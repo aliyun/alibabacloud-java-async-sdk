@@ -310,6 +310,81 @@ public class CreateAgentSessionRequest extends Request {
      *
      * <p>CreateAgentSessionRequest</p>
      */
+    public static class InitialConfigOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ExecutionLane")
+        private String executionLane;
+
+        @com.aliyun.core.annotation.NameInMap("Mode")
+        private String mode;
+
+        private InitialConfigOptions(Builder builder) {
+            this.executionLane = builder.executionLane;
+            this.mode = builder.mode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InitialConfigOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return executionLane
+         */
+        public String getExecutionLane() {
+            return this.executionLane;
+        }
+
+        /**
+         * @return mode
+         */
+        public String getMode() {
+            return this.mode;
+        }
+
+        public static final class Builder {
+            private String executionLane; 
+            private String mode; 
+
+            private Builder() {
+            } 
+
+            private Builder(InitialConfigOptions model) {
+                this.executionLane = model.executionLane;
+                this.mode = model.mode;
+            } 
+
+            /**
+             * ExecutionLane.
+             */
+            public Builder executionLane(String executionLane) {
+                this.executionLane = executionLane;
+                return this;
+            }
+
+            /**
+             * Mode.
+             */
+            public Builder mode(String mode) {
+                this.mode = mode;
+                return this;
+            }
+
+            public InitialConfigOptions build() {
+                return new InitialConfigOptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateAgentSessionRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAgentSessionRequest</p>
+     */
     public static class Meta extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Agent")
         private Agent agent;
@@ -317,9 +392,13 @@ public class CreateAgentSessionRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Config")
         private Config config;
 
+        @com.aliyun.core.annotation.NameInMap("InitialConfigOptions")
+        private InitialConfigOptions initialConfigOptions;
+
         private Meta(Builder builder) {
             this.agent = builder.agent;
             this.config = builder.config;
+            this.initialConfigOptions = builder.initialConfigOptions;
         }
 
         public static Builder builder() {
@@ -344,9 +423,17 @@ public class CreateAgentSessionRequest extends Request {
             return this.config;
         }
 
+        /**
+         * @return initialConfigOptions
+         */
+        public InitialConfigOptions getInitialConfigOptions() {
+            return this.initialConfigOptions;
+        }
+
         public static final class Builder {
             private Agent agent; 
             private Config config; 
+            private InitialConfigOptions initialConfigOptions; 
 
             private Builder() {
             } 
@@ -354,6 +441,7 @@ public class CreateAgentSessionRequest extends Request {
             private Builder(Meta model) {
                 this.agent = model.agent;
                 this.config = model.config;
+                this.initialConfigOptions = model.initialConfigOptions;
             } 
 
             /**
@@ -369,6 +457,14 @@ public class CreateAgentSessionRequest extends Request {
              */
             public Builder config(Config config) {
                 this.config = config;
+                return this;
+            }
+
+            /**
+             * InitialConfigOptions.
+             */
+            public Builder initialConfigOptions(InitialConfigOptions initialConfigOptions) {
+                this.initialConfigOptions = initialConfigOptions;
                 return this;
             }
 

@@ -36,6 +36,10 @@ public class ApproveProcessInstanceRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NewExpiration")
+    private Long newExpiration;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ProcessInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String processInstanceId;
@@ -46,6 +50,7 @@ public class ApproveProcessInstanceRequest extends Request {
         this.approvalAction = builder.approvalAction;
         this.approvalComment = builder.approvalComment;
         this.clientToken = builder.clientToken;
+        this.newExpiration = builder.newExpiration;
         this.processInstanceId = builder.processInstanceId;
     }
 
@@ -91,6 +96,13 @@ public class ApproveProcessInstanceRequest extends Request {
     }
 
     /**
+     * @return newExpiration
+     */
+    public Long getNewExpiration() {
+        return this.newExpiration;
+    }
+
+    /**
      * @return processInstanceId
      */
     public String getProcessInstanceId() {
@@ -102,6 +114,7 @@ public class ApproveProcessInstanceRequest extends Request {
         private String approvalAction; 
         private String approvalComment; 
         private String clientToken; 
+        private Long newExpiration; 
         private String processInstanceId; 
 
         private Builder() {
@@ -114,6 +127,7 @@ public class ApproveProcessInstanceRequest extends Request {
             this.approvalAction = request.approvalAction;
             this.approvalComment = request.approvalComment;
             this.clientToken = request.clientToken;
+            this.newExpiration = request.newExpiration;
             this.processInstanceId = request.processInstanceId;
         } 
 
@@ -153,6 +167,15 @@ public class ApproveProcessInstanceRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * NewExpiration.
+         */
+        public Builder newExpiration(Long newExpiration) {
+            this.putBodyParameter("NewExpiration", newExpiration);
+            this.newExpiration = newExpiration;
             return this;
         }
 
