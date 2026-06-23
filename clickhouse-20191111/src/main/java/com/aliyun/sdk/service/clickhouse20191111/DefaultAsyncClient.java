@@ -74,7 +74,19 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("me-east-1", "clickhouse.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "clickhouse.aliyuncs.com"),
             new TeaPair("us-east-1", "clickhouse.aliyuncs.com"),
-            new TeaPair("us-west-1", "clickhouse.aliyuncs.com")
+            new TeaPair("us-west-1", "clickhouse.aliyuncs.com"),
+            new TeaPair("me-central-1", "clickhouse.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "clickhouse.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "clickhouse.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "clickhouse.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "clickhouse.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "clickhouse.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "clickhouse.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "clickhouse.cn-chengdu.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "clickhouse.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "clickhouse.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "clickhouse.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "clickhouse.ap-northeast-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }

@@ -51,6 +51,10 @@ public class CheckScaleOutBalancedRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingType")
+    private String scalingType;
+
     private CheckScaleOutBalancedRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
@@ -61,6 +65,7 @@ public class CheckScaleOutBalancedRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.scalingType = builder.scalingType;
     }
 
     public static Builder builder() {
@@ -132,6 +137,13 @@ public class CheckScaleOutBalancedRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return scalingType
+     */
+    public String getScalingType() {
+        return this.scalingType;
+    }
+
     public static final class Builder extends Request.Builder<CheckScaleOutBalancedRequest, Builder> {
         private String DBClusterId; 
         private String ownerAccount; 
@@ -141,6 +153,7 @@ public class CheckScaleOutBalancedRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String scalingType; 
 
         private Builder() {
             super();
@@ -156,6 +169,7 @@ public class CheckScaleOutBalancedRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.scalingType = request.scalingType;
         } 
 
         /**
@@ -246,6 +260,15 @@ public class CheckScaleOutBalancedRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * ScalingType.
+         */
+        public Builder scalingType(String scalingType) {
+            this.putQueryParameter("ScalingType", scalingType);
+            this.scalingType = scalingType;
             return this;
         }
 
