@@ -20,11 +20,15 @@ public class MultimodalSearchBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("advancedParams")
     private java.util.Map<String, ?> advancedParams;
 
+    @com.aliyun.core.annotation.NameInMap("engineType")
+    private String engineType;
+
     @com.aliyun.core.annotation.NameInMap("query")
     private String query;
 
     private MultimodalSearchBody(Builder builder) {
         this.advancedParams = builder.advancedParams;
+        this.engineType = builder.engineType;
         this.query = builder.query;
     }
 
@@ -48,6 +52,13 @@ public class MultimodalSearchBody extends TeaModel {
     }
 
     /**
+     * @return engineType
+     */
+    public String getEngineType() {
+        return this.engineType;
+    }
+
+    /**
      * @return query
      */
     public String getQuery() {
@@ -56,6 +67,7 @@ public class MultimodalSearchBody extends TeaModel {
 
     public static final class Builder {
         private java.util.Map<String, ?> advancedParams; 
+        private String engineType; 
         private String query; 
 
         private Builder() {
@@ -63,6 +75,7 @@ public class MultimodalSearchBody extends TeaModel {
 
         private Builder(MultimodalSearchBody model) {
             this.advancedParams = model.advancedParams;
+            this.engineType = model.engineType;
             this.query = model.query;
         } 
 
@@ -71,6 +84,14 @@ public class MultimodalSearchBody extends TeaModel {
          */
         public Builder advancedParams(java.util.Map<String, ?> advancedParams) {
             this.advancedParams = advancedParams;
+            return this;
+        }
+
+        /**
+         * engineType.
+         */
+        public Builder engineType(String engineType) {
+            this.engineType = engineType;
             return this;
         }
 
