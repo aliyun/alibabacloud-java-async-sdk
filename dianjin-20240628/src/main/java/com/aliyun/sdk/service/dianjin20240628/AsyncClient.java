@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of CommercializeFetch  CommercializeFetchRequest
+     * @return CommercializeFetchResponse
+     */
+    CompletableFuture<CommercializeFetchResponse> commercializeFetch(CommercializeFetchRequest request);
+
+    /**
      * @param request the request parameters of CreateAnnualDocSummaryTask  CreateAnnualDocSummaryTaskRequest
      * @return CreateAnnualDocSummaryTaskResponse
      */
@@ -218,6 +224,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetQualityCheckTaskResultResponse> getQualityCheckTaskResult(GetQualityCheckTaskResultRequest request);
 
     /**
+     * @param request the request parameters of GetReportResponse  GetReportResponseRequest
+     * @return GetReportResponseResponse
+     */
+    CompletableFuture<GetReportResponseResponse> getReportResponse(GetReportResponseRequest request);
+
+    /**
+     * @param request the request parameters of GetReportTaskStatus  GetReportTaskStatusRequest
+     * @return GetReportTaskStatusResponse
+     */
+    CompletableFuture<GetReportTaskStatusResponse> getReportTaskStatus(GetReportTaskStatusRequest request);
+
+    /**
      * @param request the request parameters of GetSummaryTaskResult  GetSummaryTaskResultRequest
      * @return GetSummaryTaskResultResponse
      */
@@ -308,6 +326,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RecognizeIntentionResponse
      */
     CompletableFuture<RecognizeIntentionResponse> recognizeIntention(RecognizeIntentionRequest request);
+
+    /**
+     * @param request the request parameters of RetryReportTask  RetryReportTaskRequest
+     * @return RetryReportTaskResponse
+     */
+    CompletableFuture<RetryReportTaskResponse> retryReportTask(RetryReportTaskRequest request);
 
     /**
      * @param request the request parameters of RunAgent  RunAgentRequest

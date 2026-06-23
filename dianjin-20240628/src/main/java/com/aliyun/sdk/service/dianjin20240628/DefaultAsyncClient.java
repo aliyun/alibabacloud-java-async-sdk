@@ -30,14 +30,34 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "DianJin";
         this.version = "2024-06-28";
-        this.endpointRule = "";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("cn-beijing", "dianjin.cn-beijing.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
     @Override
     public void close() {
         this.handler.close();
+    }
+
+    /**
+     * @param request the request parameters of CommercializeFetch  CommercializeFetchRequest
+     * @return CommercializeFetchResponse
+     */
+    @Override
+    public CompletableFuture<CommercializeFetchResponse> commercializeFetch(CommercializeFetchRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CommercializeFetch").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/spi/path/{cjfCode}/api/support/{zjfCode}/firefly/commercializeFetch").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CommercializeFetchResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CommercializeFetchResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
     }
 
     /**
@@ -635,6 +655,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetReportResponse  GetReportResponseRequest
+     * @return GetReportResponseResponse
+     */
+    @Override
+    public CompletableFuture<GetReportResponseResponse> getReportResponse(GetReportResponseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetReportResponse").setMethod(HttpMethod.GET).setPathRegex("/{workspaceId}/api/firefly/v1/{sceneCode}/{fundProduct}/tasks/{outRequestNo}/report").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetReportResponseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetReportResponseResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetReportTaskStatus  GetReportTaskStatusRequest
+     * @return GetReportTaskStatusResponse
+     */
+    @Override
+    public CompletableFuture<GetReportTaskStatusResponse> getReportTaskStatus(GetReportTaskStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetReportTaskStatus").setMethod(HttpMethod.GET).setPathRegex("/{workspaceId}/api/firefly/v1/{sceneCode}/{fundProduct}/tasks/{outRequestNo}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetReportTaskStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetReportTaskStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetSummaryTaskResult  GetSummaryTaskResultRequest
      * @return GetSummaryTaskResultResponse
      */
@@ -909,6 +965,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RecognizeIntentionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RetryReportTask  RetryReportTaskRequest
+     * @return RetryReportTaskResponse
+     */
+    @Override
+    public CompletableFuture<RetryReportTaskResponse> retryReportTask(RetryReportTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RetryReportTask").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/api/firefly/v1/{sceneCode}/{fundProduct}/tasks/{outRequestNo}/retry").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RetryReportTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RetryReportTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
