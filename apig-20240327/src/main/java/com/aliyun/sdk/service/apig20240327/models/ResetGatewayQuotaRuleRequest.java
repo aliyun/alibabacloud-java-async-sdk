@@ -38,17 +38,24 @@ public class ResetGatewayQuotaRuleRequest extends Request {
     private Boolean overwrite;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("periodMultiplier")
+    private Long periodMultiplier;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("periodType")
     private String periodType;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("quotaLimit")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Long quotaLimit;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("timezone")
     private String timezone;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("windowAlignment")
+    private String windowAlignment;
 
     private ResetGatewayQuotaRuleRequest(Builder builder) {
         super(builder);
@@ -57,9 +64,11 @@ public class ResetGatewayQuotaRuleRequest extends Request {
         this.conflictHash = builder.conflictHash;
         this.dryRun = builder.dryRun;
         this.overwrite = builder.overwrite;
+        this.periodMultiplier = builder.periodMultiplier;
         this.periodType = builder.periodType;
         this.quotaLimit = builder.quotaLimit;
         this.timezone = builder.timezone;
+        this.windowAlignment = builder.windowAlignment;
     }
 
     public static Builder builder() {
@@ -111,6 +120,13 @@ public class ResetGatewayQuotaRuleRequest extends Request {
     }
 
     /**
+     * @return periodMultiplier
+     */
+    public Long getPeriodMultiplier() {
+        return this.periodMultiplier;
+    }
+
+    /**
      * @return periodType
      */
     public String getPeriodType() {
@@ -131,15 +147,24 @@ public class ResetGatewayQuotaRuleRequest extends Request {
         return this.timezone;
     }
 
+    /**
+     * @return windowAlignment
+     */
+    public String getWindowAlignment() {
+        return this.windowAlignment;
+    }
+
     public static final class Builder extends Request.Builder<ResetGatewayQuotaRuleRequest, Builder> {
         private String gatewayId; 
         private String ruleId; 
         private String conflictHash; 
         private Boolean dryRun; 
         private Boolean overwrite; 
+        private Long periodMultiplier; 
         private String periodType; 
         private Long quotaLimit; 
         private String timezone; 
+        private String windowAlignment; 
 
         private Builder() {
             super();
@@ -152,9 +177,11 @@ public class ResetGatewayQuotaRuleRequest extends Request {
             this.conflictHash = request.conflictHash;
             this.dryRun = request.dryRun;
             this.overwrite = request.overwrite;
+            this.periodMultiplier = request.periodMultiplier;
             this.periodType = request.periodType;
             this.quotaLimit = request.quotaLimit;
             this.timezone = request.timezone;
+            this.windowAlignment = request.windowAlignment;
         } 
 
         /**
@@ -203,6 +230,15 @@ public class ResetGatewayQuotaRuleRequest extends Request {
         }
 
         /**
+         * periodMultiplier.
+         */
+        public Builder periodMultiplier(Long periodMultiplier) {
+            this.putBodyParameter("periodMultiplier", periodMultiplier);
+            this.periodMultiplier = periodMultiplier;
+            return this;
+        }
+
+        /**
          * periodType.
          */
         public Builder periodType(String periodType) {
@@ -212,10 +248,7 @@ public class ResetGatewayQuotaRuleRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1000</p>
+         * quotaLimit.
          */
         public Builder quotaLimit(Long quotaLimit) {
             this.putBodyParameter("quotaLimit", quotaLimit);
@@ -229,6 +262,15 @@ public class ResetGatewayQuotaRuleRequest extends Request {
         public Builder timezone(String timezone) {
             this.putBodyParameter("timezone", timezone);
             this.timezone = timezone;
+            return this;
+        }
+
+        /**
+         * windowAlignment.
+         */
+        public Builder windowAlignment(String windowAlignment) {
+            this.putBodyParameter("windowAlignment", windowAlignment);
+            this.windowAlignment = windowAlignment;
             return this;
         }
 

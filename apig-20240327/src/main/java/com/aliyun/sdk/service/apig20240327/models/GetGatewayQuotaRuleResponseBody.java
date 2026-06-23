@@ -139,12 +139,90 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
      *
      * <p>GetGatewayQuotaRuleResponseBody</p>
      */
+    public static class Consumers extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("id")
+        private String id;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        private Consumers(Builder builder) {
+            this.id = builder.id;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Consumers create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String id; 
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Consumers model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
+
+            /**
+             * id.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public Consumers build() {
+                return new Consumers(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetGatewayQuotaRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayQuotaRuleResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baseTimestamp")
         private Long baseTimestamp;
 
         @com.aliyun.core.annotation.NameInMap("consumerCount")
         private Long consumerCount;
+
+        @com.aliyun.core.annotation.NameInMap("consumers")
+        private java.util.List<Consumers> consumers;
 
         @com.aliyun.core.annotation.NameInMap("periodType")
         private String periodType;
@@ -173,6 +251,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.baseTimestamp = builder.baseTimestamp;
             this.consumerCount = builder.consumerCount;
+            this.consumers = builder.consumers;
             this.periodType = builder.periodType;
             this.quotaDimension = builder.quotaDimension;
             this.quotaLimit = builder.quotaLimit;
@@ -203,6 +282,13 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
          */
         public Long getConsumerCount() {
             return this.consumerCount;
+        }
+
+        /**
+         * @return consumers
+         */
+        public java.util.List<Consumers> getConsumers() {
+            return this.consumers;
         }
 
         /**
@@ -264,6 +350,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
         public static final class Builder {
             private Long baseTimestamp; 
             private Long consumerCount; 
+            private java.util.List<Consumers> consumers; 
             private String periodType; 
             private String quotaDimension; 
             private Long quotaLimit; 
@@ -279,6 +366,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.baseTimestamp = model.baseTimestamp;
                 this.consumerCount = model.consumerCount;
+                this.consumers = model.consumers;
                 this.periodType = model.periodType;
                 this.quotaDimension = model.quotaDimension;
                 this.quotaLimit = model.quotaLimit;
@@ -302,6 +390,14 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
              */
             public Builder consumerCount(Long consumerCount) {
                 this.consumerCount = consumerCount;
+                return this;
+            }
+
+            /**
+             * consumers.
+             */
+            public Builder consumers(java.util.List<Consumers> consumers) {
+                this.consumers = consumers;
                 return this;
             }
 

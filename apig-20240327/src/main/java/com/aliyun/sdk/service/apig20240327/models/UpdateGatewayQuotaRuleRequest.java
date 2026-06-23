@@ -35,6 +35,7 @@ public class UpdateGatewayQuotaRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("consumerGroupIds")
+    @Deprecated
     private java.util.List<String> consumerGroupIds;
 
     @com.aliyun.core.annotation.Body
@@ -47,7 +48,6 @@ public class UpdateGatewayQuotaRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("quotaLimit")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Long quotaLimit;
 
     @com.aliyun.core.annotation.Body
@@ -56,7 +56,6 @@ public class UpdateGatewayQuotaRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ruleName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleName;
 
     private UpdateGatewayQuotaRuleRequest(Builder builder) {
@@ -250,10 +249,7 @@ public class UpdateGatewayQuotaRuleRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1000</p>
+         * quotaLimit.
          */
         public Builder quotaLimit(Long quotaLimit) {
             this.putBodyParameter("quotaLimit", quotaLimit);
@@ -271,10 +267,7 @@ public class UpdateGatewayQuotaRuleRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>team-rule</p>
+         * ruleName.
          */
         public Builder ruleName(String ruleName) {
             this.putBodyParameter("ruleName", ruleName);

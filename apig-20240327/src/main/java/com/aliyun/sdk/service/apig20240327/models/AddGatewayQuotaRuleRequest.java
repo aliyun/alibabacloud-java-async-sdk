@@ -27,6 +27,7 @@ public class AddGatewayQuotaRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("consumerGroupIds")
+    @Deprecated
     private java.util.List<String> consumerGroupIds;
 
     @com.aliyun.core.annotation.Body
@@ -40,6 +41,10 @@ public class AddGatewayQuotaRuleRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("overwrite")
     private Boolean overwrite;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("periodMultiplier")
+    private Long periodMultiplier;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("periodType")
@@ -77,6 +82,7 @@ public class AddGatewayQuotaRuleRequest extends Request {
         this.consumerIds = builder.consumerIds;
         this.dryRun = builder.dryRun;
         this.overwrite = builder.overwrite;
+        this.periodMultiplier = builder.periodMultiplier;
         this.periodType = builder.periodType;
         this.quotaDimension = builder.quotaDimension;
         this.quotaLimit = builder.quotaLimit;
@@ -141,6 +147,13 @@ public class AddGatewayQuotaRuleRequest extends Request {
     }
 
     /**
+     * @return periodMultiplier
+     */
+    public Long getPeriodMultiplier() {
+        return this.periodMultiplier;
+    }
+
+    /**
      * @return periodType
      */
     public String getPeriodType() {
@@ -189,6 +202,7 @@ public class AddGatewayQuotaRuleRequest extends Request {
         private java.util.List<String> consumerIds; 
         private Boolean dryRun; 
         private Boolean overwrite; 
+        private Long periodMultiplier; 
         private String periodType; 
         private String quotaDimension; 
         private Long quotaLimit; 
@@ -208,6 +222,7 @@ public class AddGatewayQuotaRuleRequest extends Request {
             this.consumerIds = request.consumerIds;
             this.dryRun = request.dryRun;
             this.overwrite = request.overwrite;
+            this.periodMultiplier = request.periodMultiplier;
             this.periodType = request.periodType;
             this.quotaDimension = request.quotaDimension;
             this.quotaLimit = request.quotaLimit;
@@ -267,6 +282,15 @@ public class AddGatewayQuotaRuleRequest extends Request {
         public Builder overwrite(Boolean overwrite) {
             this.putBodyParameter("overwrite", overwrite);
             this.overwrite = overwrite;
+            return this;
+        }
+
+        /**
+         * periodMultiplier.
+         */
+        public Builder periodMultiplier(Long periodMultiplier) {
+            this.putBodyParameter("periodMultiplier", periodMultiplier);
+            this.periodMultiplier = periodMultiplier;
             return this;
         }
 

@@ -27,10 +27,12 @@ public class GetGatewayQuotaRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("consumerPageNumber")
+    @Deprecated
     private String consumerPageNumber;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("consumerPageSize")
+    @Deprecated
     private String consumerPageSize;
 
     @com.aliyun.core.annotation.Query

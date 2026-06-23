@@ -137,6 +137,12 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
      * <p>AddGatewayQuotaRuleResponseBody</p>
      */
     public static class Items extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("conflictPeriodType")
+        private String conflictPeriodType;
+
+        @com.aliyun.core.annotation.NameInMap("conflictType")
+        private String conflictType;
+
         @com.aliyun.core.annotation.NameInMap("consumerId")
         private String consumerId;
 
@@ -144,6 +150,8 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
         private String consumerName;
 
         private Items(Builder builder) {
+            this.conflictPeriodType = builder.conflictPeriodType;
+            this.conflictType = builder.conflictType;
             this.consumerId = builder.consumerId;
             this.consumerName = builder.consumerName;
         }
@@ -154,6 +162,20 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
 
         public static Items create() {
             return builder().build();
+        }
+
+        /**
+         * @return conflictPeriodType
+         */
+        public String getConflictPeriodType() {
+            return this.conflictPeriodType;
+        }
+
+        /**
+         * @return conflictType
+         */
+        public String getConflictType() {
+            return this.conflictType;
         }
 
         /**
@@ -171,6 +193,8 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String conflictPeriodType; 
+            private String conflictType; 
             private String consumerId; 
             private String consumerName; 
 
@@ -178,9 +202,27 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
             } 
 
             private Builder(Items model) {
+                this.conflictPeriodType = model.conflictPeriodType;
+                this.conflictType = model.conflictType;
                 this.consumerId = model.consumerId;
                 this.consumerName = model.consumerName;
             } 
+
+            /**
+             * conflictPeriodType.
+             */
+            public Builder conflictPeriodType(String conflictPeriodType) {
+                this.conflictPeriodType = conflictPeriodType;
+                return this;
+            }
+
+            /**
+             * conflictType.
+             */
+            public Builder conflictType(String conflictType) {
+                this.conflictType = conflictType;
+                return this;
+            }
 
             /**
              * consumerId.
@@ -309,7 +351,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accepted")
-        private String accepted;
+        private Boolean accepted;
 
         @com.aliyun.core.annotation.NameInMap("conflictPreview")
         private ConflictPreview conflictPreview;
@@ -338,7 +380,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
         /**
          * @return accepted
          */
-        public String getAccepted() {
+        public Boolean getAccepted() {
             return this.accepted;
         }
 
@@ -364,7 +406,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String accepted; 
+            private Boolean accepted; 
             private ConflictPreview conflictPreview; 
             private Boolean dryRun; 
             private String ruleId; 
@@ -382,7 +424,7 @@ public class AddGatewayQuotaRuleResponseBody extends TeaModel {
             /**
              * accepted.
              */
-            public Builder accepted(String accepted) {
+            public Builder accepted(Boolean accepted) {
                 this.accepted = accepted;
                 return this;
             }
