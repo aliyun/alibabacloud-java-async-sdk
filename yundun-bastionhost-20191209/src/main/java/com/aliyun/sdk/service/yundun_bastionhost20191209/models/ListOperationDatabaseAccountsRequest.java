@@ -23,7 +23,6 @@ public class ListOperationDatabaseAccountsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DatabaseId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String databaseId;
 
     @com.aliyun.core.annotation.Query
@@ -147,7 +146,6 @@ public class ListOperationDatabaseAccountsRequest extends Request {
          * <blockquote>
          * <p> You can call the <a href="https://help.aliyun.com/document_detail/2758856.html">ListOperationDatabases</a> operation to query the database ID.</p>
          * </blockquote>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>56</p>

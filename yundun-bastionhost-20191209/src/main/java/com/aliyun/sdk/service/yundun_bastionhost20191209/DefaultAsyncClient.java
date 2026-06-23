@@ -89,7 +89,10 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-zhangjiakou-na62-a01", "yundun-bastionhost.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-nebula-1", "yundun-bastionhost.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "yundun-bastionhost.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "yundun-bastionhost.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "yundun-bastionhost.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-jva", "yundun-bastionhost.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "bastionhost.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "bastionhost.ap-northeast-2.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -221,6 +224,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<AddUsersToGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of AllowOperationTaskApproval  AllowOperationTaskApprovalRequest
+     * @return AllowOperationTaskApprovalResponse
+     */
+    @Override
+    public CompletableFuture<AllowOperationTaskApprovalResponse> allowOperationTaskApproval(AllowOperationTaskApprovalRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AllowOperationTaskApproval").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AllowOperationTaskApprovalResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AllowOperationTaskApprovalResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1170,6 +1191,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetAutoOpsTask  GetAutoOpsTaskRequest
+     * @return GetAutoOpsTaskResponse
+     */
+    @Override
+    public CompletableFuture<GetAutoOpsTaskResponse> getAutoOpsTask(GetAutoOpsTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAutoOpsTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAutoOpsTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAutoOpsTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetDatabase  GetDatabaseRequest
      * @return GetDatabaseResponse
      */
@@ -2107,6 +2146,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListTodoOpsTaskApprovals  ListTodoOpsTaskApprovalsRequest
+     * @return ListTodoOpsTaskApprovalsResponse
+     */
+    @Override
+    public CompletableFuture<ListTodoOpsTaskApprovalsResponse> listTodoOpsTaskApprovals(ListTodoOpsTaskApprovalsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListTodoOpsTaskApprovals").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListTodoOpsTaskApprovalsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListTodoOpsTaskApprovalsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListUserGroups  ListUserGroupsRequest
      * @return ListUserGroupsResponse
      */
@@ -2594,6 +2651,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RejectApproveCommandResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RejectOperationTaskApproval  RejectOperationTaskApprovalRequest
+     * @return RejectOperationTaskApprovalResponse
+     */
+    @Override
+    public CompletableFuture<RejectOperationTaskApprovalResponse> rejectOperationTaskApproval(RejectOperationTaskApprovalRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RejectOperationTaskApproval").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RejectOperationTaskApprovalResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RejectOperationTaskApprovalResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

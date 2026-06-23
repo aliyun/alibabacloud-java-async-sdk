@@ -75,6 +75,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddUsersToGroupResponse> addUsersToGroup(AddUsersToGroupRequest request);
 
     /**
+     * @param request the request parameters of AllowOperationTaskApproval  AllowOperationTaskApprovalRequest
+     * @return AllowOperationTaskApprovalResponse
+     */
+    CompletableFuture<AllowOperationTaskApprovalResponse> allowOperationTaskApproval(AllowOperationTaskApprovalRequest request);
+
+    /**
      * @param request the request parameters of AttachDatabaseAccountsToUser  AttachDatabaseAccountsToUserRequest
      * @return AttachDatabaseAccountsToUserResponse
      */
@@ -418,6 +424,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GenerateAssetOperationTokenResponse> generateAssetOperationToken(GenerateAssetOperationTokenRequest request);
 
     /**
+     * @param request the request parameters of GetAutoOpsTask  GetAutoOpsTaskRequest
+     * @return GetAutoOpsTaskResponse
+     */
+    CompletableFuture<GetAutoOpsTaskResponse> getAutoOpsTask(GetAutoOpsTaskRequest request);
+
+    /**
      * @param request the request parameters of GetDatabase  GetDatabaseRequest
      * @return GetDatabaseResponse
      */
@@ -743,6 +755,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     /**
+     * @param request the request parameters of ListTodoOpsTaskApprovals  ListTodoOpsTaskApprovalsRequest
+     * @return ListTodoOpsTaskApprovalsResponse
+     */
+    CompletableFuture<ListTodoOpsTaskApprovalsResponse> listTodoOpsTaskApprovals(ListTodoOpsTaskApprovalsRequest request);
+
+    /**
      * @param request the request parameters of ListUserGroups  ListUserGroupsRequest
      * @return ListUserGroupsResponse
      */
@@ -922,6 +940,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RejectApproveCommandResponse
      */
     CompletableFuture<RejectApproveCommandResponse> rejectApproveCommand(RejectApproveCommandRequest request);
+
+    /**
+     * @param request the request parameters of RejectOperationTaskApproval  RejectOperationTaskApprovalRequest
+     * @return RejectOperationTaskApprovalResponse
+     */
+    CompletableFuture<RejectOperationTaskApprovalResponse> rejectOperationTaskApproval(RejectOperationTaskApprovalRequest request);
 
     /**
      * <b>description</b> :
