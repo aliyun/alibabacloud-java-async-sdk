@@ -27,6 +27,18 @@ public class DescribeClusterNodesRequest extends Request {
     private String instanceIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("nodeIps")
+    private String nodeIps;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("nodeLabels")
+    private String nodeLabels;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("nodeNames")
+    private String nodeNames;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("nodepool_id")
     private String nodepoolId;
 
@@ -46,6 +58,9 @@ public class DescribeClusterNodesRequest extends Request {
         super(builder);
         this.clusterId = builder.clusterId;
         this.instanceIds = builder.instanceIds;
+        this.nodeIps = builder.nodeIps;
+        this.nodeLabels = builder.nodeLabels;
+        this.nodeNames = builder.nodeNames;
         this.nodepoolId = builder.nodepoolId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -80,6 +95,27 @@ public class DescribeClusterNodesRequest extends Request {
     }
 
     /**
+     * @return nodeIps
+     */
+    public String getNodeIps() {
+        return this.nodeIps;
+    }
+
+    /**
+     * @return nodeLabels
+     */
+    public String getNodeLabels() {
+        return this.nodeLabels;
+    }
+
+    /**
+     * @return nodeNames
+     */
+    public String getNodeNames() {
+        return this.nodeNames;
+    }
+
+    /**
      * @return nodepoolId
      */
     public String getNodepoolId() {
@@ -110,6 +146,9 @@ public class DescribeClusterNodesRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeClusterNodesRequest, Builder> {
         private String clusterId; 
         private String instanceIds; 
+        private String nodeIps; 
+        private String nodeLabels; 
+        private String nodeNames; 
         private String nodepoolId; 
         private String pageNumber; 
         private String pageSize; 
@@ -123,6 +162,9 @@ public class DescribeClusterNodesRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.instanceIds = request.instanceIds;
+            this.nodeIps = request.nodeIps;
+            this.nodeLabels = request.nodeLabels;
+            this.nodeNames = request.nodeNames;
             this.nodepoolId = request.nodepoolId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -151,6 +193,33 @@ public class DescribeClusterNodesRequest extends Request {
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("instanceIds", instanceIds);
             this.instanceIds = instanceIds;
+            return this;
+        }
+
+        /**
+         * nodeIps.
+         */
+        public Builder nodeIps(String nodeIps) {
+            this.putQueryParameter("nodeIps", nodeIps);
+            this.nodeIps = nodeIps;
+            return this;
+        }
+
+        /**
+         * nodeLabels.
+         */
+        public Builder nodeLabels(String nodeLabels) {
+            this.putQueryParameter("nodeLabels", nodeLabels);
+            this.nodeLabels = nodeLabels;
+            return this;
+        }
+
+        /**
+         * nodeNames.
+         */
+        public Builder nodeNames(String nodeNames) {
+            this.putQueryParameter("nodeNames", nodeNames);
+            this.nodeNames = nodeNames;
             return this;
         }
 
