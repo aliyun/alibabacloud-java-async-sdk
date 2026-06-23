@@ -203,4 +203,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<UpdateInstanceNameResponse> updateInstanceName(UpdateInstanceNameRequest request);
 
+    /**
+     * @param request the request parameters of UpdateInstanceServerlessSwitch  UpdateInstanceServerlessSwitchRequest
+     * @return UpdateInstanceServerlessSwitchResponse
+     */
+    CompletableFuture<UpdateInstanceServerlessSwitchResponse> updateInstanceServerlessSwitch(UpdateInstanceServerlessSwitchRequest request);
+
 }

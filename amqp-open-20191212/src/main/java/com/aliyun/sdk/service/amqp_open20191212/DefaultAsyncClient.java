@@ -30,7 +30,32 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "amqp-open";
         this.version = "2019-12-12";
         this.endpointRule = "regional";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("us-west-1", "amqp-open.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "amqp-open.us-east-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "amqp-open.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "amqp-open.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-jva", "amqp-open.cn-zhengzhou-jva.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "amqp-open.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "amqp-open.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "amqp-open.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "amqp-open.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "amqp-open.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "amqp-open.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "amqp-open.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "amqp-open.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "amqp-open.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "amqp-open.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "amqp-open.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "amqp-open.cn-beijing-finance-1.aliyuncs.com"),
+            new TeaPair("cn-beijing", "amqp-open.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "amqp-open.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "amqp-open.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "amqp-open.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "amqp-open.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "amqp-open.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "amqp-open.ap-northeast-1.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -554,6 +579,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateInstanceNameResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateInstanceServerlessSwitch  UpdateInstanceServerlessSwitchRequest
+     * @return UpdateInstanceServerlessSwitchResponse
+     */
+    @Override
+    public CompletableFuture<UpdateInstanceServerlessSwitchResponse> updateInstanceServerlessSwitch(UpdateInstanceServerlessSwitchRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateInstanceServerlessSwitch").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateInstanceServerlessSwitchResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateInstanceServerlessSwitchResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
