@@ -31,6 +31,10 @@ public class ValidateEmailRequest extends Request {
     private String email;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProbeType")
+    private String probeType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Timeout")
     private Long timeout;
 
@@ -39,6 +43,7 @@ public class ValidateEmailRequest extends Request {
         this.regionId = builder.regionId;
         this.checkGraylist = builder.checkGraylist;
         this.email = builder.email;
+        this.probeType = builder.probeType;
         this.timeout = builder.timeout;
     }
 
@@ -77,6 +82,13 @@ public class ValidateEmailRequest extends Request {
     }
 
     /**
+     * @return probeType
+     */
+    public String getProbeType() {
+        return this.probeType;
+    }
+
+    /**
      * @return timeout
      */
     public Long getTimeout() {
@@ -87,6 +99,7 @@ public class ValidateEmailRequest extends Request {
         private String regionId; 
         private Boolean checkGraylist; 
         private String email; 
+        private String probeType; 
         private Long timeout; 
 
         private Builder() {
@@ -98,6 +111,7 @@ public class ValidateEmailRequest extends Request {
             this.regionId = request.regionId;
             this.checkGraylist = request.checkGraylist;
             this.email = request.email;
+            this.probeType = request.probeType;
             this.timeout = request.timeout;
         } 
 
@@ -128,6 +142,15 @@ public class ValidateEmailRequest extends Request {
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
             this.email = email;
+            return this;
+        }
+
+        /**
+         * ProbeType.
+         */
+        public Builder probeType(String probeType) {
+            this.putQueryParameter("ProbeType", probeType);
+            this.probeType = probeType;
             return this;
         }
 
