@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeNatGatewaysRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AvailabilityMode")
+    private String availabilityMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
@@ -97,6 +101,7 @@ public class DescribeNatGatewaysRequest extends Request {
 
     private DescribeNatGatewaysRequest(Builder builder) {
         super(builder);
+        this.availabilityMode = builder.availabilityMode;
         this.dryRun = builder.dryRun;
         this.instanceChargeType = builder.instanceChargeType;
         this.name = builder.name;
@@ -129,6 +134,13 @@ public class DescribeNatGatewaysRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return availabilityMode
+     */
+    public String getAvailabilityMode() {
+        return this.availabilityMode;
     }
 
     /**
@@ -265,6 +277,7 @@ public class DescribeNatGatewaysRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeNatGatewaysRequest, Builder> {
+        private String availabilityMode; 
         private Boolean dryRun; 
         private String instanceChargeType; 
         private String name; 
@@ -291,6 +304,7 @@ public class DescribeNatGatewaysRequest extends Request {
 
         private Builder(DescribeNatGatewaysRequest request) {
             super(request);
+            this.availabilityMode = request.availabilityMode;
             this.dryRun = request.dryRun;
             this.instanceChargeType = request.instanceChargeType;
             this.name = request.name;
@@ -311,6 +325,15 @@ public class DescribeNatGatewaysRequest extends Request {
             this.vpcId = request.vpcId;
             this.zoneId = request.zoneId;
         } 
+
+        /**
+         * AvailabilityMode.
+         */
+        public Builder availabilityMode(String availabilityMode) {
+            this.putQueryParameter("AvailabilityMode", availabilityMode);
+            this.availabilityMode = availabilityMode;
+            return this;
+        }
 
         /**
          * <p>Specifies whether to perform a dry run. Valid values:</p>

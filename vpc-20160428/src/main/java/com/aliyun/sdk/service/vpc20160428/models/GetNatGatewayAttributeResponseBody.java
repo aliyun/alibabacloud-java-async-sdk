@@ -20,6 +20,9 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessMode")
     private AccessMode accessMode;
 
+    @com.aliyun.core.annotation.NameInMap("AvailabilityMode")
+    private String availabilityMode;
+
     @com.aliyun.core.annotation.NameInMap("BillingConfig")
     private BillingConfig billingConfig;
 
@@ -97,6 +100,7 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
 
     private GetNatGatewayAttributeResponseBody(Builder builder) {
         this.accessMode = builder.accessMode;
+        this.availabilityMode = builder.availabilityMode;
         this.billingConfig = builder.billingConfig;
         this.businessStatus = builder.businessStatus;
         this.creationTime = builder.creationTime;
@@ -141,6 +145,13 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
      */
     public AccessMode getAccessMode() {
         return this.accessMode;
+    }
+
+    /**
+     * @return availabilityMode
+     */
+    public String getAvailabilityMode() {
+        return this.availabilityMode;
     }
 
     /**
@@ -320,6 +331,7 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
 
     public static final class Builder {
         private AccessMode accessMode; 
+        private String availabilityMode; 
         private BillingConfig billingConfig; 
         private String businessStatus; 
         private String creationTime; 
@@ -351,6 +363,7 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
 
         private Builder(GetNatGatewayAttributeResponseBody model) {
             this.accessMode = model.accessMode;
+            this.availabilityMode = model.availabilityMode;
             this.billingConfig = model.billingConfig;
             this.businessStatus = model.businessStatus;
             this.creationTime = model.creationTime;
@@ -383,6 +396,14 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
          */
         public Builder accessMode(AccessMode accessMode) {
             this.accessMode = accessMode;
+            return this;
+        }
+
+        /**
+         * AvailabilityMode.
+         */
+        public Builder availabilityMode(String availabilityMode) {
+            this.availabilityMode = availabilityMode;
             return this;
         }
 

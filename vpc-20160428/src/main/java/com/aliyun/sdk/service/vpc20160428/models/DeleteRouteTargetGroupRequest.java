@@ -22,6 +22,10 @@ public class DeleteRouteTargetGroupRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceDelete")
+    private Boolean forceDelete;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -38,6 +42,7 @@ public class DeleteRouteTargetGroupRequest extends Request {
     private DeleteRouteTargetGroupRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.forceDelete = builder.forceDelete;
         this.regionId = builder.regionId;
         this.routeTargetGroupId = builder.routeTargetGroupId;
         this.tag = builder.tag;
@@ -64,6 +69,13 @@ public class DeleteRouteTargetGroupRequest extends Request {
     }
 
     /**
+     * @return forceDelete
+     */
+    public Boolean getForceDelete() {
+        return this.forceDelete;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -86,6 +98,7 @@ public class DeleteRouteTargetGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteRouteTargetGroupRequest, Builder> {
         private String clientToken; 
+        private Boolean forceDelete; 
         private String regionId; 
         private String routeTargetGroupId; 
         private java.util.List<Tag> tag; 
@@ -97,6 +110,7 @@ public class DeleteRouteTargetGroupRequest extends Request {
         private Builder(DeleteRouteTargetGroupRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.forceDelete = request.forceDelete;
             this.regionId = request.regionId;
             this.routeTargetGroupId = request.routeTargetGroupId;
             this.tag = request.tag;
@@ -115,6 +129,15 @@ public class DeleteRouteTargetGroupRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * ForceDelete.
+         */
+        public Builder forceDelete(Boolean forceDelete) {
+            this.putQueryParameter("ForceDelete", forceDelete);
+            this.forceDelete = forceDelete;
             return this;
         }
 

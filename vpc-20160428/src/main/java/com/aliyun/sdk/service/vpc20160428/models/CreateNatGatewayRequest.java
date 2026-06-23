@@ -26,6 +26,10 @@ public class CreateNatGatewayRequest extends Request {
     private Boolean autoPay;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AvailabilityMode")
+    private String availabilityMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -128,6 +132,7 @@ public class CreateNatGatewayRequest extends Request {
         super(builder);
         this.accessMode = builder.accessMode;
         this.autoPay = builder.autoPay;
+        this.availabilityMode = builder.availabilityMode;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.duration = builder.duration;
@@ -179,6 +184,13 @@ public class CreateNatGatewayRequest extends Request {
      */
     public Boolean getAutoPay() {
         return this.autoPay;
+    }
+
+    /**
+     * @return availabilityMode
+     */
+    public String getAvailabilityMode() {
+        return this.availabilityMode;
     }
 
     /**
@@ -352,6 +364,7 @@ public class CreateNatGatewayRequest extends Request {
     public static final class Builder extends Request.Builder<CreateNatGatewayRequest, Builder> {
         private AccessMode accessMode; 
         private Boolean autoPay; 
+        private String availabilityMode; 
         private String clientToken; 
         private String description; 
         private String duration; 
@@ -385,6 +398,7 @@ public class CreateNatGatewayRequest extends Request {
             super(request);
             this.accessMode = request.accessMode;
             this.autoPay = request.autoPay;
+            this.availabilityMode = request.availabilityMode;
             this.clientToken = request.clientToken;
             this.description = request.description;
             this.duration = request.duration;
@@ -433,6 +447,15 @@ public class CreateNatGatewayRequest extends Request {
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
             this.autoPay = autoPay;
+            return this;
+        }
+
+        /**
+         * AvailabilityMode.
+         */
+        public Builder availabilityMode(String availabilityMode) {
+            this.putQueryParameter("AvailabilityMode", availabilityMode);
+            this.availabilityMode = availabilityMode;
             return this;
         }
 

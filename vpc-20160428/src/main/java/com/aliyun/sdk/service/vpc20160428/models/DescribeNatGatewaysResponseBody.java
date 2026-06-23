@@ -1118,6 +1118,9 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoPay")
         private Boolean autoPay;
 
+        @com.aliyun.core.annotation.NameInMap("AvailabilityMode")
+        private String availabilityMode;
+
         @com.aliyun.core.annotation.NameInMap("BusinessStatus")
         private String businessStatus;
 
@@ -1211,6 +1214,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         private NatGateway(Builder builder) {
             this.accessMode = builder.accessMode;
             this.autoPay = builder.autoPay;
+            this.availabilityMode = builder.availabilityMode;
             this.businessStatus = builder.businessStatus;
             this.creationTime = builder.creationTime;
             this.deletionProtection = builder.deletionProtection;
@@ -1263,6 +1267,13 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
          */
         public Boolean getAutoPay() {
             return this.autoPay;
+        }
+
+        /**
+         * @return availabilityMode
+         */
+        public String getAvailabilityMode() {
+            return this.availabilityMode;
         }
 
         /**
@@ -1478,6 +1489,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         public static final class Builder {
             private AccessMode accessMode; 
             private Boolean autoPay; 
+            private String availabilityMode; 
             private String businessStatus; 
             private String creationTime; 
             private Boolean deletionProtection; 
@@ -1515,6 +1527,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             private Builder(NatGateway model) {
                 this.accessMode = model.accessMode;
                 this.autoPay = model.autoPay;
+                this.availabilityMode = model.availabilityMode;
                 this.businessStatus = model.businessStatus;
                 this.creationTime = model.creationTime;
                 this.deletionProtection = model.deletionProtection;
@@ -1567,6 +1580,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
              */
             public Builder autoPay(Boolean autoPay) {
                 this.autoPay = autoPay;
+                return this;
+            }
+
+            /**
+             * AvailabilityMode.
+             */
+            public Builder availabilityMode(String availabilityMode) {
+                this.availabilityMode = availabilityMode;
                 return this;
             }
 
