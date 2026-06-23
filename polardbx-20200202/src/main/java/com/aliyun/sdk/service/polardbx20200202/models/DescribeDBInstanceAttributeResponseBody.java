@@ -587,6 +587,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
      * <p>DescribeDBInstanceAttributeResponseBody</p>
      */
     public static class DBInstance extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AiGatewayEnabled")
+        private String aiGatewayEnabled;
+
         @com.aliyun.core.annotation.NameInMap("CanNotCreateColumnar")
         private Boolean canNotCreateColumnar;
 
@@ -768,6 +771,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         private String zoneId;
 
         private DBInstance(Builder builder) {
+            this.aiGatewayEnabled = builder.aiGatewayEnabled;
             this.canNotCreateColumnar = builder.canNotCreateColumnar;
             this.cnNodeClassCode = builder.cnNodeClassCode;
             this.cnNodeCount = builder.cnNodeCount;
@@ -835,6 +839,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         public static DBInstance create() {
             return builder().build();
+        }
+
+        /**
+         * @return aiGatewayEnabled
+         */
+        public String getAiGatewayEnabled() {
+            return this.aiGatewayEnabled;
         }
 
         /**
@@ -1251,6 +1262,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String aiGatewayEnabled; 
             private Boolean canNotCreateColumnar; 
             private String cnNodeClassCode; 
             private Integer cnNodeCount; 
@@ -1315,6 +1327,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             } 
 
             private Builder(DBInstance model) {
+                this.aiGatewayEnabled = model.aiGatewayEnabled;
                 this.canNotCreateColumnar = model.canNotCreateColumnar;
                 this.cnNodeClassCode = model.cnNodeClassCode;
                 this.cnNodeCount = model.cnNodeCount;
@@ -1375,6 +1388,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
                 this.vSwitchId = model.vSwitchId;
                 this.zoneId = model.zoneId;
             } 
+
+            /**
+             * AiGatewayEnabled.
+             */
+            public Builder aiGatewayEnabled(String aiGatewayEnabled) {
+                this.aiGatewayEnabled = aiGatewayEnabled;
+                return this;
+            }
 
             /**
              * CanNotCreateColumnar.

@@ -116,6 +116,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDataImportTaskResponse> createDataImportTask(CreateDataImportTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of CreateGatewayConsumerForPolarDBX  CreateGatewayConsumerForPolarDBXRequest
+     * @return CreateGatewayConsumerForPolarDBXResponse
+     */
+    CompletableFuture<CreateGatewayConsumerForPolarDBXResponse> createGatewayConsumerForPolarDBX(CreateGatewayConsumerForPolarDBXRequest request);
+
+    /**
      * @param request the request parameters of CreateGdnInstance  CreateGdnInstanceRequest
      * @return CreateGdnInstanceResponse
      */

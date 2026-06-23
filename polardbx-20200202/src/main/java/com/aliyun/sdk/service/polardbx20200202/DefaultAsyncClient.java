@@ -386,6 +386,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of CreateGatewayConsumerForPolarDBX  CreateGatewayConsumerForPolarDBXRequest
+     * @return CreateGatewayConsumerForPolarDBXResponse
+     */
+    @Override
+    public CompletableFuture<CreateGatewayConsumerForPolarDBXResponse> createGatewayConsumerForPolarDBX(CreateGatewayConsumerForPolarDBXRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateGatewayConsumerForPolarDBX").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateGatewayConsumerForPolarDBXResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateGatewayConsumerForPolarDBXResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateGdnInstance  CreateGdnInstanceRequest
      * @return CreateGdnInstanceResponse
      */
