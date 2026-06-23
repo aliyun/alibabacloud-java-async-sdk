@@ -944,6 +944,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAuthorizationRuleResponse> getAuthorizationRule(GetAuthorizationRuleRequest request);
 
     /**
+     * @param request the request parameters of GetAuthorizationServer  GetAuthorizationServerRequest
+     * @return GetAuthorizationServerResponse
+     */
+    CompletableFuture<GetAuthorizationServerResponse> getAuthorizationServer(GetAuthorizationServerRequest request);
+
+    /**
      * @param request the request parameters of GetBrand  GetBrandRequest
      * @return GetBrandResponse
      */
@@ -1311,6 +1317,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAuthorizationRulesForUserResponse
      */
     CompletableFuture<ListAuthorizationRulesForUserResponse> listAuthorizationRulesForUser(ListAuthorizationRulesForUserRequest request);
+
+    /**
+     * @param request the request parameters of ListAuthorizationServers  ListAuthorizationServersRequest
+     * @return ListAuthorizationServersResponse
+     */
+    CompletableFuture<ListAuthorizationServersResponse> listAuthorizationServers(ListAuthorizationServersRequest request);
 
     /**
      * @param request the request parameters of ListBrands  ListBrandsRequest
@@ -1956,6 +1968,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateAuthorizationRuleUserAttachmentResponse
      */
     CompletableFuture<UpdateAuthorizationRuleUserAttachmentResponse> updateAuthorizationRuleUserAttachment(UpdateAuthorizationRuleUserAttachmentRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAuthorizationServer  UpdateAuthorizationServerRequest
+     * @return UpdateAuthorizationServerResponse
+     */
+    CompletableFuture<UpdateAuthorizationServerResponse> updateAuthorizationServer(UpdateAuthorizationServerRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAuthorizationServerDescription  UpdateAuthorizationServerDescriptionRequest
+     * @return UpdateAuthorizationServerDescriptionResponse
+     */
+    CompletableFuture<UpdateAuthorizationServerDescriptionResponse> updateAuthorizationServerDescription(UpdateAuthorizationServerDescriptionRequest request);
 
     /**
      * @param request the request parameters of UpdateBrand  UpdateBrandRequest
