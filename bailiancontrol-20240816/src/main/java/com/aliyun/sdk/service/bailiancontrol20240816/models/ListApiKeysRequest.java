@@ -34,6 +34,14 @@ public class ListApiKeysRequest extends Request {
     private String nextToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("order")
+    private String order;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("orderBy")
+    private String orderBy;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("skip")
     private Integer skip;
 
@@ -51,6 +59,8 @@ public class ListApiKeysRequest extends Request {
         this.description = builder.description;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.order = builder.order;
+        this.orderBy = builder.orderBy;
         this.skip = builder.skip;
         this.uid = builder.uid;
         this.workspaceId = builder.workspaceId;
@@ -98,6 +108,20 @@ public class ListApiKeysRequest extends Request {
     }
 
     /**
+     * @return order
+     */
+    public String getOrder() {
+        return this.order;
+    }
+
+    /**
+     * @return orderBy
+     */
+    public String getOrderBy() {
+        return this.orderBy;
+    }
+
+    /**
      * @return skip
      */
     public Integer getSkip() {
@@ -123,6 +147,8 @@ public class ListApiKeysRequest extends Request {
         private String description; 
         private Integer maxResults; 
         private String nextToken; 
+        private String order; 
+        private String orderBy; 
         private Integer skip; 
         private String uid; 
         private String workspaceId; 
@@ -137,6 +163,8 @@ public class ListApiKeysRequest extends Request {
             this.description = request.description;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.order = request.order;
+            this.orderBy = request.orderBy;
             this.skip = request.skip;
             this.uid = request.uid;
             this.workspaceId = request.workspaceId;
@@ -175,6 +203,24 @@ public class ListApiKeysRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * order.
+         */
+        public Builder order(String order) {
+            this.putQueryParameter("order", order);
+            this.order = order;
+            return this;
+        }
+
+        /**
+         * orderBy.
+         */
+        public Builder orderBy(String orderBy) {
+            this.putQueryParameter("orderBy", orderBy);
+            this.orderBy = orderBy;
             return this;
         }
 
