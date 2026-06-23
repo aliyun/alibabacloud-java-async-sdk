@@ -854,6 +854,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDDoSBpsListResponse> describeDDoSBpsList(DescribeDDoSBpsListRequest request);
 
     /**
+     * @param request the request parameters of DescribeDDoSBpsMax  DescribeDDoSBpsMaxRequest
+     * @return DescribeDDoSBpsMaxResponse
+     */
+    CompletableFuture<DescribeDDoSBpsMaxResponse> describeDDoSBpsMax(DescribeDDoSBpsMaxRequest request);
+
+    /**
+     * @param request the request parameters of DescribeDDoSEventMax  DescribeDDoSEventMaxRequest
+     * @return DescribeDDoSEventMaxResponse
+     */
+    CompletableFuture<DescribeDDoSEventMaxResponse> describeDDoSEventMax(DescribeDDoSEventMaxRequest request);
+
+    /**
      * @param request the request parameters of DescribeDDoSL7QpsList  DescribeDDoSL7QpsListRequest
      * @return DescribeDDoSL7QpsListResponse
      */
@@ -1414,6 +1426,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetRoutineCodeVersionResponse
      */
     CompletableFuture<GetRoutineCodeVersionResponse> getRoutineCodeVersion(GetRoutineCodeVersionRequest request);
+
+    /**
+     * @param request the request parameters of GetRoutineCodeVersionInfo  GetRoutineCodeVersionInfoRequest
+     * @return GetRoutineCodeVersionInfoResponse
+     */
+    CompletableFuture<GetRoutineCodeVersionInfoResponse> getRoutineCodeVersionInfo(GetRoutineCodeVersionInfoRequest request);
 
     /**
      * @param request the request parameters of GetRoutineRoute  GetRoutineRouteRequest
@@ -2103,6 +2121,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListWaitingRoomsResponse
      */
     CompletableFuture<ListWaitingRoomsResponse> listWaitingRooms(ListWaitingRoomsRequest request);
+
+    /**
+     * @param request the request parameters of OpenEdgeContainer  OpenEdgeContainerRequest
+     * @return OpenEdgeContainerResponse
+     */
+    CompletableFuture<OpenEdgeContainerResponse> openEdgeContainer(OpenEdgeContainerRequest request);
 
     /**
      * @param request the request parameters of OpenErService  OpenErServiceRequest
