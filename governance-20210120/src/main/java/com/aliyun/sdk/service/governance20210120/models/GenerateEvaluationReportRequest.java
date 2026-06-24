@@ -26,6 +26,10 @@ public class GenerateEvaluationReportRequest extends Request {
     private java.util.List<Long> accountIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EvaluationDomain")
+    private String evaluationDomain;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -37,6 +41,7 @@ public class GenerateEvaluationReportRequest extends Request {
         super(builder);
         this.accountId = builder.accountId;
         this.accountIds = builder.accountIds;
+        this.evaluationDomain = builder.evaluationDomain;
         this.regionId = builder.regionId;
         this.reportType = builder.reportType;
     }
@@ -69,6 +74,13 @@ public class GenerateEvaluationReportRequest extends Request {
     }
 
     /**
+     * @return evaluationDomain
+     */
+    public String getEvaluationDomain() {
+        return this.evaluationDomain;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -85,6 +97,7 @@ public class GenerateEvaluationReportRequest extends Request {
     public static final class Builder extends Request.Builder<GenerateEvaluationReportRequest, Builder> {
         private Long accountId; 
         private java.util.List<Long> accountIds; 
+        private String evaluationDomain; 
         private String regionId; 
         private String reportType; 
 
@@ -96,6 +109,7 @@ public class GenerateEvaluationReportRequest extends Request {
             super(request);
             this.accountId = request.accountId;
             this.accountIds = request.accountIds;
+            this.evaluationDomain = request.evaluationDomain;
             this.regionId = request.regionId;
             this.reportType = request.reportType;
         } 
@@ -116,6 +130,15 @@ public class GenerateEvaluationReportRequest extends Request {
             String accountIdsShrink = shrink(accountIds, "AccountIds", "json");
             this.putQueryParameter("AccountIds", accountIdsShrink);
             this.accountIds = accountIds;
+            return this;
+        }
+
+        /**
+         * EvaluationDomain.
+         */
+        public Builder evaluationDomain(String evaluationDomain) {
+            this.putQueryParameter("EvaluationDomain", evaluationDomain);
+            this.evaluationDomain = evaluationDomain;
             return this;
         }
 

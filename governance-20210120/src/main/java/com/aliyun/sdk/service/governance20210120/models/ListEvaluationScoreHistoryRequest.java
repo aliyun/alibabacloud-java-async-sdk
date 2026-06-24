@@ -26,6 +26,10 @@ public class ListEvaluationScoreHistoryRequest extends Request {
     private String endDate;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EvaluationDomain")
+    private String evaluationDomain;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -37,6 +41,7 @@ public class ListEvaluationScoreHistoryRequest extends Request {
         super(builder);
         this.accountId = builder.accountId;
         this.endDate = builder.endDate;
+        this.evaluationDomain = builder.evaluationDomain;
         this.regionId = builder.regionId;
         this.startDate = builder.startDate;
     }
@@ -69,6 +74,13 @@ public class ListEvaluationScoreHistoryRequest extends Request {
     }
 
     /**
+     * @return evaluationDomain
+     */
+    public String getEvaluationDomain() {
+        return this.evaluationDomain;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -85,6 +97,7 @@ public class ListEvaluationScoreHistoryRequest extends Request {
     public static final class Builder extends Request.Builder<ListEvaluationScoreHistoryRequest, Builder> {
         private Long accountId; 
         private String endDate; 
+        private String evaluationDomain; 
         private String regionId; 
         private String startDate; 
 
@@ -96,6 +109,7 @@ public class ListEvaluationScoreHistoryRequest extends Request {
             super(request);
             this.accountId = request.accountId;
             this.endDate = request.endDate;
+            this.evaluationDomain = request.evaluationDomain;
             this.regionId = request.regionId;
             this.startDate = request.startDate;
         } 
@@ -122,6 +136,15 @@ public class ListEvaluationScoreHistoryRequest extends Request {
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
             this.endDate = endDate;
+            return this;
+        }
+
+        /**
+         * EvaluationDomain.
+         */
+        public Builder evaluationDomain(String evaluationDomain) {
+            this.putQueryParameter("EvaluationDomain", evaluationDomain);
+            this.evaluationDomain = evaluationDomain;
             return this;
         }
 

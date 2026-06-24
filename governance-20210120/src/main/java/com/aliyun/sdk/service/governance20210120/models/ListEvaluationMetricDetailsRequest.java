@@ -26,6 +26,10 @@ public class ListEvaluationMetricDetailsRequest extends Request {
     private String date;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EvaluationDomain")
+    private String evaluationDomain;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
@@ -53,6 +57,7 @@ public class ListEvaluationMetricDetailsRequest extends Request {
         super(builder);
         this.accountId = builder.accountId;
         this.date = builder.date;
+        this.evaluationDomain = builder.evaluationDomain;
         this.id = builder.id;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -86,6 +91,13 @@ public class ListEvaluationMetricDetailsRequest extends Request {
      */
     public String getDate() {
         return this.date;
+    }
+
+    /**
+     * @return evaluationDomain
+     */
+    public String getEvaluationDomain() {
+        return this.evaluationDomain;
     }
 
     /**
@@ -133,6 +145,7 @@ public class ListEvaluationMetricDetailsRequest extends Request {
     public static final class Builder extends Request.Builder<ListEvaluationMetricDetailsRequest, Builder> {
         private Long accountId; 
         private String date; 
+        private String evaluationDomain; 
         private String id; 
         private Integer maxResults; 
         private String nextToken; 
@@ -148,6 +161,7 @@ public class ListEvaluationMetricDetailsRequest extends Request {
             super(request);
             this.accountId = request.accountId;
             this.date = request.date;
+            this.evaluationDomain = request.evaluationDomain;
             this.id = request.id;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -174,6 +188,15 @@ public class ListEvaluationMetricDetailsRequest extends Request {
         public Builder date(String date) {
             this.putQueryParameter("Date", date);
             this.date = date;
+            return this;
+        }
+
+        /**
+         * EvaluationDomain.
+         */
+        public Builder evaluationDomain(String evaluationDomain) {
+            this.putQueryParameter("EvaluationDomain", evaluationDomain);
+            this.evaluationDomain = evaluationDomain;
             return this;
         }
 

@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListEvaluationMetadataRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EvaluationDomain")
+    private String evaluationDomain;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
 
@@ -35,6 +39,7 @@ public class ListEvaluationMetadataRequest extends Request {
 
     private ListEvaluationMetadataRequest(Builder builder) {
         super(builder);
+        this.evaluationDomain = builder.evaluationDomain;
         this.language = builder.language;
         this.lensCode = builder.lensCode;
         this.regionId = builder.regionId;
@@ -52,6 +57,13 @@ public class ListEvaluationMetadataRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return evaluationDomain
+     */
+    public String getEvaluationDomain() {
+        return this.evaluationDomain;
     }
 
     /**
@@ -83,6 +95,7 @@ public class ListEvaluationMetadataRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListEvaluationMetadataRequest, Builder> {
+        private String evaluationDomain; 
         private String language; 
         private String lensCode; 
         private String regionId; 
@@ -94,11 +107,21 @@ public class ListEvaluationMetadataRequest extends Request {
 
         private Builder(ListEvaluationMetadataRequest request) {
             super(request);
+            this.evaluationDomain = request.evaluationDomain;
             this.language = request.language;
             this.lensCode = request.lensCode;
             this.regionId = request.regionId;
             this.topicCode = request.topicCode;
         } 
+
+        /**
+         * EvaluationDomain.
+         */
+        public Builder evaluationDomain(String evaluationDomain) {
+            this.putQueryParameter("EvaluationDomain", evaluationDomain);
+            this.evaluationDomain = evaluationDomain;
+            return this;
+        }
 
         /**
          * <p>The language. The information is returned in the specified language. Valid values:</p>
