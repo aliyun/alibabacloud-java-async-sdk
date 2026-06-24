@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AcceptDemandResponse> acceptDemand(AcceptDemandRequest request);
 
     /**
+     * @param request the request parameters of AcceptPush  AcceptPushRequest
+     * @return AcceptPushResponse
+     */
+    CompletableFuture<AcceptPushResponse> acceptPush(AcceptPushRequest request);
+
+    /**
      * @param request the request parameters of BatchIntrudeDomains  BatchIntrudeDomainsRequest
      * @return BatchIntrudeDomainsResponse
      */
@@ -36,6 +42,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return BatchQueryPushStatusResponse
      */
     CompletableFuture<BatchQueryPushStatusResponse> batchQueryPushStatus(BatchQueryPushStatusRequest request);
+
+    /**
+     * @param request the request parameters of BatchQueryReceivedPushStatus  BatchQueryReceivedPushStatusRequest
+     * @return BatchQueryReceivedPushStatusResponse
+     */
+    CompletableFuture<BatchQueryReceivedPushStatusResponse> batchQueryReceivedPushStatus(BatchQueryReceivedPushStatusRequest request);
 
     /**
      * @param request the request parameters of BatchRecallPush  BatchRecallPushRequest
@@ -72,6 +84,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CheckSelectedDomainStatusResponse
      */
     CompletableFuture<CheckSelectedDomainStatusResponse> checkSelectedDomainStatus(CheckSelectedDomainStatusRequest request);
+
+    /**
+     * @param request the request parameters of CreateCloseoutOrder  CreateCloseoutOrderRequest
+     * @return CreateCloseoutOrderResponse
+     */
+    CompletableFuture<CreateCloseoutOrderResponse> createCloseoutOrder(CreateCloseoutOrderRequest request);
 
     /**
      * @param request the request parameters of CreateFixedPriceDemandOrder  CreateFixedPriceDemandOrderRequest
@@ -164,6 +182,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryBuyerDomainTradeRecordsResponse> queryBuyerDomainTradeRecords(QueryBuyerDomainTradeRecordsRequest request);
 
     /**
+     * @param request the request parameters of QueryCloseoutDomainInfo  QueryCloseoutDomainInfoRequest
+     * @return QueryCloseoutDomainInfoResponse
+     */
+    CompletableFuture<QueryCloseoutDomainInfoResponse> queryCloseoutDomainInfo(QueryCloseoutDomainInfoRequest request);
+
+    /**
+     * @param request the request parameters of QueryCloseoutDomainList  QueryCloseoutDomainListRequest
+     * @return QueryCloseoutDomainListResponse
+     */
+    CompletableFuture<QueryCloseoutDomainListResponse> queryCloseoutDomainList(QueryCloseoutDomainListRequest request);
+
+    /**
      * @param request the request parameters of QueryDomainTransferStatus  QueryDomainTransferStatusRequest
      * @return QueryDomainTransferStatusResponse
      */
@@ -188,6 +218,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryExportDomainExpireSnatchsResponse> queryExportDomainExpireSnatchs(QueryExportDomainExpireSnatchsRequest request);
 
     /**
+     * @param request the request parameters of QueryPendingPushList  QueryPendingPushListRequest
+     * @return QueryPendingPushListResponse
+     */
+    CompletableFuture<QueryPendingPushListResponse> queryPendingPushList(QueryPendingPushListRequest request);
+
+    /**
      * @param request the request parameters of QueryPurchasedDomains  QueryPurchasedDomainsRequest
      * @return QueryPurchasedDomainsResponse
      */
@@ -204,6 +240,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RefuseDemandResponse
      */
     CompletableFuture<RefuseDemandResponse> refuseDemand(RefuseDemandRequest request);
+
+    /**
+     * @param request the request parameters of RejectPush  RejectPushRequest
+     * @return RejectPushResponse
+     */
+    CompletableFuture<RejectPushResponse> rejectPush(RejectPushRequest request);
 
     /**
      * @param request the request parameters of RequestPayDemand  RequestPayDemandRequest
