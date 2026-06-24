@@ -18,11 +18,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDiagnosisItemsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    private String instanceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("lang")
     private String lang;
 
     private ListDiagnosisItemsRequest(Builder builder) {
         super(builder);
+        this.instanceId = builder.instanceId;
         this.lang = builder.lang;
     }
 
@@ -40,6 +45,13 @@ public class ListDiagnosisItemsRequest extends Request {
     }
 
     /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
      * @return lang
      */
     public String getLang() {
@@ -47,6 +59,7 @@ public class ListDiagnosisItemsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListDiagnosisItemsRequest, Builder> {
+        private String instanceId; 
         private String lang; 
 
         private Builder() {
@@ -55,8 +68,18 @@ public class ListDiagnosisItemsRequest extends Request {
 
         private Builder(ListDiagnosisItemsRequest request) {
             super(request);
+            this.instanceId = request.instanceId;
             this.lang = request.lang;
         } 
+
+        /**
+         * instanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("instanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
 
         /**
          * lang.

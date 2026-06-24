@@ -98,14 +98,34 @@ public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
      * <p>DescribeDiagnosisSettingsResponseBody</p>
      */
     public static class Result extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("authorizationStatus")
+        private Boolean authorizationStatus;
+
+        @com.aliyun.core.annotation.NameInMap("dailyLimit")
+        private Integer dailyLimit;
+
+        @com.aliyun.core.annotation.NameInMap("dailyScheduleEnabled")
+        private Boolean dailyScheduleEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("diagnosisMode")
+        private String diagnosisMode;
+
         @com.aliyun.core.annotation.NameInMap("scene")
         private String scene;
+
+        @com.aliyun.core.annotation.NameInMap("selectedItems")
+        private java.util.List<String> selectedItems;
 
         @com.aliyun.core.annotation.NameInMap("updateTime")
         private Long updateTime;
 
         private Result(Builder builder) {
+            this.authorizationStatus = builder.authorizationStatus;
+            this.dailyLimit = builder.dailyLimit;
+            this.dailyScheduleEnabled = builder.dailyScheduleEnabled;
+            this.diagnosisMode = builder.diagnosisMode;
             this.scene = builder.scene;
+            this.selectedItems = builder.selectedItems;
             this.updateTime = builder.updateTime;
         }
 
@@ -118,10 +138,45 @@ public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
         }
 
         /**
+         * @return authorizationStatus
+         */
+        public Boolean getAuthorizationStatus() {
+            return this.authorizationStatus;
+        }
+
+        /**
+         * @return dailyLimit
+         */
+        public Integer getDailyLimit() {
+            return this.dailyLimit;
+        }
+
+        /**
+         * @return dailyScheduleEnabled
+         */
+        public Boolean getDailyScheduleEnabled() {
+            return this.dailyScheduleEnabled;
+        }
+
+        /**
+         * @return diagnosisMode
+         */
+        public String getDiagnosisMode() {
+            return this.diagnosisMode;
+        }
+
+        /**
          * @return scene
          */
         public String getScene() {
             return this.scene;
+        }
+
+        /**
+         * @return selectedItems
+         */
+        public java.util.List<String> getSelectedItems() {
+            return this.selectedItems;
         }
 
         /**
@@ -132,16 +187,58 @@ public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean authorizationStatus; 
+            private Integer dailyLimit; 
+            private Boolean dailyScheduleEnabled; 
+            private String diagnosisMode; 
             private String scene; 
+            private java.util.List<String> selectedItems; 
             private Long updateTime; 
 
             private Builder() {
             } 
 
             private Builder(Result model) {
+                this.authorizationStatus = model.authorizationStatus;
+                this.dailyLimit = model.dailyLimit;
+                this.dailyScheduleEnabled = model.dailyScheduleEnabled;
+                this.diagnosisMode = model.diagnosisMode;
                 this.scene = model.scene;
+                this.selectedItems = model.selectedItems;
                 this.updateTime = model.updateTime;
             } 
+
+            /**
+             * authorizationStatus.
+             */
+            public Builder authorizationStatus(Boolean authorizationStatus) {
+                this.authorizationStatus = authorizationStatus;
+                return this;
+            }
+
+            /**
+             * dailyLimit.
+             */
+            public Builder dailyLimit(Integer dailyLimit) {
+                this.dailyLimit = dailyLimit;
+                return this;
+            }
+
+            /**
+             * dailyScheduleEnabled.
+             */
+            public Builder dailyScheduleEnabled(Boolean dailyScheduleEnabled) {
+                this.dailyScheduleEnabled = dailyScheduleEnabled;
+                return this;
+            }
+
+            /**
+             * diagnosisMode.
+             */
+            public Builder diagnosisMode(String diagnosisMode) {
+                this.diagnosisMode = diagnosisMode;
+                return this;
+            }
 
             /**
              * <p>Scenarios of intelligent maintenance.</p>
@@ -151,6 +248,14 @@ public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
              */
             public Builder scene(String scene) {
                 this.scene = scene;
+                return this;
+            }
+
+            /**
+             * selectedItems.
+             */
+            public Builder selectedItems(java.util.List<String> selectedItems) {
+                this.selectedItems = selectedItems;
                 return this;
             }
 

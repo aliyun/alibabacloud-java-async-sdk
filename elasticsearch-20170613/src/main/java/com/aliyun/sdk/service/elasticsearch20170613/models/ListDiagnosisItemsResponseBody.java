@@ -98,6 +98,9 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("esApiRequired")
+        private Boolean esApiRequired;
+
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
@@ -106,6 +109,7 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
 
         private Result(Builder builder) {
             this.description = builder.description;
+            this.esApiRequired = builder.esApiRequired;
             this.key = builder.key;
             this.name = builder.name;
         }
@@ -126,6 +130,13 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
         }
 
         /**
+         * @return esApiRequired
+         */
+        public Boolean getEsApiRequired() {
+            return this.esApiRequired;
+        }
+
+        /**
          * @return key
          */
         public String getKey() {
@@ -141,6 +152,7 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String description; 
+            private Boolean esApiRequired; 
             private String key; 
             private String name; 
 
@@ -149,6 +161,7 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
 
             private Builder(Result model) {
                 this.description = model.description;
+                this.esApiRequired = model.esApiRequired;
                 this.key = model.key;
                 this.name = model.name;
             } 
@@ -158,6 +171,14 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * esApiRequired.
+             */
+            public Builder esApiRequired(Boolean esApiRequired) {
+                this.esApiRequired = esApiRequired;
                 return this;
             }
 

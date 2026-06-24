@@ -30,7 +30,31 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "elasticsearch";
         this.version = "2017-06-13";
         this.endpointRule = "regional";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("us-west-1", "elasticsearch.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "elasticsearch.us-east-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "elasticsearch.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "elasticsearch.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "elasticsearch.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "elasticsearch.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "elasticsearch.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "elasticsearch.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "elasticsearch.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "elasticsearch.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "elasticsearch.cn-north-2-gov-1.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "elasticsearch.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "elasticsearch.cn-hangzhou-finance.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "elasticsearch.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "elasticsearch.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "elasticsearch.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "elasticsearch.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "elasticsearch.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "elasticsearch.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "elasticsearch.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "elasticsearch.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-south-1", "elasticsearch.ap-south-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "elasticsearch.ap-northeast-1.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
