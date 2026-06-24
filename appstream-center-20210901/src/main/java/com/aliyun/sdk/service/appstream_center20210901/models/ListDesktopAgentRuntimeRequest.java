@@ -31,7 +31,6 @@ public class ListDesktopAgentRuntimeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AgentProvider")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String agentProvider;
 
     @com.aliyun.core.annotation.Query
@@ -75,6 +74,10 @@ public class ListDesktopAgentRuntimeRequest extends Request {
     private Boolean includeRiskInfo;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ManagementStatus")
+    private String managementStatus;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ModelConfigure")
     private Boolean modelConfigure;
 
@@ -114,6 +117,7 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         this.hasAuthUser = builder.hasAuthUser;
         this.hasRisk = builder.hasRisk;
         this.includeRiskInfo = builder.includeRiskInfo;
+        this.managementStatus = builder.managementStatus;
         this.modelConfigure = builder.modelConfigure;
         this.modelTemplateId = builder.modelTemplateId;
         this.pageNumber = builder.pageNumber;
@@ -234,6 +238,13 @@ public class ListDesktopAgentRuntimeRequest extends Request {
     }
 
     /**
+     * @return managementStatus
+     */
+    public String getManagementStatus() {
+        return this.managementStatus;
+    }
+
+    /**
      * @return modelConfigure
      */
     public Boolean getModelConfigure() {
@@ -290,6 +301,7 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         private Boolean hasAuthUser; 
         private Boolean hasRisk; 
         private Boolean includeRiskInfo; 
+        private String managementStatus; 
         private Boolean modelConfigure; 
         private String modelTemplateId; 
         private Integer pageNumber; 
@@ -317,6 +329,7 @@ public class ListDesktopAgentRuntimeRequest extends Request {
             this.hasAuthUser = request.hasAuthUser;
             this.hasRisk = request.hasRisk;
             this.includeRiskInfo = request.includeRiskInfo;
+            this.managementStatus = request.managementStatus;
             this.modelConfigure = request.modelConfigure;
             this.modelTemplateId = request.modelTemplateId;
             this.pageNumber = request.pageNumber;
@@ -353,10 +366,7 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>OpenClaw</p>
+         * AgentProvider.
          */
         public Builder agentProvider(String agentProvider) {
             this.putQueryParameter("AgentProvider", agentProvider);
@@ -451,6 +461,15 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         public Builder includeRiskInfo(Boolean includeRiskInfo) {
             this.putQueryParameter("IncludeRiskInfo", includeRiskInfo);
             this.includeRiskInfo = includeRiskInfo;
+            return this;
+        }
+
+        /**
+         * ManagementStatus.
+         */
+        public Builder managementStatus(String managementStatus) {
+            this.putQueryParameter("ManagementStatus", managementStatus);
+            this.managementStatus = managementStatus;
             return this;
         }
 

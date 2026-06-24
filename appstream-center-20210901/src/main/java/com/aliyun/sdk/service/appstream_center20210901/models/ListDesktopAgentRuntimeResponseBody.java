@@ -239,6 +239,12 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentInstanceVersion")
         private String agentInstanceVersion;
 
+        @com.aliyun.core.annotation.NameInMap("AgentPlatform")
+        private String agentPlatform;
+
+        @com.aliyun.core.annotation.NameInMap("AgentProvider")
+        private String agentProvider;
+
         @com.aliyun.core.annotation.NameInMap("ChannelConfigure")
         private Boolean channelConfigure;
 
@@ -257,6 +263,8 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         private AgentInstanceInfoList(Builder builder) {
             this.agentInstanceStatus = builder.agentInstanceStatus;
             this.agentInstanceVersion = builder.agentInstanceVersion;
+            this.agentPlatform = builder.agentPlatform;
+            this.agentProvider = builder.agentProvider;
             this.channelConfigure = builder.channelConfigure;
             this.channelConfiguredList = builder.channelConfiguredList;
             this.deploymentSource = builder.deploymentSource;
@@ -284,6 +292,20 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
          */
         public String getAgentInstanceVersion() {
             return this.agentInstanceVersion;
+        }
+
+        /**
+         * @return agentPlatform
+         */
+        public String getAgentPlatform() {
+            return this.agentPlatform;
+        }
+
+        /**
+         * @return agentProvider
+         */
+        public String getAgentProvider() {
+            return this.agentProvider;
         }
 
         /**
@@ -324,6 +346,8 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         public static final class Builder {
             private String agentInstanceStatus; 
             private String agentInstanceVersion; 
+            private String agentPlatform; 
+            private String agentProvider; 
             private Boolean channelConfigure; 
             private java.util.List<String> channelConfiguredList; 
             private String deploymentSource; 
@@ -336,6 +360,8 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             private Builder(AgentInstanceInfoList model) {
                 this.agentInstanceStatus = model.agentInstanceStatus;
                 this.agentInstanceVersion = model.agentInstanceVersion;
+                this.agentPlatform = model.agentPlatform;
+                this.agentProvider = model.agentProvider;
                 this.channelConfigure = model.channelConfigure;
                 this.channelConfiguredList = model.channelConfiguredList;
                 this.deploymentSource = model.deploymentSource;
@@ -356,6 +382,22 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
              */
             public Builder agentInstanceVersion(String agentInstanceVersion) {
                 this.agentInstanceVersion = agentInstanceVersion;
+                return this;
+            }
+
+            /**
+             * AgentPlatform.
+             */
+            public Builder agentPlatform(String agentPlatform) {
+                this.agentPlatform = agentPlatform;
+                return this;
+            }
+
+            /**
+             * AgentProvider.
+             */
+            public Builder agentProvider(String agentProvider) {
+                this.agentProvider = agentProvider;
                 return this;
             }
 
@@ -611,6 +653,9 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HasAuthUser")
         private Boolean hasAuthUser;
 
+        @com.aliyun.core.annotation.NameInMap("ManagementStatuses")
+        private java.util.List<String> managementStatuses;
+
         @com.aliyun.core.annotation.NameInMap("ModelConfigure")
         private Boolean modelConfigure;
 
@@ -651,6 +696,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             this.desktopName = builder.desktopName;
             this.desktopStatus = builder.desktopStatus;
             this.hasAuthUser = builder.hasAuthUser;
+            this.managementStatuses = builder.managementStatuses;
             this.modelConfigure = builder.modelConfigure;
             this.modelTemplateId = builder.modelTemplateId;
             this.modelTemplateName = builder.modelTemplateName;
@@ -735,6 +781,13 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         }
 
         /**
+         * @return managementStatuses
+         */
+        public java.util.List<String> getManagementStatuses() {
+            return this.managementStatuses;
+        }
+
+        /**
          * @return modelConfigure
          */
         public Boolean getModelConfigure() {
@@ -814,6 +867,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             private String desktopName; 
             private String desktopStatus; 
             private Boolean hasAuthUser; 
+            private java.util.List<String> managementStatuses; 
             private Boolean modelConfigure; 
             private String modelTemplateId; 
             private String modelTemplateName; 
@@ -838,6 +892,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
                 this.desktopName = model.desktopName;
                 this.desktopStatus = model.desktopStatus;
                 this.hasAuthUser = model.hasAuthUser;
+                this.managementStatuses = model.managementStatuses;
                 this.modelConfigure = model.modelConfigure;
                 this.modelTemplateId = model.modelTemplateId;
                 this.modelTemplateName = model.modelTemplateName;
@@ -919,6 +974,14 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
              */
             public Builder hasAuthUser(Boolean hasAuthUser) {
                 this.hasAuthUser = hasAuthUser;
+                return this;
+            }
+
+            /**
+             * ManagementStatuses.
+             */
+            public Builder managementStatuses(java.util.List<String> managementStatuses) {
+                this.managementStatuses = managementStatuses;
                 return this;
             }
 
