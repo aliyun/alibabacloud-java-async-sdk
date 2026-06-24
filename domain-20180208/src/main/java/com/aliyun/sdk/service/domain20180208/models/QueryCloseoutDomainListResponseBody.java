@@ -155,6 +155,9 @@ public class QueryCloseoutDomainListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IcpStatus")
         private Boolean icpStatus;
 
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private Long id;
+
         @com.aliyun.core.annotation.NameInMap("Introduction")
         private String introduction;
 
@@ -236,6 +239,7 @@ public class QueryCloseoutDomainListResponseBody extends TeaModel {
             this.freezeAmount = builder.freezeAmount;
             this.icpNumber = builder.icpNumber;
             this.icpStatus = builder.icpStatus;
+            this.id = builder.id;
             this.introduction = builder.introduction;
             this.isPremium = builder.isPremium;
             this.partnerTypes = builder.partnerTypes;
@@ -407,6 +411,13 @@ public class QueryCloseoutDomainListResponseBody extends TeaModel {
         }
 
         /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        /**
          * @return introduction
          */
         public String getIntroduction() {
@@ -567,6 +578,7 @@ public class QueryCloseoutDomainListResponseBody extends TeaModel {
             private Double freezeAmount; 
             private String icpNumber; 
             private Boolean icpStatus; 
+            private Long id; 
             private String introduction; 
             private Boolean isPremium; 
             private String partnerTypes; 
@@ -612,6 +624,7 @@ public class QueryCloseoutDomainListResponseBody extends TeaModel {
                 this.freezeAmount = model.freezeAmount;
                 this.icpNumber = model.icpNumber;
                 this.icpStatus = model.icpStatus;
+                this.id = model.id;
                 this.introduction = model.introduction;
                 this.isPremium = model.isPremium;
                 this.partnerTypes = model.partnerTypes;
@@ -791,6 +804,14 @@ public class QueryCloseoutDomainListResponseBody extends TeaModel {
              */
             public Builder icpStatus(Boolean icpStatus) {
                 this.icpStatus = icpStatus;
+                return this;
+            }
+
+            /**
+             * Id.
+             */
+            public Builder id(Long id) {
+                this.id = id;
                 return this;
             }
 
