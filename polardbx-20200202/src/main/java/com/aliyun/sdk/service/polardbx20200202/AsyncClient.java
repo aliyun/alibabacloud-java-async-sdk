@@ -38,6 +38,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AllocateInstancePublicConnectionResponse> allocateInstancePublicConnection(AllocateInstancePublicConnectionRequest request);
 
     /**
+     * @param request the request parameters of AllocateMem0PublicConnection  AllocateMem0PublicConnectionRequest
+     * @return AllocateMem0PublicConnectionResponse
+     */
+    CompletableFuture<AllocateMem0PublicConnectionResponse> allocateMem0PublicConnection(AllocateMem0PublicConnectionRequest request);
+
+    /**
      * @param request the request parameters of AttachColumnarInstance  AttachColumnarInstanceRequest
      * @return AttachColumnarInstanceResponse
      */
@@ -792,6 +798,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ReleaseInstancePublicConnectionResponse
      */
     CompletableFuture<ReleaseInstancePublicConnectionResponse> releaseInstancePublicConnection(ReleaseInstancePublicConnectionRequest request);
+
+    /**
+     * @param request the request parameters of ReleaseMem0PublicConnection  ReleaseMem0PublicConnectionRequest
+     * @return ReleaseMem0PublicConnectionResponse
+     */
+    CompletableFuture<ReleaseMem0PublicConnectionResponse> releaseMem0PublicConnection(ReleaseMem0PublicConnectionRequest request);
 
     /**
      * @param request the request parameters of ResetAccountPassword  ResetAccountPasswordRequest

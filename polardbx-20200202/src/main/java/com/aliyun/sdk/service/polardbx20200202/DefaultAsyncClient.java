@@ -152,6 +152,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AllocateMem0PublicConnection  AllocateMem0PublicConnectionRequest
+     * @return AllocateMem0PublicConnectionResponse
+     */
+    @Override
+    public CompletableFuture<AllocateMem0PublicConnectionResponse> allocateMem0PublicConnection(AllocateMem0PublicConnectionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AllocateMem0PublicConnection").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AllocateMem0PublicConnectionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AllocateMem0PublicConnectionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of AttachColumnarInstance  AttachColumnarInstanceRequest
      * @return AttachColumnarInstanceResponse
      */
@@ -2366,6 +2384,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ReleaseInstancePublicConnectionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ReleaseMem0PublicConnection  ReleaseMem0PublicConnectionRequest
+     * @return ReleaseMem0PublicConnectionResponse
+     */
+    @Override
+    public CompletableFuture<ReleaseMem0PublicConnectionResponse> releaseMem0PublicConnection(ReleaseMem0PublicConnectionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ReleaseMem0PublicConnection").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ReleaseMem0PublicConnectionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ReleaseMem0PublicConnectionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
