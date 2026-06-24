@@ -581,6 +581,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<NotifyAppNotificationForAdminResponse> notifyAppNotificationForAdmin(NotifyAppNotificationForAdminRequest request);
 
     /**
+     * @param request the request parameters of OfflineAppInstance  OfflineAppInstanceRequest
+     * @return OfflineAppInstanceResponse
+     */
+    CompletableFuture<OfflineAppInstanceResponse> offlineAppInstance(OfflineAppInstanceRequest request);
+
+    /**
+     * @param request the request parameters of OnlineAppInstance  OnlineAppInstanceRequest
+     * @return OnlineAppInstanceResponse
+     */
+    CompletableFuture<OnlineAppInstanceResponse> onlineAppInstance(OnlineAppInstanceRequest request);
+
+    /**
      * @param request the request parameters of OperateAppInstanceForPartner  OperateAppInstanceForPartnerRequest
      * @return OperateAppInstanceForPartnerResponse
      */
