@@ -53,6 +53,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request);
 
     /**
+     * @param request the request parameters of CreateOpenSourceAccount  CreateOpenSourceAccountRequest
+     * @return CreateOpenSourceAccountResponse
+     */
+    CompletableFuture<CreateOpenSourceAccountResponse> createOpenSourceAccount(CreateOpenSourceAccountRequest request);
+
+    /**
+     * @param request the request parameters of CreateOpenSourcePermission  CreateOpenSourcePermissionRequest
+     * @return CreateOpenSourcePermissionResponse
+     */
+    CompletableFuture<CreateOpenSourcePermissionResponse> createOpenSourcePermission(CreateOpenSourcePermissionRequest request);
+
+    /**
      * @param request the request parameters of CreateQueue  CreateQueueRequest
      * @return CreateQueueResponse
      */
@@ -88,6 +100,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteExchangeResponse
      */
     CompletableFuture<DeleteExchangeResponse> deleteExchange(DeleteExchangeRequest request);
+
+    /**
+     * @param request the request parameters of DeleteOpenSourceAccount  DeleteOpenSourceAccountRequest
+     * @return DeleteOpenSourceAccountResponse
+     */
+    CompletableFuture<DeleteOpenSourceAccountResponse> deleteOpenSourceAccount(DeleteOpenSourceAccountRequest request);
+
+    /**
+     * @param request the request parameters of DeleteOpenSourcePermission  DeleteOpenSourcePermissionRequest
+     * @return DeleteOpenSourcePermissionResponse
+     */
+    CompletableFuture<DeleteOpenSourcePermissionResponse> deleteOpenSourcePermission(DeleteOpenSourcePermissionRequest request);
 
     /**
      * @param request the request parameters of DeleteQueue  DeleteQueueRequest
@@ -159,6 +183,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
 
     /**
+     * @param request the request parameters of ListOpenSourceAccounts  ListOpenSourceAccountsRequest
+     * @return ListOpenSourceAccountsResponse
+     */
+    CompletableFuture<ListOpenSourceAccountsResponse> listOpenSourceAccounts(ListOpenSourceAccountsRequest request);
+
+    /**
+     * @param request the request parameters of ListOpenSourcePermissions  ListOpenSourcePermissionsRequest
+     * @return ListOpenSourcePermissionsResponse
+     */
+    CompletableFuture<ListOpenSourcePermissionsResponse> listOpenSourcePermissions(ListOpenSourcePermissionsRequest request);
+
+    /**
      * <b>description</b> :
      * <p>ApsaraMQ for RabbitMQ allows you to query only online consumers.</p>
      * 
@@ -208,5 +244,17 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateInstanceServerlessSwitchResponse
      */
     CompletableFuture<UpdateInstanceServerlessSwitchResponse> updateInstanceServerlessSwitch(UpdateInstanceServerlessSwitchRequest request);
+
+    /**
+     * @param request the request parameters of UpdateOpenSourceAccount  UpdateOpenSourceAccountRequest
+     * @return UpdateOpenSourceAccountResponse
+     */
+    CompletableFuture<UpdateOpenSourceAccountResponse> updateOpenSourceAccount(UpdateOpenSourceAccountRequest request);
+
+    /**
+     * @param request the request parameters of UpdateOpenSourcePermission  UpdateOpenSourcePermissionRequest
+     * @return UpdateOpenSourcePermissionResponse
+     */
+    CompletableFuture<UpdateOpenSourcePermissionResponse> updateOpenSourcePermission(UpdateOpenSourcePermissionRequest request);
 
 }
