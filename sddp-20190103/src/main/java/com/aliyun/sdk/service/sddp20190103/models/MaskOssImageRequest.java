@@ -27,6 +27,10 @@ public class MaskOssImageRequest extends Request {
     private Boolean isAlwaysUpload;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsCoverObject")
+    private Boolean isCoverObject;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IsSupportRestore")
     private Boolean isSupportRestore;
 
@@ -53,6 +57,7 @@ public class MaskOssImageRequest extends Request {
         super(builder);
         this.bucketName = builder.bucketName;
         this.isAlwaysUpload = builder.isAlwaysUpload;
+        this.isCoverObject = builder.isCoverObject;
         this.isSupportRestore = builder.isSupportRestore;
         this.lang = builder.lang;
         this.maskRuleIdList = builder.maskRuleIdList;
@@ -85,6 +90,13 @@ public class MaskOssImageRequest extends Request {
      */
     public Boolean getIsAlwaysUpload() {
         return this.isAlwaysUpload;
+    }
+
+    /**
+     * @return isCoverObject
+     */
+    public Boolean getIsCoverObject() {
+        return this.isCoverObject;
     }
 
     /**
@@ -125,6 +137,7 @@ public class MaskOssImageRequest extends Request {
     public static final class Builder extends Request.Builder<MaskOssImageRequest, Builder> {
         private String bucketName; 
         private Boolean isAlwaysUpload; 
+        private Boolean isCoverObject; 
         private Boolean isSupportRestore; 
         private String lang; 
         private String maskRuleIdList; 
@@ -139,6 +152,7 @@ public class MaskOssImageRequest extends Request {
             super(request);
             this.bucketName = request.bucketName;
             this.isAlwaysUpload = request.isAlwaysUpload;
+            this.isCoverObject = request.isCoverObject;
             this.isSupportRestore = request.isSupportRestore;
             this.lang = request.lang;
             this.maskRuleIdList = request.maskRuleIdList;
@@ -164,6 +178,15 @@ public class MaskOssImageRequest extends Request {
         public Builder isAlwaysUpload(Boolean isAlwaysUpload) {
             this.putQueryParameter("IsAlwaysUpload", isAlwaysUpload);
             this.isAlwaysUpload = isAlwaysUpload;
+            return this;
+        }
+
+        /**
+         * IsCoverObject.
+         */
+        public Builder isCoverObject(Boolean isCoverObject) {
+            this.putQueryParameter("IsCoverObject", isCoverObject);
+            this.isCoverObject = isCoverObject;
             return this;
         }
 

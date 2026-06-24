@@ -473,6 +473,9 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Categories")
         private java.util.List<String> categories;
 
+        @com.aliyun.core.annotation.NameInMap("ClusterType")
+        private String clusterType;
+
         @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
@@ -580,6 +583,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
 
         private Items(Builder builder) {
             this.categories = builder.categories;
+            this.clusterType = builder.clusterType;
             this.comment = builder.comment;
             this.dataType = builder.dataType;
             this.dbName = builder.dbName;
@@ -630,6 +634,13 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
          */
         public java.util.List<String> getCategories() {
             return this.categories;
+        }
+
+        /**
+         * @return clusterType
+         */
+        public String getClusterType() {
+            return this.clusterType;
         }
 
         /**
@@ -879,6 +890,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> categories; 
+            private String clusterType; 
             private String comment; 
             private String dataType; 
             private String dbName; 
@@ -920,6 +932,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
 
             private Builder(Items model) {
                 this.categories = model.categories;
+                this.clusterType = model.clusterType;
                 this.comment = model.comment;
                 this.dataType = model.dataType;
                 this.dbName = model.dbName;
@@ -962,6 +975,14 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
              */
             public Builder categories(java.util.List<String> categories) {
                 this.categories = categories;
+                return this;
+            }
+
+            /**
+             * ClusterType.
+             */
+            public Builder clusterType(String clusterType) {
+                this.clusterType = clusterType;
                 return this;
             }
 

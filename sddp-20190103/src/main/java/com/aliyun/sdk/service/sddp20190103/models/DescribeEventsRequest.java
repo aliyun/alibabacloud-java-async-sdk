@@ -27,7 +27,7 @@ public class DescribeEventsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
-    private String endTime;
+    private Long endTime;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Id")
@@ -51,7 +51,7 @@ public class DescribeEventsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
-    private String startTime;
+    private Long startTime;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
@@ -131,7 +131,7 @@ public class DescribeEventsRequest extends Request {
     /**
      * @return endTime
      */
-    public String getEndTime() {
+    public Long getEndTime() {
         return this.endTime;
     }
 
@@ -173,7 +173,7 @@ public class DescribeEventsRequest extends Request {
     /**
      * @return startTime
      */
-    public String getStartTime() {
+    public Long getStartTime() {
         return this.startTime;
     }
 
@@ -229,13 +229,13 @@ public class DescribeEventsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeEventsRequest, Builder> {
         private Integer currentPage; 
         private String dealUserId; 
-        private String endTime; 
+        private Long endTime; 
         private Long id; 
         private String instanceName; 
         private String lang; 
         private Integer pageSize; 
         private String productCode; 
-        private String startTime; 
+        private Long startTime; 
         private String status; 
         private String subTypeCode; 
         private String targetProductCode; 
@@ -298,7 +298,7 @@ public class DescribeEventsRequest extends Request {
          * <strong>example:</strong>
          * <p>1698700000</p>
          */
-        public Builder endTime(String endTime) {
+        public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
             return this;
@@ -374,7 +374,7 @@ public class DescribeEventsRequest extends Request {
          * <strong>example:</strong>
          * <p>1657900000</p>
          */
-        public Builder startTime(String startTime) {
+        public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
             return this;

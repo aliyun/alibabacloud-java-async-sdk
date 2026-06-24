@@ -257,6 +257,9 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProductId")
         private Long productId;
 
+        @com.aliyun.core.annotation.NameInMap("RamConsoleLink")
+        private String ramConsoleLink;
+
         @com.aliyun.core.annotation.NameInMap("RuleCategory")
         private String ruleCategory;
 
@@ -311,6 +314,7 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             this.packageName = builder.packageName;
             this.productCode = builder.productCode;
             this.productId = builder.productId;
+            this.ramConsoleLink = builder.ramConsoleLink;
             this.ruleCategory = builder.ruleCategory;
             this.ruleId = builder.ruleId;
             this.ruleName = builder.ruleName;
@@ -513,6 +517,13 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         }
 
         /**
+         * @return ramConsoleLink
+         */
+        public String getRamConsoleLink() {
+            return this.ramConsoleLink;
+        }
+
+        /**
          * @return ruleCategory
          */
         public String getRuleCategory() {
@@ -602,6 +613,7 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             private String packageName; 
             private String productCode; 
             private Long productId; 
+            private String ramConsoleLink; 
             private String ruleCategory; 
             private String ruleId; 
             private String ruleName; 
@@ -642,6 +654,7 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
                 this.packageName = model.packageName;
                 this.productCode = model.productCode;
                 this.productId = model.productId;
+                this.ramConsoleLink = model.ramConsoleLink;
                 this.ruleCategory = model.ruleCategory;
                 this.ruleId = model.ruleId;
                 this.ruleName = model.ruleName;
@@ -858,6 +871,14 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
              */
             public Builder productId(Long productId) {
                 this.productId = productId;
+                return this;
+            }
+
+            /**
+             * RamConsoleLink.
+             */
+            public Builder ramConsoleLink(String ramConsoleLink) {
+                this.ramConsoleLink = ramConsoleLink;
                 return this;
             }
 
