@@ -97,6 +97,60 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
      *
      * <p>DescribeInstanceTopologyResponseBody</p>
      */
+    public static class NetworkNodes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("NetworkNodes")
+        private java.util.List<String> networkNodes;
+
+        private NetworkNodes(Builder builder) {
+            this.networkNodes = builder.networkNodes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkNodes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return networkNodes
+         */
+        public java.util.List<String> getNetworkNodes() {
+            return this.networkNodes;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> networkNodes; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkNodes model) {
+                this.networkNodes = model.networkNodes;
+            } 
+
+            /**
+             * NetworkNodes.
+             */
+            public Builder networkNodes(java.util.List<String> networkNodes) {
+                this.networkNodes = networkNodes;
+                return this;
+            }
+
+            public NetworkNodes build() {
+                return new NetworkNodes(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTopologyResponseBody</p>
+     */
     public static class Topology extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
@@ -104,9 +158,13 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
+        @com.aliyun.core.annotation.NameInMap("NetworkNodes")
+        private NetworkNodes networkNodes;
+
         private Topology(Builder builder) {
             this.hostId = builder.hostId;
             this.instanceId = builder.instanceId;
+            this.networkNodes = builder.networkNodes;
         }
 
         public static Builder builder() {
@@ -131,9 +189,17 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             return this.instanceId;
         }
 
+        /**
+         * @return networkNodes
+         */
+        public NetworkNodes getNetworkNodes() {
+            return this.networkNodes;
+        }
+
         public static final class Builder {
             private String hostId; 
             private String instanceId; 
+            private NetworkNodes networkNodes; 
 
             private Builder() {
             } 
@@ -141,6 +207,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private Builder(Topology model) {
                 this.hostId = model.hostId;
                 this.instanceId = model.instanceId;
+                this.networkNodes = model.networkNodes;
             } 
 
             /**
@@ -162,6 +229,14 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * NetworkNodes.
+             */
+            public Builder networkNodes(NetworkNodes networkNodes) {
+                this.networkNodes = networkNodes;
                 return this;
             }
 

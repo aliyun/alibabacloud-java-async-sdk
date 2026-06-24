@@ -674,6 +674,9 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InactiveDisks")
         private InactiveDisks inactiveDisks;
 
+        @com.aliyun.core.annotation.NameInMap("InitialNotBefore")
+        private String initialNotBefore;
+
         @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
@@ -709,6 +712,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             this.hostId = builder.hostId;
             this.hostType = builder.hostType;
             this.inactiveDisks = builder.inactiveDisks;
+            this.initialNotBefore = builder.initialNotBefore;
             this.metricName = builder.metricName;
             this.metricValue = builder.metricValue;
             this.migrationOptions = builder.migrationOptions;
@@ -775,6 +779,13 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
          */
         public InactiveDisks getInactiveDisks() {
             return this.inactiveDisks;
+        }
+
+        /**
+         * @return initialNotBefore
+         */
+        public String getInitialNotBefore() {
+            return this.initialNotBefore;
         }
 
         /**
@@ -848,6 +859,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             private String hostId; 
             private String hostType; 
             private InactiveDisks inactiveDisks; 
+            private String initialNotBefore; 
             private String metricName; 
             private String metricValue; 
             private MigrationOptions migrationOptions; 
@@ -869,6 +881,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
                 this.hostId = model.hostId;
                 this.hostType = model.hostType;
                 this.inactiveDisks = model.inactiveDisks;
+                this.initialNotBefore = model.initialNotBefore;
                 this.metricName = model.metricName;
                 this.metricValue = model.metricValue;
                 this.migrationOptions = model.migrationOptions;
@@ -955,6 +968,14 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
              */
             public Builder inactiveDisks(InactiveDisks inactiveDisks) {
                 this.inactiveDisks = inactiveDisks;
+                return this;
+            }
+
+            /**
+             * InitialNotBefore.
+             */
+            public Builder initialNotBefore(String initialNotBefore) {
+                this.initialNotBefore = initialNotBefore;
                 return this;
             }
 
