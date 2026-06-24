@@ -38,6 +38,10 @@ public class ListDataAgentSessionRequest extends Request {
     private Boolean isSaved;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mode")
+    private String mode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -64,6 +68,7 @@ public class ListDataAgentSessionRequest extends Request {
         this.customAgentId = builder.customAgentId;
         this.DMSUnit = builder.DMSUnit;
         this.isSaved = builder.isSaved;
+        this.mode = builder.mode;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.queryType = builder.queryType;
@@ -120,6 +125,13 @@ public class ListDataAgentSessionRequest extends Request {
     }
 
     /**
+     * @return mode
+     */
+    public String getMode() {
+        return this.mode;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -160,6 +172,7 @@ public class ListDataAgentSessionRequest extends Request {
         private String customAgentId; 
         private String DMSUnit; 
         private Boolean isSaved; 
+        private String mode; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String queryType; 
@@ -177,6 +190,7 @@ public class ListDataAgentSessionRequest extends Request {
             this.customAgentId = request.customAgentId;
             this.DMSUnit = request.DMSUnit;
             this.isSaved = request.isSaved;
+            this.mode = request.mode;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.queryType = request.queryType;
@@ -226,6 +240,15 @@ public class ListDataAgentSessionRequest extends Request {
         public Builder isSaved(Boolean isSaved) {
             this.putQueryParameter("IsSaved", isSaved);
             this.isSaved = isSaved;
+            return this;
+        }
+
+        /**
+         * Mode.
+         */
+        public Builder mode(String mode) {
+            this.putQueryParameter("Mode", mode);
+            this.mode = mode;
             return this;
         }
 

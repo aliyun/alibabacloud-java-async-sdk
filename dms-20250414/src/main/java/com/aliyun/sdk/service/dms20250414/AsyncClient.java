@@ -292,6 +292,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetNotebookTaskStatusResponse> getNotebookTaskStatus(GetNotebookTaskStatusRequest request);
 
     /**
+     * @param request the request parameters of GetSqlConsoleOperationLog  GetSqlConsoleOperationLogRequest
+     * @return GetSqlConsoleOperationLogResponse
+     */
+    CompletableFuture<GetSqlConsoleOperationLogResponse> getSqlConsoleOperationLog(GetSqlConsoleOperationLogRequest request);
+
+    /**
      * @param request the request parameters of GetWorkspaceCode  GetWorkspaceCodeRequest
      * @return GetWorkspaceCodeResponse
      */
