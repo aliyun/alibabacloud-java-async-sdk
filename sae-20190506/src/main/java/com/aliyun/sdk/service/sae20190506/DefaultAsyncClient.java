@@ -30,7 +30,23 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "sae";
         this.version = "2019-05-06";
         this.endpointRule = "regional";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("us-west-1", "sae.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "sae.us-east-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "sae.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "sae.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "sae.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "sae.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "sae.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "sae.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "sae.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "sae.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "sae.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "sae.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "sae.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "sae.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "sae.ap-northeast-1.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
