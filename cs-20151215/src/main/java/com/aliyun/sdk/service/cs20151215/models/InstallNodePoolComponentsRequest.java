@@ -180,7 +180,7 @@ public class InstallNodePoolComponentsRequest extends Request {
      */
     public static class Config extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("customConfig")
-        private java.util.Map<String, String> customConfig;
+        private java.util.Map<String, ?> customConfig;
 
         private Config(Builder builder) {
             this.customConfig = builder.customConfig;
@@ -197,12 +197,12 @@ public class InstallNodePoolComponentsRequest extends Request {
         /**
          * @return customConfig
          */
-        public java.util.Map<String, String> getCustomConfig() {
+        public java.util.Map<String, ?> getCustomConfig() {
             return this.customConfig;
         }
 
         public static final class Builder {
-            private java.util.Map<String, String> customConfig; 
+            private java.util.Map<String, ?> customConfig; 
 
             private Builder() {
             } 
@@ -213,8 +213,11 @@ public class InstallNodePoolComponentsRequest extends Request {
 
             /**
              * <p>Custom parameters for the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;cpuManagerPolicy&quot;:&quot;static&quot;}</p>
              */
-            public Builder customConfig(java.util.Map<String, String> customConfig) {
+            public Builder customConfig(java.util.Map<String, ?> customConfig) {
                 this.customConfig = customConfig;
                 return this;
             }
