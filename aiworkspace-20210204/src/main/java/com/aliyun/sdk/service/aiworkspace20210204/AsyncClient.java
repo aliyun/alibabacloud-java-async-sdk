@@ -180,6 +180,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateWorkspaceResourceResponse> createWorkspaceResource(CreateWorkspaceResourceRequest request);
 
     /**
+     * @param request the request parameters of CreateWorkspaceRole  CreateWorkspaceRoleRequest
+     * @return CreateWorkspaceRoleResponse
+     */
+    CompletableFuture<CreateWorkspaceRoleResponse> createWorkspaceRole(CreateWorkspaceRoleRequest request);
+
+    /**
      * @param request the request parameters of DeleteCodeSource  DeleteCodeSourceRequest
      * @return DeleteCodeSourceResponse
      */
@@ -312,6 +318,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteWorkspaceResourceResponse> deleteWorkspaceResource(DeleteWorkspaceResourceRequest request);
 
     /**
+     * @param request the request parameters of DeleteWorkspaceRoles  DeleteWorkspaceRolesRequest
+     * @return DeleteWorkspaceRolesResponse
+     */
+    CompletableFuture<DeleteWorkspaceRolesResponse> deleteWorkspaceRoles(DeleteWorkspaceRolesRequest request);
+
+    /**
      * @param request the request parameters of GetCodeSource  GetCodeSourceRequest
      * @return GetCodeSourceResponse
      */
@@ -384,6 +396,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetImageResponse> getImage(GetImageRequest request);
 
     /**
+     * @param request the request parameters of GetInstanceJob  GetInstanceJobRequest
+     * @return GetInstanceJobResponse
+     */
+    CompletableFuture<GetInstanceJobResponse> getInstanceJob(GetInstanceJobRequest request);
+
+    /**
      * @param request the request parameters of GetMember  GetMemberRequest
      * @return GetMemberResponse
      */
@@ -418,6 +436,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetWorkspaceResponse
      */
     CompletableFuture<GetWorkspaceResponse> getWorkspace(GetWorkspaceRequest request);
+
+    /**
+     * @param request the request parameters of GetWorkspaceRole  GetWorkspaceRoleRequest
+     * @return GetWorkspaceRoleResponse
+     */
+    CompletableFuture<GetWorkspaceRoleResponse> getWorkspaceRole(GetWorkspaceRoleRequest request);
 
     /**
      * @param request the request parameters of ListCodeSources  ListCodeSourcesRequest
@@ -550,6 +574,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListUserConfigsResponse
      */
     CompletableFuture<ListUserConfigsResponse> listUserConfigs(ListUserConfigsRequest request);
+
+    /**
+     * @param request the request parameters of ListWorkspaceRoles  ListWorkspaceRolesRequest
+     * @return ListWorkspaceRolesResponse
+     */
+    CompletableFuture<ListWorkspaceRolesResponse> listWorkspaceRoles(ListWorkspaceRolesRequest request);
 
     /**
      * @param request the request parameters of ListWorkspaceUsers  ListWorkspaceUsersRequest
@@ -721,6 +751,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateWorkspaceResourceResponse
      */
     CompletableFuture<UpdateWorkspaceResourceResponse> updateWorkspaceResource(UpdateWorkspaceResourceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateWorkspaceRole  UpdateWorkspaceRoleRequest
+     * @return UpdateWorkspaceRoleResponse
+     */
+    CompletableFuture<UpdateWorkspaceRoleResponse> updateWorkspaceRole(UpdateWorkspaceRoleRequest request);
 
     /**
      * @param request the request parameters of ValidateConnection  ValidateConnectionRequest

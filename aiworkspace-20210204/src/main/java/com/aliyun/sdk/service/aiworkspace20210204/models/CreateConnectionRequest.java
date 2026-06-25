@@ -299,19 +299,35 @@ public class CreateConnectionRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
+        @com.aliyun.core.annotation.NameInMap("MaxModelLength")
+        private Long maxModelLength;
+
         @com.aliyun.core.annotation.NameInMap("Model")
         private String model;
 
         @com.aliyun.core.annotation.NameInMap("ModelType")
         private String modelType;
 
+        @com.aliyun.core.annotation.NameInMap("SupportReasoning")
+        private Boolean supportReasoning;
+
+        @com.aliyun.core.annotation.NameInMap("SupportResponseSchema")
+        private Boolean supportResponseSchema;
+
+        @com.aliyun.core.annotation.NameInMap("SupportVision")
+        private Boolean supportVision;
+
         @com.aliyun.core.annotation.NameInMap("ToolCall")
         private Boolean toolCall;
 
         private Models(Builder builder) {
             this.displayName = builder.displayName;
+            this.maxModelLength = builder.maxModelLength;
             this.model = builder.model;
             this.modelType = builder.modelType;
+            this.supportReasoning = builder.supportReasoning;
+            this.supportResponseSchema = builder.supportResponseSchema;
+            this.supportVision = builder.supportVision;
             this.toolCall = builder.toolCall;
         }
 
@@ -331,6 +347,13 @@ public class CreateConnectionRequest extends Request {
         }
 
         /**
+         * @return maxModelLength
+         */
+        public Long getMaxModelLength() {
+            return this.maxModelLength;
+        }
+
+        /**
          * @return model
          */
         public String getModel() {
@@ -345,6 +368,27 @@ public class CreateConnectionRequest extends Request {
         }
 
         /**
+         * @return supportReasoning
+         */
+        public Boolean getSupportReasoning() {
+            return this.supportReasoning;
+        }
+
+        /**
+         * @return supportResponseSchema
+         */
+        public Boolean getSupportResponseSchema() {
+            return this.supportResponseSchema;
+        }
+
+        /**
+         * @return supportVision
+         */
+        public Boolean getSupportVision() {
+            return this.supportVision;
+        }
+
+        /**
          * @return toolCall
          */
         public Boolean getToolCall() {
@@ -353,8 +397,12 @@ public class CreateConnectionRequest extends Request {
 
         public static final class Builder {
             private String displayName; 
+            private Long maxModelLength; 
             private String model; 
             private String modelType; 
+            private Boolean supportReasoning; 
+            private Boolean supportResponseSchema; 
+            private Boolean supportVision; 
             private Boolean toolCall; 
 
             private Builder() {
@@ -362,8 +410,12 @@ public class CreateConnectionRequest extends Request {
 
             private Builder(Models model) {
                 this.displayName = model.displayName;
+                this.maxModelLength = model.maxModelLength;
                 this.model = model.model;
                 this.modelType = model.modelType;
+                this.supportReasoning = model.supportReasoning;
+                this.supportResponseSchema = model.supportResponseSchema;
+                this.supportVision = model.supportVision;
                 this.toolCall = model.toolCall;
             } 
 
@@ -372,6 +424,14 @@ public class CreateConnectionRequest extends Request {
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
+                return this;
+            }
+
+            /**
+             * MaxModelLength.
+             */
+            public Builder maxModelLength(Long maxModelLength) {
+                this.maxModelLength = maxModelLength;
                 return this;
             }
 
@@ -399,6 +459,30 @@ public class CreateConnectionRequest extends Request {
              */
             public Builder modelType(String modelType) {
                 this.modelType = modelType;
+                return this;
+            }
+
+            /**
+             * SupportReasoning.
+             */
+            public Builder supportReasoning(Boolean supportReasoning) {
+                this.supportReasoning = supportReasoning;
+                return this;
+            }
+
+            /**
+             * SupportResponseSchema.
+             */
+            public Builder supportResponseSchema(Boolean supportResponseSchema) {
+                this.supportResponseSchema = supportResponseSchema;
+                return this;
+            }
+
+            /**
+             * SupportVision.
+             */
+            public Builder supportVision(Boolean supportVision) {
+                this.supportVision = supportVision;
                 return this;
             }
 

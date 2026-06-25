@@ -70,7 +70,28 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("eu-west-1", "aiworkspace.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "aiworkspace.aliyuncs.com"),
             new TeaPair("me-east-1", "aiworkspace.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "aiworkspace.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "aiworkspace.aliyuncs.com"),
+            new TeaPair("us-west-1", "aiworkspace.us-west-1.aliyuncs.com"),
+            new TeaPair("us-southeast-1", "aiworkspace.us-southeast-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "aiworkspace.us-east-1.aliyuncs.com"),
+            new TeaPair("na-south-1", "aiworkspace.na-south-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "aiworkspace.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "aiworkspace.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "aiworkspace.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "aiworkspace.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "aiworkspace.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "aiworkspace.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "aiworkspace.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "aiworkspace.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "aiworkspace.cn-guangzhou.aliyuncs.com	"),
+            new TeaPair("cn-beijing", "aiworkspace.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "aiworkspace.ap-southeast-8.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "aiworkspace.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "aiworkspace.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "aiworkspace.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-south-1", "aiworkspace.ap-south-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "aiworkspace.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "aiworkspace.ap-northeast-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -541,6 +562,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateWorkspaceRole  CreateWorkspaceRoleRequest
+     * @return CreateWorkspaceRoleResponse
+     */
+    @Override
+    public CompletableFuture<CreateWorkspaceRoleResponse> createWorkspaceRole(CreateWorkspaceRoleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateWorkspaceRole").setMethod(HttpMethod.POST).setPathRegex("/api/v1/workspaces/{WorkspaceId}/roles").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateWorkspaceRoleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateWorkspaceRoleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteCodeSource  DeleteCodeSourceRequest
      * @return DeleteCodeSourceResponse
      */
@@ -937,6 +976,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteWorkspaceRoles  DeleteWorkspaceRolesRequest
+     * @return DeleteWorkspaceRolesResponse
+     */
+    @Override
+    public CompletableFuture<DeleteWorkspaceRolesResponse> deleteWorkspaceRoles(DeleteWorkspaceRolesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteWorkspaceRoles").setMethod(HttpMethod.POST).setPathRegex("/api/v1/workspaces/{WorkspaceId}/roles/action/delete").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteWorkspaceRolesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteWorkspaceRolesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetCodeSource  GetCodeSourceRequest
      * @return GetCodeSourceResponse
      */
@@ -1153,6 +1210,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetInstanceJob  GetInstanceJobRequest
+     * @return GetInstanceJobResponse
+     */
+    @Override
+    public CompletableFuture<GetInstanceJobResponse> getInstanceJob(GetInstanceJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetInstanceJob").setMethod(HttpMethod.GET).setPathRegex("/api/v1/instancejobs/{InstanceJobId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetInstanceJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetInstanceJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetMember  GetMemberRequest
      * @return GetMemberResponse
      */
@@ -1255,6 +1330,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetWorkspaceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetWorkspaceRole  GetWorkspaceRoleRequest
+     * @return GetWorkspaceRoleResponse
+     */
+    @Override
+    public CompletableFuture<GetWorkspaceRoleResponse> getWorkspaceRole(GetWorkspaceRoleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetWorkspaceRole").setMethod(HttpMethod.GET).setPathRegex("/api/v1/workspaces/{WorkspaceId}/roles/{RoleId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetWorkspaceRoleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetWorkspaceRoleResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1651,6 +1744,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListUserConfigsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListWorkspaceRoles  ListWorkspaceRolesRequest
+     * @return ListWorkspaceRolesResponse
+     */
+    @Override
+    public CompletableFuture<ListWorkspaceRolesResponse> listWorkspaceRoles(ListWorkspaceRolesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListWorkspaceRoles").setMethod(HttpMethod.GET).setPathRegex("/api/v1/workspaces/{WorkspaceId}/roles").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListWorkspaceRolesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListWorkspaceRolesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2158,6 +2269,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateWorkspaceResourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateWorkspaceRole  UpdateWorkspaceRoleRequest
+     * @return UpdateWorkspaceRoleResponse
+     */
+    @Override
+    public CompletableFuture<UpdateWorkspaceRoleResponse> updateWorkspaceRole(UpdateWorkspaceRoleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateWorkspaceRole").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/workspaces/{WorkspaceId}/roles/{RoleId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateWorkspaceRoleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateWorkspaceRoleResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

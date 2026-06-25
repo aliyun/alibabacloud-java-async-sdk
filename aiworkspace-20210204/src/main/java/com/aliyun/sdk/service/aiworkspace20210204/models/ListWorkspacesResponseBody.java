@@ -168,6 +168,9 @@ public class ListWorkspacesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
+        private String displayName;
+
         @com.aliyun.core.annotation.NameInMap("EnvTypes")
         private java.util.List<String> envTypes;
 
@@ -199,6 +202,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             this.adminNames = builder.adminNames;
             this.creator = builder.creator;
             this.description = builder.description;
+            this.displayName = builder.displayName;
             this.envTypes = builder.envTypes;
             this.extraInfos = builder.extraInfos;
             this.gmtCreateTime = builder.gmtCreateTime;
@@ -237,6 +241,13 @@ public class ListWorkspacesResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return displayName
+         */
+        public String getDisplayName() {
+            return this.displayName;
         }
 
         /**
@@ -306,6 +317,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             private java.util.List<String> adminNames; 
             private String creator; 
             private String description; 
+            private String displayName; 
             private java.util.List<String> envTypes; 
             private java.util.Map<String, ?> extraInfos; 
             private String gmtCreateTime; 
@@ -323,6 +335,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
                 this.adminNames = model.adminNames;
                 this.creator = model.creator;
                 this.description = model.description;
+                this.displayName = model.displayName;
                 this.envTypes = model.envTypes;
                 this.extraInfos = model.extraInfos;
                 this.gmtCreateTime = model.gmtCreateTime;
@@ -361,6 +374,14 @@ public class ListWorkspacesResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * DisplayName.
+             */
+            public Builder displayName(String displayName) {
+                this.displayName = displayName;
                 return this;
             }
 
