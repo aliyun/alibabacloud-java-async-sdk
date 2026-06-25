@@ -443,6 +443,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListConsumerAuthorizationRulesResponse> listConsumerAuthorizationRules(ListConsumerAuthorizationRulesRequest request);
 
     /**
+     * @param request the request parameters of ListConsumerQuotaRules  ListConsumerQuotaRulesRequest
+     * @return ListConsumerQuotaRulesResponse
+     */
+    CompletableFuture<ListConsumerQuotaRulesResponse> listConsumerQuotaRules(ListConsumerQuotaRulesRequest request);
+
+    /**
      * @param request the request parameters of ListConsumers  ListConsumersRequest
      * @return ListConsumersResponse
      */

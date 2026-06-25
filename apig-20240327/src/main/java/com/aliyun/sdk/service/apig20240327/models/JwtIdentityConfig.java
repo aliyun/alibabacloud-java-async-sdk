@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>JwtIdentityConfig</p>
  */
 public class JwtIdentityConfig extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("claimsToHeadersConfigs")
+    private java.util.List<ClaimsToHeadersConfigs> claimsToHeadersConfigs;
+
     @com.aliyun.core.annotation.NameInMap("jwks")
     private String jwks;
 
@@ -26,6 +29,9 @@ public class JwtIdentityConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("jwtTokenConfig")
     private JwtTokenConfig jwtTokenConfig;
 
+    @com.aliyun.core.annotation.NameInMap("remoteJwks")
+    private String remoteJwks;
+
     @com.aliyun.core.annotation.NameInMap("secretType")
     private String secretType;
 
@@ -33,9 +39,11 @@ public class JwtIdentityConfig extends TeaModel {
     private String type;
 
     private JwtIdentityConfig(Builder builder) {
+        this.claimsToHeadersConfigs = builder.claimsToHeadersConfigs;
         this.jwks = builder.jwks;
         this.jwtPayloadConfig = builder.jwtPayloadConfig;
         this.jwtTokenConfig = builder.jwtTokenConfig;
+        this.remoteJwks = builder.remoteJwks;
         this.secretType = builder.secretType;
         this.type = builder.type;
     }
@@ -50,6 +58,13 @@ public class JwtIdentityConfig extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return claimsToHeadersConfigs
+     */
+    public java.util.List<ClaimsToHeadersConfigs> getClaimsToHeadersConfigs() {
+        return this.claimsToHeadersConfigs;
     }
 
     /**
@@ -74,6 +89,13 @@ public class JwtIdentityConfig extends TeaModel {
     }
 
     /**
+     * @return remoteJwks
+     */
+    public String getRemoteJwks() {
+        return this.remoteJwks;
+    }
+
+    /**
      * @return secretType
      */
     public String getSecretType() {
@@ -88,9 +110,11 @@ public class JwtIdentityConfig extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List<ClaimsToHeadersConfigs> claimsToHeadersConfigs; 
         private String jwks; 
         private JwtPayloadConfig jwtPayloadConfig; 
         private JwtTokenConfig jwtTokenConfig; 
+        private String remoteJwks; 
         private String secretType; 
         private String type; 
 
@@ -98,12 +122,22 @@ public class JwtIdentityConfig extends TeaModel {
         } 
 
         private Builder(JwtIdentityConfig model) {
+            this.claimsToHeadersConfigs = model.claimsToHeadersConfigs;
             this.jwks = model.jwks;
             this.jwtPayloadConfig = model.jwtPayloadConfig;
             this.jwtTokenConfig = model.jwtTokenConfig;
+            this.remoteJwks = model.remoteJwks;
             this.secretType = model.secretType;
             this.type = model.type;
         } 
+
+        /**
+         * claimsToHeadersConfigs.
+         */
+        public Builder claimsToHeadersConfigs(java.util.List<ClaimsToHeadersConfigs> claimsToHeadersConfigs) {
+            this.claimsToHeadersConfigs = claimsToHeadersConfigs;
+            return this;
+        }
 
         /**
          * jwks.
@@ -130,6 +164,14 @@ public class JwtIdentityConfig extends TeaModel {
         }
 
         /**
+         * remoteJwks.
+         */
+        public Builder remoteJwks(String remoteJwks) {
+            this.remoteJwks = remoteJwks;
+            return this;
+        }
+
+        /**
          * secretType.
          */
         public Builder secretType(String secretType) {
@@ -151,6 +193,102 @@ public class JwtIdentityConfig extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link JwtIdentityConfig} extends {@link TeaModel}
+     *
+     * <p>JwtIdentityConfig</p>
+     */
+    public static class ClaimsToHeadersConfigs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("claim")
+        private String claim;
+
+        @com.aliyun.core.annotation.NameInMap("header")
+        private String header;
+
+        @com.aliyun.core.annotation.NameInMap("override")
+        private Boolean override;
+
+        private ClaimsToHeadersConfigs(Builder builder) {
+            this.claim = builder.claim;
+            this.header = builder.header;
+            this.override = builder.override;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ClaimsToHeadersConfigs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return claim
+         */
+        public String getClaim() {
+            return this.claim;
+        }
+
+        /**
+         * @return header
+         */
+        public String getHeader() {
+            return this.header;
+        }
+
+        /**
+         * @return override
+         */
+        public Boolean getOverride() {
+            return this.override;
+        }
+
+        public static final class Builder {
+            private String claim; 
+            private String header; 
+            private Boolean override; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClaimsToHeadersConfigs model) {
+                this.claim = model.claim;
+                this.header = model.header;
+                this.override = model.override;
+            } 
+
+            /**
+             * claim.
+             */
+            public Builder claim(String claim) {
+                this.claim = claim;
+                return this;
+            }
+
+            /**
+             * header.
+             */
+            public Builder header(String header) {
+                this.header = header;
+                return this;
+            }
+
+            /**
+             * override.
+             */
+            public Builder override(Boolean override) {
+                this.override = override;
+                return this;
+            }
+
+            public ClaimsToHeadersConfigs build() {
+                return new ClaimsToHeadersConfigs(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link JwtIdentityConfig} extends {@link TeaModel}
