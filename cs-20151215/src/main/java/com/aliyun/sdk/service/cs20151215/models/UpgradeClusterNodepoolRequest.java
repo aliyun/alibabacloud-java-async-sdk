@@ -28,6 +28,10 @@ public class UpgradeClusterNodepoolRequest extends Request {
     private String nodepoolId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ignore_warning_check")
+    private Boolean ignoreWarningCheck;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("image_id")
     private String imageId;
 
@@ -59,6 +63,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
         super(builder);
         this.clusterId = builder.clusterId;
         this.nodepoolId = builder.nodepoolId;
+        this.ignoreWarningCheck = builder.ignoreWarningCheck;
         this.imageId = builder.imageId;
         this.kubernetesVersion = builder.kubernetesVersion;
         this.nodeNames = builder.nodeNames;
@@ -93,6 +98,13 @@ public class UpgradeClusterNodepoolRequest extends Request {
      */
     public String getNodepoolId() {
         return this.nodepoolId;
+    }
+
+    /**
+     * @return ignoreWarningCheck
+     */
+    public Boolean getIgnoreWarningCheck() {
+        return this.ignoreWarningCheck;
     }
 
     /**
@@ -147,6 +159,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
     public static final class Builder extends Request.Builder<UpgradeClusterNodepoolRequest, Builder> {
         private String clusterId; 
         private String nodepoolId; 
+        private Boolean ignoreWarningCheck; 
         private String imageId; 
         private String kubernetesVersion; 
         private java.util.List<String> nodeNames; 
@@ -163,6 +176,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.nodepoolId = request.nodepoolId;
+            this.ignoreWarningCheck = request.ignoreWarningCheck;
             this.imageId = request.imageId;
             this.kubernetesVersion = request.kubernetesVersion;
             this.nodeNames = request.nodeNames;
@@ -195,6 +209,15 @@ public class UpgradeClusterNodepoolRequest extends Request {
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("NodepoolId", nodepoolId);
             this.nodepoolId = nodepoolId;
+            return this;
+        }
+
+        /**
+         * ignore_warning_check.
+         */
+        public Builder ignoreWarningCheck(Boolean ignoreWarningCheck) {
+            this.putBodyParameter("ignore_warning_check", ignoreWarningCheck);
+            this.ignoreWarningCheck = ignoreWarningCheck;
             return this;
         }
 
