@@ -230,6 +230,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteTagResponse> deleteTag(DeleteTagRequest request);
 
     /**
+     * @param request the request parameters of DeleteTemplate  DeleteTemplateRequest
+     * @return DeleteTemplateResponse
+     */
+    CompletableFuture<DeleteTemplateResponse> deleteTemplate(DeleteTemplateRequest request);
+
+    /**
      * @param request the request parameters of DeleteValidateFile  DeleteValidateFileRequest
      * @return DeleteValidateFileResponse
      */
@@ -366,6 +372,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyTagResponse
      */
     CompletableFuture<ModifyTagResponse> modifyTag(ModifyTagRequest request);
+
+    /**
+     * @param request the request parameters of ModifyTemplate  ModifyTemplateRequest
+     * @return ModifyTemplateResponse
+     */
+    CompletableFuture<ModifyTemplateResponse> modifyTemplate(ModifyTemplateRequest request);
 
     /**
      * @param request the request parameters of OpenSendifyTrialService  OpenSendifyTrialServiceRequest
