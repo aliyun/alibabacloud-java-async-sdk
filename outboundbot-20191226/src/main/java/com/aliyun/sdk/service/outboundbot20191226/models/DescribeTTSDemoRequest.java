@@ -34,6 +34,10 @@ public class DescribeTTSDemoRequest extends Request {
     private String engine;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtParams")
+    private String extParams;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -79,6 +83,7 @@ public class DescribeTTSDemoRequest extends Request {
         this.aliCustomizedVoice = builder.aliCustomizedVoice;
         this.appKey = builder.appKey;
         this.engine = builder.engine;
+        this.extParams = builder.extParams;
         this.instanceId = builder.instanceId;
         this.nlsServiceType = builder.nlsServiceType;
         this.pitchRate = builder.pitchRate;
@@ -129,6 +134,13 @@ public class DescribeTTSDemoRequest extends Request {
      */
     public String getEngine() {
         return this.engine;
+    }
+
+    /**
+     * @return extParams
+     */
+    public String getExtParams() {
+        return this.extParams;
     }
 
     /**
@@ -199,6 +211,7 @@ public class DescribeTTSDemoRequest extends Request {
         private String aliCustomizedVoice; 
         private String appKey; 
         private String engine; 
+        private String extParams; 
         private String instanceId; 
         private String nlsServiceType; 
         private Integer pitchRate; 
@@ -219,6 +232,7 @@ public class DescribeTTSDemoRequest extends Request {
             this.aliCustomizedVoice = request.aliCustomizedVoice;
             this.appKey = request.appKey;
             this.engine = request.engine;
+            this.extParams = request.extParams;
             this.instanceId = request.instanceId;
             this.nlsServiceType = request.nlsServiceType;
             this.pitchRate = request.pitchRate;
@@ -263,6 +277,15 @@ public class DescribeTTSDemoRequest extends Request {
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
             this.engine = engine;
+            return this;
+        }
+
+        /**
+         * ExtParams.
+         */
+        public Builder extParams(String extParams) {
+            this.putQueryParameter("ExtParams", extParams);
+            this.extParams = extParams;
             return this;
         }
 
