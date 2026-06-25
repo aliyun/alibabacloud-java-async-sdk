@@ -95,6 +95,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<IncreaseListResponse> increaseList(IncreaseListRequest request);
 
     /**
+     * @param request the request parameters of SearchImageByFilter  SearchImageByFilterRequest
+     * @return SearchImageByFilterResponse
+     */
+    CompletableFuture<SearchImageByFilterResponse> searchImageByFilter(SearchImageByFilterRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This operation searches for images by image name on an Image Search instance.</p>
      * <h2>QPS limits</h2>

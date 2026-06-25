@@ -44,7 +44,6 @@ public class UpdateImageRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PicName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String picName;
 
     @com.aliyun.core.annotation.Body
@@ -290,7 +289,6 @@ public class UpdateImageRequest extends Request {
          * <li>If you add an image whose product ID (ProductId) and image name (PicName) are the same as those of an existing image, the newly added image overwrites the existing image.</li>
          * </ul>
          * </blockquote>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>namexxx.jpg</p>

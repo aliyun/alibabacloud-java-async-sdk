@@ -29,8 +29,19 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "ImageSearch";
         this.version = "2020-12-14";
-        this.endpointRule = "";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("eu-central-1", "imagesearch.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "imagesearch.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "imagesearch.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "imagesearch.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "imagesearch.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-beijing", "imagesearch.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "imagesearch.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "imagesearch.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-south-1", "imagesearch.ap-south-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "imagesearch.ap-northeast-1.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -193,6 +204,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<IncreaseListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SearchImageByFilter  SearchImageByFilterRequest
+     * @return SearchImageByFilterResponse
+     */
+    @Override
+    public CompletableFuture<SearchImageByFilterResponse> searchImageByFilter(SearchImageByFilterRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SearchImageByFilter").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SearchImageByFilterResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SearchImageByFilterResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
