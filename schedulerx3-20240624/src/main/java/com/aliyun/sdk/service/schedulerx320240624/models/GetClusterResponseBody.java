@@ -286,6 +286,9 @@ public class GetClusterResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProductType")
         private Integer productType;
 
+        @com.aliyun.core.annotation.NameInMap("Source")
+        private String source;
+
         @com.aliyun.core.annotation.NameInMap("Spm")
         private Integer spm;
 
@@ -331,6 +334,7 @@ public class GetClusterResponseBody extends TeaModel {
             this.maxJobNum = builder.maxJobNum;
             this.maxWorkflowNum = builder.maxWorkflowNum;
             this.productType = builder.productType;
+            this.source = builder.source;
             this.spm = builder.spm;
             this.status = builder.status;
             this.tags = builder.tags;
@@ -470,6 +474,13 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
+         * @return source
+         */
+        public String getSource() {
+            return this.source;
+        }
+
+        /**
          * @return spm
          */
         public Integer getSpm() {
@@ -550,6 +561,7 @@ public class GetClusterResponseBody extends TeaModel {
             private Integer maxJobNum; 
             private Integer maxWorkflowNum; 
             private Integer productType; 
+            private String source; 
             private Integer spm; 
             private Integer status; 
             private java.util.Map<String, ?> tags; 
@@ -581,6 +593,7 @@ public class GetClusterResponseBody extends TeaModel {
                 this.maxJobNum = model.maxJobNum;
                 this.maxWorkflowNum = model.maxWorkflowNum;
                 this.productType = model.productType;
+                this.source = model.source;
                 this.spm = model.spm;
                 this.status = model.status;
                 this.tags = model.tags;
@@ -725,6 +738,14 @@ public class GetClusterResponseBody extends TeaModel {
              */
             public Builder productType(Integer productType) {
                 this.productType = productType;
+                return this;
+            }
+
+            /**
+             * Source.
+             */
+            public Builder source(String source) {
+                this.source = source;
                 return this;
             }
 

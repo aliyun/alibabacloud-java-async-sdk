@@ -207,7 +207,6 @@ public class ListAppsResponseBody extends TeaModel {
         private Integer workerId;
 
         @com.aliyun.core.annotation.NameInMap("WorkerRegistry")
-        @Deprecated
         private String workerRegistry;
 
         @com.aliyun.core.annotation.NameInMap("WorkerType")

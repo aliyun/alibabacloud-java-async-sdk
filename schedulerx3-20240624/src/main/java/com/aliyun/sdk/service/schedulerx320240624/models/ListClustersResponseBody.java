@@ -275,6 +275,9 @@ public class ListClustersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProductType")
         private Integer productType;
 
+        @com.aliyun.core.annotation.NameInMap("Source")
+        private String source;
+
         @com.aliyun.core.annotation.NameInMap("SpInstanceId")
         private String spInstanceId;
 
@@ -306,6 +309,7 @@ public class ListClustersResponseBody extends TeaModel {
             this.internetDomain = builder.internetDomain;
             this.intranetDomain = builder.intranetDomain;
             this.productType = builder.productType;
+            this.source = builder.source;
             this.spInstanceId = builder.spInstanceId;
             this.status = builder.status;
             this.tags = builder.tags;
@@ -407,6 +411,13 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return source
+         */
+        public String getSource() {
+            return this.source;
+        }
+
+        /**
          * @return spInstanceId
          */
         public String getSpInstanceId() {
@@ -461,6 +472,7 @@ public class ListClustersResponseBody extends TeaModel {
             private String internetDomain; 
             private String intranetDomain; 
             private Integer productType; 
+            private String source; 
             private String spInstanceId; 
             private Integer status; 
             private java.util.Map<String, ?> tags; 
@@ -484,6 +496,7 @@ public class ListClustersResponseBody extends TeaModel {
                 this.internetDomain = model.internetDomain;
                 this.intranetDomain = model.intranetDomain;
                 this.productType = model.productType;
+                this.source = model.source;
                 this.spInstanceId = model.spInstanceId;
                 this.status = model.status;
                 this.tags = model.tags;
@@ -585,6 +598,14 @@ public class ListClustersResponseBody extends TeaModel {
              */
             public Builder productType(Integer productType) {
                 this.productType = productType;
+                return this;
+            }
+
+            /**
+             * Source.
+             */
+            public Builder source(String source) {
+                this.source = source;
                 return this;
             }
 

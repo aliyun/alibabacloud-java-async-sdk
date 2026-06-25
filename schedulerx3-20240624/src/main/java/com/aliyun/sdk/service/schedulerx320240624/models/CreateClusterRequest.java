@@ -51,6 +51,10 @@ public class CreateClusterRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PricingCycle")
     private String pricingCycle;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Source")
+    private String source;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Tag> tag;
@@ -73,6 +77,7 @@ public class CreateClusterRequest extends Request {
         this.duration = builder.duration;
         this.engineType = builder.engineType;
         this.pricingCycle = builder.pricingCycle;
+        this.source = builder.source;
         this.tag = builder.tag;
         this.vSwitches = builder.vSwitches;
         this.vpcId = builder.vpcId;
@@ -148,6 +153,13 @@ public class CreateClusterRequest extends Request {
     }
 
     /**
+     * @return source
+     */
+    public String getSource() {
+        return this.source;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List<Tag> getTag() {
@@ -177,6 +189,7 @@ public class CreateClusterRequest extends Request {
         private Integer duration; 
         private String engineType; 
         private String pricingCycle; 
+        private String source; 
         private java.util.List<Tag> tag; 
         private java.util.List<VSwitches> vSwitches; 
         private String vpcId; 
@@ -195,6 +208,7 @@ public class CreateClusterRequest extends Request {
             this.duration = request.duration;
             this.engineType = request.engineType;
             this.pricingCycle = request.pricingCycle;
+            this.source = request.source;
             this.tag = request.tag;
             this.vSwitches = request.vSwitches;
             this.vpcId = request.vpcId;
@@ -272,6 +286,15 @@ public class CreateClusterRequest extends Request {
         public Builder pricingCycle(String pricingCycle) {
             this.putBodyParameter("PricingCycle", pricingCycle);
             this.pricingCycle = pricingCycle;
+            return this;
+        }
+
+        /**
+         * Source.
+         */
+        public Builder source(String source) {
+            this.putBodyParameter("Source", source);
+            this.source = source;
             return this;
         }
 
