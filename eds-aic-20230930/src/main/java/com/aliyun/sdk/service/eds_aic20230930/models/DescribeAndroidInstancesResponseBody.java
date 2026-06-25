@@ -713,6 +713,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BizTags")
         private java.util.List<BizTags> bizTags;
 
+        @com.aliyun.core.annotation.NameInMap("Channel")
+        private String channel;
+
         @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
@@ -769,6 +772,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
         private String officeSiteId;
+
+        @com.aliyun.core.annotation.NameInMap("PackageId")
+        private String packageId;
 
         @com.aliyun.core.annotation.NameInMap("PersistentAppInstanceId")
         private String persistentAppInstanceId;
@@ -839,6 +845,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             this.bindUserId = builder.bindUserId;
             this.bizImageType = builder.bizImageType;
             this.bizTags = builder.bizTags;
+            this.channel = builder.channel;
             this.chargeType = builder.chargeType;
             this.cpu = builder.cpu;
             this.disks = builder.disks;
@@ -858,6 +865,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             this.networkInterfaceIpv6Address = builder.networkInterfaceIpv6Address;
             this.networkType = builder.networkType;
             this.officeSiteId = builder.officeSiteId;
+            this.packageId = builder.packageId;
             this.persistentAppInstanceId = builder.persistentAppInstanceId;
             this.phoneDataInfo = builder.phoneDataInfo;
             this.policyGroupId = builder.policyGroupId;
@@ -982,6 +990,13 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
          */
         public java.util.List<BizTags> getBizTags() {
             return this.bizTags;
+        }
+
+        /**
+         * @return channel
+         */
+        public String getChannel() {
+            return this.channel;
         }
 
         /**
@@ -1115,6 +1130,13 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
          */
         public String getOfficeSiteId() {
             return this.officeSiteId;
+        }
+
+        /**
+         * @return packageId
+         */
+        public String getPackageId() {
+            return this.packageId;
         }
 
         /**
@@ -1258,6 +1280,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             private String bindUserId; 
             private String bizImageType; 
             private java.util.List<BizTags> bizTags; 
+            private String channel; 
             private String chargeType; 
             private String cpu; 
             private java.util.List<Disks> disks; 
@@ -1277,6 +1300,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             private String networkInterfaceIpv6Address; 
             private String networkType; 
             private String officeSiteId; 
+            private String packageId; 
             private String persistentAppInstanceId; 
             private PhoneDataInfo phoneDataInfo; 
             private String policyGroupId; 
@@ -1314,6 +1338,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
                 this.bindUserId = model.bindUserId;
                 this.bizImageType = model.bizImageType;
                 this.bizTags = model.bizTags;
+                this.channel = model.channel;
                 this.chargeType = model.chargeType;
                 this.cpu = model.cpu;
                 this.disks = model.disks;
@@ -1333,6 +1358,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
                 this.networkInterfaceIpv6Address = model.networkInterfaceIpv6Address;
                 this.networkType = model.networkType;
                 this.officeSiteId = model.officeSiteId;
+                this.packageId = model.packageId;
                 this.persistentAppInstanceId = model.persistentAppInstanceId;
                 this.phoneDataInfo = model.phoneDataInfo;
                 this.policyGroupId = model.policyGroupId;
@@ -1489,6 +1515,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
              */
             public Builder bizTags(java.util.List<BizTags> bizTags) {
                 this.bizTags = bizTags;
+                return this;
+            }
+
+            /**
+             * Channel.
+             */
+            public Builder channel(String channel) {
+                this.channel = channel;
                 return this;
             }
 
@@ -1682,6 +1716,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
+                return this;
+            }
+
+            /**
+             * PackageId.
+             */
+            public Builder packageId(String packageId) {
+                this.packageId = packageId;
                 return this;
             }
 

@@ -188,6 +188,9 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupFilePath")
         private String backupFilePath;
 
+        @com.aliyun.core.annotation.NameInMap("Channel")
+        private String channel;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
@@ -237,6 +240,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             this.backupFileId = builder.backupFileId;
             this.backupFileName = builder.backupFileName;
             this.backupFilePath = builder.backupFilePath;
+            this.channel = builder.channel;
             this.description = builder.description;
             this.endUserId = builder.endUserId;
             this.fileSize = builder.fileSize;
@@ -301,6 +305,13 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
          */
         public String getBackupFilePath() {
             return this.backupFilePath;
+        }
+
+        /**
+         * @return channel
+         */
+        public String getChannel() {
+            return this.channel;
         }
 
         /**
@@ -408,6 +419,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             private String backupFileId; 
             private String backupFileName; 
             private String backupFilePath; 
+            private String channel; 
             private String description; 
             private String endUserId; 
             private Long fileSize; 
@@ -433,6 +445,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
                 this.backupFileId = model.backupFileId;
                 this.backupFileName = model.backupFileName;
                 this.backupFilePath = model.backupFilePath;
+                this.channel = model.channel;
                 this.description = model.description;
                 this.endUserId = model.endUserId;
                 this.fileSize = model.fileSize;
@@ -512,6 +525,14 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
              */
             public Builder backupFilePath(String backupFilePath) {
                 this.backupFilePath = backupFilePath;
+                return this;
+            }
+
+            /**
+             * Channel.
+             */
+            public Builder channel(String channel) {
+                this.channel = channel;
                 return this;
             }
 

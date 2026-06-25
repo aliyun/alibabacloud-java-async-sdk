@@ -473,6 +473,9 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BindQosRules")
         private BindQosRules bindQosRules;
 
+        @com.aliyun.core.annotation.NameInMap("Channel")
+        private String channel;
+
         @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
@@ -536,6 +539,9 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
         private String officeSiteId;
 
+        @com.aliyun.core.annotation.NameInMap("PackageId")
+        private String packageId;
+
         @com.aliyun.core.annotation.NameInMap("PolicyGroupId")
         private String policyGroupId;
 
@@ -574,6 +580,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             this.bandwidthPackageStatus = builder.bandwidthPackageStatus;
             this.bandwidthPackageType = builder.bandwidthPackageType;
             this.bindQosRules = builder.bindQosRules;
+            this.channel = builder.channel;
             this.chargeType = builder.chargeType;
             this.cpu = builder.cpu;
             this.disks = builder.disks;
@@ -595,6 +602,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             this.networkType = builder.networkType;
             this.numberOfInstances = builder.numberOfInstances;
             this.officeSiteId = builder.officeSiteId;
+            this.packageId = builder.packageId;
             this.policyGroupId = builder.policyGroupId;
             this.regionId = builder.regionId;
             this.renderingType = builder.renderingType;
@@ -662,6 +670,13 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
          */
         public BindQosRules getBindQosRules() {
             return this.bindQosRules;
+        }
+
+        /**
+         * @return channel
+         */
+        public String getChannel() {
+            return this.channel;
         }
 
         /**
@@ -812,6 +827,13 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return packageId
+         */
+        public String getPackageId() {
+            return this.packageId;
+        }
+
+        /**
          * @return policyGroupId
          */
         public String getPolicyGroupId() {
@@ -889,6 +911,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             private String bandwidthPackageStatus; 
             private String bandwidthPackageType; 
             private BindQosRules bindQosRules; 
+            private String channel; 
             private String chargeType; 
             private String cpu; 
             private java.util.List<Disks> disks; 
@@ -910,6 +933,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             private String networkType; 
             private String numberOfInstances; 
             private String officeSiteId; 
+            private String packageId; 
             private String policyGroupId; 
             private String regionId; 
             private String renderingType; 
@@ -932,6 +956,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
                 this.bandwidthPackageStatus = model.bandwidthPackageStatus;
                 this.bandwidthPackageType = model.bandwidthPackageType;
                 this.bindQosRules = model.bindQosRules;
+                this.channel = model.channel;
                 this.chargeType = model.chargeType;
                 this.cpu = model.cpu;
                 this.disks = model.disks;
@@ -953,6 +978,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
                 this.networkType = model.networkType;
                 this.numberOfInstances = model.numberOfInstances;
                 this.officeSiteId = model.officeSiteId;
+                this.packageId = model.packageId;
                 this.policyGroupId = model.policyGroupId;
                 this.regionId = model.regionId;
                 this.renderingType = model.renderingType;
@@ -1030,6 +1056,14 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
              */
             public Builder bindQosRules(BindQosRules bindQosRules) {
                 this.bindQosRules = bindQosRules;
+                return this;
+            }
+
+            /**
+             * Channel.
+             */
+            public Builder channel(String channel) {
+                this.channel = channel;
                 return this;
             }
 
@@ -1246,6 +1280,14 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
+                return this;
+            }
+
+            /**
+             * PackageId.
+             */
+            public Builder packageId(String packageId) {
+                this.packageId = packageId;
                 return this;
             }
 

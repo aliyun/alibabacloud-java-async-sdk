@@ -236,6 +236,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteKeyPairsResponse> deleteKeyPairs(DeleteKeyPairsRequest request);
 
     /**
+     * @param request the request parameters of DeleteMobileAgentPackage  DeleteMobileAgentPackageRequest
+     * @return DeleteMobileAgentPackageResponse
+     */
+    CompletableFuture<DeleteMobileAgentPackageResponse> deleteMobileAgentPackage(DeleteMobileAgentPackageRequest request);
+
+    /**
      * @param request the request parameters of DeletePolicyGroup  DeletePolicyGroupRequest
      * @return DeletePolicyGroupResponse
      */
