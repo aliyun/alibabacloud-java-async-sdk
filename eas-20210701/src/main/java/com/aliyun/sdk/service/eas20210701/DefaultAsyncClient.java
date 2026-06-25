@@ -45,7 +45,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("ap-south-1", "pai-eas.ap-south-1.aliyuncs.com"),
             new TeaPair("cn-shanghai-finance-1", "pai-eas.cn-shanghai-finance-1.aliyuncs.com"),
             new TeaPair("cn-north-2-gov-1", "pai-eas.cn-north-2-gov-1.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "pai-eas.cn-chengdu.aliyuncs.com")
+            new TeaPair("cn-chengdu", "pai-eas.cn-chengdu.aliyuncs.com"),
+            new TeaPair("us-southeast-1", "pai-eas.us-southeast-1.aliyuncs.com"),
+            new TeaPair("na-south-1", "pai-eas.na-south-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "pai-eas.me-east-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "pai-eas.me-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhongwei", "pai-eas.cn-zhongwei.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "pai-eas.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "pai-eas.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "pai-eas.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "pai-eas.ap-southeast-8.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "pai-eas.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "pai-eas.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "pai-eas.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "pai-eas.ap-northeast-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -248,6 +261,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateGatewayIntranetLinkedVpcPeerResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateGroup  CreateGroupRequest
+     * @return CreateGroupResponse
+     */
+    @Override
+    public CompletableFuture<CreateGroupResponse> createGroup(CreateGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateGroup").setMethod(HttpMethod.POST).setPathRegex("/api/v2/groups").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateGroupResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -589,6 +620,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteGatewayLabelResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteGroup  DeleteGroupRequest
+     * @return DeleteGroupResponse
+     */
+    @Override
+    public CompletableFuture<DeleteGroupResponse> deleteGroup(DeleteGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteGroup").setMethod(HttpMethod.DELETE).setPathRegex("/api/v2/groups/{ClusterId}/{GroupName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteGroupResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

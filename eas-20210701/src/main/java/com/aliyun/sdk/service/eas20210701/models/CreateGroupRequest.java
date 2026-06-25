@@ -12,67 +12,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateGroupRequest} extends {@link RequestModel}
+ * {@link CreateGroupRequest} extends {@link RequestModel}
  *
- * <p>UpdateGroupRequest</p>
+ * <p>CreateGroupRequest</p>
  */
-public class UpdateGroupRequest extends Request {
-    @com.aliyun.core.annotation.Path
-    @com.aliyun.core.annotation.NameInMap("ClusterId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String clusterId;
-
-    @com.aliyun.core.annotation.Path
-    @com.aliyun.core.annotation.NameInMap("GroupName")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String groupName;
-
+public class CreateGroupRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Labels")
     private java.util.Map<String, String> labels;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    private String name;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Network")
     private Network network;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("TrafficMode")
-    private String trafficMode;
+    @com.aliyun.core.annotation.NameInMap("WorkSpaceId")
+    private String workSpaceId;
 
-    private UpdateGroupRequest(Builder builder) {
+    private CreateGroupRequest(Builder builder) {
         super(builder);
-        this.clusterId = builder.clusterId;
-        this.groupName = builder.groupName;
         this.labels = builder.labels;
+        this.name = builder.name;
         this.network = builder.network;
-        this.trafficMode = builder.trafficMode;
+        this.workSpaceId = builder.workSpaceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static UpdateGroupRequest create() {
+    public static CreateGroupRequest create() {
         return builder().build();
     }
 
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return clusterId
-     */
-    public String getClusterId() {
-        return this.clusterId;
-    }
-
-    /**
-     * @return groupName
-     */
-    public String getGroupName() {
-        return this.groupName;
     }
 
     /**
@@ -83,6 +62,13 @@ public class UpdateGroupRequest extends Request {
     }
 
     /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
      * @return network
      */
     public Network getNetwork() {
@@ -90,57 +76,29 @@ public class UpdateGroupRequest extends Request {
     }
 
     /**
-     * @return trafficMode
+     * @return workSpaceId
      */
-    public String getTrafficMode() {
-        return this.trafficMode;
+    public String getWorkSpaceId() {
+        return this.workSpaceId;
     }
 
-    public static final class Builder extends Request.Builder<UpdateGroupRequest, Builder> {
-        private String clusterId; 
-        private String groupName; 
+    public static final class Builder extends Request.Builder<CreateGroupRequest, Builder> {
         private java.util.Map<String, String> labels; 
+        private String name; 
         private Network network; 
-        private String trafficMode; 
+        private String workSpaceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateGroupRequest request) {
+        private Builder(CreateGroupRequest request) {
             super(request);
-            this.clusterId = request.clusterId;
-            this.groupName = request.groupName;
             this.labels = request.labels;
+            this.name = request.name;
             this.network = request.network;
-            this.trafficMode = request.trafficMode;
+            this.workSpaceId = request.workSpaceId;
         } 
-
-        /**
-         * <p>The ID of the region in which the service group resides.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-wulanchabu</p>
-         */
-        public Builder clusterId(String clusterId) {
-            this.putPathParameter("ClusterId", clusterId);
-            this.clusterId = clusterId;
-            return this;
-        }
-
-        /**
-         * <p>The service group name. For more information about how to obtain the service group name, see ListServices.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>foo</p>
-         */
-        public Builder groupName(String groupName) {
-            this.putPathParameter("GroupName", groupName);
-            this.groupName = groupName;
-            return this;
-        }
 
         /**
          * Labels.
@@ -148,6 +106,15 @@ public class UpdateGroupRequest extends Request {
         public Builder labels(java.util.Map<String, String> labels) {
             this.putBodyParameter("Labels", labels);
             this.labels = labels;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putBodyParameter("Name", name);
+            this.name = name;
             return this;
         }
 
@@ -161,29 +128,26 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * <p>The traffic mode. Valid values: auto and customized. auto: The traffic is automatically allocated based on the proportion of the number of instances to the total number of instances. customized: The traffic is allocated based on a custom weight.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>auto</p>
+         * WorkSpaceId.
          */
-        public Builder trafficMode(String trafficMode) {
-            this.putBodyParameter("TrafficMode", trafficMode);
-            this.trafficMode = trafficMode;
+        public Builder workSpaceId(String workSpaceId) {
+            this.putBodyParameter("WorkSpaceId", workSpaceId);
+            this.workSpaceId = workSpaceId;
             return this;
         }
 
         @Override
-        public UpdateGroupRequest build() {
-            return new UpdateGroupRequest(this);
+        public CreateGroupRequest build() {
+            return new CreateGroupRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link UpdateGroupRequest} extends {@link TeaModel}
+     * {@link CreateGroupRequest} extends {@link TeaModel}
      *
-     * <p>UpdateGroupRequest</p>
+     * <p>CreateGroupRequest</p>
      */
     public static class Network extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GatewayId")

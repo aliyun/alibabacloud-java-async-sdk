@@ -12,18 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateGroupResponseBody} extends {@link TeaModel}
+ * {@link DeleteGroupResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateGroupResponseBody</p>
+ * <p>DeleteGroupResponseBody</p>
  */
-public class UpdateGroupResponseBody extends TeaModel {
+public class DeleteGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private UpdateGroupResponseBody(Builder builder) {
+    private DeleteGroupResponseBody(Builder builder) {
         this.message = builder.message;
         this.requestId = builder.requestId;
     }
@@ -32,7 +32,7 @@ public class UpdateGroupResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateGroupResponseBody create() {
+    public static DeleteGroupResponseBody create() {
         return builder().build();
     }
 
@@ -61,7 +61,7 @@ public class UpdateGroupResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(UpdateGroupResponseBody model) {
+        private Builder(DeleteGroupResponseBody model) {
             this.message = model.message;
             this.requestId = model.requestId;
         } 
@@ -75,18 +75,15 @@ public class UpdateGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>40325405-579C-4D82****</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public UpdateGroupResponseBody build() {
-            return new UpdateGroupResponseBody(this);
+        public DeleteGroupResponseBody build() {
+            return new DeleteGroupResponseBody(this);
         } 
 
     } 

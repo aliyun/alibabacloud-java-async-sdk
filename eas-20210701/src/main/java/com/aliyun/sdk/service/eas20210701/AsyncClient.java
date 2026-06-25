@@ -86,6 +86,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateGatewayIntranetLinkedVpcPeerResponse> createGatewayIntranetLinkedVpcPeer(CreateGatewayIntranetLinkedVpcPeerRequest request);
 
     /**
+     * @param request the request parameters of CreateGroup  CreateGroupRequest
+     * @return CreateGroupResponse
+     */
+    CompletableFuture<CreateGroupResponse> createGroup(CreateGroupRequest request);
+
+    /**
      * <b>description</b> :
      * <p>*Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/144261.html">billing</a> of Elastic Algorithm Service (EAS).</p>
      * 
@@ -209,6 +215,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteGatewayLabelResponse
      */
     CompletableFuture<DeleteGatewayLabelResponse> deleteGatewayLabel(DeleteGatewayLabelRequest request);
+
+    /**
+     * @param request the request parameters of DeleteGroup  DeleteGroupRequest
+     * @return DeleteGroupResponse
+     */
+    CompletableFuture<DeleteGroupResponse> deleteGroup(DeleteGroupRequest request);
 
     /**
      * @param request the request parameters of DeleteResource  DeleteResourceRequest

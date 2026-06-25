@@ -22,6 +22,10 @@ public class ListGroupsRequest extends Request {
     private String filter;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Labels")
+    private java.util.Map<String, String> labels;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
@@ -48,6 +52,7 @@ public class ListGroupsRequest extends Request {
     private ListGroupsRequest(Builder builder) {
         super(builder);
         this.filter = builder.filter;
+        this.labels = builder.labels;
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -74,6 +79,13 @@ public class ListGroupsRequest extends Request {
      */
     public String getFilter() {
         return this.filter;
+    }
+
+    /**
+     * @return labels
+     */
+    public java.util.Map<String, String> getLabels() {
+        return this.labels;
     }
 
     /**
@@ -120,6 +132,7 @@ public class ListGroupsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListGroupsRequest, Builder> {
         private String filter; 
+        private java.util.Map<String, String> labels; 
         private String order; 
         private String pageNumber; 
         private String pageSize; 
@@ -134,6 +147,7 @@ public class ListGroupsRequest extends Request {
         private Builder(ListGroupsRequest request) {
             super(request);
             this.filter = request.filter;
+            this.labels = request.labels;
             this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -151,6 +165,16 @@ public class ListGroupsRequest extends Request {
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
+            return this;
+        }
+
+        /**
+         * Labels.
+         */
+        public Builder labels(java.util.Map<String, String> labels) {
+            String labelsShrink = shrink(labels, "Labels", "json");
+            this.putQueryParameter("Labels", labelsShrink);
+            this.labels = labels;
             return this;
         }
 
