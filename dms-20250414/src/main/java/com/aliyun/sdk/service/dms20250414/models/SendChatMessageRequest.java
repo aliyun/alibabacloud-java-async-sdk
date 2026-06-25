@@ -72,6 +72,10 @@ public class SendChatMessageRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TaskConfig")
     private TaskConfig taskConfig;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private SendChatMessageRequest(Builder builder) {
         super(builder);
         this.agentId = builder.agentId;
@@ -87,6 +91,7 @@ public class SendChatMessageRequest extends Request {
         this.sessionConfig = builder.sessionConfig;
         this.sessionId = builder.sessionId;
         this.taskConfig = builder.taskConfig;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -193,6 +198,13 @@ public class SendChatMessageRequest extends Request {
         return this.taskConfig;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<SendChatMessageRequest, Builder> {
         private String agentId; 
         private String DMSUnit; 
@@ -207,6 +219,7 @@ public class SendChatMessageRequest extends Request {
         private SessionConfig sessionConfig; 
         private String sessionId; 
         private TaskConfig taskConfig; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -227,6 +240,7 @@ public class SendChatMessageRequest extends Request {
             this.sessionConfig = request.sessionConfig;
             this.sessionId = request.sessionId;
             this.taskConfig = request.taskConfig;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -356,6 +370,15 @@ public class SendChatMessageRequest extends Request {
             String taskConfigShrink = shrink(taskConfig, "TaskConfig", "json");
             this.putQueryParameter("TaskConfig", taskConfigShrink);
             this.taskConfig = taskConfig;
+            return this;
+        }
+
+        /**
+         * WorkspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 
