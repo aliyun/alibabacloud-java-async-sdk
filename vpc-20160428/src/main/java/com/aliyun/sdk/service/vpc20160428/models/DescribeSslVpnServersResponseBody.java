@@ -185,6 +185,9 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
+        @com.aliyun.core.annotation.NameInMap("DnsServers")
+        private String dnsServers;
+
         @com.aliyun.core.annotation.NameInMap("EnableMultiFactorAuth")
         private Boolean enableMultiFactorAuth;
 
@@ -236,6 +239,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             this.compress = builder.compress;
             this.connections = builder.connections;
             this.createTime = builder.createTime;
+            this.dnsServers = builder.dnsServers;
             this.enableMultiFactorAuth = builder.enableMultiFactorAuth;
             this.iDaaSApplicationId = builder.iDaaSApplicationId;
             this.iDaaSInstanceId = builder.iDaaSInstanceId;
@@ -294,6 +298,13 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
          */
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return dnsServers
+         */
+        public String getDnsServers() {
+            return this.dnsServers;
         }
 
         /**
@@ -407,6 +418,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             private Boolean compress; 
             private Integer connections; 
             private Long createTime; 
+            private String dnsServers; 
             private Boolean enableMultiFactorAuth; 
             private String iDaaSApplicationId; 
             private String iDaaSInstanceId; 
@@ -432,6 +444,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
                 this.compress = model.compress;
                 this.connections = model.connections;
                 this.createTime = model.createTime;
+                this.dnsServers = model.dnsServers;
                 this.enableMultiFactorAuth = model.enableMultiFactorAuth;
                 this.iDaaSApplicationId = model.iDaaSApplicationId;
                 this.iDaaSInstanceId = model.iDaaSInstanceId;
@@ -505,6 +518,14 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * DnsServers.
+             */
+            public Builder dnsServers(String dnsServers) {
+                this.dnsServers = dnsServers;
                 return this;
             }
 

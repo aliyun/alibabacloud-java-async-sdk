@@ -35,6 +35,10 @@ public class CreateSslVpnServerRequest extends Request {
     private Boolean compress;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DnsServers")
+    private String dnsServers;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
@@ -103,6 +107,7 @@ public class CreateSslVpnServerRequest extends Request {
         this.clientIpPool = builder.clientIpPool;
         this.clientToken = builder.clientToken;
         this.compress = builder.compress;
+        this.dnsServers = builder.dnsServers;
         this.dryRun = builder.dryRun;
         this.enableMultiFactorAuth = builder.enableMultiFactorAuth;
         this.iDaaSApplicationId = builder.iDaaSApplicationId;
@@ -159,6 +164,13 @@ public class CreateSslVpnServerRequest extends Request {
      */
     public Boolean getCompress() {
         return this.compress;
+    }
+
+    /**
+     * @return dnsServers
+     */
+    public String getDnsServers() {
+        return this.dnsServers;
     }
 
     /**
@@ -271,6 +283,7 @@ public class CreateSslVpnServerRequest extends Request {
         private String clientIpPool; 
         private String clientToken; 
         private Boolean compress; 
+        private String dnsServers; 
         private Boolean dryRun; 
         private Boolean enableMultiFactorAuth; 
         private String iDaaSApplicationId; 
@@ -297,6 +310,7 @@ public class CreateSslVpnServerRequest extends Request {
             this.clientIpPool = request.clientIpPool;
             this.clientToken = request.clientToken;
             this.compress = request.compress;
+            this.dnsServers = request.dnsServers;
             this.dryRun = request.dryRun;
             this.enableMultiFactorAuth = request.enableMultiFactorAuth;
             this.iDaaSApplicationId = request.iDaaSApplicationId;
@@ -416,6 +430,15 @@ public class CreateSslVpnServerRequest extends Request {
         public Builder compress(Boolean compress) {
             this.putQueryParameter("Compress", compress);
             this.compress = compress;
+            return this;
+        }
+
+        /**
+         * DnsServers.
+         */
+        public Builder dnsServers(String dnsServers) {
+            this.putQueryParameter("DnsServers", dnsServers);
+            this.dnsServers = dnsServers;
             return this;
         }
 
