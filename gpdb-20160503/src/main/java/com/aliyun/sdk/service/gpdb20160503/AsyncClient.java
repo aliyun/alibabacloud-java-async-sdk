@@ -1803,6 +1803,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PauseInstanceResponse> pauseInstance(PauseInstanceRequest request);
 
     /**
+     * @param request the request parameters of PauseSaasService  PauseSaasServiceRequest
+     * @return PauseSaasServiceResponse
+     */
+    CompletableFuture<PauseSaasServiceResponse> pauseSaasService(PauseSaasServiceRequest request);
+
+    /**
      * @param request the request parameters of PauseSupabaseProject  PauseSupabaseProjectRequest
      * @return PauseSupabaseProjectResponse
      */
@@ -1902,6 +1908,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ResumeInstanceResponse
      */
     CompletableFuture<ResumeInstanceResponse> resumeInstance(ResumeInstanceRequest request);
+
+    /**
+     * @param request the request parameters of ResumeSaasService  ResumeSaasServiceRequest
+     * @return ResumeSaasServiceResponse
+     */
+    CompletableFuture<ResumeSaasServiceResponse> resumeSaasService(ResumeSaasServiceRequest request);
 
     /**
      * @param request the request parameters of ResumeSupabaseProject  ResumeSupabaseProjectRequest

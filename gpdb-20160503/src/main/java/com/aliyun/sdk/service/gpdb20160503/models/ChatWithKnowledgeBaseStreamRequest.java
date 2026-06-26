@@ -563,9 +563,13 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("RerankMetadataFields")
+        private String rerankMetadataFields;
+
         private QueryParamsRerankModel(Builder builder) {
             this.instruct = builder.instruct;
             this.name = builder.name;
+            this.rerankMetadataFields = builder.rerankMetadataFields;
         }
 
         public static Builder builder() {
@@ -590,9 +594,17 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
             return this.name;
         }
 
+        /**
+         * @return rerankMetadataFields
+         */
+        public String getRerankMetadataFields() {
+            return this.rerankMetadataFields;
+        }
+
         public static final class Builder {
             private String instruct; 
             private String name; 
+            private String rerankMetadataFields; 
 
             private Builder() {
             } 
@@ -600,6 +612,7 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
             private Builder(QueryParamsRerankModel model) {
                 this.instruct = model.instruct;
                 this.name = model.name;
+                this.rerankMetadataFields = model.rerankMetadataFields;
             } 
 
             /**
@@ -615,6 +628,14 @@ public class ChatWithKnowledgeBaseStreamRequest extends Request {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * RerankMetadataFields.
+             */
+            public Builder rerankMetadataFields(String rerankMetadataFields) {
+                this.rerankMetadataFields = rerankMetadataFields;
                 return this;
             }
 
