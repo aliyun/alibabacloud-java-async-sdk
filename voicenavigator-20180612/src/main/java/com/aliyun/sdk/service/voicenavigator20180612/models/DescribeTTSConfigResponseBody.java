@@ -29,6 +29,9 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EngineXunfei")
     private String engineXunfei;
 
+    @com.aliyun.core.annotation.NameInMap("ExtParams")
+    private String extParams;
+
     @com.aliyun.core.annotation.NameInMap("NlsServiceType")
     private String nlsServiceType;
 
@@ -55,6 +58,7 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         this.appKey = builder.appKey;
         this.engine = builder.engine;
         this.engineXunfei = builder.engineXunfei;
+        this.extParams = builder.extParams;
         this.nlsServiceType = builder.nlsServiceType;
         this.pitchRate = builder.pitchRate;
         this.requestId = builder.requestId;
@@ -102,6 +106,13 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
      */
     public String getEngineXunfei() {
         return this.engineXunfei;
+    }
+
+    /**
+     * @return extParams
+     */
+    public String getExtParams() {
+        return this.extParams;
     }
 
     /**
@@ -158,6 +169,7 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         private String appKey; 
         private String engine; 
         private String engineXunfei; 
+        private String extParams; 
         private String nlsServiceType; 
         private Integer pitchRate; 
         private String requestId; 
@@ -174,6 +186,7 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
             this.appKey = model.appKey;
             this.engine = model.engine;
             this.engineXunfei = model.engineXunfei;
+            this.extParams = model.extParams;
             this.nlsServiceType = model.nlsServiceType;
             this.pitchRate = model.pitchRate;
             this.requestId = model.requestId;
@@ -212,6 +225,14 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
          */
         public Builder engineXunfei(String engineXunfei) {
             this.engineXunfei = engineXunfei;
+            return this;
+        }
+
+        /**
+         * ExtParams.
+         */
+        public Builder extParams(String extParams) {
+            this.extParams = extParams;
             return this;
         }
 

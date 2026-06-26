@@ -30,6 +30,10 @@ public class AuditTTSVoiceRequest extends Request {
     private String engine;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtParams")
+    private String extParams;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -67,6 +71,7 @@ public class AuditTTSVoiceRequest extends Request {
         this.accessKey = builder.accessKey;
         this.appKey = builder.appKey;
         this.engine = builder.engine;
+        this.extParams = builder.extParams;
         this.instanceId = builder.instanceId;
         this.pitchRate = builder.pitchRate;
         this.secretKey = builder.secretKey;
@@ -108,6 +113,13 @@ public class AuditTTSVoiceRequest extends Request {
      */
     public String getEngine() {
         return this.engine;
+    }
+
+    /**
+     * @return extParams
+     */
+    public String getExtParams() {
+        return this.extParams;
     }
 
     /**
@@ -163,6 +175,7 @@ public class AuditTTSVoiceRequest extends Request {
         private String accessKey; 
         private String appKey; 
         private String engine; 
+        private String extParams; 
         private String instanceId; 
         private String pitchRate; 
         private String secretKey; 
@@ -180,6 +193,7 @@ public class AuditTTSVoiceRequest extends Request {
             this.accessKey = request.accessKey;
             this.appKey = request.appKey;
             this.engine = request.engine;
+            this.extParams = request.extParams;
             this.instanceId = request.instanceId;
             this.pitchRate = request.pitchRate;
             this.secretKey = request.secretKey;
@@ -213,6 +227,15 @@ public class AuditTTSVoiceRequest extends Request {
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
             this.engine = engine;
+            return this;
+        }
+
+        /**
+         * ExtParams.
+         */
+        public Builder extParams(String extParams) {
+            this.putQueryParameter("ExtParams", extParams);
+            this.extParams = extParams;
             return this;
         }
 

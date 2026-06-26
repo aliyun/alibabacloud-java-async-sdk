@@ -34,6 +34,10 @@ public class ModifyTTSConfigRequest extends Request {
     private String engineXunfei;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtParams")
+    private String extParams;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -68,6 +72,7 @@ public class ModifyTTSConfigRequest extends Request {
         this.appKey = builder.appKey;
         this.engine = builder.engine;
         this.engineXunfei = builder.engineXunfei;
+        this.extParams = builder.extParams;
         this.instanceId = builder.instanceId;
         this.nlsServiceType = builder.nlsServiceType;
         this.pitchRate = builder.pitchRate;
@@ -116,6 +121,13 @@ public class ModifyTTSConfigRequest extends Request {
      */
     public String getEngineXunfei() {
         return this.engineXunfei;
+    }
+
+    /**
+     * @return extParams
+     */
+    public String getExtParams() {
+        return this.extParams;
     }
 
     /**
@@ -172,6 +184,7 @@ public class ModifyTTSConfigRequest extends Request {
         private String appKey; 
         private String engine; 
         private String engineXunfei; 
+        private String extParams; 
         private String instanceId; 
         private String nlsServiceType; 
         private String pitchRate; 
@@ -190,6 +203,7 @@ public class ModifyTTSConfigRequest extends Request {
             this.appKey = request.appKey;
             this.engine = request.engine;
             this.engineXunfei = request.engineXunfei;
+            this.extParams = request.extParams;
             this.instanceId = request.instanceId;
             this.nlsServiceType = request.nlsServiceType;
             this.pitchRate = request.pitchRate;
@@ -232,6 +246,15 @@ public class ModifyTTSConfigRequest extends Request {
         public Builder engineXunfei(String engineXunfei) {
             this.putQueryParameter("EngineXunfei", engineXunfei);
             this.engineXunfei = engineXunfei;
+            return this;
+        }
+
+        /**
+         * ExtParams.
+         */
+        public Builder extParams(String extParams) {
+            this.putQueryParameter("ExtParams", extParams);
+            this.extParams = extParams;
             return this;
         }
 
