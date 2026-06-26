@@ -430,6 +430,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetUserTmpIdentityForPartnerResponse> getUserTmpIdentityForPartner(GetUserTmpIdentityForPartnerRequest request);
 
     /**
+     * @param request the request parameters of GrantPromotionOfferForPartner  GrantPromotionOfferForPartnerRequest
+     * @return GrantPromotionOfferForPartnerResponse
+     */
+    CompletableFuture<GrantPromotionOfferForPartnerResponse> grantPromotionOfferForPartner(GrantPromotionOfferForPartnerRequest request);
+
+    /**
      * @param request the request parameters of IntrospectAppInstanceTicketForPreview  IntrospectAppInstanceTicketForPreviewRequest
      * @return IntrospectAppInstanceTicketForPreviewResponse
      */
@@ -537,6 +543,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListIsvPaymentPluginConfigsResponse
      */
     CompletableFuture<ListIsvPaymentPluginConfigsResponse> listIsvPaymentPluginConfigs(ListIsvPaymentPluginConfigsRequest request);
+
+    /**
+     * @param request the request parameters of ListPromotionActivitiesForPartner  ListPromotionActivitiesForPartnerRequest
+     * @return ListPromotionActivitiesForPartnerResponse
+     */
+    CompletableFuture<ListPromotionActivitiesForPartnerResponse> listPromotionActivitiesForPartner(ListPromotionActivitiesForPartnerRequest request);
+
+    /**
+     * @param request the request parameters of ListPromotionOfferRecordsForPartner  ListPromotionOfferRecordsForPartnerRequest
+     * @return ListPromotionOfferRecordsForPartnerResponse
+     */
+    CompletableFuture<ListPromotionOfferRecordsForPartnerResponse> listPromotionOfferRecordsForPartner(ListPromotionOfferRecordsForPartnerRequest request);
 
     /**
      * @param request the request parameters of ModifyAppInstanceSpec  ModifyAppInstanceSpecRequest

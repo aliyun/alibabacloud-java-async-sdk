@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetAppRecommendedCommoditiesResponseBody} extends {@link TeaModel}
+ * {@link ListPromotionOfferRecordsForPartnerResponseBody} extends {@link TeaModel}
  *
- * <p>GetAppRecommendedCommoditiesResponseBody</p>
+ * <p>ListPromotionOfferRecordsForPartnerResponseBody</p>
  */
-public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
+public class ListPromotionOfferRecordsForPartnerResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
@@ -35,8 +35,14 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ErrorArgs")
     private java.util.List<?> errorArgs;
 
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
     @com.aliyun.core.annotation.NameInMap("Module")
     private Module module;
+
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -50,14 +56,16 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Synchro")
     private Boolean synchro;
 
-    private GetAppRecommendedCommoditiesResponseBody(Builder builder) {
+    private ListPromotionOfferRecordsForPartnerResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
         this.allowRetry = builder.allowRetry;
         this.appName = builder.appName;
         this.dynamicCode = builder.dynamicCode;
         this.dynamicMessage = builder.dynamicMessage;
         this.errorArgs = builder.errorArgs;
+        this.maxResults = builder.maxResults;
         this.module = builder.module;
+        this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.rootErrorCode = builder.rootErrorCode;
         this.rootErrorMsg = builder.rootErrorMsg;
@@ -68,7 +76,7 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetAppRecommendedCommoditiesResponseBody create() {
+    public static ListPromotionOfferRecordsForPartnerResponseBody create() {
         return builder().build();
     }
 
@@ -119,10 +127,24 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
     }
 
     /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
      * @return module
      */
     public Module getModule() {
         return this.module;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -160,7 +182,9 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         private String dynamicCode; 
         private String dynamicMessage; 
         private java.util.List<?> errorArgs; 
+        private Integer maxResults; 
         private Module module; 
+        private String nextToken; 
         private String requestId; 
         private String rootErrorCode; 
         private String rootErrorMsg; 
@@ -169,14 +193,16 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(GetAppRecommendedCommoditiesResponseBody model) {
+        private Builder(ListPromotionOfferRecordsForPartnerResponseBody model) {
             this.accessDeniedDetail = model.accessDeniedDetail;
             this.allowRetry = model.allowRetry;
             this.appName = model.appName;
             this.dynamicCode = model.dynamicCode;
             this.dynamicMessage = model.dynamicMessage;
             this.errorArgs = model.errorArgs;
+            this.maxResults = model.maxResults;
             this.module = model.module;
+            this.nextToken = model.nextToken;
             this.requestId = model.requestId;
             this.rootErrorCode = model.rootErrorCode;
             this.rootErrorMsg = model.rootErrorMsg;
@@ -232,10 +258,26 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         }
 
         /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
          * Module.
          */
         public Builder module(Module module) {
             this.module = module;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
             return this;
         }
 
@@ -274,135 +316,124 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
             return this;
         }
 
-        public GetAppRecommendedCommoditiesResponseBody build() {
-            return new GetAppRecommendedCommoditiesResponseBody(this);
+        public ListPromotionOfferRecordsForPartnerResponseBody build() {
+            return new ListPromotionOfferRecordsForPartnerResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link GetAppRecommendedCommoditiesResponseBody} extends {@link TeaModel}
+     * {@link ListPromotionOfferRecordsForPartnerResponseBody} extends {@link TeaModel}
      *
-     * <p>GetAppRecommendedCommoditiesResponseBody</p>
+     * <p>ListPromotionOfferRecordsForPartnerResponseBody</p>
      */
-    public static class Commodities extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("ActionType")
-        private String actionType;
+    public static class Records extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ActivityCode")
+        private String activityCode;
 
-        @com.aliyun.core.annotation.NameInMap("CommodityCode")
-        private String commodityCode;
+        @com.aliyun.core.annotation.NameInMap("ActivityName")
+        private String activityName;
 
-        @com.aliyun.core.annotation.NameInMap("Description")
-        private String description;
+        @com.aliyun.core.annotation.NameInMap("EmployeeCode")
+        private String employeeCode;
 
-        @com.aliyun.core.annotation.NameInMap("Extend")
-        private java.util.Map<String, String> extend;
+        @com.aliyun.core.annotation.NameInMap("FailReason")
+        private String failReason;
 
-        @com.aliyun.core.annotation.NameInMap("OrderType")
-        private String orderType;
+        @com.aliyun.core.annotation.NameInMap("IssuanceTime")
+        private String issuanceTime;
 
-        @com.aliyun.core.annotation.NameInMap("Priority")
-        private Integer priority;
+        @com.aliyun.core.annotation.NameInMap("OfferSnapshot")
+        private String offerSnapshot;
 
-        @com.aliyun.core.annotation.NameInMap("PromotionCommodityId")
-        private String promotionCommodityId;
+        @com.aliyun.core.annotation.NameInMap("RecordId")
+        private String recordId;
 
-        @com.aliyun.core.annotation.NameInMap("RecommendType")
-        private String recommendType;
-
-        @com.aliyun.core.annotation.NameInMap("RedirectUrl")
-        private String redirectUrl;
+        @com.aliyun.core.annotation.NameInMap("Remark")
+        private String remark;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @com.aliyun.core.annotation.NameInMap("Title")
-        private String title;
+        @com.aliyun.core.annotation.NameInMap("UserId")
+        private String userId;
 
-        private Commodities(Builder builder) {
-            this.actionType = builder.actionType;
-            this.commodityCode = builder.commodityCode;
-            this.description = builder.description;
-            this.extend = builder.extend;
-            this.orderType = builder.orderType;
-            this.priority = builder.priority;
-            this.promotionCommodityId = builder.promotionCommodityId;
-            this.recommendType = builder.recommendType;
-            this.redirectUrl = builder.redirectUrl;
+        private Records(Builder builder) {
+            this.activityCode = builder.activityCode;
+            this.activityName = builder.activityName;
+            this.employeeCode = builder.employeeCode;
+            this.failReason = builder.failReason;
+            this.issuanceTime = builder.issuanceTime;
+            this.offerSnapshot = builder.offerSnapshot;
+            this.recordId = builder.recordId;
+            this.remark = builder.remark;
             this.status = builder.status;
-            this.title = builder.title;
+            this.userId = builder.userId;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static Commodities create() {
+        public static Records create() {
             return builder().build();
         }
 
         /**
-         * @return actionType
+         * @return activityCode
          */
-        public String getActionType() {
-            return this.actionType;
+        public String getActivityCode() {
+            return this.activityCode;
         }
 
         /**
-         * @return commodityCode
+         * @return activityName
          */
-        public String getCommodityCode() {
-            return this.commodityCode;
+        public String getActivityName() {
+            return this.activityName;
         }
 
         /**
-         * @return description
+         * @return employeeCode
          */
-        public String getDescription() {
-            return this.description;
+        public String getEmployeeCode() {
+            return this.employeeCode;
         }
 
         /**
-         * @return extend
+         * @return failReason
          */
-        public java.util.Map<String, String> getExtend() {
-            return this.extend;
+        public String getFailReason() {
+            return this.failReason;
         }
 
         /**
-         * @return orderType
+         * @return issuanceTime
          */
-        public String getOrderType() {
-            return this.orderType;
+        public String getIssuanceTime() {
+            return this.issuanceTime;
         }
 
         /**
-         * @return priority
+         * @return offerSnapshot
          */
-        public Integer getPriority() {
-            return this.priority;
+        public String getOfferSnapshot() {
+            return this.offerSnapshot;
         }
 
         /**
-         * @return promotionCommodityId
+         * @return recordId
          */
-        public String getPromotionCommodityId() {
-            return this.promotionCommodityId;
+        public String getRecordId() {
+            return this.recordId;
         }
 
         /**
-         * @return recommendType
+         * @return remark
          */
-        public String getRecommendType() {
-            return this.recommendType;
-        }
-
-        /**
-         * @return redirectUrl
-         */
-        public String getRedirectUrl() {
-            return this.redirectUrl;
+        public String getRemark() {
+            return this.remark;
         }
 
         /**
@@ -413,111 +444,101 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         }
 
         /**
-         * @return title
+         * @return userId
          */
-        public String getTitle() {
-            return this.title;
+        public String getUserId() {
+            return this.userId;
         }
 
         public static final class Builder {
-            private String actionType; 
-            private String commodityCode; 
-            private String description; 
-            private java.util.Map<String, String> extend; 
-            private String orderType; 
-            private Integer priority; 
-            private String promotionCommodityId; 
-            private String recommendType; 
-            private String redirectUrl; 
+            private String activityCode; 
+            private String activityName; 
+            private String employeeCode; 
+            private String failReason; 
+            private String issuanceTime; 
+            private String offerSnapshot; 
+            private String recordId; 
+            private String remark; 
             private String status; 
-            private String title; 
+            private String userId; 
 
             private Builder() {
             } 
 
-            private Builder(Commodities model) {
-                this.actionType = model.actionType;
-                this.commodityCode = model.commodityCode;
-                this.description = model.description;
-                this.extend = model.extend;
-                this.orderType = model.orderType;
-                this.priority = model.priority;
-                this.promotionCommodityId = model.promotionCommodityId;
-                this.recommendType = model.recommendType;
-                this.redirectUrl = model.redirectUrl;
+            private Builder(Records model) {
+                this.activityCode = model.activityCode;
+                this.activityName = model.activityName;
+                this.employeeCode = model.employeeCode;
+                this.failReason = model.failReason;
+                this.issuanceTime = model.issuanceTime;
+                this.offerSnapshot = model.offerSnapshot;
+                this.recordId = model.recordId;
+                this.remark = model.remark;
                 this.status = model.status;
-                this.title = model.title;
+                this.userId = model.userId;
             } 
 
             /**
-             * ActionType.
+             * ActivityCode.
              */
-            public Builder actionType(String actionType) {
-                this.actionType = actionType;
+            public Builder activityCode(String activityCode) {
+                this.activityCode = activityCode;
                 return this;
             }
 
             /**
-             * CommodityCode.
+             * ActivityName.
              */
-            public Builder commodityCode(String commodityCode) {
-                this.commodityCode = commodityCode;
+            public Builder activityName(String activityName) {
+                this.activityName = activityName;
                 return this;
             }
 
             /**
-             * Description.
+             * EmployeeCode.
              */
-            public Builder description(String description) {
-                this.description = description;
+            public Builder employeeCode(String employeeCode) {
+                this.employeeCode = employeeCode;
                 return this;
             }
 
             /**
-             * Extend.
+             * FailReason.
              */
-            public Builder extend(java.util.Map<String, String> extend) {
-                this.extend = extend;
+            public Builder failReason(String failReason) {
+                this.failReason = failReason;
                 return this;
             }
 
             /**
-             * OrderType.
+             * IssuanceTime.
              */
-            public Builder orderType(String orderType) {
-                this.orderType = orderType;
+            public Builder issuanceTime(String issuanceTime) {
+                this.issuanceTime = issuanceTime;
                 return this;
             }
 
             /**
-             * Priority.
+             * OfferSnapshot.
              */
-            public Builder priority(Integer priority) {
-                this.priority = priority;
+            public Builder offerSnapshot(String offerSnapshot) {
+                this.offerSnapshot = offerSnapshot;
                 return this;
             }
 
             /**
-             * PromotionCommodityId.
+             * RecordId.
              */
-            public Builder promotionCommodityId(String promotionCommodityId) {
-                this.promotionCommodityId = promotionCommodityId;
+            public Builder recordId(String recordId) {
+                this.recordId = recordId;
                 return this;
             }
 
             /**
-             * RecommendType.
+             * Remark.
              */
-            public Builder recommendType(String recommendType) {
-                this.recommendType = recommendType;
-                return this;
-            }
-
-            /**
-             * RedirectUrl.
-             */
-            public Builder redirectUrl(String redirectUrl) {
-                this.redirectUrl = redirectUrl;
+            public Builder remark(String remark) {
+                this.remark = remark;
                 return this;
             }
 
@@ -530,15 +551,15 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * UserId.
              */
-            public Builder title(String title) {
-                this.title = title;
+            public Builder userId(String userId) {
+                this.userId = userId;
                 return this;
             }
 
-            public Commodities build() {
-                return new Commodities(this);
+            public Records build() {
+                return new Records(this);
             } 
 
         } 
@@ -546,16 +567,28 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link GetAppRecommendedCommoditiesResponseBody} extends {@link TeaModel}
+     * {@link ListPromotionOfferRecordsForPartnerResponseBody} extends {@link TeaModel}
      *
-     * <p>GetAppRecommendedCommoditiesResponseBody</p>
+     * <p>ListPromotionOfferRecordsForPartnerResponseBody</p>
      */
     public static class Module extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Commodities")
-        private java.util.List<Commodities> commodities;
+        @com.aliyun.core.annotation.NameInMap("PageNum")
+        private Integer pageNum;
+
+        @com.aliyun.core.annotation.NameInMap("PageSize")
+        private Integer pageSize;
+
+        @com.aliyun.core.annotation.NameInMap("Records")
+        private java.util.List<Records> records;
+
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
+        private Integer totalCount;
 
         private Module(Builder builder) {
-            this.commodities = builder.commodities;
+            this.pageNum = builder.pageNum;
+            this.pageSize = builder.pageSize;
+            this.records = builder.records;
+            this.totalCount = builder.totalCount;
         }
 
         public static Builder builder() {
@@ -567,27 +600,78 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         }
 
         /**
-         * @return commodities
+         * @return pageNum
          */
-        public java.util.List<Commodities> getCommodities() {
-            return this.commodities;
+        public Integer getPageNum() {
+            return this.pageNum;
+        }
+
+        /**
+         * @return pageSize
+         */
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        /**
+         * @return records
+         */
+        public java.util.List<Records> getRecords() {
+            return this.records;
+        }
+
+        /**
+         * @return totalCount
+         */
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
         public static final class Builder {
-            private java.util.List<Commodities> commodities; 
+            private Integer pageNum; 
+            private Integer pageSize; 
+            private java.util.List<Records> records; 
+            private Integer totalCount; 
 
             private Builder() {
             } 
 
             private Builder(Module model) {
-                this.commodities = model.commodities;
+                this.pageNum = model.pageNum;
+                this.pageSize = model.pageSize;
+                this.records = model.records;
+                this.totalCount = model.totalCount;
             } 
 
             /**
-             * Commodities.
+             * PageNum.
              */
-            public Builder commodities(java.util.List<Commodities> commodities) {
-                this.commodities = commodities;
+            public Builder pageNum(Integer pageNum) {
+                this.pageNum = pageNum;
+                return this;
+            }
+
+            /**
+             * PageSize.
+             */
+            public Builder pageSize(Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+            }
+
+            /**
+             * Records.
+             */
+            public Builder records(java.util.List<Records> records) {
+                this.records = records;
+                return this;
+            }
+
+            /**
+             * TotalCount.
+             */
+            public Builder totalCount(Integer totalCount) {
+                this.totalCount = totalCount;
                 return this;
             }
 
