@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeResourceGroupsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentType")
+    private String agentType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AliyunResourceGroupIds")
     private java.util.List<String> aliyunResourceGroupIds;
 
@@ -55,6 +59,7 @@ public class DescribeResourceGroupsRequest extends Request {
 
     private DescribeResourceGroupsRequest(Builder builder) {
         super(builder);
+        this.agentType = builder.agentType;
         this.aliyunResourceGroupIds = builder.aliyunResourceGroupIds;
         this.businessChannel = builder.businessChannel;
         this.needContainResourceGroupWithOfficeSite = builder.needContainResourceGroupWithOfficeSite;
@@ -77,6 +82,13 @@ public class DescribeResourceGroupsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentType
+     */
+    public String getAgentType() {
+        return this.agentType;
     }
 
     /**
@@ -143,6 +155,7 @@ public class DescribeResourceGroupsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeResourceGroupsRequest, Builder> {
+        private String agentType; 
         private java.util.List<String> aliyunResourceGroupIds; 
         private String businessChannel; 
         private Long needContainResourceGroupWithOfficeSite; 
@@ -159,6 +172,7 @@ public class DescribeResourceGroupsRequest extends Request {
 
         private Builder(DescribeResourceGroupsRequest request) {
             super(request);
+            this.agentType = request.agentType;
             this.aliyunResourceGroupIds = request.aliyunResourceGroupIds;
             this.businessChannel = request.businessChannel;
             this.needContainResourceGroupWithOfficeSite = request.needContainResourceGroupWithOfficeSite;
@@ -169,6 +183,15 @@ public class DescribeResourceGroupsRequest extends Request {
             this.resourceGroupIds = request.resourceGroupIds;
             this.resourceGroupName = request.resourceGroupName;
         } 
+
+        /**
+         * AgentType.
+         */
+        public Builder agentType(String agentType) {
+            this.putQueryParameter("AgentType", agentType);
+            this.agentType = agentType;
+            return this;
+        }
 
         /**
          * AliyunResourceGroupIds.

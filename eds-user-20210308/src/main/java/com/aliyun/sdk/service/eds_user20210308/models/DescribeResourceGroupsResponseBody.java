@@ -440,6 +440,9 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
      * <p>DescribeResourceGroupsResponseBody</p>
      */
     public static class ResourceGroup extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AgentType")
+        private String agentType;
+
         @com.aliyun.core.annotation.NameInMap("AliyunResourceGroupId")
         private String aliyunResourceGroupId;
 
@@ -468,6 +471,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         private java.util.List<Timers> timers;
 
         private ResourceGroup(Builder builder) {
+            this.agentType = builder.agentType;
             this.aliyunResourceGroupId = builder.aliyunResourceGroupId;
             this.appRules = builder.appRules;
             this.authCount = builder.authCount;
@@ -485,6 +489,13 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
 
         public static ResourceGroup create() {
             return builder().build();
+        }
+
+        /**
+         * @return agentType
+         */
+        public String getAgentType() {
+            return this.agentType;
         }
 
         /**
@@ -551,6 +562,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String agentType; 
             private String aliyunResourceGroupId; 
             private java.util.List<AppRules> appRules; 
             private String authCount; 
@@ -565,6 +577,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             } 
 
             private Builder(ResourceGroup model) {
+                this.agentType = model.agentType;
                 this.aliyunResourceGroupId = model.aliyunResourceGroupId;
                 this.appRules = model.appRules;
                 this.authCount = model.authCount;
@@ -575,6 +588,14 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
                 this.resourceGroupName = model.resourceGroupName;
                 this.timers = model.timers;
             } 
+
+            /**
+             * AgentType.
+             */
+            public Builder agentType(String agentType) {
+                this.agentType = agentType;
+                return this;
+            }
 
             /**
              * AliyunResourceGroupId.

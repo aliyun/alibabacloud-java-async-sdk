@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateResourceGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentType")
+    private String agentType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BusinessChannel")
     private String businessChannel;
 
@@ -43,6 +47,7 @@ public class CreateResourceGroupRequest extends Request {
 
     private CreateResourceGroupRequest(Builder builder) {
         super(builder);
+        this.agentType = builder.agentType;
         this.businessChannel = builder.businessChannel;
         this.enableAliyunResourceGroup = builder.enableAliyunResourceGroup;
         this.isResourceGroupWithOfficeSite = builder.isResourceGroupWithOfficeSite;
@@ -62,6 +67,13 @@ public class CreateResourceGroupRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentType
+     */
+    public String getAgentType() {
+        return this.agentType;
     }
 
     /**
@@ -107,6 +119,7 @@ public class CreateResourceGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateResourceGroupRequest, Builder> {
+        private String agentType; 
         private String businessChannel; 
         private Boolean enableAliyunResourceGroup; 
         private Long isResourceGroupWithOfficeSite; 
@@ -120,6 +133,7 @@ public class CreateResourceGroupRequest extends Request {
 
         private Builder(CreateResourceGroupRequest request) {
             super(request);
+            this.agentType = request.agentType;
             this.businessChannel = request.businessChannel;
             this.enableAliyunResourceGroup = request.enableAliyunResourceGroup;
             this.isResourceGroupWithOfficeSite = request.isResourceGroupWithOfficeSite;
@@ -127,6 +141,15 @@ public class CreateResourceGroupRequest extends Request {
             this.resourceClassification = request.resourceClassification;
             this.resourceGroupName = request.resourceGroupName;
         } 
+
+        /**
+         * AgentType.
+         */
+        public Builder agentType(String agentType) {
+            this.putQueryParameter("AgentType", agentType);
+            this.agentType = agentType;
+            return this;
+        }
 
         /**
          * BusinessChannel.
