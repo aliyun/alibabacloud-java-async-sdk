@@ -65,6 +65,9 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("LockMode")
     private String lockMode;
 
+    @com.aliyun.core.annotation.NameInMap("MetaInstanceName")
+    private String metaInstanceName;
+
     @com.aliyun.core.annotation.NameInMap("MetaUrl")
     private String metaUrl;
 
@@ -142,6 +145,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         this.expired = builder.expired;
         this.fileSystemId = builder.fileSystemId;
         this.lockMode = builder.lockMode;
+        this.metaInstanceName = builder.metaInstanceName;
         this.metaUrl = builder.metaUrl;
         this.minorVersion = builder.minorVersion;
         this.mountInfo = builder.mountInfo;
@@ -286,6 +290,13 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
      */
     public String getLockMode() {
         return this.lockMode;
+    }
+
+    /**
+     * @return metaInstanceName
+     */
+    public String getMetaInstanceName() {
+        return this.metaInstanceName;
     }
 
     /**
@@ -445,6 +456,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         private String expired; 
         private String fileSystemId; 
         private String lockMode; 
+        private String metaInstanceName; 
         private String metaUrl; 
         private String minorVersion; 
         private MountInfo mountInfo; 
@@ -486,6 +498,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
             this.expired = model.expired;
             this.fileSystemId = model.fileSystemId;
             this.lockMode = model.lockMode;
+            this.metaInstanceName = model.metaInstanceName;
             this.metaUrl = model.metaUrl;
             this.minorVersion = model.minorVersion;
             this.mountInfo = model.mountInfo;
@@ -633,6 +646,14 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
          */
         public Builder lockMode(String lockMode) {
             this.lockMode = lockMode;
+            return this;
+        }
+
+        /**
+         * MetaInstanceName.
+         */
+        public Builder metaInstanceName(String metaInstanceName) {
+            this.metaInstanceName = metaInstanceName;
             return this;
         }
 

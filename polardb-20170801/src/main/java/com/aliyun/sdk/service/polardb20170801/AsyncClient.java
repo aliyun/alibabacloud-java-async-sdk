@@ -277,6 +277,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateBackupResponse> createBackup(CreateBackupRequest request);
 
     /**
+     * @param request the request parameters of CreateBatchConsumer  CreateBatchConsumerRequest
+     * @return CreateBatchConsumerResponse
+     */
+    CompletableFuture<CreateBatchConsumerResponse> createBatchConsumer(CreateBatchConsumerRequest request);
+
+    /**
      * @param request the request parameters of CreateBatchTask  CreateBatchTaskRequest
      * @return CreateBatchTaskResponse
      */
@@ -907,6 +913,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeActiveOperationTasksResponse> describeActiveOperationTasks(DescribeActiveOperationTasksRequest request);
 
     /**
+     * @param request the request parameters of DescribeApikeyAttribute  DescribeApikeyAttributeRequest
+     * @return DescribeApikeyAttributeResponse
+     */
+    CompletableFuture<DescribeApikeyAttributeResponse> describeApikeyAttribute(DescribeApikeyAttributeRequest request);
+
+    /**
      * @param request the request parameters of DescribeApplicationAttribute  DescribeApplicationAttributeRequest
      * @return DescribeApplicationAttributeResponse
      */
@@ -1366,6 +1378,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeFirewallRulesResponse
      */
     CompletableFuture<DescribeFirewallRulesResponse> describeFirewallRules(DescribeFirewallRulesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeGatewayApikeyList  DescribeGatewayApikeyListRequest
+     * @return DescribeGatewayApikeyListResponse
+     */
+    CompletableFuture<DescribeGatewayApikeyListResponse> describeGatewayApikeyList(DescribeGatewayApikeyListRequest request);
 
     /**
      * @param request the request parameters of DescribeGatewayAttribute  DescribeGatewayAttributeRequest

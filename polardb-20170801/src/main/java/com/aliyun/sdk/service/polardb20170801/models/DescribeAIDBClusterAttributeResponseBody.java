@@ -53,6 +53,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Expired")
     private Boolean expired;
 
+    @com.aliyun.core.annotation.NameInMap("GatewayId")
+    private String gatewayId;
+
     @com.aliyun.core.annotation.NameInMap("InternalIp")
     private String internalIp;
 
@@ -120,6 +123,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         this.endpointList = builder.endpointList;
         this.expireTime = builder.expireTime;
         this.expired = builder.expired;
+        this.gatewayId = builder.gatewayId;
         this.internalIp = builder.internalIp;
         this.KVCacheInstanceId = builder.KVCacheInstanceId;
         this.kubeClusterId = builder.kubeClusterId;
@@ -234,6 +238,13 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
      */
     public Boolean getExpired() {
         return this.expired;
+    }
+
+    /**
+     * @return gatewayId
+     */
+    public String getGatewayId() {
+        return this.gatewayId;
     }
 
     /**
@@ -375,6 +386,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         private java.util.List<EndpointList> endpointList; 
         private String expireTime; 
         private Boolean expired; 
+        private String gatewayId; 
         private String internalIp; 
         private String KVCacheInstanceId; 
         private String kubeClusterId; 
@@ -410,6 +422,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
             this.endpointList = model.endpointList;
             this.expireTime = model.expireTime;
             this.expired = model.expired;
+            this.gatewayId = model.gatewayId;
             this.internalIp = model.internalIp;
             this.KVCacheInstanceId = model.KVCacheInstanceId;
             this.kubeClusterId = model.kubeClusterId;
@@ -523,6 +536,14 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
          */
         public Builder expired(Boolean expired) {
             this.expired = expired;
+            return this;
+        }
+
+        /**
+         * GatewayId.
+         */
+        public Builder gatewayId(String gatewayId) {
+            this.gatewayId = gatewayId;
             return this;
         }
 

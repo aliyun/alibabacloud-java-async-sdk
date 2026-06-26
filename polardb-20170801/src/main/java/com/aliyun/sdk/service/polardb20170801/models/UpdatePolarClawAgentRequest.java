@@ -36,6 +36,14 @@ public class UpdatePolarClawAgentRequest extends Request {
     private java.util.List<Files> files;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsDefault")
+    private Boolean isDefault;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeepWorkspaceFiles")
+    private Boolean keepWorkspaceFiles;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Model")
     private String model;
 
@@ -57,6 +65,8 @@ public class UpdatePolarClawAgentRequest extends Request {
         this.applicationId = builder.applicationId;
         this.avatar = builder.avatar;
         this.files = builder.files;
+        this.isDefault = builder.isDefault;
+        this.keepWorkspaceFiles = builder.keepWorkspaceFiles;
         this.model = builder.model;
         this.name = builder.name;
         this.restart = builder.restart;
@@ -105,6 +115,20 @@ public class UpdatePolarClawAgentRequest extends Request {
     }
 
     /**
+     * @return isDefault
+     */
+    public Boolean getIsDefault() {
+        return this.isDefault;
+    }
+
+    /**
+     * @return keepWorkspaceFiles
+     */
+    public Boolean getKeepWorkspaceFiles() {
+        return this.keepWorkspaceFiles;
+    }
+
+    /**
      * @return model
      */
     public String getModel() {
@@ -137,6 +161,8 @@ public class UpdatePolarClawAgentRequest extends Request {
         private String applicationId; 
         private String avatar; 
         private java.util.List<Files> files; 
+        private Boolean isDefault; 
+        private Boolean keepWorkspaceFiles; 
         private String model; 
         private String name; 
         private Boolean restart; 
@@ -152,6 +178,8 @@ public class UpdatePolarClawAgentRequest extends Request {
             this.applicationId = request.applicationId;
             this.avatar = request.avatar;
             this.files = request.files;
+            this.isDefault = request.isDefault;
+            this.keepWorkspaceFiles = request.keepWorkspaceFiles;
             this.model = request.model;
             this.name = request.name;
             this.restart = request.restart;
@@ -198,6 +226,24 @@ public class UpdatePolarClawAgentRequest extends Request {
             String filesShrink = shrink(files, "Files", "json");
             this.putQueryParameter("Files", filesShrink);
             this.files = files;
+            return this;
+        }
+
+        /**
+         * IsDefault.
+         */
+        public Builder isDefault(Boolean isDefault) {
+            this.putQueryParameter("IsDefault", isDefault);
+            this.isDefault = isDefault;
+            return this;
+        }
+
+        /**
+         * KeepWorkspaceFiles.
+         */
+        public Builder keepWorkspaceFiles(Boolean keepWorkspaceFiles) {
+            this.putQueryParameter("KeepWorkspaceFiles", keepWorkspaceFiles);
+            this.keepWorkspaceFiles = keepWorkspaceFiles;
             return this;
         }
 

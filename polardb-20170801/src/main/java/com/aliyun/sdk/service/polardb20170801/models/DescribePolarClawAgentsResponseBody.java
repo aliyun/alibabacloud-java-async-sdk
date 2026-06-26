@@ -223,6 +223,144 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
      *
      * <p>DescribePolarClawAgentsResponseBody</p>
      */
+    public static class Files extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Missing")
+        private Boolean missing;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Path")
+        private String path;
+
+        @com.aliyun.core.annotation.NameInMap("Size")
+        private Long size;
+
+        @com.aliyun.core.annotation.NameInMap("UpdatedAtMs")
+        private Long updatedAtMs;
+
+        private Files(Builder builder) {
+            this.missing = builder.missing;
+            this.name = builder.name;
+            this.path = builder.path;
+            this.size = builder.size;
+            this.updatedAtMs = builder.updatedAtMs;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Files create() {
+            return builder().build();
+        }
+
+        /**
+         * @return missing
+         */
+        public Boolean getMissing() {
+            return this.missing;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return path
+         */
+        public String getPath() {
+            return this.path;
+        }
+
+        /**
+         * @return size
+         */
+        public Long getSize() {
+            return this.size;
+        }
+
+        /**
+         * @return updatedAtMs
+         */
+        public Long getUpdatedAtMs() {
+            return this.updatedAtMs;
+        }
+
+        public static final class Builder {
+            private Boolean missing; 
+            private String name; 
+            private String path; 
+            private Long size; 
+            private Long updatedAtMs; 
+
+            private Builder() {
+            } 
+
+            private Builder(Files model) {
+                this.missing = model.missing;
+                this.name = model.name;
+                this.path = model.path;
+                this.size = model.size;
+                this.updatedAtMs = model.updatedAtMs;
+            } 
+
+            /**
+             * Missing.
+             */
+            public Builder missing(Boolean missing) {
+                this.missing = missing;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Path.
+             */
+            public Builder path(String path) {
+                this.path = path;
+                return this;
+            }
+
+            /**
+             * Size.
+             */
+            public Builder size(Long size) {
+                this.size = size;
+                return this;
+            }
+
+            /**
+             * UpdatedAtMs.
+             */
+            public Builder updatedAtMs(Long updatedAtMs) {
+                this.updatedAtMs = updatedAtMs;
+                return this;
+            }
+
+            public Files build() {
+                return new Files(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribePolarClawAgentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePolarClawAgentsResponseBody</p>
+     */
     public static class Identity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Avatar")
         private String avatar;
@@ -361,20 +499,115 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
      *
      * <p>DescribePolarClawAgentsResponseBody</p>
      */
+    public static class Model extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Fallbacks")
+        private java.util.List<String> fallbacks;
+
+        @com.aliyun.core.annotation.NameInMap("Primary")
+        private String primary;
+
+        private Model(Builder builder) {
+            this.fallbacks = builder.fallbacks;
+            this.primary = builder.primary;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Model create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fallbacks
+         */
+        public java.util.List<String> getFallbacks() {
+            return this.fallbacks;
+        }
+
+        /**
+         * @return primary
+         */
+        public String getPrimary() {
+            return this.primary;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> fallbacks; 
+            private String primary; 
+
+            private Builder() {
+            } 
+
+            private Builder(Model model) {
+                this.fallbacks = model.fallbacks;
+                this.primary = model.primary;
+            } 
+
+            /**
+             * Fallbacks.
+             */
+            public Builder fallbacks(java.util.List<String> fallbacks) {
+                this.fallbacks = fallbacks;
+                return this;
+            }
+
+            /**
+             * Primary.
+             */
+            public Builder primary(String primary) {
+                this.primary = primary;
+                return this;
+            }
+
+            public Model build() {
+                return new Model(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribePolarClawAgentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePolarClawAgentsResponseBody</p>
+     */
     public static class Agents extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Default")
+        private Boolean _default;
+
+        @com.aliyun.core.annotation.NameInMap("Files")
+        private java.util.List<Files> files;
+
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
         @com.aliyun.core.annotation.NameInMap("Identity")
         private Identity identity;
 
+        @com.aliyun.core.annotation.NameInMap("Model")
+        private Model model;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("Skills")
+        private java.util.List<String> skills;
+
+        @com.aliyun.core.annotation.NameInMap("Workspace")
+        private String workspace;
+
         private Agents(Builder builder) {
+            this._default = builder._default;
+            this.files = builder.files;
             this.id = builder.id;
             this.identity = builder.identity;
+            this.model = builder.model;
             this.name = builder.name;
+            this.skills = builder.skills;
+            this.workspace = builder.workspace;
         }
 
         public static Builder builder() {
@@ -383,6 +616,20 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
 
         public static Agents create() {
             return builder().build();
+        }
+
+        /**
+         * @return _default
+         */
+        public Boolean get_default() {
+            return this._default;
+        }
+
+        /**
+         * @return files
+         */
+        public java.util.List<Files> getFiles() {
+            return this.files;
         }
 
         /**
@@ -400,25 +647,72 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
         }
 
         /**
+         * @return model
+         */
+        public Model getModel() {
+            return this.model;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
             return this.name;
         }
 
+        /**
+         * @return skills
+         */
+        public java.util.List<String> getSkills() {
+            return this.skills;
+        }
+
+        /**
+         * @return workspace
+         */
+        public String getWorkspace() {
+            return this.workspace;
+        }
+
         public static final class Builder {
+            private Boolean _default; 
+            private java.util.List<Files> files; 
             private String id; 
             private Identity identity; 
+            private Model model; 
             private String name; 
+            private java.util.List<String> skills; 
+            private String workspace; 
 
             private Builder() {
             } 
 
             private Builder(Agents model) {
+                this._default = model._default;
+                this.files = model.files;
                 this.id = model.id;
                 this.identity = model.identity;
+                this.model = model.model;
                 this.name = model.name;
+                this.skills = model.skills;
+                this.workspace = model.workspace;
             } 
+
+            /**
+             * Default.
+             */
+            public Builder _default(Boolean _default) {
+                this._default = _default;
+                return this;
+            }
+
+            /**
+             * Files.
+             */
+            public Builder files(java.util.List<Files> files) {
+                this.files = files;
+                return this;
+            }
 
             /**
              * <p>Agent ID</p>
@@ -440,10 +734,34 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
             }
 
             /**
+             * Model.
+             */
+            public Builder model(Model model) {
+                this.model = model;
+                return this;
+            }
+
+            /**
              * Name.
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * Skills.
+             */
+            public Builder skills(java.util.List<String> skills) {
+                this.skills = skills;
+                return this;
+            }
+
+            /**
+             * Workspace.
+             */
+            public Builder workspace(String workspace) {
+                this.workspace = workspace;
                 return this;
             }
 
