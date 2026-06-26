@@ -12,58 +12,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListUsersResponseBody} extends {@link TeaModel}
+ * {@link CreateUserResponseBody} extends {@link TeaModel}
  *
- * <p>ListUsersResponseBody</p>
+ * <p>CreateUserResponseBody</p>
  */
-public class ListUsersResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("MaxResults")
-    private Integer maxResults;
-
-    @com.aliyun.core.annotation.NameInMap("NextToken")
-    private String nextToken;
-
+public class CreateUserResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @com.aliyun.core.annotation.NameInMap("TotalCount")
-    private Integer totalCount;
+    @com.aliyun.core.annotation.NameInMap("User")
+    private User user;
 
-    @com.aliyun.core.annotation.NameInMap("Users")
-    private java.util.List<Users> users;
-
-    private ListUsersResponseBody(Builder builder) {
-        this.maxResults = builder.maxResults;
-        this.nextToken = builder.nextToken;
+    private CreateUserResponseBody(Builder builder) {
         this.requestId = builder.requestId;
-        this.totalCount = builder.totalCount;
-        this.users = builder.users;
+        this.user = builder.user;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListUsersResponseBody create() {
+    public static CreateUserResponseBody create() {
         return builder().build();
     }
 
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return maxResults
-     */
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    /**
-     * @return nextToken
-     */
-    public String getNextToken() {
-        return this.nextToken;
     }
 
     /**
@@ -74,52 +48,23 @@ public class ListUsersResponseBody extends TeaModel {
     }
 
     /**
-     * @return totalCount
+     * @return user
      */
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    /**
-     * @return users
-     */
-    public java.util.List<Users> getUsers() {
-        return this.users;
+    public User getUser() {
+        return this.user;
     }
 
     public static final class Builder {
-        private Integer maxResults; 
-        private String nextToken; 
         private String requestId; 
-        private Integer totalCount; 
-        private java.util.List<Users> users; 
+        private User user; 
 
         private Builder() {
         } 
 
-        private Builder(ListUsersResponseBody model) {
-            this.maxResults = model.maxResults;
-            this.nextToken = model.nextToken;
+        private Builder(CreateUserResponseBody model) {
             this.requestId = model.requestId;
-            this.totalCount = model.totalCount;
-            this.users = model.users;
+            this.user = model.user;
         } 
-
-        /**
-         * MaxResults.
-         */
-        public Builder maxResults(Integer maxResults) {
-            this.maxResults = maxResults;
-            return this;
-        }
-
-        /**
-         * NextToken.
-         */
-        public Builder nextToken(String nextToken) {
-            this.nextToken = nextToken;
-            return this;
-        }
 
         /**
          * RequestId.
@@ -130,37 +75,26 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * User.
          */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public Builder user(User user) {
+            this.user = user;
             return this;
         }
 
-        /**
-         * Users.
-         */
-        public Builder users(java.util.List<Users> users) {
-            this.users = users;
-            return this;
-        }
-
-        public ListUsersResponseBody build() {
-            return new ListUsersResponseBody(this);
+        public CreateUserResponseBody build() {
+            return new CreateUserResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link ListUsersResponseBody} extends {@link TeaModel}
+     * {@link CreateUserResponseBody} extends {@link TeaModel}
      *
-     * <p>ListUsersResponseBody</p>
+     * <p>CreateUserResponseBody</p>
      */
-    public static class Users extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("CreateTime")
-        private String createTime;
-
+    public static class User extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
@@ -176,23 +110,18 @@ public class ListUsersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @com.aliyun.core.annotation.NameInMap("UpdateTime")
-        private String updateTime;
-
         @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
-        private Users(Builder builder) {
-            this.createTime = builder.createTime;
+        private User(Builder builder) {
             this.description = builder.description;
             this.displayName = builder.displayName;
             this.email = builder.email;
             this.status = builder.status;
             this.type = builder.type;
-            this.updateTime = builder.updateTime;
             this.userId = builder.userId;
             this.userName = builder.userName;
         }
@@ -201,15 +130,8 @@ public class ListUsersResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Users create() {
+        public static User create() {
             return builder().build();
-        }
-
-        /**
-         * @return createTime
-         */
-        public String getCreateTime() {
-            return this.createTime;
         }
 
         /**
@@ -248,13 +170,6 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * @return updateTime
-         */
-        public String getUpdateTime() {
-            return this.updateTime;
-        }
-
-        /**
          * @return userId
          */
         public String getUserId() {
@@ -269,38 +184,26 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String createTime; 
             private String description; 
             private String displayName; 
             private String email; 
             private String status; 
             private String type; 
-            private String updateTime; 
             private String userId; 
             private String userName; 
 
             private Builder() {
             } 
 
-            private Builder(Users model) {
-                this.createTime = model.createTime;
+            private Builder(User model) {
                 this.description = model.description;
                 this.displayName = model.displayName;
                 this.email = model.email;
                 this.status = model.status;
                 this.type = model.type;
-                this.updateTime = model.updateTime;
                 this.userId = model.userId;
                 this.userName = model.userName;
             } 
-
-            /**
-             * CreateTime.
-             */
-            public Builder createTime(String createTime) {
-                this.createTime = createTime;
-                return this;
-            }
 
             /**
              * Description.
@@ -343,14 +246,6 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
-             */
-            public Builder updateTime(String updateTime) {
-                this.updateTime = updateTime;
-                return this;
-            }
-
-            /**
              * UserId.
              */
             public Builder userId(String userId) {
@@ -366,8 +261,8 @@ public class ListUsersResponseBody extends TeaModel {
                 return this;
             }
 
-            public Users build() {
-                return new Users(this);
+            public User build() {
+                return new User(this);
             } 
 
         } 

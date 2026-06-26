@@ -12,58 +12,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListUsersResponseBody} extends {@link TeaModel}
+ * {@link UpdateUserResponseBody} extends {@link TeaModel}
  *
- * <p>ListUsersResponseBody</p>
+ * <p>UpdateUserResponseBody</p>
  */
-public class ListUsersResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("MaxResults")
-    private Integer maxResults;
-
-    @com.aliyun.core.annotation.NameInMap("NextToken")
-    private String nextToken;
-
+public class UpdateUserResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @com.aliyun.core.annotation.NameInMap("TotalCount")
-    private Integer totalCount;
+    @com.aliyun.core.annotation.NameInMap("User")
+    private User user;
 
-    @com.aliyun.core.annotation.NameInMap("Users")
-    private java.util.List<Users> users;
-
-    private ListUsersResponseBody(Builder builder) {
-        this.maxResults = builder.maxResults;
-        this.nextToken = builder.nextToken;
+    private UpdateUserResponseBody(Builder builder) {
         this.requestId = builder.requestId;
-        this.totalCount = builder.totalCount;
-        this.users = builder.users;
+        this.user = builder.user;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListUsersResponseBody create() {
+    public static UpdateUserResponseBody create() {
         return builder().build();
     }
 
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return maxResults
-     */
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    /**
-     * @return nextToken
-     */
-    public String getNextToken() {
-        return this.nextToken;
     }
 
     /**
@@ -74,52 +48,23 @@ public class ListUsersResponseBody extends TeaModel {
     }
 
     /**
-     * @return totalCount
+     * @return user
      */
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
-    /**
-     * @return users
-     */
-    public java.util.List<Users> getUsers() {
-        return this.users;
+    public User getUser() {
+        return this.user;
     }
 
     public static final class Builder {
-        private Integer maxResults; 
-        private String nextToken; 
         private String requestId; 
-        private Integer totalCount; 
-        private java.util.List<Users> users; 
+        private User user; 
 
         private Builder() {
         } 
 
-        private Builder(ListUsersResponseBody model) {
-            this.maxResults = model.maxResults;
-            this.nextToken = model.nextToken;
+        private Builder(UpdateUserResponseBody model) {
             this.requestId = model.requestId;
-            this.totalCount = model.totalCount;
-            this.users = model.users;
+            this.user = model.user;
         } 
-
-        /**
-         * MaxResults.
-         */
-        public Builder maxResults(Integer maxResults) {
-            this.maxResults = maxResults;
-            return this;
-        }
-
-        /**
-         * NextToken.
-         */
-        public Builder nextToken(String nextToken) {
-            this.nextToken = nextToken;
-            return this;
-        }
 
         /**
          * RequestId.
@@ -130,34 +75,26 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * User.
          */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public Builder user(User user) {
+            this.user = user;
             return this;
         }
 
-        /**
-         * Users.
-         */
-        public Builder users(java.util.List<Users> users) {
-            this.users = users;
-            return this;
-        }
-
-        public ListUsersResponseBody build() {
-            return new ListUsersResponseBody(this);
+        public UpdateUserResponseBody build() {
+            return new UpdateUserResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link ListUsersResponseBody} extends {@link TeaModel}
+     * {@link UpdateUserResponseBody} extends {@link TeaModel}
      *
-     * <p>ListUsersResponseBody</p>
+     * <p>UpdateUserResponseBody</p>
      */
-    public static class Users extends TeaModel {
+    public static class User extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -185,7 +122,7 @@ public class ListUsersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
-        private Users(Builder builder) {
+        private User(Builder builder) {
             this.createTime = builder.createTime;
             this.description = builder.description;
             this.displayName = builder.displayName;
@@ -201,7 +138,7 @@ public class ListUsersResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Users create() {
+        public static User create() {
             return builder().build();
         }
 
@@ -282,7 +219,7 @@ public class ListUsersResponseBody extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(Users model) {
+            private Builder(User model) {
                 this.createTime = model.createTime;
                 this.description = model.description;
                 this.displayName = model.displayName;
@@ -366,8 +303,8 @@ public class ListUsersResponseBody extends TeaModel {
                 return this;
             }
 
-            public Users build() {
-                return new Users(this);
+            public User build() {
+                return new User(this);
             } 
 
         } 

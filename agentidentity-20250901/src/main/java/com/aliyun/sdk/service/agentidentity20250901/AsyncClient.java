@@ -86,6 +86,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateTokenVaultResponse> createTokenVault(CreateTokenVaultRequest request);
 
     /**
+     * @param request the request parameters of CreateUser  CreateUserRequest
+     * @return CreateUserResponse
+     */
+    CompletableFuture<CreateUserResponse> createUser(CreateUserRequest request);
+
+    /**
      * @param request the request parameters of CreateUserPool  CreateUserPoolRequest
      * @return CreateUserPoolResponse
      */
@@ -212,6 +218,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetIdentityProviderResponse> getIdentityProvider(GetIdentityProviderRequest request);
 
     /**
+     * @param request the request parameters of GetLoginPreference  GetLoginPreferenceRequest
+     * @return GetLoginPreferenceResponse
+     */
+    CompletableFuture<GetLoginPreferenceResponse> getLoginPreference(GetLoginPreferenceRequest request);
+
+    /**
      * @param request the request parameters of GetOAuth2CredentialProvider  GetOAuth2CredentialProviderRequest
      * @return GetOAuth2CredentialProviderResponse
      */
@@ -248,6 +260,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetSAMLServiceProviderInfoResponse> getSAMLServiceProviderInfo(GetSAMLServiceProviderInfoRequest request);
 
     /**
+     * @param request the request parameters of GetSpecificIdentityProvider  GetSpecificIdentityProviderRequest
+     * @return GetSpecificIdentityProviderResponse
+     */
+    CompletableFuture<GetSpecificIdentityProviderResponse> getSpecificIdentityProvider(GetSpecificIdentityProviderRequest request);
+
+    /**
      * @param request the request parameters of GetTokenVault  GetTokenVaultRequest
      * @return GetTokenVaultResponse
      */
@@ -270,6 +288,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetUserPoolClientResponse
      */
     CompletableFuture<GetUserPoolClientResponse> getUserPoolClient(GetUserPoolClientRequest request);
+
+    /**
+     * @param request the request parameters of GetUserPoolSyncJob  GetUserPoolSyncJobRequest
+     * @return GetUserPoolSyncJobResponse
+     */
+    CompletableFuture<GetUserPoolSyncJobResponse> getUserPoolSyncJob(GetUserPoolSyncJobRequest request);
 
     /**
      * @param request the request parameters of GetWorkloadIdentity  GetWorkloadIdentityRequest
@@ -350,6 +374,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListUserPoolClientsResponse> listUserPoolClients(ListUserPoolClientsRequest request);
 
     /**
+     * @param request the request parameters of ListUserPoolSyncJobs  ListUserPoolSyncJobsRequest
+     * @return ListUserPoolSyncJobsResponse
+     */
+    CompletableFuture<ListUserPoolSyncJobsResponse> listUserPoolSyncJobs(ListUserPoolSyncJobsRequest request);
+
+    /**
      * @param request the request parameters of ListUserPools  ListUserPoolsRequest
      * @return ListUserPoolsResponse
      */
@@ -368,10 +398,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListWorkloadIdentitiesResponse> listWorkloadIdentities(ListWorkloadIdentitiesRequest request);
 
     /**
+     * @param request the request parameters of RunUserPoolSyncJob  RunUserPoolSyncJobRequest
+     * @return RunUserPoolSyncJobResponse
+     */
+    CompletableFuture<RunUserPoolSyncJobResponse> runUserPoolSyncJob(RunUserPoolSyncJobRequest request);
+
+    /**
      * @param request the request parameters of SetSAMLIdentityProvider  SetSAMLIdentityProviderRequest
      * @return SetSAMLIdentityProviderResponse
      */
     CompletableFuture<SetSAMLIdentityProviderResponse> setSAMLIdentityProvider(SetSAMLIdentityProviderRequest request);
+
+    /**
+     * @param request the request parameters of SetSpecificIdentityProvider  SetSpecificIdentityProviderRequest
+     * @return SetSpecificIdentityProviderResponse
+     */
+    CompletableFuture<SetSpecificIdentityProviderResponse> setSpecificIdentityProvider(SetSpecificIdentityProviderRequest request);
+
+    /**
+     * @param request the request parameters of SetUserPassword  SetUserPasswordRequest
+     * @return SetUserPasswordResponse
+     */
+    CompletableFuture<SetUserPasswordResponse> setUserPassword(SetUserPasswordRequest request);
 
     /**
      * @param request the request parameters of UpdateAPIKeyCredentialProvider  UpdateAPIKeyCredentialProviderRequest
@@ -390,6 +438,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateIdentityProviderResponse
      */
     CompletableFuture<UpdateIdentityProviderResponse> updateIdentityProvider(UpdateIdentityProviderRequest request);
+
+    /**
+     * @param request the request parameters of UpdateLoginPreference  UpdateLoginPreferenceRequest
+     * @return UpdateLoginPreferenceResponse
+     */
+    CompletableFuture<UpdateLoginPreferenceResponse> updateLoginPreference(UpdateLoginPreferenceRequest request);
 
     /**
      * @param request the request parameters of UpdateOAuth2CredentialProvider  UpdateOAuth2CredentialProviderRequest
@@ -420,6 +474,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateTokenVaultResponse
      */
     CompletableFuture<UpdateTokenVaultResponse> updateTokenVault(UpdateTokenVaultRequest request);
+
+    /**
+     * @param request the request parameters of UpdateUser  UpdateUserRequest
+     * @return UpdateUserResponse
+     */
+    CompletableFuture<UpdateUserResponse> updateUser(UpdateUserRequest request);
 
     /**
      * @param request the request parameters of UpdateUserPool  UpdateUserPoolRequest

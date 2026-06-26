@@ -104,6 +104,15 @@ public class GetUserResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
+        @com.aliyun.core.annotation.NameInMap("Email")
+        private String email;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
@@ -117,6 +126,9 @@ public class GetUserResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.description = builder.description;
             this.displayName = builder.displayName;
+            this.email = builder.email;
+            this.status = builder.status;
+            this.type = builder.type;
             this.updateTime = builder.updateTime;
             this.userId = builder.userId;
             this.userName = builder.userName;
@@ -152,6 +164,27 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
+         * @return email
+         */
+        public String getEmail() {
+            return this.email;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
          * @return updateTime
          */
         public String getUpdateTime() {
@@ -176,6 +209,9 @@ public class GetUserResponseBody extends TeaModel {
             private String createTime; 
             private String description; 
             private String displayName; 
+            private String email; 
+            private String status; 
+            private String type; 
             private String updateTime; 
             private String userId; 
             private String userName; 
@@ -187,6 +223,9 @@ public class GetUserResponseBody extends TeaModel {
                 this.createTime = model.createTime;
                 this.description = model.description;
                 this.displayName = model.displayName;
+                this.email = model.email;
+                this.status = model.status;
+                this.type = model.type;
                 this.updateTime = model.updateTime;
                 this.userId = model.userId;
                 this.userName = model.userName;
@@ -213,6 +252,30 @@ public class GetUserResponseBody extends TeaModel {
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
+                return this;
+            }
+
+            /**
+             * Email.
+             */
+            public Builder email(String email) {
+                this.email = email;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 

@@ -245,6 +245,9 @@ public class ListUserPoolClientsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientScopes")
         private java.util.List<ClientScopes> clientScopes;
 
+        @com.aliyun.core.annotation.NameInMap("ClientType")
+        private String clientType;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -271,6 +274,7 @@ public class ListUserPoolClientsResponseBody extends TeaModel {
             this.clientId = builder.clientId;
             this.clientName = builder.clientName;
             this.clientScopes = builder.clientScopes;
+            this.clientType = builder.clientType;
             this.createTime = builder.createTime;
             this.enforcePKCE = builder.enforcePKCE;
             this.redirectURIs = builder.redirectURIs;
@@ -314,6 +318,13 @@ public class ListUserPoolClientsResponseBody extends TeaModel {
          */
         public java.util.List<ClientScopes> getClientScopes() {
             return this.clientScopes;
+        }
+
+        /**
+         * @return clientType
+         */
+        public String getClientType() {
+            return this.clientType;
         }
 
         /**
@@ -370,6 +381,7 @@ public class ListUserPoolClientsResponseBody extends TeaModel {
             private String clientId; 
             private String clientName; 
             private java.util.List<ClientScopes> clientScopes; 
+            private String clientType; 
             private String createTime; 
             private Boolean enforcePKCE; 
             private java.util.List<String> redirectURIs; 
@@ -386,6 +398,7 @@ public class ListUserPoolClientsResponseBody extends TeaModel {
                 this.clientId = model.clientId;
                 this.clientName = model.clientName;
                 this.clientScopes = model.clientScopes;
+                this.clientType = model.clientType;
                 this.createTime = model.createTime;
                 this.enforcePKCE = model.enforcePKCE;
                 this.redirectURIs = model.redirectURIs;
@@ -424,6 +437,14 @@ public class ListUserPoolClientsResponseBody extends TeaModel {
              */
             public Builder clientScopes(java.util.List<ClientScopes> clientScopes) {
                 this.clientScopes = clientScopes;
+                return this;
+            }
+
+            /**
+             * ClientType.
+             */
+            public Builder clientType(String clientType) {
+                this.clientType = clientType;
                 return this;
             }
 

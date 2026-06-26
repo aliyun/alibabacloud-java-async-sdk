@@ -101,6 +101,9 @@ public class GetUserPoolResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("SourcePlatform")
+        private String sourcePlatform;
+
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
@@ -113,6 +116,7 @@ public class GetUserPoolResponseBody extends TeaModel {
         private UserPool(Builder builder) {
             this.createTime = builder.createTime;
             this.description = builder.description;
+            this.sourcePlatform = builder.sourcePlatform;
             this.updateTime = builder.updateTime;
             this.userPoolId = builder.userPoolId;
             this.userPoolName = builder.userPoolName;
@@ -141,6 +145,13 @@ public class GetUserPoolResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourcePlatform
+         */
+        public String getSourcePlatform() {
+            return this.sourcePlatform;
+        }
+
+        /**
          * @return updateTime
          */
         public String getUpdateTime() {
@@ -164,6 +175,7 @@ public class GetUserPoolResponseBody extends TeaModel {
         public static final class Builder {
             private String createTime; 
             private String description; 
+            private String sourcePlatform; 
             private String updateTime; 
             private String userPoolId; 
             private String userPoolName; 
@@ -174,6 +186,7 @@ public class GetUserPoolResponseBody extends TeaModel {
             private Builder(UserPool model) {
                 this.createTime = model.createTime;
                 this.description = model.description;
+                this.sourcePlatform = model.sourcePlatform;
                 this.updateTime = model.updateTime;
                 this.userPoolId = model.userPoolId;
                 this.userPoolName = model.userPoolName;
@@ -192,6 +205,14 @@ public class GetUserPoolResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * SourcePlatform.
+             */
+            public Builder sourcePlatform(String sourcePlatform) {
+                this.sourcePlatform = sourcePlatform;
                 return this;
             }
 
