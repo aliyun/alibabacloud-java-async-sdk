@@ -29,11 +29,16 @@ public class RerunTaskInstancesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Ids")
     private java.util.List<Long> ids;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UseLatestConfig")
+    private Boolean useLatestConfig;
+
     private RerunTaskInstancesRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.comment = builder.comment;
         this.ids = builder.ids;
+        this.useLatestConfig = builder.useLatestConfig;
     }
 
     public static Builder builder() {
@@ -70,10 +75,18 @@ public class RerunTaskInstancesRequest extends Request {
         return this.ids;
     }
 
+    /**
+     * @return useLatestConfig
+     */
+    public Boolean getUseLatestConfig() {
+        return this.useLatestConfig;
+    }
+
     public static final class Builder extends Request.Builder<RerunTaskInstancesRequest, Builder> {
         private String regionId; 
         private String comment; 
         private java.util.List<Long> ids; 
+        private Boolean useLatestConfig; 
 
         private Builder() {
             super();
@@ -84,6 +97,7 @@ public class RerunTaskInstancesRequest extends Request {
             this.regionId = request.regionId;
             this.comment = request.comment;
             this.ids = request.ids;
+            this.useLatestConfig = request.useLatestConfig;
         } 
 
         /**
@@ -114,6 +128,15 @@ public class RerunTaskInstancesRequest extends Request {
             String idsShrink = shrink(ids, "Ids", "json");
             this.putBodyParameter("Ids", idsShrink);
             this.ids = ids;
+            return this;
+        }
+
+        /**
+         * UseLatestConfig.
+         */
+        public Builder useLatestConfig(Boolean useLatestConfig) {
+            this.putBodyParameter("UseLatestConfig", useLatestConfig);
+            this.useLatestConfig = useLatestConfig;
             return this;
         }
 
