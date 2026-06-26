@@ -29,8 +29,21 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "DlfNext";
         this.version = "2025-03-10";
-        this.endpointRule = "";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("us-west-1", "dlfnext.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "dlfnext.us-east-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "dlfnext.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "dlfnext.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "dlfnext.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "dlfnext.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "dlfnext.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "dlfnext.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-beijing", "dlfnext.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "dlfnext.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "dlfnext.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "dlfnext.ap-northeast-1.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -160,6 +173,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<AlterTableResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of AlterTableSchema  AlterTableSchemaRequest
+     * @return AlterTableSchemaResponse
+     */
+    @Override
+    public CompletableFuture<AlterTableSchemaResponse> alterTableSchema(AlterTableSchemaRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AlterTableSchema").setMethod(HttpMethod.POST).setPathRegex("/dlf/v1/{catalogId}/databases/{database}/tables/{table}/schema").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AlterTableSchemaResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AlterTableSchemaResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -970,6 +1001,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListPartitionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListPartitionsByNames  ListPartitionsByNamesRequest
+     * @return ListPartitionsByNamesResponse
+     */
+    @Override
+    public CompletableFuture<ListPartitionsByNamesResponse> listPartitionsByNames(ListPartitionsByNamesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListPartitionsByNames").setMethod(HttpMethod.POST).setPathRegex("/dlf/v1/{catalogId}/databases/{database}/tables/{table}/partitions/list-by-names").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListPartitionsByNamesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListPartitionsByNamesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -62,6 +62,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AlterTableResponse> alterTable(AlterTableRequest request);
 
     /**
+     * @param request the request parameters of AlterTableSchema  AlterTableSchemaRequest
+     * @return AlterTableSchemaResponse
+     */
+    CompletableFuture<AlterTableSchemaResponse> alterTableSchema(AlterTableSchemaRequest request);
+
+    /**
      * @param request the request parameters of BatchGrantPermissions  BatchGrantPermissionsRequest
      * @return BatchGrantPermissionsResponse
      */
@@ -330,6 +336,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListPartitionsResponse
      */
     CompletableFuture<ListPartitionsResponse> listPartitions(ListPartitionsRequest request);
+
+    /**
+     * @param request the request parameters of ListPartitionsByNames  ListPartitionsByNamesRequest
+     * @return ListPartitionsByNamesResponse
+     */
+    CompletableFuture<ListPartitionsByNamesResponse> listPartitionsByNames(ListPartitionsByNamesRequest request);
 
     /**
      * @param request the request parameters of ListPermissions  ListPermissionsRequest
