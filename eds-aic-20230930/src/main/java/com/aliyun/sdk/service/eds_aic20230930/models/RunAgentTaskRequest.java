@@ -31,12 +31,19 @@ public class RunAgentTaskRequest extends Request {
     private Integer maxSteps;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScheduleId")
+    private String scheduleId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskConfigId")
+    private String taskConfigId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TimeoutSeconds")
     private Integer timeoutSeconds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserPrompt")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String userPrompt;
 
     private RunAgentTaskRequest(Builder builder) {
@@ -44,6 +51,8 @@ public class RunAgentTaskRequest extends Request {
         this.bizRegionId = builder.bizRegionId;
         this.instanceIds = builder.instanceIds;
         this.maxSteps = builder.maxSteps;
+        this.scheduleId = builder.scheduleId;
+        this.taskConfigId = builder.taskConfigId;
         this.timeoutSeconds = builder.timeoutSeconds;
         this.userPrompt = builder.userPrompt;
     }
@@ -83,6 +92,20 @@ public class RunAgentTaskRequest extends Request {
     }
 
     /**
+     * @return scheduleId
+     */
+    public String getScheduleId() {
+        return this.scheduleId;
+    }
+
+    /**
+     * @return taskConfigId
+     */
+    public String getTaskConfigId() {
+        return this.taskConfigId;
+    }
+
+    /**
      * @return timeoutSeconds
      */
     public Integer getTimeoutSeconds() {
@@ -100,6 +123,8 @@ public class RunAgentTaskRequest extends Request {
         private String bizRegionId; 
         private java.util.List<String> instanceIds; 
         private Integer maxSteps; 
+        private String scheduleId; 
+        private String taskConfigId; 
         private Integer timeoutSeconds; 
         private String userPrompt; 
 
@@ -112,6 +137,8 @@ public class RunAgentTaskRequest extends Request {
             this.bizRegionId = request.bizRegionId;
             this.instanceIds = request.instanceIds;
             this.maxSteps = request.maxSteps;
+            this.scheduleId = request.scheduleId;
+            this.taskConfigId = request.taskConfigId;
             this.timeoutSeconds = request.timeoutSeconds;
             this.userPrompt = request.userPrompt;
         } 
@@ -144,6 +171,24 @@ public class RunAgentTaskRequest extends Request {
         }
 
         /**
+         * ScheduleId.
+         */
+        public Builder scheduleId(String scheduleId) {
+            this.putQueryParameter("ScheduleId", scheduleId);
+            this.scheduleId = scheduleId;
+            return this;
+        }
+
+        /**
+         * TaskConfigId.
+         */
+        public Builder taskConfigId(String taskConfigId) {
+            this.putQueryParameter("TaskConfigId", taskConfigId);
+            this.taskConfigId = taskConfigId;
+            return this;
+        }
+
+        /**
          * TimeoutSeconds.
          */
         public Builder timeoutSeconds(Integer timeoutSeconds) {
@@ -153,7 +198,7 @@ public class RunAgentTaskRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * UserPrompt.
          */
         public Builder userPrompt(String userPrompt) {
             this.putQueryParameter("UserPrompt", userPrompt);
