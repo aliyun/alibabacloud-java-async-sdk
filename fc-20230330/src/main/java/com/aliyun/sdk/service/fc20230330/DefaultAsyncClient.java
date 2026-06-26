@@ -29,8 +29,35 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "FC";
         this.version = "2023-03-30";
-        this.endpointRule = "";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("us-west-1", "fcv3.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "fcv3.us-east-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "me-central-1.fc.aliyuncs.com"),
+            new TeaPair("eu-west-1", "fcv3.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "fcv3.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "fcv3.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "fcv3.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "fcv3.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "cn-shanghai-finance-1.fc.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "fcv3.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "fcv3.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "fcv3.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "fcv3.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-heyuan-acdr-1", "cn-heyuan-acdr-1.fc.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "cn-hangzhou-finance.fc.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "fcv3.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "fcv3.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "fcv3.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "fcv3.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "fcv3.ap-southeast-5.aliyuncs.com	"),
+            new TeaPair("ap-southeast-3", "fcv3.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "fcv3.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "fcv3.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-south-1", "fcv3.ap-south-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "fcv3.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "fcv3.ap-northeast-1.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 

@@ -118,6 +118,9 @@ public class Function extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("memorySize")
     private Integer memorySize;
 
+    @com.aliyun.core.annotation.NameInMap("microSandboxConfig")
+    private MicroSandboxConfig microSandboxConfig;
+
     @com.aliyun.core.annotation.NameInMap("nasConfig")
     private NASConfig nasConfig;
 
@@ -197,6 +200,7 @@ public class Function extends TeaModel {
         this.lockInfo = builder.lockInfo;
         this.logConfig = builder.logConfig;
         this.memorySize = builder.memorySize;
+        this.microSandboxConfig = builder.microSandboxConfig;
         this.nasConfig = builder.nasConfig;
         this.ossMountConfig = builder.ossMountConfig;
         this.polarFsConfig = builder.polarFsConfig;
@@ -458,6 +462,13 @@ public class Function extends TeaModel {
     }
 
     /**
+     * @return microSandboxConfig
+     */
+    public MicroSandboxConfig getMicroSandboxConfig() {
+        return this.microSandboxConfig;
+    }
+
+    /**
      * @return nasConfig
      */
     public NASConfig getNasConfig() {
@@ -596,6 +607,7 @@ public class Function extends TeaModel {
         private FunctionLockInfo lockInfo; 
         private LogConfig logConfig; 
         private Integer memorySize; 
+        private MicroSandboxConfig microSandboxConfig; 
         private NASConfig nasConfig; 
         private OSSMountConfig ossMountConfig; 
         private PolarFsConfig polarFsConfig; 
@@ -649,6 +661,7 @@ public class Function extends TeaModel {
             this.lockInfo = model.lockInfo;
             this.logConfig = model.logConfig;
             this.memorySize = model.memorySize;
+            this.microSandboxConfig = model.microSandboxConfig;
             this.nasConfig = model.nasConfig;
             this.ossMountConfig = model.ossMountConfig;
             this.polarFsConfig = model.polarFsConfig;
@@ -927,6 +940,14 @@ public class Function extends TeaModel {
          */
         public Builder memorySize(Integer memorySize) {
             this.memorySize = memorySize;
+            return this;
+        }
+
+        /**
+         * microSandboxConfig.
+         */
+        public Builder microSandboxConfig(MicroSandboxConfig microSandboxConfig) {
+            this.microSandboxConfig = microSandboxConfig;
             return this;
         }
 

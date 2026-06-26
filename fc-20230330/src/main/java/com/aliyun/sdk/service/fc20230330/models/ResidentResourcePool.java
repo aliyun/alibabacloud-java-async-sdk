@@ -20,6 +20,9 @@ public class ResidentResourcePool extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("allocationStatus")
     private ResidentResourceAllocationStatus allocationStatus;
 
+    @com.aliyun.core.annotation.NameInMap("associatedPoolId")
+    private String associatedPoolId;
+
     @com.aliyun.core.annotation.NameInMap("createdTime")
     private String createdTime;
 
@@ -28,6 +31,9 @@ public class ResidentResourcePool extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("lastModifiedTime")
     private String lastModifiedTime;
+
+    @com.aliyun.core.annotation.NameInMap("poolType")
+    private String poolType;
 
     @com.aliyun.core.annotation.NameInMap("residentResourcePoolId")
     private String residentResourcePoolId;
@@ -41,15 +47,21 @@ public class ResidentResourcePool extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("resourcePoolConfig")
     private ResidentResourceCapacity resourcePoolConfig;
 
+    @com.aliyun.core.annotation.NameInMap("timedConfig")
+    private TimedPoolConfig timedConfig;
+
     private ResidentResourcePool(Builder builder) {
         this.allocationStatus = builder.allocationStatus;
+        this.associatedPoolId = builder.associatedPoolId;
         this.createdTime = builder.createdTime;
         this.expireTime = builder.expireTime;
         this.lastModifiedTime = builder.lastModifiedTime;
+        this.poolType = builder.poolType;
         this.residentResourcePoolId = builder.residentResourcePoolId;
         this.residentResourcePoolName = builder.residentResourcePoolName;
         this.resourcePoolCapacity = builder.resourcePoolCapacity;
         this.resourcePoolConfig = builder.resourcePoolConfig;
+        this.timedConfig = builder.timedConfig;
     }
 
     public static Builder builder() {
@@ -72,6 +84,13 @@ public class ResidentResourcePool extends TeaModel {
     }
 
     /**
+     * @return associatedPoolId
+     */
+    public String getAssociatedPoolId() {
+        return this.associatedPoolId;
+    }
+
+    /**
      * @return createdTime
      */
     public String getCreatedTime() {
@@ -90,6 +109,13 @@ public class ResidentResourcePool extends TeaModel {
      */
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
+    }
+
+    /**
+     * @return poolType
+     */
+    public String getPoolType() {
+        return this.poolType;
     }
 
     /**
@@ -120,28 +146,41 @@ public class ResidentResourcePool extends TeaModel {
         return this.resourcePoolConfig;
     }
 
+    /**
+     * @return timedConfig
+     */
+    public TimedPoolConfig getTimedConfig() {
+        return this.timedConfig;
+    }
+
     public static final class Builder {
         private ResidentResourceAllocationStatus allocationStatus; 
+        private String associatedPoolId; 
         private String createdTime; 
         private String expireTime; 
         private String lastModifiedTime; 
+        private String poolType; 
         private String residentResourcePoolId; 
         private String residentResourcePoolName; 
         private ResidentResourceCapacity resourcePoolCapacity; 
         private ResidentResourceCapacity resourcePoolConfig; 
+        private TimedPoolConfig timedConfig; 
 
         private Builder() {
         } 
 
         private Builder(ResidentResourcePool model) {
             this.allocationStatus = model.allocationStatus;
+            this.associatedPoolId = model.associatedPoolId;
             this.createdTime = model.createdTime;
             this.expireTime = model.expireTime;
             this.lastModifiedTime = model.lastModifiedTime;
+            this.poolType = model.poolType;
             this.residentResourcePoolId = model.residentResourcePoolId;
             this.residentResourcePoolName = model.residentResourcePoolName;
             this.resourcePoolCapacity = model.resourcePoolCapacity;
             this.resourcePoolConfig = model.resourcePoolConfig;
+            this.timedConfig = model.timedConfig;
         } 
 
         /**
@@ -149,6 +188,14 @@ public class ResidentResourcePool extends TeaModel {
          */
         public Builder allocationStatus(ResidentResourceAllocationStatus allocationStatus) {
             this.allocationStatus = allocationStatus;
+            return this;
+        }
+
+        /**
+         * associatedPoolId.
+         */
+        public Builder associatedPoolId(String associatedPoolId) {
+            this.associatedPoolId = associatedPoolId;
             return this;
         }
 
@@ -174,6 +221,14 @@ public class ResidentResourcePool extends TeaModel {
          */
         public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
+            return this;
+        }
+
+        /**
+         * poolType.
+         */
+        public Builder poolType(String poolType) {
+            this.poolType = poolType;
             return this;
         }
 
@@ -206,6 +261,14 @@ public class ResidentResourcePool extends TeaModel {
          */
         public Builder resourcePoolConfig(ResidentResourceCapacity resourcePoolConfig) {
             this.resourcePoolConfig = resourcePoolConfig;
+            return this;
+        }
+
+        /**
+         * timedConfig.
+         */
+        public Builder timedConfig(TimedPoolConfig timedConfig) {
+            this.timedConfig = timedConfig;
             return this;
         }
 
