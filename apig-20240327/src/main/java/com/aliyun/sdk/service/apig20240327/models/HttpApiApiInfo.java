@@ -38,8 +38,8 @@ public class HttpApiApiInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @com.aliyun.core.annotation.NameInMap("enabelAuth")
-    private Boolean enabelAuth;
+    @com.aliyun.core.annotation.NameInMap("enableAuth")
+    private Boolean enableAuth;
 
     @com.aliyun.core.annotation.NameInMap("environments")
     private java.util.List<Environments> environments;
@@ -79,7 +79,7 @@ public class HttpApiApiInfo extends TeaModel {
         this.deployCntMap = builder.deployCntMap;
         this.deployConfigs = builder.deployConfigs;
         this.description = builder.description;
-        this.enabelAuth = builder.enabelAuth;
+        this.enableAuth = builder.enableAuth;
         this.environments = builder.environments;
         this.gatewayId = builder.gatewayId;
         this.httpApiId = builder.httpApiId;
@@ -154,10 +154,10 @@ public class HttpApiApiInfo extends TeaModel {
     }
 
     /**
-     * @return enabelAuth
+     * @return enableAuth
      */
-    public Boolean getEnabelAuth() {
-        return this.enabelAuth;
+    public Boolean getEnableAuth() {
+        return this.enableAuth;
     }
 
     /**
@@ -238,7 +238,7 @@ public class HttpApiApiInfo extends TeaModel {
         private java.util.Map<String, HttpApiApiInfoDeployCntMapValue> deployCntMap; 
         private java.util.List<HttpApiDeployConfig> deployConfigs; 
         private String description; 
-        private Boolean enabelAuth; 
+        private Boolean enableAuth; 
         private java.util.List<Environments> environments; 
         private String gatewayId; 
         private String httpApiId; 
@@ -261,7 +261,7 @@ public class HttpApiApiInfo extends TeaModel {
             this.deployCntMap = model.deployCntMap;
             this.deployConfigs = model.deployConfigs;
             this.description = model.description;
-            this.enabelAuth = model.enabelAuth;
+            this.enableAuth = model.enableAuth;
             this.environments = model.environments;
             this.gatewayId = model.gatewayId;
             this.httpApiId = model.httpApiId;
@@ -331,10 +331,10 @@ public class HttpApiApiInfo extends TeaModel {
         }
 
         /**
-         * enabelAuth.
+         * enableAuth.
          */
-        public Builder enabelAuth(Boolean enabelAuth) {
-            this.enabelAuth = enabelAuth;
+        public Builder enableAuth(Boolean enableAuth) {
+            this.enableAuth = enableAuth;
             return this;
         }
 

@@ -20,7 +20,7 @@ public class HttpApiApiInfoDeployCntMapValue extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("deployedCnt")
     private Long deployedCnt;
 
-    @com.aliyun.core.annotation.NameInMap("Cnt")
+    @com.aliyun.core.annotation.NameInMap("cnt")
     private Long cnt;
 
     private HttpApiApiInfoDeployCntMapValue(Builder builder) {
@@ -75,7 +75,7 @@ public class HttpApiApiInfoDeployCntMapValue extends TeaModel {
         }
 
         /**
-         * Cnt.
+         * cnt.
          */
         public Builder cnt(Long cnt) {
             this.cnt = cnt;
