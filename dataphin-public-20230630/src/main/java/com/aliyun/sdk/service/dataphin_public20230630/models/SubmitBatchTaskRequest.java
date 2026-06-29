@@ -290,6 +290,123 @@ public class SubmitBatchTaskRequest extends Request {
      *
      * <p>SubmitBatchTaskRequest</p>
      */
+    public static class OfflineCodeTemplateParams extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("EncryptEnabled")
+        private Boolean encryptEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private OfflineCodeTemplateParams(Builder builder) {
+            this.description = builder.description;
+            this.encryptEnabled = builder.encryptEnabled;
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OfflineCodeTemplateParams create() {
+            return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return encryptEnabled
+         */
+        public Boolean getEncryptEnabled() {
+            return this.encryptEnabled;
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String description; 
+            private Boolean encryptEnabled; 
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(OfflineCodeTemplateParams model) {
+                this.description = model.description;
+                this.encryptEnabled = model.encryptEnabled;
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * EncryptEnabled.
+             */
+            public Builder encryptEnabled(Boolean encryptEnabled) {
+                this.encryptEnabled = encryptEnabled;
+                return this;
+            }
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public OfflineCodeTemplateParams build() {
+                return new OfflineCodeTemplateParams(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SubmitBatchTaskRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitBatchTaskRequest</p>
+     */
     public static class ParamList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -745,6 +862,9 @@ public class SubmitBatchTaskRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String code;
 
+        @com.aliyun.core.annotation.NameInMap("CodeTemplateVersion")
+        private Integer codeTemplateVersion;
+
         @com.aliyun.core.annotation.NameInMap("Comment")
         @com.aliyun.core.annotation.Validation(required = true)
         private String comment;
@@ -775,6 +895,12 @@ public class SubmitBatchTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("NodeStatus")
         private Integer nodeStatus;
 
+        @com.aliyun.core.annotation.NameInMap("OfflineCodeTemplateId")
+        private String offlineCodeTemplateId;
+
+        @com.aliyun.core.annotation.NameInMap("OfflineCodeTemplateParams")
+        private java.util.List<OfflineCodeTemplateParams> offlineCodeTemplateParams;
+
         @com.aliyun.core.annotation.NameInMap("ParamList")
         private java.util.List<ParamList> paramList;
 
@@ -799,6 +925,7 @@ public class SubmitBatchTaskRequest extends Request {
 
         private SubmitCommand(Builder builder) {
             this.code = builder.code;
+            this.codeTemplateVersion = builder.codeTemplateVersion;
             this.comment = builder.comment;
             this.cronExpression = builder.cronExpression;
             this.customScheduleConfig = builder.customScheduleConfig;
@@ -808,6 +935,8 @@ public class SubmitBatchTaskRequest extends Request {
             this.nodeDescription = builder.nodeDescription;
             this.nodeOutputNameList = builder.nodeOutputNameList;
             this.nodeStatus = builder.nodeStatus;
+            this.offlineCodeTemplateId = builder.offlineCodeTemplateId;
+            this.offlineCodeTemplateParams = builder.offlineCodeTemplateParams;
             this.paramList = builder.paramList;
             this.priority = builder.priority;
             this.projectId = builder.projectId;
@@ -830,6 +959,13 @@ public class SubmitBatchTaskRequest extends Request {
          */
         public String getCode() {
             return this.code;
+        }
+
+        /**
+         * @return codeTemplateVersion
+         */
+        public Integer getCodeTemplateVersion() {
+            return this.codeTemplateVersion;
         }
 
         /**
@@ -896,6 +1032,20 @@ public class SubmitBatchTaskRequest extends Request {
         }
 
         /**
+         * @return offlineCodeTemplateId
+         */
+        public String getOfflineCodeTemplateId() {
+            return this.offlineCodeTemplateId;
+        }
+
+        /**
+         * @return offlineCodeTemplateParams
+         */
+        public java.util.List<OfflineCodeTemplateParams> getOfflineCodeTemplateParams() {
+            return this.offlineCodeTemplateParams;
+        }
+
+        /**
          * @return paramList
          */
         public java.util.List<ParamList> getParamList() {
@@ -946,6 +1096,7 @@ public class SubmitBatchTaskRequest extends Request {
 
         public static final class Builder {
             private String code; 
+            private Integer codeTemplateVersion; 
             private String comment; 
             private String cronExpression; 
             private CustomScheduleConfig customScheduleConfig; 
@@ -955,6 +1106,8 @@ public class SubmitBatchTaskRequest extends Request {
             private String nodeDescription; 
             private java.util.List<String> nodeOutputNameList; 
             private Integer nodeStatus; 
+            private String offlineCodeTemplateId; 
+            private java.util.List<OfflineCodeTemplateParams> offlineCodeTemplateParams; 
             private java.util.List<ParamList> paramList; 
             private Integer priority; 
             private Long projectId; 
@@ -968,6 +1121,7 @@ public class SubmitBatchTaskRequest extends Request {
 
             private Builder(SubmitCommand model) {
                 this.code = model.code;
+                this.codeTemplateVersion = model.codeTemplateVersion;
                 this.comment = model.comment;
                 this.cronExpression = model.cronExpression;
                 this.customScheduleConfig = model.customScheduleConfig;
@@ -977,6 +1131,8 @@ public class SubmitBatchTaskRequest extends Request {
                 this.nodeDescription = model.nodeDescription;
                 this.nodeOutputNameList = model.nodeOutputNameList;
                 this.nodeStatus = model.nodeStatus;
+                this.offlineCodeTemplateId = model.offlineCodeTemplateId;
+                this.offlineCodeTemplateParams = model.offlineCodeTemplateParams;
                 this.paramList = model.paramList;
                 this.priority = model.priority;
                 this.projectId = model.projectId;
@@ -994,6 +1150,14 @@ public class SubmitBatchTaskRequest extends Request {
              */
             public Builder code(String code) {
                 this.code = code;
+                return this;
+            }
+
+            /**
+             * CodeTemplateVersion.
+             */
+            public Builder codeTemplateVersion(Integer codeTemplateVersion) {
+                this.codeTemplateVersion = codeTemplateVersion;
                 return this;
             }
 
@@ -1075,6 +1239,22 @@ public class SubmitBatchTaskRequest extends Request {
              */
             public Builder nodeStatus(Integer nodeStatus) {
                 this.nodeStatus = nodeStatus;
+                return this;
+            }
+
+            /**
+             * OfflineCodeTemplateId.
+             */
+            public Builder offlineCodeTemplateId(String offlineCodeTemplateId) {
+                this.offlineCodeTemplateId = offlineCodeTemplateId;
+                return this;
+            }
+
+            /**
+             * OfflineCodeTemplateParams.
+             */
+            public Builder offlineCodeTemplateParams(java.util.List<OfflineCodeTemplateParams> offlineCodeTemplateParams) {
+                this.offlineCodeTemplateParams = offlineCodeTemplateParams;
                 return this;
             }
 

@@ -608,6 +608,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetBizUnitInfoResponse> getBizUnitInfo(GetBizUnitInfoRequest request);
 
     /**
+     * @param request the request parameters of GetCatalogAssetDetails  GetCatalogAssetDetailsRequest
+     * @return GetCatalogAssetDetailsResponse
+     */
+    CompletableFuture<GetCatalogAssetDetailsResponse> getCatalogAssetDetails(GetCatalogAssetDetailsRequest request);
+
+    /**
      * @param request the request parameters of GetCheckConnectivityJobs  GetCheckConnectivityJobsRequest
      * @return GetCheckConnectivityJobsResponse
      */
@@ -1152,6 +1158,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListBizUnitsResponse
      */
     CompletableFuture<ListBizUnitsResponse> listBizUnits(ListBizUnitsRequest request);
+
+    /**
+     * @param request the request parameters of ListCatalogAssets  ListCatalogAssetsRequest
+     * @return ListCatalogAssetsResponse
+     */
+    CompletableFuture<ListCatalogAssetsResponse> listCatalogAssets(ListCatalogAssetsRequest request);
 
     /**
      * @param request the request parameters of ListComputeSources  ListComputeSourcesRequest

@@ -29,8 +29,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "dataphin-public";
         this.version = "2023-06-30";
-        this.endpointRule = "";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("cn-shenzhen", "dataphin-public.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "dataphin-public.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "dataphin-public.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "dataphin-public.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "dataphin-public.cn-beijing.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -1804,6 +1810,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetCatalogAssetDetails  GetCatalogAssetDetailsRequest
+     * @return GetCatalogAssetDetailsResponse
+     */
+    @Override
+    public CompletableFuture<GetCatalogAssetDetailsResponse> getCatalogAssetDetails(GetCatalogAssetDetailsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetCatalogAssetDetails").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCatalogAssetDetailsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetCatalogAssetDetailsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetCheckConnectivityJobs  GetCheckConnectivityJobsRequest
      * @return GetCheckConnectivityJobsResponse
      */
@@ -3436,6 +3460,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListBizUnitsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListCatalogAssets  ListCatalogAssetsRequest
+     * @return ListCatalogAssetsResponse
+     */
+    @Override
+    public CompletableFuture<ListCatalogAssetsResponse> listCatalogAssets(ListCatalogAssetsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListCatalogAssets").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListCatalogAssetsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListCatalogAssetsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
