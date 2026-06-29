@@ -202,6 +202,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAccessRuleResponse> createAccessRule(CreateAccessRuleRequest request);
 
     /**
+     * @param request the request parameters of CreateAgenticSpace  CreateAgenticSpaceRequest
+     * @return CreateAgenticSpaceResponse
+     */
+    CompletableFuture<CreateAgenticSpaceResponse> createAgenticSpace(CreateAgenticSpaceRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
      * <ul>
@@ -589,6 +595,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAccessRuleResponse> deleteAccessRule(DeleteAccessRuleRequest request);
 
     /**
+     * @param request the request parameters of DeleteAgenticSpace  DeleteAgenticSpaceRequest
+     * @return DeleteAgenticSpaceResponse
+     */
+    CompletableFuture<DeleteAgenticSpaceResponse> deleteAgenticSpace(DeleteAgenticSpaceRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
      * <ul>
@@ -720,12 +732,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAccessPointResponse> describeAccessPoint(DescribeAccessPointRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>Only General-purpose NAS file systems that use the NFS protocol support this operation.</p>
+     * @deprecated OpenAPI DescribeAccessPoints is deprecated, please use NAS::2017-06-26::ListAccessPoints instead.  * @description Only General-purpose NAS file systems that use the NFS protocol support this operation.
      * 
      * @param request the request parameters of DescribeAccessPoints  DescribeAccessPointsRequest
      * @return DescribeAccessPointsResponse
      */
+    @Deprecated
     CompletableFuture<DescribeAccessPointsResponse> describeAccessPoints(DescribeAccessPointsRequest request);
 
     /**
@@ -733,6 +745,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeAccessRulesResponse
      */
     CompletableFuture<DescribeAccessRulesResponse> describeAccessRules(DescribeAccessRulesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAgenticSpaces  DescribeAgenticSpacesRequest
+     * @return DescribeAgenticSpacesResponse
+     */
+    CompletableFuture<DescribeAgenticSpacesResponse> describeAgenticSpaces(DescribeAgenticSpacesRequest request);
 
     /**
      * <b>description</b> :
@@ -1015,6 +1033,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableSmbAclResponse> enableSmbAcl(EnableSmbAclRequest request);
 
     /**
+     * @param request the request parameters of GetAgenticSpace  GetAgenticSpaceRequest
+     * @return GetAgenticSpaceResponse
+     */
+    CompletableFuture<GetAgenticSpaceResponse> getAgenticSpace(GetAgenticSpaceRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Only General-purpose NAS file systems support this operation.</p>
      * 
@@ -1046,6 +1070,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetRecycleBinAttributeResponse
      */
     CompletableFuture<GetRecycleBinAttributeResponse> getRecycleBinAttribute(GetRecycleBinAttributeRequest request);
+
+    /**
+     * @param request the request parameters of ListAccessPoints  ListAccessPointsRequest
+     * @return ListAccessPointsResponse
+     */
+    CompletableFuture<ListAccessPointsResponse> listAccessPoints(ListAccessPointsRequest request);
 
     /**
      * <b>description</b> :
@@ -1127,6 +1157,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyAccessRuleResponse
      */
     CompletableFuture<ModifyAccessRuleResponse> modifyAccessRule(ModifyAccessRuleRequest request);
+
+    /**
+     * @param request the request parameters of ModifyAgenticSpace  ModifyAgenticSpaceRequest
+     * @return ModifyAgenticSpaceResponse
+     */
+    CompletableFuture<ModifyAgenticSpaceResponse> modifyAgenticSpace(ModifyAgenticSpaceRequest request);
 
     /**
      * <b>description</b> :
@@ -1274,6 +1310,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RetryLifecycleRetrieveJobResponse
      */
     CompletableFuture<RetryLifecycleRetrieveJobResponse> retryLifecycleRetrieveJob(RetryLifecycleRetrieveJobRequest request);
+
+    /**
+     * @param request the request parameters of SetAgenticSpaceQuota  SetAgenticSpaceQuotaRequest
+     * @return SetAgenticSpaceQuotaResponse
+     */
+    CompletableFuture<SetAgenticSpaceQuotaResponse> setAgenticSpaceQuota(SetAgenticSpaceQuotaRequest request);
 
     /**
      * <b>description</b> :

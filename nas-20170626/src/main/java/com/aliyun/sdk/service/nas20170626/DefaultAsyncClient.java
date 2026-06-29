@@ -62,7 +62,37 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-zhangjiakou-na62-a01", "nas.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-nebula-1", "nas.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "nas.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "nas.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "nas.aliyuncs.com"),
+            new TeaPair("us-west-1", "nas.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "nas.us-east-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "nas.me-east-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "nas.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "nas.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "nas.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-jva", "nas.cn-zhengzhou-jva.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "nas.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "nas.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "nas.cn-shenzhen-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "nas.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "nas.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "nas.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "nas.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "nas.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "nas.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "nas.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "nas.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "nas.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "nas.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "nas.cn-beijing-finance-1.aliyuncs.com"),
+            new TeaPair("cn-beijing", "nas.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "nas.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "nas.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "nas.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "nas.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "nas.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-south-1", "nas.ap-south-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "nas.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "nas.ap-northeast-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -441,6 +471,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateAccessRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateAgenticSpace  CreateAgenticSpaceRequest
+     * @return CreateAgenticSpaceResponse
+     */
+    @Override
+    public CompletableFuture<CreateAgenticSpaceResponse> createAgenticSpace(CreateAgenticSpaceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateAgenticSpace").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAgenticSpaceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAgenticSpaceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1086,6 +1134,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteAgenticSpace  DeleteAgenticSpaceRequest
+     * @return DeleteAgenticSpaceResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAgenticSpaceResponse> deleteAgenticSpace(DeleteAgenticSpaceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteAgenticSpace").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAgenticSpaceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAgenticSpaceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
      * <ul>
@@ -1373,12 +1439,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Only General-purpose NAS file systems that use the NFS protocol support this operation.</p>
+     * @deprecated OpenAPI DescribeAccessPoints is deprecated, please use NAS::2017-06-26::ListAccessPoints instead.  * @description Only General-purpose NAS file systems that use the NFS protocol support this operation.
      * 
      * @param request the request parameters of DescribeAccessPoints  DescribeAccessPointsRequest
      * @return DescribeAccessPointsResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DescribeAccessPointsResponse> describeAccessPoints(DescribeAccessPointsRequest request) {
         try {
@@ -1406,6 +1472,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeAccessRulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeAgenticSpaces  DescribeAgenticSpacesRequest
+     * @return DescribeAgenticSpacesResponse
+     */
+    @Override
+    public CompletableFuture<DescribeAgenticSpacesResponse> describeAgenticSpaces(DescribeAgenticSpacesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeAgenticSpaces").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeAgenticSpacesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeAgenticSpacesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2076,6 +2160,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetAgenticSpace  GetAgenticSpaceRequest
+     * @return GetAgenticSpaceResponse
+     */
+    @Override
+    public CompletableFuture<GetAgenticSpaceResponse> getAgenticSpace(GetAgenticSpaceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAgenticSpace").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAgenticSpaceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAgenticSpaceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>Only General-purpose NAS file systems support this operation.</p>
      * 
@@ -2151,6 +2253,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetRecycleBinAttributeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListAccessPoints  ListAccessPointsRequest
+     * @return ListAccessPointsResponse
+     */
+    @Override
+    public CompletableFuture<ListAccessPointsResponse> listAccessPoints(ListAccessPointsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAccessPoints").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAccessPointsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAccessPointsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2340,6 +2460,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyAccessRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyAgenticSpace  ModifyAgenticSpaceRequest
+     * @return ModifyAgenticSpaceResponse
+     */
+    @Override
+    public CompletableFuture<ModifyAgenticSpaceResponse> modifyAgenticSpace(ModifyAgenticSpaceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyAgenticSpace").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyAgenticSpaceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyAgenticSpaceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2667,6 +2805,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RetryLifecycleRetrieveJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SetAgenticSpaceQuota  SetAgenticSpaceQuotaRequest
+     * @return SetAgenticSpaceQuotaResponse
+     */
+    @Override
+    public CompletableFuture<SetAgenticSpaceQuotaResponse> setAgenticSpaceQuota(SetAgenticSpaceQuotaRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetAgenticSpaceQuota").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetAgenticSpaceQuotaResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SetAgenticSpaceQuotaResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

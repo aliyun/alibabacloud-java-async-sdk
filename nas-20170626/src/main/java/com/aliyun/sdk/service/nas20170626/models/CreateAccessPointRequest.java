@@ -19,12 +19,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateAccessPointRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AccessGroup")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String accessGroup;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AccessPointName")
     private String accessPointName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgenticSpaceId")
+    private String agenticSpaceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnabledRam")
@@ -81,6 +84,7 @@ public class CreateAccessPointRequest extends Request {
         super(builder);
         this.accessGroup = builder.accessGroup;
         this.accessPointName = builder.accessPointName;
+        this.agenticSpaceId = builder.agenticSpaceId;
         this.enabledRam = builder.enabledRam;
         this.fileSystemId = builder.fileSystemId;
         this.ownerGroupId = builder.ownerGroupId;
@@ -120,6 +124,13 @@ public class CreateAccessPointRequest extends Request {
      */
     public String getAccessPointName() {
         return this.accessPointName;
+    }
+
+    /**
+     * @return agenticSpaceId
+     */
+    public String getAgenticSpaceId() {
+        return this.agenticSpaceId;
     }
 
     /**
@@ -209,6 +220,7 @@ public class CreateAccessPointRequest extends Request {
     public static final class Builder extends Request.Builder<CreateAccessPointRequest, Builder> {
         private String accessGroup; 
         private String accessPointName; 
+        private String agenticSpaceId; 
         private Boolean enabledRam; 
         private String fileSystemId; 
         private Integer ownerGroupId; 
@@ -230,6 +242,7 @@ public class CreateAccessPointRequest extends Request {
             super(request);
             this.accessGroup = request.accessGroup;
             this.accessPointName = request.accessPointName;
+            this.agenticSpaceId = request.agenticSpaceId;
             this.enabledRam = request.enabledRam;
             this.fileSystemId = request.fileSystemId;
             this.ownerGroupId = request.ownerGroupId;
@@ -248,7 +261,6 @@ public class CreateAccessPointRequest extends Request {
          * <p>The name of the permission group.</p>
          * <p>This parameter is required for a General-purpose File Storage NAS (NAS) file system.</p>
          * <p>The default permission group for virtual private clouds (VPCs) is named DEFAULT_VPC_GROUP_NAME.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>DEFAULT_VPC_GROUP_NAME</p>
@@ -268,6 +280,15 @@ public class CreateAccessPointRequest extends Request {
         public Builder accessPointName(String accessPointName) {
             this.putQueryParameter("AccessPointName", accessPointName);
             this.accessPointName = accessPointName;
+            return this;
+        }
+
+        /**
+         * AgenticSpaceId.
+         */
+        public Builder agenticSpaceId(String agenticSpaceId) {
+            this.putQueryParameter("AgenticSpaceId", agenticSpaceId);
+            this.agenticSpaceId = agenticSpaceId;
             return this;
         }
 
