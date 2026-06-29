@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TaskStatistic} extends {@link TeaModel}
  *
  * <p>TaskStatistic</p>
@@ -120,6 +126,10 @@ public class TaskStatistic extends TeaModel {
 
     public static TaskStatistic create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -323,6 +333,37 @@ public class TaskStatistic extends TeaModel {
         private Float totalSamplingCount; 
         private Long totalSubtaskCount; 
         private Float totalWorkTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(TaskStatistic model) {
+            this.acceptItemCount = model.acceptItemCount;
+            this.checkAbandon = model.checkAbandon;
+            this.checkAccuracy = model.checkAccuracy;
+            this.checkEfficiency = model.checkEfficiency;
+            this.checkedAccuracy = model.checkedAccuracy;
+            this.checkedError = model.checkedError;
+            this.checkedRejectCount = model.checkedRejectCount;
+            this.finalAbandonCount = model.finalAbandonCount;
+            this.finishedItemCount = model.finishedItemCount;
+            this.finishedSubtaskCount = model.finishedSubtaskCount;
+            this.markEfficiency = model.markEfficiency;
+            this.preMarkFixedCount = model.preMarkFixedCount;
+            this.sampledAccuracy = model.sampledAccuracy;
+            this.sampledErrorCount = model.sampledErrorCount;
+            this.sampledRejectCount = model.sampledRejectCount;
+            this.samplingAccuracy = model.samplingAccuracy;
+            this.totalCheckCount = model.totalCheckCount;
+            this.totalCheckTime = model.totalCheckTime;
+            this.totalCheckedCount = model.totalCheckedCount;
+            this.totalItemCount = model.totalItemCount;
+            this.totalMarkTime = model.totalMarkTime;
+            this.totalSampledCount = model.totalSampledCount;
+            this.totalSamplingCount = model.totalSamplingCount;
+            this.totalSubtaskCount = model.totalSubtaskCount;
+            this.totalWorkTime = model.totalWorkTime;
+        } 
 
         /**
          * AcceptItemCount.

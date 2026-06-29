@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SimpleUser} extends {@link TeaModel}
  *
  * <p>SimpleUser</p>
@@ -40,6 +46,10 @@ public class SimpleUser extends TeaModel {
 
     public static SimpleUser create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -83,6 +93,17 @@ public class SimpleUser extends TeaModel {
         private String role; 
         private Long userId; 
         private String userName; 
+
+        private Builder() {
+        } 
+
+        private Builder(SimpleUser model) {
+            this.accountNo = model.accountNo;
+            this.accountType = model.accountType;
+            this.role = model.role;
+            this.userId = model.userId;
+            this.userName = model.userName;
+        } 
 
         /**
          * AccountNo.

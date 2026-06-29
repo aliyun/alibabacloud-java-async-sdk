@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SimpleWorkforce} extends {@link TeaModel}
  *
  * <p>SimpleWorkforce</p>
  */
 public class SimpleWorkforce extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("UserIds")
-    private java.util.List < Long > userIds;
+    private java.util.List<Long> userIds;
 
     @com.aliyun.core.annotation.NameInMap("WorkNodeId")
     private Integer workNodeId;
@@ -30,10 +36,14 @@ public class SimpleWorkforce extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return userIds
      */
-    public java.util.List < Long > getUserIds() {
+    public java.util.List<Long> getUserIds() {
         return this.userIds;
     }
 
@@ -45,13 +55,21 @@ public class SimpleWorkforce extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Long > userIds; 
+        private java.util.List<Long> userIds; 
         private Integer workNodeId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SimpleWorkforce model) {
+            this.userIds = model.userIds;
+            this.workNodeId = model.workNodeId;
+        } 
 
         /**
          * UserIds.
          */
-        public Builder userIds(java.util.List < Long > userIds) {
+        public Builder userIds(java.util.List<Long> userIds) {
             this.userIds = userIds;
             return this;
         }

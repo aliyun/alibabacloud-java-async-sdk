@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSubtaskItemsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSubtaskItemsResponseBody</p>
@@ -21,7 +27,7 @@ public class ListSubtaskItemsResponseBody extends TeaModel {
     private String errorCode;
 
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < SubtaskItemDetail > items;
+    private java.util.List<SubtaskItemDetail> items;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -67,6 +73,10 @@ public class ListSubtaskItemsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -91,7 +101,7 @@ public class ListSubtaskItemsResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < SubtaskItemDetail > getItems() {
+    public java.util.List<SubtaskItemDetail> getItems() {
         return this.items;
     }
 
@@ -148,7 +158,7 @@ public class ListSubtaskItemsResponseBody extends TeaModel {
         private Integer code; 
         private String details; 
         private String errorCode; 
-        private java.util.List < SubtaskItemDetail > items; 
+        private java.util.List<SubtaskItemDetail> items; 
         private String message; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -156,6 +166,23 @@ public class ListSubtaskItemsResponseBody extends TeaModel {
         private Boolean success; 
         private Integer totalCount; 
         private Integer totalPage; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSubtaskItemsResponseBody model) {
+            this.code = model.code;
+            this.details = model.details;
+            this.errorCode = model.errorCode;
+            this.items = model.items;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+            this.totalPage = model.totalPage;
+        } 
 
         /**
          * Code.
@@ -184,13 +211,16 @@ public class ListSubtaskItemsResponseBody extends TeaModel {
         /**
          * Items.
          */
-        public Builder items(java.util.List < SubtaskItemDetail > items) {
+        public Builder items(java.util.List<SubtaskItemDetail> items) {
             this.items = items;
             return this;
         }
 
         /**
-         * Message.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;

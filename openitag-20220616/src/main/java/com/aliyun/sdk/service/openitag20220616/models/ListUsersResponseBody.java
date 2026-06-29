@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUsersResponseBody} extends {@link TeaModel}
  *
  * <p>ListUsersResponseBody</p>
@@ -43,7 +49,7 @@ public class ListUsersResponseBody extends TeaModel {
     private Integer totalPage;
 
     @com.aliyun.core.annotation.NameInMap("Users")
-    private java.util.List < SimpleUser > users;
+    private java.util.List<SimpleUser> users;
 
     private ListUsersResponseBody(Builder builder) {
         this.code = builder.code;
@@ -65,6 +71,10 @@ public class ListUsersResponseBody extends TeaModel {
 
     public static ListUsersResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -140,7 +150,7 @@ public class ListUsersResponseBody extends TeaModel {
     /**
      * @return users
      */
-    public java.util.List < SimpleUser > getUsers() {
+    public java.util.List<SimpleUser> getUsers() {
         return this.users;
     }
 
@@ -155,7 +165,24 @@ public class ListUsersResponseBody extends TeaModel {
         private Boolean success; 
         private Integer totalCount; 
         private Integer totalPage; 
-        private java.util.List < SimpleUser > users; 
+        private java.util.List<SimpleUser> users; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUsersResponseBody model) {
+            this.code = model.code;
+            this.details = model.details;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+            this.totalPage = model.totalPage;
+            this.users = model.users;
+        } 
 
         /**
          * Code.
@@ -182,7 +209,10 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -240,7 +270,7 @@ public class ListUsersResponseBody extends TeaModel {
         /**
          * Users.
          */
-        public Builder users(java.util.List < SimpleUser > users) {
+        public Builder users(java.util.List<SimpleUser> users) {
             this.users = users;
             return this;
         }

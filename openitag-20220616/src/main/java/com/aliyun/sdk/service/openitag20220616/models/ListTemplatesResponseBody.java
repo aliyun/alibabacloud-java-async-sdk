@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTemplatesResponseBody</p>
@@ -37,7 +43,7 @@ public class ListTemplatesResponseBody extends TeaModel {
     private Boolean success;
 
     @com.aliyun.core.annotation.NameInMap("Templates")
-    private java.util.List < SimpleTemplate > templates;
+    private java.util.List<SimpleTemplate> templates;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -65,6 +71,10 @@ public class ListTemplatesResponseBody extends TeaModel {
 
     public static ListTemplatesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -126,7 +136,7 @@ public class ListTemplatesResponseBody extends TeaModel {
     /**
      * @return templates
      */
-    public java.util.List < SimpleTemplate > getTemplates() {
+    public java.util.List<SimpleTemplate> getTemplates() {
         return this.templates;
     }
 
@@ -153,9 +163,26 @@ public class ListTemplatesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Boolean success; 
-        private java.util.List < SimpleTemplate > templates; 
+        private java.util.List<SimpleTemplate> templates; 
         private Integer totalCount; 
         private Integer totalPage; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTemplatesResponseBody model) {
+            this.code = model.code;
+            this.details = model.details;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.templates = model.templates;
+            this.totalCount = model.totalCount;
+            this.totalPage = model.totalPage;
+        } 
 
         /**
          * Code.
@@ -182,7 +209,10 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -224,7 +254,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         /**
          * Templates.
          */
-        public Builder templates(java.util.List < SimpleTemplate > templates) {
+        public Builder templates(java.util.List<SimpleTemplate> templates) {
             this.templates = templates;
             return this;
         }

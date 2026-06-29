@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TaskDetail} extends {@link TeaModel}
  *
  * <p>TaskDetail</p>
  */
 public class TaskDetail extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Admins")
-    private java.util.List < SimpleUser > admins;
+    private java.util.List<SimpleUser> admins;
 
     @com.aliyun.core.annotation.NameInMap("AlertTime")
     private Long alertTime;
@@ -27,16 +33,16 @@ public class TaskDetail extends TeaModel {
     private String archivedInfos;
 
     @com.aliyun.core.annotation.NameInMap("AssignConfig")
-    private java.util.Map < String, ? > assignConfig;
+    private java.util.Map<String, ?> assignConfig;
 
     @com.aliyun.core.annotation.NameInMap("Creator")
     private SimpleUser creator;
 
     @com.aliyun.core.annotation.NameInMap("DatasetProxyRelations")
-    private java.util.List < DatasetProxyRelations> datasetProxyRelations;
+    private java.util.List<DatasetProxyRelations> datasetProxyRelations;
 
     @com.aliyun.core.annotation.NameInMap("Exif")
-    private java.util.Map < String, ? > exif;
+    private java.util.Map<String, ?> exif;
 
     @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
@@ -48,28 +54,28 @@ public class TaskDetail extends TeaModel {
     private String labelStyle;
 
     @com.aliyun.core.annotation.NameInMap("MineConfigs")
-    private java.util.Map < String, ? > mineConfigs;
+    private java.util.Map<String, ?> mineConfigs;
 
     @com.aliyun.core.annotation.NameInMap("Modifier")
     private SimpleUser modifier;
 
     @com.aliyun.core.annotation.NameInMap("NoticeConfig")
-    private java.util.Map < String, ? > noticeConfig;
+    private java.util.Map<String, ?> noticeConfig;
 
     @com.aliyun.core.annotation.NameInMap("PeriodConfig")
-    private java.util.Map < String, ? > periodConfig;
+    private java.util.Map<String, ?> periodConfig;
 
     @com.aliyun.core.annotation.NameInMap("RefTaskId")
     private String refTaskId;
 
     @com.aliyun.core.annotation.NameInMap("RelateTaskConfig")
-    private java.util.Map < String, ? > relateTaskConfig;
+    private java.util.Map<String, ?> relateTaskConfig;
 
     @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
     @com.aliyun.core.annotation.NameInMap("ResultCallbackConfig")
-    private java.util.Map < String, ? > resultCallbackConfig;
+    private java.util.Map<String, ?> resultCallbackConfig;
 
     @com.aliyun.core.annotation.NameInMap("Stage")
     private String stage;
@@ -78,7 +84,7 @@ public class TaskDetail extends TeaModel {
     private String status;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < String > tags;
+    private java.util.List<String> tags;
 
     @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
@@ -93,7 +99,7 @@ public class TaskDetail extends TeaModel {
     private String taskType;
 
     @com.aliyun.core.annotation.NameInMap("TaskWorkflow")
-    private java.util.List < TaskWorkflow> taskWorkflow;
+    private java.util.List<TaskWorkflow> taskWorkflow;
 
     @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
@@ -108,10 +114,10 @@ public class TaskDetail extends TeaModel {
     private String UUID;
 
     @com.aliyun.core.annotation.NameInMap("VoteConfigs")
-    private java.util.Map < String, ? > voteConfigs;
+    private java.util.Map<String, ?> voteConfigs;
 
     @com.aliyun.core.annotation.NameInMap("WorkflowNodes")
-    private java.util.List < String > workflowNodes;
+    private java.util.List<String> workflowNodes;
 
     @com.aliyun.core.annotation.NameInMap("runMsg")
     private String runMsg;
@@ -162,10 +168,14 @@ public class TaskDetail extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return admins
      */
-    public java.util.List < SimpleUser > getAdmins() {
+    public java.util.List<SimpleUser> getAdmins() {
         return this.admins;
     }
 
@@ -200,7 +210,7 @@ public class TaskDetail extends TeaModel {
     /**
      * @return assignConfig
      */
-    public java.util.Map < String, ? > getAssignConfig() {
+    public java.util.Map<String, ?> getAssignConfig() {
         return this.assignConfig;
     }
 
@@ -214,14 +224,14 @@ public class TaskDetail extends TeaModel {
     /**
      * @return datasetProxyRelations
      */
-    public java.util.List < DatasetProxyRelations> getDatasetProxyRelations() {
+    public java.util.List<DatasetProxyRelations> getDatasetProxyRelations() {
         return this.datasetProxyRelations;
     }
 
     /**
      * @return exif
      */
-    public java.util.Map < String, ? > getExif() {
+    public java.util.Map<String, ?> getExif() {
         return this.exif;
     }
 
@@ -249,7 +259,7 @@ public class TaskDetail extends TeaModel {
     /**
      * @return mineConfigs
      */
-    public java.util.Map < String, ? > getMineConfigs() {
+    public java.util.Map<String, ?> getMineConfigs() {
         return this.mineConfigs;
     }
 
@@ -263,14 +273,14 @@ public class TaskDetail extends TeaModel {
     /**
      * @return noticeConfig
      */
-    public java.util.Map < String, ? > getNoticeConfig() {
+    public java.util.Map<String, ?> getNoticeConfig() {
         return this.noticeConfig;
     }
 
     /**
      * @return periodConfig
      */
-    public java.util.Map < String, ? > getPeriodConfig() {
+    public java.util.Map<String, ?> getPeriodConfig() {
         return this.periodConfig;
     }
 
@@ -284,7 +294,7 @@ public class TaskDetail extends TeaModel {
     /**
      * @return relateTaskConfig
      */
-    public java.util.Map < String, ? > getRelateTaskConfig() {
+    public java.util.Map<String, ?> getRelateTaskConfig() {
         return this.relateTaskConfig;
     }
 
@@ -298,7 +308,7 @@ public class TaskDetail extends TeaModel {
     /**
      * @return resultCallbackConfig
      */
-    public java.util.Map < String, ? > getResultCallbackConfig() {
+    public java.util.Map<String, ?> getResultCallbackConfig() {
         return this.resultCallbackConfig;
     }
 
@@ -319,7 +329,7 @@ public class TaskDetail extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < String > getTags() {
+    public java.util.List<String> getTags() {
         return this.tags;
     }
 
@@ -354,7 +364,7 @@ public class TaskDetail extends TeaModel {
     /**
      * @return taskWorkflow
      */
-    public java.util.List < TaskWorkflow> getTaskWorkflow() {
+    public java.util.List<TaskWorkflow> getTaskWorkflow() {
         return this.taskWorkflow;
     }
 
@@ -389,14 +399,14 @@ public class TaskDetail extends TeaModel {
     /**
      * @return voteConfigs
      */
-    public java.util.Map < String, ? > getVoteConfigs() {
+    public java.util.Map<String, ?> getVoteConfigs() {
         return this.voteConfigs;
     }
 
     /**
      * @return workflowNodes
      */
-    public java.util.List < String > getWorkflowNodes() {
+    public java.util.List<String> getWorkflowNodes() {
         return this.workflowNodes;
     }
 
@@ -408,46 +418,87 @@ public class TaskDetail extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < SimpleUser > admins; 
+        private java.util.List<SimpleUser> admins; 
         private Long alertTime; 
         private Boolean allowAppendData; 
         private Boolean archived; 
         private String archivedInfos; 
-        private java.util.Map < String, ? > assignConfig; 
+        private java.util.Map<String, ?> assignConfig; 
         private SimpleUser creator; 
-        private java.util.List < DatasetProxyRelations> datasetProxyRelations; 
-        private java.util.Map < String, ? > exif; 
+        private java.util.List<DatasetProxyRelations> datasetProxyRelations; 
+        private java.util.Map<String, ?> exif; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
         private String labelStyle; 
-        private java.util.Map < String, ? > mineConfigs; 
+        private java.util.Map<String, ?> mineConfigs; 
         private SimpleUser modifier; 
-        private java.util.Map < String, ? > noticeConfig; 
-        private java.util.Map < String, ? > periodConfig; 
+        private java.util.Map<String, ?> noticeConfig; 
+        private java.util.Map<String, ?> periodConfig; 
         private String refTaskId; 
-        private java.util.Map < String, ? > relateTaskConfig; 
+        private java.util.Map<String, ?> relateTaskConfig; 
         private String remark; 
-        private java.util.Map < String, ? > resultCallbackConfig; 
+        private java.util.Map<String, ?> resultCallbackConfig; 
         private String stage; 
         private String status; 
-        private java.util.List < String > tags; 
+        private java.util.List<String> tags; 
         private String taskId; 
         private String taskName; 
         private TaskTemplateConfig taskTemplateConfig; 
         private String taskType; 
-        private java.util.List < TaskWorkflow> taskWorkflow; 
+        private java.util.List<TaskWorkflow> taskWorkflow; 
         private String templateId; 
         private String tenantId; 
         private String tenantName; 
         private String UUID; 
-        private java.util.Map < String, ? > voteConfigs; 
-        private java.util.List < String > workflowNodes; 
+        private java.util.Map<String, ?> voteConfigs; 
+        private java.util.List<String> workflowNodes; 
         private String runMsg; 
+
+        private Builder() {
+        } 
+
+        private Builder(TaskDetail model) {
+            this.admins = model.admins;
+            this.alertTime = model.alertTime;
+            this.allowAppendData = model.allowAppendData;
+            this.archived = model.archived;
+            this.archivedInfos = model.archivedInfos;
+            this.assignConfig = model.assignConfig;
+            this.creator = model.creator;
+            this.datasetProxyRelations = model.datasetProxyRelations;
+            this.exif = model.exif;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.labelStyle = model.labelStyle;
+            this.mineConfigs = model.mineConfigs;
+            this.modifier = model.modifier;
+            this.noticeConfig = model.noticeConfig;
+            this.periodConfig = model.periodConfig;
+            this.refTaskId = model.refTaskId;
+            this.relateTaskConfig = model.relateTaskConfig;
+            this.remark = model.remark;
+            this.resultCallbackConfig = model.resultCallbackConfig;
+            this.stage = model.stage;
+            this.status = model.status;
+            this.tags = model.tags;
+            this.taskId = model.taskId;
+            this.taskName = model.taskName;
+            this.taskTemplateConfig = model.taskTemplateConfig;
+            this.taskType = model.taskType;
+            this.taskWorkflow = model.taskWorkflow;
+            this.templateId = model.templateId;
+            this.tenantId = model.tenantId;
+            this.tenantName = model.tenantName;
+            this.UUID = model.UUID;
+            this.voteConfigs = model.voteConfigs;
+            this.workflowNodes = model.workflowNodes;
+            this.runMsg = model.runMsg;
+        } 
 
         /**
          * Admins.
          */
-        public Builder admins(java.util.List < SimpleUser > admins) {
+        public Builder admins(java.util.List<SimpleUser> admins) {
             this.admins = admins;
             return this;
         }
@@ -487,7 +538,7 @@ public class TaskDetail extends TeaModel {
         /**
          * AssignConfig.
          */
-        public Builder assignConfig(java.util.Map < String, ? > assignConfig) {
+        public Builder assignConfig(java.util.Map<String, ?> assignConfig) {
             this.assignConfig = assignConfig;
             return this;
         }
@@ -503,7 +554,7 @@ public class TaskDetail extends TeaModel {
         /**
          * DatasetProxyRelations.
          */
-        public Builder datasetProxyRelations(java.util.List < DatasetProxyRelations> datasetProxyRelations) {
+        public Builder datasetProxyRelations(java.util.List<DatasetProxyRelations> datasetProxyRelations) {
             this.datasetProxyRelations = datasetProxyRelations;
             return this;
         }
@@ -511,7 +562,7 @@ public class TaskDetail extends TeaModel {
         /**
          * Exif.
          */
-        public Builder exif(java.util.Map < String, ? > exif) {
+        public Builder exif(java.util.Map<String, ?> exif) {
             this.exif = exif;
             return this;
         }
@@ -543,7 +594,7 @@ public class TaskDetail extends TeaModel {
         /**
          * MineConfigs.
          */
-        public Builder mineConfigs(java.util.Map < String, ? > mineConfigs) {
+        public Builder mineConfigs(java.util.Map<String, ?> mineConfigs) {
             this.mineConfigs = mineConfigs;
             return this;
         }
@@ -559,7 +610,7 @@ public class TaskDetail extends TeaModel {
         /**
          * NoticeConfig.
          */
-        public Builder noticeConfig(java.util.Map < String, ? > noticeConfig) {
+        public Builder noticeConfig(java.util.Map<String, ?> noticeConfig) {
             this.noticeConfig = noticeConfig;
             return this;
         }
@@ -567,7 +618,7 @@ public class TaskDetail extends TeaModel {
         /**
          * PeriodConfig.
          */
-        public Builder periodConfig(java.util.Map < String, ? > periodConfig) {
+        public Builder periodConfig(java.util.Map<String, ?> periodConfig) {
             this.periodConfig = periodConfig;
             return this;
         }
@@ -583,7 +634,7 @@ public class TaskDetail extends TeaModel {
         /**
          * RelateTaskConfig.
          */
-        public Builder relateTaskConfig(java.util.Map < String, ? > relateTaskConfig) {
+        public Builder relateTaskConfig(java.util.Map<String, ?> relateTaskConfig) {
             this.relateTaskConfig = relateTaskConfig;
             return this;
         }
@@ -599,7 +650,7 @@ public class TaskDetail extends TeaModel {
         /**
          * ResultCallbackConfig.
          */
-        public Builder resultCallbackConfig(java.util.Map < String, ? > resultCallbackConfig) {
+        public Builder resultCallbackConfig(java.util.Map<String, ?> resultCallbackConfig) {
             this.resultCallbackConfig = resultCallbackConfig;
             return this;
         }
@@ -623,7 +674,7 @@ public class TaskDetail extends TeaModel {
         /**
          * Tags.
          */
-        public Builder tags(java.util.List < String > tags) {
+        public Builder tags(java.util.List<String> tags) {
             this.tags = tags;
             return this;
         }
@@ -663,7 +714,7 @@ public class TaskDetail extends TeaModel {
         /**
          * TaskWorkflow.
          */
-        public Builder taskWorkflow(java.util.List < TaskWorkflow> taskWorkflow) {
+        public Builder taskWorkflow(java.util.List<TaskWorkflow> taskWorkflow) {
             this.taskWorkflow = taskWorkflow;
             return this;
         }
@@ -703,7 +754,7 @@ public class TaskDetail extends TeaModel {
         /**
          * VoteConfigs.
          */
-        public Builder voteConfigs(java.util.Map < String, ? > voteConfigs) {
+        public Builder voteConfigs(java.util.Map<String, ?> voteConfigs) {
             this.voteConfigs = voteConfigs;
             return this;
         }
@@ -711,7 +762,7 @@ public class TaskDetail extends TeaModel {
         /**
          * WorkflowNodes.
          */
-        public Builder workflowNodes(java.util.List < String > workflowNodes) {
+        public Builder workflowNodes(java.util.List<String> workflowNodes) {
             this.workflowNodes = workflowNodes;
             return this;
         }
@@ -730,6 +781,12 @@ public class TaskDetail extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TaskDetail} extends {@link TeaModel}
+     *
+     * <p>TaskDetail</p>
+     */
     public static class DatasetProxyRelations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatasetId")
         private String datasetId;
@@ -738,7 +795,7 @@ public class TaskDetail extends TeaModel {
         private String datasetType;
 
         @com.aliyun.core.annotation.NameInMap("Exif")
-        private java.util.Map < String, ? > exif;
+        private java.util.Map<String, ?> exif;
 
         @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
@@ -783,7 +840,7 @@ public class TaskDetail extends TeaModel {
         /**
          * @return exif
          */
-        public java.util.Map < String, ? > getExif() {
+        public java.util.Map<String, ?> getExif() {
             return this.exif;
         }
 
@@ -811,10 +868,22 @@ public class TaskDetail extends TeaModel {
         public static final class Builder {
             private String datasetId; 
             private String datasetType; 
-            private java.util.Map < String, ? > exif; 
+            private java.util.Map<String, ?> exif; 
             private String source; 
             private String sourceBizId; 
             private String sourceDatasetId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DatasetProxyRelations model) {
+                this.datasetId = model.datasetId;
+                this.datasetType = model.datasetType;
+                this.exif = model.exif;
+                this.source = model.source;
+                this.sourceBizId = model.sourceBizId;
+                this.sourceDatasetId = model.sourceDatasetId;
+            } 
 
             /**
              * DatasetId.
@@ -835,7 +904,7 @@ public class TaskDetail extends TeaModel {
             /**
              * Exif.
              */
-            public Builder exif(java.util.Map < String, ? > exif) {
+            public Builder exif(java.util.Map<String, ?> exif) {
                 this.exif = exif;
                 return this;
             }
@@ -871,21 +940,27 @@ public class TaskDetail extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TaskDetail} extends {@link TeaModel}
+     *
+     * <p>TaskDetail</p>
+     */
     public static class TaskTemplateConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Exif")
-        private java.util.Map < String, ? > exif;
+        private java.util.Map<String, ?> exif;
 
         @com.aliyun.core.annotation.NameInMap("ResourceKey")
         private String resourceKey;
 
         @com.aliyun.core.annotation.NameInMap("RobotConfig")
-        private java.util.Map < String, ? > robotConfig;
+        private java.util.Map<String, ?> robotConfig;
 
         @com.aliyun.core.annotation.NameInMap("SelectQuestions")
-        private java.util.List < String > selectQuestions;
+        private java.util.List<String> selectQuestions;
 
         @com.aliyun.core.annotation.NameInMap("TemplateOptionMap")
-        private java.util.Map < String, ? > templateOptionMap;
+        private java.util.Map<String, ?> templateOptionMap;
 
         @com.aliyun.core.annotation.NameInMap("TemplateRelationId")
         private String templateRelationId;
@@ -910,7 +985,7 @@ public class TaskDetail extends TeaModel {
         /**
          * @return exif
          */
-        public java.util.Map < String, ? > getExif() {
+        public java.util.Map<String, ?> getExif() {
             return this.exif;
         }
 
@@ -924,21 +999,21 @@ public class TaskDetail extends TeaModel {
         /**
          * @return robotConfig
          */
-        public java.util.Map < String, ? > getRobotConfig() {
+        public java.util.Map<String, ?> getRobotConfig() {
             return this.robotConfig;
         }
 
         /**
          * @return selectQuestions
          */
-        public java.util.List < String > getSelectQuestions() {
+        public java.util.List<String> getSelectQuestions() {
             return this.selectQuestions;
         }
 
         /**
          * @return templateOptionMap
          */
-        public java.util.Map < String, ? > getTemplateOptionMap() {
+        public java.util.Map<String, ?> getTemplateOptionMap() {
             return this.templateOptionMap;
         }
 
@@ -950,17 +1025,29 @@ public class TaskDetail extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > exif; 
+            private java.util.Map<String, ?> exif; 
             private String resourceKey; 
-            private java.util.Map < String, ? > robotConfig; 
-            private java.util.List < String > selectQuestions; 
-            private java.util.Map < String, ? > templateOptionMap; 
+            private java.util.Map<String, ?> robotConfig; 
+            private java.util.List<String> selectQuestions; 
+            private java.util.Map<String, ?> templateOptionMap; 
             private String templateRelationId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskTemplateConfig model) {
+                this.exif = model.exif;
+                this.resourceKey = model.resourceKey;
+                this.robotConfig = model.robotConfig;
+                this.selectQuestions = model.selectQuestions;
+                this.templateOptionMap = model.templateOptionMap;
+                this.templateRelationId = model.templateRelationId;
+            } 
 
             /**
              * Exif.
              */
-            public Builder exif(java.util.Map < String, ? > exif) {
+            public Builder exif(java.util.Map<String, ?> exif) {
                 this.exif = exif;
                 return this;
             }
@@ -976,7 +1063,7 @@ public class TaskDetail extends TeaModel {
             /**
              * RobotConfig.
              */
-            public Builder robotConfig(java.util.Map < String, ? > robotConfig) {
+            public Builder robotConfig(java.util.Map<String, ?> robotConfig) {
                 this.robotConfig = robotConfig;
                 return this;
             }
@@ -984,7 +1071,7 @@ public class TaskDetail extends TeaModel {
             /**
              * SelectQuestions.
              */
-            public Builder selectQuestions(java.util.List < String > selectQuestions) {
+            public Builder selectQuestions(java.util.List<String> selectQuestions) {
                 this.selectQuestions = selectQuestions;
                 return this;
             }
@@ -992,7 +1079,7 @@ public class TaskDetail extends TeaModel {
             /**
              * TemplateOptionMap.
              */
-            public Builder templateOptionMap(java.util.Map < String, ? > templateOptionMap) {
+            public Builder templateOptionMap(java.util.Map<String, ?> templateOptionMap) {
                 this.templateOptionMap = templateOptionMap;
                 return this;
             }
@@ -1012,18 +1099,24 @@ public class TaskDetail extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TaskDetail} extends {@link TeaModel}
+     *
+     * <p>TaskDetail</p>
+     */
     public static class TaskWorkflow extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Exif")
-        private java.util.Map < String, ? > exif;
+        private java.util.Map<String, ?> exif;
 
         @com.aliyun.core.annotation.NameInMap("Groups")
-        private java.util.List < String > groups;
+        private java.util.List<String> groups;
 
         @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
         @com.aliyun.core.annotation.NameInMap("Users")
-        private java.util.List < SimpleUser > users;
+        private java.util.List<SimpleUser> users;
 
         private TaskWorkflow(Builder builder) {
             this.exif = builder.exif;
@@ -1043,14 +1136,14 @@ public class TaskDetail extends TeaModel {
         /**
          * @return exif
          */
-        public java.util.Map < String, ? > getExif() {
+        public java.util.Map<String, ?> getExif() {
             return this.exif;
         }
 
         /**
          * @return groups
          */
-        public java.util.List < String > getGroups() {
+        public java.util.List<String> getGroups() {
             return this.groups;
         }
 
@@ -1064,20 +1157,30 @@ public class TaskDetail extends TeaModel {
         /**
          * @return users
          */
-        public java.util.List < SimpleUser > getUsers() {
+        public java.util.List<SimpleUser> getUsers() {
             return this.users;
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > exif; 
-            private java.util.List < String > groups; 
+            private java.util.Map<String, ?> exif; 
+            private java.util.List<String> groups; 
             private String nodeName; 
-            private java.util.List < SimpleUser > users; 
+            private java.util.List<SimpleUser> users; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskWorkflow model) {
+                this.exif = model.exif;
+                this.groups = model.groups;
+                this.nodeName = model.nodeName;
+                this.users = model.users;
+            } 
 
             /**
              * Exif.
              */
-            public Builder exif(java.util.Map < String, ? > exif) {
+            public Builder exif(java.util.Map<String, ?> exif) {
                 this.exif = exif;
                 return this;
             }
@@ -1085,7 +1188,7 @@ public class TaskDetail extends TeaModel {
             /**
              * Groups.
              */
-            public Builder groups(java.util.List < String > groups) {
+            public Builder groups(java.util.List<String> groups) {
                 this.groups = groups;
                 return this;
             }
@@ -1101,7 +1204,7 @@ public class TaskDetail extends TeaModel {
             /**
              * Users.
              */
-            public Builder users(java.util.List < SimpleUser > users) {
+            public Builder users(java.util.List<SimpleUser> users) {
                 this.users = users;
                 return this;
             }

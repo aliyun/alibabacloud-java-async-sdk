@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Job} extends {@link TeaModel}
  *
  * <p>Job</p>
@@ -48,6 +54,10 @@ public class Job extends TeaModel {
 
     public static Job create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -107,6 +117,19 @@ public class Job extends TeaModel {
         private JobResult jobResult; 
         private String jobType; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(Job model) {
+            this.creator = model.creator;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.jobId = model.jobId;
+            this.jobResult = model.jobResult;
+            this.jobType = model.jobType;
+            this.status = model.status;
+        } 
 
         /**
          * Creator.
@@ -170,6 +193,12 @@ public class Job extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link Job} extends {@link TeaModel}
+     *
+     * <p>Job</p>
+     */
     public static class JobResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResultLink")
         private String resultLink;
@@ -195,6 +224,13 @@ public class Job extends TeaModel {
 
         public static final class Builder {
             private String resultLink; 
+
+            private Builder() {
+            } 
+
+            private Builder(JobResult model) {
+                this.resultLink = model.resultLink;
+            } 
 
             /**
              * ResultLink.

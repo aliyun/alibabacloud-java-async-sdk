@@ -1,27 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TaskTemplateConfig} extends {@link TeaModel}
  *
  * <p>TaskTemplateConfig</p>
  */
 public class TaskTemplateConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Exif")
-    private java.util.Map < String, String > exif;
+    private java.util.Map<String, String> exif;
 
     @com.aliyun.core.annotation.NameInMap("ResourceKey")
     private String resourceKey;
 
     @com.aliyun.core.annotation.NameInMap("SelectQuestions")
-    private java.util.List < String > selectQuestions;
+    private java.util.List<String> selectQuestions;
 
     @com.aliyun.core.annotation.NameInMap("TemplateOptionMap")
-    private java.util.Map < String, TaskTemplateOptionConfig > templateOptionMap;
+    private java.util.Map<String, TaskTemplateOptionConfig> templateOptionMap;
 
     @com.aliyun.core.annotation.NameInMap("TemplateRelationId")
     private String templateRelationId;
@@ -42,10 +48,14 @@ public class TaskTemplateConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return exif
      */
-    public java.util.Map < String, String > getExif() {
+    public java.util.Map<String, String> getExif() {
         return this.exif;
     }
 
@@ -59,14 +69,14 @@ public class TaskTemplateConfig extends TeaModel {
     /**
      * @return selectQuestions
      */
-    public java.util.List < String > getSelectQuestions() {
+    public java.util.List<String> getSelectQuestions() {
         return this.selectQuestions;
     }
 
     /**
      * @return templateOptionMap
      */
-    public java.util.Map < String, TaskTemplateOptionConfig > getTemplateOptionMap() {
+    public java.util.Map<String, TaskTemplateOptionConfig> getTemplateOptionMap() {
         return this.templateOptionMap;
     }
 
@@ -78,16 +88,27 @@ public class TaskTemplateConfig extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, String > exif; 
+        private java.util.Map<String, String> exif; 
         private String resourceKey; 
-        private java.util.List < String > selectQuestions; 
-        private java.util.Map < String, TaskTemplateOptionConfig > templateOptionMap; 
+        private java.util.List<String> selectQuestions; 
+        private java.util.Map<String, TaskTemplateOptionConfig> templateOptionMap; 
         private String templateRelationId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TaskTemplateConfig model) {
+            this.exif = model.exif;
+            this.resourceKey = model.resourceKey;
+            this.selectQuestions = model.selectQuestions;
+            this.templateOptionMap = model.templateOptionMap;
+            this.templateRelationId = model.templateRelationId;
+        } 
 
         /**
          * Exif.
          */
-        public Builder exif(java.util.Map < String, String > exif) {
+        public Builder exif(java.util.Map<String, String> exif) {
             this.exif = exif;
             return this;
         }
@@ -103,7 +124,7 @@ public class TaskTemplateConfig extends TeaModel {
         /**
          * SelectQuestions.
          */
-        public Builder selectQuestions(java.util.List < String > selectQuestions) {
+        public Builder selectQuestions(java.util.List<String> selectQuestions) {
             this.selectQuestions = selectQuestions;
             return this;
         }
@@ -111,7 +132,7 @@ public class TaskTemplateConfig extends TeaModel {
         /**
          * TemplateOptionMap.
          */
-        public Builder templateOptionMap(java.util.Map < String, TaskTemplateOptionConfig > templateOptionMap) {
+        public Builder templateOptionMap(java.util.Map<String, TaskTemplateOptionConfig> templateOptionMap) {
             this.templateOptionMap = templateOptionMap;
             return this;
         }

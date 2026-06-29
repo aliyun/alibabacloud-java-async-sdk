@@ -1,18 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OpenDatasetProxyAppendDataRequest} extends {@link RequestModel}
  *
  * <p>OpenDatasetProxyAppendDataRequest</p>
  */
 public class OpenDatasetProxyAppendDataRequest extends Request {
+    @com.aliyun.core.annotation.NameInMap("BizCode")
+    private String bizCode;
+
     @com.aliyun.core.annotation.NameInMap("DataMeta")
-    private java.util.List < java.util.Map<String, String>> dataMeta;
+    private java.util.List<java.util.Map<String, String>> dataMeta;
 
     @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
@@ -25,6 +34,7 @@ public class OpenDatasetProxyAppendDataRequest extends Request {
 
     private OpenDatasetProxyAppendDataRequest(Builder builder) {
         super(builder);
+        this.bizCode = builder.bizCode;
         this.dataMeta = builder.dataMeta;
         this.taskId = builder.taskId;
         this.traceId = builder.traceId;
@@ -39,15 +49,22 @@ public class OpenDatasetProxyAppendDataRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
 
     /**
+     * @return bizCode
+     */
+    public String getBizCode() {
+        return this.bizCode;
+    }
+
+    /**
      * @return dataMeta
      */
-    public java.util.List < java.util.Map<String, String>> getDataMeta() {
+    public java.util.List<java.util.Map<String, String>> getDataMeta() {
         return this.dataMeta;
     }
 
@@ -73,7 +90,8 @@ public class OpenDatasetProxyAppendDataRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<OpenDatasetProxyAppendDataRequest, Builder> {
-        private java.util.List < java.util.Map<String, String>> dataMeta; 
+        private String bizCode; 
+        private java.util.List<java.util.Map<String, String>> dataMeta; 
         private String taskId; 
         private String traceId; 
         private String UUID; 
@@ -84,6 +102,7 @@ public class OpenDatasetProxyAppendDataRequest extends Request {
 
         private Builder(OpenDatasetProxyAppendDataRequest request) {
             super(request);
+            this.bizCode = request.bizCode;
             this.dataMeta = request.dataMeta;
             this.taskId = request.taskId;
             this.traceId = request.traceId;
@@ -91,9 +110,17 @@ public class OpenDatasetProxyAppendDataRequest extends Request {
         } 
 
         /**
+         * BizCode.
+         */
+        public Builder bizCode(String bizCode) {
+            this.bizCode = bizCode;
+            return this;
+        }
+
+        /**
          * DataMeta.
          */
-        public Builder dataMeta(java.util.List < java.util.Map<String, String>> dataMeta) {
+        public Builder dataMeta(java.util.List<java.util.Map<String, String>> dataMeta) {
             this.dataMeta = dataMeta;
             return this;
         }

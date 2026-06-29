@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSubtaskRequest} extends {@link RequestModel}
  *
  * <p>GetSubtaskRequest</p>
@@ -41,7 +47,7 @@ public class GetSubtaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,7 +90,10 @@ public class GetSubtaskRequest extends Request {
         } 
 
         /**
-         * TenantId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GA***W134</p>
          */
         public Builder tenantId(String tenantId) {
             this.putPathParameter("TenantId", tenantId);
@@ -93,7 +102,10 @@ public class GetSubtaskRequest extends Request {
         }
 
         /**
-         * TaskID.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>154***2518306500608</p>
          */
         public Builder taskID(String taskID) {
             this.putPathParameter("TaskID", taskID);
@@ -102,7 +114,10 @@ public class GetSubtaskRequest extends Request {
         }
 
         /**
-         * SubtaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150***502979956736</p>
          */
         public Builder subtaskId(String subtaskId) {
             this.putPathParameter("SubtaskId", subtaskId);

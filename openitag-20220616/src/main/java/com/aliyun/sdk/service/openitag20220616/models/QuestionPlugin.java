@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuestionPlugin} extends {@link TeaModel}
  *
  * <p>QuestionPlugin</p>
@@ -15,7 +21,7 @@ public class QuestionPlugin extends TeaModel {
     private Boolean canSelect;
 
     @com.aliyun.core.annotation.NameInMap("Children")
-    private java.util.List < QuestionPlugin > children;
+    private java.util.List<QuestionPlugin> children;
 
     @com.aliyun.core.annotation.NameInMap("DefaultResult")
     private String defaultResult;
@@ -25,7 +31,7 @@ public class QuestionPlugin extends TeaModel {
     private Boolean display;
 
     @com.aliyun.core.annotation.NameInMap("Exif")
-    private java.util.Map < String, ? > exif;
+    private java.util.Map<String, ?> exif;
 
     @com.aliyun.core.annotation.NameInMap("HotKeyMap")
     private String hotKeyMap;
@@ -43,10 +49,10 @@ public class QuestionPlugin extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("Options")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < QuestionOption > options;
+    private java.util.List<QuestionOption> options;
 
     @com.aliyun.core.annotation.NameInMap("PreOptions")
-    private java.util.List < String > preOptions;
+    private java.util.List<String> preOptions;
 
     @com.aliyun.core.annotation.NameInMap("QuestionId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -92,6 +98,10 @@ public class QuestionPlugin extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return canSelect
      */
@@ -102,7 +112,7 @@ public class QuestionPlugin extends TeaModel {
     /**
      * @return children
      */
-    public java.util.List < QuestionPlugin > getChildren() {
+    public java.util.List<QuestionPlugin> getChildren() {
         return this.children;
     }
 
@@ -123,7 +133,7 @@ public class QuestionPlugin extends TeaModel {
     /**
      * @return exif
      */
-    public java.util.Map < String, ? > getExif() {
+    public java.util.Map<String, ?> getExif() {
         return this.exif;
     }
 
@@ -158,14 +168,14 @@ public class QuestionPlugin extends TeaModel {
     /**
      * @return options
      */
-    public java.util.List < QuestionOption > getOptions() {
+    public java.util.List<QuestionOption> getOptions() {
         return this.options;
     }
 
     /**
      * @return preOptions
      */
-    public java.util.List < String > getPreOptions() {
+    public java.util.List<String> getPreOptions() {
         return this.preOptions;
     }
 
@@ -206,21 +216,43 @@ public class QuestionPlugin extends TeaModel {
 
     public static final class Builder {
         private Boolean canSelect; 
-        private java.util.List < QuestionPlugin > children; 
+        private java.util.List<QuestionPlugin> children; 
         private String defaultResult; 
         private Boolean display; 
-        private java.util.Map < String, ? > exif; 
+        private java.util.Map<String, ?> exif; 
         private String hotKeyMap; 
         private String markTitle; 
         private String markTitleAlias; 
         private Boolean mustFill; 
-        private java.util.List < QuestionOption > options; 
-        private java.util.List < String > preOptions; 
+        private java.util.List<QuestionOption> options; 
+        private java.util.List<String> preOptions; 
         private String questionId; 
         private String rule; 
         private String selectGroup; 
         private Boolean selected; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuestionPlugin model) {
+            this.canSelect = model.canSelect;
+            this.children = model.children;
+            this.defaultResult = model.defaultResult;
+            this.display = model.display;
+            this.exif = model.exif;
+            this.hotKeyMap = model.hotKeyMap;
+            this.markTitle = model.markTitle;
+            this.markTitleAlias = model.markTitleAlias;
+            this.mustFill = model.mustFill;
+            this.options = model.options;
+            this.preOptions = model.preOptions;
+            this.questionId = model.questionId;
+            this.rule = model.rule;
+            this.selectGroup = model.selectGroup;
+            this.selected = model.selected;
+            this.type = model.type;
+        } 
 
         /**
          * CanSelect.
@@ -233,7 +265,7 @@ public class QuestionPlugin extends TeaModel {
         /**
          * Children.
          */
-        public Builder children(java.util.List < QuestionPlugin > children) {
+        public Builder children(java.util.List<QuestionPlugin> children) {
             this.children = children;
             return this;
         }
@@ -247,7 +279,10 @@ public class QuestionPlugin extends TeaModel {
         }
 
         /**
-         * Display.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder display(Boolean display) {
             this.display = display;
@@ -257,7 +292,7 @@ public class QuestionPlugin extends TeaModel {
         /**
          * Exif.
          */
-        public Builder exif(java.util.Map < String, ? > exif) {
+        public Builder exif(java.util.Map<String, ?> exif) {
             this.exif = exif;
             return this;
         }
@@ -271,7 +306,10 @@ public class QuestionPlugin extends TeaModel {
         }
 
         /**
-         * MarkTitle.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>内部单选</p>
          */
         public Builder markTitle(String markTitle) {
             this.markTitle = markTitle;
@@ -287,7 +325,10 @@ public class QuestionPlugin extends TeaModel {
         }
 
         /**
-         * MustFill.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder mustFill(Boolean mustFill) {
             this.mustFill = mustFill;
@@ -295,9 +336,9 @@ public class QuestionPlugin extends TeaModel {
         }
 
         /**
-         * Options.
+         * <p>This parameter is required.</p>
          */
-        public Builder options(java.util.List < QuestionOption > options) {
+        public Builder options(java.util.List<QuestionOption> options) {
             this.options = options;
             return this;
         }
@@ -305,13 +346,13 @@ public class QuestionPlugin extends TeaModel {
         /**
          * PreOptions.
          */
-        public Builder preOptions(java.util.List < String > preOptions) {
+        public Builder preOptions(java.util.List<String> preOptions) {
             this.preOptions = preOptions;
             return this;
         }
 
         /**
-         * QuestionId.
+         * <p>This parameter is required.</p>
          */
         public Builder questionId(String questionId) {
             this.questionId = questionId;
@@ -343,7 +384,10 @@ public class QuestionPlugin extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RADIO</p>
          */
         public Builder type(String type) {
             this.type = type;

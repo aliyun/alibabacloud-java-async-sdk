@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSubtasksRequest} extends {@link RequestModel}
  *
  * <p>ListSubtasksRequest</p>
@@ -45,7 +51,7 @@ public class ListSubtasksRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -97,7 +103,10 @@ public class ListSubtasksRequest extends Request {
         } 
 
         /**
-         * TenantId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GAR***134</p>
          */
         public Builder tenantId(String tenantId) {
             this.putPathParameter("TenantId", tenantId);
@@ -106,7 +115,10 @@ public class ListSubtasksRequest extends Request {
         }
 
         /**
-         * TaskID.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>154***2518306500608</p>
          */
         public Builder taskID(String taskID) {
             this.putPathParameter("TaskID", taskID);

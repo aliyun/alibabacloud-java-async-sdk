@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUserRequest} extends {@link RequestModel}
  *
  * <p>CreateUserRequest</p>
@@ -52,7 +58,7 @@ public class CreateUserRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -113,7 +119,10 @@ public class CreateUserRequest extends Request {
         } 
 
         /**
-         * TenantId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GAR***W134</p>
          */
         public Builder tenantId(String tenantId) {
             this.putPathParameter("TenantId", tenantId);
@@ -122,7 +131,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * AccountNo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>166***980757310</p>
          */
         public Builder accountNo(String accountNo) {
             this.putBodyParameter("AccountNo", accountNo);
@@ -131,7 +143,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * AccountType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN</p>
          */
         public Builder accountType(String accountType) {
             this.putBodyParameter("AccountType", accountType);
@@ -140,7 +155,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * Role.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADMIN</p>
          */
         public Builder role(String role) {
             this.putBodyParameter("Role", role);

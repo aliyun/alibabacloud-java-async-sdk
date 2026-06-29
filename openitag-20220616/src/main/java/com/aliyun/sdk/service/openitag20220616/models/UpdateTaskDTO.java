@@ -1,24 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTaskDTO} extends {@link TeaModel}
  *
  * <p>UpdateTaskDTO</p>
  */
 public class UpdateTaskDTO extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Exif")
-    private java.util.Map < String, String > exif;
+    private java.util.Map<String, String> exif;
 
     @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < String > tags;
+    private java.util.List<String> tags;
 
     @com.aliyun.core.annotation.NameInMap("TaskName")
     private String taskName;
@@ -38,10 +44,14 @@ public class UpdateTaskDTO extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return exif
      */
-    public java.util.Map < String, String > getExif() {
+    public java.util.Map<String, String> getExif() {
         return this.exif;
     }
 
@@ -55,7 +65,7 @@ public class UpdateTaskDTO extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < String > getTags() {
+    public java.util.List<String> getTags() {
         return this.tags;
     }
 
@@ -67,15 +77,25 @@ public class UpdateTaskDTO extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, String > exif; 
+        private java.util.Map<String, String> exif; 
         private String remark; 
-        private java.util.List < String > tags; 
+        private java.util.List<String> tags; 
         private String taskName; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateTaskDTO model) {
+            this.exif = model.exif;
+            this.remark = model.remark;
+            this.tags = model.tags;
+            this.taskName = model.taskName;
+        } 
 
         /**
          * Exif.
          */
-        public Builder exif(java.util.Map < String, String > exif) {
+        public Builder exif(java.util.Map<String, String> exif) {
             this.exif = exif;
             return this;
         }
@@ -91,7 +111,7 @@ public class UpdateTaskDTO extends TeaModel {
         /**
          * Tags.
          */
-        public Builder tags(java.util.List < String > tags) {
+        public Builder tags(java.util.List<String> tags) {
             this.tags = tags;
             return this;
         }

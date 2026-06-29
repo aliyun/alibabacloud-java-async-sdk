@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Workforce} extends {@link TeaModel}
  *
  * <p>Workforce</p>
@@ -15,7 +21,7 @@ public class Workforce extends TeaModel {
     private String nodeType;
 
     @com.aliyun.core.annotation.NameInMap("Users")
-    private java.util.List < SimpleUser > users;
+    private java.util.List<SimpleUser> users;
 
     @com.aliyun.core.annotation.NameInMap("WorkNodeId")
     private Integer workNodeId;
@@ -34,6 +40,10 @@ public class Workforce extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nodeType
      */
@@ -44,7 +54,7 @@ public class Workforce extends TeaModel {
     /**
      * @return users
      */
-    public java.util.List < SimpleUser > getUsers() {
+    public java.util.List<SimpleUser> getUsers() {
         return this.users;
     }
 
@@ -57,8 +67,17 @@ public class Workforce extends TeaModel {
 
     public static final class Builder {
         private String nodeType; 
-        private java.util.List < SimpleUser > users; 
+        private java.util.List<SimpleUser> users; 
         private Integer workNodeId; 
+
+        private Builder() {
+        } 
+
+        private Builder(Workforce model) {
+            this.nodeType = model.nodeType;
+            this.users = model.users;
+            this.workNodeId = model.workNodeId;
+        } 
 
         /**
          * NodeType.
@@ -71,7 +90,7 @@ public class Workforce extends TeaModel {
         /**
          * Users.
          */
-        public Builder users(java.util.List < SimpleUser > users) {
+        public Builder users(java.util.List<SimpleUser> users) {
             this.users = users;
             return this;
         }

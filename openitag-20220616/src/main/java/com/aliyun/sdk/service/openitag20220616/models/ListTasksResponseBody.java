@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTasksResponseBody} extends {@link TeaModel}
  *
  * <p>ListTasksResponseBody</p>
@@ -38,7 +44,7 @@ public class ListTasksResponseBody extends TeaModel {
     private Boolean success;
 
     @com.aliyun.core.annotation.NameInMap("Tasks")
-    private java.util.List < SimpleTask > tasks;
+    private java.util.List<SimpleTask> tasks;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -66,6 +72,10 @@ public class ListTasksResponseBody extends TeaModel {
 
     public static ListTasksResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -127,7 +137,7 @@ public class ListTasksResponseBody extends TeaModel {
     /**
      * @return tasks
      */
-    public java.util.List < SimpleTask > getTasks() {
+    public java.util.List<SimpleTask> getTasks() {
         return this.tasks;
     }
 
@@ -154,9 +164,26 @@ public class ListTasksResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Boolean success; 
-        private java.util.List < SimpleTask > tasks; 
+        private java.util.List<SimpleTask> tasks; 
         private Integer totalCount; 
         private Integer totalPage; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTasksResponseBody model) {
+            this.code = model.code;
+            this.details = model.details;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.tasks = model.tasks;
+            this.totalCount = model.totalCount;
+            this.totalPage = model.totalPage;
+        } 
 
         /**
          * Code.
@@ -183,7 +210,10 @@ public class ListTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -225,7 +255,7 @@ public class ListTasksResponseBody extends TeaModel {
         /**
          * Tasks.
          */
-        public Builder tasks(java.util.List < SimpleTask > tasks) {
+        public Builder tasks(java.util.List<SimpleTask> tasks) {
             this.tasks = tasks;
             return this;
         }

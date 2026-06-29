@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTaskStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetTaskStatusResponseBody</p>
@@ -49,6 +55,10 @@ public class GetTaskStatusResponseBody extends TeaModel {
 
     public static GetTaskStatusResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -109,6 +119,19 @@ public class GetTaskStatusResponseBody extends TeaModel {
         private Boolean success; 
         private String taskStatus; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetTaskStatusResponseBody model) {
+            this.code = model.code;
+            this.details = model.details;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.taskStatus = model.taskStatus;
+        } 
+
         /**
          * Code.
          */
@@ -134,7 +157,10 @@ public class GetTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;

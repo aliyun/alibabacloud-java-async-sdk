@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTaskWorkforceRequest} extends {@link RequestModel}
  *
  * <p>UpdateTaskWorkforceRequest</p>
@@ -23,7 +29,7 @@ public class UpdateTaskWorkforceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Workforce")
-    private java.util.List < SimpleWorkforce > workforce;
+    private java.util.List<SimpleWorkforce> workforce;
 
     private UpdateTaskWorkforceRequest(Builder builder) {
         super(builder);
@@ -40,7 +46,7 @@ public class UpdateTaskWorkforceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -62,14 +68,14 @@ public class UpdateTaskWorkforceRequest extends Request {
     /**
      * @return workforce
      */
-    public java.util.List < SimpleWorkforce > getWorkforce() {
+    public java.util.List<SimpleWorkforce> getWorkforce() {
         return this.workforce;
     }
 
     public static final class Builder extends Request.Builder<UpdateTaskWorkforceRequest, Builder> {
         private String tenantId; 
         private String taskId; 
-        private java.util.List < SimpleWorkforce > workforce; 
+        private java.util.List<SimpleWorkforce> workforce; 
 
         private Builder() {
             super();
@@ -83,7 +89,10 @@ public class UpdateTaskWorkforceRequest extends Request {
         } 
 
         /**
-         * TenantId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>G***W134</p>
          */
         public Builder tenantId(String tenantId) {
             this.putPathParameter("TenantId", tenantId);
@@ -92,7 +101,10 @@ public class UpdateTaskWorkforceRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15***518306500608</p>
          */
         public Builder taskId(String taskId) {
             this.putPathParameter("TaskId", taskId);
@@ -103,7 +115,7 @@ public class UpdateTaskWorkforceRequest extends Request {
         /**
          * Workforce.
          */
-        public Builder workforce(java.util.List < SimpleWorkforce > workforce) {
+        public Builder workforce(java.util.List<SimpleWorkforce> workforce) {
             this.putBodyParameter("Workforce", workforce);
             this.workforce = workforce;
             return this;

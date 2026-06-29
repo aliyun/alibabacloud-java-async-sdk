@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SimpleSubtask} extends {@link TeaModel}
  *
  * <p>SimpleSubtask</p>
  */
 public class SimpleSubtask extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < Items> items;
+    private java.util.List<Items> items;
 
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
@@ -34,10 +40,14 @@ public class SimpleSubtask extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -56,14 +66,23 @@ public class SimpleSubtask extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private String status; 
         private Long subtaskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SimpleSubtask model) {
+            this.items = model.items;
+            this.status = model.status;
+            this.subtaskId = model.subtaskId;
+        } 
 
         /**
          * Items.
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
@@ -90,6 +109,12 @@ public class SimpleSubtask extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SimpleSubtask} extends {@link TeaModel}
+     *
+     * <p>SimpleSubtask</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AbandonFlag")
         private Boolean abandonFlag;
@@ -235,6 +260,23 @@ public class SimpleSubtask extends TeaModel {
             private Boolean rejectFlag; 
             private String state; 
             private Long weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.abandonFlag = model.abandonFlag;
+                this.abandonRemark = model.abandonRemark;
+                this.dataId = model.dataId;
+                this.feedbackFlag = model.feedbackFlag;
+                this.feedbackRemark = model.feedbackRemark;
+                this.fixedFlag = model.fixedFlag;
+                this.itemId = model.itemId;
+                this.mine = model.mine;
+                this.rejectFlag = model.rejectFlag;
+                this.state = model.state;
+                this.weight = model.weight;
+            } 
 
             /**
              * AbandonFlag.

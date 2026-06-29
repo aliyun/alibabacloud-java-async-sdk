@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateUserResponseBody</p>
@@ -49,6 +55,10 @@ public class UpdateUserResponseBody extends TeaModel {
 
     public static UpdateUserResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -109,6 +119,19 @@ public class UpdateUserResponseBody extends TeaModel {
         private Boolean success; 
         private String userId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateUserResponseBody model) {
+            this.code = model.code;
+            this.details = model.details;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.userId = model.userId;
+        } 
+
         /**
          * Code.
          */
@@ -134,7 +157,10 @@ public class UpdateUserResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;

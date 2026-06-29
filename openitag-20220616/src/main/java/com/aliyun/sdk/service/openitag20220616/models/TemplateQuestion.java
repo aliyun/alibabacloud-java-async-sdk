@@ -1,30 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TemplateQuestion} extends {@link TeaModel}
  *
  * <p>TemplateQuestion</p>
  */
 public class TemplateQuestion extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Children")
-    private java.util.List < TemplateQuestion > children;
+    private java.util.List<TemplateQuestion> children;
 
     @com.aliyun.core.annotation.NameInMap("Exif")
-    private java.util.Map < String, ? > exif;
+    private java.util.Map<String, ?> exif;
 
     @com.aliyun.core.annotation.NameInMap("MarkTitle")
     private String markTitle;
 
     @com.aliyun.core.annotation.NameInMap("Options")
-    private java.util.List < QuestionOption > options;
+    private java.util.List<QuestionOption> options;
 
     @com.aliyun.core.annotation.NameInMap("PreOptions")
-    private java.util.List < String > preOptions;
+    private java.util.List<String> preOptions;
 
     @com.aliyun.core.annotation.NameInMap("QuestionId")
     private Long questionId;
@@ -50,17 +56,21 @@ public class TemplateQuestion extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return children
      */
-    public java.util.List < TemplateQuestion > getChildren() {
+    public java.util.List<TemplateQuestion> getChildren() {
         return this.children;
     }
 
     /**
      * @return exif
      */
-    public java.util.Map < String, ? > getExif() {
+    public java.util.Map<String, ?> getExif() {
         return this.exif;
     }
 
@@ -74,14 +84,14 @@ public class TemplateQuestion extends TeaModel {
     /**
      * @return options
      */
-    public java.util.List < QuestionOption > getOptions() {
+    public java.util.List<QuestionOption> getOptions() {
         return this.options;
     }
 
     /**
      * @return preOptions
      */
-    public java.util.List < String > getPreOptions() {
+    public java.util.List<String> getPreOptions() {
         return this.preOptions;
     }
 
@@ -100,18 +110,31 @@ public class TemplateQuestion extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < TemplateQuestion > children; 
-        private java.util.Map < String, ? > exif; 
+        private java.util.List<TemplateQuestion> children; 
+        private java.util.Map<String, ?> exif; 
         private String markTitle; 
-        private java.util.List < QuestionOption > options; 
-        private java.util.List < String > preOptions; 
+        private java.util.List<QuestionOption> options; 
+        private java.util.List<String> preOptions; 
         private Long questionId; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(TemplateQuestion model) {
+            this.children = model.children;
+            this.exif = model.exif;
+            this.markTitle = model.markTitle;
+            this.options = model.options;
+            this.preOptions = model.preOptions;
+            this.questionId = model.questionId;
+            this.type = model.type;
+        } 
 
         /**
          * Children.
          */
-        public Builder children(java.util.List < TemplateQuestion > children) {
+        public Builder children(java.util.List<TemplateQuestion> children) {
             this.children = children;
             return this;
         }
@@ -119,7 +142,7 @@ public class TemplateQuestion extends TeaModel {
         /**
          * Exif.
          */
-        public Builder exif(java.util.Map < String, ? > exif) {
+        public Builder exif(java.util.Map<String, ?> exif) {
             this.exif = exif;
             return this;
         }
@@ -135,7 +158,7 @@ public class TemplateQuestion extends TeaModel {
         /**
          * Options.
          */
-        public Builder options(java.util.List < QuestionOption > options) {
+        public Builder options(java.util.List<QuestionOption> options) {
             this.options = options;
             return this;
         }
@@ -143,7 +166,7 @@ public class TemplateQuestion extends TeaModel {
         /**
          * PreOptions.
          */
-        public Builder preOptions(java.util.List < String > preOptions) {
+        public Builder preOptions(java.util.List<String> preOptions) {
             this.preOptions = preOptions;
             return this;
         }

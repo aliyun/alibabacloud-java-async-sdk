@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SimpleTask} extends {@link TeaModel}
  *
  * <p>SimpleTask</p>
@@ -45,7 +51,7 @@ public class SimpleTask extends TeaModel {
     private String status;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < String > tags;
+    private java.util.List<String> tags;
 
     @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
@@ -66,7 +72,7 @@ public class SimpleTask extends TeaModel {
     private String UUID;
 
     @com.aliyun.core.annotation.NameInMap("WorkflowNodes")
-    private java.util.List < String > workflowNodes;
+    private java.util.List<String> workflowNodes;
 
     private SimpleTask(Builder builder) {
         this.archived = builder.archived;
@@ -96,6 +102,10 @@ public class SimpleTask extends TeaModel {
 
     public static SimpleTask create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -178,7 +188,7 @@ public class SimpleTask extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < String > getTags() {
+    public java.util.List<String> getTags() {
         return this.tags;
     }
 
@@ -227,7 +237,7 @@ public class SimpleTask extends TeaModel {
     /**
      * @return workflowNodes
      */
-    public java.util.List < String > getWorkflowNodes() {
+    public java.util.List<String> getWorkflowNodes() {
         return this.workflowNodes;
     }
 
@@ -243,14 +253,39 @@ public class SimpleTask extends TeaModel {
         private String remark; 
         private String stage; 
         private String status; 
-        private java.util.List < String > tags; 
+        private java.util.List<String> tags; 
         private String taskId; 
         private String taskName; 
         private String taskType; 
         private String templateId; 
         private String tenantId; 
         private String UUID; 
-        private java.util.List < String > workflowNodes; 
+        private java.util.List<String> workflowNodes; 
+
+        private Builder() {
+        } 
+
+        private Builder(SimpleTask model) {
+            this.archived = model.archived;
+            this.archivedInfos = model.archivedInfos;
+            this.creator = model.creator;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.labelStyle = model.labelStyle;
+            this.modifier = model.modifier;
+            this.refTaskId = model.refTaskId;
+            this.remark = model.remark;
+            this.stage = model.stage;
+            this.status = model.status;
+            this.tags = model.tags;
+            this.taskId = model.taskId;
+            this.taskName = model.taskName;
+            this.taskType = model.taskType;
+            this.templateId = model.templateId;
+            this.tenantId = model.tenantId;
+            this.UUID = model.UUID;
+            this.workflowNodes = model.workflowNodes;
+        } 
 
         /**
          * Archived.
@@ -343,7 +378,7 @@ public class SimpleTask extends TeaModel {
         /**
          * Tags.
          */
-        public Builder tags(java.util.List < String > tags) {
+        public Builder tags(java.util.List<String> tags) {
             this.tags = tags;
             return this;
         }
@@ -399,7 +434,7 @@ public class SimpleTask extends TeaModel {
         /**
          * WorkflowNodes.
          */
-        public Builder workflowNodes(java.util.List < String > workflowNodes) {
+        public Builder workflowNodes(java.util.List<String> workflowNodes) {
             this.workflowNodes = workflowNodes;
             return this;
         }

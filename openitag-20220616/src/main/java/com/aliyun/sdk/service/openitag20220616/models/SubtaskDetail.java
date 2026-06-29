@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubtaskDetail} extends {@link TeaModel}
  *
  * <p>SubtaskDetail</p>
@@ -27,7 +33,7 @@ public class SubtaskDetail extends TeaModel {
     private String extConfigs;
 
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < Items> items;
+    private java.util.List<Items> items;
 
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
@@ -45,7 +51,7 @@ public class SubtaskDetail extends TeaModel {
     private String workNodeState;
 
     @com.aliyun.core.annotation.NameInMap("Workforce")
-    private java.util.List < Workforce > workforce;
+    private java.util.List<Workforce> workforce;
 
     private SubtaskDetail(Builder builder) {
         this.canDiscard = builder.canDiscard;
@@ -68,6 +74,10 @@ public class SubtaskDetail extends TeaModel {
 
     public static SubtaskDetail create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -108,7 +118,7 @@ public class SubtaskDetail extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -150,7 +160,7 @@ public class SubtaskDetail extends TeaModel {
     /**
      * @return workforce
      */
-    public java.util.List < Workforce > getWorkforce() {
+    public java.util.List<Workforce> getWorkforce() {
         return this.workforce;
     }
 
@@ -160,13 +170,31 @@ public class SubtaskDetail extends TeaModel {
         private Boolean canRelease; 
         private String currentWorkNode; 
         private String extConfigs; 
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private String status; 
         private String subtaskId; 
         private String taskId; 
         private Long weight; 
         private String workNodeState; 
-        private java.util.List < Workforce > workforce; 
+        private java.util.List<Workforce> workforce; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubtaskDetail model) {
+            this.canDiscard = model.canDiscard;
+            this.canReassign = model.canReassign;
+            this.canRelease = model.canRelease;
+            this.currentWorkNode = model.currentWorkNode;
+            this.extConfigs = model.extConfigs;
+            this.items = model.items;
+            this.status = model.status;
+            this.subtaskId = model.subtaskId;
+            this.taskId = model.taskId;
+            this.weight = model.weight;
+            this.workNodeState = model.workNodeState;
+            this.workforce = model.workforce;
+        } 
 
         /**
          * CanDiscard.
@@ -211,7 +239,7 @@ public class SubtaskDetail extends TeaModel {
         /**
          * Items.
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
@@ -259,7 +287,7 @@ public class SubtaskDetail extends TeaModel {
         /**
          * Workforce.
          */
-        public Builder workforce(java.util.List < Workforce > workforce) {
+        public Builder workforce(java.util.List<Workforce> workforce) {
             this.workforce = workforce;
             return this;
         }
@@ -270,6 +298,12 @@ public class SubtaskDetail extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SubtaskDetail} extends {@link TeaModel}
+     *
+     * <p>SubtaskDetail</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AbandonFlag")
         private Boolean abandonFlag;
@@ -403,6 +437,22 @@ public class SubtaskDetail extends TeaModel {
             private Boolean rejectFlag; 
             private String state; 
             private Long weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.abandonFlag = model.abandonFlag;
+                this.abandonRemark = model.abandonRemark;
+                this.dataId = model.dataId;
+                this.feedbackFlag = model.feedbackFlag;
+                this.feedbackRemark = model.feedbackRemark;
+                this.fixedFlag = model.fixedFlag;
+                this.mine = model.mine;
+                this.rejectFlag = model.rejectFlag;
+                this.state = model.state;
+                this.weight = model.weight;
+            } 
 
             /**
              * AbandonFlag.

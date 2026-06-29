@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TemplateView} extends {@link TeaModel}
  *
  * <p>TemplateView</p>
  */
 public class TemplateView extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Fields")
-    private java.util.List < Fields> fields;
+    private java.util.List<Fields> fields;
 
     private TemplateView(Builder builder) {
         this.fields = builder.fields;
@@ -26,20 +32,31 @@ public class TemplateView extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fields
      */
-    public java.util.List < Fields> getFields() {
+    public java.util.List<Fields> getFields() {
         return this.fields;
     }
 
     public static final class Builder {
-        private java.util.List < Fields> fields; 
+        private java.util.List<Fields> fields; 
+
+        private Builder() {
+        } 
+
+        private Builder(TemplateView model) {
+            this.fields = model.fields;
+        } 
 
         /**
          * Fields.
          */
-        public Builder fields(java.util.List < Fields> fields) {
+        public Builder fields(java.util.List<Fields> fields) {
             this.fields = fields;
             return this;
         }
@@ -50,12 +67,18 @@ public class TemplateView extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TemplateView} extends {@link TeaModel}
+     *
+     * <p>TemplateView</p>
+     */
     public static class VisitInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AftsConf")
-        private java.util.Map < String, ? > aftsConf;
+        private java.util.Map<String, ?> aftsConf;
 
         @com.aliyun.core.annotation.NameInMap("OssConf")
-        private java.util.Map < String, ? > ossConf;
+        private java.util.Map<String, ?> ossConf;
 
         private VisitInfo(Builder builder) {
             this.aftsConf = builder.aftsConf;
@@ -73,25 +96,33 @@ public class TemplateView extends TeaModel {
         /**
          * @return aftsConf
          */
-        public java.util.Map < String, ? > getAftsConf() {
+        public java.util.Map<String, ?> getAftsConf() {
             return this.aftsConf;
         }
 
         /**
          * @return ossConf
          */
-        public java.util.Map < String, ? > getOssConf() {
+        public java.util.Map<String, ?> getOssConf() {
             return this.ossConf;
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > aftsConf; 
-            private java.util.Map < String, ? > ossConf; 
+            private java.util.Map<String, ?> aftsConf; 
+            private java.util.Map<String, ?> ossConf; 
+
+            private Builder() {
+            } 
+
+            private Builder(VisitInfo model) {
+                this.aftsConf = model.aftsConf;
+                this.ossConf = model.ossConf;
+            } 
 
             /**
              * AftsConf.
              */
-            public Builder aftsConf(java.util.Map < String, ? > aftsConf) {
+            public Builder aftsConf(java.util.Map<String, ?> aftsConf) {
                 this.aftsConf = aftsConf;
                 return this;
             }
@@ -99,7 +130,7 @@ public class TemplateView extends TeaModel {
             /**
              * OssConf.
              */
-            public Builder ossConf(java.util.Map < String, ? > ossConf) {
+            public Builder ossConf(java.util.Map<String, ?> ossConf) {
                 this.ossConf = ossConf;
                 return this;
             }
@@ -111,6 +142,12 @@ public class TemplateView extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TemplateView} extends {@link TeaModel}
+     *
+     * <p>TemplateView</p>
+     */
     public static class Fields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayOriImg")
         private Boolean displayOriImg;
@@ -172,6 +209,16 @@ public class TemplateView extends TeaModel {
             private String fieldName; 
             private String type; 
             private VisitInfo visitInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Fields model) {
+                this.displayOriImg = model.displayOriImg;
+                this.fieldName = model.fieldName;
+                this.type = model.type;
+                this.visitInfo = model.visitInfo;
+            } 
 
             /**
              * DisplayOriImg.

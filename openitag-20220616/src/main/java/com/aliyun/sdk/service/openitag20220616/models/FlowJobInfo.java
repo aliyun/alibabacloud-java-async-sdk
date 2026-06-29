@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlowJobInfo} extends {@link TeaModel}
  *
  * <p>FlowJobInfo</p>
@@ -44,6 +50,10 @@ public class FlowJobInfo extends TeaModel {
 
     public static FlowJobInfo create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -95,6 +105,18 @@ public class FlowJobInfo extends TeaModel {
         private String messageId; 
         private String processType; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FlowJobInfo model) {
+            this.display = model.display;
+            this.jobId = model.jobId;
+            this.jobType = model.jobType;
+            this.messageId = model.messageId;
+            this.processType = model.processType;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * Display.

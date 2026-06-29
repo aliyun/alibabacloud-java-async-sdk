@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TaskAssginConfig} extends {@link TeaModel}
  *
  * <p>TaskAssginConfig</p>
@@ -36,6 +42,10 @@ public class TaskAssginConfig extends TeaModel {
 
     public static TaskAssginConfig create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -71,6 +81,16 @@ public class TaskAssginConfig extends TeaModel {
         private String assignField; 
         private String assignSubTaskCount; 
         private String assignType; 
+
+        private Builder() {
+        } 
+
+        private Builder(TaskAssginConfig model) {
+            this.assignCount = model.assignCount;
+            this.assignField = model.assignField;
+            this.assignSubTaskCount = model.assignSubTaskCount;
+            this.assignType = model.assignType;
+        } 
 
         /**
          * AssignCount.

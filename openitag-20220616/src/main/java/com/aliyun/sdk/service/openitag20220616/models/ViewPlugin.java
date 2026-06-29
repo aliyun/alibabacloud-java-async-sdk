@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ViewPlugin} extends {@link TeaModel}
  *
  * <p>ViewPlugin</p>
@@ -27,16 +33,16 @@ public class ViewPlugin extends TeaModel {
     private Boolean displayOriImg;
 
     @com.aliyun.core.annotation.NameInMap("Exif")
-    private java.util.Map < String, ? > exif;
+    private java.util.Map<String, ?> exif;
 
     @com.aliyun.core.annotation.NameInMap("Hide")
     private Boolean hide;
 
     @com.aliyun.core.annotation.NameInMap("Plugins")
-    private java.util.Map < String, ? > plugins;
+    private java.util.Map<String, ?> plugins;
 
     @com.aliyun.core.annotation.NameInMap("RelationQuestionIds")
-    private java.util.List < String > relationQuestionIds;
+    private java.util.List<String> relationQuestionIds;
 
     @com.aliyun.core.annotation.NameInMap("Type")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -64,6 +70,10 @@ public class ViewPlugin extends TeaModel {
 
     public static ViewPlugin create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -97,7 +107,7 @@ public class ViewPlugin extends TeaModel {
     /**
      * @return exif
      */
-    public java.util.Map < String, ? > getExif() {
+    public java.util.Map<String, ?> getExif() {
         return this.exif;
     }
 
@@ -111,14 +121,14 @@ public class ViewPlugin extends TeaModel {
     /**
      * @return plugins
      */
-    public java.util.Map < String, ? > getPlugins() {
+    public java.util.Map<String, ?> getPlugins() {
         return this.plugins;
     }
 
     /**
      * @return relationQuestionIds
      */
-    public java.util.List < String > getRelationQuestionIds() {
+    public java.util.List<String> getRelationQuestionIds() {
         return this.relationQuestionIds;
     }
 
@@ -141,15 +151,31 @@ public class ViewPlugin extends TeaModel {
         private String convertor; 
         private Boolean corsProxy; 
         private Boolean displayOriImg; 
-        private java.util.Map < String, ? > exif; 
+        private java.util.Map<String, ?> exif; 
         private Boolean hide; 
-        private java.util.Map < String, ? > plugins; 
-        private java.util.List < String > relationQuestionIds; 
+        private java.util.Map<String, ?> plugins; 
+        private java.util.List<String> relationQuestionIds; 
         private String type; 
         private VisitInfo visitInfo; 
 
+        private Builder() {
+        } 
+
+        private Builder(ViewPlugin model) {
+            this.bindField = model.bindField;
+            this.convertor = model.convertor;
+            this.corsProxy = model.corsProxy;
+            this.displayOriImg = model.displayOriImg;
+            this.exif = model.exif;
+            this.hide = model.hide;
+            this.plugins = model.plugins;
+            this.relationQuestionIds = model.relationQuestionIds;
+            this.type = model.type;
+            this.visitInfo = model.visitInfo;
+        } 
+
         /**
-         * BindField.
+         * <p>This parameter is required.</p>
          */
         public Builder bindField(String bindField) {
             this.bindField = bindField;
@@ -165,7 +191,7 @@ public class ViewPlugin extends TeaModel {
         }
 
         /**
-         * CorsProxy.
+         * <p>This parameter is required.</p>
          */
         public Builder corsProxy(Boolean corsProxy) {
             this.corsProxy = corsProxy;
@@ -173,7 +199,7 @@ public class ViewPlugin extends TeaModel {
         }
 
         /**
-         * DisplayOriImg.
+         * <p>This parameter is required.</p>
          */
         public Builder displayOriImg(Boolean displayOriImg) {
             this.displayOriImg = displayOriImg;
@@ -183,7 +209,7 @@ public class ViewPlugin extends TeaModel {
         /**
          * Exif.
          */
-        public Builder exif(java.util.Map < String, ? > exif) {
+        public Builder exif(java.util.Map<String, ?> exif) {
             this.exif = exif;
             return this;
         }
@@ -199,7 +225,7 @@ public class ViewPlugin extends TeaModel {
         /**
          * Plugins.
          */
-        public Builder plugins(java.util.Map < String, ? > plugins) {
+        public Builder plugins(java.util.Map<String, ?> plugins) {
             this.plugins = plugins;
             return this;
         }
@@ -207,13 +233,13 @@ public class ViewPlugin extends TeaModel {
         /**
          * RelationQuestionIds.
          */
-        public Builder relationQuestionIds(java.util.List < String > relationQuestionIds) {
+        public Builder relationQuestionIds(java.util.List<String> relationQuestionIds) {
             this.relationQuestionIds = relationQuestionIds;
             return this;
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -234,12 +260,18 @@ public class ViewPlugin extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ViewPlugin} extends {@link TeaModel}
+     *
+     * <p>ViewPlugin</p>
+     */
     public static class VisitInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("aftsConf")
-        private java.util.Map < String, ? > aftsConf;
+        private java.util.Map<String, ?> aftsConf;
 
         @com.aliyun.core.annotation.NameInMap("ossConf")
-        private java.util.Map < String, ? > ossConf;
+        private java.util.Map<String, ?> ossConf;
 
         private VisitInfo(Builder builder) {
             this.aftsConf = builder.aftsConf;
@@ -257,25 +289,33 @@ public class ViewPlugin extends TeaModel {
         /**
          * @return aftsConf
          */
-        public java.util.Map < String, ? > getAftsConf() {
+        public java.util.Map<String, ?> getAftsConf() {
             return this.aftsConf;
         }
 
         /**
          * @return ossConf
          */
-        public java.util.Map < String, ? > getOssConf() {
+        public java.util.Map<String, ?> getOssConf() {
             return this.ossConf;
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > aftsConf; 
-            private java.util.Map < String, ? > ossConf; 
+            private java.util.Map<String, ?> aftsConf; 
+            private java.util.Map<String, ?> ossConf; 
+
+            private Builder() {
+            } 
+
+            private Builder(VisitInfo model) {
+                this.aftsConf = model.aftsConf;
+                this.ossConf = model.ossConf;
+            } 
 
             /**
              * aftsConf.
              */
-            public Builder aftsConf(java.util.Map < String, ? > aftsConf) {
+            public Builder aftsConf(java.util.Map<String, ?> aftsConf) {
                 this.aftsConf = aftsConf;
                 return this;
             }
@@ -283,7 +323,7 @@ public class ViewPlugin extends TeaModel {
             /**
              * ossConf.
              */
-            public Builder ossConf(java.util.Map < String, ? > ossConf) {
+            public Builder ossConf(java.util.Map<String, ?> ossConf) {
                 this.ossConf = ossConf;
                 return this;
             }

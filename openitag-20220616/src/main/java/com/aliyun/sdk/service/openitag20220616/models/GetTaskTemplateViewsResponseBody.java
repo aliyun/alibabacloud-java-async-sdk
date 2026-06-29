@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTaskTemplateViewsResponseBody} extends {@link TeaModel}
  *
  * <p>GetTaskTemplateViewsResponseBody</p>
@@ -49,6 +55,10 @@ public class GetTaskTemplateViewsResponseBody extends TeaModel {
 
     public static GetTaskTemplateViewsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -109,6 +119,19 @@ public class GetTaskTemplateViewsResponseBody extends TeaModel {
         private Boolean success; 
         private Views views; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetTaskTemplateViewsResponseBody model) {
+            this.code = model.code;
+            this.details = model.details;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.views = model.views;
+        } 
+
         /**
          * Code.
          */
@@ -134,7 +157,10 @@ public class GetTaskTemplateViewsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -171,9 +197,15 @@ public class GetTaskTemplateViewsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTaskTemplateViewsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTaskTemplateViewsResponseBody</p>
+     */
     public static class Views extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ViewPlugins")
-        private java.util.List < ViewPlugin > viewPlugins;
+        private java.util.List<ViewPlugin> viewPlugins;
 
         private Views(Builder builder) {
             this.viewPlugins = builder.viewPlugins;
@@ -190,17 +222,24 @@ public class GetTaskTemplateViewsResponseBody extends TeaModel {
         /**
          * @return viewPlugins
          */
-        public java.util.List < ViewPlugin > getViewPlugins() {
+        public java.util.List<ViewPlugin> getViewPlugins() {
             return this.viewPlugins;
         }
 
         public static final class Builder {
-            private java.util.List < ViewPlugin > viewPlugins; 
+            private java.util.List<ViewPlugin> viewPlugins; 
+
+            private Builder() {
+            } 
+
+            private Builder(Views model) {
+                this.viewPlugins = model.viewPlugins;
+            } 
 
             /**
              * ViewPlugins.
              */
-            public Builder viewPlugins(java.util.List < ViewPlugin > viewPlugins) {
+            public Builder viewPlugins(java.util.List<ViewPlugin> viewPlugins) {
                 this.viewPlugins = viewPlugins;
                 return this;
             }

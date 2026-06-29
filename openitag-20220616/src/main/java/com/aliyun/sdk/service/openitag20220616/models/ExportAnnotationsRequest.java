@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportAnnotationsRequest} extends {@link RequestModel}
  *
  * <p>ExportAnnotationsRequest</p>
@@ -51,7 +57,7 @@ public class ExportAnnotationsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -112,7 +118,10 @@ public class ExportAnnotationsRequest extends Request {
         } 
 
         /**
-         * TenantId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GA***W134</p>
          */
         public Builder tenantId(String tenantId) {
             this.putPathParameter("TenantId", tenantId);
@@ -121,7 +130,10 @@ public class ExportAnnotationsRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15***02518306500608</p>
          */
         public Builder taskId(String taskId) {
             this.putPathParameter("TaskId", taskId);
@@ -130,7 +142,10 @@ public class ExportAnnotationsRequest extends Request {
         }
 
         /**
-         * OssPath.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://***-hz-oss.oss-cn-hangzhou.aliyuncs.com/output/</p>
          */
         public Builder ossPath(String ossPath) {
             this.putQueryParameter("OssPath", ossPath);

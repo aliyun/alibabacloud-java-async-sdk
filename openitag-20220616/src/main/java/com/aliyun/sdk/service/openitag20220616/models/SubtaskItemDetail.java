@@ -1,21 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubtaskItemDetail} extends {@link TeaModel}
  *
  * <p>SubtaskItemDetail</p>
  */
 public class SubtaskItemDetail extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Annotations")
-    private java.util.List < Annotations> annotations;
+    private java.util.List<Annotations> annotations;
 
     @com.aliyun.core.annotation.NameInMap("DataSource")
-    private java.util.Map < String, ? > dataSource;
+    private java.util.Map<String, ?> dataSource;
 
     @com.aliyun.core.annotation.NameInMap("ItemId")
     private Long itemId;
@@ -34,17 +40,21 @@ public class SubtaskItemDetail extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return annotations
      */
-    public java.util.List < Annotations> getAnnotations() {
+    public java.util.List<Annotations> getAnnotations() {
         return this.annotations;
     }
 
     /**
      * @return dataSource
      */
-    public java.util.Map < String, ? > getDataSource() {
+    public java.util.Map<String, ?> getDataSource() {
         return this.dataSource;
     }
 
@@ -56,14 +66,23 @@ public class SubtaskItemDetail extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Annotations> annotations; 
-        private java.util.Map < String, ? > dataSource; 
+        private java.util.List<Annotations> annotations; 
+        private java.util.Map<String, ?> dataSource; 
         private Long itemId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubtaskItemDetail model) {
+            this.annotations = model.annotations;
+            this.dataSource = model.dataSource;
+            this.itemId = model.itemId;
+        } 
 
         /**
          * Annotations.
          */
-        public Builder annotations(java.util.List < Annotations> annotations) {
+        public Builder annotations(java.util.List<Annotations> annotations) {
             this.annotations = annotations;
             return this;
         }
@@ -71,7 +90,7 @@ public class SubtaskItemDetail extends TeaModel {
         /**
          * DataSource.
          */
-        public Builder dataSource(java.util.Map < String, ? > dataSource) {
+        public Builder dataSource(java.util.Map<String, ?> dataSource) {
             this.dataSource = dataSource;
             return this;
         }
@@ -90,6 +109,12 @@ public class SubtaskItemDetail extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SubtaskItemDetail} extends {@link TeaModel}
+     *
+     * <p>SubtaskItemDetail</p>
+     */
     public static class Annotations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AbandonFlag")
         private Boolean abandonFlag;
@@ -223,6 +248,22 @@ public class SubtaskItemDetail extends TeaModel {
             private Boolean rejectFlag; 
             private String state; 
             private Long weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(Annotations model) {
+                this.abandonFlag = model.abandonFlag;
+                this.abandonRemark = model.abandonRemark;
+                this.dataId = model.dataId;
+                this.feedbackFlag = model.feedbackFlag;
+                this.feedbackRemark = model.feedbackRemark;
+                this.fixedFlag = model.fixedFlag;
+                this.mine = model.mine;
+                this.rejectFlag = model.rejectFlag;
+                this.state = model.state;
+                this.weight = model.weight;
+            } 
 
             /**
              * AbandonFlag.

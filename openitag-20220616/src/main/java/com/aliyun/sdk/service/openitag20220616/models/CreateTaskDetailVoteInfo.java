@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTaskDetailVoteInfo} extends {@link TeaModel}
  *
  * <p>CreateTaskDetailVoteInfo</p>
@@ -30,6 +36,10 @@ public class CreateTaskDetailVoteInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return minVote
      */
@@ -47,6 +57,14 @@ public class CreateTaskDetailVoteInfo extends TeaModel {
     public static final class Builder {
         private Long minVote; 
         private Long voteNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateTaskDetailVoteInfo model) {
+            this.minVote = model.minVote;
+            this.voteNum = model.voteNum;
+        } 
 
         /**
          * MinVote.

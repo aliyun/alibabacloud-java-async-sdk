@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MarkResult} extends {@link TeaModel}
  *
  * <p>MarkResult</p>
@@ -60,6 +66,10 @@ public class MarkResult extends TeaModel {
 
     public static MarkResult create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -143,6 +153,22 @@ public class MarkResult extends TeaModel {
         private String resultType; 
         private String userMarkResultId; 
         private String version; 
+
+        private Builder() {
+        } 
+
+        private Builder(MarkResult model) {
+            this.isNeedVoteJudge = model.isNeedVoteJudge;
+            this.markResult = model.markResult;
+            this.markResultId = model.markResultId;
+            this.markTime = model.markTime;
+            this.markTitle = model.markTitle;
+            this.progress = model.progress;
+            this.questionId = model.questionId;
+            this.resultType = model.resultType;
+            this.userMarkResultId = model.userMarkResultId;
+            this.version = model.version;
+        } 
 
         /**
          * IsNeedVoteJudge.

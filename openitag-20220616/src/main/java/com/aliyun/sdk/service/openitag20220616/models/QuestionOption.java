@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuestionOption} extends {@link TeaModel}
  *
  * <p>QuestionOption</p>
  */
 public class QuestionOption extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Children")
-    private java.util.List < QuestionOption > children;
+    private java.util.List<QuestionOption> children;
 
     @com.aliyun.core.annotation.NameInMap("Color")
     private String color;
@@ -48,10 +54,14 @@ public class QuestionOption extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return children
      */
-    public java.util.List < QuestionOption > getChildren() {
+    public java.util.List<QuestionOption> getChildren() {
         return this.children;
     }
 
@@ -91,17 +101,29 @@ public class QuestionOption extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < QuestionOption > children; 
+        private java.util.List<QuestionOption> children; 
         private String color; 
         private String key; 
         private String label; 
         private String remark; 
         private String shortcut; 
 
+        private Builder() {
+        } 
+
+        private Builder(QuestionOption model) {
+            this.children = model.children;
+            this.color = model.color;
+            this.key = model.key;
+            this.label = model.label;
+            this.remark = model.remark;
+            this.shortcut = model.shortcut;
+        } 
+
         /**
          * Children.
          */
-        public Builder children(java.util.List < QuestionOption > children) {
+        public Builder children(java.util.List<QuestionOption> children) {
             this.children = children;
             return this;
         }
@@ -115,7 +137,7 @@ public class QuestionOption extends TeaModel {
         }
 
         /**
-         * Key.
+         * <p>This parameter is required.</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -123,7 +145,7 @@ public class QuestionOption extends TeaModel {
         }
 
         /**
-         * Label.
+         * <p>This parameter is required.</p>
          */
         public Builder label(String label) {
             this.label = label;

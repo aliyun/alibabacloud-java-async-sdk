@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTaskTemplateQuestionsResponseBody} extends {@link TeaModel}
  *
  * <p>GetTaskTemplateQuestionsResponseBody</p>
@@ -25,7 +31,7 @@ public class GetTaskTemplateQuestionsResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("Questions")
-    private java.util.List < QuestionPlugin > questions;
+    private java.util.List<QuestionPlugin> questions;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -49,6 +55,10 @@ public class GetTaskTemplateQuestionsResponseBody extends TeaModel {
 
     public static GetTaskTemplateQuestionsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -82,7 +92,7 @@ public class GetTaskTemplateQuestionsResponseBody extends TeaModel {
     /**
      * @return questions
      */
-    public java.util.List < QuestionPlugin > getQuestions() {
+    public java.util.List<QuestionPlugin> getQuestions() {
         return this.questions;
     }
 
@@ -105,9 +115,22 @@ public class GetTaskTemplateQuestionsResponseBody extends TeaModel {
         private String details; 
         private String errorCode; 
         private String message; 
-        private java.util.List < QuestionPlugin > questions; 
+        private java.util.List<QuestionPlugin> questions; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTaskTemplateQuestionsResponseBody model) {
+            this.code = model.code;
+            this.details = model.details;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.questions = model.questions;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -134,7 +157,10 @@ public class GetTaskTemplateQuestionsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -144,7 +170,7 @@ public class GetTaskTemplateQuestionsResponseBody extends TeaModel {
         /**
          * Questions.
          */
-        public Builder questions(java.util.List < QuestionPlugin > questions) {
+        public Builder questions(java.util.List<QuestionPlugin> questions) {
             this.questions = questions;
             return this;
         }

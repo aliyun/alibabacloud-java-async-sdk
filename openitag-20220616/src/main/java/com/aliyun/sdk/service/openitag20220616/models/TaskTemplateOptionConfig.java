@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TaskTemplateOptionConfig} extends {@link TeaModel}
  *
  * <p>TaskTemplateOptionConfig</p>
@@ -15,10 +21,10 @@ public class TaskTemplateOptionConfig extends TeaModel {
     private String defaultResult;
 
     @com.aliyun.core.annotation.NameInMap("Options")
-    private java.util.List < QuestionOption > options;
+    private java.util.List<QuestionOption> options;
 
     @com.aliyun.core.annotation.NameInMap("PreOptions")
-    private java.util.List < String > preOptions;
+    private java.util.List<String> preOptions;
 
     @com.aliyun.core.annotation.NameInMap("Rule")
     private String rule;
@@ -38,6 +44,10 @@ public class TaskTemplateOptionConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return defaultResult
      */
@@ -48,14 +58,14 @@ public class TaskTemplateOptionConfig extends TeaModel {
     /**
      * @return options
      */
-    public java.util.List < QuestionOption > getOptions() {
+    public java.util.List<QuestionOption> getOptions() {
         return this.options;
     }
 
     /**
      * @return preOptions
      */
-    public java.util.List < String > getPreOptions() {
+    public java.util.List<String> getPreOptions() {
         return this.preOptions;
     }
 
@@ -68,9 +78,19 @@ public class TaskTemplateOptionConfig extends TeaModel {
 
     public static final class Builder {
         private String defaultResult; 
-        private java.util.List < QuestionOption > options; 
-        private java.util.List < String > preOptions; 
+        private java.util.List<QuestionOption> options; 
+        private java.util.List<String> preOptions; 
         private String rule; 
+
+        private Builder() {
+        } 
+
+        private Builder(TaskTemplateOptionConfig model) {
+            this.defaultResult = model.defaultResult;
+            this.options = model.options;
+            this.preOptions = model.preOptions;
+            this.rule = model.rule;
+        } 
 
         /**
          * DefaultResult.
@@ -83,7 +103,7 @@ public class TaskTemplateOptionConfig extends TeaModel {
         /**
          * Options.
          */
-        public Builder options(java.util.List < QuestionOption > options) {
+        public Builder options(java.util.List<QuestionOption> options) {
             this.options = options;
             return this;
         }
@@ -91,7 +111,7 @@ public class TaskTemplateOptionConfig extends TeaModel {
         /**
          * PreOptions.
          */
-        public Builder preOptions(java.util.List < String > preOptions) {
+        public Builder preOptions(java.util.List<String> preOptions) {
             this.preOptions = preOptions;
             return this;
         }

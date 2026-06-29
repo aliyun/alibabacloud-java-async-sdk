@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserRequest} extends {@link RequestModel}
  *
  * <p>UpdateUserRequest</p>
@@ -47,7 +53,7 @@ public class UpdateUserRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -99,7 +105,10 @@ public class UpdateUserRequest extends Request {
         } 
 
         /**
-         * TenantId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GA**W134</p>
          */
         public Builder tenantId(String tenantId) {
             this.putPathParameter("TenantId", tenantId);
@@ -108,7 +117,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>166***80757311</p>
          */
         public Builder userId(String userId) {
             this.putPathParameter("UserId", userId);
@@ -117,7 +129,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * Role.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADMIN</p>
          */
         public Builder role(String role) {
             this.putBodyParameter("Role", role);
@@ -126,7 +141,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);

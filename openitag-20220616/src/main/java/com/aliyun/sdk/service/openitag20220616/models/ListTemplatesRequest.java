@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTemplatesRequest} extends {@link RequestModel}
  *
  * <p>ListTemplatesRequest</p>
@@ -31,7 +37,7 @@ public class ListTemplatesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Types")
-    private java.util.List < String > types;
+    private java.util.List<String> types;
 
     private ListTemplatesRequest(Builder builder) {
         super(builder);
@@ -50,7 +56,7 @@ public class ListTemplatesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -86,7 +92,7 @@ public class ListTemplatesRequest extends Request {
     /**
      * @return types
      */
-    public java.util.List < String > getTypes() {
+    public java.util.List<String> getTypes() {
         return this.types;
     }
 
@@ -95,7 +101,7 @@ public class ListTemplatesRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String searchKey; 
-        private java.util.List < String > types; 
+        private java.util.List<String> types; 
 
         private Builder() {
             super();
@@ -111,7 +117,10 @@ public class ListTemplatesRequest extends Request {
         } 
 
         /**
-         * TenantId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GAR***134</p>
          */
         public Builder tenantId(String tenantId) {
             this.putPathParameter("TenantId", tenantId);
@@ -149,7 +158,7 @@ public class ListTemplatesRequest extends Request {
         /**
          * Types.
          */
-        public Builder types(java.util.List < String > types) {
+        public Builder types(java.util.List<String> types) {
             String typesShrink = shrink(types, "Types", "simple");
             this.putQueryParameter("Types", typesShrink);
             this.types = types;

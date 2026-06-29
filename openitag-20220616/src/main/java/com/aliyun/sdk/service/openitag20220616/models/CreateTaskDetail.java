@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTaskDetail} extends {@link TeaModel}
  *
  * <p>CreateTaskDetail</p>
@@ -23,13 +29,13 @@ public class CreateTaskDetail extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("DatasetProxyRelations")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < DatasetProxyConfig > datasetProxyRelations;
+    private java.util.List<DatasetProxyConfig> datasetProxyRelations;
 
     @com.aliyun.core.annotation.NameInMap("Exif")
-    private java.util.Map < String, ? > exif;
+    private java.util.Map<String, ?> exif;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < String > tags;
+    private java.util.List<String> tags;
 
     @com.aliyun.core.annotation.NameInMap("TaskName")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -40,7 +46,7 @@ public class CreateTaskDetail extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("TaskWorkflow")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < TaskWorkflow> taskWorkflow;
+    private java.util.List<TaskWorkflow> taskWorkflow;
 
     @com.aliyun.core.annotation.NameInMap("TemplateId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -51,7 +57,7 @@ public class CreateTaskDetail extends TeaModel {
     private String UUID;
 
     @com.aliyun.core.annotation.NameInMap("VoteConfigs")
-    private java.util.Map < String, CreateTaskDetailVoteInfo > voteConfigs;
+    private java.util.Map<String, CreateTaskDetailVoteInfo> voteConfigs;
 
     private CreateTaskDetail(Builder builder) {
         this.admins = builder.admins;
@@ -74,6 +80,10 @@ public class CreateTaskDetail extends TeaModel {
 
     public static CreateTaskDetail create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -100,21 +110,21 @@ public class CreateTaskDetail extends TeaModel {
     /**
      * @return datasetProxyRelations
      */
-    public java.util.List < DatasetProxyConfig > getDatasetProxyRelations() {
+    public java.util.List<DatasetProxyConfig> getDatasetProxyRelations() {
         return this.datasetProxyRelations;
     }
 
     /**
      * @return exif
      */
-    public java.util.Map < String, ? > getExif() {
+    public java.util.Map<String, ?> getExif() {
         return this.exif;
     }
 
     /**
      * @return tags
      */
-    public java.util.List < String > getTags() {
+    public java.util.List<String> getTags() {
         return this.tags;
     }
 
@@ -135,7 +145,7 @@ public class CreateTaskDetail extends TeaModel {
     /**
      * @return taskWorkflow
      */
-    public java.util.List < TaskWorkflow> getTaskWorkflow() {
+    public java.util.List<TaskWorkflow> getTaskWorkflow() {
         return this.taskWorkflow;
     }
 
@@ -156,7 +166,7 @@ public class CreateTaskDetail extends TeaModel {
     /**
      * @return voteConfigs
      */
-    public java.util.Map < String, CreateTaskDetailVoteInfo > getVoteConfigs() {
+    public java.util.Map<String, CreateTaskDetailVoteInfo> getVoteConfigs() {
         return this.voteConfigs;
     }
 
@@ -164,15 +174,33 @@ public class CreateTaskDetail extends TeaModel {
         private Admins admins; 
         private Boolean allowAppendData; 
         private TaskAssginConfig assignConfig; 
-        private java.util.List < DatasetProxyConfig > datasetProxyRelations; 
-        private java.util.Map < String, ? > exif; 
-        private java.util.List < String > tags; 
+        private java.util.List<DatasetProxyConfig> datasetProxyRelations; 
+        private java.util.Map<String, ?> exif; 
+        private java.util.List<String> tags; 
         private String taskName; 
         private TaskTemplateConfig taskTemplateConfig; 
-        private java.util.List < TaskWorkflow> taskWorkflow; 
+        private java.util.List<TaskWorkflow> taskWorkflow; 
         private String templateId; 
         private String UUID; 
-        private java.util.Map < String, CreateTaskDetailVoteInfo > voteConfigs; 
+        private java.util.Map<String, CreateTaskDetailVoteInfo> voteConfigs; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateTaskDetail model) {
+            this.admins = model.admins;
+            this.allowAppendData = model.allowAppendData;
+            this.assignConfig = model.assignConfig;
+            this.datasetProxyRelations = model.datasetProxyRelations;
+            this.exif = model.exif;
+            this.tags = model.tags;
+            this.taskName = model.taskName;
+            this.taskTemplateConfig = model.taskTemplateConfig;
+            this.taskWorkflow = model.taskWorkflow;
+            this.templateId = model.templateId;
+            this.UUID = model.UUID;
+            this.voteConfigs = model.voteConfigs;
+        } 
 
         /**
          * Admins.
@@ -191,7 +219,7 @@ public class CreateTaskDetail extends TeaModel {
         }
 
         /**
-         * AssignConfig.
+         * <p>This parameter is required.</p>
          */
         public Builder assignConfig(TaskAssginConfig assignConfig) {
             this.assignConfig = assignConfig;
@@ -199,9 +227,9 @@ public class CreateTaskDetail extends TeaModel {
         }
 
         /**
-         * DatasetProxyRelations.
+         * <p>This parameter is required.</p>
          */
-        public Builder datasetProxyRelations(java.util.List < DatasetProxyConfig > datasetProxyRelations) {
+        public Builder datasetProxyRelations(java.util.List<DatasetProxyConfig> datasetProxyRelations) {
             this.datasetProxyRelations = datasetProxyRelations;
             return this;
         }
@@ -209,7 +237,7 @@ public class CreateTaskDetail extends TeaModel {
         /**
          * Exif.
          */
-        public Builder exif(java.util.Map < String, ? > exif) {
+        public Builder exif(java.util.Map<String, ?> exif) {
             this.exif = exif;
             return this;
         }
@@ -217,13 +245,13 @@ public class CreateTaskDetail extends TeaModel {
         /**
          * Tags.
          */
-        public Builder tags(java.util.List < String > tags) {
+        public Builder tags(java.util.List<String> tags) {
             this.tags = tags;
             return this;
         }
 
         /**
-         * TaskName.
+         * <p>This parameter is required.</p>
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;
@@ -239,15 +267,15 @@ public class CreateTaskDetail extends TeaModel {
         }
 
         /**
-         * TaskWorkflow.
+         * <p>This parameter is required.</p>
          */
-        public Builder taskWorkflow(java.util.List < TaskWorkflow> taskWorkflow) {
+        public Builder taskWorkflow(java.util.List<TaskWorkflow> taskWorkflow) {
             this.taskWorkflow = taskWorkflow;
             return this;
         }
 
         /**
-         * TemplateId.
+         * <p>This parameter is required.</p>
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;
@@ -255,7 +283,7 @@ public class CreateTaskDetail extends TeaModel {
         }
 
         /**
-         * UUID.
+         * <p>This parameter is required.</p>
          */
         public Builder UUID(String UUID) {
             this.UUID = UUID;
@@ -265,7 +293,7 @@ public class CreateTaskDetail extends TeaModel {
         /**
          * VoteConfigs.
          */
-        public Builder voteConfigs(java.util.Map < String, CreateTaskDetailVoteInfo > voteConfigs) {
+        public Builder voteConfigs(java.util.Map<String, CreateTaskDetailVoteInfo> voteConfigs) {
             this.voteConfigs = voteConfigs;
             return this;
         }
@@ -276,9 +304,15 @@ public class CreateTaskDetail extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateTaskDetail} extends {@link TeaModel}
+     *
+     * <p>CreateTaskDetail</p>
+     */
     public static class Admins extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Users")
-        private java.util.List < SimpleUser > users;
+        private java.util.List<SimpleUser> users;
 
         private Admins(Builder builder) {
             this.users = builder.users;
@@ -295,17 +329,24 @@ public class CreateTaskDetail extends TeaModel {
         /**
          * @return users
          */
-        public java.util.List < SimpleUser > getUsers() {
+        public java.util.List<SimpleUser> getUsers() {
             return this.users;
         }
 
         public static final class Builder {
-            private java.util.List < SimpleUser > users; 
+            private java.util.List<SimpleUser> users; 
+
+            private Builder() {
+            } 
+
+            private Builder(Admins model) {
+                this.users = model.users;
+            } 
 
             /**
              * Users.
              */
-            public Builder users(java.util.List < SimpleUser > users) {
+            public Builder users(java.util.List<SimpleUser> users) {
                 this.users = users;
                 return this;
             }
@@ -317,6 +358,12 @@ public class CreateTaskDetail extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateTaskDetail} extends {@link TeaModel}
+     *
+     * <p>CreateTaskDetail</p>
+     */
     public static class TaskWorkflow extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
@@ -342,6 +389,13 @@ public class CreateTaskDetail extends TeaModel {
 
         public static final class Builder {
             private String nodeName; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskWorkflow model) {
+                this.nodeName = model.nodeName;
+            } 
 
             /**
              * NodeName.

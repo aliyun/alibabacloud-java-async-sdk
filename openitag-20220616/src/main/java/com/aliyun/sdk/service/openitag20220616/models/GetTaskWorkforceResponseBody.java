@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTaskWorkforceResponseBody} extends {@link TeaModel}
  *
  * <p>GetTaskWorkforceResponseBody</p>
@@ -31,7 +37,7 @@ public class GetTaskWorkforceResponseBody extends TeaModel {
     private Boolean success;
 
     @com.aliyun.core.annotation.NameInMap("Workforce")
-    private java.util.List < Workforce > workforce;
+    private java.util.List<Workforce> workforce;
 
     private GetTaskWorkforceResponseBody(Builder builder) {
         this.code = builder.code;
@@ -49,6 +55,10 @@ public class GetTaskWorkforceResponseBody extends TeaModel {
 
     public static GetTaskWorkforceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,7 +106,7 @@ public class GetTaskWorkforceResponseBody extends TeaModel {
     /**
      * @return workforce
      */
-    public java.util.List < Workforce > getWorkforce() {
+    public java.util.List<Workforce> getWorkforce() {
         return this.workforce;
     }
 
@@ -107,7 +117,20 @@ public class GetTaskWorkforceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-        private java.util.List < Workforce > workforce; 
+        private java.util.List<Workforce> workforce; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTaskWorkforceResponseBody model) {
+            this.code = model.code;
+            this.details = model.details;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.workforce = model.workforce;
+        } 
 
         /**
          * Code.
@@ -134,7 +157,10 @@ public class GetTaskWorkforceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -160,7 +186,7 @@ public class GetTaskWorkforceResponseBody extends TeaModel {
         /**
          * Workforce.
          */
-        public Builder workforce(java.util.List < Workforce > workforce) {
+        public Builder workforce(java.util.List<Workforce> workforce) {
             this.workforce = workforce;
             return this;
         }

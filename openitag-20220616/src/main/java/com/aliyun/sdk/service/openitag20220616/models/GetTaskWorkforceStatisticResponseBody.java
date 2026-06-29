@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTaskWorkforceStatisticResponseBody} extends {@link TeaModel}
  *
  * <p>GetTaskWorkforceStatisticResponseBody</p>
@@ -43,7 +49,7 @@ public class GetTaskWorkforceStatisticResponseBody extends TeaModel {
     private Integer totalPage;
 
     @com.aliyun.core.annotation.NameInMap("UsersStatistic")
-    private java.util.List < UserStatistic > usersStatistic;
+    private java.util.List<UserStatistic> usersStatistic;
 
     private GetTaskWorkforceStatisticResponseBody(Builder builder) {
         this.code = builder.code;
@@ -65,6 +71,10 @@ public class GetTaskWorkforceStatisticResponseBody extends TeaModel {
 
     public static GetTaskWorkforceStatisticResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -140,7 +150,7 @@ public class GetTaskWorkforceStatisticResponseBody extends TeaModel {
     /**
      * @return usersStatistic
      */
-    public java.util.List < UserStatistic > getUsersStatistic() {
+    public java.util.List<UserStatistic> getUsersStatistic() {
         return this.usersStatistic;
     }
 
@@ -155,7 +165,24 @@ public class GetTaskWorkforceStatisticResponseBody extends TeaModel {
         private Boolean success; 
         private Integer totalCount; 
         private Integer totalPage; 
-        private java.util.List < UserStatistic > usersStatistic; 
+        private java.util.List<UserStatistic> usersStatistic; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTaskWorkforceStatisticResponseBody model) {
+            this.code = model.code;
+            this.details = model.details;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+            this.totalPage = model.totalPage;
+            this.usersStatistic = model.usersStatistic;
+        } 
 
         /**
          * Code.
@@ -182,7 +209,10 @@ public class GetTaskWorkforceStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -240,7 +270,7 @@ public class GetTaskWorkforceStatisticResponseBody extends TeaModel {
         /**
          * UsersStatistic.
          */
-        public Builder usersStatistic(java.util.List < UserStatistic > usersStatistic) {
+        public Builder usersStatistic(java.util.List<UserStatistic> usersStatistic) {
             this.usersStatistic = usersStatistic;
             return this;
         }

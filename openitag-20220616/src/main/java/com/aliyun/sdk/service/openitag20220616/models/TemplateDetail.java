@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TemplateDetail} extends {@link TeaModel}
  *
  * <p>TemplateDetail</p>
  */
 public class TemplateDetail extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AbandonReasons")
-    private java.util.List < String > abandonReasons;
+    private java.util.List<String> abandonReasons;
 
     @com.aliyun.core.annotation.NameInMap("Classify")
     private String classify;
@@ -24,7 +30,7 @@ public class TemplateDetail extends TeaModel {
     private String description;
 
     @com.aliyun.core.annotation.NameInMap("Exif")
-    private java.util.Map < String, ? > exif;
+    private java.util.Map<String, ?> exif;
 
     @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
@@ -36,7 +42,7 @@ public class TemplateDetail extends TeaModel {
     private SimpleUser modifier;
 
     @com.aliyun.core.annotation.NameInMap("QuestionConfigs")
-    private java.util.List < QuestionPlugin > questionConfigs;
+    private java.util.List<QuestionPlugin> questionConfigs;
 
     @com.aliyun.core.annotation.NameInMap("SharedMode")
     private String sharedMode;
@@ -45,7 +51,7 @@ public class TemplateDetail extends TeaModel {
     private String status;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < String > tags;
+    private java.util.List<String> tags;
 
     @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
@@ -90,10 +96,14 @@ public class TemplateDetail extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return abandonReasons
      */
-    public java.util.List < String > getAbandonReasons() {
+    public java.util.List<String> getAbandonReasons() {
         return this.abandonReasons;
     }
 
@@ -121,7 +131,7 @@ public class TemplateDetail extends TeaModel {
     /**
      * @return exif
      */
-    public java.util.Map < String, ? > getExif() {
+    public java.util.Map<String, ?> getExif() {
         return this.exif;
     }
 
@@ -149,7 +159,7 @@ public class TemplateDetail extends TeaModel {
     /**
      * @return questionConfigs
      */
-    public java.util.List < QuestionPlugin > getQuestionConfigs() {
+    public java.util.List<QuestionPlugin> getQuestionConfigs() {
         return this.questionConfigs;
     }
 
@@ -170,7 +180,7 @@ public class TemplateDetail extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < String > getTags() {
+    public java.util.List<String> getTags() {
         return this.tags;
     }
 
@@ -210,28 +220,51 @@ public class TemplateDetail extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > abandonReasons; 
+        private java.util.List<String> abandonReasons; 
         private String classify; 
         private SimpleUser creator; 
         private String description; 
-        private java.util.Map < String, ? > exif; 
+        private java.util.Map<String, ?> exif; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
         private SimpleUser modifier; 
-        private java.util.List < QuestionPlugin > questionConfigs; 
+        private java.util.List<QuestionPlugin> questionConfigs; 
         private String sharedMode; 
         private String status; 
-        private java.util.List < String > tags; 
+        private java.util.List<String> tags; 
         private String templateId; 
         private String templateName; 
         private String tenantId; 
         private String type; 
         private ViewConfigs viewConfigs; 
 
+        private Builder() {
+        } 
+
+        private Builder(TemplateDetail model) {
+            this.abandonReasons = model.abandonReasons;
+            this.classify = model.classify;
+            this.creator = model.creator;
+            this.description = model.description;
+            this.exif = model.exif;
+            this.gmtCreateTime = model.gmtCreateTime;
+            this.gmtModifiedTime = model.gmtModifiedTime;
+            this.modifier = model.modifier;
+            this.questionConfigs = model.questionConfigs;
+            this.sharedMode = model.sharedMode;
+            this.status = model.status;
+            this.tags = model.tags;
+            this.templateId = model.templateId;
+            this.templateName = model.templateName;
+            this.tenantId = model.tenantId;
+            this.type = model.type;
+            this.viewConfigs = model.viewConfigs;
+        } 
+
         /**
          * AbandonReasons.
          */
-        public Builder abandonReasons(java.util.List < String > abandonReasons) {
+        public Builder abandonReasons(java.util.List<String> abandonReasons) {
             this.abandonReasons = abandonReasons;
             return this;
         }
@@ -263,7 +296,7 @@ public class TemplateDetail extends TeaModel {
         /**
          * Exif.
          */
-        public Builder exif(java.util.Map < String, ? > exif) {
+        public Builder exif(java.util.Map<String, ?> exif) {
             this.exif = exif;
             return this;
         }
@@ -295,7 +328,7 @@ public class TemplateDetail extends TeaModel {
         /**
          * QuestionConfigs.
          */
-        public Builder questionConfigs(java.util.List < QuestionPlugin > questionConfigs) {
+        public Builder questionConfigs(java.util.List<QuestionPlugin> questionConfigs) {
             this.questionConfigs = questionConfigs;
             return this;
         }
@@ -319,7 +352,7 @@ public class TemplateDetail extends TeaModel {
         /**
          * Tags.
          */
-        public Builder tags(java.util.List < String > tags) {
+        public Builder tags(java.util.List<String> tags) {
             this.tags = tags;
             return this;
         }
@@ -370,9 +403,15 @@ public class TemplateDetail extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TemplateDetail} extends {@link TeaModel}
+     *
+     * <p>TemplateDetail</p>
+     */
     public static class ViewConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ViewPlugins")
-        private java.util.List < ViewPlugin > viewPlugins;
+        private java.util.List<ViewPlugin> viewPlugins;
 
         private ViewConfigs(Builder builder) {
             this.viewPlugins = builder.viewPlugins;
@@ -389,17 +428,24 @@ public class TemplateDetail extends TeaModel {
         /**
          * @return viewPlugins
          */
-        public java.util.List < ViewPlugin > getViewPlugins() {
+        public java.util.List<ViewPlugin> getViewPlugins() {
             return this.viewPlugins;
         }
 
         public static final class Builder {
-            private java.util.List < ViewPlugin > viewPlugins; 
+            private java.util.List<ViewPlugin> viewPlugins; 
+
+            private Builder() {
+            } 
+
+            private Builder(ViewConfigs model) {
+                this.viewPlugins = model.viewPlugins;
+            } 
 
             /**
              * ViewPlugins.
              */
-            public Builder viewPlugins(java.util.List < ViewPlugin > viewPlugins) {
+            public Builder viewPlugins(java.util.List<ViewPlugin> viewPlugins) {
                 this.viewPlugins = viewPlugins;
                 return this;
             }

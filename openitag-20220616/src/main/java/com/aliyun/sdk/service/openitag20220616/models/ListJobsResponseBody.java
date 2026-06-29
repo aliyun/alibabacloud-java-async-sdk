@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListJobsResponseBody} extends {@link TeaModel}
  *
  * <p>ListJobsResponseBody</p>
@@ -21,7 +27,7 @@ public class ListJobsResponseBody extends TeaModel {
     private String errorCode;
 
     @com.aliyun.core.annotation.NameInMap("Jobs")
-    private java.util.List < Job > jobs;
+    private java.util.List<Job> jobs;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -67,6 +73,10 @@ public class ListJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -91,7 +101,7 @@ public class ListJobsResponseBody extends TeaModel {
     /**
      * @return jobs
      */
-    public java.util.List < Job > getJobs() {
+    public java.util.List<Job> getJobs() {
         return this.jobs;
     }
 
@@ -148,7 +158,7 @@ public class ListJobsResponseBody extends TeaModel {
         private Integer code; 
         private String details; 
         private String errorCode; 
-        private java.util.List < Job > jobs; 
+        private java.util.List<Job> jobs; 
         private String message; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -156,6 +166,23 @@ public class ListJobsResponseBody extends TeaModel {
         private Boolean success; 
         private Integer totalCount; 
         private Integer totalPage; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListJobsResponseBody model) {
+            this.code = model.code;
+            this.details = model.details;
+            this.errorCode = model.errorCode;
+            this.jobs = model.jobs;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+            this.totalPage = model.totalPage;
+        } 
 
         /**
          * Code.
@@ -184,13 +211,16 @@ public class ListJobsResponseBody extends TeaModel {
         /**
          * Jobs.
          */
-        public Builder jobs(java.util.List < Job > jobs) {
+        public Builder jobs(java.util.List<Job> jobs) {
             this.jobs = jobs;
             return this;
         }
 
         /**
-         * Message.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;

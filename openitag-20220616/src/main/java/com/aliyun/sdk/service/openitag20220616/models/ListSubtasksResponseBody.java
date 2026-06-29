@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSubtasksResponseBody} extends {@link TeaModel}
  *
  * <p>ListSubtasksResponseBody</p>
@@ -34,7 +40,7 @@ public class ListSubtasksResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Subtasks")
-    private java.util.List < SubtaskDetail > subtasks;
+    private java.util.List<SubtaskDetail> subtasks;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
@@ -65,6 +71,10 @@ public class ListSubtasksResponseBody extends TeaModel {
 
     public static ListSubtasksResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -119,7 +129,7 @@ public class ListSubtasksResponseBody extends TeaModel {
     /**
      * @return subtasks
      */
-    public java.util.List < SubtaskDetail > getSubtasks() {
+    public java.util.List<SubtaskDetail> getSubtasks() {
         return this.subtasks;
     }
 
@@ -152,10 +162,27 @@ public class ListSubtasksResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < SubtaskDetail > subtasks; 
+        private java.util.List<SubtaskDetail> subtasks; 
         private Boolean success; 
         private Integer totalCount; 
         private Integer totalPage; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSubtasksResponseBody model) {
+            this.code = model.code;
+            this.details = model.details;
+            this.errorCode = model.errorCode;
+            this.message = model.message;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.subtasks = model.subtasks;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+            this.totalPage = model.totalPage;
+        } 
 
         /**
          * Code.
@@ -182,7 +209,10 @@ public class ListSubtasksResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -216,7 +246,7 @@ public class ListSubtasksResponseBody extends TeaModel {
         /**
          * Subtasks.
          */
-        public Builder subtasks(java.util.List < SubtaskDetail > subtasks) {
+        public Builder subtasks(java.util.List<SubtaskDetail> subtasks) {
             this.subtasks = subtasks;
             return this;
         }

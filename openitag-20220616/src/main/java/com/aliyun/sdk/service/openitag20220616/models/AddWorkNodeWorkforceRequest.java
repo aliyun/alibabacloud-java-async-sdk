@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddWorkNodeWorkforceRequest} extends {@link RequestModel}
  *
  * <p>AddWorkNodeWorkforceRequest</p>
@@ -28,7 +34,7 @@ public class AddWorkNodeWorkforceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UserIds")
-    private java.util.List < Long > userIds;
+    private java.util.List<Long> userIds;
 
     private AddWorkNodeWorkforceRequest(Builder builder) {
         super(builder);
@@ -46,7 +52,7 @@ public class AddWorkNodeWorkforceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -75,7 +81,7 @@ public class AddWorkNodeWorkforceRequest extends Request {
     /**
      * @return userIds
      */
-    public java.util.List < Long > getUserIds() {
+    public java.util.List<Long> getUserIds() {
         return this.userIds;
     }
 
@@ -83,7 +89,7 @@ public class AddWorkNodeWorkforceRequest extends Request {
         private String tenantId; 
         private Long taskId; 
         private Integer workNodeId; 
-        private java.util.List < Long > userIds; 
+        private java.util.List<Long> userIds; 
 
         private Builder() {
             super();
@@ -98,7 +104,10 @@ public class AddWorkNodeWorkforceRequest extends Request {
         } 
 
         /**
-         * TenantId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GA***W134</p>
          */
         public Builder tenantId(String tenantId) {
             this.putPathParameter("TenantId", tenantId);
@@ -107,7 +116,10 @@ public class AddWorkNodeWorkforceRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1543***518306500608</p>
          */
         public Builder taskId(Long taskId) {
             this.putPathParameter("TaskId", taskId);
@@ -116,7 +128,10 @@ public class AddWorkNodeWorkforceRequest extends Request {
         }
 
         /**
-         * WorkNodeId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder workNodeId(Integer workNodeId) {
             this.putPathParameter("WorkNodeId", workNodeId);
@@ -127,7 +142,7 @@ public class AddWorkNodeWorkforceRequest extends Request {
         /**
          * UserIds.
          */
-        public Builder userIds(java.util.List < Long > userIds) {
+        public Builder userIds(java.util.List<Long> userIds) {
             this.putBodyParameter("UserIds", userIds);
             this.userIds = userIds;
             return this;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TemplateDTO} extends {@link TeaModel}
  *
  * <p>TemplateDTO</p>
@@ -18,20 +24,20 @@ public class TemplateDTO extends TeaModel {
     private String description;
 
     @com.aliyun.core.annotation.NameInMap("Exif")
-    private java.util.Map < String, ? > exif;
+    private java.util.Map<String, ?> exif;
 
     @com.aliyun.core.annotation.NameInMap("QuestionConfigs")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < QuestionPlugin > questionConfigs;
+    private java.util.List<QuestionPlugin> questionConfigs;
 
     @com.aliyun.core.annotation.NameInMap("RobotConfigs")
-    private java.util.List < java.util.Map<String, ?>> robotConfigs;
+    private java.util.List<java.util.Map<String, ?>> robotConfigs;
 
     @com.aliyun.core.annotation.NameInMap("SharedMode")
     private String sharedMode;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < String > tags;
+    private java.util.List<String> tags;
 
     @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
@@ -65,6 +71,10 @@ public class TemplateDTO extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return classify
      */
@@ -82,21 +92,21 @@ public class TemplateDTO extends TeaModel {
     /**
      * @return exif
      */
-    public java.util.Map < String, ? > getExif() {
+    public java.util.Map<String, ?> getExif() {
         return this.exif;
     }
 
     /**
      * @return questionConfigs
      */
-    public java.util.List < QuestionPlugin > getQuestionConfigs() {
+    public java.util.List<QuestionPlugin> getQuestionConfigs() {
         return this.questionConfigs;
     }
 
     /**
      * @return robotConfigs
      */
-    public java.util.List < java.util.Map<String, ?>> getRobotConfigs() {
+    public java.util.List<java.util.Map<String, ?>> getRobotConfigs() {
         return this.robotConfigs;
     }
 
@@ -110,7 +120,7 @@ public class TemplateDTO extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < String > getTags() {
+    public java.util.List<String> getTags() {
         return this.tags;
     }
 
@@ -138,14 +148,30 @@ public class TemplateDTO extends TeaModel {
     public static final class Builder {
         private String classify; 
         private String description; 
-        private java.util.Map < String, ? > exif; 
-        private java.util.List < QuestionPlugin > questionConfigs; 
-        private java.util.List < java.util.Map<String, ?>> robotConfigs; 
+        private java.util.Map<String, ?> exif; 
+        private java.util.List<QuestionPlugin> questionConfigs; 
+        private java.util.List<java.util.Map<String, ?>> robotConfigs; 
         private String sharedMode; 
-        private java.util.List < String > tags; 
+        private java.util.List<String> tags; 
         private String templateId; 
         private String templateName; 
         private ViewConfigs viewConfigs; 
+
+        private Builder() {
+        } 
+
+        private Builder(TemplateDTO model) {
+            this.classify = model.classify;
+            this.description = model.description;
+            this.exif = model.exif;
+            this.questionConfigs = model.questionConfigs;
+            this.robotConfigs = model.robotConfigs;
+            this.sharedMode = model.sharedMode;
+            this.tags = model.tags;
+            this.templateId = model.templateId;
+            this.templateName = model.templateName;
+            this.viewConfigs = model.viewConfigs;
+        } 
 
         /**
          * Classify.
@@ -166,15 +192,15 @@ public class TemplateDTO extends TeaModel {
         /**
          * Exif.
          */
-        public Builder exif(java.util.Map < String, ? > exif) {
+        public Builder exif(java.util.Map<String, ?> exif) {
             this.exif = exif;
             return this;
         }
 
         /**
-         * QuestionConfigs.
+         * <p>This parameter is required.</p>
          */
-        public Builder questionConfigs(java.util.List < QuestionPlugin > questionConfigs) {
+        public Builder questionConfigs(java.util.List<QuestionPlugin> questionConfigs) {
             this.questionConfigs = questionConfigs;
             return this;
         }
@@ -182,7 +208,7 @@ public class TemplateDTO extends TeaModel {
         /**
          * RobotConfigs.
          */
-        public Builder robotConfigs(java.util.List < java.util.Map<String, ?>> robotConfigs) {
+        public Builder robotConfigs(java.util.List<java.util.Map<String, ?>> robotConfigs) {
             this.robotConfigs = robotConfigs;
             return this;
         }
@@ -198,7 +224,7 @@ public class TemplateDTO extends TeaModel {
         /**
          * Tags.
          */
-        public Builder tags(java.util.List < String > tags) {
+        public Builder tags(java.util.List<String> tags) {
             this.tags = tags;
             return this;
         }
@@ -212,7 +238,7 @@ public class TemplateDTO extends TeaModel {
         }
 
         /**
-         * TemplateName.
+         * <p>This parameter is required.</p>
          */
         public Builder templateName(String templateName) {
             this.templateName = templateName;
@@ -220,7 +246,7 @@ public class TemplateDTO extends TeaModel {
         }
 
         /**
-         * ViewConfigs.
+         * <p>This parameter is required.</p>
          */
         public Builder viewConfigs(ViewConfigs viewConfigs) {
             this.viewConfigs = viewConfigs;
@@ -233,9 +259,15 @@ public class TemplateDTO extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TemplateDTO} extends {@link TeaModel}
+     *
+     * <p>TemplateDTO</p>
+     */
     public static class ViewConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ViewPlugins")
-        private java.util.List < ViewPlugin > viewPlugins;
+        private java.util.List<ViewPlugin> viewPlugins;
 
         private ViewConfigs(Builder builder) {
             this.viewPlugins = builder.viewPlugins;
@@ -252,17 +284,24 @@ public class TemplateDTO extends TeaModel {
         /**
          * @return viewPlugins
          */
-        public java.util.List < ViewPlugin > getViewPlugins() {
+        public java.util.List<ViewPlugin> getViewPlugins() {
             return this.viewPlugins;
         }
 
         public static final class Builder {
-            private java.util.List < ViewPlugin > viewPlugins; 
+            private java.util.List<ViewPlugin> viewPlugins; 
+
+            private Builder() {
+            } 
+
+            private Builder(ViewConfigs model) {
+                this.viewPlugins = model.viewPlugins;
+            } 
 
             /**
              * ViewPlugins.
              */
-            public Builder viewPlugins(java.util.List < ViewPlugin > viewPlugins) {
+            public Builder viewPlugins(java.util.List<ViewPlugin> viewPlugins) {
                 this.viewPlugins = viewPlugins;
                 return this;
             }

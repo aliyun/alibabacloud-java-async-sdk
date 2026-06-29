@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.openitag20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UserStatistic} extends {@link TeaModel}
  *
  * <p>UserStatistic</p>
@@ -64,6 +70,10 @@ public class UserStatistic extends TeaModel {
 
     public static UserStatistic create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -155,6 +165,23 @@ public class UserStatistic extends TeaModel {
         private Float samplingErrorCount; 
         private Float totalMarkItemsCount; 
         private String userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UserStatistic model) {
+            this.acceptedMarkItemsCount = model.acceptedMarkItemsCount;
+            this.checkCount = model.checkCount;
+            this.checkedAcceptedCount = model.checkedAcceptedCount;
+            this.checkedAccuracy = model.checkedAccuracy;
+            this.markEfficiency = model.markEfficiency;
+            this.markTime = model.markTime;
+            this.samplingAccuracy = model.samplingAccuracy;
+            this.samplingCount = model.samplingCount;
+            this.samplingErrorCount = model.samplingErrorCount;
+            this.totalMarkItemsCount = model.totalMarkItemsCount;
+            this.userId = model.userId;
+        } 
 
         /**
          * AcceptedMarkItemsCount.
