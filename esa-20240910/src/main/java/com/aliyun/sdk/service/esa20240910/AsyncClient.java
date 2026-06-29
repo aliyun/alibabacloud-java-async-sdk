@@ -872,6 +872,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDDoSL7QpsListResponse> describeDDoSL7QpsList(DescribeDDoSL7QpsListRequest request);
 
     /**
+     * @param request the request parameters of DescribeDDoSOverseasAttackCount  DescribeDDoSOverseasAttackCountRequest
+     * @return DescribeDDoSOverseasAttackCountResponse
+     */
+    CompletableFuture<DescribeDDoSOverseasAttackCountResponse> describeDDoSOverseasAttackCount(DescribeDDoSOverseasAttackCountRequest request);
+
+    /**
      * @param request the request parameters of DescribeDdosMaxBurstGbps  DescribeDdosMaxBurstGbpsRequest
      * @return DescribeDdosMaxBurstGbpsResponse
      */
@@ -1135,6 +1141,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetCustomResponseCodeRuleResponse
      */
     CompletableFuture<GetCustomResponseCodeRuleResponse> getCustomResponseCodeRule(GetCustomResponseCodeRuleRequest request);
+
+    /**
+     * @param request the request parameters of GetDcvDelegation  GetDcvDelegationRequest
+     * @return GetDcvDelegationResponse
+     */
+    CompletableFuture<GetDcvDelegationResponse> getDcvDelegation(GetDcvDelegationRequest request);
 
     /**
      * @param request the request parameters of GetDevelopmentMode  GetDevelopmentModeRequest

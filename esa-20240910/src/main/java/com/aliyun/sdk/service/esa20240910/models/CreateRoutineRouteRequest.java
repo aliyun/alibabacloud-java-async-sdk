@@ -27,10 +27,12 @@ public class CreateRoutineRouteRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RouteEnable")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String routeEnable;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RouteName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String routeName;
 
     @com.aliyun.core.annotation.Query
@@ -40,6 +42,7 @@ public class CreateRoutineRouteRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Rule")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String rule;
 
     @com.aliyun.core.annotation.Query
@@ -210,6 +213,7 @@ public class CreateRoutineRouteRequest extends Request {
          * <li>on</li>
          * <li>off</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -222,6 +226,7 @@ public class CreateRoutineRouteRequest extends Request {
 
         /**
          * <p>The name of the route.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>test_route</p>
@@ -247,6 +252,7 @@ public class CreateRoutineRouteRequest extends Request {
 
         /**
          * <p>The content of the rule.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>(http.host eq &quot;video.example.com&quot;)</p>

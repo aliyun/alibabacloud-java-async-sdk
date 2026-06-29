@@ -2443,6 +2443,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeDDoSOverseasAttackCount  DescribeDDoSOverseasAttackCountRequest
+     * @return DescribeDDoSOverseasAttackCountResponse
+     */
+    @Override
+    public CompletableFuture<DescribeDDoSOverseasAttackCountResponse> describeDDoSOverseasAttackCount(DescribeDDoSOverseasAttackCountRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDDoSOverseasAttackCount").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDDoSOverseasAttackCountResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDDoSOverseasAttackCountResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeDdosMaxBurstGbps  DescribeDdosMaxBurstGbpsRequest
      * @return DescribeDdosMaxBurstGbpsResponse
      */
@@ -3170,6 +3188,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetCustomResponseCodeRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDcvDelegation  GetDcvDelegationRequest
+     * @return GetDcvDelegationResponse
+     */
+    @Override
+    public CompletableFuture<GetDcvDelegationResponse> getDcvDelegation(GetDcvDelegationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetDcvDelegation").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDcvDelegationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDcvDelegationResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
