@@ -130,6 +130,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAppTokenServiceResponse> createAppTokenService(CreateAppTokenServiceRequest request);
 
     /**
+     * @param request the request parameters of CreateInspiration  CreateInspirationRequest
+     * @return CreateInspirationResponse
+     */
+    CompletableFuture<CreateInspirationResponse> createInspiration(CreateInspirationRequest request);
+
+    /**
      * @param request the request parameters of CreateLogoTask  CreateLogoTaskRequest
      * @return CreateLogoTaskResponse
      */
