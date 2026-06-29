@@ -12,36 +12,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link BatchAssignSeatsRequest} extends {@link RequestModel}
+ * {@link UpdateOrganizationMemberRequest} extends {@link RequestModel}
  *
- * <p>BatchAssignSeatsRequest</p>
+ * <p>UpdateOrganizationMemberRequest</p>
  */
-public class BatchAssignSeatsRequest extends Request {
+public class UpdateOrganizationMemberRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AccountIds")
     private java.util.List<String> accountIds;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Locale")
-    private String locale;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("SeatType")
+    @com.aliyun.core.annotation.NameInMap("NewRoleCode")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String seatType;
+    private String newRoleCode;
 
-    private BatchAssignSeatsRequest(Builder builder) {
+    private UpdateOrganizationMemberRequest(Builder builder) {
         super(builder);
         this.accountIds = builder.accountIds;
-        this.locale = builder.locale;
-        this.seatType = builder.seatType;
+        this.newRoleCode = builder.newRoleCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static BatchAssignSeatsRequest create() {
+    public static UpdateOrganizationMemberRequest create() {
         return builder().build();
     }
 
@@ -58,33 +53,24 @@ public class BatchAssignSeatsRequest extends Request {
     }
 
     /**
-     * @return locale
+     * @return newRoleCode
      */
-    public String getLocale() {
-        return this.locale;
+    public String getNewRoleCode() {
+        return this.newRoleCode;
     }
 
-    /**
-     * @return seatType
-     */
-    public String getSeatType() {
-        return this.seatType;
-    }
-
-    public static final class Builder extends Request.Builder<BatchAssignSeatsRequest, Builder> {
+    public static final class Builder extends Request.Builder<UpdateOrganizationMemberRequest, Builder> {
         private java.util.List<String> accountIds; 
-        private String locale; 
-        private String seatType; 
+        private String newRoleCode; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(BatchAssignSeatsRequest request) {
+        private Builder(UpdateOrganizationMemberRequest request) {
             super(request);
             this.accountIds = request.accountIds;
-            this.locale = request.locale;
-            this.seatType = request.seatType;
+            this.newRoleCode = request.newRoleCode;
         } 
 
         /**
@@ -97,29 +83,20 @@ public class BatchAssignSeatsRequest extends Request {
         }
 
         /**
-         * Locale.
-         */
-        public Builder locale(String locale) {
-            this.putQueryParameter("Locale", locale);
-            this.locale = locale;
-            return this;
-        }
-
-        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>standard</p>
+         * <p>ORG_MEMBER</p>
          */
-        public Builder seatType(String seatType) {
-            this.putQueryParameter("SeatType", seatType);
-            this.seatType = seatType;
+        public Builder newRoleCode(String newRoleCode) {
+            this.putQueryParameter("NewRoleCode", newRoleCode);
+            this.newRoleCode = newRoleCode;
             return this;
         }
 
         @Override
-        public BatchAssignSeatsRequest build() {
-            return new BatchAssignSeatsRequest(this);
+        public UpdateOrganizationMemberRequest build() {
+            return new UpdateOrganizationMemberRequest(this);
         } 
 
     } 

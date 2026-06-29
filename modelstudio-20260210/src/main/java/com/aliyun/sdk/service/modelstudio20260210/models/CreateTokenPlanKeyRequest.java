@@ -23,29 +23,13 @@ public class CreateTokenPlanKeyRequest extends Request {
     private String accountId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("CallerUacAccountId")
-    private String callerUacAccountId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("NamespaceId")
-    private String namespaceId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String workspaceId;
 
     private CreateTokenPlanKeyRequest(Builder builder) {
         super(builder);
         this.accountId = builder.accountId;
-        this.callerUacAccountId = builder.callerUacAccountId;
         this.description = builder.description;
-        this.namespaceId = builder.namespaceId;
-        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -69,39 +53,15 @@ public class CreateTokenPlanKeyRequest extends Request {
     }
 
     /**
-     * @return callerUacAccountId
-     */
-    public String getCallerUacAccountId() {
-        return this.callerUacAccountId;
-    }
-
-    /**
      * @return description
      */
     public String getDescription() {
         return this.description;
     }
 
-    /**
-     * @return namespaceId
-     */
-    public String getNamespaceId() {
-        return this.namespaceId;
-    }
-
-    /**
-     * @return workspaceId
-     */
-    public String getWorkspaceId() {
-        return this.workspaceId;
-    }
-
     public static final class Builder extends Request.Builder<CreateTokenPlanKeyRequest, Builder> {
         private String accountId; 
-        private String callerUacAccountId; 
         private String description; 
-        private String namespaceId; 
-        private String workspaceId; 
 
         private Builder() {
             super();
@@ -110,10 +70,7 @@ public class CreateTokenPlanKeyRequest extends Request {
         private Builder(CreateTokenPlanKeyRequest request) {
             super(request);
             this.accountId = request.accountId;
-            this.callerUacAccountId = request.callerUacAccountId;
             this.description = request.description;
-            this.namespaceId = request.namespaceId;
-            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -129,41 +86,11 @@ public class CreateTokenPlanKeyRequest extends Request {
         }
 
         /**
-         * CallerUacAccountId.
-         */
-        public Builder callerUacAccountId(String callerUacAccountId) {
-            this.putQueryParameter("CallerUacAccountId", callerUacAccountId);
-            this.callerUacAccountId = callerUacAccountId;
-            return this;
-        }
-
-        /**
          * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
-            return this;
-        }
-
-        /**
-         * NamespaceId.
-         */
-        public Builder namespaceId(String namespaceId) {
-            this.putQueryParameter("NamespaceId", namespaceId);
-            this.namespaceId = namespaceId;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ws_123456789</p>
-         */
-        public Builder workspaceId(String workspaceId) {
-            this.putQueryParameter("WorkspaceId", workspaceId);
-            this.workspaceId = workspaceId;
             return this;
         }
 

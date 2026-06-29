@@ -32,10 +32,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchAssignSeatsResponse> batchAssignSeats(BatchAssignSeatsRequest request);
 
     /**
+     * @param request the request parameters of BatchRevokeSeats  BatchRevokeSeatsRequest
+     * @return BatchRevokeSeatsResponse
+     */
+    CompletableFuture<BatchRevokeSeatsResponse> batchRevokeSeats(BatchRevokeSeatsRequest request);
+
+    /**
      * @param request the request parameters of CreateApiKey  CreateApiKeyRequest
      * @return CreateApiKeyResponse
      */
     CompletableFuture<CreateApiKeyResponse> createApiKey(CreateApiKeyRequest request);
+
+    /**
+     * @param request the request parameters of CreateTokenPlanInviteLink  CreateTokenPlanInviteLinkRequest
+     * @return CreateTokenPlanInviteLinkResponse
+     */
+    CompletableFuture<CreateTokenPlanInviteLinkResponse> createTokenPlanInviteLink(CreateTokenPlanInviteLinkRequest request);
 
     /**
      * @param request the request parameters of CreateTokenPlanKey  CreateTokenPlanKeyRequest
@@ -80,10 +92,46 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetApiKeyResponse> getApiKey(GetApiKeyRequest request);
 
     /**
+     * @param request the request parameters of GetOrganization  GetOrganizationRequest
+     * @return GetOrganizationResponse
+     */
+    CompletableFuture<GetOrganizationResponse> getOrganization(GetOrganizationRequest request);
+
+    /**
+     * @param request the request parameters of GetOrganizationMemberSeatStats  GetOrganizationMemberSeatStatsRequest
+     * @return GetOrganizationMemberSeatStatsResponse
+     */
+    CompletableFuture<GetOrganizationMemberSeatStatsResponse> getOrganizationMemberSeatStats(GetOrganizationMemberSeatStatsRequest request);
+
+    /**
      * @param request the request parameters of GetSubscriptionSeatDetails  GetSubscriptionSeatDetailsRequest
      * @return GetSubscriptionSeatDetailsResponse
      */
     CompletableFuture<GetSubscriptionSeatDetailsResponse> getSubscriptionSeatDetails(GetSubscriptionSeatDetailsRequest request);
+
+    /**
+     * @param request the request parameters of GetSubscriptionStats  GetSubscriptionStatsRequest
+     * @return GetSubscriptionStatsResponse
+     */
+    CompletableFuture<GetSubscriptionStatsResponse> getSubscriptionStats(GetSubscriptionStatsRequest request);
+
+    /**
+     * @param request the request parameters of GetTokenPlanAccountDetail  GetTokenPlanAccountDetailRequest
+     * @return GetTokenPlanAccountDetailResponse
+     */
+    CompletableFuture<GetTokenPlanAccountDetailResponse> getTokenPlanAccountDetail(GetTokenPlanAccountDetailRequest request);
+
+    /**
+     * @param request the request parameters of GetTokenPlanInviteLink  GetTokenPlanInviteLinkRequest
+     * @return GetTokenPlanInviteLinkResponse
+     */
+    CompletableFuture<GetTokenPlanInviteLinkResponse> getTokenPlanInviteLink(GetTokenPlanInviteLinkRequest request);
+
+    /**
+     * @param request the request parameters of GetTokenPlanOrgInviteConfig  GetTokenPlanOrgInviteConfigRequest
+     * @return GetTokenPlanOrgInviteConfigResponse
+     */
+    CompletableFuture<GetTokenPlanOrgInviteConfigResponse> getTokenPlanOrgInviteConfig(GetTokenPlanOrgInviteConfigRequest request);
 
     /**
      * @param request the request parameters of ListApiKeys  ListApiKeysRequest
@@ -92,10 +140,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListApiKeysResponse> listApiKeys(ListApiKeysRequest request);
 
     /**
+     * @param request the request parameters of ListOrganizationMembers  ListOrganizationMembersRequest
+     * @return ListOrganizationMembersResponse
+     */
+    CompletableFuture<ListOrganizationMembersResponse> listOrganizationMembers(ListOrganizationMembersRequest request);
+
+    /**
+     * @param request the request parameters of ListSubscriptionSharedPackages  ListSubscriptionSharedPackagesRequest
+     * @return ListSubscriptionSharedPackagesResponse
+     */
+    CompletableFuture<ListSubscriptionSharedPackagesResponse> listSubscriptionSharedPackages(ListSubscriptionSharedPackagesRequest request);
+
+    /**
      * @param request the request parameters of ListWorkspaces  ListWorkspacesRequest
      * @return ListWorkspacesResponse
      */
     CompletableFuture<ListWorkspacesResponse> listWorkspaces(ListWorkspacesRequest request);
+
+    /**
+     * @param request the request parameters of RemoveOrganizationMember  RemoveOrganizationMemberRequest
+     * @return RemoveOrganizationMemberResponse
+     */
+    CompletableFuture<RemoveOrganizationMemberResponse> removeOrganizationMember(RemoveOrganizationMemberRequest request);
 
     /**
      * @param request the request parameters of ResetApiKey  ResetApiKeyRequest
@@ -104,9 +170,39 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ResetApiKeyResponse> resetApiKey(ResetApiKeyRequest request);
 
     /**
+     * @param request the request parameters of RevokeTokenPlanInviteLink  RevokeTokenPlanInviteLinkRequest
+     * @return RevokeTokenPlanInviteLinkResponse
+     */
+    CompletableFuture<RevokeTokenPlanInviteLinkResponse> revokeTokenPlanInviteLink(RevokeTokenPlanInviteLinkRequest request);
+
+    /**
+     * @param request the request parameters of RotateTokenPlanKey  RotateTokenPlanKeyRequest
+     * @return RotateTokenPlanKeyResponse
+     */
+    CompletableFuture<RotateTokenPlanKeyResponse> rotateTokenPlanKey(RotateTokenPlanKeyRequest request);
+
+    /**
+     * @param request the request parameters of SetTokenPlanOrgInviteConfig  SetTokenPlanOrgInviteConfigRequest
+     * @return SetTokenPlanOrgInviteConfigResponse
+     */
+    CompletableFuture<SetTokenPlanOrgInviteConfigResponse> setTokenPlanOrgInviteConfig(SetTokenPlanOrgInviteConfigRequest request);
+
+    /**
      * @param request the request parameters of UpdateApiKey  UpdateApiKeyRequest
      * @return UpdateApiKeyResponse
      */
     CompletableFuture<UpdateApiKeyResponse> updateApiKey(UpdateApiKeyRequest request);
+
+    /**
+     * @param request the request parameters of UpdateOrganization  UpdateOrganizationRequest
+     * @return UpdateOrganizationResponse
+     */
+    CompletableFuture<UpdateOrganizationResponse> updateOrganization(UpdateOrganizationRequest request);
+
+    /**
+     * @param request the request parameters of UpdateOrganizationMember  UpdateOrganizationMemberRequest
+     * @return UpdateOrganizationMemberResponse
+     */
+    CompletableFuture<UpdateOrganizationMemberResponse> updateOrganizationMember(UpdateOrganizationMemberRequest request);
 
 }

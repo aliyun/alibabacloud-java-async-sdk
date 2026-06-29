@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link BatchAssignSeatsRequest} extends {@link RequestModel}
+ * {@link RemoveOrganizationMemberRequest} extends {@link RequestModel}
  *
- * <p>BatchAssignSeatsRequest</p>
+ * <p>RemoveOrganizationMemberRequest</p>
  */
-public class BatchAssignSeatsRequest extends Request {
+public class RemoveOrganizationMemberRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AccountIds")
     private java.util.List<String> accountIds;
@@ -25,23 +25,17 @@ public class BatchAssignSeatsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Locale")
     private String locale;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("SeatType")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String seatType;
-
-    private BatchAssignSeatsRequest(Builder builder) {
+    private RemoveOrganizationMemberRequest(Builder builder) {
         super(builder);
         this.accountIds = builder.accountIds;
         this.locale = builder.locale;
-        this.seatType = builder.seatType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static BatchAssignSeatsRequest create() {
+    public static RemoveOrganizationMemberRequest create() {
         return builder().build();
     }
 
@@ -64,27 +58,18 @@ public class BatchAssignSeatsRequest extends Request {
         return this.locale;
     }
 
-    /**
-     * @return seatType
-     */
-    public String getSeatType() {
-        return this.seatType;
-    }
-
-    public static final class Builder extends Request.Builder<BatchAssignSeatsRequest, Builder> {
+    public static final class Builder extends Request.Builder<RemoveOrganizationMemberRequest, Builder> {
         private java.util.List<String> accountIds; 
         private String locale; 
-        private String seatType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(BatchAssignSeatsRequest request) {
+        private Builder(RemoveOrganizationMemberRequest request) {
             super(request);
             this.accountIds = request.accountIds;
             this.locale = request.locale;
-            this.seatType = request.seatType;
         } 
 
         /**
@@ -105,21 +90,9 @@ public class BatchAssignSeatsRequest extends Request {
             return this;
         }
 
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>standard</p>
-         */
-        public Builder seatType(String seatType) {
-            this.putQueryParameter("SeatType", seatType);
-            this.seatType = seatType;
-            return this;
-        }
-
         @Override
-        public BatchAssignSeatsRequest build() {
-            return new BatchAssignSeatsRequest(this);
+        public RemoveOrganizationMemberRequest build() {
+            return new RemoveOrganizationMemberRequest(this);
         } 
 
     } 

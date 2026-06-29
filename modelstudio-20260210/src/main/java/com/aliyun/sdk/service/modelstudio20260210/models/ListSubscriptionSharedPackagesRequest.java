@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetSubscriptionSeatDetailsRequest} extends {@link RequestModel}
+ * {@link ListSubscriptionSharedPackagesRequest} extends {@link RequestModel}
  *
- * <p>GetSubscriptionSeatDetailsRequest</p>
+ * <p>ListSubscriptionSharedPackagesRequest</p>
  */
-public class GetSubscriptionSeatDetailsRequest extends Request {
+public class ListSubscriptionSharedPackagesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
@@ -26,28 +26,13 @@ public class GetSubscriptionSeatDetailsRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("QueryAssigned")
-    private Boolean queryAssigned;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("SeatId")
-    private String seatId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("SeatType")
-    private String seatType;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StatusList")
     private java.util.List<String> statusList;
 
-    private GetSubscriptionSeatDetailsRequest(Builder builder) {
+    private ListSubscriptionSharedPackagesRequest(Builder builder) {
         super(builder);
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
-        this.queryAssigned = builder.queryAssigned;
-        this.seatId = builder.seatId;
-        this.seatType = builder.seatType;
         this.statusList = builder.statusList;
     }
 
@@ -55,7 +40,7 @@ public class GetSubscriptionSeatDetailsRequest extends Request {
         return new Builder();
     }
 
-    public static GetSubscriptionSeatDetailsRequest create() {
+    public static ListSubscriptionSharedPackagesRequest create() {
         return builder().build();
     }
 
@@ -79,52 +64,25 @@ public class GetSubscriptionSeatDetailsRequest extends Request {
     }
 
     /**
-     * @return queryAssigned
-     */
-    public Boolean getQueryAssigned() {
-        return this.queryAssigned;
-    }
-
-    /**
-     * @return seatId
-     */
-    public String getSeatId() {
-        return this.seatId;
-    }
-
-    /**
-     * @return seatType
-     */
-    public String getSeatType() {
-        return this.seatType;
-    }
-
-    /**
      * @return statusList
      */
     public java.util.List<String> getStatusList() {
         return this.statusList;
     }
 
-    public static final class Builder extends Request.Builder<GetSubscriptionSeatDetailsRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListSubscriptionSharedPackagesRequest, Builder> {
         private Integer pageNo; 
         private Integer pageSize; 
-        private Boolean queryAssigned; 
-        private String seatId; 
-        private String seatType; 
         private java.util.List<String> statusList; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetSubscriptionSeatDetailsRequest request) {
+        private Builder(ListSubscriptionSharedPackagesRequest request) {
             super(request);
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
-            this.queryAssigned = request.queryAssigned;
-            this.seatId = request.seatId;
-            this.seatType = request.seatType;
             this.statusList = request.statusList;
         } 
 
@@ -147,33 +105,6 @@ public class GetSubscriptionSeatDetailsRequest extends Request {
         }
 
         /**
-         * QueryAssigned.
-         */
-        public Builder queryAssigned(Boolean queryAssigned) {
-            this.putQueryParameter("QueryAssigned", queryAssigned);
-            this.queryAssigned = queryAssigned;
-            return this;
-        }
-
-        /**
-         * SeatId.
-         */
-        public Builder seatId(String seatId) {
-            this.putQueryParameter("SeatId", seatId);
-            this.seatId = seatId;
-            return this;
-        }
-
-        /**
-         * SeatType.
-         */
-        public Builder seatType(String seatType) {
-            this.putQueryParameter("SeatType", seatType);
-            this.seatType = seatType;
-            return this;
-        }
-
-        /**
          * StatusList.
          */
         public Builder statusList(java.util.List<String> statusList) {
@@ -183,8 +114,8 @@ public class GetSubscriptionSeatDetailsRequest extends Request {
         }
 
         @Override
-        public GetSubscriptionSeatDetailsRequest build() {
-            return new GetSubscriptionSeatDetailsRequest(this);
+        public ListSubscriptionSharedPackagesRequest build() {
+            return new ListSubscriptionSharedPackagesRequest(this);
         } 
 
     } 
