@@ -29,8 +29,35 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "Tablestore";
         this.version = "2020-12-09";
-        this.endpointRule = "";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("us-west-1", "tablestore.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "tablestore.us-east-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "tablestore.me-east-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "tablestore.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "tablestore.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "tablestore.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "tablestore.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "tablestore.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "tablestore.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "tablestore.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "tablestore.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "tablestore.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "tablestore.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "tablestore.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "tablestore.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "tablestore.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "tablestore.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "tablestore.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "tablestore.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "tablestore.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "tablestore.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "tablestore.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "tablestore.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "tablestore.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-south-1", "tablestore.ap-south-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "tablestore.ap-northeast-1.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -94,6 +121,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateAgentStorage  CreateAgentStorageRequest
+     * @return CreateAgentStorageResponse
+     */
+    @Override
+    public CompletableFuture<CreateAgentStorageResponse> createAgentStorage(CreateAgentStorageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateAgentStorage").setMethod(HttpMethod.POST).setPathRegex("/v2/openapi/createagentstorage").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAgentStorageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAgentStorageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>  <strong>Before you call this operation, you must understand the billing and pricing of Tablestore. For more information, see <a href="https://help.aliyun.com/document_detail/27291.html">Billing overview</a>.</strong></p>
      * <ul>
@@ -131,6 +176,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateVCUInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteAgentStorage  DeleteAgentStorageRequest
+     * @return DeleteAgentStorageResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAgentStorageResponse> deleteAgentStorage(DeleteAgentStorageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteAgentStorage").setMethod(HttpMethod.POST).setPathRegex("/v2/openapi/deleteagentstorage").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAgentStorageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAgentStorageResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -222,6 +285,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetAgentStorage  GetAgentStorageRequest
+     * @return GetAgentStorageResponse
+     */
+    @Override
+    public CompletableFuture<GetAgentStorageResponse> getAgentStorage(GetAgentStorageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAgentStorage").setMethod(HttpMethod.GET).setPathRegex("/v2/openapi/getagentstorage").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAgentStorageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAgentStorageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetInstance  GetInstanceRequest
      * @return GetInstanceResponse
      */
@@ -234,6 +315,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListAgentStorages  ListAgentStoragesRequest
+     * @return ListAgentStoragesResponse
+     */
+    @Override
+    public CompletableFuture<ListAgentStoragesResponse> listAgentStorages(ListAgentStoragesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListAgentStorages").setMethod(HttpMethod.GET).setPathRegex("/v2/openapi/listagentstorages").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAgentStoragesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAgentStoragesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -381,6 +480,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UntagResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateAgentStorage  UpdateAgentStorageRequest
+     * @return UpdateAgentStorageResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAgentStorageResponse> updateAgentStorage(UpdateAgentStorageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateAgentStorage").setMethod(HttpMethod.POST).setPathRegex("/v2/openapi/updateagentstorage").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAgentStorageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAgentStorageResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -38,6 +38,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckInstancePolicyResponse> checkInstancePolicy(CheckInstancePolicyRequest request);
 
     /**
+     * @param request the request parameters of CreateAgentStorage  CreateAgentStorageRequest
+     * @return CreateAgentStorageResponse
+     */
+    CompletableFuture<CreateAgentStorageResponse> createAgentStorage(CreateAgentStorageRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  <strong>Before you call this operation, you must understand the billing and pricing of Tablestore. For more information, see <a href="https://help.aliyun.com/document_detail/27291.html">Billing overview</a>.</strong></p>
      * <ul>
@@ -55,6 +61,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateVCUInstanceResponse
      */
     CompletableFuture<CreateVCUInstanceResponse> createVCUInstance(CreateVCUInstanceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAgentStorage  DeleteAgentStorageRequest
+     * @return DeleteAgentStorageResponse
+     */
+    CompletableFuture<DeleteAgentStorageResponse> deleteAgentStorage(DeleteAgentStorageRequest request);
 
     /**
      * <b>description</b> :
@@ -94,10 +106,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
 
     /**
+     * @param request the request parameters of GetAgentStorage  GetAgentStorageRequest
+     * @return GetAgentStorageResponse
+     */
+    CompletableFuture<GetAgentStorageResponse> getAgentStorage(GetAgentStorageRequest request);
+
+    /**
      * @param request the request parameters of GetInstance  GetInstanceRequest
      * @return GetInstanceResponse
      */
     CompletableFuture<GetInstanceResponse> getInstance(GetInstanceRequest request);
+
+    /**
+     * @param request the request parameters of ListAgentStorages  ListAgentStoragesRequest
+     * @return ListAgentStoragesResponse
+     */
+    CompletableFuture<ListAgentStoragesResponse> listAgentStorages(ListAgentStoragesRequest request);
 
     /**
      * @param request the request parameters of ListClusterType  ListClusterTypeRequest
@@ -149,6 +173,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UntagResourcesResponse
      */
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAgentStorage  UpdateAgentStorageRequest
+     * @return UpdateAgentStorageResponse
+     */
+    CompletableFuture<UpdateAgentStorageResponse> updateAgentStorage(UpdateAgentStorageRequest request);
 
     /**
      * @param request the request parameters of UpdateInstance  UpdateInstanceRequest
