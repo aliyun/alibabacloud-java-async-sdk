@@ -12,15 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ImageTranslationProRequest} extends {@link RequestModel}
+ * {@link ImageTranslationPlusRequest} extends {@link RequestModel}
  *
- * <p>ImageTranslationProRequest</p>
+ * <p>ImageTranslationPlusRequest</p>
  */
-public class ImageTranslationProRequest extends Request {
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Async")
-    private Boolean async;
-
+public class ImageTranslationPlusRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Glossary")
     private String glossary;
@@ -52,9 +48,8 @@ public class ImageTranslationProRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("UseImageEditor")
     private Boolean useImageEditor;
 
-    private ImageTranslationProRequest(Builder builder) {
+    private ImageTranslationPlusRequest(Builder builder) {
         super(builder);
-        this.async = builder.async;
         this.glossary = builder.glossary;
         this.imageUrl = builder.imageUrl;
         this.includingProductArea = builder.includingProductArea;
@@ -68,20 +63,13 @@ public class ImageTranslationProRequest extends Request {
         return new Builder();
     }
 
-    public static ImageTranslationProRequest create() {
+    public static ImageTranslationPlusRequest create() {
         return builder().build();
     }
 
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return async
-     */
-    public Boolean getAsync() {
-        return this.async;
     }
 
     /**
@@ -133,8 +121,7 @@ public class ImageTranslationProRequest extends Request {
         return this.useImageEditor;
     }
 
-    public static final class Builder extends Request.Builder<ImageTranslationProRequest, Builder> {
-        private Boolean async; 
+    public static final class Builder extends Request.Builder<ImageTranslationPlusRequest, Builder> {
         private String glossary; 
         private String imageUrl; 
         private Boolean includingProductArea; 
@@ -147,9 +134,8 @@ public class ImageTranslationProRequest extends Request {
             super();
         } 
 
-        private Builder(ImageTranslationProRequest request) {
+        private Builder(ImageTranslationPlusRequest request) {
             super(request);
-            this.async = request.async;
             this.glossary = request.glossary;
             this.imageUrl = request.imageUrl;
             this.includingProductArea = request.includingProductArea;
@@ -158,15 +144,6 @@ public class ImageTranslationProRequest extends Request {
             this.translatingBrandInTheProduct = request.translatingBrandInTheProduct;
             this.useImageEditor = request.useImageEditor;
         } 
-
-        /**
-         * Async.
-         */
-        public Builder async(Boolean async) {
-            this.putBodyParameter("Async", async);
-            this.async = async;
-            return this;
-        }
 
         /**
          * Glossary.
@@ -181,7 +158,7 @@ public class ImageTranslationProRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="https://example.com/image.jpg">https://example.com/image.jpg</a></p>
+         * <p><a href="https://img.alicdn.com/example.png">https://img.alicdn.com/example.png</a></p>
          */
         public Builder imageUrl(String imageUrl) {
             this.putBodyParameter("ImageUrl", imageUrl);
@@ -202,7 +179,7 @@ public class ImageTranslationProRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>en</p>
+         * <p>zh</p>
          */
         public Builder sourceLanguage(String sourceLanguage) {
             this.putBodyParameter("SourceLanguage", sourceLanguage);
@@ -214,7 +191,7 @@ public class ImageTranslationProRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>zh</p>
+         * <p>en</p>
          */
         public Builder targetLanguage(String targetLanguage) {
             this.putBodyParameter("TargetLanguage", targetLanguage);
@@ -241,8 +218,8 @@ public class ImageTranslationProRequest extends Request {
         }
 
         @Override
-        public ImageTranslationProRequest build() {
-            return new ImageTranslationProRequest(this);
+        public ImageTranslationPlusRequest build() {
+            return new ImageTranslationPlusRequest(this);
         } 
 
     } 

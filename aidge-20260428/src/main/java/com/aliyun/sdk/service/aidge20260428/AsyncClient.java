@@ -74,6 +74,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ImageRemoveResponse> imageRemove(ImageRemoveRequest request);
 
     /**
+     * @param request the request parameters of ImageTranslationPlus  ImageTranslationPlusRequest
+     * @return ImageTranslationPlusResponse
+     */
+    CompletableFuture<ImageTranslationPlusResponse> imageTranslationPlus(ImageTranslationPlusRequest request);
+
+    /**
      * @param request the request parameters of ImageTranslationPro  ImageTranslationProRequest
      * @return ImageTranslationProResponse
      */
@@ -90,6 +96,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return LanguageDetectResponse
      */
     CompletableFuture<LanguageDetectResponse> languageDetect(LanguageDetectRequest request);
+
+    /**
+     * @param request the request parameters of MaterialInspection  MaterialInspectionRequest
+     * @return MaterialInspectionResponse
+     */
+    CompletableFuture<MaterialInspectionResponse> materialInspection(MaterialInspectionRequest request);
 
     /**
      * @param request the request parameters of PackageWeightSizeCheck  PackageWeightSizeCheckRequest
