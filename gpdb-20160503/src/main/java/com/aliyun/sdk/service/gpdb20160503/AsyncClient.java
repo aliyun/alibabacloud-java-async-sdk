@@ -1851,6 +1851,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ResetAccountPasswordResponse> resetAccountPassword(ResetAccountPasswordRequest request);
 
     /**
+     * @param request the request parameters of ResetBranch  ResetBranchRequest
+     * @return ResetBranchResponse
+     */
+    CompletableFuture<ResetBranchResponse> resetBranch(ResetBranchRequest request);
+
+    /**
      * @param request the request parameters of ResetIMVMonitorData  ResetIMVMonitorDataRequest
      * @return ResetIMVMonitorDataResponse
      */
@@ -1881,6 +1887,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RestartSupabaseProjectResponse
      */
     CompletableFuture<RestartSupabaseProjectResponse> restartSupabaseProject(RestartSupabaseProjectRequest request);
+
+    /**
+     * @param request the request parameters of RestoreBranch  RestoreBranchRequest
+     * @return RestoreBranchResponse
+     */
+    CompletableFuture<RestoreBranchResponse> restoreBranch(RestoreBranchRequest request);
 
     /**
      * @param request the request parameters of RestoreSnapshot  RestoreSnapshotRequest
@@ -1920,6 +1932,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ResumeSupabaseProjectResponse
      */
     CompletableFuture<ResumeSupabaseProjectResponse> resumeSupabaseProject(ResumeSupabaseProjectRequest request);
+
+    /**
+     * @param request the request parameters of SetAsDefaultBranch  SetAsDefaultBranchRequest
+     * @return SetAsDefaultBranchResponse
+     */
+    CompletableFuture<SetAsDefaultBranchResponse> setAsDefaultBranch(SetAsDefaultBranchRequest request);
 
     /**
      * <b>description</b> :
@@ -1998,6 +2016,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UntagSupabaseProjectResponse
      */
     CompletableFuture<UntagSupabaseProjectResponse> untagSupabaseProject(UntagSupabaseProjectRequest request);
+
+    /**
+     * @param request the request parameters of UpdateBranch  UpdateBranchRequest
+     * @return UpdateBranchResponse
+     */
+    CompletableFuture<UpdateBranchResponse> updateBranch(UpdateBranchRequest request);
 
     /**
      * @param request the request parameters of UpdateCollectionDataMetadata  UpdateCollectionDataMetadataRequest
