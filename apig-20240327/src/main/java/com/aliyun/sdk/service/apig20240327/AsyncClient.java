@@ -579,6 +579,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListSslCertsResponse> listSslCerts(ListSslCertsRequest request);
 
     /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
+    CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
+    /**
      * @param request the request parameters of ListZones  ListZonesRequest
      * @return ListZonesResponse
      */
@@ -615,6 +621,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SyncMCPServersResponse> syncMCPServers(SyncMCPServersRequest request);
 
     /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
+    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    /**
      * @param request the request parameters of UnDeployMcpServer  UnDeployMcpServerRequest
      * @return UnDeployMcpServerResponse
      */
@@ -631,6 +643,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UninstallPluginResponse
      */
     CompletableFuture<UninstallPluginResponse> uninstallPlugin(UninstallPluginRequest request);
+
+    /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
+    CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
     /**
      * @param request the request parameters of UpdateAndAttachPolicy  UpdateAndAttachPolicyRequest
@@ -673,9 +691,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateGatewayFeatureResponse> updateGatewayFeature(UpdateGatewayFeatureRequest request);
 
     /**
-     * @param request the request parameters of UpdateGatewayName  UpdateGatewayNameRequest
+     * @deprecated OpenAPI UpdateGatewayName is deprecated  * @param request  the request parameters of UpdateGatewayName  UpdateGatewayNameRequest
      * @return UpdateGatewayNameResponse
      */
+    @Deprecated
     CompletableFuture<UpdateGatewayNameResponse> updateGatewayName(UpdateGatewayNameRequest request);
 
     /**
