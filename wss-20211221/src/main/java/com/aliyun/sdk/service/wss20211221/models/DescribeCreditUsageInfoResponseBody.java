@@ -197,8 +197,14 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RemainCredit")
         private Long remainCredit;
 
+        @com.aliyun.core.annotation.NameInMap("TodayUsed")
+        private String todayUsed;
+
         @com.aliyun.core.annotation.NameInMap("TotalCredit")
         private Long totalCredit;
+
+        @com.aliyun.core.annotation.NameInMap("TotalUsed")
+        private String totalUsed;
 
         @com.aliyun.core.annotation.NameInMap("TotalUsedCredit")
         private Long totalUsedCredit;
@@ -219,7 +225,9 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             this.periodTotalCredit = builder.periodTotalCredit;
             this.periodUsedCredit = builder.periodUsedCredit;
             this.remainCredit = builder.remainCredit;
+            this.todayUsed = builder.todayUsed;
             this.totalCredit = builder.totalCredit;
+            this.totalUsed = builder.totalUsed;
             this.totalUsedCredit = builder.totalUsedCredit;
             this.warnPercent = builder.warnPercent;
             this.weekUsedCredit = builder.weekUsedCredit;
@@ -297,10 +305,24 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return todayUsed
+         */
+        public String getTodayUsed() {
+            return this.todayUsed;
+        }
+
+        /**
          * @return totalCredit
          */
         public Long getTotalCredit() {
             return this.totalCredit;
+        }
+
+        /**
+         * @return totalUsed
+         */
+        public String getTotalUsed() {
+            return this.totalUsed;
         }
 
         /**
@@ -334,7 +356,9 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             private Long periodTotalCredit; 
             private Long periodUsedCredit; 
             private Long remainCredit; 
+            private String todayUsed; 
             private Long totalCredit; 
+            private String totalUsed; 
             private Long totalUsedCredit; 
             private Integer warnPercent; 
             private Long weekUsedCredit; 
@@ -352,7 +376,9 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
                 this.periodTotalCredit = model.periodTotalCredit;
                 this.periodUsedCredit = model.periodUsedCredit;
                 this.remainCredit = model.remainCredit;
+                this.todayUsed = model.todayUsed;
                 this.totalCredit = model.totalCredit;
+                this.totalUsed = model.totalUsed;
                 this.totalUsedCredit = model.totalUsedCredit;
                 this.warnPercent = model.warnPercent;
                 this.weekUsedCredit = model.weekUsedCredit;
@@ -431,10 +457,26 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             }
 
             /**
+             * TodayUsed.
+             */
+            public Builder todayUsed(String todayUsed) {
+                this.todayUsed = todayUsed;
+                return this;
+            }
+
+            /**
              * TotalCredit.
              */
             public Builder totalCredit(Long totalCredit) {
                 this.totalCredit = totalCredit;
+                return this;
+            }
+
+            /**
+             * TotalUsed.
+             */
+            public Builder totalUsed(String totalUsed) {
+                this.totalUsed = totalUsed;
                 return this;
             }
 
