@@ -29,8 +29,24 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "emr-serverless-spark";
         this.version = "2023-08-08";
-        this.endpointRule = "";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("us-west-1", "emr-serverless-spark.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "emr-serverless-spark.us-east-1.aliyuncs.com"),
+            new TeaPair("na-south-1", "emr-serverless-spark.na-south-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "emr-serverless-spark.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "emr-serverless-spark.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "emr-serverless-spark.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "emr-serverless-spark.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "emr-serverless-spark.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "emr-serverless-spark.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "emr-serverless-spark.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "emr-serverless-spark.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "emr-serverless-spark.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "emr-serverless-spark.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "emr-serverless-spark.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "emr-serverless-spark.ap-northeast-1.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -652,6 +668,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetRayLog  GetRayLogRequest
+     * @return GetRayLogResponse
+     */
+    @Override
+    public CompletableFuture<GetRayLogResponse> getRayLog(GetRayLogRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetRayLog").setMethod(HttpMethod.GET).setPathRegex("/api/interactive/v1/workspace/{workspaceId}/ray/{instanceId}/log").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetRayLogResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetRayLogResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetRunConfiguration  GetRunConfigurationRequest
      * @return GetRunConfigurationResponse
      */
@@ -1006,6 +1040,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListRayJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListRayLogs  ListRayLogsRequest
+     * @return ListRayLogsResponse
+     */
+    @Override
+    public CompletableFuture<ListRayLogsResponse> listRayLogs(ListRayLogsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListRayLogs").setMethod(HttpMethod.GET).setPathRegex("/api/interactive/v1/workspace/{workspaceId}/ray/{instanceId}/logs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListRayLogsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListRayLogsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

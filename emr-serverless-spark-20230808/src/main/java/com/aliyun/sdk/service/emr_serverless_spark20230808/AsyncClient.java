@@ -224,6 +224,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetRayJobResponse> getRayJob(GetRayJobRequest request);
 
     /**
+     * @param request the request parameters of GetRayLog  GetRayLogRequest
+     * @return GetRayLogResponse
+     */
+    CompletableFuture<GetRayLogResponse> getRayLog(GetRayLogRequest request);
+
+    /**
      * @param request the request parameters of GetRunConfiguration  GetRunConfigurationRequest
      * @return GetRunConfigurationResponse
      */
@@ -342,6 +348,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListRayJobResponse
      */
     CompletableFuture<ListRayJobResponse> listRayJob(ListRayJobRequest request);
+
+    /**
+     * @param request the request parameters of ListRayLogs  ListRayLogsRequest
+     * @return ListRayLogsResponse
+     */
+    CompletableFuture<ListRayLogsResponse> listRayLogs(ListRayLogsRequest request);
 
     /**
      * @param request the request parameters of ListReleaseVersions  ListReleaseVersionsRequest
