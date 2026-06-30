@@ -31,6 +31,10 @@ public class ListEndpointGroupsRequest extends Request {
     private String endpointGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointGroupRegion")
+    private String endpointGroupRegion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndpointGroupType")
     private String endpointGroupType;
 
@@ -61,6 +65,7 @@ public class ListEndpointGroupsRequest extends Request {
         this.acceleratorId = builder.acceleratorId;
         this.accessLogSwitch = builder.accessLogSwitch;
         this.endpointGroupId = builder.endpointGroupId;
+        this.endpointGroupRegion = builder.endpointGroupRegion;
         this.endpointGroupType = builder.endpointGroupType;
         this.listenerId = builder.listenerId;
         this.pageNumber = builder.pageNumber;
@@ -101,6 +106,13 @@ public class ListEndpointGroupsRequest extends Request {
      */
     public String getEndpointGroupId() {
         return this.endpointGroupId;
+    }
+
+    /**
+     * @return endpointGroupRegion
+     */
+    public String getEndpointGroupRegion() {
+        return this.endpointGroupRegion;
     }
 
     /**
@@ -149,6 +161,7 @@ public class ListEndpointGroupsRequest extends Request {
         private String acceleratorId; 
         private String accessLogSwitch; 
         private String endpointGroupId; 
+        private String endpointGroupRegion; 
         private String endpointGroupType; 
         private String listenerId; 
         private Integer pageNumber; 
@@ -165,6 +178,7 @@ public class ListEndpointGroupsRequest extends Request {
             this.acceleratorId = request.acceleratorId;
             this.accessLogSwitch = request.accessLogSwitch;
             this.endpointGroupId = request.endpointGroupId;
+            this.endpointGroupRegion = request.endpointGroupRegion;
             this.endpointGroupType = request.endpointGroupType;
             this.listenerId = request.listenerId;
             this.pageNumber = request.pageNumber;
@@ -211,6 +225,15 @@ public class ListEndpointGroupsRequest extends Request {
         public Builder endpointGroupId(String endpointGroupId) {
             this.putQueryParameter("EndpointGroupId", endpointGroupId);
             this.endpointGroupId = endpointGroupId;
+            return this;
+        }
+
+        /**
+         * EndpointGroupRegion.
+         */
+        public Builder endpointGroupRegion(String endpointGroupRegion) {
+            this.putQueryParameter("EndpointGroupRegion", endpointGroupRegion);
+            this.endpointGroupRegion = endpointGroupRegion;
             return this;
         }
 
