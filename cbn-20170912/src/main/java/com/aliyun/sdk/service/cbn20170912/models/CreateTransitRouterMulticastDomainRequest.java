@@ -390,8 +390,12 @@ public class CreateTransitRouterMulticastDomainRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Igmpv2Support")
         private String igmpv2Support;
 
+        @com.aliyun.core.annotation.NameInMap("StrictSourceControl")
+        private String strictSourceControl;
+
         private Options(Builder builder) {
             this.igmpv2Support = builder.igmpv2Support;
+            this.strictSourceControl = builder.strictSourceControl;
         }
 
         public static Builder builder() {
@@ -409,14 +413,23 @@ public class CreateTransitRouterMulticastDomainRequest extends Request {
             return this.igmpv2Support;
         }
 
+        /**
+         * @return strictSourceControl
+         */
+        public String getStrictSourceControl() {
+            return this.strictSourceControl;
+        }
+
         public static final class Builder {
             private String igmpv2Support; 
+            private String strictSourceControl; 
 
             private Builder() {
             } 
 
             private Builder(Options model) {
                 this.igmpv2Support = model.igmpv2Support;
+                this.strictSourceControl = model.strictSourceControl;
             } 
 
             /**
@@ -437,6 +450,14 @@ public class CreateTransitRouterMulticastDomainRequest extends Request {
              */
             public Builder igmpv2Support(String igmpv2Support) {
                 this.igmpv2Support = igmpv2Support;
+                return this;
+            }
+
+            /**
+             * StrictSourceControl.
+             */
+            public Builder strictSourceControl(String strictSourceControl) {
+                this.strictSourceControl = strictSourceControl;
                 return this;
             }
 
