@@ -128,15 +128,94 @@ public class CreateApiKeyRequest extends Request {
      *
      * <p>CreateApiKeyRequest</p>
      */
+    public static class ModelAccessScope extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("accessibleModels")
+        private java.util.List<String> accessibleModels;
+
+        @com.aliyun.core.annotation.NameInMap("allowAllModels")
+        private Boolean allowAllModels;
+
+        private ModelAccessScope(Builder builder) {
+            this.accessibleModels = builder.accessibleModels;
+            this.allowAllModels = builder.allowAllModels;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ModelAccessScope create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accessibleModels
+         */
+        public java.util.List<String> getAccessibleModels() {
+            return this.accessibleModels;
+        }
+
+        /**
+         * @return allowAllModels
+         */
+        public Boolean getAllowAllModels() {
+            return this.allowAllModels;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> accessibleModels; 
+            private Boolean allowAllModels; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModelAccessScope model) {
+                this.accessibleModels = model.accessibleModels;
+                this.allowAllModels = model.allowAllModels;
+            } 
+
+            /**
+             * accessibleModels.
+             */
+            public Builder accessibleModels(java.util.List<String> accessibleModels) {
+                this.accessibleModels = accessibleModels;
+                return this;
+            }
+
+            /**
+             * allowAllModels.
+             */
+            public Builder allowAllModels(Boolean allowAllModels) {
+                this.allowAllModels = allowAllModels;
+                return this;
+            }
+
+            public ModelAccessScope build() {
+                return new ModelAccessScope(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateApiKeyRequest} extends {@link TeaModel}
+     *
+     * <p>CreateApiKeyRequest</p>
+     */
     public static class Auth extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accessIps")
         private java.util.List<String> accessIps;
+
+        @com.aliyun.core.annotation.NameInMap("modelAccessScope")
+        private ModelAccessScope modelAccessScope;
 
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Auth(Builder builder) {
             this.accessIps = builder.accessIps;
+            this.modelAccessScope = builder.modelAccessScope;
             this.type = builder.type;
         }
 
@@ -156,6 +235,13 @@ public class CreateApiKeyRequest extends Request {
         }
 
         /**
+         * @return modelAccessScope
+         */
+        public ModelAccessScope getModelAccessScope() {
+            return this.modelAccessScope;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -164,6 +250,7 @@ public class CreateApiKeyRequest extends Request {
 
         public static final class Builder {
             private java.util.List<String> accessIps; 
+            private ModelAccessScope modelAccessScope; 
             private String type; 
 
             private Builder() {
@@ -171,6 +258,7 @@ public class CreateApiKeyRequest extends Request {
 
             private Builder(Auth model) {
                 this.accessIps = model.accessIps;
+                this.modelAccessScope = model.modelAccessScope;
                 this.type = model.type;
             } 
 
@@ -179,6 +267,14 @@ public class CreateApiKeyRequest extends Request {
              */
             public Builder accessIps(java.util.List<String> accessIps) {
                 this.accessIps = accessIps;
+                return this;
+            }
+
+            /**
+             * modelAccessScope.
+             */
+            public Builder modelAccessScope(ModelAccessScope modelAccessScope) {
+                this.modelAccessScope = modelAccessScope;
                 return this;
             }
 
