@@ -1,3 +1,6 @@
+2026-06-30 Version: 3.0.10
+- Generated java-async 2022-03-02 for Green.
+
 2026-05-22 Version: 3.0.9
 - Generated java-async 2022-03-02 for Green.
 

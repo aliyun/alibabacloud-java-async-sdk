@@ -48,7 +48,12 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-hangzhou-finance", "green.aliyuncs.com"),
             new TeaPair("cn-shenzhen-finance-1", "green.aliyuncs.com"),
             new TeaPair("cn-shanghai-finance-1", "green.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "green.aliyuncs.com")
+            new TeaPair("cn-north-2-gov-1", "green.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "green-cip.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "green-cip.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "green-cip.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-beijing", "green-cip.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "green-cip.ap-southeast-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -411,6 +416,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<MultiModalGuardForBase64Response> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of MultiModalGuardWs  MultiModalGuardWsRequest
+     * @return MultiModalGuardWsResponse
+     */
+    @Override
+    public CompletableFuture<MultiModalGuardWsResponse> multiModalGuardWs(MultiModalGuardWsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("MultiModalGuardWs").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(MultiModalGuardWsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<MultiModalGuardWsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

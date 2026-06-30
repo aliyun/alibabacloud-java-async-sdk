@@ -233,6 +233,9 @@ public class ManualModerationResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Result")
         private java.util.List<Result> result;
 
+        @com.aliyun.core.annotation.NameInMap("ReviewCount")
+        private String reviewCount;
+
         @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
 
@@ -242,6 +245,7 @@ public class ManualModerationResultResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.dataId = builder.dataId;
             this.result = builder.result;
+            this.reviewCount = builder.reviewCount;
             this.riskLevel = builder.riskLevel;
             this.taskId = builder.taskId;
         }
@@ -269,6 +273,13 @@ public class ManualModerationResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return reviewCount
+         */
+        public String getReviewCount() {
+            return this.reviewCount;
+        }
+
+        /**
          * @return riskLevel
          */
         public String getRiskLevel() {
@@ -285,6 +296,7 @@ public class ManualModerationResultResponseBody extends TeaModel {
         public static final class Builder {
             private String dataId; 
             private java.util.List<Result> result; 
+            private String reviewCount; 
             private String riskLevel; 
             private String taskId; 
 
@@ -294,6 +306,7 @@ public class ManualModerationResultResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.dataId = model.dataId;
                 this.result = model.result;
+                this.reviewCount = model.reviewCount;
                 this.riskLevel = model.riskLevel;
                 this.taskId = model.taskId;
             } 
@@ -314,6 +327,14 @@ public class ManualModerationResultResponseBody extends TeaModel {
              */
             public Builder result(java.util.List<Result> result) {
                 this.result = result;
+                return this;
+            }
+
+            /**
+             * ReviewCount.
+             */
+            public Builder reviewCount(String reviewCount) {
+                this.reviewCount = reviewCount;
                 return this;
             }
 
