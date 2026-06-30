@@ -12,31 +12,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UploadDataSyncForLLMRequest} extends {@link RequestModel}
+ * {@link ExecuteAgentRequest} extends {@link RequestModel}
  *
- * <p>UploadDataSyncForLLMRequest</p>
+ * <p>ExecuteAgentRequest</p>
  */
-public class UploadDataSyncForLLMRequest extends Request {
-    @com.aliyun.core.annotation.Query
+public class ExecuteAgentRequest extends Request {
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BaseMeAgentId")
     private Long baseMeAgentId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("JsonStr")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String jsonStr;
 
-    private UploadDataSyncForLLMRequest(Builder builder) {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Stream")
+    private Boolean stream;
+
+    private ExecuteAgentRequest(Builder builder) {
         super(builder);
         this.baseMeAgentId = builder.baseMeAgentId;
         this.jsonStr = builder.jsonStr;
+        this.stream = builder.stream;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static UploadDataSyncForLLMRequest create() {
+    public static ExecuteAgentRequest create() {
         return builder().build();
     }
 
@@ -59,31 +63,40 @@ public class UploadDataSyncForLLMRequest extends Request {
         return this.jsonStr;
     }
 
-    public static final class Builder extends Request.Builder<UploadDataSyncForLLMRequest, Builder> {
+    /**
+     * @return stream
+     */
+    public Boolean getStream() {
+        return this.stream;
+    }
+
+    public static final class Builder extends Request.Builder<ExecuteAgentRequest, Builder> {
         private Long baseMeAgentId; 
         private String jsonStr; 
+        private Boolean stream; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UploadDataSyncForLLMRequest request) {
+        private Builder(ExecuteAgentRequest request) {
             super(request);
             this.baseMeAgentId = request.baseMeAgentId;
             this.jsonStr = request.jsonStr;
+            this.stream = request.stream;
         } 
 
         /**
          * BaseMeAgentId.
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
-            this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
+            this.putBodyParameter("BaseMeAgentId", baseMeAgentId);
             this.baseMeAgentId = baseMeAgentId;
             return this;
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * JsonStr.
          */
         public Builder jsonStr(String jsonStr) {
             this.putBodyParameter("JsonStr", jsonStr);
@@ -91,9 +104,18 @@ public class UploadDataSyncForLLMRequest extends Request {
             return this;
         }
 
+        /**
+         * Stream.
+         */
+        public Builder stream(Boolean stream) {
+            this.putBodyParameter("Stream", stream);
+            this.stream = stream;
+            return this;
+        }
+
         @Override
-        public UploadDataSyncForLLMRequest build() {
-            return new UploadDataSyncForLLMRequest(this);
+        public ExecuteAgentRequest build() {
+            return new ExecuteAgentRequest(this);
         } 
 
     } 

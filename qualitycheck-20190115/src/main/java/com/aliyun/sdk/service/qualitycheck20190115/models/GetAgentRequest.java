@@ -12,21 +12,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UploadDataSyncForLLMRequest} extends {@link RequestModel}
+ * {@link GetAgentRequest} extends {@link RequestModel}
  *
- * <p>UploadDataSyncForLLMRequest</p>
+ * <p>GetAgentRequest</p>
  */
-public class UploadDataSyncForLLMRequest extends Request {
-    @com.aliyun.core.annotation.Query
+public class GetAgentRequest extends Request {
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BaseMeAgentId")
     private Long baseMeAgentId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("JsonStr")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String jsonStr;
 
-    private UploadDataSyncForLLMRequest(Builder builder) {
+    private GetAgentRequest(Builder builder) {
         super(builder);
         this.baseMeAgentId = builder.baseMeAgentId;
         this.jsonStr = builder.jsonStr;
@@ -36,7 +35,7 @@ public class UploadDataSyncForLLMRequest extends Request {
         return new Builder();
     }
 
-    public static UploadDataSyncForLLMRequest create() {
+    public static GetAgentRequest create() {
         return builder().build();
     }
 
@@ -59,7 +58,7 @@ public class UploadDataSyncForLLMRequest extends Request {
         return this.jsonStr;
     }
 
-    public static final class Builder extends Request.Builder<UploadDataSyncForLLMRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetAgentRequest, Builder> {
         private Long baseMeAgentId; 
         private String jsonStr; 
 
@@ -67,23 +66,26 @@ public class UploadDataSyncForLLMRequest extends Request {
             super();
         } 
 
-        private Builder(UploadDataSyncForLLMRequest request) {
+        private Builder(GetAgentRequest request) {
             super(request);
             this.baseMeAgentId = request.baseMeAgentId;
             this.jsonStr = request.jsonStr;
         } 
 
         /**
-         * BaseMeAgentId.
+         * <p>baseMeAgentId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
-            this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
+            this.putBodyParameter("BaseMeAgentId", baseMeAgentId);
             this.baseMeAgentId = baseMeAgentId;
             return this;
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * JsonStr.
          */
         public Builder jsonStr(String jsonStr) {
             this.putBodyParameter("JsonStr", jsonStr);
@@ -92,8 +94,8 @@ public class UploadDataSyncForLLMRequest extends Request {
         }
 
         @Override
-        public UploadDataSyncForLLMRequest build() {
-            return new UploadDataSyncForLLMRequest(this);
+        public GetAgentRequest build() {
+            return new GetAgentRequest(this);
         } 
 
     } 

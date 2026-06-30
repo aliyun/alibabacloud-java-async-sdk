@@ -38,6 +38,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddRuleV4Response> addRuleV4(AddRuleV4Request request);
 
     /**
+     * @param request the request parameters of AnalyzeLabel  AnalyzeLabelRequest
+     * @return AnalyzeLabelResponse
+     */
+    CompletableFuture<AnalyzeLabelResponse> analyzeLabel(AnalyzeLabelRequest request);
+
+    /**
      * @param request the request parameters of ApplyWsToken  ApplyWsTokenRequest
      * @return ApplyWsTokenResponse
      */
@@ -61,6 +67,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return BatchSubmitReviewInfoResponse
      */
     CompletableFuture<BatchSubmitReviewInfoResponse> batchSubmitReviewInfo(BatchSubmitReviewInfoRequest request);
+
+    /**
+     * @param request the request parameters of CreateAgent  CreateAgentRequest
+     * @return CreateAgentResponse
+     */
+    CompletableFuture<CreateAgentResponse> createAgent(CreateAgentRequest request);
+
+    /**
+     * @param request the request parameters of CreateAgentTask  CreateAgentTaskRequest
+     * @return CreateAgentTaskResponse
+     */
+    CompletableFuture<CreateAgentTaskResponse> createAgentTask(CreateAgentTaskRequest request);
 
     /**
      * @param request the request parameters of CreateAsrVocab  CreateAsrVocabRequest
@@ -100,6 +118,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSkillGroupConfigResponse> createSkillGroupConfig(CreateSkillGroupConfigRequest request);
 
     /**
+     * @param request the request parameters of CreateTag  CreateTagRequest
+     * @return CreateTagResponse
+     */
+    CompletableFuture<CreateTagResponse> createTag(CreateTagRequest request);
+
+    /**
      * @param request the request parameters of CreateTaskAssignRule  CreateTaskAssignRuleRequest
      * @return CreateTaskAssignRuleResponse
      */
@@ -128,6 +152,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DelRuleCategoryResponse
      */
     CompletableFuture<DelRuleCategoryResponse> delRuleCategory(DelRuleCategoryRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAgent  DeleteAgentRequest
+     * @return DeleteAgentResponse
+     */
+    CompletableFuture<DeleteAgentResponse> deleteAgent(DeleteAgentRequest request);
 
     /**
      * @param request the request parameters of DeleteAsrVocab  DeleteAsrVocabRequest
@@ -199,6 +229,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteSkillGroupConfigResponse> deleteSkillGroupConfig(DeleteSkillGroupConfigRequest request);
 
     /**
+     * @param request the request parameters of DeleteTag  DeleteTagRequest
+     * @return DeleteTagResponse
+     */
+    CompletableFuture<DeleteTagResponse> deleteTag(DeleteTagRequest request);
+
+    /**
      * @param request the request parameters of DeleteTaskAssignRule  DeleteTaskAssignRuleRequest
      * @return DeleteTaskAssignRuleResponse
      */
@@ -217,6 +253,32 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteWarningStrategyConfigResponse> deleteWarningStrategyConfig(DeleteWarningStrategyConfigRequest request);
 
     /**
+     * @param request the request parameters of ExecuteAgent  ExecuteAgentRequest
+     * @return ExecuteAgentResponse
+     */
+    CompletableFuture<ExecuteAgentResponse> executeAgent(ExecuteAgentRequest request);
+
+    ResponseIterable<ExecuteAgentResponseBody> executeAgentWithResponseIterable(ExecuteAgentRequest request);
+
+    /**
+     * @param request the request parameters of GenerateLabel  GenerateLabelRequest
+     * @return GenerateLabelResponse
+     */
+    CompletableFuture<GenerateLabelResponse> generateLabel(GenerateLabelRequest request);
+
+    /**
+     * @param request the request parameters of GetAgent  GetAgentRequest
+     * @return GetAgentResponse
+     */
+    CompletableFuture<GetAgentResponse> getAgent(GetAgentRequest request);
+
+    /**
+     * @param request the request parameters of GetAgentTaskResult  GetAgentTaskResultRequest
+     * @return GetAgentTaskResultResponse
+     */
+    CompletableFuture<GetAgentTaskResultResponse> getAgentTaskResult(GetAgentTaskResultRequest request);
+
+    /**
      * @param request the request parameters of GetAsrVocab  GetAsrVocabRequest
      * @return GetAsrVocabResponse
      */
@@ -233,6 +295,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetCustomizationConfigListResponse
      */
     CompletableFuture<GetCustomizationConfigListResponse> getCustomizationConfigList(GetCustomizationConfigListRequest request);
+
+    /**
+     * @param request the request parameters of GetLabelAnalysisResult  GetLabelAnalysisResultRequest
+     * @return GetLabelAnalysisResultResponse
+     */
+    CompletableFuture<GetLabelAnalysisResultResponse> getLabelAnalysisResult(GetLabelAnalysisResultRequest request);
+
+    /**
+     * @param request the request parameters of GetLabelGeneratedResult  GetLabelGeneratedResultRequest
+     * @return GetLabelGeneratedResultResponse
+     */
+    CompletableFuture<GetLabelGeneratedResultResponse> getLabelGeneratedResult(GetLabelGeneratedResultRequest request);
 
     /**
      * @param request the request parameters of GetMiningTaskResult  GetMiningTaskResultRequest
@@ -337,6 +411,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetSyncResultResponse> getSyncResult(GetSyncResultRequest request);
 
     /**
+     * @param request the request parameters of GetTag  GetTagRequest
+     * @return GetTagResponse
+     */
+    CompletableFuture<GetTagResponse> getTag(GetTagRequest request);
+
+    /**
      * @param request the request parameters of GetWarningStrategyConfig  GetWarningStrategyConfigRequest
      * @return GetWarningStrategyConfigResponse
      */
@@ -412,6 +492,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     @Deprecated
     CompletableFuture<ListSkillGroupConfigResponse> listSkillGroupConfig(ListSkillGroupConfigRequest request);
+
+    /**
+     * @param request the request parameters of ListTag  ListTagRequest
+     * @return ListTagResponse
+     */
+    CompletableFuture<ListTagResponse> listTag(ListTagRequest request);
 
     /**
      * @param request the request parameters of ListTaskAssignRules  ListTaskAssignRulesRequest
@@ -508,6 +594,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TestRuleV4Response> testRuleV4(TestRuleV4Request request);
 
     /**
+     * @param request the request parameters of UpdateAgent  UpdateAgentRequest
+     * @return UpdateAgentResponse
+     */
+    CompletableFuture<UpdateAgentResponse> updateAgent(UpdateAgentRequest request);
+
+    /**
      * @param request the request parameters of UpdateAsrVocab  UpdateAsrVocabRequest
      * @return UpdateAsrVocabResponse
      */
@@ -575,6 +667,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateSyncQualityCheckDataResponse
      */
     CompletableFuture<UpdateSyncQualityCheckDataResponse> updateSyncQualityCheckData(UpdateSyncQualityCheckDataRequest request);
+
+    /**
+     * @param request the request parameters of UpdateTag  UpdateTagRequest
+     * @return UpdateTagResponse
+     */
+    CompletableFuture<UpdateTagResponse> updateTag(UpdateTagRequest request);
 
     /**
      * @param request the request parameters of UpdateTaskAssignRule  UpdateTaskAssignRuleRequest
