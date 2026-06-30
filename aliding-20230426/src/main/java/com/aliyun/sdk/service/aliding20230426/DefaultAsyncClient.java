@@ -1455,6 +1455,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DisableSceneGroupTemplate  DisableSceneGroupTemplateRequest
+     * @return DisableSceneGroupTemplateResponse
+     */
+    @Override
+    public CompletableFuture<DisableSceneGroupTemplateResponse> disableSceneGroupTemplate(DisableSceneGroupTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DisableSceneGroupTemplate").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/im/disableSceneGroupTemplate").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DisableSceneGroupTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DisableSceneGroupTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DocBlocksDelete  DocBlocksDeleteRequest
      * @return DocBlocksDeleteResponse
      */

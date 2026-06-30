@@ -490,6 +490,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteWorkspaceMembersResponse> deleteWorkspaceMembers(DeleteWorkspaceMembersRequest request);
 
     /**
+     * @param request the request parameters of DisableSceneGroupTemplate  DisableSceneGroupTemplateRequest
+     * @return DisableSceneGroupTemplateResponse
+     */
+    CompletableFuture<DisableSceneGroupTemplateResponse> disableSceneGroupTemplate(DisableSceneGroupTemplateRequest request);
+
+    /**
      * @param request the request parameters of DocBlocksDelete  DocBlocksDeleteRequest
      * @return DocBlocksDeleteResponse
      */
