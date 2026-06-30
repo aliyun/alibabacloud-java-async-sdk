@@ -1572,6 +1572,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePolarAgentUserSessionsResponse> describePolarAgentUserSessions(DescribePolarAgentUserSessionsRequest request);
 
     /**
+     * @param request the request parameters of DescribePolarClawAgentFile  DescribePolarClawAgentFileRequest
+     * @return DescribePolarClawAgentFileResponse
+     */
+    CompletableFuture<DescribePolarClawAgentFileResponse> describePolarClawAgentFile(DescribePolarClawAgentFileRequest request);
+
+    /**
+     * @param request the request parameters of DescribePolarClawAgentTools  DescribePolarClawAgentToolsRequest
+     * @return DescribePolarClawAgentToolsResponse
+     */
+    CompletableFuture<DescribePolarClawAgentToolsResponse> describePolarClawAgentTools(DescribePolarClawAgentToolsRequest request);
+
+    /**
      * @param request the request parameters of DescribePolarClawAgents  DescribePolarClawAgentsRequest
      * @return DescribePolarClawAgentsResponse
      */
@@ -1600,6 +1612,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribePolarClawPluginsResponse
      */
     CompletableFuture<DescribePolarClawPluginsResponse> describePolarClawPlugins(DescribePolarClawPluginsRequest request);
+
+    /**
+     * @param request the request parameters of DescribePolarClawSkillDetail  DescribePolarClawSkillDetailRequest
+     * @return DescribePolarClawSkillDetailResponse
+     */
+    CompletableFuture<DescribePolarClawSkillDetailResponse> describePolarClawSkillDetail(DescribePolarClawSkillDetailRequest request);
 
     /**
      * @param request the request parameters of DescribePolarClawTask  DescribePolarClawTaskRequest
@@ -1923,6 +1941,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return InstallPolarClawPluginResponse
      */
     CompletableFuture<InstallPolarClawPluginResponse> installPolarClawPlugin(InstallPolarClawPluginRequest request);
+
+    /**
+     * @param request the request parameters of InstallPolarClawSkill  InstallPolarClawSkillRequest
+     * @return InstallPolarClawSkillResponse
+     */
+    CompletableFuture<InstallPolarClawSkillResponse> installPolarClawSkill(InstallPolarClawSkillRequest request);
 
     /**
      * @param request the request parameters of ListOrders  ListOrdersRequest
@@ -2587,6 +2611,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SearchMemoriesResponse> searchMemories(SearchMemoriesRequest request);
 
     /**
+     * @param request the request parameters of SearchPolarClawSkills  SearchPolarClawSkillsRequest
+     * @return SearchPolarClawSkillsResponse
+     */
+    CompletableFuture<SearchPolarClawSkillsResponse> searchPolarClawSkills(SearchPolarClawSkillsRequest request);
+
+    /**
      * @param request the request parameters of SetPolarFsFileQuota  SetPolarFsFileQuotaRequest
      * @return SetPolarFsFileQuotaResponse
      */
@@ -2662,10 +2692,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdatePolarClawAgentResponse> updatePolarClawAgent(UpdatePolarClawAgentRequest request);
 
     /**
+     * @param request the request parameters of UpdatePolarClawAgentSkills  UpdatePolarClawAgentSkillsRequest
+     * @return UpdatePolarClawAgentSkillsResponse
+     */
+    CompletableFuture<UpdatePolarClawAgentSkillsResponse> updatePolarClawAgentSkills(UpdatePolarClawAgentSkillsRequest request);
+
+    /**
+     * @param request the request parameters of UpdatePolarClawAgentTools  UpdatePolarClawAgentToolsRequest
+     * @return UpdatePolarClawAgentToolsResponse
+     */
+    CompletableFuture<UpdatePolarClawAgentToolsResponse> updatePolarClawAgentTools(UpdatePolarClawAgentToolsRequest request);
+
+    /**
      * @param request the request parameters of UpdatePolarClawCronJob  UpdatePolarClawCronJobRequest
      * @return UpdatePolarClawCronJobResponse
      */
     CompletableFuture<UpdatePolarClawCronJobResponse> updatePolarClawCronJob(UpdatePolarClawCronJobRequest request);
+
+    /**
+     * @param request the request parameters of UpdatePolarClawSkill  UpdatePolarClawSkillRequest
+     * @return UpdatePolarClawSkillResponse
+     */
+    CompletableFuture<UpdatePolarClawSkillResponse> updatePolarClawSkill(UpdatePolarClawSkillRequest request);
 
     /**
      * <b>description</b> :
