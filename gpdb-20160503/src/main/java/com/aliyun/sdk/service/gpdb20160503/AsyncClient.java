@@ -255,6 +255,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateJDBCDataSourceResponse> createJDBCDataSource(CreateJDBCDataSourceRequest request);
 
     /**
+     * @param request the request parameters of CreateModelOperatorApiKey  CreateModelOperatorApiKeyRequest
+     * @return CreateModelOperatorApiKeyResponse
+     */
+    CompletableFuture<CreateModelOperatorApiKeyResponse> createModelOperatorApiKey(CreateModelOperatorApiKeyRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and <a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</p>
      * 
@@ -987,6 +993,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeLogBackupsResponse> describeLogBackups(DescribeLogBackupsRequest request);
 
     /**
+     * @param request the request parameters of DescribeModelOperatorApiKey  DescribeModelOperatorApiKeyRequest
+     * @return DescribeModelOperatorApiKeyResponse
+     */
+    CompletableFuture<DescribeModelOperatorApiKeyResponse> describeModelOperatorApiKey(DescribeModelOperatorApiKeyRequest request);
+
+    /**
+     * @param request the request parameters of DescribeModelOperatorUsage  DescribeModelOperatorUsageRequest
+     * @return DescribeModelOperatorUsageResponse
+     */
+    CompletableFuture<DescribeModelOperatorUsageResponse> describeModelOperatorUsage(DescribeModelOperatorUsageRequest request);
+
+    /**
      * <b>description</b> :
      * <h2><a href="#"></a>Usage notes</h2>
      * <p>This interface is used to view the details of a model service.</p>
@@ -1450,6 +1468,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListInstanceExtensionsResponse
      */
     CompletableFuture<ListInstanceExtensionsResponse> listInstanceExtensions(ListInstanceExtensionsRequest request);
+
+    /**
+     * @param request the request parameters of ListModelOperatorApiKeys  ListModelOperatorApiKeysRequest
+     * @return ListModelOperatorApiKeysResponse
+     */
+    CompletableFuture<ListModelOperatorApiKeysResponse> listModelOperatorApiKeys(ListModelOperatorApiKeysRequest request);
+
+    /**
+     * @param request the request parameters of ListModelOperatorServices  ListModelOperatorServicesRequest
+     * @return ListModelOperatorServicesResponse
+     */
+    CompletableFuture<ListModelOperatorServicesResponse> listModelOperatorServices(ListModelOperatorServicesRequest request);
 
     /**
      * <b>description</b> :
