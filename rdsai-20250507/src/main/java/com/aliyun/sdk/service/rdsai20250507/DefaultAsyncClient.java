@@ -30,8 +30,23 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "RdsAi";
         this.version = "2025-05-07";
-        this.endpointRule = "";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("us-west-1", "rdsai.us-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "rdsai.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "rdsai.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "rdsai.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "rdsai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "rdsai.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "rdsai.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "rdsai.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "rdsai.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "rdsai.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "rdsai.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "rdsai.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "rdsai.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "rdsai.ap-northeast-1.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -168,6 +183,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateSandboxTemplate  CreateSandboxTemplateRequest
+     * @return CreateSandboxTemplateResponse
+     */
+    @Override
+    public CompletableFuture<CreateSandboxTemplateResponse> createSandboxTemplate(CreateSandboxTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateSandboxTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateSandboxTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateSandboxTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateScheduledTask  CreateScheduledTaskRequest
      * @return CreateScheduledTaskResponse
      */
@@ -268,6 +301,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteSandboxTemplate  DeleteSandboxTemplateRequest
+     * @return DeleteSandboxTemplateResponse
+     */
+    @Override
+    public CompletableFuture<DeleteSandboxTemplateResponse> deleteSandboxTemplate(DeleteSandboxTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteSandboxTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteSandboxTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteSandboxTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteScheduledTask  DeleteScheduledTaskRequest
      * @return DeleteScheduledTaskResponse
      */
@@ -346,6 +397,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeAppInstancesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeCommonSandboxTemplates  DescribeCommonSandboxTemplatesRequest
+     * @return DescribeCommonSandboxTemplatesResponse
+     */
+    @Override
+    public CompletableFuture<DescribeCommonSandboxTemplatesResponse> describeCommonSandboxTemplates(DescribeCommonSandboxTemplatesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeCommonSandboxTemplates").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeCommonSandboxTemplatesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeCommonSandboxTemplatesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1114,6 +1183,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyMessagesFeedbacksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifySandboxTemplate  ModifySandboxTemplateRequest
+     * @return ModifySandboxTemplateResponse
+     */
+    @Override
+    public CompletableFuture<ModifySandboxTemplateResponse> modifySandboxTemplate(ModifySandboxTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifySandboxTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifySandboxTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifySandboxTemplateResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

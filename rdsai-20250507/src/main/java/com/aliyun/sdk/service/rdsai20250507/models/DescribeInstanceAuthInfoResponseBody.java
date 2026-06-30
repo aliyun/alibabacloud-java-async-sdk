@@ -170,11 +170,15 @@ public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnonKey")
         private String anonKey;
 
+        @com.aliyun.core.annotation.NameInMap("E2bApiKey")
+        private String e2bApiKey;
+
         @com.aliyun.core.annotation.NameInMap("ServiceKey")
         private String serviceKey;
 
         private ApiKeys(Builder builder) {
             this.anonKey = builder.anonKey;
+            this.e2bApiKey = builder.e2bApiKey;
             this.serviceKey = builder.serviceKey;
         }
 
@@ -194,6 +198,13 @@ public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return e2bApiKey
+         */
+        public String getE2bApiKey() {
+            return this.e2bApiKey;
+        }
+
+        /**
          * @return serviceKey
          */
         public String getServiceKey() {
@@ -202,6 +213,7 @@ public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private String anonKey; 
+            private String e2bApiKey; 
             private String serviceKey; 
 
             private Builder() {
@@ -209,6 +221,7 @@ public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
 
             private Builder(ApiKeys model) {
                 this.anonKey = model.anonKey;
+                this.e2bApiKey = model.e2bApiKey;
                 this.serviceKey = model.serviceKey;
             } 
 
@@ -220,6 +233,14 @@ public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
              */
             public Builder anonKey(String anonKey) {
                 this.anonKey = anonKey;
+                return this;
+            }
+
+            /**
+             * E2bApiKey.
+             */
+            public Builder e2bApiKey(String e2bApiKey) {
+                this.e2bApiKey = e2bApiKey;
                 return this;
             }
 

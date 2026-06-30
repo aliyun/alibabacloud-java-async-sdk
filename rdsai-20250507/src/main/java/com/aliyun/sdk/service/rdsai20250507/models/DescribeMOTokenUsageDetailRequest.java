@@ -59,6 +59,10 @@ public class DescribeMOTokenUsageDetailRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsageType")
+    private String usageType;
+
     private DescribeMOTokenUsageDetailRequest(Builder builder) {
         super(builder);
         this.apiKey = builder.apiKey;
@@ -71,6 +75,7 @@ public class DescribeMOTokenUsageDetailRequest extends Request {
         this.pageSize = builder.pageSize;
         this.region = builder.region;
         this.startTime = builder.startTime;
+        this.usageType = builder.usageType;
     }
 
     public static Builder builder() {
@@ -156,6 +161,13 @@ public class DescribeMOTokenUsageDetailRequest extends Request {
         return this.startTime;
     }
 
+    /**
+     * @return usageType
+     */
+    public String getUsageType() {
+        return this.usageType;
+    }
+
     public static final class Builder extends Request.Builder<DescribeMOTokenUsageDetailRequest, Builder> {
         private String apiKey; 
         private String consumerName; 
@@ -167,6 +179,7 @@ public class DescribeMOTokenUsageDetailRequest extends Request {
         private Integer pageSize; 
         private String region; 
         private String startTime; 
+        private String usageType; 
 
         private Builder() {
             super();
@@ -184,6 +197,7 @@ public class DescribeMOTokenUsageDetailRequest extends Request {
             this.pageSize = request.pageSize;
             this.region = request.region;
             this.startTime = request.startTime;
+            this.usageType = request.usageType;
         } 
 
         /**
@@ -276,6 +290,15 @@ public class DescribeMOTokenUsageDetailRequest extends Request {
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * UsageType.
+         */
+        public Builder usageType(String usageType) {
+            this.putQueryParameter("UsageType", usageType);
+            this.usageType = usageType;
             return this;
         }
 

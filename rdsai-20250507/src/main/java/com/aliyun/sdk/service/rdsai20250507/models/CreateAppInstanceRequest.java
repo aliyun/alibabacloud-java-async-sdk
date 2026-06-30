@@ -50,6 +50,10 @@ public class CreateAppInstanceRequest extends Request {
     private String dashboardUsername;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Database")
+    private String database;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DatabasePassword")
     private String databasePassword;
 
@@ -91,6 +95,7 @@ public class CreateAppInstanceRequest extends Request {
         this.DBInstanceName = builder.DBInstanceName;
         this.dashboardPassword = builder.dashboardPassword;
         this.dashboardUsername = builder.dashboardUsername;
+        this.database = builder.database;
         this.databasePassword = builder.databasePassword;
         this.initializeWithExistingData = builder.initializeWithExistingData;
         this.instanceClass = builder.instanceClass;
@@ -171,6 +176,13 @@ public class CreateAppInstanceRequest extends Request {
     }
 
     /**
+     * @return database
+     */
+    public String getDatabase() {
+        return this.database;
+    }
+
+    /**
      * @return databasePassword
      */
     public String getDatabasePassword() {
@@ -235,6 +247,7 @@ public class CreateAppInstanceRequest extends Request {
         private String DBInstanceName; 
         private String dashboardPassword; 
         private String dashboardUsername; 
+        private String database; 
         private String databasePassword; 
         private Boolean initializeWithExistingData; 
         private String instanceClass; 
@@ -258,6 +271,7 @@ public class CreateAppInstanceRequest extends Request {
             this.DBInstanceName = request.DBInstanceName;
             this.dashboardPassword = request.dashboardPassword;
             this.dashboardUsername = request.dashboardUsername;
+            this.database = request.database;
             this.databasePassword = request.databasePassword;
             this.initializeWithExistingData = request.initializeWithExistingData;
             this.instanceClass = request.instanceClass;
@@ -361,6 +375,15 @@ public class CreateAppInstanceRequest extends Request {
         public Builder dashboardUsername(String dashboardUsername) {
             this.putQueryParameter("DashboardUsername", dashboardUsername);
             this.dashboardUsername = dashboardUsername;
+            return this;
+        }
+
+        /**
+         * Database.
+         */
+        public Builder database(String database) {
+            this.putQueryParameter("Database", database);
+            this.database = database;
             return this;
         }
 

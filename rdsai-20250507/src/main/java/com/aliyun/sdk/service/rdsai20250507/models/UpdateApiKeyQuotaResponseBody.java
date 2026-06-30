@@ -143,6 +143,9 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiKey")
         private String apiKey;
 
+        @com.aliyun.core.annotation.NameInMap("DailyTokenQuota")
+        private Long dailyTokenQuota;
+
         @com.aliyun.core.annotation.NameInMap("LimitRate")
         private Float limitRate;
 
@@ -154,6 +157,7 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
 
         private CustomKeyList(Builder builder) {
             this.apiKey = builder.apiKey;
+            this.dailyTokenQuota = builder.dailyTokenQuota;
             this.limitRate = builder.limitRate;
             this.limitType = builder.limitType;
             this.tokenQuota = builder.tokenQuota;
@@ -172,6 +176,13 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
          */
         public String getApiKey() {
             return this.apiKey;
+        }
+
+        /**
+         * @return dailyTokenQuota
+         */
+        public Long getDailyTokenQuota() {
+            return this.dailyTokenQuota;
         }
 
         /**
@@ -197,6 +208,7 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
 
         public static final class Builder {
             private String apiKey; 
+            private Long dailyTokenQuota; 
             private Float limitRate; 
             private String limitType; 
             private Long tokenQuota; 
@@ -206,6 +218,7 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
 
             private Builder(CustomKeyList model) {
                 this.apiKey = model.apiKey;
+                this.dailyTokenQuota = model.dailyTokenQuota;
                 this.limitRate = model.limitRate;
                 this.limitType = model.limitType;
                 this.tokenQuota = model.tokenQuota;
@@ -219,6 +232,14 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
+                return this;
+            }
+
+            /**
+             * DailyTokenQuota.
+             */
+            public Builder dailyTokenQuota(Long dailyTokenQuota) {
+                this.dailyTokenQuota = dailyTokenQuota;
                 return this;
             }
 

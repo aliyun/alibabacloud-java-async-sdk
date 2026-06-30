@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateApiKeyRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DailyTokenQuota")
+    private Long dailyTokenQuota;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
@@ -44,6 +48,7 @@ public class CreateApiKeyRequest extends Request {
 
     private CreateApiKeyRequest(Builder builder) {
         super(builder);
+        this.dailyTokenQuota = builder.dailyTokenQuota;
         this.instanceId = builder.instanceId;
         this.keyName = builder.keyName;
         this.limitRate = builder.limitRate;
@@ -63,6 +68,13 @@ public class CreateApiKeyRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return dailyTokenQuota
+     */
+    public Long getDailyTokenQuota() {
+        return this.dailyTokenQuota;
     }
 
     /**
@@ -108,6 +120,7 @@ public class CreateApiKeyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateApiKeyRequest, Builder> {
+        private Long dailyTokenQuota; 
         private String instanceId; 
         private String keyName; 
         private Double limitRate; 
@@ -121,6 +134,7 @@ public class CreateApiKeyRequest extends Request {
 
         private Builder(CreateApiKeyRequest request) {
             super(request);
+            this.dailyTokenQuota = request.dailyTokenQuota;
             this.instanceId = request.instanceId;
             this.keyName = request.keyName;
             this.limitRate = request.limitRate;
@@ -128,6 +142,15 @@ public class CreateApiKeyRequest extends Request {
             this.quantity = request.quantity;
             this.tokenQuota = request.tokenQuota;
         } 
+
+        /**
+         * DailyTokenQuota.
+         */
+        public Builder dailyTokenQuota(Long dailyTokenQuota) {
+            this.putQueryParameter("DailyTokenQuota", dailyTokenQuota);
+            this.dailyTokenQuota = dailyTokenQuota;
+            return this;
+        }
 
         /**
          * InstanceId.

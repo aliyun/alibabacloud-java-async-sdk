@@ -67,6 +67,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateInspectionTaskResponse> createInspectionTask(CreateInspectionTaskRequest request);
 
     /**
+     * @param request the request parameters of CreateSandboxTemplate  CreateSandboxTemplateRequest
+     * @return CreateSandboxTemplateResponse
+     */
+    CompletableFuture<CreateSandboxTemplateResponse> createSandboxTemplate(CreateSandboxTemplateRequest request);
+
+    /**
      * @param request the request parameters of CreateScheduledTask  CreateScheduledTaskRequest
      * @return CreateScheduledTaskResponse
      */
@@ -107,6 +113,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteCustomAgentResponse> deleteCustomAgent(DeleteCustomAgentRequest request);
 
     /**
+     * @param request the request parameters of DeleteSandboxTemplate  DeleteSandboxTemplateRequest
+     * @return DeleteSandboxTemplateResponse
+     */
+    CompletableFuture<DeleteSandboxTemplateResponse> deleteSandboxTemplate(DeleteSandboxTemplateRequest request);
+
+    /**
      * @param request the request parameters of DeleteScheduledTask  DeleteScheduledTaskRequest
      * @return DeleteScheduledTaskResponse
      */
@@ -141,6 +153,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeAppInstancesResponse
      */
     CompletableFuture<DescribeAppInstancesResponse> describeAppInstances(DescribeAppInstancesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeCommonSandboxTemplates  DescribeCommonSandboxTemplatesRequest
+     * @return DescribeCommonSandboxTemplatesResponse
+     */
+    CompletableFuture<DescribeCommonSandboxTemplatesResponse> describeCommonSandboxTemplates(DescribeCommonSandboxTemplatesRequest request);
 
     /**
      * @param request the request parameters of DescribeEventsList  DescribeEventsListRequest
@@ -441,6 +459,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyMessagesFeedbacksResponse
      */
     CompletableFuture<ModifyMessagesFeedbacksResponse> modifyMessagesFeedbacks(ModifyMessagesFeedbacksRequest request);
+
+    /**
+     * @param request the request parameters of ModifySandboxTemplate  ModifySandboxTemplateRequest
+     * @return ModifySandboxTemplateResponse
+     */
+    CompletableFuture<ModifySandboxTemplateResponse> modifySandboxTemplate(ModifySandboxTemplateRequest request);
 
     /**
      * @param request the request parameters of ModifyScheduledTask  ModifyScheduledTaskRequest

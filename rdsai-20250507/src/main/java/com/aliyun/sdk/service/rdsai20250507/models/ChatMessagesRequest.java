@@ -185,19 +185,27 @@ public class ChatMessagesRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("CustomAgentId")
         private String customAgentId;
 
+        @com.aliyun.core.annotation.NameInMap("EnableThinking")
+        private String enableThinking;
+
         @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("ThinkEffort")
+        private String thinkEffort;
+
         @com.aliyun.core.annotation.NameInMap("Timezone")
         private String timezone;
 
         private Inputs(Builder builder) {
             this.customAgentId = builder.customAgentId;
+            this.enableThinking = builder.enableThinking;
             this.language = builder.language;
             this.regionId = builder.regionId;
+            this.thinkEffort = builder.thinkEffort;
             this.timezone = builder.timezone;
         }
 
@@ -217,6 +225,13 @@ public class ChatMessagesRequest extends Request {
         }
 
         /**
+         * @return enableThinking
+         */
+        public String getEnableThinking() {
+            return this.enableThinking;
+        }
+
+        /**
          * @return language
          */
         public String getLanguage() {
@@ -231,6 +246,13 @@ public class ChatMessagesRequest extends Request {
         }
 
         /**
+         * @return thinkEffort
+         */
+        public String getThinkEffort() {
+            return this.thinkEffort;
+        }
+
+        /**
          * @return timezone
          */
         public String getTimezone() {
@@ -239,8 +261,10 @@ public class ChatMessagesRequest extends Request {
 
         public static final class Builder {
             private String customAgentId; 
+            private String enableThinking; 
             private String language; 
             private String regionId; 
+            private String thinkEffort; 
             private String timezone; 
 
             private Builder() {
@@ -248,8 +272,10 @@ public class ChatMessagesRequest extends Request {
 
             private Builder(Inputs model) {
                 this.customAgentId = model.customAgentId;
+                this.enableThinking = model.enableThinking;
                 this.language = model.language;
                 this.regionId = model.regionId;
+                this.thinkEffort = model.thinkEffort;
                 this.timezone = model.timezone;
             } 
 
@@ -258,6 +284,14 @@ public class ChatMessagesRequest extends Request {
              */
             public Builder customAgentId(String customAgentId) {
                 this.customAgentId = customAgentId;
+                return this;
+            }
+
+            /**
+             * EnableThinking.
+             */
+            public Builder enableThinking(String enableThinking) {
+                this.enableThinking = enableThinking;
                 return this;
             }
 
@@ -274,6 +308,14 @@ public class ChatMessagesRequest extends Request {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ThinkEffort.
+             */
+            public Builder thinkEffort(String thinkEffort) {
+                this.thinkEffort = thinkEffort;
                 return this;
             }
 

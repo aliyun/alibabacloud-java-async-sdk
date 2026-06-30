@@ -203,6 +203,9 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
      * <p>DescribeSandboxTemplatesResponseBody</p>
      */
     public static class SandboxTemplates extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CreatedBy")
+        private String createdBy;
+
         @com.aliyun.core.annotation.NameInMap("DefaultCpu")
         private String defaultCpu;
 
@@ -225,6 +228,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         private String templateId;
 
         private SandboxTemplates(Builder builder) {
+            this.createdBy = builder.createdBy;
             this.defaultCpu = builder.defaultCpu;
             this.defaultMemory = builder.defaultMemory;
             this.description = builder.description;
@@ -240,6 +244,13 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
 
         public static SandboxTemplates create() {
             return builder().build();
+        }
+
+        /**
+         * @return createdBy
+         */
+        public String getCreatedBy() {
+            return this.createdBy;
         }
 
         /**
@@ -292,6 +303,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String createdBy; 
             private String defaultCpu; 
             private String defaultMemory; 
             private String description; 
@@ -304,6 +316,7 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
             } 
 
             private Builder(SandboxTemplates model) {
+                this.createdBy = model.createdBy;
                 this.defaultCpu = model.defaultCpu;
                 this.defaultMemory = model.defaultMemory;
                 this.description = model.description;
@@ -312,6 +325,14 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
                 this.replicas = model.replicas;
                 this.templateId = model.templateId;
             } 
+
+            /**
+             * CreatedBy.
+             */
+            public Builder createdBy(String createdBy) {
+                this.createdBy = createdBy;
+                return this;
+            }
 
             /**
              * DefaultCpu.

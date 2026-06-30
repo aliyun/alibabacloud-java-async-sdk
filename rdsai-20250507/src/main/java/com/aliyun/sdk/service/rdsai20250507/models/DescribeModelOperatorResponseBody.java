@@ -503,6 +503,9 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrefixCacheEnabled")
         private Boolean prefixCacheEnabled;
 
+        @com.aliyun.core.annotation.NameInMap("SessionIds")
+        private java.util.List<String> sessionIds;
+
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
@@ -526,6 +529,7 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.keyUsageList = builder.keyUsageList;
             this.prefixCacheEnabled = builder.prefixCacheEnabled;
+            this.sessionIds = builder.sessionIds;
             this.startTime = builder.startTime;
             this.status = builder.status;
             this.totalQuota = builder.totalQuota;
@@ -611,6 +615,13 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
         }
 
         /**
+         * @return sessionIds
+         */
+        public java.util.List<String> getSessionIds() {
+            return this.sessionIds;
+        }
+
+        /**
          * @return startTime
          */
         public Long getStartTime() {
@@ -649,6 +660,7 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
             private String instanceId; 
             private java.util.List<KeyUsageList> keyUsageList; 
             private Boolean prefixCacheEnabled; 
+            private java.util.List<String> sessionIds; 
             private Long startTime; 
             private String status; 
             private Long totalQuota; 
@@ -668,6 +680,7 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
                 this.instanceId = model.instanceId;
                 this.keyUsageList = model.keyUsageList;
                 this.prefixCacheEnabled = model.prefixCacheEnabled;
+                this.sessionIds = model.sessionIds;
                 this.startTime = model.startTime;
                 this.status = model.status;
                 this.totalQuota = model.totalQuota;
@@ -754,6 +767,14 @@ public class DescribeModelOperatorResponseBody extends TeaModel {
              */
             public Builder prefixCacheEnabled(Boolean prefixCacheEnabled) {
                 this.prefixCacheEnabled = prefixCacheEnabled;
+                return this;
+            }
+
+            /**
+             * SessionIds.
+             */
+            public Builder sessionIds(java.util.List<String> sessionIds) {
+                this.sessionIds = sessionIds;
                 return this;
             }
 

@@ -143,6 +143,9 @@ public class ListApiKeysResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiKey")
         private String apiKey;
 
+        @com.aliyun.core.annotation.NameInMap("DailyTokenQuota")
+        private Long dailyTokenQuota;
+
         @com.aliyun.core.annotation.NameInMap("IsRateLimited")
         private Boolean isRateLimited;
 
@@ -163,6 +166,7 @@ public class ListApiKeysResponseBody extends TeaModel {
 
         private CustomKeyList(Builder builder) {
             this.apiKey = builder.apiKey;
+            this.dailyTokenQuota = builder.dailyTokenQuota;
             this.isRateLimited = builder.isRateLimited;
             this.keyName = builder.keyName;
             this.limitRate = builder.limitRate;
@@ -184,6 +188,13 @@ public class ListApiKeysResponseBody extends TeaModel {
          */
         public String getApiKey() {
             return this.apiKey;
+        }
+
+        /**
+         * @return dailyTokenQuota
+         */
+        public Long getDailyTokenQuota() {
+            return this.dailyTokenQuota;
         }
 
         /**
@@ -230,6 +241,7 @@ public class ListApiKeysResponseBody extends TeaModel {
 
         public static final class Builder {
             private String apiKey; 
+            private Long dailyTokenQuota; 
             private Boolean isRateLimited; 
             private String keyName; 
             private Float limitRate; 
@@ -242,6 +254,7 @@ public class ListApiKeysResponseBody extends TeaModel {
 
             private Builder(CustomKeyList model) {
                 this.apiKey = model.apiKey;
+                this.dailyTokenQuota = model.dailyTokenQuota;
                 this.isRateLimited = model.isRateLimited;
                 this.keyName = model.keyName;
                 this.limitRate = model.limitRate;
@@ -258,6 +271,14 @@ public class ListApiKeysResponseBody extends TeaModel {
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
+                return this;
+            }
+
+            /**
+             * DailyTokenQuota.
+             */
+            public Builder dailyTokenQuota(Long dailyTokenQuota) {
+                this.dailyTokenQuota = dailyTokenQuota;
                 return this;
             }
 
@@ -329,6 +350,9 @@ public class ListApiKeysResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomKeyList")
         private java.util.List<CustomKeyList> customKeyList;
 
+        @com.aliyun.core.annotation.NameInMap("DailyTokenQuota")
+        private Long dailyTokenQuota;
+
         @com.aliyun.core.annotation.NameInMap("IsRateLimited")
         private Boolean isRateLimited;
 
@@ -350,6 +374,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.baseUrl = builder.baseUrl;
             this.customKeyList = builder.customKeyList;
+            this.dailyTokenQuota = builder.dailyTokenQuota;
             this.isRateLimited = builder.isRateLimited;
             this.page = builder.page;
             this.pageSize = builder.pageSize;
@@ -378,6 +403,13 @@ public class ListApiKeysResponseBody extends TeaModel {
          */
         public java.util.List<CustomKeyList> getCustomKeyList() {
             return this.customKeyList;
+        }
+
+        /**
+         * @return dailyTokenQuota
+         */
+        public Long getDailyTokenQuota() {
+            return this.dailyTokenQuota;
         }
 
         /**
@@ -425,6 +457,7 @@ public class ListApiKeysResponseBody extends TeaModel {
         public static final class Builder {
             private String baseUrl; 
             private java.util.List<CustomKeyList> customKeyList; 
+            private Long dailyTokenQuota; 
             private Boolean isRateLimited; 
             private Integer page; 
             private Integer pageSize; 
@@ -438,6 +471,7 @@ public class ListApiKeysResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.baseUrl = model.baseUrl;
                 this.customKeyList = model.customKeyList;
+                this.dailyTokenQuota = model.dailyTokenQuota;
                 this.isRateLimited = model.isRateLimited;
                 this.page = model.page;
                 this.pageSize = model.pageSize;
@@ -459,6 +493,14 @@ public class ListApiKeysResponseBody extends TeaModel {
              */
             public Builder customKeyList(java.util.List<CustomKeyList> customKeyList) {
                 this.customKeyList = customKeyList;
+                return this;
+            }
+
+            /**
+             * DailyTokenQuota.
+             */
+            public Builder dailyTokenQuota(Long dailyTokenQuota) {
+                this.dailyTokenQuota = dailyTokenQuota;
                 return this;
             }
 
