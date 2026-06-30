@@ -22,6 +22,10 @@ public class GrantPromotionOfferForPartnerRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ActivityCode")
+    private String activityCode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ActivityId")
     private String activityId;
 
@@ -44,6 +48,7 @@ public class GrantPromotionOfferForPartnerRequest extends Request {
     private GrantPromotionOfferForPartnerRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.activityCode = builder.activityCode;
         this.activityId = builder.activityId;
         this.belongId = builder.belongId;
         this.channel = builder.channel;
@@ -69,6 +74,13 @@ public class GrantPromotionOfferForPartnerRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return activityCode
+     */
+    public String getActivityCode() {
+        return this.activityCode;
     }
 
     /**
@@ -108,6 +120,7 @@ public class GrantPromotionOfferForPartnerRequest extends Request {
 
     public static final class Builder extends Request.Builder<GrantPromotionOfferForPartnerRequest, Builder> {
         private String regionId; 
+        private String activityCode; 
         private String activityId; 
         private String belongId; 
         private String channel; 
@@ -121,6 +134,7 @@ public class GrantPromotionOfferForPartnerRequest extends Request {
         private Builder(GrantPromotionOfferForPartnerRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.activityCode = request.activityCode;
             this.activityId = request.activityId;
             this.belongId = request.belongId;
             this.channel = request.channel;
@@ -134,6 +148,15 @@ public class GrantPromotionOfferForPartnerRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ActivityCode.
+         */
+        public Builder activityCode(String activityCode) {
+            this.putQueryParameter("ActivityCode", activityCode);
+            this.activityCode = activityCode;
             return this;
         }
 
