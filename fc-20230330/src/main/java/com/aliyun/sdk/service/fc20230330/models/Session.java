@@ -26,6 +26,12 @@ public class Session extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("disableSessionIdReuse")
     private Boolean disableSessionIdReuse;
 
+    @com.aliyun.core.annotation.NameInMap("enableAutoPause")
+    private Boolean enableAutoPause;
+
+    @com.aliyun.core.annotation.NameInMap("enableAutoResume")
+    private Boolean enableAutoResume;
+
     @com.aliyun.core.annotation.NameInMap("functionName")
     private String functionName;
 
@@ -66,6 +72,8 @@ public class Session extends TeaModel {
         this.containerId = builder.containerId;
         this.createdTime = builder.createdTime;
         this.disableSessionIdReuse = builder.disableSessionIdReuse;
+        this.enableAutoPause = builder.enableAutoPause;
+        this.enableAutoResume = builder.enableAutoResume;
         this.functionName = builder.functionName;
         this.juiceFsConfig = builder.juiceFsConfig;
         this.lastModifiedTime = builder.lastModifiedTime;
@@ -111,6 +119,20 @@ public class Session extends TeaModel {
      */
     public Boolean getDisableSessionIdReuse() {
         return this.disableSessionIdReuse;
+    }
+
+    /**
+     * @return enableAutoPause
+     */
+    public Boolean getEnableAutoPause() {
+        return this.enableAutoPause;
+    }
+
+    /**
+     * @return enableAutoResume
+     */
+    public Boolean getEnableAutoResume() {
+        return this.enableAutoResume;
     }
 
     /**
@@ -201,6 +223,8 @@ public class Session extends TeaModel {
         private String containerId; 
         private String createdTime; 
         private Boolean disableSessionIdReuse; 
+        private Boolean enableAutoPause; 
+        private Boolean enableAutoResume; 
         private String functionName; 
         private JuiceFsConfig juiceFsConfig; 
         private String lastModifiedTime; 
@@ -221,6 +245,8 @@ public class Session extends TeaModel {
             this.containerId = model.containerId;
             this.createdTime = model.createdTime;
             this.disableSessionIdReuse = model.disableSessionIdReuse;
+            this.enableAutoPause = model.enableAutoPause;
+            this.enableAutoResume = model.enableAutoResume;
             this.functionName = model.functionName;
             this.juiceFsConfig = model.juiceFsConfig;
             this.lastModifiedTime = model.lastModifiedTime;
@@ -256,6 +282,22 @@ public class Session extends TeaModel {
          */
         public Builder disableSessionIdReuse(Boolean disableSessionIdReuse) {
             this.disableSessionIdReuse = disableSessionIdReuse;
+            return this;
+        }
+
+        /**
+         * enableAutoPause.
+         */
+        public Builder enableAutoPause(Boolean enableAutoPause) {
+            this.enableAutoPause = enableAutoPause;
+            return this;
+        }
+
+        /**
+         * enableAutoResume.
+         */
+        public Builder enableAutoResume(Boolean enableAutoResume) {
+            this.enableAutoResume = enableAutoResume;
             return this;
         }
 

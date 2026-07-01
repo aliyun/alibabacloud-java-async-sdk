@@ -20,6 +20,12 @@ public class UpdateSessionInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("disableSessionIdReuse")
     private Boolean disableSessionIdReuse;
 
+    @com.aliyun.core.annotation.NameInMap("enableAutoPause")
+    private Boolean enableAutoPause;
+
+    @com.aliyun.core.annotation.NameInMap("enableAutoResume")
+    private Boolean enableAutoResume;
+
     @com.aliyun.core.annotation.NameInMap("juiceFsConfig")
     private JuiceFsConfig juiceFsConfig;
 
@@ -40,6 +46,8 @@ public class UpdateSessionInput extends TeaModel {
 
     private UpdateSessionInput(Builder builder) {
         this.disableSessionIdReuse = builder.disableSessionIdReuse;
+        this.enableAutoPause = builder.enableAutoPause;
+        this.enableAutoResume = builder.enableAutoResume;
         this.juiceFsConfig = builder.juiceFsConfig;
         this.nasConfig = builder.nasConfig;
         this.ossMountConfig = builder.ossMountConfig;
@@ -65,6 +73,20 @@ public class UpdateSessionInput extends TeaModel {
      */
     public Boolean getDisableSessionIdReuse() {
         return this.disableSessionIdReuse;
+    }
+
+    /**
+     * @return enableAutoPause
+     */
+    public Boolean getEnableAutoPause() {
+        return this.enableAutoPause;
+    }
+
+    /**
+     * @return enableAutoResume
+     */
+    public Boolean getEnableAutoResume() {
+        return this.enableAutoResume;
     }
 
     /**
@@ -111,6 +133,8 @@ public class UpdateSessionInput extends TeaModel {
 
     public static final class Builder {
         private Boolean disableSessionIdReuse; 
+        private Boolean enableAutoPause; 
+        private Boolean enableAutoResume; 
         private JuiceFsConfig juiceFsConfig; 
         private NASConfig nasConfig; 
         private OSSMountConfig ossMountConfig; 
@@ -123,6 +147,8 @@ public class UpdateSessionInput extends TeaModel {
 
         private Builder(UpdateSessionInput model) {
             this.disableSessionIdReuse = model.disableSessionIdReuse;
+            this.enableAutoPause = model.enableAutoPause;
+            this.enableAutoResume = model.enableAutoResume;
             this.juiceFsConfig = model.juiceFsConfig;
             this.nasConfig = model.nasConfig;
             this.ossMountConfig = model.ossMountConfig;
@@ -136,6 +162,22 @@ public class UpdateSessionInput extends TeaModel {
          */
         public Builder disableSessionIdReuse(Boolean disableSessionIdReuse) {
             this.disableSessionIdReuse = disableSessionIdReuse;
+            return this;
+        }
+
+        /**
+         * enableAutoPause.
+         */
+        public Builder enableAutoPause(Boolean enableAutoPause) {
+            this.enableAutoPause = enableAutoPause;
+            return this;
+        }
+
+        /**
+         * enableAutoResume.
+         */
+        public Builder enableAutoResume(Boolean enableAutoResume) {
+            this.enableAutoResume = enableAutoResume;
             return this;
         }
 
