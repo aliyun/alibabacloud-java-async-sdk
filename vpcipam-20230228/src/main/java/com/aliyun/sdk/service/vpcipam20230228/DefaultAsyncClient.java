@@ -29,8 +29,42 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "VpcIpam";
         this.version = "2023-02-28";
-        this.endpointRule = "";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("us-west-1", "vpcipam.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "vpcipam.us-east-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "vpcipam.me-east-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "vpcipam.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "vpcipam.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "vpcipam.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "vpcipam.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "vpcipam.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-wuhan-lr", "vpcipam.cn-wuhan-lr.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "vpcipam.cn-shenzhen-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "vpcipam.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "vpcipam.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "vpcipam.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "vpcipam.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-nanjing", "vpcipam.cn-nanjing.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "vpcipam.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "vpcipam.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "vpcipam.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "vpcipam.cn-hangzhou-finance.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "vpcipam.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "vpcipam.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-fuzhou", "vpcipam.cn-fuzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "vpcipam.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "vpcipam.cn-beijing-finance-1.aliyuncs.com"),
+            new TeaPair("cn-beijing", "vpcipam.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "vpcipam.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "vpcipam.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "vpcipam.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "vpcipam.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "vpcipam.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "vpcipam.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "vpcipam.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "vpcipam.ap-northeast-1.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 

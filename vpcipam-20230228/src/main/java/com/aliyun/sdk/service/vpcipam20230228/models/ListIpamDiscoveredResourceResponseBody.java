@@ -315,6 +315,9 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
+        private String resourceName;
+
         @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
         private Long resourceOwnerId;
 
@@ -338,6 +341,7 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
             this.ipUsage = builder.ipUsage;
             this.ipamResourceDiscoveryId = builder.ipamResourceDiscoveryId;
             this.resourceId = builder.resourceId;
+            this.resourceName = builder.resourceName;
             this.resourceOwnerId = builder.resourceOwnerId;
             this.resourceRegionId = builder.resourceRegionId;
             this.resourceType = builder.resourceType;
@@ -403,6 +407,13 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceName
+         */
+        public String getResourceName() {
+            return this.resourceName;
+        }
+
+        /**
          * @return resourceOwnerId
          */
         public Long getResourceOwnerId() {
@@ -445,6 +456,7 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
             private String ipUsage; 
             private String ipamResourceDiscoveryId; 
             private String resourceId; 
+            private String resourceName; 
             private Long resourceOwnerId; 
             private String resourceRegionId; 
             private String resourceType; 
@@ -462,6 +474,7 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
                 this.ipUsage = model.ipUsage;
                 this.ipamResourceDiscoveryId = model.ipamResourceDiscoveryId;
                 this.resourceId = model.resourceId;
+                this.resourceName = model.resourceName;
                 this.resourceOwnerId = model.resourceOwnerId;
                 this.resourceRegionId = model.resourceRegionId;
                 this.resourceType = model.resourceType;
@@ -543,6 +556,14 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
+                return this;
+            }
+
+            /**
+             * ResourceName.
+             */
+            public Builder resourceName(String resourceName) {
+                this.resourceName = resourceName;
                 return this;
             }
 
