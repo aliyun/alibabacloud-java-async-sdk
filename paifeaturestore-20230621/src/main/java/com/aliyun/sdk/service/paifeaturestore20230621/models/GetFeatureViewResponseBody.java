@@ -773,6 +773,9 @@ public class GetFeatureViewResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attributes")
         private java.util.List<String> attributes;
 
+        @com.aliyun.core.annotation.NameInMap("Dimension")
+        private Integer dimension;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
@@ -784,6 +787,7 @@ public class GetFeatureViewResponseBody extends TeaModel {
 
         private Fields(Builder builder) {
             this.attributes = builder.attributes;
+            this.dimension = builder.dimension;
             this.name = builder.name;
             this.transform = builder.transform;
             this.type = builder.type;
@@ -802,6 +806,13 @@ public class GetFeatureViewResponseBody extends TeaModel {
          */
         public java.util.List<String> getAttributes() {
             return this.attributes;
+        }
+
+        /**
+         * @return dimension
+         */
+        public Integer getDimension() {
+            return this.dimension;
         }
 
         /**
@@ -827,6 +838,7 @@ public class GetFeatureViewResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> attributes; 
+            private Integer dimension; 
             private String name; 
             private java.util.List<Transform> transform; 
             private String type; 
@@ -836,6 +848,7 @@ public class GetFeatureViewResponseBody extends TeaModel {
 
             private Builder(Fields model) {
                 this.attributes = model.attributes;
+                this.dimension = model.dimension;
                 this.name = model.name;
                 this.transform = model.transform;
                 this.type = model.type;
@@ -846,6 +859,14 @@ public class GetFeatureViewResponseBody extends TeaModel {
              */
             public Builder attributes(java.util.List<String> attributes) {
                 this.attributes = attributes;
+                return this;
+            }
+
+            /**
+             * Dimension.
+             */
+            public Builder dimension(Integer dimension) {
+                this.dimension = dimension;
                 return this;
             }
 
