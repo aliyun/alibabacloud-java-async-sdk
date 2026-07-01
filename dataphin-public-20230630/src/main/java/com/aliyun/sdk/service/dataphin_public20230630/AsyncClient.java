@@ -182,6 +182,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDataSourceResponse> createDataSource(CreateDataSourceRequest request);
 
     /**
+     * @param request the request parameters of CreateDataset  CreateDatasetRequest
+     * @return CreateDatasetResponse
+     */
+    CompletableFuture<CreateDatasetResponse> createDataset(CreateDatasetRequest request);
+
+    /**
      * @param request the request parameters of CreateDirectory  CreateDirectoryRequest
      * @return CreateDirectoryResponse
      */
@@ -366,6 +372,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDataSourceResponse
      */
     CompletableFuture<DeleteDataSourceResponse> deleteDataSource(DeleteDataSourceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDataset  DeleteDatasetRequest
+     * @return DeleteDatasetResponse
+     */
+    CompletableFuture<DeleteDatasetResponse> deleteDataset(DeleteDatasetRequest request);
 
     /**
      * @param request the request parameters of DeleteDirectory  DeleteDirectoryRequest
@@ -578,6 +590,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetBatchTaskVersionsResponse> getBatchTaskVersions(GetBatchTaskVersionsRequest request);
 
     /**
+     * @param request the request parameters of GetBatchTemplateVersions  GetBatchTemplateVersionsRequest
+     * @return GetBatchTemplateVersionsResponse
+     */
+    CompletableFuture<GetBatchTemplateVersionsResponse> getBatchTemplateVersions(GetBatchTemplateVersionsRequest request);
+
+    /**
      * @param request the request parameters of GetBelongAssetMapping  GetBelongAssetMappingRequest
      * @return GetBelongAssetMappingResponse
      */
@@ -728,6 +746,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDataSourceDependenciesResponse> getDataSourceDependencies(GetDataSourceDependenciesRequest request);
 
     /**
+     * @param request the request parameters of GetDataset  GetDatasetRequest
+     * @return GetDatasetResponse
+     */
+    CompletableFuture<GetDatasetResponse> getDataset(GetDatasetRequest request);
+
+    /**
      * @param request the request parameters of GetDevObjectDependency  GetDevObjectDependencyRequest
      * @return GetDevObjectDependencyResponse
      */
@@ -780,6 +804,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetNodeUpDownStreamResponse
      */
     CompletableFuture<GetNodeUpDownStreamResponse> getNodeUpDownStream(GetNodeUpDownStreamRequest request);
+
+    /**
+     * @param request the request parameters of GetOperationRecordById  GetOperationRecordByIdRequest
+     * @return GetOperationRecordByIdResponse
+     */
+    CompletableFuture<GetOperationRecordByIdResponse> getOperationRecordById(GetOperationRecordByIdRequest request);
+
+    /**
+     * @param request the request parameters of GetOperationRecordDetail  GetOperationRecordDetailRequest
+     * @return GetOperationRecordDetailResponse
+     */
+    CompletableFuture<GetOperationRecordDetailResponse> getOperationRecordDetail(GetOperationRecordDetailRequest request);
+
+    /**
+     * @param request the request parameters of GetOperationRecordRunCode  GetOperationRecordRunCodeRequest
+     * @return GetOperationRecordRunCodeResponse
+     */
+    CompletableFuture<GetOperationRecordRunCodeResponse> getOperationRecordRunCode(GetOperationRecordRunCodeRequest request);
 
     /**
      * @param request the request parameters of GetOperationSubmitStatus  GetOperationSubmitStatusRequest
@@ -1148,6 +1190,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAuthorizedDataServiceApiDetailsResponse> listAuthorizedDataServiceApiDetails(ListAuthorizedDataServiceApiDetailsRequest request);
 
     /**
+     * @param request the request parameters of ListBatchTemplates  ListBatchTemplatesRequest
+     * @return ListBatchTemplatesResponse
+     */
+    CompletableFuture<ListBatchTemplatesResponse> listBatchTemplates(ListBatchTemplatesRequest request);
+
+    /**
      * @param request the request parameters of ListBizEntities  ListBizEntitiesRequest
      * @return ListBizEntitiesResponse
      */
@@ -1232,6 +1280,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDataSourceWithConfigResponse> listDataSourceWithConfig(ListDataSourceWithConfigRequest request);
 
     /**
+     * @param request the request parameters of ListDatasets  ListDatasetsRequest
+     * @return ListDatasetsResponse
+     */
+    CompletableFuture<ListDatasetsResponse> listDatasets(ListDatasetsRequest request);
+
+    /**
      * @param request the request parameters of ListFiles  ListFilesRequest
      * @return ListFilesResponse
      */
@@ -1254,6 +1308,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListNodesResponse
      */
     CompletableFuture<ListNodesResponse> listNodes(ListNodesRequest request);
+
+    /**
+     * @param request the request parameters of ListOperationRecord  ListOperationRecordRequest
+     * @return ListOperationRecordResponse
+     */
+    CompletableFuture<ListOperationRecordResponse> listOperationRecord(ListOperationRecordRequest request);
 
     /**
      * @param request the request parameters of ListProjectMembers  ListProjectMembersRequest
@@ -1632,6 +1692,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateDataSourceConfigResponse
      */
     CompletableFuture<UpdateDataSourceConfigResponse> updateDataSourceConfig(UpdateDataSourceConfigRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDataset  UpdateDatasetRequest
+     * @return UpdateDatasetResponse
+     */
+    CompletableFuture<UpdateDatasetResponse> updateDataset(UpdateDatasetRequest request);
 
     /**
      * @param request the request parameters of UpdateFileDirectory  UpdateFileDirectoryRequest
