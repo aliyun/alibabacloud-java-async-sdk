@@ -38,9 +38,17 @@ public class CreateSmsAppIcpRecordRequest extends Request {
     private String appPrincipalUnitName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppRuntimePic")
+    private String appRuntimePic;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AppServiceName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String appServiceName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppStoreDownloadPic")
+    private String appStoreDownloadPic;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Domain")
@@ -65,7 +73,9 @@ public class CreateSmsAppIcpRecordRequest extends Request {
         this.appIcpLicenseNumber = builder.appIcpLicenseNumber;
         this.appIcpRecordPic = builder.appIcpRecordPic;
         this.appPrincipalUnitName = builder.appPrincipalUnitName;
+        this.appRuntimePic = builder.appRuntimePic;
         this.appServiceName = builder.appServiceName;
+        this.appStoreDownloadPic = builder.appStoreDownloadPic;
         this.domain = builder.domain;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -114,10 +124,24 @@ public class CreateSmsAppIcpRecordRequest extends Request {
     }
 
     /**
+     * @return appRuntimePic
+     */
+    public String getAppRuntimePic() {
+        return this.appRuntimePic;
+    }
+
+    /**
      * @return appServiceName
      */
     public String getAppServiceName() {
         return this.appServiceName;
+    }
+
+    /**
+     * @return appStoreDownloadPic
+     */
+    public String getAppStoreDownloadPic() {
+        return this.appStoreDownloadPic;
     }
 
     /**
@@ -153,7 +177,9 @@ public class CreateSmsAppIcpRecordRequest extends Request {
         private String appIcpLicenseNumber; 
         private String appIcpRecordPic; 
         private String appPrincipalUnitName; 
+        private String appRuntimePic; 
         private String appServiceName; 
+        private String appStoreDownloadPic; 
         private String domain; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -169,7 +195,9 @@ public class CreateSmsAppIcpRecordRequest extends Request {
             this.appIcpLicenseNumber = request.appIcpLicenseNumber;
             this.appIcpRecordPic = request.appIcpRecordPic;
             this.appPrincipalUnitName = request.appPrincipalUnitName;
+            this.appRuntimePic = request.appRuntimePic;
             this.appServiceName = request.appServiceName;
+            this.appStoreDownloadPic = request.appStoreDownloadPic;
             this.domain = request.domain;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -229,6 +257,18 @@ public class CreateSmsAppIcpRecordRequest extends Request {
         }
 
         /**
+         * <p>APP实际运行截图osskey</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
+         */
+        public Builder appRuntimePic(String appRuntimePic) {
+            this.putQueryParameter("AppRuntimePic", appRuntimePic);
+            this.appRuntimePic = appRuntimePic;
+            return this;
+        }
+
+        /**
          * <p>app服务名称</p>
          * <p>This parameter is required.</p>
          * 
@@ -238,6 +278,18 @@ public class CreateSmsAppIcpRecordRequest extends Request {
         public Builder appServiceName(String appServiceName) {
             this.putQueryParameter("AppServiceName", appServiceName);
             this.appServiceName = appServiceName;
+            return this;
+        }
+
+        /**
+         * <p>APP应用商店下载截图osskey</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
+         */
+        public Builder appStoreDownloadPic(String appStoreDownloadPic) {
+            this.putQueryParameter("AppStoreDownloadPic", appStoreDownloadPic);
+            this.appStoreDownloadPic = appStoreDownloadPic;
             return this;
         }
 

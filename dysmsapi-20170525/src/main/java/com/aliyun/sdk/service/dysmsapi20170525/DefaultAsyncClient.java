@@ -36,7 +36,18 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-beijing", "dysmsapi-proxy.cn-beijing.aliyuncs.com"),
             new TeaPair("cn-hongkong", "dysmsapi-xman.cn-hongkong.aliyuncs.com"),
             new TeaPair("eu-central-1", "dysmsapi.eu-central-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "dysmsapi.us-east-1.aliyuncs.com")
+            new TeaPair("us-east-1", "dysmsapi.us-east-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "dysmsapi.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "dysmsapi.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "dysmsapi.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "dysmsapi.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "dysmsapi.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "dysmsapi.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "dysmsapi.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "dysmsapi.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "dysmsapi.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "dysmsapi.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "dysmsapi.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -59,6 +70,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<AddExtCodeSignResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of AddRcsSignMenu  AddRcsSignMenuRequest
+     * @return AddRcsSignMenuResponse
+     */
+    @Override
+    public CompletableFuture<AddRcsSignMenuResponse> addRcsSignMenu(AddRcsSignMenuRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddRcsSignMenu").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddRcsSignMenuResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddRcsSignMenuResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -268,6 +297,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateDigitalSmsTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateRCSMobileCapableTask  CreateRCSMobileCapableTaskRequest
+     * @return CreateRCSMobileCapableTaskResponse
+     */
+    @Override
+    public CompletableFuture<CreateRCSMobileCapableTaskResponse> createRCSMobileCapableTask(CreateRCSMobileCapableTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateRCSMobileCapableTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateRCSMobileCapableTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateRCSMobileCapableTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateRCSTemplate  CreateRCSTemplateRequest
+     * @return CreateRCSTemplateResponse
+     */
+    @Override
+    public CompletableFuture<CreateRCSTemplateResponse> createRCSTemplate(CreateRCSTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateRCSTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateRCSTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateRCSTemplateResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -638,6 +703,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetRCSSignature  GetRCSSignatureRequest
+     * @return GetRCSSignatureResponse
+     */
+    @Override
+    public CompletableFuture<GetRCSSignatureResponse> getRCSSignature(GetRCSSignatureRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetRCSSignature").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetRCSSignatureResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetRCSSignatureResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetSmsOcrOssInfo  GetSmsOcrOssInfoRequest
      * @return GetSmsOcrOssInfoResponse
      */
@@ -913,6 +996,78 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<QueryPageSmartShortUrlLogResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryRCSMobileCapable  QueryRCSMobileCapableRequest
+     * @return QueryRCSMobileCapableResponse
+     */
+    @Override
+    public CompletableFuture<QueryRCSMobileCapableResponse> queryRCSMobileCapable(QueryRCSMobileCapableRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryRCSMobileCapable").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryRCSMobileCapableResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryRCSMobileCapableResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryRCSMobileCapableTaskResult  QueryRCSMobileCapableTaskResultRequest
+     * @return QueryRCSMobileCapableTaskResultResponse
+     */
+    @Override
+    public CompletableFuture<QueryRCSMobileCapableTaskResultResponse> queryRCSMobileCapableTaskResult(QueryRCSMobileCapableTaskResultRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryRCSMobileCapableTaskResult").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryRCSMobileCapableTaskResultResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryRCSMobileCapableTaskResultResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryRCSTemplate  QueryRCSTemplateRequest
+     * @return QueryRCSTemplateResponse
+     */
+    @Override
+    public CompletableFuture<QueryRCSTemplateResponse> queryRCSTemplate(QueryRCSTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryRCSTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryRCSTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryRCSTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryRcsSignMenuByVersion  QueryRcsSignMenuByVersionRequest
+     * @return QueryRcsSignMenuByVersionResponse
+     */
+    @Override
+    public CompletableFuture<QueryRcsSignMenuByVersionResponse> queryRcsSignMenuByVersion(QueryRcsSignMenuByVersionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryRcsSignMenuByVersion").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryRcsSignMenuByVersionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryRcsSignMenuByVersionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1270,6 +1425,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of SendRCS  SendRCSRequest
+     * @return SendRCSResponse
+     */
+    @Override
+    public CompletableFuture<SendRCSResponse> sendRCS(SendRCSRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SendRCS").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SendRCSResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SendRCSResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SendRCSReply  SendRCSReplyRequest
+     * @return SendRCSReplyResponse
+     */
+    @Override
+    public CompletableFuture<SendRCSReplyResponse> sendRCSReply(SendRCSReplyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SendRCSReply").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SendRCSReplyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SendRCSReplyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>  This operation is mainly used to send a single message. In special scenarios, you can send multiple messages with the same content to a maximum of 1,000 mobile numbers. Note that group sending may be delayed.</p>
      * <ul>
@@ -1405,6 +1596,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateRCSSignature  UpdateRCSSignatureRequest
+     * @return UpdateRCSSignatureResponse
+     */
+    @Override
+    public CompletableFuture<UpdateRCSSignatureResponse> updateRCSSignature(UpdateRCSSignatureRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateRCSSignature").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateRCSSignatureResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateRCSSignatureResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateSmsQualification  UpdateSmsQualificationRequest
      * @return UpdateSmsQualificationResponse
      */
@@ -1469,6 +1678,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateSmsTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpgradeToRCSSignature  UpgradeToRCSSignatureRequest
+     * @return UpgradeToRCSSignatureResponse
+     */
+    @Override
+    public CompletableFuture<UpgradeToRCSSignatureResponse> upgradeToRCSSignature(UpgradeToRCSSignatureRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpgradeToRCSSignature").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpgradeToRCSSignatureResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpgradeToRCSSignatureResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddExtCodeSignResponse> addExtCodeSign(AddExtCodeSignRequest request);
 
     /**
+     * @param request the request parameters of AddRcsSignMenu  AddRcsSignMenuRequest
+     * @return AddRcsSignMenuResponse
+     */
+    CompletableFuture<AddRcsSignMenuResponse> addRcsSignMenu(AddRcsSignMenuRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  Before you call this operation, you must register the primary domain name of the source URL in the Short Message Service (SMS) console. After the domain name is registered, you can call this operation to create a short URL. For more information, see <a href="https://help.aliyun.com/document_detail/302325.html#title-mau-zdh-hd0">Domain name registration</a>.</p>
      * <ul>
@@ -125,6 +131,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateDigitalSmsTemplateResponse
      */
     CompletableFuture<CreateDigitalSmsTemplateResponse> createDigitalSmsTemplate(CreateDigitalSmsTemplateRequest request);
+
+    /**
+     * @param request the request parameters of CreateRCSMobileCapableTask  CreateRCSMobileCapableTaskRequest
+     * @return CreateRCSMobileCapableTaskResponse
+     */
+    CompletableFuture<CreateRCSMobileCapableTaskResponse> createRCSMobileCapableTask(CreateRCSMobileCapableTaskRequest request);
+
+    /**
+     * @param request the request parameters of CreateRCSTemplate  CreateRCSTemplateRequest
+     * @return CreateRCSTemplateResponse
+     */
+    CompletableFuture<CreateRCSTemplateResponse> createRCSTemplate(CreateRCSTemplateRequest request);
 
     /**
      * @param request the request parameters of CreateSmartShortUrl  CreateSmartShortUrlRequest
@@ -287,6 +305,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetQualificationOssInfoResponse> getQualificationOssInfo(GetQualificationOssInfoRequest request);
 
     /**
+     * @param request the request parameters of GetRCSSignature  GetRCSSignatureRequest
+     * @return GetRCSSignatureResponse
+     */
+    CompletableFuture<GetRCSSignatureResponse> getRCSSignature(GetRCSSignatureRequest request);
+
+    /**
      * @param request the request parameters of GetSmsOcrOssInfo  GetSmsOcrOssInfoRequest
      * @return GetSmsOcrOssInfoResponse
      */
@@ -410,6 +434,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryPageSmartShortUrlLogResponse
      */
     CompletableFuture<QueryPageSmartShortUrlLogResponse> queryPageSmartShortUrlLog(QueryPageSmartShortUrlLogRequest request);
+
+    /**
+     * @param request the request parameters of QueryRCSMobileCapable  QueryRCSMobileCapableRequest
+     * @return QueryRCSMobileCapableResponse
+     */
+    CompletableFuture<QueryRCSMobileCapableResponse> queryRCSMobileCapable(QueryRCSMobileCapableRequest request);
+
+    /**
+     * @param request the request parameters of QueryRCSMobileCapableTaskResult  QueryRCSMobileCapableTaskResultRequest
+     * @return QueryRCSMobileCapableTaskResultResponse
+     */
+    CompletableFuture<QueryRCSMobileCapableTaskResultResponse> queryRCSMobileCapableTaskResult(QueryRCSMobileCapableTaskResultRequest request);
+
+    /**
+     * @param request the request parameters of QueryRCSTemplate  QueryRCSTemplateRequest
+     * @return QueryRCSTemplateResponse
+     */
+    CompletableFuture<QueryRCSTemplateResponse> queryRCSTemplate(QueryRCSTemplateRequest request);
+
+    /**
+     * @param request the request parameters of QueryRcsSignMenuByVersion  QueryRcsSignMenuByVersionRequest
+     * @return QueryRcsSignMenuByVersionResponse
+     */
+    CompletableFuture<QueryRcsSignMenuByVersionResponse> queryRcsSignMenuByVersion(QueryRcsSignMenuByVersionRequest request);
 
     /**
      * @param request the request parameters of QuerySendDetails  QuerySendDetailsRequest
@@ -559,6 +607,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SendLogisticsSmsResponse> sendLogisticsSms(SendLogisticsSmsRequest request);
 
     /**
+     * @param request the request parameters of SendRCS  SendRCSRequest
+     * @return SendRCSResponse
+     */
+    CompletableFuture<SendRCSResponse> sendRCS(SendRCSRequest request);
+
+    /**
+     * @param request the request parameters of SendRCSReply  SendRCSReplyRequest
+     * @return SendRCSReplyResponse
+     */
+    CompletableFuture<SendRCSReplyResponse> sendRCSReply(SendRCSReplyRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  This operation is mainly used to send a single message. In special scenarios, you can send multiple messages with the same content to a maximum of 1,000 mobile numbers. Note that group sending may be delayed.</p>
      * <ul>
@@ -622,6 +682,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateExtCodeSignResponse> updateExtCodeSign(UpdateExtCodeSignRequest request);
 
     /**
+     * @param request the request parameters of UpdateRCSSignature  UpdateRCSSignatureRequest
+     * @return UpdateRCSSignatureResponse
+     */
+    CompletableFuture<UpdateRCSSignatureResponse> updateRCSSignature(UpdateRCSSignatureRequest request);
+
+    /**
      * @param request the request parameters of UpdateSmsQualification  UpdateSmsQualificationRequest
      * @return UpdateSmsQualificationResponse
      */
@@ -654,6 +720,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateSmsTemplateResponse
      */
     CompletableFuture<UpdateSmsTemplateResponse> updateSmsTemplate(UpdateSmsTemplateRequest request);
+
+    /**
+     * @param request the request parameters of UpgradeToRCSSignature  UpgradeToRCSSignatureRequest
+     * @return UpgradeToRCSSignatureResponse
+     */
+    CompletableFuture<UpgradeToRCSSignatureResponse> upgradeToRCSSignature(UpgradeToRCSSignatureRequest request);
 
     /**
      * @param request the request parameters of ValidPhoneCode  ValidPhoneCodeRequest

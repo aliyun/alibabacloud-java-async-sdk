@@ -197,8 +197,20 @@ public class QuerySmsAppIcpRecordResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppPrincipalUnitName")
         private String appPrincipalUnitName;
 
+        @com.aliyun.core.annotation.NameInMap("AppRuntimePic")
+        private String appRuntimePic;
+
+        @com.aliyun.core.annotation.NameInMap("AppRuntimePicUrl")
+        private String appRuntimePicUrl;
+
         @com.aliyun.core.annotation.NameInMap("AppServiceName")
         private String appServiceName;
+
+        @com.aliyun.core.annotation.NameInMap("AppStoreDownloadPic")
+        private String appStoreDownloadPic;
+
+        @com.aliyun.core.annotation.NameInMap("AppStoreDownloadPicUrl")
+        private String appStoreDownloadPicUrl;
 
         @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
@@ -210,7 +222,11 @@ public class QuerySmsAppIcpRecordResponseBody extends TeaModel {
             this.appIcpRecordPic = builder.appIcpRecordPic;
             this.appIcpRecordPicUrl = builder.appIcpRecordPicUrl;
             this.appPrincipalUnitName = builder.appPrincipalUnitName;
+            this.appRuntimePic = builder.appRuntimePic;
+            this.appRuntimePicUrl = builder.appRuntimePicUrl;
             this.appServiceName = builder.appServiceName;
+            this.appStoreDownloadPic = builder.appStoreDownloadPic;
+            this.appStoreDownloadPicUrl = builder.appStoreDownloadPicUrl;
             this.domain = builder.domain;
         }
 
@@ -265,10 +281,38 @@ public class QuerySmsAppIcpRecordResponseBody extends TeaModel {
         }
 
         /**
+         * @return appRuntimePic
+         */
+        public String getAppRuntimePic() {
+            return this.appRuntimePic;
+        }
+
+        /**
+         * @return appRuntimePicUrl
+         */
+        public String getAppRuntimePicUrl() {
+            return this.appRuntimePicUrl;
+        }
+
+        /**
          * @return appServiceName
          */
         public String getAppServiceName() {
             return this.appServiceName;
+        }
+
+        /**
+         * @return appStoreDownloadPic
+         */
+        public String getAppStoreDownloadPic() {
+            return this.appStoreDownloadPic;
+        }
+
+        /**
+         * @return appStoreDownloadPicUrl
+         */
+        public String getAppStoreDownloadPicUrl() {
+            return this.appStoreDownloadPicUrl;
         }
 
         /**
@@ -285,7 +329,11 @@ public class QuerySmsAppIcpRecordResponseBody extends TeaModel {
             private String appIcpRecordPic; 
             private String appIcpRecordPicUrl; 
             private String appPrincipalUnitName; 
+            private String appRuntimePic; 
+            private String appRuntimePicUrl; 
             private String appServiceName; 
+            private String appStoreDownloadPic; 
+            private String appStoreDownloadPicUrl; 
             private String domain; 
 
             private Builder() {
@@ -298,7 +346,11 @@ public class QuerySmsAppIcpRecordResponseBody extends TeaModel {
                 this.appIcpRecordPic = model.appIcpRecordPic;
                 this.appIcpRecordPicUrl = model.appIcpRecordPicUrl;
                 this.appPrincipalUnitName = model.appPrincipalUnitName;
+                this.appRuntimePic = model.appRuntimePic;
+                this.appRuntimePicUrl = model.appRuntimePicUrl;
                 this.appServiceName = model.appServiceName;
+                this.appStoreDownloadPic = model.appStoreDownloadPic;
+                this.appStoreDownloadPicUrl = model.appStoreDownloadPicUrl;
                 this.domain = model.domain;
             } 
 
@@ -369,6 +421,28 @@ public class QuerySmsAppIcpRecordResponseBody extends TeaModel {
             }
 
             /**
+             * <p>APP实际运行截图Osskey</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值</p>
+             */
+            public Builder appRuntimePic(String appRuntimePic) {
+                this.appRuntimePic = appRuntimePic;
+                return this;
+            }
+
+            /**
+             * <p>APP实际运行截图url地址</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值示例值</p>
+             */
+            public Builder appRuntimePicUrl(String appRuntimePicUrl) {
+                this.appRuntimePicUrl = appRuntimePicUrl;
+                return this;
+            }
+
+            /**
              * <p>app服务名称</p>
              * 
              * <strong>example:</strong>
@@ -376,6 +450,28 @@ public class QuerySmsAppIcpRecordResponseBody extends TeaModel {
              */
             public Builder appServiceName(String appServiceName) {
                 this.appServiceName = appServiceName;
+                return this;
+            }
+
+            /**
+             * <p>APP应用商店下载截图Osskey</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值</p>
+             */
+            public Builder appStoreDownloadPic(String appStoreDownloadPic) {
+                this.appStoreDownloadPic = appStoreDownloadPic;
+                return this;
+            }
+
+            /**
+             * <p>APP应用商店下载截图url地址</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值示例值</p>
+             */
+            public Builder appStoreDownloadPicUrl(String appStoreDownloadPicUrl) {
+                this.appStoreDownloadPicUrl = appStoreDownloadPicUrl;
                 return this;
             }
 
