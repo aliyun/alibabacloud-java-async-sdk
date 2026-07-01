@@ -97,15 +97,98 @@ public class GetProjectExportJobResponseBody extends TeaModel {
      *
      * <p>GetProjectExportJobResponseBody</p>
      */
+    public static class SrtList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SrtUrl")
+        private String srtUrl;
+
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private String tag;
+
+        private SrtList(Builder builder) {
+            this.srtUrl = builder.srtUrl;
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SrtList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return srtUrl
+         */
+        public String getSrtUrl() {
+            return this.srtUrl;
+        }
+
+        /**
+         * @return tag
+         */
+        public String getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private String srtUrl; 
+            private String tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(SrtList model) {
+                this.srtUrl = model.srtUrl;
+                this.tag = model.tag;
+            } 
+
+            /**
+             * SrtUrl.
+             */
+            public Builder srtUrl(String srtUrl) {
+                this.srtUrl = srtUrl;
+                return this;
+            }
+
+            /**
+             * Tag.
+             */
+            public Builder tag(String tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public SrtList build() {
+                return new SrtList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetProjectExportJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetProjectExportJobResponseBody</p>
+     */
     public static class ExportResult extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AudioUrl")
+        private String audioUrl;
+
         @com.aliyun.core.annotation.NameInMap("ProjectUrl")
         private String projectUrl;
+
+        @com.aliyun.core.annotation.NameInMap("SrtList")
+        private java.util.List<SrtList> srtList;
 
         @com.aliyun.core.annotation.NameInMap("Timeline")
         private String timeline;
 
         private ExportResult(Builder builder) {
+            this.audioUrl = builder.audioUrl;
             this.projectUrl = builder.projectUrl;
+            this.srtList = builder.srtList;
             this.timeline = builder.timeline;
         }
 
@@ -118,10 +201,24 @@ public class GetProjectExportJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return audioUrl
+         */
+        public String getAudioUrl() {
+            return this.audioUrl;
+        }
+
+        /**
          * @return projectUrl
          */
         public String getProjectUrl() {
             return this.projectUrl;
+        }
+
+        /**
+         * @return srtList
+         */
+        public java.util.List<SrtList> getSrtList() {
+            return this.srtList;
         }
 
         /**
@@ -132,16 +229,28 @@ public class GetProjectExportJobResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String audioUrl; 
             private String projectUrl; 
+            private java.util.List<SrtList> srtList; 
             private String timeline; 
 
             private Builder() {
             } 
 
             private Builder(ExportResult model) {
+                this.audioUrl = model.audioUrl;
                 this.projectUrl = model.projectUrl;
+                this.srtList = model.srtList;
                 this.timeline = model.timeline;
             } 
+
+            /**
+             * AudioUrl.
+             */
+            public Builder audioUrl(String audioUrl) {
+                this.audioUrl = audioUrl;
+                return this;
+            }
 
             /**
              * <p>The URL of the exported project, which is typically a signed OSS URL. This field is returned when ExportType is AdobePremierePro.</p>
@@ -151,6 +260,14 @@ public class GetProjectExportJobResponseBody extends TeaModel {
              */
             public Builder projectUrl(String projectUrl) {
                 this.projectUrl = projectUrl;
+                return this;
+            }
+
+            /**
+             * SrtList.
+             */
+            public Builder srtList(java.util.List<SrtList> srtList) {
+                this.srtList = srtList;
                 return this;
             }
 
