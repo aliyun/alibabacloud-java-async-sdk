@@ -23,6 +23,9 @@ public class JobDiagnosis extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("diagnoseTime")
     private Long diagnoseTime;
 
+    @com.aliyun.core.annotation.NameInMap("healthScore")
+    private Integer healthScore;
+
     @com.aliyun.core.annotation.NameInMap("namespace")
     private String namespace;
 
@@ -38,6 +41,7 @@ public class JobDiagnosis extends TeaModel {
     private JobDiagnosis(Builder builder) {
         this.diagnoseId = builder.diagnoseId;
         this.diagnoseTime = builder.diagnoseTime;
+        this.healthScore = builder.healthScore;
         this.namespace = builder.namespace;
         this.riskLevel = builder.riskLevel;
         this.symptoms = builder.symptoms;
@@ -71,6 +75,13 @@ public class JobDiagnosis extends TeaModel {
     }
 
     /**
+     * @return healthScore
+     */
+    public Integer getHealthScore() {
+        return this.healthScore;
+    }
+
+    /**
      * @return namespace
      */
     public String getNamespace() {
@@ -101,6 +112,7 @@ public class JobDiagnosis extends TeaModel {
     public static final class Builder {
         private String diagnoseId; 
         private Long diagnoseTime; 
+        private Integer healthScore; 
         private String namespace; 
         private String riskLevel; 
         private JobDiagnosisSymptoms symptoms; 
@@ -112,6 +124,7 @@ public class JobDiagnosis extends TeaModel {
         private Builder(JobDiagnosis model) {
             this.diagnoseId = model.diagnoseId;
             this.diagnoseTime = model.diagnoseTime;
+            this.healthScore = model.healthScore;
             this.namespace = model.namespace;
             this.riskLevel = model.riskLevel;
             this.symptoms = model.symptoms;
@@ -131,6 +144,14 @@ public class JobDiagnosis extends TeaModel {
          */
         public Builder diagnoseTime(Long diagnoseTime) {
             this.diagnoseTime = diagnoseTime;
+            return this;
+        }
+
+        /**
+         * healthScore.
+         */
+        public Builder healthScore(Integer healthScore) {
+            this.healthScore = healthScore;
             return this;
         }
 

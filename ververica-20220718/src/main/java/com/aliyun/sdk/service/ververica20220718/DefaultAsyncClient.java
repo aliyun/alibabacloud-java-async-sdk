@@ -30,7 +30,26 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "ververica";
         this.version = "2022-07-18";
         this.endpointRule = "regional";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("us-west-1", "ververica.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "ververica.us-east-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "ververica.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "ververica.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "ververica.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "ververica.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "ververica.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "ververica.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "ververica.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "ververica.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "ververica.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "ververica.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "ververica.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "ververica.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "ververica.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "ververica.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "ververica.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "ververica.ap-northeast-1.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
