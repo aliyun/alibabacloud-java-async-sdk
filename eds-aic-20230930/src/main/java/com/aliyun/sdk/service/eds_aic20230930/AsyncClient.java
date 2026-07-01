@@ -299,6 +299,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeCloudPhoneNodesResponse> describeCloudPhoneNodes(DescribeCloudPhoneNodesRequest request);
 
     /**
+     * @param request the request parameters of DescribeCreditDetail  DescribeCreditDetailRequest
+     * @return DescribeCreditDetailResponse
+     */
+    CompletableFuture<DescribeCreditDetailResponse> describeCreditDetail(DescribeCreditDetailRequest request);
+
+    /**
      * @param request the request parameters of DescribeCreditPackage  DescribeCreditPackageRequest
      * @return DescribeCreditPackageResponse
      */
