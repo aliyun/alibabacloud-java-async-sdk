@@ -3914,6 +3914,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyStorageSetAttributeResponse> modifyStorageSetAttribute(ModifyStorageSetAttributeRequest request);
 
     /**
+     * @param request the request parameters of ModifySystemEventAttribute  ModifySystemEventAttributeRequest
+     * @return ModifySystemEventAttributeResponse
+     */
+    CompletableFuture<ModifySystemEventAttributeResponse> modifySystemEventAttribute(ModifySystemEventAttributeRequest request);
+
+    /**
      * @deprecated OpenAPI ModifyUserBusinessBehavior is deprecated  * @param request  the request parameters of ModifyUserBusinessBehavior  ModifyUserBusinessBehaviorRequest
      * @return ModifyUserBusinessBehaviorResponse
      */
