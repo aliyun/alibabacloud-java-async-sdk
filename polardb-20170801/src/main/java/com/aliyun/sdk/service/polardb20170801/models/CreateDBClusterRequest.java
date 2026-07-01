@@ -18,6 +18,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateDBClusterRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgenticDbClusterDescription")
+    private String agenticDbClusterDescription;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgenticDbClusterId")
+    private String agenticDbClusterId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgenticDbType")
+    private String agenticDbType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AllowShutDown")
     private String allowShutDown;
 
@@ -277,6 +289,9 @@ public class CreateDBClusterRequest extends Request {
 
     private CreateDBClusterRequest(Builder builder) {
         super(builder);
+        this.agenticDbClusterDescription = builder.agenticDbClusterDescription;
+        this.agenticDbClusterId = builder.agenticDbClusterId;
+        this.agenticDbType = builder.agenticDbType;
         this.allowShutDown = builder.allowShutDown;
         this.architecture = builder.architecture;
         this.autoRenew = builder.autoRenew;
@@ -353,6 +368,27 @@ public class CreateDBClusterRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agenticDbClusterDescription
+     */
+    public String getAgenticDbClusterDescription() {
+        return this.agenticDbClusterDescription;
+    }
+
+    /**
+     * @return agenticDbClusterId
+     */
+    public String getAgenticDbClusterId() {
+        return this.agenticDbClusterId;
+    }
+
+    /**
+     * @return agenticDbType
+     */
+    public String getAgenticDbType() {
+        return this.agenticDbType;
     }
 
     /**
@@ -797,6 +833,9 @@ public class CreateDBClusterRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDBClusterRequest, Builder> {
+        private String agenticDbClusterDescription; 
+        private String agenticDbClusterId; 
+        private String agenticDbType; 
         private String allowShutDown; 
         private String architecture; 
         private Boolean autoRenew; 
@@ -867,6 +906,9 @@ public class CreateDBClusterRequest extends Request {
 
         private Builder(CreateDBClusterRequest request) {
             super(request);
+            this.agenticDbClusterDescription = request.agenticDbClusterDescription;
+            this.agenticDbClusterId = request.agenticDbClusterId;
+            this.agenticDbType = request.agenticDbType;
             this.allowShutDown = request.allowShutDown;
             this.architecture = request.architecture;
             this.autoRenew = request.autoRenew;
@@ -931,6 +973,33 @@ public class CreateDBClusterRequest extends Request {
             this.vSwitchId = request.vSwitchId;
             this.zoneId = request.zoneId;
         } 
+
+        /**
+         * AgenticDbClusterDescription.
+         */
+        public Builder agenticDbClusterDescription(String agenticDbClusterDescription) {
+            this.putQueryParameter("AgenticDbClusterDescription", agenticDbClusterDescription);
+            this.agenticDbClusterDescription = agenticDbClusterDescription;
+            return this;
+        }
+
+        /**
+         * AgenticDbClusterId.
+         */
+        public Builder agenticDbClusterId(String agenticDbClusterId) {
+            this.putQueryParameter("AgenticDbClusterId", agenticDbClusterId);
+            this.agenticDbClusterId = agenticDbClusterId;
+            return this;
+        }
+
+        /**
+         * AgenticDbType.
+         */
+        public Builder agenticDbType(String agenticDbType) {
+            this.putQueryParameter("AgenticDbType", agenticDbType);
+            this.agenticDbType = agenticDbType;
+            return this;
+        }
 
         /**
          * <p>Whether to enable idle pause. Values:</p>

@@ -608,6 +608,12 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
+        @com.aliyun.core.annotation.NameInMap("ConnectionResourceQuota")
+        private Long connectionResourceQuota;
+
+        @com.aliyun.core.annotation.NameInMap("ConnectionResourceUsed")
+        private Long connectionResourceUsed;
+
         @com.aliyun.core.annotation.NameInMap("CpuCores")
         private String cpuCores;
 
@@ -713,6 +719,8 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         private DBCluster(Builder builder) {
             this.aiType = builder.aiType;
             this.category = builder.category;
+            this.connectionResourceQuota = builder.connectionResourceQuota;
+            this.connectionResourceUsed = builder.connectionResourceUsed;
             this.cpuCores = builder.cpuCores;
             this.createTime = builder.createTime;
             this.DBClusterDescription = builder.DBClusterDescription;
@@ -769,6 +777,20 @@ public class DescribeDBClustersResponseBody extends TeaModel {
          */
         public String getCategory() {
             return this.category;
+        }
+
+        /**
+         * @return connectionResourceQuota
+         */
+        public Long getConnectionResourceQuota() {
+            return this.connectionResourceQuota;
+        }
+
+        /**
+         * @return connectionResourceUsed
+         */
+        public Long getConnectionResourceUsed() {
+            return this.connectionResourceUsed;
         }
 
         /**
@@ -1012,6 +1034,8 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         public static final class Builder {
             private String aiType; 
             private String category; 
+            private Long connectionResourceQuota; 
+            private Long connectionResourceUsed; 
             private String cpuCores; 
             private String createTime; 
             private String DBClusterDescription; 
@@ -1053,6 +1077,8 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             private Builder(DBCluster model) {
                 this.aiType = model.aiType;
                 this.category = model.category;
+                this.connectionResourceQuota = model.connectionResourceQuota;
+                this.connectionResourceUsed = model.connectionResourceUsed;
                 this.cpuCores = model.cpuCores;
                 this.createTime = model.createTime;
                 this.DBClusterDescription = model.DBClusterDescription;
@@ -1124,6 +1150,22 @@ public class DescribeDBClustersResponseBody extends TeaModel {
              */
             public Builder category(String category) {
                 this.category = category;
+                return this;
+            }
+
+            /**
+             * ConnectionResourceQuota.
+             */
+            public Builder connectionResourceQuota(Long connectionResourceQuota) {
+                this.connectionResourceQuota = connectionResourceQuota;
+                return this;
+            }
+
+            /**
+             * ConnectionResourceUsed.
+             */
+            public Builder connectionResourceUsed(Long connectionResourceUsed) {
+                this.connectionResourceUsed = connectionResourceUsed;
                 return this;
             }
 

@@ -53,6 +53,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CompressStorageUsed")
     private Long compressStorageUsed;
 
+    @com.aliyun.core.annotation.NameInMap("ConnectionResourceQuota")
+    private Long connectionResourceQuota;
+
+    @com.aliyun.core.annotation.NameInMap("ConnectionResourceUsed")
+    private Long connectionResourceUsed;
+
     @com.aliyun.core.annotation.NameInMap("CreationTime")
     private String creationTime;
 
@@ -243,6 +249,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         this.columnTable = builder.columnTable;
         this.compressStorageMode = builder.compressStorageMode;
         this.compressStorageUsed = builder.compressStorageUsed;
+        this.connectionResourceQuota = builder.connectionResourceQuota;
+        this.connectionResourceUsed = builder.connectionResourceUsed;
         this.creationTime = builder.creationTime;
         this.DBClusterDescription = builder.DBClusterDescription;
         this.DBClusterId = builder.DBClusterId;
@@ -398,6 +406,20 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
      */
     public Long getCompressStorageUsed() {
         return this.compressStorageUsed;
+    }
+
+    /**
+     * @return connectionResourceQuota
+     */
+    public Long getConnectionResourceQuota() {
+        return this.connectionResourceQuota;
+    }
+
+    /**
+     * @return connectionResourceUsed
+     */
+    public Long getConnectionResourceUsed() {
+        return this.connectionResourceUsed;
     }
 
     /**
@@ -826,6 +848,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private String columnTable; 
         private String compressStorageMode; 
         private Long compressStorageUsed; 
+        private Long connectionResourceQuota; 
+        private Long connectionResourceUsed; 
         private String creationTime; 
         private String DBClusterDescription; 
         private String DBClusterId; 
@@ -902,6 +926,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.columnTable = model.columnTable;
             this.compressStorageMode = model.compressStorageMode;
             this.compressStorageUsed = model.compressStorageUsed;
+            this.connectionResourceQuota = model.connectionResourceQuota;
+            this.connectionResourceUsed = model.connectionResourceUsed;
             this.creationTime = model.creationTime;
             this.DBClusterDescription = model.DBClusterDescription;
             this.DBClusterId = model.DBClusterId;
@@ -1116,6 +1142,22 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public Builder compressStorageUsed(Long compressStorageUsed) {
             this.compressStorageUsed = compressStorageUsed;
+            return this;
+        }
+
+        /**
+         * ConnectionResourceQuota.
+         */
+        public Builder connectionResourceQuota(Long connectionResourceQuota) {
+            this.connectionResourceQuota = connectionResourceQuota;
+            return this;
+        }
+
+        /**
+         * ConnectionResourceUsed.
+         */
+        public Builder connectionResourceUsed(Long connectionResourceUsed) {
+            this.connectionResourceUsed = connectionResourceUsed;
             return this;
         }
 

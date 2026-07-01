@@ -244,6 +244,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateActivationCodeResponse> createActivationCode(CreateActivationCodeRequest request);
 
     /**
+     * @param request the request parameters of CreateAgenticDBBranch  CreateAgenticDBBranchRequest
+     * @return CreateAgenticDBBranchResponse
+     */
+    CompletableFuture<CreateAgenticDBBranchResponse> createAgenticDBBranch(CreateAgenticDBBranchRequest request);
+
+    /**
+     * @param request the request parameters of CreateAgenticDBProject  CreateAgenticDBProjectRequest
+     * @return CreateAgenticDBProjectResponse
+     */
+    CompletableFuture<CreateAgenticDBProjectResponse> createAgenticDBProject(CreateAgenticDBProjectRequest request);
+
+    /**
+     * @param request the request parameters of CreateAgenticDBTenantApiKey  CreateAgenticDBTenantApiKeyRequest
+     * @return CreateAgenticDBTenantApiKeyResponse
+     */
+    CompletableFuture<CreateAgenticDBTenantApiKeyResponse> createAgenticDBTenantApiKey(CreateAgenticDBTenantApiKeyRequest request);
+
+    /**
      * @param request the request parameters of CreateApplication  CreateApplicationRequest
      * @return CreateApplicationResponse
      */
@@ -557,6 +575,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteAccountZonalResponse
      */
     CompletableFuture<DeleteAccountZonalResponse> deleteAccountZonal(DeleteAccountZonalRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAgenticDBBranch  DeleteAgenticDBBranchRequest
+     * @return DeleteAgenticDBBranchResponse
+     */
+    CompletableFuture<DeleteAgenticDBBranchResponse> deleteAgenticDBBranch(DeleteAgenticDBBranchRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAgenticDBComputeCluster  DeleteAgenticDBComputeClusterRequest
+     * @return DeleteAgenticDBComputeClusterResponse
+     */
+    CompletableFuture<DeleteAgenticDBComputeClusterResponse> deleteAgenticDBComputeCluster(DeleteAgenticDBComputeClusterRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAgenticDBProject  DeleteAgenticDBProjectRequest
+     * @return DeleteAgenticDBProjectResponse
+     */
+    CompletableFuture<DeleteAgenticDBProjectResponse> deleteAgenticDBProject(DeleteAgenticDBProjectRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAgenticDBTenantApiKey  DeleteAgenticDBTenantApiKeyRequest
+     * @return DeleteAgenticDBTenantApiKeyResponse
+     */
+    CompletableFuture<DeleteAgenticDBTenantApiKeyResponse> deleteAgenticDBTenantApiKey(DeleteAgenticDBTenantApiKeyRequest request);
 
     /**
      * @param request the request parameters of DeleteApplication  DeleteApplicationRequest
@@ -911,6 +953,60 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeActiveOperationTasksResponse
      */
     CompletableFuture<DescribeActiveOperationTasksResponse> describeActiveOperationTasks(DescribeActiveOperationTasksRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAgenticDBBranch  DescribeAgenticDBBranchRequest
+     * @return DescribeAgenticDBBranchResponse
+     */
+    CompletableFuture<DescribeAgenticDBBranchResponse> describeAgenticDBBranch(DescribeAgenticDBBranchRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAgenticDBBranchEndpoints  DescribeAgenticDBBranchEndpointsRequest
+     * @return DescribeAgenticDBBranchEndpointsResponse
+     */
+    CompletableFuture<DescribeAgenticDBBranchEndpointsResponse> describeAgenticDBBranchEndpoints(DescribeAgenticDBBranchEndpointsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAgenticDBBranchLineage  DescribeAgenticDBBranchLineageRequest
+     * @return DescribeAgenticDBBranchLineageResponse
+     */
+    CompletableFuture<DescribeAgenticDBBranchLineageResponse> describeAgenticDBBranchLineage(DescribeAgenticDBBranchLineageRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAgenticDBBranches  DescribeAgenticDBBranchesRequest
+     * @return DescribeAgenticDBBranchesResponse
+     */
+    CompletableFuture<DescribeAgenticDBBranchesResponse> describeAgenticDBBranches(DescribeAgenticDBBranchesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAgenticDBClusters  DescribeAgenticDBClustersRequest
+     * @return DescribeAgenticDBClustersResponse
+     */
+    CompletableFuture<DescribeAgenticDBClustersResponse> describeAgenticDBClusters(DescribeAgenticDBClustersRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAgenticDBComputeClusters  DescribeAgenticDBComputeClustersRequest
+     * @return DescribeAgenticDBComputeClustersResponse
+     */
+    CompletableFuture<DescribeAgenticDBComputeClustersResponse> describeAgenticDBComputeClusters(DescribeAgenticDBComputeClustersRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAgenticDBProject  DescribeAgenticDBProjectRequest
+     * @return DescribeAgenticDBProjectResponse
+     */
+    CompletableFuture<DescribeAgenticDBProjectResponse> describeAgenticDBProject(DescribeAgenticDBProjectRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAgenticDBProjects  DescribeAgenticDBProjectsRequest
+     * @return DescribeAgenticDBProjectsResponse
+     */
+    CompletableFuture<DescribeAgenticDBProjectsResponse> describeAgenticDBProjects(DescribeAgenticDBProjectsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAgenticDBTenantApiKeys  DescribeAgenticDBTenantApiKeysRequest
+     * @return DescribeAgenticDBTenantApiKeysResponse
+     */
+    CompletableFuture<DescribeAgenticDBTenantApiKeysResponse> describeAgenticDBTenantApiKeys(DescribeAgenticDBTenantApiKeysRequest request);
 
     /**
      * @param request the request parameters of DescribeApikeyAttribute  DescribeApikeyAttributeRequest
@@ -2551,6 +2647,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ResetAccountZonalResponse> resetAccountZonal(ResetAccountZonalRequest request);
 
     /**
+     * @param request the request parameters of ResetAgenticDBTenantApiKey  ResetAgenticDBTenantApiKeyRequest
+     * @return ResetAgenticDBTenantApiKeyResponse
+     */
+    CompletableFuture<ResetAgenticDBTenantApiKeyResponse> resetAgenticDBTenantApiKey(ResetAgenticDBTenantApiKeyRequest request);
+
+    /**
      * @param request the request parameters of ResetConsumerApiKey  ResetConsumerApiKeyRequest
      * @return ResetConsumerApiKeyResponse
      */
@@ -2752,5 +2854,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpgradePolarClawSkillsResponse
      */
     CompletableFuture<UpgradePolarClawSkillsResponse> upgradePolarClawSkills(UpgradePolarClawSkillsRequest request);
+
+    /**
+     * @param request the request parameters of VerifyAgenticDBTenantApiKey  VerifyAgenticDBTenantApiKeyRequest
+     * @return VerifyAgenticDBTenantApiKeyResponse
+     */
+    CompletableFuture<VerifyAgenticDBTenantApiKeyResponse> verifyAgenticDBTenantApiKey(VerifyAgenticDBTenantApiKeyRequest request);
 
 }

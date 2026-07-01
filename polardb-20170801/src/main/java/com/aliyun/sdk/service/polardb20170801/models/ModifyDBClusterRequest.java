@@ -22,6 +22,10 @@ public class ModifyDBClusterRequest extends Request {
     private String compressStorage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionResourceQuota")
+    private Long connectionResourceQuota;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
@@ -86,6 +90,7 @@ public class ModifyDBClusterRequest extends Request {
     private ModifyDBClusterRequest(Builder builder) {
         super(builder);
         this.compressStorage = builder.compressStorage;
+        this.connectionResourceQuota = builder.connectionResourceQuota;
         this.DBClusterId = builder.DBClusterId;
         this.DBNodeCrashList = builder.DBNodeCrashList;
         this.dataSyncMode = builder.dataSyncMode;
@@ -121,6 +126,13 @@ public class ModifyDBClusterRequest extends Request {
      */
     public String getCompressStorage() {
         return this.compressStorage;
+    }
+
+    /**
+     * @return connectionResourceQuota
+     */
+    public Long getConnectionResourceQuota() {
+        return this.connectionResourceQuota;
     }
 
     /**
@@ -230,6 +242,7 @@ public class ModifyDBClusterRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyDBClusterRequest, Builder> {
         private String compressStorage; 
+        private Long connectionResourceQuota; 
         private String DBClusterId; 
         private String DBNodeCrashList; 
         private String dataSyncMode; 
@@ -253,6 +266,7 @@ public class ModifyDBClusterRequest extends Request {
         private Builder(ModifyDBClusterRequest request) {
             super(request);
             this.compressStorage = request.compressStorage;
+            this.connectionResourceQuota = request.connectionResourceQuota;
             this.DBClusterId = request.DBClusterId;
             this.DBNodeCrashList = request.DBNodeCrashList;
             this.dataSyncMode = request.dataSyncMode;
@@ -279,6 +293,15 @@ public class ModifyDBClusterRequest extends Request {
         public Builder compressStorage(String compressStorage) {
             this.putQueryParameter("CompressStorage", compressStorage);
             this.compressStorage = compressStorage;
+            return this;
+        }
+
+        /**
+         * ConnectionResourceQuota.
+         */
+        public Builder connectionResourceQuota(Long connectionResourceQuota) {
+            this.putQueryParameter("ConnectionResourceQuota", connectionResourceQuota);
+            this.connectionResourceQuota = connectionResourceQuota;
             return this;
         }
 

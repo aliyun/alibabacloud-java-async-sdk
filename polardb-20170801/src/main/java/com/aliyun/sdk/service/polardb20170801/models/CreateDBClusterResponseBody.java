@@ -17,6 +17,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDBClusterResponseBody</p>
  */
 public class CreateDBClusterResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AgenticDbClusterDescription")
+    private String agenticDbClusterDescription;
+
+    @com.aliyun.core.annotation.NameInMap("AgenticDbClusterId")
+    private String agenticDbClusterId;
+
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
@@ -30,6 +36,8 @@ public class CreateDBClusterResponseBody extends TeaModel {
     private String resourceGroupId;
 
     private CreateDBClusterResponseBody(Builder builder) {
+        this.agenticDbClusterDescription = builder.agenticDbClusterDescription;
+        this.agenticDbClusterId = builder.agenticDbClusterId;
         this.DBClusterId = builder.DBClusterId;
         this.orderId = builder.orderId;
         this.requestId = builder.requestId;
@@ -46,6 +54,20 @@ public class CreateDBClusterResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agenticDbClusterDescription
+     */
+    public String getAgenticDbClusterDescription() {
+        return this.agenticDbClusterDescription;
+    }
+
+    /**
+     * @return agenticDbClusterId
+     */
+    public String getAgenticDbClusterId() {
+        return this.agenticDbClusterId;
     }
 
     /**
@@ -77,6 +99,8 @@ public class CreateDBClusterResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String agenticDbClusterDescription; 
+        private String agenticDbClusterId; 
         private String DBClusterId; 
         private String orderId; 
         private String requestId; 
@@ -86,11 +110,29 @@ public class CreateDBClusterResponseBody extends TeaModel {
         } 
 
         private Builder(CreateDBClusterResponseBody model) {
+            this.agenticDbClusterDescription = model.agenticDbClusterDescription;
+            this.agenticDbClusterId = model.agenticDbClusterId;
             this.DBClusterId = model.DBClusterId;
             this.orderId = model.orderId;
             this.requestId = model.requestId;
             this.resourceGroupId = model.resourceGroupId;
         } 
+
+        /**
+         * AgenticDbClusterDescription.
+         */
+        public Builder agenticDbClusterDescription(String agenticDbClusterDescription) {
+            this.agenticDbClusterDescription = agenticDbClusterDescription;
+            return this;
+        }
+
+        /**
+         * AgenticDbClusterId.
+         */
+        public Builder agenticDbClusterId(String agenticDbClusterId) {
+            this.agenticDbClusterId = agenticDbClusterId;
+            return this;
+        }
 
         /**
          * <p>Cluster ID.</p>
