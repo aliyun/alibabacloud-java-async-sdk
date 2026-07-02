@@ -266,6 +266,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InstallAgentForClusterResponse> installAgentForCluster(InstallAgentForClusterRequest request);
 
     /**
+     * @param request the request parameters of InstallAgentWithType  InstallAgentWithTypeRequest
+     * @return InstallAgentWithTypeResponse
+     */
+    CompletableFuture<InstallAgentWithTypeResponse> installAgentWithType(InstallAgentWithTypeRequest request);
+
+    /**
      * @param request the request parameters of InvokeAnomalyDiagnosis  InvokeAnomalyDiagnosisRequest
      * @return InvokeAnomalyDiagnosisResponse
      */
