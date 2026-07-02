@@ -22,10 +22,6 @@ public class UpdateProjectRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DatasetConfig")
-    private DatasetConfig datasetConfig;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DatasetMaxBindCount")
     private Long datasetMaxBindCount;
 
@@ -73,7 +69,6 @@ public class UpdateProjectRequest extends Request {
     private UpdateProjectRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.datasetConfig = builder.datasetConfig;
         this.datasetMaxBindCount = builder.datasetMaxBindCount;
         this.datasetMaxEntityCount = builder.datasetMaxEntityCount;
         this.datasetMaxFileCount = builder.datasetMaxFileCount;
@@ -105,13 +100,6 @@ public class UpdateProjectRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
-    }
-
-    /**
-     * @return datasetConfig
-     */
-    public DatasetConfig getDatasetConfig() {
-        return this.datasetConfig;
     }
 
     /**
@@ -193,7 +181,6 @@ public class UpdateProjectRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateProjectRequest, Builder> {
         private String regionId; 
-        private DatasetConfig datasetConfig; 
         private Long datasetMaxBindCount; 
         private Long datasetMaxEntityCount; 
         private Long datasetMaxFileCount; 
@@ -213,7 +200,6 @@ public class UpdateProjectRequest extends Request {
         private Builder(UpdateProjectRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.datasetConfig = request.datasetConfig;
             this.datasetMaxBindCount = request.datasetMaxBindCount;
             this.datasetMaxEntityCount = request.datasetMaxEntityCount;
             this.datasetMaxFileCount = request.datasetMaxFileCount;
@@ -233,16 +219,6 @@ public class UpdateProjectRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * DatasetConfig.
-         */
-        public Builder datasetConfig(DatasetConfig datasetConfig) {
-            String datasetConfigShrink = shrink(datasetConfig, "DatasetConfig", "json");
-            this.putQueryParameter("DatasetConfig", datasetConfigShrink);
-            this.datasetConfig = datasetConfig;
             return this;
         }
 

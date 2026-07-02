@@ -20,9 +20,6 @@ public class Project extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @com.aliyun.core.annotation.NameInMap("DatasetConfig")
-    private DatasetConfig datasetConfig;
-
     @com.aliyun.core.annotation.NameInMap("DatasetCount")
     private Long datasetCount;
 
@@ -76,7 +73,6 @@ public class Project extends TeaModel {
 
     private Project(Builder builder) {
         this.createTime = builder.createTime;
-        this.datasetConfig = builder.datasetConfig;
         this.datasetCount = builder.datasetCount;
         this.datasetMaxBindCount = builder.datasetMaxBindCount;
         this.datasetMaxEntityCount = builder.datasetMaxEntityCount;
@@ -113,13 +109,6 @@ public class Project extends TeaModel {
      */
     public String getCreateTime() {
         return this.createTime;
-    }
-
-    /**
-     * @return datasetConfig
-     */
-    public DatasetConfig getDatasetConfig() {
-        return this.datasetConfig;
     }
 
     /**
@@ -243,7 +232,6 @@ public class Project extends TeaModel {
 
     public static final class Builder {
         private String createTime; 
-        private DatasetConfig datasetConfig; 
         private Long datasetCount; 
         private Long datasetMaxBindCount; 
         private Long datasetMaxEntityCount; 
@@ -267,7 +255,6 @@ public class Project extends TeaModel {
 
         private Builder(Project model) {
             this.createTime = model.createTime;
-            this.datasetConfig = model.datasetConfig;
             this.datasetCount = model.datasetCount;
             this.datasetMaxBindCount = model.datasetMaxBindCount;
             this.datasetMaxEntityCount = model.datasetMaxEntityCount;
@@ -292,14 +279,6 @@ public class Project extends TeaModel {
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
-            return this;
-        }
-
-        /**
-         * DatasetConfig.
-         */
-        public Builder datasetConfig(DatasetConfig datasetConfig) {
-            this.datasetConfig = datasetConfig;
             return this;
         }
 
