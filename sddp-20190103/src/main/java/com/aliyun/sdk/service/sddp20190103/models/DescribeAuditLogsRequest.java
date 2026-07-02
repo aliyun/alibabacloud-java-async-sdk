@@ -110,10 +110,6 @@ public class DescribeAuditLogsRequest extends Request {
     private String ruleCategory;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("RuleID")
-    private String ruleID;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleId")
     private String ruleId;
 
@@ -158,7 +154,6 @@ public class DescribeAuditLogsRequest extends Request {
         this.productId = builder.productId;
         this.ruleAggQuery = builder.ruleAggQuery;
         this.ruleCategory = builder.ruleCategory;
-        this.ruleID = builder.ruleID;
         this.ruleId = builder.ruleId;
         this.ruleName = builder.ruleName;
         this.sqlText = builder.sqlText;
@@ -341,13 +336,6 @@ public class DescribeAuditLogsRequest extends Request {
     }
 
     /**
-     * @return ruleID
-     */
-    public String getRuleID() {
-        return this.ruleID;
-    }
-
-    /**
      * @return ruleId
      */
     public String getRuleId() {
@@ -406,7 +394,6 @@ public class DescribeAuditLogsRequest extends Request {
         private Long productId; 
         private Boolean ruleAggQuery; 
         private String ruleCategory; 
-        private String ruleID; 
         private String ruleId; 
         private String ruleName; 
         private String sqlText; 
@@ -442,7 +429,6 @@ public class DescribeAuditLogsRequest extends Request {
             this.productId = request.productId;
             this.ruleAggQuery = request.ruleAggQuery;
             this.ruleCategory = request.ruleCategory;
-            this.ruleID = request.ruleID;
             this.ruleId = request.ruleId;
             this.ruleName = request.ruleName;
             this.sqlText = request.sqlText;
@@ -654,15 +640,6 @@ public class DescribeAuditLogsRequest extends Request {
         public Builder ruleCategory(String ruleCategory) {
             this.putQueryParameter("RuleCategory", ruleCategory);
             this.ruleCategory = ruleCategory;
-            return this;
-        }
-
-        /**
-         * RuleID.
-         */
-        public Builder ruleID(String ruleID) {
-            this.putQueryParameter("RuleID", ruleID);
-            this.ruleID = ruleID;
             return this;
         }
 
