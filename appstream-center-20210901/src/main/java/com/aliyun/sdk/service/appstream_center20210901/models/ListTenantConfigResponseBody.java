@@ -101,8 +101,17 @@ public class ListTenantConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppInstanceGroupExpireRemind")
         private Boolean appInstanceGroupExpireRemind;
 
+        @com.aliyun.core.annotation.NameInMap("MultiSessionSupportType")
+        @com.aliyun.core.annotation.Validation(maxLength = 16)
+        private String multiSessionSupportType;
+
+        @com.aliyun.core.annotation.NameInMap("MultiSessionSupportedRegions")
+        private java.util.List<String> multiSessionSupportedRegions;
+
         private TenantConfigModel(Builder builder) {
             this.appInstanceGroupExpireRemind = builder.appInstanceGroupExpireRemind;
+            this.multiSessionSupportType = builder.multiSessionSupportType;
+            this.multiSessionSupportedRegions = builder.multiSessionSupportedRegions;
         }
 
         public static Builder builder() {
@@ -120,14 +129,32 @@ public class ListTenantConfigResponseBody extends TeaModel {
             return this.appInstanceGroupExpireRemind;
         }
 
+        /**
+         * @return multiSessionSupportType
+         */
+        public String getMultiSessionSupportType() {
+            return this.multiSessionSupportType;
+        }
+
+        /**
+         * @return multiSessionSupportedRegions
+         */
+        public java.util.List<String> getMultiSessionSupportedRegions() {
+            return this.multiSessionSupportedRegions;
+        }
+
         public static final class Builder {
             private Boolean appInstanceGroupExpireRemind; 
+            private String multiSessionSupportType; 
+            private java.util.List<String> multiSessionSupportedRegions; 
 
             private Builder() {
             } 
 
             private Builder(TenantConfigModel model) {
                 this.appInstanceGroupExpireRemind = model.appInstanceGroupExpireRemind;
+                this.multiSessionSupportType = model.multiSessionSupportType;
+                this.multiSessionSupportedRegions = model.multiSessionSupportedRegions;
             } 
 
             /**
@@ -143,6 +170,22 @@ public class ListTenantConfigResponseBody extends TeaModel {
              */
             public Builder appInstanceGroupExpireRemind(Boolean appInstanceGroupExpireRemind) {
                 this.appInstanceGroupExpireRemind = appInstanceGroupExpireRemind;
+                return this;
+            }
+
+            /**
+             * MultiSessionSupportType.
+             */
+            public Builder multiSessionSupportType(String multiSessionSupportType) {
+                this.multiSessionSupportType = multiSessionSupportType;
+                return this;
+            }
+
+            /**
+             * MultiSessionSupportedRegions.
+             */
+            public Builder multiSessionSupportedRegions(java.util.List<String> multiSessionSupportedRegions) {
+                this.multiSessionSupportedRegions = multiSessionSupportedRegions;
                 return this;
             }
 
