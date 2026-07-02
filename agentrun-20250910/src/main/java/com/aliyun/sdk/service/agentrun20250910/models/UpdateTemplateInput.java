@@ -70,7 +70,7 @@ public class UpdateTemplateInput extends TeaModel {
     private Integer sandboxIdleTimeoutInSeconds;
 
     @com.aliyun.core.annotation.NameInMap("sandboxTTLInSeconds")
-    @com.aliyun.core.annotation.Validation(maximum = 21600, minimum = 1)
+    @com.aliyun.core.annotation.Validation(maximum = 604800, minimum = 1)
     private Integer sandboxTTLInSeconds;
 
     @com.aliyun.core.annotation.NameInMap("scalingConfig")

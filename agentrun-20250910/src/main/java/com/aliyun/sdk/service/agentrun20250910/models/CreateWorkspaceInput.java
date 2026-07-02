@@ -20,6 +20,9 @@ public class CreateWorkspaceInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("enablePresetModel")
+    private Boolean enablePresetModel;
+
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
@@ -28,6 +31,7 @@ public class CreateWorkspaceInput extends TeaModel {
 
     private CreateWorkspaceInput(Builder builder) {
         this.description = builder.description;
+        this.enablePresetModel = builder.enablePresetModel;
         this.name = builder.name;
         this.resourceGroupId = builder.resourceGroupId;
     }
@@ -52,6 +56,13 @@ public class CreateWorkspaceInput extends TeaModel {
     }
 
     /**
+     * @return enablePresetModel
+     */
+    public Boolean getEnablePresetModel() {
+        return this.enablePresetModel;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -67,6 +78,7 @@ public class CreateWorkspaceInput extends TeaModel {
 
     public static final class Builder {
         private String description; 
+        private Boolean enablePresetModel; 
         private String name; 
         private String resourceGroupId; 
 
@@ -75,6 +87,7 @@ public class CreateWorkspaceInput extends TeaModel {
 
         private Builder(CreateWorkspaceInput model) {
             this.description = model.description;
+            this.enablePresetModel = model.enablePresetModel;
             this.name = model.name;
             this.resourceGroupId = model.resourceGroupId;
         } 
@@ -84,6 +97,14 @@ public class CreateWorkspaceInput extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * enablePresetModel.
+         */
+        public Builder enablePresetModel(Boolean enablePresetModel) {
+            this.enablePresetModel = enablePresetModel;
             return this;
         }
 
