@@ -55,7 +55,7 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-beijing-finance-1", "cloudfw.aliyuncs.com"),
             new TeaPair("cn-beijing", "cloudfw.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "cloudfw.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "cloudfw.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "cloudfw.ap-southeast-1.aliyuncs.com"),
             new TeaPair("ap-northeast-1", "cloudfw.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
@@ -1753,6 +1753,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeFirewallDropTrend  DescribeFirewallDropTrendRequest
+     * @return DescribeFirewallDropTrendResponse
+     */
+    @Override
+    public CompletableFuture<DescribeFirewallDropTrendResponse> describeFirewallDropTrend(DescribeFirewallDropTrendRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeFirewallDropTrend").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeFirewallDropTrendResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeFirewallDropTrendResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeFirewallTask  DescribeFirewallTaskRequest
      * @return DescribeFirewallTaskResponse
      */
@@ -1765,6 +1783,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeFirewallTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeFirewallTrafficTrend  DescribeFirewallTrafficTrendRequest
+     * @return DescribeFirewallTrafficTrendResponse
+     */
+    @Override
+    public CompletableFuture<DescribeFirewallTrafficTrendResponse> describeFirewallTrafficTrend(DescribeFirewallTrafficTrendRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeFirewallTrafficTrend").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeFirewallTrafficTrendResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeFirewallTrafficTrendResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3275,6 +3311,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeSdlEventStatisticResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeSdlLastPayload  DescribeSdlLastPayloadRequest
+     * @return DescribeSdlLastPayloadResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSdlLastPayloadResponse> describeSdlLastPayload(DescribeSdlLastPayloadRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSdlLastPayload").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSdlLastPayloadResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSdlLastPayloadResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

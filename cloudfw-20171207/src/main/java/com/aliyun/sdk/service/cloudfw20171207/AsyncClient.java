@@ -650,10 +650,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeFirewallDropStatisticsResponse> describeFirewallDropStatistics(DescribeFirewallDropStatisticsRequest request);
 
     /**
+     * @param request the request parameters of DescribeFirewallDropTrend  DescribeFirewallDropTrendRequest
+     * @return DescribeFirewallDropTrendResponse
+     */
+    CompletableFuture<DescribeFirewallDropTrendResponse> describeFirewallDropTrend(DescribeFirewallDropTrendRequest request);
+
+    /**
      * @param request the request parameters of DescribeFirewallTask  DescribeFirewallTaskRequest
      * @return DescribeFirewallTaskResponse
      */
     CompletableFuture<DescribeFirewallTaskResponse> describeFirewallTask(DescribeFirewallTaskRequest request);
+
+    /**
+     * @param request the request parameters of DescribeFirewallTrafficTrend  DescribeFirewallTrafficTrendRequest
+     * @return DescribeFirewallTrafficTrendResponse
+     */
+    CompletableFuture<DescribeFirewallTrafficTrendResponse> describeFirewallTrafficTrend(DescribeFirewallTrafficTrendRequest request);
 
     /**
      * @param request the request parameters of DescribeFirewallVSwitch  DescribeFirewallVSwitchRequest
@@ -1180,6 +1192,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeSdlEventStatisticResponse
      */
     CompletableFuture<DescribeSdlEventStatisticResponse> describeSdlEventStatistic(DescribeSdlEventStatisticRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSdlLastPayload  DescribeSdlLastPayloadRequest
+     * @return DescribeSdlLastPayloadResponse
+     */
+    CompletableFuture<DescribeSdlLastPayloadResponse> describeSdlLastPayload(DescribeSdlLastPayloadRequest request);
 
     /**
      * @param request the request parameters of DescribeSdlStatistic  DescribeSdlStatisticRequest
