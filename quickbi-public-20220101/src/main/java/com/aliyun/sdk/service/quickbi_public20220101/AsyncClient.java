@@ -224,6 +224,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DelayTicketExpireTimeResponse> delayTicketExpireTime(DelayTicketExpireTimeRequest request);
 
     /**
+     * @param request the request parameters of DeleteAuthorizationByUserId  DeleteAuthorizationByUserIdRequest
+     * @return DeleteAuthorizationByUserIdResponse
+     */
+    CompletableFuture<DeleteAuthorizationByUserIdResponse> deleteAuthorizationByUserId(DeleteAuthorizationByUserIdRequest request);
+
+    /**
      * <b>description</b> :
      * <p>{&quot;ruleId&quot;:&quot;a5bb24da-<em><strong>-a891683e14da&quot;,&quot;cubeId&quot;:&quot;7c7223ae-</strong></em>-3c744528014b&quot;,&quot;delModel&quot;:{&quot;userGroups&quot;:[&quot;0d5fb19b-<em><strong>-1248fc27ca51&quot;,&quot;3d2c23d4-</strong></em>-f6390f325c2d&quot;],&quot;users&quot;:[&quot;4334<em><strong>358&quot;,&quot;Huang</strong></em>3fa822&quot;]}}</p>
      * 
@@ -312,6 +318,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetWorksEmbedListResponse
      */
     CompletableFuture<GetWorksEmbedListResponse> getWorksEmbedList(GetWorksEmbedListRequest request);
+
+    /**
+     * @param request the request parameters of IpWhiteListConfig  IpWhiteListConfigRequest
+     * @return IpWhiteListConfigResponse
+     */
+    CompletableFuture<IpWhiteListConfigResponse> ipWhiteListConfig(IpWhiteListConfigRequest request);
 
     /**
      * @param request the request parameters of ListAccelerationOfWorkspace  ListAccelerationOfWorkspaceRequest
@@ -838,6 +850,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SmartqQueryAbilityResponse
      */
     CompletableFuture<SmartqQueryAbilityResponse> smartqQueryAbility(SmartqQueryAbilityRequest request);
+
+    /**
+     * @param request the request parameters of TransferUsergroup  TransferUsergroupRequest
+     * @return TransferUsergroupResponse
+     */
+    CompletableFuture<TransferUsergroupResponse> transferUsergroup(TransferUsergroupRequest request);
 
     /**
      * @param request the request parameters of UpdateCubeBySql  UpdateCubeBySqlRequest

@@ -32,6 +32,10 @@ public class CreateCubeBySqlRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String dsId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Placeholders")
+    private String placeholders;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -47,6 +51,7 @@ public class CreateCubeBySqlRequest extends Request {
         this.caption = builder.caption;
         this.customSql = builder.customSql;
         this.dsId = builder.dsId;
+        this.placeholders = builder.placeholders;
         this.userId = builder.userId;
         this.workspaceId = builder.workspaceId;
     }
@@ -86,6 +91,13 @@ public class CreateCubeBySqlRequest extends Request {
     }
 
     /**
+     * @return placeholders
+     */
+    public String getPlaceholders() {
+        return this.placeholders;
+    }
+
+    /**
      * @return userId
      */
     public String getUserId() {
@@ -103,6 +115,7 @@ public class CreateCubeBySqlRequest extends Request {
         private String caption; 
         private String customSql; 
         private String dsId; 
+        private String placeholders; 
         private String userId; 
         private String workspaceId; 
 
@@ -115,6 +128,7 @@ public class CreateCubeBySqlRequest extends Request {
             this.caption = request.caption;
             this.customSql = request.customSql;
             this.dsId = request.dsId;
+            this.placeholders = request.placeholders;
             this.userId = request.userId;
             this.workspaceId = request.workspaceId;
         } 
@@ -149,6 +163,15 @@ public class CreateCubeBySqlRequest extends Request {
         public Builder dsId(String dsId) {
             this.putQueryParameter("DsId", dsId);
             this.dsId = dsId;
+            return this;
+        }
+
+        /**
+         * Placeholders.
+         */
+        public Builder placeholders(String placeholders) {
+            this.putBodyParameter("Placeholders", placeholders);
+            this.placeholders = placeholders;
             return this;
         }
 

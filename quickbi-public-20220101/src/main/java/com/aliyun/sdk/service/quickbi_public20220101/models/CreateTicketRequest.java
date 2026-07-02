@@ -35,7 +35,7 @@ public class CreateTicketRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ExpireTime")
     private Integer expireTime;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("GlobalParam")
     private String globalParam;
 
@@ -245,19 +245,10 @@ public class CreateTicketRequest extends Request {
         }
 
         /**
-         * <p>Global parameters for the report filter conditions.</p>
-         * <ul>
-         * <li>A string in JsonArray format.</li>
-         * </ul>
-         * <blockquote>
-         * <p>If you need to use global parameter capabilities, please contact the <a href="https://h5-alimebot.dingtalk.com/intl/index.htm?spm=a2c4g.11186623.0.0.3da14f6chrDv9e&sourceType=ding_talk&from=DEFFB9G5KBByQkwq23wneFIOmaJ">Quick BI Operations Manager</a>.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>[{&quot;paramKey&quot;:&quot;price&quot;,&quot;joinType&quot;:&quot;and&quot;,&quot;conditionList&quot;:[{&quot;operate&quot;:&quot;&gt;&quot;,&quot;value&quot;:&quot;0&quot;}]}]</p>
+         * GlobalParam.
          */
         public Builder globalParam(String globalParam) {
-            this.putQueryParameter("GlobalParam", globalParam);
+            this.putBodyParameter("GlobalParam", globalParam);
             this.globalParam = globalParam;
             return this;
         }

@@ -29,8 +29,19 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "quickbi-public";
         this.version = "2022-01-01";
-        this.endpointRule = "";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("us-east-1", "quickbi-public.us-east-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "quickbi-public.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "quickbi-public.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "quickbi-public.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "quickbi-public.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "quickbi-public.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "quickbi-public.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "quickbi-public.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "quickbi-public.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "quickbi-public.ap-northeast-1.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -452,7 +463,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<CreateCubeBySqlResponse> createCubeBySql(CreateCubeBySqlRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateCubeBySql").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateCubeBySql").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateCubeBySqlResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -491,7 +502,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<CreateTicketResponse> createTicket(CreateTicketRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateTicket").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateTicket").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateTicketResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -622,6 +633,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DelayTicketExpireTimeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteAuthorizationByUserId  DeleteAuthorizationByUserIdRequest
+     * @return DeleteAuthorizationByUserIdResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAuthorizationByUserIdResponse> deleteAuthorizationByUserId(DeleteAuthorizationByUserIdRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteAuthorizationByUserId").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAuthorizationByUserIdResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAuthorizationByUserIdResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -880,6 +909,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetWorksEmbedListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of IpWhiteListConfig  IpWhiteListConfigRequest
+     * @return IpWhiteListConfigResponse
+     */
+    @Override
+    public CompletableFuture<IpWhiteListConfigResponse> ipWhiteListConfig(IpWhiteListConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("IpWhiteListConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(IpWhiteListConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<IpWhiteListConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2330,6 +2377,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SmartqQueryAbilityResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TransferUsergroup  TransferUsergroupRequest
+     * @return TransferUsergroupResponse
+     */
+    @Override
+    public CompletableFuture<TransferUsergroupResponse> transferUsergroup(TransferUsergroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("TransferUsergroup").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TransferUsergroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TransferUsergroupResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

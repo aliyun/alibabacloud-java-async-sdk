@@ -33,6 +33,10 @@ public class UpdateCubeBySqlRequest extends Request {
     private String dsId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Placeholders")
+    private String placeholders;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
@@ -47,6 +51,7 @@ public class UpdateCubeBySqlRequest extends Request {
         this.cubeId = builder.cubeId;
         this.customSql = builder.customSql;
         this.dsId = builder.dsId;
+        this.placeholders = builder.placeholders;
         this.userId = builder.userId;
         this.workspaceId = builder.workspaceId;
     }
@@ -86,6 +91,13 @@ public class UpdateCubeBySqlRequest extends Request {
     }
 
     /**
+     * @return placeholders
+     */
+    public String getPlaceholders() {
+        return this.placeholders;
+    }
+
+    /**
      * @return userId
      */
     public String getUserId() {
@@ -103,6 +115,7 @@ public class UpdateCubeBySqlRequest extends Request {
         private String cubeId; 
         private String customSql; 
         private String dsId; 
+        private String placeholders; 
         private String userId; 
         private String workspaceId; 
 
@@ -115,6 +128,7 @@ public class UpdateCubeBySqlRequest extends Request {
             this.cubeId = request.cubeId;
             this.customSql = request.customSql;
             this.dsId = request.dsId;
+            this.placeholders = request.placeholders;
             this.userId = request.userId;
             this.workspaceId = request.workspaceId;
         } 
@@ -152,6 +166,15 @@ public class UpdateCubeBySqlRequest extends Request {
         public Builder dsId(String dsId) {
             this.putQueryParameter("DsId", dsId);
             this.dsId = dsId;
+            return this;
+        }
+
+        /**
+         * Placeholders.
+         */
+        public Builder placeholders(String placeholders) {
+            this.putQueryParameter("Placeholders", placeholders);
+            this.placeholders = placeholders;
             return this;
         }
 
