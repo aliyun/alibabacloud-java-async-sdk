@@ -212,6 +212,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitYikeStoryboardJobResponse> submitYikeStoryboardJob(SubmitYikeStoryboardJobRequest request);
 
     /**
+     * @param request the request parameters of SubmitYikeVideoCloneJob  SubmitYikeVideoCloneJobRequest
+     * @return SubmitYikeVideoCloneJobResponse
+     */
+    CompletableFuture<SubmitYikeVideoCloneJobResponse> submitYikeVideoCloneJob(SubmitYikeVideoCloneJobRequest request);
+
+    /**
      * @param request the request parameters of SubmitYikeVoiceNarratorJob  SubmitYikeVoiceNarratorJobRequest
      * @return SubmitYikeVoiceNarratorJobResponse
      */
