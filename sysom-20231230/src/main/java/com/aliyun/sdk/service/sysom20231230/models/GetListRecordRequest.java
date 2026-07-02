@@ -18,8 +18,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetListRecordRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("analysisId")
+    private String analysisId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("current")
     private Long current;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("customId")
+    private Long customId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pageSize")
@@ -31,7 +39,9 @@ public class GetListRecordRequest extends Request {
 
     private GetListRecordRequest(Builder builder) {
         super(builder);
+        this.analysisId = builder.analysisId;
         this.current = builder.current;
+        this.customId = builder.customId;
         this.pageSize = builder.pageSize;
         this.region = builder.region;
     }
@@ -50,10 +60,24 @@ public class GetListRecordRequest extends Request {
     }
 
     /**
+     * @return analysisId
+     */
+    public String getAnalysisId() {
+        return this.analysisId;
+    }
+
+    /**
      * @return current
      */
     public Long getCurrent() {
         return this.current;
+    }
+
+    /**
+     * @return customId
+     */
+    public Long getCustomId() {
+        return this.customId;
     }
 
     /**
@@ -71,7 +95,9 @@ public class GetListRecordRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetListRecordRequest, Builder> {
+        private String analysisId; 
         private Long current; 
+        private Long customId; 
         private Long pageSize; 
         private String region; 
 
@@ -81,10 +107,21 @@ public class GetListRecordRequest extends Request {
 
         private Builder(GetListRecordRequest request) {
             super(request);
+            this.analysisId = request.analysisId;
             this.current = request.current;
+            this.customId = request.customId;
             this.pageSize = request.pageSize;
             this.region = request.region;
         } 
+
+        /**
+         * analysisId.
+         */
+        public Builder analysisId(String analysisId) {
+            this.putQueryParameter("analysisId", analysisId);
+            this.analysisId = analysisId;
+            return this;
+        }
 
         /**
          * current.
@@ -92,6 +129,15 @@ public class GetListRecordRequest extends Request {
         public Builder current(Long current) {
             this.putQueryParameter("current", current);
             this.current = current;
+            return this;
+        }
+
+        /**
+         * customId.
+         */
+        public Builder customId(Long customId) {
+            this.putQueryParameter("customId", customId);
+            this.customId = customId;
             return this;
         }
 
