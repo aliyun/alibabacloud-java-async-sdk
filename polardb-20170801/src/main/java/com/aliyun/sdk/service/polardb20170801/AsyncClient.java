@@ -1722,6 +1722,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePolarClawTaskResponse> describePolarClawTask(DescribePolarClawTaskRequest request);
 
     /**
+     * @param request the request parameters of DescribePolarFs  DescribePolarFsRequest
+     * @return DescribePolarFsResponse
+     */
+    CompletableFuture<DescribePolarFsResponse> describePolarFs(DescribePolarFsRequest request);
+
+    /**
      * @param request the request parameters of DescribePolarFsAttribute  DescribePolarFsAttributeRequest
      * @return DescribePolarFsAttributeResponse
      */
