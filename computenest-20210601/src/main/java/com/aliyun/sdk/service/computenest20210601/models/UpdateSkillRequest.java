@@ -30,6 +30,10 @@ public class UpdateSkillRequest extends Request {
     private String skillDescription;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkillDisplayName")
+    private String skillDisplayName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SkillId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String skillId;
@@ -48,7 +52,6 @@ public class UpdateSkillRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceType")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceType;
 
     private UpdateSkillRequest(Builder builder) {
@@ -56,6 +59,7 @@ public class UpdateSkillRequest extends Request {
         this.clientToken = builder.clientToken;
         this.ossUrl = builder.ossUrl;
         this.skillDescription = builder.skillDescription;
+        this.skillDisplayName = builder.skillDisplayName;
         this.skillId = builder.skillId;
         this.skillLabels = builder.skillLabels;
         this.skillName = builder.skillName;
@@ -98,6 +102,13 @@ public class UpdateSkillRequest extends Request {
     }
 
     /**
+     * @return skillDisplayName
+     */
+    public String getSkillDisplayName() {
+        return this.skillDisplayName;
+    }
+
+    /**
      * @return skillId
      */
     public String getSkillId() {
@@ -136,6 +147,7 @@ public class UpdateSkillRequest extends Request {
         private String clientToken; 
         private String ossUrl; 
         private String skillDescription; 
+        private String skillDisplayName; 
         private String skillId; 
         private java.util.List<String> skillLabels; 
         private String skillName; 
@@ -151,6 +163,7 @@ public class UpdateSkillRequest extends Request {
             this.clientToken = request.clientToken;
             this.ossUrl = request.ossUrl;
             this.skillDescription = request.skillDescription;
+            this.skillDisplayName = request.skillDisplayName;
             this.skillId = request.skillId;
             this.skillLabels = request.skillLabels;
             this.skillName = request.skillName;
@@ -182,6 +195,15 @@ public class UpdateSkillRequest extends Request {
         public Builder skillDescription(String skillDescription) {
             this.putQueryParameter("SkillDescription", skillDescription);
             this.skillDescription = skillDescription;
+            return this;
+        }
+
+        /**
+         * SkillDisplayName.
+         */
+        public Builder skillDisplayName(String skillDisplayName) {
+            this.putQueryParameter("SkillDisplayName", skillDisplayName);
+            this.skillDisplayName = skillDisplayName;
             return this;
         }
 
@@ -225,10 +247,7 @@ public class UpdateSkillRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>COPY</p>
+         * SourceType.
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);

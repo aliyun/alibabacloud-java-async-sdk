@@ -20,11 +20,17 @@ public class GetSkillResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
+    @com.aliyun.core.annotation.NameInMap("Locales")
+    private java.util.List<Locales> locales;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SkillDescription")
     private String skillDescription;
+
+    @com.aliyun.core.annotation.NameInMap("SkillDisplayName")
+    private String skillDisplayName;
 
     @com.aliyun.core.annotation.NameInMap("SkillId")
     private String skillId;
@@ -43,8 +49,10 @@ public class GetSkillResponseBody extends TeaModel {
 
     private GetSkillResponseBody(Builder builder) {
         this.createTime = builder.createTime;
+        this.locales = builder.locales;
         this.requestId = builder.requestId;
         this.skillDescription = builder.skillDescription;
+        this.skillDisplayName = builder.skillDisplayName;
         this.skillId = builder.skillId;
         this.skillLabels = builder.skillLabels;
         this.skillName = builder.skillName;
@@ -72,6 +80,13 @@ public class GetSkillResponseBody extends TeaModel {
     }
 
     /**
+     * @return locales
+     */
+    public java.util.List<Locales> getLocales() {
+        return this.locales;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -83,6 +98,13 @@ public class GetSkillResponseBody extends TeaModel {
      */
     public String getSkillDescription() {
         return this.skillDescription;
+    }
+
+    /**
+     * @return skillDisplayName
+     */
+    public String getSkillDisplayName() {
+        return this.skillDisplayName;
     }
 
     /**
@@ -122,8 +144,10 @@ public class GetSkillResponseBody extends TeaModel {
 
     public static final class Builder {
         private String createTime; 
+        private java.util.List<Locales> locales; 
         private String requestId; 
         private String skillDescription; 
+        private String skillDisplayName; 
         private String skillId; 
         private java.util.List<String> skillLabels; 
         private String skillName; 
@@ -135,8 +159,10 @@ public class GetSkillResponseBody extends TeaModel {
 
         private Builder(GetSkillResponseBody model) {
             this.createTime = model.createTime;
+            this.locales = model.locales;
             this.requestId = model.requestId;
             this.skillDescription = model.skillDescription;
+            this.skillDisplayName = model.skillDisplayName;
             this.skillId = model.skillId;
             this.skillLabels = model.skillLabels;
             this.skillName = model.skillName;
@@ -149,6 +175,14 @@ public class GetSkillResponseBody extends TeaModel {
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
+            return this;
+        }
+
+        /**
+         * Locales.
+         */
+        public Builder locales(java.util.List<Locales> locales) {
+            this.locales = locales;
             return this;
         }
 
@@ -168,6 +202,14 @@ public class GetSkillResponseBody extends TeaModel {
          */
         public Builder skillDescription(String skillDescription) {
             this.skillDescription = skillDescription;
+            return this;
+        }
+
+        /**
+         * SkillDisplayName.
+         */
+        public Builder skillDisplayName(String skillDisplayName) {
+            this.skillDisplayName = skillDisplayName;
             return this;
         }
 
@@ -220,4 +262,100 @@ public class GetSkillResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSkillResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSkillResponseBody</p>
+     */
+    public static class Locales extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnValue")
+        private String enValue;
+
+        @com.aliyun.core.annotation.NameInMap("OriginalValue")
+        private String originalValue;
+
+        @com.aliyun.core.annotation.NameInMap("ZhValue")
+        private String zhValue;
+
+        private Locales(Builder builder) {
+            this.enValue = builder.enValue;
+            this.originalValue = builder.originalValue;
+            this.zhValue = builder.zhValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Locales create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enValue
+         */
+        public String getEnValue() {
+            return this.enValue;
+        }
+
+        /**
+         * @return originalValue
+         */
+        public String getOriginalValue() {
+            return this.originalValue;
+        }
+
+        /**
+         * @return zhValue
+         */
+        public String getZhValue() {
+            return this.zhValue;
+        }
+
+        public static final class Builder {
+            private String enValue; 
+            private String originalValue; 
+            private String zhValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Locales model) {
+                this.enValue = model.enValue;
+                this.originalValue = model.originalValue;
+                this.zhValue = model.zhValue;
+            } 
+
+            /**
+             * EnValue.
+             */
+            public Builder enValue(String enValue) {
+                this.enValue = enValue;
+                return this;
+            }
+
+            /**
+             * OriginalValue.
+             */
+            public Builder originalValue(String originalValue) {
+                this.originalValue = originalValue;
+                return this;
+            }
+
+            /**
+             * ZhValue.
+             */
+            public Builder zhValue(String zhValue) {
+                this.zhValue = zhValue;
+                return this;
+            }
+
+            public Locales build() {
+                return new Locales(this);
+            } 
+
+        } 
+
+    }
 }

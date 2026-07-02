@@ -30,6 +30,10 @@ public class CreateSkillRequest extends Request {
     private String skillDescription;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkillDisplayName")
+    private String skillDisplayName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SkillLabels")
     private java.util.List<String> skillLabels;
 
@@ -56,6 +60,7 @@ public class CreateSkillRequest extends Request {
         this.clientToken = builder.clientToken;
         this.ossUrl = builder.ossUrl;
         this.skillDescription = builder.skillDescription;
+        this.skillDisplayName = builder.skillDisplayName;
         this.skillLabels = builder.skillLabels;
         this.skillName = builder.skillName;
         this.skillSpaceId = builder.skillSpaceId;
@@ -98,6 +103,13 @@ public class CreateSkillRequest extends Request {
     }
 
     /**
+     * @return skillDisplayName
+     */
+    public String getSkillDisplayName() {
+        return this.skillDisplayName;
+    }
+
+    /**
      * @return skillLabels
      */
     public java.util.List<String> getSkillLabels() {
@@ -136,6 +148,7 @@ public class CreateSkillRequest extends Request {
         private String clientToken; 
         private String ossUrl; 
         private String skillDescription; 
+        private String skillDisplayName; 
         private java.util.List<String> skillLabels; 
         private String skillName; 
         private String skillSpaceId; 
@@ -151,6 +164,7 @@ public class CreateSkillRequest extends Request {
             this.clientToken = request.clientToken;
             this.ossUrl = request.ossUrl;
             this.skillDescription = request.skillDescription;
+            this.skillDisplayName = request.skillDisplayName;
             this.skillLabels = request.skillLabels;
             this.skillName = request.skillName;
             this.skillSpaceId = request.skillSpaceId;
@@ -182,6 +196,15 @@ public class CreateSkillRequest extends Request {
         public Builder skillDescription(String skillDescription) {
             this.putQueryParameter("SkillDescription", skillDescription);
             this.skillDescription = skillDescription;
+            return this;
+        }
+
+        /**
+         * SkillDisplayName.
+         */
+        public Builder skillDisplayName(String skillDisplayName) {
+            this.putQueryParameter("SkillDisplayName", skillDisplayName);
+            this.skillDisplayName = skillDisplayName;
             return this;
         }
 

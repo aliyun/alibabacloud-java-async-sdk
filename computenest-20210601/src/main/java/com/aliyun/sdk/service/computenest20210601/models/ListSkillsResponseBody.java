@@ -160,6 +160,102 @@ public class ListSkillsResponseBody extends TeaModel {
      *
      * <p>ListSkillsResponseBody</p>
      */
+    public static class Locales extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnValue")
+        private String enValue;
+
+        @com.aliyun.core.annotation.NameInMap("OriginalValue")
+        private String originalValue;
+
+        @com.aliyun.core.annotation.NameInMap("ZhValue")
+        private String zhValue;
+
+        private Locales(Builder builder) {
+            this.enValue = builder.enValue;
+            this.originalValue = builder.originalValue;
+            this.zhValue = builder.zhValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Locales create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enValue
+         */
+        public String getEnValue() {
+            return this.enValue;
+        }
+
+        /**
+         * @return originalValue
+         */
+        public String getOriginalValue() {
+            return this.originalValue;
+        }
+
+        /**
+         * @return zhValue
+         */
+        public String getZhValue() {
+            return this.zhValue;
+        }
+
+        public static final class Builder {
+            private String enValue; 
+            private String originalValue; 
+            private String zhValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Locales model) {
+                this.enValue = model.enValue;
+                this.originalValue = model.originalValue;
+                this.zhValue = model.zhValue;
+            } 
+
+            /**
+             * EnValue.
+             */
+            public Builder enValue(String enValue) {
+                this.enValue = enValue;
+                return this;
+            }
+
+            /**
+             * OriginalValue.
+             */
+            public Builder originalValue(String originalValue) {
+                this.originalValue = originalValue;
+                return this;
+            }
+
+            /**
+             * ZhValue.
+             */
+            public Builder zhValue(String zhValue) {
+                this.zhValue = zhValue;
+                return this;
+            }
+
+            public Locales build() {
+                return new Locales(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListSkillsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillsResponseBody</p>
+     */
     public static class Skills extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -167,8 +263,14 @@ public class ListSkillsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DownloadUrl")
         private String downloadUrl;
 
+        @com.aliyun.core.annotation.NameInMap("Locales")
+        private java.util.List<Locales> locales;
+
         @com.aliyun.core.annotation.NameInMap("SkillDescription")
         private String skillDescription;
+
+        @com.aliyun.core.annotation.NameInMap("SkillDisplayName")
+        private String skillDisplayName;
 
         @com.aliyun.core.annotation.NameInMap("SkillId")
         private String skillId;
@@ -188,7 +290,9 @@ public class ListSkillsResponseBody extends TeaModel {
         private Skills(Builder builder) {
             this.createTime = builder.createTime;
             this.downloadUrl = builder.downloadUrl;
+            this.locales = builder.locales;
             this.skillDescription = builder.skillDescription;
+            this.skillDisplayName = builder.skillDisplayName;
             this.skillId = builder.skillId;
             this.skillLabels = builder.skillLabels;
             this.skillName = builder.skillName;
@@ -219,10 +323,24 @@ public class ListSkillsResponseBody extends TeaModel {
         }
 
         /**
+         * @return locales
+         */
+        public java.util.List<Locales> getLocales() {
+            return this.locales;
+        }
+
+        /**
          * @return skillDescription
          */
         public String getSkillDescription() {
             return this.skillDescription;
+        }
+
+        /**
+         * @return skillDisplayName
+         */
+        public String getSkillDisplayName() {
+            return this.skillDisplayName;
         }
 
         /**
@@ -263,7 +381,9 @@ public class ListSkillsResponseBody extends TeaModel {
         public static final class Builder {
             private String createTime; 
             private String downloadUrl; 
+            private java.util.List<Locales> locales; 
             private String skillDescription; 
+            private String skillDisplayName; 
             private String skillId; 
             private java.util.List<String> skillLabels; 
             private String skillName; 
@@ -276,7 +396,9 @@ public class ListSkillsResponseBody extends TeaModel {
             private Builder(Skills model) {
                 this.createTime = model.createTime;
                 this.downloadUrl = model.downloadUrl;
+                this.locales = model.locales;
                 this.skillDescription = model.skillDescription;
+                this.skillDisplayName = model.skillDisplayName;
                 this.skillId = model.skillId;
                 this.skillLabels = model.skillLabels;
                 this.skillName = model.skillName;
@@ -301,10 +423,26 @@ public class ListSkillsResponseBody extends TeaModel {
             }
 
             /**
+             * Locales.
+             */
+            public Builder locales(java.util.List<Locales> locales) {
+                this.locales = locales;
+                return this;
+            }
+
+            /**
              * SkillDescription.
              */
             public Builder skillDescription(String skillDescription) {
                 this.skillDescription = skillDescription;
+                return this;
+            }
+
+            /**
+             * SkillDisplayName.
+             */
+            public Builder skillDisplayName(String skillDisplayName) {
+                this.skillDisplayName = skillDisplayName;
                 return this;
             }
 
