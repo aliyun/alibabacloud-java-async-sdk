@@ -53,6 +53,14 @@ public class TransformToEcsRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsAcrossZone")
+    private Boolean isAcrossZone;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IzNo")
+    private String izNo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -73,8 +81,16 @@ public class TransformToEcsRequest extends Request {
     private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecondaryIzNo")
+    private String secondaryIzNo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ShardCount")
     private Long shardCount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    private String vSwitchId;
 
     private TransformToEcsRequest(Builder builder) {
         super(builder);
@@ -86,12 +102,16 @@ public class TransformToEcsRequest extends Request {
         this.engineVersion = builder.engineVersion;
         this.instanceClass = builder.instanceClass;
         this.instanceId = builder.instanceId;
+        this.isAcrossZone = builder.isAcrossZone;
+        this.izNo = builder.izNo;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.period = builder.period;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.secondaryIzNo = builder.secondaryIzNo;
         this.shardCount = builder.shardCount;
+        this.vSwitchId = builder.vSwitchId;
     }
 
     public static Builder builder() {
@@ -164,6 +184,20 @@ public class TransformToEcsRequest extends Request {
     }
 
     /**
+     * @return isAcrossZone
+     */
+    public Boolean getIsAcrossZone() {
+        return this.isAcrossZone;
+    }
+
+    /**
+     * @return izNo
+     */
+    public String getIzNo() {
+        return this.izNo;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -199,10 +233,24 @@ public class TransformToEcsRequest extends Request {
     }
 
     /**
+     * @return secondaryIzNo
+     */
+    public String getSecondaryIzNo() {
+        return this.secondaryIzNo;
+    }
+
+    /**
      * @return shardCount
      */
     public Long getShardCount() {
         return this.shardCount;
+    }
+
+    /**
+     * @return vSwitchId
+     */
+    public String getVSwitchId() {
+        return this.vSwitchId;
     }
 
     public static final class Builder extends Request.Builder<TransformToEcsRequest, Builder> {
@@ -214,12 +262,16 @@ public class TransformToEcsRequest extends Request {
         private String engineVersion; 
         private String instanceClass; 
         private String instanceId; 
+        private Boolean isAcrossZone; 
+        private String izNo; 
         private String ownerAccount; 
         private Long ownerId; 
         private Long period; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String secondaryIzNo; 
         private Long shardCount; 
+        private String vSwitchId; 
 
         private Builder() {
             super();
@@ -235,12 +287,16 @@ public class TransformToEcsRequest extends Request {
             this.engineVersion = request.engineVersion;
             this.instanceClass = request.instanceClass;
             this.instanceId = request.instanceId;
+            this.isAcrossZone = request.isAcrossZone;
+            this.izNo = request.izNo;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.period = request.period;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.secondaryIzNo = request.secondaryIzNo;
             this.shardCount = request.shardCount;
+            this.vSwitchId = request.vSwitchId;
         } 
 
         /**
@@ -365,6 +421,24 @@ public class TransformToEcsRequest extends Request {
         }
 
         /**
+         * IsAcrossZone.
+         */
+        public Builder isAcrossZone(Boolean isAcrossZone) {
+            this.putQueryParameter("IsAcrossZone", isAcrossZone);
+            this.isAcrossZone = isAcrossZone;
+            return this;
+        }
+
+        /**
+         * IzNo.
+         */
+        public Builder izNo(String izNo) {
+            this.putQueryParameter("IzNo", izNo);
+            this.izNo = izNo;
+            return this;
+        }
+
+        /**
          * OwnerAccount.
          */
         public Builder ownerAccount(String ownerAccount) {
@@ -416,6 +490,15 @@ public class TransformToEcsRequest extends Request {
         }
 
         /**
+         * SecondaryIzNo.
+         */
+        public Builder secondaryIzNo(String secondaryIzNo) {
+            this.putQueryParameter("SecondaryIzNo", secondaryIzNo);
+            this.secondaryIzNo = secondaryIzNo;
+            return this;
+        }
+
+        /**
          * <p>The number of data shards in the cloud-native cluster instance.</p>
          * 
          * <strong>example:</strong>
@@ -424,6 +507,15 @@ public class TransformToEcsRequest extends Request {
         public Builder shardCount(Long shardCount) {
             this.putQueryParameter("ShardCount", shardCount);
             this.shardCount = shardCount;
+            return this;
+        }
+
+        /**
+         * VSwitchId.
+         */
+        public Builder vSwitchId(String vSwitchId) {
+            this.putQueryParameter("VSwitchId", vSwitchId);
+            this.vSwitchId = vSwitchId;
             return this;
         }
 

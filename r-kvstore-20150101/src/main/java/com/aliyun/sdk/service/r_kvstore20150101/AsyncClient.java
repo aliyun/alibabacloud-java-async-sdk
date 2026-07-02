@@ -149,6 +149,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request);
 
     /**
+     * @param request the request parameters of CreateInstanceMultiVIP  CreateInstanceMultiVIPRequest
+     * @return CreateInstanceMultiVIPResponse
+     */
+    CompletableFuture<CreateInstanceMultiVIPResponse> createInstanceMultiVIP(CreateInstanceMultiVIPRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/54532.html">pricing</a> of Tair (Redis OSS-compatible).</p>
      * <blockquote>
@@ -558,6 +564,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeInstanceConfigResponse
      */
     CompletableFuture<DescribeInstanceConfigResponse> describeInstanceConfig(DescribeInstanceConfigRequest request);
+
+    /**
+     * @param request the request parameters of DescribeInstanceMultiVIP  DescribeInstanceMultiVIPRequest
+     * @return DescribeInstanceMultiVIPResponse
+     */
+    CompletableFuture<DescribeInstanceMultiVIPResponse> describeInstanceMultiVIP(DescribeInstanceMultiVIPRequest request);
 
     /**
      * <b>description</b> :

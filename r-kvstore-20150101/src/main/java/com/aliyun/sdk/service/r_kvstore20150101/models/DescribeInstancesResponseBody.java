@@ -392,6 +392,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("QPS")
         private Long QPS;
 
+        @com.aliyun.core.annotation.NameInMap("QuotaCount")
+        private Long quotaCount;
+
         @com.aliyun.core.annotation.NameInMap("ReadOnlyCount")
         private String readOnlyCount;
 
@@ -424,6 +427,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
+
+        @com.aliyun.core.annotation.NameInMap("UsedCount")
+        private Long usedCount;
 
         @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
@@ -470,6 +476,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.port = builder.port;
             this.privateIp = builder.privateIp;
             this.QPS = builder.QPS;
+            this.quotaCount = builder.quotaCount;
             this.readOnlyCount = builder.readOnlyCount;
             this.regionId = builder.regionId;
             this.replacateId = builder.replacateId;
@@ -481,6 +488,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.slaveReadOnlyCount = builder.slaveReadOnlyCount;
             this.slaveReplicaCount = builder.slaveReplicaCount;
             this.tags = builder.tags;
+            this.usedCount = builder.usedCount;
             this.userName = builder.userName;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
@@ -700,6 +708,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return quotaCount
+         */
+        public Long getQuotaCount() {
+            return this.quotaCount;
+        }
+
+        /**
          * @return readOnlyCount
          */
         public String getReadOnlyCount() {
@@ -777,6 +792,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return usedCount
+         */
+        public Long getUsedCount() {
+            return this.usedCount;
+        }
+
+        /**
          * @return userName
          */
         public String getUserName() {
@@ -841,6 +863,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Long port; 
             private String privateIp; 
             private Long QPS; 
+            private Long quotaCount; 
             private String readOnlyCount; 
             private String regionId; 
             private String replacateId; 
@@ -852,6 +875,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Integer slaveReadOnlyCount; 
             private Integer slaveReplicaCount; 
             private Tags tags; 
+            private Long usedCount; 
             private String userName; 
             private String vSwitchId; 
             private String vpcId; 
@@ -891,6 +915,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
                 this.port = model.port;
                 this.privateIp = model.privateIp;
                 this.QPS = model.QPS;
+                this.quotaCount = model.quotaCount;
                 this.readOnlyCount = model.readOnlyCount;
                 this.regionId = model.regionId;
                 this.replacateId = model.replacateId;
@@ -902,6 +927,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
                 this.slaveReadOnlyCount = model.slaveReadOnlyCount;
                 this.slaveReplicaCount = model.slaveReplicaCount;
                 this.tags = model.tags;
+                this.usedCount = model.usedCount;
                 this.userName = model.userName;
                 this.vSwitchId = model.vSwitchId;
                 this.vpcId = model.vpcId;
@@ -1299,6 +1325,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * QuotaCount.
+             */
+            public Builder quotaCount(Long quotaCount) {
+                this.quotaCount = quotaCount;
+                return this;
+            }
+
+            /**
              * <p>The number of read replicas in the primary zone.</p>
              * <blockquote>
              * <p> The <strong>ReadOnlyCount</strong> and <strong>SlaveReadOnlyCount</strong> parameters are applicable only to cloud-native instances for which read/write splitting is enabled. If the instance is a cluster instance, the preceding parameters indicate the number of read replicas <strong>per node</strong> in the primary and secondary zones of the instance.</p>
@@ -1428,6 +1462,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * UsedCount.
+             */
+            public Builder usedCount(Long usedCount) {
+                this.usedCount = usedCount;
                 return this;
             }
 

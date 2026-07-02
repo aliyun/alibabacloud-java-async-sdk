@@ -67,7 +67,37 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-zhangjiakou-na62-a01", "r-kvstore.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-nebula-1", "r-kvstore.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "r-kvstore.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "r-kvstore.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "r-kvstore.aliyuncs.com"),
+            new TeaPair("us-west-1", "r-kvstore.us-west-1.aliyuncs.com"),
+            new TeaPair("us-southeast-1", "r-kvstore.us-southeast-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "r-kvstore.us-east-1.aliyuncs.com"),
+            new TeaPair("na-south-1", "r-kvstore.na-south-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "r-kvstore.me-east-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "r-kvstore.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "r-kvstore.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "r-kvstore.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-jva", "r-kvstore.cn-zhengzhou-jva.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "r-kvstore.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wuhan-lr", "r-kvstore.cn-wuhan-lr.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "r-kvstore.cn-shenzhen-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "r-kvstore.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "r-kvstore.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-nanjing", "r-kvstore.cn-nanjing.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "r-kvstore.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "r-kvstore.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "r-kvstore.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-fuzhou", "r-kvstore.cn-fuzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "r-kvstore.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "r-kvstore.cn-beijing-finance-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "r-kvstore.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "r-kvstore.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "r-kvstore.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "r-kvstore.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "r-kvstore.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "r-kvstore.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-south-1", "r-kvstore.ap-south-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "r-kvstore.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "r-kvstore.ap-northeast-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -333,6 +363,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateInstanceMultiVIP  CreateInstanceMultiVIPRequest
+     * @return CreateInstanceMultiVIPResponse
+     */
+    @Override
+    public CompletableFuture<CreateInstanceMultiVIPResponse> createInstanceMultiVIP(CreateInstanceMultiVIPRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateInstanceMultiVIP").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateInstanceMultiVIPResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateInstanceMultiVIPResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1308,6 +1356,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeInstanceConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeInstanceMultiVIP  DescribeInstanceMultiVIPRequest
+     * @return DescribeInstanceMultiVIPResponse
+     */
+    @Override
+    public CompletableFuture<DescribeInstanceMultiVIPResponse> describeInstanceMultiVIP(DescribeInstanceMultiVIPRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeInstanceMultiVIP").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeInstanceMultiVIPResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeInstanceMultiVIPResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

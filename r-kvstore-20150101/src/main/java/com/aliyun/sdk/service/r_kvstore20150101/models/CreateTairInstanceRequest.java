@@ -96,6 +96,14 @@ public class CreateTairInstanceRequest extends Request {
     private String instanceType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaintainEndTime")
+    private String maintainEndTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaintainStartTime")
+    private String maintainStartTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -235,6 +243,8 @@ public class CreateTairInstanceRequest extends Request {
         this.instanceEndpointType = builder.instanceEndpointType;
         this.instanceName = builder.instanceName;
         this.instanceType = builder.instanceType;
+        this.maintainEndTime = builder.maintainEndTime;
+        this.maintainStartTime = builder.maintainStartTime;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.paramGroupId = builder.paramGroupId;
@@ -409,6 +419,20 @@ public class CreateTairInstanceRequest extends Request {
      */
     public String getInstanceType() {
         return this.instanceType;
+    }
+
+    /**
+     * @return maintainEndTime
+     */
+    public String getMaintainEndTime() {
+        return this.maintainEndTime;
+    }
+
+    /**
+     * @return maintainStartTime
+     */
+    public String getMaintainStartTime() {
+        return this.maintainStartTime;
     }
 
     /**
@@ -627,6 +651,8 @@ public class CreateTairInstanceRequest extends Request {
         private String instanceEndpointType; 
         private String instanceName; 
         private String instanceType; 
+        private String maintainEndTime; 
+        private String maintainStartTime; 
         private String ownerAccount; 
         private Long ownerId; 
         private String paramGroupId; 
@@ -681,6 +707,8 @@ public class CreateTairInstanceRequest extends Request {
             this.instanceEndpointType = request.instanceEndpointType;
             this.instanceName = request.instanceName;
             this.instanceType = request.instanceType;
+            this.maintainEndTime = request.maintainEndTime;
+            this.maintainStartTime = request.maintainStartTime;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.paramGroupId = request.paramGroupId;
@@ -991,6 +1019,24 @@ public class CreateTairInstanceRequest extends Request {
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
             this.instanceType = instanceType;
+            return this;
+        }
+
+        /**
+         * MaintainEndTime.
+         */
+        public Builder maintainEndTime(String maintainEndTime) {
+            this.putQueryParameter("MaintainEndTime", maintainEndTime);
+            this.maintainEndTime = maintainEndTime;
+            return this;
+        }
+
+        /**
+         * MaintainStartTime.
+         */
+        public Builder maintainStartTime(String maintainStartTime) {
+            this.putQueryParameter("MaintainStartTime", maintainStartTime);
+            this.maintainStartTime = maintainStartTime;
             return this;
         }
 

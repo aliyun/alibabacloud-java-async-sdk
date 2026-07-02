@@ -51,12 +51,24 @@ public class SwitchInstanceHARequest extends Request {
     private String securityToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceNodeId")
+    private String sourceNodeId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SwitchMode")
     private Integer switchMode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SwitchType")
     private String switchType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetNodeId")
+    private String targetNodeId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetShardName")
+    private String targetShardName;
 
     private SwitchInstanceHARequest(Builder builder) {
         super(builder);
@@ -68,8 +80,11 @@ public class SwitchInstanceHARequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
+        this.sourceNodeId = builder.sourceNodeId;
         this.switchMode = builder.switchMode;
         this.switchType = builder.switchType;
+        this.targetNodeId = builder.targetNodeId;
+        this.targetShardName = builder.targetShardName;
     }
 
     public static Builder builder() {
@@ -142,6 +157,13 @@ public class SwitchInstanceHARequest extends Request {
     }
 
     /**
+     * @return sourceNodeId
+     */
+    public String getSourceNodeId() {
+        return this.sourceNodeId;
+    }
+
+    /**
      * @return switchMode
      */
     public Integer getSwitchMode() {
@@ -155,6 +177,20 @@ public class SwitchInstanceHARequest extends Request {
         return this.switchType;
     }
 
+    /**
+     * @return targetNodeId
+     */
+    public String getTargetNodeId() {
+        return this.targetNodeId;
+    }
+
+    /**
+     * @return targetShardName
+     */
+    public String getTargetShardName() {
+        return this.targetShardName;
+    }
+
     public static final class Builder extends Request.Builder<SwitchInstanceHARequest, Builder> {
         private String regionId; 
         private String instanceId; 
@@ -164,8 +200,11 @@ public class SwitchInstanceHARequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
+        private String sourceNodeId; 
         private Integer switchMode; 
         private String switchType; 
+        private String targetNodeId; 
+        private String targetShardName; 
 
         private Builder() {
             super();
@@ -181,8 +220,11 @@ public class SwitchInstanceHARequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
+            this.sourceNodeId = request.sourceNodeId;
             this.switchMode = request.switchMode;
             this.switchType = request.switchType;
+            this.targetNodeId = request.targetNodeId;
+            this.targetShardName = request.targetShardName;
         } 
 
         /**
@@ -268,6 +310,15 @@ public class SwitchInstanceHARequest extends Request {
         }
 
         /**
+         * SourceNodeId.
+         */
+        public Builder sourceNodeId(String sourceNodeId) {
+            this.putQueryParameter("SourceNodeId", sourceNodeId);
+            this.sourceNodeId = sourceNodeId;
+            return this;
+        }
+
+        /**
          * <p>The time when to perform the switchover. Default value: 0. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: immediately performs the switchover.</li>
@@ -302,6 +353,24 @@ public class SwitchInstanceHARequest extends Request {
         public Builder switchType(String switchType) {
             this.putQueryParameter("SwitchType", switchType);
             this.switchType = switchType;
+            return this;
+        }
+
+        /**
+         * TargetNodeId.
+         */
+        public Builder targetNodeId(String targetNodeId) {
+            this.putQueryParameter("TargetNodeId", targetNodeId);
+            this.targetNodeId = targetNodeId;
+            return this;
+        }
+
+        /**
+         * TargetShardName.
+         */
+        public Builder targetShardName(String targetShardName) {
+            this.putQueryParameter("TargetShardName", targetShardName);
+            this.targetShardName = targetShardName;
             return this;
         }
 
