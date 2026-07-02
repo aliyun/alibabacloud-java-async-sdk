@@ -74,6 +74,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteYikeAssetMediaInfosResponse> deleteYikeAssetMediaInfos(DeleteYikeAssetMediaInfosRequest request);
 
     /**
+     * @param request the request parameters of GetImageGenerationJob  GetImageGenerationJobRequest
+     * @return GetImageGenerationJobResponse
+     */
+    CompletableFuture<GetImageGenerationJobResponse> getImageGenerationJob(GetImageGenerationJobRequest request);
+
+    /**
+     * @param request the request parameters of GetVideoGenerationJob  GetVideoGenerationJobRequest
+     * @return GetVideoGenerationJobResponse
+     */
+    CompletableFuture<GetVideoGenerationJobResponse> getVideoGenerationJob(GetVideoGenerationJobRequest request);
+
+    /**
      * @param request the request parameters of GetYikeAIAppJob  GetYikeAIAppJobRequest
      * @return GetYikeAIAppJobResponse
      */
@@ -180,6 +192,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubYikeUserCreditResponse
      */
     CompletableFuture<SubYikeUserCreditResponse> subYikeUserCredit(SubYikeUserCreditRequest request);
+
+    /**
+     * @param request the request parameters of SubmitImageGenerationJob  SubmitImageGenerationJobRequest
+     * @return SubmitImageGenerationJobResponse
+     */
+    CompletableFuture<SubmitImageGenerationJobResponse> submitImageGenerationJob(SubmitImageGenerationJobRequest request);
+
+    /**
+     * @param request the request parameters of SubmitVideoGenerationJob  SubmitVideoGenerationJobRequest
+     * @return SubmitVideoGenerationJobResponse
+     */
+    CompletableFuture<SubmitVideoGenerationJobResponse> submitVideoGenerationJob(SubmitVideoGenerationJobRequest request);
 
     /**
      * @param request the request parameters of SubmitYikeAIAppJob  SubmitYikeAIAppJobRequest
