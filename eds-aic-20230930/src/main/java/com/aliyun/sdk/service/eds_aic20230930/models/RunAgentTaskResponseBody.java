@@ -167,6 +167,9 @@ public class RunAgentTaskResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RunningAt")
         private String runningAt;
 
+        @com.aliyun.core.annotation.NameInMap("SessionId")
+        private String sessionId;
+
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
@@ -177,6 +180,7 @@ public class RunAgentTaskResponseBody extends TeaModel {
             this.currentStatus = builder.currentStatus;
             this.instanceId = builder.instanceId;
             this.runningAt = builder.runningAt;
+            this.sessionId = builder.sessionId;
             this.taskId = builder.taskId;
             this.userPrompt = builder.userPrompt;
         }
@@ -211,6 +215,13 @@ public class RunAgentTaskResponseBody extends TeaModel {
         }
 
         /**
+         * @return sessionId
+         */
+        public String getSessionId() {
+            return this.sessionId;
+        }
+
+        /**
          * @return taskId
          */
         public String getTaskId() {
@@ -228,6 +239,7 @@ public class RunAgentTaskResponseBody extends TeaModel {
             private String currentStatus; 
             private String instanceId; 
             private String runningAt; 
+            private String sessionId; 
             private String taskId; 
             private String userPrompt; 
 
@@ -238,6 +250,7 @@ public class RunAgentTaskResponseBody extends TeaModel {
                 this.currentStatus = model.currentStatus;
                 this.instanceId = model.instanceId;
                 this.runningAt = model.runningAt;
+                this.sessionId = model.sessionId;
                 this.taskId = model.taskId;
                 this.userPrompt = model.userPrompt;
             } 
@@ -263,6 +276,14 @@ public class RunAgentTaskResponseBody extends TeaModel {
              */
             public Builder runningAt(String runningAt) {
                 this.runningAt = runningAt;
+                return this;
+            }
+
+            /**
+             * SessionId.
+             */
+            public Builder sessionId(String sessionId) {
+                this.sessionId = sessionId;
                 return this;
             }
 

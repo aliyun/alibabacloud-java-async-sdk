@@ -23,7 +23,6 @@ public class RunAgentTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
@@ -33,6 +32,10 @@ public class RunAgentTaskRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScheduleId")
     private String scheduleId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Targets")
+    private java.util.List<Targets> targets;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskConfigId")
@@ -52,6 +55,7 @@ public class RunAgentTaskRequest extends Request {
         this.instanceIds = builder.instanceIds;
         this.maxSteps = builder.maxSteps;
         this.scheduleId = builder.scheduleId;
+        this.targets = builder.targets;
         this.taskConfigId = builder.taskConfigId;
         this.timeoutSeconds = builder.timeoutSeconds;
         this.userPrompt = builder.userPrompt;
@@ -99,6 +103,13 @@ public class RunAgentTaskRequest extends Request {
     }
 
     /**
+     * @return targets
+     */
+    public java.util.List<Targets> getTargets() {
+        return this.targets;
+    }
+
+    /**
      * @return taskConfigId
      */
     public String getTaskConfigId() {
@@ -124,6 +135,7 @@ public class RunAgentTaskRequest extends Request {
         private java.util.List<String> instanceIds; 
         private Integer maxSteps; 
         private String scheduleId; 
+        private java.util.List<Targets> targets; 
         private String taskConfigId; 
         private Integer timeoutSeconds; 
         private String userPrompt; 
@@ -138,6 +150,7 @@ public class RunAgentTaskRequest extends Request {
             this.instanceIds = request.instanceIds;
             this.maxSteps = request.maxSteps;
             this.scheduleId = request.scheduleId;
+            this.targets = request.targets;
             this.taskConfigId = request.taskConfigId;
             this.timeoutSeconds = request.timeoutSeconds;
             this.userPrompt = request.userPrompt;
@@ -153,7 +166,7 @@ public class RunAgentTaskRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * InstanceIds.
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -176,6 +189,15 @@ public class RunAgentTaskRequest extends Request {
         public Builder scheduleId(String scheduleId) {
             this.putQueryParameter("ScheduleId", scheduleId);
             this.scheduleId = scheduleId;
+            return this;
+        }
+
+        /**
+         * Targets.
+         */
+        public Builder targets(java.util.List<Targets> targets) {
+            this.putQueryParameter("Targets", targets);
+            this.targets = targets;
             return this;
         }
 
@@ -213,4 +235,79 @@ public class RunAgentTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RunAgentTaskRequest} extends {@link TeaModel}
+     *
+     * <p>RunAgentTaskRequest</p>
+     */
+    public static class Targets extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private String instanceId;
+
+        @com.aliyun.core.annotation.NameInMap("SessionId")
+        private String sessionId;
+
+        private Targets(Builder builder) {
+            this.instanceId = builder.instanceId;
+            this.sessionId = builder.sessionId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Targets create() {
+            return builder().build();
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
+         * @return sessionId
+         */
+        public String getSessionId() {
+            return this.sessionId;
+        }
+
+        public static final class Builder {
+            private String instanceId; 
+            private String sessionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Targets model) {
+                this.instanceId = model.instanceId;
+                this.sessionId = model.sessionId;
+            } 
+
+            /**
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * SessionId.
+             */
+            public Builder sessionId(String sessionId) {
+                this.sessionId = sessionId;
+                return this;
+            }
+
+            public Targets build() {
+                return new Targets(this);
+            } 
+
+        } 
+
+    }
 }
