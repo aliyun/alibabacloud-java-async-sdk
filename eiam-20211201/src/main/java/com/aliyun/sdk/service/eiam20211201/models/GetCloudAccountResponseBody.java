@@ -416,6 +416,9 @@ public class GetCloudAccountResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CloudAccountProviderName")
         private String cloudAccountProviderName;
 
+        @com.aliyun.core.annotation.NameInMap("CloudAccountSite")
+        private String cloudAccountSite;
+
         @com.aliyun.core.annotation.NameInMap("CloudAccountVendorType")
         private String cloudAccountVendorType;
 
@@ -439,6 +442,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
             this.cloudAccountName = builder.cloudAccountName;
             this.cloudAccountProviderConfig = builder.cloudAccountProviderConfig;
             this.cloudAccountProviderName = builder.cloudAccountProviderName;
+            this.cloudAccountSite = builder.cloudAccountSite;
             this.cloudAccountVendorType = builder.cloudAccountVendorType;
             this.createTime = builder.createTime;
             this.description = builder.description;
@@ -504,6 +508,13 @@ public class GetCloudAccountResponseBody extends TeaModel {
         }
 
         /**
+         * @return cloudAccountSite
+         */
+        public String getCloudAccountSite() {
+            return this.cloudAccountSite;
+        }
+
+        /**
          * @return cloudAccountVendorType
          */
         public String getCloudAccountVendorType() {
@@ -546,6 +557,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
             private String cloudAccountName; 
             private CloudAccountProviderConfig cloudAccountProviderConfig; 
             private String cloudAccountProviderName; 
+            private String cloudAccountSite; 
             private String cloudAccountVendorType; 
             private Long createTime; 
             private String description; 
@@ -563,6 +575,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
                 this.cloudAccountName = model.cloudAccountName;
                 this.cloudAccountProviderConfig = model.cloudAccountProviderConfig;
                 this.cloudAccountProviderName = model.cloudAccountProviderName;
+                this.cloudAccountSite = model.cloudAccountSite;
                 this.cloudAccountVendorType = model.cloudAccountVendorType;
                 this.createTime = model.createTime;
                 this.description = model.description;
@@ -638,6 +651,14 @@ public class GetCloudAccountResponseBody extends TeaModel {
              */
             public Builder cloudAccountProviderName(String cloudAccountProviderName) {
                 this.cloudAccountProviderName = cloudAccountProviderName;
+                return this;
+            }
+
+            /**
+             * CloudAccountSite.
+             */
+            public Builder cloudAccountSite(String cloudAccountSite) {
+                this.cloudAccountSite = cloudAccountSite;
                 return this;
             }
 
