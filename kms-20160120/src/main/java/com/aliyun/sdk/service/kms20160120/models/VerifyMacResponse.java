@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeCertificateResponse} extends {@link TeaModel}
+ * {@link VerifyMacResponse} extends {@link TeaModel}
  *
- * <p>DescribeCertificateResponse</p>
+ * <p>VerifyMacResponse</p>
  */
-public class DescribeCertificateResponse extends Response {
+public class VerifyMacResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class DescribeCertificateResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribeCertificateResponseBody body;
+    private VerifyMacResponseBody body;
 
-    private DescribeCertificateResponse(BuilderImpl builder) {
+    private VerifyMacResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeCertificateResponse create() {
+    public static VerifyMacResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class DescribeCertificateResponse extends Response {
     /**
      * @return body
      */
-    public DescribeCertificateResponseBody getBody() {
+    public VerifyMacResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeCertificateResponse, Builder> {
+    public interface Builder extends Response.Builder<VerifyMacResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeCertificateResponseBody body);
+        Builder body(VerifyMacResponseBody body);
 
         @Override
-        DescribeCertificateResponse build();
+        VerifyMacResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeCertificateResponse, Builder>
+            extends Response.BuilderImpl<VerifyMacResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DescribeCertificateResponseBody body; 
+        private VerifyMacResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeCertificateResponse response) {
+        private BuilderImpl(VerifyMacResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class DescribeCertificateResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeCertificateResponseBody body) {
+        public Builder body(VerifyMacResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeCertificateResponse build() {
-            return new DescribeCertificateResponse(this);
+        public VerifyMacResponse build() {
+            return new VerifyMacResponse(this);
         } 
 
     } 

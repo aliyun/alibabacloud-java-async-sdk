@@ -30,7 +30,42 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "Kms";
         this.version = "2016-01-20";
         this.endpointRule = "regional";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("us-west-1", "kms.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "kms.us-east-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "kms.me-east-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "kms.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "kms.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "kms.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-jva", "kms.cn-zhengzhou-jva.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "kms.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "kms.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-wuhan-lr", "kms.cn-wuhan-lr.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "kms.cn-shenzhen-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "kms.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "kms.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "kms.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "kms.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "kms.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "kms.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "kms.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "kms.cn-hangzhou-finance.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "kms.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "kms.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-fuzhou", "kms.cn-fuzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "kms.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "kms.cn-beijing-finance-1.aliyuncs.com"),
+            new TeaPair("cn-beijing", "kms.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "kms.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "kms.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "kms.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "kms.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "kms.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "kms.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-south-1", "kms.ap-south-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "kms.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "kms.ap-northeast-1.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -278,196 +313,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CancelKeyDeletionResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * <b>description</b> :
-     * <p>Limit: The encryption algorithm in the request parameters must match the key type. 
-     * The following table describes the mapping between encryption algorithms and key types.</p>
-     * <table>
-     * <thead>
-     * <tr>
-     * <th>Algorithm</th>
-     * <th>Key Spec</th>
-     * </tr>
-     * </thead>
-     * <tbody><tr>
-     * <td>RSAES_OAEP_SHA_1</td>
-     * <td>RSA_2048</td>
-     * </tr>
-     * <tr>
-     * <td>RSAES_OAEP_SHA_256</td>
-     * <td>RSA_2048</td>
-     * </tr>
-     * <tr>
-     * <td>SM2PKE</td>
-     * <td>EC_SM2</td>
-     * </tr>
-     * <tr>
-     * <td>In this example, the certificate whose ID is <code>12345678-1234-1234-1234-12345678****</code> and the encryption algorithm <code>RSAES_OAEP_SHA_256</code> are used to decrypt the data <code>ZOyIygCyaOW6Gj****MlNKiuyjfzw=</code>.</td>
-     * <td></td>
-     * </tr>
-     * </tbody></table>
-     * 
-     * @param request the request parameters of CertificatePrivateKeyDecrypt  CertificatePrivateKeyDecryptRequest
-     * @return CertificatePrivateKeyDecryptResponse
-     */
-    @Override
-    public CompletableFuture<CertificatePrivateKeyDecryptResponse> certificatePrivateKeyDecrypt(CertificatePrivateKeyDecryptRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CertificatePrivateKeyDecrypt").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CertificatePrivateKeyDecryptResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CertificatePrivateKeyDecryptResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * <b>description</b> :
-     * <p>The signature algorithm in the request parameters must match the key type. The following table describes the mapping between signature algorithms and key types.  </p>
-     * <table>
-     * <thead>
-     * <tr>
-     * <th>Algorithm</th>
-     * <th>Key Spec</th>
-     * </tr>
-     * </thead>
-     * <tbody><tr>
-     * <td>RSA_PKCS1_SHA_256</td>
-     * <td>RSA_2048</td>
-     * </tr>
-     * <tr>
-     * <td>RSA_PSS_SHA_256</td>
-     * <td>RSA_2048</td>
-     * </tr>
-     * <tr>
-     * <td>ECDSA_SHA_256</td>
-     * <td>EC_P256</td>
-     * </tr>
-     * <tr>
-     * <td>SM2DSA</td>
-     * <td>EC_SM2</td>
-     * </tr>
-     * <tr>
-     * <td>In this example, the certificate whose ID is <code>12345678-1234-1234-1234-12345678****</code> and the signature algorithm <code>ECDSA_SHA_256</code> are used to generate a signature for the raw data <code>VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZy4=</code>.</td>
-     * <td></td>
-     * </tr>
-     * </tbody></table>
-     * 
-     * @param request the request parameters of CertificatePrivateKeySign  CertificatePrivateKeySignRequest
-     * @return CertificatePrivateKeySignResponse
-     */
-    @Override
-    public CompletableFuture<CertificatePrivateKeySignResponse> certificatePrivateKeySign(CertificatePrivateKeySignRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CertificatePrivateKeySign").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CertificatePrivateKeySignResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CertificatePrivateKeySignResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * <b>description</b> :
-     * <p>Limit: The encryption algorithm in the request parameters must match the key type. 
-     * The following table describes the mapping between encryption algorithms and key types.</p>
-     * <table>
-     * <thead>
-     * <tr>
-     * <th>Algorithm</th>
-     * <th>Key Spec</th>
-     * </tr>
-     * </thead>
-     * <tbody><tr>
-     * <td>RSAES_OAEP_SHA_1</td>
-     * <td>RSA_2048</td>
-     * </tr>
-     * <tr>
-     * <td>RSAES_OAEP_SHA_256</td>
-     * <td>RSA_2048</td>
-     * </tr>
-     * <tr>
-     * <td>SM2PKE</td>
-     * <td>EC_SM2</td>
-     * </tr>
-     * <tr>
-     * <td>In this example, the certificate whose ID is <code>12345678-1234-1234-1234-12345678****</code> and the encryption algorithm <code>RSAES_OAEP_SHA_256</code> are used to encrypt the data <code>VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZy4=</code>.</td>
-     * <td></td>
-     * </tr>
-     * </tbody></table>
-     * 
-     * @param request the request parameters of CertificatePublicKeyEncrypt  CertificatePublicKeyEncryptRequest
-     * @return CertificatePublicKeyEncryptResponse
-     */
-    @Override
-    public CompletableFuture<CertificatePublicKeyEncryptResponse> certificatePublicKeyEncrypt(CertificatePublicKeyEncryptRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CertificatePublicKeyEncrypt").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CertificatePublicKeyEncryptResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CertificatePublicKeyEncryptResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * <b>description</b> :
-     * <p>The signature algorithm in the request parameters must match the key type. The following table describes the mapping between signature algorithms and key types.  </p>
-     * <table>
-     * <thead>
-     * <tr>
-     * <th>Algorithm</th>
-     * <th>Key Spec</th>
-     * </tr>
-     * </thead>
-     * <tbody><tr>
-     * <td>RSA_PKCS1_SHA_256</td>
-     * <td>RSA_2048</td>
-     * </tr>
-     * <tr>
-     * <td>RSA_PSS_SHA_256</td>
-     * <td>RSA_2048</td>
-     * </tr>
-     * <tr>
-     * <td>ECDSA_SHA_256</td>
-     * <td>EC_P256</td>
-     * </tr>
-     * <tr>
-     * <td>SM2DSA</td>
-     * <td>EC_SM2</td>
-     * </tr>
-     * <tr>
-     * <td>In this example, the certificate whose ID is <code>12345678-1234-1234-1234-12345678****</code> and the signature algorithm <code>ECDSA_SHA_256</code> are used to verify the digital signature <code>ZOyIygCyaOW6Gj****MlNKiuyjfzw=</code> of the raw data <code>VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZy4=</code>.</td>
-     * <td></td>
-     * </tr>
-     * </tbody></table>
-     * 
-     * @param request the request parameters of CertificatePublicKeyVerify  CertificatePublicKeyVerifyRequest
-     * @return CertificatePublicKeyVerifyResponse
-     */
-    @Override
-    public CompletableFuture<CertificatePublicKeyVerifyResponse> certificatePublicKeyVerify(CertificatePublicKeyVerifyRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CertificatePublicKeyVerify").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CertificatePublicKeyVerifyResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CertificatePublicKeyVerifyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -756,28 +601,6 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>After the certificate and its private key and certificate chain are deleted, they cannot be restored. Proceed with caution.
-     * In this example, the certificate whose ID is <code>9a28de48-8d8b-484d-a766-dec4****</code> and its private key and certificate chain are deleted.</p>
-     * 
-     * @param request the request parameters of DeleteCertificate  DeleteCertificateRequest
-     * @return DeleteCertificateResponse
-     */
-    @Override
-    public CompletableFuture<DeleteCertificateResponse> deleteCertificate(DeleteCertificateRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteCertificate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteCertificateResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DeleteCertificateResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * <b>description</b> :
      * <p>Before you delete a client key, make sure that the client key is no longer in use. If you delete a client key that is in use, applications that use the client key cannot access Key Management Service (KMS). Exercise caution when you delete a client key.</p>
      * 
      * @param request the request parameters of DeleteClientKey  DeleteClientKeyRequest
@@ -915,27 +738,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeApplicationAccessPointResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * <b>description</b> :
-     * <p>In this example, the information about the certificate whose ID is <code>9a28de48-8d8b-484d-a766-dec4****</code> is queried. The certificate information includes the certificate ID, creation time, certificate issuer, validity period, serial number, and signature algorithm.</p>
-     * 
-     * @param request the request parameters of DescribeCertificate  DescribeCertificateRequest
-     * @return DescribeCertificateResponse
-     */
-    @Override
-    public CompletableFuture<DescribeCertificateResponse> describeCertificate(DescribeCertificateRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeCertificate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeCertificateResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeCertificateResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1240,21 +1042,18 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>In this example, the certificate whose ID is <code>9a28de48-8d8b-484d-a766-dec4****</code> is queried. The certificate, certificate chain, certificate ID, and certificate signing request (CSR) are returned.</p>
-     * 
-     * @param request the request parameters of GetCertificate  GetCertificateRequest
-     * @return GetCertificateResponse
+     * @param request the request parameters of GenerateMac  GenerateMacRequest
+     * @return GenerateMacResponse
      */
     @Override
-    public CompletableFuture<GetCertificateResponse> getCertificate(GetCertificateRequest request) {
+    public CompletableFuture<GenerateMacResponse> generateMac(GenerateMacRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetCertificate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCertificateResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GenerateMac").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GenerateMacResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<GetCertificateResponse> future = new CompletableFuture<>();
+            CompletableFuture<GenerateMacResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2136,27 +1935,6 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>In this example, the status of the certificate whose ID is <code>9a28de48-8d8b-484d-a766-dec4****</code> is updated to INACTIVE.</p>
-     * 
-     * @param request the request parameters of UpdateCertificateStatus  UpdateCertificateStatusRequest
-     * @return UpdateCertificateStatusResponse
-     */
-    @Override
-    public CompletableFuture<UpdateCertificateStatusResponse> updateCertificateStatus(UpdateCertificateStatusRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateCertificateStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateCertificateStatusResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<UpdateCertificateStatusResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * <b>description</b> :
      * <p>This operation replaces the description of a customer master key (CMK) with the description that you specify. The original description of the CMK is specified by the Description parameter when you call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation. You can call this operation to add, modify, or delete the description of a CMK.</p>
      * 
      * @param request the request parameters of UpdateKeyDescription  UpdateKeyDescriptionRequest
@@ -2348,21 +2126,18 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>In this example, a certificate issued by a CA is imported into Certificates Manager. The ID of the certificate in Certificates Manager is <code>12345678-1234-1234-1234-12345678****</code>.</p>
-     * 
-     * @param request the request parameters of UploadCertificate  UploadCertificateRequest
-     * @return UploadCertificateResponse
+     * @param request the request parameters of VerifyMac  VerifyMacRequest
+     * @return VerifyMacResponse
      */
     @Override
-    public CompletableFuture<UploadCertificateResponse> uploadCertificate(UploadCertificateRequest request) {
+    public CompletableFuture<VerifyMacResponse> verifyMac(VerifyMacRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UploadCertificate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UploadCertificateResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("VerifyMac").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(VerifyMacResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<UploadCertificateResponse> future = new CompletableFuture<>();
+            CompletableFuture<VerifyMacResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

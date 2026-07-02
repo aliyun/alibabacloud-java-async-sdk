@@ -293,6 +293,12 @@ public class GetKmsInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("DeletionProtection")
+        private Boolean deletionProtection;
+
+        @com.aliyun.core.annotation.NameInMap("DeletionProtectionDescription")
+        private String deletionProtectionDescription;
+
         @com.aliyun.core.annotation.NameInMap("EndDate")
         private String endDate;
 
@@ -349,6 +355,8 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             this.caCertificateChainPem = builder.caCertificateChainPem;
             this.chargeType = builder.chargeType;
             this.createTime = builder.createTime;
+            this.deletionProtection = builder.deletionProtection;
+            this.deletionProtectionDescription = builder.deletionProtectionDescription;
             this.endDate = builder.endDate;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
@@ -402,6 +410,20 @@ public class GetKmsInstanceResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return deletionProtection
+         */
+        public Boolean getDeletionProtection() {
+            return this.deletionProtection;
+        }
+
+        /**
+         * @return deletionProtectionDescription
+         */
+        public String getDeletionProtectionDescription() {
+            return this.deletionProtectionDescription;
         }
 
         /**
@@ -528,6 +550,8 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             private String caCertificateChainPem; 
             private String chargeType; 
             private String createTime; 
+            private Boolean deletionProtection; 
+            private String deletionProtectionDescription; 
             private String endDate; 
             private String instanceId; 
             private String instanceName; 
@@ -554,6 +578,8 @@ public class GetKmsInstanceResponseBody extends TeaModel {
                 this.caCertificateChainPem = model.caCertificateChainPem;
                 this.chargeType = model.chargeType;
                 this.createTime = model.createTime;
+                this.deletionProtection = model.deletionProtection;
+                this.deletionProtectionDescription = model.deletionProtectionDescription;
                 this.endDate = model.endDate;
                 this.instanceId = model.instanceId;
                 this.instanceName = model.instanceName;
@@ -611,6 +637,22 @@ public class GetKmsInstanceResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * DeletionProtection.
+             */
+            public Builder deletionProtection(Boolean deletionProtection) {
+                this.deletionProtection = deletionProtection;
+                return this;
+            }
+
+            /**
+             * DeletionProtectionDescription.
+             */
+            public Builder deletionProtectionDescription(String deletionProtectionDescription) {
+                this.deletionProtectionDescription = deletionProtectionDescription;
                 return this;
             }
 

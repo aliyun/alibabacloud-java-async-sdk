@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DecryptResponseBody</p>
  */
 public class DecryptResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("CiphertextForRecipient")
+    private String ciphertextForRecipient;
+
     @com.aliyun.core.annotation.NameInMap("KeyId")
     private String keyId;
 
@@ -30,6 +33,7 @@ public class DecryptResponseBody extends TeaModel {
     private String requestId;
 
     private DecryptResponseBody(Builder builder) {
+        this.ciphertextForRecipient = builder.ciphertextForRecipient;
         this.keyId = builder.keyId;
         this.keyVersionId = builder.keyVersionId;
         this.plaintext = builder.plaintext;
@@ -46,6 +50,13 @@ public class DecryptResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return ciphertextForRecipient
+     */
+    public String getCiphertextForRecipient() {
+        return this.ciphertextForRecipient;
     }
 
     /**
@@ -77,6 +88,7 @@ public class DecryptResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String ciphertextForRecipient; 
         private String keyId; 
         private String keyVersionId; 
         private String plaintext; 
@@ -86,11 +98,20 @@ public class DecryptResponseBody extends TeaModel {
         } 
 
         private Builder(DecryptResponseBody model) {
+            this.ciphertextForRecipient = model.ciphertextForRecipient;
             this.keyId = model.keyId;
             this.keyVersionId = model.keyVersionId;
             this.plaintext = model.plaintext;
             this.requestId = model.requestId;
         } 
+
+        /**
+         * CiphertextForRecipient.
+         */
+        public Builder ciphertextForRecipient(String ciphertextForRecipient) {
+            this.ciphertextForRecipient = ciphertextForRecipient;
+            return this;
+        }
 
         /**
          * <p>The ID of the customer master key (CMK) that is used to decrypt the ciphertext.</p>

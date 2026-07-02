@@ -31,6 +31,10 @@ public class SetDeletionProtectionRequest extends Request {
     private String keyId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KmsInstanceId")
+    private String kmsInstanceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProtectedResourceArn")
     private String protectedResourceArn;
 
@@ -39,6 +43,7 @@ public class SetDeletionProtectionRequest extends Request {
         this.deletionProtectionDescription = builder.deletionProtectionDescription;
         this.enableDeletionProtection = builder.enableDeletionProtection;
         this.keyId = builder.keyId;
+        this.kmsInstanceId = builder.kmsInstanceId;
         this.protectedResourceArn = builder.protectedResourceArn;
     }
 
@@ -77,6 +82,13 @@ public class SetDeletionProtectionRequest extends Request {
     }
 
     /**
+     * @return kmsInstanceId
+     */
+    public String getKmsInstanceId() {
+        return this.kmsInstanceId;
+    }
+
+    /**
      * @return protectedResourceArn
      */
     public String getProtectedResourceArn() {
@@ -87,6 +99,7 @@ public class SetDeletionProtectionRequest extends Request {
         private String deletionProtectionDescription; 
         private Boolean enableDeletionProtection; 
         private String keyId; 
+        private String kmsInstanceId; 
         private String protectedResourceArn; 
 
         private Builder() {
@@ -98,6 +111,7 @@ public class SetDeletionProtectionRequest extends Request {
             this.deletionProtectionDescription = request.deletionProtectionDescription;
             this.enableDeletionProtection = request.enableDeletionProtection;
             this.keyId = request.keyId;
+            this.kmsInstanceId = request.kmsInstanceId;
             this.protectedResourceArn = request.protectedResourceArn;
         } 
 
@@ -139,6 +153,15 @@ public class SetDeletionProtectionRequest extends Request {
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);
             this.keyId = keyId;
+            return this;
+        }
+
+        /**
+         * KmsInstanceId.
+         */
+        public Builder kmsInstanceId(String kmsInstanceId) {
+            this.putQueryParameter("KmsInstanceId", kmsInstanceId);
+            this.kmsInstanceId = kmsInstanceId;
             return this;
         }
 

@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CertificatePublicKeyEncryptResponse} extends {@link TeaModel}
+ * {@link GenerateMacResponse} extends {@link TeaModel}
  *
- * <p>CertificatePublicKeyEncryptResponse</p>
+ * <p>GenerateMacResponse</p>
  */
-public class CertificatePublicKeyEncryptResponse extends Response {
+public class GenerateMacResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class CertificatePublicKeyEncryptResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private CertificatePublicKeyEncryptResponseBody body;
+    private GenerateMacResponseBody body;
 
-    private CertificatePublicKeyEncryptResponse(BuilderImpl builder) {
+    private GenerateMacResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CertificatePublicKeyEncryptResponse create() {
+    public static GenerateMacResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class CertificatePublicKeyEncryptResponse extends Response {
     /**
      * @return body
      */
-    public CertificatePublicKeyEncryptResponseBody getBody() {
+    public GenerateMacResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CertificatePublicKeyEncryptResponse, Builder> {
+    public interface Builder extends Response.Builder<GenerateMacResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CertificatePublicKeyEncryptResponseBody body);
+        Builder body(GenerateMacResponseBody body);
 
         @Override
-        CertificatePublicKeyEncryptResponse build();
+        GenerateMacResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CertificatePublicKeyEncryptResponse, Builder>
+            extends Response.BuilderImpl<GenerateMacResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private CertificatePublicKeyEncryptResponseBody body; 
+        private GenerateMacResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CertificatePublicKeyEncryptResponse response) {
+        private BuilderImpl(GenerateMacResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class CertificatePublicKeyEncryptResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CertificatePublicKeyEncryptResponseBody body) {
+        public Builder body(GenerateMacResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CertificatePublicKeyEncryptResponse build() {
-            return new CertificatePublicKeyEncryptResponse(this);
+        public GenerateMacResponse build() {
+            return new GenerateMacResponse(this);
         } 
 
     } 

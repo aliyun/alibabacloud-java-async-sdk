@@ -20,6 +20,9 @@ public class GenerateDataKeyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CiphertextBlob")
     private String ciphertextBlob;
 
+    @com.aliyun.core.annotation.NameInMap("CiphertextForRecipient")
+    private String ciphertextForRecipient;
+
     @com.aliyun.core.annotation.NameInMap("KeyId")
     private String keyId;
 
@@ -34,6 +37,7 @@ public class GenerateDataKeyResponseBody extends TeaModel {
 
     private GenerateDataKeyResponseBody(Builder builder) {
         this.ciphertextBlob = builder.ciphertextBlob;
+        this.ciphertextForRecipient = builder.ciphertextForRecipient;
         this.keyId = builder.keyId;
         this.keyVersionId = builder.keyVersionId;
         this.plaintext = builder.plaintext;
@@ -57,6 +61,13 @@ public class GenerateDataKeyResponseBody extends TeaModel {
      */
     public String getCiphertextBlob() {
         return this.ciphertextBlob;
+    }
+
+    /**
+     * @return ciphertextForRecipient
+     */
+    public String getCiphertextForRecipient() {
+        return this.ciphertextForRecipient;
     }
 
     /**
@@ -89,6 +100,7 @@ public class GenerateDataKeyResponseBody extends TeaModel {
 
     public static final class Builder {
         private String ciphertextBlob; 
+        private String ciphertextForRecipient; 
         private String keyId; 
         private String keyVersionId; 
         private String plaintext; 
@@ -99,6 +111,7 @@ public class GenerateDataKeyResponseBody extends TeaModel {
 
         private Builder(GenerateDataKeyResponseBody model) {
             this.ciphertextBlob = model.ciphertextBlob;
+            this.ciphertextForRecipient = model.ciphertextForRecipient;
             this.keyId = model.keyId;
             this.keyVersionId = model.keyVersionId;
             this.plaintext = model.plaintext;
@@ -113,6 +126,14 @@ public class GenerateDataKeyResponseBody extends TeaModel {
          */
         public Builder ciphertextBlob(String ciphertextBlob) {
             this.ciphertextBlob = ciphertextBlob;
+            return this;
+        }
+
+        /**
+         * CiphertextForRecipient.
+         */
+        public Builder ciphertextForRecipient(String ciphertextForRecipient) {
+            this.ciphertextForRecipient = ciphertextForRecipient;
             return this;
         }
 

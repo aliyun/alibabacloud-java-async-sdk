@@ -205,148 +205,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Limit: The encryption algorithm in the request parameters must match the key type. 
-     * The following table describes the mapping between encryption algorithms and key types.</p>
-     * <table>
-     * <thead>
-     * <tr>
-     * <th>Algorithm</th>
-     * <th>Key Spec</th>
-     * </tr>
-     * </thead>
-     * <tbody><tr>
-     * <td>RSAES_OAEP_SHA_1</td>
-     * <td>RSA_2048</td>
-     * </tr>
-     * <tr>
-     * <td>RSAES_OAEP_SHA_256</td>
-     * <td>RSA_2048</td>
-     * </tr>
-     * <tr>
-     * <td>SM2PKE</td>
-     * <td>EC_SM2</td>
-     * </tr>
-     * <tr>
-     * <td>In this example, the certificate whose ID is <code>12345678-1234-1234-1234-12345678****</code> and the encryption algorithm <code>RSAES_OAEP_SHA_256</code> are used to decrypt the data <code>ZOyIygCyaOW6Gj****MlNKiuyjfzw=</code>.</td>
-     * <td></td>
-     * </tr>
-     * </tbody></table>
-     * 
-     * @param request the request parameters of CertificatePrivateKeyDecrypt  CertificatePrivateKeyDecryptRequest
-     * @return CertificatePrivateKeyDecryptResponse
-     */
-    CompletableFuture<CertificatePrivateKeyDecryptResponse> certificatePrivateKeyDecrypt(CertificatePrivateKeyDecryptRequest request);
-
-    /**
-     * <b>description</b> :
-     * <p>The signature algorithm in the request parameters must match the key type. The following table describes the mapping between signature algorithms and key types.  </p>
-     * <table>
-     * <thead>
-     * <tr>
-     * <th>Algorithm</th>
-     * <th>Key Spec</th>
-     * </tr>
-     * </thead>
-     * <tbody><tr>
-     * <td>RSA_PKCS1_SHA_256</td>
-     * <td>RSA_2048</td>
-     * </tr>
-     * <tr>
-     * <td>RSA_PSS_SHA_256</td>
-     * <td>RSA_2048</td>
-     * </tr>
-     * <tr>
-     * <td>ECDSA_SHA_256</td>
-     * <td>EC_P256</td>
-     * </tr>
-     * <tr>
-     * <td>SM2DSA</td>
-     * <td>EC_SM2</td>
-     * </tr>
-     * <tr>
-     * <td>In this example, the certificate whose ID is <code>12345678-1234-1234-1234-12345678****</code> and the signature algorithm <code>ECDSA_SHA_256</code> are used to generate a signature for the raw data <code>VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZy4=</code>.</td>
-     * <td></td>
-     * </tr>
-     * </tbody></table>
-     * 
-     * @param request the request parameters of CertificatePrivateKeySign  CertificatePrivateKeySignRequest
-     * @return CertificatePrivateKeySignResponse
-     */
-    CompletableFuture<CertificatePrivateKeySignResponse> certificatePrivateKeySign(CertificatePrivateKeySignRequest request);
-
-    /**
-     * <b>description</b> :
-     * <p>Limit: The encryption algorithm in the request parameters must match the key type. 
-     * The following table describes the mapping between encryption algorithms and key types.</p>
-     * <table>
-     * <thead>
-     * <tr>
-     * <th>Algorithm</th>
-     * <th>Key Spec</th>
-     * </tr>
-     * </thead>
-     * <tbody><tr>
-     * <td>RSAES_OAEP_SHA_1</td>
-     * <td>RSA_2048</td>
-     * </tr>
-     * <tr>
-     * <td>RSAES_OAEP_SHA_256</td>
-     * <td>RSA_2048</td>
-     * </tr>
-     * <tr>
-     * <td>SM2PKE</td>
-     * <td>EC_SM2</td>
-     * </tr>
-     * <tr>
-     * <td>In this example, the certificate whose ID is <code>12345678-1234-1234-1234-12345678****</code> and the encryption algorithm <code>RSAES_OAEP_SHA_256</code> are used to encrypt the data <code>VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZy4=</code>.</td>
-     * <td></td>
-     * </tr>
-     * </tbody></table>
-     * 
-     * @param request the request parameters of CertificatePublicKeyEncrypt  CertificatePublicKeyEncryptRequest
-     * @return CertificatePublicKeyEncryptResponse
-     */
-    CompletableFuture<CertificatePublicKeyEncryptResponse> certificatePublicKeyEncrypt(CertificatePublicKeyEncryptRequest request);
-
-    /**
-     * <b>description</b> :
-     * <p>The signature algorithm in the request parameters must match the key type. The following table describes the mapping between signature algorithms and key types.  </p>
-     * <table>
-     * <thead>
-     * <tr>
-     * <th>Algorithm</th>
-     * <th>Key Spec</th>
-     * </tr>
-     * </thead>
-     * <tbody><tr>
-     * <td>RSA_PKCS1_SHA_256</td>
-     * <td>RSA_2048</td>
-     * </tr>
-     * <tr>
-     * <td>RSA_PSS_SHA_256</td>
-     * <td>RSA_2048</td>
-     * </tr>
-     * <tr>
-     * <td>ECDSA_SHA_256</td>
-     * <td>EC_P256</td>
-     * </tr>
-     * <tr>
-     * <td>SM2DSA</td>
-     * <td>EC_SM2</td>
-     * </tr>
-     * <tr>
-     * <td>In this example, the certificate whose ID is <code>12345678-1234-1234-1234-12345678****</code> and the signature algorithm <code>ECDSA_SHA_256</code> are used to verify the digital signature <code>ZOyIygCyaOW6Gj****MlNKiuyjfzw=</code> of the raw data <code>VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZy4=</code>.</td>
-     * <td></td>
-     * </tr>
-     * </tbody></table>
-     * 
-     * @param request the request parameters of CertificatePublicKeyVerify  CertificatePublicKeyVerifyRequest
-     * @return CertificatePublicKeyVerifyResponse
-     */
-    CompletableFuture<CertificatePublicKeyVerifyResponse> certificatePublicKeyVerify(CertificatePublicKeyVerifyRequest request);
-
-    /**
-     * <b>description</b> :
      * <h3><a href="#"></a>Limits</h3>
      * <p>You can enable only instances of the software key management type. You cannot enable instances of the hardware key management type.</p>
      * 
@@ -484,16 +342,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After the certificate and its private key and certificate chain are deleted, they cannot be restored. Proceed with caution.
-     * In this example, the certificate whose ID is <code>9a28de48-8d8b-484d-a766-dec4****</code> and its private key and certificate chain are deleted.</p>
-     * 
-     * @param request the request parameters of DeleteCertificate  DeleteCertificateRequest
-     * @return DeleteCertificateResponse
-     */
-    CompletableFuture<DeleteCertificateResponse> deleteCertificate(DeleteCertificateRequest request);
-
-    /**
-     * <b>description</b> :
      * <p>Before you delete a client key, make sure that the client key is no longer in use. If you delete a client key that is in use, applications that use the client key cannot access Key Management Service (KMS). Exercise caution when you delete a client key.</p>
      * 
      * @param request the request parameters of DeleteClientKey  DeleteClientKeyRequest
@@ -551,15 +399,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeApplicationAccessPointResponse
      */
     CompletableFuture<DescribeApplicationAccessPointResponse> describeApplicationAccessPoint(DescribeApplicationAccessPointRequest request);
-
-    /**
-     * <b>description</b> :
-     * <p>In this example, the information about the certificate whose ID is <code>9a28de48-8d8b-484d-a766-dec4****</code> is queried. The certificate information includes the certificate ID, creation time, certificate issuer, validity period, serial number, and signature algorithm.</p>
-     * 
-     * @param request the request parameters of DescribeCertificate  DescribeCertificateRequest
-     * @return DescribeCertificateResponse
-     */
-    CompletableFuture<DescribeCertificateResponse> describeCertificate(DescribeCertificateRequest request);
 
     /**
      * <b>description</b> :
@@ -704,13 +543,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GenerateDataKeyWithoutPlaintextResponse> generateDataKeyWithoutPlaintext(GenerateDataKeyWithoutPlaintextRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>In this example, the certificate whose ID is <code>9a28de48-8d8b-484d-a766-dec4****</code> is queried. The certificate, certificate chain, certificate ID, and certificate signing request (CSR) are returned.</p>
-     * 
-     * @param request the request parameters of GetCertificate  GetCertificateRequest
-     * @return GetCertificateResponse
+     * @param request the request parameters of GenerateMac  GenerateMacRequest
+     * @return GenerateMacResponse
      */
-    CompletableFuture<GetCertificateResponse> getCertificate(GetCertificateRequest request);
+    CompletableFuture<GenerateMacResponse> generateMac(GenerateMacRequest request);
 
     /**
      * @param request the request parameters of GetClientKey  GetClientKeyRequest
@@ -1108,15 +944,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>In this example, the status of the certificate whose ID is <code>9a28de48-8d8b-484d-a766-dec4****</code> is updated to INACTIVE.</p>
-     * 
-     * @param request the request parameters of UpdateCertificateStatus  UpdateCertificateStatusRequest
-     * @return UpdateCertificateStatusResponse
-     */
-    CompletableFuture<UpdateCertificateStatusResponse> updateCertificateStatus(UpdateCertificateStatusRequest request);
-
-    /**
-     * <b>description</b> :
      * <p>This operation replaces the description of a customer master key (CMK) with the description that you specify. The original description of the CMK is specified by the Description parameter when you call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation. You can call this operation to add, modify, or delete the description of a CMK.</p>
      * 
      * @param request the request parameters of UpdateKeyDescription  UpdateKeyDescriptionRequest
@@ -1212,12 +1039,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateSecretVersionStageResponse> updateSecretVersionStage(UpdateSecretVersionStageRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>In this example, a certificate issued by a CA is imported into Certificates Manager. The ID of the certificate in Certificates Manager is <code>12345678-1234-1234-1234-12345678****</code>.</p>
-     * 
-     * @param request the request parameters of UploadCertificate  UploadCertificateRequest
-     * @return UploadCertificateResponse
+     * @param request the request parameters of VerifyMac  VerifyMacRequest
+     * @return VerifyMacResponse
      */
-    CompletableFuture<UploadCertificateResponse> uploadCertificate(UploadCertificateRequest request);
+    CompletableFuture<VerifyMacResponse> verifyMac(VerifyMacRequest request);
 
 }

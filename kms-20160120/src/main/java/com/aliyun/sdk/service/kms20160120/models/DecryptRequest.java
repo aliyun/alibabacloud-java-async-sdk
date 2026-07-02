@@ -30,11 +30,16 @@ public class DecryptRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("EncryptionContext")
     private java.util.Map<String, ?> encryptionContext;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Recipient")
+    private String recipient;
+
     private DecryptRequest(Builder builder) {
         super(builder);
         this.ciphertextBlob = builder.ciphertextBlob;
         this.dryRun = builder.dryRun;
         this.encryptionContext = builder.encryptionContext;
+        this.recipient = builder.recipient;
     }
 
     public static Builder builder() {
@@ -71,10 +76,18 @@ public class DecryptRequest extends Request {
         return this.encryptionContext;
     }
 
+    /**
+     * @return recipient
+     */
+    public String getRecipient() {
+        return this.recipient;
+    }
+
     public static final class Builder extends Request.Builder<DecryptRequest, Builder> {
         private String ciphertextBlob; 
         private String dryRun; 
         private java.util.Map<String, ?> encryptionContext; 
+        private String recipient; 
 
         private Builder() {
             super();
@@ -85,6 +98,7 @@ public class DecryptRequest extends Request {
             this.ciphertextBlob = request.ciphertextBlob;
             this.dryRun = request.dryRun;
             this.encryptionContext = request.encryptionContext;
+            this.recipient = request.recipient;
         } 
 
         /**
@@ -128,6 +142,15 @@ public class DecryptRequest extends Request {
             String encryptionContextShrink = shrink(encryptionContext, "EncryptionContext", "json");
             this.putQueryParameter("EncryptionContext", encryptionContextShrink);
             this.encryptionContext = encryptionContext;
+            return this;
+        }
+
+        /**
+         * Recipient.
+         */
+        public Builder recipient(String recipient) {
+            this.putQueryParameter("Recipient", recipient);
+            this.recipient = recipient;
             return this;
         }
 

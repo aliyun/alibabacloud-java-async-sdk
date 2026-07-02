@@ -96,7 +96,10 @@ public class GetKmsInstanceQuotaInfosResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f1fdfa9d-bd49-418b-942f-8f3e3ec00a4f</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

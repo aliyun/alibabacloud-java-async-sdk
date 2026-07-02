@@ -39,6 +39,10 @@ public class GenerateDataKeyRequest extends Request {
     @com.aliyun.core.annotation.Validation(maximum = 1024)
     private Integer numberOfBytes;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Recipient")
+    private String recipient;
+
     private GenerateDataKeyRequest(Builder builder) {
         super(builder);
         this.dryRun = builder.dryRun;
@@ -46,6 +50,7 @@ public class GenerateDataKeyRequest extends Request {
         this.keyId = builder.keyId;
         this.keySpec = builder.keySpec;
         this.numberOfBytes = builder.numberOfBytes;
+        this.recipient = builder.recipient;
     }
 
     public static Builder builder() {
@@ -96,12 +101,20 @@ public class GenerateDataKeyRequest extends Request {
         return this.numberOfBytes;
     }
 
+    /**
+     * @return recipient
+     */
+    public String getRecipient() {
+        return this.recipient;
+    }
+
     public static final class Builder extends Request.Builder<GenerateDataKeyRequest, Builder> {
         private String dryRun; 
         private java.util.Map<String, ?> encryptionContext; 
         private String keyId; 
         private String keySpec; 
         private Integer numberOfBytes; 
+        private String recipient; 
 
         private Builder() {
             super();
@@ -114,6 +127,7 @@ public class GenerateDataKeyRequest extends Request {
             this.keyId = request.keyId;
             this.keySpec = request.keySpec;
             this.numberOfBytes = request.numberOfBytes;
+            this.recipient = request.recipient;
         } 
 
         /**
@@ -187,6 +201,15 @@ public class GenerateDataKeyRequest extends Request {
         public Builder numberOfBytes(Integer numberOfBytes) {
             this.putQueryParameter("NumberOfBytes", numberOfBytes);
             this.numberOfBytes = numberOfBytes;
+            return this;
+        }
+
+        /**
+         * Recipient.
+         */
+        public Builder recipient(String recipient) {
+            this.putQueryParameter("Recipient", recipient);
+            this.recipient = recipient;
             return this;
         }
 
