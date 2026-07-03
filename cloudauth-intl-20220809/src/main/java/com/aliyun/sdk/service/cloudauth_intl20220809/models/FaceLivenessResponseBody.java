@@ -152,6 +152,9 @@ public class FaceLivenessResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FaceAttack")
         private String faceAttack;
 
+        @com.aliyun.core.annotation.NameInMap("FaceAttributeInfo")
+        private String faceAttributeInfo;
+
         @com.aliyun.core.annotation.NameInMap("FaceGender")
         private String faceGender;
 
@@ -176,6 +179,7 @@ public class FaceLivenessResponseBody extends TeaModel {
         private ExtFaceInfo(Builder builder) {
             this.faceAge = builder.faceAge;
             this.faceAttack = builder.faceAttack;
+            this.faceAttributeInfo = builder.faceAttributeInfo;
             this.faceGender = builder.faceGender;
             this.faceQualityScore = builder.faceQualityScore;
             this.illuminationScore = builder.illuminationScore;
@@ -205,6 +209,13 @@ public class FaceLivenessResponseBody extends TeaModel {
          */
         public String getFaceAttack() {
             return this.faceAttack;
+        }
+
+        /**
+         * @return faceAttributeInfo
+         */
+        public String getFaceAttributeInfo() {
+            return this.faceAttributeInfo;
         }
 
         /**
@@ -259,6 +270,7 @@ public class FaceLivenessResponseBody extends TeaModel {
         public static final class Builder {
             private Integer faceAge; 
             private String faceAttack; 
+            private String faceAttributeInfo; 
             private String faceGender; 
             private Double faceQualityScore; 
             private Double illuminationScore; 
@@ -273,6 +285,7 @@ public class FaceLivenessResponseBody extends TeaModel {
             private Builder(ExtFaceInfo model) {
                 this.faceAge = model.faceAge;
                 this.faceAttack = model.faceAttack;
+                this.faceAttributeInfo = model.faceAttributeInfo;
                 this.faceGender = model.faceGender;
                 this.faceQualityScore = model.faceQualityScore;
                 this.illuminationScore = model.illuminationScore;
@@ -301,6 +314,14 @@ public class FaceLivenessResponseBody extends TeaModel {
              */
             public Builder faceAttack(String faceAttack) {
                 this.faceAttack = faceAttack;
+                return this;
+            }
+
+            /**
+             * FaceAttributeInfo.
+             */
+            public Builder faceAttributeInfo(String faceAttributeInfo) {
+                this.faceAttributeInfo = faceAttributeInfo;
                 return this;
             }
 

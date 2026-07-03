@@ -45,6 +45,10 @@ public class EkycVerifyRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("FacePictureUrl")
     private String facePictureUrl;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FaceQualityCheck")
+    private String faceQualityCheck;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("IdOcrPictureBase64")
     private String idOcrPictureBase64;
@@ -78,6 +82,7 @@ public class EkycVerifyRequest extends Request {
         this.docType = builder.docType;
         this.facePictureBase64 = builder.facePictureBase64;
         this.facePictureUrl = builder.facePictureUrl;
+        this.faceQualityCheck = builder.faceQualityCheck;
         this.idOcrPictureBase64 = builder.idOcrPictureBase64;
         this.idOcrPictureUrl = builder.idOcrPictureUrl;
         this.idThreshold = builder.idThreshold;
@@ -149,6 +154,13 @@ public class EkycVerifyRequest extends Request {
     }
 
     /**
+     * @return faceQualityCheck
+     */
+    public String getFaceQualityCheck() {
+        return this.faceQualityCheck;
+    }
+
+    /**
      * @return idOcrPictureBase64
      */
     public String getIdOcrPictureBase64() {
@@ -198,6 +210,7 @@ public class EkycVerifyRequest extends Request {
         private String docType; 
         private String facePictureBase64; 
         private String facePictureUrl; 
+        private String faceQualityCheck; 
         private String idOcrPictureBase64; 
         private String idOcrPictureUrl; 
         private String idThreshold; 
@@ -218,6 +231,7 @@ public class EkycVerifyRequest extends Request {
             this.docType = request.docType;
             this.facePictureBase64 = request.facePictureBase64;
             this.facePictureUrl = request.facePictureUrl;
+            this.faceQualityCheck = request.faceQualityCheck;
             this.idOcrPictureBase64 = request.idOcrPictureBase64;
             this.idOcrPictureUrl = request.idOcrPictureUrl;
             this.idThreshold = request.idThreshold;
@@ -333,6 +347,15 @@ public class EkycVerifyRequest extends Request {
         public Builder facePictureUrl(String facePictureUrl) {
             this.putQueryParameter("FacePictureUrl", facePictureUrl);
             this.facePictureUrl = facePictureUrl;
+            return this;
+        }
+
+        /**
+         * FaceQualityCheck.
+         */
+        public Builder faceQualityCheck(String faceQualityCheck) {
+            this.putQueryParameter("FaceQualityCheck", faceQualityCheck);
+            this.faceQualityCheck = faceQualityCheck;
             return this;
         }
 

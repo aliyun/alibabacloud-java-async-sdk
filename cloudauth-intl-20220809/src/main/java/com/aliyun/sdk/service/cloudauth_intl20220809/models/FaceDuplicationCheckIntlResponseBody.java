@@ -146,6 +146,9 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
      * <p>FaceDuplicationCheckIntlResponseBody</p>
      */
     public static class ExtFaceInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FaceAttributeInfo")
+        private String faceAttributeInfo;
+
         @com.aliyun.core.annotation.NameInMap("FaceQualityScore")
         private Double faceQualityScore;
 
@@ -161,12 +164,33 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SharpnessScore")
         private Double sharpnessScore;
 
+        @com.aliyun.core.annotation.NameInMap("TargetFaceQualityScore")
+        private Double targetFaceQualityScore;
+
+        @com.aliyun.core.annotation.NameInMap("TargetIlluminationScore")
+        private Double targetIlluminationScore;
+
+        @com.aliyun.core.annotation.NameInMap("TargetKaOcclusionScore")
+        private Double targetKaOcclusionScore;
+
+        @com.aliyun.core.annotation.NameInMap("TargetOcclusionScore")
+        private Double targetOcclusionScore;
+
+        @com.aliyun.core.annotation.NameInMap("TargetSharpnessScore")
+        private Double targetSharpnessScore;
+
         private ExtFaceInfo(Builder builder) {
+            this.faceAttributeInfo = builder.faceAttributeInfo;
             this.faceQualityScore = builder.faceQualityScore;
             this.illuminationScore = builder.illuminationScore;
             this.kaOcclusionScore = builder.kaOcclusionScore;
             this.occlusionScore = builder.occlusionScore;
             this.sharpnessScore = builder.sharpnessScore;
+            this.targetFaceQualityScore = builder.targetFaceQualityScore;
+            this.targetIlluminationScore = builder.targetIlluminationScore;
+            this.targetKaOcclusionScore = builder.targetKaOcclusionScore;
+            this.targetOcclusionScore = builder.targetOcclusionScore;
+            this.targetSharpnessScore = builder.targetSharpnessScore;
         }
 
         public static Builder builder() {
@@ -175,6 +199,13 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
 
         public static ExtFaceInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return faceAttributeInfo
+         */
+        public String getFaceAttributeInfo() {
+            return this.faceAttributeInfo;
         }
 
         /**
@@ -212,23 +243,78 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
             return this.sharpnessScore;
         }
 
+        /**
+         * @return targetFaceQualityScore
+         */
+        public Double getTargetFaceQualityScore() {
+            return this.targetFaceQualityScore;
+        }
+
+        /**
+         * @return targetIlluminationScore
+         */
+        public Double getTargetIlluminationScore() {
+            return this.targetIlluminationScore;
+        }
+
+        /**
+         * @return targetKaOcclusionScore
+         */
+        public Double getTargetKaOcclusionScore() {
+            return this.targetKaOcclusionScore;
+        }
+
+        /**
+         * @return targetOcclusionScore
+         */
+        public Double getTargetOcclusionScore() {
+            return this.targetOcclusionScore;
+        }
+
+        /**
+         * @return targetSharpnessScore
+         */
+        public Double getTargetSharpnessScore() {
+            return this.targetSharpnessScore;
+        }
+
         public static final class Builder {
+            private String faceAttributeInfo; 
             private Double faceQualityScore; 
             private Double illuminationScore; 
             private Double kaOcclusionScore; 
             private Double occlusionScore; 
             private Double sharpnessScore; 
+            private Double targetFaceQualityScore; 
+            private Double targetIlluminationScore; 
+            private Double targetKaOcclusionScore; 
+            private Double targetOcclusionScore; 
+            private Double targetSharpnessScore; 
 
             private Builder() {
             } 
 
             private Builder(ExtFaceInfo model) {
+                this.faceAttributeInfo = model.faceAttributeInfo;
                 this.faceQualityScore = model.faceQualityScore;
                 this.illuminationScore = model.illuminationScore;
                 this.kaOcclusionScore = model.kaOcclusionScore;
                 this.occlusionScore = model.occlusionScore;
                 this.sharpnessScore = model.sharpnessScore;
+                this.targetFaceQualityScore = model.targetFaceQualityScore;
+                this.targetIlluminationScore = model.targetIlluminationScore;
+                this.targetKaOcclusionScore = model.targetKaOcclusionScore;
+                this.targetOcclusionScore = model.targetOcclusionScore;
+                this.targetSharpnessScore = model.targetSharpnessScore;
             } 
+
+            /**
+             * FaceAttributeInfo.
+             */
+            public Builder faceAttributeInfo(String faceAttributeInfo) {
+                this.faceAttributeInfo = faceAttributeInfo;
+                return this;
+            }
 
             /**
              * FaceQualityScore.
@@ -267,6 +353,46 @@ public class FaceDuplicationCheckIntlResponseBody extends TeaModel {
              */
             public Builder sharpnessScore(Double sharpnessScore) {
                 this.sharpnessScore = sharpnessScore;
+                return this;
+            }
+
+            /**
+             * TargetFaceQualityScore.
+             */
+            public Builder targetFaceQualityScore(Double targetFaceQualityScore) {
+                this.targetFaceQualityScore = targetFaceQualityScore;
+                return this;
+            }
+
+            /**
+             * TargetIlluminationScore.
+             */
+            public Builder targetIlluminationScore(Double targetIlluminationScore) {
+                this.targetIlluminationScore = targetIlluminationScore;
+                return this;
+            }
+
+            /**
+             * TargetKaOcclusionScore.
+             */
+            public Builder targetKaOcclusionScore(Double targetKaOcclusionScore) {
+                this.targetKaOcclusionScore = targetKaOcclusionScore;
+                return this;
+            }
+
+            /**
+             * TargetOcclusionScore.
+             */
+            public Builder targetOcclusionScore(Double targetOcclusionScore) {
+                this.targetOcclusionScore = targetOcclusionScore;
+                return this;
+            }
+
+            /**
+             * TargetSharpnessScore.
+             */
+            public Builder targetSharpnessScore(Double targetSharpnessScore) {
+                this.targetSharpnessScore = targetSharpnessScore;
                 return this;
             }
 
