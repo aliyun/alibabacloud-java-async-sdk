@@ -274,6 +274,9 @@ public class CreateServiceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("groupName")
         private String groupName;
 
+        @com.aliyun.core.annotation.NameInMap("modelProviderId")
+        private String modelProviderId;
+
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
@@ -296,6 +299,7 @@ public class CreateServiceRequest extends Request {
             this.dnsServers = builder.dnsServers;
             this.expressType = builder.expressType;
             this.groupName = builder.groupName;
+            this.modelProviderId = builder.modelProviderId;
             this.name = builder.name;
             this.namespace = builder.namespace;
             this.qualifier = builder.qualifier;
@@ -354,6 +358,13 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
+         * @return modelProviderId
+         */
+        public String getModelProviderId() {
+            return this.modelProviderId;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -395,6 +406,7 @@ public class CreateServiceRequest extends Request {
             private java.util.List<String> dnsServers; 
             private String expressType; 
             private String groupName; 
+            private String modelProviderId; 
             private String name; 
             private String namespace; 
             private String qualifier; 
@@ -411,6 +423,7 @@ public class CreateServiceRequest extends Request {
                 this.dnsServers = model.dnsServers;
                 this.expressType = model.expressType;
                 this.groupName = model.groupName;
+                this.modelProviderId = model.modelProviderId;
                 this.name = model.name;
                 this.namespace = model.namespace;
                 this.qualifier = model.qualifier;
@@ -469,6 +482,14 @@ public class CreateServiceRequest extends Request {
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * modelProviderId.
+             */
+            public Builder modelProviderId(String modelProviderId) {
+                this.modelProviderId = modelProviderId;
                 return this;
             }
 

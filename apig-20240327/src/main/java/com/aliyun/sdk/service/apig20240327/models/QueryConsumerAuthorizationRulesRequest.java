@@ -22,6 +22,10 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
     private String apiNameLike;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("consumerGroupId")
+    private String consumerGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("consumerId")
     private String consumerId;
 
@@ -50,6 +54,10 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
     private String parentResourceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("principalType")
+    private String principalType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("resourceId")
     private String resourceId;
 
@@ -64,6 +72,7 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
     private QueryConsumerAuthorizationRulesRequest(Builder builder) {
         super(builder);
         this.apiNameLike = builder.apiNameLike;
+        this.consumerGroupId = builder.consumerGroupId;
         this.consumerId = builder.consumerId;
         this.consumerNameLike = builder.consumerNameLike;
         this.environmentId = builder.environmentId;
@@ -71,6 +80,7 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.parentResourceId = builder.parentResourceId;
+        this.principalType = builder.principalType;
         this.resourceId = builder.resourceId;
         this.resourceType = builder.resourceType;
         this.resourceTypes = builder.resourceTypes;
@@ -94,6 +104,13 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
      */
     public String getApiNameLike() {
         return this.apiNameLike;
+    }
+
+    /**
+     * @return consumerGroupId
+     */
+    public String getConsumerGroupId() {
+        return this.consumerGroupId;
     }
 
     /**
@@ -146,6 +163,13 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
     }
 
     /**
+     * @return principalType
+     */
+    public String getPrincipalType() {
+        return this.principalType;
+    }
+
+    /**
      * @return resourceId
      */
     public String getResourceId() {
@@ -168,6 +192,7 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
 
     public static final class Builder extends Request.Builder<QueryConsumerAuthorizationRulesRequest, Builder> {
         private String apiNameLike; 
+        private String consumerGroupId; 
         private String consumerId; 
         private String consumerNameLike; 
         private String environmentId; 
@@ -175,6 +200,7 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String parentResourceId; 
+        private String principalType; 
         private String resourceId; 
         private String resourceType; 
         private String resourceTypes; 
@@ -186,6 +212,7 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
         private Builder(QueryConsumerAuthorizationRulesRequest request) {
             super(request);
             this.apiNameLike = request.apiNameLike;
+            this.consumerGroupId = request.consumerGroupId;
             this.consumerId = request.consumerId;
             this.consumerNameLike = request.consumerNameLike;
             this.environmentId = request.environmentId;
@@ -193,6 +220,7 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.parentResourceId = request.parentResourceId;
+            this.principalType = request.principalType;
             this.resourceId = request.resourceId;
             this.resourceType = request.resourceType;
             this.resourceTypes = request.resourceTypes;
@@ -207,6 +235,15 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
         public Builder apiNameLike(String apiNameLike) {
             this.putQueryParameter("apiNameLike", apiNameLike);
             this.apiNameLike = apiNameLike;
+            return this;
+        }
+
+        /**
+         * consumerGroupId.
+         */
+        public Builder consumerGroupId(String consumerGroupId) {
+            this.putQueryParameter("consumerGroupId", consumerGroupId);
+            this.consumerGroupId = consumerGroupId;
             return this;
         }
 
@@ -291,6 +328,15 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
         public Builder parentResourceId(String parentResourceId) {
             this.putQueryParameter("parentResourceId", parentResourceId);
             this.parentResourceId = parentResourceId;
+            return this;
+        }
+
+        /**
+         * principalType.
+         */
+        public Builder principalType(String principalType) {
+            this.putQueryParameter("principalType", principalType);
+            this.principalType = principalType;
             return this;
         }
 

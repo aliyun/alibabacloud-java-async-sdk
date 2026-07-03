@@ -207,6 +207,9 @@ public class CreateConsumerAuthorizationRulesRequest extends Request {
      * <p>CreateConsumerAuthorizationRulesRequest</p>
      */
     public static class AuthorizationRules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("consumerGroupId")
+        private String consumerGroupId;
+
         @com.aliyun.core.annotation.NameInMap("consumerId")
         private String consumerId;
 
@@ -216,6 +219,9 @@ public class CreateConsumerAuthorizationRulesRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("expireTimestamp")
         private Long expireTimestamp;
 
+        @com.aliyun.core.annotation.NameInMap("principalType")
+        private String principalType;
+
         @com.aliyun.core.annotation.NameInMap("resourceIdentifier")
         private ResourceIdentifier resourceIdentifier;
 
@@ -223,9 +229,11 @@ public class CreateConsumerAuthorizationRulesRequest extends Request {
         private String resourceType;
 
         private AuthorizationRules(Builder builder) {
+            this.consumerGroupId = builder.consumerGroupId;
             this.consumerId = builder.consumerId;
             this.expireMode = builder.expireMode;
             this.expireTimestamp = builder.expireTimestamp;
+            this.principalType = builder.principalType;
             this.resourceIdentifier = builder.resourceIdentifier;
             this.resourceType = builder.resourceType;
         }
@@ -236,6 +244,13 @@ public class CreateConsumerAuthorizationRulesRequest extends Request {
 
         public static AuthorizationRules create() {
             return builder().build();
+        }
+
+        /**
+         * @return consumerGroupId
+         */
+        public String getConsumerGroupId() {
+            return this.consumerGroupId;
         }
 
         /**
@@ -260,6 +275,13 @@ public class CreateConsumerAuthorizationRulesRequest extends Request {
         }
 
         /**
+         * @return principalType
+         */
+        public String getPrincipalType() {
+            return this.principalType;
+        }
+
+        /**
          * @return resourceIdentifier
          */
         public ResourceIdentifier getResourceIdentifier() {
@@ -274,9 +296,11 @@ public class CreateConsumerAuthorizationRulesRequest extends Request {
         }
 
         public static final class Builder {
+            private String consumerGroupId; 
             private String consumerId; 
             private String expireMode; 
             private Long expireTimestamp; 
+            private String principalType; 
             private ResourceIdentifier resourceIdentifier; 
             private String resourceType; 
 
@@ -284,12 +308,22 @@ public class CreateConsumerAuthorizationRulesRequest extends Request {
             } 
 
             private Builder(AuthorizationRules model) {
+                this.consumerGroupId = model.consumerGroupId;
                 this.consumerId = model.consumerId;
                 this.expireMode = model.expireMode;
                 this.expireTimestamp = model.expireTimestamp;
+                this.principalType = model.principalType;
                 this.resourceIdentifier = model.resourceIdentifier;
                 this.resourceType = model.resourceType;
             } 
+
+            /**
+             * consumerGroupId.
+             */
+            public Builder consumerGroupId(String consumerGroupId) {
+                this.consumerGroupId = consumerGroupId;
+                return this;
+            }
 
             /**
              * <p>The consumer ID.</p>
@@ -321,6 +355,14 @@ public class CreateConsumerAuthorizationRulesRequest extends Request {
              */
             public Builder expireTimestamp(Long expireTimestamp) {
                 this.expireTimestamp = expireTimestamp;
+                return this;
+            }
+
+            /**
+             * principalType.
+             */
+            public Builder principalType(String principalType) {
+                this.principalType = principalType;
                 return this;
             }
 

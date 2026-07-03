@@ -46,6 +46,10 @@ public class UpdateServiceRequest extends Request {
     private Float healthyPanicThreshold;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("modelProviderId")
+    private String modelProviderId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("outlierDetectionConfig")
     private OutlierDetectionConfig outlierDetectionConfig;
 
@@ -66,6 +70,7 @@ public class UpdateServiceRequest extends Request {
         this.dnsServers = builder.dnsServers;
         this.healthCheckConfig = builder.healthCheckConfig;
         this.healthyPanicThreshold = builder.healthyPanicThreshold;
+        this.modelProviderId = builder.modelProviderId;
         this.outlierDetectionConfig = builder.outlierDetectionConfig;
         this.ports = builder.ports;
         this.protocol = builder.protocol;
@@ -134,6 +139,13 @@ public class UpdateServiceRequest extends Request {
     }
 
     /**
+     * @return modelProviderId
+     */
+    public String getModelProviderId() {
+        return this.modelProviderId;
+    }
+
+    /**
      * @return outlierDetectionConfig
      */
     public OutlierDetectionConfig getOutlierDetectionConfig() {
@@ -162,6 +174,7 @@ public class UpdateServiceRequest extends Request {
         private java.util.List<String> dnsServers; 
         private HealthCheckConfig healthCheckConfig; 
         private Float healthyPanicThreshold; 
+        private String modelProviderId; 
         private OutlierDetectionConfig outlierDetectionConfig; 
         private java.util.List<Ports> ports; 
         private String protocol; 
@@ -179,6 +192,7 @@ public class UpdateServiceRequest extends Request {
             this.dnsServers = request.dnsServers;
             this.healthCheckConfig = request.healthCheckConfig;
             this.healthyPanicThreshold = request.healthyPanicThreshold;
+            this.modelProviderId = request.modelProviderId;
             this.outlierDetectionConfig = request.outlierDetectionConfig;
             this.ports = request.ports;
             this.protocol = request.protocol;
@@ -247,6 +261,15 @@ public class UpdateServiceRequest extends Request {
         public Builder healthyPanicThreshold(Float healthyPanicThreshold) {
             this.putBodyParameter("healthyPanicThreshold", healthyPanicThreshold);
             this.healthyPanicThreshold = healthyPanicThreshold;
+            return this;
+        }
+
+        /**
+         * modelProviderId.
+         */
+        public Builder modelProviderId(String modelProviderId) {
+            this.putBodyParameter("modelProviderId", modelProviderId);
+            this.modelProviderId = modelProviderId;
             return this;
         }
 

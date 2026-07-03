@@ -44,6 +44,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
 
     /**
+     * @param request the request parameters of CreateAiModelProvider  CreateAiModelProviderRequest
+     * @return CreateAiModelProviderResponse
+     */
+    CompletableFuture<CreateAiModelProviderResponse> createAiModelProvider(CreateAiModelProviderRequest request);
+
+    /**
      * @param request the request parameters of CreateAndAttachPolicy  CreateAndAttachPolicyRequest
      * @return CreateAndAttachPolicyResponse
      */
@@ -118,6 +124,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreatePluginAttachmentResponse
      */
     CompletableFuture<CreatePluginAttachmentResponse> createPluginAttachment(CreatePluginAttachmentRequest request);
+
+    /**
+     * @param request the request parameters of CreatePluginClass  CreatePluginClassRequest
+     * @return CreatePluginClassResponse
+     */
+    CompletableFuture<CreatePluginClassResponse> createPluginClass(CreatePluginClassRequest request);
 
     /**
      * @param request the request parameters of CreatePolicy  CreatePolicyRequest
@@ -372,6 +384,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetPluginAttachmentResponse
      */
     CompletableFuture<GetPluginAttachmentResponse> getPluginAttachment(GetPluginAttachmentRequest request);
+
+    /**
+     * @param request the request parameters of GetPluginClass  GetPluginClassRequest
+     * @return GetPluginClassResponse
+     */
+    CompletableFuture<GetPluginClassResponse> getPluginClass(GetPluginClassRequest request);
 
     /**
      * @param request the request parameters of GetPolicy  GetPolicyRequest

@@ -138,6 +138,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateAiModelProvider  CreateAiModelProviderRequest
+     * @return CreateAiModelProviderResponse
+     */
+    @Override
+    public CompletableFuture<CreateAiModelProviderResponse> createAiModelProvider(CreateAiModelProviderRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateAiModelProvider").setMethod(HttpMethod.POST).setPathRegex("/v1/ai-model-providers").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAiModelProviderResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAiModelProviderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateAndAttachPolicy  CreateAndAttachPolicyRequest
      * @return CreateAndAttachPolicyResponse
      */
@@ -352,6 +370,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreatePluginAttachmentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreatePluginClass  CreatePluginClassRequest
+     * @return CreatePluginClassResponse
+     */
+    @Override
+    public CompletableFuture<CreatePluginClassResponse> createPluginClass(CreatePluginClassRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreatePluginClass").setMethod(HttpMethod.POST).setPathRegex("/v1/plugin-classes").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreatePluginClassResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreatePluginClassResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1098,6 +1134,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetPluginAttachmentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetPluginClass  GetPluginClassRequest
+     * @return GetPluginClassResponse
+     */
+    @Override
+    public CompletableFuture<GetPluginClassResponse> getPluginClass(GetPluginClassRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetPluginClass").setMethod(HttpMethod.GET).setPathRegex("/v1/plugin-classes/{pluginClassId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetPluginClassResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetPluginClassResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

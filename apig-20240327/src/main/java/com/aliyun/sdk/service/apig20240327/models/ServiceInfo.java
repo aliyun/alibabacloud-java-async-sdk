@@ -12,43 +12,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link Service} extends {@link TeaModel}
+ * {@link ServiceInfo} extends {@link TeaModel}
  *
- * <p>Service</p>
+ * <p>ServiceInfo</p>
  */
-public class Service extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("addresses")
-    private java.util.List<String> addresses;
-
-    @com.aliyun.core.annotation.NameInMap("agentServiceConfig")
-    private AgentServiceConfig agentServiceConfig;
-
-    @com.aliyun.core.annotation.NameInMap("aiServiceConfig")
-    private AiServiceConfig aiServiceConfig;
-
-    @com.aliyun.core.annotation.NameInMap("createTimestamp")
-    private Long createTimestamp;
-
+public class ServiceInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("expressType")
     private String expressType;
 
-    @com.aliyun.core.annotation.NameInMap("gatewayId")
-    private String gatewayId;
-
     @com.aliyun.core.annotation.NameInMap("groupName")
     private String groupName;
-
-    @com.aliyun.core.annotation.NameInMap("healthCheck")
-    private ServiceHealthCheck healthCheck;
-
-    @com.aliyun.core.annotation.NameInMap("healthStatus")
-    private String healthStatus;
-
-    @com.aliyun.core.annotation.NameInMap("labelDetails")
-    private java.util.List<LabelDetail> labelDetails;
-
-    @com.aliyun.core.annotation.NameInMap("modelProviderId")
-    private String modelProviderId;
 
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
@@ -56,20 +29,17 @@ public class Service extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("namespace")
     private String namespace;
 
-    @com.aliyun.core.annotation.NameInMap("outlierEndpoints")
-    private java.util.List<String> outlierEndpoints;
+    @com.aliyun.core.annotation.NameInMap("paiWorkspaceId")
+    private String paiWorkspaceId;
+
+    @com.aliyun.core.annotation.NameInMap("paiWorkspaceName")
+    private String paiWorkspaceName;
 
     @com.aliyun.core.annotation.NameInMap("ports")
     private java.util.List<Ports> ports;
 
-    @com.aliyun.core.annotation.NameInMap("protocol")
-    private String protocol;
-
     @com.aliyun.core.annotation.NameInMap("qualifier")
     private String qualifier;
-
-    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
-    private String resourceGroupId;
 
     @com.aliyun.core.annotation.NameInMap("serviceId")
     private String serviceId;
@@ -77,38 +47,24 @@ public class Service extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("sourceType")
     private String sourceType;
 
-    @com.aliyun.core.annotation.NameInMap("unhealthyEndpoints")
-    private java.util.List<String> unhealthyEndpoints;
-
-    @com.aliyun.core.annotation.NameInMap("updateTimestamp")
-    private Long updateTimestamp;
+    @com.aliyun.core.annotation.NameInMap("status")
+    private String status;
 
     @com.aliyun.core.annotation.NameInMap("versions")
     private java.util.List<Versions> versions;
 
-    private Service(Builder builder) {
-        this.addresses = builder.addresses;
-        this.agentServiceConfig = builder.agentServiceConfig;
-        this.aiServiceConfig = builder.aiServiceConfig;
-        this.createTimestamp = builder.createTimestamp;
+    private ServiceInfo(Builder builder) {
         this.expressType = builder.expressType;
-        this.gatewayId = builder.gatewayId;
         this.groupName = builder.groupName;
-        this.healthCheck = builder.healthCheck;
-        this.healthStatus = builder.healthStatus;
-        this.labelDetails = builder.labelDetails;
-        this.modelProviderId = builder.modelProviderId;
         this.name = builder.name;
         this.namespace = builder.namespace;
-        this.outlierEndpoints = builder.outlierEndpoints;
+        this.paiWorkspaceId = builder.paiWorkspaceId;
+        this.paiWorkspaceName = builder.paiWorkspaceName;
         this.ports = builder.ports;
-        this.protocol = builder.protocol;
         this.qualifier = builder.qualifier;
-        this.resourceGroupId = builder.resourceGroupId;
         this.serviceId = builder.serviceId;
         this.sourceType = builder.sourceType;
-        this.unhealthyEndpoints = builder.unhealthyEndpoints;
-        this.updateTimestamp = builder.updateTimestamp;
+        this.status = builder.status;
         this.versions = builder.versions;
     }
 
@@ -116,40 +72,12 @@ public class Service extends TeaModel {
         return new Builder();
     }
 
-    public static Service create() {
+    public static ServiceInfo create() {
         return builder().build();
     }
 
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return addresses
-     */
-    public java.util.List<String> getAddresses() {
-        return this.addresses;
-    }
-
-    /**
-     * @return agentServiceConfig
-     */
-    public AgentServiceConfig getAgentServiceConfig() {
-        return this.agentServiceConfig;
-    }
-
-    /**
-     * @return aiServiceConfig
-     */
-    public AiServiceConfig getAiServiceConfig() {
-        return this.aiServiceConfig;
-    }
-
-    /**
-     * @return createTimestamp
-     */
-    public Long getCreateTimestamp() {
-        return this.createTimestamp;
     }
 
     /**
@@ -160,45 +88,10 @@ public class Service extends TeaModel {
     }
 
     /**
-     * @return gatewayId
-     */
-    public String getGatewayId() {
-        return this.gatewayId;
-    }
-
-    /**
      * @return groupName
      */
     public String getGroupName() {
         return this.groupName;
-    }
-
-    /**
-     * @return healthCheck
-     */
-    public ServiceHealthCheck getHealthCheck() {
-        return this.healthCheck;
-    }
-
-    /**
-     * @return healthStatus
-     */
-    public String getHealthStatus() {
-        return this.healthStatus;
-    }
-
-    /**
-     * @return labelDetails
-     */
-    public java.util.List<LabelDetail> getLabelDetails() {
-        return this.labelDetails;
-    }
-
-    /**
-     * @return modelProviderId
-     */
-    public String getModelProviderId() {
-        return this.modelProviderId;
     }
 
     /**
@@ -216,10 +109,17 @@ public class Service extends TeaModel {
     }
 
     /**
-     * @return outlierEndpoints
+     * @return paiWorkspaceId
      */
-    public java.util.List<String> getOutlierEndpoints() {
-        return this.outlierEndpoints;
+    public String getPaiWorkspaceId() {
+        return this.paiWorkspaceId;
+    }
+
+    /**
+     * @return paiWorkspaceName
+     */
+    public String getPaiWorkspaceName() {
+        return this.paiWorkspaceName;
     }
 
     /**
@@ -230,24 +130,10 @@ public class Service extends TeaModel {
     }
 
     /**
-     * @return protocol
-     */
-    public String getProtocol() {
-        return this.protocol;
-    }
-
-    /**
      * @return qualifier
      */
     public String getQualifier() {
         return this.qualifier;
-    }
-
-    /**
-     * @return resourceGroupId
-     */
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
     /**
@@ -265,17 +151,10 @@ public class Service extends TeaModel {
     }
 
     /**
-     * @return unhealthyEndpoints
+     * @return status
      */
-    public java.util.List<String> getUnhealthyEndpoints() {
-        return this.unhealthyEndpoints;
-    }
-
-    /**
-     * @return updateTimestamp
-     */
-    public Long getUpdateTimestamp() {
-        return this.updateTimestamp;
+    public String getStatus() {
+        return this.status;
     }
 
     /**
@@ -286,90 +165,36 @@ public class Service extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List<String> addresses; 
-        private AgentServiceConfig agentServiceConfig; 
-        private AiServiceConfig aiServiceConfig; 
-        private Long createTimestamp; 
         private String expressType; 
-        private String gatewayId; 
         private String groupName; 
-        private ServiceHealthCheck healthCheck; 
-        private String healthStatus; 
-        private java.util.List<LabelDetail> labelDetails; 
-        private String modelProviderId; 
         private String name; 
         private String namespace; 
-        private java.util.List<String> outlierEndpoints; 
+        private String paiWorkspaceId; 
+        private String paiWorkspaceName; 
         private java.util.List<Ports> ports; 
-        private String protocol; 
         private String qualifier; 
-        private String resourceGroupId; 
         private String serviceId; 
         private String sourceType; 
-        private java.util.List<String> unhealthyEndpoints; 
-        private Long updateTimestamp; 
+        private String status; 
         private java.util.List<Versions> versions; 
 
         private Builder() {
         } 
 
-        private Builder(Service model) {
-            this.addresses = model.addresses;
-            this.agentServiceConfig = model.agentServiceConfig;
-            this.aiServiceConfig = model.aiServiceConfig;
-            this.createTimestamp = model.createTimestamp;
+        private Builder(ServiceInfo model) {
             this.expressType = model.expressType;
-            this.gatewayId = model.gatewayId;
             this.groupName = model.groupName;
-            this.healthCheck = model.healthCheck;
-            this.healthStatus = model.healthStatus;
-            this.labelDetails = model.labelDetails;
-            this.modelProviderId = model.modelProviderId;
             this.name = model.name;
             this.namespace = model.namespace;
-            this.outlierEndpoints = model.outlierEndpoints;
+            this.paiWorkspaceId = model.paiWorkspaceId;
+            this.paiWorkspaceName = model.paiWorkspaceName;
             this.ports = model.ports;
-            this.protocol = model.protocol;
             this.qualifier = model.qualifier;
-            this.resourceGroupId = model.resourceGroupId;
             this.serviceId = model.serviceId;
             this.sourceType = model.sourceType;
-            this.unhealthyEndpoints = model.unhealthyEndpoints;
-            this.updateTimestamp = model.updateTimestamp;
+            this.status = model.status;
             this.versions = model.versions;
         } 
-
-        /**
-         * addresses.
-         */
-        public Builder addresses(java.util.List<String> addresses) {
-            this.addresses = addresses;
-            return this;
-        }
-
-        /**
-         * agentServiceConfig.
-         */
-        public Builder agentServiceConfig(AgentServiceConfig agentServiceConfig) {
-            this.agentServiceConfig = agentServiceConfig;
-            return this;
-        }
-
-        /**
-         * aiServiceConfig.
-         */
-        public Builder aiServiceConfig(AiServiceConfig aiServiceConfig) {
-            this.aiServiceConfig = aiServiceConfig;
-            return this;
-        }
-
-        /**
-         * createTimestamp.
-         */
-        public Builder createTimestamp(Long createTimestamp) {
-            this.createTimestamp = createTimestamp;
-            return this;
-        }
 
         /**
          * expressType.
@@ -380,50 +205,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * gatewayId.
-         */
-        public Builder gatewayId(String gatewayId) {
-            this.gatewayId = gatewayId;
-            return this;
-        }
-
-        /**
          * groupName.
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
-            return this;
-        }
-
-        /**
-         * healthCheck.
-         */
-        public Builder healthCheck(ServiceHealthCheck healthCheck) {
-            this.healthCheck = healthCheck;
-            return this;
-        }
-
-        /**
-         * healthStatus.
-         */
-        public Builder healthStatus(String healthStatus) {
-            this.healthStatus = healthStatus;
-            return this;
-        }
-
-        /**
-         * labelDetails.
-         */
-        public Builder labelDetails(java.util.List<LabelDetail> labelDetails) {
-            this.labelDetails = labelDetails;
-            return this;
-        }
-
-        /**
-         * modelProviderId.
-         */
-        public Builder modelProviderId(String modelProviderId) {
-            this.modelProviderId = modelProviderId;
             return this;
         }
 
@@ -444,10 +229,18 @@ public class Service extends TeaModel {
         }
 
         /**
-         * outlierEndpoints.
+         * paiWorkspaceId.
          */
-        public Builder outlierEndpoints(java.util.List<String> outlierEndpoints) {
-            this.outlierEndpoints = outlierEndpoints;
+        public Builder paiWorkspaceId(String paiWorkspaceId) {
+            this.paiWorkspaceId = paiWorkspaceId;
+            return this;
+        }
+
+        /**
+         * paiWorkspaceName.
+         */
+        public Builder paiWorkspaceName(String paiWorkspaceName) {
+            this.paiWorkspaceName = paiWorkspaceName;
             return this;
         }
 
@@ -460,26 +253,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * protocol.
-         */
-        public Builder protocol(String protocol) {
-            this.protocol = protocol;
-            return this;
-        }
-
-        /**
          * qualifier.
          */
         public Builder qualifier(String qualifier) {
             this.qualifier = qualifier;
-            return this;
-        }
-
-        /**
-         * resourceGroupId.
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -500,18 +277,10 @@ public class Service extends TeaModel {
         }
 
         /**
-         * unhealthyEndpoints.
+         * status.
          */
-        public Builder unhealthyEndpoints(java.util.List<String> unhealthyEndpoints) {
-            this.unhealthyEndpoints = unhealthyEndpoints;
-            return this;
-        }
-
-        /**
-         * updateTimestamp.
-         */
-        public Builder updateTimestamp(Long updateTimestamp) {
-            this.updateTimestamp = updateTimestamp;
+        public Builder status(String status) {
+            this.status = status;
             return this;
         }
 
@@ -523,17 +292,17 @@ public class Service extends TeaModel {
             return this;
         }
 
-        public Service build() {
-            return new Service(this);
+        public ServiceInfo build() {
+            return new ServiceInfo(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link Service} extends {@link TeaModel}
+     * {@link ServiceInfo} extends {@link TeaModel}
      *
-     * <p>Service</p>
+     * <p>ServiceInfo</p>
      */
     public static class Ports extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
@@ -627,9 +396,9 @@ public class Service extends TeaModel {
     }
     /**
      * 
-     * {@link Service} extends {@link TeaModel}
+     * {@link ServiceInfo} extends {@link TeaModel}
      *
-     * <p>Service</p>
+     * <p>ServiceInfo</p>
      */
     public static class Labels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
@@ -702,9 +471,9 @@ public class Service extends TeaModel {
     }
     /**
      * 
-     * {@link Service} extends {@link TeaModel}
+     * {@link ServiceInfo} extends {@link TeaModel}
      *
-     * <p>Service</p>
+     * <p>ServiceInfo</p>
      */
     public static class Versions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("labels")

@@ -227,6 +227,12 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("consumerAuthorizationRuleId")
         private String consumerAuthorizationRuleId;
 
+        @com.aliyun.core.annotation.NameInMap("consumerGroupId")
+        private String consumerGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("consumerGroupInfo")
+        private ConsumerGroupInfo consumerGroupInfo;
+
         @com.aliyun.core.annotation.NameInMap("consumerId")
         private String consumerId;
 
@@ -254,6 +260,9 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("gatewayInfo")
         private GatewayInfo gatewayInfo;
 
+        @com.aliyun.core.annotation.NameInMap("principalType")
+        private String principalType;
+
         @com.aliyun.core.annotation.NameInMap("resourceId")
         private String resourceId;
 
@@ -269,6 +278,8 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         private Items(Builder builder) {
             this.apiInfo = builder.apiInfo;
             this.consumerAuthorizationRuleId = builder.consumerAuthorizationRuleId;
+            this.consumerGroupId = builder.consumerGroupId;
+            this.consumerGroupInfo = builder.consumerGroupInfo;
             this.consumerId = builder.consumerId;
             this.consumerInfo = builder.consumerInfo;
             this.createTimestamp = builder.createTimestamp;
@@ -278,6 +289,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             this.expireStatus = builder.expireStatus;
             this.expireTimestamp = builder.expireTimestamp;
             this.gatewayInfo = builder.gatewayInfo;
+            this.principalType = builder.principalType;
             this.resourceId = builder.resourceId;
             this.resourceInfo = builder.resourceInfo;
             this.resourceType = builder.resourceType;
@@ -304,6 +316,20 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
          */
         public String getConsumerAuthorizationRuleId() {
             return this.consumerAuthorizationRuleId;
+        }
+
+        /**
+         * @return consumerGroupId
+         */
+        public String getConsumerGroupId() {
+            return this.consumerGroupId;
+        }
+
+        /**
+         * @return consumerGroupInfo
+         */
+        public ConsumerGroupInfo getConsumerGroupInfo() {
+            return this.consumerGroupInfo;
         }
 
         /**
@@ -370,6 +396,13 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return principalType
+         */
+        public String getPrincipalType() {
+            return this.principalType;
+        }
+
+        /**
          * @return resourceId
          */
         public String getResourceId() {
@@ -400,6 +433,8 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public static final class Builder {
             private HttpApiApiInfo apiInfo; 
             private String consumerAuthorizationRuleId; 
+            private String consumerGroupId; 
+            private ConsumerGroupInfo consumerGroupInfo; 
             private String consumerId; 
             private ConsumerInfo consumerInfo; 
             private Long createTimestamp; 
@@ -409,6 +444,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             private String expireStatus; 
             private Long expireTimestamp; 
             private GatewayInfo gatewayInfo; 
+            private String principalType; 
             private String resourceId; 
             private ResourceInfo resourceInfo; 
             private String resourceType; 
@@ -420,6 +456,8 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
             private Builder(Items model) {
                 this.apiInfo = model.apiInfo;
                 this.consumerAuthorizationRuleId = model.consumerAuthorizationRuleId;
+                this.consumerGroupId = model.consumerGroupId;
+                this.consumerGroupInfo = model.consumerGroupInfo;
                 this.consumerId = model.consumerId;
                 this.consumerInfo = model.consumerInfo;
                 this.createTimestamp = model.createTimestamp;
@@ -429,6 +467,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
                 this.expireStatus = model.expireStatus;
                 this.expireTimestamp = model.expireTimestamp;
                 this.gatewayInfo = model.gatewayInfo;
+                this.principalType = model.principalType;
                 this.resourceId = model.resourceId;
                 this.resourceInfo = model.resourceInfo;
                 this.resourceType = model.resourceType;
@@ -451,6 +490,22 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
              */
             public Builder consumerAuthorizationRuleId(String consumerAuthorizationRuleId) {
                 this.consumerAuthorizationRuleId = consumerAuthorizationRuleId;
+                return this;
+            }
+
+            /**
+             * consumerGroupId.
+             */
+            public Builder consumerGroupId(String consumerGroupId) {
+                this.consumerGroupId = consumerGroupId;
+                return this;
+            }
+
+            /**
+             * consumerGroupInfo.
+             */
+            public Builder consumerGroupInfo(ConsumerGroupInfo consumerGroupInfo) {
+                this.consumerGroupInfo = consumerGroupInfo;
                 return this;
             }
 
@@ -541,6 +596,14 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
              */
             public Builder gatewayInfo(GatewayInfo gatewayInfo) {
                 this.gatewayInfo = gatewayInfo;
+                return this;
+            }
+
+            /**
+             * principalType.
+             */
+            public Builder principalType(String principalType) {
+                this.principalType = principalType;
                 return this;
             }
 

@@ -145,12 +145,132 @@ public class GetConsumerResponseBody extends TeaModel {
      *
      * <p>GetConsumerResponseBody</p>
      */
+    public static class ConsumerGroups extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("consumerGroupId")
+        private String consumerGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("joinTimestamp")
+        private Long joinTimestamp;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        private ConsumerGroups(Builder builder) {
+            this.consumerGroupId = builder.consumerGroupId;
+            this.description = builder.description;
+            this.joinTimestamp = builder.joinTimestamp;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConsumerGroups create() {
+            return builder().build();
+        }
+
+        /**
+         * @return consumerGroupId
+         */
+        public String getConsumerGroupId() {
+            return this.consumerGroupId;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return joinTimestamp
+         */
+        public Long getJoinTimestamp() {
+            return this.joinTimestamp;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String consumerGroupId; 
+            private String description; 
+            private Long joinTimestamp; 
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConsumerGroups model) {
+                this.consumerGroupId = model.consumerGroupId;
+                this.description = model.description;
+                this.joinTimestamp = model.joinTimestamp;
+                this.name = model.name;
+            } 
+
+            /**
+             * consumerGroupId.
+             */
+            public Builder consumerGroupId(String consumerGroupId) {
+                this.consumerGroupId = consumerGroupId;
+                return this;
+            }
+
+            /**
+             * description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * joinTimestamp.
+             */
+            public Builder joinTimestamp(Long joinTimestamp) {
+                this.joinTimestamp = joinTimestamp;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public ConsumerGroups build() {
+                return new ConsumerGroups(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetConsumerResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("akSkIdentityConfigs")
         private java.util.List<AkSkIdentityConfig> akSkIdentityConfigs;
 
         @com.aliyun.core.annotation.NameInMap("apiKeyIdentityConfig")
         private ApiKeyIdentityConfig apiKeyIdentityConfig;
+
+        @com.aliyun.core.annotation.NameInMap("consumerGroups")
+        private java.util.List<ConsumerGroups> consumerGroups;
 
         @com.aliyun.core.annotation.NameInMap("consumerId")
         private String consumerId;
@@ -179,6 +299,7 @@ public class GetConsumerResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.akSkIdentityConfigs = builder.akSkIdentityConfigs;
             this.apiKeyIdentityConfig = builder.apiKeyIdentityConfig;
+            this.consumerGroups = builder.consumerGroups;
             this.consumerId = builder.consumerId;
             this.createTimestamp = builder.createTimestamp;
             this.deployStatus = builder.deployStatus;
@@ -209,6 +330,13 @@ public class GetConsumerResponseBody extends TeaModel {
          */
         public ApiKeyIdentityConfig getApiKeyIdentityConfig() {
             return this.apiKeyIdentityConfig;
+        }
+
+        /**
+         * @return consumerGroups
+         */
+        public java.util.List<ConsumerGroups> getConsumerGroups() {
+            return this.consumerGroups;
         }
 
         /**
@@ -270,6 +398,7 @@ public class GetConsumerResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<AkSkIdentityConfig> akSkIdentityConfigs; 
             private ApiKeyIdentityConfig apiKeyIdentityConfig; 
+            private java.util.List<ConsumerGroups> consumerGroups; 
             private String consumerId; 
             private Long createTimestamp; 
             private String deployStatus; 
@@ -285,6 +414,7 @@ public class GetConsumerResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.akSkIdentityConfigs = model.akSkIdentityConfigs;
                 this.apiKeyIdentityConfig = model.apiKeyIdentityConfig;
+                this.consumerGroups = model.consumerGroups;
                 this.consumerId = model.consumerId;
                 this.createTimestamp = model.createTimestamp;
                 this.deployStatus = model.deployStatus;
@@ -308,6 +438,14 @@ public class GetConsumerResponseBody extends TeaModel {
              */
             public Builder apiKeyIdentityConfig(ApiKeyIdentityConfig apiKeyIdentityConfig) {
                 this.apiKeyIdentityConfig = apiKeyIdentityConfig;
+                return this;
+            }
+
+            /**
+             * consumerGroups.
+             */
+            public Builder consumerGroups(java.util.List<ConsumerGroups> consumerGroups) {
+                this.consumerGroups = consumerGroups;
                 return this;
             }
 
