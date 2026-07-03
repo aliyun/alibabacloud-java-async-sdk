@@ -194,6 +194,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateDataAgentAccuracyTest  CreateDataAgentAccuracyTestRequest
+     * @return CreateDataAgentAccuracyTestResponse
+     */
+    @Override
+    public CompletableFuture<CreateDataAgentAccuracyTestResponse> createDataAgentAccuracyTest(CreateDataAgentAccuracyTestRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateDataAgentAccuracyTest").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDataAgentAccuracyTestResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateDataAgentAccuracyTestResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateDataAgentKnowledgeBase  CreateDataAgentKnowledgeBaseRequest
      * @return CreateDataAgentKnowledgeBaseResponse
      */
@@ -350,6 +368,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteCustomAgentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteDataAgentAccuracyTest  DeleteDataAgentAccuracyTestRequest
+     * @return DeleteDataAgentAccuracyTestResponse
+     */
+    @Override
+    public CompletableFuture<DeleteDataAgentAccuracyTestResponse> deleteDataAgentAccuracyTest(DeleteDataAgentAccuracyTestRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteDataAgentAccuracyTest").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteDataAgentAccuracyTestResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteDataAgentAccuracyTestResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -996,6 +1032,60 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListDataAgentAccuracyTestInstances  ListDataAgentAccuracyTestInstancesRequest
+     * @return ListDataAgentAccuracyTestInstancesResponse
+     */
+    @Override
+    public CompletableFuture<ListDataAgentAccuracyTestInstancesResponse> listDataAgentAccuracyTestInstances(ListDataAgentAccuracyTestInstancesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListDataAgentAccuracyTestInstances").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDataAgentAccuracyTestInstancesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDataAgentAccuracyTestInstancesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListDataAgentAccuracyTestResults  ListDataAgentAccuracyTestResultsRequest
+     * @return ListDataAgentAccuracyTestResultsResponse
+     */
+    @Override
+    public CompletableFuture<ListDataAgentAccuracyTestResultsResponse> listDataAgentAccuracyTestResults(ListDataAgentAccuracyTestResultsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListDataAgentAccuracyTestResults").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDataAgentAccuracyTestResultsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDataAgentAccuracyTestResultsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListDataAgentAccuracyTestTasks  ListDataAgentAccuracyTestTasksRequest
+     * @return ListDataAgentAccuracyTestTasksResponse
+     */
+    @Override
+    public CompletableFuture<ListDataAgentAccuracyTestTasksResponse> listDataAgentAccuracyTestTasks(ListDataAgentAccuracyTestTasksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListDataAgentAccuracyTestTasks").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDataAgentAccuracyTestTasksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDataAgentAccuracyTestTasksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListDataAgentSession  ListDataAgentSessionRequest
      * @return ListDataAgentSessionResponse
      */
@@ -1518,6 +1608,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of StartDataAgentAccuracyTestTask  StartDataAgentAccuracyTestTaskRequest
+     * @return StartDataAgentAccuracyTestTaskResponse
+     */
+    @Override
+    public CompletableFuture<StartDataAgentAccuracyTestTaskResponse> startDataAgentAccuracyTestTask(StartDataAgentAccuracyTestTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("StartDataAgentAccuracyTestTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StartDataAgentAccuracyTestTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StartDataAgentAccuracyTestTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of StopDataAgentAccuracyTestTask  StopDataAgentAccuracyTestTaskRequest
+     * @return StopDataAgentAccuracyTestTaskResponse
+     */
+    @Override
+    public CompletableFuture<StopDataAgentAccuracyTestTaskResponse> stopDataAgentAccuracyTestTask(StopDataAgentAccuracyTestTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("StopDataAgentAccuracyTestTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopDataAgentAccuracyTestTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StopDataAgentAccuracyTestTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateAirflow  UpdateAirflowRequest
      * @return UpdateAirflowResponse
      */
@@ -1530,6 +1656,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateAirflowResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateDataAgentAccuracyTest  UpdateDataAgentAccuracyTestRequest
+     * @return UpdateDataAgentAccuracyTestResponse
+     */
+    @Override
+    public CompletableFuture<UpdateDataAgentAccuracyTestResponse> updateDataAgentAccuracyTest(UpdateDataAgentAccuracyTestRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateDataAgentAccuracyTest").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateDataAgentAccuracyTestResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateDataAgentAccuracyTestResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

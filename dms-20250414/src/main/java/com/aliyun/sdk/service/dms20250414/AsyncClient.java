@@ -68,6 +68,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCustomAgentResponse> createCustomAgent(CreateCustomAgentRequest request);
 
     /**
+     * @param request the request parameters of CreateDataAgentAccuracyTest  CreateDataAgentAccuracyTestRequest
+     * @return CreateDataAgentAccuracyTestResponse
+     */
+    CompletableFuture<CreateDataAgentAccuracyTestResponse> createDataAgentAccuracyTest(CreateDataAgentAccuracyTestRequest request);
+
+    /**
      * @param request the request parameters of CreateDataAgentKnowledgeBase  CreateDataAgentKnowledgeBaseRequest
      * @return CreateDataAgentKnowledgeBaseResponse
      */
@@ -120,6 +126,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteCustomAgentResponse
      */
     CompletableFuture<DeleteCustomAgentResponse> deleteCustomAgent(DeleteCustomAgentRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDataAgentAccuracyTest  DeleteDataAgentAccuracyTestRequest
+     * @return DeleteDataAgentAccuracyTestResponse
+     */
+    CompletableFuture<DeleteDataAgentAccuracyTestResponse> deleteDataAgentAccuracyTest(DeleteDataAgentAccuracyTestRequest request);
 
     /**
      * @param request the request parameters of DeleteDataAgentKnowledgeBase  DeleteDataAgentKnowledgeBaseRequest
@@ -334,6 +346,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCustomAgentResponse> listCustomAgent(ListCustomAgentRequest request);
 
     /**
+     * @param request the request parameters of ListDataAgentAccuracyTestInstances  ListDataAgentAccuracyTestInstancesRequest
+     * @return ListDataAgentAccuracyTestInstancesResponse
+     */
+    CompletableFuture<ListDataAgentAccuracyTestInstancesResponse> listDataAgentAccuracyTestInstances(ListDataAgentAccuracyTestInstancesRequest request);
+
+    /**
+     * @param request the request parameters of ListDataAgentAccuracyTestResults  ListDataAgentAccuracyTestResultsRequest
+     * @return ListDataAgentAccuracyTestResultsResponse
+     */
+    CompletableFuture<ListDataAgentAccuracyTestResultsResponse> listDataAgentAccuracyTestResults(ListDataAgentAccuracyTestResultsRequest request);
+
+    /**
+     * @param request the request parameters of ListDataAgentAccuracyTestTasks  ListDataAgentAccuracyTestTasksRequest
+     * @return ListDataAgentAccuracyTestTasksResponse
+     */
+    CompletableFuture<ListDataAgentAccuracyTestTasksResponse> listDataAgentAccuracyTestTasks(ListDataAgentAccuracyTestTasksRequest request);
+
+    /**
      * @param request the request parameters of ListDataAgentSession  ListDataAgentSessionRequest
      * @return ListDataAgentSessionResponse
      */
@@ -508,10 +538,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetWorkspaceQuotaResponse> setWorkspaceQuota(SetWorkspaceQuotaRequest request);
 
     /**
+     * @param request the request parameters of StartDataAgentAccuracyTestTask  StartDataAgentAccuracyTestTaskRequest
+     * @return StartDataAgentAccuracyTestTaskResponse
+     */
+    CompletableFuture<StartDataAgentAccuracyTestTaskResponse> startDataAgentAccuracyTestTask(StartDataAgentAccuracyTestTaskRequest request);
+
+    /**
+     * @param request the request parameters of StopDataAgentAccuracyTestTask  StopDataAgentAccuracyTestTaskRequest
+     * @return StopDataAgentAccuracyTestTaskResponse
+     */
+    CompletableFuture<StopDataAgentAccuracyTestTaskResponse> stopDataAgentAccuracyTestTask(StopDataAgentAccuracyTestTaskRequest request);
+
+    /**
      * @param request the request parameters of UpdateAirflow  UpdateAirflowRequest
      * @return UpdateAirflowResponse
      */
     CompletableFuture<UpdateAirflowResponse> updateAirflow(UpdateAirflowRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDataAgentAccuracyTest  UpdateDataAgentAccuracyTestRequest
+     * @return UpdateDataAgentAccuracyTestResponse
+     */
+    CompletableFuture<UpdateDataAgentAccuracyTestResponse> updateDataAgentAccuracyTest(UpdateDataAgentAccuracyTestRequest request);
 
     /**
      * @param request the request parameters of UpdateDataAgentSpaceInfo  UpdateDataAgentSpaceInfoRequest

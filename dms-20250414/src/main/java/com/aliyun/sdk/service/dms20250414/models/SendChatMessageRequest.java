@@ -19,7 +19,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class SendChatMessageRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AgentId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String agentId;
 
     @com.aliyun.core.annotation.Query
@@ -65,12 +64,15 @@ public class SendChatMessageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SessionId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String sessionId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskConfig")
     private TaskConfig taskConfig;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserOssBucket")
+    private String userOssBucket;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
@@ -91,6 +93,7 @@ public class SendChatMessageRequest extends Request {
         this.sessionConfig = builder.sessionConfig;
         this.sessionId = builder.sessionId;
         this.taskConfig = builder.taskConfig;
+        this.userOssBucket = builder.userOssBucket;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -199,6 +202,13 @@ public class SendChatMessageRequest extends Request {
     }
 
     /**
+     * @return userOssBucket
+     */
+    public String getUserOssBucket() {
+        return this.userOssBucket;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -219,6 +229,7 @@ public class SendChatMessageRequest extends Request {
         private SessionConfig sessionConfig; 
         private String sessionId; 
         private TaskConfig taskConfig; 
+        private String userOssBucket; 
         private String workspaceId; 
 
         private Builder() {
@@ -240,14 +251,12 @@ public class SendChatMessageRequest extends Request {
             this.sessionConfig = request.sessionConfig;
             this.sessionId = request.sessionId;
             this.taskConfig = request.taskConfig;
+            this.userOssBucket = request.userOssBucket;
             this.workspaceId = request.workspaceId;
         } 
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>agent_12345</p>
+         * AgentId.
          */
         public Builder agentId(String agentId) {
             this.putQueryParameter("AgentId", agentId);
@@ -352,10 +361,7 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sess_12345</p>
+         * SessionId.
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
@@ -370,6 +376,15 @@ public class SendChatMessageRequest extends Request {
             String taskConfigShrink = shrink(taskConfig, "TaskConfig", "json");
             this.putQueryParameter("TaskConfig", taskConfigShrink);
             this.taskConfig = taskConfig;
+            return this;
+        }
+
+        /**
+         * UserOssBucket.
+         */
+        public Builder userOssBucket(String userOssBucket) {
+            this.putQueryParameter("UserOssBucket", userOssBucket);
+            this.userOssBucket = userOssBucket;
             return this;
         }
 
@@ -930,11 +945,23 @@ public class SendChatMessageRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("CustomAgentStage")
         private String customAgentStage;
 
+        @com.aliyun.core.annotation.NameInMap("EnableSearch")
+        private String enableSearch;
+
+        @com.aliyun.core.annotation.NameInMap("KbUuidList")
+        private String kbUuidList;
+
         @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
+        @com.aliyun.core.annotation.NameInMap("McpServerIds")
+        private String mcpServerIds;
+
         @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
+
+        @com.aliyun.core.annotation.NameInMap("PlanMode")
+        private String planMode;
 
         @com.aliyun.core.annotation.NameInMap("ReportWaterMark")
         private String reportWaterMark;
@@ -954,8 +981,12 @@ public class SendChatMessageRequest extends Request {
         private SessionConfig(Builder builder) {
             this.customAgentId = builder.customAgentId;
             this.customAgentStage = builder.customAgentStage;
+            this.enableSearch = builder.enableSearch;
+            this.kbUuidList = builder.kbUuidList;
             this.language = builder.language;
+            this.mcpServerIds = builder.mcpServerIds;
             this.mode = builder.mode;
+            this.planMode = builder.planMode;
             this.reportWaterMark = builder.reportWaterMark;
             this.skipAskHuman = builder.skipAskHuman;
             this.skipPlan = builder.skipPlan;
@@ -986,6 +1017,20 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
+         * @return enableSearch
+         */
+        public String getEnableSearch() {
+            return this.enableSearch;
+        }
+
+        /**
+         * @return kbUuidList
+         */
+        public String getKbUuidList() {
+            return this.kbUuidList;
+        }
+
+        /**
          * @return language
          */
         public String getLanguage() {
@@ -993,10 +1038,24 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
+         * @return mcpServerIds
+         */
+        public String getMcpServerIds() {
+            return this.mcpServerIds;
+        }
+
+        /**
          * @return mode
          */
         public String getMode() {
             return this.mode;
+        }
+
+        /**
+         * @return planMode
+         */
+        public String getPlanMode() {
+            return this.planMode;
         }
 
         /**
@@ -1037,8 +1096,12 @@ public class SendChatMessageRequest extends Request {
         public static final class Builder {
             private String customAgentId; 
             private String customAgentStage; 
+            private String enableSearch; 
+            private String kbUuidList; 
             private String language; 
+            private String mcpServerIds; 
             private String mode; 
+            private String planMode; 
             private String reportWaterMark; 
             private Boolean skipAskHuman; 
             private Boolean skipPlan; 
@@ -1051,8 +1114,12 @@ public class SendChatMessageRequest extends Request {
             private Builder(SessionConfig model) {
                 this.customAgentId = model.customAgentId;
                 this.customAgentStage = model.customAgentStage;
+                this.enableSearch = model.enableSearch;
+                this.kbUuidList = model.kbUuidList;
                 this.language = model.language;
+                this.mcpServerIds = model.mcpServerIds;
                 this.mode = model.mode;
+                this.planMode = model.planMode;
                 this.reportWaterMark = model.reportWaterMark;
                 this.skipAskHuman = model.skipAskHuman;
                 this.skipPlan = model.skipPlan;
@@ -1077,6 +1144,22 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
+             * EnableSearch.
+             */
+            public Builder enableSearch(String enableSearch) {
+                this.enableSearch = enableSearch;
+                return this;
+            }
+
+            /**
+             * KbUuidList.
+             */
+            public Builder kbUuidList(String kbUuidList) {
+                this.kbUuidList = kbUuidList;
+                return this;
+            }
+
+            /**
              * Language.
              */
             public Builder language(String language) {
@@ -1085,10 +1168,26 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
+             * McpServerIds.
+             */
+            public Builder mcpServerIds(String mcpServerIds) {
+                this.mcpServerIds = mcpServerIds;
+                return this;
+            }
+
+            /**
              * Mode.
              */
             public Builder mode(String mode) {
                 this.mode = mode;
+                return this;
+            }
+
+            /**
+             * PlanMode.
+             */
+            public Builder planMode(String planMode) {
+                this.planMode = planMode;
                 return this;
             }
 
