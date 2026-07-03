@@ -29,8 +29,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "cloud-siem";
         this.version = "2022-06-16";
-        this.endpointRule = "";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("cn-shanghai", "cloud-siem.cn-shanghai.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "cloud-siem.ap-southeast-1.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -988,6 +991,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetCapacityResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetEntitiyStat  GetEntitiyStatRequest
+     * @return GetEntitiyStatResponse
+     */
+    @Override
+    public CompletableFuture<GetEntitiyStatResponse> getEntitiyStat(GetEntitiyStatRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetEntitiyStat").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetEntitiyStatResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetEntitiyStatResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

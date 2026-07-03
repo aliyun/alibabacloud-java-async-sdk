@@ -260,9 +260,13 @@ public class ListEntitiesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentDisposalPlaybookUuid")
         private String agentDisposalPlaybookUuid;
 
+        @com.aliyun.core.annotation.NameInMap("AgentDisposalReason")
+        private String agentDisposalReason;
+
         private AgentDisposes(Builder builder) {
             this.agentDisposalMethod = builder.agentDisposalMethod;
             this.agentDisposalPlaybookUuid = builder.agentDisposalPlaybookUuid;
+            this.agentDisposalReason = builder.agentDisposalReason;
         }
 
         public static Builder builder() {
@@ -287,9 +291,17 @@ public class ListEntitiesResponseBody extends TeaModel {
             return this.agentDisposalPlaybookUuid;
         }
 
+        /**
+         * @return agentDisposalReason
+         */
+        public String getAgentDisposalReason() {
+            return this.agentDisposalReason;
+        }
+
         public static final class Builder {
             private String agentDisposalMethod; 
             private String agentDisposalPlaybookUuid; 
+            private String agentDisposalReason; 
 
             private Builder() {
             } 
@@ -297,6 +309,7 @@ public class ListEntitiesResponseBody extends TeaModel {
             private Builder(AgentDisposes model) {
                 this.agentDisposalMethod = model.agentDisposalMethod;
                 this.agentDisposalPlaybookUuid = model.agentDisposalPlaybookUuid;
+                this.agentDisposalReason = model.agentDisposalReason;
             } 
 
             /**
@@ -315,6 +328,14 @@ public class ListEntitiesResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * AgentDisposalReason.
+             */
+            public Builder agentDisposalReason(String agentDisposalReason) {
+                this.agentDisposalReason = agentDisposalReason;
+                return this;
+            }
+
             public AgentDisposes build() {
                 return new AgentDisposes(this);
             } 
@@ -329,6 +350,9 @@ public class ListEntitiesResponseBody extends TeaModel {
      * <p>ListEntitiesResponseBody</p>
      */
     public static class ResponseData extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AgentAnalysisReason")
+        private String agentAnalysisReason;
+
         @com.aliyun.core.annotation.NameInMap("AgentConfidence")
         private String agentConfidence;
 
@@ -337,6 +361,9 @@ public class ListEntitiesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("AgentDisposalPlaybookUuid")
         private String agentDisposalPlaybookUuid;
+
+        @com.aliyun.core.annotation.NameInMap("AgentDisposalReason")
+        private String agentDisposalReason;
 
         @com.aliyun.core.annotation.NameInMap("AgentDisposalSuggestion")
         private String agentDisposalSuggestion;
@@ -402,9 +429,11 @@ public class ListEntitiesResponseBody extends TeaModel {
         private String tags;
 
         private ResponseData(Builder builder) {
+            this.agentAnalysisReason = builder.agentAnalysisReason;
             this.agentConfidence = builder.agentConfidence;
             this.agentDisposalMethod = builder.agentDisposalMethod;
             this.agentDisposalPlaybookUuid = builder.agentDisposalPlaybookUuid;
+            this.agentDisposalReason = builder.agentDisposalReason;
             this.agentDisposalSuggestion = builder.agentDisposalSuggestion;
             this.agentDisposes = builder.agentDisposes;
             this.alertNum = builder.alertNum;
@@ -437,6 +466,13 @@ public class ListEntitiesResponseBody extends TeaModel {
         }
 
         /**
+         * @return agentAnalysisReason
+         */
+        public String getAgentAnalysisReason() {
+            return this.agentAnalysisReason;
+        }
+
+        /**
          * @return agentConfidence
          */
         public String getAgentConfidence() {
@@ -455,6 +491,13 @@ public class ListEntitiesResponseBody extends TeaModel {
          */
         public String getAgentDisposalPlaybookUuid() {
             return this.agentDisposalPlaybookUuid;
+        }
+
+        /**
+         * @return agentDisposalReason
+         */
+        public String getAgentDisposalReason() {
+            return this.agentDisposalReason;
         }
 
         /**
@@ -605,9 +648,11 @@ public class ListEntitiesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String agentAnalysisReason; 
             private String agentConfidence; 
             private String agentDisposalMethod; 
             private String agentDisposalPlaybookUuid; 
+            private String agentDisposalReason; 
             private String agentDisposalSuggestion; 
             private java.util.List<AgentDisposes> agentDisposes; 
             private Integer alertNum; 
@@ -634,9 +679,11 @@ public class ListEntitiesResponseBody extends TeaModel {
             } 
 
             private Builder(ResponseData model) {
+                this.agentAnalysisReason = model.agentAnalysisReason;
                 this.agentConfidence = model.agentConfidence;
                 this.agentDisposalMethod = model.agentDisposalMethod;
                 this.agentDisposalPlaybookUuid = model.agentDisposalPlaybookUuid;
+                this.agentDisposalReason = model.agentDisposalReason;
                 this.agentDisposalSuggestion = model.agentDisposalSuggestion;
                 this.agentDisposes = model.agentDisposes;
                 this.alertNum = model.alertNum;
@@ -661,6 +708,14 @@ public class ListEntitiesResponseBody extends TeaModel {
             } 
 
             /**
+             * AgentAnalysisReason.
+             */
+            public Builder agentAnalysisReason(String agentAnalysisReason) {
+                this.agentAnalysisReason = agentAnalysisReason;
+                return this;
+            }
+
+            /**
              * AgentConfidence.
              */
             public Builder agentConfidence(String agentConfidence) {
@@ -681,6 +736,14 @@ public class ListEntitiesResponseBody extends TeaModel {
              */
             public Builder agentDisposalPlaybookUuid(String agentDisposalPlaybookUuid) {
                 this.agentDisposalPlaybookUuid = agentDisposalPlaybookUuid;
+                return this;
+            }
+
+            /**
+             * AgentDisposalReason.
+             */
+            public Builder agentDisposalReason(String agentDisposalReason) {
+                this.agentDisposalReason = agentDisposalReason;
                 return this;
             }
 
