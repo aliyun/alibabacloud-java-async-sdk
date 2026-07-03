@@ -314,6 +314,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateUserGroupResponse> createUserGroup(CreateUserGroupRequest request);
 
     /**
+     * @param request the request parameters of CreateWorkFlowByJson  CreateWorkFlowByJsonRequest
+     * @return CreateWorkFlowByJsonResponse
+     */
+    CompletableFuture<CreateWorkFlowByJsonResponse> createWorkFlowByJson(CreateWorkFlowByJsonRequest request);
+
+    /**
      * @param request the request parameters of DeleteAdHocFile  DeleteAdHocFileRequest
      * @return DeleteAdHocFileResponse
      */
