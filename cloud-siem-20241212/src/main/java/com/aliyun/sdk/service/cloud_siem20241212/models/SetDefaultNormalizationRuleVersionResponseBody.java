@@ -128,6 +128,9 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NormalizationSchemaId")
         private String normalizationSchemaId;
 
+        @com.aliyun.core.annotation.NameInMap("NormalizationSecurityDomainId")
+        private String normalizationSecurityDomainId;
+
         @com.aliyun.core.annotation.NameInMap("ProductId")
         private String productId;
 
@@ -149,6 +152,7 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
             this.normalizationRuleType = builder.normalizationRuleType;
             this.normalizationRuleVersion = builder.normalizationRuleVersion;
             this.normalizationSchemaId = builder.normalizationSchemaId;
+            this.normalizationSecurityDomainId = builder.normalizationSecurityDomainId;
             this.productId = builder.productId;
             this.updateTime = builder.updateTime;
             this.vendorId = builder.vendorId;
@@ -240,6 +244,13 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
         }
 
         /**
+         * @return normalizationSecurityDomainId
+         */
+        public String getNormalizationSecurityDomainId() {
+            return this.normalizationSecurityDomainId;
+        }
+
+        /**
          * @return productId
          */
         public String getProductId() {
@@ -272,6 +283,7 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
             private String normalizationRuleType; 
             private Integer normalizationRuleVersion; 
             private String normalizationSchemaId; 
+            private String normalizationSecurityDomainId; 
             private String productId; 
             private Long updateTime; 
             private String vendorId; 
@@ -291,6 +303,7 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
                 this.normalizationRuleType = model.normalizationRuleType;
                 this.normalizationRuleVersion = model.normalizationRuleVersion;
                 this.normalizationSchemaId = model.normalizationSchemaId;
+                this.normalizationSecurityDomainId = model.normalizationSecurityDomainId;
                 this.productId = model.productId;
                 this.updateTime = model.updateTime;
                 this.vendorId = model.vendorId;
@@ -381,6 +394,14 @@ public class SetDefaultNormalizationRuleVersionResponseBody extends TeaModel {
              */
             public Builder normalizationSchemaId(String normalizationSchemaId) {
                 this.normalizationSchemaId = normalizationSchemaId;
+                return this;
+            }
+
+            /**
+             * NormalizationSecurityDomainId.
+             */
+            public Builder normalizationSecurityDomainId(String normalizationSecurityDomainId) {
+                this.normalizationSecurityDomainId = normalizationSecurityDomainId;
                 return this;
             }
 

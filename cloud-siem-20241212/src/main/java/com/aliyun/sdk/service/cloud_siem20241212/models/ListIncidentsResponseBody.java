@@ -230,6 +230,9 @@ public class ListIncidentsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RelateAssetCount")
         private Integer relateAssetCount;
 
+        @com.aliyun.core.annotation.NameInMap("ResponseTime")
+        private Long responseTime;
+
         @com.aliyun.core.annotation.NameInMap("ThreatLevel")
         private String threatLevel;
 
@@ -247,6 +250,7 @@ public class ListIncidentsResponseBody extends TeaModel {
             this.owner = builder.owner;
             this.relateAlertCount = builder.relateAlertCount;
             this.relateAssetCount = builder.relateAssetCount;
+            this.responseTime = builder.responseTime;
             this.threatLevel = builder.threatLevel;
             this.updateTime = builder.updateTime;
         }
@@ -330,6 +334,13 @@ public class ListIncidentsResponseBody extends TeaModel {
         }
 
         /**
+         * @return responseTime
+         */
+        public Long getResponseTime() {
+            return this.responseTime;
+        }
+
+        /**
          * @return threatLevel
          */
         public String getThreatLevel() {
@@ -354,6 +365,7 @@ public class ListIncidentsResponseBody extends TeaModel {
             private String owner; 
             private Integer relateAlertCount; 
             private Integer relateAssetCount; 
+            private Long responseTime; 
             private String threatLevel; 
             private Long updateTime; 
 
@@ -371,6 +383,7 @@ public class ListIncidentsResponseBody extends TeaModel {
                 this.owner = model.owner;
                 this.relateAlertCount = model.relateAlertCount;
                 this.relateAssetCount = model.relateAssetCount;
+                this.responseTime = model.responseTime;
                 this.threatLevel = model.threatLevel;
                 this.updateTime = model.updateTime;
             } 
@@ -452,6 +465,14 @@ public class ListIncidentsResponseBody extends TeaModel {
              */
             public Builder relateAssetCount(Integer relateAssetCount) {
                 this.relateAssetCount = relateAssetCount;
+                return this;
+            }
+
+            /**
+             * ResponseTime.
+             */
+            public Builder responseTime(Long responseTime) {
+                this.responseTime = responseTime;
                 return this;
             }
 

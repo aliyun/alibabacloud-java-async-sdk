@@ -12,22 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetNormalizationRuleRequest} extends {@link RequestModel}
+ * {@link GetResponseRuleStatisticRequest} extends {@link RequestModel}
  *
- * <p>GetNormalizationRuleRequest</p>
+ * <p>GetResponseRuleStatisticRequest</p>
  */
-public class GetNormalizationRuleRequest extends Request {
+public class GetResponseRuleStatisticRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("NormalizationRuleId")
-    private String normalizationRuleId;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("NormalizationSecurityDomainId")
-    private String normalizationSecurityDomainId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -37,20 +29,23 @@ public class GetNormalizationRuleRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RoleFor")
     private Long roleFor;
 
-    private GetNormalizationRuleRequest(Builder builder) {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleType")
+    private Integer roleType;
+
+    private GetResponseRuleStatisticRequest(Builder builder) {
         super(builder);
         this.lang = builder.lang;
-        this.normalizationRuleId = builder.normalizationRuleId;
-        this.normalizationSecurityDomainId = builder.normalizationSecurityDomainId;
         this.regionId = builder.regionId;
         this.roleFor = builder.roleFor;
+        this.roleType = builder.roleType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetNormalizationRuleRequest create() {
+    public static GetResponseRuleStatisticRequest create() {
         return builder().build();
     }
 
@@ -67,20 +62,6 @@ public class GetNormalizationRuleRequest extends Request {
     }
 
     /**
-     * @return normalizationRuleId
-     */
-    public String getNormalizationRuleId() {
-        return this.normalizationRuleId;
-    }
-
-    /**
-     * @return normalizationSecurityDomainId
-     */
-    public String getNormalizationSecurityDomainId() {
-        return this.normalizationSecurityDomainId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -94,24 +75,29 @@ public class GetNormalizationRuleRequest extends Request {
         return this.roleFor;
     }
 
-    public static final class Builder extends Request.Builder<GetNormalizationRuleRequest, Builder> {
+    /**
+     * @return roleType
+     */
+    public Integer getRoleType() {
+        return this.roleType;
+    }
+
+    public static final class Builder extends Request.Builder<GetResponseRuleStatisticRequest, Builder> {
         private String lang; 
-        private String normalizationRuleId; 
-        private String normalizationSecurityDomainId; 
         private String regionId; 
         private Long roleFor; 
+        private Integer roleType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetNormalizationRuleRequest request) {
+        private Builder(GetResponseRuleStatisticRequest request) {
             super(request);
             this.lang = request.lang;
-            this.normalizationRuleId = request.normalizationRuleId;
-            this.normalizationSecurityDomainId = request.normalizationSecurityDomainId;
             this.regionId = request.regionId;
             this.roleFor = request.roleFor;
+            this.roleType = request.roleType;
         } 
 
         /**
@@ -120,24 +106,6 @@ public class GetNormalizationRuleRequest extends Request {
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
             this.lang = lang;
-            return this;
-        }
-
-        /**
-         * NormalizationRuleId.
-         */
-        public Builder normalizationRuleId(String normalizationRuleId) {
-            this.putBodyParameter("NormalizationRuleId", normalizationRuleId);
-            this.normalizationRuleId = normalizationRuleId;
-            return this;
-        }
-
-        /**
-         * NormalizationSecurityDomainId.
-         */
-        public Builder normalizationSecurityDomainId(String normalizationSecurityDomainId) {
-            this.putBodyParameter("NormalizationSecurityDomainId", normalizationSecurityDomainId);
-            this.normalizationSecurityDomainId = normalizationSecurityDomainId;
             return this;
         }
 
@@ -159,9 +127,18 @@ public class GetNormalizationRuleRequest extends Request {
             return this;
         }
 
+        /**
+         * RoleType.
+         */
+        public Builder roleType(Integer roleType) {
+            this.putBodyParameter("RoleType", roleType);
+            this.roleType = roleType;
+            return this;
+        }
+
         @Override
-        public GetNormalizationRuleRequest build() {
-            return new GetNormalizationRuleRequest(this);
+        public GetResponseRuleStatisticRequest build() {
+            return new GetResponseRuleStatisticRequest(this);
         } 
 
     } 

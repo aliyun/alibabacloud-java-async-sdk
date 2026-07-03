@@ -194,6 +194,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExecuteUpgradeResponse> executeUpgrade(ExecuteUpgradeRequest request);
 
     /**
+     * @param request the request parameters of GetAlert  GetAlertRequest
+     * @return GetAlertResponse
+     */
+    CompletableFuture<GetAlertResponse> getAlert(GetAlertRequest request);
+
+    /**
      * @param request the request parameters of GetAutoDisposeConfig  GetAutoDisposeConfigRequest
      * @return GetAutoDisposeConfigResponse
      */
@@ -254,10 +260,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetNormalizationSchemaResponse> getNormalizationSchema(GetNormalizationSchemaRequest request);
 
     /**
+     * @param request the request parameters of GetResponseRuleStatistic  GetResponseRuleStatisticRequest
+     * @return GetResponseRuleStatisticResponse
+     */
+    CompletableFuture<GetResponseRuleStatisticResponse> getResponseRuleStatistic(GetResponseRuleStatisticRequest request);
+
+    /**
      * @param request the request parameters of GetUserConfig  GetUserConfigRequest
      * @return GetUserConfigResponse
      */
     CompletableFuture<GetUserConfigResponse> getUserConfig(GetUserConfigRequest request);
+
+    /**
+     * @param request the request parameters of ListAlerts  ListAlertsRequest
+     * @return ListAlertsResponse
+     */
+    CompletableFuture<ListAlertsResponse> listAlerts(ListAlertsRequest request);
 
     /**
      * @param request the request parameters of ListAutoDisposeEntities  ListAutoDisposeEntitiesRequest
@@ -368,16 +386,40 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListNormalizationSchemasResponse> listNormalizationSchemas(ListNormalizationSchemasRequest request);
 
     /**
+     * @param request the request parameters of ListNormalizationSecurityDomains  ListNormalizationSecurityDomainsRequest
+     * @return ListNormalizationSecurityDomainsResponse
+     */
+    CompletableFuture<ListNormalizationSecurityDomainsResponse> listNormalizationSecurityDomains(ListNormalizationSecurityDomainsRequest request);
+
+    /**
      * @param request the request parameters of ListProducts  ListProductsRequest
      * @return ListProductsResponse
      */
     CompletableFuture<ListProductsResponse> listProducts(ListProductsRequest request);
 
     /**
+     * @param request the request parameters of ListQueryViews  ListQueryViewsRequest
+     * @return ListQueryViewsResponse
+     */
+    CompletableFuture<ListQueryViewsResponse> listQueryViews(ListQueryViewsRequest request);
+
+    /**
+     * @param request the request parameters of ListResponseRuleFields  ListResponseRuleFieldsRequest
+     * @return ListResponseRuleFieldsResponse
+     */
+    CompletableFuture<ListResponseRuleFieldsResponse> listResponseRuleFields(ListResponseRuleFieldsRequest request);
+
+    /**
      * @param request the request parameters of ListResponseRules  ListResponseRulesRequest
      * @return ListResponseRulesResponse
      */
     CompletableFuture<ListResponseRulesResponse> listResponseRules(ListResponseRulesRequest request);
+
+    /**
+     * @param request the request parameters of ListTags  ListTagsRequest
+     * @return ListTagsResponse
+     */
+    CompletableFuture<ListTagsResponse> listTags(ListTagsRequest request);
 
     /**
      * @param request the request parameters of ListTrafficStatistics  ListTrafficStatisticsRequest

@@ -34,8 +34,16 @@ public class ListNormalizationSchemasRequest extends Request {
     private String normalizationCategoryId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NormalizationFieldSource")
+    private String normalizationFieldSource;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NormalizationSchemaType")
     private String normalizationSchemaType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NormalizationSecurityDomainId")
+    private String normalizationSecurityDomainId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -51,7 +59,9 @@ public class ListNormalizationSchemasRequest extends Request {
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.normalizationCategoryId = builder.normalizationCategoryId;
+        this.normalizationFieldSource = builder.normalizationFieldSource;
         this.normalizationSchemaType = builder.normalizationSchemaType;
+        this.normalizationSecurityDomainId = builder.normalizationSecurityDomainId;
         this.regionId = builder.regionId;
         this.roleFor = builder.roleFor;
     }
@@ -98,10 +108,24 @@ public class ListNormalizationSchemasRequest extends Request {
     }
 
     /**
+     * @return normalizationFieldSource
+     */
+    public String getNormalizationFieldSource() {
+        return this.normalizationFieldSource;
+    }
+
+    /**
      * @return normalizationSchemaType
      */
     public String getNormalizationSchemaType() {
         return this.normalizationSchemaType;
+    }
+
+    /**
+     * @return normalizationSecurityDomainId
+     */
+    public String getNormalizationSecurityDomainId() {
+        return this.normalizationSecurityDomainId;
     }
 
     /**
@@ -123,7 +147,9 @@ public class ListNormalizationSchemasRequest extends Request {
         private Integer maxResults; 
         private String nextToken; 
         private String normalizationCategoryId; 
+        private String normalizationFieldSource; 
         private String normalizationSchemaType; 
+        private String normalizationSecurityDomainId; 
         private String regionId; 
         private Long roleFor; 
 
@@ -137,7 +163,9 @@ public class ListNormalizationSchemasRequest extends Request {
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.normalizationCategoryId = request.normalizationCategoryId;
+            this.normalizationFieldSource = request.normalizationFieldSource;
             this.normalizationSchemaType = request.normalizationSchemaType;
+            this.normalizationSecurityDomainId = request.normalizationSecurityDomainId;
             this.regionId = request.regionId;
             this.roleFor = request.roleFor;
         } 
@@ -179,11 +207,29 @@ public class ListNormalizationSchemasRequest extends Request {
         }
 
         /**
+         * NormalizationFieldSource.
+         */
+        public Builder normalizationFieldSource(String normalizationFieldSource) {
+            this.putBodyParameter("NormalizationFieldSource", normalizationFieldSource);
+            this.normalizationFieldSource = normalizationFieldSource;
+            return this;
+        }
+
+        /**
          * NormalizationSchemaType.
          */
         public Builder normalizationSchemaType(String normalizationSchemaType) {
             this.putBodyParameter("NormalizationSchemaType", normalizationSchemaType);
             this.normalizationSchemaType = normalizationSchemaType;
+            return this;
+        }
+
+        /**
+         * NormalizationSecurityDomainId.
+         */
+        public Builder normalizationSecurityDomainId(String normalizationSecurityDomainId) {
+            this.putBodyParameter("NormalizationSecurityDomainId", normalizationSecurityDomainId);
+            this.normalizationSecurityDomainId = normalizationSecurityDomainId;
             return this;
         }
 

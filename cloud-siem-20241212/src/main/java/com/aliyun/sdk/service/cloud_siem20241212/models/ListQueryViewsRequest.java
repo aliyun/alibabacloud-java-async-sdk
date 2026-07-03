@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListNormalizationFieldsRequest} extends {@link RequestModel}
+ * {@link ListQueryViewsRequest} extends {@link RequestModel}
  *
- * <p>ListNormalizationFieldsRequest</p>
+ * <p>ListQueryViewsRequest</p>
  */
-public class ListNormalizationFieldsRequest extends Request {
+public class ListQueryViewsRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
@@ -26,22 +26,18 @@ public class ListNormalizationFieldsRequest extends Request {
     private Integer maxResults;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Name")
-    private String name;
-
-    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("NormalizationFieldSource")
-    private String normalizationFieldSource;
+    @com.aliyun.core.annotation.NameInMap("QueryViewScene")
+    private String queryViewScene;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("NormalizationSchemaType")
-    private String normalizationSchemaType;
+    @com.aliyun.core.annotation.NameInMap("QueryViewType")
+    private String queryViewType;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -49,23 +45,27 @@ public class ListNormalizationFieldsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RoleFor")
     private Long roleFor;
 
-    private ListNormalizationFieldsRequest(Builder builder) {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleType")
+    private Integer roleType;
+
+    private ListQueryViewsRequest(Builder builder) {
         super(builder);
         this.lang = builder.lang;
         this.maxResults = builder.maxResults;
-        this.name = builder.name;
         this.nextToken = builder.nextToken;
-        this.normalizationFieldSource = builder.normalizationFieldSource;
-        this.normalizationSchemaType = builder.normalizationSchemaType;
+        this.queryViewScene = builder.queryViewScene;
+        this.queryViewType = builder.queryViewType;
         this.regionId = builder.regionId;
         this.roleFor = builder.roleFor;
+        this.roleType = builder.roleType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListNormalizationFieldsRequest create() {
+    public static ListQueryViewsRequest create() {
         return builder().build();
     }
 
@@ -89,13 +89,6 @@ public class ListNormalizationFieldsRequest extends Request {
     }
 
     /**
-     * @return name
-     */
-    public String getName() {
-        return this.name;
-    }
-
-    /**
      * @return nextToken
      */
     public String getNextToken() {
@@ -103,17 +96,17 @@ public class ListNormalizationFieldsRequest extends Request {
     }
 
     /**
-     * @return normalizationFieldSource
+     * @return queryViewScene
      */
-    public String getNormalizationFieldSource() {
-        return this.normalizationFieldSource;
+    public String getQueryViewScene() {
+        return this.queryViewScene;
     }
 
     /**
-     * @return normalizationSchemaType
+     * @return queryViewType
      */
-    public String getNormalizationSchemaType() {
-        return this.normalizationSchemaType;
+    public String getQueryViewType() {
+        return this.queryViewType;
     }
 
     /**
@@ -130,30 +123,37 @@ public class ListNormalizationFieldsRequest extends Request {
         return this.roleFor;
     }
 
-    public static final class Builder extends Request.Builder<ListNormalizationFieldsRequest, Builder> {
+    /**
+     * @return roleType
+     */
+    public Integer getRoleType() {
+        return this.roleType;
+    }
+
+    public static final class Builder extends Request.Builder<ListQueryViewsRequest, Builder> {
         private String lang; 
         private Integer maxResults; 
-        private String name; 
         private String nextToken; 
-        private String normalizationFieldSource; 
-        private String normalizationSchemaType; 
+        private String queryViewScene; 
+        private String queryViewType; 
         private String regionId; 
         private Long roleFor; 
+        private Integer roleType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListNormalizationFieldsRequest request) {
+        private Builder(ListQueryViewsRequest request) {
             super(request);
             this.lang = request.lang;
             this.maxResults = request.maxResults;
-            this.name = request.name;
             this.nextToken = request.nextToken;
-            this.normalizationFieldSource = request.normalizationFieldSource;
-            this.normalizationSchemaType = request.normalizationSchemaType;
+            this.queryViewScene = request.queryViewScene;
+            this.queryViewType = request.queryViewType;
             this.regionId = request.regionId;
             this.roleFor = request.roleFor;
+            this.roleType = request.roleType;
         } 
 
         /**
@@ -175,15 +175,6 @@ public class ListNormalizationFieldsRequest extends Request {
         }
 
         /**
-         * Name.
-         */
-        public Builder name(String name) {
-            this.putBodyParameter("Name", name);
-            this.name = name;
-            return this;
-        }
-
-        /**
          * NextToken.
          */
         public Builder nextToken(String nextToken) {
@@ -193,20 +184,20 @@ public class ListNormalizationFieldsRequest extends Request {
         }
 
         /**
-         * NormalizationFieldSource.
+         * QueryViewScene.
          */
-        public Builder normalizationFieldSource(String normalizationFieldSource) {
-            this.putBodyParameter("NormalizationFieldSource", normalizationFieldSource);
-            this.normalizationFieldSource = normalizationFieldSource;
+        public Builder queryViewScene(String queryViewScene) {
+            this.putBodyParameter("QueryViewScene", queryViewScene);
+            this.queryViewScene = queryViewScene;
             return this;
         }
 
         /**
-         * NormalizationSchemaType.
+         * QueryViewType.
          */
-        public Builder normalizationSchemaType(String normalizationSchemaType) {
-            this.putBodyParameter("NormalizationSchemaType", normalizationSchemaType);
-            this.normalizationSchemaType = normalizationSchemaType;
+        public Builder queryViewType(String queryViewType) {
+            this.putBodyParameter("QueryViewType", queryViewType);
+            this.queryViewType = queryViewType;
             return this;
         }
 
@@ -214,7 +205,7 @@ public class ListNormalizationFieldsRequest extends Request {
          * RegionId.
          */
         public Builder regionId(String regionId) {
-            this.putBodyParameter("RegionId", regionId);
+            this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
             return this;
         }
@@ -228,9 +219,18 @@ public class ListNormalizationFieldsRequest extends Request {
             return this;
         }
 
+        /**
+         * RoleType.
+         */
+        public Builder roleType(Integer roleType) {
+            this.putBodyParameter("RoleType", roleType);
+            this.roleType = roleType;
+            return this;
+        }
+
         @Override
-        public ListNormalizationFieldsRequest build() {
-            return new ListNormalizationFieldsRequest(this);
+        public ListQueryViewsRequest build() {
+            return new ListQueryViewsRequest(this);
         } 
 
     } 

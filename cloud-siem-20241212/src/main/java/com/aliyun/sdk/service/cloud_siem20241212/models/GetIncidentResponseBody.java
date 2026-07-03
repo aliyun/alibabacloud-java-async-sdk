@@ -140,6 +140,9 @@ public class GetIncidentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RelateUserIds")
         private Object relateUserIds;
 
+        @com.aliyun.core.annotation.NameInMap("ResponseTime")
+        private Long responseTime;
+
         @com.aliyun.core.annotation.NameInMap("ThreatLevel")
         private String threatLevel;
 
@@ -165,6 +168,7 @@ public class GetIncidentResponseBody extends TeaModel {
             this.relateAssetCount = builder.relateAssetCount;
             this.relateDataSourceIds = builder.relateDataSourceIds;
             this.relateUserIds = builder.relateUserIds;
+            this.responseTime = builder.responseTime;
             this.threatLevel = builder.threatLevel;
             this.threatScore = builder.threatScore;
             this.updateTime = builder.updateTime;
@@ -284,6 +288,13 @@ public class GetIncidentResponseBody extends TeaModel {
         }
 
         /**
+         * @return responseTime
+         */
+        public Long getResponseTime() {
+            return this.responseTime;
+        }
+
+        /**
          * @return threatLevel
          */
         public String getThreatLevel() {
@@ -320,6 +331,7 @@ public class GetIncidentResponseBody extends TeaModel {
             private Integer relateAssetCount; 
             private Object relateDataSourceIds; 
             private Object relateUserIds; 
+            private Long responseTime; 
             private String threatLevel; 
             private String threatScore; 
             private Long updateTime; 
@@ -343,6 +355,7 @@ public class GetIncidentResponseBody extends TeaModel {
                 this.relateAssetCount = model.relateAssetCount;
                 this.relateDataSourceIds = model.relateDataSourceIds;
                 this.relateUserIds = model.relateUserIds;
+                this.responseTime = model.responseTime;
                 this.threatLevel = model.threatLevel;
                 this.threatScore = model.threatScore;
                 this.updateTime = model.updateTime;
@@ -465,6 +478,14 @@ public class GetIncidentResponseBody extends TeaModel {
              */
             public Builder relateUserIds(Object relateUserIds) {
                 this.relateUserIds = relateUserIds;
+                return this;
+            }
+
+            /**
+             * ResponseTime.
+             */
+            public Builder responseTime(Long responseTime) {
+                this.responseTime = responseTime;
                 return this;
             }
 

@@ -70,6 +70,10 @@ public class CreateNormalizationRuleRequest extends Request {
     private String normalizationSchemaId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NormalizationSecurityDomainId")
+    private String normalizationSecurityDomainId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("OrderField")
     private String orderField;
 
@@ -104,6 +108,7 @@ public class CreateNormalizationRuleRequest extends Request {
         this.normalizationRuleType = builder.normalizationRuleType;
         this.normalizationRuleVersion = builder.normalizationRuleVersion;
         this.normalizationSchemaId = builder.normalizationSchemaId;
+        this.normalizationSecurityDomainId = builder.normalizationSecurityDomainId;
         this.orderField = builder.orderField;
         this.productId = builder.productId;
         this.regionId = builder.regionId;
@@ -216,6 +221,13 @@ public class CreateNormalizationRuleRequest extends Request {
     }
 
     /**
+     * @return normalizationSecurityDomainId
+     */
+    public String getNormalizationSecurityDomainId() {
+        return this.normalizationSecurityDomainId;
+    }
+
+    /**
      * @return orderField
      */
     public String getOrderField() {
@@ -264,6 +276,7 @@ public class CreateNormalizationRuleRequest extends Request {
         private String normalizationRuleType; 
         private Integer normalizationRuleVersion; 
         private String normalizationSchemaId; 
+        private String normalizationSecurityDomainId; 
         private String orderField; 
         private String productId; 
         private String regionId; 
@@ -289,6 +302,7 @@ public class CreateNormalizationRuleRequest extends Request {
             this.normalizationRuleType = request.normalizationRuleType;
             this.normalizationRuleVersion = request.normalizationRuleVersion;
             this.normalizationSchemaId = request.normalizationSchemaId;
+            this.normalizationSecurityDomainId = request.normalizationSecurityDomainId;
             this.orderField = request.orderField;
             this.productId = request.productId;
             this.regionId = request.regionId;
@@ -411,6 +425,15 @@ public class CreateNormalizationRuleRequest extends Request {
         public Builder normalizationSchemaId(String normalizationSchemaId) {
             this.putBodyParameter("NormalizationSchemaId", normalizationSchemaId);
             this.normalizationSchemaId = normalizationSchemaId;
+            return this;
+        }
+
+        /**
+         * NormalizationSecurityDomainId.
+         */
+        public Builder normalizationSecurityDomainId(String normalizationSecurityDomainId) {
+            this.putBodyParameter("NormalizationSecurityDomainId", normalizationSecurityDomainId);
+            this.normalizationSecurityDomainId = normalizationSecurityDomainId;
             return this;
         }
 

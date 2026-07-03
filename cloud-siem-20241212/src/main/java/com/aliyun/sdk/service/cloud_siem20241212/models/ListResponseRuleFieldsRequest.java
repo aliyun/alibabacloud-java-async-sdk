@@ -12,22 +12,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetNormalizationRuleRequest} extends {@link RequestModel}
+ * {@link ListResponseRuleFieldsRequest} extends {@link RequestModel}
  *
- * <p>GetNormalizationRuleRequest</p>
+ * <p>ListResponseRuleFieldsRequest</p>
  */
-public class GetNormalizationRuleRequest extends Request {
+public class ListResponseRuleFieldsRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("NormalizationRuleId")
-    private String normalizationRuleId;
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("NormalizationSecurityDomainId")
-    private String normalizationSecurityDomainId;
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -37,20 +37,25 @@ public class GetNormalizationRuleRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RoleFor")
     private Long roleFor;
 
-    private GetNormalizationRuleRequest(Builder builder) {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleType")
+    private Integer roleType;
+
+    private ListResponseRuleFieldsRequest(Builder builder) {
         super(builder);
         this.lang = builder.lang;
-        this.normalizationRuleId = builder.normalizationRuleId;
-        this.normalizationSecurityDomainId = builder.normalizationSecurityDomainId;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
         this.roleFor = builder.roleFor;
+        this.roleType = builder.roleType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetNormalizationRuleRequest create() {
+    public static ListResponseRuleFieldsRequest create() {
         return builder().build();
     }
 
@@ -67,17 +72,17 @@ public class GetNormalizationRuleRequest extends Request {
     }
 
     /**
-     * @return normalizationRuleId
+     * @return maxResults
      */
-    public String getNormalizationRuleId() {
-        return this.normalizationRuleId;
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     /**
-     * @return normalizationSecurityDomainId
+     * @return nextToken
      */
-    public String getNormalizationSecurityDomainId() {
-        return this.normalizationSecurityDomainId;
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -94,24 +99,33 @@ public class GetNormalizationRuleRequest extends Request {
         return this.roleFor;
     }
 
-    public static final class Builder extends Request.Builder<GetNormalizationRuleRequest, Builder> {
+    /**
+     * @return roleType
+     */
+    public Integer getRoleType() {
+        return this.roleType;
+    }
+
+    public static final class Builder extends Request.Builder<ListResponseRuleFieldsRequest, Builder> {
         private String lang; 
-        private String normalizationRuleId; 
-        private String normalizationSecurityDomainId; 
+        private Integer maxResults; 
+        private String nextToken; 
         private String regionId; 
         private Long roleFor; 
+        private Integer roleType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetNormalizationRuleRequest request) {
+        private Builder(ListResponseRuleFieldsRequest request) {
             super(request);
             this.lang = request.lang;
-            this.normalizationRuleId = request.normalizationRuleId;
-            this.normalizationSecurityDomainId = request.normalizationSecurityDomainId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
             this.regionId = request.regionId;
             this.roleFor = request.roleFor;
+            this.roleType = request.roleType;
         } 
 
         /**
@@ -124,20 +138,20 @@ public class GetNormalizationRuleRequest extends Request {
         }
 
         /**
-         * NormalizationRuleId.
+         * MaxResults.
          */
-        public Builder normalizationRuleId(String normalizationRuleId) {
-            this.putBodyParameter("NormalizationRuleId", normalizationRuleId);
-            this.normalizationRuleId = normalizationRuleId;
+        public Builder maxResults(Integer maxResults) {
+            this.putBodyParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
             return this;
         }
 
         /**
-         * NormalizationSecurityDomainId.
+         * NextToken.
          */
-        public Builder normalizationSecurityDomainId(String normalizationSecurityDomainId) {
-            this.putBodyParameter("NormalizationSecurityDomainId", normalizationSecurityDomainId);
-            this.normalizationSecurityDomainId = normalizationSecurityDomainId;
+        public Builder nextToken(String nextToken) {
+            this.putBodyParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 
@@ -159,9 +173,18 @@ public class GetNormalizationRuleRequest extends Request {
             return this;
         }
 
+        /**
+         * RoleType.
+         */
+        public Builder roleType(Integer roleType) {
+            this.putBodyParameter("RoleType", roleType);
+            this.roleType = roleType;
+            return this;
+        }
+
         @Override
-        public GetNormalizationRuleRequest build() {
-            return new GetNormalizationRuleRequest(this);
+        public ListResponseRuleFieldsRequest build() {
+            return new ListResponseRuleFieldsRequest(this);
         } 
 
     } 

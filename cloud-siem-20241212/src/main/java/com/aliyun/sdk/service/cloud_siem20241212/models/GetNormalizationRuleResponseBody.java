@@ -107,6 +107,9 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NormalizationCategoryId")
         private String normalizationCategoryId;
 
+        @com.aliyun.core.annotation.NameInMap("NormalizationFieldSource")
+        private String normalizationFieldSource;
+
         @com.aliyun.core.annotation.NameInMap("NormalizationRuleDescription")
         private String normalizationRuleDescription;
 
@@ -140,6 +143,9 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NormalizationSchemaId")
         private String normalizationSchemaId;
 
+        @com.aliyun.core.annotation.NameInMap("NormalizationSecurityDomainId")
+        private String normalizationSecurityDomainId;
+
         @com.aliyun.core.annotation.NameInMap("OrderField")
         private String orderField;
 
@@ -157,6 +163,7 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
             this.extendContentPacked = builder.extendContentPacked;
             this.extendFieldStoreMode = builder.extendFieldStoreMode;
             this.normalizationCategoryId = builder.normalizationCategoryId;
+            this.normalizationFieldSource = builder.normalizationFieldSource;
             this.normalizationRuleDescription = builder.normalizationRuleDescription;
             this.normalizationRuleExpression = builder.normalizationRuleExpression;
             this.normalizationRuleFormat = builder.normalizationRuleFormat;
@@ -168,6 +175,7 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
             this.normalizationRuleType = builder.normalizationRuleType;
             this.normalizationRuleVersion = builder.normalizationRuleVersion;
             this.normalizationSchemaId = builder.normalizationSchemaId;
+            this.normalizationSecurityDomainId = builder.normalizationSecurityDomainId;
             this.orderField = builder.orderField;
             this.productId = builder.productId;
             this.updateTime = builder.updateTime;
@@ -208,6 +216,13 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
          */
         public String getNormalizationCategoryId() {
             return this.normalizationCategoryId;
+        }
+
+        /**
+         * @return normalizationFieldSource
+         */
+        public String getNormalizationFieldSource() {
+            return this.normalizationFieldSource;
         }
 
         /**
@@ -288,6 +303,13 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
         }
 
         /**
+         * @return normalizationSecurityDomainId
+         */
+        public String getNormalizationSecurityDomainId() {
+            return this.normalizationSecurityDomainId;
+        }
+
+        /**
          * @return orderField
          */
         public String getOrderField() {
@@ -320,6 +342,7 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
             private String extendContentPacked; 
             private String extendFieldStoreMode; 
             private String normalizationCategoryId; 
+            private String normalizationFieldSource; 
             private String normalizationRuleDescription; 
             private String normalizationRuleExpression; 
             private String normalizationRuleFormat; 
@@ -331,6 +354,7 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
             private String normalizationRuleType; 
             private Integer normalizationRuleVersion; 
             private String normalizationSchemaId; 
+            private String normalizationSecurityDomainId; 
             private String orderField; 
             private String productId; 
             private Long updateTime; 
@@ -344,6 +368,7 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
                 this.extendContentPacked = model.extendContentPacked;
                 this.extendFieldStoreMode = model.extendFieldStoreMode;
                 this.normalizationCategoryId = model.normalizationCategoryId;
+                this.normalizationFieldSource = model.normalizationFieldSource;
                 this.normalizationRuleDescription = model.normalizationRuleDescription;
                 this.normalizationRuleExpression = model.normalizationRuleExpression;
                 this.normalizationRuleFormat = model.normalizationRuleFormat;
@@ -355,6 +380,7 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
                 this.normalizationRuleType = model.normalizationRuleType;
                 this.normalizationRuleVersion = model.normalizationRuleVersion;
                 this.normalizationSchemaId = model.normalizationSchemaId;
+                this.normalizationSecurityDomainId = model.normalizationSecurityDomainId;
                 this.orderField = model.orderField;
                 this.productId = model.productId;
                 this.updateTime = model.updateTime;
@@ -390,6 +416,14 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
              */
             public Builder normalizationCategoryId(String normalizationCategoryId) {
                 this.normalizationCategoryId = normalizationCategoryId;
+                return this;
+            }
+
+            /**
+             * NormalizationFieldSource.
+             */
+            public Builder normalizationFieldSource(String normalizationFieldSource) {
+                this.normalizationFieldSource = normalizationFieldSource;
                 return this;
             }
 
@@ -478,6 +512,14 @@ public class GetNormalizationRuleResponseBody extends TeaModel {
              */
             public Builder normalizationSchemaId(String normalizationSchemaId) {
                 this.normalizationSchemaId = normalizationSchemaId;
+                return this;
+            }
+
+            /**
+             * NormalizationSecurityDomainId.
+             */
+            public Builder normalizationSecurityDomainId(String normalizationSecurityDomainId) {
+                this.normalizationSecurityDomainId = normalizationSecurityDomainId;
                 return this;
             }
 

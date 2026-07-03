@@ -30,6 +30,10 @@ public class ExecuteLogQueryRequest extends Request {
     private String lang;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LogCondition")
+    private String logCondition;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("LogProjectName")
     private String logProjectName;
 
@@ -70,6 +74,7 @@ public class ExecuteLogQueryRequest extends Request {
         this.endTime = builder.endTime;
         this.extendContentPacked = builder.extendContentPacked;
         this.lang = builder.lang;
+        this.logCondition = builder.logCondition;
         this.logProjectName = builder.logProjectName;
         this.logQuery = builder.logQuery;
         this.logRegionId = builder.logRegionId;
@@ -113,6 +118,13 @@ public class ExecuteLogQueryRequest extends Request {
      */
     public String getLang() {
         return this.lang;
+    }
+
+    /**
+     * @return logCondition
+     */
+    public String getLogCondition() {
+        return this.logCondition;
     }
 
     /**
@@ -182,6 +194,7 @@ public class ExecuteLogQueryRequest extends Request {
         private String endTime; 
         private String extendContentPacked; 
         private String lang; 
+        private String logCondition; 
         private String logProjectName; 
         private String logQuery; 
         private String logRegionId; 
@@ -201,6 +214,7 @@ public class ExecuteLogQueryRequest extends Request {
             this.endTime = request.endTime;
             this.extendContentPacked = request.extendContentPacked;
             this.lang = request.lang;
+            this.logCondition = request.logCondition;
             this.logProjectName = request.logProjectName;
             this.logQuery = request.logQuery;
             this.logRegionId = request.logRegionId;
@@ -236,6 +250,15 @@ public class ExecuteLogQueryRequest extends Request {
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * LogCondition.
+         */
+        public Builder logCondition(String logCondition) {
+            this.putBodyParameter("LogCondition", logCondition);
+            this.logCondition = logCondition;
             return this;
         }
 

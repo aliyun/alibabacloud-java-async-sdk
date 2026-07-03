@@ -443,6 +443,9 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NormalizationSchemaId")
         private String normalizationSchemaId;
 
+        @com.aliyun.core.annotation.NameInMap("NormalizationSecurityDomainId")
+        private String normalizationSecurityDomainId;
+
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
@@ -461,6 +464,7 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             this.normalizationFieldTokenize = builder.normalizationFieldTokenize;
             this.normalizationFieldType = builder.normalizationFieldType;
             this.normalizationSchemaId = builder.normalizationSchemaId;
+            this.normalizationSecurityDomainId = builder.normalizationSecurityDomainId;
             this.updateTime = builder.updateTime;
         }
 
@@ -571,6 +575,13 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
         }
 
         /**
+         * @return normalizationSecurityDomainId
+         */
+        public String getNormalizationSecurityDomainId() {
+            return this.normalizationSecurityDomainId;
+        }
+
+        /**
          * @return updateTime
          */
         public Long getUpdateTime() {
@@ -592,6 +603,7 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
             private Boolean normalizationFieldTokenize; 
             private String normalizationFieldType; 
             private String normalizationSchemaId; 
+            private String normalizationSecurityDomainId; 
             private Long updateTime; 
 
             private Builder() {
@@ -612,6 +624,7 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
                 this.normalizationFieldTokenize = model.normalizationFieldTokenize;
                 this.normalizationFieldType = model.normalizationFieldType;
                 this.normalizationSchemaId = model.normalizationSchemaId;
+                this.normalizationSecurityDomainId = model.normalizationSecurityDomainId;
                 this.updateTime = model.updateTime;
             } 
 
@@ -724,6 +737,14 @@ public class ListNormalizationFieldsResponseBody extends TeaModel {
              */
             public Builder normalizationSchemaId(String normalizationSchemaId) {
                 this.normalizationSchemaId = normalizationSchemaId;
+                return this;
+            }
+
+            /**
+             * NormalizationSecurityDomainId.
+             */
+            public Builder normalizationSecurityDomainId(String normalizationSecurityDomainId) {
+                this.normalizationSecurityDomainId = normalizationSecurityDomainId;
                 return this;
             }
 

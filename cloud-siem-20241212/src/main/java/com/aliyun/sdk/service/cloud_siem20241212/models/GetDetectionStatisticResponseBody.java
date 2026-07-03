@@ -95,6 +95,9 @@ public class GetDetectionStatisticResponseBody extends TeaModel {
      * <p>GetDetectionStatisticResponseBody</p>
      */
     public static class DetectionStatistic extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AiPoweredAggregationRuleCount")
+        private Integer aiPoweredAggregationRuleCount;
+
         @com.aliyun.core.annotation.NameInMap("DetectionRuleOnlineCount")
         private Integer detectionRuleOnlineCount;
 
@@ -114,6 +117,7 @@ public class GetDetectionStatisticResponseBody extends TeaModel {
         private Integer windowRuleCount;
 
         private DetectionStatistic(Builder builder) {
+            this.aiPoweredAggregationRuleCount = builder.aiPoweredAggregationRuleCount;
             this.detectionRuleOnlineCount = builder.detectionRuleOnlineCount;
             this.detectionRuleTemplateCount = builder.detectionRuleTemplateCount;
             this.detectionRuleTestCount = builder.detectionRuleTestCount;
@@ -128,6 +132,13 @@ public class GetDetectionStatisticResponseBody extends TeaModel {
 
         public static DetectionStatistic create() {
             return builder().build();
+        }
+
+        /**
+         * @return aiPoweredAggregationRuleCount
+         */
+        public Integer getAiPoweredAggregationRuleCount() {
+            return this.aiPoweredAggregationRuleCount;
         }
 
         /**
@@ -173,6 +184,7 @@ public class GetDetectionStatisticResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer aiPoweredAggregationRuleCount; 
             private Integer detectionRuleOnlineCount; 
             private Integer detectionRuleTemplateCount; 
             private Integer detectionRuleTestCount; 
@@ -184,6 +196,7 @@ public class GetDetectionStatisticResponseBody extends TeaModel {
             } 
 
             private Builder(DetectionStatistic model) {
+                this.aiPoweredAggregationRuleCount = model.aiPoweredAggregationRuleCount;
                 this.detectionRuleOnlineCount = model.detectionRuleOnlineCount;
                 this.detectionRuleTemplateCount = model.detectionRuleTemplateCount;
                 this.detectionRuleTestCount = model.detectionRuleTestCount;
@@ -191,6 +204,14 @@ public class GetDetectionStatisticResponseBody extends TeaModel {
                 this.passthroughRuleCount = model.passthroughRuleCount;
                 this.windowRuleCount = model.windowRuleCount;
             } 
+
+            /**
+             * AiPoweredAggregationRuleCount.
+             */
+            public Builder aiPoweredAggregationRuleCount(Integer aiPoweredAggregationRuleCount) {
+                this.aiPoweredAggregationRuleCount = aiPoweredAggregationRuleCount;
+                return this;
+            }
 
             /**
              * DetectionRuleOnlineCount.

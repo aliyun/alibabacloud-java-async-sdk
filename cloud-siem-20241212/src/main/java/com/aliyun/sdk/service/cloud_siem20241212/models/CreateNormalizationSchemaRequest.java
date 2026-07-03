@@ -23,8 +23,11 @@ public class CreateNormalizationSchemaRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NormalizationCategoryId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String normalizationCategoryId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NormalizationFieldSource")
+    private String normalizationFieldSource;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NormalizationFields")
@@ -50,6 +53,14 @@ public class CreateNormalizationSchemaRequest extends Request {
     private String normalizationSchemaType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NormalizationSecurityDomainId")
+    private String normalizationSecurityDomainId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductId")
+    private String productId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -62,18 +73,26 @@ public class CreateNormalizationSchemaRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String targetLogStore;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VendorId")
+    private String vendorId;
+
     private CreateNormalizationSchemaRequest(Builder builder) {
         super(builder);
         this.lang = builder.lang;
         this.normalizationCategoryId = builder.normalizationCategoryId;
+        this.normalizationFieldSource = builder.normalizationFieldSource;
         this.normalizationFields = builder.normalizationFields;
         this.normalizationSchemaDescription = builder.normalizationSchemaDescription;
         this.normalizationSchemaId = builder.normalizationSchemaId;
         this.normalizationSchemaName = builder.normalizationSchemaName;
         this.normalizationSchemaType = builder.normalizationSchemaType;
+        this.normalizationSecurityDomainId = builder.normalizationSecurityDomainId;
+        this.productId = builder.productId;
         this.regionId = builder.regionId;
         this.roleFor = builder.roleFor;
         this.targetLogStore = builder.targetLogStore;
+        this.vendorId = builder.vendorId;
     }
 
     public static Builder builder() {
@@ -101,6 +120,13 @@ public class CreateNormalizationSchemaRequest extends Request {
      */
     public String getNormalizationCategoryId() {
         return this.normalizationCategoryId;
+    }
+
+    /**
+     * @return normalizationFieldSource
+     */
+    public String getNormalizationFieldSource() {
+        return this.normalizationFieldSource;
     }
 
     /**
@@ -139,6 +165,20 @@ public class CreateNormalizationSchemaRequest extends Request {
     }
 
     /**
+     * @return normalizationSecurityDomainId
+     */
+    public String getNormalizationSecurityDomainId() {
+        return this.normalizationSecurityDomainId;
+    }
+
+    /**
+     * @return productId
+     */
+    public String getProductId() {
+        return this.productId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -159,17 +199,28 @@ public class CreateNormalizationSchemaRequest extends Request {
         return this.targetLogStore;
     }
 
+    /**
+     * @return vendorId
+     */
+    public String getVendorId() {
+        return this.vendorId;
+    }
+
     public static final class Builder extends Request.Builder<CreateNormalizationSchemaRequest, Builder> {
         private String lang; 
         private String normalizationCategoryId; 
+        private String normalizationFieldSource; 
         private java.util.List<NormalizationFields> normalizationFields; 
         private String normalizationSchemaDescription; 
         private String normalizationSchemaId; 
         private String normalizationSchemaName; 
         private String normalizationSchemaType; 
+        private String normalizationSecurityDomainId; 
+        private String productId; 
         private String regionId; 
         private Long roleFor; 
         private String targetLogStore; 
+        private String vendorId; 
 
         private Builder() {
             super();
@@ -179,14 +230,18 @@ public class CreateNormalizationSchemaRequest extends Request {
             super(request);
             this.lang = request.lang;
             this.normalizationCategoryId = request.normalizationCategoryId;
+            this.normalizationFieldSource = request.normalizationFieldSource;
             this.normalizationFields = request.normalizationFields;
             this.normalizationSchemaDescription = request.normalizationSchemaDescription;
             this.normalizationSchemaId = request.normalizationSchemaId;
             this.normalizationSchemaName = request.normalizationSchemaName;
             this.normalizationSchemaType = request.normalizationSchemaType;
+            this.normalizationSecurityDomainId = request.normalizationSecurityDomainId;
+            this.productId = request.productId;
             this.regionId = request.regionId;
             this.roleFor = request.roleFor;
             this.targetLogStore = request.targetLogStore;
+            this.vendorId = request.vendorId;
         } 
 
         /**
@@ -199,14 +254,20 @@ public class CreateNormalizationSchemaRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>NETWORK_CATEGORY</p>
+         * NormalizationCategoryId.
          */
         public Builder normalizationCategoryId(String normalizationCategoryId) {
             this.putBodyParameter("NormalizationCategoryId", normalizationCategoryId);
             this.normalizationCategoryId = normalizationCategoryId;
+            return this;
+        }
+
+        /**
+         * NormalizationFieldSource.
+         */
+        public Builder normalizationFieldSource(String normalizationFieldSource) {
+            this.putBodyParameter("NormalizationFieldSource", normalizationFieldSource);
+            this.normalizationFieldSource = normalizationFieldSource;
             return this;
         }
 
@@ -265,6 +326,24 @@ public class CreateNormalizationSchemaRequest extends Request {
         }
 
         /**
+         * NormalizationSecurityDomainId.
+         */
+        public Builder normalizationSecurityDomainId(String normalizationSecurityDomainId) {
+            this.putBodyParameter("NormalizationSecurityDomainId", normalizationSecurityDomainId);
+            this.normalizationSecurityDomainId = normalizationSecurityDomainId;
+            return this;
+        }
+
+        /**
+         * ProductId.
+         */
+        public Builder productId(String productId) {
+            this.putBodyParameter("ProductId", productId);
+            this.productId = productId;
+            return this;
+        }
+
+        /**
          * RegionId.
          */
         public Builder regionId(String regionId) {
@@ -291,6 +370,15 @@ public class CreateNormalizationSchemaRequest extends Request {
         public Builder targetLogStore(String targetLogStore) {
             this.putBodyParameter("TargetLogStore", targetLogStore);
             this.targetLogStore = targetLogStore;
+            return this;
+        }
+
+        /**
+         * VendorId.
+         */
+        public Builder vendorId(String vendorId) {
+            this.putBodyParameter("VendorId", vendorId);
+            this.vendorId = vendorId;
             return this;
         }
 

@@ -704,6 +704,9 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NormalizationCategoryId")
         private String normalizationCategoryId;
 
+        @com.aliyun.core.annotation.NameInMap("NormalizationFieldSource")
+        private String normalizationFieldSource;
+
         @com.aliyun.core.annotation.NameInMap("NormalizationFields")
         private java.util.List<NormalizationFields> normalizationFields;
 
@@ -725,6 +728,15 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NormalizationSchemaType")
         private String normalizationSchemaType;
 
+        @com.aliyun.core.annotation.NameInMap("NormalizationSecurityDomainId")
+        private String normalizationSecurityDomainId;
+
+        @com.aliyun.core.annotation.NameInMap("ProductId")
+        private String productId;
+
+        @com.aliyun.core.annotation.NameInMap("RecommendEntities")
+        private java.util.List<String> recommendEntities;
+
         @com.aliyun.core.annotation.NameInMap("TargetLogStore")
         private String targetLogStore;
 
@@ -734,9 +746,13 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
+        @com.aliyun.core.annotation.NameInMap("VendorId")
+        private String vendorId;
+
         private NormalizationSchema(Builder builder) {
             this.createTime = builder.createTime;
             this.normalizationCategoryId = builder.normalizationCategoryId;
+            this.normalizationFieldSource = builder.normalizationFieldSource;
             this.normalizationFields = builder.normalizationFields;
             this.normalizationSchemaDescription = builder.normalizationSchemaDescription;
             this.normalizationSchemaFrom = builder.normalizationSchemaFrom;
@@ -744,9 +760,13 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             this.normalizationSchemaName = builder.normalizationSchemaName;
             this.normalizationSchemaReferences = builder.normalizationSchemaReferences;
             this.normalizationSchemaType = builder.normalizationSchemaType;
+            this.normalizationSecurityDomainId = builder.normalizationSecurityDomainId;
+            this.productId = builder.productId;
+            this.recommendEntities = builder.recommendEntities;
             this.targetLogStore = builder.targetLogStore;
             this.targetStoreView = builder.targetStoreView;
             this.updateTime = builder.updateTime;
+            this.vendorId = builder.vendorId;
         }
 
         public static Builder builder() {
@@ -769,6 +789,13 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
          */
         public String getNormalizationCategoryId() {
             return this.normalizationCategoryId;
+        }
+
+        /**
+         * @return normalizationFieldSource
+         */
+        public String getNormalizationFieldSource() {
+            return this.normalizationFieldSource;
         }
 
         /**
@@ -821,6 +848,27 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
         }
 
         /**
+         * @return normalizationSecurityDomainId
+         */
+        public String getNormalizationSecurityDomainId() {
+            return this.normalizationSecurityDomainId;
+        }
+
+        /**
+         * @return productId
+         */
+        public String getProductId() {
+            return this.productId;
+        }
+
+        /**
+         * @return recommendEntities
+         */
+        public java.util.List<String> getRecommendEntities() {
+            return this.recommendEntities;
+        }
+
+        /**
          * @return targetLogStore
          */
         public String getTargetLogStore() {
@@ -841,9 +889,17 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             return this.updateTime;
         }
 
+        /**
+         * @return vendorId
+         */
+        public String getVendorId() {
+            return this.vendorId;
+        }
+
         public static final class Builder {
             private Long createTime; 
             private String normalizationCategoryId; 
+            private String normalizationFieldSource; 
             private java.util.List<NormalizationFields> normalizationFields; 
             private String normalizationSchemaDescription; 
             private String normalizationSchemaFrom; 
@@ -851,9 +907,13 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             private String normalizationSchemaName; 
             private java.util.List<NormalizationSchemaReferences> normalizationSchemaReferences; 
             private String normalizationSchemaType; 
+            private String normalizationSecurityDomainId; 
+            private String productId; 
+            private java.util.List<String> recommendEntities; 
             private String targetLogStore; 
             private String targetStoreView; 
             private Long updateTime; 
+            private String vendorId; 
 
             private Builder() {
             } 
@@ -861,6 +921,7 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             private Builder(NormalizationSchema model) {
                 this.createTime = model.createTime;
                 this.normalizationCategoryId = model.normalizationCategoryId;
+                this.normalizationFieldSource = model.normalizationFieldSource;
                 this.normalizationFields = model.normalizationFields;
                 this.normalizationSchemaDescription = model.normalizationSchemaDescription;
                 this.normalizationSchemaFrom = model.normalizationSchemaFrom;
@@ -868,9 +929,13 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
                 this.normalizationSchemaName = model.normalizationSchemaName;
                 this.normalizationSchemaReferences = model.normalizationSchemaReferences;
                 this.normalizationSchemaType = model.normalizationSchemaType;
+                this.normalizationSecurityDomainId = model.normalizationSecurityDomainId;
+                this.productId = model.productId;
+                this.recommendEntities = model.recommendEntities;
                 this.targetLogStore = model.targetLogStore;
                 this.targetStoreView = model.targetStoreView;
                 this.updateTime = model.updateTime;
+                this.vendorId = model.vendorId;
             } 
 
             /**
@@ -886,6 +951,14 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
              */
             public Builder normalizationCategoryId(String normalizationCategoryId) {
                 this.normalizationCategoryId = normalizationCategoryId;
+                return this;
+            }
+
+            /**
+             * NormalizationFieldSource.
+             */
+            public Builder normalizationFieldSource(String normalizationFieldSource) {
+                this.normalizationFieldSource = normalizationFieldSource;
                 return this;
             }
 
@@ -946,6 +1019,30 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
             }
 
             /**
+             * NormalizationSecurityDomainId.
+             */
+            public Builder normalizationSecurityDomainId(String normalizationSecurityDomainId) {
+                this.normalizationSecurityDomainId = normalizationSecurityDomainId;
+                return this;
+            }
+
+            /**
+             * ProductId.
+             */
+            public Builder productId(String productId) {
+                this.productId = productId;
+                return this;
+            }
+
+            /**
+             * RecommendEntities.
+             */
+            public Builder recommendEntities(java.util.List<String> recommendEntities) {
+                this.recommendEntities = recommendEntities;
+                return this;
+            }
+
+            /**
              * TargetLogStore.
              */
             public Builder targetLogStore(String targetLogStore) {
@@ -966,6 +1063,14 @@ public class GetNormalizationSchemaResponseBody extends TeaModel {
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
+                return this;
+            }
+
+            /**
+             * VendorId.
+             */
+            public Builder vendorId(String vendorId) {
+                this.vendorId = vendorId;
                 return this;
             }
 
