@@ -30,7 +30,18 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "Smartag";
         this.version = "2018-03-13";
         this.endpointRule = "regional";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("eu-central-1", "smartag.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "smartag.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "smartag.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "smartag.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "smartag.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "smartag.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "smartag.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "smartag.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "smartag.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "smartag.ap-northeast-1.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -224,6 +235,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<AssociateSmartAGWithApplicationBandwidthPackageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of AttachCcnInstanceToCen  AttachCcnInstanceToCenRequest
+     * @return AttachCcnInstanceToCenResponse
+     */
+    @Override
+    public CompletableFuture<AttachCcnInstanceToCenResponse> attachCcnInstanceToCen(AttachCcnInstanceToCenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AttachCcnInstanceToCen").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AttachCcnInstanceToCenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AttachCcnInstanceToCenResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1914,6 +1943,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeUserOnlineClientsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DetachCcnInstanceFromCen  DetachCcnInstanceFromCenRequest
+     * @return DetachCcnInstanceFromCenResponse
+     */
+    @Override
+    public CompletableFuture<DetachCcnInstanceFromCenResponse> detachCcnInstanceFromCen(DetachCcnInstanceFromCenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DetachCcnInstanceFromCen").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DetachCcnInstanceFromCenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DetachCcnInstanceFromCenResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

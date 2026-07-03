@@ -90,6 +90,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AssociateSmartAGWithApplicationBandwidthPackageResponse> associateSmartAGWithApplicationBandwidthPackage(AssociateSmartAGWithApplicationBandwidthPackageRequest request);
 
     /**
+     * @param request the request parameters of AttachCcnInstanceToCen  AttachCcnInstanceToCenRequest
+     * @return AttachCcnInstanceToCenResponse
+     */
+    CompletableFuture<AttachCcnInstanceToCenResponse> attachCcnInstanceToCen(AttachCcnInstanceToCenRequest request);
+
+    /**
      * @param request the request parameters of BindSerialNumber  BindSerialNumberRequest
      * @return BindSerialNumberResponse
      */
@@ -674,6 +680,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeUserOnlineClientsResponse
      */
     CompletableFuture<DescribeUserOnlineClientsResponse> describeUserOnlineClients(DescribeUserOnlineClientsRequest request);
+
+    /**
+     * @param request the request parameters of DetachCcnInstanceFromCen  DetachCcnInstanceFromCenRequest
+     * @return DetachCcnInstanceFromCenResponse
+     */
+    CompletableFuture<DetachCcnInstanceFromCenResponse> detachCcnInstanceFromCen(DetachCcnInstanceFromCenRequest request);
 
     /**
      * @param request the request parameters of DiagnoseSmartAccessGateway  DiagnoseSmartAccessGatewayRequest
