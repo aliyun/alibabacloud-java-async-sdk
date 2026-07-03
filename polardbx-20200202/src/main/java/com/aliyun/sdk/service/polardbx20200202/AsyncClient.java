@@ -68,6 +68,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckCloudResourceAuthorizedResponse> checkCloudResourceAuthorized(CheckCloudResourceAuthorizedRequest request);
 
     /**
+     * @param request the request parameters of CheckHealth  CheckHealthRequest
+     * @return CheckHealthResponse
+     */
+    CompletableFuture<CheckHealthResponse> checkHealth(CheckHealthRequest request);
+
+    /**
      * @param request the request parameters of CheckSqlAuditSlsStatus  CheckSqlAuditSlsStatusRequest
      * @return CheckSqlAuditSlsStatusResponse
      */
@@ -149,6 +155,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateMem0Response> createMem0(CreateMem0Request request);
 
     /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of CreatePolardbxSupabaseInstance  CreatePolardbxSupabaseInstanceRequest
+     * @return CreatePolardbxSupabaseInstanceResponse
+     */
+    CompletableFuture<CreatePolardbxSupabaseInstanceResponse> createPolardbxSupabaseInstance(CreatePolardbxSupabaseInstanceRequest request);
+
+    /**
      * @param request the request parameters of CreateRplInspectionTask  CreateRplInspectionTaskRequest
      * @return CreateRplInspectionTaskResponse
      */
@@ -180,6 +195,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateSubCNInstanceResponse
      */
     CompletableFuture<CreateSubCNInstanceResponse> createSubCNInstance(CreateSubCNInstanceRequest request);
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of CreateSupabaseNetType  CreateSupabaseNetTypeRequest
+     * @return CreateSupabaseNetTypeResponse
+     */
+    CompletableFuture<CreateSupabaseNetTypeResponse> createSupabaseNetType(CreateSupabaseNetTypeRequest request);
 
     /**
      * @param request the request parameters of CreateSuperAccount  CreateSuperAccountRequest
@@ -239,10 +263,28 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <hr>
      * 
+     * @param request the request parameters of DeletePolardbxSupabaseInstance  DeletePolardbxSupabaseInstanceRequest
+     * @return DeletePolardbxSupabaseInstanceResponse
+     */
+    CompletableFuture<DeletePolardbxSupabaseInstanceResponse> deletePolardbxSupabaseInstance(DeletePolardbxSupabaseInstanceRequest request);
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
      * @param request the request parameters of DeleteSubCNInstance  DeleteSubCNInstanceRequest
      * @return DeleteSubCNInstanceResponse
      */
     CompletableFuture<DeleteSubCNInstanceResponse> deleteSubCNInstance(DeleteSubCNInstanceRequest request);
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of DeleteSupabaseNetType  DeleteSupabaseNetTypeRequest
+     * @return DeleteSupabaseNetTypeResponse
+     */
+    CompletableFuture<DeleteSupabaseNetTypeResponse> deleteSupabaseNetType(DeleteSupabaseNetTypeRequest request);
 
     /**
      * @param request the request parameters of DescribeAccountList  DescribeAccountListRequest
@@ -587,6 +629,33 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeStructureImportTaskInfoResponse> describeStructureImportTaskInfo(DescribeStructureImportTaskInfoRequest request);
 
     /**
+     * @param request the request parameters of DescribeSupabaseApiKey  DescribeSupabaseApiKeyRequest
+     * @return DescribeSupabaseApiKeyResponse
+     */
+    CompletableFuture<DescribeSupabaseApiKeyResponse> describeSupabaseApiKey(DescribeSupabaseApiKeyRequest request);
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of DescribeSupabaseInstanceAttribute  DescribeSupabaseInstanceAttributeRequest
+     * @return DescribeSupabaseInstanceAttributeResponse
+     */
+    CompletableFuture<DescribeSupabaseInstanceAttributeResponse> describeSupabaseInstanceAttribute(DescribeSupabaseInstanceAttributeRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSupabaseInstances  DescribeSupabaseInstancesRequest
+     * @return DescribeSupabaseInstancesResponse
+     */
+    CompletableFuture<DescribeSupabaseInstancesResponse> describeSupabaseInstances(DescribeSupabaseInstancesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSupabaseIpWhitelist  DescribeSupabaseIpWhitelistRequest
+     * @return DescribeSupabaseIpWhitelistResponse
+     */
+    CompletableFuture<DescribeSupabaseIpWhitelistResponse> describeSupabaseIpWhitelist(DescribeSupabaseIpWhitelistRequest request);
+
+    /**
      * @param request the request parameters of DescribeTags  DescribeTagsRequest
      * @return DescribeTagsResponse
      */
@@ -776,6 +845,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifySecurityIpsResponse> modifySecurityIps(ModifySecurityIpsRequest request);
 
     /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of ModifySupabaseDashboardPassword  ModifySupabaseDashboardPasswordRequest
+     * @return ModifySupabaseDashboardPasswordResponse
+     */
+    CompletableFuture<ModifySupabaseDashboardPasswordResponse> modifySupabaseDashboardPassword(ModifySupabaseDashboardPasswordRequest request);
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of ModifySupabaseSecurityIPList  ModifySupabaseSecurityIPListRequest
+     * @return ModifySupabaseSecurityIPListResponse
+     */
+    CompletableFuture<ModifySupabaseSecurityIPListResponse> modifySupabaseSecurityIPList(ModifySupabaseSecurityIPListRequest request);
+
+    /**
      * @param request the request parameters of PreCheckSqlFlashbackTask  PreCheckSqlFlashbackTaskRequest
      * @return PreCheckSqlFlashbackTaskResponse
      */
@@ -840,6 +927,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RestartDataImportTaskResponse
      */
     CompletableFuture<RestartDataImportTaskResponse> restartDataImportTask(RestartDataImportTaskRequest request);
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of RestartSupabaseInstance  RestartSupabaseInstanceRequest
+     * @return RestartSupabaseInstanceResponse
+     */
+    CompletableFuture<RestartSupabaseInstanceResponse> restartSupabaseInstance(RestartSupabaseInstanceRequest request);
 
     /**
      * <b>description</b> :
