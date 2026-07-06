@@ -284,6 +284,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAutoDisposeEntitiesResponse> listAutoDisposeEntities(ListAutoDisposeEntitiesRequest request);
 
     /**
+     * @param request the request parameters of ListDataConnectors  ListDataConnectorsRequest
+     * @return ListDataConnectorsResponse
+     */
+    CompletableFuture<ListDataConnectorsResponse> listDataConnectors(ListDataConnectorsRequest request);
+
+    /**
      * @param request the request parameters of ListDataIngestionTemplates  ListDataIngestionTemplatesRequest
      * @return ListDataIngestionTemplatesResponse
      */
@@ -456,6 +462,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SetDefaultNormalizationRuleVersionResponse
      */
     CompletableFuture<SetDefaultNormalizationRuleVersionResponse> setDefaultNormalizationRuleVersion(SetDefaultNormalizationRuleVersionRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAlert  UpdateAlertRequest
+     * @return UpdateAlertResponse
+     */
+    CompletableFuture<UpdateAlertResponse> updateAlert(UpdateAlertRequest request);
 
     /**
      * @param request the request parameters of UpdateAutoDisposeConfig  UpdateAutoDisposeConfigRequest
