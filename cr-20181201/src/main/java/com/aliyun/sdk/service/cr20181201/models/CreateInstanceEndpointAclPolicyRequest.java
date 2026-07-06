@@ -23,6 +23,7 @@ public class CreateInstanceEndpointAclPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Comment")
+    @Deprecated
     private String comment;
 
     @com.aliyun.core.annotation.Query
@@ -31,8 +32,12 @@ public class CreateInstanceEndpointAclPolicyRequest extends Request {
     private String endpointType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Entries")
+    private java.util.List<AccessControlEntry> entries;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Entry")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @Deprecated
     private String entry;
 
     @com.aliyun.core.annotation.Query
@@ -49,6 +54,7 @@ public class CreateInstanceEndpointAclPolicyRequest extends Request {
         this.regionId = builder.regionId;
         this.comment = builder.comment;
         this.endpointType = builder.endpointType;
+        this.entries = builder.entries;
         this.entry = builder.entry;
         this.instanceId = builder.instanceId;
         this.moduleName = builder.moduleName;
@@ -89,6 +95,13 @@ public class CreateInstanceEndpointAclPolicyRequest extends Request {
     }
 
     /**
+     * @return entries
+     */
+    public java.util.List<AccessControlEntry> getEntries() {
+        return this.entries;
+    }
+
+    /**
      * @return entry
      */
     public String getEntry() {
@@ -113,6 +126,7 @@ public class CreateInstanceEndpointAclPolicyRequest extends Request {
         private String regionId; 
         private String comment; 
         private String endpointType; 
+        private java.util.List<AccessControlEntry> entries; 
         private String entry; 
         private String instanceId; 
         private String moduleName; 
@@ -126,6 +140,7 @@ public class CreateInstanceEndpointAclPolicyRequest extends Request {
             this.regionId = request.regionId;
             this.comment = request.comment;
             this.endpointType = request.endpointType;
+            this.entries = request.entries;
             this.entry = request.entry;
             this.instanceId = request.instanceId;
             this.moduleName = request.moduleName;
@@ -166,8 +181,17 @@ public class CreateInstanceEndpointAclPolicyRequest extends Request {
         }
 
         /**
+         * Entries.
+         */
+        public Builder entries(java.util.List<AccessControlEntry> entries) {
+            String entriesShrink = shrink(entries, "Entries", "json");
+            this.putQueryParameter("Entries", entriesShrink);
+            this.entries = entries;
+            return this;
+        }
+
+        /**
          * <p>The CIDR block that is accessible.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.1/32</p>

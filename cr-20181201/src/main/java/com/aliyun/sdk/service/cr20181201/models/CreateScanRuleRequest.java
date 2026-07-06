@@ -41,7 +41,7 @@ public class CreateScanRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleName")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 256, minLength = 1)
     private String ruleName;
 
     @com.aliyun.core.annotation.Query

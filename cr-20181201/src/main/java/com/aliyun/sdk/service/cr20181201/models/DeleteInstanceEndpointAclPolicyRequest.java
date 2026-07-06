@@ -27,8 +27,12 @@ public class DeleteInstanceEndpointAclPolicyRequest extends Request {
     private String endpointType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Entries")
+    private java.util.List<AccessControlEntry> entries;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Entry")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @Deprecated
     private String entry;
 
     @com.aliyun.core.annotation.Query
@@ -44,6 +48,7 @@ public class DeleteInstanceEndpointAclPolicyRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.endpointType = builder.endpointType;
+        this.entries = builder.entries;
         this.entry = builder.entry;
         this.instanceId = builder.instanceId;
         this.moduleName = builder.moduleName;
@@ -77,6 +82,13 @@ public class DeleteInstanceEndpointAclPolicyRequest extends Request {
     }
 
     /**
+     * @return entries
+     */
+    public java.util.List<AccessControlEntry> getEntries() {
+        return this.entries;
+    }
+
+    /**
      * @return entry
      */
     public String getEntry() {
@@ -100,6 +112,7 @@ public class DeleteInstanceEndpointAclPolicyRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteInstanceEndpointAclPolicyRequest, Builder> {
         private String regionId; 
         private String endpointType; 
+        private java.util.List<AccessControlEntry> entries; 
         private String entry; 
         private String instanceId; 
         private String moduleName; 
@@ -112,6 +125,7 @@ public class DeleteInstanceEndpointAclPolicyRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.endpointType = request.endpointType;
+            this.entries = request.entries;
             this.entry = request.entry;
             this.instanceId = request.instanceId;
             this.moduleName = request.moduleName;
@@ -140,8 +154,17 @@ public class DeleteInstanceEndpointAclPolicyRequest extends Request {
         }
 
         /**
+         * Entries.
+         */
+        public Builder entries(java.util.List<AccessControlEntry> entries) {
+            String entriesShrink = shrink(entries, "Entries", "json");
+            this.putQueryParameter("Entries", entriesShrink);
+            this.entries = entries;
+            return this;
+        }
+
+        /**
          * <p>The CIDR block.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.0.1/32</p>
