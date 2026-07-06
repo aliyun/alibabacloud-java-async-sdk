@@ -422,6 +422,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UninstallAgentForClusterResponse> uninstallAgentForCluster(UninstallAgentForClusterRequest request);
 
     /**
+     * @param request the request parameters of UninstallAgentWithType  UninstallAgentWithTypeRequest
+     * @return UninstallAgentWithTypeResponse
+     */
+    CompletableFuture<UninstallAgentWithTypeResponse> uninstallAgentWithType(UninstallAgentWithTypeRequest request);
+
+    /**
      * <b>description</b> :
      * <p>、</p>
      * 
@@ -465,5 +471,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpgradeAgentForClusterResponse
      */
     CompletableFuture<UpgradeAgentForClusterResponse> upgradeAgentForCluster(UpgradeAgentForClusterRequest request);
+
+    /**
+     * @param request the request parameters of UpgradeAgentWithType  UpgradeAgentWithTypeRequest
+     * @return UpgradeAgentWithTypeResponse
+     */
+    CompletableFuture<UpgradeAgentWithTypeResponse> upgradeAgentWithType(UpgradeAgentWithTypeRequest request);
 
 }

@@ -1266,6 +1266,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UninstallAgentWithType  UninstallAgentWithTypeRequest
+     * @return UninstallAgentWithTypeResponse
+     */
+    @Override
+    public CompletableFuture<UninstallAgentWithTypeResponse> uninstallAgentWithType(UninstallAgentWithTypeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UninstallAgentWithType").setMethod(HttpMethod.POST).setPathRegex("/api/v1/am/agent/uninstallAgent").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UninstallAgentWithTypeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UninstallAgentWithTypeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>、</p>
      * 
@@ -1389,6 +1407,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpgradeAgentForClusterResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpgradeAgentWithType  UpgradeAgentWithTypeRequest
+     * @return UpgradeAgentWithTypeResponse
+     */
+    @Override
+    public CompletableFuture<UpgradeAgentWithTypeResponse> upgradeAgentWithType(UpgradeAgentWithTypeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpgradeAgentWithType").setMethod(HttpMethod.POST).setPathRegex("/api/v1/am/agent/upgradeAgent").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpgradeAgentWithTypeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpgradeAgentWithTypeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
