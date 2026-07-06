@@ -1,3 +1,6 @@
+2026-07-06 Version: 3.0.37
+- Generated java-async 2022-08-09 for Cloudauth-intl.
+
 2026-07-03 Version: 3.0.36
 - Generated java-async 2022-08-09 for Cloudauth-intl.
 

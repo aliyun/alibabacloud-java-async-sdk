@@ -301,6 +301,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteFaceRecordV2  DeleteFaceRecordV2Request
+     * @return DeleteFaceRecordV2Response
+     */
+    @Override
+    public CompletableFuture<DeleteFaceRecordV2Response> deleteFaceRecordV2(DeleteFaceRecordV2Request request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteFaceRecordV2").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteFaceRecordV2Response.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteFaceRecordV2Response> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteVerifyResult  DeleteVerifyResultRequest
      * @return DeleteVerifyResultResponse
      */

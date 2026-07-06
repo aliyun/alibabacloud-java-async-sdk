@@ -120,6 +120,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteFaceRecordResponse> deleteFaceRecord(DeleteFaceRecordRequest request);
 
     /**
+     * @param request the request parameters of DeleteFaceRecordV2  DeleteFaceRecordV2Request
+     * @return DeleteFaceRecordV2Response
+     */
+    CompletableFuture<DeleteFaceRecordV2Response> deleteFaceRecordV2(DeleteFaceRecordV2Request request);
+
+    /**
      * @param request the request parameters of DeleteVerifyResult  DeleteVerifyResultRequest
      * @return DeleteVerifyResultResponse
      */
