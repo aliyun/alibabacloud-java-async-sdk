@@ -113,6 +113,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSAMLProviderResponse> createSAMLProvider(CreateSAMLProviderRequest request);
 
     /**
+     * @param request the request parameters of CreateServiceCredential  CreateServiceCredentialRequest
+     * @return CreateServiceCredentialResponse
+     */
+    CompletableFuture<CreateServiceCredentialResponse> createServiceCredential(CreateServiceCredentialRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This topic provides an example on how to create a RAM user named <code>test</code>.</p>
      * 
@@ -189,6 +195,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteSAMLProviderResponse> deleteSAMLProvider(DeleteSAMLProviderRequest request);
 
     /**
+     * @param request the request parameters of DeleteServiceCredential  DeleteServiceCredentialRequest
+     * @return DeleteServiceCredentialResponse
+     */
+    CompletableFuture<DeleteServiceCredentialResponse> deleteServiceCredential(DeleteServiceCredentialRequest request);
+
+    /**
      * @param request the request parameters of DeleteUser  DeleteUserRequest
      * @return DeleteUserResponse
      */
@@ -253,6 +265,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetAccessKeyLastUsedResponse
      */
     CompletableFuture<GetAccessKeyLastUsedResponse> getAccessKeyLastUsed(GetAccessKeyLastUsedRequest request);
+
+    /**
+     * @param request the request parameters of GetAccessKeyPolicy  GetAccessKeyPolicyRequest
+     * @return GetAccessKeyPolicyResponse
+     */
+    CompletableFuture<GetAccessKeyPolicyResponse> getAccessKeyPolicy(GetAccessKeyPolicyRequest request);
 
     /**
      * @param request the request parameters of GetAccountMFAInfo  GetAccountMFAInfoRequest
@@ -362,6 +380,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetSecurityPreferenceResponse
      */
     CompletableFuture<GetSecurityPreferenceResponse> getSecurityPreference(GetSecurityPreferenceRequest request);
+
+    /**
+     * @param request the request parameters of GetServiceCredential  GetServiceCredentialRequest
+     * @return GetServiceCredentialResponse
+     */
+    CompletableFuture<GetServiceCredentialResponse> getServiceCredential(GetServiceCredentialRequest request);
 
     /**
      * @param request the request parameters of GetUser  GetUserRequest
@@ -479,6 +503,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListSAMLProvidersResponse> listSAMLProviders(ListSAMLProvidersRequest request);
 
     /**
+     * @param request the request parameters of ListServiceCredentials  ListServiceCredentialsRequest
+     * @return ListServiceCredentialsResponse
+     */
+    CompletableFuture<ListServiceCredentialsResponse> listServiceCredentials(ListServiceCredentialsRequest request);
+
+    /**
      * <b>description</b> :
      * <h3></h3>
      * <p>You must specify at least one of the following parameters or parameter pairs in a request to determine a query object:</p>
@@ -589,6 +619,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RestoreUserFromRecycleBinResponse> restoreUserFromRecycleBin(RestoreUserFromRecycleBinRequest request);
 
     /**
+     * @param request the request parameters of SetAccessKeyPolicy  SetAccessKeyPolicyRequest
+     * @return SetAccessKeyPolicyResponse
+     */
+    CompletableFuture<SetAccessKeyPolicyResponse> setAccessKeyPolicy(SetAccessKeyPolicyRequest request);
+
+    /**
      * @param request the request parameters of SetDefaultDomain  SetDefaultDomainRequest
      * @return SetDefaultDomainResponse
      */
@@ -694,6 +730,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateSAMLProviderResponse
      */
     CompletableFuture<UpdateSAMLProviderResponse> updateSAMLProvider(UpdateSAMLProviderRequest request);
+
+    /**
+     * @param request the request parameters of UpdateServiceCredential  UpdateServiceCredentialRequest
+     * @return UpdateServiceCredentialResponse
+     */
+    CompletableFuture<UpdateServiceCredentialResponse> updateServiceCredential(UpdateServiceCredentialRequest request);
 
     /**
      * <b>description</b> :
