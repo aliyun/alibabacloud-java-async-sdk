@@ -67,6 +67,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of BindAgentStorage2Vpc  BindAgentStorage2VpcRequest
+     * @return BindAgentStorage2VpcResponse
+     */
+    @Override
+    public CompletableFuture<BindAgentStorage2VpcResponse> bindAgentStorage2Vpc(BindAgentStorage2VpcRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("BindAgentStorage2Vpc").setMethod(HttpMethod.POST).setPathRegex("/v2/openapi/bindagentstorage2vpc").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BindAgentStorage2VpcResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BindAgentStorage2VpcResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of BindInstance2Vpc  BindInstance2VpcRequest
      * @return BindInstance2VpcResponse
      */
@@ -97,6 +115,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ChangeResourceGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CheckAgentStoragePolicy  CheckAgentStoragePolicyRequest
+     * @return CheckAgentStoragePolicyResponse
+     */
+    @Override
+    public CompletableFuture<CheckAgentStoragePolicyResponse> checkAgentStoragePolicy(CheckAgentStoragePolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CheckAgentStoragePolicy").setMethod(HttpMethod.POST).setPathRegex("/v2/openapi/checkagentstoragepolicy").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CheckAgentStoragePolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CheckAgentStoragePolicyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -194,6 +230,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteAgentStorageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteAgentStoragePolicy  DeleteAgentStoragePolicyRequest
+     * @return DeleteAgentStoragePolicyResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAgentStoragePolicyResponse> deleteAgentStoragePolicy(DeleteAgentStoragePolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteAgentStoragePolicy").setMethod(HttpMethod.POST).setPathRegex("/v2/openapi/deleteagentstoragepolicy").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAgentStoragePolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAgentStoragePolicyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -393,6 +447,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListVpcInfoByAgentStorage  ListVpcInfoByAgentStorageRequest
+     * @return ListVpcInfoByAgentStorageResponse
+     */
+    @Override
+    public CompletableFuture<ListVpcInfoByAgentStorageResponse> listVpcInfoByAgentStorage(ListVpcInfoByAgentStorageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListVpcInfoByAgentStorage").setMethod(HttpMethod.GET).setPathRegex("/v2/openapi/listvpcinfobyagentstorage").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListVpcInfoByAgentStorageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListVpcInfoByAgentStorageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListVpcInfoByInstance  ListVpcInfoByInstanceRequest
      * @return ListVpcInfoByInstanceResponse
      */
@@ -441,6 +513,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<TagResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UnbindAgentStorage2Vpc  UnbindAgentStorage2VpcRequest
+     * @return UnbindAgentStorage2VpcResponse
+     */
+    @Override
+    public CompletableFuture<UnbindAgentStorage2VpcResponse> unbindAgentStorage2Vpc(UnbindAgentStorage2VpcRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UnbindAgentStorage2Vpc").setMethod(HttpMethod.POST).setPathRegex("/v2/openapi/unbindagentstorage2vpc").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UnbindAgentStorage2VpcResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UnbindAgentStorage2VpcResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -498,6 +588,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateAgentStorageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateAgentStoragePolicy  UpdateAgentStoragePolicyRequest
+     * @return UpdateAgentStoragePolicyResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAgentStoragePolicyResponse> updateAgentStoragePolicy(UpdateAgentStoragePolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateAgentStoragePolicy").setMethod(HttpMethod.POST).setPathRegex("/v2/openapi/updateagentstoragepolicy").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAgentStoragePolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAgentStoragePolicyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

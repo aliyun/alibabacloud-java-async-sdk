@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of BindAgentStorage2Vpc  BindAgentStorage2VpcRequest
+     * @return BindAgentStorage2VpcResponse
+     */
+    CompletableFuture<BindAgentStorage2VpcResponse> bindAgentStorage2Vpc(BindAgentStorage2VpcRequest request);
+
+    /**
      * @param request the request parameters of BindInstance2Vpc  BindInstance2VpcRequest
      * @return BindInstance2VpcResponse
      */
@@ -30,6 +36,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ChangeResourceGroupResponse
      */
     CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
+
+    /**
+     * @param request the request parameters of CheckAgentStoragePolicy  CheckAgentStoragePolicyRequest
+     * @return CheckAgentStoragePolicyResponse
+     */
+    CompletableFuture<CheckAgentStoragePolicyResponse> checkAgentStoragePolicy(CheckAgentStoragePolicyRequest request);
 
     /**
      * @param request the request parameters of CheckInstancePolicy  CheckInstancePolicyRequest
@@ -67,6 +79,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteAgentStorageResponse
      */
     CompletableFuture<DeleteAgentStorageResponse> deleteAgentStorage(DeleteAgentStorageRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAgentStoragePolicy  DeleteAgentStoragePolicyRequest
+     * @return DeleteAgentStoragePolicyResponse
+     */
+    CompletableFuture<DeleteAgentStoragePolicyResponse> deleteAgentStoragePolicy(DeleteAgentStoragePolicyRequest request);
 
     /**
      * <b>description</b> :
@@ -142,6 +160,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     /**
+     * @param request the request parameters of ListVpcInfoByAgentStorage  ListVpcInfoByAgentStorageRequest
+     * @return ListVpcInfoByAgentStorageResponse
+     */
+    CompletableFuture<ListVpcInfoByAgentStorageResponse> listVpcInfoByAgentStorage(ListVpcInfoByAgentStorageRequest request);
+
+    /**
      * @param request the request parameters of ListVpcInfoByInstance  ListVpcInfoByInstanceRequest
      * @return ListVpcInfoByInstanceResponse
      */
@@ -158,6 +182,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return TagResourcesResponse
      */
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of UnbindAgentStorage2Vpc  UnbindAgentStorage2VpcRequest
+     * @return UnbindAgentStorage2VpcResponse
+     */
+    CompletableFuture<UnbindAgentStorage2VpcResponse> unbindAgentStorage2Vpc(UnbindAgentStorage2VpcRequest request);
 
     /**
      * @param request the request parameters of UnbindInstance2Vpc  UnbindInstance2VpcRequest
@@ -179,6 +209,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateAgentStorageResponse
      */
     CompletableFuture<UpdateAgentStorageResponse> updateAgentStorage(UpdateAgentStorageRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAgentStoragePolicy  UpdateAgentStoragePolicyRequest
+     * @return UpdateAgentStoragePolicyResponse
+     */
+    CompletableFuture<UpdateAgentStoragePolicyResponse> updateAgentStoragePolicy(UpdateAgentStoragePolicyRequest request);
 
     /**
      * @param request the request parameters of UpdateInstance  UpdateInstanceRequest

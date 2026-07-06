@@ -1,0 +1,131 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.tablestore20201209.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link BindAgentStorage2VpcResponse} extends {@link TeaModel}
+ *
+ * <p>BindAgentStorage2VpcResponse</p>
+ */
+public class BindAgentStorage2VpcResponse extends Response {
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map<String, String> headers;
+
+    @com.aliyun.core.annotation.NameInMap("statusCode")
+    private Integer statusCode;
+
+    @com.aliyun.core.annotation.NameInMap("body")
+    private BindAgentStorage2VpcResponseBody body;
+
+    private BindAgentStorage2VpcResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
+        this.body = builder.body;
+    }
+
+    public static BindAgentStorage2VpcResponse create() {
+        return new BuilderImpl().build();
+    }
+
+@Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
+     * @return body
+     */
+    public BindAgentStorage2VpcResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<BindAgentStorage2VpcResponse, Builder> {
+
+        Builder headers(java.util.Map<String, String> headers);
+
+        Builder statusCode(Integer statusCode);
+
+        Builder body(BindAgentStorage2VpcResponseBody body);
+
+        @Override
+        BindAgentStorage2VpcResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<BindAgentStorage2VpcResponse, Builder>
+            implements Builder {
+        private java.util.Map<String, String> headers; 
+        private Integer statusCode; 
+        private BindAgentStorage2VpcResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(BindAgentStorage2VpcResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.statusCode = response.statusCode;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map<String, String> headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(BindAgentStorage2VpcResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public BindAgentStorage2VpcResponse build() {
+            return new BindAgentStorage2VpcResponse(this);
+        } 
+
+    } 
+
+}
