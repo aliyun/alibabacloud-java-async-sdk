@@ -30,11 +30,16 @@ public class GetTableRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("IncludeBusinessMetadata")
     private Boolean includeBusinessMetadata;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeExtendedProperties")
+    private Boolean includeExtendedProperties;
+
     private GetTableRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.id = builder.id;
         this.includeBusinessMetadata = builder.includeBusinessMetadata;
+        this.includeExtendedProperties = builder.includeExtendedProperties;
     }
 
     public static Builder builder() {
@@ -71,10 +76,18 @@ public class GetTableRequest extends Request {
         return this.includeBusinessMetadata;
     }
 
+    /**
+     * @return includeExtendedProperties
+     */
+    public Boolean getIncludeExtendedProperties() {
+        return this.includeExtendedProperties;
+    }
+
     public static final class Builder extends Request.Builder<GetTableRequest, Builder> {
         private String regionId; 
         private String id; 
         private Boolean includeBusinessMetadata; 
+        private Boolean includeExtendedProperties; 
 
         private Builder() {
             super();
@@ -85,6 +98,7 @@ public class GetTableRequest extends Request {
             this.regionId = request.regionId;
             this.id = request.id;
             this.includeBusinessMetadata = request.includeBusinessMetadata;
+            this.includeExtendedProperties = request.includeExtendedProperties;
         } 
 
         /**
@@ -140,6 +154,15 @@ public class GetTableRequest extends Request {
         public Builder includeBusinessMetadata(Boolean includeBusinessMetadata) {
             this.putQueryParameter("IncludeBusinessMetadata", includeBusinessMetadata);
             this.includeBusinessMetadata = includeBusinessMetadata;
+            return this;
+        }
+
+        /**
+         * IncludeExtendedProperties.
+         */
+        public Builder includeExtendedProperties(Boolean includeExtendedProperties) {
+            this.putQueryParameter("IncludeExtendedProperties", includeExtendedProperties);
+            this.includeExtendedProperties = includeExtendedProperties;
             return this;
         }
 

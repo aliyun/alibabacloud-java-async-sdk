@@ -22,6 +22,10 @@ public class ImportWorkflowDefinitionRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long projectId;
@@ -34,6 +38,7 @@ public class ImportWorkflowDefinitionRequest extends Request {
     private ImportWorkflowDefinitionRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.dryRun = builder.dryRun;
         this.projectId = builder.projectId;
         this.spec = builder.spec;
     }
@@ -59,6 +64,13 @@ public class ImportWorkflowDefinitionRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return projectId
      */
     public Long getProjectId() {
@@ -74,6 +86,7 @@ public class ImportWorkflowDefinitionRequest extends Request {
 
     public static final class Builder extends Request.Builder<ImportWorkflowDefinitionRequest, Builder> {
         private String regionId; 
+        private Boolean dryRun; 
         private Long projectId; 
         private String spec; 
 
@@ -84,6 +97,7 @@ public class ImportWorkflowDefinitionRequest extends Request {
         private Builder(ImportWorkflowDefinitionRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.dryRun = request.dryRun;
             this.projectId = request.projectId;
             this.spec = request.spec;
         } 
@@ -94,6 +108,15 @@ public class ImportWorkflowDefinitionRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putBodyParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

@@ -22,6 +22,10 @@ public class CreatePipelineRunRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoRunUntilStage")
+    private String autoRunUntilStage;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
@@ -36,6 +40,10 @@ public class CreatePipelineRunRequest extends Request {
     private Long projectId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RunMode")
+    private String runMode;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Type")
     @com.aliyun.core.annotation.Validation(required = true)
     private String type;
@@ -43,9 +51,11 @@ public class CreatePipelineRunRequest extends Request {
     private CreatePipelineRunRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.autoRunUntilStage = builder.autoRunUntilStage;
         this.description = builder.description;
         this.objectIds = builder.objectIds;
         this.projectId = builder.projectId;
+        this.runMode = builder.runMode;
         this.type = builder.type;
     }
 
@@ -70,6 +80,13 @@ public class CreatePipelineRunRequest extends Request {
     }
 
     /**
+     * @return autoRunUntilStage
+     */
+    public String getAutoRunUntilStage() {
+        return this.autoRunUntilStage;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
@@ -91,6 +108,13 @@ public class CreatePipelineRunRequest extends Request {
     }
 
     /**
+     * @return runMode
+     */
+    public String getRunMode() {
+        return this.runMode;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -99,9 +123,11 @@ public class CreatePipelineRunRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreatePipelineRunRequest, Builder> {
         private String regionId; 
+        private String autoRunUntilStage; 
         private String description; 
         private java.util.List<String> objectIds; 
         private Long projectId; 
+        private String runMode; 
         private String type; 
 
         private Builder() {
@@ -111,9 +137,11 @@ public class CreatePipelineRunRequest extends Request {
         private Builder(CreatePipelineRunRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.autoRunUntilStage = request.autoRunUntilStage;
             this.description = request.description;
             this.objectIds = request.objectIds;
             this.projectId = request.projectId;
+            this.runMode = request.runMode;
             this.type = request.type;
         } 
 
@@ -124,6 +152,15 @@ public class CreatePipelineRunRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * AutoRunUntilStage.
+         */
+        public Builder autoRunUntilStage(String autoRunUntilStage) {
+            this.putBodyParameter("AutoRunUntilStage", autoRunUntilStage);
+            this.autoRunUntilStage = autoRunUntilStage;
             return this;
         }
 
@@ -163,6 +200,15 @@ public class CreatePipelineRunRequest extends Request {
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
             this.projectId = projectId;
+            return this;
+        }
+
+        /**
+         * RunMode.
+         */
+        public Builder runMode(String runMode) {
+            this.putBodyParameter("RunMode", runMode);
+            this.runMode = runMode;
             return this;
         }
 

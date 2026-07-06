@@ -41,6 +41,9 @@ public class Table extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PartitionKeys")
     private java.util.List<String> partitionKeys;
 
+    @com.aliyun.core.annotation.NameInMap("StatisticsInfos")
+    private java.util.Map<String, String> statisticsInfos;
+
     @com.aliyun.core.annotation.NameInMap("TableType")
     private String tableType;
 
@@ -56,6 +59,7 @@ public class Table extends TeaModel {
         this.name = builder.name;
         this.parentMetaEntityId = builder.parentMetaEntityId;
         this.partitionKeys = builder.partitionKeys;
+        this.statisticsInfos = builder.statisticsInfos;
         this.tableType = builder.tableType;
         this.technicalMetadata = builder.technicalMetadata;
     }
@@ -129,6 +133,13 @@ public class Table extends TeaModel {
     }
 
     /**
+     * @return statisticsInfos
+     */
+    public java.util.Map<String, String> getStatisticsInfos() {
+        return this.statisticsInfos;
+    }
+
+    /**
      * @return tableType
      */
     public String getTableType() {
@@ -151,6 +162,7 @@ public class Table extends TeaModel {
         private String name; 
         private String parentMetaEntityId; 
         private java.util.List<String> partitionKeys; 
+        private java.util.Map<String, String> statisticsInfos; 
         private String tableType; 
         private TechnicalMetadata technicalMetadata; 
 
@@ -166,6 +178,7 @@ public class Table extends TeaModel {
             this.name = model.name;
             this.parentMetaEntityId = model.parentMetaEntityId;
             this.partitionKeys = model.partitionKeys;
+            this.statisticsInfos = model.statisticsInfos;
             this.tableType = model.tableType;
             this.technicalMetadata = model.technicalMetadata;
         } 
@@ -231,6 +244,14 @@ public class Table extends TeaModel {
          */
         public Builder partitionKeys(java.util.List<String> partitionKeys) {
             this.partitionKeys = partitionKeys;
+            return this;
+        }
+
+        /**
+         * StatisticsInfos.
+         */
+        public Builder statisticsInfos(java.util.Map<String, String> statisticsInfos) {
+            this.statisticsInfos = statisticsInfos;
             return this;
         }
 

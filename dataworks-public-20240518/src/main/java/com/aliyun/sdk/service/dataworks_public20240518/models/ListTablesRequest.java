@@ -26,6 +26,10 @@ public class ListTablesRequest extends Request {
     private String comment;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeExtendedProperties")
+    private Boolean includeExtendedProperties;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
@@ -59,6 +63,7 @@ public class ListTablesRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.comment = builder.comment;
+        this.includeExtendedProperties = builder.includeExtendedProperties;
         this.name = builder.name;
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
@@ -93,6 +98,13 @@ public class ListTablesRequest extends Request {
      */
     public String getComment() {
         return this.comment;
+    }
+
+    /**
+     * @return includeExtendedProperties
+     */
+    public Boolean getIncludeExtendedProperties() {
+        return this.includeExtendedProperties;
     }
 
     /**
@@ -147,6 +159,7 @@ public class ListTablesRequest extends Request {
     public static final class Builder extends Request.Builder<ListTablesRequest, Builder> {
         private String regionId; 
         private String comment; 
+        private Boolean includeExtendedProperties; 
         private String name; 
         private String order; 
         private Integer pageNumber; 
@@ -163,6 +176,7 @@ public class ListTablesRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.comment = request.comment;
+            this.includeExtendedProperties = request.includeExtendedProperties;
             this.name = request.name;
             this.order = request.order;
             this.pageNumber = request.pageNumber;
@@ -193,6 +207,15 @@ public class ListTablesRequest extends Request {
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
             this.comment = comment;
+            return this;
+        }
+
+        /**
+         * IncludeExtendedProperties.
+         */
+        public Builder includeExtendedProperties(Boolean includeExtendedProperties) {
+            this.putQueryParameter("IncludeExtendedProperties", includeExtendedProperties);
+            this.includeExtendedProperties = includeExtendedProperties;
             return this;
         }
 

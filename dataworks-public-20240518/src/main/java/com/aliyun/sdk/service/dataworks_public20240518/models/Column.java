@@ -41,6 +41,9 @@ public class Column extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PrimaryKey")
     private Boolean primaryKey;
 
+    @com.aliyun.core.annotation.NameInMap("StatisticsInfos")
+    private java.util.Map<String, String> statisticsInfos;
+
     @com.aliyun.core.annotation.NameInMap("TableId")
     private String tableId;
 
@@ -56,6 +59,7 @@ public class Column extends TeaModel {
         this.partitionKey = builder.partitionKey;
         this.position = builder.position;
         this.primaryKey = builder.primaryKey;
+        this.statisticsInfos = builder.statisticsInfos;
         this.tableId = builder.tableId;
         this.type = builder.type;
     }
@@ -129,6 +133,13 @@ public class Column extends TeaModel {
     }
 
     /**
+     * @return statisticsInfos
+     */
+    public java.util.Map<String, String> getStatisticsInfos() {
+        return this.statisticsInfos;
+    }
+
+    /**
      * @return tableId
      */
     public String getTableId() {
@@ -151,6 +162,7 @@ public class Column extends TeaModel {
         private Boolean partitionKey; 
         private Integer position; 
         private Boolean primaryKey; 
+        private java.util.Map<String, String> statisticsInfos; 
         private String tableId; 
         private String type; 
 
@@ -166,6 +178,7 @@ public class Column extends TeaModel {
             this.partitionKey = model.partitionKey;
             this.position = model.position;
             this.primaryKey = model.primaryKey;
+            this.statisticsInfos = model.statisticsInfos;
             this.tableId = model.tableId;
             this.type = model.type;
         } 
@@ -231,6 +244,14 @@ public class Column extends TeaModel {
          */
         public Builder primaryKey(Boolean primaryKey) {
             this.primaryKey = primaryKey;
+            return this;
+        }
+
+        /**
+         * StatisticsInfos.
+         */
+        public Builder statisticsInfos(java.util.Map<String, String> statisticsInfos) {
+            this.statisticsInfos = statisticsInfos;
             return this;
         }
 
