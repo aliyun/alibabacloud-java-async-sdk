@@ -1502,6 +1502,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetRowsVisibilityResponse> setRowsVisibility(SetRowsVisibilityRequest request);
 
     /**
+     * @param request the request parameters of SignOutOrgAccount  SignOutOrgAccountRequest
+     * @return SignOutOrgAccountResponse
+     */
+    CompletableFuture<SignOutOrgAccountResponse> signOutOrgAccount(SignOutOrgAccountRequest request);
+
+    /**
      * @param request the request parameters of SimpleListReport  SimpleListReportRequest
      * @return SimpleListReportResponse
      */
