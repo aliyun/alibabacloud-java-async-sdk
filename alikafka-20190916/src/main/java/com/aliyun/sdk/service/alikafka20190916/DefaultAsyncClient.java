@@ -30,7 +30,38 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "alikafka";
         this.version = "2019-09-16";
         this.endpointRule = "regional";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("us-west-1", "alikafka.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "alikafka.us-east-1.aliyuncs.com"),
+            new TeaPair("na-south-1", "alikafka.na-south-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "alikafka.me-east-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "alikafka.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "alikafka.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "alikafka.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "alikafka.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "alikafka.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "alikafka.cn-shenzhen-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "alikafka.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "alikafka.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "alikafka.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "alikafka.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "alikafka.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "alikafka.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "alikafka.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "alikafka.cn-hangzhou-finance.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "alikafka.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "alikafka.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "alikafka.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "alikafka.cn-beijing-finance-1.aliyuncs.com"),
+            new TeaPair("cn-beijing", "alikafka.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "alikafka.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "alikafka.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "alikafka.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "alikafka.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "alikafka.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "alikafka.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "alikafka.ap-northeast-1.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 

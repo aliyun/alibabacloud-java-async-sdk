@@ -592,6 +592,15 @@ public class UpgradePrePayOrderRequest extends Request {
         @com.aliyun.core.annotation.Validation(maximum = 30000, minimum = 800)
         private Integer kafkaStorage;
 
+        @com.aliyun.core.annotation.NameInMap("KraftControllerCU")
+        private Integer kraftControllerCU;
+
+        @com.aliyun.core.annotation.NameInMap("KraftControllerReplica")
+        private Integer kraftControllerReplica;
+
+        @com.aliyun.core.annotation.NameInMap("KraftControllerStorage")
+        private Integer kraftControllerStorage;
+
         @com.aliyun.core.annotation.NameInMap("KsqlCU")
         @com.aliyun.core.annotation.Validation(maximum = 20, minimum = 1)
         private Integer ksqlCU;
@@ -638,6 +647,9 @@ public class UpgradePrePayOrderRequest extends Request {
             this.kafkaRestProxyCU = builder.kafkaRestProxyCU;
             this.kafkaRestProxyReplica = builder.kafkaRestProxyReplica;
             this.kafkaStorage = builder.kafkaStorage;
+            this.kraftControllerCU = builder.kraftControllerCU;
+            this.kraftControllerReplica = builder.kraftControllerReplica;
+            this.kraftControllerStorage = builder.kraftControllerStorage;
             this.ksqlCU = builder.ksqlCU;
             this.ksqlList = builder.ksqlList;
             this.ksqlReplica = builder.ksqlReplica;
@@ -728,6 +740,27 @@ public class UpgradePrePayOrderRequest extends Request {
         }
 
         /**
+         * @return kraftControllerCU
+         */
+        public Integer getKraftControllerCU() {
+            return this.kraftControllerCU;
+        }
+
+        /**
+         * @return kraftControllerReplica
+         */
+        public Integer getKraftControllerReplica() {
+            return this.kraftControllerReplica;
+        }
+
+        /**
+         * @return kraftControllerStorage
+         */
+        public Integer getKraftControllerStorage() {
+            return this.kraftControllerStorage;
+        }
+
+        /**
          * @return ksqlCU
          */
         public Integer getKsqlCU() {
@@ -801,6 +834,9 @@ public class UpgradePrePayOrderRequest extends Request {
             private Integer kafkaRestProxyCU; 
             private Integer kafkaRestProxyReplica; 
             private Integer kafkaStorage; 
+            private Integer kraftControllerCU; 
+            private Integer kraftControllerReplica; 
+            private Integer kraftControllerStorage; 
             private Integer ksqlCU; 
             private java.util.List<KsqlList> ksqlList; 
             private Integer ksqlReplica; 
@@ -825,6 +861,9 @@ public class UpgradePrePayOrderRequest extends Request {
                 this.kafkaRestProxyCU = model.kafkaRestProxyCU;
                 this.kafkaRestProxyReplica = model.kafkaRestProxyReplica;
                 this.kafkaStorage = model.kafkaStorage;
+                this.kraftControllerCU = model.kraftControllerCU;
+                this.kraftControllerReplica = model.kraftControllerReplica;
+                this.kraftControllerStorage = model.kraftControllerStorage;
                 this.ksqlCU = model.ksqlCU;
                 this.ksqlList = model.ksqlList;
                 this.ksqlReplica = model.ksqlReplica;
@@ -913,6 +952,30 @@ public class UpgradePrePayOrderRequest extends Request {
              */
             public Builder kafkaStorage(Integer kafkaStorage) {
                 this.kafkaStorage = kafkaStorage;
+                return this;
+            }
+
+            /**
+             * KraftControllerCU.
+             */
+            public Builder kraftControllerCU(Integer kraftControllerCU) {
+                this.kraftControllerCU = kraftControllerCU;
+                return this;
+            }
+
+            /**
+             * KraftControllerReplica.
+             */
+            public Builder kraftControllerReplica(Integer kraftControllerReplica) {
+                this.kraftControllerReplica = kraftControllerReplica;
+                return this;
+            }
+
+            /**
+             * KraftControllerStorage.
+             */
+            public Builder kraftControllerStorage(Integer kraftControllerStorage) {
+                this.kraftControllerStorage = kraftControllerStorage;
                 return this;
             }
 

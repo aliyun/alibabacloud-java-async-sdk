@@ -659,6 +659,9 @@ public class CreatePrePayOrderRequest extends Request {
      * <p>CreatePrePayOrderRequest</p>
      */
     public static class ConfluentConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConfluentVersion")
+        private String confluentVersion;
+
         @com.aliyun.core.annotation.NameInMap("ConnectCU")
         private Integer connectCU;
 
@@ -689,6 +692,15 @@ public class CreatePrePayOrderRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("KafkaStorage")
         private Integer kafkaStorage;
 
+        @com.aliyun.core.annotation.NameInMap("KraftControllerCU")
+        private Integer kraftControllerCU;
+
+        @com.aliyun.core.annotation.NameInMap("KraftControllerReplica")
+        private Integer kraftControllerReplica;
+
+        @com.aliyun.core.annotation.NameInMap("KraftControllerStorage")
+        private Integer kraftControllerStorage;
+
         @com.aliyun.core.annotation.NameInMap("KsqlCU")
         private Integer ksqlCU;
 
@@ -717,6 +729,7 @@ public class CreatePrePayOrderRequest extends Request {
         private Integer zooKeeperStorage;
 
         private ConfluentConfig(Builder builder) {
+            this.confluentVersion = builder.confluentVersion;
             this.connectCU = builder.connectCU;
             this.connectReplica = builder.connectReplica;
             this.controlCenterCU = builder.controlCenterCU;
@@ -727,6 +740,9 @@ public class CreatePrePayOrderRequest extends Request {
             this.kafkaRestProxyCU = builder.kafkaRestProxyCU;
             this.kafkaRestProxyReplica = builder.kafkaRestProxyReplica;
             this.kafkaStorage = builder.kafkaStorage;
+            this.kraftControllerCU = builder.kraftControllerCU;
+            this.kraftControllerReplica = builder.kraftControllerReplica;
+            this.kraftControllerStorage = builder.kraftControllerStorage;
             this.ksqlCU = builder.ksqlCU;
             this.ksqlList = builder.ksqlList;
             this.ksqlReplica = builder.ksqlReplica;
@@ -744,6 +760,13 @@ public class CreatePrePayOrderRequest extends Request {
 
         public static ConfluentConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return confluentVersion
+         */
+        public String getConfluentVersion() {
+            return this.confluentVersion;
         }
 
         /**
@@ -817,6 +840,27 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
+         * @return kraftControllerCU
+         */
+        public Integer getKraftControllerCU() {
+            return this.kraftControllerCU;
+        }
+
+        /**
+         * @return kraftControllerReplica
+         */
+        public Integer getKraftControllerReplica() {
+            return this.kraftControllerReplica;
+        }
+
+        /**
+         * @return kraftControllerStorage
+         */
+        public Integer getKraftControllerStorage() {
+            return this.kraftControllerStorage;
+        }
+
+        /**
          * @return ksqlCU
          */
         public Integer getKsqlCU() {
@@ -880,6 +924,7 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         public static final class Builder {
+            private String confluentVersion; 
             private Integer connectCU; 
             private Integer connectReplica; 
             private Integer controlCenterCU; 
@@ -890,6 +935,9 @@ public class CreatePrePayOrderRequest extends Request {
             private Integer kafkaRestProxyCU; 
             private Integer kafkaRestProxyReplica; 
             private Integer kafkaStorage; 
+            private Integer kraftControllerCU; 
+            private Integer kraftControllerReplica; 
+            private Integer kraftControllerStorage; 
             private Integer ksqlCU; 
             private java.util.List<KsqlList> ksqlList; 
             private Integer ksqlReplica; 
@@ -904,6 +952,7 @@ public class CreatePrePayOrderRequest extends Request {
             } 
 
             private Builder(ConfluentConfig model) {
+                this.confluentVersion = model.confluentVersion;
                 this.connectCU = model.connectCU;
                 this.connectReplica = model.connectReplica;
                 this.controlCenterCU = model.controlCenterCU;
@@ -914,6 +963,9 @@ public class CreatePrePayOrderRequest extends Request {
                 this.kafkaRestProxyCU = model.kafkaRestProxyCU;
                 this.kafkaRestProxyReplica = model.kafkaRestProxyReplica;
                 this.kafkaStorage = model.kafkaStorage;
+                this.kraftControllerCU = model.kraftControllerCU;
+                this.kraftControllerReplica = model.kraftControllerReplica;
+                this.kraftControllerStorage = model.kraftControllerStorage;
                 this.ksqlCU = model.ksqlCU;
                 this.ksqlList = model.ksqlList;
                 this.ksqlReplica = model.ksqlReplica;
@@ -924,6 +976,14 @@ public class CreatePrePayOrderRequest extends Request {
                 this.zooKeeperReplica = model.zooKeeperReplica;
                 this.zooKeeperStorage = model.zooKeeperStorage;
             } 
+
+            /**
+             * ConfluentVersion.
+             */
+            public Builder confluentVersion(String confluentVersion) {
+                this.confluentVersion = confluentVersion;
+                return this;
+            }
 
             /**
              * <p>The number of CPU cores of Connect.</p>
@@ -1032,6 +1092,30 @@ public class CreatePrePayOrderRequest extends Request {
              */
             public Builder kafkaStorage(Integer kafkaStorage) {
                 this.kafkaStorage = kafkaStorage;
+                return this;
+            }
+
+            /**
+             * KraftControllerCU.
+             */
+            public Builder kraftControllerCU(Integer kraftControllerCU) {
+                this.kraftControllerCU = kraftControllerCU;
+                return this;
+            }
+
+            /**
+             * KraftControllerReplica.
+             */
+            public Builder kraftControllerReplica(Integer kraftControllerReplica) {
+                this.kraftControllerReplica = kraftControllerReplica;
+                return this;
+            }
+
+            /**
+             * KraftControllerStorage.
+             */
+            public Builder kraftControllerStorage(Integer kraftControllerStorage) {
+                this.kraftControllerStorage = kraftControllerStorage;
                 return this;
             }
 
