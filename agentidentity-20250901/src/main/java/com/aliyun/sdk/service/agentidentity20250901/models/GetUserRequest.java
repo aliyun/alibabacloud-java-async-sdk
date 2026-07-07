@@ -18,8 +18,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetUserRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    private String userId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserPoolId")
+    private String userPoolId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UserPoolName")
@@ -27,7 +35,9 @@ public class GetUserRequest extends Request {
 
     private GetUserRequest(Builder builder) {
         super(builder);
+        this.userId = builder.userId;
         this.userName = builder.userName;
+        this.userPoolId = builder.userPoolId;
         this.userPoolName = builder.userPoolName;
     }
 
@@ -45,10 +55,24 @@ public class GetUserRequest extends Request {
     }
 
     /**
+     * @return userId
+     */
+    public String getUserId() {
+        return this.userId;
+    }
+
+    /**
      * @return userName
      */
     public String getUserName() {
         return this.userName;
+    }
+
+    /**
+     * @return userPoolId
+     */
+    public String getUserPoolId() {
+        return this.userPoolId;
     }
 
     /**
@@ -59,7 +83,9 @@ public class GetUserRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetUserRequest, Builder> {
+        private String userId; 
         private String userName; 
+        private String userPoolId; 
         private String userPoolName; 
 
         private Builder() {
@@ -68,9 +94,20 @@ public class GetUserRequest extends Request {
 
         private Builder(GetUserRequest request) {
             super(request);
+            this.userId = request.userId;
             this.userName = request.userName;
+            this.userPoolId = request.userPoolId;
             this.userPoolName = request.userPoolName;
         } 
+
+        /**
+         * UserId.
+         */
+        public Builder userId(String userId) {
+            this.putBodyParameter("UserId", userId);
+            this.userId = userId;
+            return this;
+        }
 
         /**
          * UserName.
@@ -78,6 +115,15 @@ public class GetUserRequest extends Request {
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);
             this.userName = userName;
+            return this;
+        }
+
+        /**
+         * UserPoolId.
+         */
+        public Builder userPoolId(String userPoolId) {
+            this.putBodyParameter("UserPoolId", userPoolId);
+            this.userPoolId = userPoolId;
             return this;
         }
 

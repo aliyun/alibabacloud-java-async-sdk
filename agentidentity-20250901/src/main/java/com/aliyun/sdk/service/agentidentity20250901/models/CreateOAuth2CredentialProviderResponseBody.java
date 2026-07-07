@@ -116,6 +116,9 @@ public class CreateOAuth2CredentialProviderResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OAuth2ProviderConfig")
         private OAuth2ProviderConfig oAuth2ProviderConfig;
 
+        @com.aliyun.core.annotation.NameInMap("OAuthType")
+        private String oAuthType;
+
         @com.aliyun.core.annotation.NameInMap("TokenVaultName")
         private String tokenVaultName;
 
@@ -130,6 +133,7 @@ public class CreateOAuth2CredentialProviderResponseBody extends TeaModel {
             this.description = builder.description;
             this.oAuth2CredentialProviderName = builder.oAuth2CredentialProviderName;
             this.oAuth2ProviderConfig = builder.oAuth2ProviderConfig;
+            this.oAuthType = builder.oAuthType;
             this.tokenVaultName = builder.tokenVaultName;
             this.updateTime = builder.updateTime;
         }
@@ -192,6 +196,13 @@ public class CreateOAuth2CredentialProviderResponseBody extends TeaModel {
         }
 
         /**
+         * @return oAuthType
+         */
+        public String getOAuthType() {
+            return this.oAuthType;
+        }
+
+        /**
          * @return tokenVaultName
          */
         public String getTokenVaultName() {
@@ -213,6 +224,7 @@ public class CreateOAuth2CredentialProviderResponseBody extends TeaModel {
             private String description; 
             private String oAuth2CredentialProviderName; 
             private OAuth2ProviderConfig oAuth2ProviderConfig; 
+            private String oAuthType; 
             private String tokenVaultName; 
             private String updateTime; 
 
@@ -227,6 +239,7 @@ public class CreateOAuth2CredentialProviderResponseBody extends TeaModel {
                 this.description = model.description;
                 this.oAuth2CredentialProviderName = model.oAuth2CredentialProviderName;
                 this.oAuth2ProviderConfig = model.oAuth2ProviderConfig;
+                this.oAuthType = model.oAuthType;
                 this.tokenVaultName = model.tokenVaultName;
                 this.updateTime = model.updateTime;
             } 
@@ -284,6 +297,14 @@ public class CreateOAuth2CredentialProviderResponseBody extends TeaModel {
              */
             public Builder oAuth2ProviderConfig(OAuth2ProviderConfig oAuth2ProviderConfig) {
                 this.oAuth2ProviderConfig = oAuth2ProviderConfig;
+                return this;
+            }
+
+            /**
+             * OAuthType.
+             */
+            public Builder oAuthType(String oAuthType) {
+                this.oAuthType = oAuthType;
                 return this;
             }
 

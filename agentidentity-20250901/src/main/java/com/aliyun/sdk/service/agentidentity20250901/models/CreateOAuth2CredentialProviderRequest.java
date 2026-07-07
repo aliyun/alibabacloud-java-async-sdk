@@ -38,6 +38,10 @@ public class CreateOAuth2CredentialProviderRequest extends Request {
     private OAuth2ProviderConfig oAuth2ProviderConfig;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OAuthType")
+    private String oAuthType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TokenVaultName")
     private String tokenVaultName;
 
@@ -48,6 +52,7 @@ public class CreateOAuth2CredentialProviderRequest extends Request {
         this.description = builder.description;
         this.oAuth2CredentialProviderName = builder.oAuth2CredentialProviderName;
         this.oAuth2ProviderConfig = builder.oAuth2ProviderConfig;
+        this.oAuthType = builder.oAuthType;
         this.tokenVaultName = builder.tokenVaultName;
     }
 
@@ -100,6 +105,13 @@ public class CreateOAuth2CredentialProviderRequest extends Request {
     }
 
     /**
+     * @return oAuthType
+     */
+    public String getOAuthType() {
+        return this.oAuthType;
+    }
+
+    /**
      * @return tokenVaultName
      */
     public String getTokenVaultName() {
@@ -112,6 +124,7 @@ public class CreateOAuth2CredentialProviderRequest extends Request {
         private String description; 
         private String oAuth2CredentialProviderName; 
         private OAuth2ProviderConfig oAuth2ProviderConfig; 
+        private String oAuthType; 
         private String tokenVaultName; 
 
         private Builder() {
@@ -125,6 +138,7 @@ public class CreateOAuth2CredentialProviderRequest extends Request {
             this.description = request.description;
             this.oAuth2CredentialProviderName = request.oAuth2CredentialProviderName;
             this.oAuth2ProviderConfig = request.oAuth2ProviderConfig;
+            this.oAuthType = request.oAuthType;
             this.tokenVaultName = request.tokenVaultName;
         } 
 
@@ -171,6 +185,15 @@ public class CreateOAuth2CredentialProviderRequest extends Request {
             String oAuth2ProviderConfigShrink = shrink(oAuth2ProviderConfig, "OAuth2ProviderConfig", "json");
             this.putBodyParameter("OAuth2ProviderConfig", oAuth2ProviderConfigShrink);
             this.oAuth2ProviderConfig = oAuth2ProviderConfig;
+            return this;
+        }
+
+        /**
+         * OAuthType.
+         */
+        public Builder oAuthType(String oAuthType) {
+            this.putBodyParameter("OAuthType", oAuthType);
+            this.oAuthType = oAuthType;
             return this;
         }
 
