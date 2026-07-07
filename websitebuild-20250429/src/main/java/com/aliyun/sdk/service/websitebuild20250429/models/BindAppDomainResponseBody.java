@@ -321,11 +321,249 @@ public class BindAppDomainResponseBody extends TeaModel {
      *
      * <p>BindAppDomainResponseBody</p>
      */
+    public static class Records extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Host")
+        private String host;
+
+        @com.aliyun.core.annotation.NameInMap("RecordType")
+        private String recordType;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Records(Builder builder) {
+            this.host = builder.host;
+            this.recordType = builder.recordType;
+            this.status = builder.status;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Records create() {
+            return builder().build();
+        }
+
+        /**
+         * @return host
+         */
+        public String getHost() {
+            return this.host;
+        }
+
+        /**
+         * @return recordType
+         */
+        public String getRecordType() {
+            return this.recordType;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String host; 
+            private String recordType; 
+            private String status; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.host = model.host;
+                this.recordType = model.recordType;
+                this.status = model.status;
+                this.value = model.value;
+            } 
+
+            /**
+             * Host.
+             */
+            public Builder host(String host) {
+                this.host = host;
+                return this;
+            }
+
+            /**
+             * RecordType.
+             */
+            public Builder recordType(String recordType) {
+                this.recordType = recordType;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Records build() {
+                return new Records(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link BindAppDomainResponseBody} extends {@link TeaModel}
+     *
+     * <p>BindAppDomainResponseBody</p>
+     */
+    public static class DnsConflict extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CanAutoResolve")
+        private Boolean canAutoResolve;
+
+        @com.aliyun.core.annotation.NameInMap("HasConflict")
+        private Boolean hasConflict;
+
+        @com.aliyun.core.annotation.NameInMap("Message")
+        private String message;
+
+        @com.aliyun.core.annotation.NameInMap("Records")
+        private java.util.List<Records> records;
+
+        private DnsConflict(Builder builder) {
+            this.canAutoResolve = builder.canAutoResolve;
+            this.hasConflict = builder.hasConflict;
+            this.message = builder.message;
+            this.records = builder.records;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DnsConflict create() {
+            return builder().build();
+        }
+
+        /**
+         * @return canAutoResolve
+         */
+        public Boolean getCanAutoResolve() {
+            return this.canAutoResolve;
+        }
+
+        /**
+         * @return hasConflict
+         */
+        public Boolean getHasConflict() {
+            return this.hasConflict;
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        /**
+         * @return records
+         */
+        public java.util.List<Records> getRecords() {
+            return this.records;
+        }
+
+        public static final class Builder {
+            private Boolean canAutoResolve; 
+            private Boolean hasConflict; 
+            private String message; 
+            private java.util.List<Records> records; 
+
+            private Builder() {
+            } 
+
+            private Builder(DnsConflict model) {
+                this.canAutoResolve = model.canAutoResolve;
+                this.hasConflict = model.hasConflict;
+                this.message = model.message;
+                this.records = model.records;
+            } 
+
+            /**
+             * CanAutoResolve.
+             */
+            public Builder canAutoResolve(Boolean canAutoResolve) {
+                this.canAutoResolve = canAutoResolve;
+                return this;
+            }
+
+            /**
+             * HasConflict.
+             */
+            public Builder hasConflict(Boolean hasConflict) {
+                this.hasConflict = hasConflict;
+                return this;
+            }
+
+            /**
+             * Message.
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * Records.
+             */
+            public Builder records(java.util.List<Records> records) {
+                this.records = records;
+                return this;
+            }
+
+            public DnsConflict build() {
+                return new DnsConflict(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link BindAppDomainResponseBody} extends {@link TeaModel}
+     *
+     * <p>BindAppDomainResponseBody</p>
+     */
     public static class Module extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DnsConflict")
+        private DnsConflict dnsConflict;
+
         @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private Module(Builder builder) {
+            this.dnsConflict = builder.dnsConflict;
             this.success = builder.success;
         }
 
@@ -338,6 +576,13 @@ public class BindAppDomainResponseBody extends TeaModel {
         }
 
         /**
+         * @return dnsConflict
+         */
+        public DnsConflict getDnsConflict() {
+            return this.dnsConflict;
+        }
+
+        /**
          * @return success
          */
         public Boolean getSuccess() {
@@ -345,14 +590,24 @@ public class BindAppDomainResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private DnsConflict dnsConflict; 
             private Boolean success; 
 
             private Builder() {
             } 
 
             private Builder(Module model) {
+                this.dnsConflict = model.dnsConflict;
                 this.success = model.success;
             } 
+
+            /**
+             * DnsConflict.
+             */
+            public Builder dnsConflict(DnsConflict dnsConflict) {
+                this.dnsConflict = dnsConflict;
+                return this;
+            }
 
             /**
              * <p>Indicator of whether the request was successful.</p>

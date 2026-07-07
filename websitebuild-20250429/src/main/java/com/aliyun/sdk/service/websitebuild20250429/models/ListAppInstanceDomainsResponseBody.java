@@ -491,6 +491,315 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
      *
      * <p>ListAppInstanceDomainsResponseBody</p>
      */
+    public static class Records extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Host")
+        private String host;
+
+        @com.aliyun.core.annotation.NameInMap("RecordType")
+        private String recordType;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Records(Builder builder) {
+            this.host = builder.host;
+            this.recordType = builder.recordType;
+            this.status = builder.status;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Records create() {
+            return builder().build();
+        }
+
+        /**
+         * @return host
+         */
+        public String getHost() {
+            return this.host;
+        }
+
+        /**
+         * @return recordType
+         */
+        public String getRecordType() {
+            return this.recordType;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String host; 
+            private String recordType; 
+            private String status; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.host = model.host;
+                this.recordType = model.recordType;
+                this.status = model.status;
+                this.value = model.value;
+            } 
+
+            /**
+             * Host.
+             */
+            public Builder host(String host) {
+                this.host = host;
+                return this;
+            }
+
+            /**
+             * RecordType.
+             */
+            public Builder recordType(String recordType) {
+                this.recordType = recordType;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Records build() {
+                return new Records(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListAppInstanceDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAppInstanceDomainsResponseBody</p>
+     */
+    public static class DnsConflict extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CanAutoResolve")
+        private Boolean canAutoResolve;
+
+        @com.aliyun.core.annotation.NameInMap("HasConflict")
+        private Boolean hasConflict;
+
+        @com.aliyun.core.annotation.NameInMap("Message")
+        private String message;
+
+        @com.aliyun.core.annotation.NameInMap("Records")
+        private java.util.List<Records> records;
+
+        private DnsConflict(Builder builder) {
+            this.canAutoResolve = builder.canAutoResolve;
+            this.hasConflict = builder.hasConflict;
+            this.message = builder.message;
+            this.records = builder.records;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DnsConflict create() {
+            return builder().build();
+        }
+
+        /**
+         * @return canAutoResolve
+         */
+        public Boolean getCanAutoResolve() {
+            return this.canAutoResolve;
+        }
+
+        /**
+         * @return hasConflict
+         */
+        public Boolean getHasConflict() {
+            return this.hasConflict;
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        /**
+         * @return records
+         */
+        public java.util.List<Records> getRecords() {
+            return this.records;
+        }
+
+        public static final class Builder {
+            private Boolean canAutoResolve; 
+            private Boolean hasConflict; 
+            private String message; 
+            private java.util.List<Records> records; 
+
+            private Builder() {
+            } 
+
+            private Builder(DnsConflict model) {
+                this.canAutoResolve = model.canAutoResolve;
+                this.hasConflict = model.hasConflict;
+                this.message = model.message;
+                this.records = model.records;
+            } 
+
+            /**
+             * CanAutoResolve.
+             */
+            public Builder canAutoResolve(Boolean canAutoResolve) {
+                this.canAutoResolve = canAutoResolve;
+                return this;
+            }
+
+            /**
+             * HasConflict.
+             */
+            public Builder hasConflict(Boolean hasConflict) {
+                this.hasConflict = hasConflict;
+                return this;
+            }
+
+            /**
+             * Message.
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * Records.
+             */
+            public Builder records(java.util.List<Records> records) {
+                this.records = records;
+                return this;
+            }
+
+            public DnsConflict build() {
+                return new DnsConflict(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListAppInstanceDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAppInstanceDomainsResponseBody</p>
+     */
+    public static class Migration extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MigrationStatus")
+        private String migrationStatus;
+
+        @com.aliyun.core.annotation.NameInMap("PreviousDomain")
+        private Object previousDomain;
+
+        private Migration(Builder builder) {
+            this.migrationStatus = builder.migrationStatus;
+            this.previousDomain = builder.previousDomain;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Migration create() {
+            return builder().build();
+        }
+
+        /**
+         * @return migrationStatus
+         */
+        public String getMigrationStatus() {
+            return this.migrationStatus;
+        }
+
+        /**
+         * @return previousDomain
+         */
+        public Object getPreviousDomain() {
+            return this.previousDomain;
+        }
+
+        public static final class Builder {
+            private String migrationStatus; 
+            private Object previousDomain; 
+
+            private Builder() {
+            } 
+
+            private Builder(Migration model) {
+                this.migrationStatus = model.migrationStatus;
+                this.previousDomain = model.previousDomain;
+            } 
+
+            /**
+             * MigrationStatus.
+             */
+            public Builder migrationStatus(String migrationStatus) {
+                this.migrationStatus = migrationStatus;
+                return this;
+            }
+
+            /**
+             * PreviousDomain.
+             */
+            public Builder previousDomain(Object previousDomain) {
+                this.previousDomain = previousDomain;
+                return this;
+            }
+
+            public Migration build() {
+                return new Migration(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListAppInstanceDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAppInstanceDomainsResponseBody</p>
+     */
     public static class Ownership extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Account")
         private String account;
@@ -1137,8 +1446,14 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("DnsConflict")
+        private DnsConflict dnsConflict;
+
         @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
+
+        @com.aliyun.core.annotation.NameInMap("Migration")
+        private Migration migration;
 
         @com.aliyun.core.annotation.NameInMap("OverallStatus")
         private String overallStatus;
@@ -1158,7 +1473,9 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.certificate = builder.certificate;
             this.createTime = builder.createTime;
+            this.dnsConflict = builder.dnsConflict;
             this.domainName = builder.domainName;
+            this.migration = builder.migration;
             this.overallStatus = builder.overallStatus;
             this.ownership = builder.ownership;
             this.qualification = builder.qualification;
@@ -1189,10 +1506,24 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
+         * @return dnsConflict
+         */
+        public DnsConflict getDnsConflict() {
+            return this.dnsConflict;
+        }
+
+        /**
          * @return domainName
          */
         public String getDomainName() {
             return this.domainName;
+        }
+
+        /**
+         * @return migration
+         */
+        public Migration getMigration() {
+            return this.migration;
         }
 
         /**
@@ -1233,7 +1564,9 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public static final class Builder {
             private Certificate certificate; 
             private String createTime; 
+            private DnsConflict dnsConflict; 
             private String domainName; 
+            private Migration migration; 
             private String overallStatus; 
             private Ownership ownership; 
             private Qualification qualification; 
@@ -1246,7 +1579,9 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.certificate = model.certificate;
                 this.createTime = model.createTime;
+                this.dnsConflict = model.dnsConflict;
                 this.domainName = model.domainName;
+                this.migration = model.migration;
                 this.overallStatus = model.overallStatus;
                 this.ownership = model.ownership;
                 this.qualification = model.qualification;
@@ -1274,6 +1609,14 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
+             * DnsConflict.
+             */
+            public Builder dnsConflict(DnsConflict dnsConflict) {
+                this.dnsConflict = dnsConflict;
+                return this;
+            }
+
+            /**
              * <p>Domain name</p>
              * 
              * <strong>example:</strong>
@@ -1281,6 +1624,14 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
+                return this;
+            }
+
+            /**
+             * Migration.
+             */
+            public Builder migration(Migration migration) {
+                this.migration = migration;
                 return this;
             }
 
@@ -1469,6 +1820,303 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
      *
      * <p>ListAppInstanceDomainsResponseBody</p>
      */
+    public static class DnsConflictRecords extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Host")
+        private String host;
+
+        @com.aliyun.core.annotation.NameInMap("RecordType")
+        private String recordType;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private DnsConflictRecords(Builder builder) {
+            this.host = builder.host;
+            this.recordType = builder.recordType;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DnsConflictRecords create() {
+            return builder().build();
+        }
+
+        /**
+         * @return host
+         */
+        public String getHost() {
+            return this.host;
+        }
+
+        /**
+         * @return recordType
+         */
+        public String getRecordType() {
+            return this.recordType;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String host; 
+            private String recordType; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(DnsConflictRecords model) {
+                this.host = model.host;
+                this.recordType = model.recordType;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>Host record</p>
+             * 
+             * <strong>example:</strong>
+             * <p>${host}</p>
+             */
+            public Builder host(String host) {
+                this.host = host;
+                return this;
+            }
+
+            /**
+             * <p>Record type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder recordType(String recordType) {
+                this.recordType = recordType;
+                return this;
+            }
+
+            /**
+             * <p>Record value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>159.138.94.138</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public DnsConflictRecords build() {
+                return new DnsConflictRecords(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListAppInstanceDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAppInstanceDomainsResponseBody</p>
+     */
+    public static class NextDnsConflict extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CanAutoResolve")
+        private Boolean canAutoResolve;
+
+        @com.aliyun.core.annotation.NameInMap("HasConflict")
+        private Boolean hasConflict;
+
+        @com.aliyun.core.annotation.NameInMap("Message")
+        private String message;
+
+        @com.aliyun.core.annotation.NameInMap("Records")
+        private java.util.List<DnsConflictRecords> records;
+
+        private NextDnsConflict(Builder builder) {
+            this.canAutoResolve = builder.canAutoResolve;
+            this.hasConflict = builder.hasConflict;
+            this.message = builder.message;
+            this.records = builder.records;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NextDnsConflict create() {
+            return builder().build();
+        }
+
+        /**
+         * @return canAutoResolve
+         */
+        public Boolean getCanAutoResolve() {
+            return this.canAutoResolve;
+        }
+
+        /**
+         * @return hasConflict
+         */
+        public Boolean getHasConflict() {
+            return this.hasConflict;
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        /**
+         * @return records
+         */
+        public java.util.List<DnsConflictRecords> getRecords() {
+            return this.records;
+        }
+
+        public static final class Builder {
+            private Boolean canAutoResolve; 
+            private Boolean hasConflict; 
+            private String message; 
+            private java.util.List<DnsConflictRecords> records; 
+
+            private Builder() {
+            } 
+
+            private Builder(NextDnsConflict model) {
+                this.canAutoResolve = model.canAutoResolve;
+                this.hasConflict = model.hasConflict;
+                this.message = model.message;
+                this.records = model.records;
+            } 
+
+            /**
+             * CanAutoResolve.
+             */
+            public Builder canAutoResolve(Boolean canAutoResolve) {
+                this.canAutoResolve = canAutoResolve;
+                return this;
+            }
+
+            /**
+             * HasConflict.
+             */
+            public Builder hasConflict(Boolean hasConflict) {
+                this.hasConflict = hasConflict;
+                return this;
+            }
+
+            /**
+             * Message.
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * Records.
+             */
+            public Builder records(java.util.List<DnsConflictRecords> records) {
+                this.records = records;
+                return this;
+            }
+
+            public NextDnsConflict build() {
+                return new NextDnsConflict(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListAppInstanceDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAppInstanceDomainsResponseBody</p>
+     */
+    public static class NextMigration extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MigrationStatus")
+        private String migrationStatus;
+
+        @com.aliyun.core.annotation.NameInMap("PreviousDomain")
+        private Object previousDomain;
+
+        private NextMigration(Builder builder) {
+            this.migrationStatus = builder.migrationStatus;
+            this.previousDomain = builder.previousDomain;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NextMigration create() {
+            return builder().build();
+        }
+
+        /**
+         * @return migrationStatus
+         */
+        public String getMigrationStatus() {
+            return this.migrationStatus;
+        }
+
+        /**
+         * @return previousDomain
+         */
+        public Object getPreviousDomain() {
+            return this.previousDomain;
+        }
+
+        public static final class Builder {
+            private String migrationStatus; 
+            private Object previousDomain; 
+
+            private Builder() {
+            } 
+
+            private Builder(NextMigration model) {
+                this.migrationStatus = model.migrationStatus;
+                this.previousDomain = model.previousDomain;
+            } 
+
+            /**
+             * MigrationStatus.
+             */
+            public Builder migrationStatus(String migrationStatus) {
+                this.migrationStatus = migrationStatus;
+                return this;
+            }
+
+            /**
+             * PreviousDomain.
+             */
+            public Builder previousDomain(Object previousDomain) {
+                this.previousDomain = previousDomain;
+                return this;
+            }
+
+            public NextMigration build() {
+                return new NextMigration(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListAppInstanceDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAppInstanceDomainsResponseBody</p>
+     */
     public static class NextOwnership extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Account")
         private String account;
@@ -1476,9 +2124,13 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Provider")
         private String provider;
 
+        @com.aliyun.core.annotation.NameInMap("RootDomain")
+        private String rootDomain;
+
         private NextOwnership(Builder builder) {
             this.account = builder.account;
             this.provider = builder.provider;
+            this.rootDomain = builder.rootDomain;
         }
 
         public static Builder builder() {
@@ -1503,9 +2155,17 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             return this.provider;
         }
 
+        /**
+         * @return rootDomain
+         */
+        public String getRootDomain() {
+            return this.rootDomain;
+        }
+
         public static final class Builder {
             private String account; 
             private String provider; 
+            private String rootDomain; 
 
             private Builder() {
             } 
@@ -1513,6 +2173,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             private Builder(NextOwnership model) {
                 this.account = model.account;
                 this.provider = model.provider;
+                this.rootDomain = model.rootDomain;
             } 
 
             /**
@@ -1534,6 +2195,17 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
              */
             public Builder provider(String provider) {
                 this.provider = provider;
+                return this;
+            }
+
+            /**
+             * <p>The root domain name of the domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tjouya.cn</p>
+             */
+            public Builder rootDomain(String rootDomain) {
+                this.rootDomain = rootDomain;
                 return this;
             }
 
@@ -1968,10 +2640,14 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VerificationStatus")
         private String verificationStatus;
 
+        @com.aliyun.core.annotation.NameInMap("VerificationStatusCode")
+        private String verificationStatusCode;
+
         private NextVerification(Builder builder) {
             this.dnsRecord = builder.dnsRecord;
             this.errorMsg = builder.errorMsg;
             this.verificationStatus = builder.verificationStatus;
+            this.verificationStatusCode = builder.verificationStatusCode;
         }
 
         public static Builder builder() {
@@ -2003,10 +2679,18 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             return this.verificationStatus;
         }
 
+        /**
+         * @return verificationStatusCode
+         */
+        public String getVerificationStatusCode() {
+            return this.verificationStatusCode;
+        }
+
         public static final class Builder {
             private NextVerificationDnsRecord dnsRecord; 
             private String errorMsg; 
             private String verificationStatus; 
+            private String verificationStatusCode; 
 
             private Builder() {
             } 
@@ -2015,6 +2699,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
                 this.dnsRecord = model.dnsRecord;
                 this.errorMsg = model.errorMsg;
                 this.verificationStatus = model.verificationStatus;
+                this.verificationStatusCode = model.verificationStatusCode;
             } 
 
             /**
@@ -2047,6 +2732,17 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * <p>Ownership verification status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NoAliyunServiceRoleForWebsiteBuildPublishAuth</p>
+             */
+            public Builder verificationStatusCode(String verificationStatusCode) {
+                this.verificationStatusCode = verificationStatusCode;
+                return this;
+            }
+
             public NextVerification build() {
                 return new NextVerification(this);
             } 
@@ -2067,8 +2763,14 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("DnsConflict")
+        private NextDnsConflict dnsConflict;
+
         @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
+
+        @com.aliyun.core.annotation.NameInMap("Migration")
+        private NextMigration migration;
 
         @com.aliyun.core.annotation.NameInMap("OverallStatus")
         private String overallStatus;
@@ -2088,7 +2790,9 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         private Next(Builder builder) {
             this.certificate = builder.certificate;
             this.createTime = builder.createTime;
+            this.dnsConflict = builder.dnsConflict;
             this.domainName = builder.domainName;
+            this.migration = builder.migration;
             this.overallStatus = builder.overallStatus;
             this.ownership = builder.ownership;
             this.qualification = builder.qualification;
@@ -2119,10 +2823,24 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
+         * @return dnsConflict
+         */
+        public NextDnsConflict getDnsConflict() {
+            return this.dnsConflict;
+        }
+
+        /**
          * @return domainName
          */
         public String getDomainName() {
             return this.domainName;
+        }
+
+        /**
+         * @return migration
+         */
+        public NextMigration getMigration() {
+            return this.migration;
         }
 
         /**
@@ -2163,7 +2881,9 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public static final class Builder {
             private NextCertificate certificate; 
             private String createTime; 
+            private NextDnsConflict dnsConflict; 
             private String domainName; 
+            private NextMigration migration; 
             private String overallStatus; 
             private NextOwnership ownership; 
             private NextQualification qualification; 
@@ -2176,7 +2896,9 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             private Builder(Next model) {
                 this.certificate = model.certificate;
                 this.createTime = model.createTime;
+                this.dnsConflict = model.dnsConflict;
                 this.domainName = model.domainName;
+                this.migration = model.migration;
                 this.overallStatus = model.overallStatus;
                 this.ownership = model.ownership;
                 this.qualification = model.qualification;
@@ -2204,6 +2926,14 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
+             * DnsConflict.
+             */
+            public Builder dnsConflict(NextDnsConflict dnsConflict) {
+                this.dnsConflict = dnsConflict;
+                return this;
+            }
+
+            /**
              * <p>Domain name</p>
              * 
              * <strong>example:</strong>
@@ -2211,6 +2941,14 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
+                return this;
+            }
+
+            /**
+             * Migration.
+             */
+            public Builder migration(NextMigration migration) {
+                this.migration = migration;
                 return this;
             }
 
