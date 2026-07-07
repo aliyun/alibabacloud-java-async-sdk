@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ConfirmDisburseCmd</p>
  */
 public class ConfirmDisburseCmd extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("disputeId")
+    private String disputeId;
+
     @com.aliyun.core.annotation.NameInMap("orderId")
     private String orderId;
 
@@ -24,6 +27,7 @@ public class ConfirmDisburseCmd extends TeaModel {
     private String purchaseOrderId;
 
     private ConfirmDisburseCmd(Builder builder) {
+        this.disputeId = builder.disputeId;
         this.orderId = builder.orderId;
         this.purchaseOrderId = builder.purchaseOrderId;
     }
@@ -41,6 +45,13 @@ public class ConfirmDisburseCmd extends TeaModel {
     }
 
     /**
+     * @return disputeId
+     */
+    public String getDisputeId() {
+        return this.disputeId;
+    }
+
+    /**
      * @return orderId
      */
     public String getOrderId() {
@@ -55,6 +66,7 @@ public class ConfirmDisburseCmd extends TeaModel {
     }
 
     public static final class Builder {
+        private String disputeId; 
         private String orderId; 
         private String purchaseOrderId; 
 
@@ -62,9 +74,18 @@ public class ConfirmDisburseCmd extends TeaModel {
         } 
 
         private Builder(ConfirmDisburseCmd model) {
+            this.disputeId = model.disputeId;
             this.orderId = model.orderId;
             this.purchaseOrderId = model.purchaseOrderId;
         } 
+
+        /**
+         * disputeId.
+         */
+        public Builder disputeId(String disputeId) {
+            this.disputeId = disputeId;
+            return this;
+        }
 
         /**
          * orderId.
