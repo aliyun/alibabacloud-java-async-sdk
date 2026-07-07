@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of ActivateEdgeMobileAgent  ActivateEdgeMobileAgentRequest
+     * @return ActivateEdgeMobileAgentResponse
+     */
+    CompletableFuture<ActivateEdgeMobileAgentResponse> activateEdgeMobileAgent(ActivateEdgeMobileAgentRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  You can attach to an ADB key pair only to cloud phone instances in the Running state.</p>
      * <ul>
@@ -145,6 +151,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateCustomImageResponse
      */
     CompletableFuture<CreateCustomImageResponse> createCustomImage(CreateCustomImageRequest request);
+
+    /**
+     * @param request the request parameters of CreateEdgeMobileAgentPackage  CreateEdgeMobileAgentPackageRequest
+     * @return CreateEdgeMobileAgentPackageResponse
+     */
+    CompletableFuture<CreateEdgeMobileAgentPackageResponse> createEdgeMobileAgentPackage(CreateEdgeMobileAgentPackageRequest request);
 
     /**
      * <b>description</b> :
@@ -315,6 +327,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeDisplayConfigResponse
      */
     CompletableFuture<DescribeDisplayConfigResponse> describeDisplayConfig(DescribeDisplayConfigRequest request);
+
+    /**
+     * @param request the request parameters of DescribeEdgeMobileAgentPackages  DescribeEdgeMobileAgentPackagesRequest
+     * @return DescribeEdgeMobileAgentPackagesResponse
+     */
+    CompletableFuture<DescribeEdgeMobileAgentPackagesResponse> describeEdgeMobileAgentPackages(DescribeEdgeMobileAgentPackagesRequest request);
 
     /**
      * @param request the request parameters of DescribeImageList  DescribeImageListRequest
@@ -636,6 +654,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RecoveryFileResponse
      */
     CompletableFuture<RecoveryFileResponse> recoveryFile(RecoveryFileRequest request);
+
+    /**
+     * @param request the request parameters of RefreshAuthTokens  RefreshAuthTokensRequest
+     * @return RefreshAuthTokensResponse
+     */
+    CompletableFuture<RefreshAuthTokensResponse> refreshAuthTokens(RefreshAuthTokensRequest request);
 
     /**
      * @param request the request parameters of RenewAndroidInstanceGroups  RenewAndroidInstanceGroupsRequest

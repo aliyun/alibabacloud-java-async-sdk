@@ -43,6 +43,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ActivateEdgeMobileAgent  ActivateEdgeMobileAgentRequest
+     * @return ActivateEdgeMobileAgentResponse
+     */
+    @Override
+    public CompletableFuture<ActivateEdgeMobileAgentResponse> activateEdgeMobileAgent(ActivateEdgeMobileAgentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ActivateEdgeMobileAgent").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ActivateEdgeMobileAgentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ActivateEdgeMobileAgentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>  You can attach to an ADB key pair only to cloud phone instances in the Running state.</p>
      * <ul>
@@ -332,6 +350,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateCustomImageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateEdgeMobileAgentPackage  CreateEdgeMobileAgentPackageRequest
+     * @return CreateEdgeMobileAgentPackageResponse
+     */
+    @Override
+    public CompletableFuture<CreateEdgeMobileAgentPackageResponse> createEdgeMobileAgentPackage(CreateEdgeMobileAgentPackageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateEdgeMobileAgentPackage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateEdgeMobileAgentPackageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateEdgeMobileAgentPackageResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -790,6 +826,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeDisplayConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeEdgeMobileAgentPackages  DescribeEdgeMobileAgentPackagesRequest
+     * @return DescribeEdgeMobileAgentPackagesResponse
+     */
+    @Override
+    public CompletableFuture<DescribeEdgeMobileAgentPackagesResponse> describeEdgeMobileAgentPackages(DescribeEdgeMobileAgentPackagesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeEdgeMobileAgentPackages").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeEdgeMobileAgentPackagesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeEdgeMobileAgentPackagesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1675,6 +1729,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RecoveryFileResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RefreshAuthTokens  RefreshAuthTokensRequest
+     * @return RefreshAuthTokensResponse
+     */
+    @Override
+    public CompletableFuture<RefreshAuthTokensResponse> refreshAuthTokens(RefreshAuthTokensRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RefreshAuthTokens").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RefreshAuthTokensResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RefreshAuthTokensResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
