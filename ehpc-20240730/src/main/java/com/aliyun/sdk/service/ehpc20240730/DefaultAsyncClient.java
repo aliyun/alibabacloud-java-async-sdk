@@ -30,7 +30,26 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "EHPC";
         this.version = "2024-07-30";
         this.endpointRule = "regional";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("eu-central-1", "ehpc.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "ehpc.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "ehpc.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-wuhan-lr", "ehpc.cn-wuhan-lr.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "ehpc.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "ehpc.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "ehpc.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "ehpc.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "ehpc.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "ehpc.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "ehpc.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "ehpc.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "ehpc.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "ehpc.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "ehpc.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "ehpc.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "ehpc.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "ehpc.ap-northeast-1.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 

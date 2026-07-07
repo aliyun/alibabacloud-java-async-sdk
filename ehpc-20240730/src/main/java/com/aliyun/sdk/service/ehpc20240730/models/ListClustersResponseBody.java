@@ -20,6 +20,9 @@ public class ListClustersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Clusters")
     private java.util.List<Clusters> clusters;
 
+    @com.aliyun.core.annotation.NameInMap("EhpcVersionStatistics")
+    private EhpcVersionStatistics ehpcVersionStatistics;
+
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
@@ -34,6 +37,7 @@ public class ListClustersResponseBody extends TeaModel {
 
     private ListClustersResponseBody(Builder builder) {
         this.clusters = builder.clusters;
+        this.ehpcVersionStatistics = builder.ehpcVersionStatistics;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
@@ -57,6 +61,13 @@ public class ListClustersResponseBody extends TeaModel {
      */
     public java.util.List<Clusters> getClusters() {
         return this.clusters;
+    }
+
+    /**
+     * @return ehpcVersionStatistics
+     */
+    public EhpcVersionStatistics getEhpcVersionStatistics() {
+        return this.ehpcVersionStatistics;
     }
 
     /**
@@ -89,6 +100,7 @@ public class ListClustersResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<Clusters> clusters; 
+        private EhpcVersionStatistics ehpcVersionStatistics; 
         private String pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -99,6 +111,7 @@ public class ListClustersResponseBody extends TeaModel {
 
         private Builder(ListClustersResponseBody model) {
             this.clusters = model.clusters;
+            this.ehpcVersionStatistics = model.ehpcVersionStatistics;
             this.pageNumber = model.pageNumber;
             this.pageSize = model.pageSize;
             this.requestId = model.requestId;
@@ -110,6 +123,14 @@ public class ListClustersResponseBody extends TeaModel {
          */
         public Builder clusters(java.util.List<Clusters> clusters) {
             this.clusters = clusters;
+            return this;
+        }
+
+        /**
+         * EhpcVersionStatistics.
+         */
+        public Builder ehpcVersionStatistics(EhpcVersionStatistics ehpcVersionStatistics) {
+            this.ehpcVersionStatistics = ehpcVersionStatistics;
             return this;
         }
 
@@ -1866,6 +1887,81 @@ public class ListClustersResponseBody extends TeaModel {
 
             public Clusters build() {
                 return new Clusters(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClustersResponseBody</p>
+     */
+    public static class EhpcVersionStatistics extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("V1Count")
+        private Integer v1Count;
+
+        @com.aliyun.core.annotation.NameInMap("V2Count")
+        private Integer v2Count;
+
+        private EhpcVersionStatistics(Builder builder) {
+            this.v1Count = builder.v1Count;
+            this.v2Count = builder.v2Count;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EhpcVersionStatistics create() {
+            return builder().build();
+        }
+
+        /**
+         * @return v1Count
+         */
+        public Integer getV1Count() {
+            return this.v1Count;
+        }
+
+        /**
+         * @return v2Count
+         */
+        public Integer getV2Count() {
+            return this.v2Count;
+        }
+
+        public static final class Builder {
+            private Integer v1Count; 
+            private Integer v2Count; 
+
+            private Builder() {
+            } 
+
+            private Builder(EhpcVersionStatistics model) {
+                this.v1Count = model.v1Count;
+                this.v2Count = model.v2Count;
+            } 
+
+            /**
+             * V1Count.
+             */
+            public Builder v1Count(Integer v1Count) {
+                this.v1Count = v1Count;
+                return this;
+            }
+
+            /**
+             * V2Count.
+             */
+            public Builder v2Count(Integer v2Count) {
+                this.v2Count = v2Count;
+                return this;
+            }
+
+            public EhpcVersionStatistics build() {
+                return new EhpcVersionStatistics(this);
             } 
 
         } 
