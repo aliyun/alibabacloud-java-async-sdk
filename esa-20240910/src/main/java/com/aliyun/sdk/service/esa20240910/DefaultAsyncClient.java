@@ -2777,6 +2777,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeSiteWafTimeSeriesData  DescribeSiteWafTimeSeriesDataRequest
+     * @return DescribeSiteWafTimeSeriesDataResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSiteWafTimeSeriesDataResponse> describeSiteWafTimeSeriesData(DescribeSiteWafTimeSeriesDataRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSiteWafTimeSeriesData").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSiteWafTimeSeriesDataResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSiteWafTimeSeriesDataResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeSiteWafTopData  DescribeSiteWafTopDataRequest
+     * @return DescribeSiteWafTopDataResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSiteWafTopDataResponse> describeSiteWafTopData(DescribeSiteWafTopDataRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSiteWafTopData").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSiteWafTopDataResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSiteWafTopDataResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeTraceDiagnoseReport  DescribeTraceDiagnoseReportRequest
      * @return DescribeTraceDiagnoseReportResponse
      */
@@ -2810,6 +2846,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeUrlObservationDataResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeWafUsageData  DescribeWafUsageDataRequest
+     * @return DescribeWafUsageDataResponse
+     */
+    @Override
+    public CompletableFuture<DescribeWafUsageDataResponse> describeWafUsageData(DescribeWafUsageDataRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeWafUsageData").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeWafUsageDataResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeWafUsageDataResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -6094,6 +6148,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<PublishRoutineCodeVersionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of PurchaseBotInstance  PurchaseBotInstanceRequest
+     * @return PurchaseBotInstanceResponse
+     */
+    @Override
+    public CompletableFuture<PurchaseBotInstanceResponse> purchaseBotInstance(PurchaseBotInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("PurchaseBotInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PurchaseBotInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PurchaseBotInstanceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -1002,6 +1002,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSiteTopDataResponse> describeSiteTopData(DescribeSiteTopDataRequest request);
 
     /**
+     * @param request the request parameters of DescribeSiteWafTimeSeriesData  DescribeSiteWafTimeSeriesDataRequest
+     * @return DescribeSiteWafTimeSeriesDataResponse
+     */
+    CompletableFuture<DescribeSiteWafTimeSeriesDataResponse> describeSiteWafTimeSeriesData(DescribeSiteWafTimeSeriesDataRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSiteWafTopData  DescribeSiteWafTopDataRequest
+     * @return DescribeSiteWafTopDataResponse
+     */
+    CompletableFuture<DescribeSiteWafTopDataResponse> describeSiteWafTopData(DescribeSiteWafTopDataRequest request);
+
+    /**
      * @param request the request parameters of DescribeTraceDiagnoseReport  DescribeTraceDiagnoseReportRequest
      * @return DescribeTraceDiagnoseReportResponse
      */
@@ -1015,6 +1027,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeUrlObservationDataResponse
      */
     CompletableFuture<DescribeUrlObservationDataResponse> describeUrlObservationData(DescribeUrlObservationDataRequest request);
+
+    /**
+     * @param request the request parameters of DescribeWafUsageData  DescribeWafUsageDataRequest
+     * @return DescribeWafUsageDataResponse
+     */
+    CompletableFuture<DescribeWafUsageDataResponse> describeWafUsageData(DescribeWafUsageDataRequest request);
 
     /**
      * @param request the request parameters of DisableCustomScenePolicy  DisableCustomScenePolicyRequest
@@ -2163,6 +2181,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return PublishRoutineCodeVersionResponse
      */
     CompletableFuture<PublishRoutineCodeVersionResponse> publishRoutineCodeVersion(PublishRoutineCodeVersionRequest request);
+
+    /**
+     * @param request the request parameters of PurchaseBotInstance  PurchaseBotInstanceRequest
+     * @return PurchaseBotInstanceResponse
+     */
+    CompletableFuture<PurchaseBotInstanceResponse> purchaseBotInstance(PurchaseBotInstanceRequest request);
 
     /**
      * @param request the request parameters of PurchaseCacheReserve  PurchaseCacheReserveRequest
