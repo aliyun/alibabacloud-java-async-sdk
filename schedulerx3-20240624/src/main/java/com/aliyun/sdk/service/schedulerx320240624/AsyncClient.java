@@ -38,6 +38,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateClusterResponse> createCluster(CreateClusterRequest request);
 
     /**
+     * @param request the request parameters of CreateContact  CreateContactRequest
+     * @return CreateContactResponse
+     */
+    CompletableFuture<CreateContactResponse> createContact(CreateContactRequest request);
+
+    /**
      * @param request the request parameters of CreateDatasource  CreateDatasourceRequest
      * @return CreateDatasourceResponse
      */
@@ -84,6 +90,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteClusterResponse
      */
     CompletableFuture<DeleteClusterResponse> deleteCluster(DeleteClusterRequest request);
+
+    /**
+     * @param request the request parameters of DeleteContact  DeleteContactRequest
+     * @return DeleteContactResponse
+     */
+    CompletableFuture<DeleteContactResponse> deleteContact(DeleteContactRequest request);
 
     /**
      * @param request the request parameters of DeleteDatasource  DeleteDatasourceRequest
@@ -270,6 +282,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListClustersResponse
      */
     CompletableFuture<ListClustersResponse> listClusters(ListClustersRequest request);
+
+    /**
+     * @param request the request parameters of ListContacts  ListContactsRequest
+     * @return ListContactsResponse
+     */
+    CompletableFuture<ListContactsResponse> listContacts(ListContactsRequest request);
 
     /**
      * @param request the request parameters of ListDatasources  ListDatasourcesRequest
@@ -516,6 +534,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateClusterResponse
      */
     CompletableFuture<UpdateClusterResponse> updateCluster(UpdateClusterRequest request);
+
+    /**
+     * @param request the request parameters of UpdateContact  UpdateContactRequest
+     * @return UpdateContactResponse
+     */
+    CompletableFuture<UpdateContactResponse> updateContact(UpdateContactRequest request);
 
     /**
      * @param request the request parameters of UpdateDatasource  UpdateDatasourceRequest

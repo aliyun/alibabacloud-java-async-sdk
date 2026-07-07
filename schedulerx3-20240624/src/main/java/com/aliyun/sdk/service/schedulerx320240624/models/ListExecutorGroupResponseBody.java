@@ -297,11 +297,17 @@ public class ListExecutorGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CmsWorkspaceId")
         private String cmsWorkspaceId;
 
+        @com.aliyun.core.annotation.NameInMap("CurrentJobs")
+        private Integer currentJobs;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("IntegrationType")
         private String integrationType;
+
+        @com.aliyun.core.annotation.NameInMap("MaxJobs")
+        private Integer maxJobs;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -333,8 +339,10 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             this.autoScale = builder.autoScale;
             this.citeList = builder.citeList;
             this.cmsWorkspaceId = builder.cmsWorkspaceId;
+            this.currentJobs = builder.currentJobs;
             this.description = builder.description;
             this.integrationType = builder.integrationType;
+            this.maxJobs = builder.maxJobs;
             this.name = builder.name;
             this.network = builder.network;
             this.protocol = builder.protocol;
@@ -389,6 +397,13 @@ public class ListExecutorGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return currentJobs
+         */
+        public Integer getCurrentJobs() {
+            return this.currentJobs;
+        }
+
+        /**
          * @return description
          */
         public String getDescription() {
@@ -400,6 +415,13 @@ public class ListExecutorGroupResponseBody extends TeaModel {
          */
         public String getIntegrationType() {
             return this.integrationType;
+        }
+
+        /**
+         * @return maxJobs
+         */
+        public Integer getMaxJobs() {
+            return this.maxJobs;
         }
 
         /**
@@ -464,8 +486,10 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             private Boolean autoScale; 
             private java.util.List<CiteList> citeList; 
             private String cmsWorkspaceId; 
+            private Integer currentJobs; 
             private String description; 
             private String integrationType; 
+            private Integer maxJobs; 
             private String name; 
             private String network; 
             private String protocol; 
@@ -484,8 +508,10 @@ public class ListExecutorGroupResponseBody extends TeaModel {
                 this.autoScale = model.autoScale;
                 this.citeList = model.citeList;
                 this.cmsWorkspaceId = model.cmsWorkspaceId;
+                this.currentJobs = model.currentJobs;
                 this.description = model.description;
                 this.integrationType = model.integrationType;
+                this.maxJobs = model.maxJobs;
                 this.name = model.name;
                 this.network = model.network;
                 this.protocol = model.protocol;
@@ -537,6 +563,14 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             }
 
             /**
+             * CurrentJobs.
+             */
+            public Builder currentJobs(Integer currentJobs) {
+                this.currentJobs = currentJobs;
+                return this;
+            }
+
+            /**
              * Description.
              */
             public Builder description(String description) {
@@ -549,6 +583,14 @@ public class ListExecutorGroupResponseBody extends TeaModel {
              */
             public Builder integrationType(String integrationType) {
                 this.integrationType = integrationType;
+                return this;
+            }
+
+            /**
+             * MaxJobs.
+             */
+            public Builder maxJobs(Integer maxJobs) {
+                this.maxJobs = maxJobs;
                 return this;
             }
 
