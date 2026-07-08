@@ -22,6 +22,14 @@ public class AsyncCreateClipsTaskRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AdaptMode")
+    private String adaptMode;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Alignment")
+    private String alignment;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CloseMusic")
     private Boolean closeMusic;
 
@@ -99,6 +107,10 @@ public class AsyncCreateClipsTaskRequest extends Request {
     private String taskId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TextWidth")
+    private String textWidth;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VoiceStyle")
     private String voiceStyle;
 
@@ -118,6 +130,8 @@ public class AsyncCreateClipsTaskRequest extends Request {
     private AsyncCreateClipsTaskRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.adaptMode = builder.adaptMode;
+        this.alignment = builder.alignment;
         this.closeMusic = builder.closeMusic;
         this.closeSubtitle = builder.closeSubtitle;
         this.closeVoice = builder.closeVoice;
@@ -137,6 +151,7 @@ public class AsyncCreateClipsTaskRequest extends Request {
         this.stickers = builder.stickers;
         this.subtitleFontSize = builder.subtitleFontSize;
         this.taskId = builder.taskId;
+        this.textWidth = builder.textWidth;
         this.voiceStyle = builder.voiceStyle;
         this.voiceVolume = builder.voiceVolume;
         this.width = builder.width;
@@ -161,6 +176,20 @@ public class AsyncCreateClipsTaskRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return adaptMode
+     */
+    public String getAdaptMode() {
+        return this.adaptMode;
+    }
+
+    /**
+     * @return alignment
+     */
+    public String getAlignment() {
+        return this.alignment;
     }
 
     /**
@@ -297,6 +326,13 @@ public class AsyncCreateClipsTaskRequest extends Request {
     }
 
     /**
+     * @return textWidth
+     */
+    public String getTextWidth() {
+        return this.textWidth;
+    }
+
+    /**
      * @return voiceStyle
      */
     public String getVoiceStyle() {
@@ -326,6 +362,8 @@ public class AsyncCreateClipsTaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<AsyncCreateClipsTaskRequest, Builder> {
         private String regionId; 
+        private String adaptMode; 
+        private String alignment; 
         private Boolean closeMusic; 
         private Boolean closeSubtitle; 
         private Boolean closeVoice; 
@@ -345,6 +383,7 @@ public class AsyncCreateClipsTaskRequest extends Request {
         private java.util.List<Stickers> stickers; 
         private Integer subtitleFontSize; 
         private String taskId; 
+        private String textWidth; 
         private String voiceStyle; 
         private Integer voiceVolume; 
         private Integer width; 
@@ -357,6 +396,8 @@ public class AsyncCreateClipsTaskRequest extends Request {
         private Builder(AsyncCreateClipsTaskRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.adaptMode = request.adaptMode;
+            this.alignment = request.alignment;
             this.closeMusic = request.closeMusic;
             this.closeSubtitle = request.closeSubtitle;
             this.closeVoice = request.closeVoice;
@@ -376,6 +417,7 @@ public class AsyncCreateClipsTaskRequest extends Request {
             this.stickers = request.stickers;
             this.subtitleFontSize = request.subtitleFontSize;
             this.taskId = request.taskId;
+            this.textWidth = request.textWidth;
             this.voiceStyle = request.voiceStyle;
             this.voiceVolume = request.voiceVolume;
             this.width = request.width;
@@ -388,6 +430,24 @@ public class AsyncCreateClipsTaskRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * AdaptMode.
+         */
+        public Builder adaptMode(String adaptMode) {
+            this.putBodyParameter("AdaptMode", adaptMode);
+            this.adaptMode = adaptMode;
+            return this;
+        }
+
+        /**
+         * Alignment.
+         */
+        public Builder alignment(String alignment) {
+            this.putBodyParameter("Alignment", alignment);
+            this.alignment = alignment;
             return this;
         }
 
@@ -565,6 +625,15 @@ public class AsyncCreateClipsTaskRequest extends Request {
         public Builder taskId(String taskId) {
             this.putBodyParameter("TaskId", taskId);
             this.taskId = taskId;
+            return this;
+        }
+
+        /**
+         * TextWidth.
+         */
+        public Builder textWidth(String textWidth) {
+            this.putBodyParameter("TextWidth", textWidth);
+            this.textWidth = textWidth;
             return this;
         }
 
