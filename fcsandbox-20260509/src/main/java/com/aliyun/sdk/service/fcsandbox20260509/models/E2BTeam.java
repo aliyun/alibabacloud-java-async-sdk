@@ -12,31 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ApiKey} extends {@link TeaModel}
+ * {@link E2BTeam} extends {@link TeaModel}
  *
- * <p>ApiKey</p>
+ * <p>E2BTeam</p>
  */
-public class ApiKey extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("apiKeyID")
-    private String apiKeyID;
-
-    @com.aliyun.core.annotation.NameInMap("apiKeyMask")
-    private String apiKeyMask;
-
-    @com.aliyun.core.annotation.NameInMap("apiKeyName")
-    private String apiKeyName;
-
-    @com.aliyun.core.annotation.NameInMap("apiKeyValue")
-    private String apiKeyValue;
+public class E2BTeam extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("allowUpdateTeamName")
+    private Boolean allowUpdateTeamName;
 
     @com.aliyun.core.annotation.NameInMap("createdTime")
     private String createdTime;
 
-    @com.aliyun.core.annotation.NameInMap("expireTime")
-    private String expireTime;
-
-    @com.aliyun.core.annotation.NameInMap("lastUsedTime")
-    private String lastUsedTime;
+    @com.aliyun.core.annotation.NameInMap("description")
+    private String description;
 
     @com.aliyun.core.annotation.NameInMap("resourceGroupID")
     private String resourceGroupID;
@@ -53,30 +41,22 @@ public class ApiKey extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("userID")
     private String userID;
 
-    @com.aliyun.core.annotation.NameInMap("username")
-    private String username;
-
-    private ApiKey(Builder builder) {
-        this.apiKeyID = builder.apiKeyID;
-        this.apiKeyMask = builder.apiKeyMask;
-        this.apiKeyName = builder.apiKeyName;
-        this.apiKeyValue = builder.apiKeyValue;
+    private E2BTeam(Builder builder) {
+        this.allowUpdateTeamName = builder.allowUpdateTeamName;
         this.createdTime = builder.createdTime;
-        this.expireTime = builder.expireTime;
-        this.lastUsedTime = builder.lastUsedTime;
+        this.description = builder.description;
         this.resourceGroupID = builder.resourceGroupID;
         this.status = builder.status;
         this.teamID = builder.teamID;
         this.teamName = builder.teamName;
         this.userID = builder.userID;
-        this.username = builder.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ApiKey create() {
+    public static E2BTeam create() {
         return builder().build();
     }
 
@@ -85,31 +65,10 @@ public class ApiKey extends TeaModel {
     }
 
     /**
-     * @return apiKeyID
+     * @return allowUpdateTeamName
      */
-    public String getApiKeyID() {
-        return this.apiKeyID;
-    }
-
-    /**
-     * @return apiKeyMask
-     */
-    public String getApiKeyMask() {
-        return this.apiKeyMask;
-    }
-
-    /**
-     * @return apiKeyName
-     */
-    public String getApiKeyName() {
-        return this.apiKeyName;
-    }
-
-    /**
-     * @return apiKeyValue
-     */
-    public String getApiKeyValue() {
-        return this.apiKeyValue;
+    public Boolean getAllowUpdateTeamName() {
+        return this.allowUpdateTeamName;
     }
 
     /**
@@ -120,17 +79,10 @@ public class ApiKey extends TeaModel {
     }
 
     /**
-     * @return expireTime
+     * @return description
      */
-    public String getExpireTime() {
-        return this.expireTime;
-    }
-
-    /**
-     * @return lastUsedTime
-     */
-    public String getLastUsedTime() {
-        return this.lastUsedTime;
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -168,76 +120,35 @@ public class ApiKey extends TeaModel {
         return this.userID;
     }
 
-    /**
-     * @return username
-     */
-    public String getUsername() {
-        return this.username;
-    }
-
     public static final class Builder {
-        private String apiKeyID; 
-        private String apiKeyMask; 
-        private String apiKeyName; 
-        private String apiKeyValue; 
+        private Boolean allowUpdateTeamName; 
         private String createdTime; 
-        private String expireTime; 
-        private String lastUsedTime; 
+        private String description; 
         private String resourceGroupID; 
         private String status; 
         private String teamID; 
         private String teamName; 
         private String userID; 
-        private String username; 
 
         private Builder() {
         } 
 
-        private Builder(ApiKey model) {
-            this.apiKeyID = model.apiKeyID;
-            this.apiKeyMask = model.apiKeyMask;
-            this.apiKeyName = model.apiKeyName;
-            this.apiKeyValue = model.apiKeyValue;
+        private Builder(E2BTeam model) {
+            this.allowUpdateTeamName = model.allowUpdateTeamName;
             this.createdTime = model.createdTime;
-            this.expireTime = model.expireTime;
-            this.lastUsedTime = model.lastUsedTime;
+            this.description = model.description;
             this.resourceGroupID = model.resourceGroupID;
             this.status = model.status;
             this.teamID = model.teamID;
             this.teamName = model.teamName;
             this.userID = model.userID;
-            this.username = model.username;
         } 
 
         /**
-         * apiKeyID.
+         * allowUpdateTeamName.
          */
-        public Builder apiKeyID(String apiKeyID) {
-            this.apiKeyID = apiKeyID;
-            return this;
-        }
-
-        /**
-         * apiKeyMask.
-         */
-        public Builder apiKeyMask(String apiKeyMask) {
-            this.apiKeyMask = apiKeyMask;
-            return this;
-        }
-
-        /**
-         * apiKeyName.
-         */
-        public Builder apiKeyName(String apiKeyName) {
-            this.apiKeyName = apiKeyName;
-            return this;
-        }
-
-        /**
-         * apiKeyValue.
-         */
-        public Builder apiKeyValue(String apiKeyValue) {
-            this.apiKeyValue = apiKeyValue;
+        public Builder allowUpdateTeamName(Boolean allowUpdateTeamName) {
+            this.allowUpdateTeamName = allowUpdateTeamName;
             return this;
         }
 
@@ -250,18 +161,10 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * expireTime.
+         * description.
          */
-        public Builder expireTime(String expireTime) {
-            this.expireTime = expireTime;
-            return this;
-        }
-
-        /**
-         * lastUsedTime.
-         */
-        public Builder lastUsedTime(String lastUsedTime) {
-            this.lastUsedTime = lastUsedTime;
+        public Builder description(String description) {
+            this.description = description;
             return this;
         }
 
@@ -305,16 +208,8 @@ public class ApiKey extends TeaModel {
             return this;
         }
 
-        /**
-         * username.
-         */
-        public Builder username(String username) {
-            this.username = username;
-            return this;
-        }
-
-        public ApiKey build() {
-            return new ApiKey(this);
+        public E2BTeam build() {
+            return new E2BTeam(this);
         } 
 
     } 

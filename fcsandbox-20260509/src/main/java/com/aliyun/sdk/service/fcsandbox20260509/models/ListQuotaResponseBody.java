@@ -20,6 +20,9 @@ public class ListQuotaResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
+    @com.aliyun.core.annotation.NameInMap("maxResults")
+    private Integer maxResults;
+
     @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
@@ -34,6 +37,7 @@ public class ListQuotaResponseBody extends TeaModel {
 
     private ListQuotaResponseBody(Builder builder) {
         this.code = builder.code;
+        this.maxResults = builder.maxResults;
         this.message = builder.message;
         this.nextToken = builder.nextToken;
         this.quotas = builder.quotas;
@@ -57,6 +61,13 @@ public class ListQuotaResponseBody extends TeaModel {
      */
     public String getCode() {
         return this.code;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     /**
@@ -89,6 +100,7 @@ public class ListQuotaResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
+        private Integer maxResults; 
         private String message; 
         private String nextToken; 
         private java.util.List<Quota> quotas; 
@@ -99,6 +111,7 @@ public class ListQuotaResponseBody extends TeaModel {
 
         private Builder(ListQuotaResponseBody model) {
             this.code = model.code;
+            this.maxResults = model.maxResults;
             this.message = model.message;
             this.nextToken = model.nextToken;
             this.quotas = model.quotas;
@@ -110,6 +123,14 @@ public class ListQuotaResponseBody extends TeaModel {
          */
         public Builder code(String code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * maxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
             return this;
         }
 

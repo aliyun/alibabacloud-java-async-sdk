@@ -41,6 +41,9 @@ public class E2BListedSandbox extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("metadata")
     private java.util.Map<String, String> metadata;
 
+    @com.aliyun.core.annotation.NameInMap("resourceGroupID")
+    private String resourceGroupID;
+
     @com.aliyun.core.annotation.NameInMap("sandboxID")
     private String sandboxID;
 
@@ -50,11 +53,20 @@ public class E2BListedSandbox extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("state")
     private String state;
 
+    @com.aliyun.core.annotation.NameInMap("teamID")
+    private String teamID;
+
+    @com.aliyun.core.annotation.NameInMap("teamName")
+    private String teamName;
+
     @com.aliyun.core.annotation.NameInMap("templateID")
     private String templateID;
 
     @com.aliyun.core.annotation.NameInMap("templateName")
     private String templateName;
+
+    @com.aliyun.core.annotation.NameInMap("userID")
+    private String userID;
 
     @com.aliyun.core.annotation.NameInMap("volumeMounts")
     private java.util.List<E2BVolumeMount> volumeMounts;
@@ -68,11 +80,15 @@ public class E2BListedSandbox extends TeaModel {
         this.envdVersion = builder.envdVersion;
         this.memoryMB = builder.memoryMB;
         this.metadata = builder.metadata;
+        this.resourceGroupID = builder.resourceGroupID;
         this.sandboxID = builder.sandboxID;
         this.startedAt = builder.startedAt;
         this.state = builder.state;
+        this.teamID = builder.teamID;
+        this.teamName = builder.teamName;
         this.templateID = builder.templateID;
         this.templateName = builder.templateName;
+        this.userID = builder.userID;
         this.volumeMounts = builder.volumeMounts;
     }
 
@@ -145,6 +161,13 @@ public class E2BListedSandbox extends TeaModel {
     }
 
     /**
+     * @return resourceGroupID
+     */
+    public String getResourceGroupID() {
+        return this.resourceGroupID;
+    }
+
+    /**
      * @return sandboxID
      */
     public String getSandboxID() {
@@ -166,6 +189,20 @@ public class E2BListedSandbox extends TeaModel {
     }
 
     /**
+     * @return teamID
+     */
+    public String getTeamID() {
+        return this.teamID;
+    }
+
+    /**
+     * @return teamName
+     */
+    public String getTeamName() {
+        return this.teamName;
+    }
+
+    /**
      * @return templateID
      */
     public String getTemplateID() {
@@ -177,6 +214,13 @@ public class E2BListedSandbox extends TeaModel {
      */
     public String getTemplateName() {
         return this.templateName;
+    }
+
+    /**
+     * @return userID
+     */
+    public String getUserID() {
+        return this.userID;
     }
 
     /**
@@ -195,11 +239,15 @@ public class E2BListedSandbox extends TeaModel {
         private String envdVersion; 
         private Integer memoryMB; 
         private java.util.Map<String, String> metadata; 
+        private String resourceGroupID; 
         private String sandboxID; 
         private String startedAt; 
         private String state; 
+        private String teamID; 
+        private String teamName; 
         private String templateID; 
         private String templateName; 
+        private String userID; 
         private java.util.List<E2BVolumeMount> volumeMounts; 
 
         private Builder() {
@@ -214,11 +262,15 @@ public class E2BListedSandbox extends TeaModel {
             this.envdVersion = model.envdVersion;
             this.memoryMB = model.memoryMB;
             this.metadata = model.metadata;
+            this.resourceGroupID = model.resourceGroupID;
             this.sandboxID = model.sandboxID;
             this.startedAt = model.startedAt;
             this.state = model.state;
+            this.teamID = model.teamID;
+            this.teamName = model.teamName;
             this.templateID = model.templateID;
             this.templateName = model.templateName;
+            this.userID = model.userID;
             this.volumeMounts = model.volumeMounts;
         } 
 
@@ -287,6 +339,14 @@ public class E2BListedSandbox extends TeaModel {
         }
 
         /**
+         * resourceGroupID.
+         */
+        public Builder resourceGroupID(String resourceGroupID) {
+            this.resourceGroupID = resourceGroupID;
+            return this;
+        }
+
+        /**
          * sandboxID.
          */
         public Builder sandboxID(String sandboxID) {
@@ -311,6 +371,22 @@ public class E2BListedSandbox extends TeaModel {
         }
 
         /**
+         * teamID.
+         */
+        public Builder teamID(String teamID) {
+            this.teamID = teamID;
+            return this;
+        }
+
+        /**
+         * teamName.
+         */
+        public Builder teamName(String teamName) {
+            this.teamName = teamName;
+            return this;
+        }
+
+        /**
          * templateID.
          */
         public Builder templateID(String templateID) {
@@ -323,6 +399,14 @@ public class E2BListedSandbox extends TeaModel {
          */
         public Builder templateName(String templateName) {
             this.templateName = templateName;
+            return this;
+        }
+
+        /**
+         * userID.
+         */
+        public Builder userID(String userID) {
+            this.userID = userID;
             return this;
         }
 

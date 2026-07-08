@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>E2BSandbox</p>
  */
 public class E2BSandbox extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("accessEndpoint")
+    private String accessEndpoint;
+
     @com.aliyun.core.annotation.NameInMap("alias")
     private String alias;
 
@@ -65,6 +68,9 @@ public class E2BSandbox extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("network")
     private E2BNetwork network;
 
+    @com.aliyun.core.annotation.NameInMap("resourceGroupID")
+    private String resourceGroupID;
+
     @com.aliyun.core.annotation.NameInMap("sandboxID")
     private String sandboxID;
 
@@ -74,16 +80,26 @@ public class E2BSandbox extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("state")
     private String state;
 
-    @com.aliyun.core.annotation.NameInMap("templateId")
-    private String templateId;
+    @com.aliyun.core.annotation.NameInMap("teamID")
+    private String teamID;
+
+    @com.aliyun.core.annotation.NameInMap("teamName")
+    private String teamName;
+
+    @com.aliyun.core.annotation.NameInMap("templateID")
+    private String templateID;
 
     @com.aliyun.core.annotation.NameInMap("templateName")
     private String templateName;
+
+    @com.aliyun.core.annotation.NameInMap("userID")
+    private String userID;
 
     @com.aliyun.core.annotation.NameInMap("volumeMounts")
     private java.util.List<E2BVolumeMount> volumeMounts;
 
     private E2BSandbox(Builder builder) {
+        this.accessEndpoint = builder.accessEndpoint;
         this.alias = builder.alias;
         this.allowInternetAccess = builder.allowInternetAccess;
         this.clientID = builder.clientID;
@@ -100,11 +116,15 @@ public class E2BSandbox extends TeaModel {
         this.memoryMB = builder.memoryMB;
         this.metadata = builder.metadata;
         this.network = builder.network;
+        this.resourceGroupID = builder.resourceGroupID;
         this.sandboxID = builder.sandboxID;
         this.startedAt = builder.startedAt;
         this.state = builder.state;
-        this.templateId = builder.templateId;
+        this.teamID = builder.teamID;
+        this.teamName = builder.teamName;
+        this.templateID = builder.templateID;
         this.templateName = builder.templateName;
+        this.userID = builder.userID;
         this.volumeMounts = builder.volumeMounts;
     }
 
@@ -118,6 +138,13 @@ public class E2BSandbox extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessEndpoint
+     */
+    public String getAccessEndpoint() {
+        return this.accessEndpoint;
     }
 
     /**
@@ -233,6 +260,13 @@ public class E2BSandbox extends TeaModel {
     }
 
     /**
+     * @return resourceGroupID
+     */
+    public String getResourceGroupID() {
+        return this.resourceGroupID;
+    }
+
+    /**
      * @return sandboxID
      */
     public String getSandboxID() {
@@ -254,10 +288,24 @@ public class E2BSandbox extends TeaModel {
     }
 
     /**
-     * @return templateId
+     * @return teamID
      */
-    public String getTemplateId() {
-        return this.templateId;
+    public String getTeamID() {
+        return this.teamID;
+    }
+
+    /**
+     * @return teamName
+     */
+    public String getTeamName() {
+        return this.teamName;
+    }
+
+    /**
+     * @return templateID
+     */
+    public String getTemplateID() {
+        return this.templateID;
     }
 
     /**
@@ -268,6 +316,13 @@ public class E2BSandbox extends TeaModel {
     }
 
     /**
+     * @return userID
+     */
+    public String getUserID() {
+        return this.userID;
+    }
+
+    /**
      * @return volumeMounts
      */
     public java.util.List<E2BVolumeMount> getVolumeMounts() {
@@ -275,6 +330,7 @@ public class E2BSandbox extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessEndpoint; 
         private String alias; 
         private Boolean allowInternetAccess; 
         private String clientID; 
@@ -291,17 +347,22 @@ public class E2BSandbox extends TeaModel {
         private Integer memoryMB; 
         private java.util.Map<String, String> metadata; 
         private E2BNetwork network; 
+        private String resourceGroupID; 
         private String sandboxID; 
         private String startedAt; 
         private String state; 
-        private String templateId; 
+        private String teamID; 
+        private String teamName; 
+        private String templateID; 
         private String templateName; 
+        private String userID; 
         private java.util.List<E2BVolumeMount> volumeMounts; 
 
         private Builder() {
         } 
 
         private Builder(E2BSandbox model) {
+            this.accessEndpoint = model.accessEndpoint;
             this.alias = model.alias;
             this.allowInternetAccess = model.allowInternetAccess;
             this.clientID = model.clientID;
@@ -318,13 +379,25 @@ public class E2BSandbox extends TeaModel {
             this.memoryMB = model.memoryMB;
             this.metadata = model.metadata;
             this.network = model.network;
+            this.resourceGroupID = model.resourceGroupID;
             this.sandboxID = model.sandboxID;
             this.startedAt = model.startedAt;
             this.state = model.state;
-            this.templateId = model.templateId;
+            this.teamID = model.teamID;
+            this.teamName = model.teamName;
+            this.templateID = model.templateID;
             this.templateName = model.templateName;
+            this.userID = model.userID;
             this.volumeMounts = model.volumeMounts;
         } 
+
+        /**
+         * accessEndpoint.
+         */
+        public Builder accessEndpoint(String accessEndpoint) {
+            this.accessEndpoint = accessEndpoint;
+            return this;
+        }
 
         /**
          * alias.
@@ -455,6 +528,14 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
+         * resourceGroupID.
+         */
+        public Builder resourceGroupID(String resourceGroupID) {
+            this.resourceGroupID = resourceGroupID;
+            return this;
+        }
+
+        /**
          * sandboxID.
          */
         public Builder sandboxID(String sandboxID) {
@@ -479,10 +560,26 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * templateId.
+         * teamID.
          */
-        public Builder templateId(String templateId) {
-            this.templateId = templateId;
+        public Builder teamID(String teamID) {
+            this.teamID = teamID;
+            return this;
+        }
+
+        /**
+         * teamName.
+         */
+        public Builder teamName(String teamName) {
+            this.teamName = teamName;
+            return this;
+        }
+
+        /**
+         * templateID.
+         */
+        public Builder templateID(String templateID) {
+            this.templateID = templateID;
             return this;
         }
 
@@ -491,6 +588,14 @@ public class E2BSandbox extends TeaModel {
          */
         public Builder templateName(String templateName) {
             this.templateName = templateName;
+            return this;
+        }
+
+        /**
+         * userID.
+         */
+        public Builder userID(String userID) {
+            this.userID = userID;
             return this;
         }
 

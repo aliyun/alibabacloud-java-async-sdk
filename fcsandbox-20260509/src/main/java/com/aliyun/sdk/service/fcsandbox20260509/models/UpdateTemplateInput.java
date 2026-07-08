@@ -20,8 +20,12 @@ public class UpdateTemplateInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("logConfiguration")
     private LogConfiguration logConfiguration;
 
+    @com.aliyun.core.annotation.NameInMap("networkConfiguration")
+    private NetworkConfiguration networkConfiguration;
+
     private UpdateTemplateInput(Builder builder) {
         this.logConfiguration = builder.logConfiguration;
+        this.networkConfiguration = builder.networkConfiguration;
     }
 
     public static Builder builder() {
@@ -43,14 +47,23 @@ public class UpdateTemplateInput extends TeaModel {
         return this.logConfiguration;
     }
 
+    /**
+     * @return networkConfiguration
+     */
+    public NetworkConfiguration getNetworkConfiguration() {
+        return this.networkConfiguration;
+    }
+
     public static final class Builder {
         private LogConfiguration logConfiguration; 
+        private NetworkConfiguration networkConfiguration; 
 
         private Builder() {
         } 
 
         private Builder(UpdateTemplateInput model) {
             this.logConfiguration = model.logConfiguration;
+            this.networkConfiguration = model.networkConfiguration;
         } 
 
         /**
@@ -58,6 +71,14 @@ public class UpdateTemplateInput extends TeaModel {
          */
         public Builder logConfiguration(LogConfiguration logConfiguration) {
             this.logConfiguration = logConfiguration;
+            return this;
+        }
+
+        /**
+         * networkConfiguration.
+         */
+        public Builder networkConfiguration(NetworkConfiguration networkConfiguration) {
+            this.networkConfiguration = networkConfiguration;
             return this;
         }
 

@@ -23,9 +23,6 @@ public class E2BTemplate extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("buildStatus")
     private String buildStatus;
 
-    @com.aliyun.core.annotation.NameInMap("builds")
-    private E2BTemplateBuild builds;
-
     @com.aliyun.core.annotation.NameInMap("cpuCount")
     private Integer cpuCount;
 
@@ -47,14 +44,23 @@ public class E2BTemplate extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("public")
     private Boolean _public;
 
+    @com.aliyun.core.annotation.NameInMap("resourceGroupID")
+    private String resourceGroupID;
+
     @com.aliyun.core.annotation.NameInMap("spawnCount")
-    private String spawnCount;
+    private Integer spawnCount;
 
     @com.aliyun.core.annotation.NameInMap("statusReason")
     private String statusReason;
 
     @com.aliyun.core.annotation.NameInMap("tags")
     private java.util.List<E2BTemplateTag> tags;
+
+    @com.aliyun.core.annotation.NameInMap("teamID")
+    private String teamID;
+
+    @com.aliyun.core.annotation.NameInMap("teamName")
+    private String teamName;
 
     @com.aliyun.core.annotation.NameInMap("templateID")
     private String templateID;
@@ -68,7 +74,6 @@ public class E2BTemplate extends TeaModel {
     private E2BTemplate(Builder builder) {
         this.aliases = builder.aliases;
         this.buildStatus = builder.buildStatus;
-        this.builds = builder.builds;
         this.cpuCount = builder.cpuCount;
         this.createdAt = builder.createdAt;
         this.lastSpawnedAt = builder.lastSpawnedAt;
@@ -76,9 +81,12 @@ public class E2BTemplate extends TeaModel {
         this.memoryMB = builder.memoryMB;
         this.names = builder.names;
         this._public = builder._public;
+        this.resourceGroupID = builder.resourceGroupID;
         this.spawnCount = builder.spawnCount;
         this.statusReason = builder.statusReason;
         this.tags = builder.tags;
+        this.teamID = builder.teamID;
+        this.teamName = builder.teamName;
         this.templateID = builder.templateID;
         this.updatedAt = builder.updatedAt;
         this.userID = builder.userID;
@@ -108,13 +116,6 @@ public class E2BTemplate extends TeaModel {
      */
     public String getBuildStatus() {
         return this.buildStatus;
-    }
-
-    /**
-     * @return builds
-     */
-    public E2BTemplateBuild getBuilds() {
-        return this.builds;
     }
 
     /**
@@ -167,9 +168,16 @@ public class E2BTemplate extends TeaModel {
     }
 
     /**
+     * @return resourceGroupID
+     */
+    public String getResourceGroupID() {
+        return this.resourceGroupID;
+    }
+
+    /**
      * @return spawnCount
      */
-    public String getSpawnCount() {
+    public Integer getSpawnCount() {
         return this.spawnCount;
     }
 
@@ -185,6 +193,20 @@ public class E2BTemplate extends TeaModel {
      */
     public java.util.List<E2BTemplateTag> getTags() {
         return this.tags;
+    }
+
+    /**
+     * @return teamID
+     */
+    public String getTeamID() {
+        return this.teamID;
+    }
+
+    /**
+     * @return teamName
+     */
+    public String getTeamName() {
+        return this.teamName;
     }
 
     /**
@@ -211,7 +233,6 @@ public class E2BTemplate extends TeaModel {
     public static final class Builder {
         private java.util.List<String> aliases; 
         private String buildStatus; 
-        private E2BTemplateBuild builds; 
         private Integer cpuCount; 
         private String createdAt; 
         private String lastSpawnedAt; 
@@ -219,9 +240,12 @@ public class E2BTemplate extends TeaModel {
         private Integer memoryMB; 
         private java.util.List<String> names; 
         private Boolean _public; 
-        private String spawnCount; 
+        private String resourceGroupID; 
+        private Integer spawnCount; 
         private String statusReason; 
         private java.util.List<E2BTemplateTag> tags; 
+        private String teamID; 
+        private String teamName; 
         private String templateID; 
         private String updatedAt; 
         private String userID; 
@@ -232,7 +256,6 @@ public class E2BTemplate extends TeaModel {
         private Builder(E2BTemplate model) {
             this.aliases = model.aliases;
             this.buildStatus = model.buildStatus;
-            this.builds = model.builds;
             this.cpuCount = model.cpuCount;
             this.createdAt = model.createdAt;
             this.lastSpawnedAt = model.lastSpawnedAt;
@@ -240,9 +263,12 @@ public class E2BTemplate extends TeaModel {
             this.memoryMB = model.memoryMB;
             this.names = model.names;
             this._public = model._public;
+            this.resourceGroupID = model.resourceGroupID;
             this.spawnCount = model.spawnCount;
             this.statusReason = model.statusReason;
             this.tags = model.tags;
+            this.teamID = model.teamID;
+            this.teamName = model.teamName;
             this.templateID = model.templateID;
             this.updatedAt = model.updatedAt;
             this.userID = model.userID;
@@ -261,14 +287,6 @@ public class E2BTemplate extends TeaModel {
          */
         public Builder buildStatus(String buildStatus) {
             this.buildStatus = buildStatus;
-            return this;
-        }
-
-        /**
-         * builds.
-         */
-        public Builder builds(E2BTemplateBuild builds) {
-            this.builds = builds;
             return this;
         }
 
@@ -329,9 +347,17 @@ public class E2BTemplate extends TeaModel {
         }
 
         /**
+         * resourceGroupID.
+         */
+        public Builder resourceGroupID(String resourceGroupID) {
+            this.resourceGroupID = resourceGroupID;
+            return this;
+        }
+
+        /**
          * spawnCount.
          */
-        public Builder spawnCount(String spawnCount) {
+        public Builder spawnCount(Integer spawnCount) {
             this.spawnCount = spawnCount;
             return this;
         }
@@ -349,6 +375,22 @@ public class E2BTemplate extends TeaModel {
          */
         public Builder tags(java.util.List<E2BTemplateTag> tags) {
             this.tags = tags;
+            return this;
+        }
+
+        /**
+         * teamID.
+         */
+        public Builder teamID(String teamID) {
+            this.teamID = teamID;
+            return this;
+        }
+
+        /**
+         * teamName.
+         */
+        public Builder teamName(String teamName) {
+            this.teamName = teamName;
             return this;
         }
 

@@ -23,9 +23,13 @@ public class CreateApiKeyInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("expireTime")
     private String expireTime;
 
+    @com.aliyun.core.annotation.NameInMap("teamID")
+    private String teamID;
+
     private CreateApiKeyInput(Builder builder) {
         this.apiKeyName = builder.apiKeyName;
         this.expireTime = builder.expireTime;
+        this.teamID = builder.teamID;
     }
 
     public static Builder builder() {
@@ -54,9 +58,17 @@ public class CreateApiKeyInput extends TeaModel {
         return this.expireTime;
     }
 
+    /**
+     * @return teamID
+     */
+    public String getTeamID() {
+        return this.teamID;
+    }
+
     public static final class Builder {
         private String apiKeyName; 
         private String expireTime; 
+        private String teamID; 
 
         private Builder() {
         } 
@@ -64,6 +76,7 @@ public class CreateApiKeyInput extends TeaModel {
         private Builder(CreateApiKeyInput model) {
             this.apiKeyName = model.apiKeyName;
             this.expireTime = model.expireTime;
+            this.teamID = model.teamID;
         } 
 
         /**
@@ -79,6 +92,14 @@ public class CreateApiKeyInput extends TeaModel {
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
+            return this;
+        }
+
+        /**
+         * teamID.
+         */
+        public Builder teamID(String teamID) {
+            this.teamID = teamID;
             return this;
         }
 
