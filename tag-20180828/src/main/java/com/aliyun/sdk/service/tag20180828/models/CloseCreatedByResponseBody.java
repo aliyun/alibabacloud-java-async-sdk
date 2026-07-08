@@ -54,7 +54,10 @@ public class CloseCreatedByResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AECFE0F2-CEC3-5D16-BE4C-E2F95083****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

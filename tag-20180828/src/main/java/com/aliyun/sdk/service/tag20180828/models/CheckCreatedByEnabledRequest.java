@@ -134,6 +134,8 @@ public class CheckCreatedByEnabledRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region where the instance resides.</p>
+         * <p>Set the value to cn-shanghai.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

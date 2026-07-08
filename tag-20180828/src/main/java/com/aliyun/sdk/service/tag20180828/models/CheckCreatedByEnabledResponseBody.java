@@ -67,7 +67,14 @@ public class CheckCreatedByEnabledResponseBody extends TeaModel {
         } 
 
         /**
-         * OpenStatus.
+         * <p>Indicates whether the createdby tag is enabled. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder openStatus(Boolean openStatus) {
             this.openStatus = openStatus;
@@ -75,7 +82,10 @@ public class CheckCreatedByEnabledResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>682DD9E1-F530-5D14-A839-A6787FA8****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
