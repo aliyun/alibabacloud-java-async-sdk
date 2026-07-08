@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetAuthCodeRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccountType")
+    private String accountType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AdDomain")
+    private String adDomain;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AutoCreateUser")
     private Boolean autoCreateUser;
 
@@ -39,6 +47,8 @@ public class GetAuthCodeRequest extends Request {
 
     private GetAuthCodeRequest(Builder builder) {
         super(builder);
+        this.accountType = builder.accountType;
+        this.adDomain = builder.adDomain;
         this.autoCreateUser = builder.autoCreateUser;
         this.endUserId = builder.endUserId;
         this.externalUserId = builder.externalUserId;
@@ -57,6 +67,20 @@ public class GetAuthCodeRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accountType
+     */
+    public String getAccountType() {
+        return this.accountType;
+    }
+
+    /**
+     * @return adDomain
+     */
+    public String getAdDomain() {
+        return this.adDomain;
     }
 
     /**
@@ -95,6 +119,8 @@ public class GetAuthCodeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetAuthCodeRequest, Builder> {
+        private String accountType; 
+        private String adDomain; 
         private Boolean autoCreateUser; 
         private String endUserId; 
         private String externalUserId; 
@@ -107,12 +133,32 @@ public class GetAuthCodeRequest extends Request {
 
         private Builder(GetAuthCodeRequest request) {
             super(request);
+            this.accountType = request.accountType;
+            this.adDomain = request.adDomain;
             this.autoCreateUser = request.autoCreateUser;
             this.endUserId = request.endUserId;
             this.externalUserId = request.externalUserId;
             this.policy = request.policy;
             this.tokenType = request.tokenType;
         } 
+
+        /**
+         * AccountType.
+         */
+        public Builder accountType(String accountType) {
+            this.putBodyParameter("AccountType", accountType);
+            this.accountType = accountType;
+            return this;
+        }
+
+        /**
+         * AdDomain.
+         */
+        public Builder adDomain(String adDomain) {
+            this.putBodyParameter("AdDomain", adDomain);
+            this.adDomain = adDomain;
+            return this;
+        }
 
         /**
          * AutoCreateUser.
