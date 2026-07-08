@@ -80,6 +80,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchBindTemplatesResponse> batchBindTemplates(BatchBindTemplatesRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><strong>认证</strong>：请求需要携带 <code>AliUid</code> 参数进行身份验证。</li>
+     * <li><strong>实例指定方式</strong>：可以通过 <code>RenderingInstanceIds</code>、<code>ResourceIds</code> 或者结合 <code>ProjectId/ProjectName</code> 加上分页参数来指定要截图的实例。优先级依次为 <code>RenderingInstanceIds</code> &gt; <code>ResourceIds</code> &gt; <code>ProjectId/ProjectName</code>。</li>
+     * <li><strong>截图质量</strong>：通过 <code>Quality</code> 参数可以设置截图图片的质量，默认值为75（如果未配置），取值范围是1到100。</li>
+     * <li><strong>响应处理</strong>：返回结果中包含成功和失败的实例列表及其相关信息，包括截图文件的OSS存储路径、预签名下载链接以及截图完成时间等。</li>
+     * <li><strong>错误场景</strong>：当遇到如<code>Quality</code>超出有效范围、非AIC平台实例、OSS RamRoleArn未配置或VDM命令超时等情况时，API将根据具体情况给出相应的错误反馈。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of BatchCaptureRenderingInstanceScreenshot  BatchCaptureRenderingInstanceScreenshotRequest
+     * @return BatchCaptureRenderingInstanceScreenshotResponse
+     */
+    CompletableFuture<BatchCaptureRenderingInstanceScreenshotResponse> batchCaptureRenderingInstanceScreenshot(BatchCaptureRenderingInstanceScreenshotRequest request);
+
+    /**
      * @param request the request parameters of BatchDeleteDevices  BatchDeleteDevicesRequest
      * @return BatchDeleteDevicesResponse
      */
