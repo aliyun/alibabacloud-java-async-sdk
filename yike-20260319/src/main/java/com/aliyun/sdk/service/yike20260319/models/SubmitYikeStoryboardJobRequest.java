@@ -46,8 +46,16 @@ public class SubmitYikeStoryboardJobRequest extends Request {
     private String narrationVoiceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NeedCaption")
+    private Boolean needCaption;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Resolution")
     private String resolution;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShotPromptLang")
+    private String shotPromptLang;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ShotPromptMode")
@@ -90,7 +98,9 @@ public class SubmitYikeStoryboardJobRequest extends Request {
         this.keepOriginDialogue = builder.keepOriginDialogue;
         this.modelParams = builder.modelParams;
         this.narrationVoiceId = builder.narrationVoiceId;
+        this.needCaption = builder.needCaption;
         this.resolution = builder.resolution;
+        this.shotPromptLang = builder.shotPromptLang;
         this.shotPromptMode = builder.shotPromptMode;
         this.shotSplitMode = builder.shotSplitMode;
         this.skipFailureShot = builder.skipFailureShot;
@@ -164,10 +174,24 @@ public class SubmitYikeStoryboardJobRequest extends Request {
     }
 
     /**
+     * @return needCaption
+     */
+    public Boolean getNeedCaption() {
+        return this.needCaption;
+    }
+
+    /**
      * @return resolution
      */
     public String getResolution() {
         return this.resolution;
+    }
+
+    /**
+     * @return shotPromptLang
+     */
+    public String getShotPromptLang() {
+        return this.shotPromptLang;
     }
 
     /**
@@ -234,7 +258,9 @@ public class SubmitYikeStoryboardJobRequest extends Request {
         private Boolean keepOriginDialogue; 
         private String modelParams; 
         private String narrationVoiceId; 
+        private Boolean needCaption; 
         private String resolution; 
+        private String shotPromptLang; 
         private String shotPromptMode; 
         private String shotSplitMode; 
         private Boolean skipFailureShot; 
@@ -257,7 +283,9 @@ public class SubmitYikeStoryboardJobRequest extends Request {
             this.keepOriginDialogue = request.keepOriginDialogue;
             this.modelParams = request.modelParams;
             this.narrationVoiceId = request.narrationVoiceId;
+            this.needCaption = request.needCaption;
             this.resolution = request.resolution;
+            this.shotPromptLang = request.shotPromptLang;
             this.shotPromptMode = request.shotPromptMode;
             this.shotSplitMode = request.shotSplitMode;
             this.skipFailureShot = request.skipFailureShot;
@@ -332,11 +360,29 @@ public class SubmitYikeStoryboardJobRequest extends Request {
         }
 
         /**
+         * NeedCaption.
+         */
+        public Builder needCaption(Boolean needCaption) {
+            this.putQueryParameter("NeedCaption", needCaption);
+            this.needCaption = needCaption;
+            return this;
+        }
+
+        /**
          * Resolution.
          */
         public Builder resolution(String resolution) {
             this.putQueryParameter("Resolution", resolution);
             this.resolution = resolution;
+            return this;
+        }
+
+        /**
+         * ShotPromptLang.
+         */
+        public Builder shotPromptLang(String shotPromptLang) {
+            this.putQueryParameter("ShotPromptLang", shotPromptLang);
+            this.shotPromptLang = shotPromptLang;
             return this;
         }
 
