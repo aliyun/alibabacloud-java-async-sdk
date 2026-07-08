@@ -18,12 +18,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RevokeCertificateRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertificateId")
+    private Long certificateId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private RevokeCertificateRequest(Builder builder) {
         super(builder);
+        this.certificateId = builder.certificateId;
         this.instanceId = builder.instanceId;
     }
 
@@ -41,6 +46,13 @@ public class RevokeCertificateRequest extends Request {
     }
 
     /**
+     * @return certificateId
+     */
+    public Long getCertificateId() {
+        return this.certificateId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -48,6 +60,7 @@ public class RevokeCertificateRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RevokeCertificateRequest, Builder> {
+        private Long certificateId; 
         private String instanceId; 
 
         private Builder() {
@@ -56,8 +69,18 @@ public class RevokeCertificateRequest extends Request {
 
         private Builder(RevokeCertificateRequest request) {
             super(request);
+            this.certificateId = request.certificateId;
             this.instanceId = request.instanceId;
         } 
+
+        /**
+         * CertificateId.
+         */
+        public Builder certificateId(Long certificateId) {
+            this.putQueryParameter("CertificateId", certificateId);
+            this.certificateId = certificateId;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>

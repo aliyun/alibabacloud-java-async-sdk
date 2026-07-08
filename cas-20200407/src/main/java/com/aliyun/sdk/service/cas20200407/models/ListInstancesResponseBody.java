@@ -179,6 +179,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertificateNotAfter")
         private Long certificateNotAfter;
 
+        @com.aliyun.core.annotation.NameInMap("CertificateNotBefore")
+        private Long certificateNotBefore;
+
         @com.aliyun.core.annotation.NameInMap("CertificateRevokeTime")
         private Long certificateRevokeTime;
 
@@ -241,6 +244,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.certificateId = builder.certificateId;
             this.certificateName = builder.certificateName;
             this.certificateNotAfter = builder.certificateNotAfter;
+            this.certificateNotBefore = builder.certificateNotBefore;
             this.certificateRevokeTime = builder.certificateRevokeTime;
             this.certificateStatus = builder.certificateStatus;
             this.certificateType = builder.certificateType;
@@ -316,6 +320,13 @@ public class ListInstancesResponseBody extends TeaModel {
          */
         public Long getCertificateNotAfter() {
             return this.certificateNotAfter;
+        }
+
+        /**
+         * @return certificateNotBefore
+         */
+        public Long getCertificateNotBefore() {
+            return this.certificateNotBefore;
         }
 
         /**
@@ -452,6 +463,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private Long certificateId; 
             private String certificateName; 
             private Long certificateNotAfter; 
+            private Long certificateNotBefore; 
             private Long certificateRevokeTime; 
             private String certificateStatus; 
             private String certificateType; 
@@ -482,6 +494,7 @@ public class ListInstancesResponseBody extends TeaModel {
                 this.certificateId = model.certificateId;
                 this.certificateName = model.certificateName;
                 this.certificateNotAfter = model.certificateNotAfter;
+                this.certificateNotBefore = model.certificateNotBefore;
                 this.certificateRevokeTime = model.certificateRevokeTime;
                 this.certificateStatus = model.certificateStatus;
                 this.certificateType = model.certificateType;
@@ -555,6 +568,14 @@ public class ListInstancesResponseBody extends TeaModel {
              */
             public Builder certificateNotAfter(Long certificateNotAfter) {
                 this.certificateNotAfter = certificateNotAfter;
+                return this;
+            }
+
+            /**
+             * CertificateNotBefore.
+             */
+            public Builder certificateNotBefore(Long certificateNotBefore) {
+                this.certificateNotBefore = certificateNotBefore;
                 return this;
             }
 
