@@ -34,6 +34,10 @@ public class SearchSkillsRequest extends Request {
     private String nextToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("searchMode")
+    private String searchMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("skip")
     private Integer skip;
 
@@ -43,6 +47,7 @@ public class SearchSkillsRequest extends Request {
         this.keyword = builder.keyword;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.searchMode = builder.searchMode;
         this.skip = builder.skip;
     }
 
@@ -88,6 +93,13 @@ public class SearchSkillsRequest extends Request {
     }
 
     /**
+     * @return searchMode
+     */
+    public String getSearchMode() {
+        return this.searchMode;
+    }
+
+    /**
      * @return skip
      */
     public Integer getSkip() {
@@ -99,6 +111,7 @@ public class SearchSkillsRequest extends Request {
         private String keyword; 
         private Integer maxResults; 
         private String nextToken; 
+        private String searchMode; 
         private Integer skip; 
 
         private Builder() {
@@ -111,6 +124,7 @@ public class SearchSkillsRequest extends Request {
             this.keyword = request.keyword;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.searchMode = request.searchMode;
             this.skip = request.skip;
         } 
 
@@ -147,6 +161,15 @@ public class SearchSkillsRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * searchMode.
+         */
+        public Builder searchMode(String searchMode) {
+            this.putQueryParameter("searchMode", searchMode);
+            this.searchMode = searchMode;
             return this;
         }
 

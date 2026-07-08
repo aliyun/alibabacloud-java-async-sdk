@@ -23,20 +23,32 @@ public class Skill extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("categoryName")
     private String categoryName;
 
+    @com.aliyun.core.annotation.NameInMap("categoryNameEn")
+    private String categoryNameEn;
+
     @com.aliyun.core.annotation.NameInMap("createdAt")
     private String createdAt;
 
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("descriptionEn")
+    private String descriptionEn;
+
     @com.aliyun.core.annotation.NameInMap("displayName")
     private String displayName;
+
+    @com.aliyun.core.annotation.NameInMap("githubPath")
+    private String githubPath;
 
     @com.aliyun.core.annotation.NameInMap("installCount")
     private Integer installCount;
 
     @com.aliyun.core.annotation.NameInMap("likeCount")
     private Integer likeCount;
+
+    @com.aliyun.core.annotation.NameInMap("nameEn")
+    private String nameEn;
 
     @com.aliyun.core.annotation.NameInMap("skillName")
     private String skillName;
@@ -47,20 +59,28 @@ public class Skill extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("subCategoryName")
     private String subCategoryName;
 
+    @com.aliyun.core.annotation.NameInMap("subCategoryNameEn")
+    private String subCategoryNameEn;
+
     @com.aliyun.core.annotation.NameInMap("updatedAt")
     private String updatedAt;
 
     private Skill(Builder builder) {
         this.categoryCode = builder.categoryCode;
         this.categoryName = builder.categoryName;
+        this.categoryNameEn = builder.categoryNameEn;
         this.createdAt = builder.createdAt;
         this.description = builder.description;
+        this.descriptionEn = builder.descriptionEn;
         this.displayName = builder.displayName;
+        this.githubPath = builder.githubPath;
         this.installCount = builder.installCount;
         this.likeCount = builder.likeCount;
+        this.nameEn = builder.nameEn;
         this.skillName = builder.skillName;
         this.subCategoryCode = builder.subCategoryCode;
         this.subCategoryName = builder.subCategoryName;
+        this.subCategoryNameEn = builder.subCategoryNameEn;
         this.updatedAt = builder.updatedAt;
     }
 
@@ -91,6 +111,13 @@ public class Skill extends TeaModel {
     }
 
     /**
+     * @return categoryNameEn
+     */
+    public String getCategoryNameEn() {
+        return this.categoryNameEn;
+    }
+
+    /**
      * @return createdAt
      */
     public String getCreatedAt() {
@@ -105,10 +132,24 @@ public class Skill extends TeaModel {
     }
 
     /**
+     * @return descriptionEn
+     */
+    public String getDescriptionEn() {
+        return this.descriptionEn;
+    }
+
+    /**
      * @return displayName
      */
     public String getDisplayName() {
         return this.displayName;
+    }
+
+    /**
+     * @return githubPath
+     */
+    public String getGithubPath() {
+        return this.githubPath;
     }
 
     /**
@@ -123,6 +164,13 @@ public class Skill extends TeaModel {
      */
     public Integer getLikeCount() {
         return this.likeCount;
+    }
+
+    /**
+     * @return nameEn
+     */
+    public String getNameEn() {
+        return this.nameEn;
     }
 
     /**
@@ -147,6 +195,13 @@ public class Skill extends TeaModel {
     }
 
     /**
+     * @return subCategoryNameEn
+     */
+    public String getSubCategoryNameEn() {
+        return this.subCategoryNameEn;
+    }
+
+    /**
      * @return updatedAt
      */
     public String getUpdatedAt() {
@@ -156,14 +211,19 @@ public class Skill extends TeaModel {
     public static final class Builder {
         private String categoryCode; 
         private String categoryName; 
+        private String categoryNameEn; 
         private String createdAt; 
         private String description; 
+        private String descriptionEn; 
         private String displayName; 
+        private String githubPath; 
         private Integer installCount; 
         private Integer likeCount; 
+        private String nameEn; 
         private String skillName; 
         private String subCategoryCode; 
         private String subCategoryName; 
+        private String subCategoryNameEn; 
         private String updatedAt; 
 
         private Builder() {
@@ -172,14 +232,19 @@ public class Skill extends TeaModel {
         private Builder(Skill model) {
             this.categoryCode = model.categoryCode;
             this.categoryName = model.categoryName;
+            this.categoryNameEn = model.categoryNameEn;
             this.createdAt = model.createdAt;
             this.description = model.description;
+            this.descriptionEn = model.descriptionEn;
             this.displayName = model.displayName;
+            this.githubPath = model.githubPath;
             this.installCount = model.installCount;
             this.likeCount = model.likeCount;
+            this.nameEn = model.nameEn;
             this.skillName = model.skillName;
             this.subCategoryCode = model.subCategoryCode;
             this.subCategoryName = model.subCategoryName;
+            this.subCategoryNameEn = model.subCategoryNameEn;
             this.updatedAt = model.updatedAt;
         } 
 
@@ -200,6 +265,14 @@ public class Skill extends TeaModel {
         }
 
         /**
+         * categoryNameEn.
+         */
+        public Builder categoryNameEn(String categoryNameEn) {
+            this.categoryNameEn = categoryNameEn;
+            return this;
+        }
+
+        /**
          * createdAt.
          */
         public Builder createdAt(String createdAt) {
@@ -216,10 +289,26 @@ public class Skill extends TeaModel {
         }
 
         /**
+         * descriptionEn.
+         */
+        public Builder descriptionEn(String descriptionEn) {
+            this.descriptionEn = descriptionEn;
+            return this;
+        }
+
+        /**
          * displayName.
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
+            return this;
+        }
+
+        /**
+         * githubPath.
+         */
+        public Builder githubPath(String githubPath) {
+            this.githubPath = githubPath;
             return this;
         }
 
@@ -236,6 +325,14 @@ public class Skill extends TeaModel {
          */
         public Builder likeCount(Integer likeCount) {
             this.likeCount = likeCount;
+            return this;
+        }
+
+        /**
+         * nameEn.
+         */
+        public Builder nameEn(String nameEn) {
+            this.nameEn = nameEn;
             return this;
         }
 
@@ -260,6 +357,14 @@ public class Skill extends TeaModel {
          */
         public Builder subCategoryName(String subCategoryName) {
             this.subCategoryName = subCategoryName;
+            return this;
+        }
+
+        /**
+         * subCategoryNameEn.
+         */
+        public Builder subCategoryNameEn(String subCategoryNameEn) {
+            this.subCategoryNameEn = subCategoryNameEn;
             return this;
         }
 
