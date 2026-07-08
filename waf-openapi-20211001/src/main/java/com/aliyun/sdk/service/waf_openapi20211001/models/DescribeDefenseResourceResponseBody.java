@@ -227,6 +227,9 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceOrigin")
         private String resourceOrigin;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceStatus")
+        private String resourceStatus;
+
         @com.aliyun.core.annotation.NameInMap("ResponseHeaders")
         private java.util.List<ResponseHeaders> responseHeaders;
 
@@ -250,6 +253,7 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
             this.resourceGroup = builder.resourceGroup;
             this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
             this.resourceOrigin = builder.resourceOrigin;
+            this.resourceStatus = builder.resourceStatus;
             this.responseHeaders = builder.responseHeaders;
             this.xffStatus = builder.xffStatus;
         }
@@ -375,6 +379,13 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceStatus
+         */
+        public String getResourceStatus() {
+            return this.resourceStatus;
+        }
+
+        /**
          * @return responseHeaders
          */
         public java.util.List<ResponseHeaders> getResponseHeaders() {
@@ -405,6 +416,7 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
             private String resourceGroup; 
             private String resourceManagerResourceGroupId; 
             private String resourceOrigin; 
+            private String resourceStatus; 
             private java.util.List<ResponseHeaders> responseHeaders; 
             private Integer xffStatus; 
 
@@ -428,6 +440,7 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
                 this.resourceGroup = model.resourceGroup;
                 this.resourceManagerResourceGroupId = model.resourceManagerResourceGroupId;
                 this.resourceOrigin = model.resourceOrigin;
+                this.resourceStatus = model.resourceStatus;
                 this.responseHeaders = model.responseHeaders;
                 this.xffStatus = model.xffStatus;
             } 
@@ -621,6 +634,14 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
              */
             public Builder resourceOrigin(String resourceOrigin) {
                 this.resourceOrigin = resourceOrigin;
+                return this;
+            }
+
+            /**
+             * ResourceStatus.
+             */
+            public Builder resourceStatus(String resourceStatus) {
+                this.resourceStatus = resourceStatus;
                 return this;
             }
 

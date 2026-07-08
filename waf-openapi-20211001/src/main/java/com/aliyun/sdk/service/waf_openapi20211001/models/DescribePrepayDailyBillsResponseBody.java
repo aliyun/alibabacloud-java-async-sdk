@@ -131,6 +131,12 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExceedStatus")
         private Integer exceedStatus;
 
+        @com.aliyun.core.annotation.NameInMap("ExtensionPlugin")
+        private Boolean extensionPlugin;
+
+        @com.aliyun.core.annotation.NameInMap("ExtensionPluginRequest")
+        private Long extensionPluginRequest;
+
         @com.aliyun.core.annotation.NameInMap("MaxQps")
         private Long maxQps;
 
@@ -162,6 +168,8 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
             this.elasticQpsSetValue = builder.elasticQpsSetValue;
             this.endTime = builder.endTime;
             this.exceedStatus = builder.exceedStatus;
+            this.extensionPlugin = builder.extensionPlugin;
+            this.extensionPluginRequest = builder.extensionPluginRequest;
             this.maxQps = builder.maxQps;
             this.price = builder.price;
             this.qps = builder.qps;
@@ -200,6 +208,20 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
          */
         public Integer getExceedStatus() {
             return this.exceedStatus;
+        }
+
+        /**
+         * @return extensionPlugin
+         */
+        public Boolean getExtensionPlugin() {
+            return this.extensionPlugin;
+        }
+
+        /**
+         * @return extensionPluginRequest
+         */
+        public Long getExtensionPluginRequest() {
+            return this.extensionPluginRequest;
         }
 
         /**
@@ -269,6 +291,8 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
             private Long elasticQpsSetValue; 
             private Long endTime; 
             private Integer exceedStatus; 
+            private Boolean extensionPlugin; 
+            private Long extensionPluginRequest; 
             private Long maxQps; 
             private Float price; 
             private Long qps; 
@@ -286,6 +310,8 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
                 this.elasticQpsSetValue = model.elasticQpsSetValue;
                 this.endTime = model.endTime;
                 this.exceedStatus = model.exceedStatus;
+                this.extensionPlugin = model.extensionPlugin;
+                this.extensionPluginRequest = model.extensionPluginRequest;
                 this.maxQps = model.maxQps;
                 this.price = model.price;
                 this.qps = model.qps;
@@ -332,6 +358,22 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
              */
             public Builder exceedStatus(Integer exceedStatus) {
                 this.exceedStatus = exceedStatus;
+                return this;
+            }
+
+            /**
+             * ExtensionPlugin.
+             */
+            public Builder extensionPlugin(Boolean extensionPlugin) {
+                this.extensionPlugin = extensionPlugin;
+                return this;
+            }
+
+            /**
+             * ExtensionPluginRequest.
+             */
+            public Builder extensionPluginRequest(Long extensionPluginRequest) {
+                this.extensionPluginRequest = extensionPluginRequest;
                 return this;
             }
 
