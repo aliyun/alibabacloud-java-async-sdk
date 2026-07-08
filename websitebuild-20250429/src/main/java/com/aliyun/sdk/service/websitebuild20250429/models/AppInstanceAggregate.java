@@ -107,6 +107,9 @@ public class AppInstanceAggregate extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List<Tags> tags;
 
+    @com.aliyun.core.annotation.NameInMap("TemplateRecord")
+    private TemplateRecord templateRecord;
+
     @com.aliyun.core.annotation.NameInMap("ThumbnailUrl")
     private String thumbnailUrl;
 
@@ -147,6 +150,7 @@ public class AppInstanceAggregate extends TeaModel {
         this.status = builder.status;
         this.statusText = builder.statusText;
         this.tags = builder.tags;
+        this.templateRecord = builder.templateRecord;
         this.thumbnailUrl = builder.thumbnailUrl;
         this.userId = builder.userId;
         this.version = builder.version;
@@ -375,6 +379,13 @@ public class AppInstanceAggregate extends TeaModel {
     }
 
     /**
+     * @return templateRecord
+     */
+    public TemplateRecord getTemplateRecord() {
+        return this.templateRecord;
+    }
+
+    /**
      * @return thumbnailUrl
      */
     public String getThumbnailUrl() {
@@ -426,6 +437,7 @@ public class AppInstanceAggregate extends TeaModel {
         private String status; 
         private String statusText; 
         private java.util.List<Tags> tags; 
+        private TemplateRecord templateRecord; 
         private String thumbnailUrl; 
         private String userId; 
         private String version; 
@@ -464,6 +476,7 @@ public class AppInstanceAggregate extends TeaModel {
             this.status = model.status;
             this.statusText = model.statusText;
             this.tags = model.tags;
+            this.templateRecord = model.templateRecord;
             this.thumbnailUrl = model.thumbnailUrl;
             this.userId = model.userId;
             this.version = model.version;
@@ -706,6 +719,14 @@ public class AppInstanceAggregate extends TeaModel {
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
+            return this;
+        }
+
+        /**
+         * TemplateRecord.
+         */
+        public Builder templateRecord(TemplateRecord templateRecord) {
+            this.templateRecord = templateRecord;
             return this;
         }
 
