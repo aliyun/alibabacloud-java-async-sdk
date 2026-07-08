@@ -29,8 +29,32 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "Dytnsapi";
         this.version = "2020-02-17";
-        this.endpointRule = "central";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("us-west-1", "dytnsapi.aliyuncs.com"),
+            new TeaPair("us-east-1", "dytnsapi.aliyuncs.com"),
+            new TeaPair("me-east-1", "dytnsapi.aliyuncs.com"),
+            new TeaPair("eu-west-1", "dytnsapi.aliyuncs.com"),
+            new TeaPair("eu-central-1", "dytnsapi.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "dytnsapi.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "dytnsapi.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "dytnsapi.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "dytnsapi.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "dytnsapi.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "dytnsapi.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "dytnsapi.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "dytnsapi.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "dytnsapi.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "dytnsapi.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "dytnsapi.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "dytnsapi.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "dytnsapi.aliyuncs.com"),
+            new TeaPair("cn-beijing", "dytnsapi.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "dytnsapi.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "dytnsapi.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "dytnsapi.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "dytnsapi.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -1022,6 +1046,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateContactsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of VirtualThreeElementsVerification  VirtualThreeElementsVerificationRequest
+     * @return VirtualThreeElementsVerificationResponse
+     */
+    @Override
+    public CompletableFuture<VirtualThreeElementsVerificationResponse> virtualThreeElementsVerification(VirtualThreeElementsVerificationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("VirtualThreeElementsVerification").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(VirtualThreeElementsVerificationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<VirtualThreeElementsVerificationResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

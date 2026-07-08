@@ -443,4 +443,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<UpdateContactsResponse> updateContacts(UpdateContactsRequest request);
 
+    /**
+     * @param request the request parameters of VirtualThreeElementsVerification  VirtualThreeElementsVerificationRequest
+     * @return VirtualThreeElementsVerificationResponse
+     */
+    CompletableFuture<VirtualThreeElementsVerificationResponse> virtualThreeElementsVerification(VirtualThreeElementsVerificationRequest request);
+
 }
