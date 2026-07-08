@@ -30,8 +30,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "appflow";
         this.version = "2023-09-04";
-        this.endpointRule = "";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("cn-hangzhou", "appflow.cn-hangzhou.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -243,6 +245,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<LaunchFlowResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListFlows  ListFlowsRequest
+     * @return ListFlowsResponse
+     */
+    @Override
+    public CompletableFuture<ListFlowsResponse> listFlows(ListFlowsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListFlows").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListFlowsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListFlowsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

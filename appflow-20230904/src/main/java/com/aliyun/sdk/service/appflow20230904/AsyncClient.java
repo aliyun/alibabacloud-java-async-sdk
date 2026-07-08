@@ -88,6 +88,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<LaunchFlowResponse> launchFlow(LaunchFlowRequest request);
 
     /**
+     * @param request the request parameters of ListFlows  ListFlowsRequest
+     * @return ListFlowsResponse
+     */
+    CompletableFuture<ListFlowsResponse> listFlows(ListFlowsRequest request);
+
+    /**
      * @param request the request parameters of ListUserAuthConfigs  ListUserAuthConfigsRequest
      * @return ListUserAuthConfigsResponse
      */
