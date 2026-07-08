@@ -4156,6 +4156,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeVpcFirewallTrafficTrend  DescribeVpcFirewallTrafficTrendRequest
+     * @return DescribeVpcFirewallTrafficTrendResponse
+     */
+    @Override
+    public CompletableFuture<DescribeVpcFirewallTrafficTrendResponse> describeVpcFirewallTrafficTrend(DescribeVpcFirewallTrafficTrendRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeVpcFirewallTrafficTrend").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeVpcFirewallTrafficTrendResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeVpcFirewallTrafficTrendResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeVpcFirewallZone  DescribeVpcFirewallZoneRequest
      * @return DescribeVpcFirewallZoneResponse
      */
