@@ -34,6 +34,14 @@ public class AddAddressBookRequest extends Request {
     private String addressList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssetMemberUids")
+    private java.util.List<Long> assetMemberUids;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssetRegionResourceTypes")
+    private java.util.List<AssetRegionResourceTypes> assetRegionResourceTypes;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoAddTagEcs")
     private String autoAddTagEcs;
 
@@ -75,6 +83,8 @@ public class AddAddressBookRequest extends Request {
         this.ackLabels = builder.ackLabels;
         this.ackNamespaces = builder.ackNamespaces;
         this.addressList = builder.addressList;
+        this.assetMemberUids = builder.assetMemberUids;
+        this.assetRegionResourceTypes = builder.assetRegionResourceTypes;
         this.autoAddTagEcs = builder.autoAddTagEcs;
         this.description = builder.description;
         this.groupName = builder.groupName;
@@ -124,6 +134,20 @@ public class AddAddressBookRequest extends Request {
      */
     public String getAddressList() {
         return this.addressList;
+    }
+
+    /**
+     * @return assetMemberUids
+     */
+    public java.util.List<Long> getAssetMemberUids() {
+        return this.assetMemberUids;
+    }
+
+    /**
+     * @return assetRegionResourceTypes
+     */
+    public java.util.List<AssetRegionResourceTypes> getAssetRegionResourceTypes() {
+        return this.assetRegionResourceTypes;
     }
 
     /**
@@ -187,6 +211,8 @@ public class AddAddressBookRequest extends Request {
         private java.util.List<AckLabels> ackLabels; 
         private java.util.List<String> ackNamespaces; 
         private String addressList; 
+        private java.util.List<Long> assetMemberUids; 
+        private java.util.List<AssetRegionResourceTypes> assetRegionResourceTypes; 
         private String autoAddTagEcs; 
         private String description; 
         private String groupName; 
@@ -206,6 +232,8 @@ public class AddAddressBookRequest extends Request {
             this.ackLabels = request.ackLabels;
             this.ackNamespaces = request.ackNamespaces;
             this.addressList = request.addressList;
+            this.assetMemberUids = request.assetMemberUids;
+            this.assetRegionResourceTypes = request.assetRegionResourceTypes;
             this.autoAddTagEcs = request.autoAddTagEcs;
             this.description = request.description;
             this.groupName = request.groupName;
@@ -260,6 +288,26 @@ public class AddAddressBookRequest extends Request {
         public Builder addressList(String addressList) {
             this.putQueryParameter("AddressList", addressList);
             this.addressList = addressList;
+            return this;
+        }
+
+        /**
+         * AssetMemberUids.
+         */
+        public Builder assetMemberUids(java.util.List<Long> assetMemberUids) {
+            String assetMemberUidsShrink = shrink(assetMemberUids, "AssetMemberUids", "json");
+            this.putQueryParameter("AssetMemberUids", assetMemberUidsShrink);
+            this.assetMemberUids = assetMemberUids;
+            return this;
+        }
+
+        /**
+         * AssetRegionResourceTypes.
+         */
+        public Builder assetRegionResourceTypes(java.util.List<AssetRegionResourceTypes> assetRegionResourceTypes) {
+            String assetRegionResourceTypesShrink = shrink(assetRegionResourceTypes, "AssetRegionResourceTypes", "json");
+            this.putQueryParameter("AssetRegionResourceTypes", assetRegionResourceTypesShrink);
+            this.assetRegionResourceTypes = assetRegionResourceTypes;
             return this;
         }
 
@@ -454,6 +502,747 @@ public class AddAddressBookRequest extends Request {
 
             public AckLabels build() {
                 return new AckLabels(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AddAddressBookRequest} extends {@link TeaModel}
+     *
+     * <p>AddAddressBookRequest</p>
+     */
+    public static class Ipv4 extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AiGatewayEIP")
+        private Boolean aiGatewayEIP;
+
+        @com.aliyun.core.annotation.NameInMap("AlbEIP")
+        private Boolean albEIP;
+
+        @com.aliyun.core.annotation.NameInMap("ApiGatewayEIP")
+        private Boolean apiGatewayEIP;
+
+        @com.aliyun.core.annotation.NameInMap("BastionHostEgressIP")
+        private Boolean bastionHostEgressIP;
+
+        @com.aliyun.core.annotation.NameInMap("BastionHostIP")
+        private Boolean bastionHostIP;
+
+        @com.aliyun.core.annotation.NameInMap("BastionHostIngressIP")
+        private Boolean bastionHostIngressIP;
+
+        @com.aliyun.core.annotation.NameInMap("EIP")
+        private Boolean EIP;
+
+        @com.aliyun.core.annotation.NameInMap("EcsEIP")
+        private Boolean ecsEIP;
+
+        @com.aliyun.core.annotation.NameInMap("EcsPublicIP")
+        private Boolean ecsPublicIP;
+
+        @com.aliyun.core.annotation.NameInMap("EniEIP")
+        private Boolean eniEIP;
+
+        @com.aliyun.core.annotation.NameInMap("GaEIP")
+        private Boolean gaEIP;
+
+        @com.aliyun.core.annotation.NameInMap("HAVIP")
+        private Boolean HAVIP;
+
+        @com.aliyun.core.annotation.NameInMap("NatEIP")
+        private Boolean natEIP;
+
+        @com.aliyun.core.annotation.NameInMap("NatPublicIP")
+        private Boolean natPublicIP;
+
+        @com.aliyun.core.annotation.NameInMap("NlbEIP")
+        private Boolean nlbEIP;
+
+        @com.aliyun.core.annotation.NameInMap("SlbEIP")
+        private Boolean slbEIP;
+
+        @com.aliyun.core.annotation.NameInMap("SlbPublicIP")
+        private Boolean slbPublicIP;
+
+        private Ipv4(Builder builder) {
+            this.aiGatewayEIP = builder.aiGatewayEIP;
+            this.albEIP = builder.albEIP;
+            this.apiGatewayEIP = builder.apiGatewayEIP;
+            this.bastionHostEgressIP = builder.bastionHostEgressIP;
+            this.bastionHostIP = builder.bastionHostIP;
+            this.bastionHostIngressIP = builder.bastionHostIngressIP;
+            this.EIP = builder.EIP;
+            this.ecsEIP = builder.ecsEIP;
+            this.ecsPublicIP = builder.ecsPublicIP;
+            this.eniEIP = builder.eniEIP;
+            this.gaEIP = builder.gaEIP;
+            this.HAVIP = builder.HAVIP;
+            this.natEIP = builder.natEIP;
+            this.natPublicIP = builder.natPublicIP;
+            this.nlbEIP = builder.nlbEIP;
+            this.slbEIP = builder.slbEIP;
+            this.slbPublicIP = builder.slbPublicIP;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ipv4 create() {
+            return builder().build();
+        }
+
+        /**
+         * @return aiGatewayEIP
+         */
+        public Boolean getAiGatewayEIP() {
+            return this.aiGatewayEIP;
+        }
+
+        /**
+         * @return albEIP
+         */
+        public Boolean getAlbEIP() {
+            return this.albEIP;
+        }
+
+        /**
+         * @return apiGatewayEIP
+         */
+        public Boolean getApiGatewayEIP() {
+            return this.apiGatewayEIP;
+        }
+
+        /**
+         * @return bastionHostEgressIP
+         */
+        public Boolean getBastionHostEgressIP() {
+            return this.bastionHostEgressIP;
+        }
+
+        /**
+         * @return bastionHostIP
+         */
+        public Boolean getBastionHostIP() {
+            return this.bastionHostIP;
+        }
+
+        /**
+         * @return bastionHostIngressIP
+         */
+        public Boolean getBastionHostIngressIP() {
+            return this.bastionHostIngressIP;
+        }
+
+        /**
+         * @return EIP
+         */
+        public Boolean getEIP() {
+            return this.EIP;
+        }
+
+        /**
+         * @return ecsEIP
+         */
+        public Boolean getEcsEIP() {
+            return this.ecsEIP;
+        }
+
+        /**
+         * @return ecsPublicIP
+         */
+        public Boolean getEcsPublicIP() {
+            return this.ecsPublicIP;
+        }
+
+        /**
+         * @return eniEIP
+         */
+        public Boolean getEniEIP() {
+            return this.eniEIP;
+        }
+
+        /**
+         * @return gaEIP
+         */
+        public Boolean getGaEIP() {
+            return this.gaEIP;
+        }
+
+        /**
+         * @return HAVIP
+         */
+        public Boolean getHAVIP() {
+            return this.HAVIP;
+        }
+
+        /**
+         * @return natEIP
+         */
+        public Boolean getNatEIP() {
+            return this.natEIP;
+        }
+
+        /**
+         * @return natPublicIP
+         */
+        public Boolean getNatPublicIP() {
+            return this.natPublicIP;
+        }
+
+        /**
+         * @return nlbEIP
+         */
+        public Boolean getNlbEIP() {
+            return this.nlbEIP;
+        }
+
+        /**
+         * @return slbEIP
+         */
+        public Boolean getSlbEIP() {
+            return this.slbEIP;
+        }
+
+        /**
+         * @return slbPublicIP
+         */
+        public Boolean getSlbPublicIP() {
+            return this.slbPublicIP;
+        }
+
+        public static final class Builder {
+            private Boolean aiGatewayEIP; 
+            private Boolean albEIP; 
+            private Boolean apiGatewayEIP; 
+            private Boolean bastionHostEgressIP; 
+            private Boolean bastionHostIP; 
+            private Boolean bastionHostIngressIP; 
+            private Boolean EIP; 
+            private Boolean ecsEIP; 
+            private Boolean ecsPublicIP; 
+            private Boolean eniEIP; 
+            private Boolean gaEIP; 
+            private Boolean HAVIP; 
+            private Boolean natEIP; 
+            private Boolean natPublicIP; 
+            private Boolean nlbEIP; 
+            private Boolean slbEIP; 
+            private Boolean slbPublicIP; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv4 model) {
+                this.aiGatewayEIP = model.aiGatewayEIP;
+                this.albEIP = model.albEIP;
+                this.apiGatewayEIP = model.apiGatewayEIP;
+                this.bastionHostEgressIP = model.bastionHostEgressIP;
+                this.bastionHostIP = model.bastionHostIP;
+                this.bastionHostIngressIP = model.bastionHostIngressIP;
+                this.EIP = model.EIP;
+                this.ecsEIP = model.ecsEIP;
+                this.ecsPublicIP = model.ecsPublicIP;
+                this.eniEIP = model.eniEIP;
+                this.gaEIP = model.gaEIP;
+                this.HAVIP = model.HAVIP;
+                this.natEIP = model.natEIP;
+                this.natPublicIP = model.natPublicIP;
+                this.nlbEIP = model.nlbEIP;
+                this.slbEIP = model.slbEIP;
+                this.slbPublicIP = model.slbPublicIP;
+            } 
+
+            /**
+             * AiGatewayEIP.
+             */
+            public Builder aiGatewayEIP(Boolean aiGatewayEIP) {
+                this.aiGatewayEIP = aiGatewayEIP;
+                return this;
+            }
+
+            /**
+             * AlbEIP.
+             */
+            public Builder albEIP(Boolean albEIP) {
+                this.albEIP = albEIP;
+                return this;
+            }
+
+            /**
+             * ApiGatewayEIP.
+             */
+            public Builder apiGatewayEIP(Boolean apiGatewayEIP) {
+                this.apiGatewayEIP = apiGatewayEIP;
+                return this;
+            }
+
+            /**
+             * BastionHostEgressIP.
+             */
+            public Builder bastionHostEgressIP(Boolean bastionHostEgressIP) {
+                this.bastionHostEgressIP = bastionHostEgressIP;
+                return this;
+            }
+
+            /**
+             * BastionHostIP.
+             */
+            public Builder bastionHostIP(Boolean bastionHostIP) {
+                this.bastionHostIP = bastionHostIP;
+                return this;
+            }
+
+            /**
+             * BastionHostIngressIP.
+             */
+            public Builder bastionHostIngressIP(Boolean bastionHostIngressIP) {
+                this.bastionHostIngressIP = bastionHostIngressIP;
+                return this;
+            }
+
+            /**
+             * EIP.
+             */
+            public Builder EIP(Boolean EIP) {
+                this.EIP = EIP;
+                return this;
+            }
+
+            /**
+             * EcsEIP.
+             */
+            public Builder ecsEIP(Boolean ecsEIP) {
+                this.ecsEIP = ecsEIP;
+                return this;
+            }
+
+            /**
+             * EcsPublicIP.
+             */
+            public Builder ecsPublicIP(Boolean ecsPublicIP) {
+                this.ecsPublicIP = ecsPublicIP;
+                return this;
+            }
+
+            /**
+             * EniEIP.
+             */
+            public Builder eniEIP(Boolean eniEIP) {
+                this.eniEIP = eniEIP;
+                return this;
+            }
+
+            /**
+             * GaEIP.
+             */
+            public Builder gaEIP(Boolean gaEIP) {
+                this.gaEIP = gaEIP;
+                return this;
+            }
+
+            /**
+             * HAVIP.
+             */
+            public Builder HAVIP(Boolean HAVIP) {
+                this.HAVIP = HAVIP;
+                return this;
+            }
+
+            /**
+             * NatEIP.
+             */
+            public Builder natEIP(Boolean natEIP) {
+                this.natEIP = natEIP;
+                return this;
+            }
+
+            /**
+             * NatPublicIP.
+             */
+            public Builder natPublicIP(Boolean natPublicIP) {
+                this.natPublicIP = natPublicIP;
+                return this;
+            }
+
+            /**
+             * NlbEIP.
+             */
+            public Builder nlbEIP(Boolean nlbEIP) {
+                this.nlbEIP = nlbEIP;
+                return this;
+            }
+
+            /**
+             * SlbEIP.
+             */
+            public Builder slbEIP(Boolean slbEIP) {
+                this.slbEIP = slbEIP;
+                return this;
+            }
+
+            /**
+             * SlbPublicIP.
+             */
+            public Builder slbPublicIP(Boolean slbPublicIP) {
+                this.slbPublicIP = slbPublicIP;
+                return this;
+            }
+
+            public Ipv4 build() {
+                return new Ipv4(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AddAddressBookRequest} extends {@link TeaModel}
+     *
+     * <p>AddAddressBookRequest</p>
+     */
+    public static class Ipv6 extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AiGatewayEIPv6")
+        private Boolean aiGatewayEIPv6;
+
+        @com.aliyun.core.annotation.NameInMap("AlbIPv6")
+        private Boolean albIPv6;
+
+        @com.aliyun.core.annotation.NameInMap("ApiGatewayEIPv6")
+        private Boolean apiGatewayEIPv6;
+
+        @com.aliyun.core.annotation.NameInMap("EcsIPv6")
+        private Boolean ecsIPv6;
+
+        @com.aliyun.core.annotation.NameInMap("EniEIPv6")
+        private Boolean eniEIPv6;
+
+        @com.aliyun.core.annotation.NameInMap("GaEIPv6")
+        private Boolean gaEIPv6;
+
+        @com.aliyun.core.annotation.NameInMap("NlbIPv6")
+        private Boolean nlbIPv6;
+
+        @com.aliyun.core.annotation.NameInMap("SlbIPv6")
+        private Boolean slbIPv6;
+
+        private Ipv6(Builder builder) {
+            this.aiGatewayEIPv6 = builder.aiGatewayEIPv6;
+            this.albIPv6 = builder.albIPv6;
+            this.apiGatewayEIPv6 = builder.apiGatewayEIPv6;
+            this.ecsIPv6 = builder.ecsIPv6;
+            this.eniEIPv6 = builder.eniEIPv6;
+            this.gaEIPv6 = builder.gaEIPv6;
+            this.nlbIPv6 = builder.nlbIPv6;
+            this.slbIPv6 = builder.slbIPv6;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ipv6 create() {
+            return builder().build();
+        }
+
+        /**
+         * @return aiGatewayEIPv6
+         */
+        public Boolean getAiGatewayEIPv6() {
+            return this.aiGatewayEIPv6;
+        }
+
+        /**
+         * @return albIPv6
+         */
+        public Boolean getAlbIPv6() {
+            return this.albIPv6;
+        }
+
+        /**
+         * @return apiGatewayEIPv6
+         */
+        public Boolean getApiGatewayEIPv6() {
+            return this.apiGatewayEIPv6;
+        }
+
+        /**
+         * @return ecsIPv6
+         */
+        public Boolean getEcsIPv6() {
+            return this.ecsIPv6;
+        }
+
+        /**
+         * @return eniEIPv6
+         */
+        public Boolean getEniEIPv6() {
+            return this.eniEIPv6;
+        }
+
+        /**
+         * @return gaEIPv6
+         */
+        public Boolean getGaEIPv6() {
+            return this.gaEIPv6;
+        }
+
+        /**
+         * @return nlbIPv6
+         */
+        public Boolean getNlbIPv6() {
+            return this.nlbIPv6;
+        }
+
+        /**
+         * @return slbIPv6
+         */
+        public Boolean getSlbIPv6() {
+            return this.slbIPv6;
+        }
+
+        public static final class Builder {
+            private Boolean aiGatewayEIPv6; 
+            private Boolean albIPv6; 
+            private Boolean apiGatewayEIPv6; 
+            private Boolean ecsIPv6; 
+            private Boolean eniEIPv6; 
+            private Boolean gaEIPv6; 
+            private Boolean nlbIPv6; 
+            private Boolean slbIPv6; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ipv6 model) {
+                this.aiGatewayEIPv6 = model.aiGatewayEIPv6;
+                this.albIPv6 = model.albIPv6;
+                this.apiGatewayEIPv6 = model.apiGatewayEIPv6;
+                this.ecsIPv6 = model.ecsIPv6;
+                this.eniEIPv6 = model.eniEIPv6;
+                this.gaEIPv6 = model.gaEIPv6;
+                this.nlbIPv6 = model.nlbIPv6;
+                this.slbIPv6 = model.slbIPv6;
+            } 
+
+            /**
+             * AiGatewayEIPv6.
+             */
+            public Builder aiGatewayEIPv6(Boolean aiGatewayEIPv6) {
+                this.aiGatewayEIPv6 = aiGatewayEIPv6;
+                return this;
+            }
+
+            /**
+             * AlbIPv6.
+             */
+            public Builder albIPv6(Boolean albIPv6) {
+                this.albIPv6 = albIPv6;
+                return this;
+            }
+
+            /**
+             * ApiGatewayEIPv6.
+             */
+            public Builder apiGatewayEIPv6(Boolean apiGatewayEIPv6) {
+                this.apiGatewayEIPv6 = apiGatewayEIPv6;
+                return this;
+            }
+
+            /**
+             * EcsIPv6.
+             */
+            public Builder ecsIPv6(Boolean ecsIPv6) {
+                this.ecsIPv6 = ecsIPv6;
+                return this;
+            }
+
+            /**
+             * EniEIPv6.
+             */
+            public Builder eniEIPv6(Boolean eniEIPv6) {
+                this.eniEIPv6 = eniEIPv6;
+                return this;
+            }
+
+            /**
+             * GaEIPv6.
+             */
+            public Builder gaEIPv6(Boolean gaEIPv6) {
+                this.gaEIPv6 = gaEIPv6;
+                return this;
+            }
+
+            /**
+             * NlbIPv6.
+             */
+            public Builder nlbIPv6(Boolean nlbIPv6) {
+                this.nlbIPv6 = nlbIPv6;
+                return this;
+            }
+
+            /**
+             * SlbIPv6.
+             */
+            public Builder slbIPv6(Boolean slbIPv6) {
+                this.slbIPv6 = slbIPv6;
+                return this;
+            }
+
+            public Ipv6 build() {
+                return new Ipv6(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AddAddressBookRequest} extends {@link TeaModel}
+     *
+     * <p>AddAddressBookRequest</p>
+     */
+    public static class ResourceType extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Ipv4")
+        private Ipv4 ipv4;
+
+        @com.aliyun.core.annotation.NameInMap("Ipv6")
+        private Ipv6 ipv6;
+
+        private ResourceType(Builder builder) {
+            this.ipv4 = builder.ipv4;
+            this.ipv6 = builder.ipv6;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceType create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ipv4
+         */
+        public Ipv4 getIpv4() {
+            return this.ipv4;
+        }
+
+        /**
+         * @return ipv6
+         */
+        public Ipv6 getIpv6() {
+            return this.ipv6;
+        }
+
+        public static final class Builder {
+            private Ipv4 ipv4; 
+            private Ipv6 ipv6; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceType model) {
+                this.ipv4 = model.ipv4;
+                this.ipv6 = model.ipv6;
+            } 
+
+            /**
+             * Ipv4.
+             */
+            public Builder ipv4(Ipv4 ipv4) {
+                this.ipv4 = ipv4;
+                return this;
+            }
+
+            /**
+             * Ipv6.
+             */
+            public Builder ipv6(Ipv6 ipv6) {
+                this.ipv6 = ipv6;
+                return this;
+            }
+
+            public ResourceType build() {
+                return new ResourceType(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AddAddressBookRequest} extends {@link TeaModel}
+     *
+     * <p>AddAddressBookRequest</p>
+     */
+    public static class AssetRegionResourceTypes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AssetRegionId")
+        private String assetRegionId;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
+        private ResourceType resourceType;
+
+        private AssetRegionResourceTypes(Builder builder) {
+            this.assetRegionId = builder.assetRegionId;
+            this.resourceType = builder.resourceType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AssetRegionResourceTypes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return assetRegionId
+         */
+        public String getAssetRegionId() {
+            return this.assetRegionId;
+        }
+
+        /**
+         * @return resourceType
+         */
+        public ResourceType getResourceType() {
+            return this.resourceType;
+        }
+
+        public static final class Builder {
+            private String assetRegionId; 
+            private ResourceType resourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssetRegionResourceTypes model) {
+                this.assetRegionId = model.assetRegionId;
+                this.resourceType = model.resourceType;
+            } 
+
+            /**
+             * AssetRegionId.
+             */
+            public Builder assetRegionId(String assetRegionId) {
+                this.assetRegionId = assetRegionId;
+                return this;
+            }
+
+            /**
+             * ResourceType.
+             */
+            public Builder resourceType(ResourceType resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            public AssetRegionResourceTypes build() {
+                return new AssetRegionResourceTypes(this);
             } 
 
         } 

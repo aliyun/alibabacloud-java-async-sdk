@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAddressBookRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssetMemberUids")
+    private java.util.List<Long> assetMemberUids;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ContainPort")
     private String containPort;
 
@@ -47,6 +51,7 @@ public class DescribeAddressBookRequest extends Request {
 
     private DescribeAddressBookRequest(Builder builder) {
         super(builder);
+        this.assetMemberUids = builder.assetMemberUids;
         this.containPort = builder.containPort;
         this.currentPage = builder.currentPage;
         this.groupType = builder.groupType;
@@ -67,6 +72,13 @@ public class DescribeAddressBookRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return assetMemberUids
+     */
+    public java.util.List<Long> getAssetMemberUids() {
+        return this.assetMemberUids;
     }
 
     /**
@@ -119,6 +131,7 @@ public class DescribeAddressBookRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeAddressBookRequest, Builder> {
+        private java.util.List<Long> assetMemberUids; 
         private String containPort; 
         private String currentPage; 
         private String groupType; 
@@ -133,6 +146,7 @@ public class DescribeAddressBookRequest extends Request {
 
         private Builder(DescribeAddressBookRequest request) {
             super(request);
+            this.assetMemberUids = request.assetMemberUids;
             this.containPort = request.containPort;
             this.currentPage = request.currentPage;
             this.groupType = request.groupType;
@@ -141,6 +155,16 @@ public class DescribeAddressBookRequest extends Request {
             this.pageSize = request.pageSize;
             this.query = request.query;
         } 
+
+        /**
+         * AssetMemberUids.
+         */
+        public Builder assetMemberUids(java.util.List<Long> assetMemberUids) {
+            String assetMemberUidsShrink = shrink(assetMemberUids, "AssetMemberUids", "json");
+            this.putQueryParameter("AssetMemberUids", assetMemberUidsShrink);
+            this.assetMemberUids = assetMemberUids;
+            return this;
+        }
 
         /**
          * <p>The port that is included in the address book. This parameter takes effect only when the <strong>GroupType</strong> parameter is set to <strong>port</strong>.</p>
