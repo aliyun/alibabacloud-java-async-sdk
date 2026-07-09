@@ -20,6 +20,15 @@ public class DatasourceConfigUnified extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
 
+    @com.aliyun.core.annotation.NameInMap("legacyRaw")
+    private String legacyRaw;
+
+    @com.aliyun.core.annotation.NameInMap("legacyType")
+    private String legacyType;
+
+    @com.aliyun.core.annotation.NameInMap("productCategory")
+    private String productCategory;
+
     @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
 
@@ -29,6 +38,9 @@ public class DatasourceConfigUnified extends TeaModel {
 
     private DatasourceConfigUnified(Builder builder) {
         this.instanceId = builder.instanceId;
+        this.legacyRaw = builder.legacyRaw;
+        this.legacyType = builder.legacyType;
+        this.productCategory = builder.productCategory;
         this.regionId = builder.regionId;
         this.type = builder.type;
     }
@@ -53,6 +65,27 @@ public class DatasourceConfigUnified extends TeaModel {
     }
 
     /**
+     * @return legacyRaw
+     */
+    public String getLegacyRaw() {
+        return this.legacyRaw;
+    }
+
+    /**
+     * @return legacyType
+     */
+    public String getLegacyType() {
+        return this.legacyType;
+    }
+
+    /**
+     * @return productCategory
+     */
+    public String getProductCategory() {
+        return this.productCategory;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -68,6 +101,9 @@ public class DatasourceConfigUnified extends TeaModel {
 
     public static final class Builder {
         private String instanceId; 
+        private String legacyRaw; 
+        private String legacyType; 
+        private String productCategory; 
         private String regionId; 
         private String type; 
 
@@ -76,12 +112,15 @@ public class DatasourceConfigUnified extends TeaModel {
 
         private Builder(DatasourceConfigUnified model) {
             this.instanceId = model.instanceId;
+            this.legacyRaw = model.legacyRaw;
+            this.legacyType = model.legacyType;
+            this.productCategory = model.productCategory;
             this.regionId = model.regionId;
             this.type = model.type;
         } 
 
         /**
-         * <p>Prometheus 实例 ID（type=PROMETHEUS 时使用）</p>
+         * instanceId.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -89,7 +128,31 @@ public class DatasourceConfigUnified extends TeaModel {
         }
 
         /**
-         * <p>地域 ID（各类型可选，缺省与规则/网关一致）</p>
+         * legacyRaw.
+         */
+        public Builder legacyRaw(String legacyRaw) {
+            this.legacyRaw = legacyRaw;
+            return this;
+        }
+
+        /**
+         * legacyType.
+         */
+        public Builder legacyType(String legacyType) {
+            this.legacyType = legacyType;
+            return this;
+        }
+
+        /**
+         * productCategory.
+         */
+        public Builder productCategory(String productCategory) {
+            this.productCategory = productCategory;
+            return this;
+        }
+
+        /**
+         * regionId.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -97,7 +160,6 @@ public class DatasourceConfigUnified extends TeaModel {
         }
 
         /**
-         * <p>数据源类型</p>
          * <p>This parameter is required.</p>
          */
         public Builder type(String type) {

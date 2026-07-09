@@ -80,7 +80,7 @@ public class UmodelLabelFilter extends TeaModel {
         } 
 
         /**
-         * <p>标签名</p>
+         * name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -88,7 +88,7 @@ public class UmodelLabelFilter extends TeaModel {
         }
 
         /**
-         * <p>标签过滤操作符，仅支持 = 或 !=</p>
+         * operator.
          */
         public Builder operator(String operator) {
             this.operator = operator;
@@ -96,7 +96,7 @@ public class UmodelLabelFilter extends TeaModel {
         }
 
         /**
-         * <p>标签值</p>
+         * value.
          */
         public Builder value(String value) {
             this.value = value;

@@ -196,6 +196,9 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+        private String resourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("resourceType")
         private String resourceType;
 
@@ -223,6 +226,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
             this.prometheusInstanceId = builder.prometheusInstanceId;
             this.prometheusInstanceName = builder.prometheusInstanceName;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.resourceType = builder.resourceType;
             this.status = builder.status;
             this.supportAuthTypes = builder.supportAuthTypes;
@@ -296,6 +300,13 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return resourceType
          */
         public String getResourceType() {
@@ -346,6 +357,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
             private String prometheusInstanceId; 
             private String prometheusInstanceName; 
             private String regionId; 
+            private String resourceGroupId; 
             private String resourceType; 
             private String status; 
             private java.util.List<String> supportAuthTypes; 
@@ -365,6 +377,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
                 this.prometheusInstanceId = model.prometheusInstanceId;
                 this.prometheusInstanceName = model.prometheusInstanceName;
                 this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
                 this.resourceType = model.resourceType;
                 this.status = model.status;
                 this.supportAuthTypes = model.supportAuthTypes;
@@ -462,6 +475,17 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * <p>Resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek2bhocin5e2na</p>
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

@@ -23,6 +23,12 @@ public class AlertRuleTemplate extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("applyCount")
     private Long applyCount;
 
+    @com.aliyun.core.annotation.NameInMap("bizType")
+    private String bizType;
+
+    @com.aliyun.core.annotation.NameInMap("datasource")
+    private String datasource;
+
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
@@ -44,6 +50,15 @@ public class AlertRuleTemplate extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ruleConfigs")
     private String ruleConfigs;
 
+    @com.aliyun.core.annotation.NameInMap("scenes")
+    private String scenes;
+
+    @com.aliyun.core.annotation.NameInMap("schemaVersion")
+    private String schemaVersion;
+
+    @com.aliyun.core.annotation.NameInMap("sourceType")
+    private String sourceType;
+
     @com.aliyun.core.annotation.NameInMap("status")
     private Integer status;
 
@@ -62,6 +77,8 @@ public class AlertRuleTemplate extends TeaModel {
     private AlertRuleTemplate(Builder builder) {
         this.alertType = builder.alertType;
         this.applyCount = builder.applyCount;
+        this.bizType = builder.bizType;
+        this.datasource = builder.datasource;
         this.description = builder.description;
         this.gmtCreate = builder.gmtCreate;
         this.gmtModified = builder.gmtModified;
@@ -69,6 +86,9 @@ public class AlertRuleTemplate extends TeaModel {
         this.isSystem = builder.isSystem;
         this.labels = builder.labels;
         this.ruleConfigs = builder.ruleConfigs;
+        this.scenes = builder.scenes;
+        this.schemaVersion = builder.schemaVersion;
+        this.sourceType = builder.sourceType;
         this.status = builder.status;
         this.subType = builder.subType;
         this.templateName = builder.templateName;
@@ -100,6 +120,20 @@ public class AlertRuleTemplate extends TeaModel {
      */
     public Long getApplyCount() {
         return this.applyCount;
+    }
+
+    /**
+     * @return bizType
+     */
+    public String getBizType() {
+        return this.bizType;
+    }
+
+    /**
+     * @return datasource
+     */
+    public String getDatasource() {
+        return this.datasource;
     }
 
     /**
@@ -152,6 +186,27 @@ public class AlertRuleTemplate extends TeaModel {
     }
 
     /**
+     * @return scenes
+     */
+    public String getScenes() {
+        return this.scenes;
+    }
+
+    /**
+     * @return schemaVersion
+     */
+    public String getSchemaVersion() {
+        return this.schemaVersion;
+    }
+
+    /**
+     * @return sourceType
+     */
+    public String getSourceType() {
+        return this.sourceType;
+    }
+
+    /**
      * @return status
      */
     public Integer getStatus() {
@@ -189,6 +244,8 @@ public class AlertRuleTemplate extends TeaModel {
     public static final class Builder {
         private String alertType; 
         private Long applyCount; 
+        private String bizType; 
+        private String datasource; 
         private String description; 
         private Long gmtCreate; 
         private Long gmtModified; 
@@ -196,6 +253,9 @@ public class AlertRuleTemplate extends TeaModel {
         private Integer isSystem; 
         private String labels; 
         private String ruleConfigs; 
+        private String scenes; 
+        private String schemaVersion; 
+        private String sourceType; 
         private Integer status; 
         private String subType; 
         private String templateName; 
@@ -208,6 +268,8 @@ public class AlertRuleTemplate extends TeaModel {
         private Builder(AlertRuleTemplate model) {
             this.alertType = model.alertType;
             this.applyCount = model.applyCount;
+            this.bizType = model.bizType;
+            this.datasource = model.datasource;
             this.description = model.description;
             this.gmtCreate = model.gmtCreate;
             this.gmtModified = model.gmtModified;
@@ -215,6 +277,9 @@ public class AlertRuleTemplate extends TeaModel {
             this.isSystem = model.isSystem;
             this.labels = model.labels;
             this.ruleConfigs = model.ruleConfigs;
+            this.scenes = model.scenes;
+            this.schemaVersion = model.schemaVersion;
+            this.sourceType = model.sourceType;
             this.status = model.status;
             this.subType = model.subType;
             this.templateName = model.templateName;
@@ -235,6 +300,22 @@ public class AlertRuleTemplate extends TeaModel {
          */
         public Builder applyCount(Long applyCount) {
             this.applyCount = applyCount;
+            return this;
+        }
+
+        /**
+         * bizType.
+         */
+        public Builder bizType(String bizType) {
+            this.bizType = bizType;
+            return this;
+        }
+
+        /**
+         * datasource.
+         */
+        public Builder datasource(String datasource) {
+            this.datasource = datasource;
             return this;
         }
 
@@ -291,6 +372,30 @@ public class AlertRuleTemplate extends TeaModel {
          */
         public Builder ruleConfigs(String ruleConfigs) {
             this.ruleConfigs = ruleConfigs;
+            return this;
+        }
+
+        /**
+         * scenes.
+         */
+        public Builder scenes(String scenes) {
+            this.scenes = scenes;
+            return this;
+        }
+
+        /**
+         * schemaVersion.
+         */
+        public Builder schemaVersion(String schemaVersion) {
+            this.schemaVersion = schemaVersion;
+            return this;
+        }
+
+        /**
+         * sourceType.
+         */
+        public Builder sourceType(String sourceType) {
+            this.sourceType = sourceType;
             return this;
         }
 

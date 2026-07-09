@@ -69,7 +69,6 @@ public class DirectNotifyChannel extends TeaModel {
         } 
 
         /**
-         * <p>通知对象标识列表</p>
          * <p>This parameter is required.</p>
          */
         public Builder identifiers(java.util.List<String> identifiers) {
@@ -78,7 +77,6 @@ public class DirectNotifyChannel extends TeaModel {
         }
 
         /**
-         * <p>通知渠道类型</p>
          * <p>This parameter is required.</p>
          */
         public Builder type(String type) {

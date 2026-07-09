@@ -82,7 +82,6 @@ public class ApmFilterConfig extends TeaModel {
         } 
 
         /**
-         * <p>维度键</p>
          * <p>This parameter is required.</p>
          */
         public Builder key(String key) {
@@ -91,7 +90,6 @@ public class ApmFilterConfig extends TeaModel {
         }
 
         /**
-         * <p>过滤类型</p>
          * <p>This parameter is required.</p>
          */
         public Builder type(String type) {
@@ -100,7 +98,7 @@ public class ApmFilterConfig extends TeaModel {
         }
 
         /**
-         * <p>过滤值（type 为 ALL/DISABLED 时可为空）</p>
+         * value.
          */
         public Builder value(String value) {
             this.value = value;

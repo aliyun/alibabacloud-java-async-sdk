@@ -82,7 +82,7 @@ public class ApmMeasureConfig extends TeaModel {
         } 
 
         /**
-         * <p>分组维度</p>
+         * groupBy.
          */
         public Builder groupBy(java.util.List<String> groupBy) {
             this.groupBy = groupBy;
@@ -90,7 +90,6 @@ public class ApmMeasureConfig extends TeaModel {
         }
 
         /**
-         * <p>指标代码</p>
          * <p>This parameter is required.</p>
          */
         public Builder measureCode(String measureCode) {
@@ -99,7 +98,6 @@ public class ApmMeasureConfig extends TeaModel {
         }
 
         /**
-         * <p>查询时间窗口（秒）</p>
          * <p>This parameter is required.</p>
          */
         public Builder windowSecs(Integer windowSecs) {

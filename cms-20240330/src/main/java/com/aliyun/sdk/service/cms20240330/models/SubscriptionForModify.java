@@ -32,6 +32,9 @@ public class SubscriptionForModify extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("pushingSetting")
     private PushingSetting pushingSetting;
 
+    @com.aliyun.core.annotation.NameInMap("subscribeLegacyEvent")
+    private Boolean subscribeLegacyEvent;
+
     @com.aliyun.core.annotation.NameInMap("subscriptionName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String subscriptionName;
@@ -45,6 +48,7 @@ public class SubscriptionForModify extends TeaModel {
         this.filterSetting = builder.filterSetting;
         this.notifyStrategyId = builder.notifyStrategyId;
         this.pushingSetting = builder.pushingSetting;
+        this.subscribeLegacyEvent = builder.subscribeLegacyEvent;
         this.subscriptionName = builder.subscriptionName;
         this.workspaceFilterSetting = builder.workspaceFilterSetting;
     }
@@ -97,6 +101,13 @@ public class SubscriptionForModify extends TeaModel {
     }
 
     /**
+     * @return subscribeLegacyEvent
+     */
+    public Boolean getSubscribeLegacyEvent() {
+        return this.subscribeLegacyEvent;
+    }
+
+    /**
      * @return subscriptionName
      */
     public String getSubscriptionName() {
@@ -116,6 +127,7 @@ public class SubscriptionForModify extends TeaModel {
         private FilterSetting filterSetting; 
         private String notifyStrategyId; 
         private PushingSetting pushingSetting; 
+        private Boolean subscribeLegacyEvent; 
         private String subscriptionName; 
         private WorkspaceFilterSetting workspaceFilterSetting; 
 
@@ -128,6 +140,7 @@ public class SubscriptionForModify extends TeaModel {
             this.filterSetting = model.filterSetting;
             this.notifyStrategyId = model.notifyStrategyId;
             this.pushingSetting = model.pushingSetting;
+            this.subscribeLegacyEvent = model.subscribeLegacyEvent;
             this.subscriptionName = model.subscriptionName;
             this.workspaceFilterSetting = model.workspaceFilterSetting;
         } 
@@ -169,6 +182,14 @@ public class SubscriptionForModify extends TeaModel {
          */
         public Builder pushingSetting(PushingSetting pushingSetting) {
             this.pushingSetting = pushingSetting;
+            return this;
+        }
+
+        /**
+         * <p>是否订阅老产品事件（workspace=null 的 cms 1.0 / ARMS / SLS 事件）：true=订阅，false 或 null=不订阅</p>
+         */
+        public Builder subscribeLegacyEvent(Boolean subscribeLegacyEvent) {
+            this.subscribeLegacyEvent = subscribeLegacyEvent;
             return this;
         }
 

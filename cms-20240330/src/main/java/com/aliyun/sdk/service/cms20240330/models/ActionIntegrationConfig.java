@@ -67,7 +67,7 @@ public class ActionIntegrationConfig extends TeaModel {
         } 
 
         /**
-         * <p>行动集成 ID 列表</p>
+         * actions.
          */
         public Builder actions(java.util.List<String> actions) {
             this.actions = actions;
@@ -75,7 +75,7 @@ public class ActionIntegrationConfig extends TeaModel {
         }
 
         /**
-         * <p>是否启用行动集成</p>
+         * enabled.
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;

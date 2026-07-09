@@ -26,10 +26,18 @@ public class ManageAlertRulesResult extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("deletedUuidList")
     private java.util.List<String> deletedUuidList;
 
+    @com.aliyun.core.annotation.NameInMap("updatedCount")
+    private Integer updatedCount;
+
+    @com.aliyun.core.annotation.NameInMap("updatedUuidList")
+    private java.util.List<String> updatedUuidList;
+
     private ManageAlertRulesResult(Builder builder) {
         this.alertRule = builder.alertRule;
         this.deletedCount = builder.deletedCount;
         this.deletedUuidList = builder.deletedUuidList;
+        this.updatedCount = builder.updatedCount;
+        this.updatedUuidList = builder.updatedUuidList;
     }
 
     public static Builder builder() {
@@ -65,10 +73,26 @@ public class ManageAlertRulesResult extends TeaModel {
         return this.deletedUuidList;
     }
 
+    /**
+     * @return updatedCount
+     */
+    public Integer getUpdatedCount() {
+        return this.updatedCount;
+    }
+
+    /**
+     * @return updatedUuidList
+     */
+    public java.util.List<String> getUpdatedUuidList() {
+        return this.updatedUuidList;
+    }
+
     public static final class Builder {
         private AlertRuleV2 alertRule; 
         private Integer deletedCount; 
         private java.util.List<String> deletedUuidList; 
+        private Integer updatedCount; 
+        private java.util.List<String> updatedUuidList; 
 
         private Builder() {
         } 
@@ -77,6 +101,8 @@ public class ManageAlertRulesResult extends TeaModel {
             this.alertRule = model.alertRule;
             this.deletedCount = model.deletedCount;
             this.deletedUuidList = model.deletedUuidList;
+            this.updatedCount = model.updatedCount;
+            this.updatedUuidList = model.updatedUuidList;
         } 
 
         /**
@@ -88,7 +114,7 @@ public class ManageAlertRulesResult extends TeaModel {
         }
 
         /**
-         * <p>成功删除的规则数量</p>
+         * deletedCount.
          */
         public Builder deletedCount(Integer deletedCount) {
             this.deletedCount = deletedCount;
@@ -96,10 +122,26 @@ public class ManageAlertRulesResult extends TeaModel {
         }
 
         /**
-         * <p>成功删除的规则 UUID 列表</p>
+         * deletedUuidList.
          */
         public Builder deletedUuidList(java.util.List<String> deletedUuidList) {
             this.deletedUuidList = deletedUuidList;
+            return this;
+        }
+
+        /**
+         * updatedCount.
+         */
+        public Builder updatedCount(Integer updatedCount) {
+            this.updatedCount = updatedCount;
+            return this;
+        }
+
+        /**
+         * updatedUuidList.
+         */
+        public Builder updatedUuidList(java.util.List<String> updatedUuidList) {
+            this.updatedUuidList = updatedUuidList;
             return this;
         }
 

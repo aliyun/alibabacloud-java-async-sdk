@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link EnabledFilter} extends {@link TeaModel}
+ * {@link DatasourceTypeFilter} extends {@link TeaModel}
  *
- * <p>EnabledFilter</p>
+ * <p>DatasourceTypeFilter</p>
  */
-public class EnabledFilter extends TeaModel {
+public class DatasourceTypeFilter extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("eq")
-    private Boolean eq;
+    private String eq;
 
-    private EnabledFilter(Builder builder) {
+    private DatasourceTypeFilter(Builder builder) {
         this.eq = builder.eq;
     }
 
@@ -28,7 +28,7 @@ public class EnabledFilter extends TeaModel {
         return new Builder();
     }
 
-    public static EnabledFilter create() {
+    public static DatasourceTypeFilter create() {
         return builder().build();
     }
 
@@ -39,30 +39,30 @@ public class EnabledFilter extends TeaModel {
     /**
      * @return eq
      */
-    public Boolean getEq() {
+    public String getEq() {
         return this.eq;
     }
 
     public static final class Builder {
-        private Boolean eq; 
+        private String eq; 
 
         private Builder() {
         } 
 
-        private Builder(EnabledFilter model) {
+        private Builder(DatasourceTypeFilter model) {
             this.eq = model.eq;
         } 
 
         /**
          * eq.
          */
-        public Builder eq(Boolean eq) {
+        public Builder eq(String eq) {
             this.eq = eq;
             return this;
         }
 
-        public EnabledFilter build() {
-            return new EnabledFilter(this);
+        public DatasourceTypeFilter build() {
+            return new DatasourceTypeFilter(this);
         } 
 
     } 

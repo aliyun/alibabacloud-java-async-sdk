@@ -67,7 +67,7 @@ public class QueryAlertRulesResult extends TeaModel {
         } 
 
         /**
-         * <p>告警规则列表</p>
+         * alertRules.
          */
         public Builder alertRules(java.util.List<AlertRuleV2> alertRules) {
             this.alertRules = alertRules;
@@ -75,7 +75,7 @@ public class QueryAlertRulesResult extends TeaModel {
         }
 
         /**
-         * <p>符合查询条件的总告警规则数</p>
+         * totalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

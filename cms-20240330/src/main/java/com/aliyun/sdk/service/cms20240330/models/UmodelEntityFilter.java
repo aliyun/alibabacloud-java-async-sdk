@@ -80,7 +80,7 @@ public class UmodelEntityFilter extends TeaModel {
         } 
 
         /**
-         * <p>过滤字段名</p>
+         * field.
          */
         public Builder field(String field) {
             this.field = field;
@@ -88,7 +88,7 @@ public class UmodelEntityFilter extends TeaModel {
         }
 
         /**
-         * <p>过滤操作符，仅支持 = 或 !=</p>
+         * operator.
          */
         public Builder operator(String operator) {
             this.operator = operator;
@@ -96,7 +96,7 @@ public class UmodelEntityFilter extends TeaModel {
         }
 
         /**
-         * <p>过滤值</p>
+         * value.
          */
         public Builder value(String value) {
             this.value = value;

@@ -68,7 +68,7 @@ public class ScheduleConfigUnified extends TeaModel {
         } 
 
         /**
-         * <p>调度间隔（秒），type=FIXED 时使用</p>
+         * intervalSecs.
          */
         public Builder intervalSecs(Integer intervalSecs) {
             this.intervalSecs = intervalSecs;
@@ -76,7 +76,6 @@ public class ScheduleConfigUnified extends TeaModel {
         }
 
         /**
-         * <p>调度类型</p>
          * <p>This parameter is required.</p>
          */
         public Builder type(String type) {

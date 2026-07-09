@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link EnabledFilter} extends {@link TeaModel}
+ * {@link ObserveResourceGlobalScopeFilter} extends {@link TeaModel}
  *
- * <p>EnabledFilter</p>
+ * <p>ObserveResourceGlobalScopeFilter</p>
  */
-public class EnabledFilter extends TeaModel {
+public class ObserveResourceGlobalScopeFilter extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("eq")
     private Boolean eq;
 
-    private EnabledFilter(Builder builder) {
+    private ObserveResourceGlobalScopeFilter(Builder builder) {
         this.eq = builder.eq;
     }
 
@@ -28,7 +28,7 @@ public class EnabledFilter extends TeaModel {
         return new Builder();
     }
 
-    public static EnabledFilter create() {
+    public static ObserveResourceGlobalScopeFilter create() {
         return builder().build();
     }
 
@@ -49,7 +49,7 @@ public class EnabledFilter extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(EnabledFilter model) {
+        private Builder(ObserveResourceGlobalScopeFilter model) {
             this.eq = model.eq;
         } 
 
@@ -61,8 +61,8 @@ public class EnabledFilter extends TeaModel {
             return this;
         }
 
-        public EnabledFilter build() {
-            return new EnabledFilter(this);
+        public ObserveResourceGlobalScopeFilter build() {
+            return new ObserveResourceGlobalScopeFilter(this);
         } 
 
     } 

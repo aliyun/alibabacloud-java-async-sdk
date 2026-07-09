@@ -32,9 +32,6 @@ public class AlertRuleV2 extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("contentTemplate")
     private String contentTemplate;
 
-    @com.aliyun.core.annotation.NameInMap("coveredSeverityLevels")
-    private String coveredSeverityLevels;
-
     @com.aliyun.core.annotation.NameInMap("createdAt")
     private String createdAt;
 
@@ -56,20 +53,29 @@ public class AlertRuleV2 extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("notifyConfig")
     private NotifyConfigUnified notifyConfig;
 
+    @com.aliyun.core.annotation.NameInMap("notifyStrategyId")
+    private String notifyStrategyId;
+
     @com.aliyun.core.annotation.NameInMap("observeResourceGlobalScope")
     private Boolean observeResourceGlobalScope;
 
     @com.aliyun.core.annotation.NameInMap("observeResourceList")
-    private String observeResourceList;
+    private java.util.List<String> observeResourceList;
 
     @com.aliyun.core.annotation.NameInMap("observeResourceType")
     private String observeResourceType;
+
+    @com.aliyun.core.annotation.NameInMap("partitionKey")
+    private String partitionKey;
 
     @com.aliyun.core.annotation.NameInMap("queryConfig")
     private QueryConfigUnified queryConfig;
 
     @com.aliyun.core.annotation.NameInMap("scheduleConfig")
     private ScheduleConfigUnified scheduleConfig;
+
+    @com.aliyun.core.annotation.NameInMap("severityLevels")
+    private String severityLevels;
 
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
@@ -89,7 +95,6 @@ public class AlertRuleV2 extends TeaModel {
         this.armsIntegrationConfig = builder.armsIntegrationConfig;
         this.conditionConfig = builder.conditionConfig;
         this.contentTemplate = builder.contentTemplate;
-        this.coveredSeverityLevels = builder.coveredSeverityLevels;
         this.createdAt = builder.createdAt;
         this.datasourceConfig = builder.datasourceConfig;
         this.datasourceType = builder.datasourceType;
@@ -97,11 +102,14 @@ public class AlertRuleV2 extends TeaModel {
         this.enabled = builder.enabled;
         this.labels = builder.labels;
         this.notifyConfig = builder.notifyConfig;
+        this.notifyStrategyId = builder.notifyStrategyId;
         this.observeResourceGlobalScope = builder.observeResourceGlobalScope;
         this.observeResourceList = builder.observeResourceList;
         this.observeResourceType = builder.observeResourceType;
+        this.partitionKey = builder.partitionKey;
         this.queryConfig = builder.queryConfig;
         this.scheduleConfig = builder.scheduleConfig;
+        this.severityLevels = builder.severityLevels;
         this.status = builder.status;
         this.updatedAt = builder.updatedAt;
         this.uuid = builder.uuid;
@@ -156,13 +164,6 @@ public class AlertRuleV2 extends TeaModel {
     }
 
     /**
-     * @return coveredSeverityLevels
-     */
-    public String getCoveredSeverityLevels() {
-        return this.coveredSeverityLevels;
-    }
-
-    /**
      * @return createdAt
      */
     public String getCreatedAt() {
@@ -212,6 +213,13 @@ public class AlertRuleV2 extends TeaModel {
     }
 
     /**
+     * @return notifyStrategyId
+     */
+    public String getNotifyStrategyId() {
+        return this.notifyStrategyId;
+    }
+
+    /**
      * @return observeResourceGlobalScope
      */
     public Boolean getObserveResourceGlobalScope() {
@@ -221,7 +229,7 @@ public class AlertRuleV2 extends TeaModel {
     /**
      * @return observeResourceList
      */
-    public String getObserveResourceList() {
+    public java.util.List<String> getObserveResourceList() {
         return this.observeResourceList;
     }
 
@@ -230,6 +238,13 @@ public class AlertRuleV2 extends TeaModel {
      */
     public String getObserveResourceType() {
         return this.observeResourceType;
+    }
+
+    /**
+     * @return partitionKey
+     */
+    public String getPartitionKey() {
+        return this.partitionKey;
     }
 
     /**
@@ -244,6 +259,13 @@ public class AlertRuleV2 extends TeaModel {
      */
     public ScheduleConfigUnified getScheduleConfig() {
         return this.scheduleConfig;
+    }
+
+    /**
+     * @return severityLevels
+     */
+    public String getSeverityLevels() {
+        return this.severityLevels;
     }
 
     /**
@@ -280,7 +302,6 @@ public class AlertRuleV2 extends TeaModel {
         private ArmsIntegrationConfig armsIntegrationConfig; 
         private ConditionConfigUnified conditionConfig; 
         private String contentTemplate; 
-        private String coveredSeverityLevels; 
         private String createdAt; 
         private DatasourceConfigUnified datasourceConfig; 
         private String datasourceType; 
@@ -288,11 +309,14 @@ public class AlertRuleV2 extends TeaModel {
         private Boolean enabled; 
         private java.util.Map<String, String> labels; 
         private NotifyConfigUnified notifyConfig; 
+        private String notifyStrategyId; 
         private Boolean observeResourceGlobalScope; 
-        private String observeResourceList; 
+        private java.util.List<String> observeResourceList; 
         private String observeResourceType; 
+        private String partitionKey; 
         private QueryConfigUnified queryConfig; 
         private ScheduleConfigUnified scheduleConfig; 
+        private String severityLevels; 
         private String status; 
         private String updatedAt; 
         private String uuid; 
@@ -307,7 +331,6 @@ public class AlertRuleV2 extends TeaModel {
             this.armsIntegrationConfig = model.armsIntegrationConfig;
             this.conditionConfig = model.conditionConfig;
             this.contentTemplate = model.contentTemplate;
-            this.coveredSeverityLevels = model.coveredSeverityLevels;
             this.createdAt = model.createdAt;
             this.datasourceConfig = model.datasourceConfig;
             this.datasourceType = model.datasourceType;
@@ -315,11 +338,14 @@ public class AlertRuleV2 extends TeaModel {
             this.enabled = model.enabled;
             this.labels = model.labels;
             this.notifyConfig = model.notifyConfig;
+            this.notifyStrategyId = model.notifyStrategyId;
             this.observeResourceGlobalScope = model.observeResourceGlobalScope;
             this.observeResourceList = model.observeResourceList;
             this.observeResourceType = model.observeResourceType;
+            this.partitionKey = model.partitionKey;
             this.queryConfig = model.queryConfig;
             this.scheduleConfig = model.scheduleConfig;
+            this.severityLevels = model.severityLevels;
             this.status = model.status;
             this.updatedAt = model.updatedAt;
             this.uuid = model.uuid;
@@ -335,7 +361,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>注解</p>
+         * annotations.
          */
         public Builder annotations(java.util.Map<String, String> annotations) {
             this.annotations = annotations;
@@ -359,7 +385,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>内容模板</p>
+         * contentTemplate.
          */
         public Builder contentTemplate(String contentTemplate) {
             this.contentTemplate = contentTemplate;
@@ -367,15 +393,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * coveredSeverityLevels.
-         */
-        public Builder coveredSeverityLevels(String coveredSeverityLevels) {
-            this.coveredSeverityLevels = coveredSeverityLevels;
-            return this;
-        }
-
-        /**
-         * <p>创建时间（只读），ISO 8601</p>
+         * createdAt.
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
@@ -399,7 +417,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>显示名称</p>
+         * displayName.
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -407,7 +425,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>是否启用</p>
+         * enabled.
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -415,7 +433,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>标签</p>
+         * labels.
          */
         public Builder labels(java.util.Map<String, String> labels) {
             this.labels = labels;
@@ -431,6 +449,14 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
+         * notifyStrategyId.
+         */
+        public Builder notifyStrategyId(String notifyStrategyId) {
+            this.notifyStrategyId = notifyStrategyId;
+            return this;
+        }
+
+        /**
          * observeResourceGlobalScope.
          */
         public Builder observeResourceGlobalScope(Boolean observeResourceGlobalScope) {
@@ -441,7 +467,7 @@ public class AlertRuleV2 extends TeaModel {
         /**
          * observeResourceList.
          */
-        public Builder observeResourceList(String observeResourceList) {
+        public Builder observeResourceList(java.util.List<String> observeResourceList) {
             this.observeResourceList = observeResourceList;
             return this;
         }
@@ -451,6 +477,14 @@ public class AlertRuleV2 extends TeaModel {
          */
         public Builder observeResourceType(String observeResourceType) {
             this.observeResourceType = observeResourceType;
+            return this;
+        }
+
+        /**
+         * partitionKey.
+         */
+        public Builder partitionKey(String partitionKey) {
+            this.partitionKey = partitionKey;
             return this;
         }
 
@@ -471,7 +505,15 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>告警状态（只读）</p>
+         * severityLevels.
+         */
+        public Builder severityLevels(String severityLevels) {
+            this.severityLevels = severityLevels;
+            return this;
+        }
+
+        /**
+         * status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -479,7 +521,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>更新时间（只读），ISO 8601</p>
+         * updatedAt.
          */
         public Builder updatedAt(String updatedAt) {
             this.updatedAt = updatedAt;
@@ -487,7 +529,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>规则 UUID（系统生成，只读）</p>
+         * uuid.
          */
         public Builder uuid(String uuid) {
             this.uuid = uuid;
@@ -495,7 +537,7 @@ public class AlertRuleV2 extends TeaModel {
         }
 
         /**
-         * <p>工作空间</p>
+         * workspace.
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;

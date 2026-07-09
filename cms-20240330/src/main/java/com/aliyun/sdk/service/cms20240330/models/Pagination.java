@@ -67,7 +67,7 @@ public class Pagination extends TeaModel {
         } 
 
         /**
-         * <p>页码（从 1 开始）</p>
+         * pageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -75,7 +75,7 @@ public class Pagination extends TeaModel {
         }
 
         /**
-         * <p>每页数量</p>
+         * pageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;

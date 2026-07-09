@@ -67,7 +67,7 @@ public class UmodelEntityField extends TeaModel {
         } 
 
         /**
-         * <p>实体字段名</p>
+         * field.
          */
         public Builder field(String field) {
             this.field = field;
@@ -75,7 +75,7 @@ public class UmodelEntityField extends TeaModel {
         }
 
         /**
-         * <p>字段别名或展示值</p>
+         * value.
          */
         public Builder value(String value) {
             this.value = value;

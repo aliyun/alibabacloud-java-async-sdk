@@ -51,6 +51,12 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("notifyConfig")
     private NotifyConfigUnified notifyConfig;
 
+    @com.aliyun.core.annotation.NameInMap("observeResourceInstanceId")
+    private String observeResourceInstanceId;
+
+    @com.aliyun.core.annotation.NameInMap("observeResourceType")
+    private String observeResourceType;
+
     @com.aliyun.core.annotation.NameInMap("queryConfig")
     private QueryConfigUnified queryConfig;
 
@@ -78,6 +84,8 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         this.enabled = builder.enabled;
         this.labels = builder.labels;
         this.notifyConfig = builder.notifyConfig;
+        this.observeResourceInstanceId = builder.observeResourceInstanceId;
+        this.observeResourceType = builder.observeResourceType;
         this.queryConfig = builder.queryConfig;
         this.scheduleConfig = builder.scheduleConfig;
         this.uuid = builder.uuid;
@@ -175,6 +183,20 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
     }
 
     /**
+     * @return observeResourceInstanceId
+     */
+    public String getObserveResourceInstanceId() {
+        return this.observeResourceInstanceId;
+    }
+
+    /**
+     * @return observeResourceType
+     */
+    public String getObserveResourceType() {
+        return this.observeResourceType;
+    }
+
+    /**
      * @return queryConfig
      */
     public QueryConfigUnified getQueryConfig() {
@@ -221,6 +243,8 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         private Boolean enabled; 
         private java.util.Map<String, String> labels; 
         private NotifyConfigUnified notifyConfig; 
+        private String observeResourceInstanceId; 
+        private String observeResourceType; 
         private QueryConfigUnified queryConfig; 
         private ScheduleConfigUnified scheduleConfig; 
         private String uuid; 
@@ -242,6 +266,8 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
             this.enabled = model.enabled;
             this.labels = model.labels;
             this.notifyConfig = model.notifyConfig;
+            this.observeResourceInstanceId = model.observeResourceInstanceId;
+            this.observeResourceType = model.observeResourceType;
             this.queryConfig = model.queryConfig;
             this.scheduleConfig = model.scheduleConfig;
             this.uuid = model.uuid;
@@ -250,7 +276,6 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         } 
 
         /**
-         * <p>操作类型</p>
          * <p>This parameter is required.</p>
          */
         public Builder action(String action) {
@@ -267,7 +292,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>注解</p>
+         * annotations.
          */
         public Builder annotations(java.util.Map<String, String> annotations) {
             this.annotations = annotations;
@@ -291,7 +316,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>内容模板</p>
+         * contentTemplate.
          */
         public Builder contentTemplate(String contentTemplate) {
             this.contentTemplate = contentTemplate;
@@ -307,7 +332,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>显示名称</p>
+         * displayName.
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -315,7 +340,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>是否启用</p>
+         * enabled.
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -323,7 +348,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>标签</p>
+         * labels.
          */
         public Builder labels(java.util.Map<String, String> labels) {
             this.labels = labels;
@@ -335,6 +360,22 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
          */
         public Builder notifyConfig(NotifyConfigUnified notifyConfig) {
             this.notifyConfig = notifyConfig;
+            return this;
+        }
+
+        /**
+         * observeResourceInstanceId.
+         */
+        public Builder observeResourceInstanceId(String observeResourceInstanceId) {
+            this.observeResourceInstanceId = observeResourceInstanceId;
+            return this;
+        }
+
+        /**
+         * observeResourceType.
+         */
+        public Builder observeResourceType(String observeResourceType) {
+            this.observeResourceType = observeResourceType;
             return this;
         }
 
@@ -355,7 +396,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>规则 UUID（UPDATE/PATCH 必填）</p>
+         * uuid.
          */
         public Builder uuid(String uuid) {
             this.uuid = uuid;
@@ -363,7 +404,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>待删除规则 UUID 列表（BATCH_DELETE）</p>
+         * uuidList.
          */
         public Builder uuidList(java.util.List<String> uuidList) {
             this.uuidList = uuidList;
@@ -371,7 +412,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * <p>工作空间（CREATE/UPDATE 等）</p>
+         * workspace.
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;

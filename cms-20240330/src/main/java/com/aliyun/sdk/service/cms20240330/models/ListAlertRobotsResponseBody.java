@@ -173,6 +173,9 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("robotId")
         private String robotId;
 
+        @com.aliyun.core.annotation.NameInMap("robotSignKey")
+        private String robotSignKey;
+
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
@@ -187,6 +190,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
             this.lang = builder.lang;
             this.name = builder.name;
             this.robotId = builder.robotId;
+            this.robotSignKey = builder.robotSignKey;
             this.type = builder.type;
             this.url = builder.url;
             this.workspace = builder.workspace;
@@ -229,6 +233,13 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         }
 
         /**
+         * @return robotSignKey
+         */
+        public String getRobotSignKey() {
+            return this.robotSignKey;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -254,6 +265,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
             private String lang; 
             private String name; 
             private String robotId; 
+            private String robotSignKey; 
             private String type; 
             private String url; 
             private String workspace; 
@@ -266,6 +278,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
                 this.lang = model.lang;
                 this.name = model.name;
                 this.robotId = model.robotId;
+                this.robotSignKey = model.robotSignKey;
                 this.type = model.type;
                 this.url = model.url;
                 this.workspace = model.workspace;
@@ -300,6 +313,14 @@ public class ListAlertRobotsResponseBody extends TeaModel {
              */
             public Builder robotId(String robotId) {
                 this.robotId = robotId;
+                return this;
+            }
+
+            /**
+             * robotSignKey.
+             */
+            public Builder robotSignKey(String robotSignKey) {
+                this.robotSignKey = robotSignKey;
                 return this;
             }
 

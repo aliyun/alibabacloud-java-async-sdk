@@ -29,6 +29,12 @@ public class AlertRuleCondition extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("compositeEscalation")
     private CompositeEscalation compositeEscalation;
 
+    @com.aliyun.core.annotation.NameInMap("countOperator")
+    private String countOperator;
+
+    @com.aliyun.core.annotation.NameInMap("countThreshold")
+    private Long countThreshold;
+
     @com.aliyun.core.annotation.NameInMap("enableSeveritySuppression")
     private Boolean enableSeveritySuppression;
 
@@ -37,6 +43,21 @@ public class AlertRuleCondition extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("expressEscalation")
     private ExpressEscalation expressEscalation;
+
+    @com.aliyun.core.annotation.NameInMap("matchField")
+    private String matchField;
+
+    @com.aliyun.core.annotation.NameInMap("matchOperator")
+    private String matchOperator;
+
+    @com.aliyun.core.annotation.NameInMap("matchValue")
+    private String matchValue;
+
+    @com.aliyun.core.annotation.NameInMap("max")
+    private Double max;
+
+    @com.aliyun.core.annotation.NameInMap("min")
+    private Double min;
 
     @com.aliyun.core.annotation.NameInMap("noDataAlertLevel")
     private String noDataAlertLevel;
@@ -56,6 +77,9 @@ public class AlertRuleCondition extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("simpleEscalation")
     private SimpleEscalation simpleEscalation;
 
+    @com.aliyun.core.annotation.NameInMap("thresholdList")
+    private java.util.List<ThresholdList> thresholdList;
+
     @com.aliyun.core.annotation.NameInMap("triggers")
     private java.util.List<Triggers> triggers;
 
@@ -71,15 +95,23 @@ public class AlertRuleCondition extends TeaModel {
         this.caseList = builder.caseList;
         this.compareList = builder.compareList;
         this.compositeEscalation = builder.compositeEscalation;
+        this.countOperator = builder.countOperator;
+        this.countThreshold = builder.countThreshold;
         this.enableSeveritySuppression = builder.enableSeveritySuppression;
         this.escalationType = builder.escalationType;
         this.expressEscalation = builder.expressEscalation;
+        this.matchField = builder.matchField;
+        this.matchOperator = builder.matchOperator;
+        this.matchValue = builder.matchValue;
+        this.max = builder.max;
+        this.min = builder.min;
         this.noDataAlertLevel = builder.noDataAlertLevel;
         this.noDataAppendValue = builder.noDataAppendValue;
         this.noDataPolicy = builder.noDataPolicy;
         this.oper = builder.oper;
         this.relation = builder.relation;
         this.simpleEscalation = builder.simpleEscalation;
+        this.thresholdList = builder.thresholdList;
         this.triggers = builder.triggers;
         this.type = builder.type;
         this.value = builder.value;
@@ -126,6 +158,20 @@ public class AlertRuleCondition extends TeaModel {
     }
 
     /**
+     * @return countOperator
+     */
+    public String getCountOperator() {
+        return this.countOperator;
+    }
+
+    /**
+     * @return countThreshold
+     */
+    public Long getCountThreshold() {
+        return this.countThreshold;
+    }
+
+    /**
      * @return enableSeveritySuppression
      */
     public Boolean getEnableSeveritySuppression() {
@@ -144,6 +190,41 @@ public class AlertRuleCondition extends TeaModel {
      */
     public ExpressEscalation getExpressEscalation() {
         return this.expressEscalation;
+    }
+
+    /**
+     * @return matchField
+     */
+    public String getMatchField() {
+        return this.matchField;
+    }
+
+    /**
+     * @return matchOperator
+     */
+    public String getMatchOperator() {
+        return this.matchOperator;
+    }
+
+    /**
+     * @return matchValue
+     */
+    public String getMatchValue() {
+        return this.matchValue;
+    }
+
+    /**
+     * @return max
+     */
+    public Double getMax() {
+        return this.max;
+    }
+
+    /**
+     * @return min
+     */
+    public Double getMin() {
+        return this.min;
     }
 
     /**
@@ -189,6 +270,13 @@ public class AlertRuleCondition extends TeaModel {
     }
 
     /**
+     * @return thresholdList
+     */
+    public java.util.List<ThresholdList> getThresholdList() {
+        return this.thresholdList;
+    }
+
+    /**
      * @return triggers
      */
     public java.util.List<Triggers> getTriggers() {
@@ -214,15 +302,23 @@ public class AlertRuleCondition extends TeaModel {
         private java.util.List<CaseList> caseList; 
         private java.util.List<CompareList> compareList; 
         private CompositeEscalation compositeEscalation; 
+        private String countOperator; 
+        private Long countThreshold; 
         private Boolean enableSeveritySuppression; 
         private String escalationType; 
         private ExpressEscalation expressEscalation; 
+        private String matchField; 
+        private String matchOperator; 
+        private String matchValue; 
+        private Double max; 
+        private Double min; 
         private String noDataAlertLevel; 
         private String noDataAppendValue; 
         private String noDataPolicy; 
         private String oper; 
         private String relation; 
         private SimpleEscalation simpleEscalation; 
+        private java.util.List<ThresholdList> thresholdList; 
         private java.util.List<Triggers> triggers; 
         private String type; 
         private Double value; 
@@ -235,15 +331,23 @@ public class AlertRuleCondition extends TeaModel {
             this.caseList = model.caseList;
             this.compareList = model.compareList;
             this.compositeEscalation = model.compositeEscalation;
+            this.countOperator = model.countOperator;
+            this.countThreshold = model.countThreshold;
             this.enableSeveritySuppression = model.enableSeveritySuppression;
             this.escalationType = model.escalationType;
             this.expressEscalation = model.expressEscalation;
+            this.matchField = model.matchField;
+            this.matchOperator = model.matchOperator;
+            this.matchValue = model.matchValue;
+            this.max = model.max;
+            this.min = model.min;
             this.noDataAlertLevel = model.noDataAlertLevel;
             this.noDataAppendValue = model.noDataAppendValue;
             this.noDataPolicy = model.noDataPolicy;
             this.oper = model.oper;
             this.relation = model.relation;
             this.simpleEscalation = model.simpleEscalation;
+            this.thresholdList = model.thresholdList;
             this.triggers = model.triggers;
             this.type = model.type;
             this.value = model.value;
@@ -282,6 +386,22 @@ public class AlertRuleCondition extends TeaModel {
         }
 
         /**
+         * countOperator.
+         */
+        public Builder countOperator(String countOperator) {
+            this.countOperator = countOperator;
+            return this;
+        }
+
+        /**
+         * countThreshold.
+         */
+        public Builder countThreshold(Long countThreshold) {
+            this.countThreshold = countThreshold;
+            return this;
+        }
+
+        /**
          * enableSeveritySuppression.
          */
         public Builder enableSeveritySuppression(Boolean enableSeveritySuppression) {
@@ -302,6 +422,46 @@ public class AlertRuleCondition extends TeaModel {
          */
         public Builder expressEscalation(ExpressEscalation expressEscalation) {
             this.expressEscalation = expressEscalation;
+            return this;
+        }
+
+        /**
+         * matchField.
+         */
+        public Builder matchField(String matchField) {
+            this.matchField = matchField;
+            return this;
+        }
+
+        /**
+         * matchOperator.
+         */
+        public Builder matchOperator(String matchOperator) {
+            this.matchOperator = matchOperator;
+            return this;
+        }
+
+        /**
+         * matchValue.
+         */
+        public Builder matchValue(String matchValue) {
+            this.matchValue = matchValue;
+            return this;
+        }
+
+        /**
+         * max.
+         */
+        public Builder max(Double max) {
+            this.max = max;
+            return this;
+        }
+
+        /**
+         * min.
+         */
+        public Builder min(Double min) {
+            this.min = min;
             return this;
         }
 
@@ -354,6 +514,14 @@ public class AlertRuleCondition extends TeaModel {
         }
 
         /**
+         * thresholdList.
+         */
+        public Builder thresholdList(java.util.List<ThresholdList> thresholdList) {
+            this.thresholdList = thresholdList;
+            return this;
+        }
+
+        /**
          * triggers.
          */
         public Builder triggers(java.util.List<Triggers> triggers) {
@@ -362,7 +530,7 @@ public class AlertRuleCondition extends TeaModel {
         }
 
         /**
-         * <p>规则条件类型，可选值：SLS_CONDITION</p>
+         * <p>规则条件类型，可选值：SLS_CONDITION/APM_CONDITION/CMS_BASIC_CONDITION/PROMETHEUS_MULTI_CONDITION/BASIC_CONDITION/LOG_SET_CONDITION</p>
          * <p>This parameter is required.</p>
          */
         public Builder type(String type) {
@@ -487,7 +655,7 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * <p>规则条件类型，可选值：SLS_CONDITION</p>
+             * <p>规则条件类型，可选值：SLS_CONDITION/APM_CONDITION/CMS_BASIC_CONDITION/PROMETHEUS_MULTI_CONDITION/BASIC_CONDITION/LOG_SET_CONDITION</p>
              * <p>This parameter is required.</p>
              */
             public Builder type(String type) {
@@ -1358,6 +1526,123 @@ public class AlertRuleCondition extends TeaModel {
 
             public SimpleEscalation build() {
                 return new SimpleEscalation(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AlertRuleCondition} extends {@link TeaModel}
+     *
+     * <p>AlertRuleCondition</p>
+     */
+    public static class ThresholdList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("max")
+        private Double max;
+
+        @com.aliyun.core.annotation.NameInMap("min")
+        private Double min;
+
+        @com.aliyun.core.annotation.NameInMap("severity")
+        private String severity;
+
+        @com.aliyun.core.annotation.NameInMap("threshold")
+        private Double threshold;
+
+        private ThresholdList(Builder builder) {
+            this.max = builder.max;
+            this.min = builder.min;
+            this.severity = builder.severity;
+            this.threshold = builder.threshold;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ThresholdList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return max
+         */
+        public Double getMax() {
+            return this.max;
+        }
+
+        /**
+         * @return min
+         */
+        public Double getMin() {
+            return this.min;
+        }
+
+        /**
+         * @return severity
+         */
+        public String getSeverity() {
+            return this.severity;
+        }
+
+        /**
+         * @return threshold
+         */
+        public Double getThreshold() {
+            return this.threshold;
+        }
+
+        public static final class Builder {
+            private Double max; 
+            private Double min; 
+            private String severity; 
+            private Double threshold; 
+
+            private Builder() {
+            } 
+
+            private Builder(ThresholdList model) {
+                this.max = model.max;
+                this.min = model.min;
+                this.severity = model.severity;
+                this.threshold = model.threshold;
+            } 
+
+            /**
+             * max.
+             */
+            public Builder max(Double max) {
+                this.max = max;
+                return this;
+            }
+
+            /**
+             * min.
+             */
+            public Builder min(Double min) {
+                this.min = min;
+                return this;
+            }
+
+            /**
+             * severity.
+             */
+            public Builder severity(String severity) {
+                this.severity = severity;
+                return this;
+            }
+
+            /**
+             * threshold.
+             */
+            public Builder threshold(Double threshold) {
+                this.threshold = threshold;
+                return this;
+            }
+
+            public ThresholdList build() {
+                return new ThresholdList(this);
             } 
 
         } 

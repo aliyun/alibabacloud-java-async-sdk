@@ -27,8 +27,10 @@ public class NotifyConfigUnified extends TeaModel {
     private String activeStartTime;
 
     @com.aliyun.core.annotation.NameInMap("channels")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<DirectNotifyChannel> channels;
+
+    @com.aliyun.core.annotation.NameInMap("notifyStrategies")
+    private java.util.List<String> notifyStrategies;
 
     @com.aliyun.core.annotation.NameInMap("silenceTimeSecs")
     private Integer silenceTimeSecs;
@@ -45,6 +47,7 @@ public class NotifyConfigUnified extends TeaModel {
         this.activeEndTime = builder.activeEndTime;
         this.activeStartTime = builder.activeStartTime;
         this.channels = builder.channels;
+        this.notifyStrategies = builder.notifyStrategies;
         this.silenceTimeSecs = builder.silenceTimeSecs;
         this.type = builder.type;
         this.utcOffset = builder.utcOffset;
@@ -91,6 +94,13 @@ public class NotifyConfigUnified extends TeaModel {
     }
 
     /**
+     * @return notifyStrategies
+     */
+    public java.util.List<String> getNotifyStrategies() {
+        return this.notifyStrategies;
+    }
+
+    /**
      * @return silenceTimeSecs
      */
     public Integer getSilenceTimeSecs() {
@@ -116,6 +126,7 @@ public class NotifyConfigUnified extends TeaModel {
         private String activeEndTime; 
         private String activeStartTime; 
         private java.util.List<DirectNotifyChannel> channels; 
+        private java.util.List<String> notifyStrategies; 
         private Integer silenceTimeSecs; 
         private String type; 
         private String utcOffset; 
@@ -128,13 +139,14 @@ public class NotifyConfigUnified extends TeaModel {
             this.activeEndTime = model.activeEndTime;
             this.activeStartTime = model.activeStartTime;
             this.channels = model.channels;
+            this.notifyStrategies = model.notifyStrategies;
             this.silenceTimeSecs = model.silenceTimeSecs;
             this.type = model.type;
             this.utcOffset = model.utcOffset;
         } 
 
         /**
-         * <p>一周中发送通知的星期，1-7</p>
+         * activeDays.
          */
         public Builder activeDays(java.util.List<Integer> activeDays) {
             this.activeDays = activeDays;
@@ -142,7 +154,7 @@ public class NotifyConfigUnified extends TeaModel {
         }
 
         /**
-         * <p>每天通知生效结束时间</p>
+         * activeEndTime.
          */
         public Builder activeEndTime(String activeEndTime) {
             this.activeEndTime = activeEndTime;
@@ -150,7 +162,7 @@ public class NotifyConfigUnified extends TeaModel {
         }
 
         /**
-         * <p>每天通知生效开始时间</p>
+         * activeStartTime.
          */
         public Builder activeStartTime(String activeStartTime) {
             this.activeStartTime = activeStartTime;
@@ -158,8 +170,7 @@ public class NotifyConfigUnified extends TeaModel {
         }
 
         /**
-         * <p>通知渠道列表</p>
-         * <p>This parameter is required.</p>
+         * channels.
          */
         public Builder channels(java.util.List<DirectNotifyChannel> channels) {
             this.channels = channels;
@@ -167,7 +178,15 @@ public class NotifyConfigUnified extends TeaModel {
         }
 
         /**
-         * <p>通道沉默周期（秒）</p>
+         * notifyStrategies.
+         */
+        public Builder notifyStrategies(java.util.List<String> notifyStrategies) {
+            this.notifyStrategies = notifyStrategies;
+            return this;
+        }
+
+        /**
+         * silenceTimeSecs.
          */
         public Builder silenceTimeSecs(Integer silenceTimeSecs) {
             this.silenceTimeSecs = silenceTimeSecs;
@@ -175,7 +194,6 @@ public class NotifyConfigUnified extends TeaModel {
         }
 
         /**
-         * <p>通知配置类型</p>
          * <p>This parameter is required.</p>
          */
         public Builder type(String type) {
@@ -184,7 +202,7 @@ public class NotifyConfigUnified extends TeaModel {
         }
 
         /**
-         * <p>UTC 时区偏移量</p>
+         * utcOffset.
          */
         public Builder utcOffset(String utcOffset) {
             this.utcOffset = utcOffset;

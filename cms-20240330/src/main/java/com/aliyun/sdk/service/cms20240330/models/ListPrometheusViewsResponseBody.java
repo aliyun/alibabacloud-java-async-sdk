@@ -196,6 +196,9 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+        private String resourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("resourceType")
         private String resourceType;
 
@@ -220,6 +223,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             this.prometheusViewId = builder.prometheusViewId;
             this.prometheusViewName = builder.prometheusViewName;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.resourceType = builder.resourceType;
             this.status = builder.status;
             this.userId = builder.userId;
@@ -292,6 +296,13 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return resourceType
          */
         public String getResourceType() {
@@ -335,6 +346,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             private String prometheusViewId; 
             private String prometheusViewName; 
             private String regionId; 
+            private String resourceGroupId; 
             private String resourceType; 
             private String status; 
             private String userId; 
@@ -353,6 +365,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
                 this.prometheusViewId = model.prometheusViewId;
                 this.prometheusViewName = model.prometheusViewName;
                 this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
                 this.resourceType = model.resourceType;
                 this.status = model.status;
                 this.userId = model.userId;
@@ -447,6 +460,17 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * <p>Resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfm3gn5i6bigbi</p>
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

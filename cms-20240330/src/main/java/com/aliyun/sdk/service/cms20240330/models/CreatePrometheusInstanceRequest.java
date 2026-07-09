@@ -51,6 +51,10 @@ public class CreatePrometheusInstanceRequest extends Request {
     private String prometheusInstanceName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
@@ -76,6 +80,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         this.enableAuthToken = builder.enableAuthToken;
         this.paymentType = builder.paymentType;
         this.prometheusInstanceName = builder.prometheusInstanceName;
+        this.resourceGroupId = builder.resourceGroupId;
         this.status = builder.status;
         this.storageDuration = builder.storageDuration;
         this.tags = builder.tags;
@@ -152,6 +157,13 @@ public class CreatePrometheusInstanceRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -188,6 +200,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         private Boolean enableAuthToken; 
         private String paymentType; 
         private String prometheusInstanceName; 
+        private String resourceGroupId; 
         private String status; 
         private Integer storageDuration; 
         private java.util.List<Tags> tags; 
@@ -207,6 +220,7 @@ public class CreatePrometheusInstanceRequest extends Request {
             this.enableAuthToken = request.enableAuthToken;
             this.paymentType = request.paymentType;
             this.prometheusInstanceName = request.prometheusInstanceName;
+            this.resourceGroupId = request.resourceGroupId;
             this.status = request.status;
             this.storageDuration = request.storageDuration;
             this.tags = request.tags;
@@ -334,6 +348,15 @@ public class CreatePrometheusInstanceRequest extends Request {
         public Builder prometheusInstanceName(String prometheusInstanceName) {
             this.putBodyParameter("prometheusInstanceName", prometheusInstanceName);
             this.prometheusInstanceName = prometheusInstanceName;
+            return this;
+        }
+
+        /**
+         * resourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putBodyParameter("resourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

@@ -158,7 +158,7 @@ public class ServerResponseManageAlertRulesResult extends TeaModel {
         } 
 
         /**
-         * <p>响应码</p>
+         * code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -174,7 +174,7 @@ public class ServerResponseManageAlertRulesResult extends TeaModel {
         }
 
         /**
-         * <p>错误消息</p>
+         * message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -182,7 +182,7 @@ public class ServerResponseManageAlertRulesResult extends TeaModel {
         }
 
         /**
-         * <p>分页 Token</p>
+         * nextToken.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -190,7 +190,7 @@ public class ServerResponseManageAlertRulesResult extends TeaModel {
         }
 
         /**
-         * <p>页码</p>
+         * pageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -198,7 +198,7 @@ public class ServerResponseManageAlertRulesResult extends TeaModel {
         }
 
         /**
-         * <p>每页大小</p>
+         * pageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -206,7 +206,7 @@ public class ServerResponseManageAlertRulesResult extends TeaModel {
         }
 
         /**
-         * <p>请求 ID</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +214,7 @@ public class ServerResponseManageAlertRulesResult extends TeaModel {
         }
 
         /**
-         * <p>是否成功</p>
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +222,7 @@ public class ServerResponseManageAlertRulesResult extends TeaModel {
         }
 
         /**
-         * <p>总数</p>
+         * total.
          */
         public Builder total(Integer total) {
             this.total = total;

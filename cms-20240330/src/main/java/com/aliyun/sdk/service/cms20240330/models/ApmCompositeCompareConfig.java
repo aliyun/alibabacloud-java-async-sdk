@@ -29,10 +29,18 @@ public class ApmCompositeCompareConfig extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private Float threshold;
 
+    @com.aliyun.core.annotation.NameInMap("yoyTimeUnit")
+    private String yoyTimeUnit;
+
+    @com.aliyun.core.annotation.NameInMap("yoyTimeValue")
+    private Integer yoyTimeValue;
+
     private ApmCompositeCompareConfig(Builder builder) {
         this.aggregate = builder.aggregate;
         this.operator = builder.operator;
         this.threshold = builder.threshold;
+        this.yoyTimeUnit = builder.yoyTimeUnit;
+        this.yoyTimeValue = builder.yoyTimeValue;
     }
 
     public static Builder builder() {
@@ -68,10 +76,26 @@ public class ApmCompositeCompareConfig extends TeaModel {
         return this.threshold;
     }
 
+    /**
+     * @return yoyTimeUnit
+     */
+    public String getYoyTimeUnit() {
+        return this.yoyTimeUnit;
+    }
+
+    /**
+     * @return yoyTimeValue
+     */
+    public Integer getYoyTimeValue() {
+        return this.yoyTimeValue;
+    }
+
     public static final class Builder {
         private String aggregate; 
         private String operator; 
         private Float threshold; 
+        private String yoyTimeUnit; 
+        private Integer yoyTimeValue; 
 
         private Builder() {
         } 
@@ -80,10 +104,11 @@ public class ApmCompositeCompareConfig extends TeaModel {
             this.aggregate = model.aggregate;
             this.operator = model.operator;
             this.threshold = model.threshold;
+            this.yoyTimeUnit = model.yoyTimeUnit;
+            this.yoyTimeValue = model.yoyTimeValue;
         } 
 
         /**
-         * <p>聚合函数</p>
          * <p>This parameter is required.</p>
          */
         public Builder aggregate(String aggregate) {
@@ -92,7 +117,6 @@ public class ApmCompositeCompareConfig extends TeaModel {
         }
 
         /**
-         * <p>比较操作符</p>
          * <p>This parameter is required.</p>
          */
         public Builder operator(String operator) {
@@ -101,11 +125,26 @@ public class ApmCompositeCompareConfig extends TeaModel {
         }
 
         /**
-         * <p>单阈值</p>
          * <p>This parameter is required.</p>
          */
         public Builder threshold(Float threshold) {
             this.threshold = threshold;
+            return this;
+        }
+
+        /**
+         * yoyTimeUnit.
+         */
+        public Builder yoyTimeUnit(String yoyTimeUnit) {
+            this.yoyTimeUnit = yoyTimeUnit;
+            return this;
+        }
+
+        /**
+         * yoyTimeValue.
+         */
+        public Builder yoyTimeValue(Integer yoyTimeValue) {
+            this.yoyTimeValue = yoyTimeValue;
             return this;
         }
 

@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AlertRuleQuery</p>
  */
 public class AlertRuleQuery extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("aggregate")
+    private String aggregate;
+
     @com.aliyun.core.annotation.NameInMap("checkAfterDataComplete")
     private Boolean checkAfterDataComplete;
 
@@ -53,6 +56,9 @@ public class AlertRuleQuery extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("labelFilters")
     private java.util.List<LabelFilters> labelFilters;
 
+    @com.aliyun.core.annotation.NameInMap("logSet")
+    private String logSet;
+
     @com.aliyun.core.annotation.NameInMap("markTags")
     private java.util.List<MarkTags> markTags;
 
@@ -64,6 +70,9 @@ public class AlertRuleQuery extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("namespace")
     private String namespace;
+
+    @com.aliyun.core.annotation.NameInMap("offsetSecs")
+    private Long offsetSecs;
 
     @com.aliyun.core.annotation.NameInMap("queries")
     private java.util.List<Queries> queries;
@@ -81,7 +90,11 @@ public class AlertRuleQuery extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
+    @com.aliyun.core.annotation.NameInMap("windowSecs")
+    private Long windowSecs;
+
     private AlertRuleQuery(Builder builder) {
+        this.aggregate = builder.aggregate;
         this.checkAfterDataComplete = builder.checkAfterDataComplete;
         this.dimensions = builder.dimensions;
         this.domain = builder.domain;
@@ -94,15 +107,18 @@ public class AlertRuleQuery extends TeaModel {
         this.groupId = builder.groupId;
         this.groupType = builder.groupType;
         this.labelFilters = builder.labelFilters;
+        this.logSet = builder.logSet;
         this.markTags = builder.markTags;
         this.metric = builder.metric;
         this.metricSet = builder.metricSet;
         this.namespace = builder.namespace;
+        this.offsetSecs = builder.offsetSecs;
         this.queries = builder.queries;
         this.relationType = builder.relationType;
         this.secondJoin = builder.secondJoin;
         this.serviceIds = builder.serviceIds;
         this.type = builder.type;
+        this.windowSecs = builder.windowSecs;
     }
 
     public static Builder builder() {
@@ -115,6 +131,13 @@ public class AlertRuleQuery extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return aggregate
+     */
+    public String getAggregate() {
+        return this.aggregate;
     }
 
     /**
@@ -202,6 +225,13 @@ public class AlertRuleQuery extends TeaModel {
     }
 
     /**
+     * @return logSet
+     */
+    public String getLogSet() {
+        return this.logSet;
+    }
+
+    /**
      * @return markTags
      */
     public java.util.List<MarkTags> getMarkTags() {
@@ -227,6 +257,13 @@ public class AlertRuleQuery extends TeaModel {
      */
     public String getNamespace() {
         return this.namespace;
+    }
+
+    /**
+     * @return offsetSecs
+     */
+    public Long getOffsetSecs() {
+        return this.offsetSecs;
     }
 
     /**
@@ -264,7 +301,15 @@ public class AlertRuleQuery extends TeaModel {
         return this.type;
     }
 
+    /**
+     * @return windowSecs
+     */
+    public Long getWindowSecs() {
+        return this.windowSecs;
+    }
+
     public static final class Builder {
+        private String aggregate; 
         private Boolean checkAfterDataComplete; 
         private java.util.List<java.util.Map<String, String>> dimensions; 
         private String domain; 
@@ -277,20 +322,24 @@ public class AlertRuleQuery extends TeaModel {
         private String groupId; 
         private String groupType; 
         private java.util.List<LabelFilters> labelFilters; 
+        private String logSet; 
         private java.util.List<MarkTags> markTags; 
         private String metric; 
         private String metricSet; 
         private String namespace; 
+        private Long offsetSecs; 
         private java.util.List<Queries> queries; 
         private String relationType; 
         private AlertRuleSlsQueryJoin secondJoin; 
         private java.util.List<String> serviceIds; 
         private String type; 
+        private Long windowSecs; 
 
         private Builder() {
         } 
 
         private Builder(AlertRuleQuery model) {
+            this.aggregate = model.aggregate;
             this.checkAfterDataComplete = model.checkAfterDataComplete;
             this.dimensions = model.dimensions;
             this.domain = model.domain;
@@ -303,16 +352,27 @@ public class AlertRuleQuery extends TeaModel {
             this.groupId = model.groupId;
             this.groupType = model.groupType;
             this.labelFilters = model.labelFilters;
+            this.logSet = model.logSet;
             this.markTags = model.markTags;
             this.metric = model.metric;
             this.metricSet = model.metricSet;
             this.namespace = model.namespace;
+            this.offsetSecs = model.offsetSecs;
             this.queries = model.queries;
             this.relationType = model.relationType;
             this.secondJoin = model.secondJoin;
             this.serviceIds = model.serviceIds;
             this.type = model.type;
+            this.windowSecs = model.windowSecs;
         } 
+
+        /**
+         * aggregate.
+         */
+        public Builder aggregate(String aggregate) {
+            this.aggregate = aggregate;
+            return this;
+        }
 
         /**
          * checkAfterDataComplete.
@@ -411,6 +471,14 @@ public class AlertRuleQuery extends TeaModel {
         }
 
         /**
+         * logSet.
+         */
+        public Builder logSet(String logSet) {
+            this.logSet = logSet;
+            return this;
+        }
+
+        /**
          * markTags.
          */
         public Builder markTags(java.util.List<MarkTags> markTags) {
@@ -439,6 +507,14 @@ public class AlertRuleQuery extends TeaModel {
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
+            return this;
+        }
+
+        /**
+         * offsetSecs.
+         */
+        public Builder offsetSecs(Long offsetSecs) {
+            this.offsetSecs = offsetSecs;
             return this;
         }
 
@@ -475,11 +551,19 @@ public class AlertRuleQuery extends TeaModel {
         }
 
         /**
-         * <p>查询类型</p>
+         * <p>查询类型，可选值：PROMQL_QUERY / APM_MULTI_QUERY / SLS_MULTI_QUERY / CMS_BASIC_QUERY / METRIC_SET_QUERY / LOG_SET_QUERY / PROMETHEUS_MULTI_QUERY / METRIC_SET_MULTI_QUERY</p>
          * <p>This parameter is required.</p>
          */
         public Builder type(String type) {
             this.type = type;
+            return this;
+        }
+
+        /**
+         * windowSecs.
+         */
+        public Builder windowSecs(Long windowSecs) {
+            this.windowSecs = windowSecs;
             return this;
         }
 
@@ -742,7 +826,7 @@ public class AlertRuleQuery extends TeaModel {
             }
 
             /**
-             * <p>查询类型</p>
+             * <p>查询类型，可选值：PROMQL_QUERY / APM_MULTI_QUERY / SLS_MULTI_QUERY / CMS_BASIC_QUERY / METRIC_SET_QUERY / LOG_SET_QUERY / PROMETHEUS_MULTI_QUERY / METRIC_SET_MULTI_QUERY</p>
              * <p>This parameter is required.</p>
              */
             public Builder type(String type) {
@@ -1002,7 +1086,7 @@ public class AlertRuleQuery extends TeaModel {
             }
 
             /**
-             * <p>查询类型</p>
+             * <p>查询类型，可选值：PROMQL_QUERY / APM_MULTI_QUERY / SLS_MULTI_QUERY / CMS_BASIC_QUERY / METRIC_SET_QUERY / LOG_SET_QUERY / PROMETHEUS_MULTI_QUERY / METRIC_SET_MULTI_QUERY</p>
              * <p>This parameter is required.</p>
              */
             public Builder type(String type) {
@@ -1020,6 +1104,102 @@ public class AlertRuleQuery extends TeaModel {
 
             public ApmFilters build() {
                 return new ApmFilters(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AlertRuleQuery} extends {@link TeaModel}
+     *
+     * <p>AlertRuleQuery</p>
+     */
+    public static class QueriesLabelFilters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("operator")
+        private String operator;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private QueriesLabelFilters(Builder builder) {
+            this.name = builder.name;
+            this.operator = builder.operator;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static QueriesLabelFilters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return operator
+         */
+        public String getOperator() {
+            return this.operator;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String operator; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueriesLabelFilters model) {
+                this.name = model.name;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * operator.
+             */
+            public Builder operator(String operator) {
+                this.operator = operator;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public QueriesLabelFilters build() {
+                return new QueriesLabelFilters(this);
             } 
 
         } 
@@ -1050,6 +1230,15 @@ public class AlertRuleQuery extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("expr")
         private String expr;
 
+        @com.aliyun.core.annotation.NameInMap("labelFilters")
+        private java.util.List<QueriesLabelFilters> labelFilters;
+
+        @com.aliyun.core.annotation.NameInMap("metric")
+        private String metric;
+
+        @com.aliyun.core.annotation.NameInMap("metricSet")
+        private String metricSet;
+
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
@@ -1072,6 +1261,9 @@ public class AlertRuleQuery extends TeaModel {
             this.duration = builder.duration;
             this.end = builder.end;
             this.expr = builder.expr;
+            this.labelFilters = builder.labelFilters;
+            this.metric = builder.metric;
+            this.metricSet = builder.metricSet;
             this.name = builder.name;
             this.promQl = builder.promQl;
             this.start = builder.start;
@@ -1130,6 +1322,27 @@ public class AlertRuleQuery extends TeaModel {
         }
 
         /**
+         * @return labelFilters
+         */
+        public java.util.List<QueriesLabelFilters> getLabelFilters() {
+            return this.labelFilters;
+        }
+
+        /**
+         * @return metric
+         */
+        public String getMetric() {
+            return this.metric;
+        }
+
+        /**
+         * @return metricSet
+         */
+        public String getMetricSet() {
+            return this.metricSet;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -1171,6 +1384,9 @@ public class AlertRuleQuery extends TeaModel {
             private Long duration; 
             private Long end; 
             private String expr; 
+            private java.util.List<QueriesLabelFilters> labelFilters; 
+            private String metric; 
+            private String metricSet; 
             private String name; 
             private String promQl; 
             private Long start; 
@@ -1187,6 +1403,9 @@ public class AlertRuleQuery extends TeaModel {
                 this.duration = model.duration;
                 this.end = model.end;
                 this.expr = model.expr;
+                this.labelFilters = model.labelFilters;
+                this.metric = model.metric;
+                this.metricSet = model.metricSet;
                 this.name = model.name;
                 this.promQl = model.promQl;
                 this.start = model.start;
@@ -1239,6 +1458,30 @@ public class AlertRuleQuery extends TeaModel {
              */
             public Builder expr(String expr) {
                 this.expr = expr;
+                return this;
+            }
+
+            /**
+             * labelFilters.
+             */
+            public Builder labelFilters(java.util.List<QueriesLabelFilters> labelFilters) {
+                this.labelFilters = labelFilters;
+                return this;
+            }
+
+            /**
+             * metric.
+             */
+            public Builder metric(String metric) {
+                this.metric = metric;
+                return this;
+            }
+
+            /**
+             * metricSet.
+             */
+            public Builder metricSet(String metricSet) {
+                this.metricSet = metricSet;
                 return this;
             }
 

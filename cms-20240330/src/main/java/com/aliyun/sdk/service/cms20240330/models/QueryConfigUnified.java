@@ -17,6 +17,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryConfigUnified</p>
  */
 public class QueryConfigUnified extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("aggregate")
+    private String aggregate;
+
+    @com.aliyun.core.annotation.NameInMap("dimensions")
+    private java.util.List<java.util.Map<String, String>> dimensions;
+
     @com.aliyun.core.annotation.NameInMap("enableDataCompleteCheck")
     private Boolean enableDataCompleteCheck;
 
@@ -38,8 +44,20 @@ public class QueryConfigUnified extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("filterList")
     private java.util.List<ApmFilterConfig> filterList;
 
+    @com.aliyun.core.annotation.NameInMap("groupId")
+    private String groupId;
+
     @com.aliyun.core.annotation.NameInMap("labelFilters")
     private java.util.List<UmodelLabelFilter> labelFilters;
+
+    @com.aliyun.core.annotation.NameInMap("legacyRaw")
+    private String legacyRaw;
+
+    @com.aliyun.core.annotation.NameInMap("legacyType")
+    private String legacyType;
+
+    @com.aliyun.core.annotation.NameInMap("logSet")
+    private String logSet;
 
     @com.aliyun.core.annotation.NameInMap("measureList")
     private java.util.List<ApmMeasureConfig> measureList;
@@ -50,8 +68,21 @@ public class QueryConfigUnified extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("metricSet")
     private String metricSet;
 
+    @com.aliyun.core.annotation.NameInMap("namespace")
+    private String namespace;
+
+    @com.aliyun.core.annotation.NameInMap("offsetSecs")
+    private Long offsetSecs;
+
     @com.aliyun.core.annotation.NameInMap("promQl")
+    @Deprecated
     private String promQl;
+
+    @com.aliyun.core.annotation.NameInMap("queries")
+    private java.util.List<MetricSetNamedQueryEntry> queries;
+
+    @com.aliyun.core.annotation.NameInMap("relationType")
+    private String relationType;
 
     @com.aliyun.core.annotation.NameInMap("serviceIdList")
     private java.util.List<String> serviceIdList;
@@ -60,7 +91,12 @@ public class QueryConfigUnified extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
+    @com.aliyun.core.annotation.NameInMap("windowSecs")
+    private Long windowSecs;
+
     private QueryConfigUnified(Builder builder) {
+        this.aggregate = builder.aggregate;
+        this.dimensions = builder.dimensions;
         this.enableDataCompleteCheck = builder.enableDataCompleteCheck;
         this.entityDomain = builder.entityDomain;
         this.entityFields = builder.entityFields;
@@ -68,13 +104,22 @@ public class QueryConfigUnified extends TeaModel {
         this.entityType = builder.entityType;
         this.expr = builder.expr;
         this.filterList = builder.filterList;
+        this.groupId = builder.groupId;
         this.labelFilters = builder.labelFilters;
+        this.legacyRaw = builder.legacyRaw;
+        this.legacyType = builder.legacyType;
+        this.logSet = builder.logSet;
         this.measureList = builder.measureList;
         this.metric = builder.metric;
         this.metricSet = builder.metricSet;
+        this.namespace = builder.namespace;
+        this.offsetSecs = builder.offsetSecs;
         this.promQl = builder.promQl;
+        this.queries = builder.queries;
+        this.relationType = builder.relationType;
         this.serviceIdList = builder.serviceIdList;
         this.type = builder.type;
+        this.windowSecs = builder.windowSecs;
     }
 
     public static Builder builder() {
@@ -87,6 +132,20 @@ public class QueryConfigUnified extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return aggregate
+     */
+    public String getAggregate() {
+        return this.aggregate;
+    }
+
+    /**
+     * @return dimensions
+     */
+    public java.util.List<java.util.Map<String, String>> getDimensions() {
+        return this.dimensions;
     }
 
     /**
@@ -139,10 +198,38 @@ public class QueryConfigUnified extends TeaModel {
     }
 
     /**
+     * @return groupId
+     */
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    /**
      * @return labelFilters
      */
     public java.util.List<UmodelLabelFilter> getLabelFilters() {
         return this.labelFilters;
+    }
+
+    /**
+     * @return legacyRaw
+     */
+    public String getLegacyRaw() {
+        return this.legacyRaw;
+    }
+
+    /**
+     * @return legacyType
+     */
+    public String getLegacyType() {
+        return this.legacyType;
+    }
+
+    /**
+     * @return logSet
+     */
+    public String getLogSet() {
+        return this.logSet;
     }
 
     /**
@@ -167,10 +254,38 @@ public class QueryConfigUnified extends TeaModel {
     }
 
     /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    /**
+     * @return offsetSecs
+     */
+    public Long getOffsetSecs() {
+        return this.offsetSecs;
+    }
+
+    /**
      * @return promQl
      */
     public String getPromQl() {
         return this.promQl;
+    }
+
+    /**
+     * @return queries
+     */
+    public java.util.List<MetricSetNamedQueryEntry> getQueries() {
+        return this.queries;
+    }
+
+    /**
+     * @return relationType
+     */
+    public String getRelationType() {
+        return this.relationType;
     }
 
     /**
@@ -187,7 +302,16 @@ public class QueryConfigUnified extends TeaModel {
         return this.type;
     }
 
+    /**
+     * @return windowSecs
+     */
+    public Long getWindowSecs() {
+        return this.windowSecs;
+    }
+
     public static final class Builder {
+        private String aggregate; 
+        private java.util.List<java.util.Map<String, String>> dimensions; 
         private Boolean enableDataCompleteCheck; 
         private String entityDomain; 
         private java.util.List<UmodelEntityField> entityFields; 
@@ -195,18 +319,29 @@ public class QueryConfigUnified extends TeaModel {
         private String entityType; 
         private String expr; 
         private java.util.List<ApmFilterConfig> filterList; 
+        private String groupId; 
         private java.util.List<UmodelLabelFilter> labelFilters; 
+        private String legacyRaw; 
+        private String legacyType; 
+        private String logSet; 
         private java.util.List<ApmMeasureConfig> measureList; 
         private String metric; 
         private String metricSet; 
+        private String namespace; 
+        private Long offsetSecs; 
         private String promQl; 
+        private java.util.List<MetricSetNamedQueryEntry> queries; 
+        private String relationType; 
         private java.util.List<String> serviceIdList; 
         private String type; 
+        private Long windowSecs; 
 
         private Builder() {
         } 
 
         private Builder(QueryConfigUnified model) {
+            this.aggregate = model.aggregate;
+            this.dimensions = model.dimensions;
             this.enableDataCompleteCheck = model.enableDataCompleteCheck;
             this.entityDomain = model.entityDomain;
             this.entityFields = model.entityFields;
@@ -214,17 +349,42 @@ public class QueryConfigUnified extends TeaModel {
             this.entityType = model.entityType;
             this.expr = model.expr;
             this.filterList = model.filterList;
+            this.groupId = model.groupId;
             this.labelFilters = model.labelFilters;
+            this.legacyRaw = model.legacyRaw;
+            this.legacyType = model.legacyType;
+            this.logSet = model.logSet;
             this.measureList = model.measureList;
             this.metric = model.metric;
             this.metricSet = model.metricSet;
+            this.namespace = model.namespace;
+            this.offsetSecs = model.offsetSecs;
             this.promQl = model.promQl;
+            this.queries = model.queries;
+            this.relationType = model.relationType;
             this.serviceIdList = model.serviceIdList;
             this.type = model.type;
+            this.windowSecs = model.windowSecs;
         } 
 
         /**
-         * <p>是否启用数据完整性检查</p>
+         * aggregate.
+         */
+        public Builder aggregate(String aggregate) {
+            this.aggregate = aggregate;
+            return this;
+        }
+
+        /**
+         * dimensions.
+         */
+        public Builder dimensions(java.util.List<java.util.Map<String, String>> dimensions) {
+            this.dimensions = dimensions;
+            return this;
+        }
+
+        /**
+         * enableDataCompleteCheck.
          */
         public Builder enableDataCompleteCheck(Boolean enableDataCompleteCheck) {
             this.enableDataCompleteCheck = enableDataCompleteCheck;
@@ -232,7 +392,7 @@ public class QueryConfigUnified extends TeaModel {
         }
 
         /**
-         * <p>实体所属域</p>
+         * entityDomain.
          */
         public Builder entityDomain(String entityDomain) {
             this.entityDomain = entityDomain;
@@ -240,7 +400,7 @@ public class QueryConfigUnified extends TeaModel {
         }
 
         /**
-         * <p>需要附带返回的实体字段</p>
+         * entityFields.
          */
         public Builder entityFields(java.util.List<UmodelEntityField> entityFields) {
             this.entityFields = entityFields;
@@ -248,7 +408,7 @@ public class QueryConfigUnified extends TeaModel {
         }
 
         /**
-         * <p>实体过滤列表</p>
+         * entityFilters.
          */
         public Builder entityFilters(java.util.List<UmodelEntityFilter> entityFilters) {
             this.entityFilters = entityFilters;
@@ -256,7 +416,7 @@ public class QueryConfigUnified extends TeaModel {
         }
 
         /**
-         * <p>实体类型</p>
+         * entityType.
          */
         public Builder entityType(String entityType) {
             this.entityType = entityType;
@@ -272,7 +432,7 @@ public class QueryConfigUnified extends TeaModel {
         }
 
         /**
-         * <p>APM 过滤条件列表</p>
+         * filterList.
          */
         public Builder filterList(java.util.List<ApmFilterConfig> filterList) {
             this.filterList = filterList;
@@ -280,7 +440,15 @@ public class QueryConfigUnified extends TeaModel {
         }
 
         /**
-         * <p>标签过滤条件</p>
+         * groupId.
+         */
+        public Builder groupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * labelFilters.
          */
         public Builder labelFilters(java.util.List<UmodelLabelFilter> labelFilters) {
             this.labelFilters = labelFilters;
@@ -288,7 +456,31 @@ public class QueryConfigUnified extends TeaModel {
         }
 
         /**
-         * <p>APM 度量配置列表</p>
+         * legacyRaw.
+         */
+        public Builder legacyRaw(String legacyRaw) {
+            this.legacyRaw = legacyRaw;
+            return this;
+        }
+
+        /**
+         * legacyType.
+         */
+        public Builder legacyType(String legacyType) {
+            this.legacyType = legacyType;
+            return this;
+        }
+
+        /**
+         * logSet.
+         */
+        public Builder logSet(String logSet) {
+            this.logSet = logSet;
+            return this;
+        }
+
+        /**
+         * measureList.
          */
         public Builder measureList(java.util.List<ApmMeasureConfig> measureList) {
             this.measureList = measureList;
@@ -296,7 +488,7 @@ public class QueryConfigUnified extends TeaModel {
         }
 
         /**
-         * <p>指标名称（type=UMODEL_METRICSET_QUERY）</p>
+         * metric.
          */
         public Builder metric(String metric) {
             this.metric = metric;
@@ -304,7 +496,7 @@ public class QueryConfigUnified extends TeaModel {
         }
 
         /**
-         * <p>指标集名称（type=UMODEL_METRICSET_QUERY）</p>
+         * metricSet.
          */
         public Builder metricSet(String metricSet) {
             this.metricSet = metricSet;
@@ -312,7 +504,23 @@ public class QueryConfigUnified extends TeaModel {
         }
 
         /**
-         * <p>Prometheus 查询语句（type=PROMETHEUS_SINGLE_QUERY）</p>
+         * namespace.
+         */
+        public Builder namespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+
+        /**
+         * offsetSecs.
+         */
+        public Builder offsetSecs(Long offsetSecs) {
+            this.offsetSecs = offsetSecs;
+            return this;
+        }
+
+        /**
+         * promQl.
          */
         public Builder promQl(String promQl) {
             this.promQl = promQl;
@@ -320,7 +528,23 @@ public class QueryConfigUnified extends TeaModel {
         }
 
         /**
-         * <p>服务 ID 列表（type=APM_MULTI_QUERY）</p>
+         * queries.
+         */
+        public Builder queries(java.util.List<MetricSetNamedQueryEntry> queries) {
+            this.queries = queries;
+            return this;
+        }
+
+        /**
+         * relationType.
+         */
+        public Builder relationType(String relationType) {
+            this.relationType = relationType;
+            return this;
+        }
+
+        /**
+         * serviceIdList.
          */
         public Builder serviceIdList(java.util.List<String> serviceIdList) {
             this.serviceIdList = serviceIdList;
@@ -328,11 +552,18 @@ public class QueryConfigUnified extends TeaModel {
         }
 
         /**
-         * <p>查询类型</p>
          * <p>This parameter is required.</p>
          */
         public Builder type(String type) {
             this.type = type;
+            return this;
+        }
+
+        /**
+         * windowSecs.
+         */
+        public Builder windowSecs(Long windowSecs) {
+            this.windowSecs = windowSecs;
             return this;
         }
 

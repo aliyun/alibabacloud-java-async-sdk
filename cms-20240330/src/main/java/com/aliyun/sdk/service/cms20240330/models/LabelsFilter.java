@@ -67,7 +67,7 @@ public class LabelsFilter extends TeaModel {
         } 
 
         /**
-         * <p>匹配所有标签（AND）</p>
+         * allOf.
          */
         public Builder allOf(java.util.List<LabelMatcher> allOf) {
             this.allOf = allOf;
@@ -75,7 +75,7 @@ public class LabelsFilter extends TeaModel {
         }
 
         /**
-         * <p>匹配任意一个标签（OR）</p>
+         * anyOf.
          */
         public Builder anyOf(java.util.List<LabelMatcher> anyOf) {
             this.anyOf = anyOf;
