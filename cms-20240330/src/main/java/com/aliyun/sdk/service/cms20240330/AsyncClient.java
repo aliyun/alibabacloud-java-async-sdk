@@ -158,6 +158,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateServiceObservabilityResponse> createServiceObservability(CreateServiceObservabilityRequest request);
 
     /**
+     * @param request the request parameters of CreateServiceRecord  CreateServiceRecordRequest
+     * @return CreateServiceRecordResponse
+     */
+    CompletableFuture<CreateServiceRecordResponse> createServiceRecord(CreateServiceRecordRequest request);
+
+    /**
      * @param request the request parameters of CreateTicket  CreateTicketRequest
      * @return CreateTicketResponse
      */
@@ -303,6 +309,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteServiceResponse
      */
     CompletableFuture<DeleteServiceResponse> deleteService(DeleteServiceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteServiceRecord  DeleteServiceRecordRequest
+     * @return DeleteServiceRecordResponse
+     */
+    CompletableFuture<DeleteServiceRecordResponse> deleteServiceRecord(DeleteServiceRecordRequest request);
 
     /**
      * <b>description</b> :
@@ -519,6 +531,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetServiceObservabilityResponse
      */
     CompletableFuture<GetServiceObservabilityResponse> getServiceObservability(GetServiceObservabilityRequest request);
+
+    /**
+     * @param request the request parameters of GetServiceRecord  GetServiceRecordRequest
+     * @return GetServiceRecordResponse
+     */
+    CompletableFuture<GetServiceRecordResponse> getServiceRecord(GetServiceRecordRequest request);
 
     /**
      * <b>description</b> :
@@ -741,6 +759,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPrometheusVirtualInstancesResponse> listPrometheusVirtualInstances(ListPrometheusVirtualInstancesRequest request);
 
     /**
+     * @param request the request parameters of ListServiceRecords  ListServiceRecordsRequest
+     * @return ListServiceRecordsResponse
+     */
+    CompletableFuture<ListServiceRecordsResponse> listServiceRecords(ListServiceRecordsRequest request);
+
+    /**
      * @param request the request parameters of ListServices  ListServicesRequest
      * @return ListServicesResponse
      */
@@ -919,6 +943,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateServiceResponse
      */
     CompletableFuture<UpdateServiceResponse> updateService(UpdateServiceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateServiceRecord  UpdateServiceRecordRequest
+     * @return UpdateServiceRecordResponse
+     */
+    CompletableFuture<UpdateServiceRecordResponse> updateServiceRecord(UpdateServiceRecordRequest request);
 
     /**
      * @param request the request parameters of UpdateSubscription  UpdateSubscriptionRequest

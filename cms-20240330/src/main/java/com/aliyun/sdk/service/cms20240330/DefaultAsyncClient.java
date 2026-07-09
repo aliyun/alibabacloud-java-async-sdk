@@ -474,6 +474,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateServiceRecord  CreateServiceRecordRequest
+     * @return CreateServiceRecordResponse
+     */
+    @Override
+    public CompletableFuture<CreateServiceRecordResponse> createServiceRecord(CreateServiceRecordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateServiceRecord").setMethod(HttpMethod.POST).setPathRegex("/workspace/{workspace}/service/{serviceId}/record").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateServiceRecordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateServiceRecordResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateTicket  CreateTicketRequest
      * @return CreateTicketResponse
      */
@@ -891,6 +909,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteServiceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteServiceRecord  DeleteServiceRecordRequest
+     * @return DeleteServiceRecordResponse
+     */
+    @Override
+    public CompletableFuture<DeleteServiceRecordResponse> deleteServiceRecord(DeleteServiceRecordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteServiceRecord").setMethod(HttpMethod.DELETE).setPathRegex("/workspace/{workspace}/service/{serviceId}/record").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteServiceRecordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteServiceRecordResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1521,6 +1557,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetServiceRecord  GetServiceRecordRequest
+     * @return GetServiceRecordResponse
+     */
+    @Override
+    public CompletableFuture<GetServiceRecordResponse> getServiceRecord(GetServiceRecordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetServiceRecord").setMethod(HttpMethod.GET).setPathRegex("/workspace/{workspace}/service/{serviceId}/record").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetServiceRecordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetServiceRecordResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>Get Umodel configuration information</p>
      * 
@@ -2113,6 +2167,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListServiceRecords  ListServiceRecordsRequest
+     * @return ListServiceRecordsResponse
+     */
+    @Override
+    public CompletableFuture<ListServiceRecordsResponse> listServiceRecords(ListServiceRecordsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListServiceRecords").setMethod(HttpMethod.GET).setPathRegex("/workspace/{workspace}/service-records").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListServiceRecordsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListServiceRecordsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListServices  ListServicesRequest
      * @return ListServicesResponse
      */
@@ -2635,6 +2707,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateServiceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateServiceRecord  UpdateServiceRecordRequest
+     * @return UpdateServiceRecordResponse
+     */
+    @Override
+    public CompletableFuture<UpdateServiceRecordResponse> updateServiceRecord(UpdateServiceRecordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateServiceRecord").setMethod(HttpMethod.PUT).setPathRegex("/workspace/{workspace}/service/{serviceId}/record").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateServiceRecordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateServiceRecordResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
