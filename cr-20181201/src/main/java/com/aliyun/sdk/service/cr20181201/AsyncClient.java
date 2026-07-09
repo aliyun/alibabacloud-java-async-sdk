@@ -102,6 +102,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateChartRepositoryResponse> createChartRepository(CreateChartRepositoryRequest request);
 
     /**
+     * @param request the request parameters of CreateInstanceCustomizedDomain  CreateInstanceCustomizedDomainRequest
+     * @return CreateInstanceCustomizedDomainResponse
+     */
+    CompletableFuture<CreateInstanceCustomizedDomainResponse> createInstanceCustomizedDomain(CreateInstanceCustomizedDomainRequest request);
+
+    /**
      * @param request the request parameters of CreateInstanceEndpointAclPolicy  CreateInstanceEndpointAclPolicyRequest
      * @return CreateInstanceEndpointAclPolicyResponse
      */
@@ -240,6 +246,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteEventCenterRuleResponse
      */
     CompletableFuture<DeleteEventCenterRuleResponse> deleteEventCenterRule(DeleteEventCenterRuleRequest request);
+
+    /**
+     * @param request the request parameters of DeleteInstanceCustomizedDomain  DeleteInstanceCustomizedDomainRequest
+     * @return DeleteInstanceCustomizedDomainResponse
+     */
+    CompletableFuture<DeleteInstanceCustomizedDomainResponse> deleteInstanceCustomizedDomain(DeleteInstanceCustomizedDomainRequest request);
 
     /**
      * @param request the request parameters of DeleteInstanceEndpointAclPolicy  DeleteInstanceEndpointAclPolicyRequest
@@ -394,6 +406,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetInstanceCountResponse
      */
     CompletableFuture<GetInstanceCountResponse> getInstanceCount(GetInstanceCountRequest request);
+
+    /**
+     * @param request the request parameters of GetInstanceCustomizedDomain  GetInstanceCustomizedDomainRequest
+     * @return GetInstanceCustomizedDomainResponse
+     */
+    CompletableFuture<GetInstanceCustomizedDomainResponse> getInstanceCustomizedDomain(GetInstanceCustomizedDomainRequest request);
 
     /**
      * @param request the request parameters of GetInstanceEndpoint  GetInstanceEndpointRequest
@@ -718,6 +736,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateEventCenterRuleResponse
      */
     CompletableFuture<UpdateEventCenterRuleResponse> updateEventCenterRule(UpdateEventCenterRuleRequest request);
+
+    /**
+     * @param request the request parameters of UpdateInstanceCustomizedDomain  UpdateInstanceCustomizedDomainRequest
+     * @return UpdateInstanceCustomizedDomainResponse
+     */
+    CompletableFuture<UpdateInstanceCustomizedDomainResponse> updateInstanceCustomizedDomain(UpdateInstanceCustomizedDomainRequest request);
 
     /**
      * @param request the request parameters of UpdateInstanceEndpointStatus  UpdateInstanceEndpointStatusRequest
