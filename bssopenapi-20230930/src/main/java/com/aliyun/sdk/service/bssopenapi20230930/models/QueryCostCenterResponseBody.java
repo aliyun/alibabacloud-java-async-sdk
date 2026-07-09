@@ -203,6 +203,9 @@ public class QueryCostCenterResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrevCostCenterId")
         private Long prevCostCenterId;
 
+        @com.aliyun.core.annotation.NameInMap("Priority")
+        private Integer priority;
+
         private CostCenterDtoList(Builder builder) {
             this.costCenterCode = builder.costCenterCode;
             this.costCenterId = builder.costCenterId;
@@ -211,6 +214,7 @@ public class QueryCostCenterResponseBody extends TeaModel {
             this.ownerAccountId = builder.ownerAccountId;
             this.parentCostCenterId = builder.parentCostCenterId;
             this.prevCostCenterId = builder.prevCostCenterId;
+            this.priority = builder.priority;
         }
 
         public static Builder builder() {
@@ -270,6 +274,13 @@ public class QueryCostCenterResponseBody extends TeaModel {
             return this.prevCostCenterId;
         }
 
+        /**
+         * @return priority
+         */
+        public Integer getPriority() {
+            return this.priority;
+        }
+
         public static final class Builder {
             private String costCenterCode; 
             private Long costCenterId; 
@@ -278,6 +289,7 @@ public class QueryCostCenterResponseBody extends TeaModel {
             private Long ownerAccountId; 
             private Long parentCostCenterId; 
             private Long prevCostCenterId; 
+            private Integer priority; 
 
             private Builder() {
             } 
@@ -290,6 +302,7 @@ public class QueryCostCenterResponseBody extends TeaModel {
                 this.ownerAccountId = model.ownerAccountId;
                 this.parentCostCenterId = model.parentCostCenterId;
                 this.prevCostCenterId = model.prevCostCenterId;
+                this.priority = model.priority;
             } 
 
             /**
@@ -345,6 +358,14 @@ public class QueryCostCenterResponseBody extends TeaModel {
              */
             public Builder prevCostCenterId(Long prevCostCenterId) {
                 this.prevCostCenterId = prevCostCenterId;
+                return this;
+            }
+
+            /**
+             * Priority.
+             */
+            public Builder priority(Integer priority) {
+                this.priority = priority;
                 return this;
             }
 

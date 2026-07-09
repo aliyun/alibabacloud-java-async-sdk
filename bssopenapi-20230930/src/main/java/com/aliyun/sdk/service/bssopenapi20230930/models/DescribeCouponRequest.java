@@ -463,7 +463,6 @@ public class DescribeCouponRequest extends Request {
         private java.util.List<Long> accountIds;
 
         @com.aliyun.core.annotation.NameInMap("EcId")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String ecId;
 
         private EcIdAccountIds(Builder builder) {
@@ -514,10 +513,7 @@ public class DescribeCouponRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1501603440974415</p>
+             * EcId.
              */
             public Builder ecId(String ecId) {
                 this.ecId = ecId;

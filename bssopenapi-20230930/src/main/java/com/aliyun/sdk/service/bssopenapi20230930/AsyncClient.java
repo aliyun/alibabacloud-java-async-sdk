@@ -146,6 +146,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeCouponItemListResponse> describeCouponItemList(DescribeCouponItemListRequest request);
 
     /**
+     * @param request the request parameters of DescribeDeductLogs  DescribeDeductLogsRequest
+     * @return DescribeDeductLogsResponse
+     */
+    CompletableFuture<DescribeDeductLogsResponse> describeDeductLogs(DescribeDeductLogsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeFrInstances  DescribeFrInstancesRequest
+     * @return DescribeFrInstancesResponse
+     */
+    CompletableFuture<DescribeFrInstancesResponse> describeFrInstances(DescribeFrInstancesRequest request);
+
+    /**
      * @param request the request parameters of DescribeUserSpnSummaryInfo  DescribeUserSpnSummaryInfoRequest
      * @return DescribeUserSpnSummaryInfoResponse
      */
