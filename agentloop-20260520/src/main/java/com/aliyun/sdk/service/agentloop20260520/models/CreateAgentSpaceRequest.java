@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAgentSpaceRequest</p>
  */
 public class CreateAgentSpaceRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("agentSpace")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 64, minLength = 2)
@@ -30,15 +34,21 @@ public class CreateAgentSpaceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("trajectoryStoreEnabled")
+    private Boolean trajectoryStoreEnabled;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
     private CreateAgentSpaceRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentSpace = builder.agentSpace;
         this.cmsWorkspace = builder.cmsWorkspace;
         this.description = builder.description;
+        this.trajectoryStoreEnabled = builder.trajectoryStoreEnabled;
         this.clientToken = builder.clientToken;
     }
 
@@ -53,6 +63,13 @@ public class CreateAgentSpaceRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -77,6 +94,13 @@ public class CreateAgentSpaceRequest extends Request {
     }
 
     /**
+     * @return trajectoryStoreEnabled
+     */
+    public Boolean getTrajectoryStoreEnabled() {
+        return this.trajectoryStoreEnabled;
+    }
+
+    /**
      * @return clientToken
      */
     public String getClientToken() {
@@ -84,9 +108,11 @@ public class CreateAgentSpaceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateAgentSpaceRequest, Builder> {
+        private String regionId; 
         private String agentSpace; 
         private String cmsWorkspace; 
         private String description; 
+        private Boolean trajectoryStoreEnabled; 
         private String clientToken; 
 
         private Builder() {
@@ -95,11 +121,22 @@ public class CreateAgentSpaceRequest extends Request {
 
         private Builder(CreateAgentSpaceRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentSpace = request.agentSpace;
             this.cmsWorkspace = request.cmsWorkspace;
             this.description = request.description;
+            this.trajectoryStoreEnabled = request.trajectoryStoreEnabled;
             this.clientToken = request.clientToken;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
@@ -128,6 +165,15 @@ public class CreateAgentSpaceRequest extends Request {
         public Builder description(String description) {
             this.putBodyParameter("description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * trajectoryStoreEnabled.
+         */
+        public Builder trajectoryStoreEnabled(Boolean trajectoryStoreEnabled) {
+            this.putBodyParameter("trajectoryStoreEnabled", trajectoryStoreEnabled);
+            this.trajectoryStoreEnabled = trajectoryStoreEnabled;
             return this;
         }
 

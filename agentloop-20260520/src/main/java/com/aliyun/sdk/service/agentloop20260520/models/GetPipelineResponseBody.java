@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPipelineResponseBody</p>
  */
 public class GetPipelineResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("committedWatermark")
+    private Long committedWatermark;
+
     @com.aliyun.core.annotation.NameInMap("createTime")
     private String createTime;
 
@@ -25,6 +28,9 @@ public class GetPipelineResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("executePolicy")
     private ExecutePolicy executePolicy;
+
+    @com.aliyun.core.annotation.NameInMap("nextTriggerTime")
+    private Long nextTriggerTime;
 
     @com.aliyun.core.annotation.NameInMap("pipeline")
     private Pipeline pipeline;
@@ -37,6 +43,9 @@ public class GetPipelineResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("scheduleStatus")
+    private String scheduleStatus;
 
     @com.aliyun.core.annotation.NameInMap("sink")
     private Sink sink;
@@ -51,13 +60,16 @@ public class GetPipelineResponseBody extends TeaModel {
     private String workspace;
 
     private GetPipelineResponseBody(Builder builder) {
+        this.committedWatermark = builder.committedWatermark;
         this.createTime = builder.createTime;
         this.description = builder.description;
         this.executePolicy = builder.executePolicy;
+        this.nextTriggerTime = builder.nextTriggerTime;
         this.pipeline = builder.pipeline;
         this.pipelineName = builder.pipelineName;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
+        this.scheduleStatus = builder.scheduleStatus;
         this.sink = builder.sink;
         this.source = builder.source;
         this.updateTime = builder.updateTime;
@@ -74,6 +86,13 @@ public class GetPipelineResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return committedWatermark
+     */
+    public Long getCommittedWatermark() {
+        return this.committedWatermark;
     }
 
     /**
@@ -95,6 +114,13 @@ public class GetPipelineResponseBody extends TeaModel {
      */
     public ExecutePolicy getExecutePolicy() {
         return this.executePolicy;
+    }
+
+    /**
+     * @return nextTriggerTime
+     */
+    public Long getNextTriggerTime() {
+        return this.nextTriggerTime;
     }
 
     /**
@@ -126,6 +152,13 @@ public class GetPipelineResponseBody extends TeaModel {
     }
 
     /**
+     * @return scheduleStatus
+     */
+    public String getScheduleStatus() {
+        return this.scheduleStatus;
+    }
+
+    /**
      * @return sink
      */
     public Sink getSink() {
@@ -154,13 +187,16 @@ public class GetPipelineResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Long committedWatermark; 
         private String createTime; 
         private String description; 
         private ExecutePolicy executePolicy; 
+        private Long nextTriggerTime; 
         private Pipeline pipeline; 
         private String pipelineName; 
         private String regionId; 
         private String requestId; 
+        private String scheduleStatus; 
         private Sink sink; 
         private Source source; 
         private String updateTime; 
@@ -170,18 +206,29 @@ public class GetPipelineResponseBody extends TeaModel {
         } 
 
         private Builder(GetPipelineResponseBody model) {
+            this.committedWatermark = model.committedWatermark;
             this.createTime = model.createTime;
             this.description = model.description;
             this.executePolicy = model.executePolicy;
+            this.nextTriggerTime = model.nextTriggerTime;
             this.pipeline = model.pipeline;
             this.pipelineName = model.pipelineName;
             this.regionId = model.regionId;
             this.requestId = model.requestId;
+            this.scheduleStatus = model.scheduleStatus;
             this.sink = model.sink;
             this.source = model.source;
             this.updateTime = model.updateTime;
             this.workspace = model.workspace;
         } 
+
+        /**
+         * committedWatermark.
+         */
+        public Builder committedWatermark(Long committedWatermark) {
+            this.committedWatermark = committedWatermark;
+            return this;
+        }
 
         /**
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
@@ -207,6 +254,14 @@ public class GetPipelineResponseBody extends TeaModel {
          */
         public Builder executePolicy(ExecutePolicy executePolicy) {
             this.executePolicy = executePolicy;
+            return this;
+        }
+
+        /**
+         * nextTriggerTime.
+         */
+        public Builder nextTriggerTime(Long nextTriggerTime) {
+            this.nextTriggerTime = nextTriggerTime;
             return this;
         }
 
@@ -239,6 +294,14 @@ public class GetPipelineResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * scheduleStatus.
+         */
+        public Builder scheduleStatus(String scheduleStatus) {
+            this.scheduleStatus = scheduleStatus;
             return this;
         }
 

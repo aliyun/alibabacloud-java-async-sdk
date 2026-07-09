@@ -28,9 +28,29 @@ public class ExecuteQueryRequest extends Request {
     private String datasetName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("from")
+    private Integer from;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("length")
+    private Integer length;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("maxOutputLength")
+    private Integer maxOutputLength;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("offset")
+    private Integer offset;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("query")
     @com.aliyun.core.annotation.Validation(required = true)
     private String query;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("to")
+    private Integer to;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("type")
@@ -41,7 +61,12 @@ public class ExecuteQueryRequest extends Request {
         super(builder);
         this.agentSpace = builder.agentSpace;
         this.datasetName = builder.datasetName;
+        this.from = builder.from;
+        this.length = builder.length;
+        this.maxOutputLength = builder.maxOutputLength;
+        this.offset = builder.offset;
         this.query = builder.query;
+        this.to = builder.to;
         this.type = builder.type;
     }
 
@@ -73,10 +98,45 @@ public class ExecuteQueryRequest extends Request {
     }
 
     /**
+     * @return from
+     */
+    public Integer getFrom() {
+        return this.from;
+    }
+
+    /**
+     * @return length
+     */
+    public Integer getLength() {
+        return this.length;
+    }
+
+    /**
+     * @return maxOutputLength
+     */
+    public Integer getMaxOutputLength() {
+        return this.maxOutputLength;
+    }
+
+    /**
+     * @return offset
+     */
+    public Integer getOffset() {
+        return this.offset;
+    }
+
+    /**
      * @return query
      */
     public String getQuery() {
         return this.query;
+    }
+
+    /**
+     * @return to
+     */
+    public Integer getTo() {
+        return this.to;
     }
 
     /**
@@ -89,7 +149,12 @@ public class ExecuteQueryRequest extends Request {
     public static final class Builder extends Request.Builder<ExecuteQueryRequest, Builder> {
         private String agentSpace; 
         private String datasetName; 
+        private Integer from; 
+        private Integer length; 
+        private Integer maxOutputLength; 
+        private Integer offset; 
         private String query; 
+        private Integer to; 
         private String type; 
 
         private Builder() {
@@ -100,7 +165,12 @@ public class ExecuteQueryRequest extends Request {
             super(request);
             this.agentSpace = request.agentSpace;
             this.datasetName = request.datasetName;
+            this.from = request.from;
+            this.length = request.length;
+            this.maxOutputLength = request.maxOutputLength;
+            this.offset = request.offset;
             this.query = request.query;
+            this.to = request.to;
             this.type = request.type;
         } 
 
@@ -129,6 +199,42 @@ public class ExecuteQueryRequest extends Request {
         }
 
         /**
+         * from.
+         */
+        public Builder from(Integer from) {
+            this.putBodyParameter("from", from);
+            this.from = from;
+            return this;
+        }
+
+        /**
+         * length.
+         */
+        public Builder length(Integer length) {
+            this.putBodyParameter("length", length);
+            this.length = length;
+            return this;
+        }
+
+        /**
+         * maxOutputLength.
+         */
+        public Builder maxOutputLength(Integer maxOutputLength) {
+            this.putBodyParameter("maxOutputLength", maxOutputLength);
+            this.maxOutputLength = maxOutputLength;
+            return this;
+        }
+
+        /**
+         * offset.
+         */
+        public Builder offset(Integer offset) {
+            this.putBodyParameter("offset", offset);
+            this.offset = offset;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +243,15 @@ public class ExecuteQueryRequest extends Request {
         public Builder query(String query) {
             this.putBodyParameter("query", query);
             this.query = query;
+            return this;
+        }
+
+        /**
+         * to.
+         */
+        public Builder to(Integer to) {
+            this.putBodyParameter("to", to);
+            this.to = to;
             return this;
         }
 

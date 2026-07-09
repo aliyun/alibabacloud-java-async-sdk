@@ -17,9 +17,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ExperimentRecord</p>
  */
 public class ExperimentRecord extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("batchId")
-    private String batchId;
-
     @com.aliyun.core.annotation.NameInMap("completedAt")
     private Long completedAt;
 
@@ -38,6 +35,9 @@ public class ExperimentRecord extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
+    @com.aliyun.core.annotation.NameInMap("evaluationTaskId")
+    private String evaluationTaskId;
+
     @com.aliyun.core.annotation.NameInMap("evaluators")
     private java.util.List<Evaluator> evaluators;
 
@@ -45,10 +45,10 @@ public class ExperimentRecord extends TeaModel {
     private Long executedAt;
 
     @com.aliyun.core.annotation.NameInMap("experimentConfig")
-    private ExperimentConfig experimentConfig;
+    private java.util.List<ExperimentConfig> experimentConfig;
 
-    @com.aliyun.core.annotation.NameInMap("experimentName")
-    private String experimentName;
+    @com.aliyun.core.annotation.NameInMap("experimentPlanId")
+    private String experimentPlanId;
 
     @com.aliyun.core.annotation.NameInMap("failedTasks")
     private Integer failedTasks;
@@ -56,11 +56,8 @@ public class ExperimentRecord extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("input")
     private java.util.Map<String, ?> input;
 
-    @com.aliyun.core.annotation.NameInMap("modelName")
-    private String modelName;
-
-    @com.aliyun.core.annotation.NameInMap("planId")
-    private String planId;
+    @com.aliyun.core.annotation.NameInMap("modelNames")
+    private java.util.List<String> modelNames;
 
     @com.aliyun.core.annotation.NameInMap("planName")
     private String planName;
@@ -68,8 +65,14 @@ public class ExperimentRecord extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("progress")
     private Float progress;
 
+    @com.aliyun.core.annotation.NameInMap("querySql")
+    private String querySql;
+
     @com.aliyun.core.annotation.NameInMap("recordId")
     private String recordId;
+
+    @com.aliyun.core.annotation.NameInMap("recordName")
+    private String recordName;
 
     @com.aliyun.core.annotation.NameInMap("selectedItemIds")
     private java.util.List<String> selectedItemIds;
@@ -81,24 +84,25 @@ public class ExperimentRecord extends TeaModel {
     private Integer totalTasks;
 
     private ExperimentRecord(Builder builder) {
-        this.batchId = builder.batchId;
         this.completedAt = builder.completedAt;
         this.completedTasks = builder.completedTasks;
         this.dataSourceType = builder.dataSourceType;
         this.datasetId = builder.datasetId;
         this.datasetProject = builder.datasetProject;
         this.errorMessage = builder.errorMessage;
+        this.evaluationTaskId = builder.evaluationTaskId;
         this.evaluators = builder.evaluators;
         this.executedAt = builder.executedAt;
         this.experimentConfig = builder.experimentConfig;
-        this.experimentName = builder.experimentName;
+        this.experimentPlanId = builder.experimentPlanId;
         this.failedTasks = builder.failedTasks;
         this.input = builder.input;
-        this.modelName = builder.modelName;
-        this.planId = builder.planId;
+        this.modelNames = builder.modelNames;
         this.planName = builder.planName;
         this.progress = builder.progress;
+        this.querySql = builder.querySql;
         this.recordId = builder.recordId;
+        this.recordName = builder.recordName;
         this.selectedItemIds = builder.selectedItemIds;
         this.status = builder.status;
         this.totalTasks = builder.totalTasks;
@@ -114,13 +118,6 @@ public class ExperimentRecord extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return batchId
-     */
-    public String getBatchId() {
-        return this.batchId;
     }
 
     /**
@@ -166,6 +163,13 @@ public class ExperimentRecord extends TeaModel {
     }
 
     /**
+     * @return evaluationTaskId
+     */
+    public String getEvaluationTaskId() {
+        return this.evaluationTaskId;
+    }
+
+    /**
      * @return evaluators
      */
     public java.util.List<Evaluator> getEvaluators() {
@@ -182,15 +186,15 @@ public class ExperimentRecord extends TeaModel {
     /**
      * @return experimentConfig
      */
-    public ExperimentConfig getExperimentConfig() {
+    public java.util.List<ExperimentConfig> getExperimentConfig() {
         return this.experimentConfig;
     }
 
     /**
-     * @return experimentName
+     * @return experimentPlanId
      */
-    public String getExperimentName() {
-        return this.experimentName;
+    public String getExperimentPlanId() {
+        return this.experimentPlanId;
     }
 
     /**
@@ -208,17 +212,10 @@ public class ExperimentRecord extends TeaModel {
     }
 
     /**
-     * @return modelName
+     * @return modelNames
      */
-    public String getModelName() {
-        return this.modelName;
-    }
-
-    /**
-     * @return planId
-     */
-    public String getPlanId() {
-        return this.planId;
+    public java.util.List<String> getModelNames() {
+        return this.modelNames;
     }
 
     /**
@@ -236,10 +233,24 @@ public class ExperimentRecord extends TeaModel {
     }
 
     /**
+     * @return querySql
+     */
+    public String getQuerySql() {
+        return this.querySql;
+    }
+
+    /**
      * @return recordId
      */
     public String getRecordId() {
         return this.recordId;
+    }
+
+    /**
+     * @return recordName
+     */
+    public String getRecordName() {
+        return this.recordName;
     }
 
     /**
@@ -264,24 +275,25 @@ public class ExperimentRecord extends TeaModel {
     }
 
     public static final class Builder {
-        private String batchId; 
         private Long completedAt; 
         private Integer completedTasks; 
         private String dataSourceType; 
         private String datasetId; 
         private String datasetProject; 
         private String errorMessage; 
+        private String evaluationTaskId; 
         private java.util.List<Evaluator> evaluators; 
         private Long executedAt; 
-        private ExperimentConfig experimentConfig; 
-        private String experimentName; 
+        private java.util.List<ExperimentConfig> experimentConfig; 
+        private String experimentPlanId; 
         private Integer failedTasks; 
         private java.util.Map<String, ?> input; 
-        private String modelName; 
-        private String planId; 
+        private java.util.List<String> modelNames; 
         private String planName; 
         private Float progress; 
+        private String querySql; 
         private String recordId; 
+        private String recordName; 
         private java.util.List<String> selectedItemIds; 
         private String status; 
         private Integer totalTasks; 
@@ -290,36 +302,29 @@ public class ExperimentRecord extends TeaModel {
         } 
 
         private Builder(ExperimentRecord model) {
-            this.batchId = model.batchId;
             this.completedAt = model.completedAt;
             this.completedTasks = model.completedTasks;
             this.dataSourceType = model.dataSourceType;
             this.datasetId = model.datasetId;
             this.datasetProject = model.datasetProject;
             this.errorMessage = model.errorMessage;
+            this.evaluationTaskId = model.evaluationTaskId;
             this.evaluators = model.evaluators;
             this.executedAt = model.executedAt;
             this.experimentConfig = model.experimentConfig;
-            this.experimentName = model.experimentName;
+            this.experimentPlanId = model.experimentPlanId;
             this.failedTasks = model.failedTasks;
             this.input = model.input;
-            this.modelName = model.modelName;
-            this.planId = model.planId;
+            this.modelNames = model.modelNames;
             this.planName = model.planName;
             this.progress = model.progress;
+            this.querySql = model.querySql;
             this.recordId = model.recordId;
+            this.recordName = model.recordName;
             this.selectedItemIds = model.selectedItemIds;
             this.status = model.status;
             this.totalTasks = model.totalTasks;
         } 
-
-        /**
-         * batchId.
-         */
-        public Builder batchId(String batchId) {
-            this.batchId = batchId;
-            return this;
-        }
 
         /**
          * completedAt.
@@ -370,6 +375,14 @@ public class ExperimentRecord extends TeaModel {
         }
 
         /**
+         * evaluationTaskId.
+         */
+        public Builder evaluationTaskId(String evaluationTaskId) {
+            this.evaluationTaskId = evaluationTaskId;
+            return this;
+        }
+
+        /**
          * evaluators.
          */
         public Builder evaluators(java.util.List<Evaluator> evaluators) {
@@ -388,16 +401,16 @@ public class ExperimentRecord extends TeaModel {
         /**
          * experimentConfig.
          */
-        public Builder experimentConfig(ExperimentConfig experimentConfig) {
+        public Builder experimentConfig(java.util.List<ExperimentConfig> experimentConfig) {
             this.experimentConfig = experimentConfig;
             return this;
         }
 
         /**
-         * experimentName.
+         * experimentPlanId.
          */
-        public Builder experimentName(String experimentName) {
-            this.experimentName = experimentName;
+        public Builder experimentPlanId(String experimentPlanId) {
+            this.experimentPlanId = experimentPlanId;
             return this;
         }
 
@@ -418,18 +431,10 @@ public class ExperimentRecord extends TeaModel {
         }
 
         /**
-         * modelName.
+         * modelNames.
          */
-        public Builder modelName(String modelName) {
-            this.modelName = modelName;
-            return this;
-        }
-
-        /**
-         * planId.
-         */
-        public Builder planId(String planId) {
-            this.planId = planId;
+        public Builder modelNames(java.util.List<String> modelNames) {
+            this.modelNames = modelNames;
             return this;
         }
 
@@ -450,10 +455,26 @@ public class ExperimentRecord extends TeaModel {
         }
 
         /**
+         * querySql.
+         */
+        public Builder querySql(String querySql) {
+            this.querySql = querySql;
+            return this;
+        }
+
+        /**
          * recordId.
          */
         public Builder recordId(String recordId) {
             this.recordId = recordId;
+            return this;
+        }
+
+        /**
+         * recordName.
+         */
+        public Builder recordName(String recordName) {
+            this.recordName = recordName;
             return this;
         }
 

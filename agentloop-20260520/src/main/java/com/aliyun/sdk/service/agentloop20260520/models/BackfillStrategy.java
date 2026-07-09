@@ -23,16 +23,12 @@ public class BackfillStrategy extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("endTime")
     private Long endTime;
 
-    @com.aliyun.core.annotation.NameInMap("immediate")
-    private Boolean immediate;
-
     @com.aliyun.core.annotation.NameInMap("startTime")
     private Long startTime;
 
     private BackfillStrategy(Builder builder) {
         this.enabled = builder.enabled;
         this.endTime = builder.endTime;
-        this.immediate = builder.immediate;
         this.startTime = builder.startTime;
     }
 
@@ -63,13 +59,6 @@ public class BackfillStrategy extends TeaModel {
     }
 
     /**
-     * @return immediate
-     */
-    public Boolean getImmediate() {
-        return this.immediate;
-    }
-
-    /**
      * @return startTime
      */
     public Long getStartTime() {
@@ -79,7 +68,6 @@ public class BackfillStrategy extends TeaModel {
     public static final class Builder {
         private Boolean enabled; 
         private Long endTime; 
-        private Boolean immediate; 
         private Long startTime; 
 
         private Builder() {
@@ -88,7 +76,6 @@ public class BackfillStrategy extends TeaModel {
         private Builder(BackfillStrategy model) {
             this.enabled = model.enabled;
             this.endTime = model.endTime;
-            this.immediate = model.immediate;
             this.startTime = model.startTime;
         } 
 
@@ -105,14 +92,6 @@ public class BackfillStrategy extends TeaModel {
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
-            return this;
-        }
-
-        /**
-         * immediate.
-         */
-        public Builder immediate(Boolean immediate) {
-            this.immediate = immediate;
             return this;
         }
 

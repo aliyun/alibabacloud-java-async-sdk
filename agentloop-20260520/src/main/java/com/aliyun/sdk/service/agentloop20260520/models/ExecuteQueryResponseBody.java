@@ -157,6 +157,81 @@ public class ExecuteQueryResponseBody extends TeaModel {
      *
      * <p>ExecuteQueryResponseBody</p>
      */
+    public static class Truncation extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("truncated")
+        private Boolean truncated;
+
+        @com.aliyun.core.annotation.NameInMap("truncatedColumnIndexes")
+        private java.util.List<java.util.List<Integer>> truncatedColumnIndexes;
+
+        private Truncation(Builder builder) {
+            this.truncated = builder.truncated;
+            this.truncatedColumnIndexes = builder.truncatedColumnIndexes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Truncation create() {
+            return builder().build();
+        }
+
+        /**
+         * @return truncated
+         */
+        public Boolean getTruncated() {
+            return this.truncated;
+        }
+
+        /**
+         * @return truncatedColumnIndexes
+         */
+        public java.util.List<java.util.List<Integer>> getTruncatedColumnIndexes() {
+            return this.truncatedColumnIndexes;
+        }
+
+        public static final class Builder {
+            private Boolean truncated; 
+            private java.util.List<java.util.List<Integer>> truncatedColumnIndexes; 
+
+            private Builder() {
+            } 
+
+            private Builder(Truncation model) {
+                this.truncated = model.truncated;
+                this.truncatedColumnIndexes = model.truncatedColumnIndexes;
+            } 
+
+            /**
+             * truncated.
+             */
+            public Builder truncated(Boolean truncated) {
+                this.truncated = truncated;
+                return this;
+            }
+
+            /**
+             * truncatedColumnIndexes.
+             */
+            public Builder truncatedColumnIndexes(java.util.List<java.util.List<Integer>> truncatedColumnIndexes) {
+                this.truncatedColumnIndexes = truncatedColumnIndexes;
+                return this;
+            }
+
+            public Truncation build() {
+                return new Truncation(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ExecuteQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ExecuteQueryResponseBody</p>
+     */
     public static class Meta extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("affectedRows")
         private Integer affectedRows;
@@ -170,11 +245,15 @@ public class ExecuteQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("progress")
         private String progress;
 
+        @com.aliyun.core.annotation.NameInMap("truncation")
+        private Truncation truncation;
+
         private Meta(Builder builder) {
             this.affectedRows = builder.affectedRows;
             this.count = builder.count;
             this.elapsedMillisecond = builder.elapsedMillisecond;
             this.progress = builder.progress;
+            this.truncation = builder.truncation;
         }
 
         public static Builder builder() {
@@ -213,11 +292,19 @@ public class ExecuteQueryResponseBody extends TeaModel {
             return this.progress;
         }
 
+        /**
+         * @return truncation
+         */
+        public Truncation getTruncation() {
+            return this.truncation;
+        }
+
         public static final class Builder {
             private Integer affectedRows; 
             private Integer count; 
             private Long elapsedMillisecond; 
             private String progress; 
+            private Truncation truncation; 
 
             private Builder() {
             } 
@@ -227,6 +314,7 @@ public class ExecuteQueryResponseBody extends TeaModel {
                 this.count = model.count;
                 this.elapsedMillisecond = model.elapsedMillisecond;
                 this.progress = model.progress;
+                this.truncation = model.truncation;
             } 
 
             /**
@@ -258,6 +346,14 @@ public class ExecuteQueryResponseBody extends TeaModel {
              */
             public Builder progress(String progress) {
                 this.progress = progress;
+                return this;
+            }
+
+            /**
+             * truncation.
+             */
+            public Builder truncation(Truncation truncation) {
+                this.truncation = truncation;
                 return this;
             }
 

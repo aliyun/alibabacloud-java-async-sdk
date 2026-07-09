@@ -32,10 +32,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
             new TeaPair("cn-zhangjiakou", "agentloop.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "agentloop.cn-shenzhen.aliyuncs.com"),
             new TeaPair("cn-shanghai", "agentloop.cn-shanghai.aliyuncs.com"),
             new TeaPair("cn-hongkong", "agentloop.cn-hongkong.aliyuncs.com"),
             new TeaPair("cn-hangzhou", "agentloop.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-beijing", "agentloop.cn-beijing.aliyuncs.com")
+            new TeaPair("cn-guangzhou", "agentloop.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "agentloop.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "agentloop.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "agentloop.ap-southeast-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -58,6 +62,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<AddDatasetDataResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CancelPipelineRun  CancelPipelineRunRequest
+     * @return CancelPipelineRunResponse
+     */
+    @Override
+    public CompletableFuture<CancelPipelineRunResponse> cancelPipelineRun(CancelPipelineRunRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CancelPipelineRun").setMethod(HttpMethod.POST).setPathRegex("/agentspace/{agentSpace}/pipeline/{pipelineName}/runs/{runId}/cancel").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CancelPipelineRunResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CancelPipelineRunResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -136,6 +158,60 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateEvaluationTask  CreateEvaluationTaskRequest
+     * @return CreateEvaluationTaskResponse
+     */
+    @Override
+    public CompletableFuture<CreateEvaluationTaskResponse> createEvaluationTask(CreateEvaluationTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateEvaluationTask").setMethod(HttpMethod.POST).setPathRegex("/api/v1/evaluation-task/{agentSpace}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateEvaluationTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateEvaluationTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateEvaluator  CreateEvaluatorRequest
+     * @return CreateEvaluatorResponse
+     */
+    @Override
+    public CompletableFuture<CreateEvaluatorResponse> createEvaluator(CreateEvaluatorRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateEvaluator").setMethod(HttpMethod.POST).setPathRegex("/api/v1/evaluators/{agentSpace}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateEvaluatorResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateEvaluatorResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateEvaluatorSkill  CreateEvaluatorSkillRequest
+     * @return CreateEvaluatorSkillResponse
+     */
+    @Override
+    public CompletableFuture<CreateEvaluatorSkillResponse> createEvaluatorSkill(CreateEvaluatorSkillRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateEvaluatorSkill").setMethod(HttpMethod.POST).setPathRegex("/api/v1/evaluator/{name}/skill").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateEvaluatorSkillResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateEvaluatorSkillResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteAgentSpace  DeleteAgentSpaceRequest
      * @return DeleteAgentSpaceResponse
      */
@@ -202,6 +278,78 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteDatasetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteEvaluationRun  DeleteEvaluationRunRequest
+     * @return DeleteEvaluationRunResponse
+     */
+    @Override
+    public CompletableFuture<DeleteEvaluationRunResponse> deleteEvaluationRun(DeleteEvaluationRunRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteEvaluationRun").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/evaluation-task/{agentSpace}/{taskId}/run/{runId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteEvaluationRunResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteEvaluationRunResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteEvaluationTask  DeleteEvaluationTaskRequest
+     * @return DeleteEvaluationTaskResponse
+     */
+    @Override
+    public CompletableFuture<DeleteEvaluationTaskResponse> deleteEvaluationTask(DeleteEvaluationTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteEvaluationTask").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/evaluation-task/{agentSpace}/{taskId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteEvaluationTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteEvaluationTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteEvaluator  DeleteEvaluatorRequest
+     * @return DeleteEvaluatorResponse
+     */
+    @Override
+    public CompletableFuture<DeleteEvaluatorResponse> deleteEvaluator(DeleteEvaluatorRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteEvaluator").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/evaluators/{agentSpace}/{name}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteEvaluatorResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteEvaluatorResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteEvaluatorSkill  DeleteEvaluatorSkillRequest
+     * @return DeleteEvaluatorSkillResponse
+     */
+    @Override
+    public CompletableFuture<DeleteEvaluatorSkillResponse> deleteEvaluatorSkill(DeleteEvaluatorSkillRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteEvaluatorSkill").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/evaluator/{name}/skill/{skillName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteEvaluatorSkillResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteEvaluatorSkillResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -334,6 +482,78 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetEvaluationRun  GetEvaluationRunRequest
+     * @return GetEvaluationRunResponse
+     */
+    @Override
+    public CompletableFuture<GetEvaluationRunResponse> getEvaluationRun(GetEvaluationRunRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetEvaluationRun").setMethod(HttpMethod.GET).setPathRegex("/api/v1/evaluation-task/{agentSpace}/{taskId}/run/{runId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetEvaluationRunResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetEvaluationRunResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetEvaluationTask  GetEvaluationTaskRequest
+     * @return GetEvaluationTaskResponse
+     */
+    @Override
+    public CompletableFuture<GetEvaluationTaskResponse> getEvaluationTask(GetEvaluationTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetEvaluationTask").setMethod(HttpMethod.GET).setPathRegex("/api/v1/evaluation-task/{agentSpace}/{taskId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetEvaluationTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetEvaluationTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetEvaluator  GetEvaluatorRequest
+     * @return GetEvaluatorResponse
+     */
+    @Override
+    public CompletableFuture<GetEvaluatorResponse> getEvaluator(GetEvaluatorRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetEvaluator").setMethod(HttpMethod.GET).setPathRegex("/api/v1/evaluators/{agentSpace}/{name}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetEvaluatorResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetEvaluatorResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetEvaluatorSkill  GetEvaluatorSkillRequest
+     * @return GetEvaluatorSkillResponse
+     */
+    @Override
+    public CompletableFuture<GetEvaluatorSkillResponse> getEvaluatorSkill(GetEvaluatorSkillRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetEvaluatorSkill").setMethod(HttpMethod.GET).setPathRegex("/api/v1/evaluator/{name}/skill/{skillName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetEvaluatorSkillResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetEvaluatorSkillResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetPipeline  GetPipelineRequest
      * @return GetPipelineResponse
      */
@@ -346,6 +566,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetPipelineResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetPipelineRun  GetPipelineRunRequest
+     * @return GetPipelineRunResponse
+     */
+    @Override
+    public CompletableFuture<GetPipelineRunResponse> getPipelineRun(GetPipelineRunRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetPipelineRun").setMethod(HttpMethod.GET).setPathRegex("/agentspace/{agentSpace}/pipeline/{pipelineName}/runs/{runId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetPipelineRunResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetPipelineRunResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetPipelineStats  GetPipelineStatsRequest
+     * @return GetPipelineStatsResponse
+     */
+    @Override
+    public CompletableFuture<GetPipelineStatsResponse> getPipelineStats(GetPipelineStatsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetPipelineStats").setMethod(HttpMethod.GET).setPathRegex("/agentspace/{agentSpace}/pipeline/{pipelineName}/stats").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetPipelineStatsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetPipelineStatsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -424,6 +680,96 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListEvaluationRuns  ListEvaluationRunsRequest
+     * @return ListEvaluationRunsResponse
+     */
+    @Override
+    public CompletableFuture<ListEvaluationRunsResponse> listEvaluationRuns(ListEvaluationRunsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListEvaluationRuns").setMethod(HttpMethod.GET).setPathRegex("/api/v1/evaluation-task/{agentSpace}/{taskId}/runs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListEvaluationRunsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListEvaluationRunsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListEvaluationTasks  ListEvaluationTasksRequest
+     * @return ListEvaluationTasksResponse
+     */
+    @Override
+    public CompletableFuture<ListEvaluationTasksResponse> listEvaluationTasks(ListEvaluationTasksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListEvaluationTasks").setMethod(HttpMethod.GET).setPathRegex("/api/v1/evaluation-tasks").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListEvaluationTasksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListEvaluationTasksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListEvaluatorSkills  ListEvaluatorSkillsRequest
+     * @return ListEvaluatorSkillsResponse
+     */
+    @Override
+    public CompletableFuture<ListEvaluatorSkillsResponse> listEvaluatorSkills(ListEvaluatorSkillsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListEvaluatorSkills").setMethod(HttpMethod.GET).setPathRegex("/api/v1/evaluator/{name}/skills").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListEvaluatorSkillsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListEvaluatorSkillsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListEvaluators  ListEvaluatorsRequest
+     * @return ListEvaluatorsResponse
+     */
+    @Override
+    public CompletableFuture<ListEvaluatorsResponse> listEvaluators(ListEvaluatorsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListEvaluators").setMethod(HttpMethod.GET).setPathRegex("/api/v1/evaluators").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListEvaluatorsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListEvaluatorsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListPipelineRuns  ListPipelineRunsRequest
+     * @return ListPipelineRunsResponse
+     */
+    @Override
+    public CompletableFuture<ListPipelineRunsResponse> listPipelineRuns(ListPipelineRunsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListPipelineRuns").setMethod(HttpMethod.GET).setPathRegex("/agentspace/{agentSpace}/pipeline/{pipelineName}/runs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListPipelineRunsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListPipelineRunsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListPipelines  ListPipelinesRequest
      * @return ListPipelinesResponse
      */
@@ -442,6 +788,60 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of PausePipeline  PausePipelineRequest
+     * @return PausePipelineResponse
+     */
+    @Override
+    public CompletableFuture<PausePipelineResponse> pausePipeline(PausePipelineRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PausePipeline").setMethod(HttpMethod.POST).setPathRegex("/agentspace/{agentSpace}/pipeline/{pipelineName}/pause").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PausePipelineResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PausePipelineResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ResumePipeline  ResumePipelineRequest
+     * @return ResumePipelineResponse
+     */
+    @Override
+    public CompletableFuture<ResumePipelineResponse> resumePipeline(ResumePipelineRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ResumePipeline").setMethod(HttpMethod.POST).setPathRegex("/agentspace/{agentSpace}/pipeline/{pipelineName}/resume").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ResumePipelineResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ResumePipelineResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RunPipeline  RunPipelineRequest
+     * @return RunPipelineResponse
+     */
+    @Override
+    public CompletableFuture<RunPipelineResponse> runPipeline(RunPipelineRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RunPipeline").setMethod(HttpMethod.POST).setPathRegex("/agentspace/{agentSpace}/pipeline/{pipelineName}/run").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunPipelineResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunPipelineResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of SearchContext  SearchContextRequest
      * @return SearchContextResponse
      */
@@ -454,6 +854,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SearchContextResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TerminatePipeline  TerminatePipelineRequest
+     * @return TerminatePipelineResponse
+     */
+    @Override
+    public CompletableFuture<TerminatePipelineResponse> terminatePipeline(TerminatePipelineRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TerminatePipeline").setMethod(HttpMethod.POST).setPathRegex("/agentspace/{agentSpace}/pipeline/{pipelineName}/terminate").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TerminatePipelineResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TerminatePipelineResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -508,6 +926,78 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateDatasetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateEvaluationRun  UpdateEvaluationRunRequest
+     * @return UpdateEvaluationRunResponse
+     */
+    @Override
+    public CompletableFuture<UpdateEvaluationRunResponse> updateEvaluationRun(UpdateEvaluationRunRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateEvaluationRun").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/evaluation-task/{agentSpace}/{taskId}/run/{runId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateEvaluationRunResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateEvaluationRunResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateEvaluationTask  UpdateEvaluationTaskRequest
+     * @return UpdateEvaluationTaskResponse
+     */
+    @Override
+    public CompletableFuture<UpdateEvaluationTaskResponse> updateEvaluationTask(UpdateEvaluationTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateEvaluationTask").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/evaluation-task/{agentSpace}/{taskId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateEvaluationTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateEvaluationTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateEvaluator  UpdateEvaluatorRequest
+     * @return UpdateEvaluatorResponse
+     */
+    @Override
+    public CompletableFuture<UpdateEvaluatorResponse> updateEvaluator(UpdateEvaluatorRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateEvaluator").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/evaluators/{agentSpace}/{name}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateEvaluatorResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateEvaluatorResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateEvaluatorSkill  UpdateEvaluatorSkillRequest
+     * @return UpdateEvaluatorSkillResponse
+     */
+    @Override
+    public CompletableFuture<UpdateEvaluatorSkillResponse> updateEvaluatorSkill(UpdateEvaluatorSkillRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateEvaluatorSkill").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/evaluator/{name}/skill/{skillName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateEvaluatorSkillResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateEvaluatorSkillResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

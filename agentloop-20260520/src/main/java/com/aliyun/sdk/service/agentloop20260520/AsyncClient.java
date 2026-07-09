@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddDatasetDataResponse> addDatasetData(AddDatasetDataRequest request);
 
     /**
+     * @param request the request parameters of CancelPipelineRun  CancelPipelineRunRequest
+     * @return CancelPipelineRunResponse
+     */
+    CompletableFuture<CancelPipelineRunResponse> cancelPipelineRun(CancelPipelineRunRequest request);
+
+    /**
      * @param request the request parameters of CreateAgentSpace  CreateAgentSpaceRequest
      * @return CreateAgentSpaceResponse
      */
@@ -50,6 +56,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDatasetResponse> createDataset(CreateDatasetRequest request);
 
     /**
+     * @param request the request parameters of CreateEvaluationTask  CreateEvaluationTaskRequest
+     * @return CreateEvaluationTaskResponse
+     */
+    CompletableFuture<CreateEvaluationTaskResponse> createEvaluationTask(CreateEvaluationTaskRequest request);
+
+    /**
+     * @param request the request parameters of CreateEvaluator  CreateEvaluatorRequest
+     * @return CreateEvaluatorResponse
+     */
+    CompletableFuture<CreateEvaluatorResponse> createEvaluator(CreateEvaluatorRequest request);
+
+    /**
+     * @param request the request parameters of CreateEvaluatorSkill  CreateEvaluatorSkillRequest
+     * @return CreateEvaluatorSkillResponse
+     */
+    CompletableFuture<CreateEvaluatorSkillResponse> createEvaluatorSkill(CreateEvaluatorSkillRequest request);
+
+    /**
      * @param request the request parameters of DeleteAgentSpace  DeleteAgentSpaceRequest
      * @return DeleteAgentSpaceResponse
      */
@@ -72,6 +96,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDatasetResponse
      */
     CompletableFuture<DeleteDatasetResponse> deleteDataset(DeleteDatasetRequest request);
+
+    /**
+     * @param request the request parameters of DeleteEvaluationRun  DeleteEvaluationRunRequest
+     * @return DeleteEvaluationRunResponse
+     */
+    CompletableFuture<DeleteEvaluationRunResponse> deleteEvaluationRun(DeleteEvaluationRunRequest request);
+
+    /**
+     * @param request the request parameters of DeleteEvaluationTask  DeleteEvaluationTaskRequest
+     * @return DeleteEvaluationTaskResponse
+     */
+    CompletableFuture<DeleteEvaluationTaskResponse> deleteEvaluationTask(DeleteEvaluationTaskRequest request);
+
+    /**
+     * @param request the request parameters of DeleteEvaluator  DeleteEvaluatorRequest
+     * @return DeleteEvaluatorResponse
+     */
+    CompletableFuture<DeleteEvaluatorResponse> deleteEvaluator(DeleteEvaluatorRequest request);
+
+    /**
+     * @param request the request parameters of DeleteEvaluatorSkill  DeleteEvaluatorSkillRequest
+     * @return DeleteEvaluatorSkillResponse
+     */
+    CompletableFuture<DeleteEvaluatorSkillResponse> deleteEvaluatorSkill(DeleteEvaluatorSkillRequest request);
 
     /**
      * @param request the request parameters of DeletePipeline  DeletePipelineRequest
@@ -116,10 +164,46 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDatasetResponse> getDataset(GetDatasetRequest request);
 
     /**
+     * @param request the request parameters of GetEvaluationRun  GetEvaluationRunRequest
+     * @return GetEvaluationRunResponse
+     */
+    CompletableFuture<GetEvaluationRunResponse> getEvaluationRun(GetEvaluationRunRequest request);
+
+    /**
+     * @param request the request parameters of GetEvaluationTask  GetEvaluationTaskRequest
+     * @return GetEvaluationTaskResponse
+     */
+    CompletableFuture<GetEvaluationTaskResponse> getEvaluationTask(GetEvaluationTaskRequest request);
+
+    /**
+     * @param request the request parameters of GetEvaluator  GetEvaluatorRequest
+     * @return GetEvaluatorResponse
+     */
+    CompletableFuture<GetEvaluatorResponse> getEvaluator(GetEvaluatorRequest request);
+
+    /**
+     * @param request the request parameters of GetEvaluatorSkill  GetEvaluatorSkillRequest
+     * @return GetEvaluatorSkillResponse
+     */
+    CompletableFuture<GetEvaluatorSkillResponse> getEvaluatorSkill(GetEvaluatorSkillRequest request);
+
+    /**
      * @param request the request parameters of GetPipeline  GetPipelineRequest
      * @return GetPipelineResponse
      */
     CompletableFuture<GetPipelineResponse> getPipeline(GetPipelineRequest request);
+
+    /**
+     * @param request the request parameters of GetPipelineRun  GetPipelineRunRequest
+     * @return GetPipelineRunResponse
+     */
+    CompletableFuture<GetPipelineRunResponse> getPipelineRun(GetPipelineRunRequest request);
+
+    /**
+     * @param request the request parameters of GetPipelineStats  GetPipelineStatsRequest
+     * @return GetPipelineStatsResponse
+     */
+    CompletableFuture<GetPipelineStatsResponse> getPipelineStats(GetPipelineStatsRequest request);
 
     /**
      * @param request the request parameters of ListAgentSpaces  ListAgentSpacesRequest
@@ -146,16 +230,70 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDatasetsResponse> listDatasets(ListDatasetsRequest request);
 
     /**
+     * @param request the request parameters of ListEvaluationRuns  ListEvaluationRunsRequest
+     * @return ListEvaluationRunsResponse
+     */
+    CompletableFuture<ListEvaluationRunsResponse> listEvaluationRuns(ListEvaluationRunsRequest request);
+
+    /**
+     * @param request the request parameters of ListEvaluationTasks  ListEvaluationTasksRequest
+     * @return ListEvaluationTasksResponse
+     */
+    CompletableFuture<ListEvaluationTasksResponse> listEvaluationTasks(ListEvaluationTasksRequest request);
+
+    /**
+     * @param request the request parameters of ListEvaluatorSkills  ListEvaluatorSkillsRequest
+     * @return ListEvaluatorSkillsResponse
+     */
+    CompletableFuture<ListEvaluatorSkillsResponse> listEvaluatorSkills(ListEvaluatorSkillsRequest request);
+
+    /**
+     * @param request the request parameters of ListEvaluators  ListEvaluatorsRequest
+     * @return ListEvaluatorsResponse
+     */
+    CompletableFuture<ListEvaluatorsResponse> listEvaluators(ListEvaluatorsRequest request);
+
+    /**
+     * @param request the request parameters of ListPipelineRuns  ListPipelineRunsRequest
+     * @return ListPipelineRunsResponse
+     */
+    CompletableFuture<ListPipelineRunsResponse> listPipelineRuns(ListPipelineRunsRequest request);
+
+    /**
      * @param request the request parameters of ListPipelines  ListPipelinesRequest
      * @return ListPipelinesResponse
      */
     CompletableFuture<ListPipelinesResponse> listPipelines(ListPipelinesRequest request);
 
     /**
+     * @param request the request parameters of PausePipeline  PausePipelineRequest
+     * @return PausePipelineResponse
+     */
+    CompletableFuture<PausePipelineResponse> pausePipeline(PausePipelineRequest request);
+
+    /**
+     * @param request the request parameters of ResumePipeline  ResumePipelineRequest
+     * @return ResumePipelineResponse
+     */
+    CompletableFuture<ResumePipelineResponse> resumePipeline(ResumePipelineRequest request);
+
+    /**
+     * @param request the request parameters of RunPipeline  RunPipelineRequest
+     * @return RunPipelineResponse
+     */
+    CompletableFuture<RunPipelineResponse> runPipeline(RunPipelineRequest request);
+
+    /**
      * @param request the request parameters of SearchContext  SearchContextRequest
      * @return SearchContextResponse
      */
     CompletableFuture<SearchContextResponse> searchContext(SearchContextRequest request);
+
+    /**
+     * @param request the request parameters of TerminatePipeline  TerminatePipelineRequest
+     * @return TerminatePipelineResponse
+     */
+    CompletableFuture<TerminatePipelineResponse> terminatePipeline(TerminatePipelineRequest request);
 
     /**
      * @param request the request parameters of UpdateAgentSpace  UpdateAgentSpaceRequest
@@ -174,6 +312,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateDatasetResponse
      */
     CompletableFuture<UpdateDatasetResponse> updateDataset(UpdateDatasetRequest request);
+
+    /**
+     * @param request the request parameters of UpdateEvaluationRun  UpdateEvaluationRunRequest
+     * @return UpdateEvaluationRunResponse
+     */
+    CompletableFuture<UpdateEvaluationRunResponse> updateEvaluationRun(UpdateEvaluationRunRequest request);
+
+    /**
+     * @param request the request parameters of UpdateEvaluationTask  UpdateEvaluationTaskRequest
+     * @return UpdateEvaluationTaskResponse
+     */
+    CompletableFuture<UpdateEvaluationTaskResponse> updateEvaluationTask(UpdateEvaluationTaskRequest request);
+
+    /**
+     * @param request the request parameters of UpdateEvaluator  UpdateEvaluatorRequest
+     * @return UpdateEvaluatorResponse
+     */
+    CompletableFuture<UpdateEvaluatorResponse> updateEvaluator(UpdateEvaluatorRequest request);
+
+    /**
+     * @param request the request parameters of UpdateEvaluatorSkill  UpdateEvaluatorSkillRequest
+     * @return UpdateEvaluatorSkillResponse
+     */
+    CompletableFuture<UpdateEvaluatorSkillResponse> updateEvaluatorSkill(UpdateEvaluatorSkillRequest request);
 
     /**
      * @param request the request parameters of UpdatePipeline  UpdatePipelineRequest

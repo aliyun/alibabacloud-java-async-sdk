@@ -17,9 +17,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DataFilter</p>
  */
 public class DataFilter extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("endTime")
-    private Long endTime;
-
     @com.aliyun.core.annotation.NameInMap("maxRecords")
     private Integer maxRecords;
 
@@ -32,16 +29,11 @@ public class DataFilter extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("samplingRate")
     private Integer samplingRate;
 
-    @com.aliyun.core.annotation.NameInMap("startTime")
-    private Long startTime;
-
     private DataFilter(Builder builder) {
-        this.endTime = builder.endTime;
         this.maxRecords = builder.maxRecords;
         this.provided = builder.provided;
         this.query = builder.query;
         this.samplingRate = builder.samplingRate;
-        this.startTime = builder.startTime;
     }
 
     public static Builder builder() {
@@ -54,13 +46,6 @@ public class DataFilter extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return endTime
-     */
-    public Long getEndTime() {
-        return this.endTime;
     }
 
     /**
@@ -91,40 +76,21 @@ public class DataFilter extends TeaModel {
         return this.samplingRate;
     }
 
-    /**
-     * @return startTime
-     */
-    public Long getStartTime() {
-        return this.startTime;
-    }
-
     public static final class Builder {
-        private Long endTime; 
         private Integer maxRecords; 
         private java.util.Map<String, ?> provided; 
         private String query; 
         private Integer samplingRate; 
-        private Long startTime; 
 
         private Builder() {
         } 
 
         private Builder(DataFilter model) {
-            this.endTime = model.endTime;
             this.maxRecords = model.maxRecords;
             this.provided = model.provided;
             this.query = model.query;
             this.samplingRate = model.samplingRate;
-            this.startTime = model.startTime;
         } 
-
-        /**
-         * endTime.
-         */
-        public Builder endTime(Long endTime) {
-            this.endTime = endTime;
-            return this;
-        }
 
         /**
          * maxRecords.
@@ -155,14 +121,6 @@ public class DataFilter extends TeaModel {
          */
         public Builder samplingRate(Integer samplingRate) {
             this.samplingRate = samplingRate;
-            return this;
-        }
-
-        /**
-         * startTime.
-         */
-        public Builder startTime(Long startTime) {
-            this.startTime = startTime;
             return this;
         }
 

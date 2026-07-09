@@ -29,11 +29,16 @@ public class ListAgentSpacesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("regionId")
+    private String regionId;
+
     private ListAgentSpacesRequest(Builder builder) {
         super(builder);
         this.agentSpace = builder.agentSpace;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -70,10 +75,18 @@ public class ListAgentSpacesRequest extends Request {
         return this.nextToken;
     }
 
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public static final class Builder extends Request.Builder<ListAgentSpacesRequest, Builder> {
         private String agentSpace; 
         private Integer maxResults; 
         private String nextToken; 
+        private String regionId; 
 
         private Builder() {
             super();
@@ -84,6 +97,7 @@ public class ListAgentSpacesRequest extends Request {
             this.agentSpace = request.agentSpace;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
         } 
 
         /**
@@ -110,6 +124,15 @@ public class ListAgentSpacesRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * regionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("regionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

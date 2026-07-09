@@ -33,12 +33,22 @@ public class ListPipelinesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("pipelineName")
     private String pipelineName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("scheduleStatus")
+    private String scheduleStatus;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("scheduleType")
+    private String scheduleType;
+
     private ListPipelinesRequest(Builder builder) {
         super(builder);
         this.agentSpace = builder.agentSpace;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.pipelineName = builder.pipelineName;
+        this.scheduleStatus = builder.scheduleStatus;
+        this.scheduleType = builder.scheduleType;
     }
 
     public static Builder builder() {
@@ -82,11 +92,27 @@ public class ListPipelinesRequest extends Request {
         return this.pipelineName;
     }
 
+    /**
+     * @return scheduleStatus
+     */
+    public String getScheduleStatus() {
+        return this.scheduleStatus;
+    }
+
+    /**
+     * @return scheduleType
+     */
+    public String getScheduleType() {
+        return this.scheduleType;
+    }
+
     public static final class Builder extends Request.Builder<ListPipelinesRequest, Builder> {
         private String agentSpace; 
         private Integer maxResults; 
         private String nextToken; 
         private String pipelineName; 
+        private String scheduleStatus; 
+        private String scheduleType; 
 
         private Builder() {
             super();
@@ -98,6 +124,8 @@ public class ListPipelinesRequest extends Request {
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.pipelineName = request.pipelineName;
+            this.scheduleStatus = request.scheduleStatus;
+            this.scheduleType = request.scheduleType;
         } 
 
         /**
@@ -133,6 +161,24 @@ public class ListPipelinesRequest extends Request {
         public Builder pipelineName(String pipelineName) {
             this.putQueryParameter("pipelineName", pipelineName);
             this.pipelineName = pipelineName;
+            return this;
+        }
+
+        /**
+         * scheduleStatus.
+         */
+        public Builder scheduleStatus(String scheduleStatus) {
+            this.putQueryParameter("scheduleStatus", scheduleStatus);
+            this.scheduleStatus = scheduleStatus;
+            return this;
+        }
+
+        /**
+         * scheduleType.
+         */
+        public Builder scheduleType(String scheduleType) {
+            this.putQueryParameter("scheduleType", scheduleType);
+            this.scheduleType = scheduleType;
             return this;
         }
 

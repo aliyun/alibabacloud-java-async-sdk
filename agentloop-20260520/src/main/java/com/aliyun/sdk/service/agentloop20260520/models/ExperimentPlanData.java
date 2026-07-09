@@ -29,11 +29,17 @@ public class ExperimentPlanData extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("experimentCount")
     private Integer experimentCount;
 
+    @com.aliyun.core.annotation.NameInMap("experimentType")
+    private String experimentType;
+
     @com.aliyun.core.annotation.NameInMap("planId")
     private String planId;
 
     @com.aliyun.core.annotation.NameInMap("planName")
     private String planName;
+
+    @com.aliyun.core.annotation.NameInMap("querySql")
+    private String querySql;
 
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
@@ -46,8 +52,10 @@ public class ExperimentPlanData extends TeaModel {
         this.datasetId = builder.datasetId;
         this.description = builder.description;
         this.experimentCount = builder.experimentCount;
+        this.experimentType = builder.experimentType;
         this.planId = builder.planId;
         this.planName = builder.planName;
+        this.querySql = builder.querySql;
         this.status = builder.status;
         this.updatedAt = builder.updatedAt;
     }
@@ -93,6 +101,13 @@ public class ExperimentPlanData extends TeaModel {
     }
 
     /**
+     * @return experimentType
+     */
+    public String getExperimentType() {
+        return this.experimentType;
+    }
+
+    /**
      * @return planId
      */
     public String getPlanId() {
@@ -104,6 +119,13 @@ public class ExperimentPlanData extends TeaModel {
      */
     public String getPlanName() {
         return this.planName;
+    }
+
+    /**
+     * @return querySql
+     */
+    public String getQuerySql() {
+        return this.querySql;
     }
 
     /**
@@ -125,8 +147,10 @@ public class ExperimentPlanData extends TeaModel {
         private String datasetId; 
         private String description; 
         private Integer experimentCount; 
+        private String experimentType; 
         private String planId; 
         private String planName; 
+        private String querySql; 
         private String status; 
         private Long updatedAt; 
 
@@ -138,8 +162,10 @@ public class ExperimentPlanData extends TeaModel {
             this.datasetId = model.datasetId;
             this.description = model.description;
             this.experimentCount = model.experimentCount;
+            this.experimentType = model.experimentType;
             this.planId = model.planId;
             this.planName = model.planName;
+            this.querySql = model.querySql;
             this.status = model.status;
             this.updatedAt = model.updatedAt;
         } 
@@ -177,6 +203,14 @@ public class ExperimentPlanData extends TeaModel {
         }
 
         /**
+         * experimentType.
+         */
+        public Builder experimentType(String experimentType) {
+            this.experimentType = experimentType;
+            return this;
+        }
+
+        /**
          * planId.
          */
         public Builder planId(String planId) {
@@ -189,6 +223,14 @@ public class ExperimentPlanData extends TeaModel {
          */
         public Builder planName(String planName) {
             this.planName = planName;
+            return this;
+        }
+
+        /**
+         * querySql.
+         */
+        public Builder querySql(String querySql) {
+            this.querySql = querySql;
             return this;
         }
 
