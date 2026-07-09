@@ -26,6 +26,10 @@ public class GetAuthCodeRequest extends Request {
     private String adDomain;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AdPassword")
+    private String adPassword;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AutoCreateUser")
     private Boolean autoCreateUser;
 
@@ -49,6 +53,7 @@ public class GetAuthCodeRequest extends Request {
         super(builder);
         this.accountType = builder.accountType;
         this.adDomain = builder.adDomain;
+        this.adPassword = builder.adPassword;
         this.autoCreateUser = builder.autoCreateUser;
         this.endUserId = builder.endUserId;
         this.externalUserId = builder.externalUserId;
@@ -81,6 +86,13 @@ public class GetAuthCodeRequest extends Request {
      */
     public String getAdDomain() {
         return this.adDomain;
+    }
+
+    /**
+     * @return adPassword
+     */
+    public String getAdPassword() {
+        return this.adPassword;
     }
 
     /**
@@ -121,6 +133,7 @@ public class GetAuthCodeRequest extends Request {
     public static final class Builder extends Request.Builder<GetAuthCodeRequest, Builder> {
         private String accountType; 
         private String adDomain; 
+        private String adPassword; 
         private Boolean autoCreateUser; 
         private String endUserId; 
         private String externalUserId; 
@@ -135,6 +148,7 @@ public class GetAuthCodeRequest extends Request {
             super(request);
             this.accountType = request.accountType;
             this.adDomain = request.adDomain;
+            this.adPassword = request.adPassword;
             this.autoCreateUser = request.autoCreateUser;
             this.endUserId = request.endUserId;
             this.externalUserId = request.externalUserId;
@@ -157,6 +171,15 @@ public class GetAuthCodeRequest extends Request {
         public Builder adDomain(String adDomain) {
             this.putBodyParameter("AdDomain", adDomain);
             this.adDomain = adDomain;
+            return this;
+        }
+
+        /**
+         * AdPassword.
+         */
+        public Builder adPassword(String adPassword) {
+            this.putBodyParameter("AdPassword", adPassword);
+            this.adPassword = adPassword;
             return this;
         }
 
