@@ -145,6 +145,144 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
      *
      * <p>ListPolicyGroupsResponseBody</p>
      */
+    public static class AccessPolicies extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccessPolicyRuleId")
+        private Long accessPolicyRuleId;
+
+        @com.aliyun.core.annotation.NameInMap("CidrIp")
+        private String cidrIp;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("Policy")
+        private String policy;
+
+        @com.aliyun.core.annotation.NameInMap("Priority")
+        private Integer priority;
+
+        private AccessPolicies(Builder builder) {
+            this.accessPolicyRuleId = builder.accessPolicyRuleId;
+            this.cidrIp = builder.cidrIp;
+            this.description = builder.description;
+            this.policy = builder.policy;
+            this.priority = builder.priority;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AccessPolicies create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accessPolicyRuleId
+         */
+        public Long getAccessPolicyRuleId() {
+            return this.accessPolicyRuleId;
+        }
+
+        /**
+         * @return cidrIp
+         */
+        public String getCidrIp() {
+            return this.cidrIp;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return policy
+         */
+        public String getPolicy() {
+            return this.policy;
+        }
+
+        /**
+         * @return priority
+         */
+        public Integer getPriority() {
+            return this.priority;
+        }
+
+        public static final class Builder {
+            private Long accessPolicyRuleId; 
+            private String cidrIp; 
+            private String description; 
+            private String policy; 
+            private Integer priority; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessPolicies model) {
+                this.accessPolicyRuleId = model.accessPolicyRuleId;
+                this.cidrIp = model.cidrIp;
+                this.description = model.description;
+                this.policy = model.policy;
+                this.priority = model.priority;
+            } 
+
+            /**
+             * AccessPolicyRuleId.
+             */
+            public Builder accessPolicyRuleId(Long accessPolicyRuleId) {
+                this.accessPolicyRuleId = accessPolicyRuleId;
+                return this;
+            }
+
+            /**
+             * CidrIp.
+             */
+            public Builder cidrIp(String cidrIp) {
+                this.cidrIp = cidrIp;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * Policy.
+             */
+            public Builder policy(String policy) {
+                this.policy = policy;
+                return this;
+            }
+
+            /**
+             * Priority.
+             */
+            public Builder priority(Integer priority) {
+                this.priority = priority;
+                return this;
+            }
+
+            public AccessPolicies build() {
+                return new AccessPolicies(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListPolicyGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPolicyGroupsResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleType")
         private String ruleType;
@@ -702,6 +840,9 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
      * <p>ListPolicyGroupsResponseBody</p>
      */
     public static class PolicyGroupModel extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccessPolicies")
+        private java.util.List<AccessPolicies> accessPolicies;
+
         @com.aliyun.core.annotation.NameInMap("CameraRedirect")
         private String cameraRedirect;
 
@@ -742,6 +883,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         private Watermark watermark;
 
         private PolicyGroupModel(Builder builder) {
+            this.accessPolicies = builder.accessPolicies;
             this.cameraRedirect = builder.cameraRedirect;
             this.clipboard = builder.clipboard;
             this.gmtCreate = builder.gmtCreate;
@@ -763,6 +905,13 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
 
         public static PolicyGroupModel create() {
             return builder().build();
+        }
+
+        /**
+         * @return accessPolicies
+         */
+        public java.util.List<AccessPolicies> getAccessPolicies() {
+            return this.accessPolicies;
         }
 
         /**
@@ -857,6 +1006,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<AccessPolicies> accessPolicies; 
             private String cameraRedirect; 
             private String clipboard; 
             private String gmtCreate; 
@@ -875,6 +1025,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             } 
 
             private Builder(PolicyGroupModel model) {
+                this.accessPolicies = model.accessPolicies;
                 this.cameraRedirect = model.cameraRedirect;
                 this.clipboard = model.clipboard;
                 this.gmtCreate = model.gmtCreate;
@@ -889,6 +1040,14 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
                 this.sessionResolutionWidth = model.sessionResolutionWidth;
                 this.watermark = model.watermark;
             } 
+
+            /**
+             * AccessPolicies.
+             */
+            public Builder accessPolicies(java.util.List<AccessPolicies> accessPolicies) {
+                this.accessPolicies = accessPolicies;
+                return this;
+            }
 
             /**
              * <p>Specifies whether to enable the webcam redirection feature.</p>
