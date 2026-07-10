@@ -92,6 +92,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ResetApiKeyResponse> resetApiKey(ResetApiKeyRequest request);
 
     /**
+     * @param request the request parameters of UpdateApiKey  UpdateApiKeyRequest
+     * @return UpdateApiKeyResponse
+     */
+    CompletableFuture<UpdateApiKeyResponse> updateApiKey(UpdateApiKeyRequest request);
+
+    /**
      * @param request the request parameters of UpdateQuota  UpdateQuotaRequest
      * @return UpdateQuotaResponse
      */
