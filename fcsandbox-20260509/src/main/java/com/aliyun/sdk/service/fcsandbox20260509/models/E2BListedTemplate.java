@@ -17,9 +17,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>E2BListedTemplate</p>
  */
 public class E2BListedTemplate extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("aliases")
-    private java.util.List<String> aliases;
-
     @com.aliyun.core.annotation.NameInMap("buildStatus")
     private String buildStatus;
 
@@ -35,9 +32,6 @@ public class E2BListedTemplate extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("functionName")
     private String functionName;
 
-    @com.aliyun.core.annotation.NameInMap("lastSpawnedAt")
-    private String lastSpawnedAt;
-
     @com.aliyun.core.annotation.NameInMap("logConfiguration")
     private LogConfiguration logConfiguration;
 
@@ -52,9 +46,6 @@ public class E2BListedTemplate extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("resourceGroupID")
     private String resourceGroupID;
-
-    @com.aliyun.core.annotation.NameInMap("spawnCount")
-    private Integer spawnCount;
 
     @com.aliyun.core.annotation.NameInMap("statusReason")
     private String statusReason;
@@ -78,19 +69,16 @@ public class E2BListedTemplate extends TeaModel {
     private String userID;
 
     private E2BListedTemplate(Builder builder) {
-        this.aliases = builder.aliases;
         this.buildStatus = builder.buildStatus;
         this.category = builder.category;
         this.cpuCount = builder.cpuCount;
         this.createdAt = builder.createdAt;
         this.functionName = builder.functionName;
-        this.lastSpawnedAt = builder.lastSpawnedAt;
         this.logConfiguration = builder.logConfiguration;
         this.memoryMB = builder.memoryMB;
         this.names = builder.names;
         this._public = builder._public;
         this.resourceGroupID = builder.resourceGroupID;
-        this.spawnCount = builder.spawnCount;
         this.statusReason = builder.statusReason;
         this.tags = builder.tags;
         this.teamID = builder.teamID;
@@ -110,13 +98,6 @@ public class E2BListedTemplate extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return aliases
-     */
-    public java.util.List<String> getAliases() {
-        return this.aliases;
     }
 
     /**
@@ -155,13 +136,6 @@ public class E2BListedTemplate extends TeaModel {
     }
 
     /**
-     * @return lastSpawnedAt
-     */
-    public String getLastSpawnedAt() {
-        return this.lastSpawnedAt;
-    }
-
-    /**
      * @return logConfiguration
      */
     public LogConfiguration getLogConfiguration() {
@@ -194,13 +168,6 @@ public class E2BListedTemplate extends TeaModel {
      */
     public String getResourceGroupID() {
         return this.resourceGroupID;
-    }
-
-    /**
-     * @return spawnCount
-     */
-    public Integer getSpawnCount() {
-        return this.spawnCount;
     }
 
     /**
@@ -253,19 +220,16 @@ public class E2BListedTemplate extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List<String> aliases; 
         private String buildStatus; 
         private String category; 
         private Integer cpuCount; 
         private String createdAt; 
         private String functionName; 
-        private String lastSpawnedAt; 
         private LogConfiguration logConfiguration; 
         private Integer memoryMB; 
         private java.util.List<String> names; 
         private Boolean _public; 
         private String resourceGroupID; 
-        private Integer spawnCount; 
         private String statusReason; 
         private java.util.List<E2BTemplateTag> tags; 
         private String teamID; 
@@ -278,19 +242,16 @@ public class E2BListedTemplate extends TeaModel {
         } 
 
         private Builder(E2BListedTemplate model) {
-            this.aliases = model.aliases;
             this.buildStatus = model.buildStatus;
             this.category = model.category;
             this.cpuCount = model.cpuCount;
             this.createdAt = model.createdAt;
             this.functionName = model.functionName;
-            this.lastSpawnedAt = model.lastSpawnedAt;
             this.logConfiguration = model.logConfiguration;
             this.memoryMB = model.memoryMB;
             this.names = model.names;
             this._public = model._public;
             this.resourceGroupID = model.resourceGroupID;
-            this.spawnCount = model.spawnCount;
             this.statusReason = model.statusReason;
             this.tags = model.tags;
             this.teamID = model.teamID;
@@ -299,14 +260,6 @@ public class E2BListedTemplate extends TeaModel {
             this.updatedAt = model.updatedAt;
             this.userID = model.userID;
         } 
-
-        /**
-         * aliases.
-         */
-        public Builder aliases(java.util.List<String> aliases) {
-            this.aliases = aliases;
-            return this;
-        }
 
         /**
          * buildStatus.
@@ -349,14 +302,6 @@ public class E2BListedTemplate extends TeaModel {
         }
 
         /**
-         * lastSpawnedAt.
-         */
-        public Builder lastSpawnedAt(String lastSpawnedAt) {
-            this.lastSpawnedAt = lastSpawnedAt;
-            return this;
-        }
-
-        /**
          * logConfiguration.
          */
         public Builder logConfiguration(LogConfiguration logConfiguration) {
@@ -393,14 +338,6 @@ public class E2BListedTemplate extends TeaModel {
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.resourceGroupID = resourceGroupID;
-            return this;
-        }
-
-        /**
-         * spawnCount.
-         */
-        public Builder spawnCount(Integer spawnCount) {
-            this.spawnCount = spawnCount;
             return this;
         }
 

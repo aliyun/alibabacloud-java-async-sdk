@@ -17,12 +17,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>E2BListedSandbox</p>
  */
 public class E2BListedSandbox extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("alias")
-    private String alias;
-
-    @com.aliyun.core.annotation.NameInMap("clientID")
-    private String clientID;
-
     @com.aliyun.core.annotation.NameInMap("cpuCount")
     private Integer cpuCount;
 
@@ -31,9 +25,6 @@ public class E2BListedSandbox extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("endAt")
     private String endAt;
-
-    @com.aliyun.core.annotation.NameInMap("envdVersion")
-    private String envdVersion;
 
     @com.aliyun.core.annotation.NameInMap("memoryMB")
     private Integer memoryMB;
@@ -68,16 +59,10 @@ public class E2BListedSandbox extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("userID")
     private String userID;
 
-    @com.aliyun.core.annotation.NameInMap("volumeMounts")
-    private java.util.List<E2BVolumeMount> volumeMounts;
-
     private E2BListedSandbox(Builder builder) {
-        this.alias = builder.alias;
-        this.clientID = builder.clientID;
         this.cpuCount = builder.cpuCount;
         this.diskSizeMB = builder.diskSizeMB;
         this.endAt = builder.endAt;
-        this.envdVersion = builder.envdVersion;
         this.memoryMB = builder.memoryMB;
         this.metadata = builder.metadata;
         this.resourceGroupID = builder.resourceGroupID;
@@ -89,7 +74,6 @@ public class E2BListedSandbox extends TeaModel {
         this.templateID = builder.templateID;
         this.templateName = builder.templateName;
         this.userID = builder.userID;
-        this.volumeMounts = builder.volumeMounts;
     }
 
     public static Builder builder() {
@@ -102,20 +86,6 @@ public class E2BListedSandbox extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return alias
-     */
-    public String getAlias() {
-        return this.alias;
-    }
-
-    /**
-     * @return clientID
-     */
-    public String getClientID() {
-        return this.clientID;
     }
 
     /**
@@ -137,13 +107,6 @@ public class E2BListedSandbox extends TeaModel {
      */
     public String getEndAt() {
         return this.endAt;
-    }
-
-    /**
-     * @return envdVersion
-     */
-    public String getEnvdVersion() {
-        return this.envdVersion;
     }
 
     /**
@@ -223,20 +186,10 @@ public class E2BListedSandbox extends TeaModel {
         return this.userID;
     }
 
-    /**
-     * @return volumeMounts
-     */
-    public java.util.List<E2BVolumeMount> getVolumeMounts() {
-        return this.volumeMounts;
-    }
-
     public static final class Builder {
-        private String alias; 
-        private String clientID; 
         private Integer cpuCount; 
         private Integer diskSizeMB; 
         private String endAt; 
-        private String envdVersion; 
         private Integer memoryMB; 
         private java.util.Map<String, String> metadata; 
         private String resourceGroupID; 
@@ -248,18 +201,14 @@ public class E2BListedSandbox extends TeaModel {
         private String templateID; 
         private String templateName; 
         private String userID; 
-        private java.util.List<E2BVolumeMount> volumeMounts; 
 
         private Builder() {
         } 
 
         private Builder(E2BListedSandbox model) {
-            this.alias = model.alias;
-            this.clientID = model.clientID;
             this.cpuCount = model.cpuCount;
             this.diskSizeMB = model.diskSizeMB;
             this.endAt = model.endAt;
-            this.envdVersion = model.envdVersion;
             this.memoryMB = model.memoryMB;
             this.metadata = model.metadata;
             this.resourceGroupID = model.resourceGroupID;
@@ -271,24 +220,7 @@ public class E2BListedSandbox extends TeaModel {
             this.templateID = model.templateID;
             this.templateName = model.templateName;
             this.userID = model.userID;
-            this.volumeMounts = model.volumeMounts;
         } 
-
-        /**
-         * alias.
-         */
-        public Builder alias(String alias) {
-            this.alias = alias;
-            return this;
-        }
-
-        /**
-         * clientID.
-         */
-        public Builder clientID(String clientID) {
-            this.clientID = clientID;
-            return this;
-        }
 
         /**
          * cpuCount.
@@ -311,14 +243,6 @@ public class E2BListedSandbox extends TeaModel {
          */
         public Builder endAt(String endAt) {
             this.endAt = endAt;
-            return this;
-        }
-
-        /**
-         * envdVersion.
-         */
-        public Builder envdVersion(String envdVersion) {
-            this.envdVersion = envdVersion;
             return this;
         }
 
@@ -407,14 +331,6 @@ public class E2BListedSandbox extends TeaModel {
          */
         public Builder userID(String userID) {
             this.userID = userID;
-            return this;
-        }
-
-        /**
-         * volumeMounts.
-         */
-        public Builder volumeMounts(java.util.List<E2BVolumeMount> volumeMounts) {
-            this.volumeMounts = volumeMounts;
             return this;
         }
 

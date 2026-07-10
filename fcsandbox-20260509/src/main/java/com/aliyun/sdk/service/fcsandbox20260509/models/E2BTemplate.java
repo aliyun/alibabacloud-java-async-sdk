@@ -17,20 +17,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>E2BTemplate</p>
  */
 public class E2BTemplate extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("aliases")
-    private java.util.List<String> aliases;
-
     @com.aliyun.core.annotation.NameInMap("buildStatus")
     private String buildStatus;
+
+    @com.aliyun.core.annotation.NameInMap("category")
+    private String category;
 
     @com.aliyun.core.annotation.NameInMap("cpuCount")
     private Integer cpuCount;
 
     @com.aliyun.core.annotation.NameInMap("createdAt")
     private String createdAt;
-
-    @com.aliyun.core.annotation.NameInMap("lastSpawnedAt")
-    private String lastSpawnedAt;
 
     @com.aliyun.core.annotation.NameInMap("logConfiguration")
     private LogConfiguration logConfiguration;
@@ -41,14 +38,14 @@ public class E2BTemplate extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("names")
     private java.util.List<String> names;
 
+    @com.aliyun.core.annotation.NameInMap("networkConfiguration")
+    private NetworkConfiguration networkConfiguration;
+
     @com.aliyun.core.annotation.NameInMap("public")
     private Boolean _public;
 
     @com.aliyun.core.annotation.NameInMap("resourceGroupID")
     private String resourceGroupID;
-
-    @com.aliyun.core.annotation.NameInMap("spawnCount")
-    private Integer spawnCount;
 
     @com.aliyun.core.annotation.NameInMap("statusReason")
     private String statusReason;
@@ -72,17 +69,16 @@ public class E2BTemplate extends TeaModel {
     private String userID;
 
     private E2BTemplate(Builder builder) {
-        this.aliases = builder.aliases;
         this.buildStatus = builder.buildStatus;
+        this.category = builder.category;
         this.cpuCount = builder.cpuCount;
         this.createdAt = builder.createdAt;
-        this.lastSpawnedAt = builder.lastSpawnedAt;
         this.logConfiguration = builder.logConfiguration;
         this.memoryMB = builder.memoryMB;
         this.names = builder.names;
+        this.networkConfiguration = builder.networkConfiguration;
         this._public = builder._public;
         this.resourceGroupID = builder.resourceGroupID;
-        this.spawnCount = builder.spawnCount;
         this.statusReason = builder.statusReason;
         this.tags = builder.tags;
         this.teamID = builder.teamID;
@@ -105,17 +101,17 @@ public class E2BTemplate extends TeaModel {
     }
 
     /**
-     * @return aliases
-     */
-    public java.util.List<String> getAliases() {
-        return this.aliases;
-    }
-
-    /**
      * @return buildStatus
      */
     public String getBuildStatus() {
         return this.buildStatus;
+    }
+
+    /**
+     * @return category
+     */
+    public String getCategory() {
+        return this.category;
     }
 
     /**
@@ -130,13 +126,6 @@ public class E2BTemplate extends TeaModel {
      */
     public String getCreatedAt() {
         return this.createdAt;
-    }
-
-    /**
-     * @return lastSpawnedAt
-     */
-    public String getLastSpawnedAt() {
-        return this.lastSpawnedAt;
     }
 
     /**
@@ -161,6 +150,13 @@ public class E2BTemplate extends TeaModel {
     }
 
     /**
+     * @return networkConfiguration
+     */
+    public NetworkConfiguration getNetworkConfiguration() {
+        return this.networkConfiguration;
+    }
+
+    /**
      * @return _public
      */
     public Boolean get_public() {
@@ -172,13 +168,6 @@ public class E2BTemplate extends TeaModel {
      */
     public String getResourceGroupID() {
         return this.resourceGroupID;
-    }
-
-    /**
-     * @return spawnCount
-     */
-    public Integer getSpawnCount() {
-        return this.spawnCount;
     }
 
     /**
@@ -231,17 +220,16 @@ public class E2BTemplate extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List<String> aliases; 
         private String buildStatus; 
+        private String category; 
         private Integer cpuCount; 
         private String createdAt; 
-        private String lastSpawnedAt; 
         private LogConfiguration logConfiguration; 
         private Integer memoryMB; 
         private java.util.List<String> names; 
+        private NetworkConfiguration networkConfiguration; 
         private Boolean _public; 
         private String resourceGroupID; 
-        private Integer spawnCount; 
         private String statusReason; 
         private java.util.List<E2BTemplateTag> tags; 
         private String teamID; 
@@ -254,17 +242,16 @@ public class E2BTemplate extends TeaModel {
         } 
 
         private Builder(E2BTemplate model) {
-            this.aliases = model.aliases;
             this.buildStatus = model.buildStatus;
+            this.category = model.category;
             this.cpuCount = model.cpuCount;
             this.createdAt = model.createdAt;
-            this.lastSpawnedAt = model.lastSpawnedAt;
             this.logConfiguration = model.logConfiguration;
             this.memoryMB = model.memoryMB;
             this.names = model.names;
+            this.networkConfiguration = model.networkConfiguration;
             this._public = model._public;
             this.resourceGroupID = model.resourceGroupID;
-            this.spawnCount = model.spawnCount;
             this.statusReason = model.statusReason;
             this.tags = model.tags;
             this.teamID = model.teamID;
@@ -275,18 +262,18 @@ public class E2BTemplate extends TeaModel {
         } 
 
         /**
-         * aliases.
-         */
-        public Builder aliases(java.util.List<String> aliases) {
-            this.aliases = aliases;
-            return this;
-        }
-
-        /**
          * buildStatus.
          */
         public Builder buildStatus(String buildStatus) {
             this.buildStatus = buildStatus;
+            return this;
+        }
+
+        /**
+         * category.
+         */
+        public Builder category(String category) {
+            this.category = category;
             return this;
         }
 
@@ -303,14 +290,6 @@ public class E2BTemplate extends TeaModel {
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
-            return this;
-        }
-
-        /**
-         * lastSpawnedAt.
-         */
-        public Builder lastSpawnedAt(String lastSpawnedAt) {
-            this.lastSpawnedAt = lastSpawnedAt;
             return this;
         }
 
@@ -339,6 +318,14 @@ public class E2BTemplate extends TeaModel {
         }
 
         /**
+         * networkConfiguration.
+         */
+        public Builder networkConfiguration(NetworkConfiguration networkConfiguration) {
+            this.networkConfiguration = networkConfiguration;
+            return this;
+        }
+
+        /**
          * public.
          */
         public Builder _public(Boolean _public) {
@@ -351,14 +338,6 @@ public class E2BTemplate extends TeaModel {
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.resourceGroupID = resourceGroupID;
-            return this;
-        }
-
-        /**
-         * spawnCount.
-         */
-        public Builder spawnCount(Integer spawnCount) {
-            this.spawnCount = spawnCount;
             return this;
         }
 

@@ -20,15 +20,6 @@ public class E2BSandbox extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("accessEndpoint")
     private String accessEndpoint;
 
-    @com.aliyun.core.annotation.NameInMap("alias")
-    private String alias;
-
-    @com.aliyun.core.annotation.NameInMap("allowInternetAccess")
-    private Boolean allowInternetAccess;
-
-    @com.aliyun.core.annotation.NameInMap("clientID")
-    private String clientID;
-
     @com.aliyun.core.annotation.NameInMap("cpuCount")
     private Integer cpuCount;
 
@@ -41,12 +32,6 @@ public class E2BSandbox extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("endAt")
     private String endAt;
 
-    @com.aliyun.core.annotation.NameInMap("envdAccessToken")
-    private String envdAccessToken;
-
-    @com.aliyun.core.annotation.NameInMap("envdVersion")
-    private String envdVersion;
-
     @com.aliyun.core.annotation.NameInMap("fcFunctionName")
     private String fcFunctionName;
 
@@ -56,17 +41,11 @@ public class E2BSandbox extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("fcSessionID")
     private String fcSessionID;
 
-    @com.aliyun.core.annotation.NameInMap("lifecycle")
-    private E2BLifecycle lifecycle;
-
     @com.aliyun.core.annotation.NameInMap("memoryMB")
     private Integer memoryMB;
 
     @com.aliyun.core.annotation.NameInMap("metadata")
     private java.util.Map<String, String> metadata;
-
-    @com.aliyun.core.annotation.NameInMap("network")
-    private E2BNetwork network;
 
     @com.aliyun.core.annotation.NameInMap("resourceGroupID")
     private String resourceGroupID;
@@ -95,27 +74,17 @@ public class E2BSandbox extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("userID")
     private String userID;
 
-    @com.aliyun.core.annotation.NameInMap("volumeMounts")
-    private java.util.List<E2BVolumeMount> volumeMounts;
-
     private E2BSandbox(Builder builder) {
         this.accessEndpoint = builder.accessEndpoint;
-        this.alias = builder.alias;
-        this.allowInternetAccess = builder.allowInternetAccess;
-        this.clientID = builder.clientID;
         this.cpuCount = builder.cpuCount;
         this.diskSizeMB = builder.diskSizeMB;
         this.domain = builder.domain;
         this.endAt = builder.endAt;
-        this.envdAccessToken = builder.envdAccessToken;
-        this.envdVersion = builder.envdVersion;
         this.fcFunctionName = builder.fcFunctionName;
         this.fcInstanceID = builder.fcInstanceID;
         this.fcSessionID = builder.fcSessionID;
-        this.lifecycle = builder.lifecycle;
         this.memoryMB = builder.memoryMB;
         this.metadata = builder.metadata;
-        this.network = builder.network;
         this.resourceGroupID = builder.resourceGroupID;
         this.sandboxID = builder.sandboxID;
         this.startedAt = builder.startedAt;
@@ -125,7 +94,6 @@ public class E2BSandbox extends TeaModel {
         this.templateID = builder.templateID;
         this.templateName = builder.templateName;
         this.userID = builder.userID;
-        this.volumeMounts = builder.volumeMounts;
     }
 
     public static Builder builder() {
@@ -145,27 +113,6 @@ public class E2BSandbox extends TeaModel {
      */
     public String getAccessEndpoint() {
         return this.accessEndpoint;
-    }
-
-    /**
-     * @return alias
-     */
-    public String getAlias() {
-        return this.alias;
-    }
-
-    /**
-     * @return allowInternetAccess
-     */
-    public Boolean getAllowInternetAccess() {
-        return this.allowInternetAccess;
-    }
-
-    /**
-     * @return clientID
-     */
-    public String getClientID() {
-        return this.clientID;
     }
 
     /**
@@ -197,20 +144,6 @@ public class E2BSandbox extends TeaModel {
     }
 
     /**
-     * @return envdAccessToken
-     */
-    public String getEnvdAccessToken() {
-        return this.envdAccessToken;
-    }
-
-    /**
-     * @return envdVersion
-     */
-    public String getEnvdVersion() {
-        return this.envdVersion;
-    }
-
-    /**
      * @return fcFunctionName
      */
     public String getFcFunctionName() {
@@ -232,13 +165,6 @@ public class E2BSandbox extends TeaModel {
     }
 
     /**
-     * @return lifecycle
-     */
-    public E2BLifecycle getLifecycle() {
-        return this.lifecycle;
-    }
-
-    /**
      * @return memoryMB
      */
     public Integer getMemoryMB() {
@@ -250,13 +176,6 @@ public class E2BSandbox extends TeaModel {
      */
     public java.util.Map<String, String> getMetadata() {
         return this.metadata;
-    }
-
-    /**
-     * @return network
-     */
-    public E2BNetwork getNetwork() {
-        return this.network;
     }
 
     /**
@@ -322,31 +241,17 @@ public class E2BSandbox extends TeaModel {
         return this.userID;
     }
 
-    /**
-     * @return volumeMounts
-     */
-    public java.util.List<E2BVolumeMount> getVolumeMounts() {
-        return this.volumeMounts;
-    }
-
     public static final class Builder {
         private String accessEndpoint; 
-        private String alias; 
-        private Boolean allowInternetAccess; 
-        private String clientID; 
         private Integer cpuCount; 
         private Integer diskSizeMB; 
         private String domain; 
         private String endAt; 
-        private String envdAccessToken; 
-        private String envdVersion; 
         private String fcFunctionName; 
         private String fcInstanceID; 
         private String fcSessionID; 
-        private E2BLifecycle lifecycle; 
         private Integer memoryMB; 
         private java.util.Map<String, String> metadata; 
-        private E2BNetwork network; 
         private String resourceGroupID; 
         private String sandboxID; 
         private String startedAt; 
@@ -356,29 +261,21 @@ public class E2BSandbox extends TeaModel {
         private String templateID; 
         private String templateName; 
         private String userID; 
-        private java.util.List<E2BVolumeMount> volumeMounts; 
 
         private Builder() {
         } 
 
         private Builder(E2BSandbox model) {
             this.accessEndpoint = model.accessEndpoint;
-            this.alias = model.alias;
-            this.allowInternetAccess = model.allowInternetAccess;
-            this.clientID = model.clientID;
             this.cpuCount = model.cpuCount;
             this.diskSizeMB = model.diskSizeMB;
             this.domain = model.domain;
             this.endAt = model.endAt;
-            this.envdAccessToken = model.envdAccessToken;
-            this.envdVersion = model.envdVersion;
             this.fcFunctionName = model.fcFunctionName;
             this.fcInstanceID = model.fcInstanceID;
             this.fcSessionID = model.fcSessionID;
-            this.lifecycle = model.lifecycle;
             this.memoryMB = model.memoryMB;
             this.metadata = model.metadata;
-            this.network = model.network;
             this.resourceGroupID = model.resourceGroupID;
             this.sandboxID = model.sandboxID;
             this.startedAt = model.startedAt;
@@ -388,7 +285,6 @@ public class E2BSandbox extends TeaModel {
             this.templateID = model.templateID;
             this.templateName = model.templateName;
             this.userID = model.userID;
-            this.volumeMounts = model.volumeMounts;
         } 
 
         /**
@@ -396,30 +292,6 @@ public class E2BSandbox extends TeaModel {
          */
         public Builder accessEndpoint(String accessEndpoint) {
             this.accessEndpoint = accessEndpoint;
-            return this;
-        }
-
-        /**
-         * alias.
-         */
-        public Builder alias(String alias) {
-            this.alias = alias;
-            return this;
-        }
-
-        /**
-         * allowInternetAccess.
-         */
-        public Builder allowInternetAccess(Boolean allowInternetAccess) {
-            this.allowInternetAccess = allowInternetAccess;
-            return this;
-        }
-
-        /**
-         * clientID.
-         */
-        public Builder clientID(String clientID) {
-            this.clientID = clientID;
             return this;
         }
 
@@ -456,22 +328,6 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * envdAccessToken.
-         */
-        public Builder envdAccessToken(String envdAccessToken) {
-            this.envdAccessToken = envdAccessToken;
-            return this;
-        }
-
-        /**
-         * envdVersion.
-         */
-        public Builder envdVersion(String envdVersion) {
-            this.envdVersion = envdVersion;
-            return this;
-        }
-
-        /**
          * fcFunctionName.
          */
         public Builder fcFunctionName(String fcFunctionName) {
@@ -496,14 +352,6 @@ public class E2BSandbox extends TeaModel {
         }
 
         /**
-         * lifecycle.
-         */
-        public Builder lifecycle(E2BLifecycle lifecycle) {
-            this.lifecycle = lifecycle;
-            return this;
-        }
-
-        /**
          * memoryMB.
          */
         public Builder memoryMB(Integer memoryMB) {
@@ -516,14 +364,6 @@ public class E2BSandbox extends TeaModel {
          */
         public Builder metadata(java.util.Map<String, String> metadata) {
             this.metadata = metadata;
-            return this;
-        }
-
-        /**
-         * network.
-         */
-        public Builder network(E2BNetwork network) {
-            this.network = network;
             return this;
         }
 
@@ -596,14 +436,6 @@ public class E2BSandbox extends TeaModel {
          */
         public Builder userID(String userID) {
             this.userID = userID;
-            return this;
-        }
-
-        /**
-         * volumeMounts.
-         */
-        public Builder volumeMounts(java.util.List<E2BVolumeMount> volumeMounts) {
-            this.volumeMounts = volumeMounts;
             return this;
         }
 
