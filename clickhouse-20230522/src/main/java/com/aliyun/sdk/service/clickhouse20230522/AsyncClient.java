@@ -62,6 +62,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateEndpointResponse> createEndpoint(CreateEndpointRequest request);
 
     /**
+     * @param request the request parameters of CreateLangfuseOrg  CreateLangfuseOrgRequest
+     * @return CreateLangfuseOrgResponse
+     */
+    CompletableFuture<CreateLangfuseOrgResponse> createLangfuseOrg(CreateLangfuseOrgRequest request);
+
+    /**
+     * @param request the request parameters of CreateLangfuseOrgMember  CreateLangfuseOrgMemberRequest
+     * @return CreateLangfuseOrgMemberResponse
+     */
+    CompletableFuture<CreateLangfuseOrgMemberResponse> createLangfuseOrgMember(CreateLangfuseOrgMemberRequest request);
+
+    /**
+     * @param request the request parameters of CreateLangfuseProject  CreateLangfuseProjectRequest
+     * @return CreateLangfuseProjectResponse
+     */
+    CompletableFuture<CreateLangfuseProjectResponse> createLangfuseProject(CreateLangfuseProjectRequest request);
+
+    /**
+     * @param request the request parameters of CreateLangfuseUser  CreateLangfuseUserRequest
+     * @return CreateLangfuseUserResponse
+     */
+    CompletableFuture<CreateLangfuseUserResponse> createLangfuseUser(CreateLangfuseUserRequest request);
+
+    /**
      * @param request the request parameters of CreateWhitelistTemplate  CreateWhitelistTemplateRequest
      * @return CreateWhitelistTemplateResponse
      */
@@ -96,6 +120,36 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteEndpointResponse
      */
     CompletableFuture<DeleteEndpointResponse> deleteEndpoint(DeleteEndpointRequest request);
+
+    /**
+     * @param request the request parameters of DeleteLangfuseInstance  DeleteLangfuseInstanceRequest
+     * @return DeleteLangfuseInstanceResponse
+     */
+    CompletableFuture<DeleteLangfuseInstanceResponse> deleteLangfuseInstance(DeleteLangfuseInstanceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteLangfuseOrg  DeleteLangfuseOrgRequest
+     * @return DeleteLangfuseOrgResponse
+     */
+    CompletableFuture<DeleteLangfuseOrgResponse> deleteLangfuseOrg(DeleteLangfuseOrgRequest request);
+
+    /**
+     * @param request the request parameters of DeleteLangfuseOrgMembership  DeleteLangfuseOrgMembershipRequest
+     * @return DeleteLangfuseOrgMembershipResponse
+     */
+    CompletableFuture<DeleteLangfuseOrgMembershipResponse> deleteLangfuseOrgMembership(DeleteLangfuseOrgMembershipRequest request);
+
+    /**
+     * @param request the request parameters of DeleteLangfuseProject  DeleteLangfuseProjectRequest
+     * @return DeleteLangfuseProjectResponse
+     */
+    CompletableFuture<DeleteLangfuseProjectResponse> deleteLangfuseProject(DeleteLangfuseProjectRequest request);
+
+    /**
+     * @param request the request parameters of DeleteLangfuseUser  DeleteLangfuseUserRequest
+     * @return DeleteLangfuseUserResponse
+     */
+    CompletableFuture<DeleteLangfuseUserResponse> deleteLangfuseUser(DeleteLangfuseUserRequest request);
 
     /**
      * @param request the request parameters of DeleteWhitelistTemplate  DeleteWhitelistTemplateRequest
@@ -162,6 +216,54 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeEndpointsResponse
      */
     CompletableFuture<DescribeEndpointsResponse> describeEndpoints(DescribeEndpointsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeLangfuseEndpoints  DescribeLangfuseEndpointsRequest
+     * @return DescribeLangfuseEndpointsResponse
+     */
+    CompletableFuture<DescribeLangfuseEndpointsResponse> describeLangfuseEndpoints(DescribeLangfuseEndpointsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeLangfuseOrgMemberships  DescribeLangfuseOrgMembershipsRequest
+     * @return DescribeLangfuseOrgMembershipsResponse
+     */
+    CompletableFuture<DescribeLangfuseOrgMembershipsResponse> describeLangfuseOrgMemberships(DescribeLangfuseOrgMembershipsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeLangfuseOrgs  DescribeLangfuseOrgsRequest
+     * @return DescribeLangfuseOrgsResponse
+     */
+    CompletableFuture<DescribeLangfuseOrgsResponse> describeLangfuseOrgs(DescribeLangfuseOrgsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeLangfuseProjectMemberships  DescribeLangfuseProjectMembershipsRequest
+     * @return DescribeLangfuseProjectMembershipsResponse
+     */
+    CompletableFuture<DescribeLangfuseProjectMembershipsResponse> describeLangfuseProjectMemberships(DescribeLangfuseProjectMembershipsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeLangfuseProjects  DescribeLangfuseProjectsRequest
+     * @return DescribeLangfuseProjectsResponse
+     */
+    CompletableFuture<DescribeLangfuseProjectsResponse> describeLangfuseProjects(DescribeLangfuseProjectsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeLangfuseSecurityIPList  DescribeLangfuseSecurityIPListRequest
+     * @return DescribeLangfuseSecurityIPListResponse
+     */
+    CompletableFuture<DescribeLangfuseSecurityIPListResponse> describeLangfuseSecurityIPList(DescribeLangfuseSecurityIPListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeLangfuseUser  DescribeLangfuseUserRequest
+     * @return DescribeLangfuseUserResponse
+     */
+    CompletableFuture<DescribeLangfuseUserResponse> describeLangfuseUser(DescribeLangfuseUserRequest request);
+
+    /**
+     * @param request the request parameters of DescribeLangfuseUsers  DescribeLangfuseUsersRequest
+     * @return DescribeLangfuseUsersResponse
+     */
+    CompletableFuture<DescribeLangfuseUsersResponse> describeLangfuseUsers(DescribeLangfuseUsersRequest request);
 
     /**
      * @param request the request parameters of DescribeProcessList  DescribeProcessListRequest
@@ -272,6 +374,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBInstanceConnectionStringResponse> modifyDBInstanceConnectionString(ModifyDBInstanceConnectionStringRequest request);
 
     /**
+     * @param request the request parameters of ModifyLangfuseOrgMembership  ModifyLangfuseOrgMembershipRequest
+     * @return ModifyLangfuseOrgMembershipResponse
+     */
+    CompletableFuture<ModifyLangfuseOrgMembershipResponse> modifyLangfuseOrgMembership(ModifyLangfuseOrgMembershipRequest request);
+
+    /**
+     * @param request the request parameters of ModifyLangfuseProjectMembership  ModifyLangfuseProjectMembershipRequest
+     * @return ModifyLangfuseProjectMembershipResponse
+     */
+    CompletableFuture<ModifyLangfuseProjectMembershipResponse> modifyLangfuseProjectMembership(ModifyLangfuseProjectMembershipRequest request);
+
+    /**
      * @param request the request parameters of ModifySecurityIPList  ModifySecurityIPListRequest
      * @return ModifySecurityIPListResponse
      */
@@ -282,6 +396,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ResetAccountPasswordResponse
      */
     CompletableFuture<ResetAccountPasswordResponse> resetAccountPassword(ResetAccountPasswordRequest request);
+
+    /**
+     * @param request the request parameters of ResetLangfuseUserPassword  ResetLangfuseUserPasswordRequest
+     * @return ResetLangfuseUserPasswordResponse
+     */
+    CompletableFuture<ResetLangfuseUserPasswordResponse> resetLangfuseUserPassword(ResetLangfuseUserPasswordRequest request);
 
     /**
      * @param request the request parameters of RestartDBInstance  RestartDBInstanceRequest

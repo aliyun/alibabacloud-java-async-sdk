@@ -74,7 +74,19 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("me-east-1", "clickhouse.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "clickhouse.aliyuncs.com"),
             new TeaPair("us-east-1", "clickhouse.aliyuncs.com"),
-            new TeaPair("us-west-1", "clickhouse.aliyuncs.com")
+            new TeaPair("us-west-1", "clickhouse.aliyuncs.com"),
+            new TeaPair("me-central-1", "clickhouse.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "clickhouse.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "clickhouse.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "clickhouse.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "clickhouse.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "clickhouse.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "clickhouse.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "clickhouse.cn-chengdu.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "clickhouse.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "clickhouse.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "clickhouse.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "clickhouse.ap-northeast-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -211,6 +223,78 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateLangfuseOrg  CreateLangfuseOrgRequest
+     * @return CreateLangfuseOrgResponse
+     */
+    @Override
+    public CompletableFuture<CreateLangfuseOrgResponse> createLangfuseOrg(CreateLangfuseOrgRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateLangfuseOrg").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateLangfuseOrgResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateLangfuseOrgResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateLangfuseOrgMember  CreateLangfuseOrgMemberRequest
+     * @return CreateLangfuseOrgMemberResponse
+     */
+    @Override
+    public CompletableFuture<CreateLangfuseOrgMemberResponse> createLangfuseOrgMember(CreateLangfuseOrgMemberRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateLangfuseOrgMember").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateLangfuseOrgMemberResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateLangfuseOrgMemberResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateLangfuseProject  CreateLangfuseProjectRequest
+     * @return CreateLangfuseProjectResponse
+     */
+    @Override
+    public CompletableFuture<CreateLangfuseProjectResponse> createLangfuseProject(CreateLangfuseProjectRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateLangfuseProject").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateLangfuseProjectResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateLangfuseProjectResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateLangfuseUser  CreateLangfuseUserRequest
+     * @return CreateLangfuseUserResponse
+     */
+    @Override
+    public CompletableFuture<CreateLangfuseUserResponse> createLangfuseUser(CreateLangfuseUserRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateLangfuseUser").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateLangfuseUserResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateLangfuseUserResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateWhitelistTemplate  CreateWhitelistTemplateRequest
      * @return CreateWhitelistTemplateResponse
      */
@@ -313,6 +397,96 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteEndpointResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteLangfuseInstance  DeleteLangfuseInstanceRequest
+     * @return DeleteLangfuseInstanceResponse
+     */
+    @Override
+    public CompletableFuture<DeleteLangfuseInstanceResponse> deleteLangfuseInstance(DeleteLangfuseInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteLangfuseInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteLangfuseInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteLangfuseInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteLangfuseOrg  DeleteLangfuseOrgRequest
+     * @return DeleteLangfuseOrgResponse
+     */
+    @Override
+    public CompletableFuture<DeleteLangfuseOrgResponse> deleteLangfuseOrg(DeleteLangfuseOrgRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteLangfuseOrg").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteLangfuseOrgResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteLangfuseOrgResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteLangfuseOrgMembership  DeleteLangfuseOrgMembershipRequest
+     * @return DeleteLangfuseOrgMembershipResponse
+     */
+    @Override
+    public CompletableFuture<DeleteLangfuseOrgMembershipResponse> deleteLangfuseOrgMembership(DeleteLangfuseOrgMembershipRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteLangfuseOrgMembership").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteLangfuseOrgMembershipResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteLangfuseOrgMembershipResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteLangfuseProject  DeleteLangfuseProjectRequest
+     * @return DeleteLangfuseProjectResponse
+     */
+    @Override
+    public CompletableFuture<DeleteLangfuseProjectResponse> deleteLangfuseProject(DeleteLangfuseProjectRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteLangfuseProject").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteLangfuseProjectResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteLangfuseProjectResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteLangfuseUser  DeleteLangfuseUserRequest
+     * @return DeleteLangfuseUserResponse
+     */
+    @Override
+    public CompletableFuture<DeleteLangfuseUserResponse> deleteLangfuseUser(DeleteLangfuseUserRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteLangfuseUser").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteLangfuseUserResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteLangfuseUserResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -511,6 +685,150 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeEndpointsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeLangfuseEndpoints  DescribeLangfuseEndpointsRequest
+     * @return DescribeLangfuseEndpointsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeLangfuseEndpointsResponse> describeLangfuseEndpoints(DescribeLangfuseEndpointsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeLangfuseEndpoints").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeLangfuseEndpointsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeLangfuseEndpointsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeLangfuseOrgMemberships  DescribeLangfuseOrgMembershipsRequest
+     * @return DescribeLangfuseOrgMembershipsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeLangfuseOrgMembershipsResponse> describeLangfuseOrgMemberships(DescribeLangfuseOrgMembershipsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeLangfuseOrgMemberships").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeLangfuseOrgMembershipsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeLangfuseOrgMembershipsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeLangfuseOrgs  DescribeLangfuseOrgsRequest
+     * @return DescribeLangfuseOrgsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeLangfuseOrgsResponse> describeLangfuseOrgs(DescribeLangfuseOrgsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeLangfuseOrgs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeLangfuseOrgsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeLangfuseOrgsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeLangfuseProjectMemberships  DescribeLangfuseProjectMembershipsRequest
+     * @return DescribeLangfuseProjectMembershipsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeLangfuseProjectMembershipsResponse> describeLangfuseProjectMemberships(DescribeLangfuseProjectMembershipsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeLangfuseProjectMemberships").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeLangfuseProjectMembershipsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeLangfuseProjectMembershipsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeLangfuseProjects  DescribeLangfuseProjectsRequest
+     * @return DescribeLangfuseProjectsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeLangfuseProjectsResponse> describeLangfuseProjects(DescribeLangfuseProjectsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeLangfuseProjects").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeLangfuseProjectsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeLangfuseProjectsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeLangfuseSecurityIPList  DescribeLangfuseSecurityIPListRequest
+     * @return DescribeLangfuseSecurityIPListResponse
+     */
+    @Override
+    public CompletableFuture<DescribeLangfuseSecurityIPListResponse> describeLangfuseSecurityIPList(DescribeLangfuseSecurityIPListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeLangfuseSecurityIPList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeLangfuseSecurityIPListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeLangfuseSecurityIPListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeLangfuseUser  DescribeLangfuseUserRequest
+     * @return DescribeLangfuseUserResponse
+     */
+    @Override
+    public CompletableFuture<DescribeLangfuseUserResponse> describeLangfuseUser(DescribeLangfuseUserRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeLangfuseUser").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeLangfuseUserResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeLangfuseUserResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeLangfuseUsers  DescribeLangfuseUsersRequest
+     * @return DescribeLangfuseUsersResponse
+     */
+    @Override
+    public CompletableFuture<DescribeLangfuseUsersResponse> describeLangfuseUsers(DescribeLangfuseUsersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeLangfuseUsers").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeLangfuseUsersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeLangfuseUsersResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -841,6 +1159,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModifyLangfuseOrgMembership  ModifyLangfuseOrgMembershipRequest
+     * @return ModifyLangfuseOrgMembershipResponse
+     */
+    @Override
+    public CompletableFuture<ModifyLangfuseOrgMembershipResponse> modifyLangfuseOrgMembership(ModifyLangfuseOrgMembershipRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyLangfuseOrgMembership").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyLangfuseOrgMembershipResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyLangfuseOrgMembershipResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyLangfuseProjectMembership  ModifyLangfuseProjectMembershipRequest
+     * @return ModifyLangfuseProjectMembershipResponse
+     */
+    @Override
+    public CompletableFuture<ModifyLangfuseProjectMembershipResponse> modifyLangfuseProjectMembership(ModifyLangfuseProjectMembershipRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyLangfuseProjectMembership").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyLangfuseProjectMembershipResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyLangfuseProjectMembershipResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ModifySecurityIPList  ModifySecurityIPListRequest
      * @return ModifySecurityIPListResponse
      */
@@ -871,6 +1225,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ResetAccountPasswordResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ResetLangfuseUserPassword  ResetLangfuseUserPasswordRequest
+     * @return ResetLangfuseUserPasswordResponse
+     */
+    @Override
+    public CompletableFuture<ResetLangfuseUserPasswordResponse> resetLangfuseUserPassword(ResetLangfuseUserPasswordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ResetLangfuseUserPassword").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ResetLangfuseUserPasswordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ResetLangfuseUserPasswordResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
