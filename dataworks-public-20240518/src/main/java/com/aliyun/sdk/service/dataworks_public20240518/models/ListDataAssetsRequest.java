@@ -22,6 +22,14 @@ public class ListDataAssetsRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssetDomainId")
+    private Long assetDomainId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CategoryUuid")
+    private String categoryUuid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DataAssetIds")
     private java.util.List<String> dataAssetIds;
 
@@ -32,6 +40,10 @@ public class ListDataAssetsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnvType")
     private String envType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    private String name;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
@@ -49,15 +61,17 @@ public class ListDataAssetsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<Tags> tags;
 
     private ListDataAssetsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.assetDomainId = builder.assetDomainId;
+        this.categoryUuid = builder.categoryUuid;
         this.dataAssetIds = builder.dataAssetIds;
         this.dataAssetType = builder.dataAssetType;
         this.envType = builder.envType;
+        this.name = builder.name;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.projectId = builder.projectId;
@@ -85,6 +99,20 @@ public class ListDataAssetsRequest extends Request {
     }
 
     /**
+     * @return assetDomainId
+     */
+    public Long getAssetDomainId() {
+        return this.assetDomainId;
+    }
+
+    /**
+     * @return categoryUuid
+     */
+    public String getCategoryUuid() {
+        return this.categoryUuid;
+    }
+
+    /**
      * @return dataAssetIds
      */
     public java.util.List<String> getDataAssetIds() {
@@ -103,6 +131,13 @@ public class ListDataAssetsRequest extends Request {
      */
     public String getEnvType() {
         return this.envType;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
     }
 
     /**
@@ -135,9 +170,12 @@ public class ListDataAssetsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListDataAssetsRequest, Builder> {
         private String regionId; 
+        private Long assetDomainId; 
+        private String categoryUuid; 
         private java.util.List<String> dataAssetIds; 
         private String dataAssetType; 
         private String envType; 
+        private String name; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private Long projectId; 
@@ -150,9 +188,12 @@ public class ListDataAssetsRequest extends Request {
         private Builder(ListDataAssetsRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.assetDomainId = request.assetDomainId;
+            this.categoryUuid = request.categoryUuid;
             this.dataAssetIds = request.dataAssetIds;
             this.dataAssetType = request.dataAssetType;
             this.envType = request.envType;
+            this.name = request.name;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.projectId = request.projectId;
@@ -165,6 +206,24 @@ public class ListDataAssetsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * AssetDomainId.
+         */
+        public Builder assetDomainId(Long assetDomainId) {
+            this.putQueryParameter("AssetDomainId", assetDomainId);
+            this.assetDomainId = assetDomainId;
+            return this;
+        }
+
+        /**
+         * CategoryUuid.
+         */
+        public Builder categoryUuid(String categoryUuid) {
+            this.putQueryParameter("CategoryUuid", categoryUuid);
+            this.categoryUuid = categoryUuid;
             return this;
         }
 
@@ -211,6 +270,15 @@ public class ListDataAssetsRequest extends Request {
         }
 
         /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
          * <p>The page number. Pages start from page 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -252,7 +320,6 @@ public class ListDataAssetsRequest extends Request {
          * <li>You can specify multiple tags, which are in the logical OR relation. For example, you can query the data assets that contain one of the following tags: <code>[&quot;key1:v1&quot;, &quot;key2:v1&quot;, &quot;key3:v1&quot;]</code>.</li>
          * <li>If you do not configure this parameter, tag-based filtering is not performed.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -276,7 +343,6 @@ public class ListDataAssetsRequest extends Request {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("Value")
@@ -324,7 +390,6 @@ public class ListDataAssetsRequest extends Request {
             /**
              * <p>The tag key.</p>
              * <p>The tag key can be up to 64 characters in length and can contain letters, digits, and the following characters: <code>-@#*&lt;&gt;|[]()+=&amp;%$!~</code>. It cannot start with <code>dw:</code>.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>key</p>

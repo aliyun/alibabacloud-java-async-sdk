@@ -317,9 +317,17 @@ public class CreateAgentSessionRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("Skills")
+        private String skills;
+
         private InitialConfigOptions(Builder builder) {
             this.executionLane = builder.executionLane;
             this.mode = builder.mode;
+            this.resourceGroupId = builder.resourceGroupId;
+            this.skills = builder.skills;
         }
 
         public static Builder builder() {
@@ -344,9 +352,25 @@ public class CreateAgentSessionRequest extends Request {
             return this.mode;
         }
 
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
+         * @return skills
+         */
+        public String getSkills() {
+            return this.skills;
+        }
+
         public static final class Builder {
             private String executionLane; 
             private String mode; 
+            private String resourceGroupId; 
+            private String skills; 
 
             private Builder() {
             } 
@@ -354,6 +378,8 @@ public class CreateAgentSessionRequest extends Request {
             private Builder(InitialConfigOptions model) {
                 this.executionLane = model.executionLane;
                 this.mode = model.mode;
+                this.resourceGroupId = model.resourceGroupId;
+                this.skills = model.skills;
             } 
 
             /**
@@ -369,6 +395,22 @@ public class CreateAgentSessionRequest extends Request {
              */
             public Builder mode(String mode) {
                 this.mode = mode;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * Skills.
+             */
+            public Builder skills(String skills) {
+                this.skills = skills;
                 return this;
             }
 

@@ -97,6 +97,102 @@ public class ListDataAssetsResponseBody extends TeaModel {
      *
      * <p>ListDataAssetsResponseBody</p>
      */
+    public static class AssetCategories extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AssetDomainId")
+        private String assetDomainId;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private String id;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private AssetCategories(Builder builder) {
+            this.assetDomainId = builder.assetDomainId;
+            this.id = builder.id;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AssetCategories create() {
+            return builder().build();
+        }
+
+        /**
+         * @return assetDomainId
+         */
+        public String getAssetDomainId() {
+            return this.assetDomainId;
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String assetDomainId; 
+            private String id; 
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssetCategories model) {
+                this.assetDomainId = model.assetDomainId;
+                this.id = model.id;
+                this.name = model.name;
+            } 
+
+            /**
+             * AssetDomainId.
+             */
+            public Builder assetDomainId(String assetDomainId) {
+                this.assetDomainId = assetDomainId;
+                return this;
+            }
+
+            /**
+             * Id.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public AssetCategories build() {
+                return new AssetCategories(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListDataAssetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataAssetsResponseBody</p>
+     */
     public static class DataAssetTagMappings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoTraceEnabled")
         private Boolean autoTraceEnabled;
@@ -279,6 +375,9 @@ public class ListDataAssetsResponseBody extends TeaModel {
      * <p>ListDataAssetsResponseBody</p>
      */
     public static class DataAssets extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AssetCategories")
+        private java.util.List<AssetCategories> assetCategories;
+
         @com.aliyun.core.annotation.NameInMap("DataAssetTagMappings")
         private java.util.List<DataAssetTagMappings> dataAssetTagMappings;
 
@@ -298,6 +397,7 @@ public class ListDataAssetsResponseBody extends TeaModel {
         private String type;
 
         private DataAssets(Builder builder) {
+            this.assetCategories = builder.assetCategories;
             this.dataAssetTagMappings = builder.dataAssetTagMappings;
             this.envType = builder.envType;
             this.id = builder.id;
@@ -312,6 +412,13 @@ public class ListDataAssetsResponseBody extends TeaModel {
 
         public static DataAssets create() {
             return builder().build();
+        }
+
+        /**
+         * @return assetCategories
+         */
+        public java.util.List<AssetCategories> getAssetCategories() {
+            return this.assetCategories;
         }
 
         /**
@@ -357,6 +464,7 @@ public class ListDataAssetsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<AssetCategories> assetCategories; 
             private java.util.List<DataAssetTagMappings> dataAssetTagMappings; 
             private String envType; 
             private String id; 
@@ -368,6 +476,7 @@ public class ListDataAssetsResponseBody extends TeaModel {
             } 
 
             private Builder(DataAssets model) {
+                this.assetCategories = model.assetCategories;
                 this.dataAssetTagMappings = model.dataAssetTagMappings;
                 this.envType = model.envType;
                 this.id = model.id;
@@ -375,6 +484,14 @@ public class ListDataAssetsResponseBody extends TeaModel {
                 this.projectId = model.projectId;
                 this.type = model.type;
             } 
+
+            /**
+             * AssetCategories.
+             */
+            public Builder assetCategories(java.util.List<AssetCategories> assetCategories) {
+                this.assetCategories = assetCategories;
+                return this;
+            }
 
             /**
              * <p>The mappings between data assets and tags.</p>
