@@ -913,6 +913,336 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
      *
      * <p>HotelGoodsQueryResponseBody</p>
      */
+    public static class AvgOnsitePrice extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("currency")
+        private String currency;
+
+        @com.aliyun.core.annotation.NameInMap("foreign_currency")
+        private String foreignCurrency;
+
+        @com.aliyun.core.annotation.NameInMap("foreign_price_cent")
+        private Long foreignPriceCent;
+
+        @com.aliyun.core.annotation.NameInMap("price_cent")
+        private Long priceCent;
+
+        private AvgOnsitePrice(Builder builder) {
+            this.currency = builder.currency;
+            this.foreignCurrency = builder.foreignCurrency;
+            this.foreignPriceCent = builder.foreignPriceCent;
+            this.priceCent = builder.priceCent;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AvgOnsitePrice create() {
+            return builder().build();
+        }
+
+        /**
+         * @return currency
+         */
+        public String getCurrency() {
+            return this.currency;
+        }
+
+        /**
+         * @return foreignCurrency
+         */
+        public String getForeignCurrency() {
+            return this.foreignCurrency;
+        }
+
+        /**
+         * @return foreignPriceCent
+         */
+        public Long getForeignPriceCent() {
+            return this.foreignPriceCent;
+        }
+
+        /**
+         * @return priceCent
+         */
+        public Long getPriceCent() {
+            return this.priceCent;
+        }
+
+        public static final class Builder {
+            private String currency; 
+            private String foreignCurrency; 
+            private Long foreignPriceCent; 
+            private Long priceCent; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvgOnsitePrice model) {
+                this.currency = model.currency;
+                this.foreignCurrency = model.foreignCurrency;
+                this.foreignPriceCent = model.foreignPriceCent;
+                this.priceCent = model.priceCent;
+            } 
+
+            /**
+             * currency.
+             */
+            public Builder currency(String currency) {
+                this.currency = currency;
+                return this;
+            }
+
+            /**
+             * foreign_currency.
+             */
+            public Builder foreignCurrency(String foreignCurrency) {
+                this.foreignCurrency = foreignCurrency;
+                return this;
+            }
+
+            /**
+             * foreign_price_cent.
+             */
+            public Builder foreignPriceCent(Long foreignPriceCent) {
+                this.foreignPriceCent = foreignPriceCent;
+                return this;
+            }
+
+            /**
+             * price_cent.
+             */
+            public Builder priceCent(Long priceCent) {
+                this.priceCent = priceCent;
+                return this;
+            }
+
+            public AvgOnsitePrice build() {
+                return new AvgOnsitePrice(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link HotelGoodsQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelGoodsQueryResponseBody</p>
+     */
+    public static class DailyOnsitePrice extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("currency")
+        private String currency;
+
+        @com.aliyun.core.annotation.NameInMap("day")
+        private String day;
+
+        @com.aliyun.core.annotation.NameInMap("foreign_currency")
+        private String foreignCurrency;
+
+        @com.aliyun.core.annotation.NameInMap("foreign_price_cent")
+        private Long foreignPriceCent;
+
+        @com.aliyun.core.annotation.NameInMap("price_cent")
+        private Long priceCent;
+
+        private DailyOnsitePrice(Builder builder) {
+            this.currency = builder.currency;
+            this.day = builder.day;
+            this.foreignCurrency = builder.foreignCurrency;
+            this.foreignPriceCent = builder.foreignPriceCent;
+            this.priceCent = builder.priceCent;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DailyOnsitePrice create() {
+            return builder().build();
+        }
+
+        /**
+         * @return currency
+         */
+        public String getCurrency() {
+            return this.currency;
+        }
+
+        /**
+         * @return day
+         */
+        public String getDay() {
+            return this.day;
+        }
+
+        /**
+         * @return foreignCurrency
+         */
+        public String getForeignCurrency() {
+            return this.foreignCurrency;
+        }
+
+        /**
+         * @return foreignPriceCent
+         */
+        public Long getForeignPriceCent() {
+            return this.foreignPriceCent;
+        }
+
+        /**
+         * @return priceCent
+         */
+        public Long getPriceCent() {
+            return this.priceCent;
+        }
+
+        public static final class Builder {
+            private String currency; 
+            private String day; 
+            private String foreignCurrency; 
+            private Long foreignPriceCent; 
+            private Long priceCent; 
+
+            private Builder() {
+            } 
+
+            private Builder(DailyOnsitePrice model) {
+                this.currency = model.currency;
+                this.day = model.day;
+                this.foreignCurrency = model.foreignCurrency;
+                this.foreignPriceCent = model.foreignPriceCent;
+                this.priceCent = model.priceCent;
+            } 
+
+            /**
+             * currency.
+             */
+            public Builder currency(String currency) {
+                this.currency = currency;
+                return this;
+            }
+
+            /**
+             * day.
+             */
+            public Builder day(String day) {
+                this.day = day;
+                return this;
+            }
+
+            /**
+             * foreign_currency.
+             */
+            public Builder foreignCurrency(String foreignCurrency) {
+                this.foreignCurrency = foreignCurrency;
+                return this;
+            }
+
+            /**
+             * foreign_price_cent.
+             */
+            public Builder foreignPriceCent(Long foreignPriceCent) {
+                this.foreignPriceCent = foreignPriceCent;
+                return this;
+            }
+
+            /**
+             * price_cent.
+             */
+            public Builder priceCent(Long priceCent) {
+                this.priceCent = priceCent;
+                return this;
+            }
+
+            public DailyOnsitePrice build() {
+                return new DailyOnsitePrice(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link HotelGoodsQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelGoodsQueryResponseBody</p>
+     */
+    public static class HotelOnsitePriceDetail extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("avg_onsite_price")
+        private AvgOnsitePrice avgOnsitePrice;
+
+        @com.aliyun.core.annotation.NameInMap("daily_onsite_price")
+        private java.util.List<DailyOnsitePrice> dailyOnsitePrice;
+
+        private HotelOnsitePriceDetail(Builder builder) {
+            this.avgOnsitePrice = builder.avgOnsitePrice;
+            this.dailyOnsitePrice = builder.dailyOnsitePrice;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HotelOnsitePriceDetail create() {
+            return builder().build();
+        }
+
+        /**
+         * @return avgOnsitePrice
+         */
+        public AvgOnsitePrice getAvgOnsitePrice() {
+            return this.avgOnsitePrice;
+        }
+
+        /**
+         * @return dailyOnsitePrice
+         */
+        public java.util.List<DailyOnsitePrice> getDailyOnsitePrice() {
+            return this.dailyOnsitePrice;
+        }
+
+        public static final class Builder {
+            private AvgOnsitePrice avgOnsitePrice; 
+            private java.util.List<DailyOnsitePrice> dailyOnsitePrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(HotelOnsitePriceDetail model) {
+                this.avgOnsitePrice = model.avgOnsitePrice;
+                this.dailyOnsitePrice = model.dailyOnsitePrice;
+            } 
+
+            /**
+             * avg_onsite_price.
+             */
+            public Builder avgOnsitePrice(AvgOnsitePrice avgOnsitePrice) {
+                this.avgOnsitePrice = avgOnsitePrice;
+                return this;
+            }
+
+            /**
+             * daily_onsite_price.
+             */
+            public Builder dailyOnsitePrice(java.util.List<DailyOnsitePrice> dailyOnsitePrice) {
+                this.dailyOnsitePrice = dailyOnsitePrice;
+                return this;
+            }
+
+            public HotelOnsitePriceDetail build() {
+                return new HotelOnsitePriceDetail(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link HotelGoodsQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelGoodsQueryResponseBody</p>
+     */
     public static class Rates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bed_desc")
         private String bedDesc;
@@ -967,6 +1297,9 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("hotel_member_benefit")
         private java.util.Map<String, String> hotelMemberBenefit;
+
+        @com.aliyun.core.annotation.NameInMap("hotel_onsite_price_detail")
+        private HotelOnsitePriceDetail hotelOnsitePriceDetail;
 
         @com.aliyun.core.annotation.NameInMap("instant_confirm")
         private Boolean instantConfirm;
@@ -1052,6 +1385,9 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("support_special_invoice")
         private Boolean supportSpecialInvoice;
 
+        @com.aliyun.core.annotation.NameInMap("tax_fee_desc")
+        private String taxFeeDesc;
+
         @com.aliyun.core.annotation.NameInMap("unrounding_daily_price_format_yuan")
         private String unroundingDailyPriceFormatYuan;
 
@@ -1074,6 +1410,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             this.endTimeDaily = builder.endTimeDaily;
             this.hotelDetailRatePriceDTO = builder.hotelDetailRatePriceDTO;
             this.hotelMemberBenefit = builder.hotelMemberBenefit;
+            this.hotelOnsitePriceDetail = builder.hotelOnsitePriceDetail;
             this.instantConfirm = builder.instantConfirm;
             this.inventoryDesc = builder.inventoryDesc;
             this.inventoryPrice = builder.inventoryPrice;
@@ -1102,6 +1439,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             this.supplierCode = builder.supplierCode;
             this.supplierName = builder.supplierName;
             this.supportSpecialInvoice = builder.supportSpecialInvoice;
+            this.taxFeeDesc = builder.taxFeeDesc;
             this.unroundingDailyPriceFormatYuan = builder.unroundingDailyPriceFormatYuan;
         }
 
@@ -1237,6 +1575,13 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
          */
         public java.util.Map<String, String> getHotelMemberBenefit() {
             return this.hotelMemberBenefit;
+        }
+
+        /**
+         * @return hotelOnsitePriceDetail
+         */
+        public HotelOnsitePriceDetail getHotelOnsitePriceDetail() {
+            return this.hotelOnsitePriceDetail;
         }
 
         /**
@@ -1436,6 +1781,13 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return taxFeeDesc
+         */
+        public String getTaxFeeDesc() {
+            return this.taxFeeDesc;
+        }
+
+        /**
          * @return unroundingDailyPriceFormatYuan
          */
         public String getUnroundingDailyPriceFormatYuan() {
@@ -1461,6 +1813,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             private String endTimeDaily; 
             private java.util.List<HotelDetailRatePriceDTO> hotelDetailRatePriceDTO; 
             private java.util.Map<String, String> hotelMemberBenefit; 
+            private HotelOnsitePriceDetail hotelOnsitePriceDetail; 
             private Boolean instantConfirm; 
             private String inventoryDesc; 
             private String inventoryPrice; 
@@ -1489,6 +1842,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
             private String supplierCode; 
             private String supplierName; 
             private Boolean supportSpecialInvoice; 
+            private String taxFeeDesc; 
             private String unroundingDailyPriceFormatYuan; 
 
             private Builder() {
@@ -1513,6 +1867,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
                 this.endTimeDaily = model.endTimeDaily;
                 this.hotelDetailRatePriceDTO = model.hotelDetailRatePriceDTO;
                 this.hotelMemberBenefit = model.hotelMemberBenefit;
+                this.hotelOnsitePriceDetail = model.hotelOnsitePriceDetail;
                 this.instantConfirm = model.instantConfirm;
                 this.inventoryDesc = model.inventoryDesc;
                 this.inventoryPrice = model.inventoryPrice;
@@ -1541,6 +1896,7 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
                 this.supplierCode = model.supplierCode;
                 this.supplierName = model.supplierName;
                 this.supportSpecialInvoice = model.supportSpecialInvoice;
+                this.taxFeeDesc = model.taxFeeDesc;
                 this.unroundingDailyPriceFormatYuan = model.unroundingDailyPriceFormatYuan;
             } 
 
@@ -1685,6 +2041,14 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
              */
             public Builder hotelMemberBenefit(java.util.Map<String, String> hotelMemberBenefit) {
                 this.hotelMemberBenefit = hotelMemberBenefit;
+                return this;
+            }
+
+            /**
+             * hotel_onsite_price_detail.
+             */
+            public Builder hotelOnsitePriceDetail(HotelOnsitePriceDetail hotelOnsitePriceDetail) {
+                this.hotelOnsitePriceDetail = hotelOnsitePriceDetail;
                 return this;
             }
 
@@ -1909,6 +2273,14 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
              */
             public Builder supportSpecialInvoice(Boolean supportSpecialInvoice) {
                 this.supportSpecialInvoice = supportSpecialInvoice;
+                return this;
+            }
+
+            /**
+             * tax_fee_desc.
+             */
+            public Builder taxFeeDesc(String taxFeeDesc) {
+                this.taxFeeDesc = taxFeeDesc;
                 return this;
             }
 

@@ -24,7 +24,6 @@ public class CarApplyAddRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("city")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String city;
 
     @com.aliyun.core.annotation.Body
@@ -33,12 +32,15 @@ public class CarApplyAddRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("date")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String date;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("finished_date")
     private String finishedDate;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("itinerary_list")
+    private java.util.List<ItineraryList> itineraryList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("project_code")
@@ -68,17 +70,14 @@ public class CarApplyAddRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("times_total")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Integer timesTotal;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("times_type")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Integer timesType;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("times_used")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Integer timesUsed;
 
     @com.aliyun.core.annotation.Body
@@ -106,6 +105,7 @@ public class CarApplyAddRequest extends Request {
         this.cityCodeSet = builder.cityCodeSet;
         this.date = builder.date;
         this.finishedDate = builder.finishedDate;
+        this.itineraryList = builder.itineraryList;
         this.projectCode = builder.projectCode;
         this.projectName = builder.projectName;
         this.status = builder.status;
@@ -167,6 +167,13 @@ public class CarApplyAddRequest extends Request {
      */
     public String getFinishedDate() {
         return this.finishedDate;
+    }
+
+    /**
+     * @return itineraryList
+     */
+    public java.util.List<ItineraryList> getItineraryList() {
+        return this.itineraryList;
     }
 
     /**
@@ -266,6 +273,7 @@ public class CarApplyAddRequest extends Request {
         private String cityCodeSet; 
         private String date; 
         private String finishedDate; 
+        private java.util.List<ItineraryList> itineraryList; 
         private String projectCode; 
         private String projectName; 
         private Integer status; 
@@ -291,6 +299,7 @@ public class CarApplyAddRequest extends Request {
             this.cityCodeSet = request.cityCodeSet;
             this.date = request.date;
             this.finishedDate = request.finishedDate;
+            this.itineraryList = request.itineraryList;
             this.projectCode = request.projectCode;
             this.projectName = request.projectName;
             this.status = request.status;
@@ -316,7 +325,7 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * city.
          */
         public Builder city(String city) {
             this.putBodyParameter("city", city);
@@ -334,10 +343,7 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-07-12 14:52:52</p>
+         * date.
          */
         public Builder date(String date) {
             this.putBodyParameter("date", date);
@@ -351,6 +357,16 @@ public class CarApplyAddRequest extends Request {
         public Builder finishedDate(String finishedDate) {
             this.putBodyParameter("finished_date", finishedDate);
             this.finishedDate = finishedDate;
+            return this;
+        }
+
+        /**
+         * itinerary_list.
+         */
+        public Builder itineraryList(java.util.List<ItineraryList> itineraryList) {
+            String itineraryListShrink = shrink(itineraryList, "itinerary_list", "json");
+            this.putBodyParameter("itinerary_list", itineraryListShrink);
+            this.itineraryList = itineraryList;
             return this;
         }
 
@@ -415,10 +431,7 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * times_total.
          */
         public Builder timesTotal(Integer timesTotal) {
             this.putBodyParameter("times_total", timesTotal);
@@ -427,10 +440,7 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * times_type.
          */
         public Builder timesType(Integer timesType) {
             this.putBodyParameter("times_type", timesType);
@@ -439,10 +449,7 @@ public class CarApplyAddRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * times_used.
          */
         public Builder timesUsed(Integer timesUsed) {
             this.putBodyParameter("times_used", timesUsed);
@@ -497,6 +504,123 @@ public class CarApplyAddRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CarApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>CarApplyAddRequest</p>
+     */
+    public static class ItineraryList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("city")
+        private String city;
+
+        @com.aliyun.core.annotation.NameInMap("city_code_set")
+        private String cityCodeSet;
+
+        @com.aliyun.core.annotation.NameInMap("date")
+        private String date;
+
+        @com.aliyun.core.annotation.NameInMap("finished_date")
+        private String finishedDate;
+
+        private ItineraryList(Builder builder) {
+            this.city = builder.city;
+            this.cityCodeSet = builder.cityCodeSet;
+            this.date = builder.date;
+            this.finishedDate = builder.finishedDate;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ItineraryList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return city
+         */
+        public String getCity() {
+            return this.city;
+        }
+
+        /**
+         * @return cityCodeSet
+         */
+        public String getCityCodeSet() {
+            return this.cityCodeSet;
+        }
+
+        /**
+         * @return date
+         */
+        public String getDate() {
+            return this.date;
+        }
+
+        /**
+         * @return finishedDate
+         */
+        public String getFinishedDate() {
+            return this.finishedDate;
+        }
+
+        public static final class Builder {
+            private String city; 
+            private String cityCodeSet; 
+            private String date; 
+            private String finishedDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(ItineraryList model) {
+                this.city = model.city;
+                this.cityCodeSet = model.cityCodeSet;
+                this.date = model.date;
+                this.finishedDate = model.finishedDate;
+            } 
+
+            /**
+             * city.
+             */
+            public Builder city(String city) {
+                this.city = city;
+                return this;
+            }
+
+            /**
+             * city_code_set.
+             */
+            public Builder cityCodeSet(String cityCodeSet) {
+                this.cityCodeSet = cityCodeSet;
+                return this;
+            }
+
+            /**
+             * date.
+             */
+            public Builder date(String date) {
+                this.date = date;
+                return this;
+            }
+
+            /**
+             * finished_date.
+             */
+            public Builder finishedDate(String finishedDate) {
+                this.finishedDate = finishedDate;
+                return this;
+            }
+
+            public ItineraryList build() {
+                return new ItineraryList(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link CarApplyAddRequest} extends {@link TeaModel}

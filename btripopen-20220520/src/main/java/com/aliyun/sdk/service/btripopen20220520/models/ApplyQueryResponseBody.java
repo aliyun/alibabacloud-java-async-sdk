@@ -1367,6 +1367,9 @@ public class ApplyQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("attribute")
         private String attribute;
 
+        @com.aliyun.core.annotation.NameInMap("can_order_type_list")
+        private java.util.List<String> canOrderTypeList;
+
         @com.aliyun.core.annotation.NameInMap("cost_center_name")
         private String costCenterName;
 
@@ -1384,6 +1387,9 @@ public class ApplyQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("itinerary_id")
         private String itineraryId;
+
+        @com.aliyun.core.annotation.NameInMap("itinerary_no")
+        private String itineraryNo;
 
         @com.aliyun.core.annotation.NameInMap("itinerary_travel_standard")
         private ItineraryTravelStandard itineraryTravelStandard;
@@ -1414,12 +1420,14 @@ public class ApplyQueryResponseBody extends TeaModel {
             this.arrCityCode = builder.arrCityCode;
             this.arrDate = builder.arrDate;
             this.attribute = builder.attribute;
+            this.canOrderTypeList = builder.canOrderTypeList;
             this.costCenterName = builder.costCenterName;
             this.depCity = builder.depCity;
             this.depCityCode = builder.depCityCode;
             this.depDate = builder.depDate;
             this.invoiceName = builder.invoiceName;
             this.itineraryId = builder.itineraryId;
+            this.itineraryNo = builder.itineraryNo;
             this.itineraryTravelStandard = builder.itineraryTravelStandard;
             this.projectCode = builder.projectCode;
             this.projectTitle = builder.projectTitle;
@@ -1467,6 +1475,13 @@ public class ApplyQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return canOrderTypeList
+         */
+        public java.util.List<String> getCanOrderTypeList() {
+            return this.canOrderTypeList;
+        }
+
+        /**
          * @return costCenterName
          */
         public String getCostCenterName() {
@@ -1506,6 +1521,13 @@ public class ApplyQueryResponseBody extends TeaModel {
          */
         public String getItineraryId() {
             return this.itineraryId;
+        }
+
+        /**
+         * @return itineraryNo
+         */
+        public String getItineraryNo() {
+            return this.itineraryNo;
         }
 
         /**
@@ -1569,12 +1591,14 @@ public class ApplyQueryResponseBody extends TeaModel {
             private String arrCityCode; 
             private String arrDate; 
             private String attribute; 
+            private java.util.List<String> canOrderTypeList; 
             private String costCenterName; 
             private String depCity; 
             private String depCityCode; 
             private String depDate; 
             private String invoiceName; 
             private String itineraryId; 
+            private String itineraryNo; 
             private ItineraryTravelStandard itineraryTravelStandard; 
             private String projectCode; 
             private String projectTitle; 
@@ -1592,12 +1616,14 @@ public class ApplyQueryResponseBody extends TeaModel {
                 this.arrCityCode = model.arrCityCode;
                 this.arrDate = model.arrDate;
                 this.attribute = model.attribute;
+                this.canOrderTypeList = model.canOrderTypeList;
                 this.costCenterName = model.costCenterName;
                 this.depCity = model.depCity;
                 this.depCityCode = model.depCityCode;
                 this.depDate = model.depDate;
                 this.invoiceName = model.invoiceName;
                 this.itineraryId = model.itineraryId;
+                this.itineraryNo = model.itineraryNo;
                 this.itineraryTravelStandard = model.itineraryTravelStandard;
                 this.projectCode = model.projectCode;
                 this.projectTitle = model.projectTitle;
@@ -1637,6 +1663,14 @@ public class ApplyQueryResponseBody extends TeaModel {
              */
             public Builder attribute(String attribute) {
                 this.attribute = attribute;
+                return this;
+            }
+
+            /**
+             * can_order_type_list.
+             */
+            public Builder canOrderTypeList(java.util.List<String> canOrderTypeList) {
+                this.canOrderTypeList = canOrderTypeList;
                 return this;
             }
 
@@ -1685,6 +1719,14 @@ public class ApplyQueryResponseBody extends TeaModel {
              */
             public Builder itineraryId(String itineraryId) {
                 this.itineraryId = itineraryId;
+                return this;
+            }
+
+            /**
+             * itinerary_no.
+             */
+            public Builder itineraryNo(String itineraryNo) {
+                this.itineraryNo = itineraryNo;
                 return this;
             }
 
@@ -1826,6 +1868,9 @@ public class ApplyQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("attribute")
         private String attribute;
 
+        @com.aliyun.core.annotation.NameInMap("can_order_type_list")
+        private java.util.List<String> canOrderTypeList;
+
         @com.aliyun.core.annotation.NameInMap("city_code_set")
         private String cityCodeSet;
 
@@ -1843,6 +1888,9 @@ public class ApplyQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("itinerary_id")
         private String itineraryId;
+
+        @com.aliyun.core.annotation.NameInMap("itinerary_no")
+        private String itineraryNo;
 
         @com.aliyun.core.annotation.NameInMap("itinerary_travel_standard")
         private ItinerarySetListItineraryTravelStandard itineraryTravelStandard;
@@ -1868,12 +1916,14 @@ public class ApplyQueryResponseBody extends TeaModel {
         private ItinerarySetList(Builder builder) {
             this.arrDate = builder.arrDate;
             this.attribute = builder.attribute;
+            this.canOrderTypeList = builder.canOrderTypeList;
             this.cityCodeSet = builder.cityCodeSet;
             this.citySet = builder.citySet;
             this.costCenterName = builder.costCenterName;
             this.depDate = builder.depDate;
             this.invoiceName = builder.invoiceName;
             this.itineraryId = builder.itineraryId;
+            this.itineraryNo = builder.itineraryNo;
             this.itineraryTravelStandard = builder.itineraryTravelStandard;
             this.projectCode = builder.projectCode;
             this.projectTitle = builder.projectTitle;
@@ -1903,6 +1953,13 @@ public class ApplyQueryResponseBody extends TeaModel {
          */
         public String getAttribute() {
             return this.attribute;
+        }
+
+        /**
+         * @return canOrderTypeList
+         */
+        public java.util.List<String> getCanOrderTypeList() {
+            return this.canOrderTypeList;
         }
 
         /**
@@ -1945,6 +2002,13 @@ public class ApplyQueryResponseBody extends TeaModel {
          */
         public String getItineraryId() {
             return this.itineraryId;
+        }
+
+        /**
+         * @return itineraryNo
+         */
+        public String getItineraryNo() {
+            return this.itineraryNo;
         }
 
         /**
@@ -1999,12 +2063,14 @@ public class ApplyQueryResponseBody extends TeaModel {
         public static final class Builder {
             private String arrDate; 
             private String attribute; 
+            private java.util.List<String> canOrderTypeList; 
             private String cityCodeSet; 
             private String citySet; 
             private String costCenterName; 
             private String depDate; 
             private String invoiceName; 
             private String itineraryId; 
+            private String itineraryNo; 
             private ItinerarySetListItineraryTravelStandard itineraryTravelStandard; 
             private String projectCode; 
             private String projectTitle; 
@@ -2019,12 +2085,14 @@ public class ApplyQueryResponseBody extends TeaModel {
             private Builder(ItinerarySetList model) {
                 this.arrDate = model.arrDate;
                 this.attribute = model.attribute;
+                this.canOrderTypeList = model.canOrderTypeList;
                 this.cityCodeSet = model.cityCodeSet;
                 this.citySet = model.citySet;
                 this.costCenterName = model.costCenterName;
                 this.depDate = model.depDate;
                 this.invoiceName = model.invoiceName;
                 this.itineraryId = model.itineraryId;
+                this.itineraryNo = model.itineraryNo;
                 this.itineraryTravelStandard = model.itineraryTravelStandard;
                 this.projectCode = model.projectCode;
                 this.projectTitle = model.projectTitle;
@@ -2047,6 +2115,14 @@ public class ApplyQueryResponseBody extends TeaModel {
              */
             public Builder attribute(String attribute) {
                 this.attribute = attribute;
+                return this;
+            }
+
+            /**
+             * can_order_type_list.
+             */
+            public Builder canOrderTypeList(java.util.List<String> canOrderTypeList) {
+                this.canOrderTypeList = canOrderTypeList;
                 return this;
             }
 
@@ -2095,6 +2171,14 @@ public class ApplyQueryResponseBody extends TeaModel {
              */
             public Builder itineraryId(String itineraryId) {
                 this.itineraryId = itineraryId;
+                return this;
+            }
+
+            /**
+             * itinerary_no.
+             */
+            public Builder itineraryNo(String itineraryNo) {
+                this.itineraryNo = itineraryNo;
                 return this;
             }
 
@@ -3122,6 +3206,9 @@ public class ApplyQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("itinerary_set_list")
         private java.util.List<ItinerarySetList> itinerarySetList;
 
+        @com.aliyun.core.annotation.NameInMap("job_no")
+        private String jobNo;
+
         @com.aliyun.core.annotation.NameInMap("limit_traveler")
         private Integer limitTraveler;
 
@@ -3202,6 +3289,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             this.itineraryList = builder.itineraryList;
             this.itineraryRule = builder.itineraryRule;
             this.itinerarySetList = builder.itinerarySetList;
+            this.jobNo = builder.jobNo;
             this.limitTraveler = builder.limitTraveler;
             this.mealBudget = builder.mealBudget;
             this.paymentDepartmentId = builder.paymentDepartmentId;
@@ -3386,6 +3474,13 @@ public class ApplyQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return jobNo
+         */
+        public String getJobNo() {
+            return this.jobNo;
+        }
+
+        /**
          * @return limitTraveler
          */
         public Integer getLimitTraveler() {
@@ -3541,6 +3636,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             private java.util.List<ItineraryList> itineraryList; 
             private Integer itineraryRule; 
             private java.util.List<ItinerarySetList> itinerarySetList; 
+            private String jobNo; 
             private Integer limitTraveler; 
             private Long mealBudget; 
             private String paymentDepartmentId; 
@@ -3587,6 +3683,7 @@ public class ApplyQueryResponseBody extends TeaModel {
                 this.itineraryList = model.itineraryList;
                 this.itineraryRule = model.itineraryRule;
                 this.itinerarySetList = model.itinerarySetList;
+                this.jobNo = model.jobNo;
                 this.limitTraveler = model.limitTraveler;
                 this.mealBudget = model.mealBudget;
                 this.paymentDepartmentId = model.paymentDepartmentId;
@@ -3784,6 +3881,14 @@ public class ApplyQueryResponseBody extends TeaModel {
              */
             public Builder itinerarySetList(java.util.List<ItinerarySetList> itinerarySetList) {
                 this.itinerarySetList = itinerarySetList;
+                return this;
+            }
+
+            /**
+             * job_no.
+             */
+            public Builder jobNo(String jobNo) {
+                this.jobNo = jobNo;
                 return this;
             }
 

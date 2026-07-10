@@ -12,13 +12,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link TripBusinessInstanceQueryResponseBody} extends {@link TeaModel}
+ * {@link AddProjectManagerResponseBody} extends {@link TeaModel}
  *
- * <p>TripBusinessInstanceQueryResponseBody</p>
+ * <p>AddProjectManagerResponseBody</p>
  */
-public class TripBusinessInstanceQueryResponseBody extends TeaModel {
+public class AddProjectManagerResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("code")
     private String code;
+
+    @com.aliyun.core.annotation.NameInMap("httpStatusCode")
+    private Integer httpStatusCode;
 
     @com.aliyun.core.annotation.NameInMap("message")
     private String message;
@@ -35,8 +38,9 @@ public class TripBusinessInstanceQueryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
-    private TripBusinessInstanceQueryResponseBody(Builder builder) {
+    private AddProjectManagerResponseBody(Builder builder) {
         this.code = builder.code;
+        this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
         this.module = builder.module;
         this.requestId = builder.requestId;
@@ -48,7 +52,7 @@ public class TripBusinessInstanceQueryResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static TripBusinessInstanceQueryResponseBody create() {
+    public static AddProjectManagerResponseBody create() {
         return builder().build();
     }
 
@@ -61,6 +65,13 @@ public class TripBusinessInstanceQueryResponseBody extends TeaModel {
      */
     public String getCode() {
         return this.code;
+    }
+
+    /**
+     * @return httpStatusCode
+     */
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     /**
@@ -100,6 +111,7 @@ public class TripBusinessInstanceQueryResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
+        private Integer httpStatusCode; 
         private String message; 
         private Module module; 
         private String requestId; 
@@ -109,8 +121,9 @@ public class TripBusinessInstanceQueryResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(TripBusinessInstanceQueryResponseBody model) {
+        private Builder(AddProjectManagerResponseBody model) {
             this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
             this.message = model.message;
             this.module = model.module;
             this.requestId = model.requestId;
@@ -127,6 +140,14 @@ public class TripBusinessInstanceQueryResponseBody extends TeaModel {
         }
 
         /**
+         * httpStatusCode.
+         */
+        public Builder httpStatusCode(Integer httpStatusCode) {
+            this.httpStatusCode = httpStatusCode;
+            return this;
+        }
+
+        /**
          * message.
          */
         public Builder message(String message) {
@@ -135,7 +156,7 @@ public class TripBusinessInstanceQueryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>module。</p>
+         * module.
          */
         public Builder module(Module module) {
             this.module = module;
@@ -159,54 +180,39 @@ public class TripBusinessInstanceQueryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>traceId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>210bc44416869853114684533da3c2</p>
+         * traceId.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
             return this;
         }
 
-        public TripBusinessInstanceQueryResponseBody build() {
-            return new TripBusinessInstanceQueryResponseBody(this);
+        public AddProjectManagerResponseBody build() {
+            return new AddProjectManagerResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link TripBusinessInstanceQueryResponseBody} extends {@link TeaModel}
+     * {@link AddProjectManagerResponseBody} extends {@link TeaModel}
      *
-     * <p>TripBusinessInstanceQueryResponseBody</p>
+     * <p>AddProjectManagerResponseBody</p>
      */
     public static class Module extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("business_data")
-        private String businessData;
+        @com.aliyun.core.annotation.NameInMap("add_num")
+        private Integer addNum;
 
-        @com.aliyun.core.annotation.NameInMap("business_form_data")
-        private String businessFormData;
+        @com.aliyun.core.annotation.NameInMap("remove_num")
+        private Integer removeNum;
 
-        @com.aliyun.core.annotation.NameInMap("creator")
-        private String creator;
-
-        @com.aliyun.core.annotation.NameInMap("gmt_create")
-        private Long gmtCreate;
-
-        @com.aliyun.core.annotation.NameInMap("gmt_modified")
-        private Long gmtModified;
-
-        @com.aliyun.core.annotation.NameInMap("status")
-        private String status;
+        @com.aliyun.core.annotation.NameInMap("rule_code")
+        private Long ruleCode;
 
         private Module(Builder builder) {
-            this.businessData = builder.businessData;
-            this.businessFormData = builder.businessFormData;
-            this.creator = builder.creator;
-            this.gmtCreate = builder.gmtCreate;
-            this.gmtModified = builder.gmtModified;
-            this.status = builder.status;
+            this.addNum = builder.addNum;
+            this.removeNum = builder.removeNum;
+            this.ruleCode = builder.ruleCode;
         }
 
         public static Builder builder() {
@@ -218,112 +224,61 @@ public class TripBusinessInstanceQueryResponseBody extends TeaModel {
         }
 
         /**
-         * @return businessData
+         * @return addNum
          */
-        public String getBusinessData() {
-            return this.businessData;
+        public Integer getAddNum() {
+            return this.addNum;
         }
 
         /**
-         * @return businessFormData
+         * @return removeNum
          */
-        public String getBusinessFormData() {
-            return this.businessFormData;
+        public Integer getRemoveNum() {
+            return this.removeNum;
         }
 
         /**
-         * @return creator
+         * @return ruleCode
          */
-        public String getCreator() {
-            return this.creator;
-        }
-
-        /**
-         * @return gmtCreate
-         */
-        public Long getGmtCreate() {
-            return this.gmtCreate;
-        }
-
-        /**
-         * @return gmtModified
-         */
-        public Long getGmtModified() {
-            return this.gmtModified;
-        }
-
-        /**
-         * @return status
-         */
-        public String getStatus() {
-            return this.status;
+        public Long getRuleCode() {
+            return this.ruleCode;
         }
 
         public static final class Builder {
-            private String businessData; 
-            private String businessFormData; 
-            private String creator; 
-            private Long gmtCreate; 
-            private Long gmtModified; 
-            private String status; 
+            private Integer addNum; 
+            private Integer removeNum; 
+            private Long ruleCode; 
 
             private Builder() {
             } 
 
             private Builder(Module model) {
-                this.businessData = model.businessData;
-                this.businessFormData = model.businessFormData;
-                this.creator = model.creator;
-                this.gmtCreate = model.gmtCreate;
-                this.gmtModified = model.gmtModified;
-                this.status = model.status;
+                this.addNum = model.addNum;
+                this.removeNum = model.removeNum;
+                this.ruleCode = model.ruleCode;
             } 
 
             /**
-             * business_data.
+             * add_num.
              */
-            public Builder businessData(String businessData) {
-                this.businessData = businessData;
+            public Builder addNum(Integer addNum) {
+                this.addNum = addNum;
                 return this;
             }
 
             /**
-             * business_form_data.
+             * remove_num.
              */
-            public Builder businessFormData(String businessFormData) {
-                this.businessFormData = businessFormData;
+            public Builder removeNum(Integer removeNum) {
+                this.removeNum = removeNum;
                 return this;
             }
 
             /**
-             * creator.
+             * rule_code.
              */
-            public Builder creator(String creator) {
-                this.creator = creator;
-                return this;
-            }
-
-            /**
-             * gmt_create.
-             */
-            public Builder gmtCreate(Long gmtCreate) {
-                this.gmtCreate = gmtCreate;
-                return this;
-            }
-
-            /**
-             * gmt_modified.
-             */
-            public Builder gmtModified(Long gmtModified) {
-                this.gmtModified = gmtModified;
-                return this;
-            }
-
-            /**
-             * status.
-             */
-            public Builder status(String status) {
-                this.status = status;
+            public Builder ruleCode(Long ruleCode) {
+                this.ruleCode = ruleCode;
                 return this;
             }
 

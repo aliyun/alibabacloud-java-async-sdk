@@ -3872,6 +3872,1326 @@ public class ApplyAddRequest extends Request {
      *
      * <p>ApplyAddRequest</p>
      */
+    public static class BookAllowInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("book_allow")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private Boolean bookAllow;
+
+        private BookAllowInfo(Builder builder) {
+            this.bookAllow = builder.bookAllow;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BookAllowInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bookAllow
+         */
+        public Boolean getBookAllow() {
+            return this.bookAllow;
+        }
+
+        public static final class Builder {
+            private Boolean bookAllow; 
+
+            private Builder() {
+            } 
+
+            private Builder(BookAllowInfo model) {
+                this.bookAllow = model.bookAllow;
+            } 
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder bookAllow(Boolean bookAllow) {
+                this.bookAllow = bookAllow;
+                return this;
+            }
+
+            public BookAllowInfo build() {
+                return new BookAllowInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyAddRequest</p>
+     */
+    public static class CarHelper extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("car_helper_type")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String carHelperType;
+
+        private CarHelper(Builder builder) {
+            this.carHelperType = builder.carHelperType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CarHelper create() {
+            return builder().build();
+        }
+
+        /**
+         * @return carHelperType
+         */
+        public String getCarHelperType() {
+            return this.carHelperType;
+        }
+
+        public static final class Builder {
+            private String carHelperType; 
+
+            private Builder() {
+            } 
+
+            private Builder(CarHelper model) {
+                this.carHelperType = model.carHelperType;
+            } 
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder carHelperType(String carHelperType) {
+                this.carHelperType = carHelperType;
+                return this;
+            }
+
+            public CarHelper build() {
+                return new CarHelper(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyAddRequest</p>
+     */
+    public static class TimeLimit extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("end_time")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String endTime;
+
+        @com.aliyun.core.annotation.NameInMap("start_time")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String startTime;
+
+        private TimeLimit(Builder builder) {
+            this.endTime = builder.endTime;
+            this.startTime = builder.startTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TimeLimit create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endTime
+         */
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public static final class Builder {
+            private String endTime; 
+            private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(TimeLimit model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder endTime(String endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            public TimeLimit build() {
+                return new TimeLimit(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyAddRequest</p>
+     */
+    public static class CarTimeControl extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("time_limit")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<TimeLimit> timeLimit;
+
+        @com.aliyun.core.annotation.NameInMap("time_switch")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private Boolean timeSwitch;
+
+        private CarTimeControl(Builder builder) {
+            this.timeLimit = builder.timeLimit;
+            this.timeSwitch = builder.timeSwitch;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CarTimeControl create() {
+            return builder().build();
+        }
+
+        /**
+         * @return timeLimit
+         */
+        public java.util.List<TimeLimit> getTimeLimit() {
+            return this.timeLimit;
+        }
+
+        /**
+         * @return timeSwitch
+         */
+        public Boolean getTimeSwitch() {
+            return this.timeSwitch;
+        }
+
+        public static final class Builder {
+            private java.util.List<TimeLimit> timeLimit; 
+            private Boolean timeSwitch; 
+
+            private Builder() {
+            } 
+
+            private Builder(CarTimeControl model) {
+                this.timeLimit = model.timeLimit;
+                this.timeSwitch = model.timeSwitch;
+            } 
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder timeLimit(java.util.List<TimeLimit> timeLimit) {
+                this.timeLimit = timeLimit;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder timeSwitch(Boolean timeSwitch) {
+                this.timeSwitch = timeSwitch;
+                return this;
+            }
+
+            public CarTimeControl build() {
+                return new CarTimeControl(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyAddRequest</p>
+     */
+    public static class CityInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("adcode")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String adcode;
+
+        @com.aliyun.core.annotation.NameInMap("city_code")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String cityCode;
+
+        @com.aliyun.core.annotation.NameInMap("city_name")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String cityName;
+
+        private CityInfos(Builder builder) {
+            this.adcode = builder.adcode;
+            this.cityCode = builder.cityCode;
+            this.cityName = builder.cityName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CityInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return adcode
+         */
+        public String getAdcode() {
+            return this.adcode;
+        }
+
+        /**
+         * @return cityCode
+         */
+        public String getCityCode() {
+            return this.cityCode;
+        }
+
+        /**
+         * @return cityName
+         */
+        public String getCityName() {
+            return this.cityName;
+        }
+
+        public static final class Builder {
+            private String adcode; 
+            private String cityCode; 
+            private String cityName; 
+
+            private Builder() {
+            } 
+
+            private Builder(CityInfos model) {
+                this.adcode = model.adcode;
+                this.cityCode = model.cityCode;
+                this.cityName = model.cityName;
+            } 
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder adcode(String adcode) {
+                this.adcode = adcode;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder cityCode(String cityCode) {
+                this.cityCode = cityCode;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder cityName(String cityName) {
+                this.cityName = cityName;
+                return this;
+            }
+
+            public CityInfos build() {
+                return new CityInfos(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyAddRequest</p>
+     */
+    public static class CityControlInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("city_control_type")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private Integer cityControlType;
+
+        @com.aliyun.core.annotation.NameInMap("city_infos")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<CityInfos> cityInfos;
+
+        private CityControlInfo(Builder builder) {
+            this.cityControlType = builder.cityControlType;
+            this.cityInfos = builder.cityInfos;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CityControlInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cityControlType
+         */
+        public Integer getCityControlType() {
+            return this.cityControlType;
+        }
+
+        /**
+         * @return cityInfos
+         */
+        public java.util.List<CityInfos> getCityInfos() {
+            return this.cityInfos;
+        }
+
+        public static final class Builder {
+            private Integer cityControlType; 
+            private java.util.List<CityInfos> cityInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(CityControlInfo model) {
+                this.cityControlType = model.cityControlType;
+                this.cityInfos = model.cityInfos;
+            } 
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder cityControlType(Integer cityControlType) {
+                this.cityControlType = cityControlType;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder cityInfos(java.util.List<CityInfos> cityInfos) {
+                this.cityInfos = cityInfos;
+                return this;
+            }
+
+            public CityControlInfo build() {
+                return new CityControlInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyAddRequest</p>
+     */
+    public static class CrossCityList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("from_adcode")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String fromAdcode;
+
+        @com.aliyun.core.annotation.NameInMap("from_city_code")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String fromCityCode;
+
+        @com.aliyun.core.annotation.NameInMap("from_city_name")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String fromCityName;
+
+        @com.aliyun.core.annotation.NameInMap("to_adcode")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String toAdcode;
+
+        @com.aliyun.core.annotation.NameInMap("to_city_code")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String toCityCode;
+
+        @com.aliyun.core.annotation.NameInMap("to_city_name")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String toCityName;
+
+        private CrossCityList(Builder builder) {
+            this.fromAdcode = builder.fromAdcode;
+            this.fromCityCode = builder.fromCityCode;
+            this.fromCityName = builder.fromCityName;
+            this.toAdcode = builder.toAdcode;
+            this.toCityCode = builder.toCityCode;
+            this.toCityName = builder.toCityName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CrossCityList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fromAdcode
+         */
+        public String getFromAdcode() {
+            return this.fromAdcode;
+        }
+
+        /**
+         * @return fromCityCode
+         */
+        public String getFromCityCode() {
+            return this.fromCityCode;
+        }
+
+        /**
+         * @return fromCityName
+         */
+        public String getFromCityName() {
+            return this.fromCityName;
+        }
+
+        /**
+         * @return toAdcode
+         */
+        public String getToAdcode() {
+            return this.toAdcode;
+        }
+
+        /**
+         * @return toCityCode
+         */
+        public String getToCityCode() {
+            return this.toCityCode;
+        }
+
+        /**
+         * @return toCityName
+         */
+        public String getToCityName() {
+            return this.toCityName;
+        }
+
+        public static final class Builder {
+            private String fromAdcode; 
+            private String fromCityCode; 
+            private String fromCityName; 
+            private String toAdcode; 
+            private String toCityCode; 
+            private String toCityName; 
+
+            private Builder() {
+            } 
+
+            private Builder(CrossCityList model) {
+                this.fromAdcode = model.fromAdcode;
+                this.fromCityCode = model.fromCityCode;
+                this.fromCityName = model.fromCityName;
+                this.toAdcode = model.toAdcode;
+                this.toCityCode = model.toCityCode;
+                this.toCityName = model.toCityName;
+            } 
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder fromAdcode(String fromAdcode) {
+                this.fromAdcode = fromAdcode;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder fromCityCode(String fromCityCode) {
+                this.fromCityCode = fromCityCode;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder fromCityName(String fromCityName) {
+                this.fromCityName = fromCityName;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder toAdcode(String toAdcode) {
+                this.toAdcode = toAdcode;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder toCityCode(String toCityCode) {
+                this.toCityCode = toCityCode;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder toCityName(String toCityName) {
+                this.toCityName = toCityName;
+                return this;
+            }
+
+            public CrossCityList build() {
+                return new CrossCityList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyAddRequest</p>
+     */
+    public static class CrossCityInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("cross_city_list")
+        private java.util.List<CrossCityList> crossCityList;
+
+        @com.aliyun.core.annotation.NameInMap("cross_city_type")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private Integer crossCityType;
+
+        private CrossCityInfo(Builder builder) {
+            this.crossCityList = builder.crossCityList;
+            this.crossCityType = builder.crossCityType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CrossCityInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return crossCityList
+         */
+        public java.util.List<CrossCityList> getCrossCityList() {
+            return this.crossCityList;
+        }
+
+        /**
+         * @return crossCityType
+         */
+        public Integer getCrossCityType() {
+            return this.crossCityType;
+        }
+
+        public static final class Builder {
+            private java.util.List<CrossCityList> crossCityList; 
+            private Integer crossCityType; 
+
+            private Builder() {
+            } 
+
+            private Builder(CrossCityInfo model) {
+                this.crossCityList = model.crossCityList;
+                this.crossCityType = model.crossCityType;
+            } 
+
+            /**
+             * cross_city_list.
+             */
+            public Builder crossCityList(java.util.List<CrossCityList> crossCityList) {
+                this.crossCityList = crossCityList;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder crossCityType(Integer crossCityType) {
+                this.crossCityType = crossCityType;
+                return this;
+            }
+
+            public CrossCityInfo build() {
+                return new CrossCityInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyAddRequest</p>
+     */
+    public static class ElectronicFenceLocationsFrom extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("address")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String address;
+
+        @com.aliyun.core.annotation.NameInMap("latitude")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String latitude;
+
+        @com.aliyun.core.annotation.NameInMap("longitude")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String longitude;
+
+        @com.aliyun.core.annotation.NameInMap("radius")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private Integer radius;
+
+        private ElectronicFenceLocationsFrom(Builder builder) {
+            this.address = builder.address;
+            this.latitude = builder.latitude;
+            this.longitude = builder.longitude;
+            this.radius = builder.radius;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ElectronicFenceLocationsFrom create() {
+            return builder().build();
+        }
+
+        /**
+         * @return address
+         */
+        public String getAddress() {
+            return this.address;
+        }
+
+        /**
+         * @return latitude
+         */
+        public String getLatitude() {
+            return this.latitude;
+        }
+
+        /**
+         * @return longitude
+         */
+        public String getLongitude() {
+            return this.longitude;
+        }
+
+        /**
+         * @return radius
+         */
+        public Integer getRadius() {
+            return this.radius;
+        }
+
+        public static final class Builder {
+            private String address; 
+            private String latitude; 
+            private String longitude; 
+            private Integer radius; 
+
+            private Builder() {
+            } 
+
+            private Builder(ElectronicFenceLocationsFrom model) {
+                this.address = model.address;
+                this.latitude = model.latitude;
+                this.longitude = model.longitude;
+                this.radius = model.radius;
+            } 
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder address(String address) {
+                this.address = address;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder latitude(String latitude) {
+                this.latitude = latitude;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder longitude(String longitude) {
+                this.longitude = longitude;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder radius(Integer radius) {
+                this.radius = radius;
+                return this;
+            }
+
+            public ElectronicFenceLocationsFrom build() {
+                return new ElectronicFenceLocationsFrom(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyAddRequest</p>
+     */
+    public static class ElectronicFenceLocationsTo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("address")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String address;
+
+        @com.aliyun.core.annotation.NameInMap("latitude")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String latitude;
+
+        @com.aliyun.core.annotation.NameInMap("longitude")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String longitude;
+
+        @com.aliyun.core.annotation.NameInMap("radius")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private Integer radius;
+
+        private ElectronicFenceLocationsTo(Builder builder) {
+            this.address = builder.address;
+            this.latitude = builder.latitude;
+            this.longitude = builder.longitude;
+            this.radius = builder.radius;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ElectronicFenceLocationsTo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return address
+         */
+        public String getAddress() {
+            return this.address;
+        }
+
+        /**
+         * @return latitude
+         */
+        public String getLatitude() {
+            return this.latitude;
+        }
+
+        /**
+         * @return longitude
+         */
+        public String getLongitude() {
+            return this.longitude;
+        }
+
+        /**
+         * @return radius
+         */
+        public Integer getRadius() {
+            return this.radius;
+        }
+
+        public static final class Builder {
+            private String address; 
+            private String latitude; 
+            private String longitude; 
+            private Integer radius; 
+
+            private Builder() {
+            } 
+
+            private Builder(ElectronicFenceLocationsTo model) {
+                this.address = model.address;
+                this.latitude = model.latitude;
+                this.longitude = model.longitude;
+                this.radius = model.radius;
+            } 
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder address(String address) {
+                this.address = address;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder latitude(String latitude) {
+                this.latitude = latitude;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder longitude(String longitude) {
+                this.longitude = longitude;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder radius(Integer radius) {
+                this.radius = radius;
+                return this;
+            }
+
+            public ElectronicFenceLocationsTo build() {
+                return new ElectronicFenceLocationsTo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyAddRequest</p>
+     */
+    public static class ElectronicFenceInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("electronic_fence_locations_from")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<ElectronicFenceLocationsFrom> electronicFenceLocationsFrom;
+
+        @com.aliyun.core.annotation.NameInMap("electronic_fence_locations_to")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<ElectronicFenceLocationsTo> electronicFenceLocationsTo;
+
+        @com.aliyun.core.annotation.NameInMap("electronic_fence_type")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private Integer electronicFenceType;
+
+        private ElectronicFenceInfo(Builder builder) {
+            this.electronicFenceLocationsFrom = builder.electronicFenceLocationsFrom;
+            this.electronicFenceLocationsTo = builder.electronicFenceLocationsTo;
+            this.electronicFenceType = builder.electronicFenceType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ElectronicFenceInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return electronicFenceLocationsFrom
+         */
+        public java.util.List<ElectronicFenceLocationsFrom> getElectronicFenceLocationsFrom() {
+            return this.electronicFenceLocationsFrom;
+        }
+
+        /**
+         * @return electronicFenceLocationsTo
+         */
+        public java.util.List<ElectronicFenceLocationsTo> getElectronicFenceLocationsTo() {
+            return this.electronicFenceLocationsTo;
+        }
+
+        /**
+         * @return electronicFenceType
+         */
+        public Integer getElectronicFenceType() {
+            return this.electronicFenceType;
+        }
+
+        public static final class Builder {
+            private java.util.List<ElectronicFenceLocationsFrom> electronicFenceLocationsFrom; 
+            private java.util.List<ElectronicFenceLocationsTo> electronicFenceLocationsTo; 
+            private Integer electronicFenceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ElectronicFenceInfo model) {
+                this.electronicFenceLocationsFrom = model.electronicFenceLocationsFrom;
+                this.electronicFenceLocationsTo = model.electronicFenceLocationsTo;
+                this.electronicFenceType = model.electronicFenceType;
+            } 
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder electronicFenceLocationsFrom(java.util.List<ElectronicFenceLocationsFrom> electronicFenceLocationsFrom) {
+                this.electronicFenceLocationsFrom = electronicFenceLocationsFrom;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder electronicFenceLocationsTo(java.util.List<ElectronicFenceLocationsTo> electronicFenceLocationsTo) {
+                this.electronicFenceLocationsTo = electronicFenceLocationsTo;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder electronicFenceType(Integer electronicFenceType) {
+                this.electronicFenceType = electronicFenceType;
+                return this;
+            }
+
+            public ElectronicFenceInfo build() {
+                return new ElectronicFenceInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyAddRequest</p>
+     */
+    public static class ModifyDestinationInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("modify_destination")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private Boolean modifyDestination;
+
+        private ModifyDestinationInfo(Builder builder) {
+            this.modifyDestination = builder.modifyDestination;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ModifyDestinationInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return modifyDestination
+         */
+        public Boolean getModifyDestination() {
+            return this.modifyDestination;
+        }
+
+        public static final class Builder {
+            private Boolean modifyDestination; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModifyDestinationInfo model) {
+                this.modifyDestination = model.modifyDestination;
+            } 
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder modifyDestination(Boolean modifyDestination) {
+                this.modifyDestination = modifyDestination;
+                return this;
+            }
+
+            public ModifyDestinationInfo build() {
+                return new ModifyDestinationInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyAddRequest</p>
+     */
+    public static class CarStandard extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("book_allow_info")
+        private BookAllowInfo bookAllowInfo;
+
+        @com.aliyun.core.annotation.NameInMap("car_helper")
+        private CarHelper carHelper;
+
+        @com.aliyun.core.annotation.NameInMap("car_time_control")
+        private CarTimeControl carTimeControl;
+
+        @com.aliyun.core.annotation.NameInMap("city_control_info")
+        private CityControlInfo cityControlInfo;
+
+        @com.aliyun.core.annotation.NameInMap("cross_city_info")
+        private CrossCityInfo crossCityInfo;
+
+        @com.aliyun.core.annotation.NameInMap("electronic_fence_info")
+        private ElectronicFenceInfo electronicFenceInfo;
+
+        @com.aliyun.core.annotation.NameInMap("level_codes")
+        private String levelCodes;
+
+        @com.aliyun.core.annotation.NameInMap("modify_destination_info")
+        private ModifyDestinationInfo modifyDestinationInfo;
+
+        @com.aliyun.core.annotation.NameInMap("times_total")
+        private Integer timesTotal;
+
+        @com.aliyun.core.annotation.NameInMap("times_type")
+        private Integer timesType;
+
+        private CarStandard(Builder builder) {
+            this.bookAllowInfo = builder.bookAllowInfo;
+            this.carHelper = builder.carHelper;
+            this.carTimeControl = builder.carTimeControl;
+            this.cityControlInfo = builder.cityControlInfo;
+            this.crossCityInfo = builder.crossCityInfo;
+            this.electronicFenceInfo = builder.electronicFenceInfo;
+            this.levelCodes = builder.levelCodes;
+            this.modifyDestinationInfo = builder.modifyDestinationInfo;
+            this.timesTotal = builder.timesTotal;
+            this.timesType = builder.timesType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CarStandard create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bookAllowInfo
+         */
+        public BookAllowInfo getBookAllowInfo() {
+            return this.bookAllowInfo;
+        }
+
+        /**
+         * @return carHelper
+         */
+        public CarHelper getCarHelper() {
+            return this.carHelper;
+        }
+
+        /**
+         * @return carTimeControl
+         */
+        public CarTimeControl getCarTimeControl() {
+            return this.carTimeControl;
+        }
+
+        /**
+         * @return cityControlInfo
+         */
+        public CityControlInfo getCityControlInfo() {
+            return this.cityControlInfo;
+        }
+
+        /**
+         * @return crossCityInfo
+         */
+        public CrossCityInfo getCrossCityInfo() {
+            return this.crossCityInfo;
+        }
+
+        /**
+         * @return electronicFenceInfo
+         */
+        public ElectronicFenceInfo getElectronicFenceInfo() {
+            return this.electronicFenceInfo;
+        }
+
+        /**
+         * @return levelCodes
+         */
+        public String getLevelCodes() {
+            return this.levelCodes;
+        }
+
+        /**
+         * @return modifyDestinationInfo
+         */
+        public ModifyDestinationInfo getModifyDestinationInfo() {
+            return this.modifyDestinationInfo;
+        }
+
+        /**
+         * @return timesTotal
+         */
+        public Integer getTimesTotal() {
+            return this.timesTotal;
+        }
+
+        /**
+         * @return timesType
+         */
+        public Integer getTimesType() {
+            return this.timesType;
+        }
+
+        public static final class Builder {
+            private BookAllowInfo bookAllowInfo; 
+            private CarHelper carHelper; 
+            private CarTimeControl carTimeControl; 
+            private CityControlInfo cityControlInfo; 
+            private CrossCityInfo crossCityInfo; 
+            private ElectronicFenceInfo electronicFenceInfo; 
+            private String levelCodes; 
+            private ModifyDestinationInfo modifyDestinationInfo; 
+            private Integer timesTotal; 
+            private Integer timesType; 
+
+            private Builder() {
+            } 
+
+            private Builder(CarStandard model) {
+                this.bookAllowInfo = model.bookAllowInfo;
+                this.carHelper = model.carHelper;
+                this.carTimeControl = model.carTimeControl;
+                this.cityControlInfo = model.cityControlInfo;
+                this.crossCityInfo = model.crossCityInfo;
+                this.electronicFenceInfo = model.electronicFenceInfo;
+                this.levelCodes = model.levelCodes;
+                this.modifyDestinationInfo = model.modifyDestinationInfo;
+                this.timesTotal = model.timesTotal;
+                this.timesType = model.timesType;
+            } 
+
+            /**
+             * book_allow_info.
+             */
+            public Builder bookAllowInfo(BookAllowInfo bookAllowInfo) {
+                this.bookAllowInfo = bookAllowInfo;
+                return this;
+            }
+
+            /**
+             * car_helper.
+             */
+            public Builder carHelper(CarHelper carHelper) {
+                this.carHelper = carHelper;
+                return this;
+            }
+
+            /**
+             * car_time_control.
+             */
+            public Builder carTimeControl(CarTimeControl carTimeControl) {
+                this.carTimeControl = carTimeControl;
+                return this;
+            }
+
+            /**
+             * city_control_info.
+             */
+            public Builder cityControlInfo(CityControlInfo cityControlInfo) {
+                this.cityControlInfo = cityControlInfo;
+                return this;
+            }
+
+            /**
+             * cross_city_info.
+             */
+            public Builder crossCityInfo(CrossCityInfo crossCityInfo) {
+                this.crossCityInfo = crossCityInfo;
+                return this;
+            }
+
+            /**
+             * electronic_fence_info.
+             */
+            public Builder electronicFenceInfo(ElectronicFenceInfo electronicFenceInfo) {
+                this.electronicFenceInfo = electronicFenceInfo;
+                return this;
+            }
+
+            /**
+             * level_codes.
+             */
+            public Builder levelCodes(String levelCodes) {
+                this.levelCodes = levelCodes;
+                return this;
+            }
+
+            /**
+             * modify_destination_info.
+             */
+            public Builder modifyDestinationInfo(ModifyDestinationInfo modifyDestinationInfo) {
+                this.modifyDestinationInfo = modifyDestinationInfo;
+                return this;
+            }
+
+            /**
+             * times_total.
+             */
+            public Builder timesTotal(Integer timesTotal) {
+                this.timesTotal = timesTotal;
+                return this;
+            }
+
+            /**
+             * times_type.
+             */
+            public Builder timesType(Integer timesType) {
+                this.timesType = timesType;
+                return this;
+            }
+
+            public CarStandard build() {
+                return new CarStandard(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ApplyAddRequest} extends {@link TeaModel}
+     *
+     * <p>ApplyAddRequest</p>
+     */
     public static class TravelerStandardHotelCitys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
@@ -4071,6 +5391,9 @@ public class ApplyAddRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("car_city_set")
         private java.util.List<CarCitySet> carCitySet;
 
+        @com.aliyun.core.annotation.NameInMap("car_standard")
+        private CarStandard carStandard;
+
         @com.aliyun.core.annotation.NameInMap("economy_discount")
         private Integer economyDiscount;
 
@@ -4119,6 +5442,7 @@ public class ApplyAddRequest extends Request {
         private TravelerStandard(Builder builder) {
             this.businessDiscount = builder.businessDiscount;
             this.carCitySet = builder.carCitySet;
+            this.carStandard = builder.carStandard;
             this.economyDiscount = builder.economyDiscount;
             this.firstDiscount = builder.firstDiscount;
             this.flightCabins = builder.flightCabins;
@@ -4156,6 +5480,13 @@ public class ApplyAddRequest extends Request {
          */
         public java.util.List<CarCitySet> getCarCitySet() {
             return this.carCitySet;
+        }
+
+        /**
+         * @return carStandard
+         */
+        public CarStandard getCarStandard() {
+            return this.carStandard;
         }
 
         /**
@@ -4266,6 +5597,7 @@ public class ApplyAddRequest extends Request {
         public static final class Builder {
             private Integer businessDiscount; 
             private java.util.List<CarCitySet> carCitySet; 
+            private CarStandard carStandard; 
             private Integer economyDiscount; 
             private Integer firstDiscount; 
             private String flightCabins; 
@@ -4288,6 +5620,7 @@ public class ApplyAddRequest extends Request {
             private Builder(TravelerStandard model) {
                 this.businessDiscount = model.businessDiscount;
                 this.carCitySet = model.carCitySet;
+                this.carStandard = model.carStandard;
                 this.economyDiscount = model.economyDiscount;
                 this.firstDiscount = model.firstDiscount;
                 this.flightCabins = model.flightCabins;
@@ -4318,6 +5651,14 @@ public class ApplyAddRequest extends Request {
              */
             public Builder carCitySet(java.util.List<CarCitySet> carCitySet) {
                 this.carCitySet = carCitySet;
+                return this;
+            }
+
+            /**
+             * car_standard.
+             */
+            public Builder carStandard(CarStandard carStandard) {
+                this.carStandard = carStandard;
                 return this;
             }
 

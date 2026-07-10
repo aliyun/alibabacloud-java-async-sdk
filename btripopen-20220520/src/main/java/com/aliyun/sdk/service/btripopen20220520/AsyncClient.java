@@ -50,6 +50,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddInvoiceEntityResponse> addInvoiceEntity(AddInvoiceEntityRequest request);
 
     /**
+     * @param request the request parameters of AddProjectManager  AddProjectManagerRequest
+     * @return AddProjectManagerResponse
+     */
+    CompletableFuture<AddProjectManagerResponse> addProjectManager(AddProjectManagerRequest request);
+
+    /**
      * @param request the request parameters of AddressGet  AddressGetRequest
      * @return AddressGetResponse
      */
@@ -122,6 +128,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BaseCityInfoSearchResponse> baseCityInfoSearch(BaseCityInfoSearchRequest request);
 
     /**
+     * @param request the request parameters of BatchQueryDepartment  BatchQueryDepartmentRequest
+     * @return BatchQueryDepartmentResponse
+     */
+    CompletableFuture<BatchQueryDepartmentResponse> batchQueryDepartment(BatchQueryDepartmentRequest request);
+
+    /**
+     * @param request the request parameters of BatchSubmitPreBill  BatchSubmitPreBillRequest
+     * @return BatchSubmitPreBillResponse
+     */
+    CompletableFuture<BatchSubmitPreBillResponse> batchSubmitPreBill(BatchSubmitPreBillRequest request);
+
+    /**
      * @param request the request parameters of BtripBillInfoAdjust  BtripBillInfoAdjustRequest
      * @return BtripBillInfoAdjustResponse
      */
@@ -192,6 +210,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CommonApplySyncResponse
      */
     CompletableFuture<CommonApplySyncResponse> commonApplySync(CommonApplySyncRequest request);
+
+    /**
+     * @param request the request parameters of ConfirmPreBill  ConfirmPreBillRequest
+     * @return ConfirmPreBillResponse
+     */
+    CompletableFuture<ConfirmPreBillResponse> confirmPreBill(ConfirmPreBillRequest request);
 
     /**
      * @param request the request parameters of CooperatorFlightBillSettlementQuery  CooperatorFlightBillSettlementQueryRequest
@@ -962,6 +986,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<MealApplyApproveResponse> mealApplyApprove(MealApplyApproveRequest request);
 
     /**
+     * @param request the request parameters of MealApplyModify  MealApplyModifyRequest
+     * @return MealApplyModifyResponse
+     */
+    CompletableFuture<MealApplyModifyResponse> mealApplyModify(MealApplyModifyRequest request);
+
+    /**
      * @param request the request parameters of MealApplyQuery  MealApplyQueryRequest
      * @return MealApplyQueryResponse
      */
@@ -1002,6 +1032,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return MonthBillSplitGetResponse
      */
     CompletableFuture<MonthBillSplitGetResponse> monthBillSplitGet(MonthBillSplitGetRequest request);
+
+    /**
+     * @param request the request parameters of MonthPreBillGet  MonthPreBillGetRequest
+     * @return MonthPreBillGetResponse
+     */
+    CompletableFuture<MonthPreBillGetResponse> monthPreBillGet(MonthPreBillGetRequest request);
 
     /**
      * @param request the request parameters of OrderRefundDetailQuery  OrderRefundDetailQueryRequest
@@ -1056,6 +1092,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryReimbursementOrderResponse
      */
     CompletableFuture<QueryReimbursementOrderResponse> queryReimbursementOrder(QueryReimbursementOrderRequest request);
+
+    /**
+     * @param request the request parameters of RemoveProjectManager  RemoveProjectManagerRequest
+     * @return RemoveProjectManagerResponse
+     */
+    CompletableFuture<RemoveProjectManagerResponse> removeProjectManager(RemoveProjectManagerRequest request);
 
     /**
      * @param request the request parameters of SyncSingleUser  SyncSingleUserRequest

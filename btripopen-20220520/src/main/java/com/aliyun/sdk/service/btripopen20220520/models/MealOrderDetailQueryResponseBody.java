@@ -227,6 +227,9 @@ public class MealOrderDetailQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("person_refund_amount")
         private Long personRefundAmount;
 
+        @com.aliyun.core.annotation.NameInMap("receipt_image_urls")
+        private String receiptImageUrls;
+
         @com.aliyun.core.annotation.NameInMap("refund_amount")
         private Long refundAmount;
 
@@ -261,6 +264,7 @@ public class MealOrderDetailQueryResponseBody extends TeaModel {
             this.payType = builder.payType;
             this.personPayAmount = builder.personPayAmount;
             this.personRefundAmount = builder.personRefundAmount;
+            this.receiptImageUrls = builder.receiptImageUrls;
             this.refundAmount = builder.refundAmount;
             this.sceneName = builder.sceneName;
             this.settleTime = builder.settleTime;
@@ -383,6 +387,13 @@ public class MealOrderDetailQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return receiptImageUrls
+         */
+        public String getReceiptImageUrls() {
+            return this.receiptImageUrls;
+        }
+
+        /**
          * @return refundAmount
          */
         public Long getRefundAmount() {
@@ -440,6 +451,7 @@ public class MealOrderDetailQueryResponseBody extends TeaModel {
             private Integer payType; 
             private Long personPayAmount; 
             private Long personRefundAmount; 
+            private String receiptImageUrls; 
             private Long refundAmount; 
             private String sceneName; 
             private String settleTime; 
@@ -466,6 +478,7 @@ public class MealOrderDetailQueryResponseBody extends TeaModel {
                 this.payType = model.payType;
                 this.personPayAmount = model.personPayAmount;
                 this.personRefundAmount = model.personRefundAmount;
+                this.receiptImageUrls = model.receiptImageUrls;
                 this.refundAmount = model.refundAmount;
                 this.sceneName = model.sceneName;
                 this.settleTime = model.settleTime;
@@ -591,6 +604,14 @@ public class MealOrderDetailQueryResponseBody extends TeaModel {
              */
             public Builder personRefundAmount(Long personRefundAmount) {
                 this.personRefundAmount = personRefundAmount;
+                return this;
+            }
+
+            /**
+             * receipt_image_urls.
+             */
+            public Builder receiptImageUrls(String receiptImageUrls) {
+                this.receiptImageUrls = receiptImageUrls;
                 return this;
             }
 

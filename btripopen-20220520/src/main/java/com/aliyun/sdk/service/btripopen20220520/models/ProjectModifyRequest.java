@@ -22,6 +22,10 @@ public class ProjectModifyRequest extends Request {
     private String code;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("has_manager")
+    private Boolean hasManager;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("project_name")
     @com.aliyun.core.annotation.Validation(required = true)
     private String projectName;
@@ -46,6 +50,7 @@ public class ProjectModifyRequest extends Request {
     private ProjectModifyRequest(Builder builder) {
         super(builder);
         this.code = builder.code;
+        this.hasManager = builder.hasManager;
         this.projectName = builder.projectName;
         this.thirdPartCostCenterId = builder.thirdPartCostCenterId;
         this.thirdPartId = builder.thirdPartId;
@@ -71,6 +76,13 @@ public class ProjectModifyRequest extends Request {
      */
     public String getCode() {
         return this.code;
+    }
+
+    /**
+     * @return hasManager
+     */
+    public Boolean getHasManager() {
+        return this.hasManager;
     }
 
     /**
@@ -110,6 +122,7 @@ public class ProjectModifyRequest extends Request {
 
     public static final class Builder extends Request.Builder<ProjectModifyRequest, Builder> {
         private String code; 
+        private Boolean hasManager; 
         private String projectName; 
         private String thirdPartCostCenterId; 
         private String thirdPartId; 
@@ -123,6 +136,7 @@ public class ProjectModifyRequest extends Request {
         private Builder(ProjectModifyRequest request) {
             super(request);
             this.code = request.code;
+            this.hasManager = request.hasManager;
             this.projectName = request.projectName;
             this.thirdPartCostCenterId = request.thirdPartCostCenterId;
             this.thirdPartId = request.thirdPartId;
@@ -136,6 +150,15 @@ public class ProjectModifyRequest extends Request {
         public Builder code(String code) {
             this.putBodyParameter("code", code);
             this.code = code;
+            return this;
+        }
+
+        /**
+         * has_manager.
+         */
+        public Builder hasManager(Boolean hasManager) {
+            this.putBodyParameter("has_manager", hasManager);
+            this.hasManager = hasManager;
             return this;
         }
 

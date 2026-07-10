@@ -70,6 +70,10 @@ public class HotelOrderPreValidateRequest extends Request {
     private Integer roomNum;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("rp_type")
+    private Integer rpType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("search_room_price")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long searchRoomPrice;
@@ -101,6 +105,7 @@ public class HotelOrderPreValidateRequest extends Request {
         this.ratePlanId = builder.ratePlanId;
         this.roomId = builder.roomId;
         this.roomNum = builder.roomNum;
+        this.rpType = builder.rpType;
         this.searchRoomPrice = builder.searchRoomPrice;
         this.sellerId = builder.sellerId;
         this.shid = builder.shid;
@@ -198,6 +203,13 @@ public class HotelOrderPreValidateRequest extends Request {
     }
 
     /**
+     * @return rpType
+     */
+    public Integer getRpType() {
+        return this.rpType;
+    }
+
+    /**
      * @return searchRoomPrice
      */
     public Long getSearchRoomPrice() {
@@ -237,6 +249,7 @@ public class HotelOrderPreValidateRequest extends Request {
         private Long ratePlanId; 
         private Long roomId; 
         private Integer roomNum; 
+        private Integer rpType; 
         private Long searchRoomPrice; 
         private Long sellerId; 
         private Long shid; 
@@ -259,6 +272,7 @@ public class HotelOrderPreValidateRequest extends Request {
             this.ratePlanId = request.ratePlanId;
             this.roomId = request.roomId;
             this.roomNum = request.roomNum;
+            this.rpType = request.rpType;
             this.searchRoomPrice = request.searchRoomPrice;
             this.sellerId = request.sellerId;
             this.shid = request.shid;
@@ -384,6 +398,15 @@ public class HotelOrderPreValidateRequest extends Request {
         public Builder roomNum(Integer roomNum) {
             this.putQueryParameter("room_num", roomNum);
             this.roomNum = roomNum;
+            return this;
+        }
+
+        /**
+         * rp_type.
+         */
+        public Builder rpType(Integer rpType) {
+            this.putQueryParameter("rp_type", rpType);
+            this.rpType = rpType;
             return this;
         }
 

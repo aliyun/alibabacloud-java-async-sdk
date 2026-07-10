@@ -992,6 +992,9 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("amount")
         private String amount;
 
+        @com.aliyun.core.annotation.NameInMap("cnaps_code")
+        private String cnapsCode;
+
         @com.aliyun.core.annotation.NameInMap("payee_account_number")
         private String payeeAccountNumber;
 
@@ -1000,6 +1003,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
 
         private PaymentInfos(Builder builder) {
             this.amount = builder.amount;
+            this.cnapsCode = builder.cnapsCode;
             this.payeeAccountNumber = builder.payeeAccountNumber;
             this.payeeUserId = builder.payeeUserId;
         }
@@ -1020,6 +1024,13 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         }
 
         /**
+         * @return cnapsCode
+         */
+        public String getCnapsCode() {
+            return this.cnapsCode;
+        }
+
+        /**
          * @return payeeAccountNumber
          */
         public String getPayeeAccountNumber() {
@@ -1035,6 +1046,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
 
         public static final class Builder {
             private String amount; 
+            private String cnapsCode; 
             private String payeeAccountNumber; 
             private String payeeUserId; 
 
@@ -1043,6 +1055,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
 
             private Builder(PaymentInfos model) {
                 this.amount = model.amount;
+                this.cnapsCode = model.cnapsCode;
                 this.payeeAccountNumber = model.payeeAccountNumber;
                 this.payeeUserId = model.payeeUserId;
             } 
@@ -1052,6 +1065,14 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
              */
             public Builder amount(String amount) {
                 this.amount = amount;
+                return this;
+            }
+
+            /**
+             * cnaps_code.
+             */
+            public Builder cnapsCode(String cnapsCode) {
+                this.cnapsCode = cnapsCode;
                 return this;
             }
 

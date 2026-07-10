@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class VasBillSettlementQueryRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("apply_id")
+    private String applyId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("bill_batch")
     private String billBatch;
 
@@ -69,6 +73,7 @@ public class VasBillSettlementQueryRequest extends Request {
 
     private VasBillSettlementQueryRequest(Builder builder) {
         super(builder);
+        this.applyId = builder.applyId;
         this.billBatch = builder.billBatch;
         this.billRecordTimeEnd = builder.billRecordTimeEnd;
         this.billRecordTimeStart = builder.billRecordTimeStart;
@@ -94,6 +99,13 @@ public class VasBillSettlementQueryRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return applyId
+     */
+    public String getApplyId() {
+        return this.applyId;
     }
 
     /**
@@ -181,6 +193,7 @@ public class VasBillSettlementQueryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<VasBillSettlementQueryRequest, Builder> {
+        private String applyId; 
         private String billBatch; 
         private String billRecordTimeEnd; 
         private String billRecordTimeStart; 
@@ -200,6 +213,7 @@ public class VasBillSettlementQueryRequest extends Request {
 
         private Builder(VasBillSettlementQueryRequest request) {
             super(request);
+            this.applyId = request.applyId;
             this.billBatch = request.billBatch;
             this.billRecordTimeEnd = request.billRecordTimeEnd;
             this.billRecordTimeStart = request.billRecordTimeStart;
@@ -213,6 +227,15 @@ public class VasBillSettlementQueryRequest extends Request {
             this.scrollMod = request.scrollMod;
             this.xAcsBtripCorpToken = request.xAcsBtripCorpToken;
         } 
+
+        /**
+         * apply_id.
+         */
+        public Builder applyId(String applyId) {
+            this.putQueryParameter("apply_id", applyId);
+            this.applyId = applyId;
+            return this;
+        }
 
         /**
          * bill_batch.

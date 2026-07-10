@@ -29,7 +29,7 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "btripOpen";
         this.version = "2022-05-20";
-        this.endpointRule = "";
+        this.endpointRule = "regional";
         this.endpointMap = new java.util.HashMap<>();
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -124,6 +124,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<AddInvoiceEntityResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of AddProjectManager  AddProjectManagerRequest
+     * @return AddProjectManagerResponse
+     */
+    @Override
+    public CompletableFuture<AddProjectManagerResponse> addProjectManager(AddProjectManagerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AddProjectManager").setMethod(HttpMethod.POST).setPathRegex("/cost/v1/project/manager/add").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddProjectManagerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddProjectManagerResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -346,6 +364,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of BatchQueryDepartment  BatchQueryDepartmentRequest
+     * @return BatchQueryDepartmentResponse
+     */
+    @Override
+    public CompletableFuture<BatchQueryDepartmentResponse> batchQueryDepartment(BatchQueryDepartmentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("BatchQueryDepartment").setMethod(HttpMethod.POST).setPathRegex("/department/v2/batch_query").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchQueryDepartmentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchQueryDepartmentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of BatchSubmitPreBill  BatchSubmitPreBillRequest
+     * @return BatchSubmitPreBillResponse
+     */
+    @Override
+    public CompletableFuture<BatchSubmitPreBillResponse> batchSubmitPreBill(BatchSubmitPreBillRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("BatchSubmitPreBill").setMethod(HttpMethod.PUT).setPathRegex("/prebill/v1/batchSubmit").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchSubmitPreBillResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchSubmitPreBillResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of BtripBillInfoAdjust  BtripBillInfoAdjustRequest
      * @return BtripBillInfoAdjustResponse
      */
@@ -556,6 +610,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CommonApplySyncResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ConfirmPreBill  ConfirmPreBillRequest
+     * @return ConfirmPreBillResponse
+     */
+    @Override
+    public CompletableFuture<ConfirmPreBillResponse> confirmPreBill(ConfirmPreBillRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ConfirmPreBill").setMethod(HttpMethod.PUT).setPathRegex("/prebill/v1/confirm").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ConfirmPreBillResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ConfirmPreBillResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2866,6 +2938,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of MealApplyModify  MealApplyModifyRequest
+     * @return MealApplyModifyResponse
+     */
+    @Override
+    public CompletableFuture<MealApplyModifyResponse> mealApplyModify(MealApplyModifyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("MealApplyModify").setMethod(HttpMethod.POST).setPathRegex("/apply/v1/meal/modify").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(MealApplyModifyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<MealApplyModifyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of MealApplyQuery  MealApplyQueryRequest
      * @return MealApplyQueryResponse
      */
@@ -2986,6 +3076,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<MonthBillSplitGetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of MonthPreBillGet  MonthPreBillGetRequest
+     * @return MonthPreBillGetResponse
+     */
+    @Override
+    public CompletableFuture<MonthPreBillGetResponse> monthPreBillGet(MonthPreBillGetRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("MonthPreBillGet").setMethod(HttpMethod.GET).setPathRegex("/open/v1/month-pre-bill").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(MonthPreBillGetResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<MonthPreBillGetResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3148,6 +3256,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<QueryReimbursementOrderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RemoveProjectManager  RemoveProjectManagerRequest
+     * @return RemoveProjectManagerResponse
+     */
+    @Override
+    public CompletableFuture<RemoveProjectManagerResponse> removeProjectManager(RemoveProjectManagerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RemoveProjectManager").setMethod(HttpMethod.POST).setPathRegex("/cost/v1/project/manager/remove").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RemoveProjectManagerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RemoveProjectManagerResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

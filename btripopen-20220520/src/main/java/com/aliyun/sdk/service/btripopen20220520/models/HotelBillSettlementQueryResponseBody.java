@@ -254,6 +254,12 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("brand_name")
         private String brandName;
 
+        @com.aliyun.core.annotation.NameInMap("budget_number")
+        private String budgetNumber;
+
+        @com.aliyun.core.annotation.NameInMap("business_reason")
+        private String businessReason;
+
         @com.aliyun.core.annotation.NameInMap("business_trip_result")
         private String businessTripResult;
 
@@ -305,6 +311,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cost_department")
         private String costDepartment;
 
+        @com.aliyun.core.annotation.NameInMap("custom_apply_id")
+        private String customApplyId;
+
         @com.aliyun.core.annotation.NameInMap("custom_content")
         private String customContent;
 
@@ -319,6 +328,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("exceed_reason")
         private String exceedReason;
+
+        @com.aliyun.core.annotation.NameInMap("external_person_type")
+        private String externalPersonType;
 
         @com.aliyun.core.annotation.NameInMap("fee_type")
         private String feeType;
@@ -550,6 +562,8 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             this.bookerName = builder.bookerName;
             this.brandGroup = builder.brandGroup;
             this.brandName = builder.brandName;
+            this.budgetNumber = builder.budgetNumber;
+            this.businessReason = builder.businessReason;
             this.businessTripResult = builder.businessTripResult;
             this.cancelOrModifyReason = builder.cancelOrModifyReason;
             this.cancelOrModifyScene = builder.cancelOrModifyScene;
@@ -567,11 +581,13 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             this.costCenter = builder.costCenter;
             this.costCenterNumber = builder.costCenterNumber;
             this.costDepartment = builder.costDepartment;
+            this.customApplyId = builder.customApplyId;
             this.customContent = builder.customContent;
             this.deductibleTax = builder.deductibleTax;
             this.department = builder.department;
             this.departmentId = builder.departmentId;
             this.exceedReason = builder.exceedReason;
+            this.externalPersonType = builder.externalPersonType;
             this.feeType = builder.feeType;
             this.feeTypeDesc = builder.feeTypeDesc;
             this.fees = builder.fees;
@@ -826,6 +842,20 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return budgetNumber
+         */
+        public String getBudgetNumber() {
+            return this.budgetNumber;
+        }
+
+        /**
+         * @return businessReason
+         */
+        public String getBusinessReason() {
+            return this.businessReason;
+        }
+
+        /**
          * @return businessTripResult
          */
         public String getBusinessTripResult() {
@@ -945,6 +975,13 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return customApplyId
+         */
+        public String getCustomApplyId() {
+            return this.customApplyId;
+        }
+
+        /**
          * @return customContent
          */
         public String getCustomContent() {
@@ -977,6 +1014,13 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getExceedReason() {
             return this.exceedReason;
+        }
+
+        /**
+         * @return externalPersonType
+         */
+        public String getExternalPersonType() {
+            return this.externalPersonType;
         }
 
         /**
@@ -1481,6 +1525,8 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             private String bookerName; 
             private String brandGroup; 
             private String brandName; 
+            private String budgetNumber; 
+            private String businessReason; 
             private String businessTripResult; 
             private String cancelOrModifyReason; 
             private String cancelOrModifyScene; 
@@ -1498,11 +1544,13 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             private String costCenter; 
             private String costCenterNumber; 
             private String costDepartment; 
+            private String customApplyId; 
             private String customContent; 
             private Double deductibleTax; 
             private String department; 
             private String departmentId; 
             private String exceedReason; 
+            private String externalPersonType; 
             private String feeType; 
             private String feeTypeDesc; 
             private Double fees; 
@@ -1601,6 +1649,8 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
                 this.bookerName = model.bookerName;
                 this.brandGroup = model.brandGroup;
                 this.brandName = model.brandName;
+                this.budgetNumber = model.budgetNumber;
+                this.businessReason = model.businessReason;
                 this.businessTripResult = model.businessTripResult;
                 this.cancelOrModifyReason = model.cancelOrModifyReason;
                 this.cancelOrModifyScene = model.cancelOrModifyScene;
@@ -1618,11 +1668,13 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
                 this.costCenter = model.costCenter;
                 this.costCenterNumber = model.costCenterNumber;
                 this.costDepartment = model.costDepartment;
+                this.customApplyId = model.customApplyId;
                 this.customContent = model.customContent;
                 this.deductibleTax = model.deductibleTax;
                 this.department = model.department;
                 this.departmentId = model.departmentId;
                 this.exceedReason = model.exceedReason;
+                this.externalPersonType = model.externalPersonType;
                 this.feeType = model.feeType;
                 this.feeTypeDesc = model.feeTypeDesc;
                 this.fees = model.fees;
@@ -1894,6 +1946,22 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * budget_number.
+             */
+            public Builder budgetNumber(String budgetNumber) {
+                this.budgetNumber = budgetNumber;
+                return this;
+            }
+
+            /**
+             * business_reason.
+             */
+            public Builder businessReason(String businessReason) {
+                this.businessReason = businessReason;
+                return this;
+            }
+
+            /**
              * business_trip_result.
              */
             public Builder businessTripResult(String businessTripResult) {
@@ -2030,6 +2098,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * custom_apply_id.
+             */
+            public Builder customApplyId(String customApplyId) {
+                this.customApplyId = customApplyId;
+                return this;
+            }
+
+            /**
              * custom_content.
              */
             public Builder customContent(String customContent) {
@@ -2066,6 +2142,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder exceedReason(String exceedReason) {
                 this.exceedReason = exceedReason;
+                return this;
+            }
+
+            /**
+             * external_person_type.
+             */
+            public Builder externalPersonType(String externalPersonType) {
+                this.externalPersonType = externalPersonType;
                 return this;
             }
 

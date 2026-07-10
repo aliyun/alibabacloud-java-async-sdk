@@ -3860,6 +3860,9 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("flight_segment_list")
         private java.util.List<FlightSegmentList> flightSegmentList;
 
+        @com.aliyun.core.annotation.NameInMap("itinerary_id")
+        private String itineraryId;
+
         @com.aliyun.core.annotation.NameInMap("mix_pay")
         private Boolean mixPay;
 
@@ -3899,6 +3902,9 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("third_part_apply_id")
         private String thirdPartApplyId;
 
+        @com.aliyun.core.annotation.NameInMap("thirdpart_itinerary_id")
+        private String thirdpartItineraryId;
+
         @com.aliyun.core.annotation.NameInMap("trip_type")
         private Integer tripType;
 
@@ -3911,6 +3917,7 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
             this.flightOrderInsureList = builder.flightOrderInsureList;
             this.flightOrderTicketList = builder.flightOrderTicketList;
             this.flightSegmentList = builder.flightSegmentList;
+            this.itineraryId = builder.itineraryId;
             this.mixPay = builder.mixPay;
             this.orderCreateTime = builder.orderCreateTime;
             this.orderId = builder.orderId;
@@ -3924,6 +3931,7 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
             this.personPayPrice = builder.personPayPrice;
             this.serviceFee = builder.serviceFee;
             this.thirdPartApplyId = builder.thirdPartApplyId;
+            this.thirdpartItineraryId = builder.thirdpartItineraryId;
             this.tripType = builder.tripType;
         }
 
@@ -3989,6 +3997,13 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
          */
         public java.util.List<FlightSegmentList> getFlightSegmentList() {
             return this.flightSegmentList;
+        }
+
+        /**
+         * @return itineraryId
+         */
+        public String getItineraryId() {
+            return this.itineraryId;
         }
 
         /**
@@ -4083,6 +4098,13 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return thirdpartItineraryId
+         */
+        public String getThirdpartItineraryId() {
+            return this.thirdpartItineraryId;
+        }
+
+        /**
          * @return tripType
          */
         public Integer getTripType() {
@@ -4098,6 +4120,7 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
             private java.util.List<FlightOrderInsureList> flightOrderInsureList; 
             private java.util.List<FlightOrderTicketList> flightOrderTicketList; 
             private java.util.List<FlightSegmentList> flightSegmentList; 
+            private String itineraryId; 
             private Boolean mixPay; 
             private String orderCreateTime; 
             private String orderId; 
@@ -4111,6 +4134,7 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
             private Long personPayPrice; 
             private Long serviceFee; 
             private String thirdPartApplyId; 
+            private String thirdpartItineraryId; 
             private Integer tripType; 
 
             private Builder() {
@@ -4125,6 +4149,7 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
                 this.flightOrderInsureList = model.flightOrderInsureList;
                 this.flightOrderTicketList = model.flightOrderTicketList;
                 this.flightSegmentList = model.flightSegmentList;
+                this.itineraryId = model.itineraryId;
                 this.mixPay = model.mixPay;
                 this.orderCreateTime = model.orderCreateTime;
                 this.orderId = model.orderId;
@@ -4138,6 +4163,7 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
                 this.personPayPrice = model.personPayPrice;
                 this.serviceFee = model.serviceFee;
                 this.thirdPartApplyId = model.thirdPartApplyId;
+                this.thirdpartItineraryId = model.thirdpartItineraryId;
                 this.tripType = model.tripType;
             } 
 
@@ -4202,6 +4228,14 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
              */
             public Builder flightSegmentList(java.util.List<FlightSegmentList> flightSegmentList) {
                 this.flightSegmentList = flightSegmentList;
+                return this;
+            }
+
+            /**
+             * itinerary_id.
+             */
+            public Builder itineraryId(String itineraryId) {
+                this.itineraryId = itineraryId;
                 return this;
             }
 
@@ -4306,6 +4340,14 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
              */
             public Builder thirdPartApplyId(String thirdPartApplyId) {
                 this.thirdPartApplyId = thirdPartApplyId;
+                return this;
+            }
+
+            /**
+             * thirdpart_itinerary_id.
+             */
+            public Builder thirdpartItineraryId(String thirdpartItineraryId) {
+                this.thirdpartItineraryId = thirdpartItineraryId;
                 return this;
             }
 

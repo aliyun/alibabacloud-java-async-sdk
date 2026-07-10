@@ -925,6 +925,144 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
      *
      * <p>HotelOrderPreValidateResponseBody</p>
      */
+    public static class HourItemArrivalTimeInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("actual_live_hour")
+        private String actualLiveHour;
+
+        @com.aliyun.core.annotation.NameInMap("earliest_check_in_time")
+        private String earliestCheckInTime;
+
+        @com.aliyun.core.annotation.NameInMap("latest_check_in_time")
+        private String latestCheckInTime;
+
+        @com.aliyun.core.annotation.NameInMap("latest_check_out_time")
+        private String latestCheckOutTime;
+
+        @com.aliyun.core.annotation.NameInMap("live_hour")
+        private String liveHour;
+
+        private HourItemArrivalTimeInfo(Builder builder) {
+            this.actualLiveHour = builder.actualLiveHour;
+            this.earliestCheckInTime = builder.earliestCheckInTime;
+            this.latestCheckInTime = builder.latestCheckInTime;
+            this.latestCheckOutTime = builder.latestCheckOutTime;
+            this.liveHour = builder.liveHour;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HourItemArrivalTimeInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return actualLiveHour
+         */
+        public String getActualLiveHour() {
+            return this.actualLiveHour;
+        }
+
+        /**
+         * @return earliestCheckInTime
+         */
+        public String getEarliestCheckInTime() {
+            return this.earliestCheckInTime;
+        }
+
+        /**
+         * @return latestCheckInTime
+         */
+        public String getLatestCheckInTime() {
+            return this.latestCheckInTime;
+        }
+
+        /**
+         * @return latestCheckOutTime
+         */
+        public String getLatestCheckOutTime() {
+            return this.latestCheckOutTime;
+        }
+
+        /**
+         * @return liveHour
+         */
+        public String getLiveHour() {
+            return this.liveHour;
+        }
+
+        public static final class Builder {
+            private String actualLiveHour; 
+            private String earliestCheckInTime; 
+            private String latestCheckInTime; 
+            private String latestCheckOutTime; 
+            private String liveHour; 
+
+            private Builder() {
+            } 
+
+            private Builder(HourItemArrivalTimeInfo model) {
+                this.actualLiveHour = model.actualLiveHour;
+                this.earliestCheckInTime = model.earliestCheckInTime;
+                this.latestCheckInTime = model.latestCheckInTime;
+                this.latestCheckOutTime = model.latestCheckOutTime;
+                this.liveHour = model.liveHour;
+            } 
+
+            /**
+             * actual_live_hour.
+             */
+            public Builder actualLiveHour(String actualLiveHour) {
+                this.actualLiveHour = actualLiveHour;
+                return this;
+            }
+
+            /**
+             * earliest_check_in_time.
+             */
+            public Builder earliestCheckInTime(String earliestCheckInTime) {
+                this.earliestCheckInTime = earliestCheckInTime;
+                return this;
+            }
+
+            /**
+             * latest_check_in_time.
+             */
+            public Builder latestCheckInTime(String latestCheckInTime) {
+                this.latestCheckInTime = latestCheckInTime;
+                return this;
+            }
+
+            /**
+             * latest_check_out_time.
+             */
+            public Builder latestCheckOutTime(String latestCheckOutTime) {
+                this.latestCheckOutTime = latestCheckOutTime;
+                return this;
+            }
+
+            /**
+             * live_hour.
+             */
+            public Builder liveHour(String liveHour) {
+                this.liveHour = liveHour;
+                return this;
+            }
+
+            public HourItemArrivalTimeInfo build() {
+                return new HourItemArrivalTimeInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link HotelOrderPreValidateResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderPreValidateResponseBody</p>
+     */
     public static class RatePlanInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bed_desc")
         private String bedDesc;
@@ -937,6 +1075,9 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("earliest_check_in_time")
         private String earliestCheckInTime;
+
+        @com.aliyun.core.annotation.NameInMap("hour_item_arrival_time_info")
+        private HourItemArrivalTimeInfo hourItemArrivalTimeInfo;
 
         @com.aliyun.core.annotation.NameInMap("latest_check_out_time")
         private String latestCheckOutTime;
@@ -956,6 +1097,9 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("need_english_name")
         private Boolean needEnglishName;
 
+        @com.aliyun.core.annotation.NameInMap("rp_type")
+        private Integer rpType;
+
         @com.aliyun.core.annotation.NameInMap("total_order_price")
         private Long totalOrderPrice;
 
@@ -967,12 +1111,14 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             this.btripHotelCancelPolicyDTO = builder.btripHotelCancelPolicyDTO;
             this.certTypeList = builder.certTypeList;
             this.earliestCheckInTime = builder.earliestCheckInTime;
+            this.hourItemArrivalTimeInfo = builder.hourItemArrivalTimeInfo;
             this.latestCheckOutTime = builder.latestCheckOutTime;
             this.maxBookingNum = builder.maxBookingNum;
             this.maxOccupancyNum = builder.maxOccupancyNum;
             this.needCertificate = builder.needCertificate;
             this.needEmail = builder.needEmail;
             this.needEnglishName = builder.needEnglishName;
+            this.rpType = builder.rpType;
             this.totalOrderPrice = builder.totalOrderPrice;
             this.totalRoomPrice = builder.totalRoomPrice;
         }
@@ -1011,6 +1157,13 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
          */
         public String getEarliestCheckInTime() {
             return this.earliestCheckInTime;
+        }
+
+        /**
+         * @return hourItemArrivalTimeInfo
+         */
+        public HourItemArrivalTimeInfo getHourItemArrivalTimeInfo() {
+            return this.hourItemArrivalTimeInfo;
         }
 
         /**
@@ -1056,6 +1209,13 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         }
 
         /**
+         * @return rpType
+         */
+        public Integer getRpType() {
+            return this.rpType;
+        }
+
+        /**
          * @return totalOrderPrice
          */
         public Long getTotalOrderPrice() {
@@ -1074,12 +1234,14 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
             private BtripHotelCancelPolicyDTO btripHotelCancelPolicyDTO; 
             private java.util.List<String> certTypeList; 
             private String earliestCheckInTime; 
+            private HourItemArrivalTimeInfo hourItemArrivalTimeInfo; 
             private String latestCheckOutTime; 
             private Integer maxBookingNum; 
             private Integer maxOccupancyNum; 
             private Boolean needCertificate; 
             private Boolean needEmail; 
             private Boolean needEnglishName; 
+            private Integer rpType; 
             private Long totalOrderPrice; 
             private Long totalRoomPrice; 
 
@@ -1091,12 +1253,14 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
                 this.btripHotelCancelPolicyDTO = model.btripHotelCancelPolicyDTO;
                 this.certTypeList = model.certTypeList;
                 this.earliestCheckInTime = model.earliestCheckInTime;
+                this.hourItemArrivalTimeInfo = model.hourItemArrivalTimeInfo;
                 this.latestCheckOutTime = model.latestCheckOutTime;
                 this.maxBookingNum = model.maxBookingNum;
                 this.maxOccupancyNum = model.maxOccupancyNum;
                 this.needCertificate = model.needCertificate;
                 this.needEmail = model.needEmail;
                 this.needEnglishName = model.needEnglishName;
+                this.rpType = model.rpType;
                 this.totalOrderPrice = model.totalOrderPrice;
                 this.totalRoomPrice = model.totalRoomPrice;
             } 
@@ -1130,6 +1294,14 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
              */
             public Builder earliestCheckInTime(String earliestCheckInTime) {
                 this.earliestCheckInTime = earliestCheckInTime;
+                return this;
+            }
+
+            /**
+             * hour_item_arrival_time_info.
+             */
+            public Builder hourItemArrivalTimeInfo(HourItemArrivalTimeInfo hourItemArrivalTimeInfo) {
+                this.hourItemArrivalTimeInfo = hourItemArrivalTimeInfo;
                 return this;
             }
 
@@ -1178,6 +1350,14 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
              */
             public Builder needEnglishName(Boolean needEnglishName) {
                 this.needEnglishName = needEnglishName;
+                return this;
+            }
+
+            /**
+             * rp_type.
+             */
+            public Builder rpType(Integer rpType) {
+                this.rpType = rpType;
                 return this;
             }
 

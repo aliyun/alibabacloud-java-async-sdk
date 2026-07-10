@@ -98,6 +98,10 @@ public class HotelSearchRequest extends Request {
     private Integer paymentType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("poi")
+    private String poi;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("shids")
     private java.util.List<Long> shids;
 
@@ -135,6 +139,7 @@ public class HotelSearchRequest extends Request {
         this.pageSize = builder.pageSize;
         this.payOverType = builder.payOverType;
         this.paymentType = builder.paymentType;
+        this.poi = builder.poi;
         this.shids = builder.shids;
         this.sortCode = builder.sortCode;
         this.superMan = builder.superMan;
@@ -288,6 +293,13 @@ public class HotelSearchRequest extends Request {
     }
 
     /**
+     * @return poi
+     */
+    public String getPoi() {
+        return this.poi;
+    }
+
+    /**
      * @return shids
      */
     public java.util.List<Long> getShids() {
@@ -335,6 +347,7 @@ public class HotelSearchRequest extends Request {
         private Integer pageSize; 
         private Integer payOverType; 
         private Integer paymentType; 
+        private String poi; 
         private java.util.List<Long> shids; 
         private Integer sortCode; 
         private Integer superMan; 
@@ -365,6 +378,7 @@ public class HotelSearchRequest extends Request {
             this.pageSize = request.pageSize;
             this.payOverType = request.payOverType;
             this.paymentType = request.paymentType;
+            this.poi = request.poi;
             this.shids = request.shids;
             this.sortCode = request.sortCode;
             this.superMan = request.superMan;
@@ -552,6 +566,15 @@ public class HotelSearchRequest extends Request {
         public Builder paymentType(Integer paymentType) {
             this.putQueryParameter("payment_type", paymentType);
             this.paymentType = paymentType;
+            return this;
+        }
+
+        /**
+         * poi.
+         */
+        public Builder poi(String poi) {
+            this.putQueryParameter("poi", poi);
+            this.poi = poi;
             return this;
         }
 

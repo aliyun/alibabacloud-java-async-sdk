@@ -12,29 +12,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link HotelIndexInfoRequest} extends {@link RequestModel}
+ * {@link BatchQueryDepartmentRequest} extends {@link RequestModel}
  *
- * <p>HotelIndexInfoRequest</p>
+ * <p>BatchQueryDepartmentRequest</p>
  */
-public class HotelIndexInfoRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("city_code")
-    private String cityCode;
+public class BatchQueryDepartmentRequest extends Request {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("modified_time_greater_or_equal_than")
+    private String modifiedTimeGreaterOrEqualThan;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("hotel_status")
-    private Integer hotelStatus;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("out_dept_id")
+    private String outDeptId;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("internation")
-    private Boolean internation;
-
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("page_size")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("page_token")
     private String pageToken;
 
@@ -42,11 +37,10 @@ public class HotelIndexInfoRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
-    private HotelIndexInfoRequest(Builder builder) {
+    private BatchQueryDepartmentRequest(Builder builder) {
         super(builder);
-        this.cityCode = builder.cityCode;
-        this.hotelStatus = builder.hotelStatus;
-        this.internation = builder.internation;
+        this.modifiedTimeGreaterOrEqualThan = builder.modifiedTimeGreaterOrEqualThan;
+        this.outDeptId = builder.outDeptId;
         this.pageSize = builder.pageSize;
         this.pageToken = builder.pageToken;
         this.xAcsBtripCorpToken = builder.xAcsBtripCorpToken;
@@ -56,7 +50,7 @@ public class HotelIndexInfoRequest extends Request {
         return new Builder();
     }
 
-    public static HotelIndexInfoRequest create() {
+    public static BatchQueryDepartmentRequest create() {
         return builder().build();
     }
 
@@ -66,24 +60,17 @@ public class HotelIndexInfoRequest extends Request {
     }
 
     /**
-     * @return cityCode
+     * @return modifiedTimeGreaterOrEqualThan
      */
-    public String getCityCode() {
-        return this.cityCode;
+    public String getModifiedTimeGreaterOrEqualThan() {
+        return this.modifiedTimeGreaterOrEqualThan;
     }
 
     /**
-     * @return hotelStatus
+     * @return outDeptId
      */
-    public Integer getHotelStatus() {
-        return this.hotelStatus;
-    }
-
-    /**
-     * @return internation
-     */
-    public Boolean getInternation() {
-        return this.internation;
+    public String getOutDeptId() {
+        return this.outDeptId;
     }
 
     /**
@@ -107,10 +94,9 @@ public class HotelIndexInfoRequest extends Request {
         return this.xAcsBtripCorpToken;
     }
 
-    public static final class Builder extends Request.Builder<HotelIndexInfoRequest, Builder> {
-        private String cityCode; 
-        private Integer hotelStatus; 
-        private Boolean internation; 
+    public static final class Builder extends Request.Builder<BatchQueryDepartmentRequest, Builder> {
+        private String modifiedTimeGreaterOrEqualThan; 
+        private String outDeptId; 
         private Integer pageSize; 
         private String pageToken; 
         private String xAcsBtripCorpToken; 
@@ -119,51 +105,38 @@ public class HotelIndexInfoRequest extends Request {
             super();
         } 
 
-        private Builder(HotelIndexInfoRequest request) {
+        private Builder(BatchQueryDepartmentRequest request) {
             super(request);
-            this.cityCode = request.cityCode;
-            this.hotelStatus = request.hotelStatus;
-            this.internation = request.internation;
+            this.modifiedTimeGreaterOrEqualThan = request.modifiedTimeGreaterOrEqualThan;
+            this.outDeptId = request.outDeptId;
             this.pageSize = request.pageSize;
             this.pageToken = request.pageToken;
             this.xAcsBtripCorpToken = request.xAcsBtripCorpToken;
         } 
 
         /**
-         * city_code.
+         * modified_time_greater_or_equal_than.
          */
-        public Builder cityCode(String cityCode) {
-            this.putQueryParameter("city_code", cityCode);
-            this.cityCode = cityCode;
+        public Builder modifiedTimeGreaterOrEqualThan(String modifiedTimeGreaterOrEqualThan) {
+            this.putBodyParameter("modified_time_greater_or_equal_than", modifiedTimeGreaterOrEqualThan);
+            this.modifiedTimeGreaterOrEqualThan = modifiedTimeGreaterOrEqualThan;
             return this;
         }
 
         /**
-         * hotel_status.
+         * out_dept_id.
          */
-        public Builder hotelStatus(Integer hotelStatus) {
-            this.putQueryParameter("hotel_status", hotelStatus);
-            this.hotelStatus = hotelStatus;
+        public Builder outDeptId(String outDeptId) {
+            this.putBodyParameter("out_dept_id", outDeptId);
+            this.outDeptId = outDeptId;
             return this;
         }
 
         /**
-         * internation.
-         */
-        public Builder internation(Boolean internation) {
-            this.putQueryParameter("internation", internation);
-            this.internation = internation;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
+         * page_size.
          */
         public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("page_size", pageSize);
+            this.putBodyParameter("page_size", pageSize);
             this.pageSize = pageSize;
             return this;
         }
@@ -172,7 +145,7 @@ public class HotelIndexInfoRequest extends Request {
          * page_token.
          */
         public Builder pageToken(String pageToken) {
-            this.putQueryParameter("page_token", pageToken);
+            this.putBodyParameter("page_token", pageToken);
             this.pageToken = pageToken;
             return this;
         }
@@ -187,8 +160,8 @@ public class HotelIndexInfoRequest extends Request {
         }
 
         @Override
-        public HotelIndexInfoRequest build() {
-            return new HotelIndexInfoRequest(this);
+        public BatchQueryDepartmentRequest build() {
+            return new BatchQueryDepartmentRequest(this);
         } 
 
     } 

@@ -2084,6 +2084,9 @@ public class FlightOtaSearchV2ResponseBody extends TeaModel {
      * <p>FlightOtaSearchV2ResponseBody</p>
      */
     public static class ItemList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("code_type")
+        private String codeType;
+
         @com.aliyun.core.annotation.NameInMap("flight_rule_infos")
         private java.util.Map<String, ModuleItemListFlightRuleInfosValue> flightRuleInfos;
 
@@ -2100,6 +2103,7 @@ public class FlightOtaSearchV2ResponseBody extends TeaModel {
         private java.util.List<SubItems> subItems;
 
         private ItemList(Builder builder) {
+            this.codeType = builder.codeType;
             this.flightRuleInfos = builder.flightRuleInfos;
             this.itemId = builder.itemId;
             this.shoppingItemMap = builder.shoppingItemMap;
@@ -2113,6 +2117,13 @@ public class FlightOtaSearchV2ResponseBody extends TeaModel {
 
         public static ItemList create() {
             return builder().build();
+        }
+
+        /**
+         * @return codeType
+         */
+        public String getCodeType() {
+            return this.codeType;
         }
 
         /**
@@ -2151,6 +2162,7 @@ public class FlightOtaSearchV2ResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String codeType; 
             private java.util.Map<String, ModuleItemListFlightRuleInfosValue> flightRuleInfos; 
             private String itemId; 
             private java.util.Map<String, ModuleItemListShoppingItemMapValue> shoppingItemMap; 
@@ -2161,12 +2173,21 @@ public class FlightOtaSearchV2ResponseBody extends TeaModel {
             } 
 
             private Builder(ItemList model) {
+                this.codeType = model.codeType;
                 this.flightRuleInfos = model.flightRuleInfos;
                 this.itemId = model.itemId;
                 this.shoppingItemMap = model.shoppingItemMap;
                 this.subItemPositionMap = model.subItemPositionMap;
                 this.subItems = model.subItems;
             } 
+
+            /**
+             * code_type.
+             */
+            public Builder codeType(String codeType) {
+                this.codeType = codeType;
+                return this;
+            }
 
             /**
              * flight_rule_infos.

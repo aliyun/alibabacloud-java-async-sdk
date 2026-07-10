@@ -18,14 +18,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ChannelCorpCreateRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("administrator_email")
+    private String administratorEmail;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("administrator_name")
     @com.aliyun.core.annotation.Validation(required = true)
     private String administratorName;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("administrator_phone")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String administratorPhone;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("base_currency")
+    private String baseCurrency;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("btrip_region")
+    private String btripRegion;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("city")
@@ -33,8 +44,16 @@ public class ChannelCorpCreateRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("corp_name")
-    @com.aliyun.core.annotation.Validation(required = true, maxLength = 50, minLength = 5)
+    @com.aliyun.core.annotation.Validation(required = true)
     private String corpName;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("corp_name_en")
+    private String corpNameEn;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("extend_field")
+    private String extendField;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("province")
@@ -46,7 +65,7 @@ public class ChannelCorpCreateRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("third_corp_id")
-    @com.aliyun.core.annotation.Validation(required = true, maxLength = 50, minLength = 5)
+    @com.aliyun.core.annotation.Validation(required = true)
     private String thirdCorpId;
 
     @com.aliyun.core.annotation.Body
@@ -59,10 +78,15 @@ public class ChannelCorpCreateRequest extends Request {
 
     private ChannelCorpCreateRequest(Builder builder) {
         super(builder);
+        this.administratorEmail = builder.administratorEmail;
         this.administratorName = builder.administratorName;
         this.administratorPhone = builder.administratorPhone;
+        this.baseCurrency = builder.baseCurrency;
+        this.btripRegion = builder.btripRegion;
         this.city = builder.city;
         this.corpName = builder.corpName;
+        this.corpNameEn = builder.corpNameEn;
+        this.extendField = builder.extendField;
         this.province = builder.province;
         this.scope = builder.scope;
         this.thirdCorpId = builder.thirdCorpId;
@@ -84,6 +108,13 @@ public class ChannelCorpCreateRequest extends Request {
     }
 
     /**
+     * @return administratorEmail
+     */
+    public String getAdministratorEmail() {
+        return this.administratorEmail;
+    }
+
+    /**
      * @return administratorName
      */
     public String getAdministratorName() {
@@ -98,6 +129,20 @@ public class ChannelCorpCreateRequest extends Request {
     }
 
     /**
+     * @return baseCurrency
+     */
+    public String getBaseCurrency() {
+        return this.baseCurrency;
+    }
+
+    /**
+     * @return btripRegion
+     */
+    public String getBtripRegion() {
+        return this.btripRegion;
+    }
+
+    /**
      * @return city
      */
     public String getCity() {
@@ -109,6 +154,20 @@ public class ChannelCorpCreateRequest extends Request {
      */
     public String getCorpName() {
         return this.corpName;
+    }
+
+    /**
+     * @return corpNameEn
+     */
+    public String getCorpNameEn() {
+        return this.corpNameEn;
+    }
+
+    /**
+     * @return extendField
+     */
+    public String getExtendField() {
+        return this.extendField;
     }
 
     /**
@@ -147,10 +206,15 @@ public class ChannelCorpCreateRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ChannelCorpCreateRequest, Builder> {
+        private String administratorEmail; 
         private String administratorName; 
         private String administratorPhone; 
+        private String baseCurrency; 
+        private String btripRegion; 
         private String city; 
         private String corpName; 
+        private String corpNameEn; 
+        private String extendField; 
         private String province; 
         private Integer scope; 
         private String thirdCorpId; 
@@ -163,16 +227,30 @@ public class ChannelCorpCreateRequest extends Request {
 
         private Builder(ChannelCorpCreateRequest request) {
             super(request);
+            this.administratorEmail = request.administratorEmail;
             this.administratorName = request.administratorName;
             this.administratorPhone = request.administratorPhone;
+            this.baseCurrency = request.baseCurrency;
+            this.btripRegion = request.btripRegion;
             this.city = request.city;
             this.corpName = request.corpName;
+            this.corpNameEn = request.corpNameEn;
+            this.extendField = request.extendField;
             this.province = request.province;
             this.scope = request.scope;
             this.thirdCorpId = request.thirdCorpId;
             this.userId = request.userId;
             this.xAcsBtripCorpToken = request.xAcsBtripCorpToken;
         } 
+
+        /**
+         * administrator_email.
+         */
+        public Builder administratorEmail(String administratorEmail) {
+            this.putBodyParameter("administrator_email", administratorEmail);
+            this.administratorEmail = administratorEmail;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
@@ -184,14 +262,29 @@ public class ChannelCorpCreateRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>18378889782</p>
+         * administrator_phone.
          */
         public Builder administratorPhone(String administratorPhone) {
             this.putBodyParameter("administrator_phone", administratorPhone);
             this.administratorPhone = administratorPhone;
+            return this;
+        }
+
+        /**
+         * base_currency.
+         */
+        public Builder baseCurrency(String baseCurrency) {
+            this.putBodyParameter("base_currency", baseCurrency);
+            this.baseCurrency = baseCurrency;
+            return this;
+        }
+
+        /**
+         * btrip_region.
+         */
+        public Builder btripRegion(String btripRegion) {
+            this.putBodyParameter("btrip_region", btripRegion);
+            this.btripRegion = btripRegion;
             return this;
         }
 
@@ -210,6 +303,24 @@ public class ChannelCorpCreateRequest extends Request {
         public Builder corpName(String corpName) {
             this.putBodyParameter("corp_name", corpName);
             this.corpName = corpName;
+            return this;
+        }
+
+        /**
+         * corp_name_en.
+         */
+        public Builder corpNameEn(String corpNameEn) {
+            this.putBodyParameter("corp_name_en", corpNameEn);
+            this.corpNameEn = corpNameEn;
+            return this;
+        }
+
+        /**
+         * extend_field.
+         */
+        public Builder extendField(String extendField) {
+            this.putBodyParameter("extend_field", extendField);
+            this.extendField = extendField;
             return this;
         }
 

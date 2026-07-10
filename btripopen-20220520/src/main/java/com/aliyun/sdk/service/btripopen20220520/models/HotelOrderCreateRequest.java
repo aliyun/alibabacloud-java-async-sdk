@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class HotelOrderCreateRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("arrival_time")
+    private String arrivalTime;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("btrip_user_id")
     @com.aliyun.core.annotation.Validation(required = true)
     private String btripUserId;
@@ -74,6 +78,10 @@ public class HotelOrderCreateRequest extends Request {
     private String itineraryNo;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("leave_time")
+    private String leaveTime;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("member_info")
     private MemberInfo memberInfo;
 
@@ -107,6 +115,10 @@ public class HotelOrderCreateRequest extends Request {
     private Integer roomNum;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("rp_type")
+    private Integer rpType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("seller_id")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long sellerId;
@@ -132,6 +144,7 @@ public class HotelOrderCreateRequest extends Request {
 
     private HotelOrderCreateRequest(Builder builder) {
         super(builder);
+        this.arrivalTime = builder.arrivalTime;
         this.btripUserId = builder.btripUserId;
         this.checkIn = builder.checkIn;
         this.checkOut = builder.checkOut;
@@ -144,6 +157,7 @@ public class HotelOrderCreateRequest extends Request {
         this.invoiceInfo = builder.invoiceInfo;
         this.itemId = builder.itemId;
         this.itineraryNo = builder.itineraryNo;
+        this.leaveTime = builder.leaveTime;
         this.memberInfo = builder.memberInfo;
         this.occupantInfoList = builder.occupantInfoList;
         this.personPayPrice = builder.personPayPrice;
@@ -151,6 +165,7 @@ public class HotelOrderCreateRequest extends Request {
         this.ratePlanId = builder.ratePlanId;
         this.roomId = builder.roomId;
         this.roomNum = builder.roomNum;
+        this.rpType = builder.rpType;
         this.sellerId = builder.sellerId;
         this.shid = builder.shid;
         this.totalOrderPrice = builder.totalOrderPrice;
@@ -169,6 +184,13 @@ public class HotelOrderCreateRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return arrivalTime
+     */
+    public String getArrivalTime() {
+        return this.arrivalTime;
     }
 
     /**
@@ -256,6 +278,13 @@ public class HotelOrderCreateRequest extends Request {
     }
 
     /**
+     * @return leaveTime
+     */
+    public String getLeaveTime() {
+        return this.leaveTime;
+    }
+
+    /**
      * @return memberInfo
      */
     public MemberInfo getMemberInfo() {
@@ -305,6 +334,13 @@ public class HotelOrderCreateRequest extends Request {
     }
 
     /**
+     * @return rpType
+     */
+    public Integer getRpType() {
+        return this.rpType;
+    }
+
+    /**
      * @return sellerId
      */
     public Long getSellerId() {
@@ -340,6 +376,7 @@ public class HotelOrderCreateRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<HotelOrderCreateRequest, Builder> {
+        private String arrivalTime; 
         private String btripUserId; 
         private String checkIn; 
         private String checkOut; 
@@ -352,6 +389,7 @@ public class HotelOrderCreateRequest extends Request {
         private InvoiceInfo invoiceInfo; 
         private Long itemId; 
         private String itineraryNo; 
+        private String leaveTime; 
         private MemberInfo memberInfo; 
         private java.util.List<OccupantInfoList> occupantInfoList; 
         private Long personPayPrice; 
@@ -359,6 +397,7 @@ public class HotelOrderCreateRequest extends Request {
         private Long ratePlanId; 
         private Long roomId; 
         private Integer roomNum; 
+        private Integer rpType; 
         private Long sellerId; 
         private Long shid; 
         private Long totalOrderPrice; 
@@ -371,6 +410,7 @@ public class HotelOrderCreateRequest extends Request {
 
         private Builder(HotelOrderCreateRequest request) {
             super(request);
+            this.arrivalTime = request.arrivalTime;
             this.btripUserId = request.btripUserId;
             this.checkIn = request.checkIn;
             this.checkOut = request.checkOut;
@@ -383,6 +423,7 @@ public class HotelOrderCreateRequest extends Request {
             this.invoiceInfo = request.invoiceInfo;
             this.itemId = request.itemId;
             this.itineraryNo = request.itineraryNo;
+            this.leaveTime = request.leaveTime;
             this.memberInfo = request.memberInfo;
             this.occupantInfoList = request.occupantInfoList;
             this.personPayPrice = request.personPayPrice;
@@ -390,12 +431,22 @@ public class HotelOrderCreateRequest extends Request {
             this.ratePlanId = request.ratePlanId;
             this.roomId = request.roomId;
             this.roomNum = request.roomNum;
+            this.rpType = request.rpType;
             this.sellerId = request.sellerId;
             this.shid = request.shid;
             this.totalOrderPrice = request.totalOrderPrice;
             this.validateResKey = request.validateResKey;
             this.xAcsBtripCorpToken = request.xAcsBtripCorpToken;
         } 
+
+        /**
+         * arrival_time.
+         */
+        public Builder arrivalTime(String arrivalTime) {
+            this.putBodyParameter("arrival_time", arrivalTime);
+            this.arrivalTime = arrivalTime;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
@@ -531,6 +582,15 @@ public class HotelOrderCreateRequest extends Request {
         }
 
         /**
+         * leave_time.
+         */
+        public Builder leaveTime(String leaveTime) {
+            this.putBodyParameter("leave_time", leaveTime);
+            this.leaveTime = leaveTime;
+            return this;
+        }
+
+        /**
          * member_info.
          */
         public Builder memberInfo(MemberInfo memberInfo) {
@@ -605,6 +665,15 @@ public class HotelOrderCreateRequest extends Request {
         public Builder roomNum(Integer roomNum) {
             this.putBodyParameter("room_num", roomNum);
             this.roomNum = roomNum;
+            return this;
+        }
+
+        /**
+         * rp_type.
+         */
+        public Builder rpType(Integer rpType) {
+            this.putBodyParameter("rp_type", rpType);
+            this.rpType = rpType;
             return this;
         }
 
