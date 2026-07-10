@@ -58,6 +58,11 @@ public class ListApplicationsRequest extends Request {
     private String m2MClientStatus;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ManagedServiceCode")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String managedServiceCode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
@@ -69,6 +74,10 @@ public class ListApplicationsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceServerStatus")
     @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String resourceServerStatus;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceManaged")
+    private Boolean serviceManaged;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SsoType")
@@ -91,9 +100,11 @@ public class ListApplicationsRequest extends Request {
         this.customFields = builder.customFields;
         this.instanceId = builder.instanceId;
         this.m2MClientStatus = builder.m2MClientStatus;
+        this.managedServiceCode = builder.managedServiceCode;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.resourceServerStatus = builder.resourceServerStatus;
+        this.serviceManaged = builder.serviceManaged;
         this.ssoType = builder.ssoType;
         this.status = builder.status;
     }
@@ -175,6 +186,13 @@ public class ListApplicationsRequest extends Request {
     }
 
     /**
+     * @return managedServiceCode
+     */
+    public String getManagedServiceCode() {
+        return this.managedServiceCode;
+    }
+
+    /**
      * @return pageNumber
      */
     public Long getPageNumber() {
@@ -193,6 +211,13 @@ public class ListApplicationsRequest extends Request {
      */
     public String getResourceServerStatus() {
         return this.resourceServerStatus;
+    }
+
+    /**
+     * @return serviceManaged
+     */
+    public Boolean getServiceManaged() {
+        return this.serviceManaged;
     }
 
     /**
@@ -219,9 +244,11 @@ public class ListApplicationsRequest extends Request {
         private java.util.List<CustomFields> customFields; 
         private String instanceId; 
         private String m2MClientStatus; 
+        private String managedServiceCode; 
         private Long pageNumber; 
         private Long pageSize; 
         private String resourceServerStatus; 
+        private Boolean serviceManaged; 
         private String ssoType; 
         private String status; 
 
@@ -240,9 +267,11 @@ public class ListApplicationsRequest extends Request {
             this.customFields = request.customFields;
             this.instanceId = request.instanceId;
             this.m2MClientStatus = request.m2MClientStatus;
+            this.managedServiceCode = request.managedServiceCode;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.resourceServerStatus = request.resourceServerStatus;
+            this.serviceManaged = request.serviceManaged;
             this.ssoType = request.ssoType;
             this.status = request.status;
         } 
@@ -353,6 +382,15 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
+         * ManagedServiceCode.
+         */
+        public Builder managedServiceCode(String managedServiceCode) {
+            this.putQueryParameter("ManagedServiceCode", managedServiceCode);
+            this.managedServiceCode = managedServiceCode;
+            return this;
+        }
+
+        /**
          * <p>The number of the page to return.</p>
          * 
          * <strong>example:</strong>
@@ -389,6 +427,15 @@ public class ListApplicationsRequest extends Request {
         public Builder resourceServerStatus(String resourceServerStatus) {
             this.putQueryParameter("ResourceServerStatus", resourceServerStatus);
             this.resourceServerStatus = resourceServerStatus;
+            return this;
+        }
+
+        /**
+         * ServiceManaged.
+         */
+        public Builder serviceManaged(Boolean serviceManaged) {
+            this.putQueryParameter("ServiceManaged", serviceManaged);
+            this.serviceManaged = serviceManaged;
             return this;
         }
 
