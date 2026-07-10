@@ -296,6 +296,10 @@ public class CreateApplicationRequest extends Request {
     private String pythonModules;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RaspConfig")
+    private RaspConfig raspConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Readiness")
     private String readiness;
 
@@ -440,6 +444,7 @@ public class CreateApplicationRequest extends Request {
         this.pvtzDiscoverySvc = builder.pvtzDiscoverySvc;
         this.python = builder.python;
         this.pythonModules = builder.pythonModules;
+        this.raspConfig = builder.raspConfig;
         this.readiness = builder.readiness;
         this.replicas = builder.replicas;
         this.resourceType = builder.resourceType;
@@ -957,6 +962,13 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return raspConfig
+     */
+    public RaspConfig getRaspConfig() {
+        return this.raspConfig;
+    }
+
+    /**
      * @return readiness
      */
     public String getReadiness() {
@@ -1152,6 +1164,7 @@ public class CreateApplicationRequest extends Request {
         private String pvtzDiscoverySvc; 
         private String python; 
         private String pythonModules; 
+        private RaspConfig raspConfig; 
         private String readiness; 
         private Integer replicas; 
         private String resourceType; 
@@ -1246,6 +1259,7 @@ public class CreateApplicationRequest extends Request {
             this.pvtzDiscoverySvc = request.pvtzDiscoverySvc;
             this.python = request.python;
             this.pythonModules = request.pythonModules;
+            this.raspConfig = request.raspConfig;
             this.readiness = request.readiness;
             this.replicas = request.replicas;
             this.resourceType = request.resourceType;
@@ -2283,6 +2297,16 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
+         * RaspConfig.
+         */
+        public Builder raspConfig(RaspConfig raspConfig) {
+            String raspConfigShrink = shrink(raspConfig, "RaspConfig", "json");
+            this.putQueryParameter("RaspConfig", raspConfigShrink);
+            this.raspConfig = raspConfig;
+            return this;
+        }
+
+        /**
          * <p>Check the launch status of the container. Containers that fail health checks more than once will not receive traffic from Server Load Balancer (SLB) instances any loner. You can use the <strong>exec</strong>, <strong>httpGet</strong>, or <strong>tcpSocket</strong> method to perform health checks. For more information, see the description of the <strong>Liveness</strong> parameter.</p>
          * <blockquote>
          * <p>You can use only one method to perform the health check.</p>
@@ -2553,4 +2577,100 @@ public class CreateApplicationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateApplicationRequest} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationRequest</p>
+     */
+    public static class RaspConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableRasp")
+        private Boolean enableRasp;
+
+        @com.aliyun.core.annotation.NameInMap("RaspAppKey")
+        private String raspAppKey;
+
+        @com.aliyun.core.annotation.NameInMap("RaspAppName")
+        private String raspAppName;
+
+        private RaspConfig(Builder builder) {
+            this.enableRasp = builder.enableRasp;
+            this.raspAppKey = builder.raspAppKey;
+            this.raspAppName = builder.raspAppName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RaspConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableRasp
+         */
+        public Boolean getEnableRasp() {
+            return this.enableRasp;
+        }
+
+        /**
+         * @return raspAppKey
+         */
+        public String getRaspAppKey() {
+            return this.raspAppKey;
+        }
+
+        /**
+         * @return raspAppName
+         */
+        public String getRaspAppName() {
+            return this.raspAppName;
+        }
+
+        public static final class Builder {
+            private Boolean enableRasp; 
+            private String raspAppKey; 
+            private String raspAppName; 
+
+            private Builder() {
+            } 
+
+            private Builder(RaspConfig model) {
+                this.enableRasp = model.enableRasp;
+                this.raspAppKey = model.raspAppKey;
+                this.raspAppName = model.raspAppName;
+            } 
+
+            /**
+             * EnableRasp.
+             */
+            public Builder enableRasp(Boolean enableRasp) {
+                this.enableRasp = enableRasp;
+                return this;
+            }
+
+            /**
+             * RaspAppKey.
+             */
+            public Builder raspAppKey(String raspAppKey) {
+                this.raspAppKey = raspAppKey;
+                return this;
+            }
+
+            /**
+             * RaspAppName.
+             */
+            public Builder raspAppName(String raspAppName) {
+                this.raspAppName = raspAppName;
+                return this;
+            }
+
+            public RaspConfig build() {
+                return new RaspConfig(this);
+            } 
+
+        } 
+
+    }
 }

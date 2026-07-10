@@ -1062,6 +1062,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProgrammingLanguage")
         private String programmingLanguage;
 
+        @com.aliyun.core.annotation.NameInMap("RaspEnabled")
+        private Boolean raspEnabled;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
@@ -1100,6 +1103,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             this.newSaeVersion = builder.newSaeVersion;
             this.packageUrl = builder.packageUrl;
             this.programmingLanguage = builder.programmingLanguage;
+            this.raspEnabled = builder.raspEnabled;
             this.regionId = builder.regionId;
             this.resourceType = builder.resourceType;
             this.runningInstances = builder.runningInstances;
@@ -1270,6 +1274,13 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return raspEnabled
+         */
+        public Boolean getRaspEnabled() {
+            return this.raspEnabled;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -1327,6 +1338,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String newSaeVersion; 
             private String packageUrl; 
             private String programmingLanguage; 
+            private Boolean raspEnabled; 
             private String regionId; 
             private String resourceType; 
             private Integer runningInstances; 
@@ -1359,6 +1371,7 @@ public class ListApplicationsResponseBody extends TeaModel {
                 this.newSaeVersion = model.newSaeVersion;
                 this.packageUrl = model.packageUrl;
                 this.programmingLanguage = model.programmingLanguage;
+                this.raspEnabled = model.raspEnabled;
                 this.regionId = model.regionId;
                 this.resourceType = model.resourceType;
                 this.runningInstances = model.runningInstances;
@@ -1628,6 +1641,14 @@ public class ListApplicationsResponseBody extends TeaModel {
              */
             public Builder programmingLanguage(String programmingLanguage) {
                 this.programmingLanguage = programmingLanguage;
+                return this;
+            }
+
+            /**
+             * RaspEnabled.
+             */
+            public Builder raspEnabled(Boolean raspEnabled) {
+                this.raspEnabled = raspEnabled;
                 return this;
             }
 

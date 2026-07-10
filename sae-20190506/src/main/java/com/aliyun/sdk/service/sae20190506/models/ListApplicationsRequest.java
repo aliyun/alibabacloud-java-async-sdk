@@ -58,6 +58,10 @@ public class ListApplicationsRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProgrammingLanguage")
+    private String programmingLanguage;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Reverse")
     private Boolean reverse;
 
@@ -77,6 +81,7 @@ public class ListApplicationsRequest extends Request {
         this.newSaeVersion = builder.newSaeVersion;
         this.orderBy = builder.orderBy;
         this.pageSize = builder.pageSize;
+        this.programmingLanguage = builder.programmingLanguage;
         this.reverse = builder.reverse;
         this.tags = builder.tags;
     }
@@ -165,6 +170,13 @@ public class ListApplicationsRequest extends Request {
     }
 
     /**
+     * @return programmingLanguage
+     */
+    public String getProgrammingLanguage() {
+        return this.programmingLanguage;
+    }
+
+    /**
      * @return reverse
      */
     public Boolean getReverse() {
@@ -189,6 +201,7 @@ public class ListApplicationsRequest extends Request {
         private String newSaeVersion; 
         private String orderBy; 
         private Integer pageSize; 
+        private String programmingLanguage; 
         private Boolean reverse; 
         private String tags; 
 
@@ -208,6 +221,7 @@ public class ListApplicationsRequest extends Request {
             this.newSaeVersion = request.newSaeVersion;
             this.orderBy = request.orderBy;
             this.pageSize = request.pageSize;
+            this.programmingLanguage = request.programmingLanguage;
             this.reverse = request.reverse;
             this.tags = request.tags;
         } 
@@ -338,6 +352,15 @@ public class ListApplicationsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ProgrammingLanguage.
+         */
+        public Builder programmingLanguage(String programmingLanguage) {
+            this.putQueryParameter("ProgrammingLanguage", programmingLanguage);
+            this.programmingLanguage = programmingLanguage;
             return this;
         }
 

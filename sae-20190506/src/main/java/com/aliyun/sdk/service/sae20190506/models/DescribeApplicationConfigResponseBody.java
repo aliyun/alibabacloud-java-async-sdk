@@ -1223,6 +1223,102 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
      *
      * <p>DescribeApplicationConfigResponseBody</p>
      */
+    public static class RaspConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableRasp")
+        private Boolean enableRasp;
+
+        @com.aliyun.core.annotation.NameInMap("RaspAppKey")
+        private String raspAppKey;
+
+        @com.aliyun.core.annotation.NameInMap("RaspAppName")
+        private String raspAppName;
+
+        private RaspConfig(Builder builder) {
+            this.enableRasp = builder.enableRasp;
+            this.raspAppKey = builder.raspAppKey;
+            this.raspAppName = builder.raspAppName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RaspConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableRasp
+         */
+        public Boolean getEnableRasp() {
+            return this.enableRasp;
+        }
+
+        /**
+         * @return raspAppKey
+         */
+        public String getRaspAppKey() {
+            return this.raspAppKey;
+        }
+
+        /**
+         * @return raspAppName
+         */
+        public String getRaspAppName() {
+            return this.raspAppName;
+        }
+
+        public static final class Builder {
+            private Boolean enableRasp; 
+            private String raspAppKey; 
+            private String raspAppName; 
+
+            private Builder() {
+            } 
+
+            private Builder(RaspConfig model) {
+                this.enableRasp = model.enableRasp;
+                this.raspAppKey = model.raspAppKey;
+                this.raspAppName = model.raspAppName;
+            } 
+
+            /**
+             * EnableRasp.
+             */
+            public Builder enableRasp(Boolean enableRasp) {
+                this.enableRasp = enableRasp;
+                return this;
+            }
+
+            /**
+             * RaspAppKey.
+             */
+            public Builder raspAppKey(String raspAppKey) {
+                this.raspAppKey = raspAppKey;
+                return this;
+            }
+
+            /**
+             * RaspAppName.
+             */
+            public Builder raspAppName(String raspAppName) {
+                this.raspAppName = raspAppName;
+                return this;
+            }
+
+            public RaspConfig build() {
+                return new RaspConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeApplicationConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApplicationConfigResponseBody</p>
+     */
     public static class DataSecretMountDesc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -2423,6 +2519,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PythonModules")
         private String pythonModules;
 
+        @com.aliyun.core.annotation.NameInMap("RaspConfig")
+        private java.util.List<RaspConfig> raspConfig;
+
         @com.aliyun.core.annotation.NameInMap("Readiness")
         private String readiness;
 
@@ -2568,6 +2667,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.pvtzDiscovery = builder.pvtzDiscovery;
             this.python = builder.python;
             this.pythonModules = builder.pythonModules;
+            this.raspConfig = builder.raspConfig;
             this.readiness = builder.readiness;
             this.regionId = builder.regionId;
             this.replicas = builder.replicas;
@@ -3167,6 +3267,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return raspConfig
+         */
+        public java.util.List<RaspConfig> getRaspConfig() {
+            return this.raspConfig;
+        }
+
+        /**
          * @return readiness
          */
         public String getReadiness() {
@@ -3395,6 +3502,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String pvtzDiscovery; 
             private String python; 
             private String pythonModules; 
+            private java.util.List<RaspConfig> raspConfig; 
             private String readiness; 
             private String regionId; 
             private Integer replicas; 
@@ -3502,6 +3610,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
                 this.pvtzDiscovery = model.pvtzDiscovery;
                 this.python = model.python;
                 this.pythonModules = model.pythonModules;
+                this.raspConfig = model.raspConfig;
                 this.readiness = model.readiness;
                 this.regionId = model.regionId;
                 this.replicas = model.replicas;
@@ -4550,6 +4659,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              */
             public Builder pythonModules(String pythonModules) {
                 this.pythonModules = pythonModules;
+                return this;
+            }
+
+            /**
+             * RaspConfig.
+             */
+            public Builder raspConfig(java.util.List<RaspConfig> raspConfig) {
+                this.raspConfig = raspConfig;
                 return this;
             }
 
