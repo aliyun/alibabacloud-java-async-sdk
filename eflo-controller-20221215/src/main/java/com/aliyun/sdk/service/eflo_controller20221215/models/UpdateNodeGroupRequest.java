@@ -51,6 +51,10 @@ public class UpdateNodeGroupRequest extends Request {
     private String ramRoleName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SystemDisk")
+    private SystemDisk systemDisk;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
@@ -64,6 +68,7 @@ public class UpdateNodeGroupRequest extends Request {
         this.newNodeGroupName = builder.newNodeGroupName;
         this.nodeGroupId = builder.nodeGroupId;
         this.ramRoleName = builder.ramRoleName;
+        this.systemDisk = builder.systemDisk;
         this.userData = builder.userData;
     }
 
@@ -137,6 +142,13 @@ public class UpdateNodeGroupRequest extends Request {
     }
 
     /**
+     * @return systemDisk
+     */
+    public SystemDisk getSystemDisk() {
+        return this.systemDisk;
+    }
+
+    /**
      * @return userData
      */
     public String getUserData() {
@@ -152,6 +164,7 @@ public class UpdateNodeGroupRequest extends Request {
         private String newNodeGroupName; 
         private String nodeGroupId; 
         private String ramRoleName; 
+        private SystemDisk systemDisk; 
         private String userData; 
 
         private Builder() {
@@ -168,6 +181,7 @@ public class UpdateNodeGroupRequest extends Request {
             this.newNodeGroupName = request.newNodeGroupName;
             this.nodeGroupId = request.nodeGroupId;
             this.ramRoleName = request.ramRoleName;
+            this.systemDisk = request.systemDisk;
             this.userData = request.userData;
         } 
 
@@ -262,6 +276,16 @@ public class UpdateNodeGroupRequest extends Request {
         }
 
         /**
+         * SystemDisk.
+         */
+        public Builder systemDisk(SystemDisk systemDisk) {
+            String systemDiskShrink = shrink(systemDisk, "SystemDisk", "json");
+            this.putBodyParameter("SystemDisk", systemDiskShrink);
+            this.systemDisk = systemDisk;
+            return this;
+        }
+
+        /**
          * <p>User-defined script</p>
          * 
          * <strong>example:</strong>
@@ -282,4 +306,58 @@ public class UpdateNodeGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateNodeGroupRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateNodeGroupRequest</p>
+     */
+    public static class SystemDisk extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
+        private String performanceLevel;
+
+        private SystemDisk(Builder builder) {
+            this.performanceLevel = builder.performanceLevel;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SystemDisk create() {
+            return builder().build();
+        }
+
+        /**
+         * @return performanceLevel
+         */
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        public static final class Builder {
+            private String performanceLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemDisk model) {
+                this.performanceLevel = model.performanceLevel;
+            } 
+
+            /**
+             * PerformanceLevel.
+             */
+            public Builder performanceLevel(String performanceLevel) {
+                this.performanceLevel = performanceLevel;
+                return this;
+            }
+
+            public SystemDisk build() {
+                return new SystemDisk(this);
+            } 
+
+        } 
+
+    }
 }
