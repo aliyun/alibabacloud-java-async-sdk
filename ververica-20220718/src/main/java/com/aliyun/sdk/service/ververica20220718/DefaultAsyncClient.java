@@ -1410,6 +1410,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of StartSqlExecution  StartSqlExecutionRequest
+     * @return StartSqlExecutionResponse
+     */
+    @Override
+    public CompletableFuture<StartSqlExecutionResponse> startSqlExecution(StartSqlExecutionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StartSqlExecution").setMethod(HttpMethod.POST).setPathRegex("/api/v2/namespaces/{namespace}/sql-execution").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StartSqlExecutionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StartSqlExecutionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of StopApplyScheduledPlan  StopApplyScheduledPlanRequest
      * @return StopApplyScheduledPlanResponse
      */

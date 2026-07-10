@@ -471,6 +471,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartSessionClusterResponse> startSessionCluster(StartSessionClusterRequest request);
 
     /**
+     * @param request the request parameters of StartSqlExecution  StartSqlExecutionRequest
+     * @return StartSqlExecutionResponse
+     */
+    CompletableFuture<StartSqlExecutionResponse> startSqlExecution(StartSqlExecutionRequest request);
+
+    /**
      * @param request the request parameters of StopApplyScheduledPlan  StopApplyScheduledPlanRequest
      * @return StopApplyScheduledPlanResponse
      */
