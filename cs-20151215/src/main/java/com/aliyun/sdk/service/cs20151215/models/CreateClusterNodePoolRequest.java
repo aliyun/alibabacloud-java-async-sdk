@@ -779,15 +779,23 @@ public class CreateClusterNodePoolRequest extends Request {
      * <p>CreateClusterNodePoolRequest</p>
      */
     public static class EfloNodeGroup extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("auto_attach_enabled")
+        private Boolean autoAttachEnabled;
+
         @com.aliyun.core.annotation.NameInMap("cluster_id")
         private String clusterId;
 
         @com.aliyun.core.annotation.NameInMap("group_id")
         private String groupId;
 
+        @com.aliyun.core.annotation.NameInMap("worker_ram_role_name")
+        private String workerRamRoleName;
+
         private EfloNodeGroup(Builder builder) {
+            this.autoAttachEnabled = builder.autoAttachEnabled;
             this.clusterId = builder.clusterId;
             this.groupId = builder.groupId;
+            this.workerRamRoleName = builder.workerRamRoleName;
         }
 
         public static Builder builder() {
@@ -796,6 +804,13 @@ public class CreateClusterNodePoolRequest extends Request {
 
         public static EfloNodeGroup create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoAttachEnabled
+         */
+        public Boolean getAutoAttachEnabled() {
+            return this.autoAttachEnabled;
         }
 
         /**
@@ -812,17 +827,36 @@ public class CreateClusterNodePoolRequest extends Request {
             return this.groupId;
         }
 
+        /**
+         * @return workerRamRoleName
+         */
+        public String getWorkerRamRoleName() {
+            return this.workerRamRoleName;
+        }
+
         public static final class Builder {
+            private Boolean autoAttachEnabled; 
             private String clusterId; 
             private String groupId; 
+            private String workerRamRoleName; 
 
             private Builder() {
             } 
 
             private Builder(EfloNodeGroup model) {
+                this.autoAttachEnabled = model.autoAttachEnabled;
                 this.clusterId = model.clusterId;
                 this.groupId = model.groupId;
+                this.workerRamRoleName = model.workerRamRoleName;
             } 
+
+            /**
+             * auto_attach_enabled.
+             */
+            public Builder autoAttachEnabled(Boolean autoAttachEnabled) {
+                this.autoAttachEnabled = autoAttachEnabled;
+                return this;
+            }
 
             /**
              * cluster_id.
@@ -837,6 +871,14 @@ public class CreateClusterNodePoolRequest extends Request {
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
+                return this;
+            }
+
+            /**
+             * worker_ram_role_name.
+             */
+            public Builder workerRamRoleName(String workerRamRoleName) {
+                this.workerRamRoleName = workerRamRoleName;
                 return this;
             }
 

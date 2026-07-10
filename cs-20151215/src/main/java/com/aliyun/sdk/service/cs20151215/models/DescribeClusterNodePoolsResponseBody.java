@@ -349,15 +349,23 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
      * <p>DescribeClusterNodePoolsResponseBody</p>
      */
     public static class EfloNodeGroup extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("auto_attach_enabled")
+        private Boolean autoAttachEnabled;
+
         @com.aliyun.core.annotation.NameInMap("cluster_id")
         private String clusterId;
 
         @com.aliyun.core.annotation.NameInMap("group_id")
         private String groupId;
 
+        @com.aliyun.core.annotation.NameInMap("worker_ram_role_name")
+        private String workerRamRoleName;
+
         private EfloNodeGroup(Builder builder) {
+            this.autoAttachEnabled = builder.autoAttachEnabled;
             this.clusterId = builder.clusterId;
             this.groupId = builder.groupId;
+            this.workerRamRoleName = builder.workerRamRoleName;
         }
 
         public static Builder builder() {
@@ -366,6 +374,13 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
         public static EfloNodeGroup create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoAttachEnabled
+         */
+        public Boolean getAutoAttachEnabled() {
+            return this.autoAttachEnabled;
         }
 
         /**
@@ -382,17 +397,36 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             return this.groupId;
         }
 
+        /**
+         * @return workerRamRoleName
+         */
+        public String getWorkerRamRoleName() {
+            return this.workerRamRoleName;
+        }
+
         public static final class Builder {
+            private Boolean autoAttachEnabled; 
             private String clusterId; 
             private String groupId; 
+            private String workerRamRoleName; 
 
             private Builder() {
             } 
 
             private Builder(EfloNodeGroup model) {
+                this.autoAttachEnabled = model.autoAttachEnabled;
                 this.clusterId = model.clusterId;
                 this.groupId = model.groupId;
+                this.workerRamRoleName = model.workerRamRoleName;
             } 
+
+            /**
+             * auto_attach_enabled.
+             */
+            public Builder autoAttachEnabled(Boolean autoAttachEnabled) {
+                this.autoAttachEnabled = autoAttachEnabled;
+                return this;
+            }
 
             /**
              * cluster_id.
@@ -407,6 +441,14 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
+                return this;
+            }
+
+            /**
+             * worker_ram_role_name.
+             */
+            public Builder workerRamRoleName(String workerRamRoleName) {
+                this.workerRamRoleName = workerRamRoleName;
                 return this;
             }
 
@@ -1589,6 +1631,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("config")
         private Config config;
 
+        @com.aliyun.core.annotation.NameInMap("config_revision")
+        private String configRevision;
+
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
@@ -1597,6 +1642,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
         private NodeComponents(Builder builder) {
             this.config = builder.config;
+            this.configRevision = builder.configRevision;
             this.name = builder.name;
             this.version = builder.version;
         }
@@ -1617,6 +1663,13 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         }
 
         /**
+         * @return configRevision
+         */
+        public String getConfigRevision() {
+            return this.configRevision;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -1632,6 +1685,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Config config; 
+            private String configRevision; 
             private String name; 
             private String version; 
 
@@ -1640,6 +1694,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
             private Builder(NodeComponents model) {
                 this.config = model.config;
+                this.configRevision = model.configRevision;
                 this.name = model.name;
                 this.version = model.version;
             } 
@@ -1649,6 +1704,14 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
              */
             public Builder config(Config config) {
                 this.config = config;
+                return this;
+            }
+
+            /**
+             * config_revision.
+             */
+            public Builder configRevision(String configRevision) {
+                this.configRevision = configRevision;
                 return this;
             }
 

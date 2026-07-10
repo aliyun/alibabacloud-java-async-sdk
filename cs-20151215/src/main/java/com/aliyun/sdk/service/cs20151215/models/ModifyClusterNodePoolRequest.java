@@ -36,6 +36,10 @@ public class ModifyClusterNodePoolRequest extends Request {
     private Boolean concurrency;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("eflo_node_group")
+    private EfloNodeGroup efloNodeGroup;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("kubernetes_config")
     private KubernetesConfig kubernetesConfig;
 
@@ -65,6 +69,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         this.nodepoolId = builder.nodepoolId;
         this.autoScaling = builder.autoScaling;
         this.concurrency = builder.concurrency;
+        this.efloNodeGroup = builder.efloNodeGroup;
         this.kubernetesConfig = builder.kubernetesConfig;
         this.management = builder.management;
         this.nodepoolInfo = builder.nodepoolInfo;
@@ -115,6 +120,13 @@ public class ModifyClusterNodePoolRequest extends Request {
     }
 
     /**
+     * @return efloNodeGroup
+     */
+    public EfloNodeGroup getEfloNodeGroup() {
+        return this.efloNodeGroup;
+    }
+
+    /**
      * @return kubernetesConfig
      */
     public KubernetesConfig getKubernetesConfig() {
@@ -161,6 +173,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         private String nodepoolId; 
         private AutoScaling autoScaling; 
         private Boolean concurrency; 
+        private EfloNodeGroup efloNodeGroup; 
         private KubernetesConfig kubernetesConfig; 
         private Management management; 
         private NodepoolInfo nodepoolInfo; 
@@ -178,6 +191,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             this.nodepoolId = request.nodepoolId;
             this.autoScaling = request.autoScaling;
             this.concurrency = request.concurrency;
+            this.efloNodeGroup = request.efloNodeGroup;
             this.kubernetesConfig = request.kubernetesConfig;
             this.management = request.management;
             this.nodepoolInfo = request.nodepoolInfo;
@@ -230,6 +244,15 @@ public class ModifyClusterNodePoolRequest extends Request {
         public Builder concurrency(Boolean concurrency) {
             this.putBodyParameter("concurrency", concurrency);
             this.concurrency = concurrency;
+            return this;
+        }
+
+        /**
+         * eflo_node_group.
+         */
+        public Builder efloNodeGroup(EfloNodeGroup efloNodeGroup) {
+            this.putBodyParameter("eflo_node_group", efloNodeGroup);
+            this.efloNodeGroup = efloNodeGroup;
             return this;
         }
 
@@ -532,6 +555,60 @@ public class ModifyClusterNodePoolRequest extends Request {
 
             public AutoScaling build() {
                 return new AutoScaling(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyClusterNodePoolRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyClusterNodePoolRequest</p>
+     */
+    public static class EfloNodeGroup extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("auto_attach_enabled")
+        private String autoAttachEnabled;
+
+        private EfloNodeGroup(Builder builder) {
+            this.autoAttachEnabled = builder.autoAttachEnabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EfloNodeGroup create() {
+            return builder().build();
+        }
+
+        /**
+         * @return autoAttachEnabled
+         */
+        public String getAutoAttachEnabled() {
+            return this.autoAttachEnabled;
+        }
+
+        public static final class Builder {
+            private String autoAttachEnabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(EfloNodeGroup model) {
+                this.autoAttachEnabled = model.autoAttachEnabled;
+            } 
+
+            /**
+             * auto_attach_enabled.
+             */
+            public Builder autoAttachEnabled(String autoAttachEnabled) {
+                this.autoAttachEnabled = autoAttachEnabled;
+                return this;
+            }
+
+            public EfloNodeGroup build() {
+                return new EfloNodeGroup(this);
             } 
 
         } 
