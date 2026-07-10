@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of GenerateGroupImage  GenerateGroupImageRequest
+     * @return GenerateGroupImageResponse
+     */
+    CompletableFuture<GenerateGroupImageResponse> generateGroupImage(GenerateGroupImageRequest request);
+
+    /**
      * @param request the request parameters of ImportProducts  ImportProductsRequest
      * @return ImportProductsResponse
      */
