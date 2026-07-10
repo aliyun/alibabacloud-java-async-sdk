@@ -64,6 +64,10 @@ public class DescribeWhitelistSettingRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ValidStartDate")
     private Long validStartDate;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WhitelistType")
+    private String whitelistType;
+
     private DescribeWhitelistSettingRequest(Builder builder) {
         super(builder);
         this.certNo = builder.certNo;
@@ -77,6 +81,7 @@ public class DescribeWhitelistSettingRequest extends Request {
         this.status = builder.status;
         this.validEndDate = builder.validEndDate;
         this.validStartDate = builder.validStartDate;
+        this.whitelistType = builder.whitelistType;
     }
 
     public static Builder builder() {
@@ -169,6 +174,13 @@ public class DescribeWhitelistSettingRequest extends Request {
         return this.validStartDate;
     }
 
+    /**
+     * @return whitelistType
+     */
+    public String getWhitelistType() {
+        return this.whitelistType;
+    }
+
     public static final class Builder extends Request.Builder<DescribeWhitelistSettingRequest, Builder> {
         private String certNo; 
         private String certifyId; 
@@ -181,6 +193,7 @@ public class DescribeWhitelistSettingRequest extends Request {
         private String status; 
         private Long validEndDate; 
         private Long validStartDate; 
+        private String whitelistType; 
 
         private Builder() {
             super();
@@ -199,6 +212,7 @@ public class DescribeWhitelistSettingRequest extends Request {
             this.status = request.status;
             this.validEndDate = request.validEndDate;
             this.validStartDate = request.validStartDate;
+            this.whitelistType = request.whitelistType;
         } 
 
         /**
@@ -346,6 +360,15 @@ public class DescribeWhitelistSettingRequest extends Request {
         public Builder validStartDate(Long validStartDate) {
             this.putQueryParameter("ValidStartDate", validStartDate);
             this.validStartDate = validStartDate;
+            return this;
+        }
+
+        /**
+         * WhitelistType.
+         */
+        public Builder whitelistType(String whitelistType) {
+            this.putQueryParameter("WhitelistType", whitelistType);
+            this.whitelistType = whitelistType;
             return this;
         }
 

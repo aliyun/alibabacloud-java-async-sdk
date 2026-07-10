@@ -29,8 +29,33 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "Cloudauth";
         this.version = "2019-03-07";
-        this.endpointRule = "central";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("us-west-1", "cloudauth.aliyuncs.com"),
+            new TeaPair("us-east-1", "cloudauth.aliyuncs.com"),
+            new TeaPair("me-east-1", "cloudauth.aliyuncs.com"),
+            new TeaPair("eu-west-1", "cloudauth.aliyuncs.com"),
+            new TeaPair("eu-central-1", "cloudauth.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "cloudauth.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "cloudauth.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "cloudauth.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "cloudauth.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "cloudauth.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "cloudauth.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "cloudauth.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "cloudauth.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "cloudauth.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "cloudauth.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "cloudauth.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "cloudauth.aliyuncs.com"),
+            new TeaPair("cn-beijing", "cloudauth.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "cloudauth.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "cloudauth.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "cloudauth.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "cloudauth.aliyuncs.com"),
+            new TeaPair("ap-south-1", "cloudauth.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "cloudauth.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 

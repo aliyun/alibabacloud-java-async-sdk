@@ -200,6 +200,9 @@ public class DescribeWhitelistSettingResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ValidStartDate")
         private String validStartDate;
 
+        @com.aliyun.core.annotation.NameInMap("WhitelistType")
+        private String whitelistType;
+
         private Items(Builder builder) {
             this.certNo = builder.certNo;
             this.certifyId = builder.certifyId;
@@ -211,6 +214,7 @@ public class DescribeWhitelistSettingResponseBody extends TeaModel {
             this.status = builder.status;
             this.validEndDate = builder.validEndDate;
             this.validStartDate = builder.validStartDate;
+            this.whitelistType = builder.whitelistType;
         }
 
         public static Builder builder() {
@@ -291,6 +295,13 @@ public class DescribeWhitelistSettingResponseBody extends TeaModel {
             return this.validStartDate;
         }
 
+        /**
+         * @return whitelistType
+         */
+        public String getWhitelistType() {
+            return this.whitelistType;
+        }
+
         public static final class Builder {
             private String certNo; 
             private String certifyId; 
@@ -302,6 +313,7 @@ public class DescribeWhitelistSettingResponseBody extends TeaModel {
             private String status; 
             private String validEndDate; 
             private String validStartDate; 
+            private String whitelistType; 
 
             private Builder() {
             } 
@@ -317,6 +329,7 @@ public class DescribeWhitelistSettingResponseBody extends TeaModel {
                 this.status = model.status;
                 this.validEndDate = model.validEndDate;
                 this.validStartDate = model.validStartDate;
+                this.whitelistType = model.whitelistType;
             } 
 
             /**
@@ -431,6 +444,14 @@ public class DescribeWhitelistSettingResponseBody extends TeaModel {
              */
             public Builder validStartDate(String validStartDate) {
                 this.validStartDate = validStartDate;
+                return this;
+            }
+
+            /**
+             * WhitelistType.
+             */
+            public Builder whitelistType(String whitelistType) {
+                this.whitelistType = whitelistType;
                 return this;
             }
 
