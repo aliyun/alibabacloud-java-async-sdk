@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AllocateSupabaseForAdminResponse> allocateSupabaseForAdmin(AllocateSupabaseForAdminRequest request);
 
     /**
+     * @param request the request parameters of AuthorizeAppProxyOps  AuthorizeAppProxyOpsRequest
+     * @return AuthorizeAppProxyOpsResponse
+     */
+    CompletableFuture<AuthorizeAppProxyOpsResponse> authorizeAppProxyOps(AuthorizeAppProxyOpsRequest request);
+
+    /**
      * @param request the request parameters of BatchCheckResourceMeasure  BatchCheckResourceMeasureRequest
      * @return BatchCheckResourceMeasureResponse
      */
