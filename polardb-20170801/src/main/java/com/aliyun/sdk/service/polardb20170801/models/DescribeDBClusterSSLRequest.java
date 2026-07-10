@@ -31,6 +31,10 @@ public class DescribeDBClusterSSLRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PfsInstanceId")
+    private String pfsInstanceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -43,6 +47,7 @@ public class DescribeDBClusterSSLRequest extends Request {
         this.DBClusterId = builder.DBClusterId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.pfsInstanceId = builder.pfsInstanceId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -82,6 +87,13 @@ public class DescribeDBClusterSSLRequest extends Request {
     }
 
     /**
+     * @return pfsInstanceId
+     */
+    public String getPfsInstanceId() {
+        return this.pfsInstanceId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -99,6 +111,7 @@ public class DescribeDBClusterSSLRequest extends Request {
         private String DBClusterId; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String pfsInstanceId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -111,6 +124,7 @@ public class DescribeDBClusterSSLRequest extends Request {
             this.DBClusterId = request.DBClusterId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.pfsInstanceId = request.pfsInstanceId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
@@ -146,6 +160,15 @@ public class DescribeDBClusterSSLRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PfsInstanceId.
+         */
+        public Builder pfsInstanceId(String pfsInstanceId) {
+            this.putQueryParameter("PfsInstanceId", pfsInstanceId);
+            this.pfsInstanceId = pfsInstanceId;
             return this;
         }
 

@@ -22,6 +22,10 @@ public class CreateBackupRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comment")
+    private String comment;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
@@ -45,6 +49,7 @@ public class CreateBackupRequest extends Request {
     private CreateBackupRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.comment = builder.comment;
         this.DBClusterId = builder.DBClusterId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -70,6 +75,13 @@ public class CreateBackupRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return comment
+     */
+    public String getComment() {
+        return this.comment;
     }
 
     /**
@@ -109,6 +121,7 @@ public class CreateBackupRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateBackupRequest, Builder> {
         private String clientToken; 
+        private String comment; 
         private String DBClusterId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -122,6 +135,7 @@ public class CreateBackupRequest extends Request {
         private Builder(CreateBackupRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.comment = request.comment;
             this.DBClusterId = request.DBClusterId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -138,6 +152,15 @@ public class CreateBackupRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * Comment.
+         */
+        public Builder comment(String comment) {
+            this.putQueryParameter("Comment", comment);
+            this.comment = comment;
             return this;
         }
 

@@ -95,11 +95,20 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("StorageType")
     private String storageType;
 
+    @com.aliyun.core.annotation.NameInMap("TimeSlicesInfo")
+    private TimeSlicesInfo timeSlicesInfo;
+
+    @com.aliyun.core.annotation.NameInMap("TimeSlicesType")
+    private String timeSlicesType;
+
     @com.aliyun.core.annotation.NameInMap("VPCId")
     private String VPCId;
 
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
+
+    @com.aliyun.core.annotation.NameInMap("VnodeKubernetesConfig")
+    private VnodeKubernetesConfig vnodeKubernetesConfig;
 
     @com.aliyun.core.annotation.NameInMap("Volumes")
     private java.util.List<Volumes> volumes;
@@ -137,8 +146,11 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.runType = builder.runType;
         this.storageType = builder.storageType;
+        this.timeSlicesInfo = builder.timeSlicesInfo;
+        this.timeSlicesType = builder.timeSlicesType;
         this.VPCId = builder.VPCId;
         this.vSwitchId = builder.vSwitchId;
+        this.vnodeKubernetesConfig = builder.vnodeKubernetesConfig;
         this.volumes = builder.volumes;
         this.zoneId = builder.zoneId;
         this.zoneIds = builder.zoneIds;
@@ -339,6 +351,20 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return timeSlicesInfo
+     */
+    public TimeSlicesInfo getTimeSlicesInfo() {
+        return this.timeSlicesInfo;
+    }
+
+    /**
+     * @return timeSlicesType
+     */
+    public String getTimeSlicesType() {
+        return this.timeSlicesType;
+    }
+
+    /**
      * @return VPCId
      */
     public String getVPCId() {
@@ -350,6 +376,13 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
      */
     public String getVSwitchId() {
         return this.vSwitchId;
+    }
+
+    /**
+     * @return vnodeKubernetesConfig
+     */
+    public VnodeKubernetesConfig getVnodeKubernetesConfig() {
+        return this.vnodeKubernetesConfig;
     }
 
     /**
@@ -400,8 +433,11 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         private String requestId; 
         private String runType; 
         private String storageType; 
+        private TimeSlicesInfo timeSlicesInfo; 
+        private String timeSlicesType; 
         private String VPCId; 
         private String vSwitchId; 
+        private VnodeKubernetesConfig vnodeKubernetesConfig; 
         private java.util.List<Volumes> volumes; 
         private String zoneId; 
         private String zoneIds; 
@@ -436,8 +472,11 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
             this.requestId = model.requestId;
             this.runType = model.runType;
             this.storageType = model.storageType;
+            this.timeSlicesInfo = model.timeSlicesInfo;
+            this.timeSlicesType = model.timeSlicesType;
             this.VPCId = model.VPCId;
             this.vSwitchId = model.vSwitchId;
+            this.vnodeKubernetesConfig = model.vnodeKubernetesConfig;
             this.volumes = model.volumes;
             this.zoneId = model.zoneId;
             this.zoneIds = model.zoneIds;
@@ -655,6 +694,22 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * TimeSlicesInfo.
+         */
+        public Builder timeSlicesInfo(TimeSlicesInfo timeSlicesInfo) {
+            this.timeSlicesInfo = timeSlicesInfo;
+            return this;
+        }
+
+        /**
+         * TimeSlicesType.
+         */
+        public Builder timeSlicesType(String timeSlicesType) {
+            this.timeSlicesType = timeSlicesType;
+            return this;
+        }
+
+        /**
          * VPCId.
          */
         public Builder VPCId(String VPCId) {
@@ -667,6 +722,14 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
          */
         public Builder vSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
+            return this;
+        }
+
+        /**
+         * VnodeKubernetesConfig.
+         */
+        public Builder vnodeKubernetesConfig(VnodeKubernetesConfig vnodeKubernetesConfig) {
+            this.vnodeKubernetesConfig = vnodeKubernetesConfig;
             return this;
         }
 
@@ -1331,6 +1394,381 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
 
             public EndpointList build() {
                 return new EndpointList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAIDBClusterAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAIDBClusterAttributeResponseBody</p>
+     */
+    public static class TimeSlices extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BeginTime")
+        private String beginTime;
+
+        @com.aliyun.core.annotation.NameInMap("EndTime")
+        private String endTime;
+
+        private TimeSlices(Builder builder) {
+            this.beginTime = builder.beginTime;
+            this.endTime = builder.endTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TimeSlices create() {
+            return builder().build();
+        }
+
+        /**
+         * @return beginTime
+         */
+        public String getBeginTime() {
+            return this.beginTime;
+        }
+
+        /**
+         * @return endTime
+         */
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public static final class Builder {
+            private String beginTime; 
+            private String endTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(TimeSlices model) {
+                this.beginTime = model.beginTime;
+                this.endTime = model.endTime;
+            } 
+
+            /**
+             * BeginTime.
+             */
+            public Builder beginTime(String beginTime) {
+                this.beginTime = beginTime;
+                return this;
+            }
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(String endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            public TimeSlices build() {
+                return new TimeSlices(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAIDBClusterAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAIDBClusterAttributeResponseBody</p>
+     */
+    public static class TimeSlicesInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TimeSlices")
+        private java.util.List<TimeSlices> timeSlices;
+
+        private TimeSlicesInfo(Builder builder) {
+            this.timeSlices = builder.timeSlices;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TimeSlicesInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return timeSlices
+         */
+        public java.util.List<TimeSlices> getTimeSlices() {
+            return this.timeSlices;
+        }
+
+        public static final class Builder {
+            private java.util.List<TimeSlices> timeSlices; 
+
+            private Builder() {
+            } 
+
+            private Builder(TimeSlicesInfo model) {
+                this.timeSlices = model.timeSlices;
+            } 
+
+            /**
+             * TimeSlices.
+             */
+            public Builder timeSlices(java.util.List<TimeSlices> timeSlices) {
+                this.timeSlices = timeSlices;
+                return this;
+            }
+
+            public TimeSlicesInfo build() {
+                return new TimeSlicesInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAIDBClusterAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAIDBClusterAttributeResponseBody</p>
+     */
+    public static class Labels extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Labels(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Labels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Labels build() {
+                return new Labels(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAIDBClusterAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAIDBClusterAttributeResponseBody</p>
+     */
+    public static class Taints extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Effect")
+        private String effect;
+
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Taints(Builder builder) {
+            this.effect = builder.effect;
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Taints create() {
+            return builder().build();
+        }
+
+        /**
+         * @return effect
+         */
+        public String getEffect() {
+            return this.effect;
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String effect; 
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Taints model) {
+                this.effect = model.effect;
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Effect.
+             */
+            public Builder effect(String effect) {
+                this.effect = effect;
+                return this;
+            }
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Taints build() {
+                return new Taints(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAIDBClusterAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAIDBClusterAttributeResponseBody</p>
+     */
+    public static class VnodeKubernetesConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Labels")
+        private java.util.List<Labels> labels;
+
+        @com.aliyun.core.annotation.NameInMap("Taints")
+        private java.util.List<Taints> taints;
+
+        private VnodeKubernetesConfig(Builder builder) {
+            this.labels = builder.labels;
+            this.taints = builder.taints;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VnodeKubernetesConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return labels
+         */
+        public java.util.List<Labels> getLabels() {
+            return this.labels;
+        }
+
+        /**
+         * @return taints
+         */
+        public java.util.List<Taints> getTaints() {
+            return this.taints;
+        }
+
+        public static final class Builder {
+            private java.util.List<Labels> labels; 
+            private java.util.List<Taints> taints; 
+
+            private Builder() {
+            } 
+
+            private Builder(VnodeKubernetesConfig model) {
+                this.labels = model.labels;
+                this.taints = model.taints;
+            } 
+
+            /**
+             * Labels.
+             */
+            public Builder labels(java.util.List<Labels> labels) {
+                this.labels = labels;
+                return this;
+            }
+
+            /**
+             * Taints.
+             */
+            public Builder taints(java.util.List<Taints> taints) {
+                this.taints = taints;
+                return this;
+            }
+
+            public VnodeKubernetesConfig build() {
+                return new VnodeKubernetesConfig(this);
             } 
 
         } 

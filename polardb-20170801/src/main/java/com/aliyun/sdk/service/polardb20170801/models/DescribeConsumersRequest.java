@@ -26,6 +26,14 @@ public class DescribeConsumersRequest extends Request {
     private String consumerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsumerName")
+    private String consumerName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsumerNameList")
+    private String consumerNameList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GwClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String gwClusterId;
@@ -46,6 +54,8 @@ public class DescribeConsumersRequest extends Request {
         super(builder);
         this.consumerGroupId = builder.consumerGroupId;
         this.consumerId = builder.consumerId;
+        this.consumerName = builder.consumerName;
+        this.consumerNameList = builder.consumerNameList;
         this.gwClusterId = builder.gwClusterId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -80,6 +90,20 @@ public class DescribeConsumersRequest extends Request {
     }
 
     /**
+     * @return consumerName
+     */
+    public String getConsumerName() {
+        return this.consumerName;
+    }
+
+    /**
+     * @return consumerNameList
+     */
+    public String getConsumerNameList() {
+        return this.consumerNameList;
+    }
+
+    /**
      * @return gwClusterId
      */
     public String getGwClusterId() {
@@ -110,6 +134,8 @@ public class DescribeConsumersRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeConsumersRequest, Builder> {
         private String consumerGroupId; 
         private String consumerId; 
+        private String consumerName; 
+        private String consumerNameList; 
         private String gwClusterId; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -123,6 +149,8 @@ public class DescribeConsumersRequest extends Request {
             super(request);
             this.consumerGroupId = request.consumerGroupId;
             this.consumerId = request.consumerId;
+            this.consumerName = request.consumerName;
+            this.consumerNameList = request.consumerNameList;
             this.gwClusterId = request.gwClusterId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -144,6 +172,24 @@ public class DescribeConsumersRequest extends Request {
         public Builder consumerId(String consumerId) {
             this.putQueryParameter("ConsumerId", consumerId);
             this.consumerId = consumerId;
+            return this;
+        }
+
+        /**
+         * ConsumerName.
+         */
+        public Builder consumerName(String consumerName) {
+            this.putQueryParameter("ConsumerName", consumerName);
+            this.consumerName = consumerName;
+            return this;
+        }
+
+        /**
+         * ConsumerNameList.
+         */
+        public Builder consumerNameList(String consumerNameList) {
+            this.putQueryParameter("ConsumerNameList", consumerNameList);
+            this.consumerNameList = consumerNameList;
             return this;
         }
 

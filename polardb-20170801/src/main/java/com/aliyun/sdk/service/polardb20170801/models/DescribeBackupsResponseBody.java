@@ -218,6 +218,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupsLevel")
         private String backupsLevel;
 
+        @com.aliyun.core.annotation.NameInMap("Comment")
+        private String comment;
+
         @com.aliyun.core.annotation.NameInMap("ConsistentTime")
         private String consistentTime;
 
@@ -246,6 +249,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             this.backupStatus = builder.backupStatus;
             this.backupType = builder.backupType;
             this.backupsLevel = builder.backupsLevel;
+            this.comment = builder.comment;
             this.consistentTime = builder.consistentTime;
             this.DBClusterId = builder.DBClusterId;
             this.expectExpireTime = builder.expectExpireTime;
@@ -326,6 +330,13 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return comment
+         */
+        public String getComment() {
+            return this.comment;
+        }
+
+        /**
          * @return consistentTime
          */
         public String getConsistentTime() {
@@ -377,6 +388,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             private String backupStatus; 
             private String backupType; 
             private String backupsLevel; 
+            private String comment; 
             private String consistentTime; 
             private String DBClusterId; 
             private String expectExpireTime; 
@@ -397,6 +409,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
                 this.backupStatus = model.backupStatus;
                 this.backupType = model.backupType;
                 this.backupsLevel = model.backupsLevel;
+                this.comment = model.comment;
                 this.consistentTime = model.consistentTime;
                 this.DBClusterId = model.DBClusterId;
                 this.expectExpireTime = model.expectExpireTime;
@@ -516,6 +529,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
              */
             public Builder backupsLevel(String backupsLevel) {
                 this.backupsLevel = backupsLevel;
+                return this;
+            }
+
+            /**
+             * Comment.
+             */
+            public Builder comment(String comment) {
+                this.comment = comment;
                 return this;
             }
 

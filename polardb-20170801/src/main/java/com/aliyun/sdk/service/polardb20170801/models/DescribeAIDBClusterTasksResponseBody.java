@@ -230,6 +230,9 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TrainType")
         private String trainType;
 
+        @com.aliyun.core.annotation.NameInMap("TuneArch")
+        private String tuneArch;
+
         private Items(Builder builder) {
             this.completedTime = builder.completedTime;
             this.creationTime = builder.creationTime;
@@ -247,6 +250,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
             this.startTime = builder.startTime;
             this.trainMode = builder.trainMode;
             this.trainType = builder.trainType;
+            this.tuneArch = builder.tuneArch;
         }
 
         public static Builder builder() {
@@ -369,6 +373,13 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
             return this.trainType;
         }
 
+        /**
+         * @return tuneArch
+         */
+        public String getTuneArch() {
+            return this.tuneArch;
+        }
+
         public static final class Builder {
             private String completedTime; 
             private String creationTime; 
@@ -386,6 +397,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
             private String startTime; 
             private String trainMode; 
             private String trainType; 
+            private String tuneArch; 
 
             private Builder() {
             } 
@@ -407,6 +419,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
                 this.startTime = model.startTime;
                 this.trainMode = model.trainMode;
                 this.trainType = model.trainType;
+                this.tuneArch = model.tuneArch;
             } 
 
             /**
@@ -534,6 +547,14 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
              */
             public Builder trainType(String trainType) {
                 this.trainType = trainType;
+                return this;
+            }
+
+            /**
+             * TuneArch.
+             */
+            public Builder tuneArch(String tuneArch) {
+                this.tuneArch = tuneArch;
                 return this;
             }
 

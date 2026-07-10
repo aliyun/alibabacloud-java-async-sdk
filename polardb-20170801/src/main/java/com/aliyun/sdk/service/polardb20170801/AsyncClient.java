@@ -1284,6 +1284,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDBClusterPerformanceResponse> describeDBClusterPerformance(DescribeDBClusterPerformanceRequest request);
 
     /**
+     * @param request the request parameters of DescribeDBClusterPrice  DescribeDBClusterPriceRequest
+     * @return DescribeDBClusterPriceResponse
+     */
+    CompletableFuture<DescribeDBClusterPriceResponse> describeDBClusterPrice(DescribeDBClusterPriceRequest request);
+
+    /**
      * @param request the request parameters of DescribeDBClusterProxy  DescribeDBClusterProxyRequest
      * @return DescribeDBClusterProxyResponse
      */

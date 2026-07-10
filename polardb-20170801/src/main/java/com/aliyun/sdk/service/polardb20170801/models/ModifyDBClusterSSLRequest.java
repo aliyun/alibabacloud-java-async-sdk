@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyDBClusterSSLRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionString")
+    private String connectionString;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
@@ -39,6 +43,10 @@ public class ModifyDBClusterSSLRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PfsInstanceId")
+    private String pfsInstanceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -56,11 +64,13 @@ public class ModifyDBClusterSSLRequest extends Request {
 
     private ModifyDBClusterSSLRequest(Builder builder) {
         super(builder);
+        this.connectionString = builder.connectionString;
         this.DBClusterId = builder.DBClusterId;
         this.DBEndpointId = builder.DBEndpointId;
         this.netType = builder.netType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.pfsInstanceId = builder.pfsInstanceId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.SSLAutoRotate = builder.SSLAutoRotate;
@@ -78,6 +88,13 @@ public class ModifyDBClusterSSLRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return connectionString
+     */
+    public String getConnectionString() {
+        return this.connectionString;
     }
 
     /**
@@ -116,6 +133,13 @@ public class ModifyDBClusterSSLRequest extends Request {
     }
 
     /**
+     * @return pfsInstanceId
+     */
+    public String getPfsInstanceId() {
+        return this.pfsInstanceId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -144,11 +168,13 @@ public class ModifyDBClusterSSLRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDBClusterSSLRequest, Builder> {
+        private String connectionString; 
         private String DBClusterId; 
         private String DBEndpointId; 
         private String netType; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String pfsInstanceId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String SSLAutoRotate; 
@@ -160,16 +186,27 @@ public class ModifyDBClusterSSLRequest extends Request {
 
         private Builder(ModifyDBClusterSSLRequest request) {
             super(request);
+            this.connectionString = request.connectionString;
             this.DBClusterId = request.DBClusterId;
             this.DBEndpointId = request.DBEndpointId;
             this.netType = request.netType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.pfsInstanceId = request.pfsInstanceId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.SSLAutoRotate = request.SSLAutoRotate;
             this.SSLEnabled = request.SSLEnabled;
         } 
+
+        /**
+         * ConnectionString.
+         */
+        public Builder connectionString(String connectionString) {
+            this.putQueryParameter("ConnectionString", connectionString);
+            this.connectionString = connectionString;
+            return this;
+        }
 
         /**
          * <p>The ID of the cluster.</p>
@@ -246,6 +283,15 @@ public class ModifyDBClusterSSLRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PfsInstanceId.
+         */
+        public Builder pfsInstanceId(String pfsInstanceId) {
+            this.putQueryParameter("PfsInstanceId", pfsInstanceId);
+            this.pfsInstanceId = pfsInstanceId;
             return this;
         }
 

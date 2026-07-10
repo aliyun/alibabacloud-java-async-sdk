@@ -71,6 +71,9 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("TaskInfo")
     private java.util.List<TaskInfo> taskInfo;
 
+    @com.aliyun.core.annotation.NameInMap("TuneArch")
+    private String tuneArch;
+
     @com.aliyun.core.annotation.NameInMap("VPCId")
     private String VPCId;
 
@@ -96,6 +99,7 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         this.modelPath = builder.modelPath;
         this.requestId = builder.requestId;
         this.taskInfo = builder.taskInfo;
+        this.tuneArch = builder.tuneArch;
         this.VPCId = builder.VPCId;
         this.vSwitchId = builder.vSwitchId;
     }
@@ -239,6 +243,13 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return tuneArch
+     */
+    public String getTuneArch() {
+        return this.tuneArch;
+    }
+
+    /**
      * @return VPCId
      */
     public String getVPCId() {
@@ -271,6 +282,7 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         private String modelPath; 
         private String requestId; 
         private java.util.List<TaskInfo> taskInfo; 
+        private String tuneArch; 
         private String VPCId; 
         private String vSwitchId; 
 
@@ -296,6 +308,7 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
             this.modelPath = model.modelPath;
             this.requestId = model.requestId;
             this.taskInfo = model.taskInfo;
+            this.tuneArch = model.tuneArch;
             this.VPCId = model.VPCId;
             this.vSwitchId = model.vSwitchId;
         } 
@@ -444,6 +457,14 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
          */
         public Builder taskInfo(java.util.List<TaskInfo> taskInfo) {
             this.taskInfo = taskInfo;
+            return this;
+        }
+
+        /**
+         * TuneArch.
+         */
+        public Builder tuneArch(String tuneArch) {
+            this.tuneArch = tuneArch;
             return this;
         }
 

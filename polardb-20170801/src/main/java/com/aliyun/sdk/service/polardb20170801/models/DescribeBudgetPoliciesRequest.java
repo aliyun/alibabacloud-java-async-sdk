@@ -47,6 +47,10 @@ public class DescribeBudgetPoliciesRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScopeRefName")
+    private String scopeRefName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
@@ -59,6 +63,7 @@ public class DescribeBudgetPoliciesRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.scopeRefName = builder.scopeRefName;
         this.status = builder.status;
     }
 
@@ -125,6 +130,13 @@ public class DescribeBudgetPoliciesRequest extends Request {
     }
 
     /**
+     * @return scopeRefName
+     */
+    public String getScopeRefName() {
+        return this.scopeRefName;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -139,6 +151,7 @@ public class DescribeBudgetPoliciesRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
+        private String scopeRefName; 
         private String status; 
 
         private Builder() {
@@ -154,6 +167,7 @@ public class DescribeBudgetPoliciesRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.scopeRefName = request.scopeRefName;
             this.status = request.status;
         } 
 
@@ -220,6 +234,15 @@ public class DescribeBudgetPoliciesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ScopeRefName.
+         */
+        public Builder scopeRefName(String scopeRefName) {
+            this.putQueryParameter("ScopeRefName", scopeRefName);
+            this.scopeRefName = scopeRefName;
             return this;
         }
 

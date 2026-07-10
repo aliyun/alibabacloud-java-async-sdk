@@ -50,8 +50,14 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CustomBucketPathList")
     private java.util.List<CustomBucketPathList> customBucketPathList;
 
+    @com.aliyun.core.annotation.NameInMap("DBEndpointId")
+    private String DBEndpointId;
+
     @com.aliyun.core.annotation.NameInMap("DBType")
     private String DBType;
+
+    @com.aliyun.core.annotation.NameInMap("EndpointItems")
+    private java.util.List<EndpointItems> endpointItems;
 
     @com.aliyun.core.annotation.NameInMap("ExpireTime")
     private String expireTime;
@@ -65,8 +71,17 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("LockMode")
     private String lockMode;
 
+    @com.aliyun.core.annotation.NameInMap("MaxscaleEndpointId")
+    private String maxscaleEndpointId;
+
+    @com.aliyun.core.annotation.NameInMap("MetaConnString")
+    private String metaConnString;
+
     @com.aliyun.core.annotation.NameInMap("MetaInstanceName")
     private String metaInstanceName;
+
+    @com.aliyun.core.annotation.NameInMap("MetaMxsConnString")
+    private String metaMxsConnString;
 
     @com.aliyun.core.annotation.NameInMap("MetaUrl")
     private String metaUrl;
@@ -119,6 +134,12 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("StorageUsed")
     private Double storageUsed;
 
+    @com.aliyun.core.annotation.NameInMap("UserDefaultAccName")
+    private String userDefaultAccName;
+
+    @com.aliyun.core.annotation.NameInMap("UserDefaultAccSk")
+    private String userDefaultAccSk;
+
     @com.aliyun.core.annotation.NameInMap("VPCId")
     private String VPCId;
 
@@ -140,12 +161,17 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         this.createTime = builder.createTime;
         this.customBucketPath = builder.customBucketPath;
         this.customBucketPathList = builder.customBucketPathList;
+        this.DBEndpointId = builder.DBEndpointId;
         this.DBType = builder.DBType;
+        this.endpointItems = builder.endpointItems;
         this.expireTime = builder.expireTime;
         this.expired = builder.expired;
         this.fileSystemId = builder.fileSystemId;
         this.lockMode = builder.lockMode;
+        this.maxscaleEndpointId = builder.maxscaleEndpointId;
+        this.metaConnString = builder.metaConnString;
         this.metaInstanceName = builder.metaInstanceName;
+        this.metaMxsConnString = builder.metaMxsConnString;
         this.metaUrl = builder.metaUrl;
         this.minorVersion = builder.minorVersion;
         this.mountInfo = builder.mountInfo;
@@ -163,6 +189,8 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         this.storageSpace = builder.storageSpace;
         this.storageType = builder.storageType;
         this.storageUsed = builder.storageUsed;
+        this.userDefaultAccName = builder.userDefaultAccName;
+        this.userDefaultAccSk = builder.userDefaultAccSk;
         this.VPCId = builder.VPCId;
         this.vSwitchId = builder.vSwitchId;
         this.zoneId = builder.zoneId;
@@ -258,10 +286,24 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return DBEndpointId
+     */
+    public String getDBEndpointId() {
+        return this.DBEndpointId;
+    }
+
+    /**
      * @return DBType
      */
     public String getDBType() {
         return this.DBType;
+    }
+
+    /**
+     * @return endpointItems
+     */
+    public java.util.List<EndpointItems> getEndpointItems() {
+        return this.endpointItems;
     }
 
     /**
@@ -293,10 +335,31 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return maxscaleEndpointId
+     */
+    public String getMaxscaleEndpointId() {
+        return this.maxscaleEndpointId;
+    }
+
+    /**
+     * @return metaConnString
+     */
+    public String getMetaConnString() {
+        return this.metaConnString;
+    }
+
+    /**
      * @return metaInstanceName
      */
     public String getMetaInstanceName() {
         return this.metaInstanceName;
+    }
+
+    /**
+     * @return metaMxsConnString
+     */
+    public String getMetaMxsConnString() {
+        return this.metaMxsConnString;
     }
 
     /**
@@ -419,6 +482,20 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return userDefaultAccName
+     */
+    public String getUserDefaultAccName() {
+        return this.userDefaultAccName;
+    }
+
+    /**
+     * @return userDefaultAccSk
+     */
+    public String getUserDefaultAccSk() {
+        return this.userDefaultAccSk;
+    }
+
+    /**
      * @return VPCId
      */
     public String getVPCId() {
@@ -451,12 +528,17 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         private String createTime; 
         private String customBucketPath; 
         private java.util.List<CustomBucketPathList> customBucketPathList; 
+        private String DBEndpointId; 
         private String DBType; 
+        private java.util.List<EndpointItems> endpointItems; 
         private String expireTime; 
         private String expired; 
         private String fileSystemId; 
         private String lockMode; 
+        private String maxscaleEndpointId; 
+        private String metaConnString; 
         private String metaInstanceName; 
+        private String metaMxsConnString; 
         private String metaUrl; 
         private String minorVersion; 
         private MountInfo mountInfo; 
@@ -474,6 +556,8 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         private Double storageSpace; 
         private String storageType; 
         private Double storageUsed; 
+        private String userDefaultAccName; 
+        private String userDefaultAccSk; 
         private String VPCId; 
         private String vSwitchId; 
         private String zoneId; 
@@ -493,12 +577,17 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
             this.createTime = model.createTime;
             this.customBucketPath = model.customBucketPath;
             this.customBucketPathList = model.customBucketPathList;
+            this.DBEndpointId = model.DBEndpointId;
             this.DBType = model.DBType;
+            this.endpointItems = model.endpointItems;
             this.expireTime = model.expireTime;
             this.expired = model.expired;
             this.fileSystemId = model.fileSystemId;
             this.lockMode = model.lockMode;
+            this.maxscaleEndpointId = model.maxscaleEndpointId;
+            this.metaConnString = model.metaConnString;
             this.metaInstanceName = model.metaInstanceName;
+            this.metaMxsConnString = model.metaMxsConnString;
             this.metaUrl = model.metaUrl;
             this.minorVersion = model.minorVersion;
             this.mountInfo = model.mountInfo;
@@ -516,6 +605,8 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
             this.storageSpace = model.storageSpace;
             this.storageType = model.storageType;
             this.storageUsed = model.storageUsed;
+            this.userDefaultAccName = model.userDefaultAccName;
+            this.userDefaultAccSk = model.userDefaultAccSk;
             this.VPCId = model.VPCId;
             this.vSwitchId = model.vSwitchId;
             this.zoneId = model.zoneId;
@@ -610,10 +701,26 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * DBEndpointId.
+         */
+        public Builder DBEndpointId(String DBEndpointId) {
+            this.DBEndpointId = DBEndpointId;
+            return this;
+        }
+
+        /**
          * DBType.
          */
         public Builder DBType(String DBType) {
             this.DBType = DBType;
+            return this;
+        }
+
+        /**
+         * EndpointItems.
+         */
+        public Builder endpointItems(java.util.List<EndpointItems> endpointItems) {
+            this.endpointItems = endpointItems;
             return this;
         }
 
@@ -650,10 +757,34 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * MaxscaleEndpointId.
+         */
+        public Builder maxscaleEndpointId(String maxscaleEndpointId) {
+            this.maxscaleEndpointId = maxscaleEndpointId;
+            return this;
+        }
+
+        /**
+         * MetaConnString.
+         */
+        public Builder metaConnString(String metaConnString) {
+            this.metaConnString = metaConnString;
+            return this;
+        }
+
+        /**
          * MetaInstanceName.
          */
         public Builder metaInstanceName(String metaInstanceName) {
             this.metaInstanceName = metaInstanceName;
+            return this;
+        }
+
+        /**
+         * MetaMxsConnString.
+         */
+        public Builder metaMxsConnString(String metaMxsConnString) {
+            this.metaMxsConnString = metaMxsConnString;
             return this;
         }
 
@@ -797,6 +928,22 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * UserDefaultAccName.
+         */
+        public Builder userDefaultAccName(String userDefaultAccName) {
+            this.userDefaultAccName = userDefaultAccName;
+            return this;
+        }
+
+        /**
+         * UserDefaultAccSk.
+         */
+        public Builder userDefaultAccSk(String userDefaultAccSk) {
+            this.userDefaultAccSk = userDefaultAccSk;
+            return this;
+        }
+
+        /**
          * VPCId.
          */
         public Builder VPCId(String VPCId) {
@@ -896,6 +1043,261 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
 
             public CustomBucketPathList build() {
                 return new CustomBucketPathList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribePolarFsAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePolarFsAttributeResponseBody</p>
+     */
+    public static class AddressItems extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
+        private String connectionString;
+
+        @com.aliyun.core.annotation.NameInMap("IPAddress")
+        private String IPAddress;
+
+        @com.aliyun.core.annotation.NameInMap("NetType")
+        private String netType;
+
+        @com.aliyun.core.annotation.NameInMap("Port")
+        private String port;
+
+        @com.aliyun.core.annotation.NameInMap("VPCId")
+        private String VPCId;
+
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
+        private String vSwitchId;
+
+        private AddressItems(Builder builder) {
+            this.connectionString = builder.connectionString;
+            this.IPAddress = builder.IPAddress;
+            this.netType = builder.netType;
+            this.port = builder.port;
+            this.VPCId = builder.VPCId;
+            this.vSwitchId = builder.vSwitchId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AddressItems create() {
+            return builder().build();
+        }
+
+        /**
+         * @return connectionString
+         */
+        public String getConnectionString() {
+            return this.connectionString;
+        }
+
+        /**
+         * @return IPAddress
+         */
+        public String getIPAddress() {
+            return this.IPAddress;
+        }
+
+        /**
+         * @return netType
+         */
+        public String getNetType() {
+            return this.netType;
+        }
+
+        /**
+         * @return port
+         */
+        public String getPort() {
+            return this.port;
+        }
+
+        /**
+         * @return VPCId
+         */
+        public String getVPCId() {
+            return this.VPCId;
+        }
+
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public static final class Builder {
+            private String connectionString; 
+            private String IPAddress; 
+            private String netType; 
+            private String port; 
+            private String VPCId; 
+            private String vSwitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AddressItems model) {
+                this.connectionString = model.connectionString;
+                this.IPAddress = model.IPAddress;
+                this.netType = model.netType;
+                this.port = model.port;
+                this.VPCId = model.VPCId;
+                this.vSwitchId = model.vSwitchId;
+            } 
+
+            /**
+             * ConnectionString.
+             */
+            public Builder connectionString(String connectionString) {
+                this.connectionString = connectionString;
+                return this;
+            }
+
+            /**
+             * IPAddress.
+             */
+            public Builder IPAddress(String IPAddress) {
+                this.IPAddress = IPAddress;
+                return this;
+            }
+
+            /**
+             * NetType.
+             */
+            public Builder netType(String netType) {
+                this.netType = netType;
+                return this;
+            }
+
+            /**
+             * Port.
+             */
+            public Builder port(String port) {
+                this.port = port;
+                return this;
+            }
+
+            /**
+             * VPCId.
+             */
+            public Builder VPCId(String VPCId) {
+                this.VPCId = VPCId;
+                return this;
+            }
+
+            /**
+             * VSwitchId.
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            public AddressItems build() {
+                return new AddressItems(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribePolarFsAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePolarFsAttributeResponseBody</p>
+     */
+    public static class EndpointItems extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AddressItems")
+        private java.util.List<AddressItems> addressItems;
+
+        @com.aliyun.core.annotation.NameInMap("DBEndpointId")
+        private String DBEndpointId;
+
+        @com.aliyun.core.annotation.NameInMap("EndpointType")
+        private String endpointType;
+
+        private EndpointItems(Builder builder) {
+            this.addressItems = builder.addressItems;
+            this.DBEndpointId = builder.DBEndpointId;
+            this.endpointType = builder.endpointType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EndpointItems create() {
+            return builder().build();
+        }
+
+        /**
+         * @return addressItems
+         */
+        public java.util.List<AddressItems> getAddressItems() {
+            return this.addressItems;
+        }
+
+        /**
+         * @return DBEndpointId
+         */
+        public String getDBEndpointId() {
+            return this.DBEndpointId;
+        }
+
+        /**
+         * @return endpointType
+         */
+        public String getEndpointType() {
+            return this.endpointType;
+        }
+
+        public static final class Builder {
+            private java.util.List<AddressItems> addressItems; 
+            private String DBEndpointId; 
+            private String endpointType; 
+
+            private Builder() {
+            } 
+
+            private Builder(EndpointItems model) {
+                this.addressItems = model.addressItems;
+                this.DBEndpointId = model.DBEndpointId;
+                this.endpointType = model.endpointType;
+            } 
+
+            /**
+             * AddressItems.
+             */
+            public Builder addressItems(java.util.List<AddressItems> addressItems) {
+                this.addressItems = addressItems;
+                return this;
+            }
+
+            /**
+             * DBEndpointId.
+             */
+            public Builder DBEndpointId(String DBEndpointId) {
+                this.DBEndpointId = DBEndpointId;
+                return this;
+            }
+
+            /**
+             * EndpointType.
+             */
+            public Builder endpointType(String endpointType) {
+                this.endpointType = endpointType;
+                return this;
+            }
+
+            public EndpointItems build() {
+                return new EndpointItems(this);
             } 
 
         } 

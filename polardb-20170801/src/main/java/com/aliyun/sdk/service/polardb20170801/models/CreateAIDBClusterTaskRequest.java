@@ -87,6 +87,10 @@ public class CreateAIDBClusterTaskRequest extends Request {
     private String taskName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TuneArch")
+    private String tuneArch;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VPCId")
     private String VPCId;
 
@@ -116,6 +120,7 @@ public class CreateAIDBClusterTaskRequest extends Request {
         this.runningParameter = builder.runningParameter;
         this.securityGroupId = builder.securityGroupId;
         this.taskName = builder.taskName;
+        this.tuneArch = builder.tuneArch;
         this.VPCId = builder.VPCId;
         this.vSwitchId = builder.vSwitchId;
         this.zoneId = builder.zoneId;
@@ -247,6 +252,13 @@ public class CreateAIDBClusterTaskRequest extends Request {
     }
 
     /**
+     * @return tuneArch
+     */
+    public String getTuneArch() {
+        return this.tuneArch;
+    }
+
+    /**
      * @return VPCId
      */
     public String getVPCId() {
@@ -284,6 +296,7 @@ public class CreateAIDBClusterTaskRequest extends Request {
         private String runningParameter; 
         private String securityGroupId; 
         private String taskName; 
+        private String tuneArch; 
         private String VPCId; 
         private String vSwitchId; 
         private String zoneId; 
@@ -310,6 +323,7 @@ public class CreateAIDBClusterTaskRequest extends Request {
             this.runningParameter = request.runningParameter;
             this.securityGroupId = request.securityGroupId;
             this.taskName = request.taskName;
+            this.tuneArch = request.tuneArch;
             this.VPCId = request.VPCId;
             this.vSwitchId = request.vSwitchId;
             this.zoneId = request.zoneId;
@@ -471,6 +485,15 @@ public class CreateAIDBClusterTaskRequest extends Request {
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
             this.taskName = taskName;
+            return this;
+        }
+
+        /**
+         * TuneArch.
+         */
+        public Builder tuneArch(String tuneArch) {
+            this.putQueryParameter("TuneArch", tuneArch);
+            this.tuneArch = tuneArch;
             return this;
         }
 

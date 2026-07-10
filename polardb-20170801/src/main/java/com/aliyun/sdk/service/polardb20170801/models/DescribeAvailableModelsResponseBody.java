@@ -233,6 +233,9 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedGpuModels")
         private java.util.List<String> supportedGpuModels;
 
+        @com.aliyun.core.annotation.NameInMap("TuneArch")
+        private String tuneArch;
+
         private Items(Builder builder) {
             this.gpuRequired = builder.gpuRequired;
             this.minimumCpu = builder.minimumCpu;
@@ -240,6 +243,7 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
             this.modelName = builder.modelName;
             this.modelSeries = builder.modelSeries;
             this.supportedGpuModels = builder.supportedGpuModels;
+            this.tuneArch = builder.tuneArch;
         }
 
         public static Builder builder() {
@@ -292,6 +296,13 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
             return this.supportedGpuModels;
         }
 
+        /**
+         * @return tuneArch
+         */
+        public String getTuneArch() {
+            return this.tuneArch;
+        }
+
         public static final class Builder {
             private java.util.List<GpuRequired> gpuRequired; 
             private Long minimumCpu; 
@@ -299,6 +310,7 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
             private String modelName; 
             private String modelSeries; 
             private java.util.List<String> supportedGpuModels; 
+            private String tuneArch; 
 
             private Builder() {
             } 
@@ -310,6 +322,7 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
                 this.modelName = model.modelName;
                 this.modelSeries = model.modelSeries;
                 this.supportedGpuModels = model.supportedGpuModels;
+                this.tuneArch = model.tuneArch;
             } 
 
             /**
@@ -357,6 +370,14 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
              */
             public Builder supportedGpuModels(java.util.List<String> supportedGpuModels) {
                 this.supportedGpuModels = supportedGpuModels;
+                return this;
+            }
+
+            /**
+             * TuneArch.
+             */
+            public Builder tuneArch(String tuneArch) {
+                this.tuneArch = tuneArch;
                 return this;
             }
 
