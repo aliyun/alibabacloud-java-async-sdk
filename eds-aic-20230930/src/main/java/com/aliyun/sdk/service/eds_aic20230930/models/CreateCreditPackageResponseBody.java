@@ -20,6 +20,9 @@ public class CreateCreditPackageResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CreditPackageId")
     private String creditPackageId;
 
+    @com.aliyun.core.annotation.NameInMap("CreditPackageIds")
+    private java.util.List<String> creditPackageIds;
+
     @com.aliyun.core.annotation.NameInMap("EffectiveTime")
     private String effectiveTime;
 
@@ -34,6 +37,7 @@ public class CreateCreditPackageResponseBody extends TeaModel {
 
     private CreateCreditPackageResponseBody(Builder builder) {
         this.creditPackageId = builder.creditPackageId;
+        this.creditPackageIds = builder.creditPackageIds;
         this.effectiveTime = builder.effectiveTime;
         this.expiredTime = builder.expiredTime;
         this.orderId = builder.orderId;
@@ -57,6 +61,13 @@ public class CreateCreditPackageResponseBody extends TeaModel {
      */
     public String getCreditPackageId() {
         return this.creditPackageId;
+    }
+
+    /**
+     * @return creditPackageIds
+     */
+    public java.util.List<String> getCreditPackageIds() {
+        return this.creditPackageIds;
     }
 
     /**
@@ -89,6 +100,7 @@ public class CreateCreditPackageResponseBody extends TeaModel {
 
     public static final class Builder {
         private String creditPackageId; 
+        private java.util.List<String> creditPackageIds; 
         private String effectiveTime; 
         private String expiredTime; 
         private String orderId; 
@@ -99,6 +111,7 @@ public class CreateCreditPackageResponseBody extends TeaModel {
 
         private Builder(CreateCreditPackageResponseBody model) {
             this.creditPackageId = model.creditPackageId;
+            this.creditPackageIds = model.creditPackageIds;
             this.effectiveTime = model.effectiveTime;
             this.expiredTime = model.expiredTime;
             this.orderId = model.orderId;
@@ -110,6 +123,14 @@ public class CreateCreditPackageResponseBody extends TeaModel {
          */
         public Builder creditPackageId(String creditPackageId) {
             this.creditPackageId = creditPackageId;
+            return this;
+        }
+
+        /**
+         * CreditPackageIds.
+         */
+        public Builder creditPackageIds(java.util.List<String> creditPackageIds) {
+            this.creditPackageIds = creditPackageIds;
             return this;
         }
 

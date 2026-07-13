@@ -22,8 +22,16 @@ public class CreateCreditPackageRequest extends Request {
     private Boolean autoPay;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelCookie")
+    private String channelCookie;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CreditAmount")
     private String creditAmount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PackageAmount")
+    private String packageAmount;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Period")
@@ -40,7 +48,9 @@ public class CreateCreditPackageRequest extends Request {
     private CreateCreditPackageRequest(Builder builder) {
         super(builder);
         this.autoPay = builder.autoPay;
+        this.channelCookie = builder.channelCookie;
         this.creditAmount = builder.creditAmount;
+        this.packageAmount = builder.packageAmount;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
         this.promotionId = builder.promotionId;
@@ -67,10 +77,24 @@ public class CreateCreditPackageRequest extends Request {
     }
 
     /**
+     * @return channelCookie
+     */
+    public String getChannelCookie() {
+        return this.channelCookie;
+    }
+
+    /**
      * @return creditAmount
      */
     public String getCreditAmount() {
         return this.creditAmount;
+    }
+
+    /**
+     * @return packageAmount
+     */
+    public String getPackageAmount() {
+        return this.packageAmount;
     }
 
     /**
@@ -96,7 +120,9 @@ public class CreateCreditPackageRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateCreditPackageRequest, Builder> {
         private Boolean autoPay; 
+        private String channelCookie; 
         private String creditAmount; 
+        private String packageAmount; 
         private Integer period; 
         private String periodUnit; 
         private String promotionId; 
@@ -108,7 +134,9 @@ public class CreateCreditPackageRequest extends Request {
         private Builder(CreateCreditPackageRequest request) {
             super(request);
             this.autoPay = request.autoPay;
+            this.channelCookie = request.channelCookie;
             this.creditAmount = request.creditAmount;
+            this.packageAmount = request.packageAmount;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
             this.promotionId = request.promotionId;
@@ -124,11 +152,29 @@ public class CreateCreditPackageRequest extends Request {
         }
 
         /**
+         * ChannelCookie.
+         */
+        public Builder channelCookie(String channelCookie) {
+            this.putQueryParameter("ChannelCookie", channelCookie);
+            this.channelCookie = channelCookie;
+            return this;
+        }
+
+        /**
          * CreditAmount.
          */
         public Builder creditAmount(String creditAmount) {
             this.putQueryParameter("CreditAmount", creditAmount);
             this.creditAmount = creditAmount;
+            return this;
+        }
+
+        /**
+         * PackageAmount.
+         */
+        public Builder packageAmount(String packageAmount) {
+            this.putQueryParameter("PackageAmount", packageAmount);
+            this.packageAmount = packageAmount;
             return this;
         }
 

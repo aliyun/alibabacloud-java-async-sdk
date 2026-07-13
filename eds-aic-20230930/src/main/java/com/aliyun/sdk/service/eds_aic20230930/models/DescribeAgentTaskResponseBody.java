@@ -161,14 +161,23 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentStatus")
         private String currentStatus;
 
+        @com.aliyun.core.annotation.NameInMap("DigestSource")
+        private String digestSource;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
+
+        @com.aliyun.core.annotation.NameInMap("Reason")
+        private String reason;
 
         @com.aliyun.core.annotation.NameInMap("RunningAt")
         private String runningAt;
 
         @com.aliyun.core.annotation.NameInMap("Steps")
         private String steps;
+
+        @com.aliyun.core.annotation.NameInMap("TaskDigest")
+        private String taskDigest;
 
         @com.aliyun.core.annotation.NameInMap("TaskDuration")
         private String taskDuration;
@@ -184,9 +193,12 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
 
         private Tasks(Builder builder) {
             this.currentStatus = builder.currentStatus;
+            this.digestSource = builder.digestSource;
             this.instanceId = builder.instanceId;
+            this.reason = builder.reason;
             this.runningAt = builder.runningAt;
             this.steps = builder.steps;
+            this.taskDigest = builder.taskDigest;
             this.taskDuration = builder.taskDuration;
             this.taskId = builder.taskId;
             this.taskResult = builder.taskResult;
@@ -209,10 +221,24 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
         }
 
         /**
+         * @return digestSource
+         */
+        public String getDigestSource() {
+            return this.digestSource;
+        }
+
+        /**
          * @return instanceId
          */
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        /**
+         * @return reason
+         */
+        public String getReason() {
+            return this.reason;
         }
 
         /**
@@ -227,6 +253,13 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
          */
         public String getSteps() {
             return this.steps;
+        }
+
+        /**
+         * @return taskDigest
+         */
+        public String getTaskDigest() {
+            return this.taskDigest;
         }
 
         /**
@@ -259,9 +292,12 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private String currentStatus; 
+            private String digestSource; 
             private String instanceId; 
+            private String reason; 
             private String runningAt; 
             private String steps; 
+            private String taskDigest; 
             private String taskDuration; 
             private String taskId; 
             private String taskResult; 
@@ -272,9 +308,12 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
 
             private Builder(Tasks model) {
                 this.currentStatus = model.currentStatus;
+                this.digestSource = model.digestSource;
                 this.instanceId = model.instanceId;
+                this.reason = model.reason;
                 this.runningAt = model.runningAt;
                 this.steps = model.steps;
+                this.taskDigest = model.taskDigest;
                 this.taskDuration = model.taskDuration;
                 this.taskId = model.taskId;
                 this.taskResult = model.taskResult;
@@ -290,10 +329,26 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
             }
 
             /**
+             * DigestSource.
+             */
+            public Builder digestSource(String digestSource) {
+                this.digestSource = digestSource;
+                return this;
+            }
+
+            /**
              * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * Reason.
+             */
+            public Builder reason(String reason) {
+                this.reason = reason;
                 return this;
             }
 
@@ -310,6 +365,14 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
              */
             public Builder steps(String steps) {
                 this.steps = steps;
+                return this;
+            }
+
+            /**
+             * TaskDigest.
+             */
+            public Builder taskDigest(String taskDigest) {
+                this.taskDigest = taskDigest;
                 return this;
             }
 

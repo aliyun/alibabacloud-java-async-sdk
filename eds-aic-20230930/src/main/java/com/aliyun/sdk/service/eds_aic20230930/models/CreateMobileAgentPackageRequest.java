@@ -34,6 +34,10 @@ public class CreateMobileAgentPackageRequest extends Request {
     private String bizRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelCookie")
+    private String channelCookie;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CreditAmount")
     private String creditAmount;
 
@@ -79,6 +83,7 @@ public class CreateMobileAgentPackageRequest extends Request {
         this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
         this.bizRegionId = builder.bizRegionId;
+        this.channelCookie = builder.channelCookie;
         this.creditAmount = builder.creditAmount;
         this.creditConfig = builder.creditConfig;
         this.imageId = builder.imageId;
@@ -130,6 +135,13 @@ public class CreateMobileAgentPackageRequest extends Request {
      */
     public String getBizRegionId() {
         return this.bizRegionId;
+    }
+
+    /**
+     * @return channelCookie
+     */
+    public String getChannelCookie() {
+        return this.channelCookie;
     }
 
     /**
@@ -207,6 +219,7 @@ public class CreateMobileAgentPackageRequest extends Request {
         private Boolean autoPay; 
         private Boolean autoRenew; 
         private String bizRegionId; 
+        private String channelCookie; 
         private String creditAmount; 
         private String creditConfig; 
         private String imageId; 
@@ -228,6 +241,7 @@ public class CreateMobileAgentPackageRequest extends Request {
             this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
             this.bizRegionId = request.bizRegionId;
+            this.channelCookie = request.channelCookie;
             this.creditAmount = request.creditAmount;
             this.creditConfig = request.creditConfig;
             this.imageId = request.imageId;
@@ -273,6 +287,15 @@ public class CreateMobileAgentPackageRequest extends Request {
         public Builder bizRegionId(String bizRegionId) {
             this.putQueryParameter("BizRegionId", bizRegionId);
             this.bizRegionId = bizRegionId;
+            return this;
+        }
+
+        /**
+         * ChannelCookie.
+         */
+        public Builder channelCookie(String channelCookie) {
+            this.putQueryParameter("ChannelCookie", channelCookie);
+            this.channelCookie = channelCookie;
             return this;
         }
 

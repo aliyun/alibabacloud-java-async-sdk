@@ -182,6 +182,9 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableCredits")
         private String availableCredits;
 
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        private String createTime;
+
         @com.aliyun.core.annotation.NameInMap("CreditPackageId")
         private String creditPackageId;
 
@@ -202,6 +205,7 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
 
         private CreditsPackageInfos(Builder builder) {
             this.availableCredits = builder.availableCredits;
+            this.createTime = builder.createTime;
             this.creditPackageId = builder.creditPackageId;
             this.creditPackageStatus = builder.creditPackageStatus;
             this.effectiveTime = builder.effectiveTime;
@@ -223,6 +227,13 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
          */
         public String getAvailableCredits() {
             return this.availableCredits;
+        }
+
+        /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         /**
@@ -269,6 +280,7 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
 
         public static final class Builder {
             private String availableCredits; 
+            private String createTime; 
             private String creditPackageId; 
             private String creditPackageStatus; 
             private String effectiveTime; 
@@ -281,6 +293,7 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
 
             private Builder(CreditsPackageInfos model) {
                 this.availableCredits = model.availableCredits;
+                this.createTime = model.createTime;
                 this.creditPackageId = model.creditPackageId;
                 this.creditPackageStatus = model.creditPackageStatus;
                 this.effectiveTime = model.effectiveTime;
@@ -294,6 +307,14 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
              */
             public Builder availableCredits(String availableCredits) {
                 this.availableCredits = availableCredits;
+                return this;
+            }
+
+            /**
+             * CreateTime.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
                 return this;
             }
 
