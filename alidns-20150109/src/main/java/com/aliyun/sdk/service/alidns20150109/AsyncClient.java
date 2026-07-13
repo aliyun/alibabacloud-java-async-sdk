@@ -190,6 +190,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CopyGtmConfigResponse> copyGtmConfig(CopyGtmConfigRequest request);
 
     /**
+     * @param request the request parameters of CreateAtiAgentRegisterInfo  CreateAtiAgentRegisterInfoRequest
+     * @return CreateAtiAgentRegisterInfoResponse
+     */
+    CompletableFuture<CreateAtiAgentRegisterInfoResponse> createAtiAgentRegisterInfo(CreateAtiAgentRegisterInfoRequest request);
+
+    /**
+     * @param request the request parameters of CreateAtiAgentRegisterInfoAcmeChallengeRecord  CreateAtiAgentRegisterInfoAcmeChallengeRecordRequest
+     * @return CreateAtiAgentRegisterInfoAcmeChallengeRecordResponse
+     */
+    CompletableFuture<CreateAtiAgentRegisterInfoAcmeChallengeRecordResponse> createAtiAgentRegisterInfoAcmeChallengeRecord(CreateAtiAgentRegisterInfoAcmeChallengeRecordRequest request);
+
+    /**
+     * @param request the request parameters of CreateAtiRegistrant  CreateAtiRegistrantRequest
+     * @return CreateAtiRegistrantResponse
+     */
+    CompletableFuture<CreateAtiRegistrantResponse> createAtiRegistrant(CreateAtiRegistrantRequest request);
+
+    /**
      * @param request the request parameters of CreateCloudGtmAddress  CreateCloudGtmAddressRequest
      * @return CreateCloudGtmAddressResponse
      */
@@ -224,6 +242,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreatePdnsUdpIpSegmentResponse
      */
     CompletableFuture<CreatePdnsUdpIpSegmentResponse> createPdnsUdpIpSegment(CreatePdnsUdpIpSegmentRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAtiAgentRegisterInfo  DeleteAtiAgentRegisterInfoRequest
+     * @return DeleteAtiAgentRegisterInfoResponse
+     */
+    CompletableFuture<DeleteAtiAgentRegisterInfoResponse> deleteAtiAgentRegisterInfo(DeleteAtiAgentRegisterInfoRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAtiRegistrant  DeleteAtiRegistrantRequest
+     * @return DeleteAtiRegistrantResponse
+     */
+    CompletableFuture<DeleteAtiRegistrantResponse> deleteAtiRegistrant(DeleteAtiRegistrantRequest request);
 
     /**
      * @param request the request parameters of DeleteCloudGtmAddress  DeleteCloudGtmAddressRequest
@@ -334,6 +364,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteSubDomainRecordsResponse
      */
     CompletableFuture<DeleteSubDomainRecordsResponse> deleteSubDomainRecords(DeleteSubDomainRecordsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAtiAgentRegisterInfo  DescribeAtiAgentRegisterInfoRequest
+     * @return DescribeAtiAgentRegisterInfoResponse
+     */
+    CompletableFuture<DescribeAtiAgentRegisterInfoResponse> describeAtiAgentRegisterInfo(DescribeAtiAgentRegisterInfoRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAtiAlertSettings  DescribeAtiAlertSettingsRequest
+     * @return DescribeAtiAlertSettingsResponse
+     */
+    CompletableFuture<DescribeAtiAlertSettingsResponse> describeAtiAlertSettings(DescribeAtiAlertSettingsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAtiCertificate  DescribeAtiCertificateRequest
+     * @return DescribeAtiCertificateResponse
+     */
+    CompletableFuture<DescribeAtiCertificateResponse> describeAtiCertificate(DescribeAtiCertificateRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAtiRegistrant  DescribeAtiRegistrantRequest
+     * @return DescribeAtiRegistrantResponse
+     */
+    CompletableFuture<DescribeAtiRegistrantResponse> describeAtiRegistrant(DescribeAtiRegistrantRequest request);
 
     /**
      * @param request the request parameters of DescribeBatchResultCount  DescribeBatchResultCountRequest
@@ -982,6 +1036,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTxtRecordForVerifyResponse> getTxtRecordForVerify(GetTxtRecordForVerifyRequest request);
 
     /**
+     * @param request the request parameters of ListAtiAgentRegisterInfos  ListAtiAgentRegisterInfosRequest
+     * @return ListAtiAgentRegisterInfosResponse
+     */
+    CompletableFuture<ListAtiAgentRegisterInfosResponse> listAtiAgentRegisterInfos(ListAtiAgentRegisterInfosRequest request);
+
+    /**
+     * @param request the request parameters of ListAtiChangeLogs  ListAtiChangeLogsRequest
+     * @return ListAtiChangeLogsResponse
+     */
+    CompletableFuture<ListAtiChangeLogsResponse> listAtiChangeLogs(ListAtiChangeLogsRequest request);
+
+    /**
+     * @param request the request parameters of ListAtiRegistrants  ListAtiRegistrantsRequest
+     * @return ListAtiRegistrantsResponse
+     */
+    CompletableFuture<ListAtiRegistrantsResponse> listAtiRegistrants(ListAtiRegistrantsRequest request);
+
+    /**
      * @param request the request parameters of ListCloudGtmAddressPools  ListCloudGtmAddressPoolsRequest
      * @return ListCloudGtmAddressPoolsResponse
      */
@@ -1172,10 +1244,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RetrieveDomainResponse> retrieveDomain(RetrieveDomainRequest request);
 
     /**
+     * @param request the request parameters of RevokeAtiAgentRegisterInfo  RevokeAtiAgentRegisterInfoRequest
+     * @return RevokeAtiAgentRegisterInfoResponse
+     */
+    CompletableFuture<RevokeAtiAgentRegisterInfoResponse> revokeAtiAgentRegisterInfo(RevokeAtiAgentRegisterInfoRequest request);
+
+    /**
+     * @param request the request parameters of RevokeAtiRegistrant  RevokeAtiRegistrantRequest
+     * @return RevokeAtiRegistrantResponse
+     */
+    CompletableFuture<RevokeAtiRegistrantResponse> revokeAtiRegistrant(RevokeAtiRegistrantRequest request);
+
+    /**
      * @param request the request parameters of RollbackGtmRecoveryPlan  RollbackGtmRecoveryPlanRequest
      * @return RollbackGtmRecoveryPlanResponse
      */
     CompletableFuture<RollbackGtmRecoveryPlanResponse> rollbackGtmRecoveryPlan(RollbackGtmRecoveryPlanRequest request);
+
+    /**
+     * @param request the request parameters of SearchAtiAgentRegisterInfoMarket  SearchAtiAgentRegisterInfoMarketRequest
+     * @return SearchAtiAgentRegisterInfoMarketResponse
+     */
+    CompletableFuture<SearchAtiAgentRegisterInfoMarketResponse> searchAtiAgentRegisterInfoMarket(SearchAtiAgentRegisterInfoMarketRequest request);
 
     /**
      * @param request the request parameters of SearchCloudGtmAddressPools  SearchCloudGtmAddressPoolsRequest
@@ -1271,6 +1361,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetGtmMonitorStatusResponse> setGtmMonitorStatus(SetGtmMonitorStatusRequest request);
 
     /**
+     * @param request the request parameters of SubmitAtiAgentRegisterInfo  SubmitAtiAgentRegisterInfoRequest
+     * @return SubmitAtiAgentRegisterInfoResponse
+     */
+    CompletableFuture<SubmitAtiAgentRegisterInfoResponse> submitAtiAgentRegisterInfo(SubmitAtiAgentRegisterInfoRequest request);
+
+    /**
      * @param request the request parameters of SubmitIspFlushCacheTask  SubmitIspFlushCacheTaskRequest
      * @return SubmitIspFlushCacheTaskResponse
      */
@@ -1315,6 +1411,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateAppKeyStateResponse
      */
     CompletableFuture<UpdateAppKeyStateResponse> updateAppKeyState(UpdateAppKeyStateRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAtiAgentRegisterInfo  UpdateAtiAgentRegisterInfoRequest
+     * @return UpdateAtiAgentRegisterInfoResponse
+     */
+    CompletableFuture<UpdateAtiAgentRegisterInfoResponse> updateAtiAgentRegisterInfo(UpdateAtiAgentRegisterInfoRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAtiAlertSettings  UpdateAtiAlertSettingsRequest
+     * @return UpdateAtiAlertSettingsResponse
+     */
+    CompletableFuture<UpdateAtiAlertSettingsResponse> updateAtiAlertSettings(UpdateAtiAlertSettingsRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAtiRegistrant  UpdateAtiRegistrantRequest
+     * @return UpdateAtiRegistrantResponse
+     */
+    CompletableFuture<UpdateAtiRegistrantResponse> updateAtiRegistrant(UpdateAtiRegistrantRequest request);
 
     /**
      * @param request the request parameters of UpdateCloudGtmAddress  UpdateCloudGtmAddressRequest
@@ -1642,5 +1756,17 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ValidatePdnsUdpIpSegmentResponse
      */
     CompletableFuture<ValidatePdnsUdpIpSegmentResponse> validatePdnsUdpIpSegment(ValidatePdnsUdpIpSegmentRequest request);
+
+    /**
+     * @param request the request parameters of VerifyAtiAgentDnsRecords  VerifyAtiAgentDnsRecordsRequest
+     * @return VerifyAtiAgentDnsRecordsResponse
+     */
+    CompletableFuture<VerifyAtiAgentDnsRecordsResponse> verifyAtiAgentDnsRecords(VerifyAtiAgentDnsRecordsRequest request);
+
+    /**
+     * @param request the request parameters of VerifyAtiAgentRegisterInfoAcmeChallengeRecord  VerifyAtiAgentRegisterInfoAcmeChallengeRecordRequest
+     * @return VerifyAtiAgentRegisterInfoAcmeChallengeRecordResponse
+     */
+    CompletableFuture<VerifyAtiAgentRegisterInfoAcmeChallengeRecordResponse> verifyAtiAgentRegisterInfoAcmeChallengeRecord(VerifyAtiAgentRegisterInfoAcmeChallengeRecordRequest request);
 
 }

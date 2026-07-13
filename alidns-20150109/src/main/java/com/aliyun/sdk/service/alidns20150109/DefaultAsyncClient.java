@@ -29,8 +29,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "Alidns";
         this.version = "2015-01-09";
-        this.endpointRule = "central";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("public", "alidns.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -462,6 +464,60 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateAtiAgentRegisterInfo  CreateAtiAgentRegisterInfoRequest
+     * @return CreateAtiAgentRegisterInfoResponse
+     */
+    @Override
+    public CompletableFuture<CreateAtiAgentRegisterInfoResponse> createAtiAgentRegisterInfo(CreateAtiAgentRegisterInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateAtiAgentRegisterInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAtiAgentRegisterInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAtiAgentRegisterInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateAtiAgentRegisterInfoAcmeChallengeRecord  CreateAtiAgentRegisterInfoAcmeChallengeRecordRequest
+     * @return CreateAtiAgentRegisterInfoAcmeChallengeRecordResponse
+     */
+    @Override
+    public CompletableFuture<CreateAtiAgentRegisterInfoAcmeChallengeRecordResponse> createAtiAgentRegisterInfoAcmeChallengeRecord(CreateAtiAgentRegisterInfoAcmeChallengeRecordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateAtiAgentRegisterInfoAcmeChallengeRecord").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAtiAgentRegisterInfoAcmeChallengeRecordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAtiAgentRegisterInfoAcmeChallengeRecordResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateAtiRegistrant  CreateAtiRegistrantRequest
+     * @return CreateAtiRegistrantResponse
+     */
+    @Override
+    public CompletableFuture<CreateAtiRegistrantResponse> createAtiRegistrant(CreateAtiRegistrantRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateAtiRegistrant").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAtiRegistrantResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAtiRegistrantResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateCloudGtmAddress  CreateCloudGtmAddressRequest
      * @return CreateCloudGtmAddressResponse
      */
@@ -564,6 +620,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreatePdnsUdpIpSegmentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteAtiAgentRegisterInfo  DeleteAtiAgentRegisterInfoRequest
+     * @return DeleteAtiAgentRegisterInfoResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAtiAgentRegisterInfoResponse> deleteAtiAgentRegisterInfo(DeleteAtiAgentRegisterInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteAtiAgentRegisterInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAtiAgentRegisterInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAtiAgentRegisterInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteAtiRegistrant  DeleteAtiRegistrantRequest
+     * @return DeleteAtiRegistrantResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAtiRegistrantResponse> deleteAtiRegistrant(DeleteAtiRegistrantRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteAtiRegistrant").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAtiRegistrantResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAtiRegistrantResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -878,6 +970,78 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteSubDomainRecordsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeAtiAgentRegisterInfo  DescribeAtiAgentRegisterInfoRequest
+     * @return DescribeAtiAgentRegisterInfoResponse
+     */
+    @Override
+    public CompletableFuture<DescribeAtiAgentRegisterInfoResponse> describeAtiAgentRegisterInfo(DescribeAtiAgentRegisterInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeAtiAgentRegisterInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeAtiAgentRegisterInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeAtiAgentRegisterInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeAtiAlertSettings  DescribeAtiAlertSettingsRequest
+     * @return DescribeAtiAlertSettingsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeAtiAlertSettingsResponse> describeAtiAlertSettings(DescribeAtiAlertSettingsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeAtiAlertSettings").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeAtiAlertSettingsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeAtiAlertSettingsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeAtiCertificate  DescribeAtiCertificateRequest
+     * @return DescribeAtiCertificateResponse
+     */
+    @Override
+    public CompletableFuture<DescribeAtiCertificateResponse> describeAtiCertificate(DescribeAtiCertificateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeAtiCertificate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeAtiCertificateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeAtiCertificateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeAtiRegistrant  DescribeAtiRegistrantRequest
+     * @return DescribeAtiRegistrantResponse
+     */
+    @Override
+    public CompletableFuture<DescribeAtiRegistrantResponse> describeAtiRegistrant(DescribeAtiRegistrantRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeAtiRegistrant").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeAtiRegistrantResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeAtiRegistrantResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2730,6 +2894,60 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListAtiAgentRegisterInfos  ListAtiAgentRegisterInfosRequest
+     * @return ListAtiAgentRegisterInfosResponse
+     */
+    @Override
+    public CompletableFuture<ListAtiAgentRegisterInfosResponse> listAtiAgentRegisterInfos(ListAtiAgentRegisterInfosRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAtiAgentRegisterInfos").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAtiAgentRegisterInfosResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAtiAgentRegisterInfosResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListAtiChangeLogs  ListAtiChangeLogsRequest
+     * @return ListAtiChangeLogsResponse
+     */
+    @Override
+    public CompletableFuture<ListAtiChangeLogsResponse> listAtiChangeLogs(ListAtiChangeLogsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAtiChangeLogs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAtiChangeLogsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAtiChangeLogsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListAtiRegistrants  ListAtiRegistrantsRequest
+     * @return ListAtiRegistrantsResponse
+     */
+    @Override
+    public CompletableFuture<ListAtiRegistrantsResponse> listAtiRegistrants(ListAtiRegistrantsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAtiRegistrants").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAtiRegistrantsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAtiRegistrantsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListCloudGtmAddressPools  ListCloudGtmAddressPoolsRequest
      * @return ListCloudGtmAddressPoolsResponse
      */
@@ -3220,6 +3438,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of RevokeAtiAgentRegisterInfo  RevokeAtiAgentRegisterInfoRequest
+     * @return RevokeAtiAgentRegisterInfoResponse
+     */
+    @Override
+    public CompletableFuture<RevokeAtiAgentRegisterInfoResponse> revokeAtiAgentRegisterInfo(RevokeAtiAgentRegisterInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RevokeAtiAgentRegisterInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RevokeAtiAgentRegisterInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RevokeAtiAgentRegisterInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RevokeAtiRegistrant  RevokeAtiRegistrantRequest
+     * @return RevokeAtiRegistrantResponse
+     */
+    @Override
+    public CompletableFuture<RevokeAtiRegistrantResponse> revokeAtiRegistrant(RevokeAtiRegistrantRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RevokeAtiRegistrant").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RevokeAtiRegistrantResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RevokeAtiRegistrantResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of RollbackGtmRecoveryPlan  RollbackGtmRecoveryPlanRequest
      * @return RollbackGtmRecoveryPlanResponse
      */
@@ -3232,6 +3486,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RollbackGtmRecoveryPlanResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SearchAtiAgentRegisterInfoMarket  SearchAtiAgentRegisterInfoMarketRequest
+     * @return SearchAtiAgentRegisterInfoMarketResponse
+     */
+    @Override
+    public CompletableFuture<SearchAtiAgentRegisterInfoMarketResponse> searchAtiAgentRegisterInfoMarket(SearchAtiAgentRegisterInfoMarketRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SearchAtiAgentRegisterInfoMarket").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SearchAtiAgentRegisterInfoMarketResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SearchAtiAgentRegisterInfoMarketResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3511,6 +3783,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of SubmitAtiAgentRegisterInfo  SubmitAtiAgentRegisterInfoRequest
+     * @return SubmitAtiAgentRegisterInfoResponse
+     */
+    @Override
+    public CompletableFuture<SubmitAtiAgentRegisterInfoResponse> submitAtiAgentRegisterInfo(SubmitAtiAgentRegisterInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SubmitAtiAgentRegisterInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitAtiAgentRegisterInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitAtiAgentRegisterInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of SubmitIspFlushCacheTask  SubmitIspFlushCacheTaskRequest
      * @return SubmitIspFlushCacheTaskResponse
      */
@@ -3635,6 +3925,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateAppKeyStateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateAtiAgentRegisterInfo  UpdateAtiAgentRegisterInfoRequest
+     * @return UpdateAtiAgentRegisterInfoResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAtiAgentRegisterInfoResponse> updateAtiAgentRegisterInfo(UpdateAtiAgentRegisterInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateAtiAgentRegisterInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAtiAgentRegisterInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAtiAgentRegisterInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateAtiAlertSettings  UpdateAtiAlertSettingsRequest
+     * @return UpdateAtiAlertSettingsResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAtiAlertSettingsResponse> updateAtiAlertSettings(UpdateAtiAlertSettingsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateAtiAlertSettings").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAtiAlertSettingsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAtiAlertSettingsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateAtiRegistrant  UpdateAtiRegistrantRequest
+     * @return UpdateAtiRegistrantResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAtiRegistrantResponse> updateAtiRegistrant(UpdateAtiRegistrantRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateAtiRegistrant").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAtiRegistrantResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAtiRegistrantResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4526,6 +4870,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ValidatePdnsUdpIpSegmentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of VerifyAtiAgentDnsRecords  VerifyAtiAgentDnsRecordsRequest
+     * @return VerifyAtiAgentDnsRecordsResponse
+     */
+    @Override
+    public CompletableFuture<VerifyAtiAgentDnsRecordsResponse> verifyAtiAgentDnsRecords(VerifyAtiAgentDnsRecordsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("VerifyAtiAgentDnsRecords").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(VerifyAtiAgentDnsRecordsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<VerifyAtiAgentDnsRecordsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of VerifyAtiAgentRegisterInfoAcmeChallengeRecord  VerifyAtiAgentRegisterInfoAcmeChallengeRecordRequest
+     * @return VerifyAtiAgentRegisterInfoAcmeChallengeRecordResponse
+     */
+    @Override
+    public CompletableFuture<VerifyAtiAgentRegisterInfoAcmeChallengeRecordResponse> verifyAtiAgentRegisterInfoAcmeChallengeRecord(VerifyAtiAgentRegisterInfoAcmeChallengeRecordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("VerifyAtiAgentRegisterInfoAcmeChallengeRecord").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(VerifyAtiAgentRegisterInfoAcmeChallengeRecordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<VerifyAtiAgentRegisterInfoAcmeChallengeRecordResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
