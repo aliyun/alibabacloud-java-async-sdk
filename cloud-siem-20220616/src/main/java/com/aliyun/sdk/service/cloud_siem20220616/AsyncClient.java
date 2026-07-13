@@ -338,6 +338,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCapacityResponse> getCapacity(GetCapacityRequest request);
 
     /**
+     * @param request the request parameters of GetDataStorage  GetDataStorageRequest
+     * @return GetDataStorageResponse
+     */
+    CompletableFuture<GetDataStorageResponse> getDataStorage(GetDataStorageRequest request);
+
+    /**
      * @param request the request parameters of GetEntitiyStat  GetEntitiyStatRequest
      * @return GetEntitiyStatResponse
      */

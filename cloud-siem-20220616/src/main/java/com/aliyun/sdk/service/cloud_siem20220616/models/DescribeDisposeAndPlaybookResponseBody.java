@@ -291,6 +291,12 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
+        @com.aliyun.core.annotation.NameInMap("DisposeStatus")
+        private String disposeStatus;
+
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
+        private String errorMessage;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
@@ -319,6 +325,8 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             this.available = builder.available;
             this.description = builder.description;
             this.displayName = builder.displayName;
+            this.disposeStatus = builder.disposeStatus;
+            this.errorMessage = builder.errorMessage;
             this.name = builder.name;
             this.opCode = builder.opCode;
             this.opLevel = builder.opLevel;
@@ -356,6 +364,20 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
          */
         public String getDisplayName() {
             return this.displayName;
+        }
+
+        /**
+         * @return disposeStatus
+         */
+        public String getDisposeStatus() {
+            return this.disposeStatus;
+        }
+
+        /**
+         * @return errorMessage
+         */
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
         /**
@@ -418,6 +440,8 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             private String available; 
             private String description; 
             private String displayName; 
+            private String disposeStatus; 
+            private String errorMessage; 
             private String name; 
             private String opCode; 
             private String opLevel; 
@@ -434,6 +458,8 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
                 this.available = model.available;
                 this.description = model.description;
                 this.displayName = model.displayName;
+                this.disposeStatus = model.disposeStatus;
+                this.errorMessage = model.errorMessage;
                 this.name = model.name;
                 this.opCode = model.opCode;
                 this.opLevel = model.opLevel;
@@ -471,6 +497,22 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
+                return this;
+            }
+
+            /**
+             * DisposeStatus.
+             */
+            public Builder disposeStatus(String disposeStatus) {
+                this.disposeStatus = disposeStatus;
+                return this;
+            }
+
+            /**
+             * ErrorMessage.
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
                 return this;
             }
 
