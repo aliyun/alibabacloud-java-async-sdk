@@ -1,0 +1,292 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.agentteams20260605.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link QuerySupportedZonesResponseBody} extends {@link TeaModel}
+ *
+ * <p>QuerySupportedZonesResponseBody</p>
+ */
+public class QuerySupportedZonesResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Code")
+    private String code;
+
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
+    private Integer httpStatusCode;
+
+    @com.aliyun.core.annotation.NameInMap("Items")
+    private java.util.List<Items> items;
+
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.NameInMap("Message")
+    private String message;
+
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("Success")
+    private Boolean success;
+
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
+    private Integer totalCount;
+
+    private QuerySupportedZonesResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.httpStatusCode = builder.httpStatusCode;
+        this.items = builder.items;
+        this.maxResults = builder.maxResults;
+        this.message = builder.message;
+        this.nextToken = builder.nextToken;
+        this.requestId = builder.requestId;
+        this.success = builder.success;
+        this.totalCount = builder.totalCount;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static QuerySupportedZonesResponseBody create() {
+        return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return httpStatusCode
+     */
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    /**
+     * @return items
+     */
+    public java.util.List<Items> getItems() {
+        return this.items;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public static final class Builder {
+        private String code; 
+        private Integer httpStatusCode; 
+        private java.util.List<Items> items; 
+        private Integer maxResults; 
+        private String message; 
+        private String nextToken; 
+        private String requestId; 
+        private Boolean success; 
+        private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(QuerySupportedZonesResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.items = model.items;
+            this.maxResults = model.maxResults;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
+
+        /**
+         * Code.
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * HttpStatusCode.
+         */
+        public Builder httpStatusCode(Integer httpStatusCode) {
+            this.httpStatusCode = httpStatusCode;
+            return this;
+        }
+
+        /**
+         * Items.
+         */
+        public Builder items(java.util.List<Items> items) {
+            this.items = items;
+            return this;
+        }
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+
+        public QuerySupportedZonesResponseBody build() {
+            return new QuerySupportedZonesResponseBody(this);
+        } 
+
+    } 
+
+    /**
+     * 
+     * {@link QuerySupportedZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySupportedZonesResponseBody</p>
+     */
+    public static class Items extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
+        private String zoneId;
+
+        private Items(Builder builder) {
+            this.zoneId = builder.zoneId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Items create() {
+            return builder().build();
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public static final class Builder {
+            private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.zoneId = model.zoneId;
+            } 
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
+                return this;
+            }
+
+            public Items build() {
+                return new Items(this);
+            } 
+
+        } 
+
+    }
+}
