@@ -158,6 +158,9 @@ public class ListConversationsResponseBody extends TeaModel {
      * <p>ListConversationsResponseBody</p>
      */
     public static class Conversations extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AbTestName")
+        private String abTestName;
+
         @com.aliyun.core.annotation.NameInMap("CalledNumber")
         private String calledNumber;
 
@@ -198,6 +201,7 @@ public class ListConversationsResponseBody extends TeaModel {
         private Long startTime;
 
         private Conversations(Builder builder) {
+            this.abTestName = builder.abTestName;
             this.calledNumber = builder.calledNumber;
             this.callingNumber = builder.callingNumber;
             this.conversationId = builder.conversationId;
@@ -219,6 +223,13 @@ public class ListConversationsResponseBody extends TeaModel {
 
         public static Conversations create() {
             return builder().build();
+        }
+
+        /**
+         * @return abTestName
+         */
+        public String getAbTestName() {
+            return this.abTestName;
         }
 
         /**
@@ -313,6 +324,7 @@ public class ListConversationsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String abTestName; 
             private String calledNumber; 
             private String callingNumber; 
             private String conversationId; 
@@ -331,6 +343,7 @@ public class ListConversationsResponseBody extends TeaModel {
             } 
 
             private Builder(Conversations model) {
+                this.abTestName = model.abTestName;
                 this.calledNumber = model.calledNumber;
                 this.callingNumber = model.callingNumber;
                 this.conversationId = model.conversationId;
@@ -345,6 +358,14 @@ public class ListConversationsResponseBody extends TeaModel {
                 this.skillGroup = model.skillGroup;
                 this.startTime = model.startTime;
             } 
+
+            /**
+             * AbTestName.
+             */
+            public Builder abTestName(String abTestName) {
+                this.abTestName = abTestName;
+                return this;
+            }
 
             /**
              * CalledNumber.

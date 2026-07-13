@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ExportConversationDetailsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AbTestId")
+    private String abTestId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BeginTimeLeftRange")
     private Long beginTimeLeftRange;
 
@@ -56,6 +60,7 @@ public class ExportConversationDetailsRequest extends Request {
 
     private ExportConversationDetailsRequest(Builder builder) {
         super(builder);
+        this.abTestId = builder.abTestId;
         this.beginTimeLeftRange = builder.beginTimeLeftRange;
         this.beginTimeRightRange = builder.beginTimeRightRange;
         this.callingNumber = builder.callingNumber;
@@ -78,6 +83,13 @@ public class ExportConversationDetailsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return abTestId
+     */
+    public String getAbTestId() {
+        return this.abTestId;
     }
 
     /**
@@ -144,6 +156,7 @@ public class ExportConversationDetailsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ExportConversationDetailsRequest, Builder> {
+        private String abTestId; 
         private Long beginTimeLeftRange; 
         private Long beginTimeRightRange; 
         private String callingNumber; 
@@ -160,6 +173,7 @@ public class ExportConversationDetailsRequest extends Request {
 
         private Builder(ExportConversationDetailsRequest request) {
             super(request);
+            this.abTestId = request.abTestId;
             this.beginTimeLeftRange = request.beginTimeLeftRange;
             this.beginTimeRightRange = request.beginTimeRightRange;
             this.callingNumber = request.callingNumber;
@@ -170,6 +184,15 @@ public class ExportConversationDetailsRequest extends Request {
             this.roundsLeftRange = request.roundsLeftRange;
             this.roundsRightRange = request.roundsRightRange;
         } 
+
+        /**
+         * AbTestId.
+         */
+        public Builder abTestId(String abTestId) {
+            this.putQueryParameter("AbTestId", abTestId);
+            this.abTestId = abTestId;
+            return this;
+        }
 
         /**
          * BeginTimeLeftRange.
