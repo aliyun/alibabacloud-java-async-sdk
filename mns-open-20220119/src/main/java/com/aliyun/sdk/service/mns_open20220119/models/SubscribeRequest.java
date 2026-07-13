@@ -264,7 +264,11 @@ public class SubscribeRequest extends Request {
         }
 
         /**
-         * DmAttributes.
+         * <p>邮箱推送相关属性，当 PushType=dm 时必填。JSON 格式，包含以下字段：</p>
+         * <ul>
+         * <li><strong>AccountName</strong>：发信地址，即 DirectMail 中配置的发信地址（如 <code>notify@example.com</code>）。</li>
+         * <li><strong>Subject</strong>：邮件主题。</li>
+         * </ul>
          */
         public Builder dmAttributes(DmAttributes dmAttributes) {
             String dmAttributesShrink = shrink(dmAttributes, "DmAttributes", "json");
@@ -274,7 +278,11 @@ public class SubscribeRequest extends Request {
         }
 
         /**
-         * DysmsAttributes.
+         * <p>短信推送相关属性，当 PushType=alisms 时必填。JSON 格式，包含以下字段：</p>
+         * <ul>
+         * <li><strong>TemplateCode</strong>：短信模板 Code，在短信服务控制台中获取。</li>
+         * <li><strong>SignName</strong>：短信签名名称。</li>
+         * </ul>
          */
         public Builder dysmsAttributes(DysmsAttributes dysmsAttributes) {
             String dysmsAttributesShrink = shrink(dysmsAttributes, "DysmsAttributes", "json");
@@ -304,7 +312,10 @@ public class SubscribeRequest extends Request {
         }
 
         /**
-         * KafkaAttributes.
+         * <p>Kafka 推送相关属性。JSON 格式，包含以下字段：</p>
+         * <ul>
+         * <li><strong>BusinessMode</strong>：业务模式。</li>
+         * </ul>
          */
         public Builder kafkaAttributes(KafkaAttributes kafkaAttributes) {
             String kafkaAttributesShrink = shrink(kafkaAttributes, "KafkaAttributes", "json");
@@ -380,7 +391,18 @@ public class SubscribeRequest extends Request {
         }
 
         /**
-         * StsRoleArn.
+         * <p>SMQ 服务扮演的 RAM 角色 ARN。格式为 <code>acs:ram::{主账号UID}:role/{RoleName}</code>，其中 <code>{主账号UID}</code> 必须替换为调用 OpenAPI 的阿里云主账号 UID。</p>
+         * <p>使用场景：</p>
+         * <ul>
+         * <li>当 PushType=dm（邮箱推送）时<strong>必填</strong>，RoleName 通常为 <code>AliyunMNSNotificationRole</code>。</li>
+         * <li>当 PushType=queue 且目标队列与当前主题不在同一账号下时必填。</li>
+         * </ul>
+         * <blockquote>
+         * <p><strong>注意</strong>：ARN 中的 UID 必须与调用 OpenAPI 的主账号一致，否则将报跨账号错误（InvalidParameter: Cross account is not allowed）。</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1234567890:role/AliyunMNSNotificationRole</p>
          */
         public Builder stsRoleArn(String stsRoleArn) {
             this.putQueryParameter("StsRoleArn", stsRoleArn);

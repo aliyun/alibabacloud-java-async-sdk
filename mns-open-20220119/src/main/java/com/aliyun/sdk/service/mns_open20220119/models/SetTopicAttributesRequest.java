@@ -26,8 +26,24 @@ public class SetTopicAttributesRequest extends Request {
     private Boolean enableLogging;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableSSE")
+    private Boolean enableSSE;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KmsKeyId")
+    private String kmsKeyId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxMessageSize")
     private Long maxMessageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SseAlgorithm")
+    private String sseAlgorithm;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SseType")
+    private String sseType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TopicName")
@@ -38,7 +54,11 @@ public class SetTopicAttributesRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.enableLogging = builder.enableLogging;
+        this.enableSSE = builder.enableSSE;
+        this.kmsKeyId = builder.kmsKeyId;
         this.maxMessageSize = builder.maxMessageSize;
+        this.sseAlgorithm = builder.sseAlgorithm;
+        this.sseType = builder.sseType;
         this.topicName = builder.topicName;
     }
 
@@ -70,10 +90,38 @@ public class SetTopicAttributesRequest extends Request {
     }
 
     /**
+     * @return enableSSE
+     */
+    public Boolean getEnableSSE() {
+        return this.enableSSE;
+    }
+
+    /**
+     * @return kmsKeyId
+     */
+    public String getKmsKeyId() {
+        return this.kmsKeyId;
+    }
+
+    /**
      * @return maxMessageSize
      */
     public Long getMaxMessageSize() {
         return this.maxMessageSize;
+    }
+
+    /**
+     * @return sseAlgorithm
+     */
+    public String getSseAlgorithm() {
+        return this.sseAlgorithm;
+    }
+
+    /**
+     * @return sseType
+     */
+    public String getSseType() {
+        return this.sseType;
     }
 
     /**
@@ -86,7 +134,11 @@ public class SetTopicAttributesRequest extends Request {
     public static final class Builder extends Request.Builder<SetTopicAttributesRequest, Builder> {
         private String regionId; 
         private Boolean enableLogging; 
+        private Boolean enableSSE; 
+        private String kmsKeyId; 
         private Long maxMessageSize; 
+        private String sseAlgorithm; 
+        private String sseType; 
         private String topicName; 
 
         private Builder() {
@@ -97,7 +149,11 @@ public class SetTopicAttributesRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.enableLogging = request.enableLogging;
+            this.enableSSE = request.enableSSE;
+            this.kmsKeyId = request.kmsKeyId;
             this.maxMessageSize = request.maxMessageSize;
+            this.sseAlgorithm = request.sseAlgorithm;
+            this.sseType = request.sseType;
             this.topicName = request.topicName;
         } 
 
@@ -127,6 +183,24 @@ public class SetTopicAttributesRequest extends Request {
         }
 
         /**
+         * EnableSSE.
+         */
+        public Builder enableSSE(Boolean enableSSE) {
+            this.putQueryParameter("EnableSSE", enableSSE);
+            this.enableSSE = enableSSE;
+            return this;
+        }
+
+        /**
+         * KmsKeyId.
+         */
+        public Builder kmsKeyId(String kmsKeyId) {
+            this.putQueryParameter("KmsKeyId", kmsKeyId);
+            this.kmsKeyId = kmsKeyId;
+            return this;
+        }
+
+        /**
          * <p>The maximum length of the message that is sent to the topic. Valid values: 1024 to 65536. Unit: bytes. Default value: 65536.</p>
          * 
          * <strong>example:</strong>
@@ -135,6 +209,24 @@ public class SetTopicAttributesRequest extends Request {
         public Builder maxMessageSize(Long maxMessageSize) {
             this.putQueryParameter("MaxMessageSize", maxMessageSize);
             this.maxMessageSize = maxMessageSize;
+            return this;
+        }
+
+        /**
+         * SseAlgorithm.
+         */
+        public Builder sseAlgorithm(String sseAlgorithm) {
+            this.putQueryParameter("SseAlgorithm", sseAlgorithm);
+            this.sseAlgorithm = sseAlgorithm;
+            return this;
+        }
+
+        /**
+         * SseType.
+         */
+        public Builder sseType(String sseType) {
+            this.putQueryParameter("SseType", sseType);
+            this.sseType = sseType;
             return this;
         }
 

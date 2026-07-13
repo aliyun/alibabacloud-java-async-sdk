@@ -395,8 +395,17 @@ public class ListQueueResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DlqPolicy")
         private DlqPolicy dlqPolicy;
 
+        @com.aliyun.core.annotation.NameInMap("EnableSSE")
+        private Boolean enableSSE;
+
+        @com.aliyun.core.annotation.NameInMap("EncryptionEnabled")
+        private Boolean encryptionEnabled;
+
         @com.aliyun.core.annotation.NameInMap("InactiveMessages")
         private Long inactiveMessages;
+
+        @com.aliyun.core.annotation.NameInMap("KmsKeyId")
+        private String kmsKeyId;
 
         @com.aliyun.core.annotation.NameInMap("LastModifyTime")
         private Long lastModifyTime;
@@ -419,6 +428,12 @@ public class ListQueueResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("QueueType")
         private String queueType;
 
+        @com.aliyun.core.annotation.NameInMap("SseAlgorithm")
+        private String sseAlgorithm;
+
+        @com.aliyun.core.annotation.NameInMap("SseType")
+        private String sseType;
+
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
 
@@ -431,7 +446,10 @@ public class ListQueueResponseBody extends TeaModel {
             this.delayMessages = builder.delayMessages;
             this.delaySeconds = builder.delaySeconds;
             this.dlqPolicy = builder.dlqPolicy;
+            this.enableSSE = builder.enableSSE;
+            this.encryptionEnabled = builder.encryptionEnabled;
             this.inactiveMessages = builder.inactiveMessages;
+            this.kmsKeyId = builder.kmsKeyId;
             this.lastModifyTime = builder.lastModifyTime;
             this.loggingEnabled = builder.loggingEnabled;
             this.maximumMessageSize = builder.maximumMessageSize;
@@ -439,6 +457,8 @@ public class ListQueueResponseBody extends TeaModel {
             this.pollingWaitSeconds = builder.pollingWaitSeconds;
             this.queueName = builder.queueName;
             this.queueType = builder.queueType;
+            this.sseAlgorithm = builder.sseAlgorithm;
+            this.sseType = builder.sseType;
             this.tags = builder.tags;
             this.visibilityTimeout = builder.visibilityTimeout;
         }
@@ -487,10 +507,31 @@ public class ListQueueResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableSSE
+         */
+        public Boolean getEnableSSE() {
+            return this.enableSSE;
+        }
+
+        /**
+         * @return encryptionEnabled
+         */
+        public Boolean getEncryptionEnabled() {
+            return this.encryptionEnabled;
+        }
+
+        /**
          * @return inactiveMessages
          */
         public Long getInactiveMessages() {
             return this.inactiveMessages;
+        }
+
+        /**
+         * @return kmsKeyId
+         */
+        public String getKmsKeyId() {
+            return this.kmsKeyId;
         }
 
         /**
@@ -543,6 +584,20 @@ public class ListQueueResponseBody extends TeaModel {
         }
 
         /**
+         * @return sseAlgorithm
+         */
+        public String getSseAlgorithm() {
+            return this.sseAlgorithm;
+        }
+
+        /**
+         * @return sseType
+         */
+        public String getSseType() {
+            return this.sseType;
+        }
+
+        /**
          * @return tags
          */
         public java.util.List<Tags> getTags() {
@@ -562,7 +617,10 @@ public class ListQueueResponseBody extends TeaModel {
             private Long delayMessages; 
             private Long delaySeconds; 
             private DlqPolicy dlqPolicy; 
+            private Boolean enableSSE; 
+            private Boolean encryptionEnabled; 
             private Long inactiveMessages; 
+            private String kmsKeyId; 
             private Long lastModifyTime; 
             private Boolean loggingEnabled; 
             private Long maximumMessageSize; 
@@ -570,6 +628,8 @@ public class ListQueueResponseBody extends TeaModel {
             private Long pollingWaitSeconds; 
             private String queueName; 
             private String queueType; 
+            private String sseAlgorithm; 
+            private String sseType; 
             private java.util.List<Tags> tags; 
             private Long visibilityTimeout; 
 
@@ -582,7 +642,10 @@ public class ListQueueResponseBody extends TeaModel {
                 this.delayMessages = model.delayMessages;
                 this.delaySeconds = model.delaySeconds;
                 this.dlqPolicy = model.dlqPolicy;
+                this.enableSSE = model.enableSSE;
+                this.encryptionEnabled = model.encryptionEnabled;
                 this.inactiveMessages = model.inactiveMessages;
+                this.kmsKeyId = model.kmsKeyId;
                 this.lastModifyTime = model.lastModifyTime;
                 this.loggingEnabled = model.loggingEnabled;
                 this.maximumMessageSize = model.maximumMessageSize;
@@ -590,6 +653,8 @@ public class ListQueueResponseBody extends TeaModel {
                 this.pollingWaitSeconds = model.pollingWaitSeconds;
                 this.queueName = model.queueName;
                 this.queueType = model.queueType;
+                this.sseAlgorithm = model.sseAlgorithm;
+                this.sseType = model.sseType;
                 this.tags = model.tags;
                 this.visibilityTimeout = model.visibilityTimeout;
             } 
@@ -647,6 +712,22 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
+             * EnableSSE.
+             */
+            public Builder enableSSE(Boolean enableSSE) {
+                this.enableSSE = enableSSE;
+                return this;
+            }
+
+            /**
+             * EncryptionEnabled.
+             */
+            public Builder encryptionEnabled(Boolean encryptionEnabled) {
+                this.encryptionEnabled = encryptionEnabled;
+                return this;
+            }
+
+            /**
              * <p>The total number of the messages that are in the Inactive state in the queue. The value is an approximate number. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</p>
              * 
              * <strong>example:</strong>
@@ -654,6 +735,14 @@ public class ListQueueResponseBody extends TeaModel {
              */
             public Builder inactiveMessages(Long inactiveMessages) {
                 this.inactiveMessages = inactiveMessages;
+                return this;
+            }
+
+            /**
+             * KmsKeyId.
+             */
+            public Builder kmsKeyId(String kmsKeyId) {
+                this.kmsKeyId = kmsKeyId;
                 return this;
             }
 
@@ -732,6 +821,22 @@ public class ListQueueResponseBody extends TeaModel {
              */
             public Builder queueType(String queueType) {
                 this.queueType = queueType;
+                return this;
+            }
+
+            /**
+             * SseAlgorithm.
+             */
+            public Builder sseAlgorithm(String sseAlgorithm) {
+                this.sseAlgorithm = sseAlgorithm;
+                return this;
+            }
+
+            /**
+             * SseType.
+             */
+            public Builder sseType(String sseType) {
+                this.sseType = sseType;
                 return this;
             }
 

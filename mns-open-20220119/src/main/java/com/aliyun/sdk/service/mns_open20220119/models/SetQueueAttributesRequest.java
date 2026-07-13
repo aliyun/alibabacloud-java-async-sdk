@@ -34,6 +34,14 @@ public class SetQueueAttributesRequest extends Request {
     private Boolean enableLogging;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableSSE")
+    private Boolean enableSSE;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KmsKeyId")
+    private String kmsKeyId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaximumMessageSize")
     private Long maximumMessageSize;
 
@@ -51,6 +59,14 @@ public class SetQueueAttributesRequest extends Request {
     private String queueName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SseAlgorithm")
+    private String sseAlgorithm;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SseType")
+    private String sseType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TenantRateLimitPolicy")
     private TenantRateLimitPolicy tenantRateLimitPolicy;
 
@@ -64,10 +80,14 @@ public class SetQueueAttributesRequest extends Request {
         this.delaySeconds = builder.delaySeconds;
         this.dlqPolicy = builder.dlqPolicy;
         this.enableLogging = builder.enableLogging;
+        this.enableSSE = builder.enableSSE;
+        this.kmsKeyId = builder.kmsKeyId;
         this.maximumMessageSize = builder.maximumMessageSize;
         this.messageRetentionPeriod = builder.messageRetentionPeriod;
         this.pollingWaitSeconds = builder.pollingWaitSeconds;
         this.queueName = builder.queueName;
+        this.sseAlgorithm = builder.sseAlgorithm;
+        this.sseType = builder.sseType;
         this.tenantRateLimitPolicy = builder.tenantRateLimitPolicy;
         this.visibilityTimeout = builder.visibilityTimeout;
     }
@@ -114,6 +134,20 @@ public class SetQueueAttributesRequest extends Request {
     }
 
     /**
+     * @return enableSSE
+     */
+    public Boolean getEnableSSE() {
+        return this.enableSSE;
+    }
+
+    /**
+     * @return kmsKeyId
+     */
+    public String getKmsKeyId() {
+        return this.kmsKeyId;
+    }
+
+    /**
      * @return maximumMessageSize
      */
     public Long getMaximumMessageSize() {
@@ -142,6 +176,20 @@ public class SetQueueAttributesRequest extends Request {
     }
 
     /**
+     * @return sseAlgorithm
+     */
+    public String getSseAlgorithm() {
+        return this.sseAlgorithm;
+    }
+
+    /**
+     * @return sseType
+     */
+    public String getSseType() {
+        return this.sseType;
+    }
+
+    /**
      * @return tenantRateLimitPolicy
      */
     public TenantRateLimitPolicy getTenantRateLimitPolicy() {
@@ -160,10 +208,14 @@ public class SetQueueAttributesRequest extends Request {
         private Long delaySeconds; 
         private DlqPolicy dlqPolicy; 
         private Boolean enableLogging; 
+        private Boolean enableSSE; 
+        private String kmsKeyId; 
         private Long maximumMessageSize; 
         private Long messageRetentionPeriod; 
         private Long pollingWaitSeconds; 
         private String queueName; 
+        private String sseAlgorithm; 
+        private String sseType; 
         private TenantRateLimitPolicy tenantRateLimitPolicy; 
         private Long visibilityTimeout; 
 
@@ -177,10 +229,14 @@ public class SetQueueAttributesRequest extends Request {
             this.delaySeconds = request.delaySeconds;
             this.dlqPolicy = request.dlqPolicy;
             this.enableLogging = request.enableLogging;
+            this.enableSSE = request.enableSSE;
+            this.kmsKeyId = request.kmsKeyId;
             this.maximumMessageSize = request.maximumMessageSize;
             this.messageRetentionPeriod = request.messageRetentionPeriod;
             this.pollingWaitSeconds = request.pollingWaitSeconds;
             this.queueName = request.queueName;
+            this.sseAlgorithm = request.sseAlgorithm;
+            this.sseType = request.sseType;
             this.tenantRateLimitPolicy = request.tenantRateLimitPolicy;
             this.visibilityTimeout = request.visibilityTimeout;
         } 
@@ -233,6 +289,24 @@ public class SetQueueAttributesRequest extends Request {
         }
 
         /**
+         * EnableSSE.
+         */
+        public Builder enableSSE(Boolean enableSSE) {
+            this.putQueryParameter("EnableSSE", enableSSE);
+            this.enableSSE = enableSSE;
+            return this;
+        }
+
+        /**
+         * KmsKeyId.
+         */
+        public Builder kmsKeyId(String kmsKeyId) {
+            this.putQueryParameter("KmsKeyId", kmsKeyId);
+            this.kmsKeyId = kmsKeyId;
+            return this;
+        }
+
+        /**
          * <p>The maximum length of the message that is sent to the queue. Valid values: 1024 to 65536. Unit: bytes. Default value: 65536.</p>
          * 
          * <strong>example:</strong>
@@ -278,6 +352,24 @@ public class SetQueueAttributesRequest extends Request {
         public Builder queueName(String queueName) {
             this.putQueryParameter("QueueName", queueName);
             this.queueName = queueName;
+            return this;
+        }
+
+        /**
+         * SseAlgorithm.
+         */
+        public Builder sseAlgorithm(String sseAlgorithm) {
+            this.putQueryParameter("SseAlgorithm", sseAlgorithm);
+            this.sseAlgorithm = sseAlgorithm;
+            return this;
+        }
+
+        /**
+         * SseType.
+         */
+        public Builder sseType(String sseType) {
+            this.putQueryParameter("SseType", sseType);
+            this.sseType = sseType;
             return this;
         }
 

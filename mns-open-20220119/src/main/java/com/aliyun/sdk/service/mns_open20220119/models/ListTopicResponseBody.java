@@ -278,6 +278,15 @@ public class ListTopicResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
+        @com.aliyun.core.annotation.NameInMap("EnableSSE")
+        private Boolean enableSSE;
+
+        @com.aliyun.core.annotation.NameInMap("EncryptionEnabled")
+        private Boolean encryptionEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("KmsKeyId")
+        private String kmsKeyId;
+
         @com.aliyun.core.annotation.NameInMap("LastModifyTime")
         private Long lastModifyTime;
 
@@ -292,6 +301,12 @@ public class ListTopicResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("MessageRetentionPeriod")
         private Long messageRetentionPeriod;
+
+        @com.aliyun.core.annotation.NameInMap("SseAlgorithm")
+        private String sseAlgorithm;
+
+        @com.aliyun.core.annotation.NameInMap("SseType")
+        private String sseType;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
@@ -310,11 +325,16 @@ public class ListTopicResponseBody extends TeaModel {
 
         private PageData(Builder builder) {
             this.createTime = builder.createTime;
+            this.enableSSE = builder.enableSSE;
+            this.encryptionEnabled = builder.encryptionEnabled;
+            this.kmsKeyId = builder.kmsKeyId;
             this.lastModifyTime = builder.lastModifyTime;
             this.loggingEnabled = builder.loggingEnabled;
             this.maxMessageSize = builder.maxMessageSize;
             this.messageCount = builder.messageCount;
             this.messageRetentionPeriod = builder.messageRetentionPeriod;
+            this.sseAlgorithm = builder.sseAlgorithm;
+            this.sseType = builder.sseType;
             this.tags = builder.tags;
             this.topicInnerUrl = builder.topicInnerUrl;
             this.topicName = builder.topicName;
@@ -335,6 +355,27 @@ public class ListTopicResponseBody extends TeaModel {
          */
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return enableSSE
+         */
+        public Boolean getEnableSSE() {
+            return this.enableSSE;
+        }
+
+        /**
+         * @return encryptionEnabled
+         */
+        public Boolean getEncryptionEnabled() {
+            return this.encryptionEnabled;
+        }
+
+        /**
+         * @return kmsKeyId
+         */
+        public String getKmsKeyId() {
+            return this.kmsKeyId;
         }
 
         /**
@@ -370,6 +411,20 @@ public class ListTopicResponseBody extends TeaModel {
          */
         public Long getMessageRetentionPeriod() {
             return this.messageRetentionPeriod;
+        }
+
+        /**
+         * @return sseAlgorithm
+         */
+        public String getSseAlgorithm() {
+            return this.sseAlgorithm;
+        }
+
+        /**
+         * @return sseType
+         */
+        public String getSseType() {
+            return this.sseType;
         }
 
         /**
@@ -409,11 +464,16 @@ public class ListTopicResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long createTime; 
+            private Boolean enableSSE; 
+            private Boolean encryptionEnabled; 
+            private String kmsKeyId; 
             private Long lastModifyTime; 
             private Boolean loggingEnabled; 
             private Long maxMessageSize; 
             private Long messageCount; 
             private Long messageRetentionPeriod; 
+            private String sseAlgorithm; 
+            private String sseType; 
             private java.util.List<Tags> tags; 
             private String topicInnerUrl; 
             private String topicName; 
@@ -425,11 +485,16 @@ public class ListTopicResponseBody extends TeaModel {
 
             private Builder(PageData model) {
                 this.createTime = model.createTime;
+                this.enableSSE = model.enableSSE;
+                this.encryptionEnabled = model.encryptionEnabled;
+                this.kmsKeyId = model.kmsKeyId;
                 this.lastModifyTime = model.lastModifyTime;
                 this.loggingEnabled = model.loggingEnabled;
                 this.maxMessageSize = model.maxMessageSize;
                 this.messageCount = model.messageCount;
                 this.messageRetentionPeriod = model.messageRetentionPeriod;
+                this.sseAlgorithm = model.sseAlgorithm;
+                this.sseType = model.sseType;
                 this.tags = model.tags;
                 this.topicInnerUrl = model.topicInnerUrl;
                 this.topicName = model.topicName;
@@ -445,6 +510,30 @@ public class ListTopicResponseBody extends TeaModel {
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * EnableSSE.
+             */
+            public Builder enableSSE(Boolean enableSSE) {
+                this.enableSSE = enableSSE;
+                return this;
+            }
+
+            /**
+             * EncryptionEnabled.
+             */
+            public Builder encryptionEnabled(Boolean encryptionEnabled) {
+                this.encryptionEnabled = encryptionEnabled;
+                return this;
+            }
+
+            /**
+             * KmsKeyId.
+             */
+            public Builder kmsKeyId(String kmsKeyId) {
+                this.kmsKeyId = kmsKeyId;
                 return this;
             }
 
@@ -504,6 +593,22 @@ public class ListTopicResponseBody extends TeaModel {
              */
             public Builder messageRetentionPeriod(Long messageRetentionPeriod) {
                 this.messageRetentionPeriod = messageRetentionPeriod;
+                return this;
+            }
+
+            /**
+             * SseAlgorithm.
+             */
+            public Builder sseAlgorithm(String sseAlgorithm) {
+                this.sseAlgorithm = sseAlgorithm;
+                return this;
+            }
+
+            /**
+             * SseType.
+             */
+            public Builder sseType(String sseType) {
+                this.sseType = sseType;
                 return this;
             }
 

@@ -34,6 +34,14 @@ public class CreateQueueRequest extends Request {
     private Boolean enableLogging;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableSSE")
+    private Boolean enableSSE;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KmsKeyId")
+    private String kmsKeyId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaximumMessageSize")
     private Long maximumMessageSize;
 
@@ -56,6 +64,14 @@ public class CreateQueueRequest extends Request {
     private String queueType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SseAlgorithm")
+    private String sseAlgorithm;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SseType")
+    private String sseType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Tag> tag;
 
@@ -73,11 +89,15 @@ public class CreateQueueRequest extends Request {
         this.delaySeconds = builder.delaySeconds;
         this.dlqPolicy = builder.dlqPolicy;
         this.enableLogging = builder.enableLogging;
+        this.enableSSE = builder.enableSSE;
+        this.kmsKeyId = builder.kmsKeyId;
         this.maximumMessageSize = builder.maximumMessageSize;
         this.messageRetentionPeriod = builder.messageRetentionPeriod;
         this.pollingWaitSeconds = builder.pollingWaitSeconds;
         this.queueName = builder.queueName;
         this.queueType = builder.queueType;
+        this.sseAlgorithm = builder.sseAlgorithm;
+        this.sseType = builder.sseType;
         this.tag = builder.tag;
         this.tenantRateLimitPolicy = builder.tenantRateLimitPolicy;
         this.visibilityTimeout = builder.visibilityTimeout;
@@ -125,6 +145,20 @@ public class CreateQueueRequest extends Request {
     }
 
     /**
+     * @return enableSSE
+     */
+    public Boolean getEnableSSE() {
+        return this.enableSSE;
+    }
+
+    /**
+     * @return kmsKeyId
+     */
+    public String getKmsKeyId() {
+        return this.kmsKeyId;
+    }
+
+    /**
      * @return maximumMessageSize
      */
     public Long getMaximumMessageSize() {
@@ -160,6 +194,20 @@ public class CreateQueueRequest extends Request {
     }
 
     /**
+     * @return sseAlgorithm
+     */
+    public String getSseAlgorithm() {
+        return this.sseAlgorithm;
+    }
+
+    /**
+     * @return sseType
+     */
+    public String getSseType() {
+        return this.sseType;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List<Tag> getTag() {
@@ -185,11 +233,15 @@ public class CreateQueueRequest extends Request {
         private Long delaySeconds; 
         private DlqPolicy dlqPolicy; 
         private Boolean enableLogging; 
+        private Boolean enableSSE; 
+        private String kmsKeyId; 
         private Long maximumMessageSize; 
         private Long messageRetentionPeriod; 
         private Long pollingWaitSeconds; 
         private String queueName; 
         private String queueType; 
+        private String sseAlgorithm; 
+        private String sseType; 
         private java.util.List<Tag> tag; 
         private TenantRateLimitPolicy tenantRateLimitPolicy; 
         private Long visibilityTimeout; 
@@ -204,11 +256,15 @@ public class CreateQueueRequest extends Request {
             this.delaySeconds = request.delaySeconds;
             this.dlqPolicy = request.dlqPolicy;
             this.enableLogging = request.enableLogging;
+            this.enableSSE = request.enableSSE;
+            this.kmsKeyId = request.kmsKeyId;
             this.maximumMessageSize = request.maximumMessageSize;
             this.messageRetentionPeriod = request.messageRetentionPeriod;
             this.pollingWaitSeconds = request.pollingWaitSeconds;
             this.queueName = request.queueName;
             this.queueType = request.queueType;
+            this.sseAlgorithm = request.sseAlgorithm;
+            this.sseType = request.sseType;
             this.tag = request.tag;
             this.tenantRateLimitPolicy = request.tenantRateLimitPolicy;
             this.visibilityTimeout = request.visibilityTimeout;
@@ -259,6 +315,24 @@ public class CreateQueueRequest extends Request {
         public Builder enableLogging(Boolean enableLogging) {
             this.putQueryParameter("EnableLogging", enableLogging);
             this.enableLogging = enableLogging;
+            return this;
+        }
+
+        /**
+         * EnableSSE.
+         */
+        public Builder enableSSE(Boolean enableSSE) {
+            this.putQueryParameter("EnableSSE", enableSSE);
+            this.enableSSE = enableSSE;
+            return this;
+        }
+
+        /**
+         * KmsKeyId.
+         */
+        public Builder kmsKeyId(String kmsKeyId) {
+            this.putQueryParameter("KmsKeyId", kmsKeyId);
+            this.kmsKeyId = kmsKeyId;
             return this;
         }
 
@@ -317,6 +391,24 @@ public class CreateQueueRequest extends Request {
         public Builder queueType(String queueType) {
             this.putQueryParameter("QueueType", queueType);
             this.queueType = queueType;
+            return this;
+        }
+
+        /**
+         * SseAlgorithm.
+         */
+        public Builder sseAlgorithm(String sseAlgorithm) {
+            this.putQueryParameter("SseAlgorithm", sseAlgorithm);
+            this.sseAlgorithm = sseAlgorithm;
+            return this;
+        }
+
+        /**
+         * SseType.
+         */
+        public Builder sseType(String sseType) {
+            this.putQueryParameter("SseType", sseType);
+            this.sseType = sseType;
             return this;
         }
 
