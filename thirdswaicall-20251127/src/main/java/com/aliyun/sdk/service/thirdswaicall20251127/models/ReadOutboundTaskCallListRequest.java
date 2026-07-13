@@ -18,6 +18,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ReadOutboundTaskCallListRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CallEndTimeBegin")
+    private Long callEndTimeBegin;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CallEndTimeEnd")
+    private Long callEndTimeEnd;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CallStartTimeBegin")
+    private Long callStartTimeBegin;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CallStartTimeEnd")
+    private Long callStartTimeEnd;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Current")
     private Integer current;
 
@@ -55,6 +71,10 @@ public class ReadOutboundTaskCallListRequest extends Request {
 
     private ReadOutboundTaskCallListRequest(Builder builder) {
         super(builder);
+        this.callEndTimeBegin = builder.callEndTimeBegin;
+        this.callEndTimeEnd = builder.callEndTimeEnd;
+        this.callStartTimeBegin = builder.callStartTimeBegin;
+        this.callStartTimeEnd = builder.callStartTimeEnd;
         this.current = builder.current;
         this.customerNameOrPhone = builder.customerNameOrPhone;
         this.displayStatusList = builder.displayStatusList;
@@ -77,6 +97,34 @@ public class ReadOutboundTaskCallListRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return callEndTimeBegin
+     */
+    public Long getCallEndTimeBegin() {
+        return this.callEndTimeBegin;
+    }
+
+    /**
+     * @return callEndTimeEnd
+     */
+    public Long getCallEndTimeEnd() {
+        return this.callEndTimeEnd;
+    }
+
+    /**
+     * @return callStartTimeBegin
+     */
+    public Long getCallStartTimeBegin() {
+        return this.callStartTimeBegin;
+    }
+
+    /**
+     * @return callStartTimeEnd
+     */
+    public Long getCallStartTimeEnd() {
+        return this.callStartTimeEnd;
     }
 
     /**
@@ -143,6 +191,10 @@ public class ReadOutboundTaskCallListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ReadOutboundTaskCallListRequest, Builder> {
+        private Long callEndTimeBegin; 
+        private Long callEndTimeEnd; 
+        private Long callStartTimeBegin; 
+        private Long callStartTimeEnd; 
         private Integer current; 
         private String customerNameOrPhone; 
         private java.util.List<String> displayStatusList; 
@@ -159,6 +211,10 @@ public class ReadOutboundTaskCallListRequest extends Request {
 
         private Builder(ReadOutboundTaskCallListRequest request) {
             super(request);
+            this.callEndTimeBegin = request.callEndTimeBegin;
+            this.callEndTimeEnd = request.callEndTimeEnd;
+            this.callStartTimeBegin = request.callStartTimeBegin;
+            this.callStartTimeEnd = request.callStartTimeEnd;
             this.current = request.current;
             this.customerNameOrPhone = request.customerNameOrPhone;
             this.displayStatusList = request.displayStatusList;
@@ -169,6 +225,42 @@ public class ReadOutboundTaskCallListRequest extends Request {
             this.taskId = request.taskId;
             this.userId = request.userId;
         } 
+
+        /**
+         * CallEndTimeBegin.
+         */
+        public Builder callEndTimeBegin(Long callEndTimeBegin) {
+            this.putBodyParameter("CallEndTimeBegin", callEndTimeBegin);
+            this.callEndTimeBegin = callEndTimeBegin;
+            return this;
+        }
+
+        /**
+         * CallEndTimeEnd.
+         */
+        public Builder callEndTimeEnd(Long callEndTimeEnd) {
+            this.putBodyParameter("CallEndTimeEnd", callEndTimeEnd);
+            this.callEndTimeEnd = callEndTimeEnd;
+            return this;
+        }
+
+        /**
+         * CallStartTimeBegin.
+         */
+        public Builder callStartTimeBegin(Long callStartTimeBegin) {
+            this.putBodyParameter("CallStartTimeBegin", callStartTimeBegin);
+            this.callStartTimeBegin = callStartTimeBegin;
+            return this;
+        }
+
+        /**
+         * CallStartTimeEnd.
+         */
+        public Builder callStartTimeEnd(Long callStartTimeEnd) {
+            this.putBodyParameter("CallStartTimeEnd", callStartTimeEnd);
+            this.callStartTimeEnd = callStartTimeEnd;
+            return this;
+        }
 
         /**
          * Current.

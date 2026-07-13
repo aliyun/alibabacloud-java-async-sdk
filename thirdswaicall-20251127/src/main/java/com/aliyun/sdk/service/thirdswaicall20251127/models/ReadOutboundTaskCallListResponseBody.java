@@ -380,6 +380,9 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
      * <p>ReadOutboundTaskCallListResponseBody</p>
      */
     public static class Records extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BillingDuration")
+        private Long billingDuration;
+
         @com.aliyun.core.annotation.NameInMap("CallEndTime")
         private String callEndTime;
 
@@ -437,6 +440,9 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RecordUrl")
         private String recordUrl;
 
+        @com.aliyun.core.annotation.NameInMap("Remark")
+        private String remark;
+
         @com.aliyun.core.annotation.NameInMap("RetryCount")
         private Integer retryCount;
 
@@ -462,6 +468,7 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
         private String userId;
 
         private Records(Builder builder) {
+            this.billingDuration = builder.billingDuration;
             this.callEndTime = builder.callEndTime;
             this.callId = builder.callId;
             this.callStartTime = builder.callStartTime;
@@ -481,6 +488,7 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
             this.labelTags = builder.labelTags;
             this.recordDetailReady = builder.recordDetailReady;
             this.recordUrl = builder.recordUrl;
+            this.remark = builder.remark;
             this.retryCount = builder.retryCount;
             this.sceneId = builder.sceneId;
             this.status = builder.status;
@@ -497,6 +505,13 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
 
         public static Records create() {
             return builder().build();
+        }
+
+        /**
+         * @return billingDuration
+         */
+        public Long getBillingDuration() {
+            return this.billingDuration;
         }
 
         /**
@@ -633,6 +648,13 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
         }
 
         /**
+         * @return remark
+         */
+        public String getRemark() {
+            return this.remark;
+        }
+
+        /**
          * @return retryCount
          */
         public Integer getRetryCount() {
@@ -689,6 +711,7 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long billingDuration; 
             private String callEndTime; 
             private String callId; 
             private String callStartTime; 
@@ -708,6 +731,7 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
             private java.util.List<String> labelTags; 
             private Boolean recordDetailReady; 
             private String recordUrl; 
+            private String remark; 
             private Integer retryCount; 
             private String sceneId; 
             private String status; 
@@ -721,6 +745,7 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
             } 
 
             private Builder(Records model) {
+                this.billingDuration = model.billingDuration;
                 this.callEndTime = model.callEndTime;
                 this.callId = model.callId;
                 this.callStartTime = model.callStartTime;
@@ -740,6 +765,7 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
                 this.labelTags = model.labelTags;
                 this.recordDetailReady = model.recordDetailReady;
                 this.recordUrl = model.recordUrl;
+                this.remark = model.remark;
                 this.retryCount = model.retryCount;
                 this.sceneId = model.sceneId;
                 this.status = model.status;
@@ -749,6 +775,14 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
                 this.ttsVoiceDesc = model.ttsVoiceDesc;
                 this.userId = model.userId;
             } 
+
+            /**
+             * BillingDuration.
+             */
+            public Builder billingDuration(Long billingDuration) {
+                this.billingDuration = billingDuration;
+                return this;
+            }
 
             /**
              * CallEndTime.
@@ -899,6 +933,14 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
              */
             public Builder recordUrl(String recordUrl) {
                 this.recordUrl = recordUrl;
+                return this;
+            }
+
+            /**
+             * Remark.
+             */
+            public Builder remark(String remark) {
+                this.remark = remark;
                 return this;
             }
 

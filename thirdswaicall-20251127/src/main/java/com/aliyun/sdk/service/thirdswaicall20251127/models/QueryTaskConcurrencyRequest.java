@@ -18,12 +18,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QueryTaskConcurrencyRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApplicationCode")
+    private String applicationCode;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TaskId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Long taskId;
 
     private QueryTaskConcurrencyRequest(Builder builder) {
         super(builder);
+        this.applicationCode = builder.applicationCode;
         this.taskId = builder.taskId;
     }
 
@@ -41,6 +45,13 @@ public class QueryTaskConcurrencyRequest extends Request {
     }
 
     /**
+     * @return applicationCode
+     */
+    public String getApplicationCode() {
+        return this.applicationCode;
+    }
+
+    /**
      * @return taskId
      */
     public Long getTaskId() {
@@ -48,6 +59,7 @@ public class QueryTaskConcurrencyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<QueryTaskConcurrencyRequest, Builder> {
+        private String applicationCode; 
         private Long taskId; 
 
         private Builder() {
@@ -56,14 +68,21 @@ public class QueryTaskConcurrencyRequest extends Request {
 
         private Builder(QueryTaskConcurrencyRequest request) {
             super(request);
+            this.applicationCode = request.applicationCode;
             this.taskId = request.taskId;
         } 
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>12345</p>
+         * ApplicationCode.
+         */
+        public Builder applicationCode(String applicationCode) {
+            this.putBodyParameter("ApplicationCode", applicationCode);
+            this.applicationCode = applicationCode;
+            return this;
+        }
+
+        /**
+         * TaskId.
          */
         public Builder taskId(Long taskId) {
             this.putBodyParameter("TaskId", taskId);
