@@ -25,10 +25,15 @@ public class CreateAppInstanceTicketRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ClientId")
     private String clientId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Role")
+    private String role;
+
     private CreateAppInstanceTicketRequest(Builder builder) {
         super(builder);
         this.bizId = builder.bizId;
         this.clientId = builder.clientId;
+        this.role = builder.role;
     }
 
     public static Builder builder() {
@@ -58,9 +63,17 @@ public class CreateAppInstanceTicketRequest extends Request {
         return this.clientId;
     }
 
+    /**
+     * @return role
+     */
+    public String getRole() {
+        return this.role;
+    }
+
     public static final class Builder extends Request.Builder<CreateAppInstanceTicketRequest, Builder> {
         private String bizId; 
         private String clientId; 
+        private String role; 
 
         private Builder() {
             super();
@@ -70,6 +83,7 @@ public class CreateAppInstanceTicketRequest extends Request {
             super(request);
             this.bizId = request.bizId;
             this.clientId = request.clientId;
+            this.role = request.role;
         } 
 
         /**
@@ -93,6 +107,15 @@ public class CreateAppInstanceTicketRequest extends Request {
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
             this.clientId = clientId;
+            return this;
+        }
+
+        /**
+         * Role.
+         */
+        public Builder role(String role) {
+            this.putQueryParameter("Role", role);
+            this.role = role;
             return this;
         }
 

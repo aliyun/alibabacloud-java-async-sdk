@@ -34,6 +34,10 @@ public class UpdateAppSeoStatusRequest extends Request {
     private String seAuthInfo;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SeIndexStatus")
+    private Integer seIndexStatus;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SeType")
     private String seType;
 
@@ -43,6 +47,7 @@ public class UpdateAppSeoStatusRequest extends Request {
         this.bizId = builder.bizId;
         this.domain = builder.domain;
         this.seAuthInfo = builder.seAuthInfo;
+        this.seIndexStatus = builder.seIndexStatus;
         this.seType = builder.seType;
     }
 
@@ -88,6 +93,13 @@ public class UpdateAppSeoStatusRequest extends Request {
     }
 
     /**
+     * @return seIndexStatus
+     */
+    public Integer getSeIndexStatus() {
+        return this.seIndexStatus;
+    }
+
+    /**
      * @return seType
      */
     public String getSeType() {
@@ -99,6 +111,7 @@ public class UpdateAppSeoStatusRequest extends Request {
         private String bizId; 
         private String domain; 
         private String seAuthInfo; 
+        private Integer seIndexStatus; 
         private String seType; 
 
         private Builder() {
@@ -111,6 +124,7 @@ public class UpdateAppSeoStatusRequest extends Request {
             this.bizId = request.bizId;
             this.domain = request.domain;
             this.seAuthInfo = request.seAuthInfo;
+            this.seIndexStatus = request.seIndexStatus;
             this.seType = request.seType;
         } 
 
@@ -153,6 +167,15 @@ public class UpdateAppSeoStatusRequest extends Request {
         public Builder seAuthInfo(String seAuthInfo) {
             this.putQueryParameter("SeAuthInfo", seAuthInfo);
             this.seAuthInfo = seAuthInfo;
+            return this;
+        }
+
+        /**
+         * SeIndexStatus.
+         */
+        public Builder seIndexStatus(Integer seIndexStatus) {
+            this.putQueryParameter("SeIndexStatus", seIndexStatus);
+            this.seIndexStatus = seIndexStatus;
             return this;
         }
 
