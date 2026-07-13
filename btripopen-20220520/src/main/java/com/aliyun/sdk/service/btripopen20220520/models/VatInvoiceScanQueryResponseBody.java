@@ -419,6 +419,9 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bill_date")
         private String billDate;
 
+        @com.aliyun.core.annotation.NameInMap("changed")
+        private Boolean changed;
+
         @com.aliyun.core.annotation.NameInMap("check_code")
         private String checkCode;
 
@@ -522,6 +525,7 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             this.amountWithTax = builder.amountWithTax;
             this.amountWithoutTax = builder.amountWithoutTax;
             this.billDate = builder.billDate;
+            this.changed = builder.changed;
             this.checkCode = builder.checkCode;
             this.drawer = builder.drawer;
             this.id = builder.id;
@@ -584,6 +588,13 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
          */
         public String getBillDate() {
             return this.billDate;
+        }
+
+        /**
+         * @return changed
+         */
+        public Boolean getChanged() {
+            return this.changed;
         }
 
         /**
@@ -821,6 +832,7 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             private String amountWithTax; 
             private String amountWithoutTax; 
             private String billDate; 
+            private Boolean changed; 
             private String checkCode; 
             private String drawer; 
             private String id; 
@@ -862,6 +874,7 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
                 this.amountWithTax = model.amountWithTax;
                 this.amountWithoutTax = model.amountWithoutTax;
                 this.billDate = model.billDate;
+                this.changed = model.changed;
                 this.checkCode = model.checkCode;
                 this.drawer = model.drawer;
                 this.id = model.id;
@@ -918,6 +931,14 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
              */
             public Builder billDate(String billDate) {
                 this.billDate = billDate;
+                return this;
+            }
+
+            /**
+             * changed.
+             */
+            public Builder changed(Boolean changed) {
+                this.changed = changed;
                 return this;
             }
 
