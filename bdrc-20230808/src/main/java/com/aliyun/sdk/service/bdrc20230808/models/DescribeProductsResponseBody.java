@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bdrc20230808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeProductsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -48,6 +57,14 @@ public class DescribeProductsResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeProductsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -114,6 +131,14 @@ public class DescribeProductsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer from; 
             private Integer to; 
+
+            private Builder() {
+            } 
+
+            private Builder(Range model) {
+                this.from = model.from;
+                this.to = model.to;
+            } 
 
             /**
              * From.
@@ -182,6 +207,14 @@ public class DescribeProductsResponseBody extends TeaModel {
             private Long count; 
             private Range range; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProtectionScoreDistribution model) {
+                this.count = model.count;
+                this.range = model.range;
+            } 
+
             /**
              * Count.
              */
@@ -231,7 +264,7 @@ public class DescribeProductsResponseBody extends TeaModel {
         private Integer protectionScore;
 
         @com.aliyun.core.annotation.NameInMap("ProtectionScoreDistribution")
-        private java.util.List < ProtectionScoreDistribution> protectionScoreDistribution;
+        private java.util.List<ProtectionScoreDistribution> protectionScoreDistribution;
 
         @com.aliyun.core.annotation.NameInMap("ProtectionScoreUpdatedTime")
         private Long protectionScoreUpdatedTime;
@@ -245,6 +278,9 @@ public class DescribeProductsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TotalResourceCount")
         private Long totalResourceCount;
 
+        @com.aliyun.core.annotation.NameInMap("WaitForCheckResourceCount")
+        private Long waitForCheckResourceCount;
+
         private Content(Builder builder) {
             this.checkFailedCount = builder.checkFailedCount;
             this.checkFailedResourceCount = builder.checkFailedResourceCount;
@@ -257,6 +293,7 @@ public class DescribeProductsResponseBody extends TeaModel {
             this.riskCount = builder.riskCount;
             this.riskyResourceCount = builder.riskyResourceCount;
             this.totalResourceCount = builder.totalResourceCount;
+            this.waitForCheckResourceCount = builder.waitForCheckResourceCount;
         }
 
         public static Builder builder() {
@@ -312,7 +349,7 @@ public class DescribeProductsResponseBody extends TeaModel {
         /**
          * @return protectionScoreDistribution
          */
-        public java.util.List < ProtectionScoreDistribution> getProtectionScoreDistribution() {
+        public java.util.List<ProtectionScoreDistribution> getProtectionScoreDistribution() {
             return this.protectionScoreDistribution;
         }
 
@@ -344,6 +381,13 @@ public class DescribeProductsResponseBody extends TeaModel {
             return this.totalResourceCount;
         }
 
+        /**
+         * @return waitForCheckResourceCount
+         */
+        public Long getWaitForCheckResourceCount() {
+            return this.waitForCheckResourceCount;
+        }
+
         public static final class Builder {
             private Long checkFailedCount; 
             private Long checkFailedResourceCount; 
@@ -351,11 +395,30 @@ public class DescribeProductsResponseBody extends TeaModel {
             private Boolean enableCheck; 
             private String productType; 
             private Integer protectionScore; 
-            private java.util.List < ProtectionScoreDistribution> protectionScoreDistribution; 
+            private java.util.List<ProtectionScoreDistribution> protectionScoreDistribution; 
             private Long protectionScoreUpdatedTime; 
             private Long riskCount; 
             private Long riskyResourceCount; 
             private Long totalResourceCount; 
+            private Long waitForCheckResourceCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.checkFailedCount = model.checkFailedCount;
+                this.checkFailedResourceCount = model.checkFailedResourceCount;
+                this.disableCheckResourceCount = model.disableCheckResourceCount;
+                this.enableCheck = model.enableCheck;
+                this.productType = model.productType;
+                this.protectionScore = model.protectionScore;
+                this.protectionScoreDistribution = model.protectionScoreDistribution;
+                this.protectionScoreUpdatedTime = model.protectionScoreUpdatedTime;
+                this.riskCount = model.riskCount;
+                this.riskyResourceCount = model.riskyResourceCount;
+                this.totalResourceCount = model.totalResourceCount;
+                this.waitForCheckResourceCount = model.waitForCheckResourceCount;
+            } 
 
             /**
              * CheckFailedCount.
@@ -408,7 +471,7 @@ public class DescribeProductsResponseBody extends TeaModel {
             /**
              * ProtectionScoreDistribution.
              */
-            public Builder protectionScoreDistribution(java.util.List < ProtectionScoreDistribution> protectionScoreDistribution) {
+            public Builder protectionScoreDistribution(java.util.List<ProtectionScoreDistribution> protectionScoreDistribution) {
                 this.protectionScoreDistribution = protectionScoreDistribution;
                 return this;
             }
@@ -445,6 +508,14 @@ public class DescribeProductsResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * WaitForCheckResourceCount.
+             */
+            public Builder waitForCheckResourceCount(Long waitForCheckResourceCount) {
+                this.waitForCheckResourceCount = waitForCheckResourceCount;
+                return this;
+            }
+
             public Content build() {
                 return new Content(this);
             } 
@@ -460,7 +531,7 @@ public class DescribeProductsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
-        private java.util.List < Content> content;
+        private java.util.List<Content> content;
 
         @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
@@ -489,7 +560,7 @@ public class DescribeProductsResponseBody extends TeaModel {
         /**
          * @return content
          */
-        public java.util.List < Content> getContent() {
+        public java.util.List<Content> getContent() {
             return this.content;
         }
 
@@ -515,15 +586,25 @@ public class DescribeProductsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Content> content; 
+            private java.util.List<Content> content; 
             private Integer maxResults; 
             private String nextToken; 
             private Long totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.content = model.content;
+                this.maxResults = model.maxResults;
+                this.nextToken = model.nextToken;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * Content.
              */
-            public Builder content(java.util.List < Content> content) {
+            public Builder content(java.util.List<Content> content) {
                 this.content = content;
                 return this;
             }

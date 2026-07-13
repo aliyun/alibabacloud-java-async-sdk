@@ -32,10 +32,40 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CloseBdrcServiceResponse> closeBdrcService(CloseBdrcServiceRequest request);
 
     /**
+     * @param request the request parameters of CreateProtectionPolicy  CreateProtectionPolicyRequest
+     * @return CreateProtectionPolicyResponse
+     */
+    CompletableFuture<CreateProtectionPolicyResponse> createProtectionPolicy(CreateProtectionPolicyRequest request);
+
+    /**
+     * @param request the request parameters of CreateResourceCategory  CreateResourceCategoryRequest
+     * @return CreateResourceCategoryResponse
+     */
+    CompletableFuture<CreateResourceCategoryResponse> createResourceCategory(CreateResourceCategoryRequest request);
+
+    /**
+     * @param request the request parameters of DeleteProtectionPolicy  DeleteProtectionPolicyRequest
+     * @return DeleteProtectionPolicyResponse
+     */
+    CompletableFuture<DeleteProtectionPolicyResponse> deleteProtectionPolicy(DeleteProtectionPolicyRequest request);
+
+    /**
+     * @param request the request parameters of DeleteResourceCategory  DeleteResourceCategoryRequest
+     * @return DeleteResourceCategoryResponse
+     */
+    CompletableFuture<DeleteResourceCategoryResponse> deleteResourceCategory(DeleteResourceCategoryRequest request);
+
+    /**
      * @param request the request parameters of DescribeCheckDetails  DescribeCheckDetailsRequest
      * @return DescribeCheckDetailsResponse
      */
     CompletableFuture<DescribeCheckDetailsResponse> describeCheckDetails(DescribeCheckDetailsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeProductDataRedundancyTypeStat  DescribeProductDataRedundancyTypeStatRequest
+     * @return DescribeProductDataRedundancyTypeStatResponse
+     */
+    CompletableFuture<DescribeProductDataRedundancyTypeStatResponse> describeProductDataRedundancyTypeStat(DescribeProductDataRedundancyTypeStatRequest request);
 
     /**
      * @param request the request parameters of DescribeProducts  DescribeProductsRequest
@@ -104,10 +134,64 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetBdrcServiceResponse> getBdrcService(GetBdrcServiceRequest request);
 
     /**
+     * @param request the request parameters of GetMessage  GetMessageRequest
+     * @return GetMessageResponse
+     */
+    CompletableFuture<GetMessageResponse> getMessage(GetMessageRequest request);
+
+    /**
+     * @param request the request parameters of GetProtectionPolicy  GetProtectionPolicyRequest
+     * @return GetProtectionPolicyResponse
+     */
+    CompletableFuture<GetProtectionPolicyResponse> getProtectionPolicy(GetProtectionPolicyRequest request);
+
+    /**
+     * @param request the request parameters of GetResourceCategory  GetResourceCategoryRequest
+     * @return GetResourceCategoryResponse
+     */
+    CompletableFuture<GetResourceCategoryResponse> getResourceCategory(GetResourceCategoryRequest request);
+
+    /**
+     * @param request the request parameters of ListMessages  ListMessagesRequest
+     * @return ListMessagesResponse
+     */
+    CompletableFuture<ListMessagesResponse> listMessages(ListMessagesRequest request);
+
+    /**
+     * @param request the request parameters of ListProtectionPolicies  ListProtectionPoliciesRequest
+     * @return ListProtectionPoliciesResponse
+     */
+    CompletableFuture<ListProtectionPoliciesResponse> listProtectionPolicies(ListProtectionPoliciesRequest request);
+
+    /**
+     * @param request the request parameters of ListProtectionPolicyApplications  ListProtectionPolicyApplicationsRequest
+     * @return ListProtectionPolicyApplicationsResponse
+     */
+    CompletableFuture<ListProtectionPolicyApplicationsResponse> listProtectionPolicyApplications(ListProtectionPolicyApplicationsRequest request);
+
+    /**
+     * @param request the request parameters of ListResourceCategories  ListResourceCategoriesRequest
+     * @return ListResourceCategoriesResponse
+     */
+    CompletableFuture<ListResourceCategoriesResponse> listResourceCategories(ListResourceCategoriesRequest request);
+
+    /**
      * @param request the request parameters of OpenBdrcService  OpenBdrcServiceRequest
      * @return OpenBdrcServiceResponse
      */
     CompletableFuture<OpenBdrcServiceResponse> openBdrcService(OpenBdrcServiceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateProtectionPolicy  UpdateProtectionPolicyRequest
+     * @return UpdateProtectionPolicyResponse
+     */
+    CompletableFuture<UpdateProtectionPolicyResponse> updateProtectionPolicy(UpdateProtectionPolicyRequest request);
+
+    /**
+     * @param request the request parameters of UpdateResourceCategory  UpdateResourceCategoryRequest
+     * @return UpdateResourceCategoryResponse
+     */
+    CompletableFuture<UpdateResourceCategoryResponse> updateResourceCategory(UpdateResourceCategoryRequest request);
 
     /**
      * @param request the request parameters of UpdateResources  UpdateResourcesRequest

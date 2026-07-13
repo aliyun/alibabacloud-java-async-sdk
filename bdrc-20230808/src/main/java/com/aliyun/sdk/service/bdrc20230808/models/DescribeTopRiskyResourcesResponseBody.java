@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bdrc20230808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeTopRiskyResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -48,6 +57,14 @@ public class DescribeTopRiskyResourcesResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTopRiskyResourcesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -120,6 +137,9 @@ public class DescribeTopRiskyResourcesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
+        private Long resourceOwnerId;
+
         @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
@@ -162,6 +182,7 @@ public class DescribeTopRiskyResourcesResponseBody extends TeaModel {
             this.resourceArn = builder.resourceArn;
             this.resourceId = builder.resourceId;
             this.resourceName = builder.resourceName;
+            this.resourceOwnerId = builder.resourceOwnerId;
             this.resourceType = builder.resourceType;
             this.riskCount = builder.riskCount;
             this.standardDataSize = builder.standardDataSize;
@@ -280,6 +301,13 @@ public class DescribeTopRiskyResourcesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceOwnerId
+         */
+        public Long getResourceOwnerId() {
+            return this.resourceOwnerId;
+        }
+
+        /**
          * @return resourceType
          */
         public String getResourceType() {
@@ -357,6 +385,7 @@ public class DescribeTopRiskyResourcesResponseBody extends TeaModel {
             private String resourceArn; 
             private String resourceId; 
             private String resourceName; 
+            private Long resourceOwnerId; 
             private String resourceType; 
             private Long riskCount; 
             private Long standardDataSize; 
@@ -366,6 +395,36 @@ public class DescribeTopRiskyResourcesResponseBody extends TeaModel {
             private String vSwitchId; 
             private String vpcId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.archiveDataSize = model.archiveDataSize;
+                this.checkFailedCount = model.checkFailedCount;
+                this.coldArchiveDataSize = model.coldArchiveDataSize;
+                this.createTime = model.createTime;
+                this.dataRedundancyType = model.dataRedundancyType;
+                this.enableCheck = model.enableCheck;
+                this.iaDataSize = model.iaDataSize;
+                this.productType = model.productType;
+                this.protectionScore = model.protectionScore;
+                this.protectionScoreUpdatedTime = model.protectionScoreUpdatedTime;
+                this.regionId = model.regionId;
+                this.resourceArn = model.resourceArn;
+                this.resourceId = model.resourceId;
+                this.resourceName = model.resourceName;
+                this.resourceOwnerId = model.resourceOwnerId;
+                this.resourceType = model.resourceType;
+                this.riskCount = model.riskCount;
+                this.standardDataSize = model.standardDataSize;
+                this.status = model.status;
+                this.storageClass = model.storageClass;
+                this.totalDataSize = model.totalDataSize;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * ArchiveDataSize.
@@ -480,6 +539,14 @@ public class DescribeTopRiskyResourcesResponseBody extends TeaModel {
             }
 
             /**
+             * ResourceOwnerId.
+             */
+            public Builder resourceOwnerId(Long resourceOwnerId) {
+                this.resourceOwnerId = resourceOwnerId;
+                return this;
+            }
+
+            /**
              * ResourceType.
              */
             public Builder resourceType(String resourceType) {
@@ -572,7 +639,7 @@ public class DescribeTopRiskyResourcesResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
-        private java.util.List < Content> content;
+        private java.util.List<Content> content;
 
         @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
@@ -601,7 +668,7 @@ public class DescribeTopRiskyResourcesResponseBody extends TeaModel {
         /**
          * @return content
          */
-        public java.util.List < Content> getContent() {
+        public java.util.List<Content> getContent() {
             return this.content;
         }
 
@@ -627,15 +694,25 @@ public class DescribeTopRiskyResourcesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Content> content; 
+            private java.util.List<Content> content; 
             private Integer maxResults; 
             private String nextToken; 
             private Long totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.content = model.content;
+                this.maxResults = model.maxResults;
+                this.nextToken = model.nextToken;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * Content.
              */
-            public Builder content(java.util.List < Content> content) {
+            public Builder content(java.util.List<Content> content) {
                 this.content = content;
                 return this;
             }

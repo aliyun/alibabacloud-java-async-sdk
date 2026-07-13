@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bdrc20230808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,11 +30,16 @@ public class DescribeTasksRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TaskStatus")
     private String taskStatus;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskType")
+    private String taskType;
+
     private DescribeTasksRequest(Builder builder) {
         super(builder);
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.taskStatus = builder.taskStatus;
+        this.taskType = builder.taskType;
     }
 
     public static Builder builder() {
@@ -40,7 +50,7 @@ public class DescribeTasksRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -66,10 +76,18 @@ public class DescribeTasksRequest extends Request {
         return this.taskStatus;
     }
 
+    /**
+     * @return taskType
+     */
+    public String getTaskType() {
+        return this.taskType;
+    }
+
     public static final class Builder extends Request.Builder<DescribeTasksRequest, Builder> {
         private Integer maxResults; 
         private String nextToken; 
         private String taskStatus; 
+        private String taskType; 
 
         private Builder() {
             super();
@@ -80,6 +98,7 @@ public class DescribeTasksRequest extends Request {
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.taskStatus = request.taskStatus;
+            this.taskType = request.taskType;
         } 
 
         /**
@@ -106,6 +125,15 @@ public class DescribeTasksRequest extends Request {
         public Builder taskStatus(String taskStatus) {
             this.putQueryParameter("TaskStatus", taskStatus);
             this.taskStatus = taskStatus;
+            return this;
+        }
+
+        /**
+         * TaskType.
+         */
+        public Builder taskType(String taskType) {
+            this.putQueryParameter("TaskType", taskType);
+            this.taskType = taskType;
             return this;
         }
 

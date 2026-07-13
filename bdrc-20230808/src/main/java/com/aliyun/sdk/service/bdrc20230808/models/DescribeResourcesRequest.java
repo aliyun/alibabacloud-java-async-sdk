@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bdrc20230808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,8 +35,24 @@ public class DescribeResourcesRequest extends Request {
     private String nextToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceArn")
+    private String resourceArn;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceCategoryId")
+    private String resourceCategoryId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerIds")
+    private java.util.List<Long> resourceOwnerIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceRegionId")
+    private String resourceRegionId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceType")
@@ -55,7 +76,11 @@ public class DescribeResourcesRequest extends Request {
         this.failedRuleTemplate = builder.failedRuleTemplate;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.resourceArn = builder.resourceArn;
+        this.resourceCategoryId = builder.resourceCategoryId;
         this.resourceId = builder.resourceId;
+        this.resourceOwnerIds = builder.resourceOwnerIds;
+        this.resourceRegionId = builder.resourceRegionId;
         this.resourceType = builder.resourceType;
         this.sortBy = builder.sortBy;
         this.sortOrder = builder.sortOrder;
@@ -70,7 +95,7 @@ public class DescribeResourcesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -104,10 +129,38 @@ public class DescribeResourcesRequest extends Request {
     }
 
     /**
+     * @return resourceArn
+     */
+    public String getResourceArn() {
+        return this.resourceArn;
+    }
+
+    /**
+     * @return resourceCategoryId
+     */
+    public String getResourceCategoryId() {
+        return this.resourceCategoryId;
+    }
+
+    /**
      * @return resourceId
      */
     public String getResourceId() {
         return this.resourceId;
+    }
+
+    /**
+     * @return resourceOwnerIds
+     */
+    public java.util.List<Long> getResourceOwnerIds() {
+        return this.resourceOwnerIds;
+    }
+
+    /**
+     * @return resourceRegionId
+     */
+    public String getResourceRegionId() {
+        return this.resourceRegionId;
     }
 
     /**
@@ -143,7 +196,11 @@ public class DescribeResourcesRequest extends Request {
         private String failedRuleTemplate; 
         private Integer maxResults; 
         private String nextToken; 
+        private String resourceArn; 
+        private String resourceCategoryId; 
         private String resourceId; 
+        private java.util.List<Long> resourceOwnerIds; 
+        private String resourceRegionId; 
         private String resourceType; 
         private String sortBy; 
         private String sortOrder; 
@@ -159,7 +216,11 @@ public class DescribeResourcesRequest extends Request {
             this.failedRuleTemplate = request.failedRuleTemplate;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.resourceArn = request.resourceArn;
+            this.resourceCategoryId = request.resourceCategoryId;
             this.resourceId = request.resourceId;
+            this.resourceOwnerIds = request.resourceOwnerIds;
+            this.resourceRegionId = request.resourceRegionId;
             this.resourceType = request.resourceType;
             this.sortBy = request.sortBy;
             this.sortOrder = request.sortOrder;
@@ -203,11 +264,48 @@ public class DescribeResourcesRequest extends Request {
         }
 
         /**
+         * ResourceArn.
+         */
+        public Builder resourceArn(String resourceArn) {
+            this.putQueryParameter("ResourceArn", resourceArn);
+            this.resourceArn = resourceArn;
+            return this;
+        }
+
+        /**
+         * ResourceCategoryId.
+         */
+        public Builder resourceCategoryId(String resourceCategoryId) {
+            this.putQueryParameter("ResourceCategoryId", resourceCategoryId);
+            this.resourceCategoryId = resourceCategoryId;
+            return this;
+        }
+
+        /**
          * ResourceId.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
             this.resourceId = resourceId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerIds.
+         */
+        public Builder resourceOwnerIds(java.util.List<Long> resourceOwnerIds) {
+            String resourceOwnerIdsShrink = shrink(resourceOwnerIds, "ResourceOwnerIds", "json");
+            this.putQueryParameter("ResourceOwnerIds", resourceOwnerIdsShrink);
+            this.resourceOwnerIds = resourceOwnerIds;
+            return this;
+        }
+
+        /**
+         * ResourceRegionId.
+         */
+        public Builder resourceRegionId(String resourceRegionId) {
+            this.putQueryParameter("ResourceRegionId", resourceRegionId);
+            this.resourceRegionId = resourceRegionId;
             return this;
         }
 

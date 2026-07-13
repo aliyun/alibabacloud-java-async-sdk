@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bdrc20230808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -48,6 +57,14 @@ public class DescribeTasksResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTasksResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -114,6 +131,9 @@ public class DescribeTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskPriority")
         private String taskPriority;
 
+        @com.aliyun.core.annotation.NameInMap("TaskResult")
+        private String taskResult;
+
         @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private String taskStatus;
 
@@ -133,6 +153,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             this.taskId = builder.taskId;
             this.taskName = builder.taskName;
             this.taskPriority = builder.taskPriority;
+            this.taskResult = builder.taskResult;
             this.taskStatus = builder.taskStatus;
             this.taskType = builder.taskType;
         }
@@ -230,6 +251,13 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return taskResult
+         */
+        public String getTaskResult() {
+            return this.taskResult;
+        }
+
+        /**
          * @return taskStatus
          */
         public String getTaskStatus() {
@@ -256,8 +284,30 @@ public class DescribeTasksResponseBody extends TeaModel {
             private String taskId; 
             private String taskName; 
             private String taskPriority; 
+            private String taskResult; 
             private String taskStatus; 
             private String taskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.completeTime = model.completeTime;
+                this.errorMessage = model.errorMessage;
+                this.executionId = model.executionId;
+                this.expireTime = model.expireTime;
+                this.progress = model.progress;
+                this.requestId = model.requestId;
+                this.startTime = model.startTime;
+                this.taskDescription = model.taskDescription;
+                this.taskDetail = model.taskDetail;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+                this.taskPriority = model.taskPriority;
+                this.taskResult = model.taskResult;
+                this.taskStatus = model.taskStatus;
+                this.taskType = model.taskType;
+            } 
 
             /**
              * CompleteTime.
@@ -356,6 +406,14 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
+             * TaskResult.
+             */
+            public Builder taskResult(String taskResult) {
+                this.taskResult = taskResult;
+                return this;
+            }
+
+            /**
              * TaskStatus.
              */
             public Builder taskStatus(String taskStatus) {
@@ -386,7 +444,7 @@ public class DescribeTasksResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
-        private java.util.List < Content> content;
+        private java.util.List<Content> content;
 
         @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
@@ -415,7 +473,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         /**
          * @return content
          */
-        public java.util.List < Content> getContent() {
+        public java.util.List<Content> getContent() {
             return this.content;
         }
 
@@ -441,15 +499,25 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Content> content; 
+            private java.util.List<Content> content; 
             private Integer maxResults; 
             private String nextToken; 
             private Long totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.content = model.content;
+                this.maxResults = model.maxResults;
+                this.nextToken = model.nextToken;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * Content.
              */
-            public Builder content(java.util.List < Content> content) {
+            public Builder content(java.util.List<Content> content) {
                 this.content = content;
                 return this;
             }

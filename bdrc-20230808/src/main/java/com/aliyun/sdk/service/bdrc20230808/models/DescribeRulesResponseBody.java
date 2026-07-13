@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bdrc20230808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -48,6 +57,14 @@ public class DescribeRulesResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRulesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -199,6 +216,21 @@ public class DescribeRulesResponseBody extends TeaModel {
             private String ruleTemplate; 
             private Long totalResourceCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.checkFailedResourceCount = model.checkFailedResourceCount;
+                this.checkStatus = model.checkStatus;
+                this.checkTime = model.checkTime;
+                this.productType = model.productType;
+                this.resourceType = model.resourceType;
+                this.riskyResourceCount = model.riskyResourceCount;
+                this.ruleId = model.ruleId;
+                this.ruleTemplate = model.ruleTemplate;
+                this.totalResourceCount = model.totalResourceCount;
+            } 
+
             /**
              * CheckFailedResourceCount.
              */
@@ -286,7 +318,7 @@ public class DescribeRulesResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
-        private java.util.List < Content> content;
+        private java.util.List<Content> content;
 
         @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
@@ -315,7 +347,7 @@ public class DescribeRulesResponseBody extends TeaModel {
         /**
          * @return content
          */
-        public java.util.List < Content> getContent() {
+        public java.util.List<Content> getContent() {
             return this.content;
         }
 
@@ -341,15 +373,25 @@ public class DescribeRulesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Content> content; 
+            private java.util.List<Content> content; 
             private Integer maxResults; 
             private String nextToken; 
             private Long totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.content = model.content;
+                this.maxResults = model.maxResults;
+                this.nextToken = model.nextToken;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * Content.
              */
-            public Builder content(java.util.List < Content> content) {
+            public Builder content(java.util.List<Content> content) {
                 this.content = content;
                 return this;
             }
