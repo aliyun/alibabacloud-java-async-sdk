@@ -821,6 +821,9 @@ public class SendChatappMassMessageRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("ProductAction")
         private ProductAction productAction;
 
+        @com.aliyun.core.annotation.NameInMap("RecipientType")
+        private String recipientType;
+
         @com.aliyun.core.annotation.NameInMap("TemplateParams")
         private java.util.Map<String, String> templateParams;
 
@@ -831,6 +834,7 @@ public class SendChatappMassMessageRequest extends Request {
             this.flowAction = builder.flowAction;
             this.payload = builder.payload;
             this.productAction = builder.productAction;
+            this.recipientType = builder.recipientType;
             this.templateParams = builder.templateParams;
             this.to = builder.to;
         }
@@ -865,6 +869,13 @@ public class SendChatappMassMessageRequest extends Request {
         }
 
         /**
+         * @return recipientType
+         */
+        public String getRecipientType() {
+            return this.recipientType;
+        }
+
+        /**
          * @return templateParams
          */
         public java.util.Map<String, String> getTemplateParams() {
@@ -882,6 +893,7 @@ public class SendChatappMassMessageRequest extends Request {
             private FlowAction flowAction; 
             private java.util.List<String> payload; 
             private ProductAction productAction; 
+            private String recipientType; 
             private java.util.Map<String, String> templateParams; 
             private String to; 
 
@@ -892,6 +904,7 @@ public class SendChatappMassMessageRequest extends Request {
                 this.flowAction = model.flowAction;
                 this.payload = model.payload;
                 this.productAction = model.productAction;
+                this.recipientType = model.recipientType;
                 this.templateParams = model.templateParams;
                 this.to = model.to;
             } 
@@ -917,6 +930,14 @@ public class SendChatappMassMessageRequest extends Request {
              */
             public Builder productAction(ProductAction productAction) {
                 this.productAction = productAction;
+                return this;
+            }
+
+            /**
+             * RecipientType.
+             */
+            public Builder recipientType(String recipientType) {
+                this.recipientType = recipientType;
                 return this;
             }
 

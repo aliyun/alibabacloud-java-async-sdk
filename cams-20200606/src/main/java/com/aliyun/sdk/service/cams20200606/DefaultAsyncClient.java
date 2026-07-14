@@ -204,6 +204,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ArchiveChatappTemplate  ArchiveChatappTemplateRequest
+     * @return ArchiveChatappTemplateResponse
+     */
+    @Override
+    public CompletableFuture<ArchiveChatappTemplateResponse> archiveChatappTemplate(ArchiveChatappTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ArchiveChatappTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ArchiveChatappTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ArchiveChatappTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of BindDmAccount  BindDmAccountRequest
      * @return BindDmAccountResponse
      */
@@ -998,6 +1016,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteWhatsappUserName  DeleteWhatsappUserNameRequest
+     * @return DeleteWhatsappUserNameResponse
+     */
+    @Override
+    public CompletableFuture<DeleteWhatsappUserNameResponse> deleteWhatsappUserName(DeleteWhatsappUserNameRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteWhatsappUserName").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteWhatsappUserNameResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteWhatsappUserNameResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeprecateFlow  DeprecateFlowRequest
      * @return DeprecateFlowResponse
      */
@@ -1744,6 +1780,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetWhatsappHealthStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetWhatsappUserName  GetWhatsappUserNameRequest
+     * @return GetWhatsappUserNameResponse
+     */
+    @Override
+    public CompletableFuture<GetWhatsappUserNameResponse> getWhatsappUserName(GetWhatsappUserNameRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetWhatsappUserName").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetWhatsappUserNameResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetWhatsappUserNameResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetWhatsappUserNameSuggestions  GetWhatsappUserNameSuggestionsRequest
+     * @return GetWhatsappUserNameSuggestionsResponse
+     */
+    @Override
+    public CompletableFuture<GetWhatsappUserNameSuggestionsResponse> getWhatsappUserNameSuggestions(GetWhatsappUserNameSuggestionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetWhatsappUserNameSuggestions").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetWhatsappUserNameSuggestionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetWhatsappUserNameSuggestionsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3201,6 +3273,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateWabaMmlStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateWhatsappUserName  UpdateWhatsappUserNameRequest
+     * @return UpdateWhatsappUserNameResponse
+     */
+    @Override
+    public CompletableFuture<UpdateWhatsappUserNameResponse> updateWhatsappUserName(UpdateWhatsappUserNameRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateWhatsappUserName").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateWhatsappUserNameResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateWhatsappUserNameResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -74,6 +74,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddMarketingFlowResponse> addMarketingFlow(AddMarketingFlowRequest request);
 
     /**
+     * @param request the request parameters of ArchiveChatappTemplate  ArchiveChatappTemplateRequest
+     * @return ArchiveChatappTemplateResponse
+     */
+    CompletableFuture<ArchiveChatappTemplateResponse> archiveChatappTemplate(ArchiveChatappTemplateRequest request);
+
+    /**
      * @param request the request parameters of BindDmAccount  BindDmAccountRequest
      * @return BindDmAccountResponse
      */
@@ -364,6 +370,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeletePhoneMessageQrdlResponse> deletePhoneMessageQrdl(DeletePhoneMessageQrdlRequest request);
 
     /**
+     * @param request the request parameters of DeleteWhatsappUserName  DeleteWhatsappUserNameRequest
+     * @return DeleteWhatsappUserNameResponse
+     */
+    CompletableFuture<DeleteWhatsappUserNameResponse> deleteWhatsappUserName(DeleteWhatsappUserNameRequest request);
+
+    /**
      * @param request the request parameters of DeprecateFlow  DeprecateFlowRequest
      * @return DeprecateFlowResponse
      */
@@ -646,6 +658,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetWhatsappHealthStatusResponse
      */
     CompletableFuture<GetWhatsappHealthStatusResponse> getWhatsappHealthStatus(GetWhatsappHealthStatusRequest request);
+
+    /**
+     * @param request the request parameters of GetWhatsappUserName  GetWhatsappUserNameRequest
+     * @return GetWhatsappUserNameResponse
+     */
+    CompletableFuture<GetWhatsappUserNameResponse> getWhatsappUserName(GetWhatsappUserNameRequest request);
+
+    /**
+     * @param request the request parameters of GetWhatsappUserNameSuggestions  GetWhatsappUserNameSuggestionsRequest
+     * @return GetWhatsappUserNameSuggestionsResponse
+     */
+    CompletableFuture<GetWhatsappUserNameSuggestionsResponse> getWhatsappUserNameSuggestions(GetWhatsappUserNameSuggestionsRequest request);
 
     /**
      * <b>description</b> :
@@ -1179,6 +1203,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateWabaMmlStatusResponse
      */
     CompletableFuture<UpdateWabaMmlStatusResponse> updateWabaMmlStatus(UpdateWabaMmlStatusRequest request);
+
+    /**
+     * @param request the request parameters of UpdateWhatsappUserName  UpdateWhatsappUserNameRequest
+     * @return UpdateWhatsappUserNameResponse
+     */
+    CompletableFuture<UpdateWhatsappUserNameResponse> updateWhatsappUserName(UpdateWhatsappUserNameRequest request);
 
     /**
      * @param request the request parameters of WhatsappCall  WhatsappCallRequest
