@@ -74,6 +74,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateEvaluatorSkillResponse> createEvaluatorSkill(CreateEvaluatorSkillRequest request);
 
     /**
+     * @param request the request parameters of CreatePipeline  CreatePipelineRequest
+     * @return CreatePipelineResponse
+     */
+    CompletableFuture<CreatePipelineResponse> createPipeline(CreatePipelineRequest request);
+
+    /**
      * @param request the request parameters of DeleteAgentSpace  DeleteAgentSpaceRequest
      * @return DeleteAgentSpaceResponse
      */
@@ -270,6 +276,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return PausePipelineResponse
      */
     CompletableFuture<PausePipelineResponse> pausePipeline(PausePipelineRequest request);
+
+    /**
+     * @param request the request parameters of PreviewPipeline  PreviewPipelineRequest
+     * @return PreviewPipelineResponse
+     */
+    CompletableFuture<PreviewPipelineResponse> previewPipeline(PreviewPipelineRequest request);
 
     /**
      * @param request the request parameters of ResumePipeline  ResumePipelineRequest

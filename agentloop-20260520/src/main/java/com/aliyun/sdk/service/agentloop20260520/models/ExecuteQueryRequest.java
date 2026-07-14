@@ -57,6 +57,10 @@ public class ExecuteQueryRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("version")
+    private String version;
+
     private ExecuteQueryRequest(Builder builder) {
         super(builder);
         this.agentSpace = builder.agentSpace;
@@ -68,6 +72,7 @@ public class ExecuteQueryRequest extends Request {
         this.query = builder.query;
         this.to = builder.to;
         this.type = builder.type;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -146,6 +151,13 @@ public class ExecuteQueryRequest extends Request {
         return this.type;
     }
 
+    /**
+     * @return version
+     */
+    public String getVersion() {
+        return this.version;
+    }
+
     public static final class Builder extends Request.Builder<ExecuteQueryRequest, Builder> {
         private String agentSpace; 
         private String datasetName; 
@@ -156,6 +168,7 @@ public class ExecuteQueryRequest extends Request {
         private String query; 
         private Integer to; 
         private String type; 
+        private String version; 
 
         private Builder() {
             super();
@@ -172,6 +185,7 @@ public class ExecuteQueryRequest extends Request {
             this.query = request.query;
             this.to = request.to;
             this.type = request.type;
+            this.version = request.version;
         } 
 
         /**
@@ -264,6 +278,15 @@ public class ExecuteQueryRequest extends Request {
         public Builder type(String type) {
             this.putBodyParameter("type", type);
             this.type = type;
+            return this;
+        }
+
+        /**
+         * version.
+         */
+        public Builder version(String version) {
+            this.putBodyParameter("version", version);
+            this.version = version;
             return this;
         }
 
