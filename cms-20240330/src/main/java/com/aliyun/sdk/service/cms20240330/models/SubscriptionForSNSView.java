@@ -38,6 +38,9 @@ public class SubscriptionForSNSView extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
 
+    @com.aliyun.core.annotation.NameInMap("subscribeLegacyEvent")
+    private Boolean subscribeLegacyEvent;
+
     @com.aliyun.core.annotation.NameInMap("subscriptionType")
     private String subscriptionType;
 
@@ -67,6 +70,7 @@ public class SubscriptionForSNSView extends TeaModel {
         this.name = builder.name;
         this.notifyStrategyUuid = builder.notifyStrategyUuid;
         this.regionId = builder.regionId;
+        this.subscribeLegacyEvent = builder.subscribeLegacyEvent;
         this.subscriptionType = builder.subscriptionType;
         this.syncFromType = builder.syncFromType;
         this.updateTime = builder.updateTime;
@@ -138,6 +142,13 @@ public class SubscriptionForSNSView extends TeaModel {
     }
 
     /**
+     * @return subscribeLegacyEvent
+     */
+    public Boolean getSubscribeLegacyEvent() {
+        return this.subscribeLegacyEvent;
+    }
+
+    /**
      * @return subscriptionType
      */
     public String getSubscriptionType() {
@@ -194,6 +205,7 @@ public class SubscriptionForSNSView extends TeaModel {
         private String name; 
         private String notifyStrategyUuid; 
         private String regionId; 
+        private Boolean subscribeLegacyEvent; 
         private String subscriptionType; 
         private String syncFromType; 
         private String updateTime; 
@@ -213,6 +225,7 @@ public class SubscriptionForSNSView extends TeaModel {
             this.name = model.name;
             this.notifyStrategyUuid = model.notifyStrategyUuid;
             this.regionId = model.regionId;
+            this.subscribeLegacyEvent = model.subscribeLegacyEvent;
             this.subscriptionType = model.subscriptionType;
             this.syncFromType = model.syncFromType;
             this.updateTime = model.updateTime;
@@ -275,6 +288,14 @@ public class SubscriptionForSNSView extends TeaModel {
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>是否订阅老产品事件（workspace=null 的 cms 1.0 / ARMS / SLS 事件）：true=订阅，false 或 null=不订阅</p>
+         */
+        public Builder subscribeLegacyEvent(Boolean subscribeLegacyEvent) {
+            this.subscribeLegacyEvent = subscribeLegacyEvent;
             return this;
         }
 

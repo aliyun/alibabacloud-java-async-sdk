@@ -12,19 +12,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link NotifyStrategyForSNSModify} extends {@link TeaModel}
+ * {@link NotifyStrategyConfig} extends {@link TeaModel}
  *
- * <p>NotifyStrategyForSNSModify</p>
+ * <p>NotifyStrategyConfig</p>
  */
-public class NotifyStrategyForSNSModify extends TeaModel {
+public class NotifyStrategyConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("customTemplateEntries")
     private java.util.List<CustomTemplateEntries> customTemplateEntries;
 
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
-
-    @com.aliyun.core.annotation.NameInMap("enableIncidentManagement")
-    private Boolean enableIncidentManagement;
 
     @com.aliyun.core.annotation.NameInMap("groupingSetting")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -37,10 +34,9 @@ public class NotifyStrategyForSNSModify extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<Routes> routes;
 
-    private NotifyStrategyForSNSModify(Builder builder) {
+    private NotifyStrategyConfig(Builder builder) {
         this.customTemplateEntries = builder.customTemplateEntries;
         this.description = builder.description;
-        this.enableIncidentManagement = builder.enableIncidentManagement;
         this.groupingSetting = builder.groupingSetting;
         this.ignoreRestoredNotification = builder.ignoreRestoredNotification;
         this.routes = builder.routes;
@@ -50,7 +46,7 @@ public class NotifyStrategyForSNSModify extends TeaModel {
         return new Builder();
     }
 
-    public static NotifyStrategyForSNSModify create() {
+    public static NotifyStrategyConfig create() {
         return builder().build();
     }
 
@@ -70,13 +66,6 @@ public class NotifyStrategyForSNSModify extends TeaModel {
      */
     public String getDescription() {
         return this.description;
-    }
-
-    /**
-     * @return enableIncidentManagement
-     */
-    public Boolean getEnableIncidentManagement() {
-        return this.enableIncidentManagement;
     }
 
     /**
@@ -103,7 +92,6 @@ public class NotifyStrategyForSNSModify extends TeaModel {
     public static final class Builder {
         private java.util.List<CustomTemplateEntries> customTemplateEntries; 
         private String description; 
-        private Boolean enableIncidentManagement; 
         private GroupingSetting groupingSetting; 
         private Boolean ignoreRestoredNotification; 
         private java.util.List<Routes> routes; 
@@ -111,10 +99,9 @@ public class NotifyStrategyForSNSModify extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(NotifyStrategyForSNSModify model) {
+        private Builder(NotifyStrategyConfig model) {
             this.customTemplateEntries = model.customTemplateEntries;
             this.description = model.description;
-            this.enableIncidentManagement = model.enableIncidentManagement;
             this.groupingSetting = model.groupingSetting;
             this.ignoreRestoredNotification = model.ignoreRestoredNotification;
             this.routes = model.routes;
@@ -133,14 +120,6 @@ public class NotifyStrategyForSNSModify extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
-            return this;
-        }
-
-        /**
-         * enableIncidentManagement.
-         */
-        public Builder enableIncidentManagement(Boolean enableIncidentManagement) {
-            this.enableIncidentManagement = enableIncidentManagement;
             return this;
         }
 
@@ -168,27 +147,23 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             return this;
         }
 
-        public NotifyStrategyForSNSModify build() {
-            return new NotifyStrategyForSNSModify(this);
+        public NotifyStrategyConfig build() {
+            return new NotifyStrategyConfig(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link NotifyStrategyForSNSModify} extends {@link TeaModel}
+     * {@link NotifyStrategyConfig} extends {@link TeaModel}
      *
-     * <p>NotifyStrategyForSNSModify</p>
+     * <p>NotifyStrategyConfig</p>
      */
     public static class CustomTemplateEntries extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("targetType")
-        private String targetType;
-
         @com.aliyun.core.annotation.NameInMap("templateUuid")
         private String templateUuid;
 
         private CustomTemplateEntries(Builder builder) {
-            this.targetType = builder.targetType;
             this.templateUuid = builder.templateUuid;
         }
 
@@ -201,13 +176,6 @@ public class NotifyStrategyForSNSModify extends TeaModel {
         }
 
         /**
-         * @return targetType
-         */
-        public String getTargetType() {
-            return this.targetType;
-        }
-
-        /**
          * @return templateUuid
          */
         public String getTemplateUuid() {
@@ -215,24 +183,14 @@ public class NotifyStrategyForSNSModify extends TeaModel {
         }
 
         public static final class Builder {
-            private String targetType; 
             private String templateUuid; 
 
             private Builder() {
             } 
 
             private Builder(CustomTemplateEntries model) {
-                this.targetType = model.targetType;
                 this.templateUuid = model.templateUuid;
             } 
-
-            /**
-             * targetType.
-             */
-            public Builder targetType(String targetType) {
-                this.targetType = targetType;
-                return this;
-            }
 
             /**
              * templateUuid.
@@ -251,9 +209,9 @@ public class NotifyStrategyForSNSModify extends TeaModel {
     }
     /**
      * 
-     * {@link NotifyStrategyForSNSModify} extends {@link TeaModel}
+     * {@link NotifyStrategyConfig} extends {@link TeaModel}
      *
-     * <p>NotifyStrategyForSNSModify</p>
+     * <p>NotifyStrategyConfig</p>
      */
     public static class GroupingSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("groupingKeys")
@@ -368,9 +326,9 @@ public class NotifyStrategyForSNSModify extends TeaModel {
     }
     /**
      * 
-     * {@link NotifyStrategyForSNSModify} extends {@link TeaModel}
+     * {@link NotifyStrategyConfig} extends {@link TeaModel}
      *
-     * <p>NotifyStrategyForSNSModify</p>
+     * <p>NotifyStrategyConfig</p>
      */
     public static class Channels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("channelType")
@@ -434,11 +392,7 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             } 
 
             /**
-             * <p>通知渠道类型，必须为以下大写枚举值之一：DING（钉钉机器人）、WEIXIN（企业微信机器人）、FEISHU（飞书机器人）、SLACK、TEAMS、WEBHOOK（自定义 Webhook）、CONTACT（联系人，需配合 enabledSubChannels 指定子渠道）、GROUP（联系人组）、DUTY（值班表）、DING_COOL_APP（钉钉酷应用）。注意：不支持 EMAIL/SMS 等小写值，邮件/短信/电话通知请使用 channelType=CONTACT 并在 enabledSubChannels 中指定 EMAIL/SMS/VOICE。</p>
              * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>WEBHOOK</p>
              */
             public Builder channelType(String channelType) {
                 this.channelType = channelType;
@@ -446,10 +400,7 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             }
 
             /**
-             * <p>仅当 channelType 为 CONTACT/GROUP/DUTY 时必填。可选值：EMAIL（邮件）、SMS（短信）、VOICE（电话）、DING（钉钉工作通知）、WEIXIN（企微消息）、FEISHU（飞书消息）、WEBHOOK。例如要邮件+短信通知联系人，设 channelType=CONTACT, enabledSubChannels=[&quot;EMAIL&quot;,&quot;SMS&quot;]。其他 channelType（如 WEBHOOK/DING）无需设置此字段。</p>
-             * 
-             * <strong>example:</strong>
-             * <p>[&quot;EMAIL&quot;,&quot;SMS&quot;]</p>
+             * enabledSubChannels.
              */
             public Builder enabledSubChannels(java.util.List<String> enabledSubChannels) {
                 this.enabledSubChannels = enabledSubChannels;
@@ -457,11 +408,7 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             }
 
             /**
-             * <p>接收方标识列表。WEBHOOK 类型填 webhook uuid；DING/WEIXIN/FEISHU 填机器人 uuid；CONTACT 填联系人 ID；GROUP 填联系人组 ID；DUTY 填排班 uuid。至少一个元素。</p>
              * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>[&quot;my-webhook-uuid&quot;]</p>
              */
             public Builder receivers(java.util.List<String> receivers) {
                 this.receivers = receivers;
@@ -477,9 +424,9 @@ public class NotifyStrategyForSNSModify extends TeaModel {
     }
     /**
      * 
-     * {@link NotifyStrategyForSNSModify} extends {@link TeaModel}
+     * {@link NotifyStrategyConfig} extends {@link TeaModel}
      *
-     * <p>NotifyStrategyForSNSModify</p>
+     * <p>NotifyStrategyConfig</p>
      */
     public static class EffectTimeRange extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dayInWeek")
@@ -554,10 +501,7 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             } 
 
             /**
-             * <p>一周中哪几天生效，数组元素取值范围 0-6（0=周日，1=周一，2=周二...6=周六）。注意：不支持 7，最大值为 6。全周生效示例：[0,1,2,3,4,5,6]；仅工作日：[1,2,3,4,5]</p>
-             * 
-             * <strong>example:</strong>
-             * <p>[0,1,2,3,4,5,6]</p>
+             * dayInWeek.
              */
             public Builder dayInWeek(java.util.List<Integer> dayInWeek) {
                 this.dayInWeek = dayInWeek;
@@ -565,10 +509,7 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             }
 
             /**
-             * <p>当天结束时间，从00:00起的分钟数，范围 0-1439（23*60+59=1439 表示 23:59）</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1439</p>
+             * endTimeInMinute.
              */
             public Builder endTimeInMinute(Integer endTimeInMinute) {
                 this.endTimeInMinute = endTimeInMinute;
@@ -576,10 +517,7 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             }
 
             /**
-             * <p>当天开始时间，从00:00起的分钟数，范围 0-1439（0 表示 00:00）</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * startTimeInMinute.
              */
             public Builder startTimeInMinute(Integer startTimeInMinute) {
                 this.startTimeInMinute = startTimeInMinute;
@@ -587,10 +525,7 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             }
 
             /**
-             * <p>IANA 时区标识，如 Asia/Shanghai、America/Los_Angeles</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Asia/Shanghai</p>
+             * timeZone.
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;
@@ -606,201 +541,9 @@ public class NotifyStrategyForSNSModify extends TeaModel {
     }
     /**
      * 
-     * {@link NotifyStrategyForSNSModify} extends {@link TeaModel}
+     * {@link NotifyStrategyConfig} extends {@link TeaModel}
      *
-     * <p>NotifyStrategyForSNSModify</p>
-     */
-    public static class Conditions extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("field")
-        private String field;
-
-        @com.aliyun.core.annotation.NameInMap("op")
-        private String op;
-
-        @com.aliyun.core.annotation.NameInMap("value")
-        private String value;
-
-        private Conditions(Builder builder) {
-            this.field = builder.field;
-            this.op = builder.op;
-            this.value = builder.value;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Conditions create() {
-            return builder().build();
-        }
-
-        /**
-         * @return field
-         */
-        public String getField() {
-            return this.field;
-        }
-
-        /**
-         * @return op
-         */
-        public String getOp() {
-            return this.op;
-        }
-
-        /**
-         * @return value
-         */
-        public String getValue() {
-            return this.value;
-        }
-
-        public static final class Builder {
-            private String field; 
-            private String op; 
-            private String value; 
-
-            private Builder() {
-            } 
-
-            private Builder(Conditions model) {
-                this.field = model.field;
-                this.op = model.op;
-                this.value = model.value;
-            } 
-
-            /**
-             * field.
-             */
-            public Builder field(String field) {
-                this.field = field;
-                return this;
-            }
-
-            /**
-             * op.
-             */
-            public Builder op(String op) {
-                this.op = op;
-                return this;
-            }
-
-            /**
-             * value.
-             */
-            public Builder value(String value) {
-                this.value = value;
-                return this;
-            }
-
-            public Conditions build() {
-                return new Conditions(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link NotifyStrategyForSNSModify} extends {@link TeaModel}
-     *
-     * <p>NotifyStrategyForSNSModify</p>
-     */
-    public static class FilterSetting extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("conditions")
-        private java.util.List<Conditions> conditions;
-
-        @com.aliyun.core.annotation.NameInMap("expression")
-        private String expression;
-
-        @com.aliyun.core.annotation.NameInMap("relation")
-        private String relation;
-
-        private FilterSetting(Builder builder) {
-            this.conditions = builder.conditions;
-            this.expression = builder.expression;
-            this.relation = builder.relation;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static FilterSetting create() {
-            return builder().build();
-        }
-
-        /**
-         * @return conditions
-         */
-        public java.util.List<Conditions> getConditions() {
-            return this.conditions;
-        }
-
-        /**
-         * @return expression
-         */
-        public String getExpression() {
-            return this.expression;
-        }
-
-        /**
-         * @return relation
-         */
-        public String getRelation() {
-            return this.relation;
-        }
-
-        public static final class Builder {
-            private java.util.List<Conditions> conditions; 
-            private String expression; 
-            private String relation; 
-
-            private Builder() {
-            } 
-
-            private Builder(FilterSetting model) {
-                this.conditions = model.conditions;
-                this.expression = model.expression;
-                this.relation = model.relation;
-            } 
-
-            /**
-             * conditions.
-             */
-            public Builder conditions(java.util.List<Conditions> conditions) {
-                this.conditions = conditions;
-                return this;
-            }
-
-            /**
-             * expression.
-             */
-            public Builder expression(String expression) {
-                this.expression = expression;
-                return this;
-            }
-
-            /**
-             * relation.
-             */
-            public Builder relation(String relation) {
-                this.relation = relation;
-                return this;
-            }
-
-            public FilterSetting build() {
-                return new FilterSetting(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link NotifyStrategyForSNSModify} extends {@link TeaModel}
-     *
-     * <p>NotifyStrategyForSNSModify</p>
+     * <p>NotifyStrategyConfig</p>
      */
     public static class Routes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("channels")
@@ -818,16 +561,12 @@ public class NotifyStrategyForSNSModify extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("filterSetting")
         private FilterSetting filterSetting;
 
-        @com.aliyun.core.annotation.NameInMap("severities")
-        private java.util.List<String> severities;
-
         private Routes(Builder builder) {
             this.channels = builder.channels;
             this.digitalEmployeeName = builder.digitalEmployeeName;
             this.effectTimeRange = builder.effectTimeRange;
             this.enableRca = builder.enableRca;
             this.filterSetting = builder.filterSetting;
-            this.severities = builder.severities;
         }
 
         public static Builder builder() {
@@ -873,20 +612,12 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             return this.filterSetting;
         }
 
-        /**
-         * @return severities
-         */
-        public java.util.List<String> getSeverities() {
-            return this.severities;
-        }
-
         public static final class Builder {
             private java.util.List<Channels> channels; 
             private String digitalEmployeeName; 
             private EffectTimeRange effectTimeRange; 
             private Boolean enableRca; 
             private FilterSetting filterSetting; 
-            private java.util.List<String> severities; 
 
             private Builder() {
             } 
@@ -897,7 +628,6 @@ public class NotifyStrategyForSNSModify extends TeaModel {
                 this.effectTimeRange = model.effectTimeRange;
                 this.enableRca = model.enableRca;
                 this.filterSetting = model.filterSetting;
-                this.severities = model.severities;
             } 
 
             /**
@@ -917,7 +647,7 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             }
 
             /**
-             * <p>通知生效时间段设置，定义在哪些天的哪个时间范围内发送通知</p>
+             * effectTimeRange.
              */
             public Builder effectTimeRange(EffectTimeRange effectTimeRange) {
                 this.effectTimeRange = effectTimeRange;
@@ -937,14 +667,6 @@ public class NotifyStrategyForSNSModify extends TeaModel {
              */
             public Builder filterSetting(FilterSetting filterSetting) {
                 this.filterSetting = filterSetting;
-                return this;
-            }
-
-            /**
-             * severities.
-             */
-            public Builder severities(java.util.List<String> severities) {
-                this.severities = severities;
                 return this;
             }
 

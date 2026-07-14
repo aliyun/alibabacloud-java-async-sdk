@@ -360,6 +360,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateNotifyPolicy  CreateNotifyPolicyRequest
+     * @return CreateNotifyPolicyResponse
+     */
+    @Override
+    public CompletableFuture<CreateNotifyPolicyResponse> createNotifyPolicy(CreateNotifyPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateNotifyPolicy").setMethod(HttpMethod.POST).setPathRegex("/api/eventbase/notify-policy/create").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateNotifyPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateNotifyPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreatePipeline  CreatePipelineRequest
      * @return CreatePipelineResponse
      */
@@ -819,6 +837,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteNotifyPolicy  DeleteNotifyPolicyRequest
+     * @return DeleteNotifyPolicyResponse
+     */
+    @Override
+    public CompletableFuture<DeleteNotifyPolicyResponse> deleteNotifyPolicy(DeleteNotifyPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteNotifyPolicy").setMethod(HttpMethod.DELETE).setPathRegex("/api/eventbase/notify-policy").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteNotifyPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteNotifyPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeletePipeline  DeletePipelineRequest
      * @return DeletePipelineResponse
      */
@@ -1041,6 +1077,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeRegionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DisableNotifyPolicy  DisableNotifyPolicyRequest
+     * @return DisableNotifyPolicyResponse
+     */
+    @Override
+    public CompletableFuture<DisableNotifyPolicyResponse> disableNotifyPolicy(DisableNotifyPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DisableNotifyPolicy").setMethod(HttpMethod.PUT).setPathRegex("/api/eventbase/notify-policy/{uuid}/disable").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DisableNotifyPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DisableNotifyPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnableNotifyPolicy  EnableNotifyPolicyRequest
+     * @return EnableNotifyPolicyResponse
+     */
+    @Override
+    public CompletableFuture<EnableNotifyPolicyResponse> enableNotifyPolicy(EnableNotifyPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("EnableNotifyPolicy").setMethod(HttpMethod.PUT).setPathRegex("/api/eventbase/notify-policy/{uuid}/enable").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnableNotifyPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnableNotifyPolicyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1437,6 +1509,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetMemoryStoreResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetNotifyPolicy  GetNotifyPolicyRequest
+     * @return GetNotifyPolicyResponse
+     */
+    @Override
+    public CompletableFuture<GetNotifyPolicyResponse> getNotifyPolicy(GetNotifyPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetNotifyPolicy").setMethod(HttpMethod.GET).setPathRegex("/api/eventbase/notify-policy").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetNotifyPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetNotifyPolicyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2065,6 +2155,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListNotifyPolicies  ListNotifyPoliciesRequest
+     * @return ListNotifyPoliciesResponse
+     */
+    @Override
+    public CompletableFuture<ListNotifyPoliciesResponse> listNotifyPolicies(ListNotifyPoliciesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListNotifyPolicies").setMethod(HttpMethod.GET).setPathRegex("/api/eventbase/notify-policies").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListNotifyPoliciesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListNotifyPoliciesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListPipelines  ListPipelinesRequest
      * @return ListPipelinesResponse
      */
@@ -2593,6 +2701,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateMemoryStoreResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateNotifyPolicy  UpdateNotifyPolicyRequest
+     * @return UpdateNotifyPolicyResponse
+     */
+    @Override
+    public CompletableFuture<UpdateNotifyPolicyResponse> updateNotifyPolicy(UpdateNotifyPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateNotifyPolicy").setMethod(HttpMethod.PUT).setPathRegex("/api/eventbase/notify-policy/update").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateNotifyPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateNotifyPolicyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

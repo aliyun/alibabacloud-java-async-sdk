@@ -27,7 +27,7 @@ public class ObserveGroup extends TeaModel {
     private String description;
 
     @com.aliyun.core.annotation.NameInMap("discoverRules")
-    private String discoverRules;
+    private java.util.List<ObserveGroupDiscoverRule> discoverRules;
 
     @com.aliyun.core.annotation.NameInMap("entityCounts")
     private java.util.Map<String, Integer> entityCounts;
@@ -52,6 +52,12 @@ public class ObserveGroup extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("modifyTime")
     private String modifyTime;
+
+    @com.aliyun.core.annotation.NameInMap("ogEntityInfoEnabled")
+    private Boolean ogEntityInfoEnabled;
+
+    @com.aliyun.core.annotation.NameInMap("ogEntityInfoPromInstances")
+    private java.util.List<ObserveGroupPromInstance> ogEntityInfoPromInstances;
 
     @com.aliyun.core.annotation.NameInMap("originGroupId")
     private String originGroupId;
@@ -84,6 +90,8 @@ public class ObserveGroup extends TeaModel {
         this.groupType = builder.groupType;
         this.health = builder.health;
         this.modifyTime = builder.modifyTime;
+        this.ogEntityInfoEnabled = builder.ogEntityInfoEnabled;
+        this.ogEntityInfoPromInstances = builder.ogEntityInfoPromInstances;
         this.originGroupId = builder.originGroupId;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -128,7 +136,7 @@ public class ObserveGroup extends TeaModel {
     /**
      * @return discoverRules
      */
-    public String getDiscoverRules() {
+    public java.util.List<ObserveGroupDiscoverRule> getDiscoverRules() {
         return this.discoverRules;
     }
 
@@ -189,6 +197,20 @@ public class ObserveGroup extends TeaModel {
     }
 
     /**
+     * @return ogEntityInfoEnabled
+     */
+    public Boolean getOgEntityInfoEnabled() {
+        return this.ogEntityInfoEnabled;
+    }
+
+    /**
+     * @return ogEntityInfoPromInstances
+     */
+    public java.util.List<ObserveGroupPromInstance> getOgEntityInfoPromInstances() {
+        return this.ogEntityInfoPromInstances;
+    }
+
+    /**
      * @return originGroupId
      */
     public String getOriginGroupId() {
@@ -234,7 +256,7 @@ public class ObserveGroup extends TeaModel {
         private String aliUid; 
         private String createTime; 
         private String description; 
-        private String discoverRules; 
+        private java.util.List<ObserveGroupDiscoverRule> discoverRules; 
         private java.util.Map<String, Integer> entityCounts; 
         private String extraInfo; 
         private Boolean favorited; 
@@ -243,6 +265,8 @@ public class ObserveGroup extends TeaModel {
         private String groupType; 
         private Integer health; 
         private String modifyTime; 
+        private Boolean ogEntityInfoEnabled; 
+        private java.util.List<ObserveGroupPromInstance> ogEntityInfoPromInstances; 
         private String originGroupId; 
         private String regionId; 
         private String resourceGroupId; 
@@ -266,6 +290,8 @@ public class ObserveGroup extends TeaModel {
             this.groupType = model.groupType;
             this.health = model.health;
             this.modifyTime = model.modifyTime;
+            this.ogEntityInfoEnabled = model.ogEntityInfoEnabled;
+            this.ogEntityInfoPromInstances = model.ogEntityInfoPromInstances;
             this.originGroupId = model.originGroupId;
             this.regionId = model.regionId;
             this.resourceGroupId = model.resourceGroupId;
@@ -301,7 +327,7 @@ public class ObserveGroup extends TeaModel {
         /**
          * <p>实体发现规则列表，定义分组自动匹配哪些实体。</p>
          */
-        public Builder discoverRules(String discoverRules) {
+        public Builder discoverRules(java.util.List<ObserveGroupDiscoverRule> discoverRules) {
             this.discoverRules = discoverRules;
             return this;
         }
@@ -367,6 +393,22 @@ public class ObserveGroup extends TeaModel {
          */
         public Builder modifyTime(String modifyTime) {
             this.modifyTime = modifyTime;
+            return this;
+        }
+
+        /**
+         * <p>是否开启 og_entity_info 指标输出。开启后数据面会把本分组归属写入目标 Prometheus 实例。</p>
+         */
+        public Builder ogEntityInfoEnabled(Boolean ogEntityInfoEnabled) {
+            this.ogEntityInfoEnabled = ogEntityInfoEnabled;
+            return this;
+        }
+
+        /**
+         * <p>写入 og_entity_info 的 Prometheus 实例集合，包含系统自动识别(system)和用户自定义(custom)两类来源。</p>
+         */
+        public Builder ogEntityInfoPromInstances(java.util.List<ObserveGroupPromInstance> ogEntityInfoPromInstances) {
+            this.ogEntityInfoPromInstances = ogEntityInfoPromInstances;
             return this;
         }
 

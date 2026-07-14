@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SubscriptionForSNSModify} extends {@link TeaModel}
+ * {@link SubscriptionConfig} extends {@link TeaModel}
  *
- * <p>SubscriptionForSNSModify</p>
+ * <p>SubscriptionConfig</p>
  */
-public class SubscriptionForSNSModify extends TeaModel {
+public class SubscriptionConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("filterSetting")
     private FilterSetting filterSetting;
 
@@ -26,7 +26,7 @@ public class SubscriptionForSNSModify extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("workspaceFilterSetting")
     private WorkspaceFilterSetting workspaceFilterSetting;
 
-    private SubscriptionForSNSModify(Builder builder) {
+    private SubscriptionConfig(Builder builder) {
         this.filterSetting = builder.filterSetting;
         this.subscribeLegacyEvent = builder.subscribeLegacyEvent;
         this.workspaceFilterSetting = builder.workspaceFilterSetting;
@@ -36,7 +36,7 @@ public class SubscriptionForSNSModify extends TeaModel {
         return new Builder();
     }
 
-    public static SubscriptionForSNSModify create() {
+    public static SubscriptionConfig create() {
         return builder().build();
     }
 
@@ -73,7 +73,7 @@ public class SubscriptionForSNSModify extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(SubscriptionForSNSModify model) {
+        private Builder(SubscriptionConfig model) {
             this.filterSetting = model.filterSetting;
             this.subscribeLegacyEvent = model.subscribeLegacyEvent;
             this.workspaceFilterSetting = model.workspaceFilterSetting;
@@ -88,7 +88,7 @@ public class SubscriptionForSNSModify extends TeaModel {
         }
 
         /**
-         * <p>是否订阅老产品事件（workspace=null 的 cms 1.0 / ARMS / SLS 事件）：true=订阅，false 或 null=不订阅</p>
+         * subscribeLegacyEvent.
          */
         public Builder subscribeLegacyEvent(Boolean subscribeLegacyEvent) {
             this.subscribeLegacyEvent = subscribeLegacyEvent;
@@ -103,8 +103,8 @@ public class SubscriptionForSNSModify extends TeaModel {
             return this;
         }
 
-        public SubscriptionForSNSModify build() {
-            return new SubscriptionForSNSModify(this);
+        public SubscriptionConfig build() {
+            return new SubscriptionConfig(this);
         } 
 
     } 

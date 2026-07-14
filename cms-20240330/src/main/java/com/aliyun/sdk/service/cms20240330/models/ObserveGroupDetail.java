@@ -27,7 +27,7 @@ public class ObserveGroupDetail extends TeaModel {
     private String description;
 
     @com.aliyun.core.annotation.NameInMap("discoverRules")
-    private String discoverRules;
+    private java.util.List<ObserveGroupDiscoverRule> discoverRules;
 
     @com.aliyun.core.annotation.NameInMap("entitySummaries")
     private java.util.List<EntitySummaries> entitySummaries;
@@ -50,6 +50,12 @@ public class ObserveGroupDetail extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("modifyTime")
     private String modifyTime;
 
+    @com.aliyun.core.annotation.NameInMap("ogEntityInfoEnabled")
+    private Boolean ogEntityInfoEnabled;
+
+    @com.aliyun.core.annotation.NameInMap("ogEntityInfoPromInstances")
+    private java.util.List<ObserveGroupPromInstance> ogEntityInfoPromInstances;
+
     @com.aliyun.core.annotation.NameInMap("originGroupId")
     private String originGroupId;
 
@@ -61,6 +67,9 @@ public class ObserveGroupDetail extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("sourceOrigin")
     private String sourceOrigin;
+
+    @com.aliyun.core.annotation.NameInMap("tags")
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.NameInMap("workspaceId")
     private String workspaceId;
@@ -77,10 +86,13 @@ public class ObserveGroupDetail extends TeaModel {
         this.groupName = builder.groupName;
         this.groupType = builder.groupType;
         this.modifyTime = builder.modifyTime;
+        this.ogEntityInfoEnabled = builder.ogEntityInfoEnabled;
+        this.ogEntityInfoPromInstances = builder.ogEntityInfoPromInstances;
         this.originGroupId = builder.originGroupId;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.sourceOrigin = builder.sourceOrigin;
+        this.tags = builder.tags;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -120,7 +132,7 @@ public class ObserveGroupDetail extends TeaModel {
     /**
      * @return discoverRules
      */
-    public String getDiscoverRules() {
+    public java.util.List<ObserveGroupDiscoverRule> getDiscoverRules() {
         return this.discoverRules;
     }
 
@@ -174,6 +186,20 @@ public class ObserveGroupDetail extends TeaModel {
     }
 
     /**
+     * @return ogEntityInfoEnabled
+     */
+    public Boolean getOgEntityInfoEnabled() {
+        return this.ogEntityInfoEnabled;
+    }
+
+    /**
+     * @return ogEntityInfoPromInstances
+     */
+    public java.util.List<ObserveGroupPromInstance> getOgEntityInfoPromInstances() {
+        return this.ogEntityInfoPromInstances;
+    }
+
+    /**
      * @return originGroupId
      */
     public String getOriginGroupId() {
@@ -202,6 +228,13 @@ public class ObserveGroupDetail extends TeaModel {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -212,7 +245,7 @@ public class ObserveGroupDetail extends TeaModel {
         private String aliUid; 
         private String createTime; 
         private String description; 
-        private String discoverRules; 
+        private java.util.List<ObserveGroupDiscoverRule> discoverRules; 
         private java.util.List<EntitySummaries> entitySummaries; 
         private String extraInfo; 
         private Boolean favorited; 
@@ -220,10 +253,13 @@ public class ObserveGroupDetail extends TeaModel {
         private String groupName; 
         private String groupType; 
         private String modifyTime; 
+        private Boolean ogEntityInfoEnabled; 
+        private java.util.List<ObserveGroupPromInstance> ogEntityInfoPromInstances; 
         private String originGroupId; 
         private String regionId; 
         private String resourceGroupId; 
         private String sourceOrigin; 
+        private java.util.List<Tags> tags; 
         private String workspaceId; 
 
         private Builder() {
@@ -241,10 +277,13 @@ public class ObserveGroupDetail extends TeaModel {
             this.groupName = model.groupName;
             this.groupType = model.groupType;
             this.modifyTime = model.modifyTime;
+            this.ogEntityInfoEnabled = model.ogEntityInfoEnabled;
+            this.ogEntityInfoPromInstances = model.ogEntityInfoPromInstances;
             this.originGroupId = model.originGroupId;
             this.regionId = model.regionId;
             this.resourceGroupId = model.resourceGroupId;
             this.sourceOrigin = model.sourceOrigin;
+            this.tags = model.tags;
             this.workspaceId = model.workspaceId;
         } 
 
@@ -275,7 +314,7 @@ public class ObserveGroupDetail extends TeaModel {
         /**
          * <p>实体发现规则列表，定义分组自动匹配哪些实体。</p>
          */
-        public Builder discoverRules(String discoverRules) {
+        public Builder discoverRules(java.util.List<ObserveGroupDiscoverRule> discoverRules) {
             this.discoverRules = discoverRules;
             return this;
         }
@@ -337,6 +376,22 @@ public class ObserveGroupDetail extends TeaModel {
         }
 
         /**
+         * <p>是否开启 og_entity_info 指标输出。开启后数据面会把本分组归属写入目标 Prometheus 实例。</p>
+         */
+        public Builder ogEntityInfoEnabled(Boolean ogEntityInfoEnabled) {
+            this.ogEntityInfoEnabled = ogEntityInfoEnabled;
+            return this;
+        }
+
+        /**
+         * <p>写入 og_entity_info 的 Prometheus 实例集合，包含系统自动识别(system)和用户自定义(custom)两类来源。</p>
+         */
+        public Builder ogEntityInfoPromInstances(java.util.List<ObserveGroupPromInstance> ogEntityInfoPromInstances) {
+            this.ogEntityInfoPromInstances = ogEntityInfoPromInstances;
+            return this;
+        }
+
+        /**
          * <p>仅 synced_from_1_0 时填值，存 1.0 应用分组的 product_group.id。</p>
          */
         public Builder originGroupId(String originGroupId) {
@@ -365,6 +420,14 @@ public class ObserveGroupDetail extends TeaModel {
          */
         public Builder sourceOrigin(String sourceOrigin) {
             this.sourceOrigin = sourceOrigin;
+            return this;
+        }
+
+        /**
+         * <p>资源标签（阿里云标准标签），键值对数组。</p>
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            this.tags = tags;
             return this;
         }
 
@@ -494,6 +557,81 @@ public class ObserveGroupDetail extends TeaModel {
 
             public EntitySummaries build() {
                 return new EntitySummaries(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ObserveGroupDetail} extends {@link TeaModel}
+     *
+     * <p>ObserveGroupDetail</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("tagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("tagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
+            /**
+             * <p>标签键。</p>
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * <p>标签值。</p>
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 

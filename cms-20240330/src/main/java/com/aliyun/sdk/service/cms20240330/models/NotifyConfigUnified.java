@@ -32,6 +32,12 @@ public class NotifyConfigUnified extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("notifyStrategies")
     private java.util.List<String> notifyStrategies;
 
+    @com.aliyun.core.annotation.NameInMap("sendRecoverNotification")
+    private Boolean sendRecoverNotification;
+
+    @com.aliyun.core.annotation.NameInMap("severityChannels")
+    private java.util.Map<String, SeverityNotifyConfig> severityChannels;
+
     @com.aliyun.core.annotation.NameInMap("silenceTimeSecs")
     private Integer silenceTimeSecs;
 
@@ -48,6 +54,8 @@ public class NotifyConfigUnified extends TeaModel {
         this.activeStartTime = builder.activeStartTime;
         this.channels = builder.channels;
         this.notifyStrategies = builder.notifyStrategies;
+        this.sendRecoverNotification = builder.sendRecoverNotification;
+        this.severityChannels = builder.severityChannels;
         this.silenceTimeSecs = builder.silenceTimeSecs;
         this.type = builder.type;
         this.utcOffset = builder.utcOffset;
@@ -101,6 +109,20 @@ public class NotifyConfigUnified extends TeaModel {
     }
 
     /**
+     * @return sendRecoverNotification
+     */
+    public Boolean getSendRecoverNotification() {
+        return this.sendRecoverNotification;
+    }
+
+    /**
+     * @return severityChannels
+     */
+    public java.util.Map<String, SeverityNotifyConfig> getSeverityChannels() {
+        return this.severityChannels;
+    }
+
+    /**
      * @return silenceTimeSecs
      */
     public Integer getSilenceTimeSecs() {
@@ -127,6 +149,8 @@ public class NotifyConfigUnified extends TeaModel {
         private String activeStartTime; 
         private java.util.List<DirectNotifyChannel> channels; 
         private java.util.List<String> notifyStrategies; 
+        private Boolean sendRecoverNotification; 
+        private java.util.Map<String, SeverityNotifyConfig> severityChannels; 
         private Integer silenceTimeSecs; 
         private String type; 
         private String utcOffset; 
@@ -140,6 +164,8 @@ public class NotifyConfigUnified extends TeaModel {
             this.activeStartTime = model.activeStartTime;
             this.channels = model.channels;
             this.notifyStrategies = model.notifyStrategies;
+            this.sendRecoverNotification = model.sendRecoverNotification;
+            this.severityChannels = model.severityChannels;
             this.silenceTimeSecs = model.silenceTimeSecs;
             this.type = model.type;
             this.utcOffset = model.utcOffset;
@@ -182,6 +208,22 @@ public class NotifyConfigUnified extends TeaModel {
          */
         public Builder notifyStrategies(java.util.List<String> notifyStrategies) {
             this.notifyStrategies = notifyStrategies;
+            return this;
+        }
+
+        /**
+         * sendRecoverNotification.
+         */
+        public Builder sendRecoverNotification(Boolean sendRecoverNotification) {
+            this.sendRecoverNotification = sendRecoverNotification;
+            return this;
+        }
+
+        /**
+         * severityChannels.
+         */
+        public Builder severityChannels(java.util.Map<String, SeverityNotifyConfig> severityChannels) {
+            this.severityChannels = severityChannels;
             return this;
         }
 

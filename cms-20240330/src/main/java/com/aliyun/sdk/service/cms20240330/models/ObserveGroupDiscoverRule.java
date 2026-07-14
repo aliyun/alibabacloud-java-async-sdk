@@ -17,46 +17,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ObserveGroupDiscoverRule</p>
  */
 public class ObserveGroupDiscoverRule extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("Enabled")
+    @com.aliyun.core.annotation.NameInMap("enabled")
     private Boolean enabled;
 
-    @com.aliyun.core.annotation.NameInMap("EntityType")
+    @com.aliyun.core.annotation.NameInMap("entityType")
     private String entityType;
 
-    @com.aliyun.core.annotation.NameInMap("EntityTypes")
+    @com.aliyun.core.annotation.NameInMap("entityTypes")
     private java.util.List<String> entityTypes;
 
-    @com.aliyun.core.annotation.NameInMap("GmtCreate")
+    @com.aliyun.core.annotation.NameInMap("gmtCreate")
     private Long gmtCreate;
 
-    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.NameInMap("instanceIds")
     private java.util.List<String> instanceIds;
 
-    @com.aliyun.core.annotation.NameInMap("NameRules")
+    @com.aliyun.core.annotation.NameInMap("nameRules")
     private NameRules nameRules;
 
-    @com.aliyun.core.annotation.NameInMap("RegionIds")
+    @com.aliyun.core.annotation.NameInMap("regionIds")
     private java.util.List<String> regionIds;
 
-    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
     private String resourceGroupId;
 
-    @com.aliyun.core.annotation.NameInMap("RuleId")
+    @com.aliyun.core.annotation.NameInMap("ruleId")
     private String ruleId;
 
-    @com.aliyun.core.annotation.NameInMap("RuleType")
+    @com.aliyun.core.annotation.NameInMap("ruleType")
     private String ruleType;
 
-    @com.aliyun.core.annotation.NameInMap("Scope")
+    @com.aliyun.core.annotation.NameInMap("scope")
     private String scope;
 
-    @com.aliyun.core.annotation.NameInMap("Spl")
+    @com.aliyun.core.annotation.NameInMap("spl")
     private String spl;
 
-    @com.aliyun.core.annotation.NameInMap("TagRules")
+    @com.aliyun.core.annotation.NameInMap("tagRules")
     private TagRules tagRules;
 
-    @com.aliyun.core.annotation.NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("userId")
     private String userId;
 
     private ObserveGroupDiscoverRule(Builder builder) {
@@ -347,10 +347,10 @@ public class ObserveGroupDiscoverRule extends TeaModel {
      * <p>ObserveGroupDiscoverRule</p>
      */
     public static class Tags extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Op")
+        @com.aliyun.core.annotation.NameInMap("op")
         private String op;
 
-        @com.aliyun.core.annotation.NameInMap("TagValues")
+        @com.aliyun.core.annotation.NameInMap("tagValues")
         private java.util.List<String> tagValues;
 
         private Tags(Builder builder) {
@@ -422,10 +422,10 @@ public class ObserveGroupDiscoverRule extends TeaModel {
      * <p>ObserveGroupDiscoverRule</p>
      */
     public static class NameRules extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Op")
+        @com.aliyun.core.annotation.NameInMap("op")
         private String op;
 
-        @com.aliyun.core.annotation.NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("tags")
         private java.util.List<Tags> tags;
 
         private NameRules(Builder builder) {
@@ -497,13 +497,13 @@ public class ObserveGroupDiscoverRule extends TeaModel {
      * <p>ObserveGroupDiscoverRule</p>
      */
     public static class TagRulesTags extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Op")
+        @com.aliyun.core.annotation.NameInMap("op")
         private String op;
 
-        @com.aliyun.core.annotation.NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("tagKey")
         private String tagKey;
 
-        @com.aliyun.core.annotation.NameInMap("TagValues")
+        @com.aliyun.core.annotation.NameInMap("tagValues")
         private java.util.List<String> tagValues;
 
         private TagRulesTags(Builder builder) {
@@ -593,10 +593,10 @@ public class ObserveGroupDiscoverRule extends TeaModel {
      * <p>ObserveGroupDiscoverRule</p>
      */
     public static class TagRules extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Op")
+        @com.aliyun.core.annotation.NameInMap("op")
         private String op;
 
-        @com.aliyun.core.annotation.NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("tags")
         private java.util.List<TagRulesTags> tags;
 
         private TagRules(Builder builder) {

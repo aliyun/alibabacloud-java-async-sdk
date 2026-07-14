@@ -41,6 +41,12 @@ public class AlertRuleNotification extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("qwencloudContacts")
     private java.util.Map<String, java.util.Map<String, ?>> qwencloudContacts;
 
+    @com.aliyun.core.annotation.NameInMap("sendOk")
+    private Boolean sendOk;
+
+    @com.aliyun.core.annotation.NameInMap("severityNotifications")
+    private java.util.Map<String, SeverityNotifyConfig> severityNotifications;
+
     @com.aliyun.core.annotation.NameInMap("silenceTime")
     private Long silenceTime;
 
@@ -59,6 +65,8 @@ public class AlertRuleNotification extends TeaModel {
         this.groups = builder.groups;
         this.notifyTime = builder.notifyTime;
         this.qwencloudContacts = builder.qwencloudContacts;
+        this.sendOk = builder.sendOk;
+        this.severityNotifications = builder.severityNotifications;
         this.silenceTime = builder.silenceTime;
         this.slackWebhooks = builder.slackWebhooks;
         this.wxWebhooks = builder.wxWebhooks;
@@ -133,6 +141,20 @@ public class AlertRuleNotification extends TeaModel {
     }
 
     /**
+     * @return sendOk
+     */
+    public Boolean getSendOk() {
+        return this.sendOk;
+    }
+
+    /**
+     * @return severityNotifications
+     */
+    public java.util.Map<String, SeverityNotifyConfig> getSeverityNotifications() {
+        return this.severityNotifications;
+    }
+
+    /**
      * @return silenceTime
      */
     public Long getSilenceTime() {
@@ -162,6 +184,8 @@ public class AlertRuleNotification extends TeaModel {
         private java.util.List<String> groups; 
         private AlertRuleTimeSpan notifyTime; 
         private java.util.Map<String, java.util.Map<String, ?>> qwencloudContacts; 
+        private Boolean sendOk; 
+        private java.util.Map<String, SeverityNotifyConfig> severityNotifications; 
         private Long silenceTime; 
         private java.util.List<String> slackWebhooks; 
         private java.util.List<String> wxWebhooks; 
@@ -178,6 +202,8 @@ public class AlertRuleNotification extends TeaModel {
             this.groups = model.groups;
             this.notifyTime = model.notifyTime;
             this.qwencloudContacts = model.qwencloudContacts;
+            this.sendOk = model.sendOk;
+            this.severityNotifications = model.severityNotifications;
             this.silenceTime = model.silenceTime;
             this.slackWebhooks = model.slackWebhooks;
             this.wxWebhooks = model.wxWebhooks;
@@ -244,6 +270,22 @@ public class AlertRuleNotification extends TeaModel {
          */
         public Builder qwencloudContacts(java.util.Map<String, java.util.Map<String, ?>> qwencloudContacts) {
             this.qwencloudContacts = qwencloudContacts;
+            return this;
+        }
+
+        /**
+         * sendOk.
+         */
+        public Builder sendOk(Boolean sendOk) {
+            this.sendOk = sendOk;
+            return this;
+        }
+
+        /**
+         * severityNotifications.
+         */
+        public Builder severityNotifications(java.util.Map<String, SeverityNotifyConfig> severityNotifications) {
+            this.severityNotifications = severityNotifications;
             return this;
         }
 

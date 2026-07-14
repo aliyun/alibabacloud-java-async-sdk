@@ -116,6 +116,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateMemoryStoreResponse> createMemoryStore(CreateMemoryStoreRequest request);
 
     /**
+     * @param request the request parameters of CreateNotifyPolicy  CreateNotifyPolicyRequest
+     * @return CreateNotifyPolicyResponse
+     */
+    CompletableFuture<CreateNotifyPolicyResponse> createNotifyPolicy(CreateNotifyPolicyRequest request);
+
+    /**
      * @param request the request parameters of CreatePipeline  CreatePipelineRequest
      * @return CreatePipelineResponse
      */
@@ -275,6 +281,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteMemoryStoreResponse> deleteMemoryStore(DeleteMemoryStoreRequest request);
 
     /**
+     * @param request the request parameters of DeleteNotifyPolicy  DeleteNotifyPolicyRequest
+     * @return DeleteNotifyPolicyResponse
+     */
+    CompletableFuture<DeleteNotifyPolicyResponse> deleteNotifyPolicy(DeleteNotifyPolicyRequest request);
+
+    /**
      * @param request the request parameters of DeletePipeline  DeletePipelineRequest
      * @return DeletePipelineResponse
      */
@@ -357,6 +369,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeRegionsResponse
      */
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
+
+    /**
+     * @param request the request parameters of DisableNotifyPolicy  DisableNotifyPolicyRequest
+     * @return DisableNotifyPolicyResponse
+     */
+    CompletableFuture<DisableNotifyPolicyResponse> disableNotifyPolicy(DisableNotifyPolicyRequest request);
+
+    /**
+     * @param request the request parameters of EnableNotifyPolicy  EnableNotifyPolicyRequest
+     * @return EnableNotifyPolicyResponse
+     */
+    CompletableFuture<EnableNotifyPolicyResponse> enableNotifyPolicy(EnableNotifyPolicyRequest request);
 
     /**
      * @param request the request parameters of ExecuteQuery  ExecuteQueryRequest
@@ -489,6 +513,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetMemoryStoreResponse
      */
     CompletableFuture<GetMemoryStoreResponse> getMemoryStore(GetMemoryStoreRequest request);
+
+    /**
+     * @param request the request parameters of GetNotifyPolicy  GetNotifyPolicyRequest
+     * @return GetNotifyPolicyResponse
+     */
+    CompletableFuture<GetNotifyPolicyResponse> getNotifyPolicy(GetNotifyPolicyRequest request);
 
     /**
      * @param request the request parameters of GetPipeline  GetPipelineRequest
@@ -717,6 +747,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListMemoryStoresResponse> listMemoryStores(ListMemoryStoresRequest request);
 
     /**
+     * @param request the request parameters of ListNotifyPolicies  ListNotifyPoliciesRequest
+     * @return ListNotifyPoliciesResponse
+     */
+    CompletableFuture<ListNotifyPoliciesResponse> listNotifyPolicies(ListNotifyPoliciesRequest request);
+
+    /**
      * @param request the request parameters of ListPipelines  ListPipelinesRequest
      * @return ListPipelinesResponse
      */
@@ -901,6 +937,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateMemoryStoreResponse
      */
     CompletableFuture<UpdateMemoryStoreResponse> updateMemoryStore(UpdateMemoryStoreRequest request);
+
+    /**
+     * @param request the request parameters of UpdateNotifyPolicy  UpdateNotifyPolicyRequest
+     * @return UpdateNotifyPolicyResponse
+     */
+    CompletableFuture<UpdateNotifyPolicyResponse> updateNotifyPolicy(UpdateNotifyPolicyRequest request);
 
     /**
      * @param request the request parameters of UpdateNotifyStrategy  UpdateNotifyStrategyRequest
