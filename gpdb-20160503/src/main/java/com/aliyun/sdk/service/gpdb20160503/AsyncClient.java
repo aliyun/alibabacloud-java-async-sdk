@@ -161,6 +161,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAccountResponse> createAccount(CreateAccountRequest request);
 
     /**
+     * @param request the request parameters of CreateApiKey  CreateApiKeyRequest
+     * @return CreateApiKeyResponse
+     */
+    CompletableFuture<CreateApiKeyResponse> createApiKey(CreateApiKeyRequest request);
+
+    /**
      * @param request the request parameters of CreateBackup  CreateBackupRequest
      * @return CreateBackupResponse
      */
@@ -380,6 +386,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteAccountResponse
      */
     CompletableFuture<DeleteAccountResponse> deleteAccount(DeleteAccountRequest request);
+
+    /**
+     * @param request the request parameters of DeleteApiKey  DeleteApiKeyRequest
+     * @return DeleteApiKeyResponse
+     */
+    CompletableFuture<DeleteApiKeyResponse> deleteApiKey(DeleteApiKeyRequest request);
 
     /**
      * @param request the request parameters of DeleteBackup  DeleteBackupRequest
@@ -1269,6 +1281,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAccountResponse> getAccount(GetAccountRequest request);
 
     /**
+     * @param request the request parameters of GetApiKey  GetApiKeyRequest
+     * @return GetApiKeyResponse
+     */
+    CompletableFuture<GetApiKeyResponse> getApiKey(GetApiKeyRequest request);
+
+    /**
      * @param request the request parameters of GetBranchSchema  GetBranchSchemaRequest
      * @return GetBranchSchemaResponse
      */
@@ -1359,6 +1377,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetUpsertCollectionDataJobResponse> getUpsertCollectionDataJob(GetUpsertCollectionDataJobRequest request);
 
     /**
+     * @param request the request parameters of GetWorkspace  GetWorkspaceRequest
+     * @return GetWorkspaceResponse
+     */
+    CompletableFuture<GetWorkspaceResponse> getWorkspace(GetWorkspaceRequest request);
+
+    /**
      * @param request the request parameters of GrantCollection  GrantCollectionRequest
      * @return GrantCollectionResponse
      */
@@ -1390,6 +1414,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAIServicesResponse
      */
     CompletableFuture<ListAIServicesResponse> listAIServices(ListAIServicesRequest request);
+
+    /**
+     * @param request the request parameters of ListApiKeys  ListApiKeysRequest
+     * @return ListApiKeysResponse
+     */
+    CompletableFuture<ListApiKeysResponse> listApiKeys(ListApiKeysRequest request);
 
     /**
      * @param request the request parameters of ListBackupJobs  ListBackupJobsRequest
