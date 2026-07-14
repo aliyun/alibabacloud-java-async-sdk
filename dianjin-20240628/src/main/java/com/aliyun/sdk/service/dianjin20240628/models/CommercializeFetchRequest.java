@@ -43,6 +43,14 @@ public class CommercializeFetchRequest extends Request {
     private String data;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("encryptType")
+    private String encryptType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("env")
+    private String env;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("productId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String productId;
@@ -62,6 +70,10 @@ public class CommercializeFetchRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String sign;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("signType")
+    private String signType;
+
     private CommercializeFetchRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
@@ -69,10 +81,13 @@ public class CommercializeFetchRequest extends Request {
         this.zjfCode = builder.zjfCode;
         this.channelId = builder.channelId;
         this.data = builder.data;
+        this.encryptType = builder.encryptType;
+        this.env = builder.env;
         this.productId = builder.productId;
         this.requestId = builder.requestId;
         this.secretKey = builder.secretKey;
         this.sign = builder.sign;
+        this.signType = builder.signType;
     }
 
     public static Builder builder() {
@@ -124,6 +139,20 @@ public class CommercializeFetchRequest extends Request {
     }
 
     /**
+     * @return encryptType
+     */
+    public String getEncryptType() {
+        return this.encryptType;
+    }
+
+    /**
+     * @return env
+     */
+    public String getEnv() {
+        return this.env;
+    }
+
+    /**
      * @return productId
      */
     public String getProductId() {
@@ -151,16 +180,26 @@ public class CommercializeFetchRequest extends Request {
         return this.sign;
     }
 
+    /**
+     * @return signType
+     */
+    public String getSignType() {
+        return this.signType;
+    }
+
     public static final class Builder extends Request.Builder<CommercializeFetchRequest, Builder> {
         private String workspaceId; 
         private String cjfCode; 
         private String zjfCode; 
         private String channelId; 
         private String data; 
+        private String encryptType; 
+        private String env; 
         private String productId; 
         private String requestId; 
         private String secretKey; 
         private String sign; 
+        private String signType; 
 
         private Builder() {
             super();
@@ -173,10 +212,13 @@ public class CommercializeFetchRequest extends Request {
             this.zjfCode = request.zjfCode;
             this.channelId = request.channelId;
             this.data = request.data;
+            this.encryptType = request.encryptType;
+            this.env = request.env;
             this.productId = request.productId;
             this.requestId = request.requestId;
             this.secretKey = request.secretKey;
             this.sign = request.sign;
+            this.signType = request.signType;
         } 
 
         /**
@@ -237,6 +279,24 @@ public class CommercializeFetchRequest extends Request {
         }
 
         /**
+         * encryptType.
+         */
+        public Builder encryptType(String encryptType) {
+            this.putBodyParameter("encryptType", encryptType);
+            this.encryptType = encryptType;
+            return this;
+        }
+
+        /**
+         * env.
+         */
+        public Builder env(String env) {
+            this.putBodyParameter("env", env);
+            this.env = env;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -281,6 +341,15 @@ public class CommercializeFetchRequest extends Request {
         public Builder sign(String sign) {
             this.putBodyParameter("sign", sign);
             this.sign = sign;
+            return this;
+        }
+
+        /**
+         * signType.
+         */
+        public Builder signType(String signType) {
+            this.putBodyParameter("signType", signType);
+            this.signType = signType;
             return this;
         }
 
