@@ -121,6 +121,10 @@ public class PushMultipleRequest extends Request {
     private String transparentMessageUrgency;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VendorTemplate")
+    private String vendorTemplate;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
@@ -151,6 +155,7 @@ public class PushMultipleRequest extends Request {
         this.thirdChannelCategory = builder.thirdChannelCategory;
         this.transparentMessagePayload = builder.transparentMessagePayload;
         this.transparentMessageUrgency = builder.transparentMessageUrgency;
+        this.vendorTemplate = builder.vendorTemplate;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -336,6 +341,13 @@ public class PushMultipleRequest extends Request {
     }
 
     /**
+     * @return vendorTemplate
+     */
+    public String getVendorTemplate() {
+        return this.vendorTemplate;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -367,6 +379,7 @@ public class PushMultipleRequest extends Request {
         private java.util.Map<String, ?> thirdChannelCategory; 
         private Object transparentMessagePayload; 
         private String transparentMessageUrgency; 
+        private String vendorTemplate; 
         private String workspaceId; 
 
         private Builder() {
@@ -399,6 +412,7 @@ public class PushMultipleRequest extends Request {
             this.thirdChannelCategory = request.thirdChannelCategory;
             this.transparentMessagePayload = request.transparentMessagePayload;
             this.transparentMessageUrgency = request.transparentMessageUrgency;
+            this.vendorTemplate = request.vendorTemplate;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -617,6 +631,15 @@ public class PushMultipleRequest extends Request {
         public Builder transparentMessageUrgency(String transparentMessageUrgency) {
             this.putBodyParameter("TransparentMessageUrgency", transparentMessageUrgency);
             this.transparentMessageUrgency = transparentMessageUrgency;
+            return this;
+        }
+
+        /**
+         * VendorTemplate.
+         */
+        public Builder vendorTemplate(String vendorTemplate) {
+            this.putBodyParameter("VendorTemplate", vendorTemplate);
+            this.vendorTemplate = vendorTemplate;
             return this;
         }
 
