@@ -147,6 +147,10 @@ public class PushBroadcastRequest extends Request {
     private Long unBindStartTime;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VendorTemplate")
+    private String vendorTemplate;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
@@ -183,6 +187,7 @@ public class PushBroadcastRequest extends Request {
         this.unBindEndTime = builder.unBindEndTime;
         this.unBindPeriod = builder.unBindPeriod;
         this.unBindStartTime = builder.unBindStartTime;
+        this.vendorTemplate = builder.vendorTemplate;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -410,6 +415,13 @@ public class PushBroadcastRequest extends Request {
     }
 
     /**
+     * @return vendorTemplate
+     */
+    public String getVendorTemplate() {
+        return this.vendorTemplate;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -447,6 +459,7 @@ public class PushBroadcastRequest extends Request {
         private Long unBindEndTime; 
         private Long unBindPeriod; 
         private Long unBindStartTime; 
+        private String vendorTemplate; 
         private String workspaceId; 
 
         private Builder() {
@@ -485,6 +498,7 @@ public class PushBroadcastRequest extends Request {
             this.unBindEndTime = request.unBindEndTime;
             this.unBindPeriod = request.unBindPeriod;
             this.unBindStartTime = request.unBindStartTime;
+            this.vendorTemplate = request.vendorTemplate;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -757,6 +771,15 @@ public class PushBroadcastRequest extends Request {
         public Builder unBindStartTime(Long unBindStartTime) {
             this.putBodyParameter("UnBindStartTime", unBindStartTime);
             this.unBindStartTime = unBindStartTime;
+            return this;
+        }
+
+        /**
+         * VendorTemplate.
+         */
+        public Builder vendorTemplate(String vendorTemplate) {
+            this.putBodyParameter("VendorTemplate", vendorTemplate);
+            this.vendorTemplate = vendorTemplate;
             return this;
         }
 

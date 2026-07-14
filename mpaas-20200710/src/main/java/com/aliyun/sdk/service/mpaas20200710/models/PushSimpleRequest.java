@@ -142,6 +142,10 @@ public class PushSimpleRequest extends Request {
     private String uri;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VendorTemplate")
+    private String vendorTemplate;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
@@ -177,6 +181,7 @@ public class PushSimpleRequest extends Request {
         this.transparentMessagePayload = builder.transparentMessagePayload;
         this.transparentMessageUrgency = builder.transparentMessageUrgency;
         this.uri = builder.uri;
+        this.vendorTemplate = builder.vendorTemplate;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -397,6 +402,13 @@ public class PushSimpleRequest extends Request {
     }
 
     /**
+     * @return vendorTemplate
+     */
+    public String getVendorTemplate() {
+        return this.vendorTemplate;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -433,6 +445,7 @@ public class PushSimpleRequest extends Request {
         private Object transparentMessagePayload; 
         private String transparentMessageUrgency; 
         private String uri; 
+        private String vendorTemplate; 
         private String workspaceId; 
 
         private Builder() {
@@ -470,6 +483,7 @@ public class PushSimpleRequest extends Request {
             this.transparentMessagePayload = request.transparentMessagePayload;
             this.transparentMessageUrgency = request.transparentMessageUrgency;
             this.uri = request.uri;
+            this.vendorTemplate = request.vendorTemplate;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -733,6 +747,15 @@ public class PushSimpleRequest extends Request {
         public Builder uri(String uri) {
             this.putBodyParameter("Uri", uri);
             this.uri = uri;
+            return this;
+        }
+
+        /**
+         * VendorTemplate.
+         */
+        public Builder vendorTemplate(String vendorTemplate) {
+            this.putBodyParameter("VendorTemplate", vendorTemplate);
+            this.vendorTemplate = vendorTemplate;
             return this;
         }
 
