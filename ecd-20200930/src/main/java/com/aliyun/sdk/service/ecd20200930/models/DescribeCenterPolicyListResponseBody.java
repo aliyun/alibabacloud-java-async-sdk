@@ -1145,6 +1145,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthorizeSecurityPolicyRules")
         private java.util.List<AuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules;
 
+        @com.aliyun.core.annotation.NameInMap("AutoReconnect")
+        private String autoReconnect;
+
         @com.aliyun.core.annotation.NameInMap("CameraRedirect")
         private String cameraRedirect;
 
@@ -1202,6 +1205,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DesktopGroupCount")
         private Integer desktopGroupCount;
 
+        @com.aliyun.core.annotation.NameInMap("DeviceConnectHint")
+        private String deviceConnectHint;
+
         @com.aliyun.core.annotation.NameInMap("DeviceRedirects")
         private java.util.List<DeviceRedirects> deviceRedirects;
 
@@ -1240,6 +1246,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ExternalDrive")
         private String externalDrive;
+
+        @com.aliyun.core.annotation.NameInMap("FileMigrate")
+        private String fileMigrate;
 
         @com.aliyun.core.annotation.NameInMap("FileTransferAddress")
         private String fileTransferAddress;
@@ -1418,6 +1427,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RemoteCoordinate")
         private String remoteCoordinate;
 
+        @com.aliyun.core.annotation.NameInMap("ResetDesktop")
+        private String resetDesktop;
+
         @com.aliyun.core.annotation.NameInMap("ResolutionDpi")
         private Integer resolutionDpi;
 
@@ -1529,6 +1541,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WatermarkType")
         private String watermarkType;
 
+        @com.aliyun.core.annotation.NameInMap("WuyingKeeper")
+        private String wuyingKeeper;
+
         @com.aliyun.core.annotation.NameInMap("WyAssistant")
         private String wyAssistant;
 
@@ -1541,6 +1556,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             this.appContentProtection = builder.appContentProtection;
             this.authorizeAccessPolicyRules = builder.authorizeAccessPolicyRules;
             this.authorizeSecurityPolicyRules = builder.authorizeSecurityPolicyRules;
+            this.autoReconnect = builder.autoReconnect;
             this.cameraRedirect = builder.cameraRedirect;
             this.clientControlMenu = builder.clientControlMenu;
             this.clientCreateSnapshot = builder.clientCreateSnapshot;
@@ -1560,6 +1576,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             this.cpuSingleRateLimit = builder.cpuSingleRateLimit;
             this.desktopCount = builder.desktopCount;
             this.desktopGroupCount = builder.desktopGroupCount;
+            this.deviceConnectHint = builder.deviceConnectHint;
             this.deviceRedirects = builder.deviceRedirects;
             this.deviceRules = builder.deviceRules;
             this.disconnectKeepSession = builder.disconnectKeepSession;
@@ -1573,6 +1590,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             this.endUserCount = builder.endUserCount;
             this.endUserGroupCoordinate = builder.endUserGroupCoordinate;
             this.externalDrive = builder.externalDrive;
+            this.fileMigrate = builder.fileMigrate;
             this.fileTransferAddress = builder.fileTransferAddress;
             this.fileTransferSpeed = builder.fileTransferSpeed;
             this.fileTransferSpeedLocation = builder.fileTransferSpeedLocation;
@@ -1632,6 +1650,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             this.recordingUserNotify = builder.recordingUserNotify;
             this.recordingUserNotifyMessage = builder.recordingUserNotifyMessage;
             this.remoteCoordinate = builder.remoteCoordinate;
+            this.resetDesktop = builder.resetDesktop;
             this.resolutionDpi = builder.resolutionDpi;
             this.resolutionHeight = builder.resolutionHeight;
             this.resolutionModel = builder.resolutionModel;
@@ -1669,6 +1688,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             this.watermarkShadow = builder.watermarkShadow;
             this.watermarkTransparencyValue = builder.watermarkTransparencyValue;
             this.watermarkType = builder.watermarkType;
+            this.wuyingKeeper = builder.wuyingKeeper;
             this.wyAssistant = builder.wyAssistant;
         }
 
@@ -1734,6 +1754,13 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
          */
         public java.util.List<AuthorizeSecurityPolicyRules> getAuthorizeSecurityPolicyRules() {
             return this.authorizeSecurityPolicyRules;
+        }
+
+        /**
+         * @return autoReconnect
+         */
+        public String getAutoReconnect() {
+            return this.autoReconnect;
         }
 
         /**
@@ -1870,6 +1897,13 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         }
 
         /**
+         * @return deviceConnectHint
+         */
+        public String getDeviceConnectHint() {
+            return this.deviceConnectHint;
+        }
+
+        /**
          * @return deviceRedirects
          */
         public java.util.List<DeviceRedirects> getDeviceRedirects() {
@@ -1958,6 +1992,13 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
          */
         public String getExternalDrive() {
             return this.externalDrive;
+        }
+
+        /**
+         * @return fileMigrate
+         */
+        public String getFileMigrate() {
+            return this.fileMigrate;
         }
 
         /**
@@ -2374,6 +2415,13 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         }
 
         /**
+         * @return resetDesktop
+         */
+        public String getResetDesktop() {
+            return this.resetDesktop;
+        }
+
+        /**
          * @return resolutionDpi
          */
         public Integer getResolutionDpi() {
@@ -2633,6 +2681,13 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         }
 
         /**
+         * @return wuyingKeeper
+         */
+        public String getWuyingKeeper() {
+            return this.wuyingKeeper;
+        }
+
+        /**
          * @return wyAssistant
          */
         public String getWyAssistant() {
@@ -2648,6 +2703,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             private String appContentProtection; 
             private java.util.List<AuthorizeAccessPolicyRules> authorizeAccessPolicyRules; 
             private java.util.List<AuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules; 
+            private String autoReconnect; 
             private String cameraRedirect; 
             private String clientControlMenu; 
             private String clientCreateSnapshot; 
@@ -2667,6 +2723,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             private Integer cpuSingleRateLimit; 
             private Integer desktopCount; 
             private Integer desktopGroupCount; 
+            private String deviceConnectHint; 
             private java.util.List<DeviceRedirects> deviceRedirects; 
             private java.util.List<DeviceRules> deviceRules; 
             private String disconnectKeepSession; 
@@ -2680,6 +2737,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             private String endUserCount; 
             private String endUserGroupCoordinate; 
             private String externalDrive; 
+            private String fileMigrate; 
             private String fileTransferAddress; 
             private String fileTransferSpeed; 
             private String fileTransferSpeedLocation; 
@@ -2739,6 +2797,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             private String recordingUserNotify; 
             private String recordingUserNotifyMessage; 
             private String remoteCoordinate; 
+            private String resetDesktop; 
             private Integer resolutionDpi; 
             private Integer resolutionHeight; 
             private String resolutionModel; 
@@ -2776,6 +2835,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             private String watermarkShadow; 
             private Integer watermarkTransparencyValue; 
             private String watermarkType; 
+            private String wuyingKeeper; 
             private String wyAssistant; 
 
             private Builder() {
@@ -2790,6 +2850,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
                 this.appContentProtection = model.appContentProtection;
                 this.authorizeAccessPolicyRules = model.authorizeAccessPolicyRules;
                 this.authorizeSecurityPolicyRules = model.authorizeSecurityPolicyRules;
+                this.autoReconnect = model.autoReconnect;
                 this.cameraRedirect = model.cameraRedirect;
                 this.clientControlMenu = model.clientControlMenu;
                 this.clientCreateSnapshot = model.clientCreateSnapshot;
@@ -2809,6 +2870,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
                 this.cpuSingleRateLimit = model.cpuSingleRateLimit;
                 this.desktopCount = model.desktopCount;
                 this.desktopGroupCount = model.desktopGroupCount;
+                this.deviceConnectHint = model.deviceConnectHint;
                 this.deviceRedirects = model.deviceRedirects;
                 this.deviceRules = model.deviceRules;
                 this.disconnectKeepSession = model.disconnectKeepSession;
@@ -2822,6 +2884,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
                 this.endUserCount = model.endUserCount;
                 this.endUserGroupCoordinate = model.endUserGroupCoordinate;
                 this.externalDrive = model.externalDrive;
+                this.fileMigrate = model.fileMigrate;
                 this.fileTransferAddress = model.fileTransferAddress;
                 this.fileTransferSpeed = model.fileTransferSpeed;
                 this.fileTransferSpeedLocation = model.fileTransferSpeedLocation;
@@ -2881,6 +2944,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
                 this.recordingUserNotify = model.recordingUserNotify;
                 this.recordingUserNotifyMessage = model.recordingUserNotifyMessage;
                 this.remoteCoordinate = model.remoteCoordinate;
+                this.resetDesktop = model.resetDesktop;
                 this.resolutionDpi = model.resolutionDpi;
                 this.resolutionHeight = model.resolutionHeight;
                 this.resolutionModel = model.resolutionModel;
@@ -2918,6 +2982,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
                 this.watermarkShadow = model.watermarkShadow;
                 this.watermarkTransparencyValue = model.watermarkTransparencyValue;
                 this.watermarkType = model.watermarkType;
+                this.wuyingKeeper = model.wuyingKeeper;
                 this.wyAssistant = model.wyAssistant;
             } 
 
@@ -2991,6 +3056,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
              */
             public Builder authorizeSecurityPolicyRules(java.util.List<AuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules) {
                 this.authorizeSecurityPolicyRules = authorizeSecurityPolicyRules;
+                return this;
+            }
+
+            /**
+             * AutoReconnect.
+             */
+            public Builder autoReconnect(String autoReconnect) {
+                this.autoReconnect = autoReconnect;
                 return this;
             }
 
@@ -3177,6 +3250,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
+             * DeviceConnectHint.
+             */
+            public Builder deviceConnectHint(String deviceConnectHint) {
+                this.deviceConnectHint = deviceConnectHint;
+                return this;
+            }
+
+            /**
              * <p>The device redirection rules.</p>
              */
             public Builder deviceRedirects(java.util.List<DeviceRedirects> deviceRedirects) {
@@ -3304,6 +3385,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
              */
             public Builder externalDrive(String externalDrive) {
                 this.externalDrive = externalDrive;
+                return this;
+            }
+
+            /**
+             * FileMigrate.
+             */
+            public Builder fileMigrate(String fileMigrate) {
+                this.fileMigrate = fileMigrate;
                 return this;
             }
 
@@ -3900,6 +3989,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
+             * ResetDesktop.
+             */
+            public Builder resetDesktop(String resetDesktop) {
+                this.resetDesktop = resetDesktop;
+                return this;
+            }
+
+            /**
              * ResolutionDpi.
              */
             public Builder resolutionDpi(Integer resolutionDpi) {
@@ -4285,6 +4382,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
              */
             public Builder watermarkType(String watermarkType) {
                 this.watermarkType = watermarkType;
+                return this;
+            }
+
+            /**
+             * WuyingKeeper.
+             */
+            public Builder wuyingKeeper(String wuyingKeeper) {
+                this.wuyingKeeper = wuyingKeeper;
                 return this;
             }
 

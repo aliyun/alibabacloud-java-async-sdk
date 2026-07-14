@@ -940,17 +940,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeFlowMetricResponse> describeFlowMetric(DescribeFlowMetricRequest request);
 
     /**
-     * <b>description</b> :
-     * <blockquote>
-     * <p>You can query only the traffic data in the last 90 days.</p>
-     * </blockquote>
-     * 
-     * @param request the request parameters of DescribeFlowStatistic  DescribeFlowStatisticRequest
-     * @return DescribeFlowStatisticResponse
-     */
-    CompletableFuture<DescribeFlowStatisticResponse> describeFlowStatistic(DescribeFlowStatisticRequest request);
-
-    /**
      * @param request the request parameters of DescribeForwardTableEntries  DescribeForwardTableEntriesRequest
      * @return DescribeForwardTableEntriesResponse
      */

@@ -99,6 +99,10 @@ public class CreateDesktopsRequest extends Request {
     private String officeSiteId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OuPath")
+    private String ouPath;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
@@ -142,6 +146,10 @@ public class CreateDesktopsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SnapshotPolicyId")
     private String snapshotPolicyId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubPayType")
+    private String subPayType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SubnetId")
@@ -201,6 +209,7 @@ public class CreateDesktopsRequest extends Request {
         this.hostname = builder.hostname;
         this.monthDesktopSetting = builder.monthDesktopSetting;
         this.officeSiteId = builder.officeSiteId;
+        this.ouPath = builder.ouPath;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
         this.policyGroupId = builder.policyGroupId;
@@ -212,6 +221,7 @@ public class CreateDesktopsRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.savingPlanId = builder.savingPlanId;
         this.snapshotPolicyId = builder.snapshotPolicyId;
+        this.subPayType = builder.subPayType;
         this.subnetId = builder.subnetId;
         this.tag = builder.tag;
         this.timerGroupId = builder.timerGroupId;
@@ -377,6 +387,13 @@ public class CreateDesktopsRequest extends Request {
     }
 
     /**
+     * @return ouPath
+     */
+    public String getOuPath() {
+        return this.ouPath;
+    }
+
+    /**
      * @return period
      */
     public Integer getPeriod() {
@@ -451,6 +468,13 @@ public class CreateDesktopsRequest extends Request {
      */
     public String getSnapshotPolicyId() {
         return this.snapshotPolicyId;
+    }
+
+    /**
+     * @return subPayType
+     */
+    public String getSubPayType() {
+        return this.subPayType;
     }
 
     /**
@@ -537,6 +561,7 @@ public class CreateDesktopsRequest extends Request {
         private String hostname; 
         private MonthDesktopSetting monthDesktopSetting; 
         private String officeSiteId; 
+        private String ouPath; 
         private Integer period; 
         private String periodUnit; 
         private String policyGroupId; 
@@ -548,6 +573,7 @@ public class CreateDesktopsRequest extends Request {
         private String resourceGroupId; 
         private String savingPlanId; 
         private String snapshotPolicyId; 
+        private String subPayType; 
         private String subnetId; 
         private java.util.List<Tag> tag; 
         private String timerGroupId; 
@@ -584,6 +610,7 @@ public class CreateDesktopsRequest extends Request {
             this.hostname = request.hostname;
             this.monthDesktopSetting = request.monthDesktopSetting;
             this.officeSiteId = request.officeSiteId;
+            this.ouPath = request.ouPath;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
             this.policyGroupId = request.policyGroupId;
@@ -595,6 +622,7 @@ public class CreateDesktopsRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.savingPlanId = request.savingPlanId;
             this.snapshotPolicyId = request.snapshotPolicyId;
+            this.subPayType = request.subPayType;
             this.subnetId = request.subnetId;
             this.tag = request.tag;
             this.timerGroupId = request.timerGroupId;
@@ -879,6 +907,15 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
+         * OuPath.
+         */
+        public Builder ouPath(String ouPath) {
+            this.putQueryParameter("OuPath", ouPath);
+            this.ouPath = ouPath;
+            return this;
+        }
+
+        /**
          * <p>The subscription duration of the cloud desktop that you want to create. The unit is specified by the <code>PeriodUnit</code> parameter. This parameter takes effect and is required only when the <code>ChargeType</code> parameter is set to <code>PrePaid</code>.</p>
          * <ul>
          * <li><p>Valid values if the <code>PeriodUnit</code> parameter is set to <code>Month</code>:</p>
@@ -1019,6 +1056,15 @@ public class CreateDesktopsRequest extends Request {
         public Builder snapshotPolicyId(String snapshotPolicyId) {
             this.putQueryParameter("SnapshotPolicyId", snapshotPolicyId);
             this.snapshotPolicyId = snapshotPolicyId;
+            return this;
+        }
+
+        /**
+         * SubPayType.
+         */
+        public Builder subPayType(String subPayType) {
+            this.putQueryParameter("SubPayType", subPayType);
+            this.subPayType = subPayType;
             return this;
         }
 

@@ -121,6 +121,81 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
      *
      * <p>DescribeNetworkPackagesResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeNetworkPackagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkPackagesResponseBody</p>
+     */
     public static class NetworkPackages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
@@ -167,6 +242,9 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReservationInternetChargeType")
         private String reservationInternetChargeType;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
         private NetworkPackages(Builder builder) {
             this.bandwidth = builder.bandwidth;
             this.businessStatus = builder.businessStatus;
@@ -183,6 +261,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             this.reservationActiveTime = builder.reservationActiveTime;
             this.reservationBandwidth = builder.reservationBandwidth;
             this.reservationInternetChargeType = builder.reservationInternetChargeType;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -298,6 +377,13 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             return this.reservationInternetChargeType;
         }
 
+        /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private Integer bandwidth; 
             private String businessStatus; 
@@ -314,6 +400,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             private String reservationActiveTime; 
             private Integer reservationBandwidth; 
             private String reservationInternetChargeType; 
+            private java.util.List<Tags> tags; 
 
             private Builder() {
             } 
@@ -334,6 +421,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
                 this.reservationActiveTime = model.reservationActiveTime;
                 this.reservationBandwidth = model.reservationBandwidth;
                 this.reservationInternetChargeType = model.reservationInternetChargeType;
+                this.tags = model.tags;
             } 
 
             /**
@@ -576,6 +664,14 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
              */
             public Builder reservationInternetChargeType(String reservationInternetChargeType) {
                 this.reservationInternetChargeType = reservationInternetChargeType;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

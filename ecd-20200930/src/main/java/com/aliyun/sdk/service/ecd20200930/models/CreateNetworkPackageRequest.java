@@ -67,6 +67,10 @@ public class CreateNetworkPackageRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResellerOwnerUid")
     private Long resellerOwnerUid;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
     private CreateNetworkPackageRequest(Builder builder) {
         super(builder);
         this.autoPay = builder.autoPay;
@@ -81,6 +85,7 @@ public class CreateNetworkPackageRequest extends Request {
         this.promotionId = builder.promotionId;
         this.regionId = builder.regionId;
         this.resellerOwnerUid = builder.resellerOwnerUid;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -180,6 +185,13 @@ public class CreateNetworkPackageRequest extends Request {
         return this.resellerOwnerUid;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<CreateNetworkPackageRequest, Builder> {
         private Boolean autoPay; 
         private Boolean autoRenew; 
@@ -193,6 +205,7 @@ public class CreateNetworkPackageRequest extends Request {
         private String promotionId; 
         private String regionId; 
         private Long resellerOwnerUid; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -212,6 +225,7 @@ public class CreateNetworkPackageRequest extends Request {
             this.promotionId = request.promotionId;
             this.regionId = request.regionId;
             this.resellerOwnerUid = request.resellerOwnerUid;
+            this.tag = request.tag;
         } 
 
         /**
@@ -440,6 +454,15 @@ public class CreateNetworkPackageRequest extends Request {
             return this;
         }
 
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
         @Override
         public CreateNetworkPackageRequest build() {
             return new CreateNetworkPackageRequest(this);
@@ -447,4 +470,79 @@ public class CreateNetworkPackageRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateNetworkPackageRequest} extends {@link TeaModel}
+     *
+     * <p>CreateNetworkPackageRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }
