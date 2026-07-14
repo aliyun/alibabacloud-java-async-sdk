@@ -21,6 +21,10 @@ public class ValidateEmailRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("Region")
+    private String region;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CheckGraylist")
     private Boolean checkGraylist;
@@ -41,6 +45,7 @@ public class ValidateEmailRequest extends Request {
     private ValidateEmailRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.region = builder.region;
         this.checkGraylist = builder.checkGraylist;
         this.email = builder.email;
         this.probeType = builder.probeType;
@@ -65,6 +70,13 @@ public class ValidateEmailRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return region
+     */
+    public String getRegion() {
+        return this.region;
     }
 
     /**
@@ -97,6 +109,7 @@ public class ValidateEmailRequest extends Request {
 
     public static final class Builder extends Request.Builder<ValidateEmailRequest, Builder> {
         private String regionId; 
+        private String region; 
         private Boolean checkGraylist; 
         private String email; 
         private String probeType; 
@@ -109,6 +122,7 @@ public class ValidateEmailRequest extends Request {
         private Builder(ValidateEmailRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.region = request.region;
             this.checkGraylist = request.checkGraylist;
             this.email = request.email;
             this.probeType = request.probeType;
@@ -121,6 +135,15 @@ public class ValidateEmailRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Region.
+         */
+        public Builder region(String region) {
+            this.putHostParameter("Region", region);
+            this.region = region;
             return this;
         }
 
