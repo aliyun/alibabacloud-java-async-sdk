@@ -129,6 +129,10 @@ public class CreateJobRequest extends Request {
     private String sendChannel;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    private Long startTime;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
@@ -202,6 +206,7 @@ public class CreateJobRequest extends Request {
         this.queueSize = builder.queueSize;
         this.regionId = builder.regionId;
         this.sendChannel = builder.sendChannel;
+        this.startTime = builder.startTime;
         this.status = builder.status;
         this.successNoticeEnable = builder.successNoticeEnable;
         this.taskAttemptInterval = builder.taskAttemptInterval;
@@ -411,6 +416,13 @@ public class CreateJobRequest extends Request {
     }
 
     /**
+     * @return startTime
+     */
+    public Long getStartTime() {
+        return this.startTime;
+    }
+
+    /**
      * @return status
      */
     public Integer getStatus() {
@@ -514,6 +526,7 @@ public class CreateJobRequest extends Request {
         private Integer queueSize; 
         private String regionId; 
         private String sendChannel; 
+        private Long startTime; 
         private Integer status; 
         private Boolean successNoticeEnable; 
         private Integer taskAttemptInterval; 
@@ -558,6 +571,7 @@ public class CreateJobRequest extends Request {
             this.queueSize = request.queueSize;
             this.regionId = request.regionId;
             this.sendChannel = request.sendChannel;
+            this.startTime = request.startTime;
             this.status = request.status;
             this.successNoticeEnable = request.successNoticeEnable;
             this.taskAttemptInterval = request.taskAttemptInterval;
@@ -907,6 +921,15 @@ public class CreateJobRequest extends Request {
         public Builder sendChannel(String sendChannel) {
             this.putBodyParameter("SendChannel", sendChannel);
             this.sendChannel = sendChannel;
+            return this;
+        }
+
+        /**
+         * StartTime.
+         */
+        public Builder startTime(Long startTime) {
+            this.putBodyParameter("StartTime", startTime);
+            this.startTime = startTime;
             return this;
         }
 

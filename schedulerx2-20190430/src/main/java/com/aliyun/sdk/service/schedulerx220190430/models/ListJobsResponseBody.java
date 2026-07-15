@@ -927,6 +927,9 @@ public class ListJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Parameters")
         private String parameters;
 
+        @com.aliyun.core.annotation.NameInMap("StartTime")
+        private Long startTime;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
@@ -951,6 +954,7 @@ public class ListJobsResponseBody extends TeaModel {
             this.maxConcurrency = builder.maxConcurrency;
             this.name = builder.name;
             this.parameters = builder.parameters;
+            this.startTime = builder.startTime;
             this.status = builder.status;
             this.timeConfig = builder.timeConfig;
             this.xAttrs = builder.xAttrs;
@@ -1063,6 +1067,13 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
+         * @return startTime
+         */
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        /**
          * @return status
          */
         public Integer getStatus() {
@@ -1098,6 +1109,7 @@ public class ListJobsResponseBody extends TeaModel {
             private String maxConcurrency; 
             private String name; 
             private String parameters; 
+            private Long startTime; 
             private Integer status; 
             private TimeConfig timeConfig; 
             private String xAttrs; 
@@ -1120,6 +1132,7 @@ public class ListJobsResponseBody extends TeaModel {
                 this.maxConcurrency = model.maxConcurrency;
                 this.name = model.name;
                 this.parameters = model.parameters;
+                this.startTime = model.startTime;
                 this.status = model.status;
                 this.timeConfig = model.timeConfig;
                 this.xAttrs = model.xAttrs;
@@ -1278,6 +1291,14 @@ public class ListJobsResponseBody extends TeaModel {
              */
             public Builder parameters(String parameters) {
                 this.parameters = parameters;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(Long startTime) {
+                this.startTime = startTime;
                 return this;
             }
 
