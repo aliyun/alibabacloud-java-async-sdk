@@ -32,16 +32,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddGatewaySecurityGroupRuleResponse> addGatewaySecurityGroupRule(AddGatewaySecurityGroupRuleRequest request);
 
     /**
+     * @param request the request parameters of BatchAddConsumerGroupConsumers  BatchAddConsumerGroupConsumersRequest
+     * @return BatchAddConsumerGroupConsumersResponse
+     */
+    CompletableFuture<BatchAddConsumerGroupConsumersResponse> batchAddConsumerGroupConsumers(BatchAddConsumerGroupConsumersRequest request);
+
+    /**
      * @param request the request parameters of BatchDeleteConsumerAuthorizationRule  BatchDeleteConsumerAuthorizationRuleRequest
      * @return BatchDeleteConsumerAuthorizationRuleResponse
      */
     CompletableFuture<BatchDeleteConsumerAuthorizationRuleResponse> batchDeleteConsumerAuthorizationRule(BatchDeleteConsumerAuthorizationRuleRequest request);
 
     /**
+     * @param request the request parameters of BatchRemoveConsumerGroupConsumers  BatchRemoveConsumerGroupConsumersRequest
+     * @return BatchRemoveConsumerGroupConsumersResponse
+     */
+    CompletableFuture<BatchRemoveConsumerGroupConsumersResponse> batchRemoveConsumerGroupConsumers(BatchRemoveConsumerGroupConsumersRequest request);
+
+    /**
      * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
      */
     CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
+
+    /**
+     * @param request the request parameters of CreateAiModelCard  CreateAiModelCardRequest
+     * @return CreateAiModelCardResponse
+     */
+    CompletableFuture<CreateAiModelCardResponse> createAiModelCard(CreateAiModelCardRequest request);
 
     /**
      * @param request the request parameters of CreateAiModelProvider  CreateAiModelProviderRequest
@@ -72,6 +90,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateConsumerAuthorizationRulesResponse
      */
     CompletableFuture<CreateConsumerAuthorizationRulesResponse> createConsumerAuthorizationRules(CreateConsumerAuthorizationRulesRequest request);
+
+    /**
+     * @param request the request parameters of CreateConsumerGroup  CreateConsumerGroupRequest
+     * @return CreateConsumerGroupResponse
+     */
+    CompletableFuture<CreateConsumerGroupResponse> createConsumerGroup(CreateConsumerGroupRequest request);
 
     /**
      * <b>description</b> :
@@ -171,6 +195,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSourceResponse> createSource(CreateSourceRequest request);
 
     /**
+     * @param request the request parameters of DeleteAiModelCard  DeleteAiModelCardRequest
+     * @return DeleteAiModelCardResponse
+     */
+    CompletableFuture<DeleteAiModelCardResponse> deleteAiModelCard(DeleteAiModelCardRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAiModelProvider  DeleteAiModelProviderRequest
+     * @return DeleteAiModelProviderResponse
+     */
+    CompletableFuture<DeleteAiModelProviderResponse> deleteAiModelProvider(DeleteAiModelProviderRequest request);
+
+    /**
      * @param request the request parameters of DeleteConsumer  DeleteConsumerRequest
      * @return DeleteConsumerResponse
      */
@@ -181,6 +217,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteConsumerAuthorizationRuleResponse
      */
     CompletableFuture<DeleteConsumerAuthorizationRuleResponse> deleteConsumerAuthorizationRule(DeleteConsumerAuthorizationRuleRequest request);
+
+    /**
+     * @param request the request parameters of DeleteConsumerGroup  DeleteConsumerGroupRequest
+     * @return DeleteConsumerGroupResponse
+     */
+    CompletableFuture<DeleteConsumerGroupResponse> deleteConsumerGroup(DeleteConsumerGroupRequest request);
 
     /**
      * @param request the request parameters of DeleteDomain  DeleteDomainRequest
@@ -310,6 +352,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExportHttpApiResponse> exportHttpApi(ExportHttpApiRequest request);
 
     /**
+     * @param request the request parameters of GetAiModelCard  GetAiModelCardRequest
+     * @return GetAiModelCardResponse
+     */
+    CompletableFuture<GetAiModelCardResponse> getAiModelCard(GetAiModelCardRequest request);
+
+    /**
+     * @param request the request parameters of GetAiModelProvider  GetAiModelProviderRequest
+     * @return GetAiModelProviderResponse
+     */
+    CompletableFuture<GetAiModelProviderResponse> getAiModelProvider(GetAiModelProviderRequest request);
+
+    /**
      * @param request the request parameters of GetConsumer  GetConsumerRequest
      * @return GetConsumerResponse
      */
@@ -320,6 +374,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetConsumerAuthorizationRuleResponse
      */
     CompletableFuture<GetConsumerAuthorizationRuleResponse> getConsumerAuthorizationRule(GetConsumerAuthorizationRuleRequest request);
+
+    /**
+     * @param request the request parameters of GetConsumerGroup  GetConsumerGroupRequest
+     * @return GetConsumerGroupResponse
+     */
+    CompletableFuture<GetConsumerGroupResponse> getConsumerGroup(GetConsumerGroupRequest request);
 
     /**
      * @param request the request parameters of GetDashboard  GetDashboardRequest
@@ -461,10 +521,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InstallPluginResponse> installPlugin(InstallPluginRequest request);
 
     /**
+     * @param request the request parameters of ListAiModelCards  ListAiModelCardsRequest
+     * @return ListAiModelCardsResponse
+     */
+    CompletableFuture<ListAiModelCardsResponse> listAiModelCards(ListAiModelCardsRequest request);
+
+    /**
+     * @param request the request parameters of ListAiModelProviders  ListAiModelProvidersRequest
+     * @return ListAiModelProvidersResponse
+     */
+    CompletableFuture<ListAiModelProvidersResponse> listAiModelProviders(ListAiModelProvidersRequest request);
+
+    /**
      * @param request the request parameters of ListConsumerAuthorizationRules  ListConsumerAuthorizationRulesRequest
      * @return ListConsumerAuthorizationRulesResponse
      */
     CompletableFuture<ListConsumerAuthorizationRulesResponse> listConsumerAuthorizationRules(ListConsumerAuthorizationRulesRequest request);
+
+    /**
+     * @param request the request parameters of ListConsumerGroupConsumers  ListConsumerGroupConsumersRequest
+     * @return ListConsumerGroupConsumersResponse
+     */
+    CompletableFuture<ListConsumerGroupConsumersResponse> listConsumerGroupConsumers(ListConsumerGroupConsumersRequest request);
+
+    /**
+     * @param request the request parameters of ListConsumerGroups  ListConsumerGroupsRequest
+     * @return ListConsumerGroupsResponse
+     */
+    CompletableFuture<ListConsumerGroupsResponse> listConsumerGroups(ListConsumerGroupsRequest request);
 
     /**
      * @param request the request parameters of ListConsumerQuotaRules  ListConsumerQuotaRulesRequest
@@ -675,6 +759,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
     /**
+     * @param request the request parameters of UpdateAiModelCard  UpdateAiModelCardRequest
+     * @return UpdateAiModelCardResponse
+     */
+    CompletableFuture<UpdateAiModelCardResponse> updateAiModelCard(UpdateAiModelCardRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAiModelProvider  UpdateAiModelProviderRequest
+     * @return UpdateAiModelProviderResponse
+     */
+    CompletableFuture<UpdateAiModelProviderResponse> updateAiModelProvider(UpdateAiModelProviderRequest request);
+
+    /**
      * @param request the request parameters of UpdateAndAttachPolicy  UpdateAndAttachPolicyRequest
      * @return UpdateAndAttachPolicyResponse
      */
@@ -691,6 +787,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateConsumerAuthorizationRuleResponse
      */
     CompletableFuture<UpdateConsumerAuthorizationRuleResponse> updateConsumerAuthorizationRule(UpdateConsumerAuthorizationRuleRequest request);
+
+    /**
+     * @param request the request parameters of UpdateConsumerGroup  UpdateConsumerGroupRequest
+     * @return UpdateConsumerGroupResponse
+     */
+    CompletableFuture<UpdateConsumerGroupResponse> updateConsumerGroup(UpdateConsumerGroupRequest request);
 
     /**
      * <b>description</b> :

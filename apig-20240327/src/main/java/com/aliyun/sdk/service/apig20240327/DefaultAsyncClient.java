@@ -102,6 +102,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of BatchAddConsumerGroupConsumers  BatchAddConsumerGroupConsumersRequest
+     * @return BatchAddConsumerGroupConsumersResponse
+     */
+    @Override
+    public CompletableFuture<BatchAddConsumerGroupConsumersResponse> batchAddConsumerGroupConsumers(BatchAddConsumerGroupConsumersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("BatchAddConsumerGroupConsumers").setMethod(HttpMethod.POST).setPathRegex("/v1/consumer-groups/{consumerGroupId}/consumers/batch-add").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchAddConsumerGroupConsumersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchAddConsumerGroupConsumersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of BatchDeleteConsumerAuthorizationRule  BatchDeleteConsumerAuthorizationRuleRequest
      * @return BatchDeleteConsumerAuthorizationRuleResponse
      */
@@ -120,6 +138,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of BatchRemoveConsumerGroupConsumers  BatchRemoveConsumerGroupConsumersRequest
+     * @return BatchRemoveConsumerGroupConsumersResponse
+     */
+    @Override
+    public CompletableFuture<BatchRemoveConsumerGroupConsumersResponse> batchRemoveConsumerGroupConsumers(BatchRemoveConsumerGroupConsumersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("BatchRemoveConsumerGroupConsumers").setMethod(HttpMethod.POST).setPathRegex("/v1/consumer-groups/{consumerGroupId}/consumers/batch-remove").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchRemoveConsumerGroupConsumersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchRemoveConsumerGroupConsumersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
      */
@@ -132,6 +168,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ChangeResourceGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateAiModelCard  CreateAiModelCardRequest
+     * @return CreateAiModelCardResponse
+     */
+    @Override
+    public CompletableFuture<CreateAiModelCardResponse> createAiModelCard(CreateAiModelCardRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateAiModelCard").setMethod(HttpMethod.POST).setPathRegex("/v1/ai-model-cards").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAiModelCardResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAiModelCardResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -222,6 +276,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateConsumerAuthorizationRulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateConsumerGroup  CreateConsumerGroupRequest
+     * @return CreateConsumerGroupResponse
+     */
+    @Override
+    public CompletableFuture<CreateConsumerGroupResponse> createConsumerGroup(CreateConsumerGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateConsumerGroup").setMethod(HttpMethod.POST).setPathRegex("/v1/consumer-groups").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateConsumerGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateConsumerGroupResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -505,6 +577,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteAiModelCard  DeleteAiModelCardRequest
+     * @return DeleteAiModelCardResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAiModelCardResponse> deleteAiModelCard(DeleteAiModelCardRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteAiModelCard").setMethod(HttpMethod.DELETE).setPathRegex("/v1/ai-model-cards/{modelCardId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAiModelCardResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAiModelCardResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteAiModelProvider  DeleteAiModelProviderRequest
+     * @return DeleteAiModelProviderResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAiModelProviderResponse> deleteAiModelProvider(DeleteAiModelProviderRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteAiModelProvider").setMethod(HttpMethod.DELETE).setPathRegex("/v1/ai-model-providers/{modelProviderId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAiModelProviderResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAiModelProviderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteConsumer  DeleteConsumerRequest
      * @return DeleteConsumerResponse
      */
@@ -535,6 +643,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteConsumerAuthorizationRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteConsumerGroup  DeleteConsumerGroupRequest
+     * @return DeleteConsumerGroupResponse
+     */
+    @Override
+    public CompletableFuture<DeleteConsumerGroupResponse> deleteConsumerGroup(DeleteConsumerGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteConsumerGroup").setMethod(HttpMethod.DELETE).setPathRegex("/v1/consumer-groups/{consumerGroupId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteConsumerGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteConsumerGroupResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -920,6 +1046,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetAiModelCard  GetAiModelCardRequest
+     * @return GetAiModelCardResponse
+     */
+    @Override
+    public CompletableFuture<GetAiModelCardResponse> getAiModelCard(GetAiModelCardRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAiModelCard").setMethod(HttpMethod.GET).setPathRegex("/v1/ai-model-cards/{modelCardId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAiModelCardResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAiModelCardResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetAiModelProvider  GetAiModelProviderRequest
+     * @return GetAiModelProviderResponse
+     */
+    @Override
+    public CompletableFuture<GetAiModelProviderResponse> getAiModelProvider(GetAiModelProviderRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAiModelProvider").setMethod(HttpMethod.GET).setPathRegex("/v1/ai-model-providers/{modelProviderId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAiModelProviderResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAiModelProviderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetConsumer  GetConsumerRequest
      * @return GetConsumerResponse
      */
@@ -950,6 +1112,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetConsumerAuthorizationRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetConsumerGroup  GetConsumerGroupRequest
+     * @return GetConsumerGroupResponse
+     */
+    @Override
+    public CompletableFuture<GetConsumerGroupResponse> getConsumerGroup(GetConsumerGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetConsumerGroup").setMethod(HttpMethod.GET).setPathRegex("/v1/consumer-groups/{consumerGroupId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetConsumerGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetConsumerGroupResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1359,6 +1539,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListAiModelCards  ListAiModelCardsRequest
+     * @return ListAiModelCardsResponse
+     */
+    @Override
+    public CompletableFuture<ListAiModelCardsResponse> listAiModelCards(ListAiModelCardsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListAiModelCards").setMethod(HttpMethod.GET).setPathRegex("/v1/ai-model-cards").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAiModelCardsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAiModelCardsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListAiModelProviders  ListAiModelProvidersRequest
+     * @return ListAiModelProvidersResponse
+     */
+    @Override
+    public CompletableFuture<ListAiModelProvidersResponse> listAiModelProviders(ListAiModelProvidersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListAiModelProviders").setMethod(HttpMethod.GET).setPathRegex("/v1/ai-model-providers").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAiModelProvidersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAiModelProvidersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListConsumerAuthorizationRules  ListConsumerAuthorizationRulesRequest
      * @return ListConsumerAuthorizationRulesResponse
      */
@@ -1371,6 +1587,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListConsumerAuthorizationRulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListConsumerGroupConsumers  ListConsumerGroupConsumersRequest
+     * @return ListConsumerGroupConsumersResponse
+     */
+    @Override
+    public CompletableFuture<ListConsumerGroupConsumersResponse> listConsumerGroupConsumers(ListConsumerGroupConsumersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListConsumerGroupConsumers").setMethod(HttpMethod.GET).setPathRegex("/v1/consumer-groups/{consumerGroupId}/consumers").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListConsumerGroupConsumersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListConsumerGroupConsumersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListConsumerGroups  ListConsumerGroupsRequest
+     * @return ListConsumerGroupsResponse
+     */
+    @Override
+    public CompletableFuture<ListConsumerGroupsResponse> listConsumerGroups(ListConsumerGroupsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListConsumerGroups").setMethod(HttpMethod.GET).setPathRegex("/v1/consumer-groups").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListConsumerGroupsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListConsumerGroupsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1981,6 +2233,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateAiModelCard  UpdateAiModelCardRequest
+     * @return UpdateAiModelCardResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAiModelCardResponse> updateAiModelCard(UpdateAiModelCardRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateAiModelCard").setMethod(HttpMethod.PUT).setPathRegex("/v1/ai-model-cards/{modelCardId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAiModelCardResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAiModelCardResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateAiModelProvider  UpdateAiModelProviderRequest
+     * @return UpdateAiModelProviderResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAiModelProviderResponse> updateAiModelProvider(UpdateAiModelProviderRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateAiModelProvider").setMethod(HttpMethod.PUT).setPathRegex("/v1/ai-model-providers/{modelProviderId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAiModelProviderResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAiModelProviderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateAndAttachPolicy  UpdateAndAttachPolicyRequest
      * @return UpdateAndAttachPolicyResponse
      */
@@ -2029,6 +2317,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateConsumerAuthorizationRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateConsumerGroup  UpdateConsumerGroupRequest
+     * @return UpdateConsumerGroupResponse
+     */
+    @Override
+    public CompletableFuture<UpdateConsumerGroupResponse> updateConsumerGroup(UpdateConsumerGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateConsumerGroup").setMethod(HttpMethod.PUT).setPathRegex("/v1/consumer-groups/{consumerGroupId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateConsumerGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateConsumerGroupResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
