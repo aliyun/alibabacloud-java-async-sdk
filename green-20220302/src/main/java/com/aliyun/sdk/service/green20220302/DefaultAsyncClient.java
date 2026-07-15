@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.green20220302;
 
 import com.aliyun.core.http.*;
 import com.aliyun.sdk.service.green20220302.models.*;
+import darabonba.core.sse.SSEHttpResponseHandler;
 import darabonba.core.utils.*;
 import com.aliyun.sdk.gateway.pop.*;
 import darabonba.core.*;
@@ -347,6 +348,34 @@ public final class DefaultAsyncClient implements AsyncClient {
             future.completeExceptionally(e);
             return future;
         }
+    }
+
+    /**
+     * @param request the request parameters of MultiModalAgentSSE  MultiModalAgentSSERequest
+     * @return MultiModalAgentSSEResponse
+     */
+    @Override
+    public CompletableFuture<MultiModalAgentSSEResponse> multiModalAgentSSE(MultiModalAgentSSERequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("MultiModalAgentSSE").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(MultiModalAgentSSEResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<MultiModalAgentSSEResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<MultiModalAgentSSEResponseBody> multiModalAgentSSEWithResponseIterable(MultiModalAgentSSERequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("MultiModalAgentSSE").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+        MultiModalAgentSSEResponseBodyIterator iterator = MultiModalAgentSSEResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
     }
 
     /**

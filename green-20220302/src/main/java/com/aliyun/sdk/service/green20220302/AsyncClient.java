@@ -126,6 +126,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<MultiModalAgentResponse> multiModalAgent(MultiModalAgentRequest request);
 
     /**
+     * @param request the request parameters of MultiModalAgentSSE  MultiModalAgentSSERequest
+     * @return MultiModalAgentSSEResponse
+     */
+    CompletableFuture<MultiModalAgentSSEResponse> multiModalAgentSSE(MultiModalAgentSSERequest request);
+
+    ResponseIterable<MultiModalAgentSSEResponseBody> multiModalAgentSSEWithResponseIterable(MultiModalAgentSSERequest request);
+
+    /**
      * @param request the request parameters of MultiModalGuard  MultiModalGuardRequest
      * @return MultiModalGuardResponse
      */
