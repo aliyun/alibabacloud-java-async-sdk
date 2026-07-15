@@ -1,0 +1,146 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.yike20260707.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link DeleteMediasRequest} extends {@link RequestModel}
+ *
+ * <p>DeleteMediasRequest</p>
+ */
+public class DeleteMediasRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeletePhysicalFiles")
+    private Boolean deletePhysicalFiles;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InputURLs")
+    private String inputURLs;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaIds")
+    private String mediaIds;
+
+    private DeleteMediasRequest(Builder builder) {
+        super(builder);
+        this.regionId = builder.regionId;
+        this.deletePhysicalFiles = builder.deletePhysicalFiles;
+        this.inputURLs = builder.inputURLs;
+        this.mediaIds = builder.mediaIds;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DeleteMediasRequest create() {
+        return builder().build();
+    }
+
+@Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return deletePhysicalFiles
+     */
+    public Boolean getDeletePhysicalFiles() {
+        return this.deletePhysicalFiles;
+    }
+
+    /**
+     * @return inputURLs
+     */
+    public String getInputURLs() {
+        return this.inputURLs;
+    }
+
+    /**
+     * @return mediaIds
+     */
+    public String getMediaIds() {
+        return this.mediaIds;
+    }
+
+    public static final class Builder extends Request.Builder<DeleteMediasRequest, Builder> {
+        private String regionId; 
+        private Boolean deletePhysicalFiles; 
+        private String inputURLs; 
+        private String mediaIds; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(DeleteMediasRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.deletePhysicalFiles = request.deletePhysicalFiles;
+            this.inputURLs = request.inputURLs;
+            this.mediaIds = request.mediaIds;
+        } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * DeletePhysicalFiles.
+         */
+        public Builder deletePhysicalFiles(Boolean deletePhysicalFiles) {
+            this.putQueryParameter("DeletePhysicalFiles", deletePhysicalFiles);
+            this.deletePhysicalFiles = deletePhysicalFiles;
+            return this;
+        }
+
+        /**
+         * InputURLs.
+         */
+        public Builder inputURLs(String inputURLs) {
+            this.putQueryParameter("InputURLs", inputURLs);
+            this.inputURLs = inputURLs;
+            return this;
+        }
+
+        /**
+         * MediaIds.
+         */
+        public Builder mediaIds(String mediaIds) {
+            this.putQueryParameter("MediaIds", mediaIds);
+            this.mediaIds = mediaIds;
+            return this;
+        }
+
+        @Override
+        public DeleteMediasRequest build() {
+            return new DeleteMediasRequest(this);
+        } 
+
+    } 
+
+}

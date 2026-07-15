@@ -20,15 +20,69 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of BatchGetMedias  BatchGetMediasRequest
+     * @return BatchGetMediasResponse
+     */
+    CompletableFuture<BatchGetMediasResponse> batchGetMedias(BatchGetMediasRequest request);
+
+    /**
+     * @param request the request parameters of DeleteMedias  DeleteMediasRequest
+     * @return DeleteMediasResponse
+     */
+    CompletableFuture<DeleteMediasResponse> deleteMedias(DeleteMediasRequest request);
+
+    /**
+     * @param request the request parameters of GetImageGenerationJob  GetImageGenerationJobRequest
+     * @return GetImageGenerationJobResponse
+     */
+    CompletableFuture<GetImageGenerationJobResponse> getImageGenerationJob(GetImageGenerationJobRequest request);
+
+    /**
+     * @param request the request parameters of GetMedia  GetMediaRequest
+     * @return GetMediaResponse
+     */
+    CompletableFuture<GetMediaResponse> getMedia(GetMediaRequest request);
+
+    /**
      * @param request the request parameters of GetMediaComprehensionJob  GetMediaComprehensionJobRequest
      * @return GetMediaComprehensionJobResponse
      */
     CompletableFuture<GetMediaComprehensionJobResponse> getMediaComprehensionJob(GetMediaComprehensionJobRequest request);
 
     /**
+     * @param request the request parameters of GetVideoGenerationJob  GetVideoGenerationJobRequest
+     * @return GetVideoGenerationJobResponse
+     */
+    CompletableFuture<GetVideoGenerationJobResponse> getVideoGenerationJob(GetVideoGenerationJobRequest request);
+
+    /**
+     * @param request the request parameters of ImportMedia  ImportMediaRequest
+     * @return ImportMediaResponse
+     */
+    CompletableFuture<ImportMediaResponse> importMedia(ImportMediaRequest request);
+
+    /**
+     * @param request the request parameters of SubmitImageGenerationJob  SubmitImageGenerationJobRequest
+     * @return SubmitImageGenerationJobResponse
+     */
+    CompletableFuture<SubmitImageGenerationJobResponse> submitImageGenerationJob(SubmitImageGenerationJobRequest request);
+
+    /**
      * @param request the request parameters of SubmitMediaComprehensionJob  SubmitMediaComprehensionJobRequest
      * @return SubmitMediaComprehensionJobResponse
      */
     CompletableFuture<SubmitMediaComprehensionJobResponse> submitMediaComprehensionJob(SubmitMediaComprehensionJobRequest request);
+
+    /**
+     * @param request the request parameters of SubmitVideoGenerationJob  SubmitVideoGenerationJobRequest
+     * @return SubmitVideoGenerationJobResponse
+     */
+    CompletableFuture<SubmitVideoGenerationJobResponse> submitVideoGenerationJob(SubmitVideoGenerationJobRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMedia  UpdateMediaRequest
+     * @return UpdateMediaResponse
+     */
+    CompletableFuture<UpdateMediaResponse> updateMedia(UpdateMediaRequest request);
 
 }
