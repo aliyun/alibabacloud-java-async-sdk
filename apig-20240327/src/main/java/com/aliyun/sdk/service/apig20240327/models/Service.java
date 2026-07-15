@@ -71,6 +71,12 @@ public class Service extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("resourceGroupId")
     private String resourceGroupId;
 
+    @com.aliyun.core.annotation.NameInMap("runtimeDetailErrorCode")
+    private String runtimeDetailErrorCode;
+
+    @com.aliyun.core.annotation.NameInMap("runtimeDetailStatus")
+    private String runtimeDetailStatus;
+
     @com.aliyun.core.annotation.NameInMap("serviceId")
     private String serviceId;
 
@@ -105,6 +111,8 @@ public class Service extends TeaModel {
         this.protocol = builder.protocol;
         this.qualifier = builder.qualifier;
         this.resourceGroupId = builder.resourceGroupId;
+        this.runtimeDetailErrorCode = builder.runtimeDetailErrorCode;
+        this.runtimeDetailStatus = builder.runtimeDetailStatus;
         this.serviceId = builder.serviceId;
         this.sourceType = builder.sourceType;
         this.unhealthyEndpoints = builder.unhealthyEndpoints;
@@ -251,6 +259,20 @@ public class Service extends TeaModel {
     }
 
     /**
+     * @return runtimeDetailErrorCode
+     */
+    public String getRuntimeDetailErrorCode() {
+        return this.runtimeDetailErrorCode;
+    }
+
+    /**
+     * @return runtimeDetailStatus
+     */
+    public String getRuntimeDetailStatus() {
+        return this.runtimeDetailStatus;
+    }
+
+    /**
      * @return serviceId
      */
     public String getServiceId() {
@@ -304,6 +326,8 @@ public class Service extends TeaModel {
         private String protocol; 
         private String qualifier; 
         private String resourceGroupId; 
+        private String runtimeDetailErrorCode; 
+        private String runtimeDetailStatus; 
         private String serviceId; 
         private String sourceType; 
         private java.util.List<String> unhealthyEndpoints; 
@@ -332,6 +356,8 @@ public class Service extends TeaModel {
             this.protocol = model.protocol;
             this.qualifier = model.qualifier;
             this.resourceGroupId = model.resourceGroupId;
+            this.runtimeDetailErrorCode = model.runtimeDetailErrorCode;
+            this.runtimeDetailStatus = model.runtimeDetailStatus;
             this.serviceId = model.serviceId;
             this.sourceType = model.sourceType;
             this.unhealthyEndpoints = model.unhealthyEndpoints;
@@ -480,6 +506,22 @@ public class Service extends TeaModel {
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * runtimeDetailErrorCode.
+         */
+        public Builder runtimeDetailErrorCode(String runtimeDetailErrorCode) {
+            this.runtimeDetailErrorCode = runtimeDetailErrorCode;
+            return this;
+        }
+
+        /**
+         * runtimeDetailStatus.
+         */
+        public Builder runtimeDetailStatus(String runtimeDetailStatus) {
+            this.runtimeDetailStatus = runtimeDetailStatus;
             return this;
         }
 

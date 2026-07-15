@@ -244,6 +244,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeletePluginAttachmentResponse> deletePluginAttachment(DeletePluginAttachmentRequest request);
 
     /**
+     * @param request the request parameters of DeletePluginClass  DeletePluginClassRequest
+     * @return DeletePluginClassResponse
+     */
+    CompletableFuture<DeletePluginClassResponse> deletePluginClass(DeletePluginClassRequest request);
+
+    /**
      * @param request the request parameters of DeletePolicy  DeletePolicyRequest
      * @return DeletePolicyResponse
      */

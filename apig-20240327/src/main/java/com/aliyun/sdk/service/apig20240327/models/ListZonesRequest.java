@@ -17,8 +17,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListZonesRequest</p>
  */
 public class ListZonesRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("gatewayEdition")
+    private String gatewayEdition;
+
     private ListZonesRequest(Builder builder) {
         super(builder);
+        this.gatewayEdition = builder.gatewayEdition;
     }
 
     public static Builder builder() {
@@ -34,7 +39,15 @@ public class ListZonesRequest extends Request {
         return new Builder(this);
     }
 
+    /**
+     * @return gatewayEdition
+     */
+    public String getGatewayEdition() {
+        return this.gatewayEdition;
+    }
+
     public static final class Builder extends Request.Builder<ListZonesRequest, Builder> {
+        private String gatewayEdition; 
 
         private Builder() {
             super();
@@ -42,7 +55,17 @@ public class ListZonesRequest extends Request {
 
         private Builder(ListZonesRequest request) {
             super(request);
+            this.gatewayEdition = request.gatewayEdition;
         } 
+
+        /**
+         * gatewayEdition.
+         */
+        public Builder gatewayEdition(String gatewayEdition) {
+            this.putQueryParameter("gatewayEdition", gatewayEdition);
+            this.gatewayEdition = gatewayEdition;
+            return this;
+        }
 
         @Override
         public ListZonesRequest build() {

@@ -53,6 +53,12 @@ public class DomainInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
+    @com.aliyun.core.annotation.NameInMap("tlsMax")
+    private String tlsMax;
+
+    @com.aliyun.core.annotation.NameInMap("tlsMin")
+    private String tlsMin;
+
     @com.aliyun.core.annotation.NameInMap("updateTimestamp")
     private Long updateTimestamp;
 
@@ -69,6 +75,8 @@ public class DomainInfo extends TeaModel {
         this.protocol = builder.protocol;
         this.resourceGroupId = builder.resourceGroupId;
         this.status = builder.status;
+        this.tlsMax = builder.tlsMax;
+        this.tlsMin = builder.tlsMin;
         this.updateTimestamp = builder.updateTimestamp;
     }
 
@@ -169,6 +177,20 @@ public class DomainInfo extends TeaModel {
     }
 
     /**
+     * @return tlsMax
+     */
+    public String getTlsMax() {
+        return this.tlsMax;
+    }
+
+    /**
+     * @return tlsMin
+     */
+    public String getTlsMin() {
+        return this.tlsMin;
+    }
+
+    /**
      * @return updateTimestamp
      */
     public Long getUpdateTimestamp() {
@@ -188,6 +210,8 @@ public class DomainInfo extends TeaModel {
         private String protocol; 
         private String resourceGroupId; 
         private String status; 
+        private String tlsMax; 
+        private String tlsMin; 
         private Long updateTimestamp; 
 
         private Builder() {
@@ -206,6 +230,8 @@ public class DomainInfo extends TeaModel {
             this.protocol = model.protocol;
             this.resourceGroupId = model.resourceGroupId;
             this.status = model.status;
+            this.tlsMax = model.tlsMax;
+            this.tlsMin = model.tlsMin;
             this.updateTimestamp = model.updateTimestamp;
         } 
 
@@ -302,6 +328,22 @@ public class DomainInfo extends TeaModel {
          */
         public Builder status(String status) {
             this.status = status;
+            return this;
+        }
+
+        /**
+         * tlsMax.
+         */
+        public Builder tlsMax(String tlsMax) {
+            this.tlsMax = tlsMax;
+            return this;
+        }
+
+        /**
+         * tlsMin.
+         */
+        public Builder tlsMin(String tlsMin) {
+            this.tlsMin = tlsMin;
             return this;
         }
 

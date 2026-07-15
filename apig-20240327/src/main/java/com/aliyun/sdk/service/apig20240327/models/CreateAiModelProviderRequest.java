@@ -105,6 +105,9 @@ public class CreateAiModelProviderRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenAI</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("displayName", displayName);
@@ -114,6 +117,9 @@ public class CreateAiModelProviderRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-ucbx3s2m****</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putBodyParameter("gatewayId", gatewayId);
@@ -123,6 +129,9 @@ public class CreateAiModelProviderRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>openai</p>
          */
         public Builder provider(String provider) {
             this.putBodyParameter("provider", provider);

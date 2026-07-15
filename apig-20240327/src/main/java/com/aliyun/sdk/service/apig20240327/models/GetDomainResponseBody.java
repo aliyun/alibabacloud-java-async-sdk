@@ -230,6 +230,15 @@ public class GetDomainResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("caCertIdentifier")
         private String caCertIdentifier;
 
+        @com.aliyun.core.annotation.NameInMap("certDetailErrorCode")
+        private String certDetailErrorCode;
+
+        @com.aliyun.core.annotation.NameInMap("certDetailErrorMessage")
+        private String certDetailErrorMessage;
+
+        @com.aliyun.core.annotation.NameInMap("certDetailStatus")
+        private String certDetailStatus;
+
         @com.aliyun.core.annotation.NameInMap("certIdentifier")
         private String certIdentifier;
 
@@ -302,6 +311,9 @@ public class GetDomainResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.algorithm = builder.algorithm;
             this.caCertIdentifier = builder.caCertIdentifier;
+            this.certDetailErrorCode = builder.certDetailErrorCode;
+            this.certDetailErrorMessage = builder.certDetailErrorMessage;
+            this.certDetailStatus = builder.certDetailStatus;
             this.certIdentifier = builder.certIdentifier;
             this.certName = builder.certName;
             this.clientCACert = builder.clientCACert;
@@ -347,6 +359,27 @@ public class GetDomainResponseBody extends TeaModel {
          */
         public String getCaCertIdentifier() {
             return this.caCertIdentifier;
+        }
+
+        /**
+         * @return certDetailErrorCode
+         */
+        public String getCertDetailErrorCode() {
+            return this.certDetailErrorCode;
+        }
+
+        /**
+         * @return certDetailErrorMessage
+         */
+        public String getCertDetailErrorMessage() {
+            return this.certDetailErrorMessage;
+        }
+
+        /**
+         * @return certDetailStatus
+         */
+        public String getCertDetailStatus() {
+            return this.certDetailStatus;
         }
 
         /**
@@ -513,6 +546,9 @@ public class GetDomainResponseBody extends TeaModel {
         public static final class Builder {
             private String algorithm; 
             private String caCertIdentifier; 
+            private String certDetailErrorCode; 
+            private String certDetailErrorMessage; 
+            private String certDetailStatus; 
             private String certIdentifier; 
             private String certName; 
             private String clientCACert; 
@@ -543,6 +579,9 @@ public class GetDomainResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.algorithm = model.algorithm;
                 this.caCertIdentifier = model.caCertIdentifier;
+                this.certDetailErrorCode = model.certDetailErrorCode;
+                this.certDetailErrorMessage = model.certDetailErrorMessage;
+                this.certDetailStatus = model.certDetailStatus;
                 this.certIdentifier = model.certIdentifier;
                 this.certName = model.certName;
                 this.clientCACert = model.clientCACert;
@@ -587,6 +626,30 @@ public class GetDomainResponseBody extends TeaModel {
              */
             public Builder caCertIdentifier(String caCertIdentifier) {
                 this.caCertIdentifier = caCertIdentifier;
+                return this;
+            }
+
+            /**
+             * certDetailErrorCode.
+             */
+            public Builder certDetailErrorCode(String certDetailErrorCode) {
+                this.certDetailErrorCode = certDetailErrorCode;
+                return this;
+            }
+
+            /**
+             * certDetailErrorMessage.
+             */
+            public Builder certDetailErrorMessage(String certDetailErrorMessage) {
+                this.certDetailErrorMessage = certDetailErrorMessage;
+                return this;
+            }
+
+            /**
+             * certDetailStatus.
+             */
+            public Builder certDetailStatus(String certDetailStatus) {
+                this.certDetailStatus = certDetailStatus;
                 return this;
             }
 

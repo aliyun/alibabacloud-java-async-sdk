@@ -93,6 +93,7 @@ public class CreateHttpApiRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     @com.aliyun.core.annotation.Body
@@ -515,6 +516,7 @@ public class CreateHttpApiRequest extends Request {
 
         /**
          * <p>$.parameters[0].schema.properties.deployConfigs.description</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>Http</p>

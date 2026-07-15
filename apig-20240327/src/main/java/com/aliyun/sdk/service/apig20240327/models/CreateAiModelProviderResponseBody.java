@@ -117,7 +117,10 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>464F9EA0-1052-51BD-8187-D292AA2D8D24</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
