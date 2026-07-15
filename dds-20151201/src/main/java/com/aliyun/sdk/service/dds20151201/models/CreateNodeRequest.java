@@ -86,6 +86,18 @@ public class CreateNodeRequest extends Request {
     private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchDBInstanceClass")
+    private String searchDBInstanceClass;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchNodeCount")
+    private Integer searchNodeCount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchStorage")
+    private Integer searchStorage;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ShardDirect")
     private Boolean shardDirect;
 
@@ -107,6 +119,9 @@ public class CreateNodeRequest extends Request {
         this.readonlyReplicas = builder.readonlyReplicas;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.searchDBInstanceClass = builder.searchDBInstanceClass;
+        this.searchNodeCount = builder.searchNodeCount;
+        this.searchStorage = builder.searchStorage;
         this.shardDirect = builder.shardDirect;
     }
 
@@ -236,6 +251,27 @@ public class CreateNodeRequest extends Request {
     }
 
     /**
+     * @return searchDBInstanceClass
+     */
+    public String getSearchDBInstanceClass() {
+        return this.searchDBInstanceClass;
+    }
+
+    /**
+     * @return searchNodeCount
+     */
+    public Integer getSearchNodeCount() {
+        return this.searchNodeCount;
+    }
+
+    /**
+     * @return searchStorage
+     */
+    public Integer getSearchStorage() {
+        return this.searchStorage;
+    }
+
+    /**
      * @return shardDirect
      */
     public Boolean getShardDirect() {
@@ -259,6 +295,9 @@ public class CreateNodeRequest extends Request {
         private Integer readonlyReplicas; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String searchDBInstanceClass; 
+        private Integer searchNodeCount; 
+        private Integer searchStorage; 
         private Boolean shardDirect; 
 
         private Builder() {
@@ -283,6 +322,9 @@ public class CreateNodeRequest extends Request {
             this.readonlyReplicas = request.readonlyReplicas;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.searchDBInstanceClass = request.searchDBInstanceClass;
+            this.searchNodeCount = request.searchNodeCount;
+            this.searchStorage = request.searchStorage;
             this.shardDirect = request.shardDirect;
         } 
 
@@ -505,6 +547,33 @@ public class CreateNodeRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SearchDBInstanceClass.
+         */
+        public Builder searchDBInstanceClass(String searchDBInstanceClass) {
+            this.putQueryParameter("SearchDBInstanceClass", searchDBInstanceClass);
+            this.searchDBInstanceClass = searchDBInstanceClass;
+            return this;
+        }
+
+        /**
+         * SearchNodeCount.
+         */
+        public Builder searchNodeCount(Integer searchNodeCount) {
+            this.putQueryParameter("SearchNodeCount", searchNodeCount);
+            this.searchNodeCount = searchNodeCount;
+            return this;
+        }
+
+        /**
+         * SearchStorage.
+         */
+        public Builder searchStorage(Integer searchStorage) {
+            this.putQueryParameter("SearchStorage", searchStorage);
+            this.searchStorage = searchStorage;
             return this;
         }
 

@@ -89,7 +89,22 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-zhangjiakou-na62-a01", "mongodb.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-nebula-1", "mongodb.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "mongodb.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "mongodb.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "mongodb.aliyuncs.com"),
+            new TeaPair("us-southeast-1", "mongodb.us-southeast-1.aliyuncs.com"),
+            new TeaPair("na-south-1", "mongodb.na-south-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "mongodb.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-west-2", "mongodb.eu-west-2.aliyuncs.com"),
+            new TeaPair("cn-zhongwei", "mongodb.cn-zhongwei.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-jva", "mongodb.cn-zhengzhou-jva.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu-gic-1", "mongodb.cn-wulanchabu-gic-1.aliyuncs.com"),
+            new TeaPair("cn-wuhan-lr", "mongodb.cn-wuhan-lr.aliyuncs.com"),
+            new TeaPair("cn-nanjing", "mongodb.cn-nanjing.aliyuncs.com"),
+            new TeaPair("cn-heyuan-acdr-1", "mongodb.cn-heyuan-acdr-1.aliyuncs.com"),
+            new TeaPair("cn-fuzhou", "mongodb.cn-fuzhou.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "mongodb.ap-southeast-8.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "mongodb.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "mongodb.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "mongodb.ap-northeast-2.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }

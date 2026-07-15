@@ -31,6 +31,10 @@ public class RestartDBInstanceRequest extends Request {
     private String nodeId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeType")
+    private String nodeType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -55,6 +59,7 @@ public class RestartDBInstanceRequest extends Request {
         this.regionId = builder.regionId;
         this.DBInstanceId = builder.DBInstanceId;
         this.nodeId = builder.nodeId;
+        this.nodeType = builder.nodeType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -97,6 +102,13 @@ public class RestartDBInstanceRequest extends Request {
     }
 
     /**
+     * @return nodeType
+     */
+    public String getNodeType() {
+        return this.nodeType;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -135,6 +147,7 @@ public class RestartDBInstanceRequest extends Request {
         private String regionId; 
         private String DBInstanceId; 
         private String nodeId; 
+        private String nodeType; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -150,6 +163,7 @@ public class RestartDBInstanceRequest extends Request {
             this.regionId = request.regionId;
             this.DBInstanceId = request.DBInstanceId;
             this.nodeId = request.nodeId;
+            this.nodeType = request.nodeType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -191,6 +205,15 @@ public class RestartDBInstanceRequest extends Request {
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
             this.nodeId = nodeId;
+            return this;
+        }
+
+        /**
+         * NodeType.
+         */
+        public Builder nodeType(String nodeType) {
+            this.putQueryParameter("NodeType", nodeType);
+            this.nodeType = nodeType;
             return this;
         }
 

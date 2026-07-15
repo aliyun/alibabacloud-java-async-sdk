@@ -31,6 +31,10 @@ public class DescribeInstanceRecoverTimeRequest extends Request {
     private String destRegion;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OnlyDbTableRecovery")
+    private Boolean onlyDbTableRecovery;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -63,6 +67,7 @@ public class DescribeInstanceRecoverTimeRequest extends Request {
         this.regionId = builder.regionId;
         this.DBInstanceId = builder.DBInstanceId;
         this.destRegion = builder.destRegion;
+        this.onlyDbTableRecovery = builder.onlyDbTableRecovery;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -104,6 +109,13 @@ public class DescribeInstanceRecoverTimeRequest extends Request {
      */
     public String getDestRegion() {
         return this.destRegion;
+    }
+
+    /**
+     * @return onlyDbTableRecovery
+     */
+    public Boolean getOnlyDbTableRecovery() {
+        return this.onlyDbTableRecovery;
     }
 
     /**
@@ -159,6 +171,7 @@ public class DescribeInstanceRecoverTimeRequest extends Request {
         private String regionId; 
         private String DBInstanceId; 
         private String destRegion; 
+        private Boolean onlyDbTableRecovery; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceGroupId; 
@@ -176,6 +189,7 @@ public class DescribeInstanceRecoverTimeRequest extends Request {
             this.regionId = request.regionId;
             this.DBInstanceId = request.DBInstanceId;
             this.destRegion = request.destRegion;
+            this.onlyDbTableRecovery = request.onlyDbTableRecovery;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceGroupId = request.resourceGroupId;
@@ -213,6 +227,15 @@ public class DescribeInstanceRecoverTimeRequest extends Request {
         public Builder destRegion(String destRegion) {
             this.putQueryParameter("DestRegion", destRegion);
             this.destRegion = destRegion;
+            return this;
+        }
+
+        /**
+         * OnlyDbTableRecovery.
+         */
+        public Builder onlyDbTableRecovery(Boolean onlyDbTableRecovery) {
+            this.putQueryParameter("OnlyDbTableRecovery", onlyDbTableRecovery);
+            this.onlyDbTableRecovery = onlyDbTableRecovery;
             return this;
         }
 

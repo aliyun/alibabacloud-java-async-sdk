@@ -1590,6 +1590,201 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
      *
      * <p>DescribeDBInstanceAttributeResponseBody</p>
      */
+    public static class ShardSearchNodes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("NodeId")
+        private String nodeId;
+
+        @com.aliyun.core.annotation.NameInMap("SearchNodeClass")
+        private String searchNodeClass;
+
+        @com.aliyun.core.annotation.NameInMap("SearchNodeCount")
+        private String searchNodeCount;
+
+        @com.aliyun.core.annotation.NameInMap("SearchNodeId")
+        private String searchNodeId;
+
+        @com.aliyun.core.annotation.NameInMap("SearchNodeStorage")
+        private String searchNodeStorage;
+
+        private ShardSearchNodes(Builder builder) {
+            this.nodeId = builder.nodeId;
+            this.searchNodeClass = builder.searchNodeClass;
+            this.searchNodeCount = builder.searchNodeCount;
+            this.searchNodeId = builder.searchNodeId;
+            this.searchNodeStorage = builder.searchNodeStorage;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ShardSearchNodes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return nodeId
+         */
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
+        /**
+         * @return searchNodeClass
+         */
+        public String getSearchNodeClass() {
+            return this.searchNodeClass;
+        }
+
+        /**
+         * @return searchNodeCount
+         */
+        public String getSearchNodeCount() {
+            return this.searchNodeCount;
+        }
+
+        /**
+         * @return searchNodeId
+         */
+        public String getSearchNodeId() {
+            return this.searchNodeId;
+        }
+
+        /**
+         * @return searchNodeStorage
+         */
+        public String getSearchNodeStorage() {
+            return this.searchNodeStorage;
+        }
+
+        public static final class Builder {
+            private String nodeId; 
+            private String searchNodeClass; 
+            private String searchNodeCount; 
+            private String searchNodeId; 
+            private String searchNodeStorage; 
+
+            private Builder() {
+            } 
+
+            private Builder(ShardSearchNodes model) {
+                this.nodeId = model.nodeId;
+                this.searchNodeClass = model.searchNodeClass;
+                this.searchNodeCount = model.searchNodeCount;
+                this.searchNodeId = model.searchNodeId;
+                this.searchNodeStorage = model.searchNodeStorage;
+            } 
+
+            /**
+             * <p>The ID of the shard node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-bp16e09d9c5d****</p>
+             */
+            public Builder nodeId(String nodeId) {
+                this.nodeId = nodeId;
+                return this;
+            }
+
+            /**
+             * SearchNodeClass.
+             */
+            public Builder searchNodeClass(String searchNodeClass) {
+                this.searchNodeClass = searchNodeClass;
+                return this;
+            }
+
+            /**
+             * SearchNodeCount.
+             */
+            public Builder searchNodeCount(String searchNodeCount) {
+                this.searchNodeCount = searchNodeCount;
+                return this;
+            }
+
+            /**
+             * SearchNodeId.
+             */
+            public Builder searchNodeId(String searchNodeId) {
+                this.searchNodeId = searchNodeId;
+                return this;
+            }
+
+            /**
+             * SearchNodeStorage.
+             */
+            public Builder searchNodeStorage(String searchNodeStorage) {
+                this.searchNodeStorage = searchNodeStorage;
+                return this;
+            }
+
+            public ShardSearchNodes build() {
+                return new ShardSearchNodes(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDBInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceAttributeResponseBody</p>
+     */
+    public static class DBInstanceShardSearchNodes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ShardSearchNodes")
+        private java.util.List<ShardSearchNodes> shardSearchNodes;
+
+        private DBInstanceShardSearchNodes(Builder builder) {
+            this.shardSearchNodes = builder.shardSearchNodes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DBInstanceShardSearchNodes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return shardSearchNodes
+         */
+        public java.util.List<ShardSearchNodes> getShardSearchNodes() {
+            return this.shardSearchNodes;
+        }
+
+        public static final class Builder {
+            private java.util.List<ShardSearchNodes> shardSearchNodes; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBInstanceShardSearchNodes model) {
+                this.shardSearchNodes = model.shardSearchNodes;
+            } 
+
+            /**
+             * ShardSearchNodes.
+             */
+            public Builder shardSearchNodes(java.util.List<ShardSearchNodes> shardSearchNodes) {
+                this.shardSearchNodes = shardSearchNodes;
+                return this;
+            }
+
+            public DBInstanceShardSearchNodes build() {
+                return new DBInstanceShardSearchNodes(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDBInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceAttributeResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -1726,6 +1921,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
      * <p>DescribeDBInstanceAttributeResponseBody</p>
      */
     public static class DBInstance extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AIGatewayEnabled")
+        private Boolean AIGatewayEnabled;
+
         @com.aliyun.core.annotation.NameInMap("BurstingEnabled")
         private Boolean burstingEnabled;
 
@@ -1867,6 +2065,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ShardList")
         private ShardList shardList;
 
+        @com.aliyun.core.annotation.NameInMap("ShardSearchNodes")
+        private DBInstanceShardSearchNodes shardSearchNodes;
+
         @com.aliyun.core.annotation.NameInMap("StorageEngine")
         private String storageEngine;
 
@@ -1898,6 +2099,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         private String zoneId;
 
         private DBInstance(Builder builder) {
+            this.AIGatewayEnabled = builder.AIGatewayEnabled;
             this.burstingEnabled = builder.burstingEnabled;
             this.capacityUnit = builder.capacityUnit;
             this.chargeType = builder.chargeType;
@@ -1945,6 +2147,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.searchNodeStorage = builder.searchNodeStorage;
             this.secondaryZoneId = builder.secondaryZoneId;
             this.shardList = builder.shardList;
+            this.shardSearchNodes = builder.shardSearchNodes;
             this.storageEngine = builder.storageEngine;
             this.storageType = builder.storageType;
             this.syncPercent = builder.syncPercent;
@@ -1963,6 +2166,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         public static DBInstance create() {
             return builder().build();
+        }
+
+        /**
+         * @return AIGatewayEnabled
+         */
+        public Boolean getAIGatewayEnabled() {
+            return this.AIGatewayEnabled;
         }
 
         /**
@@ -2295,6 +2505,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return shardSearchNodes
+         */
+        public DBInstanceShardSearchNodes getShardSearchNodes() {
+            return this.shardSearchNodes;
+        }
+
+        /**
          * @return storageEngine
          */
         public String getStorageEngine() {
@@ -2365,6 +2582,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean AIGatewayEnabled; 
             private Boolean burstingEnabled; 
             private String capacityUnit; 
             private String chargeType; 
@@ -2412,6 +2630,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private Integer searchNodeStorage; 
             private String secondaryZoneId; 
             private ShardList shardList; 
+            private DBInstanceShardSearchNodes shardSearchNodes; 
             private String storageEngine; 
             private String storageType; 
             private String syncPercent; 
@@ -2427,6 +2646,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             } 
 
             private Builder(DBInstance model) {
+                this.AIGatewayEnabled = model.AIGatewayEnabled;
                 this.burstingEnabled = model.burstingEnabled;
                 this.capacityUnit = model.capacityUnit;
                 this.chargeType = model.chargeType;
@@ -2474,6 +2694,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
                 this.searchNodeStorage = model.searchNodeStorage;
                 this.secondaryZoneId = model.secondaryZoneId;
                 this.shardList = model.shardList;
+                this.shardSearchNodes = model.shardSearchNodes;
                 this.storageEngine = model.storageEngine;
                 this.storageType = model.storageType;
                 this.syncPercent = model.syncPercent;
@@ -2485,6 +2706,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
                 this.vpcAuthMode = model.vpcAuthMode;
                 this.zoneId = model.zoneId;
             } 
+
+            /**
+             * AIGatewayEnabled.
+             */
+            public Builder AIGatewayEnabled(Boolean AIGatewayEnabled) {
+                this.AIGatewayEnabled = AIGatewayEnabled;
+                return this;
+            }
 
             /**
              * <p>Indicates whether performance burst is enabled for the ESSD AutoPL disk.</p>
@@ -3112,6 +3341,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder shardList(ShardList shardList) {
                 this.shardList = shardList;
+                return this;
+            }
+
+            /**
+             * ShardSearchNodes.
+             */
+            public Builder shardSearchNodes(DBInstanceShardSearchNodes shardSearchNodes) {
+                this.shardSearchNodes = shardSearchNodes;
                 return this;
             }
 
