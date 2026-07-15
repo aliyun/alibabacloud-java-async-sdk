@@ -203,6 +203,9 @@ public class DescribeApplicationLogsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Hostname")
         private String hostname;
 
+        @com.aliyun.core.annotation.NameInMap("InsName")
+        private String insName;
+
         @com.aliyun.core.annotation.NameInMap("LogLevelId")
         private Long logLevelId;
 
@@ -224,6 +227,9 @@ public class DescribeApplicationLogsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
+        private Long timestamp;
+
         private LogRecords(Builder builder) {
             this.componentName = builder.componentName;
             this.containerName = builder.containerName;
@@ -233,6 +239,7 @@ public class DescribeApplicationLogsResponseBody extends TeaModel {
             this.fileName = builder.fileName;
             this.fullFilePath = builder.fullFilePath;
             this.hostname = builder.hostname;
+            this.insName = builder.insName;
             this.logLevelId = builder.logLevelId;
             this.logLevelName = builder.logLevelName;
             this.method = builder.method;
@@ -240,6 +247,7 @@ public class DescribeApplicationLogsResponseBody extends TeaModel {
             this.runtime = builder.runtime;
             this.runtimeVersion = builder.runtimeVersion;
             this.time = builder.time;
+            this.timestamp = builder.timestamp;
         }
 
         public static Builder builder() {
@@ -307,6 +315,13 @@ public class DescribeApplicationLogsResponseBody extends TeaModel {
         }
 
         /**
+         * @return insName
+         */
+        public String getInsName() {
+            return this.insName;
+        }
+
+        /**
          * @return logLevelId
          */
         public Long getLogLevelId() {
@@ -355,6 +370,13 @@ public class DescribeApplicationLogsResponseBody extends TeaModel {
             return this.time;
         }
 
+        /**
+         * @return timestamp
+         */
+        public Long getTimestamp() {
+            return this.timestamp;
+        }
+
         public static final class Builder {
             private String componentName; 
             private String containerName; 
@@ -364,6 +386,7 @@ public class DescribeApplicationLogsResponseBody extends TeaModel {
             private String fileName; 
             private String fullFilePath; 
             private String hostname; 
+            private String insName; 
             private Long logLevelId; 
             private String logLevelName; 
             private String method; 
@@ -371,6 +394,7 @@ public class DescribeApplicationLogsResponseBody extends TeaModel {
             private String runtime; 
             private String runtimeVersion; 
             private String time; 
+            private Long timestamp; 
 
             private Builder() {
             } 
@@ -384,6 +408,7 @@ public class DescribeApplicationLogsResponseBody extends TeaModel {
                 this.fileName = model.fileName;
                 this.fullFilePath = model.fullFilePath;
                 this.hostname = model.hostname;
+                this.insName = model.insName;
                 this.logLevelId = model.logLevelId;
                 this.logLevelName = model.logLevelName;
                 this.method = model.method;
@@ -391,6 +416,7 @@ public class DescribeApplicationLogsResponseBody extends TeaModel {
                 this.runtime = model.runtime;
                 this.runtimeVersion = model.runtimeVersion;
                 this.time = model.time;
+                this.timestamp = model.timestamp;
             } 
 
             /**
@@ -458,6 +484,14 @@ public class DescribeApplicationLogsResponseBody extends TeaModel {
             }
 
             /**
+             * InsName.
+             */
+            public Builder insName(String insName) {
+                this.insName = insName;
+                return this;
+            }
+
+            /**
              * LogLevelId.
              */
             public Builder logLevelId(Long logLevelId) {
@@ -510,6 +544,14 @@ public class DescribeApplicationLogsResponseBody extends TeaModel {
              */
             public Builder time(String time) {
                 this.time = time;
+                return this;
+            }
+
+            /**
+             * Timestamp.
+             */
+            public Builder timestamp(Long timestamp) {
+                this.timestamp = timestamp;
                 return this;
             }
 

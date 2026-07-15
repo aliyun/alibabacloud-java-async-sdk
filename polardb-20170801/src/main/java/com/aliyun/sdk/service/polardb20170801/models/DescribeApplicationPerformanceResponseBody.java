@@ -26,6 +26,9 @@ public class DescribeApplicationPerformanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
+    @com.aliyun.core.annotation.NameInMap("Interval")
+    private String interval;
+
     @com.aliyun.core.annotation.NameInMap("PerformanceKeys")
     private PerformanceKeys performanceKeys;
 
@@ -39,6 +42,7 @@ public class DescribeApplicationPerformanceResponseBody extends TeaModel {
         this.applicationId = builder.applicationId;
         this.applicationType = builder.applicationType;
         this.endTime = builder.endTime;
+        this.interval = builder.interval;
         this.performanceKeys = builder.performanceKeys;
         this.requestId = builder.requestId;
         this.startTime = builder.startTime;
@@ -78,6 +82,13 @@ public class DescribeApplicationPerformanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return interval
+     */
+    public String getInterval() {
+        return this.interval;
+    }
+
+    /**
      * @return performanceKeys
      */
     public PerformanceKeys getPerformanceKeys() {
@@ -102,6 +113,7 @@ public class DescribeApplicationPerformanceResponseBody extends TeaModel {
         private String applicationId; 
         private String applicationType; 
         private String endTime; 
+        private String interval; 
         private PerformanceKeys performanceKeys; 
         private String requestId; 
         private String startTime; 
@@ -113,6 +125,7 @@ public class DescribeApplicationPerformanceResponseBody extends TeaModel {
             this.applicationId = model.applicationId;
             this.applicationType = model.applicationType;
             this.endTime = model.endTime;
+            this.interval = model.interval;
             this.performanceKeys = model.performanceKeys;
             this.requestId = model.requestId;
             this.startTime = model.startTime;
@@ -139,6 +152,14 @@ public class DescribeApplicationPerformanceResponseBody extends TeaModel {
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * Interval.
+         */
+        public Builder interval(String interval) {
+            this.interval = interval;
             return this;
         }
 
@@ -179,6 +200,9 @@ public class DescribeApplicationPerformanceResponseBody extends TeaModel {
      * <p>DescribeApplicationPerformanceResponseBody</p>
      */
     public static class PerformanceItemValue extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Step")
+        private Long step;
+
         @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
@@ -186,6 +210,7 @@ public class DescribeApplicationPerformanceResponseBody extends TeaModel {
         private String value;
 
         private PerformanceItemValue(Builder builder) {
+            this.step = builder.step;
             this.timestamp = builder.timestamp;
             this.value = builder.value;
         }
@@ -196,6 +221,13 @@ public class DescribeApplicationPerformanceResponseBody extends TeaModel {
 
         public static PerformanceItemValue create() {
             return builder().build();
+        }
+
+        /**
+         * @return step
+         */
+        public Long getStep() {
+            return this.step;
         }
 
         /**
@@ -213,6 +245,7 @@ public class DescribeApplicationPerformanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long step; 
             private Long timestamp; 
             private String value; 
 
@@ -220,9 +253,18 @@ public class DescribeApplicationPerformanceResponseBody extends TeaModel {
             } 
 
             private Builder(PerformanceItemValue model) {
+                this.step = model.step;
                 this.timestamp = model.timestamp;
                 this.value = model.value;
             } 
+
+            /**
+             * Step.
+             */
+            public Builder step(Long step) {
+                this.step = step;
+                return this;
+            }
 
             /**
              * Timestamp.

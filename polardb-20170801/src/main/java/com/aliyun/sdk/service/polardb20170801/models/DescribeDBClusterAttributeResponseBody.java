@@ -200,6 +200,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("StandbyHAMode")
     private String standbyHAMode;
 
+    @com.aliyun.core.annotation.NameInMap("StorageAutoScale")
+    private String storageAutoScale;
+
     @com.aliyun.core.annotation.NameInMap("StorageMax")
     private Long storageMax;
 
@@ -211,6 +214,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("StorageType")
     private String storageType;
+
+    @com.aliyun.core.annotation.NameInMap("StorageUpperBound")
+    private Integer storageUpperBound;
 
     @com.aliyun.core.annotation.NameInMap("StorageUsed")
     private Long storageUsed;
@@ -298,10 +304,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         this.sourceDBCluster = builder.sourceDBCluster;
         this.sourceRegionId = builder.sourceRegionId;
         this.standbyHAMode = builder.standbyHAMode;
+        this.storageAutoScale = builder.storageAutoScale;
         this.storageMax = builder.storageMax;
         this.storagePayType = builder.storagePayType;
         this.storageSpace = builder.storageSpace;
         this.storageType = builder.storageType;
+        this.storageUpperBound = builder.storageUpperBound;
         this.storageUsed = builder.storageUsed;
         this.strictConsistency = builder.strictConsistency;
         this.subCategory = builder.subCategory;
@@ -752,6 +760,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return storageAutoScale
+     */
+    public String getStorageAutoScale() {
+        return this.storageAutoScale;
+    }
+
+    /**
      * @return storageMax
      */
     public Long getStorageMax() {
@@ -777,6 +792,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
      */
     public String getStorageType() {
         return this.storageType;
+    }
+
+    /**
+     * @return storageUpperBound
+     */
+    public Integer getStorageUpperBound() {
+        return this.storageUpperBound;
     }
 
     /**
@@ -897,10 +919,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private String sourceDBCluster; 
         private String sourceRegionId; 
         private String standbyHAMode; 
+        private String storageAutoScale; 
         private Long storageMax; 
         private String storagePayType; 
         private Long storageSpace; 
         private String storageType; 
+        private Integer storageUpperBound; 
         private Long storageUsed; 
         private String strictConsistency; 
         private String subCategory; 
@@ -975,10 +999,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.sourceDBCluster = model.sourceDBCluster;
             this.sourceRegionId = model.sourceRegionId;
             this.standbyHAMode = model.standbyHAMode;
+            this.storageAutoScale = model.storageAutoScale;
             this.storageMax = model.storageMax;
             this.storagePayType = model.storagePayType;
             this.storageSpace = model.storageSpace;
             this.storageType = model.storageType;
+            this.storageUpperBound = model.storageUpperBound;
             this.storageUsed = model.storageUsed;
             this.strictConsistency = model.strictConsistency;
             this.subCategory = model.subCategory;
@@ -1758,6 +1784,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * StorageAutoScale.
+         */
+        public Builder storageAutoScale(String storageAutoScale) {
+            this.storageAutoScale = storageAutoScale;
+            return this;
+        }
+
+        /**
          * <p>The maximum storage capacity of the current cluster specification, in bytes.</p>
          * 
          * <strong>example:</strong>
@@ -1802,6 +1836,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public Builder storageType(String storageType) {
             this.storageType = storageType;
+            return this;
+        }
+
+        /**
+         * StorageUpperBound.
+         */
+        public Builder storageUpperBound(Integer storageUpperBound) {
+            this.storageUpperBound = storageUpperBound;
             return this;
         }
 
@@ -2232,6 +2274,15 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Orca")
         private String orca;
 
+        @com.aliyun.core.annotation.NameInMap("RemoteMemoryMax")
+        private Integer remoteMemoryMax;
+
+        @com.aliyun.core.annotation.NameInMap("RemoteMemoryMin")
+        private Integer remoteMemoryMin;
+
+        @com.aliyun.core.annotation.NameInMap("RemoteMemoryRecommended")
+        private Integer remoteMemoryRecommended;
+
         @com.aliyun.core.annotation.NameInMap("RemoteMemorySize")
         private String remoteMemorySize;
 
@@ -2275,6 +2326,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.multiMasterLocalStandby = builder.multiMasterLocalStandby;
             this.multiMasterPrimaryNode = builder.multiMasterPrimaryNode;
             this.orca = builder.orca;
+            this.remoteMemoryMax = builder.remoteMemoryMax;
+            this.remoteMemoryMin = builder.remoteMemoryMin;
+            this.remoteMemoryRecommended = builder.remoteMemoryRecommended;
             this.remoteMemorySize = builder.remoteMemorySize;
             this.sccMode = builder.sccMode;
             this.serverWeight = builder.serverWeight;
@@ -2433,6 +2487,27 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return remoteMemoryMax
+         */
+        public Integer getRemoteMemoryMax() {
+            return this.remoteMemoryMax;
+        }
+
+        /**
+         * @return remoteMemoryMin
+         */
+        public Integer getRemoteMemoryMin() {
+            return this.remoteMemoryMin;
+        }
+
+        /**
+         * @return remoteMemoryRecommended
+         */
+        public Integer getRemoteMemoryRecommended() {
+            return this.remoteMemoryRecommended;
+        }
+
+        /**
          * @return remoteMemorySize
          */
         public String getRemoteMemorySize() {
@@ -2502,6 +2577,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private String multiMasterLocalStandby; 
             private String multiMasterPrimaryNode; 
             private String orca; 
+            private Integer remoteMemoryMax; 
+            private Integer remoteMemoryMin; 
+            private Integer remoteMemoryRecommended; 
             private String remoteMemorySize; 
             private String sccMode; 
             private String serverWeight; 
@@ -2534,6 +2612,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
                 this.multiMasterLocalStandby = model.multiMasterLocalStandby;
                 this.multiMasterPrimaryNode = model.multiMasterPrimaryNode;
                 this.orca = model.orca;
+                this.remoteMemoryMax = model.remoteMemoryMax;
+                this.remoteMemoryMin = model.remoteMemoryMin;
+                this.remoteMemoryRecommended = model.remoteMemoryRecommended;
                 this.remoteMemorySize = model.remoteMemorySize;
                 this.sccMode = model.sccMode;
                 this.serverWeight = model.serverWeight;
@@ -2780,6 +2861,30 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              */
             public Builder orca(String orca) {
                 this.orca = orca;
+                return this;
+            }
+
+            /**
+             * RemoteMemoryMax.
+             */
+            public Builder remoteMemoryMax(Integer remoteMemoryMax) {
+                this.remoteMemoryMax = remoteMemoryMax;
+                return this;
+            }
+
+            /**
+             * RemoteMemoryMin.
+             */
+            public Builder remoteMemoryMin(Integer remoteMemoryMin) {
+                this.remoteMemoryMin = remoteMemoryMin;
+                return this;
+            }
+
+            /**
+             * RemoteMemoryRecommended.
+             */
+            public Builder remoteMemoryRecommended(Integer remoteMemoryRecommended) {
+                this.remoteMemoryRecommended = remoteMemoryRecommended;
                 return this;
             }
 

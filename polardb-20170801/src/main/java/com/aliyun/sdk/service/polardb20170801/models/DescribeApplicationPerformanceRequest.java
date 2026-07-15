@@ -31,6 +31,14 @@ public class DescribeApplicationPerformanceRequest extends Request {
     private String consumerGroup;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Downsample")
+    private String downsample;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndStep")
+    private Long endStep;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
     @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
@@ -45,8 +53,16 @@ public class DescribeApplicationPerformanceRequest extends Request {
     private String key;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxPoints")
+    private Integer maxPoints;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ModelService")
     private String modelService;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartStep")
+    private Long startStep;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
@@ -58,10 +74,14 @@ public class DescribeApplicationPerformanceRequest extends Request {
         this.applicationId = builder.applicationId;
         this.consumer = builder.consumer;
         this.consumerGroup = builder.consumerGroup;
+        this.downsample = builder.downsample;
+        this.endStep = builder.endStep;
         this.endTime = builder.endTime;
         this.interval = builder.interval;
         this.key = builder.key;
+        this.maxPoints = builder.maxPoints;
         this.modelService = builder.modelService;
+        this.startStep = builder.startStep;
         this.startTime = builder.startTime;
     }
 
@@ -100,6 +120,20 @@ public class DescribeApplicationPerformanceRequest extends Request {
     }
 
     /**
+     * @return downsample
+     */
+    public String getDownsample() {
+        return this.downsample;
+    }
+
+    /**
+     * @return endStep
+     */
+    public Long getEndStep() {
+        return this.endStep;
+    }
+
+    /**
      * @return endTime
      */
     public String getEndTime() {
@@ -121,10 +155,24 @@ public class DescribeApplicationPerformanceRequest extends Request {
     }
 
     /**
+     * @return maxPoints
+     */
+    public Integer getMaxPoints() {
+        return this.maxPoints;
+    }
+
+    /**
      * @return modelService
      */
     public String getModelService() {
         return this.modelService;
+    }
+
+    /**
+     * @return startStep
+     */
+    public Long getStartStep() {
+        return this.startStep;
     }
 
     /**
@@ -138,10 +186,14 @@ public class DescribeApplicationPerformanceRequest extends Request {
         private String applicationId; 
         private String consumer; 
         private String consumerGroup; 
+        private String downsample; 
+        private Long endStep; 
         private String endTime; 
         private String interval; 
         private String key; 
+        private Integer maxPoints; 
         private String modelService; 
+        private Long startStep; 
         private String startTime; 
 
         private Builder() {
@@ -153,10 +205,14 @@ public class DescribeApplicationPerformanceRequest extends Request {
             this.applicationId = request.applicationId;
             this.consumer = request.consumer;
             this.consumerGroup = request.consumerGroup;
+            this.downsample = request.downsample;
+            this.endStep = request.endStep;
             this.endTime = request.endTime;
             this.interval = request.interval;
             this.key = request.key;
+            this.maxPoints = request.maxPoints;
             this.modelService = request.modelService;
+            this.startStep = request.startStep;
             this.startTime = request.startTime;
         } 
 
@@ -187,6 +243,24 @@ public class DescribeApplicationPerformanceRequest extends Request {
         public Builder consumerGroup(String consumerGroup) {
             this.putQueryParameter("ConsumerGroup", consumerGroup);
             this.consumerGroup = consumerGroup;
+            return this;
+        }
+
+        /**
+         * Downsample.
+         */
+        public Builder downsample(String downsample) {
+            this.putQueryParameter("Downsample", downsample);
+            this.downsample = downsample;
+            return this;
+        }
+
+        /**
+         * EndStep.
+         */
+        public Builder endStep(Long endStep) {
+            this.putQueryParameter("EndStep", endStep);
+            this.endStep = endStep;
             return this;
         }
 
@@ -224,11 +298,29 @@ public class DescribeApplicationPerformanceRequest extends Request {
         }
 
         /**
+         * MaxPoints.
+         */
+        public Builder maxPoints(Integer maxPoints) {
+            this.putQueryParameter("MaxPoints", maxPoints);
+            this.maxPoints = maxPoints;
+            return this;
+        }
+
+        /**
          * ModelService.
          */
         public Builder modelService(String modelService) {
             this.putQueryParameter("ModelService", modelService);
             this.modelService = modelService;
+            return this;
+        }
+
+        /**
+         * StartStep.
+         */
+        public Builder startStep(Long startStep) {
+            this.putQueryParameter("StartStep", startStep);
+            this.startStep = startStep;
             return this;
         }
 
