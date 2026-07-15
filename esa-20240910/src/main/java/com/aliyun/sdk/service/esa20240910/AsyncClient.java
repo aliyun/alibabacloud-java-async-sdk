@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ActivateVersionManagementResponse> activateVersionManagement(ActivateVersionManagementRequest request);
 
     /**
+     * @param request the request parameters of AddUserBusinessForm  AddUserBusinessFormRequest
+     * @return AddUserBusinessFormResponse
+     */
+    CompletableFuture<AddUserBusinessFormResponse> addUserBusinessForm(AddUserBusinessFormRequest request);
+
+    /**
      * @param request the request parameters of ApplyCertificate  ApplyCertificateRequest
      * @return ApplyCertificateResponse
      */
@@ -94,6 +100,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CheckAssumeSlrRoleResponse
      */
     CompletableFuture<CheckAssumeSlrRoleResponse> checkAssumeSlrRole(CheckAssumeSlrRoleRequest request);
+
+    /**
+     * @param request the request parameters of CheckSiteFeaturesMatchPlan  CheckSiteFeaturesMatchPlanRequest
+     * @return CheckSiteFeaturesMatchPlanResponse
+     */
+    CompletableFuture<CheckSiteFeaturesMatchPlanResponse> checkSiteFeaturesMatchPlan(CheckSiteFeaturesMatchPlanRequest request);
 
     /**
      * @param request the request parameters of CheckSiteName  CheckSiteNameRequest
