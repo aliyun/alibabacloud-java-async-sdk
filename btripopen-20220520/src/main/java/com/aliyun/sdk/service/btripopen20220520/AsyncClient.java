@@ -356,6 +356,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EstimatedPriceQueryResponse> estimatedPriceQuery(EstimatedPriceQueryRequest request);
 
     /**
+     * @param request the request parameters of EstimatedPriceQueryV2  EstimatedPriceQueryV2Request
+     * @return EstimatedPriceQueryV2Response
+     */
+    CompletableFuture<EstimatedPriceQueryV2Response> estimatedPriceQueryV2(EstimatedPriceQueryV2Request request);
+
+    /**
      * @param request the request parameters of ExceedApplySync  ExceedApplySyncRequest
      * @return ExceedApplySyncResponse
      */
