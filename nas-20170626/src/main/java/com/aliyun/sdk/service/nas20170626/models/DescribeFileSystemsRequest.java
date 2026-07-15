@@ -39,6 +39,10 @@ public class DescribeFileSystemsRequest extends Request {
     private String resourceGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageType")
+    private String storageType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Tag> tag;
 
@@ -53,6 +57,7 @@ public class DescribeFileSystemsRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.resourceGroupId = builder.resourceGroupId;
+        this.storageType = builder.storageType;
         this.tag = builder.tag;
         this.vpcId = builder.vpcId;
     }
@@ -106,6 +111,13 @@ public class DescribeFileSystemsRequest extends Request {
     }
 
     /**
+     * @return storageType
+     */
+    public String getStorageType() {
+        return this.storageType;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List<Tag> getTag() {
@@ -125,6 +137,7 @@ public class DescribeFileSystemsRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String resourceGroupId; 
+        private String storageType; 
         private java.util.List<Tag> tag; 
         private String vpcId; 
 
@@ -139,6 +152,7 @@ public class DescribeFileSystemsRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.resourceGroupId = request.resourceGroupId;
+            this.storageType = request.storageType;
             this.tag = request.tag;
             this.vpcId = request.vpcId;
         } 
@@ -221,6 +235,15 @@ public class DescribeFileSystemsRequest extends Request {
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * StorageType.
+         */
+        public Builder storageType(String storageType) {
+            this.putQueryParameter("StorageType", storageType);
+            this.storageType = storageType;
             return this;
         }
 
