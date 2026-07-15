@@ -104,6 +104,9 @@ public class GenerateOauthTokenResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExpiresIn")
         private Long expiresIn;
 
+        @com.aliyun.core.annotation.NameInMap("IssuedTokenType")
+        private String issuedTokenType;
+
         @com.aliyun.core.annotation.NameInMap("TokenType")
         private String tokenType;
 
@@ -111,6 +114,7 @@ public class GenerateOauthTokenResponseBody extends TeaModel {
             this.accessToken = builder.accessToken;
             this.expiresAt = builder.expiresAt;
             this.expiresIn = builder.expiresIn;
+            this.issuedTokenType = builder.issuedTokenType;
             this.tokenType = builder.tokenType;
         }
 
@@ -144,6 +148,13 @@ public class GenerateOauthTokenResponseBody extends TeaModel {
         }
 
         /**
+         * @return issuedTokenType
+         */
+        public String getIssuedTokenType() {
+            return this.issuedTokenType;
+        }
+
+        /**
          * @return tokenType
          */
         public String getTokenType() {
@@ -154,6 +165,7 @@ public class GenerateOauthTokenResponseBody extends TeaModel {
             private String accessToken; 
             private Long expiresAt; 
             private Long expiresIn; 
+            private String issuedTokenType; 
             private String tokenType; 
 
             private Builder() {
@@ -163,6 +175,7 @@ public class GenerateOauthTokenResponseBody extends TeaModel {
                 this.accessToken = model.accessToken;
                 this.expiresAt = model.expiresAt;
                 this.expiresIn = model.expiresIn;
+                this.issuedTokenType = model.issuedTokenType;
                 this.tokenType = model.tokenType;
             } 
 
@@ -190,6 +203,14 @@ public class GenerateOauthTokenResponseBody extends TeaModel {
              */
             public Builder expiresIn(Long expiresIn) {
                 this.expiresIn = expiresIn;
+                return this;
+            }
+
+            /**
+             * IssuedTokenType.
+             */
+            public Builder issuedTokenType(String issuedTokenType) {
+                this.issuedTokenType = issuedTokenType;
                 return this;
             }
 
