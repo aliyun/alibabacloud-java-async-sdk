@@ -1345,6 +1345,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("auto_vul_fix_policy")
         private AutoVulFixPolicy autoVulFixPolicy;
 
+        @com.aliyun.core.annotation.NameInMap("drift_enabled")
+        private Boolean driftEnabled;
+
         @com.aliyun.core.annotation.NameInMap("enable")
         private Boolean enable;
 
@@ -1359,6 +1362,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             this.autoUpgradePolicy = builder.autoUpgradePolicy;
             this.autoVulFix = builder.autoVulFix;
             this.autoVulFixPolicy = builder.autoVulFixPolicy;
+            this.driftEnabled = builder.driftEnabled;
             this.enable = builder.enable;
             this.upgradeConfig = builder.upgradeConfig;
         }
@@ -1421,6 +1425,13 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         }
 
         /**
+         * @return driftEnabled
+         */
+        public Boolean getDriftEnabled() {
+            return this.driftEnabled;
+        }
+
+        /**
          * @return enable
          */
         public Boolean getEnable() {
@@ -1442,6 +1453,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             private AutoUpgradePolicy autoUpgradePolicy; 
             private Boolean autoVulFix; 
             private AutoVulFixPolicy autoVulFixPolicy; 
+            private Boolean driftEnabled; 
             private Boolean enable; 
             private UpgradeConfig upgradeConfig; 
 
@@ -1456,6 +1468,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
                 this.autoUpgradePolicy = model.autoUpgradePolicy;
                 this.autoVulFix = model.autoVulFix;
                 this.autoVulFixPolicy = model.autoVulFixPolicy;
+                this.driftEnabled = model.driftEnabled;
                 this.enable = model.enable;
                 this.upgradeConfig = model.upgradeConfig;
             } 
@@ -1534,6 +1547,14 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
              */
             public Builder autoVulFixPolicy(AutoVulFixPolicy autoVulFixPolicy) {
                 this.autoVulFixPolicy = autoVulFixPolicy;
+                return this;
+            }
+
+            /**
+             * drift_enabled.
+             */
+            public Builder driftEnabled(Boolean driftEnabled) {
+                this.driftEnabled = driftEnabled;
                 return this;
             }
 
