@@ -35,6 +35,9 @@ public class JobSpec extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ExtraPodSpec")
     private ExtraPodSpec extraPodSpec;
 
+    @com.aliyun.core.annotation.NameInMap("HyperNodeSchedulingConfig")
+    private HyperNodeSchedulingConfig hyperNodeSchedulingConfig;
+
     @com.aliyun.core.annotation.NameInMap("Image")
     private String image;
 
@@ -50,6 +53,9 @@ public class JobSpec extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("LocalMountSpecs")
     private java.util.List<LocalMountSpec> localMountSpecs;
+
+    @com.aliyun.core.annotation.NameInMap("OversoldType")
+    private String oversoldType;
 
     @com.aliyun.core.annotation.NameInMap("PodCount")
     private Long podCount;
@@ -89,11 +95,13 @@ public class JobSpec extends TeaModel {
         this.ecsSpec = builder.ecsSpec;
         this.elasticSpotSpecs = builder.elasticSpotSpecs;
         this.extraPodSpec = builder.extraPodSpec;
+        this.hyperNodeSchedulingConfig = builder.hyperNodeSchedulingConfig;
         this.image = builder.image;
         this.imageConfig = builder.imageConfig;
         this.isCheif = builder.isCheif;
         this.isChief = builder.isChief;
         this.localMountSpecs = builder.localMountSpecs;
+        this.oversoldType = builder.oversoldType;
         this.podCount = builder.podCount;
         this.quotaId = builder.quotaId;
         this.resourceConfig = builder.resourceConfig;
@@ -161,6 +169,13 @@ public class JobSpec extends TeaModel {
     }
 
     /**
+     * @return hyperNodeSchedulingConfig
+     */
+    public HyperNodeSchedulingConfig getHyperNodeSchedulingConfig() {
+        return this.hyperNodeSchedulingConfig;
+    }
+
+    /**
      * @return image
      */
     public String getImage() {
@@ -193,6 +208,13 @@ public class JobSpec extends TeaModel {
      */
     public java.util.List<LocalMountSpec> getLocalMountSpecs() {
         return this.localMountSpecs;
+    }
+
+    /**
+     * @return oversoldType
+     */
+    public String getOversoldType() {
+        return this.oversoldType;
     }
 
     /**
@@ -272,11 +294,13 @@ public class JobSpec extends TeaModel {
         private String ecsSpec; 
         private java.util.List<ElasticSpotSpec> elasticSpotSpecs; 
         private ExtraPodSpec extraPodSpec; 
+        private HyperNodeSchedulingConfig hyperNodeSchedulingConfig; 
         private String image; 
         private ImageConfig imageConfig; 
         private Boolean isCheif; 
         private Boolean isChief; 
         private java.util.List<LocalMountSpec> localMountSpecs; 
+        private String oversoldType; 
         private Long podCount; 
         private String quotaId; 
         private ResourceConfig resourceConfig; 
@@ -298,11 +322,13 @@ public class JobSpec extends TeaModel {
             this.ecsSpec = model.ecsSpec;
             this.elasticSpotSpecs = model.elasticSpotSpecs;
             this.extraPodSpec = model.extraPodSpec;
+            this.hyperNodeSchedulingConfig = model.hyperNodeSchedulingConfig;
             this.image = model.image;
             this.imageConfig = model.imageConfig;
             this.isCheif = model.isCheif;
             this.isChief = model.isChief;
             this.localMountSpecs = model.localMountSpecs;
+            this.oversoldType = model.oversoldType;
             this.podCount = model.podCount;
             this.quotaId = model.quotaId;
             this.resourceConfig = model.resourceConfig;
@@ -364,6 +390,14 @@ public class JobSpec extends TeaModel {
         }
 
         /**
+         * HyperNodeSchedulingConfig.
+         */
+        public Builder hyperNodeSchedulingConfig(HyperNodeSchedulingConfig hyperNodeSchedulingConfig) {
+            this.hyperNodeSchedulingConfig = hyperNodeSchedulingConfig;
+            return this;
+        }
+
+        /**
          * Image.
          */
         public Builder image(String image) {
@@ -400,6 +434,14 @@ public class JobSpec extends TeaModel {
          */
         public Builder localMountSpecs(java.util.List<LocalMountSpec> localMountSpecs) {
             this.localMountSpecs = localMountSpecs;
+            return this;
+        }
+
+        /**
+         * OversoldType.
+         */
+        public Builder oversoldType(String oversoldType) {
+            this.oversoldType = oversoldType;
             return this;
         }
 

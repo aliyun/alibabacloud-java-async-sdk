@@ -70,6 +70,10 @@ public class ListRayHistoryServersRequest extends Request {
     private String status;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StoragePath")
+    private String storagePath;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserIdForFilter")
     private String userIdForFilter;
 
@@ -96,6 +100,7 @@ public class ListRayHistoryServersRequest extends Request {
         this.sortBy = builder.sortBy;
         this.startTime = builder.startTime;
         this.status = builder.status;
+        this.storagePath = builder.storagePath;
         this.userIdForFilter = builder.userIdForFilter;
         this.username = builder.username;
         this.workspaceId = builder.workspaceId;
@@ -206,6 +211,13 @@ public class ListRayHistoryServersRequest extends Request {
     }
 
     /**
+     * @return storagePath
+     */
+    public String getStoragePath() {
+        return this.storagePath;
+    }
+
+    /**
      * @return userIdForFilter
      */
     public String getUserIdForFilter() {
@@ -240,6 +252,7 @@ public class ListRayHistoryServersRequest extends Request {
         private String sortBy; 
         private String startTime; 
         private String status; 
+        private String storagePath; 
         private String userIdForFilter; 
         private String username; 
         private String workspaceId; 
@@ -263,6 +276,7 @@ public class ListRayHistoryServersRequest extends Request {
             this.sortBy = request.sortBy;
             this.startTime = request.startTime;
             this.status = request.status;
+            this.storagePath = request.storagePath;
             this.userIdForFilter = request.userIdForFilter;
             this.username = request.username;
             this.workspaceId = request.workspaceId;
@@ -382,6 +396,15 @@ public class ListRayHistoryServersRequest extends Request {
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * StoragePath.
+         */
+        public Builder storagePath(String storagePath) {
+            this.putQueryParameter("StoragePath", storagePath);
+            this.storagePath = storagePath;
             return this;
         }
 

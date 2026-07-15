@@ -137,6 +137,9 @@ public class JobItem extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RestartTimes")
     private String restartTimes;
 
+    @com.aliyun.core.annotation.NameInMap("RetryCount")
+    private Integer retryCount;
+
     @com.aliyun.core.annotation.NameInMap("SchedulingStrategy")
     private String schedulingStrategy;
 
@@ -238,6 +241,7 @@ public class JobItem extends TeaModel {
         this.resourceQuotaName = builder.resourceQuotaName;
         this.resourceType = builder.resourceType;
         this.restartTimes = builder.restartTimes;
+        this.retryCount = builder.retryCount;
         this.schedulingStrategy = builder.schedulingStrategy;
         this.settings = builder.settings;
         this.status = builder.status;
@@ -553,6 +557,13 @@ public class JobItem extends TeaModel {
     }
 
     /**
+     * @return retryCount
+     */
+    public Integer getRetryCount() {
+        return this.retryCount;
+    }
+
+    /**
      * @return schedulingStrategy
      */
     public String getSchedulingStrategy() {
@@ -733,6 +744,7 @@ public class JobItem extends TeaModel {
         private String resourceQuotaName; 
         private String resourceType; 
         private String restartTimes; 
+        private Integer retryCount; 
         private String schedulingStrategy; 
         private JobSettings settings; 
         private String status; 
@@ -798,6 +810,7 @@ public class JobItem extends TeaModel {
             this.resourceQuotaName = model.resourceQuotaName;
             this.resourceType = model.resourceType;
             this.restartTimes = model.restartTimes;
+            this.retryCount = model.retryCount;
             this.schedulingStrategy = model.schedulingStrategy;
             this.settings = model.settings;
             this.status = model.status;
@@ -1137,6 +1150,14 @@ public class JobItem extends TeaModel {
          */
         public Builder restartTimes(String restartTimes) {
             this.restartTimes = restartTimes;
+            return this;
+        }
+
+        /**
+         * RetryCount.
+         */
+        public Builder retryCount(Integer retryCount) {
+            this.retryCount = retryCount;
             return this;
         }
 

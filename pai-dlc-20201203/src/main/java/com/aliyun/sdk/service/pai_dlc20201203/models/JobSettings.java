@@ -83,8 +83,14 @@ public class JobSettings extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SanityCheckArgs")
     private String sanityCheckArgs;
 
+    @com.aliyun.core.annotation.NameInMap("Shell")
+    private String shell;
+
     @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.Map<String, String> tags;
+
+    @com.aliyun.core.annotation.NameInMap("TerminationGracePeriodSeconds")
+    private Long terminationGracePeriodSeconds;
 
     private JobSettings(Builder builder) {
         this.advancedSettings = builder.advancedSettings;
@@ -109,7 +115,9 @@ public class JobSettings extends TeaModel {
         this.oversoldType = builder.oversoldType;
         this.pipelineId = builder.pipelineId;
         this.sanityCheckArgs = builder.sanityCheckArgs;
+        this.shell = builder.shell;
         this.tags = builder.tags;
+        this.terminationGracePeriodSeconds = builder.terminationGracePeriodSeconds;
     }
 
     public static Builder builder() {
@@ -279,10 +287,24 @@ public class JobSettings extends TeaModel {
     }
 
     /**
+     * @return shell
+     */
+    public String getShell() {
+        return this.shell;
+    }
+
+    /**
      * @return tags
      */
     public java.util.Map<String, String> getTags() {
         return this.tags;
+    }
+
+    /**
+     * @return terminationGracePeriodSeconds
+     */
+    public Long getTerminationGracePeriodSeconds() {
+        return this.terminationGracePeriodSeconds;
     }
 
     public static final class Builder {
@@ -308,7 +330,9 @@ public class JobSettings extends TeaModel {
         private String oversoldType; 
         private String pipelineId; 
         private String sanityCheckArgs; 
+        private String shell; 
         private java.util.Map<String, String> tags; 
+        private Long terminationGracePeriodSeconds; 
 
         private Builder() {
         } 
@@ -336,7 +360,9 @@ public class JobSettings extends TeaModel {
             this.oversoldType = model.oversoldType;
             this.pipelineId = model.pipelineId;
             this.sanityCheckArgs = model.sanityCheckArgs;
+            this.shell = model.shell;
             this.tags = model.tags;
+            this.terminationGracePeriodSeconds = model.terminationGracePeriodSeconds;
         } 
 
         /**
@@ -516,10 +542,26 @@ public class JobSettings extends TeaModel {
         }
 
         /**
+         * Shell.
+         */
+        public Builder shell(String shell) {
+            this.shell = shell;
+            return this;
+        }
+
+        /**
          * Tags.
          */
         public Builder tags(java.util.Map<String, String> tags) {
             this.tags = tags;
+            return this;
+        }
+
+        /**
+         * TerminationGracePeriodSeconds.
+         */
+        public Builder terminationGracePeriodSeconds(Long terminationGracePeriodSeconds) {
+            this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
             return this;
         }
 
