@@ -32,7 +32,6 @@ public class ImageRemoveRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ObjectRemoveElements")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<Integer> objectRemoveElements;
 
     private ImageRemoveRequest(Builder builder) {
@@ -134,10 +133,7 @@ public class ImageRemoveRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[1,2]</p>
+         * ObjectRemoveElements.
          */
         public Builder objectRemoveElements(java.util.List<Integer> objectRemoveElements) {
             String objectRemoveElementsShrink = shrink(objectRemoveElements, "ObjectRemoveElements", "json");

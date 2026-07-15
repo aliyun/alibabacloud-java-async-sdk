@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ImageTranslationPlusResponse} extends {@link TeaModel}
+ * {@link ImageRemovalProResponse} extends {@link TeaModel}
  *
- * <p>ImageTranslationPlusResponse</p>
+ * <p>ImageRemovalProResponse</p>
  */
-public class ImageTranslationPlusResponse extends Response {
+public class ImageRemovalProResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class ImageTranslationPlusResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ImageTranslationPlusResponseBody body;
+    private ImageRemovalProResponseBody body;
 
-    private ImageTranslationPlusResponse(BuilderImpl builder) {
+    private ImageRemovalProResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ImageTranslationPlusResponse create() {
+    public static ImageRemovalProResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class ImageTranslationPlusResponse extends Response {
     /**
      * @return body
      */
-    public ImageTranslationPlusResponseBody getBody() {
+    public ImageRemovalProResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ImageTranslationPlusResponse, Builder> {
+    public interface Builder extends Response.Builder<ImageRemovalProResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ImageTranslationPlusResponseBody body);
+        Builder body(ImageRemovalProResponseBody body);
 
         @Override
-        ImageTranslationPlusResponse build();
+        ImageRemovalProResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ImageTranslationPlusResponse, Builder>
+            extends Response.BuilderImpl<ImageRemovalProResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private ImageTranslationPlusResponseBody body; 
+        private ImageRemovalProResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ImageTranslationPlusResponse response) {
+        private BuilderImpl(ImageRemovalProResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class ImageTranslationPlusResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ImageTranslationPlusResponseBody body) {
+        public Builder body(ImageRemovalProResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ImageTranslationPlusResponse build() {
-            return new ImageTranslationPlusResponse(this);
+        public ImageRemovalProResponse build() {
+            return new ImageRemovalProResponse(this);
         } 
 
     } 

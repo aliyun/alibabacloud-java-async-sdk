@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class TextTranslateRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizName")
+    private String bizName;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FormatType")
     private String formatType;
 
@@ -39,13 +43,19 @@ public class TextTranslateRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String targetLanguage;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TranslateScene")
+    private String translateScene;
+
     private TextTranslateRequest(Builder builder) {
         super(builder);
+        this.bizName = builder.bizName;
         this.formatType = builder.formatType;
         this.glossary = builder.glossary;
         this.sourceLanguage = builder.sourceLanguage;
         this.sourceTextList = builder.sourceTextList;
         this.targetLanguage = builder.targetLanguage;
+        this.translateScene = builder.translateScene;
     }
 
     public static Builder builder() {
@@ -59,6 +69,13 @@ public class TextTranslateRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bizName
+     */
+    public String getBizName() {
+        return this.bizName;
     }
 
     /**
@@ -96,12 +113,21 @@ public class TextTranslateRequest extends Request {
         return this.targetLanguage;
     }
 
+    /**
+     * @return translateScene
+     */
+    public String getTranslateScene() {
+        return this.translateScene;
+    }
+
     public static final class Builder extends Request.Builder<TextTranslateRequest, Builder> {
+        private String bizName; 
         private String formatType; 
         private String glossary; 
         private String sourceLanguage; 
         private java.util.List<String> sourceTextList; 
         private String targetLanguage; 
+        private String translateScene; 
 
         private Builder() {
             super();
@@ -109,12 +135,23 @@ public class TextTranslateRequest extends Request {
 
         private Builder(TextTranslateRequest request) {
             super(request);
+            this.bizName = request.bizName;
             this.formatType = request.formatType;
             this.glossary = request.glossary;
             this.sourceLanguage = request.sourceLanguage;
             this.sourceTextList = request.sourceTextList;
             this.targetLanguage = request.targetLanguage;
+            this.translateScene = request.translateScene;
         } 
+
+        /**
+         * BizName.
+         */
+        public Builder bizName(String bizName) {
+            this.putBodyParameter("BizName", bizName);
+            this.bizName = bizName;
+            return this;
+        }
 
         /**
          * FormatType.
@@ -165,6 +202,15 @@ public class TextTranslateRequest extends Request {
         public Builder targetLanguage(String targetLanguage) {
             this.putBodyParameter("TargetLanguage", targetLanguage);
             this.targetLanguage = targetLanguage;
+            return this;
+        }
+
+        /**
+         * TranslateScene.
+         */
+        public Builder translateScene(String translateScene) {
+            this.putBodyParameter("TranslateScene", translateScene);
+            this.translateScene = translateScene;
             return this;
         }
 

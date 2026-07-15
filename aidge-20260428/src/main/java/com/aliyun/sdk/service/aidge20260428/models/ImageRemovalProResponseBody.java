@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ImageTranslationPlusResponseBody} extends {@link TeaModel}
+ * {@link ImageRemovalProResponseBody} extends {@link TeaModel}
  *
- * <p>ImageTranslationPlusResponseBody</p>
+ * <p>ImageRemovalProResponseBody</p>
  */
-public class ImageTranslationPlusResponseBody extends TeaModel {
+public class ImageRemovalProResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -32,7 +32,7 @@ public class ImageTranslationPlusResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private ImageTranslationPlusResponseBody(Builder builder) {
+    private ImageRemovalProResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -44,7 +44,7 @@ public class ImageTranslationPlusResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ImageTranslationPlusResponseBody create() {
+    public static ImageRemovalProResponseBody create() {
         return builder().build();
     }
 
@@ -97,7 +97,7 @@ public class ImageTranslationPlusResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(ImageTranslationPlusResponseBody model) {
+        private Builder(ImageRemovalProResponseBody model) {
             this.code = model.code;
             this.data = model.data;
             this.message = model.message;
@@ -148,24 +148,32 @@ public class ImageTranslationPlusResponseBody extends TeaModel {
             return this;
         }
 
-        public ImageTranslationPlusResponseBody build() {
-            return new ImageTranslationPlusResponseBody(this);
+        public ImageRemovalProResponseBody build() {
+            return new ImageRemovalProResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link ImageTranslationPlusResponseBody} extends {@link TeaModel}
+     * {@link ImageRemovalProResponseBody} extends {@link TeaModel}
      *
-     * <p>ImageTranslationPlusResponseBody</p>
+     * <p>ImageRemovalProResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ImageUrl")
+        private String imageUrl;
+
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
+        @com.aliyun.core.annotation.NameInMap("UsageMap")
+        private java.util.Map<String, Long> usageMap;
+
         private Data(Builder builder) {
+            this.imageUrl = builder.imageUrl;
             this.taskId = builder.taskId;
+            this.usageMap = builder.usageMap;
         }
 
         public static Builder builder() {
@@ -177,27 +185,61 @@ public class ImageTranslationPlusResponseBody extends TeaModel {
         }
 
         /**
+         * @return imageUrl
+         */
+        public String getImageUrl() {
+            return this.imageUrl;
+        }
+
+        /**
          * @return taskId
          */
         public String getTaskId() {
             return this.taskId;
         }
 
+        /**
+         * @return usageMap
+         */
+        public java.util.Map<String, Long> getUsageMap() {
+            return this.usageMap;
+        }
+
         public static final class Builder {
+            private String imageUrl; 
             private String taskId; 
+            private java.util.Map<String, Long> usageMap; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
+                this.imageUrl = model.imageUrl;
                 this.taskId = model.taskId;
+                this.usageMap = model.usageMap;
             } 
+
+            /**
+             * ImageUrl.
+             */
+            public Builder imageUrl(String imageUrl) {
+                this.imageUrl = imageUrl;
+                return this;
+            }
 
             /**
              * TaskId.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
+                return this;
+            }
+
+            /**
+             * UsageMap.
+             */
+            public Builder usageMap(java.util.Map<String, Long> usageMap) {
+                this.usageMap = usageMap;
                 return this;
             }
 
