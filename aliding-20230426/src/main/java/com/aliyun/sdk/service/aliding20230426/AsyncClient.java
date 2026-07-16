@@ -520,6 +520,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DocUpdateContentResponse> docUpdateContent(DocUpdateContentRequest request);
 
     /**
+     * @param request the request parameters of EnableSceneGroupTemplate  EnableSceneGroupTemplateRequest
+     * @return EnableSceneGroupTemplateResponse
+     */
+    CompletableFuture<EnableSceneGroupTemplateResponse> enableSceneGroupTemplate(EnableSceneGroupTemplateRequest request);
+
+    /**
      * @param request the request parameters of ExecuteBatchTask  ExecuteBatchTaskRequest
      * @return ExecuteBatchTaskResponse
      */
