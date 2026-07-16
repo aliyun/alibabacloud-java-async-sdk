@@ -890,10 +890,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<IntlFlightReShopConsultResponse> intlFlightReShopConsult(IntlFlightReShopConsultRequest request);
 
     /**
+     * @param request the request parameters of IntlFlightReShopCreate  IntlFlightReShopCreateRequest
+     * @return IntlFlightReShopCreateResponse
+     */
+    CompletableFuture<IntlFlightReShopCreateResponse> intlFlightReShopCreate(IntlFlightReShopCreateRequest request);
+
+    /**
      * @param request the request parameters of IntlFlightReShopDetail  IntlFlightReShopDetailRequest
      * @return IntlFlightReShopDetailResponse
      */
     CompletableFuture<IntlFlightReShopDetailResponse> intlFlightReShopDetail(IntlFlightReShopDetailRequest request);
+
+    /**
+     * @param request the request parameters of IntlFlightReShopListSearch  IntlFlightReShopListSearchRequest
+     * @return IntlFlightReShopListSearchResponse
+     */
+    CompletableFuture<IntlFlightReShopListSearchResponse> intlFlightReShopListSearch(IntlFlightReShopListSearchRequest request);
+
+    /**
+     * @param request the request parameters of IntlFlightReShopOtaSearch  IntlFlightReShopOtaSearchRequest
+     * @return IntlFlightReShopOtaSearchResponse
+     */
+    CompletableFuture<IntlFlightReShopOtaSearchResponse> intlFlightReShopOtaSearch(IntlFlightReShopOtaSearchRequest request);
 
     /**
      * @param request the request parameters of IntlFlightReShopPay  IntlFlightReShopPayRequest

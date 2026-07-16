@@ -2650,6 +2650,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of IntlFlightReShopCreate  IntlFlightReShopCreateRequest
+     * @return IntlFlightReShopCreateResponse
+     */
+    @Override
+    public CompletableFuture<IntlFlightReShopCreateResponse> intlFlightReShopCreate(IntlFlightReShopCreateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("IntlFlightReShopCreate").setMethod(HttpMethod.POST).setPathRegex("/intl-flight/v1/flights/action/reshop/create").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(IntlFlightReShopCreateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<IntlFlightReShopCreateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of IntlFlightReShopDetail  IntlFlightReShopDetailRequest
      * @return IntlFlightReShopDetailResponse
      */
@@ -2662,6 +2680,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<IntlFlightReShopDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of IntlFlightReShopListSearch  IntlFlightReShopListSearchRequest
+     * @return IntlFlightReShopListSearchResponse
+     */
+    @Override
+    public CompletableFuture<IntlFlightReShopListSearchResponse> intlFlightReShopListSearch(IntlFlightReShopListSearchRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("IntlFlightReShopListSearch").setMethod(HttpMethod.GET).setPathRegex("/intl-flight/v1/flights/action/reshop/listSearch").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(IntlFlightReShopListSearchResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<IntlFlightReShopListSearchResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of IntlFlightReShopOtaSearch  IntlFlightReShopOtaSearchRequest
+     * @return IntlFlightReShopOtaSearchResponse
+     */
+    @Override
+    public CompletableFuture<IntlFlightReShopOtaSearchResponse> intlFlightReShopOtaSearch(IntlFlightReShopOtaSearchRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("IntlFlightReShopOtaSearch").setMethod(HttpMethod.GET).setPathRegex("/intl-flight/v1/flights/action/reshop/otaSerach").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(IntlFlightReShopOtaSearchResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<IntlFlightReShopOtaSearchResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

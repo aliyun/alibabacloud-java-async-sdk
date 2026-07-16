@@ -1,0 +1,3268 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.btripopen20220520.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link IntlFlightReShopListSearchResponseBody} extends {@link TeaModel}
+ *
+ * <p>IntlFlightReShopListSearchResponseBody</p>
+ */
+public class IntlFlightReShopListSearchResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("code")
+    private String code;
+
+    @com.aliyun.core.annotation.NameInMap("message")
+    private String message;
+
+    @com.aliyun.core.annotation.NameInMap("module")
+    private Module module;
+
+    @com.aliyun.core.annotation.NameInMap("requestId")
+    private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("success")
+    private Boolean success;
+
+    @com.aliyun.core.annotation.NameInMap("traceId")
+    private String traceId;
+
+    private IntlFlightReShopListSearchResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.message = builder.message;
+        this.module = builder.module;
+        this.requestId = builder.requestId;
+        this.success = builder.success;
+        this.traceId = builder.traceId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static IntlFlightReShopListSearchResponseBody create() {
+        return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
+     * @return module
+     */
+    public Module getModule() {
+        return this.module;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    /**
+     * @return traceId
+     */
+    public String getTraceId() {
+        return this.traceId;
+    }
+
+    public static final class Builder {
+        private String code; 
+        private String message; 
+        private Module module; 
+        private String requestId; 
+        private Boolean success; 
+        private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(IntlFlightReShopListSearchResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.module = model.module;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
+
+        /**
+         * code.
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * module.
+         */
+        public Builder module(Module module) {
+            this.module = module;
+            return this;
+        }
+
+        /**
+         * requestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
+            return this;
+        }
+
+        /**
+         * traceId.
+         */
+        public Builder traceId(String traceId) {
+            this.traceId = traceId;
+            return this;
+        }
+
+        public IntlFlightReShopListSearchResponseBody build() {
+            return new IntlFlightReShopListSearchResponseBody(this);
+        } 
+
+    } 
+
+    /**
+     * 
+     * {@link IntlFlightReShopListSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightReShopListSearchResponseBody</p>
+     */
+    public static class SegmentPositionList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("journey_index")
+        private Integer journeyIndex;
+
+        @com.aliyun.core.annotation.NameInMap("segment_index")
+        private Integer segmentIndex;
+
+        private SegmentPositionList(Builder builder) {
+            this.journeyIndex = builder.journeyIndex;
+            this.segmentIndex = builder.segmentIndex;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SegmentPositionList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return journeyIndex
+         */
+        public Integer getJourneyIndex() {
+            return this.journeyIndex;
+        }
+
+        /**
+         * @return segmentIndex
+         */
+        public Integer getSegmentIndex() {
+            return this.segmentIndex;
+        }
+
+        public static final class Builder {
+            private Integer journeyIndex; 
+            private Integer segmentIndex; 
+
+            private Builder() {
+            } 
+
+            private Builder(SegmentPositionList model) {
+                this.journeyIndex = model.journeyIndex;
+                this.segmentIndex = model.segmentIndex;
+            } 
+
+            /**
+             * journey_index.
+             */
+            public Builder journeyIndex(Integer journeyIndex) {
+                this.journeyIndex = journeyIndex;
+                return this;
+            }
+
+            /**
+             * segment_index.
+             */
+            public Builder segmentIndex(Integer segmentIndex) {
+                this.segmentIndex = segmentIndex;
+                return this;
+            }
+
+            public SegmentPositionList build() {
+                return new SegmentPositionList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link IntlFlightReShopListSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightReShopListSearchResponseBody</p>
+     */
+    public static class SubItems extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("discount_num")
+        private Double discountNum;
+
+        @com.aliyun.core.annotation.NameInMap("segment_keys")
+        private java.util.List<String> segmentKeys;
+
+        @com.aliyun.core.annotation.NameInMap("segment_position_list")
+        private java.util.List<SegmentPositionList> segmentPositionList;
+
+        @com.aliyun.core.annotation.NameInMap("shopping_item_map")
+        private java.util.Map<String, ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValue> shoppingItemMap;
+
+        @com.aliyun.core.annotation.NameInMap("uniq_key")
+        private String uniqKey;
+
+        private SubItems(Builder builder) {
+            this.discountNum = builder.discountNum;
+            this.segmentKeys = builder.segmentKeys;
+            this.segmentPositionList = builder.segmentPositionList;
+            this.shoppingItemMap = builder.shoppingItemMap;
+            this.uniqKey = builder.uniqKey;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SubItems create() {
+            return builder().build();
+        }
+
+        /**
+         * @return discountNum
+         */
+        public Double getDiscountNum() {
+            return this.discountNum;
+        }
+
+        /**
+         * @return segmentKeys
+         */
+        public java.util.List<String> getSegmentKeys() {
+            return this.segmentKeys;
+        }
+
+        /**
+         * @return segmentPositionList
+         */
+        public java.util.List<SegmentPositionList> getSegmentPositionList() {
+            return this.segmentPositionList;
+        }
+
+        /**
+         * @return shoppingItemMap
+         */
+        public java.util.Map<String, ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValue> getShoppingItemMap() {
+            return this.shoppingItemMap;
+        }
+
+        /**
+         * @return uniqKey
+         */
+        public String getUniqKey() {
+            return this.uniqKey;
+        }
+
+        public static final class Builder {
+            private Double discountNum; 
+            private java.util.List<String> segmentKeys; 
+            private java.util.List<SegmentPositionList> segmentPositionList; 
+            private java.util.Map<String, ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValue> shoppingItemMap; 
+            private String uniqKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubItems model) {
+                this.discountNum = model.discountNum;
+                this.segmentKeys = model.segmentKeys;
+                this.segmentPositionList = model.segmentPositionList;
+                this.shoppingItemMap = model.shoppingItemMap;
+                this.uniqKey = model.uniqKey;
+            } 
+
+            /**
+             * discount_num.
+             */
+            public Builder discountNum(Double discountNum) {
+                this.discountNum = discountNum;
+                return this;
+            }
+
+            /**
+             * segment_keys.
+             */
+            public Builder segmentKeys(java.util.List<String> segmentKeys) {
+                this.segmentKeys = segmentKeys;
+                return this;
+            }
+
+            /**
+             * segment_position_list.
+             */
+            public Builder segmentPositionList(java.util.List<SegmentPositionList> segmentPositionList) {
+                this.segmentPositionList = segmentPositionList;
+                return this;
+            }
+
+            /**
+             * shopping_item_map.
+             */
+            public Builder shoppingItemMap(java.util.Map<String, ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValue> shoppingItemMap) {
+                this.shoppingItemMap = shoppingItemMap;
+                return this;
+            }
+
+            /**
+             * uniq_key.
+             */
+            public Builder uniqKey(String uniqKey) {
+                this.uniqKey = uniqKey;
+                return this;
+            }
+
+            public SubItems build() {
+                return new SubItems(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link IntlFlightReShopListSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightReShopListSearchResponseBody</p>
+     */
+    public static class BestPriceItem extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("item_id")
+        private String itemId;
+
+        @com.aliyun.core.annotation.NameInMap("item_type")
+        private String itemType;
+
+        @com.aliyun.core.annotation.NameInMap("shopping_item_map")
+        private java.util.Map<String, ModuleReShopItemListBestPriceItemShoppingItemMapValue> shoppingItemMap;
+
+        @com.aliyun.core.annotation.NameInMap("sub_items")
+        private java.util.List<SubItems> subItems;
+
+        private BestPriceItem(Builder builder) {
+            this.itemId = builder.itemId;
+            this.itemType = builder.itemType;
+            this.shoppingItemMap = builder.shoppingItemMap;
+            this.subItems = builder.subItems;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BestPriceItem create() {
+            return builder().build();
+        }
+
+        /**
+         * @return itemId
+         */
+        public String getItemId() {
+            return this.itemId;
+        }
+
+        /**
+         * @return itemType
+         */
+        public String getItemType() {
+            return this.itemType;
+        }
+
+        /**
+         * @return shoppingItemMap
+         */
+        public java.util.Map<String, ModuleReShopItemListBestPriceItemShoppingItemMapValue> getShoppingItemMap() {
+            return this.shoppingItemMap;
+        }
+
+        /**
+         * @return subItems
+         */
+        public java.util.List<SubItems> getSubItems() {
+            return this.subItems;
+        }
+
+        public static final class Builder {
+            private String itemId; 
+            private String itemType; 
+            private java.util.Map<String, ModuleReShopItemListBestPriceItemShoppingItemMapValue> shoppingItemMap; 
+            private java.util.List<SubItems> subItems; 
+
+            private Builder() {
+            } 
+
+            private Builder(BestPriceItem model) {
+                this.itemId = model.itemId;
+                this.itemType = model.itemType;
+                this.shoppingItemMap = model.shoppingItemMap;
+                this.subItems = model.subItems;
+            } 
+
+            /**
+             * item_id.
+             */
+            public Builder itemId(String itemId) {
+                this.itemId = itemId;
+                return this;
+            }
+
+            /**
+             * item_type.
+             */
+            public Builder itemType(String itemType) {
+                this.itemType = itemType;
+                return this;
+            }
+
+            /**
+             * shopping_item_map.
+             */
+            public Builder shoppingItemMap(java.util.Map<String, ModuleReShopItemListBestPriceItemShoppingItemMapValue> shoppingItemMap) {
+                this.shoppingItemMap = shoppingItemMap;
+                return this;
+            }
+
+            /**
+             * sub_items.
+             */
+            public Builder subItems(java.util.List<SubItems> subItems) {
+                this.subItems = subItems;
+                return this;
+            }
+
+            public BestPriceItem build() {
+                return new BestPriceItem(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link IntlFlightReShopListSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightReShopListSearchResponseBody</p>
+     */
+    public static class AirlineInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("airline_code")
+        private String airlineCode;
+
+        @com.aliyun.core.annotation.NameInMap("airline_name")
+        private String airlineName;
+
+        @com.aliyun.core.annotation.NameInMap("cheap_airline")
+        private Boolean cheapAirline;
+
+        @com.aliyun.core.annotation.NameInMap("icon_url")
+        private String iconUrl;
+
+        @com.aliyun.core.annotation.NameInMap("short_name")
+        private String shortName;
+
+        private AirlineInfo(Builder builder) {
+            this.airlineCode = builder.airlineCode;
+            this.airlineName = builder.airlineName;
+            this.cheapAirline = builder.cheapAirline;
+            this.iconUrl = builder.iconUrl;
+            this.shortName = builder.shortName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AirlineInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return airlineCode
+         */
+        public String getAirlineCode() {
+            return this.airlineCode;
+        }
+
+        /**
+         * @return airlineName
+         */
+        public String getAirlineName() {
+            return this.airlineName;
+        }
+
+        /**
+         * @return cheapAirline
+         */
+        public Boolean getCheapAirline() {
+            return this.cheapAirline;
+        }
+
+        /**
+         * @return iconUrl
+         */
+        public String getIconUrl() {
+            return this.iconUrl;
+        }
+
+        /**
+         * @return shortName
+         */
+        public String getShortName() {
+            return this.shortName;
+        }
+
+        public static final class Builder {
+            private String airlineCode; 
+            private String airlineName; 
+            private Boolean cheapAirline; 
+            private String iconUrl; 
+            private String shortName; 
+
+            private Builder() {
+            } 
+
+            private Builder(AirlineInfo model) {
+                this.airlineCode = model.airlineCode;
+                this.airlineName = model.airlineName;
+                this.cheapAirline = model.cheapAirline;
+                this.iconUrl = model.iconUrl;
+                this.shortName = model.shortName;
+            } 
+
+            /**
+             * airline_code.
+             */
+            public Builder airlineCode(String airlineCode) {
+                this.airlineCode = airlineCode;
+                return this;
+            }
+
+            /**
+             * airline_name.
+             */
+            public Builder airlineName(String airlineName) {
+                this.airlineName = airlineName;
+                return this;
+            }
+
+            /**
+             * cheap_airline.
+             */
+            public Builder cheapAirline(Boolean cheapAirline) {
+                this.cheapAirline = cheapAirline;
+                return this;
+            }
+
+            /**
+             * icon_url.
+             */
+            public Builder iconUrl(String iconUrl) {
+                this.iconUrl = iconUrl;
+                return this;
+            }
+
+            /**
+             * short_name.
+             */
+            public Builder shortName(String shortName) {
+                this.shortName = shortName;
+                return this;
+            }
+
+            public AirlineInfo build() {
+                return new AirlineInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link IntlFlightReShopListSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightReShopListSearchResponseBody</p>
+     */
+    public static class ArrAirportInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("airport_code")
+        private String airportCode;
+
+        @com.aliyun.core.annotation.NameInMap("airport_name")
+        private String airportName;
+
+        @com.aliyun.core.annotation.NameInMap("airport_short_name")
+        private String airportShortName;
+
+        @com.aliyun.core.annotation.NameInMap("terminal")
+        private String terminal;
+
+        private ArrAirportInfo(Builder builder) {
+            this.airportCode = builder.airportCode;
+            this.airportName = builder.airportName;
+            this.airportShortName = builder.airportShortName;
+            this.terminal = builder.terminal;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ArrAirportInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return airportCode
+         */
+        public String getAirportCode() {
+            return this.airportCode;
+        }
+
+        /**
+         * @return airportName
+         */
+        public String getAirportName() {
+            return this.airportName;
+        }
+
+        /**
+         * @return airportShortName
+         */
+        public String getAirportShortName() {
+            return this.airportShortName;
+        }
+
+        /**
+         * @return terminal
+         */
+        public String getTerminal() {
+            return this.terminal;
+        }
+
+        public static final class Builder {
+            private String airportCode; 
+            private String airportName; 
+            private String airportShortName; 
+            private String terminal; 
+
+            private Builder() {
+            } 
+
+            private Builder(ArrAirportInfo model) {
+                this.airportCode = model.airportCode;
+                this.airportName = model.airportName;
+                this.airportShortName = model.airportShortName;
+                this.terminal = model.terminal;
+            } 
+
+            /**
+             * airport_code.
+             */
+            public Builder airportCode(String airportCode) {
+                this.airportCode = airportCode;
+                return this;
+            }
+
+            /**
+             * airport_name.
+             */
+            public Builder airportName(String airportName) {
+                this.airportName = airportName;
+                return this;
+            }
+
+            /**
+             * airport_short_name.
+             */
+            public Builder airportShortName(String airportShortName) {
+                this.airportShortName = airportShortName;
+                return this;
+            }
+
+            /**
+             * terminal.
+             */
+            public Builder terminal(String terminal) {
+                this.terminal = terminal;
+                return this;
+            }
+
+            public ArrAirportInfo build() {
+                return new ArrAirportInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link IntlFlightReShopListSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightReShopListSearchResponseBody</p>
+     */
+    public static class DepAirportInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("airport_code")
+        private String airportCode;
+
+        @com.aliyun.core.annotation.NameInMap("airport_name")
+        private String airportName;
+
+        @com.aliyun.core.annotation.NameInMap("airport_short_name")
+        private String airportShortName;
+
+        @com.aliyun.core.annotation.NameInMap("terminal")
+        private String terminal;
+
+        private DepAirportInfo(Builder builder) {
+            this.airportCode = builder.airportCode;
+            this.airportName = builder.airportName;
+            this.airportShortName = builder.airportShortName;
+            this.terminal = builder.terminal;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DepAirportInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return airportCode
+         */
+        public String getAirportCode() {
+            return this.airportCode;
+        }
+
+        /**
+         * @return airportName
+         */
+        public String getAirportName() {
+            return this.airportName;
+        }
+
+        /**
+         * @return airportShortName
+         */
+        public String getAirportShortName() {
+            return this.airportShortName;
+        }
+
+        /**
+         * @return terminal
+         */
+        public String getTerminal() {
+            return this.terminal;
+        }
+
+        public static final class Builder {
+            private String airportCode; 
+            private String airportName; 
+            private String airportShortName; 
+            private String terminal; 
+
+            private Builder() {
+            } 
+
+            private Builder(DepAirportInfo model) {
+                this.airportCode = model.airportCode;
+                this.airportName = model.airportName;
+                this.airportShortName = model.airportShortName;
+                this.terminal = model.terminal;
+            } 
+
+            /**
+             * airport_code.
+             */
+            public Builder airportCode(String airportCode) {
+                this.airportCode = airportCode;
+                return this;
+            }
+
+            /**
+             * airport_name.
+             */
+            public Builder airportName(String airportName) {
+                this.airportName = airportName;
+                return this;
+            }
+
+            /**
+             * airport_short_name.
+             */
+            public Builder airportShortName(String airportShortName) {
+                this.airportShortName = airportShortName;
+                return this;
+            }
+
+            /**
+             * terminal.
+             */
+            public Builder terminal(String terminal) {
+                this.terminal = terminal;
+                return this;
+            }
+
+            public DepAirportInfo build() {
+                return new DepAirportInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link IntlFlightReShopListSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightReShopListSearchResponseBody</p>
+     */
+    public static class OperatingAirlineInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("airline_code")
+        private String airlineCode;
+
+        @com.aliyun.core.annotation.NameInMap("airline_name")
+        private String airlineName;
+
+        @com.aliyun.core.annotation.NameInMap("cheap_airline")
+        private Boolean cheapAirline;
+
+        @com.aliyun.core.annotation.NameInMap("icon_url")
+        private String iconUrl;
+
+        @com.aliyun.core.annotation.NameInMap("short_name")
+        private String shortName;
+
+        private OperatingAirlineInfo(Builder builder) {
+            this.airlineCode = builder.airlineCode;
+            this.airlineName = builder.airlineName;
+            this.cheapAirline = builder.cheapAirline;
+            this.iconUrl = builder.iconUrl;
+            this.shortName = builder.shortName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OperatingAirlineInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return airlineCode
+         */
+        public String getAirlineCode() {
+            return this.airlineCode;
+        }
+
+        /**
+         * @return airlineName
+         */
+        public String getAirlineName() {
+            return this.airlineName;
+        }
+
+        /**
+         * @return cheapAirline
+         */
+        public Boolean getCheapAirline() {
+            return this.cheapAirline;
+        }
+
+        /**
+         * @return iconUrl
+         */
+        public String getIconUrl() {
+            return this.iconUrl;
+        }
+
+        /**
+         * @return shortName
+         */
+        public String getShortName() {
+            return this.shortName;
+        }
+
+        public static final class Builder {
+            private String airlineCode; 
+            private String airlineName; 
+            private Boolean cheapAirline; 
+            private String iconUrl; 
+            private String shortName; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperatingAirlineInfo model) {
+                this.airlineCode = model.airlineCode;
+                this.airlineName = model.airlineName;
+                this.cheapAirline = model.cheapAirline;
+                this.iconUrl = model.iconUrl;
+                this.shortName = model.shortName;
+            } 
+
+            /**
+             * airline_code.
+             */
+            public Builder airlineCode(String airlineCode) {
+                this.airlineCode = airlineCode;
+                return this;
+            }
+
+            /**
+             * airline_name.
+             */
+            public Builder airlineName(String airlineName) {
+                this.airlineName = airlineName;
+                return this;
+            }
+
+            /**
+             * cheap_airline.
+             */
+            public Builder cheapAirline(Boolean cheapAirline) {
+                this.cheapAirline = cheapAirline;
+                return this;
+            }
+
+            /**
+             * icon_url.
+             */
+            public Builder iconUrl(String iconUrl) {
+                this.iconUrl = iconUrl;
+                return this;
+            }
+
+            /**
+             * short_name.
+             */
+            public Builder shortName(String shortName) {
+                this.shortName = shortName;
+                return this;
+            }
+
+            public OperatingAirlineInfo build() {
+                return new OperatingAirlineInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link IntlFlightReShopListSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightReShopListSearchResponseBody</p>
+     */
+    public static class FlightShareInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("operating_airline_info")
+        private OperatingAirlineInfo operatingAirlineInfo;
+
+        @com.aliyun.core.annotation.NameInMap("operating_flight_no")
+        private String operatingFlightNo;
+
+        private FlightShareInfo(Builder builder) {
+            this.operatingAirlineInfo = builder.operatingAirlineInfo;
+            this.operatingFlightNo = builder.operatingFlightNo;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FlightShareInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return operatingAirlineInfo
+         */
+        public OperatingAirlineInfo getOperatingAirlineInfo() {
+            return this.operatingAirlineInfo;
+        }
+
+        /**
+         * @return operatingFlightNo
+         */
+        public String getOperatingFlightNo() {
+            return this.operatingFlightNo;
+        }
+
+        public static final class Builder {
+            private OperatingAirlineInfo operatingAirlineInfo; 
+            private String operatingFlightNo; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlightShareInfo model) {
+                this.operatingAirlineInfo = model.operatingAirlineInfo;
+                this.operatingFlightNo = model.operatingFlightNo;
+            } 
+
+            /**
+             * operating_airline_info.
+             */
+            public Builder operatingAirlineInfo(OperatingAirlineInfo operatingAirlineInfo) {
+                this.operatingAirlineInfo = operatingAirlineInfo;
+                return this;
+            }
+
+            /**
+             * operating_flight_no.
+             */
+            public Builder operatingFlightNo(String operatingFlightNo) {
+                this.operatingFlightNo = operatingFlightNo;
+                return this;
+            }
+
+            public FlightShareInfo build() {
+                return new FlightShareInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link IntlFlightReShopListSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightReShopListSearchResponseBody</p>
+     */
+    public static class StopAirportCountyInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("adcode")
+        private String adcode;
+
+        @com.aliyun.core.annotation.NameInMap("airport_city_code")
+        private String airportCityCode;
+
+        @com.aliyun.core.annotation.NameInMap("airport_city_name")
+        private String airportCityName;
+
+        @com.aliyun.core.annotation.NameInMap("airport_code")
+        private String airportCode;
+
+        @com.aliyun.core.annotation.NameInMap("airport_name")
+        private String airportName;
+
+        @com.aliyun.core.annotation.NameInMap("airport_parent_city_name")
+        private String airportParentCityName;
+
+        @com.aliyun.core.annotation.NameInMap("county_city_adcode")
+        private String countyCityAdcode;
+
+        @com.aliyun.core.annotation.NameInMap("county_city_name")
+        private String countyCityName;
+
+        @com.aliyun.core.annotation.NameInMap("prefecture_city_adcode")
+        private String prefectureCityAdcode;
+
+        @com.aliyun.core.annotation.NameInMap("prefecture_city_name")
+        private String prefectureCityName;
+
+        private StopAirportCountyInfo(Builder builder) {
+            this.adcode = builder.adcode;
+            this.airportCityCode = builder.airportCityCode;
+            this.airportCityName = builder.airportCityName;
+            this.airportCode = builder.airportCode;
+            this.airportName = builder.airportName;
+            this.airportParentCityName = builder.airportParentCityName;
+            this.countyCityAdcode = builder.countyCityAdcode;
+            this.countyCityName = builder.countyCityName;
+            this.prefectureCityAdcode = builder.prefectureCityAdcode;
+            this.prefectureCityName = builder.prefectureCityName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StopAirportCountyInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return adcode
+         */
+        public String getAdcode() {
+            return this.adcode;
+        }
+
+        /**
+         * @return airportCityCode
+         */
+        public String getAirportCityCode() {
+            return this.airportCityCode;
+        }
+
+        /**
+         * @return airportCityName
+         */
+        public String getAirportCityName() {
+            return this.airportCityName;
+        }
+
+        /**
+         * @return airportCode
+         */
+        public String getAirportCode() {
+            return this.airportCode;
+        }
+
+        /**
+         * @return airportName
+         */
+        public String getAirportName() {
+            return this.airportName;
+        }
+
+        /**
+         * @return airportParentCityName
+         */
+        public String getAirportParentCityName() {
+            return this.airportParentCityName;
+        }
+
+        /**
+         * @return countyCityAdcode
+         */
+        public String getCountyCityAdcode() {
+            return this.countyCityAdcode;
+        }
+
+        /**
+         * @return countyCityName
+         */
+        public String getCountyCityName() {
+            return this.countyCityName;
+        }
+
+        /**
+         * @return prefectureCityAdcode
+         */
+        public String getPrefectureCityAdcode() {
+            return this.prefectureCityAdcode;
+        }
+
+        /**
+         * @return prefectureCityName
+         */
+        public String getPrefectureCityName() {
+            return this.prefectureCityName;
+        }
+
+        public static final class Builder {
+            private String adcode; 
+            private String airportCityCode; 
+            private String airportCityName; 
+            private String airportCode; 
+            private String airportName; 
+            private String airportParentCityName; 
+            private String countyCityAdcode; 
+            private String countyCityName; 
+            private String prefectureCityAdcode; 
+            private String prefectureCityName; 
+
+            private Builder() {
+            } 
+
+            private Builder(StopAirportCountyInfo model) {
+                this.adcode = model.adcode;
+                this.airportCityCode = model.airportCityCode;
+                this.airportCityName = model.airportCityName;
+                this.airportCode = model.airportCode;
+                this.airportName = model.airportName;
+                this.airportParentCityName = model.airportParentCityName;
+                this.countyCityAdcode = model.countyCityAdcode;
+                this.countyCityName = model.countyCityName;
+                this.prefectureCityAdcode = model.prefectureCityAdcode;
+                this.prefectureCityName = model.prefectureCityName;
+            } 
+
+            /**
+             * adcode.
+             */
+            public Builder adcode(String adcode) {
+                this.adcode = adcode;
+                return this;
+            }
+
+            /**
+             * airport_city_code.
+             */
+            public Builder airportCityCode(String airportCityCode) {
+                this.airportCityCode = airportCityCode;
+                return this;
+            }
+
+            /**
+             * airport_city_name.
+             */
+            public Builder airportCityName(String airportCityName) {
+                this.airportCityName = airportCityName;
+                return this;
+            }
+
+            /**
+             * airport_code.
+             */
+            public Builder airportCode(String airportCode) {
+                this.airportCode = airportCode;
+                return this;
+            }
+
+            /**
+             * airport_name.
+             */
+            public Builder airportName(String airportName) {
+                this.airportName = airportName;
+                return this;
+            }
+
+            /**
+             * airport_parent_city_name.
+             */
+            public Builder airportParentCityName(String airportParentCityName) {
+                this.airportParentCityName = airportParentCityName;
+                return this;
+            }
+
+            /**
+             * county_city_adcode.
+             */
+            public Builder countyCityAdcode(String countyCityAdcode) {
+                this.countyCityAdcode = countyCityAdcode;
+                return this;
+            }
+
+            /**
+             * county_city_name.
+             */
+            public Builder countyCityName(String countyCityName) {
+                this.countyCityName = countyCityName;
+                return this;
+            }
+
+            /**
+             * prefecture_city_adcode.
+             */
+            public Builder prefectureCityAdcode(String prefectureCityAdcode) {
+                this.prefectureCityAdcode = prefectureCityAdcode;
+                return this;
+            }
+
+            /**
+             * prefecture_city_name.
+             */
+            public Builder prefectureCityName(String prefectureCityName) {
+                this.prefectureCityName = prefectureCityName;
+                return this;
+            }
+
+            public StopAirportCountyInfo build() {
+                return new StopAirportCountyInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link IntlFlightReShopListSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightReShopListSearchResponseBody</p>
+     */
+    public static class FlightStopInfoList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("stop_airport")
+        private String stopAirport;
+
+        @com.aliyun.core.annotation.NameInMap("stop_airport_county_info")
+        private StopAirportCountyInfo stopAirportCountyInfo;
+
+        @com.aliyun.core.annotation.NameInMap("stop_airport_name")
+        private String stopAirportName;
+
+        @com.aliyun.core.annotation.NameInMap("stop_arr_term")
+        private String stopArrTerm;
+
+        @com.aliyun.core.annotation.NameInMap("stop_arr_time")
+        private String stopArrTime;
+
+        @com.aliyun.core.annotation.NameInMap("stop_city_code")
+        private String stopCityCode;
+
+        @com.aliyun.core.annotation.NameInMap("stop_city_name")
+        private String stopCityName;
+
+        @com.aliyun.core.annotation.NameInMap("stop_dep_term")
+        private String stopDepTerm;
+
+        @com.aliyun.core.annotation.NameInMap("stop_dep_time")
+        private String stopDepTime;
+
+        @com.aliyun.core.annotation.NameInMap("stop_time")
+        private String stopTime;
+
+        private FlightStopInfoList(Builder builder) {
+            this.stopAirport = builder.stopAirport;
+            this.stopAirportCountyInfo = builder.stopAirportCountyInfo;
+            this.stopAirportName = builder.stopAirportName;
+            this.stopArrTerm = builder.stopArrTerm;
+            this.stopArrTime = builder.stopArrTime;
+            this.stopCityCode = builder.stopCityCode;
+            this.stopCityName = builder.stopCityName;
+            this.stopDepTerm = builder.stopDepTerm;
+            this.stopDepTime = builder.stopDepTime;
+            this.stopTime = builder.stopTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FlightStopInfoList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return stopAirport
+         */
+        public String getStopAirport() {
+            return this.stopAirport;
+        }
+
+        /**
+         * @return stopAirportCountyInfo
+         */
+        public StopAirportCountyInfo getStopAirportCountyInfo() {
+            return this.stopAirportCountyInfo;
+        }
+
+        /**
+         * @return stopAirportName
+         */
+        public String getStopAirportName() {
+            return this.stopAirportName;
+        }
+
+        /**
+         * @return stopArrTerm
+         */
+        public String getStopArrTerm() {
+            return this.stopArrTerm;
+        }
+
+        /**
+         * @return stopArrTime
+         */
+        public String getStopArrTime() {
+            return this.stopArrTime;
+        }
+
+        /**
+         * @return stopCityCode
+         */
+        public String getStopCityCode() {
+            return this.stopCityCode;
+        }
+
+        /**
+         * @return stopCityName
+         */
+        public String getStopCityName() {
+            return this.stopCityName;
+        }
+
+        /**
+         * @return stopDepTerm
+         */
+        public String getStopDepTerm() {
+            return this.stopDepTerm;
+        }
+
+        /**
+         * @return stopDepTime
+         */
+        public String getStopDepTime() {
+            return this.stopDepTime;
+        }
+
+        /**
+         * @return stopTime
+         */
+        public String getStopTime() {
+            return this.stopTime;
+        }
+
+        public static final class Builder {
+            private String stopAirport; 
+            private StopAirportCountyInfo stopAirportCountyInfo; 
+            private String stopAirportName; 
+            private String stopArrTerm; 
+            private String stopArrTime; 
+            private String stopCityCode; 
+            private String stopCityName; 
+            private String stopDepTerm; 
+            private String stopDepTime; 
+            private String stopTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlightStopInfoList model) {
+                this.stopAirport = model.stopAirport;
+                this.stopAirportCountyInfo = model.stopAirportCountyInfo;
+                this.stopAirportName = model.stopAirportName;
+                this.stopArrTerm = model.stopArrTerm;
+                this.stopArrTime = model.stopArrTime;
+                this.stopCityCode = model.stopCityCode;
+                this.stopCityName = model.stopCityName;
+                this.stopDepTerm = model.stopDepTerm;
+                this.stopDepTime = model.stopDepTime;
+                this.stopTime = model.stopTime;
+            } 
+
+            /**
+             * stop_airport.
+             */
+            public Builder stopAirport(String stopAirport) {
+                this.stopAirport = stopAirport;
+                return this;
+            }
+
+            /**
+             * stop_airport_county_info.
+             */
+            public Builder stopAirportCountyInfo(StopAirportCountyInfo stopAirportCountyInfo) {
+                this.stopAirportCountyInfo = stopAirportCountyInfo;
+                return this;
+            }
+
+            /**
+             * stop_airport_name.
+             */
+            public Builder stopAirportName(String stopAirportName) {
+                this.stopAirportName = stopAirportName;
+                return this;
+            }
+
+            /**
+             * stop_arr_term.
+             */
+            public Builder stopArrTerm(String stopArrTerm) {
+                this.stopArrTerm = stopArrTerm;
+                return this;
+            }
+
+            /**
+             * stop_arr_time.
+             */
+            public Builder stopArrTime(String stopArrTime) {
+                this.stopArrTime = stopArrTime;
+                return this;
+            }
+
+            /**
+             * stop_city_code.
+             */
+            public Builder stopCityCode(String stopCityCode) {
+                this.stopCityCode = stopCityCode;
+                return this;
+            }
+
+            /**
+             * stop_city_name.
+             */
+            public Builder stopCityName(String stopCityName) {
+                this.stopCityName = stopCityName;
+                return this;
+            }
+
+            /**
+             * stop_dep_term.
+             */
+            public Builder stopDepTerm(String stopDepTerm) {
+                this.stopDepTerm = stopDepTerm;
+                return this;
+            }
+
+            /**
+             * stop_dep_time.
+             */
+            public Builder stopDepTime(String stopDepTime) {
+                this.stopDepTime = stopDepTime;
+                return this;
+            }
+
+            /**
+             * stop_time.
+             */
+            public Builder stopTime(String stopTime) {
+                this.stopTime = stopTime;
+                return this;
+            }
+
+            public FlightStopInfoList build() {
+                return new FlightStopInfoList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link IntlFlightReShopListSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightReShopListSearchResponseBody</p>
+     */
+    public static class LuggageDirectInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("dep_city_luggage_direct")
+        private Integer depCityLuggageDirect;
+
+        @com.aliyun.core.annotation.NameInMap("stop_city_luggage_direct")
+        private Integer stopCityLuggageDirect;
+
+        private LuggageDirectInfo(Builder builder) {
+            this.depCityLuggageDirect = builder.depCityLuggageDirect;
+            this.stopCityLuggageDirect = builder.stopCityLuggageDirect;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LuggageDirectInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return depCityLuggageDirect
+         */
+        public Integer getDepCityLuggageDirect() {
+            return this.depCityLuggageDirect;
+        }
+
+        /**
+         * @return stopCityLuggageDirect
+         */
+        public Integer getStopCityLuggageDirect() {
+            return this.stopCityLuggageDirect;
+        }
+
+        public static final class Builder {
+            private Integer depCityLuggageDirect; 
+            private Integer stopCityLuggageDirect; 
+
+            private Builder() {
+            } 
+
+            private Builder(LuggageDirectInfo model) {
+                this.depCityLuggageDirect = model.depCityLuggageDirect;
+                this.stopCityLuggageDirect = model.stopCityLuggageDirect;
+            } 
+
+            /**
+             * dep_city_luggage_direct.
+             */
+            public Builder depCityLuggageDirect(Integer depCityLuggageDirect) {
+                this.depCityLuggageDirect = depCityLuggageDirect;
+                return this;
+            }
+
+            /**
+             * stop_city_luggage_direct.
+             */
+            public Builder stopCityLuggageDirect(Integer stopCityLuggageDirect) {
+                this.stopCityLuggageDirect = stopCityLuggageDirect;
+                return this;
+            }
+
+            public LuggageDirectInfo build() {
+                return new LuggageDirectInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link IntlFlightReShopListSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightReShopListSearchResponseBody</p>
+     */
+    public static class OtherInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("aircraft_age")
+        private String aircraftAge;
+
+        @com.aliyun.core.annotation.NameInMap("avg_delay_time")
+        private String avgDelayTime;
+
+        @com.aliyun.core.annotation.NameInMap("flight_cancel_rate")
+        private String flightCancelRate;
+
+        @com.aliyun.core.annotation.NameInMap("jet_bridge_rate")
+        private String jetBridgeRate;
+
+        @com.aliyun.core.annotation.NameInMap("on_time_rate")
+        private String onTimeRate;
+
+        @com.aliyun.core.annotation.NameInMap("wifi")
+        private Boolean wifi;
+
+        private OtherInfo(Builder builder) {
+            this.aircraftAge = builder.aircraftAge;
+            this.avgDelayTime = builder.avgDelayTime;
+            this.flightCancelRate = builder.flightCancelRate;
+            this.jetBridgeRate = builder.jetBridgeRate;
+            this.onTimeRate = builder.onTimeRate;
+            this.wifi = builder.wifi;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OtherInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return aircraftAge
+         */
+        public String getAircraftAge() {
+            return this.aircraftAge;
+        }
+
+        /**
+         * @return avgDelayTime
+         */
+        public String getAvgDelayTime() {
+            return this.avgDelayTime;
+        }
+
+        /**
+         * @return flightCancelRate
+         */
+        public String getFlightCancelRate() {
+            return this.flightCancelRate;
+        }
+
+        /**
+         * @return jetBridgeRate
+         */
+        public String getJetBridgeRate() {
+            return this.jetBridgeRate;
+        }
+
+        /**
+         * @return onTimeRate
+         */
+        public String getOnTimeRate() {
+            return this.onTimeRate;
+        }
+
+        /**
+         * @return wifi
+         */
+        public Boolean getWifi() {
+            return this.wifi;
+        }
+
+        public static final class Builder {
+            private String aircraftAge; 
+            private String avgDelayTime; 
+            private String flightCancelRate; 
+            private String jetBridgeRate; 
+            private String onTimeRate; 
+            private Boolean wifi; 
+
+            private Builder() {
+            } 
+
+            private Builder(OtherInfo model) {
+                this.aircraftAge = model.aircraftAge;
+                this.avgDelayTime = model.avgDelayTime;
+                this.flightCancelRate = model.flightCancelRate;
+                this.jetBridgeRate = model.jetBridgeRate;
+                this.onTimeRate = model.onTimeRate;
+                this.wifi = model.wifi;
+            } 
+
+            /**
+             * aircraft_age.
+             */
+            public Builder aircraftAge(String aircraftAge) {
+                this.aircraftAge = aircraftAge;
+                return this;
+            }
+
+            /**
+             * avg_delay_time.
+             */
+            public Builder avgDelayTime(String avgDelayTime) {
+                this.avgDelayTime = avgDelayTime;
+                return this;
+            }
+
+            /**
+             * flight_cancel_rate.
+             */
+            public Builder flightCancelRate(String flightCancelRate) {
+                this.flightCancelRate = flightCancelRate;
+                return this;
+            }
+
+            /**
+             * jet_bridge_rate.
+             */
+            public Builder jetBridgeRate(String jetBridgeRate) {
+                this.jetBridgeRate = jetBridgeRate;
+                return this;
+            }
+
+            /**
+             * on_time_rate.
+             */
+            public Builder onTimeRate(String onTimeRate) {
+                this.onTimeRate = onTimeRate;
+                return this;
+            }
+
+            /**
+             * wifi.
+             */
+            public Builder wifi(Boolean wifi) {
+                this.wifi = wifi;
+                return this;
+            }
+
+            public OtherInfo build() {
+                return new OtherInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link IntlFlightReShopListSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightReShopListSearchResponseBody</p>
+     */
+    public static class SegmentVisaRemark extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("dep_city_visa_remark")
+        private String depCityVisaRemark;
+
+        @com.aliyun.core.annotation.NameInMap("dep_city_visa_type")
+        private Integer depCityVisaType;
+
+        @com.aliyun.core.annotation.NameInMap("stop_city_visa_remarks")
+        private java.util.List<String> stopCityVisaRemarks;
+
+        @com.aliyun.core.annotation.NameInMap("stop_city_visa_types")
+        private java.util.List<Integer> stopCityVisaTypes;
+
+        private SegmentVisaRemark(Builder builder) {
+            this.depCityVisaRemark = builder.depCityVisaRemark;
+            this.depCityVisaType = builder.depCityVisaType;
+            this.stopCityVisaRemarks = builder.stopCityVisaRemarks;
+            this.stopCityVisaTypes = builder.stopCityVisaTypes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SegmentVisaRemark create() {
+            return builder().build();
+        }
+
+        /**
+         * @return depCityVisaRemark
+         */
+        public String getDepCityVisaRemark() {
+            return this.depCityVisaRemark;
+        }
+
+        /**
+         * @return depCityVisaType
+         */
+        public Integer getDepCityVisaType() {
+            return this.depCityVisaType;
+        }
+
+        /**
+         * @return stopCityVisaRemarks
+         */
+        public java.util.List<String> getStopCityVisaRemarks() {
+            return this.stopCityVisaRemarks;
+        }
+
+        /**
+         * @return stopCityVisaTypes
+         */
+        public java.util.List<Integer> getStopCityVisaTypes() {
+            return this.stopCityVisaTypes;
+        }
+
+        public static final class Builder {
+            private String depCityVisaRemark; 
+            private Integer depCityVisaType; 
+            private java.util.List<String> stopCityVisaRemarks; 
+            private java.util.List<Integer> stopCityVisaTypes; 
+
+            private Builder() {
+            } 
+
+            private Builder(SegmentVisaRemark model) {
+                this.depCityVisaRemark = model.depCityVisaRemark;
+                this.depCityVisaType = model.depCityVisaType;
+                this.stopCityVisaRemarks = model.stopCityVisaRemarks;
+                this.stopCityVisaTypes = model.stopCityVisaTypes;
+            } 
+
+            /**
+             * dep_city_visa_remark.
+             */
+            public Builder depCityVisaRemark(String depCityVisaRemark) {
+                this.depCityVisaRemark = depCityVisaRemark;
+                return this;
+            }
+
+            /**
+             * dep_city_visa_type.
+             */
+            public Builder depCityVisaType(Integer depCityVisaType) {
+                this.depCityVisaType = depCityVisaType;
+                return this;
+            }
+
+            /**
+             * stop_city_visa_remarks.
+             */
+            public Builder stopCityVisaRemarks(java.util.List<String> stopCityVisaRemarks) {
+                this.stopCityVisaRemarks = stopCityVisaRemarks;
+                return this;
+            }
+
+            /**
+             * stop_city_visa_types.
+             */
+            public Builder stopCityVisaTypes(java.util.List<Integer> stopCityVisaTypes) {
+                this.stopCityVisaTypes = stopCityVisaTypes;
+                return this;
+            }
+
+            public SegmentVisaRemark build() {
+                return new SegmentVisaRemark(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link IntlFlightReShopListSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightReShopListSearchResponseBody</p>
+     */
+    public static class TicketingAirlineInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("airline_code")
+        private String airlineCode;
+
+        @com.aliyun.core.annotation.NameInMap("airline_name")
+        private String airlineName;
+
+        @com.aliyun.core.annotation.NameInMap("cheap_airline")
+        private Boolean cheapAirline;
+
+        @com.aliyun.core.annotation.NameInMap("icon_url")
+        private String iconUrl;
+
+        @com.aliyun.core.annotation.NameInMap("short_name")
+        private String shortName;
+
+        private TicketingAirlineInfo(Builder builder) {
+            this.airlineCode = builder.airlineCode;
+            this.airlineName = builder.airlineName;
+            this.cheapAirline = builder.cheapAirline;
+            this.iconUrl = builder.iconUrl;
+            this.shortName = builder.shortName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TicketingAirlineInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return airlineCode
+         */
+        public String getAirlineCode() {
+            return this.airlineCode;
+        }
+
+        /**
+         * @return airlineName
+         */
+        public String getAirlineName() {
+            return this.airlineName;
+        }
+
+        /**
+         * @return cheapAirline
+         */
+        public Boolean getCheapAirline() {
+            return this.cheapAirline;
+        }
+
+        /**
+         * @return iconUrl
+         */
+        public String getIconUrl() {
+            return this.iconUrl;
+        }
+
+        /**
+         * @return shortName
+         */
+        public String getShortName() {
+            return this.shortName;
+        }
+
+        public static final class Builder {
+            private String airlineCode; 
+            private String airlineName; 
+            private Boolean cheapAirline; 
+            private String iconUrl; 
+            private String shortName; 
+
+            private Builder() {
+            } 
+
+            private Builder(TicketingAirlineInfo model) {
+                this.airlineCode = model.airlineCode;
+                this.airlineName = model.airlineName;
+                this.cheapAirline = model.cheapAirline;
+                this.iconUrl = model.iconUrl;
+                this.shortName = model.shortName;
+            } 
+
+            /**
+             * airline_code.
+             */
+            public Builder airlineCode(String airlineCode) {
+                this.airlineCode = airlineCode;
+                return this;
+            }
+
+            /**
+             * airline_name.
+             */
+            public Builder airlineName(String airlineName) {
+                this.airlineName = airlineName;
+                return this;
+            }
+
+            /**
+             * cheap_airline.
+             */
+            public Builder cheapAirline(Boolean cheapAirline) {
+                this.cheapAirline = cheapAirline;
+                return this;
+            }
+
+            /**
+             * icon_url.
+             */
+            public Builder iconUrl(String iconUrl) {
+                this.iconUrl = iconUrl;
+                return this;
+            }
+
+            /**
+             * short_name.
+             */
+            public Builder shortName(String shortName) {
+                this.shortName = shortName;
+                return this;
+            }
+
+            public TicketingAirlineInfo build() {
+                return new TicketingAirlineInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link IntlFlightReShopListSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightReShopListSearchResponseBody</p>
+     */
+    public static class FlightSegmentInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("airline_info")
+        private AirlineInfo airlineInfo;
+
+        @com.aliyun.core.annotation.NameInMap("arr_airport_info")
+        private ArrAirportInfo arrAirportInfo;
+
+        @com.aliyun.core.annotation.NameInMap("arr_city_code")
+        private String arrCityCode;
+
+        @com.aliyun.core.annotation.NameInMap("arr_city_name")
+        private String arrCityName;
+
+        @com.aliyun.core.annotation.NameInMap("arr_time")
+        private String arrTime;
+
+        @com.aliyun.core.annotation.NameInMap("arr_time_u_t_c")
+        private String arrTimeUTC;
+
+        @com.aliyun.core.annotation.NameInMap("dep_airport_info")
+        private DepAirportInfo depAirportInfo;
+
+        @com.aliyun.core.annotation.NameInMap("dep_city_code")
+        private String depCityCode;
+
+        @com.aliyun.core.annotation.NameInMap("dep_city_name")
+        private String depCityName;
+
+        @com.aliyun.core.annotation.NameInMap("dep_time")
+        private String depTime;
+
+        @com.aliyun.core.annotation.NameInMap("dep_time_u_t_c")
+        private String depTimeUTC;
+
+        @com.aliyun.core.annotation.NameInMap("duration")
+        private Integer duration;
+
+        @com.aliyun.core.annotation.NameInMap("flight_no")
+        private String flightNo;
+
+        @com.aliyun.core.annotation.NameInMap("flight_share_info")
+        private FlightShareInfo flightShareInfo;
+
+        @com.aliyun.core.annotation.NameInMap("flight_size")
+        private String flightSize;
+
+        @com.aliyun.core.annotation.NameInMap("flight_stop_info_list")
+        private java.util.List<FlightStopInfoList> flightStopInfoList;
+
+        @com.aliyun.core.annotation.NameInMap("flight_type")
+        private String flightType;
+
+        @com.aliyun.core.annotation.NameInMap("journey_index")
+        private Integer journeyIndex;
+
+        @com.aliyun.core.annotation.NameInMap("luggage_direct_info")
+        private LuggageDirectInfo luggageDirectInfo;
+
+        @com.aliyun.core.annotation.NameInMap("manufacturer")
+        private String manufacturer;
+
+        @com.aliyun.core.annotation.NameInMap("meal")
+        private Integer meal;
+
+        @com.aliyun.core.annotation.NameInMap("meal_desc")
+        private String mealDesc;
+
+        @com.aliyun.core.annotation.NameInMap("miles")
+        private Integer miles;
+
+        @com.aliyun.core.annotation.NameInMap("on_time_rate")
+        private String onTimeRate;
+
+        @com.aliyun.core.annotation.NameInMap("one_more")
+        private Integer oneMore;
+
+        @com.aliyun.core.annotation.NameInMap("one_more_show")
+        private String oneMoreShow;
+
+        @com.aliyun.core.annotation.NameInMap("other_info")
+        private OtherInfo otherInfo;
+
+        @com.aliyun.core.annotation.NameInMap("segment_index")
+        private Integer segmentIndex;
+
+        @com.aliyun.core.annotation.NameInMap("segment_key")
+        private String segmentKey;
+
+        @com.aliyun.core.annotation.NameInMap("segment_visa_remark")
+        private SegmentVisaRemark segmentVisaRemark;
+
+        @com.aliyun.core.annotation.NameInMap("share")
+        private Boolean share;
+
+        @com.aliyun.core.annotation.NameInMap("short_flight_size")
+        private String shortFlightSize;
+
+        @com.aliyun.core.annotation.NameInMap("stop")
+        private Boolean stop;
+
+        @com.aliyun.core.annotation.NameInMap("ticketing_airline_info")
+        private TicketingAirlineInfo ticketingAirlineInfo;
+
+        @com.aliyun.core.annotation.NameInMap("total_time")
+        private String totalTime;
+
+        private FlightSegmentInfos(Builder builder) {
+            this.airlineInfo = builder.airlineInfo;
+            this.arrAirportInfo = builder.arrAirportInfo;
+            this.arrCityCode = builder.arrCityCode;
+            this.arrCityName = builder.arrCityName;
+            this.arrTime = builder.arrTime;
+            this.arrTimeUTC = builder.arrTimeUTC;
+            this.depAirportInfo = builder.depAirportInfo;
+            this.depCityCode = builder.depCityCode;
+            this.depCityName = builder.depCityName;
+            this.depTime = builder.depTime;
+            this.depTimeUTC = builder.depTimeUTC;
+            this.duration = builder.duration;
+            this.flightNo = builder.flightNo;
+            this.flightShareInfo = builder.flightShareInfo;
+            this.flightSize = builder.flightSize;
+            this.flightStopInfoList = builder.flightStopInfoList;
+            this.flightType = builder.flightType;
+            this.journeyIndex = builder.journeyIndex;
+            this.luggageDirectInfo = builder.luggageDirectInfo;
+            this.manufacturer = builder.manufacturer;
+            this.meal = builder.meal;
+            this.mealDesc = builder.mealDesc;
+            this.miles = builder.miles;
+            this.onTimeRate = builder.onTimeRate;
+            this.oneMore = builder.oneMore;
+            this.oneMoreShow = builder.oneMoreShow;
+            this.otherInfo = builder.otherInfo;
+            this.segmentIndex = builder.segmentIndex;
+            this.segmentKey = builder.segmentKey;
+            this.segmentVisaRemark = builder.segmentVisaRemark;
+            this.share = builder.share;
+            this.shortFlightSize = builder.shortFlightSize;
+            this.stop = builder.stop;
+            this.ticketingAirlineInfo = builder.ticketingAirlineInfo;
+            this.totalTime = builder.totalTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FlightSegmentInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return airlineInfo
+         */
+        public AirlineInfo getAirlineInfo() {
+            return this.airlineInfo;
+        }
+
+        /**
+         * @return arrAirportInfo
+         */
+        public ArrAirportInfo getArrAirportInfo() {
+            return this.arrAirportInfo;
+        }
+
+        /**
+         * @return arrCityCode
+         */
+        public String getArrCityCode() {
+            return this.arrCityCode;
+        }
+
+        /**
+         * @return arrCityName
+         */
+        public String getArrCityName() {
+            return this.arrCityName;
+        }
+
+        /**
+         * @return arrTime
+         */
+        public String getArrTime() {
+            return this.arrTime;
+        }
+
+        /**
+         * @return arrTimeUTC
+         */
+        public String getArrTimeUTC() {
+            return this.arrTimeUTC;
+        }
+
+        /**
+         * @return depAirportInfo
+         */
+        public DepAirportInfo getDepAirportInfo() {
+            return this.depAirportInfo;
+        }
+
+        /**
+         * @return depCityCode
+         */
+        public String getDepCityCode() {
+            return this.depCityCode;
+        }
+
+        /**
+         * @return depCityName
+         */
+        public String getDepCityName() {
+            return this.depCityName;
+        }
+
+        /**
+         * @return depTime
+         */
+        public String getDepTime() {
+            return this.depTime;
+        }
+
+        /**
+         * @return depTimeUTC
+         */
+        public String getDepTimeUTC() {
+            return this.depTimeUTC;
+        }
+
+        /**
+         * @return duration
+         */
+        public Integer getDuration() {
+            return this.duration;
+        }
+
+        /**
+         * @return flightNo
+         */
+        public String getFlightNo() {
+            return this.flightNo;
+        }
+
+        /**
+         * @return flightShareInfo
+         */
+        public FlightShareInfo getFlightShareInfo() {
+            return this.flightShareInfo;
+        }
+
+        /**
+         * @return flightSize
+         */
+        public String getFlightSize() {
+            return this.flightSize;
+        }
+
+        /**
+         * @return flightStopInfoList
+         */
+        public java.util.List<FlightStopInfoList> getFlightStopInfoList() {
+            return this.flightStopInfoList;
+        }
+
+        /**
+         * @return flightType
+         */
+        public String getFlightType() {
+            return this.flightType;
+        }
+
+        /**
+         * @return journeyIndex
+         */
+        public Integer getJourneyIndex() {
+            return this.journeyIndex;
+        }
+
+        /**
+         * @return luggageDirectInfo
+         */
+        public LuggageDirectInfo getLuggageDirectInfo() {
+            return this.luggageDirectInfo;
+        }
+
+        /**
+         * @return manufacturer
+         */
+        public String getManufacturer() {
+            return this.manufacturer;
+        }
+
+        /**
+         * @return meal
+         */
+        public Integer getMeal() {
+            return this.meal;
+        }
+
+        /**
+         * @return mealDesc
+         */
+        public String getMealDesc() {
+            return this.mealDesc;
+        }
+
+        /**
+         * @return miles
+         */
+        public Integer getMiles() {
+            return this.miles;
+        }
+
+        /**
+         * @return onTimeRate
+         */
+        public String getOnTimeRate() {
+            return this.onTimeRate;
+        }
+
+        /**
+         * @return oneMore
+         */
+        public Integer getOneMore() {
+            return this.oneMore;
+        }
+
+        /**
+         * @return oneMoreShow
+         */
+        public String getOneMoreShow() {
+            return this.oneMoreShow;
+        }
+
+        /**
+         * @return otherInfo
+         */
+        public OtherInfo getOtherInfo() {
+            return this.otherInfo;
+        }
+
+        /**
+         * @return segmentIndex
+         */
+        public Integer getSegmentIndex() {
+            return this.segmentIndex;
+        }
+
+        /**
+         * @return segmentKey
+         */
+        public String getSegmentKey() {
+            return this.segmentKey;
+        }
+
+        /**
+         * @return segmentVisaRemark
+         */
+        public SegmentVisaRemark getSegmentVisaRemark() {
+            return this.segmentVisaRemark;
+        }
+
+        /**
+         * @return share
+         */
+        public Boolean getShare() {
+            return this.share;
+        }
+
+        /**
+         * @return shortFlightSize
+         */
+        public String getShortFlightSize() {
+            return this.shortFlightSize;
+        }
+
+        /**
+         * @return stop
+         */
+        public Boolean getStop() {
+            return this.stop;
+        }
+
+        /**
+         * @return ticketingAirlineInfo
+         */
+        public TicketingAirlineInfo getTicketingAirlineInfo() {
+            return this.ticketingAirlineInfo;
+        }
+
+        /**
+         * @return totalTime
+         */
+        public String getTotalTime() {
+            return this.totalTime;
+        }
+
+        public static final class Builder {
+            private AirlineInfo airlineInfo; 
+            private ArrAirportInfo arrAirportInfo; 
+            private String arrCityCode; 
+            private String arrCityName; 
+            private String arrTime; 
+            private String arrTimeUTC; 
+            private DepAirportInfo depAirportInfo; 
+            private String depCityCode; 
+            private String depCityName; 
+            private String depTime; 
+            private String depTimeUTC; 
+            private Integer duration; 
+            private String flightNo; 
+            private FlightShareInfo flightShareInfo; 
+            private String flightSize; 
+            private java.util.List<FlightStopInfoList> flightStopInfoList; 
+            private String flightType; 
+            private Integer journeyIndex; 
+            private LuggageDirectInfo luggageDirectInfo; 
+            private String manufacturer; 
+            private Integer meal; 
+            private String mealDesc; 
+            private Integer miles; 
+            private String onTimeRate; 
+            private Integer oneMore; 
+            private String oneMoreShow; 
+            private OtherInfo otherInfo; 
+            private Integer segmentIndex; 
+            private String segmentKey; 
+            private SegmentVisaRemark segmentVisaRemark; 
+            private Boolean share; 
+            private String shortFlightSize; 
+            private Boolean stop; 
+            private TicketingAirlineInfo ticketingAirlineInfo; 
+            private String totalTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlightSegmentInfos model) {
+                this.airlineInfo = model.airlineInfo;
+                this.arrAirportInfo = model.arrAirportInfo;
+                this.arrCityCode = model.arrCityCode;
+                this.arrCityName = model.arrCityName;
+                this.arrTime = model.arrTime;
+                this.arrTimeUTC = model.arrTimeUTC;
+                this.depAirportInfo = model.depAirportInfo;
+                this.depCityCode = model.depCityCode;
+                this.depCityName = model.depCityName;
+                this.depTime = model.depTime;
+                this.depTimeUTC = model.depTimeUTC;
+                this.duration = model.duration;
+                this.flightNo = model.flightNo;
+                this.flightShareInfo = model.flightShareInfo;
+                this.flightSize = model.flightSize;
+                this.flightStopInfoList = model.flightStopInfoList;
+                this.flightType = model.flightType;
+                this.journeyIndex = model.journeyIndex;
+                this.luggageDirectInfo = model.luggageDirectInfo;
+                this.manufacturer = model.manufacturer;
+                this.meal = model.meal;
+                this.mealDesc = model.mealDesc;
+                this.miles = model.miles;
+                this.onTimeRate = model.onTimeRate;
+                this.oneMore = model.oneMore;
+                this.oneMoreShow = model.oneMoreShow;
+                this.otherInfo = model.otherInfo;
+                this.segmentIndex = model.segmentIndex;
+                this.segmentKey = model.segmentKey;
+                this.segmentVisaRemark = model.segmentVisaRemark;
+                this.share = model.share;
+                this.shortFlightSize = model.shortFlightSize;
+                this.stop = model.stop;
+                this.ticketingAirlineInfo = model.ticketingAirlineInfo;
+                this.totalTime = model.totalTime;
+            } 
+
+            /**
+             * airline_info.
+             */
+            public Builder airlineInfo(AirlineInfo airlineInfo) {
+                this.airlineInfo = airlineInfo;
+                return this;
+            }
+
+            /**
+             * arr_airport_info.
+             */
+            public Builder arrAirportInfo(ArrAirportInfo arrAirportInfo) {
+                this.arrAirportInfo = arrAirportInfo;
+                return this;
+            }
+
+            /**
+             * arr_city_code.
+             */
+            public Builder arrCityCode(String arrCityCode) {
+                this.arrCityCode = arrCityCode;
+                return this;
+            }
+
+            /**
+             * arr_city_name.
+             */
+            public Builder arrCityName(String arrCityName) {
+                this.arrCityName = arrCityName;
+                return this;
+            }
+
+            /**
+             * arr_time.
+             */
+            public Builder arrTime(String arrTime) {
+                this.arrTime = arrTime;
+                return this;
+            }
+
+            /**
+             * arr_time_u_t_c.
+             */
+            public Builder arrTimeUTC(String arrTimeUTC) {
+                this.arrTimeUTC = arrTimeUTC;
+                return this;
+            }
+
+            /**
+             * dep_airport_info.
+             */
+            public Builder depAirportInfo(DepAirportInfo depAirportInfo) {
+                this.depAirportInfo = depAirportInfo;
+                return this;
+            }
+
+            /**
+             * dep_city_code.
+             */
+            public Builder depCityCode(String depCityCode) {
+                this.depCityCode = depCityCode;
+                return this;
+            }
+
+            /**
+             * dep_city_name.
+             */
+            public Builder depCityName(String depCityName) {
+                this.depCityName = depCityName;
+                return this;
+            }
+
+            /**
+             * dep_time.
+             */
+            public Builder depTime(String depTime) {
+                this.depTime = depTime;
+                return this;
+            }
+
+            /**
+             * dep_time_u_t_c.
+             */
+            public Builder depTimeUTC(String depTimeUTC) {
+                this.depTimeUTC = depTimeUTC;
+                return this;
+            }
+
+            /**
+             * duration.
+             */
+            public Builder duration(Integer duration) {
+                this.duration = duration;
+                return this;
+            }
+
+            /**
+             * flight_no.
+             */
+            public Builder flightNo(String flightNo) {
+                this.flightNo = flightNo;
+                return this;
+            }
+
+            /**
+             * flight_share_info.
+             */
+            public Builder flightShareInfo(FlightShareInfo flightShareInfo) {
+                this.flightShareInfo = flightShareInfo;
+                return this;
+            }
+
+            /**
+             * flight_size.
+             */
+            public Builder flightSize(String flightSize) {
+                this.flightSize = flightSize;
+                return this;
+            }
+
+            /**
+             * flight_stop_info_list.
+             */
+            public Builder flightStopInfoList(java.util.List<FlightStopInfoList> flightStopInfoList) {
+                this.flightStopInfoList = flightStopInfoList;
+                return this;
+            }
+
+            /**
+             * flight_type.
+             */
+            public Builder flightType(String flightType) {
+                this.flightType = flightType;
+                return this;
+            }
+
+            /**
+             * journey_index.
+             */
+            public Builder journeyIndex(Integer journeyIndex) {
+                this.journeyIndex = journeyIndex;
+                return this;
+            }
+
+            /**
+             * luggage_direct_info.
+             */
+            public Builder luggageDirectInfo(LuggageDirectInfo luggageDirectInfo) {
+                this.luggageDirectInfo = luggageDirectInfo;
+                return this;
+            }
+
+            /**
+             * manufacturer.
+             */
+            public Builder manufacturer(String manufacturer) {
+                this.manufacturer = manufacturer;
+                return this;
+            }
+
+            /**
+             * meal.
+             */
+            public Builder meal(Integer meal) {
+                this.meal = meal;
+                return this;
+            }
+
+            /**
+             * meal_desc.
+             */
+            public Builder mealDesc(String mealDesc) {
+                this.mealDesc = mealDesc;
+                return this;
+            }
+
+            /**
+             * miles.
+             */
+            public Builder miles(Integer miles) {
+                this.miles = miles;
+                return this;
+            }
+
+            /**
+             * on_time_rate.
+             */
+            public Builder onTimeRate(String onTimeRate) {
+                this.onTimeRate = onTimeRate;
+                return this;
+            }
+
+            /**
+             * one_more.
+             */
+            public Builder oneMore(Integer oneMore) {
+                this.oneMore = oneMore;
+                return this;
+            }
+
+            /**
+             * one_more_show.
+             */
+            public Builder oneMoreShow(String oneMoreShow) {
+                this.oneMoreShow = oneMoreShow;
+                return this;
+            }
+
+            /**
+             * other_info.
+             */
+            public Builder otherInfo(OtherInfo otherInfo) {
+                this.otherInfo = otherInfo;
+                return this;
+            }
+
+            /**
+             * segment_index.
+             */
+            public Builder segmentIndex(Integer segmentIndex) {
+                this.segmentIndex = segmentIndex;
+                return this;
+            }
+
+            /**
+             * segment_key.
+             */
+            public Builder segmentKey(String segmentKey) {
+                this.segmentKey = segmentKey;
+                return this;
+            }
+
+            /**
+             * segment_visa_remark.
+             */
+            public Builder segmentVisaRemark(SegmentVisaRemark segmentVisaRemark) {
+                this.segmentVisaRemark = segmentVisaRemark;
+                return this;
+            }
+
+            /**
+             * share.
+             */
+            public Builder share(Boolean share) {
+                this.share = share;
+                return this;
+            }
+
+            /**
+             * short_flight_size.
+             */
+            public Builder shortFlightSize(String shortFlightSize) {
+                this.shortFlightSize = shortFlightSize;
+                return this;
+            }
+
+            /**
+             * stop.
+             */
+            public Builder stop(Boolean stop) {
+                this.stop = stop;
+                return this;
+            }
+
+            /**
+             * ticketing_airline_info.
+             */
+            public Builder ticketingAirlineInfo(TicketingAirlineInfo ticketingAirlineInfo) {
+                this.ticketingAirlineInfo = ticketingAirlineInfo;
+                return this;
+            }
+
+            /**
+             * total_time.
+             */
+            public Builder totalTime(String totalTime) {
+                this.totalTime = totalTime;
+                return this;
+            }
+
+            public FlightSegmentInfos build() {
+                return new FlightSegmentInfos(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link IntlFlightReShopListSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightReShopListSearchResponseBody</p>
+     */
+    public static class FlightJourneyInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("arr_city_code")
+        private String arrCityCode;
+
+        @com.aliyun.core.annotation.NameInMap("arr_city_name")
+        private String arrCityName;
+
+        @com.aliyun.core.annotation.NameInMap("arr_time")
+        private String arrTime;
+
+        @com.aliyun.core.annotation.NameInMap("dep_city_code")
+        private String depCityCode;
+
+        @com.aliyun.core.annotation.NameInMap("dep_city_name")
+        private String depCityName;
+
+        @com.aliyun.core.annotation.NameInMap("dep_time")
+        private String depTime;
+
+        @com.aliyun.core.annotation.NameInMap("duration")
+        private Integer duration;
+
+        @com.aliyun.core.annotation.NameInMap("flight_segment_infos")
+        private java.util.List<FlightSegmentInfos> flightSegmentInfos;
+
+        @com.aliyun.core.annotation.NameInMap("journey_index")
+        private Integer journeyIndex;
+
+        @com.aliyun.core.annotation.NameInMap("transfer_time")
+        private Integer transferTime;
+
+        private FlightJourneyInfos(Builder builder) {
+            this.arrCityCode = builder.arrCityCode;
+            this.arrCityName = builder.arrCityName;
+            this.arrTime = builder.arrTime;
+            this.depCityCode = builder.depCityCode;
+            this.depCityName = builder.depCityName;
+            this.depTime = builder.depTime;
+            this.duration = builder.duration;
+            this.flightSegmentInfos = builder.flightSegmentInfos;
+            this.journeyIndex = builder.journeyIndex;
+            this.transferTime = builder.transferTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FlightJourneyInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return arrCityCode
+         */
+        public String getArrCityCode() {
+            return this.arrCityCode;
+        }
+
+        /**
+         * @return arrCityName
+         */
+        public String getArrCityName() {
+            return this.arrCityName;
+        }
+
+        /**
+         * @return arrTime
+         */
+        public String getArrTime() {
+            return this.arrTime;
+        }
+
+        /**
+         * @return depCityCode
+         */
+        public String getDepCityCode() {
+            return this.depCityCode;
+        }
+
+        /**
+         * @return depCityName
+         */
+        public String getDepCityName() {
+            return this.depCityName;
+        }
+
+        /**
+         * @return depTime
+         */
+        public String getDepTime() {
+            return this.depTime;
+        }
+
+        /**
+         * @return duration
+         */
+        public Integer getDuration() {
+            return this.duration;
+        }
+
+        /**
+         * @return flightSegmentInfos
+         */
+        public java.util.List<FlightSegmentInfos> getFlightSegmentInfos() {
+            return this.flightSegmentInfos;
+        }
+
+        /**
+         * @return journeyIndex
+         */
+        public Integer getJourneyIndex() {
+            return this.journeyIndex;
+        }
+
+        /**
+         * @return transferTime
+         */
+        public Integer getTransferTime() {
+            return this.transferTime;
+        }
+
+        public static final class Builder {
+            private String arrCityCode; 
+            private String arrCityName; 
+            private String arrTime; 
+            private String depCityCode; 
+            private String depCityName; 
+            private String depTime; 
+            private Integer duration; 
+            private java.util.List<FlightSegmentInfos> flightSegmentInfos; 
+            private Integer journeyIndex; 
+            private Integer transferTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlightJourneyInfos model) {
+                this.arrCityCode = model.arrCityCode;
+                this.arrCityName = model.arrCityName;
+                this.arrTime = model.arrTime;
+                this.depCityCode = model.depCityCode;
+                this.depCityName = model.depCityName;
+                this.depTime = model.depTime;
+                this.duration = model.duration;
+                this.flightSegmentInfos = model.flightSegmentInfos;
+                this.journeyIndex = model.journeyIndex;
+                this.transferTime = model.transferTime;
+            } 
+
+            /**
+             * arr_city_code.
+             */
+            public Builder arrCityCode(String arrCityCode) {
+                this.arrCityCode = arrCityCode;
+                return this;
+            }
+
+            /**
+             * arr_city_name.
+             */
+            public Builder arrCityName(String arrCityName) {
+                this.arrCityName = arrCityName;
+                return this;
+            }
+
+            /**
+             * arr_time.
+             */
+            public Builder arrTime(String arrTime) {
+                this.arrTime = arrTime;
+                return this;
+            }
+
+            /**
+             * dep_city_code.
+             */
+            public Builder depCityCode(String depCityCode) {
+                this.depCityCode = depCityCode;
+                return this;
+            }
+
+            /**
+             * dep_city_name.
+             */
+            public Builder depCityName(String depCityName) {
+                this.depCityName = depCityName;
+                return this;
+            }
+
+            /**
+             * dep_time.
+             */
+            public Builder depTime(String depTime) {
+                this.depTime = depTime;
+                return this;
+            }
+
+            /**
+             * duration.
+             */
+            public Builder duration(Integer duration) {
+                this.duration = duration;
+                return this;
+            }
+
+            /**
+             * flight_segment_infos.
+             */
+            public Builder flightSegmentInfos(java.util.List<FlightSegmentInfos> flightSegmentInfos) {
+                this.flightSegmentInfos = flightSegmentInfos;
+                return this;
+            }
+
+            /**
+             * journey_index.
+             */
+            public Builder journeyIndex(Integer journeyIndex) {
+                this.journeyIndex = journeyIndex;
+                return this;
+            }
+
+            /**
+             * transfer_time.
+             */
+            public Builder transferTime(Integer transferTime) {
+                this.transferTime = transferTime;
+                return this;
+            }
+
+            public FlightJourneyInfos build() {
+                return new FlightJourneyInfos(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link IntlFlightReShopListSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightReShopListSearchResponseBody</p>
+     */
+    public static class ReShopItemList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("best_price_item")
+        private BestPriceItem bestPriceItem;
+
+        @com.aliyun.core.annotation.NameInMap("flight_journey_infos")
+        private java.util.List<FlightJourneyInfos> flightJourneyInfos;
+
+        private ReShopItemList(Builder builder) {
+            this.bestPriceItem = builder.bestPriceItem;
+            this.flightJourneyInfos = builder.flightJourneyInfos;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ReShopItemList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bestPriceItem
+         */
+        public BestPriceItem getBestPriceItem() {
+            return this.bestPriceItem;
+        }
+
+        /**
+         * @return flightJourneyInfos
+         */
+        public java.util.List<FlightJourneyInfos> getFlightJourneyInfos() {
+            return this.flightJourneyInfos;
+        }
+
+        public static final class Builder {
+            private BestPriceItem bestPriceItem; 
+            private java.util.List<FlightJourneyInfos> flightJourneyInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReShopItemList model) {
+                this.bestPriceItem = model.bestPriceItem;
+                this.flightJourneyInfos = model.flightJourneyInfos;
+            } 
+
+            /**
+             * best_price_item.
+             */
+            public Builder bestPriceItem(BestPriceItem bestPriceItem) {
+                this.bestPriceItem = bestPriceItem;
+                return this;
+            }
+
+            /**
+             * flight_journey_infos.
+             */
+            public Builder flightJourneyInfos(java.util.List<FlightJourneyInfos> flightJourneyInfos) {
+                this.flightJourneyInfos = flightJourneyInfos;
+                return this;
+            }
+
+            public ReShopItemList build() {
+                return new ReShopItemList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link IntlFlightReShopListSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightReShopListSearchResponseBody</p>
+     */
+    public static class Module extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("need_continue")
+        private Boolean needContinue;
+
+        @com.aliyun.core.annotation.NameInMap("next_req_wait_time")
+        private Integer nextReqWaitTime;
+
+        @com.aliyun.core.annotation.NameInMap("re_shop_item_list")
+        private java.util.List<ReShopItemList> reShopItemList;
+
+        @com.aliyun.core.annotation.NameInMap("token")
+        private String token;
+
+        private Module(Builder builder) {
+            this.needContinue = builder.needContinue;
+            this.nextReqWaitTime = builder.nextReqWaitTime;
+            this.reShopItemList = builder.reShopItemList;
+            this.token = builder.token;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Module create() {
+            return builder().build();
+        }
+
+        /**
+         * @return needContinue
+         */
+        public Boolean getNeedContinue() {
+            return this.needContinue;
+        }
+
+        /**
+         * @return nextReqWaitTime
+         */
+        public Integer getNextReqWaitTime() {
+            return this.nextReqWaitTime;
+        }
+
+        /**
+         * @return reShopItemList
+         */
+        public java.util.List<ReShopItemList> getReShopItemList() {
+            return this.reShopItemList;
+        }
+
+        /**
+         * @return token
+         */
+        public String getToken() {
+            return this.token;
+        }
+
+        public static final class Builder {
+            private Boolean needContinue; 
+            private Integer nextReqWaitTime; 
+            private java.util.List<ReShopItemList> reShopItemList; 
+            private String token; 
+
+            private Builder() {
+            } 
+
+            private Builder(Module model) {
+                this.needContinue = model.needContinue;
+                this.nextReqWaitTime = model.nextReqWaitTime;
+                this.reShopItemList = model.reShopItemList;
+                this.token = model.token;
+            } 
+
+            /**
+             * need_continue.
+             */
+            public Builder needContinue(Boolean needContinue) {
+                this.needContinue = needContinue;
+                return this;
+            }
+
+            /**
+             * next_req_wait_time.
+             */
+            public Builder nextReqWaitTime(Integer nextReqWaitTime) {
+                this.nextReqWaitTime = nextReqWaitTime;
+                return this;
+            }
+
+            /**
+             * re_shop_item_list.
+             */
+            public Builder reShopItemList(java.util.List<ReShopItemList> reShopItemList) {
+                this.reShopItemList = reShopItemList;
+                return this;
+            }
+
+            /**
+             * token.
+             */
+            public Builder token(String token) {
+                this.token = token;
+                return this;
+            }
+
+            public Module build() {
+                return new Module(this);
+            } 
+
+        } 
+
+    }
+}
