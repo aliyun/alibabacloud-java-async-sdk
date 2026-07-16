@@ -1,3 +1,6 @@
+2026-07-16 Version: 3.0.23
+- Generated java-async 2020-02-02 for polardbx.
+
 2026-07-03 Version: 3.0.22
 - Generated java-async 2020-02-02 for polardbx.
 

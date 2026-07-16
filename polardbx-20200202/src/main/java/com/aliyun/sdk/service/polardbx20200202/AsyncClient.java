@@ -176,6 +176,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSQLEvaluateTaskResponse> createSQLEvaluateTask(CreateSQLEvaluateTaskRequest request);
 
     /**
+     * @param request the request parameters of CreateServiceAccount  CreateServiceAccountRequest
+     * @return CreateServiceAccountResponse
+     */
+    CompletableFuture<CreateServiceAccountResponse> createServiceAccount(CreateServiceAccountRequest request);
+
+    /**
      * @param request the request parameters of CreateStoragePool  CreateStoragePoolRequest
      * @return CreateStoragePoolResponse
      */
@@ -267,6 +273,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeletePolardbxSupabaseInstanceResponse
      */
     CompletableFuture<DeletePolardbxSupabaseInstanceResponse> deletePolardbxSupabaseInstance(DeletePolardbxSupabaseInstanceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteServiceAccount  DeleteServiceAccountRequest
+     * @return DeleteServiceAccountResponse
+     */
+    CompletableFuture<DeleteServiceAccountResponse> deleteServiceAccount(DeleteServiceAccountRequest request);
 
     /**
      * <b>description</b> :
@@ -593,6 +605,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSecurityIpsResponse> describeSecurityIps(DescribeSecurityIpsRequest request);
 
     /**
+     * @param request the request parameters of DescribeServiceAccount  DescribeServiceAccountRequest
+     * @return DescribeServiceAccountResponse
+     */
+    CompletableFuture<DescribeServiceAccountResponse> describeServiceAccount(DescribeServiceAccountRequest request);
+
+    /**
      * @param request the request parameters of DescribeShowStorageInfo  DescribeShowStorageInfoRequest
      * @return DescribeShowStorageInfoResponse
      */
@@ -702,6 +720,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return EnableSqlAuditResponse
      */
     CompletableFuture<EnableSqlAuditResponse> enableSqlAudit(EnableSqlAuditRequest request);
+
+    /**
+     * @param request the request parameters of ExecuteMetaQuery  ExecuteMetaQueryRequest
+     * @return ExecuteMetaQueryResponse
+     */
+    CompletableFuture<ExecuteMetaQueryResponse> executeMetaQuery(ExecuteMetaQueryRequest request);
 
     /**
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest

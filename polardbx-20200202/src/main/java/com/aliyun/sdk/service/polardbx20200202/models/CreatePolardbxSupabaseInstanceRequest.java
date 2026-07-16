@@ -40,6 +40,10 @@ public class CreatePolardbxSupabaseInstanceRequest extends Request {
     private String dbPassword;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeSpec")
+    private String nodeSpec;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PayType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String payType;
@@ -87,6 +91,7 @@ public class CreatePolardbxSupabaseInstanceRequest extends Request {
         this.dashboardPassword = builder.dashboardPassword;
         this.dbInstanceDescription = builder.dbInstanceDescription;
         this.dbPassword = builder.dbPassword;
+        this.nodeSpec = builder.nodeSpec;
         this.payType = builder.payType;
         this.period = builder.period;
         this.regionId = builder.regionId;
@@ -144,6 +149,13 @@ public class CreatePolardbxSupabaseInstanceRequest extends Request {
      */
     public String getDbPassword() {
         return this.dbPassword;
+    }
+
+    /**
+     * @return nodeSpec
+     */
+    public String getNodeSpec() {
+        return this.nodeSpec;
     }
 
     /**
@@ -215,6 +227,7 @@ public class CreatePolardbxSupabaseInstanceRequest extends Request {
         private String dashboardPassword; 
         private String dbInstanceDescription; 
         private String dbPassword; 
+        private String nodeSpec; 
         private String payType; 
         private String period; 
         private String regionId; 
@@ -236,6 +249,7 @@ public class CreatePolardbxSupabaseInstanceRequest extends Request {
             this.dashboardPassword = request.dashboardPassword;
             this.dbInstanceDescription = request.dbInstanceDescription;
             this.dbPassword = request.dbPassword;
+            this.nodeSpec = request.nodeSpec;
             this.payType = request.payType;
             this.period = request.period;
             this.regionId = request.regionId;
@@ -300,6 +314,15 @@ public class CreatePolardbxSupabaseInstanceRequest extends Request {
         public Builder dbPassword(String dbPassword) {
             this.putQueryParameter("DbPassword", dbPassword);
             this.dbPassword = dbPassword;
+            return this;
+        }
+
+        /**
+         * <p>实例规格代码，如 polarx.supabase.x2.small / polarx.supabase.x4.xlarge，不传时默认 x2.small</p>
+         */
+        public Builder nodeSpec(String nodeSpec) {
+            this.putQueryParameter("NodeSpec", nodeSpec);
+            this.nodeSpec = nodeSpec;
             return this;
         }
 
