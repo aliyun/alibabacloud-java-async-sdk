@@ -2564,6 +2564,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitCopyrightJobResponse> submitCopyrightJob(SubmitCopyrightJobRequest request);
 
     /**
+     * @param request the request parameters of SubmitCosyVoiceCustomizedVoiceJob  SubmitCosyVoiceCustomizedVoiceJobRequest
+     * @return SubmitCosyVoiceCustomizedVoiceJobResponse
+     */
+    CompletableFuture<SubmitCosyVoiceCustomizedVoiceJobResponse> submitCosyVoiceCustomizedVoiceJob(SubmitCosyVoiceCustomizedVoiceJobRequest request);
+
+    /**
      * @param request the request parameters of SubmitCustomizedVoiceJob  SubmitCustomizedVoiceJobRequest
      * @return SubmitCustomizedVoiceJobResponse
      */
