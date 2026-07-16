@@ -34,6 +34,10 @@ public class ListIncidentsRequest extends Request {
     private Integer incidentStatus;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IncidentStatusList")
+    private java.util.List<String> incidentStatusList;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("IncidentTags")
     private String incidentTags;
 
@@ -109,6 +113,7 @@ public class ListIncidentsRequest extends Request {
         this.endTime = builder.endTime;
         this.incidentName = builder.incidentName;
         this.incidentStatus = builder.incidentStatus;
+        this.incidentStatusList = builder.incidentStatusList;
         this.incidentTags = builder.incidentTags;
         this.incidentUuids = builder.incidentUuids;
         this.lang = builder.lang;
@@ -167,6 +172,13 @@ public class ListIncidentsRequest extends Request {
      */
     public Integer getIncidentStatus() {
         return this.incidentStatus;
+    }
+
+    /**
+     * @return incidentStatusList
+     */
+    public java.util.List<String> getIncidentStatusList() {
+        return this.incidentStatusList;
     }
 
     /**
@@ -293,6 +305,7 @@ public class ListIncidentsRequest extends Request {
         private Long endTime; 
         private String incidentName; 
         private Integer incidentStatus; 
+        private java.util.List<String> incidentStatusList; 
         private String incidentTags; 
         private java.util.List<String> incidentUuids; 
         private String lang; 
@@ -321,6 +334,7 @@ public class ListIncidentsRequest extends Request {
             this.endTime = request.endTime;
             this.incidentName = request.incidentName;
             this.incidentStatus = request.incidentStatus;
+            this.incidentStatusList = request.incidentStatusList;
             this.incidentTags = request.incidentTags;
             this.incidentUuids = request.incidentUuids;
             this.lang = request.lang;
@@ -373,6 +387,15 @@ public class ListIncidentsRequest extends Request {
         public Builder incidentStatus(Integer incidentStatus) {
             this.putBodyParameter("IncidentStatus", incidentStatus);
             this.incidentStatus = incidentStatus;
+            return this;
+        }
+
+        /**
+         * IncidentStatusList.
+         */
+        public Builder incidentStatusList(java.util.List<String> incidentStatusList) {
+            this.putBodyParameter("IncidentStatusList", incidentStatusList);
+            this.incidentStatusList = incidentStatusList;
             return this;
         }
 

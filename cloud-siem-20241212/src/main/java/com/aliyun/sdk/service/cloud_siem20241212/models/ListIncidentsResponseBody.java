@@ -200,11 +200,23 @@ public class ListIncidentsResponseBody extends TeaModel {
      * <p>ListIncidentsResponseBody</p>
      */
     public static class Incidents extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AlertInfos")
+        private String alertInfos;
+
+        @com.aliyun.core.annotation.NameInMap("AttckTactics")
+        private String attckTactics;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
         @com.aliyun.core.annotation.NameInMap("DetectionRuleId")
         private String detectionRuleId;
+
+        @com.aliyun.core.annotation.NameInMap("EntityInfos")
+        private String entityInfos;
+
+        @com.aliyun.core.annotation.NameInMap("IncidentDescription")
+        private String incidentDescription;
 
         @com.aliyun.core.annotation.NameInMap("IncidentName")
         private String incidentName;
@@ -240,8 +252,12 @@ public class ListIncidentsResponseBody extends TeaModel {
         private Long updateTime;
 
         private Incidents(Builder builder) {
+            this.alertInfos = builder.alertInfos;
+            this.attckTactics = builder.attckTactics;
             this.createTime = builder.createTime;
             this.detectionRuleId = builder.detectionRuleId;
+            this.entityInfos = builder.entityInfos;
+            this.incidentDescription = builder.incidentDescription;
             this.incidentName = builder.incidentName;
             this.incidentRemark = builder.incidentRemark;
             this.incidentStatus = builder.incidentStatus;
@@ -264,6 +280,20 @@ public class ListIncidentsResponseBody extends TeaModel {
         }
 
         /**
+         * @return alertInfos
+         */
+        public String getAlertInfos() {
+            return this.alertInfos;
+        }
+
+        /**
+         * @return attckTactics
+         */
+        public String getAttckTactics() {
+            return this.attckTactics;
+        }
+
+        /**
          * @return createTime
          */
         public Long getCreateTime() {
@@ -275,6 +305,20 @@ public class ListIncidentsResponseBody extends TeaModel {
          */
         public String getDetectionRuleId() {
             return this.detectionRuleId;
+        }
+
+        /**
+         * @return entityInfos
+         */
+        public String getEntityInfos() {
+            return this.entityInfos;
+        }
+
+        /**
+         * @return incidentDescription
+         */
+        public String getIncidentDescription() {
+            return this.incidentDescription;
         }
 
         /**
@@ -355,8 +399,12 @@ public class ListIncidentsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String alertInfos; 
+            private String attckTactics; 
             private Long createTime; 
             private String detectionRuleId; 
+            private String entityInfos; 
+            private String incidentDescription; 
             private String incidentName; 
             private String incidentRemark; 
             private Integer incidentStatus; 
@@ -373,8 +421,12 @@ public class ListIncidentsResponseBody extends TeaModel {
             } 
 
             private Builder(Incidents model) {
+                this.alertInfos = model.alertInfos;
+                this.attckTactics = model.attckTactics;
                 this.createTime = model.createTime;
                 this.detectionRuleId = model.detectionRuleId;
+                this.entityInfos = model.entityInfos;
+                this.incidentDescription = model.incidentDescription;
                 this.incidentName = model.incidentName;
                 this.incidentRemark = model.incidentRemark;
                 this.incidentStatus = model.incidentStatus;
@@ -389,6 +441,22 @@ public class ListIncidentsResponseBody extends TeaModel {
             } 
 
             /**
+             * AlertInfos.
+             */
+            public Builder alertInfos(String alertInfos) {
+                this.alertInfos = alertInfos;
+                return this;
+            }
+
+            /**
+             * AttckTactics.
+             */
+            public Builder attckTactics(String attckTactics) {
+                this.attckTactics = attckTactics;
+                return this;
+            }
+
+            /**
              * CreateTime.
              */
             public Builder createTime(Long createTime) {
@@ -401,6 +469,22 @@ public class ListIncidentsResponseBody extends TeaModel {
              */
             public Builder detectionRuleId(String detectionRuleId) {
                 this.detectionRuleId = detectionRuleId;
+                return this;
+            }
+
+            /**
+             * EntityInfos.
+             */
+            public Builder entityInfos(String entityInfos) {
+                this.entityInfos = entityInfos;
+                return this;
+            }
+
+            /**
+             * IncidentDescription.
+             */
+            public Builder incidentDescription(String incidentDescription) {
+                this.incidentDescription = incidentDescription;
                 return this;
             }
 

@@ -146,6 +146,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteNormalizationRuleVersionResponse> deleteNormalizationRuleVersion(DeleteNormalizationRuleVersionRequest request);
 
     /**
+     * @param request the request parameters of DeleteNormalizationSchema  DeleteNormalizationSchemaRequest
+     * @return DeleteNormalizationSchemaResponse
+     */
+    CompletableFuture<DeleteNormalizationSchemaResponse> deleteNormalizationSchema(DeleteNormalizationSchemaRequest request);
+
+    /**
      * @param request the request parameters of DeleteProduct  DeleteProductRequest
      * @return DeleteProductResponse
      */
@@ -486,6 +492,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateDataBatchIngestionResponse
      */
     CompletableFuture<UpdateDataBatchIngestionResponse> updateDataBatchIngestion(UpdateDataBatchIngestionRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDataConnector  UpdateDataConnectorRequest
+     * @return UpdateDataConnectorResponse
+     */
+    CompletableFuture<UpdateDataConnectorResponse> updateDataConnector(UpdateDataConnectorRequest request);
 
     /**
      * @param request the request parameters of UpdateDataIngestion  UpdateDataIngestionRequest
