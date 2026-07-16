@@ -126,6 +126,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckUserProjectNameResponse> checkUserProjectName(CheckUserProjectNameRequest request);
 
     /**
+     * @param request the request parameters of CloneVersion  CloneVersionRequest
+     * @return CloneVersionResponse
+     */
+    CompletableFuture<CloneVersionResponse> cloneVersion(CloneVersionRequest request);
+
+    /**
      * @param request the request parameters of CommitRoutineStagingCode  CommitRoutineStagingCodeRequest
      * @return CommitRoutineStagingCodeResponse
      */
@@ -190,6 +196,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateEdgeContainerAppVersionResponse
      */
     CompletableFuture<CreateEdgeContainerAppVersionResponse> createEdgeContainerAppVersion(CreateEdgeContainerAppVersionRequest request);
+
+    /**
+     * @param request the request parameters of CreateEnvironment  CreateEnvironmentRequest
+     * @return CreateEnvironmentResponse
+     */
+    CompletableFuture<CreateEnvironmentResponse> createEnvironment(CreateEnvironmentRequest request);
 
     /**
      * @param request the request parameters of CreateHttpIncomingRequestHeaderModificationRule  CreateHttpIncomingRequestHeaderModificationRuleRequest
@@ -561,6 +573,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteEdgeContainerAppVersionResponse> deleteEdgeContainerAppVersion(DeleteEdgeContainerAppVersionRequest request);
 
     /**
+     * @param request the request parameters of DeleteEnvironment  DeleteEnvironmentRequest
+     * @return DeleteEnvironmentResponse
+     */
+    CompletableFuture<DeleteEnvironmentResponse> deleteEnvironment(DeleteEnvironmentRequest request);
+
+    /**
      * @param request the request parameters of DeleteHttpDDoSIntelligentRule  DeleteHttpDDoSIntelligentRuleRequest
      * @return DeleteHttpDDoSIntelligentRuleResponse
      */
@@ -794,6 +812,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteUserWafRulesetResponse> deleteUserWafRuleset(DeleteUserWafRulesetRequest request);
 
     /**
+     * @param request the request parameters of DeleteVersion  DeleteVersionRequest
+     * @return DeleteVersionResponse
+     */
+    CompletableFuture<DeleteVersionResponse> deleteVersion(DeleteVersionRequest request);
+
+    /**
      * @param request the request parameters of DeleteVideoProcessing  DeleteVideoProcessingRequest
      * @return DeleteVideoProcessingResponse
      */
@@ -846,6 +870,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeCacheReservePriceGapResponse
      */
     CompletableFuture<DescribeCacheReservePriceGapResponse> describeCacheReservePriceGap(DescribeCacheReservePriceGapRequest request);
+
+    /**
+     * @param request the request parameters of DescribeConditionIPBInfo  DescribeConditionIPBInfoRequest
+     * @return DescribeConditionIPBInfoResponse
+     */
+    CompletableFuture<DescribeConditionIPBInfoResponse> describeConditionIPBInfo(DescribeConditionIPBInfoRequest request);
 
     /**
      * @param request the request parameters of DescribeCustomScenePolicies  DescribeCustomScenePoliciesRequest
@@ -971,6 +1001,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRatePlanPriceGapResponse> describeRatePlanPriceGap(DescribeRatePlanPriceGapRequest request);
 
     /**
+     * @param request the request parameters of DescribeRuleMetadata  DescribeRuleMetadataRequest
+     * @return DescribeRuleMetadataResponse
+     */
+    CompletableFuture<DescribeRuleMetadataResponse> describeRuleMetadata(DescribeRuleMetadataRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  If you do not specify StartTime or EndTime, the log data generated in the last 24 hours is queried. If you specify StartTime and EndTime, the log data generated within the specified time range is queried.</p>
      * <ul>
@@ -1065,6 +1101,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableCustomScenePolicyResponse> enableCustomScenePolicy(EnableCustomScenePolicyRequest request);
 
     /**
+     * @param request the request parameters of ExportRecordCnames  ExportRecordCnamesRequest
+     * @return ExportRecordCnamesResponse
+     */
+    CompletableFuture<ExportRecordCnamesResponse> exportRecordCnames(ExportRecordCnamesRequest request);
+
+    /**
      * @param request the request parameters of ExportRecords  ExportRecordsRequest
      * @return ExportRecordsResponse
      */
@@ -1087,6 +1129,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetAutomaticFrequencyControlConfigResponse
      */
     CompletableFuture<GetAutomaticFrequencyControlConfigResponse> getAutomaticFrequencyControlConfig(GetAutomaticFrequencyControlConfigRequest request);
+
+    /**
+     * @param request the request parameters of GetCacheReserve  GetCacheReserveRequest
+     * @return GetCacheReserveResponse
+     */
+    CompletableFuture<GetCacheReserveResponse> getCacheReserve(GetCacheReserveRequest request);
 
     /**
      * @param request the request parameters of GetCacheReserveSpecification  GetCacheReserveSpecificationRequest
@@ -1362,10 +1410,25 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetLoadBalancerResponse> getLoadBalancer(GetLoadBalancerRequest request);
 
     /**
+     * @param request the request parameters of GetMainDomainName  GetMainDomainNameRequest
+     * @return GetMainDomainNameResponse
+     */
+    CompletableFuture<GetMainDomainNameResponse> getMainDomainName(GetMainDomainNameRequest request);
+
+    /**
      * @param request the request parameters of GetManagedTransform  GetManagedTransformRequest
      * @return GetManagedTransformResponse
      */
     CompletableFuture<GetManagedTransformResponse> getManagedTransform(GetManagedTransformRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>You can call this operation when you use Edge Routine.</p>
+     * 
+     * @param request the request parameters of GetMatchSite  GetMatchSiteRequest
+     * @return GetMatchSiteResponse
+     */
+    CompletableFuture<GetMatchSiteResponse> getMatchSite(GetMatchSiteRequest request);
 
     /**
      * @param request the request parameters of GetNetworkOptimization  GetNetworkOptimizationRequest
@@ -1414,6 +1477,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetPageResponse
      */
     CompletableFuture<GetPageResponse> getPage(GetPageRequest request);
+
+    /**
+     * @param request the request parameters of GetPageShield  GetPageShieldRequest
+     * @return GetPageShieldResponse
+     */
+    CompletableFuture<GetPageShieldResponse> getPageShield(GetPageShieldRequest request);
 
     /**
      * @param request the request parameters of GetPerformanceDataCollection  GetPerformanceDataCollectionRequest
@@ -1584,6 +1653,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetSitePauseResponse> getSitePause(GetSitePauseRequest request);
 
     /**
+     * @param request the request parameters of GetSiteTrafficSequence  GetSiteTrafficSequenceRequest
+     * @return GetSiteTrafficSequenceResponse
+     */
+    CompletableFuture<GetSiteTrafficSequenceResponse> getSiteTrafficSequence(GetSiteTrafficSequenceRequest request);
+
+    /**
      * @param request the request parameters of GetSiteWafSettings  GetSiteWafSettingsRequest
      * @return GetSiteWafSettingsResponse
      */
@@ -1670,6 +1745,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetWafRulesetResponse
      */
     CompletableFuture<GetWafRulesetResponse> getWafRuleset(GetWafRulesetRequest request);
+
+    /**
+     * @param request the request parameters of GetWaitingRoomPreviewPage  GetWaitingRoomPreviewPageRequest
+     * @return GetWaitingRoomPreviewPageResponse
+     */
+    CompletableFuture<GetWaitingRoomPreviewPageResponse> getWaitingRoomPreviewPage(GetWaitingRoomPreviewPageRequest request);
+
+    /**
+     * @param request the request parameters of ListAWSRegionInfos  ListAWSRegionInfosRequest
+     * @return ListAWSRegionInfosResponse
+     */
+    CompletableFuture<ListAWSRegionInfosResponse> listAWSRegionInfos(ListAWSRegionInfosRequest request);
+
+    /**
+     * @param request the request parameters of ListAsyncTasks  ListAsyncTasksRequest
+     * @return ListAsyncTasksResponse
+     */
+    CompletableFuture<ListAsyncTasksResponse> listAsyncTasks(ListAsyncTasksRequest request);
 
     /**
      * @param request the request parameters of ListCacheReserveInstances  ListCacheReserveInstancesRequest
@@ -1798,6 +1891,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListEdgeRoutineRecordsResponse
      */
     CompletableFuture<ListEdgeRoutineRecordsResponse> listEdgeRoutineRecords(ListEdgeRoutineRecordsRequest request);
+
+    /**
+     * @param request the request parameters of ListEnvironments  ListEnvironmentsRequest
+     * @return ListEnvironmentsResponse
+     */
+    CompletableFuture<ListEnvironmentsResponse> listEnvironments(ListEnvironmentsRequest request);
 
     /**
      * @param request the request parameters of ListHttpIncomingRequestHeaderModificationRules  ListHttpIncomingRequestHeaderModificationRulesRequest
@@ -1950,6 +2049,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPostpaidRatePlanInstancesResponse> listPostpaidRatePlanInstances(ListPostpaidRatePlanInstancesRequest request);
 
     /**
+     * @param request the request parameters of ListPostpaidSitePlans  ListPostpaidSitePlansRequest
+     * @return ListPostpaidSitePlansResponse
+     */
+    CompletableFuture<ListPostpaidSitePlansResponse> listPostpaidSitePlans(ListPostpaidSitePlansRequest request);
+
+    /**
      * <b>description</b> :
      * <p>The DNS records related to Edge Container, Edge Routine, and TCP/UDP proxy are not returned in this operation.</p>
      * 
@@ -2019,6 +2124,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListSiteDeliveryTasksResponse
      */
     CompletableFuture<ListSiteDeliveryTasksResponse> listSiteDeliveryTasks(ListSiteDeliveryTasksRequest request);
+
+    /**
+     * @param request the request parameters of ListSiteFunctions  ListSiteFunctionsRequest
+     * @return ListSiteFunctionsResponse
+     */
+    CompletableFuture<ListSiteFunctionsResponse> listSiteFunctions(ListSiteFunctionsRequest request);
 
     /**
      * @param request the request parameters of ListSiteOriginClientCertificates  ListSiteOriginClientCertificatesRequest
@@ -2094,6 +2205,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListUserWafRulesetsResponse
      */
     CompletableFuture<ListUserWafRulesetsResponse> listUserWafRulesets(ListUserWafRulesetsRequest request);
+
+    /**
+     * @param request the request parameters of ListVersions  ListVersionsRequest
+     * @return ListVersionsResponse
+     */
+    CompletableFuture<ListVersionsResponse> listVersions(ListVersionsRequest request);
 
     /**
      * @param request the request parameters of ListVideoProcessings  ListVideoProcessingsRequest
@@ -2237,6 +2354,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RebuildEdgeContainerAppStagingEnvResponse> rebuildEdgeContainerAppStagingEnv(RebuildEdgeContainerAppStagingEnvRequest request);
 
     /**
+     * @param request the request parameters of RecoverSite  RecoverSiteRequest
+     * @return RecoverSiteResponse
+     */
+    CompletableFuture<RecoverSiteResponse> recoverSite(RecoverSiteRequest request);
+
+    /**
      * @param request the request parameters of ReleaseInstance  ReleaseInstanceRequest
      * @return ReleaseInstanceResponse
      */
@@ -2259,6 +2382,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RollbackEdgeContainerAppVersionResponse
      */
     CompletableFuture<RollbackEdgeContainerAppVersionResponse> rollbackEdgeContainerAppVersion(RollbackEdgeContainerAppVersionRequest request);
+
+    /**
+     * @param request the request parameters of RollbackEnvironmentVersion  RollbackEnvironmentVersionRequest
+     * @return RollbackEnvironmentVersionResponse
+     */
+    CompletableFuture<RollbackEnvironmentVersionResponse> rollbackEnvironmentVersion(RollbackEnvironmentVersionRequest request);
 
     /**
      * @param request the request parameters of SetAutomaticFrequencyControlConfig  SetAutomaticFrequencyControlConfigRequest
@@ -2339,6 +2468,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopScheduledPreloadExecutionResponse> stopScheduledPreloadExecution(StopScheduledPreloadExecutionRequest request);
 
     /**
+     * @param request the request parameters of StopSite  StopSiteRequest
+     * @return StopSiteResponse
+     */
+    CompletableFuture<StopSiteResponse> stopSite(StopSiteRequest request);
+
+    /**
      * @param request the request parameters of SubmitUploadTask  SubmitUploadTaskRequest
      * @return SubmitUploadTaskResponse
      */
@@ -2355,6 +2490,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UntagResourcesResponse
      */
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of UpdateCacheReserve  UpdateCacheReserveRequest
+     * @return UpdateCacheReserveResponse
+     */
+    CompletableFuture<UpdateCacheReserveResponse> updateCacheReserve(UpdateCacheReserveRequest request);
 
     /**
      * @param request the request parameters of UpdateCacheReserveSpec  UpdateCacheReserveSpecRequest
@@ -2385,6 +2526,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateCompressionRuleResponse
      */
     CompletableFuture<UpdateCompressionRuleResponse> updateCompressionRule(UpdateCompressionRuleRequest request);
+
+    /**
+     * @param request the request parameters of UpdateConfigSequence  UpdateConfigSequenceRequest
+     * @return UpdateConfigSequenceResponse
+     */
+    CompletableFuture<UpdateConfigSequenceResponse> updateConfigSequence(UpdateConfigSequenceRequest request);
 
     /**
      * @param request the request parameters of UpdateCrossBorderOptimization  UpdateCrossBorderOptimizationRequest
@@ -2427,6 +2574,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateEdgeContainerAppResourceReserveResponse
      */
     CompletableFuture<UpdateEdgeContainerAppResourceReserveResponse> updateEdgeContainerAppResourceReserve(UpdateEdgeContainerAppResourceReserveRequest request);
+
+    /**
+     * @param request the request parameters of UpdateEnvironment  UpdateEnvironmentRequest
+     * @return UpdateEnvironmentResponse
+     */
+    CompletableFuture<UpdateEnvironmentResponse> updateEnvironment(UpdateEnvironmentRequest request);
+
+    /**
+     * @param request the request parameters of UpdateEnvironmentVersion  UpdateEnvironmentVersionRequest
+     * @return UpdateEnvironmentVersionResponse
+     */
+    CompletableFuture<UpdateEnvironmentVersionResponse> updateEnvironmentVersion(UpdateEnvironmentVersionRequest request);
 
     /**
      * @param request the request parameters of UpdateHttpIncomingRequestHeaderModificationRule  UpdateHttpIncomingRequestHeaderModificationRuleRequest
@@ -2707,6 +2866,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateUserWafRulesetResponse> updateUserWafRuleset(UpdateUserWafRulesetRequest request);
 
     /**
+     * @param request the request parameters of UpdateVersionDesc  UpdateVersionDescRequest
+     * @return UpdateVersionDescResponse
+     */
+    CompletableFuture<UpdateVersionDescResponse> updateVersionDesc(UpdateVersionDescRequest request);
+
+    /**
      * @param request the request parameters of UpdateVideoProcessing  UpdateVideoProcessingRequest
      * @return UpdateVideoProcessingResponse
      */
@@ -2744,6 +2909,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateWaitingRoomRuleResponse
      */
     CompletableFuture<UpdateWaitingRoomRuleResponse> updateWaitingRoomRule(UpdateWaitingRoomRuleRequest request);
+
+    /**
+     * @param request the request parameters of UpgradeEnvironmentVersion  UpgradeEnvironmentVersionRequest
+     * @return UpgradeEnvironmentVersionResponse
+     */
+    CompletableFuture<UpgradeEnvironmentVersionResponse> upgradeEnvironmentVersion(UpgradeEnvironmentVersionRequest request);
 
     /**
      * @param request the request parameters of UploadClientCaCertificate  UploadClientCaCertificateRequest
