@@ -317,15 +317,27 @@ public class TargetVideo extends TeaModel {
      * <p>TargetVideo</p>
      */
     public static class Face extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BlurRadius")
+        private Integer blurRadius;
+
         @com.aliyun.core.annotation.NameInMap("Confidence")
         private Float confidence;
 
         @com.aliyun.core.annotation.NameInMap("MinSize")
         private Integer minSize;
 
+        @com.aliyun.core.annotation.NameInMap("ScaleRatio")
+        private Float scaleRatio;
+
+        @com.aliyun.core.annotation.NameInMap("Transparency")
+        private Float transparency;
+
         private Face(Builder builder) {
+            this.blurRadius = builder.blurRadius;
             this.confidence = builder.confidence;
             this.minSize = builder.minSize;
+            this.scaleRatio = builder.scaleRatio;
+            this.transparency = builder.transparency;
         }
 
         public static Builder builder() {
@@ -334,6 +346,13 @@ public class TargetVideo extends TeaModel {
 
         public static Face create() {
             return builder().build();
+        }
+
+        /**
+         * @return blurRadius
+         */
+        public Integer getBlurRadius() {
+            return this.blurRadius;
         }
 
         /**
@@ -350,17 +369,45 @@ public class TargetVideo extends TeaModel {
             return this.minSize;
         }
 
+        /**
+         * @return scaleRatio
+         */
+        public Float getScaleRatio() {
+            return this.scaleRatio;
+        }
+
+        /**
+         * @return transparency
+         */
+        public Float getTransparency() {
+            return this.transparency;
+        }
+
         public static final class Builder {
+            private Integer blurRadius; 
             private Float confidence; 
             private Integer minSize; 
+            private Float scaleRatio; 
+            private Float transparency; 
 
             private Builder() {
             } 
 
             private Builder(Face model) {
+                this.blurRadius = model.blurRadius;
                 this.confidence = model.confidence;
                 this.minSize = model.minSize;
+                this.scaleRatio = model.scaleRatio;
+                this.transparency = model.transparency;
             } 
+
+            /**
+             * BlurRadius.
+             */
+            public Builder blurRadius(Integer blurRadius) {
+                this.blurRadius = blurRadius;
+                return this;
+            }
 
             /**
              * Confidence.
@@ -375,6 +422,22 @@ public class TargetVideo extends TeaModel {
              */
             public Builder minSize(Integer minSize) {
                 this.minSize = minSize;
+                return this;
+            }
+
+            /**
+             * ScaleRatio.
+             */
+            public Builder scaleRatio(Float scaleRatio) {
+                this.scaleRatio = scaleRatio;
+                return this;
+            }
+
+            /**
+             * Transparency.
+             */
+            public Builder transparency(Float transparency) {
+                this.transparency = transparency;
                 return this;
             }
 
@@ -392,15 +455,27 @@ public class TargetVideo extends TeaModel {
      * <p>TargetVideo</p>
      */
     public static class LicensePlate extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BlurRadius")
+        private Integer blurRadius;
+
         @com.aliyun.core.annotation.NameInMap("Confidence")
         private Float confidence;
 
         @com.aliyun.core.annotation.NameInMap("MinSize")
         private Integer minSize;
 
+        @com.aliyun.core.annotation.NameInMap("ScaleRatio")
+        private Float scaleRatio;
+
+        @com.aliyun.core.annotation.NameInMap("Transparency")
+        private Float transparency;
+
         private LicensePlate(Builder builder) {
+            this.blurRadius = builder.blurRadius;
             this.confidence = builder.confidence;
             this.minSize = builder.minSize;
+            this.scaleRatio = builder.scaleRatio;
+            this.transparency = builder.transparency;
         }
 
         public static Builder builder() {
@@ -409,6 +484,13 @@ public class TargetVideo extends TeaModel {
 
         public static LicensePlate create() {
             return builder().build();
+        }
+
+        /**
+         * @return blurRadius
+         */
+        public Integer getBlurRadius() {
+            return this.blurRadius;
         }
 
         /**
@@ -425,17 +507,45 @@ public class TargetVideo extends TeaModel {
             return this.minSize;
         }
 
+        /**
+         * @return scaleRatio
+         */
+        public Float getScaleRatio() {
+            return this.scaleRatio;
+        }
+
+        /**
+         * @return transparency
+         */
+        public Float getTransparency() {
+            return this.transparency;
+        }
+
         public static final class Builder {
+            private Integer blurRadius; 
             private Float confidence; 
             private Integer minSize; 
+            private Float scaleRatio; 
+            private Float transparency; 
 
             private Builder() {
             } 
 
             private Builder(LicensePlate model) {
+                this.blurRadius = model.blurRadius;
                 this.confidence = model.confidence;
                 this.minSize = model.minSize;
+                this.scaleRatio = model.scaleRatio;
+                this.transparency = model.transparency;
             } 
+
+            /**
+             * BlurRadius.
+             */
+            public Builder blurRadius(Integer blurRadius) {
+                this.blurRadius = blurRadius;
+                return this;
+            }
 
             /**
              * Confidence.
@@ -450,6 +560,22 @@ public class TargetVideo extends TeaModel {
              */
             public Builder minSize(Integer minSize) {
                 this.minSize = minSize;
+                return this;
+            }
+
+            /**
+             * ScaleRatio.
+             */
+            public Builder scaleRatio(Float scaleRatio) {
+                this.scaleRatio = scaleRatio;
+                return this;
+            }
+
+            /**
+             * Transparency.
+             */
+            public Builder transparency(Float transparency) {
+                this.transparency = transparency;
                 return this;
             }
 

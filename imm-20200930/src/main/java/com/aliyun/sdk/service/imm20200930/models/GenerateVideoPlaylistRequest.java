@@ -512,6 +512,9 @@ public class GenerateVideoPlaylistRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Audio")
         private TargetAudio audio;
 
+        @com.aliyun.core.annotation.NameInMap("Container")
+        private String container;
+
         @com.aliyun.core.annotation.NameInMap("Duration")
         private Float duration;
 
@@ -538,6 +541,7 @@ public class GenerateVideoPlaylistRequest extends Request {
 
         private Targets(Builder builder) {
             this.audio = builder.audio;
+            this.container = builder.container;
             this.duration = builder.duration;
             this.initialSegments = builder.initialSegments;
             this.initialTranscode = builder.initialTranscode;
@@ -561,6 +565,13 @@ public class GenerateVideoPlaylistRequest extends Request {
          */
         public TargetAudio getAudio() {
             return this.audio;
+        }
+
+        /**
+         * @return container
+         */
+        public String getContainer() {
+            return this.container;
         }
 
         /**
@@ -621,6 +632,7 @@ public class GenerateVideoPlaylistRequest extends Request {
 
         public static final class Builder {
             private TargetAudio audio; 
+            private String container; 
             private Float duration; 
             private java.util.List<Float> initialSegments; 
             private Float initialTranscode; 
@@ -635,6 +647,7 @@ public class GenerateVideoPlaylistRequest extends Request {
 
             private Builder(Targets model) {
                 this.audio = model.audio;
+                this.container = model.container;
                 this.duration = model.duration;
                 this.initialSegments = model.initialSegments;
                 this.initialTranscode = model.initialTranscode;
@@ -653,6 +666,14 @@ public class GenerateVideoPlaylistRequest extends Request {
              */
             public Builder audio(TargetAudio audio) {
                 this.audio = audio;
+                return this;
+            }
+
+            /**
+             * Container.
+             */
+            public Builder container(String container) {
+                this.container = container;
                 return this;
             }
 
