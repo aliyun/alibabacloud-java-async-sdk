@@ -39,6 +39,10 @@ public class ListApplicationsRequest extends Request {
     private String applicationName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationTemplateId")
+    private String applicationTemplateId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AuthorizationType")
     @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String authorizationType;
@@ -96,6 +100,7 @@ public class ListApplicationsRequest extends Request {
         this.applicationIdentityType = builder.applicationIdentityType;
         this.applicationIds = builder.applicationIds;
         this.applicationName = builder.applicationName;
+        this.applicationTemplateId = builder.applicationTemplateId;
         this.authorizationType = builder.authorizationType;
         this.customFields = builder.customFields;
         this.instanceId = builder.instanceId;
@@ -155,6 +160,13 @@ public class ListApplicationsRequest extends Request {
      */
     public String getApplicationName() {
         return this.applicationName;
+    }
+
+    /**
+     * @return applicationTemplateId
+     */
+    public String getApplicationTemplateId() {
+        return this.applicationTemplateId;
     }
 
     /**
@@ -240,6 +252,7 @@ public class ListApplicationsRequest extends Request {
         private String applicationIdentityType; 
         private java.util.List<String> applicationIds; 
         private String applicationName; 
+        private String applicationTemplateId; 
         private String authorizationType; 
         private java.util.List<CustomFields> customFields; 
         private String instanceId; 
@@ -263,6 +276,7 @@ public class ListApplicationsRequest extends Request {
             this.applicationIdentityType = request.applicationIdentityType;
             this.applicationIds = request.applicationIds;
             this.applicationName = request.applicationName;
+            this.applicationTemplateId = request.applicationTemplateId;
             this.authorizationType = request.authorizationType;
             this.customFields = request.customFields;
             this.instanceId = request.instanceId;
@@ -324,6 +338,15 @@ public class ListApplicationsRequest extends Request {
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
             this.applicationName = applicationName;
+            return this;
+        }
+
+        /**
+         * ApplicationTemplateId.
+         */
+        public Builder applicationTemplateId(String applicationTemplateId) {
+            this.putQueryParameter("ApplicationTemplateId", applicationTemplateId);
+            this.applicationTemplateId = applicationTemplateId;
             return this;
         }
 
