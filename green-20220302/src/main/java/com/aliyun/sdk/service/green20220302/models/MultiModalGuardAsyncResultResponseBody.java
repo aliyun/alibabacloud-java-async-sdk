@@ -908,6 +908,12 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Detail")
         private java.util.List<FramesDetail> detail;
 
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
+        private Integer errorCode;
+
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
+        private String errorMsg;
+
         @com.aliyun.core.annotation.NameInMap("Offset")
         private Float offset;
 
@@ -922,6 +928,8 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
 
         private Frames(Builder builder) {
             this.detail = builder.detail;
+            this.errorCode = builder.errorCode;
+            this.errorMsg = builder.errorMsg;
             this.offset = builder.offset;
             this.suggestion = builder.suggestion;
             this.timestamp = builder.timestamp;
@@ -941,6 +949,20 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
          */
         public java.util.List<FramesDetail> getDetail() {
             return this.detail;
+        }
+
+        /**
+         * @return errorCode
+         */
+        public Integer getErrorCode() {
+            return this.errorCode;
+        }
+
+        /**
+         * @return errorMsg
+         */
+        public String getErrorMsg() {
+            return this.errorMsg;
         }
 
         /**
@@ -973,6 +995,8 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<FramesDetail> detail; 
+            private Integer errorCode; 
+            private String errorMsg; 
             private Float offset; 
             private String suggestion; 
             private Long timestamp; 
@@ -983,6 +1007,8 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
 
             private Builder(Frames model) {
                 this.detail = model.detail;
+                this.errorCode = model.errorCode;
+                this.errorMsg = model.errorMsg;
                 this.offset = model.offset;
                 this.suggestion = model.suggestion;
                 this.timestamp = model.timestamp;
@@ -994,6 +1020,22 @@ public class MultiModalGuardAsyncResultResponseBody extends TeaModel {
              */
             public Builder detail(java.util.List<FramesDetail> detail) {
                 this.detail = detail;
+                return this;
+            }
+
+            /**
+             * ErrorCode.
+             */
+            public Builder errorCode(Integer errorCode) {
+                this.errorCode = errorCode;
+                return this;
+            }
+
+            /**
+             * ErrorMsg.
+             */
+            public Builder errorMsg(String errorMsg) {
+                this.errorMsg = errorMsg;
                 return this;
             }
 
