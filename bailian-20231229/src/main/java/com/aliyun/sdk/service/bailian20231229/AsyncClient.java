@@ -35,6 +35,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddCategoryResponse> addCategory(AddCategoryRequest request);
 
     /**
+     * @param request the request parameters of AddChunk  AddChunkRequest
+     * @return AddChunkResponse
+     */
+    CompletableFuture<AddChunkResponse> addChunk(AddChunkRequest request);
+
+    /**
      * @param request the request parameters of AddConnector  AddConnectorRequest
      * @return AddConnectorResponse
      */
