@@ -1198,6 +1198,9 @@ public class DescribeImagesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
+        @com.aliyun.core.annotation.NameInMap("Usable")
+        private Boolean usable;
+
         @com.aliyun.core.annotation.NameInMap("Usage")
         private String usage;
 
@@ -1234,6 +1237,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             this.status = builder.status;
             this.supplierName = builder.supplierName;
             this.tags = builder.tags;
+            this.usable = builder.usable;
             this.usage = builder.usage;
         }
 
@@ -1470,6 +1474,13 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         /**
+         * @return usable
+         */
+        public Boolean getUsable() {
+            return this.usable;
+        }
+
+        /**
          * @return usage
          */
         public String getUsage() {
@@ -1509,6 +1520,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             private String status; 
             private String supplierName; 
             private Tags tags; 
+            private Boolean usable; 
             private String usage; 
 
             private Builder() {
@@ -1547,6 +1559,7 @@ public class DescribeImagesResponseBody extends TeaModel {
                 this.status = model.status;
                 this.supplierName = model.supplierName;
                 this.tags = model.tags;
+                this.usable = model.usable;
                 this.usage = model.usage;
             } 
 
@@ -1922,6 +1935,14 @@ public class DescribeImagesResponseBody extends TeaModel {
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * Usable.
+             */
+            public Builder usable(Boolean usable) {
+                this.usable = usable;
                 return this;
             }
 

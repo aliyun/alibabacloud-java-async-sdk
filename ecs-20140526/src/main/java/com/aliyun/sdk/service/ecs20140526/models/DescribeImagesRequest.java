@@ -128,6 +128,10 @@ public class DescribeImagesRequest extends Request {
     private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Usable")
+    private Boolean usable;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Usage")
     private String usage;
 
@@ -160,6 +164,7 @@ public class DescribeImagesRequest extends Request {
         this.snapshotId = builder.snapshotId;
         this.status = builder.status;
         this.tag = builder.tag;
+        this.usable = builder.usable;
         this.usage = builder.usage;
     }
 
@@ -366,6 +371,13 @@ public class DescribeImagesRequest extends Request {
     }
 
     /**
+     * @return usable
+     */
+    public Boolean getUsable() {
+        return this.usable;
+    }
+
+    /**
      * @return usage
      */
     public String getUsage() {
@@ -400,6 +412,7 @@ public class DescribeImagesRequest extends Request {
         private String snapshotId; 
         private String status; 
         private java.util.List<Tag> tag; 
+        private Boolean usable; 
         private String usage; 
 
         private Builder() {
@@ -435,6 +448,7 @@ public class DescribeImagesRequest extends Request {
             this.snapshotId = request.snapshotId;
             this.status = request.status;
             this.tag = request.tag;
+            this.usable = request.usable;
             this.usage = request.usage;
         } 
 
@@ -805,6 +819,15 @@ public class DescribeImagesRequest extends Request {
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
+            return this;
+        }
+
+        /**
+         * Usable.
+         */
+        public Builder usable(Boolean usable) {
+            this.putQueryParameter("Usable", usable);
+            this.usable = usable;
             return this;
         }
 
