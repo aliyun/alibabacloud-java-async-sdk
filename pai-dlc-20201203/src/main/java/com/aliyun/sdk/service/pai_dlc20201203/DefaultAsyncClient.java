@@ -159,6 +159,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateSignal  CreateSignalRequest
+     * @return CreateSignalResponse
+     */
+    @Override
+    public CompletableFuture<CreateSignalResponse> createSignal(CreateSignalRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateSignal").setMethod(HttpMethod.POST).setPathRegex("/api/v1/jobs/{JobId}/signals").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateSignalResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateSignalResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateTensorboard  CreateTensorboardRequest
      * @return CreateTensorboardResponse
      */
@@ -453,6 +471,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetSignal  GetSignalRequest
+     * @return GetSignalResponse
+     */
+    @Override
+    public CompletableFuture<GetSignalResponse> getSignal(GetSignalRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetSignal").setMethod(HttpMethod.GET).setPathRegex("/api/v1/jobs/{JobId}/signals/{SignalId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetSignalResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetSignalResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetTensorboard  GetTensorboardRequest
      * @return GetTensorboardResponse
      */
@@ -609,6 +645,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListRayHistoryServersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListSignals  ListSignalsRequest
+     * @return ListSignalsResponse
+     */
+    @Override
+    public CompletableFuture<ListSignalsResponse> listSignals(ListSignalsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListSignals").setMethod(HttpMethod.GET).setPathRegex("/api/v1/jobs/{JobId}/signals").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListSignalsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListSignalsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

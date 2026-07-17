@@ -41,6 +41,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRayHistoryServerResponse> createRayHistoryServer(CreateRayHistoryServerRequest request);
 
     /**
+     * @param request the request parameters of CreateSignal  CreateSignalRequest
+     * @return CreateSignalResponse
+     */
+    CompletableFuture<CreateSignalResponse> createSignal(CreateSignalRequest request);
+
+    /**
      * @param request the request parameters of CreateTensorboard  CreateTensorboardRequest
      * @return CreateTensorboardResponse
      */
@@ -143,6 +149,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetRayHistoryServerResponse> getRayHistoryServer(GetRayHistoryServerRequest request);
 
     /**
+     * @param request the request parameters of GetSignal  GetSignalRequest
+     * @return GetSignalResponse
+     */
+    CompletableFuture<GetSignalResponse> getSignal(GetSignalRequest request);
+
+    /**
      * @param request the request parameters of GetTensorboard  GetTensorboardRequest
      * @return GetTensorboardResponse
      */
@@ -195,6 +207,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListRayHistoryServersResponse
      */
     CompletableFuture<ListRayHistoryServersResponse> listRayHistoryServers(ListRayHistoryServersRequest request);
+
+    /**
+     * @param request the request parameters of ListSignals  ListSignalsRequest
+     * @return ListSignalsResponse
+     */
+    CompletableFuture<ListSignalsResponse> listSignals(ListSignalsRequest request);
 
     /**
      * @param request the request parameters of ListTensorboards  ListTensorboardsRequest
