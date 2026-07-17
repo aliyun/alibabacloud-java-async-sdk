@@ -131,6 +131,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetClientSourceIpResponse> getClientSourceIp(GetClientSourceIpRequest request);
 
     /**
+     * @param request the request parameters of GetComputeEngineJobDetail  GetComputeEngineJobDetailRequest
+     * @return GetComputeEngineJobDetailResponse
+     */
+    CompletableFuture<GetComputeEngineJobDetailResponse> getComputeEngineJobDetail(GetComputeEngineJobDetailRequest request);
+
+    /**
+     * @param request the request parameters of GetComputeEngineJobLog  GetComputeEngineJobLogRequest
+     * @return GetComputeEngineJobLogResponse
+     */
+    CompletableFuture<GetComputeEngineJobLogResponse> getComputeEngineJobLog(GetComputeEngineJobLogRequest request);
+
+    /**
      * @param request the request parameters of GetEngineDefaultAuth  GetEngineDefaultAuthRequest
      * @return GetEngineDefaultAuthResponse
      */
@@ -264,6 +276,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAutoScalingRulesResponse
      */
     CompletableFuture<ListAutoScalingRulesResponse> listAutoScalingRules(ListAutoScalingRulesRequest request);
+
+    /**
+     * @param request the request parameters of ListComputeEngineJob  ListComputeEngineJobRequest
+     * @return ListComputeEngineJobResponse
+     */
+    CompletableFuture<ListComputeEngineJobResponse> listComputeEngineJob(ListComputeEngineJobRequest request);
 
     /**
      * @param request the request parameters of ListLdpsComputeGroups  ListLdpsComputeGroupsRequest
