@@ -1705,6 +1705,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetUserLogDeliveryQuotaResponse> getUserLogDeliveryQuota(GetUserLogDeliveryQuotaRequest request);
 
     /**
+     * @param request the request parameters of GetUserMaxPlanQuota  GetUserMaxPlanQuotaRequest
+     * @return GetUserMaxPlanQuotaResponse
+     */
+    CompletableFuture<GetUserMaxPlanQuotaResponse> getUserMaxPlanQuota(GetUserMaxPlanQuotaRequest request);
+
+    /**
      * @param request the request parameters of GetUserWafRuleset  GetUserWafRulesetRequest
      * @return GetUserWafRulesetResponse
      */
@@ -1763,6 +1769,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAsyncTasksResponse
      */
     CompletableFuture<ListAsyncTasksResponse> listAsyncTasks(ListAsyncTasksRequest request);
+
+    /**
+     * @param request the request parameters of ListBotInstances  ListBotInstancesRequest
+     * @return ListBotInstancesResponse
+     */
+    CompletableFuture<ListBotInstancesResponse> listBotInstances(ListBotInstancesRequest request);
 
     /**
      * @param request the request parameters of ListCacheReserveInstances  ListCacheReserveInstancesRequest
@@ -1953,6 +1965,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListInstanceQuotasWithUsageResponse> listInstanceQuotasWithUsage(ListInstanceQuotasWithUsageRequest request);
 
     /**
+     * @param request the request parameters of ListInstancesQuota  ListInstancesQuotaRequest
+     * @return ListInstancesQuotaResponse
+     */
+    CompletableFuture<ListInstancesQuotaResponse> listInstancesQuota(ListInstancesQuotaRequest request);
+
+    /**
      * @param request the request parameters of ListKeylessServers  ListKeylessServersRequest
      * @return ListKeylessServersResponse
      */
@@ -2053,6 +2071,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListPostpaidSitePlansResponse
      */
     CompletableFuture<ListPostpaidSitePlansResponse> listPostpaidSitePlans(ListPostpaidSitePlansRequest request);
+
+    /**
+     * @param request the request parameters of ListQuotasMinEffectPlan  ListQuotasMinEffectPlanRequest
+     * @return ListQuotasMinEffectPlanResponse
+     */
+    CompletableFuture<ListQuotasMinEffectPlanResponse> listQuotasMinEffectPlan(ListQuotasMinEffectPlanRequest request);
 
     /**
      * <b>description</b> :
@@ -2280,6 +2304,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListWaitingRoomsResponse
      */
     CompletableFuture<ListWaitingRoomsResponse> listWaitingRooms(ListWaitingRoomsRequest request);
+
+    /**
+     * @param request the request parameters of ModifyInstanceFeatures  ModifyInstanceFeaturesRequest
+     * @return ModifyInstanceFeaturesResponse
+     */
+    CompletableFuture<ModifyInstanceFeaturesResponse> modifyInstanceFeatures(ModifyInstanceFeaturesRequest request);
+
+    /**
+     * @param request the request parameters of ModifySiteFeatures  ModifySiteFeaturesRequest
+     * @return ModifySiteFeaturesResponse
+     */
+    CompletableFuture<ModifySiteFeaturesResponse> modifySiteFeatures(ModifySiteFeaturesRequest request);
 
     /**
      * @param request the request parameters of OpenEdgeContainer  OpenEdgeContainerRequest
