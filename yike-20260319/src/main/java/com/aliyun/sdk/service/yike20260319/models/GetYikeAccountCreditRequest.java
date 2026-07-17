@@ -12,30 +12,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetVideoGenerationJobRequest} extends {@link RequestModel}
+ * {@link GetYikeAccountCreditRequest} extends {@link RequestModel}
  *
- * <p>GetVideoGenerationJobRequest</p>
+ * <p>GetYikeAccountCreditRequest</p>
  */
-public class GetVideoGenerationJobRequest extends Request {
+public class GetYikeAccountCreditRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("JobId")
-    private String jobId;
-
-    private GetVideoGenerationJobRequest(Builder builder) {
+    private GetYikeAccountCreditRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.jobId = builder.jobId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetVideoGenerationJobRequest create() {
+    public static GetYikeAccountCreditRequest create() {
         return builder().build();
     }
 
@@ -51,25 +46,16 @@ public class GetVideoGenerationJobRequest extends Request {
         return this.regionId;
     }
 
-    /**
-     * @return jobId
-     */
-    public String getJobId() {
-        return this.jobId;
-    }
-
-    public static final class Builder extends Request.Builder<GetVideoGenerationJobRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetYikeAccountCreditRequest, Builder> {
         private String regionId; 
-        private String jobId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetVideoGenerationJobRequest request) {
+        private Builder(GetYikeAccountCreditRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.jobId = request.jobId;
         } 
 
         /**
@@ -81,18 +67,9 @@ public class GetVideoGenerationJobRequest extends Request {
             return this;
         }
 
-        /**
-         * JobId.
-         */
-        public Builder jobId(String jobId) {
-            this.putQueryParameter("JobId", jobId);
-            this.jobId = jobId;
-            return this;
-        }
-
         @Override
-        public GetVideoGenerationJobRequest build() {
-            return new GetVideoGenerationJobRequest(this);
+        public GetYikeAccountCreditRequest build() {
+            return new GetYikeAccountCreditRequest(this);
         } 
 
     } 
