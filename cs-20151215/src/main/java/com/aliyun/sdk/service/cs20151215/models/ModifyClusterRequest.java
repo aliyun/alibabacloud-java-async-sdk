@@ -40,6 +40,10 @@ public class ModifyClusterRequest extends Request {
     private String apiServerEipId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("client_token")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("cluster_name")
     private String clusterName;
 
@@ -113,6 +117,7 @@ public class ModifyClusterRequest extends Request {
         this.apiServerCustomCertSans = builder.apiServerCustomCertSans;
         this.apiServerEip = builder.apiServerEip;
         this.apiServerEipId = builder.apiServerEipId;
+        this.clientToken = builder.clientToken;
         this.clusterName = builder.clusterName;
         this.clusterSpec = builder.clusterSpec;
         this.controlPlaneConfig = builder.controlPlaneConfig;
@@ -177,6 +182,13 @@ public class ModifyClusterRequest extends Request {
      */
     public String getApiServerEipId() {
         return this.apiServerEipId;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -297,6 +309,7 @@ public class ModifyClusterRequest extends Request {
         private ApiServerCustomCertSans apiServerCustomCertSans; 
         private Boolean apiServerEip; 
         private String apiServerEipId; 
+        private String clientToken; 
         private String clusterName; 
         private String clusterSpec; 
         private ControlPlaneConfig controlPlaneConfig; 
@@ -325,6 +338,7 @@ public class ModifyClusterRequest extends Request {
             this.apiServerCustomCertSans = request.apiServerCustomCertSans;
             this.apiServerEip = request.apiServerEip;
             this.apiServerEipId = request.apiServerEipId;
+            this.clientToken = request.clientToken;
             this.clusterName = request.clusterName;
             this.clusterSpec = request.clusterSpec;
             this.controlPlaneConfig = request.controlPlaneConfig;
@@ -399,6 +413,15 @@ public class ModifyClusterRequest extends Request {
         public Builder apiServerEipId(String apiServerEipId) {
             this.putBodyParameter("api_server_eip_id", apiServerEipId);
             this.apiServerEipId = apiServerEipId;
+            return this;
+        }
+
+        /**
+         * client_token.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putBodyParameter("client_token", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
@@ -1469,12 +1492,91 @@ public class ModifyClusterRequest extends Request {
      *
      * <p>ModifyClusterRequest</p>
      */
+    public static class LoadBalancersConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("endpoint_type")
+        private String endpointType;
+
+        @com.aliyun.core.annotation.NameInMap("load_balancer_id")
+        private String loadBalancerId;
+
+        private LoadBalancersConfig(Builder builder) {
+            this.endpointType = builder.endpointType;
+            this.loadBalancerId = builder.loadBalancerId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LoadBalancersConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endpointType
+         */
+        public String getEndpointType() {
+            return this.endpointType;
+        }
+
+        /**
+         * @return loadBalancerId
+         */
+        public String getLoadBalancerId() {
+            return this.loadBalancerId;
+        }
+
+        public static final class Builder {
+            private String endpointType; 
+            private String loadBalancerId; 
+
+            private Builder() {
+            } 
+
+            private Builder(LoadBalancersConfig model) {
+                this.endpointType = model.endpointType;
+                this.loadBalancerId = model.loadBalancerId;
+            } 
+
+            /**
+             * endpoint_type.
+             */
+            public Builder endpointType(String endpointType) {
+                this.endpointType = endpointType;
+                return this;
+            }
+
+            /**
+             * load_balancer_id.
+             */
+            public Builder loadBalancerId(String loadBalancerId) {
+                this.loadBalancerId = loadBalancerId;
+                return this;
+            }
+
+            public LoadBalancersConfig build() {
+                return new LoadBalancersConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyClusterRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyClusterRequest</p>
+     */
     public static class ControlPlaneEndpointsConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("internal_dns_config")
         private InternalDnsConfig internalDnsConfig;
 
+        @com.aliyun.core.annotation.NameInMap("load_balancers_config")
+        private java.util.List<LoadBalancersConfig> loadBalancersConfig;
+
         private ControlPlaneEndpointsConfig(Builder builder) {
             this.internalDnsConfig = builder.internalDnsConfig;
+            this.loadBalancersConfig = builder.loadBalancersConfig;
         }
 
         public static Builder builder() {
@@ -1492,14 +1594,23 @@ public class ModifyClusterRequest extends Request {
             return this.internalDnsConfig;
         }
 
+        /**
+         * @return loadBalancersConfig
+         */
+        public java.util.List<LoadBalancersConfig> getLoadBalancersConfig() {
+            return this.loadBalancersConfig;
+        }
+
         public static final class Builder {
             private InternalDnsConfig internalDnsConfig; 
+            private java.util.List<LoadBalancersConfig> loadBalancersConfig; 
 
             private Builder() {
             } 
 
             private Builder(ControlPlaneEndpointsConfig model) {
                 this.internalDnsConfig = model.internalDnsConfig;
+                this.loadBalancersConfig = model.loadBalancersConfig;
             } 
 
             /**
@@ -1507,6 +1618,14 @@ public class ModifyClusterRequest extends Request {
              */
             public Builder internalDnsConfig(InternalDnsConfig internalDnsConfig) {
                 this.internalDnsConfig = internalDnsConfig;
+                return this;
+            }
+
+            /**
+             * load_balancers_config.
+             */
+            public Builder loadBalancersConfig(java.util.List<LoadBalancersConfig> loadBalancersConfig) {
+                this.loadBalancersConfig = loadBalancersConfig;
                 return this;
             }
 

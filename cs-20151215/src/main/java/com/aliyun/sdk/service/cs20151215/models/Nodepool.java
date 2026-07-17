@@ -854,10 +854,18 @@ public class Nodepool extends TeaModel {
      * <p>Nodepool</p>
      */
     public static class AutoRepairPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("max_parallel_repairing_nodes")
+        private String maxParallelRepairingNodes;
+
+        @com.aliyun.core.annotation.NameInMap("max_unhealthy_nodes_threshold")
+        private String maxUnhealthyNodesThreshold;
+
         @com.aliyun.core.annotation.NameInMap("restart_node")
         private Boolean restartNode;
 
         private AutoRepairPolicy(Builder builder) {
+            this.maxParallelRepairingNodes = builder.maxParallelRepairingNodes;
+            this.maxUnhealthyNodesThreshold = builder.maxUnhealthyNodesThreshold;
             this.restartNode = builder.restartNode;
         }
 
@@ -870,6 +878,20 @@ public class Nodepool extends TeaModel {
         }
 
         /**
+         * @return maxParallelRepairingNodes
+         */
+        public String getMaxParallelRepairingNodes() {
+            return this.maxParallelRepairingNodes;
+        }
+
+        /**
+         * @return maxUnhealthyNodesThreshold
+         */
+        public String getMaxUnhealthyNodesThreshold() {
+            return this.maxUnhealthyNodesThreshold;
+        }
+
+        /**
          * @return restartNode
          */
         public Boolean getRestartNode() {
@@ -877,14 +899,34 @@ public class Nodepool extends TeaModel {
         }
 
         public static final class Builder {
+            private String maxParallelRepairingNodes; 
+            private String maxUnhealthyNodesThreshold; 
             private Boolean restartNode; 
 
             private Builder() {
             } 
 
             private Builder(AutoRepairPolicy model) {
+                this.maxParallelRepairingNodes = model.maxParallelRepairingNodes;
+                this.maxUnhealthyNodesThreshold = model.maxUnhealthyNodesThreshold;
                 this.restartNode = model.restartNode;
             } 
+
+            /**
+             * max_parallel_repairing_nodes.
+             */
+            public Builder maxParallelRepairingNodes(String maxParallelRepairingNodes) {
+                this.maxParallelRepairingNodes = maxParallelRepairingNodes;
+                return this;
+            }
+
+            /**
+             * max_unhealthy_nodes_threshold.
+             */
+            public Builder maxUnhealthyNodesThreshold(String maxUnhealthyNodesThreshold) {
+                this.maxUnhealthyNodesThreshold = maxUnhealthyNodesThreshold;
+                return this;
+            }
 
             /**
              * restart_node.
@@ -1704,6 +1746,60 @@ public class Nodepool extends TeaModel {
      *
      * <p>Nodepool</p>
      */
+    public static class CpuOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("nested_virtualization")
+        private String nestedVirtualization;
+
+        private CpuOptions(Builder builder) {
+            this.nestedVirtualization = builder.nestedVirtualization;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CpuOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return nestedVirtualization
+         */
+        public String getNestedVirtualization() {
+            return this.nestedVirtualization;
+        }
+
+        public static final class Builder {
+            private String nestedVirtualization; 
+
+            private Builder() {
+            } 
+
+            private Builder(CpuOptions model) {
+                this.nestedVirtualization = model.nestedVirtualization;
+            } 
+
+            /**
+             * nested_virtualization.
+             */
+            public Builder nestedVirtualization(String nestedVirtualization) {
+                this.nestedVirtualization = nestedVirtualization;
+                return this;
+            }
+
+            public CpuOptions build() {
+                return new CpuOptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link Nodepool} extends {@link TeaModel}
+     *
+     * <p>Nodepool</p>
+     */
     public static class PrivatePoolOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("id")
         private String id;
@@ -2014,6 +2110,9 @@ public class Nodepool extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("compensate_with_on_demand")
         private Boolean compensateWithOnDemand;
 
+        @com.aliyun.core.annotation.NameInMap("cpu_options")
+        private CpuOptions cpuOptions;
+
         @com.aliyun.core.annotation.NameInMap("data_disks")
         private java.util.List<DataDisk> dataDisks;
 
@@ -2148,6 +2247,7 @@ public class Nodepool extends TeaModel {
             this.autoRenew = builder.autoRenew;
             this.autoRenewPeriod = builder.autoRenewPeriod;
             this.compensateWithOnDemand = builder.compensateWithOnDemand;
+            this.cpuOptions = builder.cpuOptions;
             this.dataDisks = builder.dataDisks;
             this.deploymentsetId = builder.deploymentsetId;
             this.desiredSize = builder.desiredSize;
@@ -2219,6 +2319,13 @@ public class Nodepool extends TeaModel {
          */
         public Boolean getCompensateWithOnDemand() {
             return this.compensateWithOnDemand;
+        }
+
+        /**
+         * @return cpuOptions
+         */
+        public CpuOptions getCpuOptions() {
+            return this.cpuOptions;
         }
 
         /**
@@ -2519,6 +2626,7 @@ public class Nodepool extends TeaModel {
             private Boolean autoRenew; 
             private Long autoRenewPeriod; 
             private Boolean compensateWithOnDemand; 
+            private CpuOptions cpuOptions; 
             private java.util.List<DataDisk> dataDisks; 
             private String deploymentsetId; 
             private Long desiredSize; 
@@ -2569,6 +2677,7 @@ public class Nodepool extends TeaModel {
                 this.autoRenew = model.autoRenew;
                 this.autoRenewPeriod = model.autoRenewPeriod;
                 this.compensateWithOnDemand = model.compensateWithOnDemand;
+                this.cpuOptions = model.cpuOptions;
                 this.dataDisks = model.dataDisks;
                 this.deploymentsetId = model.deploymentsetId;
                 this.desiredSize = model.desiredSize;
@@ -2634,6 +2743,14 @@ public class Nodepool extends TeaModel {
              */
             public Builder compensateWithOnDemand(Boolean compensateWithOnDemand) {
                 this.compensateWithOnDemand = compensateWithOnDemand;
+                return this;
+            }
+
+            /**
+             * cpu_options.
+             */
+            public Builder cpuOptions(CpuOptions cpuOptions) {
+                this.cpuOptions = cpuOptions;
                 return this;
             }
 

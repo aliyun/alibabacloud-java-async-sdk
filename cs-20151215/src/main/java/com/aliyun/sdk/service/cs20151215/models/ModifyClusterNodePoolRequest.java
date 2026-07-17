@@ -915,12 +915,20 @@ public class ModifyClusterNodePoolRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("auto_repair_policy_id")
         private String autoRepairPolicyId;
 
+        @com.aliyun.core.annotation.NameInMap("max_parallel_repairing_nodes")
+        private String maxParallelRepairingNodes;
+
+        @com.aliyun.core.annotation.NameInMap("max_unhealthy_nodes_threshold")
+        private String maxUnhealthyNodesThreshold;
+
         @com.aliyun.core.annotation.NameInMap("restart_node")
         private Boolean restartNode;
 
         private AutoRepairPolicy(Builder builder) {
             this.approvalRequired = builder.approvalRequired;
             this.autoRepairPolicyId = builder.autoRepairPolicyId;
+            this.maxParallelRepairingNodes = builder.maxParallelRepairingNodes;
+            this.maxUnhealthyNodesThreshold = builder.maxUnhealthyNodesThreshold;
             this.restartNode = builder.restartNode;
         }
 
@@ -947,6 +955,20 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
+         * @return maxParallelRepairingNodes
+         */
+        public String getMaxParallelRepairingNodes() {
+            return this.maxParallelRepairingNodes;
+        }
+
+        /**
+         * @return maxUnhealthyNodesThreshold
+         */
+        public String getMaxUnhealthyNodesThreshold() {
+            return this.maxUnhealthyNodesThreshold;
+        }
+
+        /**
          * @return restartNode
          */
         public Boolean getRestartNode() {
@@ -956,6 +978,8 @@ public class ModifyClusterNodePoolRequest extends Request {
         public static final class Builder {
             private Boolean approvalRequired; 
             private String autoRepairPolicyId; 
+            private String maxParallelRepairingNodes; 
+            private String maxUnhealthyNodesThreshold; 
             private Boolean restartNode; 
 
             private Builder() {
@@ -964,6 +988,8 @@ public class ModifyClusterNodePoolRequest extends Request {
             private Builder(AutoRepairPolicy model) {
                 this.approvalRequired = model.approvalRequired;
                 this.autoRepairPolicyId = model.autoRepairPolicyId;
+                this.maxParallelRepairingNodes = model.maxParallelRepairingNodes;
+                this.maxUnhealthyNodesThreshold = model.maxUnhealthyNodesThreshold;
                 this.restartNode = model.restartNode;
             } 
 
@@ -980,6 +1006,22 @@ public class ModifyClusterNodePoolRequest extends Request {
              */
             public Builder autoRepairPolicyId(String autoRepairPolicyId) {
                 this.autoRepairPolicyId = autoRepairPolicyId;
+                return this;
+            }
+
+            /**
+             * max_parallel_repairing_nodes.
+             */
+            public Builder maxParallelRepairingNodes(String maxParallelRepairingNodes) {
+                this.maxParallelRepairingNodes = maxParallelRepairingNodes;
+                return this;
+            }
+
+            /**
+             * max_unhealthy_nodes_threshold.
+             */
+            public Builder maxUnhealthyNodesThreshold(String maxUnhealthyNodesThreshold) {
+                this.maxUnhealthyNodesThreshold = maxUnhealthyNodesThreshold;
                 return this;
             }
 

@@ -3854,12 +3854,97 @@ public class CreateClusterRequest extends Request {
      *
      * <p>CreateClusterRequest</p>
      */
+    public static class LoadBalancersConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("endpoint_type")
+        private String endpointType;
+
+        @com.aliyun.core.annotation.NameInMap("load_balancer_id")
+        private String loadBalancerId;
+
+        private LoadBalancersConfig(Builder builder) {
+            this.endpointType = builder.endpointType;
+            this.loadBalancerId = builder.loadBalancerId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LoadBalancersConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endpointType
+         */
+        public String getEndpointType() {
+            return this.endpointType;
+        }
+
+        /**
+         * @return loadBalancerId
+         */
+        public String getLoadBalancerId() {
+            return this.loadBalancerId;
+        }
+
+        public static final class Builder {
+            private String endpointType; 
+            private String loadBalancerId; 
+
+            private Builder() {
+            } 
+
+            private Builder(LoadBalancersConfig model) {
+                this.endpointType = model.endpointType;
+                this.loadBalancerId = model.loadBalancerId;
+            } 
+
+            /**
+             * endpoint_type.
+             */
+            public Builder endpointType(String endpointType) {
+                this.endpointType = endpointType;
+                return this;
+            }
+
+            /**
+             * <p>Specifies the ID of the CLB instance for accessing the API server. If this parameter is specified, the system does not automatically create a CLB instance for the API server.</p>
+             * <blockquote>
+             * <p> Make sure that the CLB instance does not have other dependencies, such as listeners and backend servers. You cannot specify shared-resource or Internet-facing CLB instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-wz9t256gqa3vbouk****</p>
+             */
+            public Builder loadBalancerId(String loadBalancerId) {
+                this.loadBalancerId = loadBalancerId;
+                return this;
+            }
+
+            public LoadBalancersConfig build() {
+                return new LoadBalancersConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
     public static class ControlPlaneEndpointsConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("internal_dns_config")
         private InternalDnsConfig internalDnsConfig;
 
+        @com.aliyun.core.annotation.NameInMap("load_balancers_config")
+        private java.util.List<LoadBalancersConfig> loadBalancersConfig;
+
         private ControlPlaneEndpointsConfig(Builder builder) {
             this.internalDnsConfig = builder.internalDnsConfig;
+            this.loadBalancersConfig = builder.loadBalancersConfig;
         }
 
         public static Builder builder() {
@@ -3877,14 +3962,23 @@ public class CreateClusterRequest extends Request {
             return this.internalDnsConfig;
         }
 
+        /**
+         * @return loadBalancersConfig
+         */
+        public java.util.List<LoadBalancersConfig> getLoadBalancersConfig() {
+            return this.loadBalancersConfig;
+        }
+
         public static final class Builder {
             private InternalDnsConfig internalDnsConfig; 
+            private java.util.List<LoadBalancersConfig> loadBalancersConfig; 
 
             private Builder() {
             } 
 
             private Builder(ControlPlaneEndpointsConfig model) {
                 this.internalDnsConfig = model.internalDnsConfig;
+                this.loadBalancersConfig = model.loadBalancersConfig;
             } 
 
             /**
@@ -3892,6 +3986,14 @@ public class CreateClusterRequest extends Request {
              */
             public Builder internalDnsConfig(InternalDnsConfig internalDnsConfig) {
                 this.internalDnsConfig = internalDnsConfig;
+                return this;
+            }
+
+            /**
+             * load_balancers_config.
+             */
+            public Builder loadBalancersConfig(java.util.List<LoadBalancersConfig> loadBalancersConfig) {
+                this.loadBalancersConfig = loadBalancersConfig;
                 return this;
             }
 
