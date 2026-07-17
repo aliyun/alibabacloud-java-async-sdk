@@ -372,6 +372,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAtiAgentRegisterInfoResponse> describeAtiAgentRegisterInfo(DescribeAtiAgentRegisterInfoRequest request);
 
     /**
+     * @param request the request parameters of DescribeAtiAgentRegisterInfoMarket  DescribeAtiAgentRegisterInfoMarketRequest
+     * @return DescribeAtiAgentRegisterInfoMarketResponse
+     */
+    CompletableFuture<DescribeAtiAgentRegisterInfoMarketResponse> describeAtiAgentRegisterInfoMarket(DescribeAtiAgentRegisterInfoMarketRequest request);
+
+    /**
      * @param request the request parameters of DescribeAtiAlertSettings  DescribeAtiAlertSettingsRequest
      * @return DescribeAtiAlertSettingsResponse
      */
