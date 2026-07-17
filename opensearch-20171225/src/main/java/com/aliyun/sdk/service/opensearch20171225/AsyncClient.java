@@ -82,6 +82,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAppGroupCredentialsResponse> createAppGroupCredentials(CreateAppGroupCredentialsRequest request);
 
     /**
+     * @param request the request parameters of CreateElasticPlan  CreateElasticPlanRequest
+     * @return CreateElasticPlanResponse
+     */
+    CompletableFuture<CreateElasticPlanResponse> createElasticPlan(CreateElasticPlanRequest request);
+
+    /**
      * @param request the request parameters of CreateFirstRank  CreateFirstRankRequest
      * @return CreateFirstRankResponse
      */
@@ -253,6 +259,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeDataCollctionResponse
      */
     CompletableFuture<DescribeDataCollctionResponse> describeDataCollction(DescribeDataCollctionRequest request);
+
+    /**
+     * @param request the request parameters of DescribeElasticPlan  DescribeElasticPlanRequest
+     * @return DescribeElasticPlanResponse
+     */
+    CompletableFuture<DescribeElasticPlanResponse> describeElasticPlan(DescribeElasticPlanRequest request);
 
     /**
      * @param request the request parameters of DescribeFirstRank  DescribeFirstRankRequest
@@ -442,6 +454,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDataSourceTablesResponse> listDataSourceTables(ListDataSourceTablesRequest request);
 
     /**
+     * @param request the request parameters of ListElasticPlans  ListElasticPlansRequest
+     * @return ListElasticPlansResponse
+     */
+    CompletableFuture<ListElasticPlansResponse> listElasticPlans(ListElasticPlansRequest request);
+
+    /**
      * @param request the request parameters of ListFirstRanks  ListFirstRanksRequest
      * @return ListFirstRanksResponse
      */
@@ -604,6 +622,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyAppGroupQuotaResponse> modifyAppGroupQuota(ModifyAppGroupQuotaRequest request);
 
     /**
+     * @param request the request parameters of ModifyElasticPlan  ModifyElasticPlanRequest
+     * @return ModifyElasticPlanResponse
+     */
+    CompletableFuture<ModifyElasticPlanResponse> modifyElasticPlan(ModifyElasticPlanRequest request);
+
+    /**
      * @param request the request parameters of ModifyFirstRank  ModifyFirstRankRequest
      * @return ModifyFirstRankResponse
      */
@@ -665,6 +689,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RemoveDataCollectionResponse
      */
     CompletableFuture<RemoveDataCollectionResponse> removeDataCollection(RemoveDataCollectionRequest request);
+
+    /**
+     * @param request the request parameters of RemoveElasticPlan  RemoveElasticPlanRequest
+     * @return RemoveElasticPlanResponse
+     */
+    CompletableFuture<RemoveElasticPlanResponse> removeElasticPlan(RemoveElasticPlanRequest request);
 
     /**
      * @param request the request parameters of RemoveFirstRank  RemoveFirstRankRequest

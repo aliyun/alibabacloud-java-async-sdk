@@ -314,6 +314,9 @@ public class DescribeAppGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("domain")
         private String domain;
 
+        @com.aliyun.core.annotation.NameInMap("elasticLcu")
+        private Integer elasticLcu;
+
         @com.aliyun.core.annotation.NameInMap("engineType")
         private String engineType;
 
@@ -385,6 +388,7 @@ public class DescribeAppGroupResponseBody extends TeaModel {
             this.currentVersion = builder.currentVersion;
             this.description = builder.description;
             this.domain = builder.domain;
+            this.elasticLcu = builder.elasticLcu;
             this.engineType = builder.engineType;
             this.expireOn = builder.expireOn;
             this.firstRankAlgoDeploymentId = builder.firstRankAlgoDeploymentId;
@@ -463,6 +467,13 @@ public class DescribeAppGroupResponseBody extends TeaModel {
          */
         public String getDomain() {
             return this.domain;
+        }
+
+        /**
+         * @return elasticLcu
+         */
+        public Integer getElasticLcu() {
+            return this.elasticLcu;
         }
 
         /**
@@ -620,6 +631,7 @@ public class DescribeAppGroupResponseBody extends TeaModel {
             private String currentVersion; 
             private String description; 
             private String domain; 
+            private Integer elasticLcu; 
             private String engineType; 
             private String expireOn; 
             private Integer firstRankAlgoDeploymentId; 
@@ -653,6 +665,7 @@ public class DescribeAppGroupResponseBody extends TeaModel {
                 this.currentVersion = model.currentVersion;
                 this.description = model.description;
                 this.domain = model.domain;
+                this.elasticLcu = model.elasticLcu;
                 this.engineType = model.engineType;
                 this.expireOn = model.expireOn;
                 this.firstRankAlgoDeploymentId = model.firstRankAlgoDeploymentId;
@@ -760,6 +773,14 @@ public class DescribeAppGroupResponseBody extends TeaModel {
              */
             public Builder domain(String domain) {
                 this.domain = domain;
+                return this;
+            }
+
+            /**
+             * elasticLcu.
+             */
+            public Builder elasticLcu(Integer elasticLcu) {
+                this.elasticLcu = elasticLcu;
                 return this;
             }
 

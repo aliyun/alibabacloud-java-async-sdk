@@ -2375,6 +2375,9 @@ public class DescribeAppsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("quota")
         private Quota quota;
 
+        @com.aliyun.core.annotation.NameInMap("realtimeShared")
+        private Boolean realtimeShared;
+
         @com.aliyun.core.annotation.NameInMap("schema")
         private Schema schema;
 
@@ -2409,6 +2412,7 @@ public class DescribeAppsResponseBody extends TeaModel {
             this.prompts = builder.prompts;
             this.queryProcessors = builder.queryProcessors;
             this.quota = builder.quota;
+            this.realtimeShared = builder.realtimeShared;
             this.schema = builder.schema;
             this.schemas = builder.schemas;
             this.secondRanks = builder.secondRanks;
@@ -2531,6 +2535,13 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
 
         /**
+         * @return realtimeShared
+         */
+        public Boolean getRealtimeShared() {
+            return this.realtimeShared;
+        }
+
+        /**
          * @return schema
          */
         public Schema getSchema() {
@@ -2588,6 +2599,7 @@ public class DescribeAppsResponseBody extends TeaModel {
             private java.util.List<java.util.Map<String, ?>> prompts; 
             private java.util.List<QueryProcessors> queryProcessors; 
             private Quota quota; 
+            private Boolean realtimeShared; 
             private Schema schema; 
             private java.util.List<Schemas> schemas; 
             private java.util.List<SecondRanks> secondRanks; 
@@ -2614,6 +2626,7 @@ public class DescribeAppsResponseBody extends TeaModel {
                 this.prompts = model.prompts;
                 this.queryProcessors = model.queryProcessors;
                 this.quota = model.quota;
+                this.realtimeShared = model.realtimeShared;
                 this.schema = model.schema;
                 this.schemas = model.schemas;
                 this.secondRanks = model.secondRanks;
@@ -2762,6 +2775,14 @@ public class DescribeAppsResponseBody extends TeaModel {
              */
             public Builder quota(Quota quota) {
                 this.quota = quota;
+                return this;
+            }
+
+            /**
+             * realtimeShared.
+             */
+            public Builder realtimeShared(Boolean realtimeShared) {
+                this.realtimeShared = realtimeShared;
                 return this;
             }
 

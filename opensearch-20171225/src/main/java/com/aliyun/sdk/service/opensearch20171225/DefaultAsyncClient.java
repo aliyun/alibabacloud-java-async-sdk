@@ -30,7 +30,19 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "OpenSearch";
         this.version = "2017-12-25";
         this.endpointRule = "regional";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("us-east-1", "opensearch.us-east-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "opensearch.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "opensearch.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "opensearch.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "opensearch.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "opensearch.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "opensearch.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "opensearch.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-beijing", "opensearch.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "opensearch.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "opensearch.ap-southeast-1.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -204,6 +216,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateAppGroupCredentialsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateElasticPlan  CreateElasticPlanRequest
+     * @return CreateElasticPlanResponse
+     */
+    @Override
+    public CompletableFuture<CreateElasticPlanResponse> createElasticPlan(CreateElasticPlanRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateElasticPlan").setMethod(HttpMethod.POST).setPathRegex("/v4/openapi/app-groups/{appGroupIdentity}/elastic-plans").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateElasticPlanResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateElasticPlanResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -701,6 +731,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeDataCollctionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeElasticPlan  DescribeElasticPlanRequest
+     * @return DescribeElasticPlanResponse
+     */
+    @Override
+    public CompletableFuture<DescribeElasticPlanResponse> describeElasticPlan(DescribeElasticPlanRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeElasticPlan").setMethod(HttpMethod.GET).setPathRegex("/v4/openapi/app-groups/{appGroupIdentity}/elastic-plans/{planId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeElasticPlanResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeElasticPlanResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1254,6 +1302,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListElasticPlans  ListElasticPlansRequest
+     * @return ListElasticPlansResponse
+     */
+    @Override
+    public CompletableFuture<ListElasticPlansResponse> listElasticPlans(ListElasticPlansRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListElasticPlans").setMethod(HttpMethod.GET).setPathRegex("/v4/openapi/app-groups/{appGroupIdentity}/elastic-plans").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListElasticPlansResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListElasticPlansResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListFirstRanks  ListFirstRanksRequest
      * @return ListFirstRanksResponse
      */
@@ -1740,6 +1806,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModifyElasticPlan  ModifyElasticPlanRequest
+     * @return ModifyElasticPlanResponse
+     */
+    @Override
+    public CompletableFuture<ModifyElasticPlanResponse> modifyElasticPlan(ModifyElasticPlanRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModifyElasticPlan").setMethod(HttpMethod.PUT).setPathRegex("/v4/openapi/app-groups/{appGroupIdentity}/elastic-plans/{planId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyElasticPlanResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyElasticPlanResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ModifyFirstRank  ModifyFirstRankRequest
      * @return ModifyFirstRankResponse
      */
@@ -1917,6 +2001,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RemoveDataCollectionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RemoveElasticPlan  RemoveElasticPlanRequest
+     * @return RemoveElasticPlanResponse
+     */
+    @Override
+    public CompletableFuture<RemoveElasticPlanResponse> removeElasticPlan(RemoveElasticPlanRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RemoveElasticPlan").setMethod(HttpMethod.DELETE).setPathRegex("/v4/openapi/app-groups/{appGroupIdentity}/elastic-plans/{planId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RemoveElasticPlanResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RemoveElasticPlanResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
