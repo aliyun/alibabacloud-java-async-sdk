@@ -2701,6 +2701,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RestartDBNodeZonalResponse> restartDBNodeZonal(RestartDBNodeZonalRequest request);
 
     /**
+     * @param request the request parameters of RestartPolarClawGateway  RestartPolarClawGatewayRequest
+     * @return RestartPolarClawGatewayResponse
+     */
+    CompletableFuture<RestartPolarClawGatewayResponse> restartPolarClawGateway(RestartPolarClawGatewayRequest request);
+
+    /**
      * @param request the request parameters of RestoreTable  RestoreTableRequest
      * @return RestoreTableResponse
      */

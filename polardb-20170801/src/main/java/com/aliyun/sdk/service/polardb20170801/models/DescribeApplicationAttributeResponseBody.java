@@ -1412,6 +1412,9 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("Domain")
+        private String domain;
+
         @com.aliyun.core.annotation.NameInMap("EndpointId")
         private String endpointId;
 
@@ -1429,6 +1432,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
 
         private Endpoints(Builder builder) {
             this.description = builder.description;
+            this.domain = builder.domain;
             this.endpointId = builder.endpointId;
             this.ip = builder.ip;
             this.netType = builder.netType;
@@ -1449,6 +1453,13 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return domain
+         */
+        public String getDomain() {
+            return this.domain;
         }
 
         /**
@@ -1488,6 +1499,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private String description; 
+            private String domain; 
             private String endpointId; 
             private String ip; 
             private String netType; 
@@ -1499,6 +1511,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
 
             private Builder(Endpoints model) {
                 this.description = model.description;
+                this.domain = model.domain;
                 this.endpointId = model.endpointId;
                 this.ip = model.ip;
                 this.netType = model.netType;
@@ -1511,6 +1524,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * Domain.
+             */
+            public Builder domain(String domain) {
+                this.domain = domain;
                 return this;
             }
 
