@@ -154,6 +154,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateMaterialDirectoryResponse> createMaterialDirectory(CreateMaterialDirectoryRequest request);
 
     /**
+     * @param request the request parameters of CreateRbacRole  CreateRbacRoleRequest
+     * @return CreateRbacRoleResponse
+     */
+    CompletableFuture<CreateRbacRoleResponse> createRbacRole(CreateRbacRoleRequest request);
+
+    /**
      * @param request the request parameters of DeleteAppDomainCertificate  DeleteAppDomainCertificateRequest
      * @return DeleteAppDomainCertificateResponse
      */
@@ -202,6 +208,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteMaterialTaskResponse> deleteMaterialTask(DeleteMaterialTaskRequest request);
 
     /**
+     * @param request the request parameters of DeleteRbacRole  DeleteRbacRoleRequest
+     * @return DeleteRbacRoleResponse
+     */
+    CompletableFuture<DeleteRbacRoleResponse> deleteRbacRole(DeleteRbacRoleRequest request);
+
+    /**
      * @param request the request parameters of DescribeAppDomainDnsRecord  DescribeAppDomainDnsRecordRequest
      * @return DescribeAppDomainDnsRecordResponse
      */
@@ -224,6 +236,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ExportMaterialFileResponse
      */
     CompletableFuture<ExportMaterialFileResponse> exportMaterialFile(ExportMaterialFileRequest request);
+
+    /**
+     * @param request the request parameters of ExportRbacConfig  ExportRbacConfigRequest
+     * @return ExportRbacConfigResponse
+     */
+    CompletableFuture<ExportRbacConfigResponse> exportRbacConfig(ExportRbacConfigRequest request);
 
     /**
      * @param request the request parameters of GetAIStaffPreviewUrl  GetAIStaffPreviewUrlRequest
@@ -569,6 +587,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPromotionOfferRecordsForPartnerResponse> listPromotionOfferRecordsForPartner(ListPromotionOfferRecordsForPartnerRequest request);
 
     /**
+     * @param request the request parameters of ListRbacOrgTree  ListRbacOrgTreeRequest
+     * @return ListRbacOrgTreeResponse
+     */
+    CompletableFuture<ListRbacOrgTreeResponse> listRbacOrgTree(ListRbacOrgTreeRequest request);
+
+    /**
+     * @param request the request parameters of ListRbacPermissions  ListRbacPermissionsRequest
+     * @return ListRbacPermissionsResponse
+     */
+    CompletableFuture<ListRbacPermissionsResponse> listRbacPermissions(ListRbacPermissionsRequest request);
+
+    /**
+     * @param request the request parameters of ListRbacRoleHierarchy  ListRbacRoleHierarchyRequest
+     * @return ListRbacRoleHierarchyResponse
+     */
+    CompletableFuture<ListRbacRoleHierarchyResponse> listRbacRoleHierarchy(ListRbacRoleHierarchyRequest request);
+
+    /**
+     * @param request the request parameters of ListRbacRoles  ListRbacRolesRequest
+     * @return ListRbacRolesResponse
+     */
+    CompletableFuture<ListRbacRolesResponse> listRbacRoles(ListRbacRolesRequest request);
+
+    /**
      * @param request the request parameters of ModifyAppInstanceSpec  ModifyAppInstanceSpecRequest
      * @return ModifyAppInstanceSpecResponse
      */
@@ -751,6 +793,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RefundAppInstanceForPartnerResponse> refundAppInstanceForPartner(RefundAppInstanceForPartnerRequest request);
 
     /**
+     * @param request the request parameters of RemoveRbacRoleHierarchy  RemoveRbacRoleHierarchyRequest
+     * @return RemoveRbacRoleHierarchyResponse
+     */
+    CompletableFuture<RemoveRbacRoleHierarchyResponse> removeRbacRoleHierarchy(RemoveRbacRoleHierarchyRequest request);
+
+    /**
      * @param request the request parameters of RenewAppInstance  RenewAppInstanceRequest
      * @return RenewAppInstanceResponse
      */
@@ -797,6 +845,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SetAppDomainCertificateResponse
      */
     CompletableFuture<SetAppDomainCertificateResponse> setAppDomainCertificate(SetAppDomainCertificateRequest request);
+
+    /**
+     * @param request the request parameters of SetRbacRoleHierarchy  SetRbacRoleHierarchyRequest
+     * @return SetRbacRoleHierarchyResponse
+     */
+    CompletableFuture<SetRbacRoleHierarchyResponse> setRbacRoleHierarchy(SetRbacRoleHierarchyRequest request);
 
     /**
      * @param request the request parameters of SubmitAppSeoIndex  SubmitAppSeoIndexRequest
@@ -878,6 +932,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateMiniAppBindingResponse
      */
     CompletableFuture<UpdateMiniAppBindingResponse> updateMiniAppBinding(UpdateMiniAppBindingRequest request);
+
+    /**
+     * @param request the request parameters of UpdateRbacRole  UpdateRbacRoleRequest
+     * @return UpdateRbacRoleResponse
+     */
+    CompletableFuture<UpdateRbacRoleResponse> updateRbacRole(UpdateRbacRoleRequest request);
 
     /**
      * @param request the request parameters of UploadAppSiteValidationFile  UploadAppSiteValidationFileRequest
