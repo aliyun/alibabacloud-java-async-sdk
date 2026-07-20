@@ -20,6 +20,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of CustomerNoteCreate  CustomerNoteCreateRequest
+     * @return CustomerNoteCreateResponse
+     */
+    CompletableFuture<CustomerNoteCreateResponse> customerNoteCreate(CustomerNoteCreateRequest request);
+
+    /**
+     * @param request the request parameters of CustomerNoteEdit  CustomerNoteEditRequest
+     * @return CustomerNoteEditResponse
+     */
+    CompletableFuture<CustomerNoteEditResponse> customerNoteEdit(CustomerNoteEditRequest request);
+
+    /**
+     * @param request the request parameters of CustomerNoteList  CustomerNoteListRequest
+     * @return CustomerNoteListResponse
+     */
+    CompletableFuture<CustomerNoteListResponse> customerNoteList(CustomerNoteListRequest request);
+
+    /**
+     * @param request the request parameters of CustomerNoteListDetail  CustomerNoteListDetailRequest
+     * @return CustomerNoteListDetailResponse
+     */
+    CompletableFuture<CustomerNoteListDetailResponse> customerNoteListDetail(CustomerNoteListDetailRequest request);
+
+    /**
      * @param request the request parameters of GetBillDetailFileList  GetBillDetailFileListRequest
      * @return GetBillDetailFileListResponse
      */
