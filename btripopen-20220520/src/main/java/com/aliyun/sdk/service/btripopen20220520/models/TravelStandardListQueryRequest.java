@@ -35,6 +35,10 @@ public class TravelStandardListQueryRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("rule_name")
     private String ruleName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("user_id")
+    private String userId;
+
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -46,6 +50,7 @@ public class TravelStandardListQueryRequest extends Request {
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
         this.ruleName = builder.ruleName;
+        this.userId = builder.userId;
         this.xAcsBtripCorpToken = builder.xAcsBtripCorpToken;
     }
 
@@ -91,6 +96,13 @@ public class TravelStandardListQueryRequest extends Request {
     }
 
     /**
+     * @return userId
+     */
+    public String getUserId() {
+        return this.userId;
+    }
+
+    /**
      * @return xAcsBtripCorpToken
      */
     public String getXAcsBtripCorpToken() {
@@ -102,6 +114,7 @@ public class TravelStandardListQueryRequest extends Request {
         private Integer pageNo; 
         private Integer pageSize; 
         private String ruleName; 
+        private String userId; 
         private String xAcsBtripCorpToken; 
 
         private Builder() {
@@ -114,6 +127,7 @@ public class TravelStandardListQueryRequest extends Request {
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
             this.ruleName = request.ruleName;
+            this.userId = request.userId;
             this.xAcsBtripCorpToken = request.xAcsBtripCorpToken;
         } 
 
@@ -156,6 +170,15 @@ public class TravelStandardListQueryRequest extends Request {
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("rule_name", ruleName);
             this.ruleName = ruleName;
+            return this;
+        }
+
+        /**
+         * user_id.
+         */
+        public Builder userId(String userId) {
+            this.putQueryParameter("user_id", userId);
+            this.userId = userId;
             return this;
         }
 
