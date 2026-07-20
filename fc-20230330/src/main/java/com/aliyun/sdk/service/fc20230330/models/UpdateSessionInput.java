@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateSessionInput</p>
  */
 public class UpdateSessionInput extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("allowInternetAccess")
+    private Boolean allowInternetAccess;
+
     @com.aliyun.core.annotation.NameInMap("disableSessionIdReuse")
     private Boolean disableSessionIdReuse;
 
@@ -32,6 +35,9 @@ public class UpdateSessionInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("nasConfig")
     private NASConfig nasConfig;
 
+    @com.aliyun.core.annotation.NameInMap("network")
+    private UpdateSessionNetworkConfig network;
+
     @com.aliyun.core.annotation.NameInMap("ossMountConfig")
     private OSSMountConfig ossMountConfig;
 
@@ -45,11 +51,13 @@ public class UpdateSessionInput extends TeaModel {
     private Long sessionTTLInSeconds;
 
     private UpdateSessionInput(Builder builder) {
+        this.allowInternetAccess = builder.allowInternetAccess;
         this.disableSessionIdReuse = builder.disableSessionIdReuse;
         this.enableAutoPause = builder.enableAutoPause;
         this.enableAutoResume = builder.enableAutoResume;
         this.juiceFsConfig = builder.juiceFsConfig;
         this.nasConfig = builder.nasConfig;
+        this.network = builder.network;
         this.ossMountConfig = builder.ossMountConfig;
         this.polarFsConfig = builder.polarFsConfig;
         this.sessionIdleTimeoutInSeconds = builder.sessionIdleTimeoutInSeconds;
@@ -66,6 +74,13 @@ public class UpdateSessionInput extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return allowInternetAccess
+     */
+    public Boolean getAllowInternetAccess() {
+        return this.allowInternetAccess;
     }
 
     /**
@@ -104,6 +119,13 @@ public class UpdateSessionInput extends TeaModel {
     }
 
     /**
+     * @return network
+     */
+    public UpdateSessionNetworkConfig getNetwork() {
+        return this.network;
+    }
+
+    /**
      * @return ossMountConfig
      */
     public OSSMountConfig getOssMountConfig() {
@@ -132,11 +154,13 @@ public class UpdateSessionInput extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean allowInternetAccess; 
         private Boolean disableSessionIdReuse; 
         private Boolean enableAutoPause; 
         private Boolean enableAutoResume; 
         private JuiceFsConfig juiceFsConfig; 
         private NASConfig nasConfig; 
+        private UpdateSessionNetworkConfig network; 
         private OSSMountConfig ossMountConfig; 
         private PolarFsConfig polarFsConfig; 
         private Long sessionIdleTimeoutInSeconds; 
@@ -146,16 +170,26 @@ public class UpdateSessionInput extends TeaModel {
         } 
 
         private Builder(UpdateSessionInput model) {
+            this.allowInternetAccess = model.allowInternetAccess;
             this.disableSessionIdReuse = model.disableSessionIdReuse;
             this.enableAutoPause = model.enableAutoPause;
             this.enableAutoResume = model.enableAutoResume;
             this.juiceFsConfig = model.juiceFsConfig;
             this.nasConfig = model.nasConfig;
+            this.network = model.network;
             this.ossMountConfig = model.ossMountConfig;
             this.polarFsConfig = model.polarFsConfig;
             this.sessionIdleTimeoutInSeconds = model.sessionIdleTimeoutInSeconds;
             this.sessionTTLInSeconds = model.sessionTTLInSeconds;
         } 
+
+        /**
+         * allowInternetAccess.
+         */
+        public Builder allowInternetAccess(Boolean allowInternetAccess) {
+            this.allowInternetAccess = allowInternetAccess;
+            return this;
+        }
 
         /**
          * disableSessionIdReuse.
@@ -194,6 +228,14 @@ public class UpdateSessionInput extends TeaModel {
          */
         public Builder nasConfig(NASConfig nasConfig) {
             this.nasConfig = nasConfig;
+            return this;
+        }
+
+        /**
+         * network.
+         */
+        public Builder network(UpdateSessionNetworkConfig network) {
+            this.network = network;
             return this;
         }
 

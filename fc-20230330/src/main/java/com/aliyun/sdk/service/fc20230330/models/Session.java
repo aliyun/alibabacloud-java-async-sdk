@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Session</p>
  */
 public class Session extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("allowInternetAccess")
+    private Boolean allowInternetAccess;
+
     @com.aliyun.core.annotation.NameInMap("containerId")
     private String containerId;
 
@@ -44,6 +47,9 @@ public class Session extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("nasConfig")
     private NASConfig nasConfig;
 
+    @com.aliyun.core.annotation.NameInMap("network")
+    private CreateSessionNetworkConfig network;
+
     @com.aliyun.core.annotation.NameInMap("ossMountConfig")
     private OSSMountConfig ossMountConfig;
 
@@ -68,7 +74,11 @@ public class Session extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("sessionTTLInSeconds")
     private Long sessionTTLInSeconds;
 
+    @com.aliyun.core.annotation.NameInMap("trafficAccessToken")
+    private String trafficAccessToken;
+
     private Session(Builder builder) {
+        this.allowInternetAccess = builder.allowInternetAccess;
         this.containerId = builder.containerId;
         this.createdTime = builder.createdTime;
         this.disableSessionIdReuse = builder.disableSessionIdReuse;
@@ -78,6 +88,7 @@ public class Session extends TeaModel {
         this.juiceFsConfig = builder.juiceFsConfig;
         this.lastModifiedTime = builder.lastModifiedTime;
         this.nasConfig = builder.nasConfig;
+        this.network = builder.network;
         this.ossMountConfig = builder.ossMountConfig;
         this.polarFsConfig = builder.polarFsConfig;
         this.qualifier = builder.qualifier;
@@ -86,6 +97,7 @@ public class Session extends TeaModel {
         this.sessionIdleTimeoutInSeconds = builder.sessionIdleTimeoutInSeconds;
         this.sessionStatus = builder.sessionStatus;
         this.sessionTTLInSeconds = builder.sessionTTLInSeconds;
+        this.trafficAccessToken = builder.trafficAccessToken;
     }
 
     public static Builder builder() {
@@ -98,6 +110,13 @@ public class Session extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return allowInternetAccess
+     */
+    public Boolean getAllowInternetAccess() {
+        return this.allowInternetAccess;
     }
 
     /**
@@ -164,6 +183,13 @@ public class Session extends TeaModel {
     }
 
     /**
+     * @return network
+     */
+    public CreateSessionNetworkConfig getNetwork() {
+        return this.network;
+    }
+
+    /**
      * @return ossMountConfig
      */
     public OSSMountConfig getOssMountConfig() {
@@ -219,7 +245,15 @@ public class Session extends TeaModel {
         return this.sessionTTLInSeconds;
     }
 
+    /**
+     * @return trafficAccessToken
+     */
+    public String getTrafficAccessToken() {
+        return this.trafficAccessToken;
+    }
+
     public static final class Builder {
+        private Boolean allowInternetAccess; 
         private String containerId; 
         private String createdTime; 
         private Boolean disableSessionIdReuse; 
@@ -229,6 +263,7 @@ public class Session extends TeaModel {
         private JuiceFsConfig juiceFsConfig; 
         private String lastModifiedTime; 
         private NASConfig nasConfig; 
+        private CreateSessionNetworkConfig network; 
         private OSSMountConfig ossMountConfig; 
         private PolarFsConfig polarFsConfig; 
         private String qualifier; 
@@ -237,11 +272,13 @@ public class Session extends TeaModel {
         private Long sessionIdleTimeoutInSeconds; 
         private String sessionStatus; 
         private Long sessionTTLInSeconds; 
+        private String trafficAccessToken; 
 
         private Builder() {
         } 
 
         private Builder(Session model) {
+            this.allowInternetAccess = model.allowInternetAccess;
             this.containerId = model.containerId;
             this.createdTime = model.createdTime;
             this.disableSessionIdReuse = model.disableSessionIdReuse;
@@ -251,6 +288,7 @@ public class Session extends TeaModel {
             this.juiceFsConfig = model.juiceFsConfig;
             this.lastModifiedTime = model.lastModifiedTime;
             this.nasConfig = model.nasConfig;
+            this.network = model.network;
             this.ossMountConfig = model.ossMountConfig;
             this.polarFsConfig = model.polarFsConfig;
             this.qualifier = model.qualifier;
@@ -259,7 +297,16 @@ public class Session extends TeaModel {
             this.sessionIdleTimeoutInSeconds = model.sessionIdleTimeoutInSeconds;
             this.sessionStatus = model.sessionStatus;
             this.sessionTTLInSeconds = model.sessionTTLInSeconds;
+            this.trafficAccessToken = model.trafficAccessToken;
         } 
+
+        /**
+         * allowInternetAccess.
+         */
+        public Builder allowInternetAccess(Boolean allowInternetAccess) {
+            this.allowInternetAccess = allowInternetAccess;
+            return this;
+        }
 
         /**
          * containerId.
@@ -334,6 +381,14 @@ public class Session extends TeaModel {
         }
 
         /**
+         * network.
+         */
+        public Builder network(CreateSessionNetworkConfig network) {
+            this.network = network;
+            return this;
+        }
+
+        /**
          * ossMountConfig.
          */
         public Builder ossMountConfig(OSSMountConfig ossMountConfig) {
@@ -394,6 +449,14 @@ public class Session extends TeaModel {
          */
         public Builder sessionTTLInSeconds(Long sessionTTLInSeconds) {
             this.sessionTTLInSeconds = sessionTTLInSeconds;
+            return this;
+        }
+
+        /**
+         * trafficAccessToken.
+         */
+        public Builder trafficAccessToken(String trafficAccessToken) {
+            this.trafficAccessToken = trafficAccessToken;
             return this;
         }
 
