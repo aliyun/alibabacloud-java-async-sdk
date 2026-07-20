@@ -36,6 +36,10 @@ public class ListTableDetailsRequest extends Request {
     private String pageToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("status")
+    private String status;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("tableNamePattern")
     private String tableNamePattern;
 
@@ -49,6 +53,7 @@ public class ListTableDetailsRequest extends Request {
         this.database = builder.database;
         this.maxResults = builder.maxResults;
         this.pageToken = builder.pageToken;
+        this.status = builder.status;
         this.tableNamePattern = builder.tableNamePattern;
         this.type = builder.type;
     }
@@ -95,6 +100,13 @@ public class ListTableDetailsRequest extends Request {
     }
 
     /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return tableNamePattern
      */
     public String getTableNamePattern() {
@@ -113,6 +125,7 @@ public class ListTableDetailsRequest extends Request {
         private String database; 
         private Integer maxResults; 
         private String pageToken; 
+        private String status; 
         private String tableNamePattern; 
         private String type; 
 
@@ -126,6 +139,7 @@ public class ListTableDetailsRequest extends Request {
             this.database = request.database;
             this.maxResults = request.maxResults;
             this.pageToken = request.pageToken;
+            this.status = request.status;
             this.tableNamePattern = request.tableNamePattern;
             this.type = request.type;
         } 
@@ -169,6 +183,15 @@ public class ListTableDetailsRequest extends Request {
         public Builder pageToken(String pageToken) {
             this.putQueryParameter("pageToken", pageToken);
             this.pageToken = pageToken;
+            return this;
+        }
+
+        /**
+         * status.
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("status", status);
+            this.status = status;
             return this;
         }
 

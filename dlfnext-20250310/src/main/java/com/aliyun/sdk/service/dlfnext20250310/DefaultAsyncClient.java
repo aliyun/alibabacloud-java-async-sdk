@@ -503,6 +503,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetCatalogKmsGrants  GetCatalogKmsGrantsRequest
+     * @return GetCatalogKmsGrantsResponse
+     */
+    @Override
+    public CompletableFuture<GetCatalogKmsGrantsResponse> getCatalogKmsGrants(GetCatalogKmsGrantsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetCatalogKmsGrants").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/catalogs/{catalog}/kms/grants").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCatalogKmsGrantsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetCatalogKmsGrantsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetCatalogSummary  GetCatalogSummaryRequest
      * @return GetCatalogSummaryResponse
      */
@@ -623,6 +641,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetIcebergTableResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetQuery  GetQueryRequest
+     * @return GetQueryResponse
+     */
+    @Override
+    public CompletableFuture<GetQueryResponse> getQuery(GetQueryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetQuery").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/query/{queryId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetQueryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetQueryResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1349,6 +1385,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of SubmitQuery  SubmitQueryRequest
+     * @return SubmitQueryResponse
+     */
+    @Override
+    public CompletableFuture<SubmitQueryResponse> submitQuery(SubmitQueryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SubmitQuery").setMethod(HttpMethod.POST).setPathRegex("/dlf/v1/query").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitQueryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitQueryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of Subscribe  SubscribeRequest
      * @return SubscribeResponse
      */
@@ -1397,6 +1451,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateRoleUsersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of VerifyCatalogKms  VerifyCatalogKmsRequest
+     * @return VerifyCatalogKmsResponse
+     */
+    @Override
+    public CompletableFuture<VerifyCatalogKmsResponse> verifyCatalogKms(VerifyCatalogKmsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("VerifyCatalogKms").setMethod(HttpMethod.POST).setPathRegex("/dlf/v1/catalogs/{catalog}/kms/verify").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(VerifyCatalogKmsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<VerifyCatalogKmsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

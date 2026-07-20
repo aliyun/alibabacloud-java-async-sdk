@@ -38,6 +38,9 @@ public class Database extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("owner")
     private String owner;
 
+    @com.aliyun.core.annotation.NameInMap("status")
+    private String status;
+
     @com.aliyun.core.annotation.NameInMap("tableCount")
     private Long tableCount;
 
@@ -55,6 +58,7 @@ public class Database extends TeaModel {
         this.name = builder.name;
         this.options = builder.options;
         this.owner = builder.owner;
+        this.status = builder.status;
         this.tableCount = builder.tableCount;
         this.updatedAt = builder.updatedAt;
         this.updatedBy = builder.updatedBy;
@@ -122,6 +126,13 @@ public class Database extends TeaModel {
     }
 
     /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return tableCount
      */
     public Long getTableCount() {
@@ -150,6 +161,7 @@ public class Database extends TeaModel {
         private String name; 
         private java.util.Map<String, String> options; 
         private String owner; 
+        private String status; 
         private Long tableCount; 
         private Long updatedAt; 
         private String updatedBy; 
@@ -165,6 +177,7 @@ public class Database extends TeaModel {
             this.name = model.name;
             this.options = model.options;
             this.owner = model.owner;
+            this.status = model.status;
             this.tableCount = model.tableCount;
             this.updatedAt = model.updatedAt;
             this.updatedBy = model.updatedBy;
@@ -223,6 +236,14 @@ public class Database extends TeaModel {
          */
         public Builder owner(String owner) {
             this.owner = owner;
+            return this;
+        }
+
+        /**
+         * status.
+         */
+        public Builder status(String status) {
+            this.status = status;
             return this;
         }
 

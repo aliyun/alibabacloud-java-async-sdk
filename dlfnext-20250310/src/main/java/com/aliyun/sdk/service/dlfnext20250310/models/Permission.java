@@ -20,6 +20,9 @@ public class Permission extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("access")
     private String access;
 
+    @com.aliyun.core.annotation.NameInMap("columnMasking")
+    private java.util.Map<String, ColumnMask> columnMasking;
+
     @com.aliyun.core.annotation.NameInMap("columns")
     private Columns columns;
 
@@ -49,6 +52,7 @@ public class Permission extends TeaModel {
 
     private Permission(Builder builder) {
         this.access = builder.access;
+        this.columnMasking = builder.columnMasking;
         this.columns = builder.columns;
         this.database = builder.database;
         this.expireTime = builder.expireTime;
@@ -77,6 +81,13 @@ public class Permission extends TeaModel {
      */
     public String getAccess() {
         return this.access;
+    }
+
+    /**
+     * @return columnMasking
+     */
+    public java.util.Map<String, ColumnMask> getColumnMasking() {
+        return this.columnMasking;
     }
 
     /**
@@ -144,6 +155,7 @@ public class Permission extends TeaModel {
 
     public static final class Builder {
         private String access; 
+        private java.util.Map<String, ColumnMask> columnMasking; 
         private Columns columns; 
         private String database; 
         private String expireTime; 
@@ -159,6 +171,7 @@ public class Permission extends TeaModel {
 
         private Builder(Permission model) {
             this.access = model.access;
+            this.columnMasking = model.columnMasking;
             this.columns = model.columns;
             this.database = model.database;
             this.expireTime = model.expireTime;
@@ -175,6 +188,14 @@ public class Permission extends TeaModel {
          */
         public Builder access(String access) {
             this.access = access;
+            return this;
+        }
+
+        /**
+         * columnMasking.
+         */
+        public Builder columnMasking(java.util.Map<String, ColumnMask> columnMasking) {
+            this.columnMasking = columnMasking;
             return this;
         }
 

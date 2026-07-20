@@ -170,6 +170,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCatalogByIdResponse> getCatalogById(GetCatalogByIdRequest request);
 
     /**
+     * @param request the request parameters of GetCatalogKmsGrants  GetCatalogKmsGrantsRequest
+     * @return GetCatalogKmsGrantsResponse
+     */
+    CompletableFuture<GetCatalogKmsGrantsResponse> getCatalogKmsGrants(GetCatalogKmsGrantsRequest request);
+
+    /**
      * @param request the request parameters of GetCatalogSummary  GetCatalogSummaryRequest
      * @return GetCatalogSummaryResponse
      */
@@ -210,6 +216,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetIcebergTableResponse
      */
     CompletableFuture<GetIcebergTableResponse> getIcebergTable(GetIcebergTableRequest request);
+
+    /**
+     * @param request the request parameters of GetQuery  GetQueryRequest
+     * @return GetQueryResponse
+     */
+    CompletableFuture<GetQueryResponse> getQuery(GetQueryRequest request);
 
     /**
      * @param request the request parameters of GetReceiver  GetReceiverRequest
@@ -452,6 +464,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RollbackTableResponse> rollbackTable(RollbackTableRequest request);
 
     /**
+     * @param request the request parameters of SubmitQuery  SubmitQueryRequest
+     * @return SubmitQueryResponse
+     */
+    CompletableFuture<SubmitQueryResponse> submitQuery(SubmitQueryRequest request);
+
+    /**
      * @param request the request parameters of Subscribe  SubscribeRequest
      * @return SubscribeResponse
      */
@@ -468,5 +486,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateRoleUsersResponse
      */
     CompletableFuture<UpdateRoleUsersResponse> updateRoleUsers(UpdateRoleUsersRequest request);
+
+    /**
+     * @param request the request parameters of VerifyCatalogKms  VerifyCatalogKmsRequest
+     * @return VerifyCatalogKmsResponse
+     */
+    CompletableFuture<VerifyCatalogKmsResponse> verifyCatalogKms(VerifyCatalogKmsRequest request);
 
 }

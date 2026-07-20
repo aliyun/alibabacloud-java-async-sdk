@@ -34,12 +34,17 @@ public class ListDatabaseDetailsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("pageToken")
     private String pageToken;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("status")
+    private String status;
+
     private ListDatabaseDetailsRequest(Builder builder) {
         super(builder);
         this.catalogId = builder.catalogId;
         this.databaseNamePattern = builder.databaseNamePattern;
         this.maxResults = builder.maxResults;
         this.pageToken = builder.pageToken;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
@@ -83,11 +88,19 @@ public class ListDatabaseDetailsRequest extends Request {
         return this.pageToken;
     }
 
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
     public static final class Builder extends Request.Builder<ListDatabaseDetailsRequest, Builder> {
         private String catalogId; 
         private String databaseNamePattern; 
         private Integer maxResults; 
         private String pageToken; 
+        private String status; 
 
         private Builder() {
             super();
@@ -99,6 +112,7 @@ public class ListDatabaseDetailsRequest extends Request {
             this.databaseNamePattern = request.databaseNamePattern;
             this.maxResults = request.maxResults;
             this.pageToken = request.pageToken;
+            this.status = request.status;
         } 
 
         /**
@@ -137,6 +151,15 @@ public class ListDatabaseDetailsRequest extends Request {
         public Builder pageToken(String pageToken) {
             this.putQueryParameter("pageToken", pageToken);
             this.pageToken = pageToken;
+            return this;
+        }
+
+        /**
+         * status.
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("status", status);
+            this.status = status;
             return this;
         }
 

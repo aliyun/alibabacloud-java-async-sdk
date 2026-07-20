@@ -47,6 +47,9 @@ public class Table extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("schemaId")
     private Long schemaId;
 
+    @com.aliyun.core.annotation.NameInMap("status")
+    private String status;
+
     @com.aliyun.core.annotation.NameInMap("storageAction")
     private String storageAction;
 
@@ -76,6 +79,7 @@ public class Table extends TeaModel {
         this.path = builder.path;
         this.schema = builder.schema;
         this.schemaId = builder.schemaId;
+        this.status = builder.status;
         this.storageAction = builder.storageAction;
         this.storageActionTimestamp = builder.storageActionTimestamp;
         this.storageClass = builder.storageClass;
@@ -167,6 +171,13 @@ public class Table extends TeaModel {
     }
 
     /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return storageAction
      */
     public String getStorageAction() {
@@ -219,6 +230,7 @@ public class Table extends TeaModel {
         private String path; 
         private Schema schema; 
         private Long schemaId; 
+        private String status; 
         private String storageAction; 
         private Long storageActionTimestamp; 
         private String storageClass; 
@@ -240,6 +252,7 @@ public class Table extends TeaModel {
             this.path = model.path;
             this.schema = model.schema;
             this.schemaId = model.schemaId;
+            this.status = model.status;
             this.storageAction = model.storageAction;
             this.storageActionTimestamp = model.storageActionTimestamp;
             this.storageClass = model.storageClass;
@@ -325,6 +338,14 @@ public class Table extends TeaModel {
          */
         public Builder schemaId(Long schemaId) {
             this.schemaId = schemaId;
+            return this;
+        }
+
+        /**
+         * status.
+         */
+        public Builder status(String status) {
+            this.status = status;
             return this;
         }
 
