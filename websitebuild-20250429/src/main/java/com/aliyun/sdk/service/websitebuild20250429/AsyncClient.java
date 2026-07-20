@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AllocateSupabaseForAdminResponse> allocateSupabaseForAdmin(AllocateSupabaseForAdminRequest request);
 
     /**
+     * @param request the request parameters of AssignRbacUserRole  AssignRbacUserRoleRequest
+     * @return AssignRbacUserRoleResponse
+     */
+    CompletableFuture<AssignRbacUserRoleResponse> assignRbacUserRole(AssignRbacUserRoleRequest request);
+
+    /**
      * @param request the request parameters of AuthorizeAppProxyOps  AuthorizeAppProxyOpsRequest
      * @return AuthorizeAppProxyOpsResponse
      */
@@ -154,6 +160,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateMaterialDirectoryResponse> createMaterialDirectory(CreateMaterialDirectoryRequest request);
 
     /**
+     * @param request the request parameters of CreateRbacOrgUnit  CreateRbacOrgUnitRequest
+     * @return CreateRbacOrgUnitResponse
+     */
+    CompletableFuture<CreateRbacOrgUnitResponse> createRbacOrgUnit(CreateRbacOrgUnitRequest request);
+
+    /**
+     * @param request the request parameters of CreateRbacPermission  CreateRbacPermissionRequest
+     * @return CreateRbacPermissionResponse
+     */
+    CompletableFuture<CreateRbacPermissionResponse> createRbacPermission(CreateRbacPermissionRequest request);
+
+    /**
      * @param request the request parameters of CreateRbacRole  CreateRbacRoleRequest
      * @return CreateRbacRoleResponse
      */
@@ -206,6 +224,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteMaterialTaskResponse
      */
     CompletableFuture<DeleteMaterialTaskResponse> deleteMaterialTask(DeleteMaterialTaskRequest request);
+
+    /**
+     * @param request the request parameters of DeleteRbacOrgUnit  DeleteRbacOrgUnitRequest
+     * @return DeleteRbacOrgUnitResponse
+     */
+    CompletableFuture<DeleteRbacOrgUnitResponse> deleteRbacOrgUnit(DeleteRbacOrgUnitRequest request);
+
+    /**
+     * @param request the request parameters of DeleteRbacPermission  DeleteRbacPermissionRequest
+     * @return DeleteRbacPermissionResponse
+     */
+    CompletableFuture<DeleteRbacPermissionResponse> deleteRbacPermission(DeleteRbacPermissionRequest request);
 
     /**
      * @param request the request parameters of DeleteRbacRole  DeleteRbacRoleRequest
@@ -755,6 +785,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryMaterialTaskListResponse> queryMaterialTaskList(QueryMaterialTaskListRequest request);
 
     /**
+     * @param request the request parameters of QueryRbacRole  QueryRbacRoleRequest
+     * @return QueryRbacRoleResponse
+     */
+    CompletableFuture<QueryRbacRoleResponse> queryRbacRole(QueryRbacRoleRequest request);
+
+    /**
+     * @param request the request parameters of QueryRbacRolePermissions  QueryRbacRolePermissionsRequest
+     * @return QueryRbacRolePermissionsResponse
+     */
+    CompletableFuture<QueryRbacRolePermissionsResponse> queryRbacRolePermissions(QueryRbacRolePermissionsRequest request);
+
+    /**
+     * @param request the request parameters of QueryRbacUserRoles  QueryRbacUserRolesRequest
+     * @return QueryRbacUserRolesResponse
+     */
+    CompletableFuture<QueryRbacUserRolesResponse> queryRbacUserRoles(QueryRbacUserRolesRequest request);
+
+    /**
      * @param request the request parameters of QuerySupabaseAuthConfigsForAdmin  QuerySupabaseAuthConfigsForAdminRequest
      * @return QuerySupabaseAuthConfigsForAdminResponse
      */
@@ -809,6 +857,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RenewAppSandboxResponse
      */
     CompletableFuture<RenewAppSandboxResponse> renewAppSandbox(RenewAppSandboxRequest request);
+
+    /**
+     * @param request the request parameters of RevokeRbacUserRole  RevokeRbacUserRoleRequest
+     * @return RevokeRbacUserRoleResponse
+     */
+    CompletableFuture<RevokeRbacUserRoleResponse> revokeRbacUserRole(RevokeRbacUserRoleRequest request);
 
     /**
      * @param request the request parameters of RollbackAppCodeSnapshot  RollbackAppCodeSnapshotRequest
@@ -932,6 +986,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateMiniAppBindingResponse
      */
     CompletableFuture<UpdateMiniAppBindingResponse> updateMiniAppBinding(UpdateMiniAppBindingRequest request);
+
+    /**
+     * @param request the request parameters of UpdateRbacOrgUnit  UpdateRbacOrgUnitRequest
+     * @return UpdateRbacOrgUnitResponse
+     */
+    CompletableFuture<UpdateRbacOrgUnitResponse> updateRbacOrgUnit(UpdateRbacOrgUnitRequest request);
 
     /**
      * @param request the request parameters of UpdateRbacRole  UpdateRbacRoleRequest
