@@ -19,6 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListTagResourcesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxItem")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Integer maxItem;
 
     @com.aliyun.core.annotation.Query

@@ -2770,6 +2770,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateRewriteUrlRuleResponse> updateRewriteUrlRule(UpdateRewriteUrlRuleRequest request);
 
     /**
+     * @param request the request parameters of UpdateRoutineBuildConfiguration  UpdateRoutineBuildConfigurationRequest
+     * @return UpdateRoutineBuildConfigurationResponse
+     */
+    CompletableFuture<UpdateRoutineBuildConfigurationResponse> updateRoutineBuildConfiguration(UpdateRoutineBuildConfigurationRequest request);
+
+    /**
      * @param request the request parameters of UpdateRoutineConfigDescription  UpdateRoutineConfigDescriptionRequest
      * @return UpdateRoutineConfigDescriptionResponse
      */
