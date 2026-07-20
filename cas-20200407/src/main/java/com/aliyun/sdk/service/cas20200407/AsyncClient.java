@@ -103,6 +103,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCertificateWithCsrRequestResponse> createCertificateWithCsrRequest(CreateCertificateWithCsrRequestRequest request);
 
     /**
+     * @param request the request parameters of CreateCompany  CreateCompanyRequest
+     * @return CreateCompanyResponse
+     */
+    CompletableFuture<CreateCompanyResponse> createCompany(CreateCompanyRequest request);
+
+    /**
+     * @param request the request parameters of CreateContact  CreateContactRequest
+     * @return CreateContactResponse
+     */
+    CompletableFuture<CreateContactResponse> createContact(CreateContactRequest request);
+
+    /**
      * @param request the request parameters of CreateCsr  CreateCsrRequest
      * @return CreateCsrResponse
      */
@@ -156,6 +168,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteCloudAccessResponse
      */
     CompletableFuture<DeleteCloudAccessResponse> deleteCloudAccess(DeleteCloudAccessRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCompany  DeleteCompanyRequest
+     * @return DeleteCompanyResponse
+     */
+    CompletableFuture<DeleteCompanyResponse> deleteCompany(DeleteCompanyRequest request);
+
+    /**
+     * @param request the request parameters of DeleteContact  DeleteContactRequest
+     * @return DeleteContactResponse
+     */
+    CompletableFuture<DeleteContactResponse> deleteContact(DeleteContactRequest request);
 
     /**
      * @param request the request parameters of DeleteCsr  DeleteCsrRequest
@@ -278,6 +302,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCertificateDetailResponse> getCertificateDetail(GetCertificateDetailRequest request);
 
     /**
+     * @param request the request parameters of GetCompany  GetCompanyRequest
+     * @return GetCompanyResponse
+     */
+    CompletableFuture<GetCompanyResponse> getCompany(GetCompanyRequest request);
+
+    /**
+     * @param request the request parameters of GetContact  GetContactRequest
+     * @return GetContactResponse
+     */
+    CompletableFuture<GetContactResponse> getContact(GetContactRequest request);
+
+    /**
      * @param request the request parameters of GetCsrDetail  GetCsrDetailRequest
      * @return GetCsrDetailResponse
      */
@@ -365,6 +401,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCloudResourcesResponse
      */
     CompletableFuture<ListCloudResourcesResponse> listCloudResources(ListCloudResourcesRequest request);
+
+    /**
+     * @param request the request parameters of ListCompanies  ListCompaniesRequest
+     * @return ListCompaniesResponse
+     */
+    CompletableFuture<ListCompaniesResponse> listCompanies(ListCompaniesRequest request);
 
     /**
      * @param request the request parameters of ListContact  ListContactRequest
@@ -474,6 +516,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SignResponse
      */
     CompletableFuture<SignResponse> sign(SignRequest request);
+
+    /**
+     * @param request the request parameters of UpdateCompany  UpdateCompanyRequest
+     * @return UpdateCompanyResponse
+     */
+    CompletableFuture<UpdateCompanyResponse> updateCompany(UpdateCompanyRequest request);
+
+    /**
+     * @param request the request parameters of UpdateContact  UpdateContactRequest
+     * @return UpdateContactResponse
+     */
+    CompletableFuture<UpdateContactResponse> updateContact(UpdateContactRequest request);
 
     /**
      * @param request the request parameters of UpdateCsr  UpdateCsrRequest
