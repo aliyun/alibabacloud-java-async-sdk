@@ -30,6 +30,10 @@ public class DescribeSnapshotsRequest extends Request {
     private String desktopName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopScenario")
+    private String desktopScenario;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
@@ -76,6 +80,7 @@ public class DescribeSnapshotsRequest extends Request {
         this.creator = builder.creator;
         this.desktopId = builder.desktopId;
         this.desktopName = builder.desktopName;
+        this.desktopScenario = builder.desktopScenario;
         this.endTime = builder.endTime;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -120,6 +125,13 @@ public class DescribeSnapshotsRequest extends Request {
      */
     public String getDesktopName() {
         return this.desktopName;
+    }
+
+    /**
+     * @return desktopScenario
+     */
+    public String getDesktopScenario() {
+        return this.desktopScenario;
     }
 
     /**
@@ -196,6 +208,7 @@ public class DescribeSnapshotsRequest extends Request {
         private String creator; 
         private String desktopId; 
         private String desktopName; 
+        private String desktopScenario; 
         private String endTime; 
         private Integer maxResults; 
         private String nextToken; 
@@ -216,6 +229,7 @@ public class DescribeSnapshotsRequest extends Request {
             this.creator = request.creator;
             this.desktopId = request.desktopId;
             this.desktopName = request.desktopName;
+            this.desktopScenario = request.desktopScenario;
             this.endTime = request.endTime;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -261,6 +275,15 @@ public class DescribeSnapshotsRequest extends Request {
         public Builder desktopName(String desktopName) {
             this.putQueryParameter("DesktopName", desktopName);
             this.desktopName = desktopName;
+            return this;
+        }
+
+        /**
+         * DesktopScenario.
+         */
+        public Builder desktopScenario(String desktopScenario) {
+            this.putQueryParameter("DesktopScenario", desktopScenario);
+            this.desktopScenario = desktopScenario;
             return this;
         }
 

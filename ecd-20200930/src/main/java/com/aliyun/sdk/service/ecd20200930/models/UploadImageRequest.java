@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UploadImageRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BootMode")
+    private String bootMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DataDiskSize")
     @com.aliyun.core.annotation.Validation(maximum = 500, minimum = 5)
     private Integer dataDiskSize;
@@ -71,6 +75,7 @@ public class UploadImageRequest extends Request {
 
     private UploadImageRequest(Builder builder) {
         super(builder);
+        this.bootMode = builder.bootMode;
         this.dataDiskSize = builder.dataDiskSize;
         this.description = builder.description;
         this.enableSecurityCheck = builder.enableSecurityCheck;
@@ -96,6 +101,13 @@ public class UploadImageRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bootMode
+     */
+    public String getBootMode() {
+        return this.bootMode;
     }
 
     /**
@@ -183,6 +195,7 @@ public class UploadImageRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UploadImageRequest, Builder> {
+        private String bootMode; 
         private Integer dataDiskSize; 
         private String description; 
         private Boolean enableSecurityCheck; 
@@ -202,6 +215,7 @@ public class UploadImageRequest extends Request {
 
         private Builder(UploadImageRequest request) {
             super(request);
+            this.bootMode = request.bootMode;
             this.dataDiskSize = request.dataDiskSize;
             this.description = request.description;
             this.enableSecurityCheck = request.enableSecurityCheck;
@@ -215,6 +229,15 @@ public class UploadImageRequest extends Request {
             this.regionId = request.regionId;
             this.systemDiskSize = request.systemDiskSize;
         } 
+
+        /**
+         * BootMode.
+         */
+        public Builder bootMode(String bootMode) {
+            this.putQueryParameter("BootMode", bootMode);
+            this.bootMode = bootMode;
+            return this;
+        }
 
         /**
          * <p>The size of the data disk. Valid values: 80 to 500. Unit: GiB.</p>

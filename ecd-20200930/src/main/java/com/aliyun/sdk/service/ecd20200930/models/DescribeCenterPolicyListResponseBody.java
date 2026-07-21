@@ -1253,6 +1253,21 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileTransferAddress")
         private String fileTransferAddress;
 
+        @com.aliyun.core.annotation.NameInMap("FileTransferInSize")
+        private String fileTransferInSize;
+
+        @com.aliyun.core.annotation.NameInMap("FileTransferInUnit")
+        private String fileTransferInUnit;
+
+        @com.aliyun.core.annotation.NameInMap("FileTransferOutSize")
+        private String fileTransferOutSize;
+
+        @com.aliyun.core.annotation.NameInMap("FileTransferOutUnit")
+        private String fileTransferOutUnit;
+
+        @com.aliyun.core.annotation.NameInMap("FileTransferSizeLimit")
+        private String fileTransferSizeLimit;
+
         @com.aliyun.core.annotation.NameInMap("FileTransferSpeed")
         private String fileTransferSpeed;
 
@@ -1592,6 +1607,11 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             this.externalDrive = builder.externalDrive;
             this.fileMigrate = builder.fileMigrate;
             this.fileTransferAddress = builder.fileTransferAddress;
+            this.fileTransferInSize = builder.fileTransferInSize;
+            this.fileTransferInUnit = builder.fileTransferInUnit;
+            this.fileTransferOutSize = builder.fileTransferOutSize;
+            this.fileTransferOutUnit = builder.fileTransferOutUnit;
+            this.fileTransferSizeLimit = builder.fileTransferSizeLimit;
             this.fileTransferSpeed = builder.fileTransferSpeed;
             this.fileTransferSpeedLocation = builder.fileTransferSpeedLocation;
             this.gpuAcceleration = builder.gpuAcceleration;
@@ -2006,6 +2026,41 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
          */
         public String getFileTransferAddress() {
             return this.fileTransferAddress;
+        }
+
+        /**
+         * @return fileTransferInSize
+         */
+        public String getFileTransferInSize() {
+            return this.fileTransferInSize;
+        }
+
+        /**
+         * @return fileTransferInUnit
+         */
+        public String getFileTransferInUnit() {
+            return this.fileTransferInUnit;
+        }
+
+        /**
+         * @return fileTransferOutSize
+         */
+        public String getFileTransferOutSize() {
+            return this.fileTransferOutSize;
+        }
+
+        /**
+         * @return fileTransferOutUnit
+         */
+        public String getFileTransferOutUnit() {
+            return this.fileTransferOutUnit;
+        }
+
+        /**
+         * @return fileTransferSizeLimit
+         */
+        public String getFileTransferSizeLimit() {
+            return this.fileTransferSizeLimit;
         }
 
         /**
@@ -2739,6 +2794,11 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             private String externalDrive; 
             private String fileMigrate; 
             private String fileTransferAddress; 
+            private String fileTransferInSize; 
+            private String fileTransferInUnit; 
+            private String fileTransferOutSize; 
+            private String fileTransferOutUnit; 
+            private String fileTransferSizeLimit; 
             private String fileTransferSpeed; 
             private String fileTransferSpeedLocation; 
             private String gpuAcceleration; 
@@ -2886,6 +2946,11 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
                 this.externalDrive = model.externalDrive;
                 this.fileMigrate = model.fileMigrate;
                 this.fileTransferAddress = model.fileTransferAddress;
+                this.fileTransferInSize = model.fileTransferInSize;
+                this.fileTransferInUnit = model.fileTransferInUnit;
+                this.fileTransferOutSize = model.fileTransferOutSize;
+                this.fileTransferOutUnit = model.fileTransferOutUnit;
+                this.fileTransferSizeLimit = model.fileTransferSizeLimit;
                 this.fileTransferSpeed = model.fileTransferSpeed;
                 this.fileTransferSpeedLocation = model.fileTransferSpeedLocation;
                 this.gpuAcceleration = model.gpuAcceleration;
@@ -3401,6 +3466,46 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
              */
             public Builder fileTransferAddress(String fileTransferAddress) {
                 this.fileTransferAddress = fileTransferAddress;
+                return this;
+            }
+
+            /**
+             * FileTransferInSize.
+             */
+            public Builder fileTransferInSize(String fileTransferInSize) {
+                this.fileTransferInSize = fileTransferInSize;
+                return this;
+            }
+
+            /**
+             * FileTransferInUnit.
+             */
+            public Builder fileTransferInUnit(String fileTransferInUnit) {
+                this.fileTransferInUnit = fileTransferInUnit;
+                return this;
+            }
+
+            /**
+             * FileTransferOutSize.
+             */
+            public Builder fileTransferOutSize(String fileTransferOutSize) {
+                this.fileTransferOutSize = fileTransferOutSize;
+                return this;
+            }
+
+            /**
+             * FileTransferOutUnit.
+             */
+            public Builder fileTransferOutUnit(String fileTransferOutUnit) {
+                this.fileTransferOutUnit = fileTransferOutUnit;
+                return this;
+            }
+
+            /**
+             * FileTransferSizeLimit.
+             */
+            public Builder fileTransferSizeLimit(String fileTransferSizeLimit) {
+                this.fileTransferSizeLimit = fileTransferSizeLimit;
                 return this;
             }
 

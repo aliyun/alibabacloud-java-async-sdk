@@ -26,10 +26,14 @@ public class DescribeClientEventsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
+    private Integer totalCount;
+
     private DescribeClientEventsResponseBody(Builder builder) {
         this.events = builder.events;
         this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -65,10 +69,18 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
         private java.util.List<Events> events; 
         private String nextToken; 
         private String requestId; 
+        private Integer totalCount; 
 
         private Builder() {
         } 
@@ -77,6 +89,7 @@ public class DescribeClientEventsResponseBody extends TeaModel {
             this.events = model.events;
             this.nextToken = model.nextToken;
             this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
         } 
 
         /**
@@ -106,6 +119,14 @@ public class DescribeClientEventsResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 

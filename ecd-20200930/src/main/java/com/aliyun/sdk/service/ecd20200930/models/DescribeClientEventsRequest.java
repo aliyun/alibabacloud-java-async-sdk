@@ -42,6 +42,10 @@ public class DescribeClientEventsRequest extends Request {
     private String endUserId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserIds")
+    private java.util.List<String> endUserIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EventType")
     private String eventType;
 
@@ -90,6 +94,7 @@ public class DescribeClientEventsRequest extends Request {
         this.directoryId = builder.directoryId;
         this.endTime = builder.endTime;
         this.endUserId = builder.endUserId;
+        this.endUserIds = builder.endUserIds;
         this.eventType = builder.eventType;
         this.eventTypes = builder.eventTypes;
         this.fillHardwareInfo = builder.fillHardwareInfo;
@@ -155,6 +160,13 @@ public class DescribeClientEventsRequest extends Request {
      */
     public String getEndUserId() {
         return this.endUserId;
+    }
+
+    /**
+     * @return endUserIds
+     */
+    public java.util.List<String> getEndUserIds() {
+        return this.endUserIds;
     }
 
     /**
@@ -234,6 +246,7 @@ public class DescribeClientEventsRequest extends Request {
         private String directoryId; 
         private String endTime; 
         private String endUserId; 
+        private java.util.List<String> endUserIds; 
         private String eventType; 
         private java.util.List<String> eventTypes; 
         private Boolean fillHardwareInfo; 
@@ -257,6 +270,7 @@ public class DescribeClientEventsRequest extends Request {
             this.directoryId = request.directoryId;
             this.endTime = request.endTime;
             this.endUserId = request.endUserId;
+            this.endUserIds = request.endUserIds;
             this.eventType = request.eventType;
             this.eventTypes = request.eventTypes;
             this.fillHardwareInfo = request.fillHardwareInfo;
@@ -338,6 +352,15 @@ public class DescribeClientEventsRequest extends Request {
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
             this.endUserId = endUserId;
+            return this;
+        }
+
+        /**
+         * EndUserIds.
+         */
+        public Builder endUserIds(java.util.List<String> endUserIds) {
+            this.putQueryParameter("EndUserIds", endUserIds);
+            this.endUserIds = endUserIds;
             return this;
         }
 

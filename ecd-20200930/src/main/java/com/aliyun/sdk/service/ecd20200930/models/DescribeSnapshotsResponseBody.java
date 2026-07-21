@@ -152,6 +152,9 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnvType")
         private String envType;
 
+        @com.aliyun.core.annotation.NameInMap("JvsId")
+        private String jvsId;
+
         @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
 
@@ -205,6 +208,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             this.diskStatus = builder.diskStatus;
             this.envId = builder.envId;
             this.envType = builder.envType;
+            this.jvsId = builder.jvsId;
             this.osType = builder.osType;
             this.progress = builder.progress;
             this.protocolType = builder.protocolType;
@@ -297,6 +301,13 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
          */
         public String getEnvType() {
             return this.envType;
+        }
+
+        /**
+         * @return jvsId
+         */
+        public String getJvsId() {
+            return this.jvsId;
         }
 
         /**
@@ -408,6 +419,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             private String diskStatus; 
             private String envId; 
             private String envType; 
+            private String jvsId; 
             private String osType; 
             private String progress; 
             private String protocolType; 
@@ -437,6 +449,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
                 this.diskStatus = model.diskStatus;
                 this.envId = model.envId;
                 this.envType = model.envType;
+                this.jvsId = model.jvsId;
                 this.osType = model.osType;
                 this.progress = model.progress;
                 this.protocolType = model.protocolType;
@@ -562,6 +575,14 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
              */
             public Builder envType(String envType) {
                 this.envType = envType;
+                return this;
+            }
+
+            /**
+             * JvsId.
+             */
+            public Builder jvsId(String jvsId) {
+                this.jvsId = jvsId;
                 return this;
             }
 

@@ -149,6 +149,9 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InvocationStatus")
         private String invocationStatus;
 
+        @com.aliyun.core.annotation.NameInMap("JvsAgentId")
+        private String jvsAgentId;
+
         @com.aliyun.core.annotation.NameInMap("Output")
         private String output;
 
@@ -174,6 +177,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             this.exitCode = builder.exitCode;
             this.finishTime = builder.finishTime;
             this.invocationStatus = builder.invocationStatus;
+            this.jvsAgentId = builder.jvsAgentId;
             this.output = builder.output;
             this.repeats = builder.repeats;
             this.startTime = builder.startTime;
@@ -253,6 +257,13 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return jvsAgentId
+         */
+        public String getJvsAgentId() {
+            return this.jvsAgentId;
+        }
+
+        /**
          * @return output
          */
         public String getOutput() {
@@ -297,6 +308,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             private Long exitCode; 
             private String finishTime; 
             private String invocationStatus; 
+            private String jvsAgentId; 
             private String output; 
             private Integer repeats; 
             private String startTime; 
@@ -316,6 +328,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
                 this.exitCode = model.exitCode;
                 this.finishTime = model.finishTime;
                 this.invocationStatus = model.invocationStatus;
+                this.jvsAgentId = model.jvsAgentId;
                 this.output = model.output;
                 this.repeats = model.repeats;
                 this.startTime = model.startTime;
@@ -455,6 +468,14 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
+             * JvsAgentId.
+             */
+            public Builder jvsAgentId(String jvsAgentId) {
+                this.jvsAgentId = jvsAgentId;
+                return this;
+            }
+
+            /**
              * <p>The command output.</p>
              * <ul>
              * <li>When the <code>IncludeOutput</code> parameter is set to false, the output is not returned.</li>
@@ -536,6 +557,9 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
+        @com.aliyun.core.annotation.NameInMap("DesktopScenario")
+        private String desktopScenario;
+
         @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
@@ -558,6 +582,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             this.commandContent = builder.commandContent;
             this.commandType = builder.commandType;
             this.creationTime = builder.creationTime;
+            this.desktopScenario = builder.desktopScenario;
             this.endUserId = builder.endUserId;
             this.invocationStatus = builder.invocationStatus;
             this.invokeDesktopCount = builder.invokeDesktopCount;
@@ -593,6 +618,13 @@ public class DescribeInvocationsResponseBody extends TeaModel {
          */
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        /**
+         * @return desktopScenario
+         */
+        public String getDesktopScenario() {
+            return this.desktopScenario;
         }
 
         /**
@@ -641,6 +673,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             private String commandContent; 
             private String commandType; 
             private String creationTime; 
+            private String desktopScenario; 
             private String endUserId; 
             private String invocationStatus; 
             private Integer invokeDesktopCount; 
@@ -655,6 +688,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
                 this.commandContent = model.commandContent;
                 this.commandType = model.commandType;
                 this.creationTime = model.creationTime;
+                this.desktopScenario = model.desktopScenario;
                 this.endUserId = model.endUserId;
                 this.invocationStatus = model.invocationStatus;
                 this.invokeDesktopCount = model.invokeDesktopCount;
@@ -693,6 +727,14 @@ public class DescribeInvocationsResponseBody extends TeaModel {
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * DesktopScenario.
+             */
+            public Builder desktopScenario(String desktopScenario) {
+                this.desktopScenario = desktopScenario;
                 return this;
             }
 

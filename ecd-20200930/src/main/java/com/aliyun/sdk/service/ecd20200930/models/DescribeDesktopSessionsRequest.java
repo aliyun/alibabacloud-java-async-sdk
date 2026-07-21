@@ -42,6 +42,10 @@ public class DescribeDesktopSessionsRequest extends Request {
     private String endUserIdFilter;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserIds")
+    private java.util.List<String> endUserIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FillHardwareInfo")
     private Boolean fillHardwareInfo;
 
@@ -90,6 +94,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         this.endTime = builder.endTime;
         this.endUserId = builder.endUserId;
         this.endUserIdFilter = builder.endUserIdFilter;
+        this.endUserIds = builder.endUserIds;
         this.fillHardwareInfo = builder.fillHardwareInfo;
         this.language = builder.language;
         this.officeSiteId = builder.officeSiteId;
@@ -155,6 +160,13 @@ public class DescribeDesktopSessionsRequest extends Request {
      */
     public String getEndUserIdFilter() {
         return this.endUserIdFilter;
+    }
+
+    /**
+     * @return endUserIds
+     */
+    public java.util.List<String> getEndUserIds() {
+        return this.endUserIds;
     }
 
     /**
@@ -234,6 +246,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         private String endTime; 
         private String endUserId; 
         private String endUserIdFilter; 
+        private java.util.List<String> endUserIds; 
         private Boolean fillHardwareInfo; 
         private String language; 
         private String officeSiteId; 
@@ -257,6 +270,7 @@ public class DescribeDesktopSessionsRequest extends Request {
             this.endTime = request.endTime;
             this.endUserId = request.endUserId;
             this.endUserIdFilter = request.endUserIdFilter;
+            this.endUserIds = request.endUserIds;
             this.fillHardwareInfo = request.fillHardwareInfo;
             this.language = request.language;
             this.officeSiteId = request.officeSiteId;
@@ -335,6 +349,15 @@ public class DescribeDesktopSessionsRequest extends Request {
         public Builder endUserIdFilter(String endUserIdFilter) {
             this.putQueryParameter("EndUserIdFilter", endUserIdFilter);
             this.endUserIdFilter = endUserIdFilter;
+            return this;
+        }
+
+        /**
+         * EndUserIds.
+         */
+        public Builder endUserIds(java.util.List<String> endUserIds) {
+            this.putQueryParameter("EndUserIds", endUserIds);
+            this.endUserIds = endUserIds;
             return this;
         }
 

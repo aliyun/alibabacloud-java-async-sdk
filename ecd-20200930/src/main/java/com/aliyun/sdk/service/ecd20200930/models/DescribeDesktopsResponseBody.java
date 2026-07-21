@@ -1408,6 +1408,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
+        @com.aliyun.core.annotation.NameInMap("ImageName")
+        private String imageName;
+
         @com.aliyun.core.annotation.NameInMap("IsLdap")
         private Boolean isLdap;
 
@@ -1489,6 +1492,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
+        @com.aliyun.core.annotation.NameInMap("SubnetId")
+        private String subnetId;
+
         @com.aliyun.core.annotation.NameInMap("SupportHibernation")
         private Boolean supportHibernation;
 
@@ -1548,6 +1554,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             this.hibernationOptionsConfigured = builder.hibernationOptionsConfigured;
             this.hostName = builder.hostName;
             this.imageId = builder.imageId;
+            this.imageName = builder.imageName;
             this.isLdap = builder.isLdap;
             this.managementFlag = builder.managementFlag;
             this.managementFlags = builder.managementFlags;
@@ -1575,6 +1582,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             this.snapshotPolicyName = builder.snapshotPolicyName;
             this.standardStartTime = builder.standardStartTime;
             this.startTime = builder.startTime;
+            this.subnetId = builder.subnetId;
             this.supportHibernation = builder.supportHibernation;
             this.systemDiskCategory = builder.systemDiskCategory;
             this.systemDiskSize = builder.systemDiskSize;
@@ -1852,6 +1860,13 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
 
         /**
+         * @return imageName
+         */
+        public String getImageName() {
+            return this.imageName;
+        }
+
+        /**
          * @return isLdap
          */
         public Boolean getIsLdap() {
@@ -2041,6 +2056,13 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
 
         /**
+         * @return subnetId
+         */
+        public String getSubnetId() {
+            return this.subnetId;
+        }
+
+        /**
          * @return supportHibernation
          */
         public Boolean getSupportHibernation() {
@@ -2127,6 +2149,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private Boolean hibernationOptionsConfigured; 
             private String hostName; 
             private String imageId; 
+            private String imageName; 
             private Boolean isLdap; 
             private String managementFlag; 
             private java.util.List<String> managementFlags; 
@@ -2154,6 +2177,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private String snapshotPolicyName; 
             private String standardStartTime; 
             private String startTime; 
+            private String subnetId; 
             private Boolean supportHibernation; 
             private String systemDiskCategory; 
             private Integer systemDiskSize; 
@@ -2203,6 +2227,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
                 this.hibernationOptionsConfigured = model.hibernationOptionsConfigured;
                 this.hostName = model.hostName;
                 this.imageId = model.imageId;
+                this.imageName = model.imageName;
                 this.isLdap = model.isLdap;
                 this.managementFlag = model.managementFlag;
                 this.managementFlags = model.managementFlags;
@@ -2230,6 +2255,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
                 this.snapshotPolicyName = model.snapshotPolicyName;
                 this.standardStartTime = model.standardStartTime;
                 this.startTime = model.startTime;
+                this.subnetId = model.subnetId;
                 this.supportHibernation = model.supportHibernation;
                 this.systemDiskCategory = model.systemDiskCategory;
                 this.systemDiskSize = model.systemDiskSize;
@@ -2655,6 +2681,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
+             * ImageName.
+             */
+            public Builder imageName(String imageName) {
+                this.imageName = imageName;
+                return this;
+            }
+
+            /**
              * IsLdap.
              */
             public Builder isLdap(Boolean isLdap) {
@@ -2971,6 +3005,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * SubnetId.
+             */
+            public Builder subnetId(String subnetId) {
+                this.subnetId = subnetId;
                 return this;
             }
 

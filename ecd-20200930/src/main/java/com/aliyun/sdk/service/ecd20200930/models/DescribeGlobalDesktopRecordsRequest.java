@@ -90,6 +90,10 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SubPayType")
     private String subPayType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserNames")
+    private java.util.List<String> userNames;
+
     private DescribeGlobalDesktopRecordsRequest(Builder builder) {
         super(builder);
         this.businessChannel = builder.businessChannel;
@@ -110,6 +114,7 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         this.sortType = builder.sortType;
         this.startTime = builder.startTime;
         this.subPayType = builder.subPayType;
+        this.userNames = builder.userNames;
     }
 
     public static Builder builder() {
@@ -251,6 +256,13 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         return this.subPayType;
     }
 
+    /**
+     * @return userNames
+     */
+    public java.util.List<String> getUserNames() {
+        return this.userNames;
+    }
+
     public static final class Builder extends Request.Builder<DescribeGlobalDesktopRecordsRequest, Builder> {
         private String businessChannel; 
         private java.util.List<String> desktopId; 
@@ -270,6 +282,7 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         private String sortType; 
         private String startTime; 
         private String subPayType; 
+        private java.util.List<String> userNames; 
 
         private Builder() {
             super();
@@ -295,6 +308,7 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
             this.sortType = request.sortType;
             this.startTime = request.startTime;
             this.subPayType = request.subPayType;
+            this.userNames = request.userNames;
         } 
 
         /**
@@ -524,6 +538,15 @@ public class DescribeGlobalDesktopRecordsRequest extends Request {
         public Builder subPayType(String subPayType) {
             this.putQueryParameter("SubPayType", subPayType);
             this.subPayType = subPayType;
+            return this;
+        }
+
+        /**
+         * UserNames.
+         */
+        public Builder userNames(java.util.List<String> userNames) {
+            this.putQueryParameter("UserNames", userNames);
+            this.userNames = userNames;
             return this;
         }
 

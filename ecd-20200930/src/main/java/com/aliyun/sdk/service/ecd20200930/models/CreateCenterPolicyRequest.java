@@ -187,6 +187,26 @@ public class CreateCenterPolicyRequest extends Request {
     private String fileTransferAddress;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileTransferInSize")
+    private Integer fileTransferInSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileTransferInUnit")
+    private String fileTransferInUnit;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileTransferOutSize")
+    private Integer fileTransferOutSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileTransferOutUnit")
+    private String fileTransferOutUnit;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileTransferSizeLimit")
+    private String fileTransferSizeLimit;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FileTransferSpeed")
     private String fileTransferSpeed;
 
@@ -598,6 +618,11 @@ public class CreateCenterPolicyRequest extends Request {
         this.externalDrive = builder.externalDrive;
         this.fileMigrate = builder.fileMigrate;
         this.fileTransferAddress = builder.fileTransferAddress;
+        this.fileTransferInSize = builder.fileTransferInSize;
+        this.fileTransferInUnit = builder.fileTransferInUnit;
+        this.fileTransferOutSize = builder.fileTransferOutSize;
+        this.fileTransferOutUnit = builder.fileTransferOutUnit;
+        this.fileTransferSizeLimit = builder.fileTransferSizeLimit;
         this.fileTransferSpeed = builder.fileTransferSpeed;
         this.fileTransferSpeedLocation = builder.fileTransferSpeedLocation;
         this.gpuAcceleration = builder.gpuAcceleration;
@@ -996,6 +1021,41 @@ public class CreateCenterPolicyRequest extends Request {
      */
     public String getFileTransferAddress() {
         return this.fileTransferAddress;
+    }
+
+    /**
+     * @return fileTransferInSize
+     */
+    public Integer getFileTransferInSize() {
+        return this.fileTransferInSize;
+    }
+
+    /**
+     * @return fileTransferInUnit
+     */
+    public String getFileTransferInUnit() {
+        return this.fileTransferInUnit;
+    }
+
+    /**
+     * @return fileTransferOutSize
+     */
+    public Integer getFileTransferOutSize() {
+        return this.fileTransferOutSize;
+    }
+
+    /**
+     * @return fileTransferOutUnit
+     */
+    public String getFileTransferOutUnit() {
+        return this.fileTransferOutUnit;
+    }
+
+    /**
+     * @return fileTransferSizeLimit
+     */
+    public String getFileTransferSizeLimit() {
+        return this.fileTransferSizeLimit;
     }
 
     /**
@@ -1678,6 +1738,11 @@ public class CreateCenterPolicyRequest extends Request {
         private String externalDrive; 
         private String fileMigrate; 
         private String fileTransferAddress; 
+        private Integer fileTransferInSize; 
+        private String fileTransferInUnit; 
+        private Integer fileTransferOutSize; 
+        private String fileTransferOutUnit; 
+        private String fileTransferSizeLimit; 
         private String fileTransferSpeed; 
         private String fileTransferSpeedLocation; 
         private String gpuAcceleration; 
@@ -1818,6 +1883,11 @@ public class CreateCenterPolicyRequest extends Request {
             this.externalDrive = request.externalDrive;
             this.fileMigrate = request.fileMigrate;
             this.fileTransferAddress = request.fileTransferAddress;
+            this.fileTransferInSize = request.fileTransferInSize;
+            this.fileTransferInUnit = request.fileTransferInUnit;
+            this.fileTransferOutSize = request.fileTransferOutSize;
+            this.fileTransferOutUnit = request.fileTransferOutUnit;
+            this.fileTransferSizeLimit = request.fileTransferSizeLimit;
             this.fileTransferSpeed = request.fileTransferSpeed;
             this.fileTransferSpeedLocation = request.fileTransferSpeedLocation;
             this.gpuAcceleration = request.gpuAcceleration;
@@ -2426,6 +2496,51 @@ public class CreateCenterPolicyRequest extends Request {
         public Builder fileTransferAddress(String fileTransferAddress) {
             this.putQueryParameter("FileTransferAddress", fileTransferAddress);
             this.fileTransferAddress = fileTransferAddress;
+            return this;
+        }
+
+        /**
+         * FileTransferInSize.
+         */
+        public Builder fileTransferInSize(Integer fileTransferInSize) {
+            this.putQueryParameter("FileTransferInSize", fileTransferInSize);
+            this.fileTransferInSize = fileTransferInSize;
+            return this;
+        }
+
+        /**
+         * FileTransferInUnit.
+         */
+        public Builder fileTransferInUnit(String fileTransferInUnit) {
+            this.putQueryParameter("FileTransferInUnit", fileTransferInUnit);
+            this.fileTransferInUnit = fileTransferInUnit;
+            return this;
+        }
+
+        /**
+         * FileTransferOutSize.
+         */
+        public Builder fileTransferOutSize(Integer fileTransferOutSize) {
+            this.putQueryParameter("FileTransferOutSize", fileTransferOutSize);
+            this.fileTransferOutSize = fileTransferOutSize;
+            return this;
+        }
+
+        /**
+         * FileTransferOutUnit.
+         */
+        public Builder fileTransferOutUnit(String fileTransferOutUnit) {
+            this.putQueryParameter("FileTransferOutUnit", fileTransferOutUnit);
+            this.fileTransferOutUnit = fileTransferOutUnit;
+            return this;
+        }
+
+        /**
+         * FileTransferSizeLimit.
+         */
+        public Builder fileTransferSizeLimit(String fileTransferSizeLimit) {
+            this.putQueryParameter("FileTransferSizeLimit", fileTransferSizeLimit);
+            this.fileTransferSizeLimit = fileTransferSizeLimit;
             return this;
         }
 

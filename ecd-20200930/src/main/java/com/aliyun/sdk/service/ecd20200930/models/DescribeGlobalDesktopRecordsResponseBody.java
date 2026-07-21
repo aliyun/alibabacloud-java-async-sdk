@@ -290,6 +290,9 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
+        private String creationTime;
+
         @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
         private String desktopGroupId;
 
@@ -365,6 +368,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         private Sessions(Builder builder) {
             this.connectionStatus = builder.connectionStatus;
             this.cpu = builder.cpu;
+            this.creationTime = builder.creationTime;
             this.desktopGroupId = builder.desktopGroupId;
             this.desktopGroupName = builder.desktopGroupName;
             this.desktopId = builder.desktopId;
@@ -411,6 +415,13 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
          */
         public Integer getCpu() {
             return this.cpu;
+        }
+
+        /**
+         * @return creationTime
+         */
+        public String getCreationTime() {
+            return this.creationTime;
         }
 
         /**
@@ -584,6 +595,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public static final class Builder {
             private String connectionStatus; 
             private Integer cpu; 
+            private String creationTime; 
             private String desktopGroupId; 
             private String desktopGroupName; 
             private String desktopId; 
@@ -615,6 +627,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             private Builder(Sessions model) {
                 this.connectionStatus = model.connectionStatus;
                 this.cpu = model.cpu;
+                this.creationTime = model.creationTime;
                 this.desktopGroupId = model.desktopGroupId;
                 this.desktopGroupName = model.desktopGroupName;
                 this.desktopId = model.desktopId;
@@ -660,6 +673,14 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * CreationTime.
+             */
+            public Builder creationTime(String creationTime) {
+                this.creationTime = creationTime;
                 return this;
             }
 

@@ -55,6 +55,10 @@ public class DescribeDesktopMetadataRequest extends Request {
     private Integer maxResults;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceIp")
+    private String networkInterfaceIp;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
@@ -85,6 +89,7 @@ public class DescribeDesktopMetadataRequest extends Request {
         this.includeDesktopGroup = builder.includeDesktopGroup;
         this.keyword = builder.keyword;
         this.maxResults = builder.maxResults;
+        this.networkInterfaceIp = builder.networkInterfaceIp;
         this.nextToken = builder.nextToken;
         this.officeSiteId = builder.officeSiteId;
         this.operationTimeStart = builder.operationTimeStart;
@@ -169,6 +174,13 @@ public class DescribeDesktopMetadataRequest extends Request {
     }
 
     /**
+     * @return networkInterfaceIp
+     */
+    public String getNetworkInterfaceIp() {
+        return this.networkInterfaceIp;
+    }
+
+    /**
      * @return nextToken
      */
     public String getNextToken() {
@@ -213,6 +225,7 @@ public class DescribeDesktopMetadataRequest extends Request {
         private Boolean includeDesktopGroup; 
         private String keyword; 
         private Integer maxResults; 
+        private String networkInterfaceIp; 
         private String nextToken; 
         private String officeSiteId; 
         private String operationTimeStart; 
@@ -234,6 +247,7 @@ public class DescribeDesktopMetadataRequest extends Request {
             this.includeDesktopGroup = request.includeDesktopGroup;
             this.keyword = request.keyword;
             this.maxResults = request.maxResults;
+            this.networkInterfaceIp = request.networkInterfaceIp;
             this.nextToken = request.nextToken;
             this.officeSiteId = request.officeSiteId;
             this.operationTimeStart = request.operationTimeStart;
@@ -319,6 +333,15 @@ public class DescribeDesktopMetadataRequest extends Request {
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
             this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NetworkInterfaceIp.
+         */
+        public Builder networkInterfaceIp(String networkInterfaceIp) {
+            this.putQueryParameter("NetworkInterfaceIp", networkInterfaceIp);
+            this.networkInterfaceIp = networkInterfaceIp;
             return this;
         }
 
