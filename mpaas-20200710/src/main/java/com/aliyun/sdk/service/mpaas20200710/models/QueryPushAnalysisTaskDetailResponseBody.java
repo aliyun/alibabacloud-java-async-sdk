@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryPushAnalysisTaskDetailResponseBody</p>
  */
 public class QueryPushAnalysisTaskDetailResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -30,6 +33,7 @@ public class QueryPushAnalysisTaskDetailResponseBody extends TeaModel {
     private String resultMessage;
 
     private QueryPushAnalysisTaskDetailResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.requestId = builder.requestId;
         this.resultCode = builder.resultCode;
         this.resultContent = builder.resultContent;
@@ -46,6 +50,13 @@ public class QueryPushAnalysisTaskDetailResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -77,6 +88,7 @@ public class QueryPushAnalysisTaskDetailResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private String requestId; 
         private String resultCode; 
         private ResultContent resultContent; 
@@ -86,11 +98,20 @@ public class QueryPushAnalysisTaskDetailResponseBody extends TeaModel {
         } 
 
         private Builder(QueryPushAnalysisTaskDetailResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
             this.requestId = model.requestId;
             this.resultCode = model.resultCode;
             this.resultContent = model.resultContent;
             this.resultMessage = model.resultMessage;
         } 
+
+        /**
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
 
         /**
          * RequestId.
