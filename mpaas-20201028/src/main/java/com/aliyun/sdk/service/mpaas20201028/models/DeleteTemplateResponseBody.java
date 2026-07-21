@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteTemplateResponseBody</p>
  */
 public class DeleteTemplateResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -30,6 +33,7 @@ public class DeleteTemplateResponseBody extends TeaModel {
     private Boolean success;
 
     private DeleteTemplateResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.msg = builder.msg;
         this.requestId = builder.requestId;
@@ -46,6 +50,13 @@ public class DeleteTemplateResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -77,6 +88,7 @@ public class DeleteTemplateResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private String code; 
         private String msg; 
         private String requestId; 
@@ -86,11 +98,20 @@ public class DeleteTemplateResponseBody extends TeaModel {
         } 
 
         private Builder(DeleteTemplateResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
             this.code = model.code;
             this.msg = model.msg;
             this.requestId = model.requestId;
             this.success = model.success;
         } 
+
+        /**
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
 
         /**
          * Code.

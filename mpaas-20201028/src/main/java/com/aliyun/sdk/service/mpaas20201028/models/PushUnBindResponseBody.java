@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PushUnBindResponseBody</p>
  */
 public class PushUnBindResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @com.aliyun.core.annotation.NameInMap("PushResult")
     private PushResult pushResult;
 
@@ -30,6 +33,7 @@ public class PushUnBindResponseBody extends TeaModel {
     private String resultMessage;
 
     private PushUnBindResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.pushResult = builder.pushResult;
         this.requestId = builder.requestId;
         this.resultCode = builder.resultCode;
@@ -46,6 +50,13 @@ public class PushUnBindResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -77,6 +88,7 @@ public class PushUnBindResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private PushResult pushResult; 
         private String requestId; 
         private String resultCode; 
@@ -86,11 +98,20 @@ public class PushUnBindResponseBody extends TeaModel {
         } 
 
         private Builder(PushUnBindResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
             this.pushResult = model.pushResult;
             this.requestId = model.requestId;
             this.resultCode = model.resultCode;
             this.resultMessage = model.resultMessage;
         } 
+
+        /**
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
 
         /**
          * PushResult.

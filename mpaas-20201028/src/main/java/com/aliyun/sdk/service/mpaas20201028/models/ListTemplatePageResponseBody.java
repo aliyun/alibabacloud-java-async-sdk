@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTemplatePageResponseBody</p>
  */
 public class ListTemplatePageResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -42,6 +45,7 @@ public class ListTemplatePageResponseBody extends TeaModel {
     private Integer totalSize;
 
     private ListTemplatePageResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.currentPage = builder.currentPage;
         this.data = builder.data;
@@ -62,6 +66,13 @@ public class ListTemplatePageResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -121,6 +132,7 @@ public class ListTemplatePageResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private String code; 
         private Integer currentPage; 
         private java.util.List<Data> data; 
@@ -134,6 +146,7 @@ public class ListTemplatePageResponseBody extends TeaModel {
         } 
 
         private Builder(ListTemplatePageResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
             this.code = model.code;
             this.currentPage = model.currentPage;
             this.data = model.data;
@@ -143,6 +156,14 @@ public class ListTemplatePageResponseBody extends TeaModel {
             this.success = model.success;
             this.totalSize = model.totalSize;
         } 
+
+        /**
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
 
         /**
          * Code.
