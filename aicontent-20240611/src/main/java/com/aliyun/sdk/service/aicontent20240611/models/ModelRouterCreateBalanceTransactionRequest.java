@@ -26,6 +26,14 @@ public class ModelRouterCreateBalanceTransactionRequest extends Request {
     private Double amount;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("balanceType")
+    private String balanceType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("idempotencyKey")
+    private String idempotencyKey;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("remark")
     private String remark;
 
@@ -37,6 +45,8 @@ public class ModelRouterCreateBalanceTransactionRequest extends Request {
         super(builder);
         this.id = builder.id;
         this.amount = builder.amount;
+        this.balanceType = builder.balanceType;
+        this.idempotencyKey = builder.idempotencyKey;
         this.remark = builder.remark;
         this.type = builder.type;
     }
@@ -69,6 +79,20 @@ public class ModelRouterCreateBalanceTransactionRequest extends Request {
     }
 
     /**
+     * @return balanceType
+     */
+    public String getBalanceType() {
+        return this.balanceType;
+    }
+
+    /**
+     * @return idempotencyKey
+     */
+    public String getIdempotencyKey() {
+        return this.idempotencyKey;
+    }
+
+    /**
      * @return remark
      */
     public String getRemark() {
@@ -85,6 +109,8 @@ public class ModelRouterCreateBalanceTransactionRequest extends Request {
     public static final class Builder extends Request.Builder<ModelRouterCreateBalanceTransactionRequest, Builder> {
         private Long id; 
         private Double amount; 
+        private String balanceType; 
+        private String idempotencyKey; 
         private String remark; 
         private String type; 
 
@@ -96,6 +122,8 @@ public class ModelRouterCreateBalanceTransactionRequest extends Request {
             super(request);
             this.id = request.id;
             this.amount = request.amount;
+            this.balanceType = request.balanceType;
+            this.idempotencyKey = request.idempotencyKey;
             this.remark = request.remark;
             this.type = request.type;
         } 
@@ -115,6 +143,24 @@ public class ModelRouterCreateBalanceTransactionRequest extends Request {
         public Builder amount(Double amount) {
             this.putBodyParameter("amount", amount);
             this.amount = amount;
+            return this;
+        }
+
+        /**
+         * balanceType.
+         */
+        public Builder balanceType(String balanceType) {
+            this.putBodyParameter("balanceType", balanceType);
+            this.balanceType = balanceType;
+            return this;
+        }
+
+        /**
+         * idempotencyKey.
+         */
+        public Builder idempotencyKey(String idempotencyKey) {
+            this.putBodyParameter("idempotencyKey", idempotencyKey);
+            this.idempotencyKey = idempotencyKey;
             return this;
         }
 

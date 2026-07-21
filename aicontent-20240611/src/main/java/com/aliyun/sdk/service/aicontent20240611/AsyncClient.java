@@ -314,6 +314,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModelRouterCreateModelResponse> modelRouterCreateModel(ModelRouterCreateModelRequest request);
 
     /**
+     * @param request the request parameters of ModelRouterCreateSubscription  ModelRouterCreateSubscriptionRequest
+     * @return ModelRouterCreateSubscriptionResponse
+     */
+    CompletableFuture<ModelRouterCreateSubscriptionResponse> modelRouterCreateSubscription(ModelRouterCreateSubscriptionRequest request);
+
+    /**
      * @param request the request parameters of ModelRouterDeleteApiKey  ModelRouterDeleteApiKeyRequest
      * @return ModelRouterDeleteApiKeyResponse
      */
@@ -348,6 +354,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModelRouterGetClientBalanceLogsResponse
      */
     CompletableFuture<ModelRouterGetClientBalanceLogsResponse> modelRouterGetClientBalanceLogs(ModelRouterGetClientBalanceLogsRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterListSubscriptions  ModelRouterListSubscriptionsRequest
+     * @return ModelRouterListSubscriptionsResponse
+     */
+    CompletableFuture<ModelRouterListSubscriptionsResponse> modelRouterListSubscriptions(ModelRouterListSubscriptionsRequest request);
 
     /**
      * @param request the request parameters of ModelRouterQueryApiKey  ModelRouterQueryApiKeyRequest
@@ -480,6 +492,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModelRouterSaveFlowConfigResponse
      */
     CompletableFuture<ModelRouterSaveFlowConfigResponse> modelRouterSaveFlowConfig(ModelRouterSaveFlowConfigRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterStopSubscription  ModelRouterStopSubscriptionRequest
+     * @return ModelRouterStopSubscriptionResponse
+     */
+    CompletableFuture<ModelRouterStopSubscriptionResponse> modelRouterStopSubscription(ModelRouterStopSubscriptionRequest request);
 
     /**
      * @param request the request parameters of ModelRouterUpdateBillingRule  ModelRouterUpdateBillingRuleRequest
