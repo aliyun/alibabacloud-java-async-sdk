@@ -170,6 +170,9 @@ public class ListDatasetsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("isFavorite")
+        private Boolean isFavorite;
+
         @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
@@ -181,6 +184,7 @@ public class ListDatasetsResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.datasetName = builder.datasetName;
             this.description = builder.description;
+            this.isFavorite = builder.isFavorite;
             this.regionId = builder.regionId;
             this.updateTime = builder.updateTime;
         }
@@ -222,6 +226,13 @@ public class ListDatasetsResponseBody extends TeaModel {
         }
 
         /**
+         * @return isFavorite
+         */
+        public Boolean getIsFavorite() {
+            return this.isFavorite;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -240,6 +251,7 @@ public class ListDatasetsResponseBody extends TeaModel {
             private String createTime; 
             private String datasetName; 
             private String description; 
+            private Boolean isFavorite; 
             private String regionId; 
             private String updateTime; 
 
@@ -251,6 +263,7 @@ public class ListDatasetsResponseBody extends TeaModel {
                 this.createTime = model.createTime;
                 this.datasetName = model.datasetName;
                 this.description = model.description;
+                this.isFavorite = model.isFavorite;
                 this.regionId = model.regionId;
                 this.updateTime = model.updateTime;
             } 
@@ -287,6 +300,14 @@ public class ListDatasetsResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * isFavorite.
+             */
+            public Builder isFavorite(Boolean isFavorite) {
+                this.isFavorite = isFavorite;
                 return this;
             }
 

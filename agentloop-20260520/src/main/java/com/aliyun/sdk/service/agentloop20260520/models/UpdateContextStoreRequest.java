@@ -39,6 +39,10 @@ public class UpdateContextStoreRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("status")
+    private String status;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
@@ -50,6 +54,7 @@ public class UpdateContextStoreRequest extends Request {
         this.config = builder.config;
         this.contextType = builder.contextType;
         this.description = builder.description;
+        this.status = builder.status;
         this.clientToken = builder.clientToken;
     }
 
@@ -102,6 +107,13 @@ public class UpdateContextStoreRequest extends Request {
     }
 
     /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return clientToken
      */
     public String getClientToken() {
@@ -114,6 +126,7 @@ public class UpdateContextStoreRequest extends Request {
         private Config config; 
         private String contextType; 
         private String description; 
+        private String status; 
         private String clientToken; 
 
         private Builder() {
@@ -127,6 +140,7 @@ public class UpdateContextStoreRequest extends Request {
             this.config = request.config;
             this.contextType = request.contextType;
             this.description = request.description;
+            this.status = request.status;
             this.clientToken = request.clientToken;
         } 
 
@@ -178,6 +192,15 @@ public class UpdateContextStoreRequest extends Request {
         public Builder description(String description) {
             this.putBodyParameter("description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * status.
+         */
+        public Builder status(String status) {
+            this.putBodyParameter("status", status);
+            this.status = status;
             return this;
         }
 

@@ -29,11 +29,15 @@ public class DataFilter extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("samplingRate")
     private Integer samplingRate;
 
+    @com.aliyun.core.annotation.NameInMap("serviceNames")
+    private java.util.List<String> serviceNames;
+
     private DataFilter(Builder builder) {
         this.maxRecords = builder.maxRecords;
         this.provided = builder.provided;
         this.query = builder.query;
         this.samplingRate = builder.samplingRate;
+        this.serviceNames = builder.serviceNames;
     }
 
     public static Builder builder() {
@@ -76,11 +80,19 @@ public class DataFilter extends TeaModel {
         return this.samplingRate;
     }
 
+    /**
+     * @return serviceNames
+     */
+    public java.util.List<String> getServiceNames() {
+        return this.serviceNames;
+    }
+
     public static final class Builder {
         private Integer maxRecords; 
         private java.util.Map<String, ?> provided; 
         private String query; 
         private Integer samplingRate; 
+        private java.util.List<String> serviceNames; 
 
         private Builder() {
         } 
@@ -90,6 +102,7 @@ public class DataFilter extends TeaModel {
             this.provided = model.provided;
             this.query = model.query;
             this.samplingRate = model.samplingRate;
+            this.serviceNames = model.serviceNames;
         } 
 
         /**
@@ -121,6 +134,14 @@ public class DataFilter extends TeaModel {
          */
         public Builder samplingRate(Integer samplingRate) {
             this.samplingRate = samplingRate;
+            return this;
+        }
+
+        /**
+         * serviceNames.
+         */
+        public Builder serviceNames(java.util.List<String> serviceNames) {
+            this.serviceNames = serviceNames;
             return this;
         }
 
