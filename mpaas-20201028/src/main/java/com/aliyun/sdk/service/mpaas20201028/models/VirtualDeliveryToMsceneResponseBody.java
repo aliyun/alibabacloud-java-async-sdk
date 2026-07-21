@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>VirtualDeliveryToMsceneResponseBody</p>
  */
 public class VirtualDeliveryToMsceneResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @com.aliyun.core.annotation.NameInMap("MpaasUserGamecenterPaymentVirtualdeliveryResponse")
     private MpaasUserGamecenterPaymentVirtualdeliveryResponse mpaasUserGamecenterPaymentVirtualdeliveryResponse;
 
@@ -33,6 +36,7 @@ public class VirtualDeliveryToMsceneResponseBody extends TeaModel {
     private Boolean success;
 
     private VirtualDeliveryToMsceneResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.mpaasUserGamecenterPaymentVirtualdeliveryResponse = builder.mpaasUserGamecenterPaymentVirtualdeliveryResponse;
         this.requestId = builder.requestId;
         this.resultCode = builder.resultCode;
@@ -50,6 +54,13 @@ public class VirtualDeliveryToMsceneResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -88,6 +99,7 @@ public class VirtualDeliveryToMsceneResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private MpaasUserGamecenterPaymentVirtualdeliveryResponse mpaasUserGamecenterPaymentVirtualdeliveryResponse; 
         private String requestId; 
         private String resultCode; 
@@ -98,12 +110,21 @@ public class VirtualDeliveryToMsceneResponseBody extends TeaModel {
         } 
 
         private Builder(VirtualDeliveryToMsceneResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
             this.mpaasUserGamecenterPaymentVirtualdeliveryResponse = model.mpaasUserGamecenterPaymentVirtualdeliveryResponse;
             this.requestId = model.requestId;
             this.resultCode = model.resultCode;
             this.resultMsg = model.resultMsg;
             this.success = model.success;
         } 
+
+        /**
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
 
         /**
          * MpaasUserGamecenterPaymentVirtualdeliveryResponse.

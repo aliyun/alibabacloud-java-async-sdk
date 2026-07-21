@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryPayOrderToMsenceResponseBody</p>
  */
 public class QueryPayOrderToMsenceResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @com.aliyun.core.annotation.NameInMap("MpaasUserGamecenterPaymentQuerystatusResponse")
     private MpaasUserGamecenterPaymentQuerystatusResponse mpaasUserGamecenterPaymentQuerystatusResponse;
 
@@ -33,6 +36,7 @@ public class QueryPayOrderToMsenceResponseBody extends TeaModel {
     private Boolean success;
 
     private QueryPayOrderToMsenceResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.mpaasUserGamecenterPaymentQuerystatusResponse = builder.mpaasUserGamecenterPaymentQuerystatusResponse;
         this.requestId = builder.requestId;
         this.resultCode = builder.resultCode;
@@ -50,6 +54,13 @@ public class QueryPayOrderToMsenceResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -88,6 +99,7 @@ public class QueryPayOrderToMsenceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private MpaasUserGamecenterPaymentQuerystatusResponse mpaasUserGamecenterPaymentQuerystatusResponse; 
         private String requestId; 
         private String resultCode; 
@@ -98,12 +110,21 @@ public class QueryPayOrderToMsenceResponseBody extends TeaModel {
         } 
 
         private Builder(QueryPayOrderToMsenceResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
             this.mpaasUserGamecenterPaymentQuerystatusResponse = model.mpaasUserGamecenterPaymentQuerystatusResponse;
             this.requestId = model.requestId;
             this.resultCode = model.resultCode;
             this.resultMsg = model.resultMsg;
             this.success = model.success;
         } 
+
+        /**
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
 
         /**
          * MpaasUserGamecenterPaymentQuerystatusResponse.
