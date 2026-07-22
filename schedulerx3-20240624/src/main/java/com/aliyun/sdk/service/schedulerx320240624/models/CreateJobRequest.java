@@ -101,7 +101,7 @@ public class CreateJobRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RouteStrategy")
-    @com.aliyun.core.annotation.Validation(maximum = 9, minimum = 1)
+    @com.aliyun.core.annotation.Validation(maximum = 20, minimum = 1)
     private Integer routeStrategy;
 
     @com.aliyun.core.annotation.Body

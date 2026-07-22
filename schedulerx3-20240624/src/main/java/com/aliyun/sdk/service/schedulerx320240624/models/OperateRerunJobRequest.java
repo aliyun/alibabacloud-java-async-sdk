@@ -22,6 +22,10 @@ public class OperateRerunJobRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    private Long appId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AppName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
@@ -54,6 +58,7 @@ public class OperateRerunJobRequest extends Request {
     private OperateRerunJobRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.appId = builder.appId;
         this.appName = builder.appName;
         this.clusterId = builder.clusterId;
         this.dataTime = builder.dataTime;
@@ -80,6 +85,13 @@ public class OperateRerunJobRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return appId
+     */
+    public Long getAppId() {
+        return this.appId;
     }
 
     /**
@@ -126,6 +138,7 @@ public class OperateRerunJobRequest extends Request {
 
     public static final class Builder extends Request.Builder<OperateRerunJobRequest, Builder> {
         private String regionId; 
+        private Long appId; 
         private String appName; 
         private String clusterId; 
         private String dataTime; 
@@ -140,6 +153,7 @@ public class OperateRerunJobRequest extends Request {
         private Builder(OperateRerunJobRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.appId = request.appId;
             this.appName = request.appName;
             this.clusterId = request.clusterId;
             this.dataTime = request.dataTime;
@@ -154,6 +168,15 @@ public class OperateRerunJobRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * AppId.
+         */
+        public Builder appId(Long appId) {
+            this.putQueryParameter("AppId", appId);
+            this.appId = appId;
             return this;
         }
 

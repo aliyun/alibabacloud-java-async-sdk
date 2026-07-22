@@ -230,6 +230,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetWorkflowExecutionDAGResponse> getWorkflowExecutionDAG(GetWorkflowExecutionDAGRequest request);
 
     /**
+     * @param request the request parameters of ImportAgentJobs  ImportAgentJobsRequest
+     * @return ImportAgentJobsResponse
+     */
+    CompletableFuture<ImportAgentJobsResponse> importAgentJobs(ImportAgentJobsRequest request);
+
+    ResponseIterable<ImportAgentJobsResponseBody> importAgentJobsWithResponseIterable(ImportAgentJobsRequest request);
+
+    /**
      * @param request the request parameters of ImportCalendar  ImportCalendarRequest
      * @return ImportCalendarResponse
      */

@@ -164,6 +164,9 @@ public class ListJobExecutionsResponseBody extends TeaModel {
      * <p>ListJobExecutionsResponseBody</p>
      */
     public static class Records extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppGroupId")
+        private Long appGroupId;
+
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
@@ -237,6 +240,7 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         private String xAttrs;
 
         private Records(Builder builder) {
+            this.appGroupId = builder.appGroupId;
             this.appName = builder.appName;
             this.attempt = builder.attempt;
             this.dataTime = builder.dataTime;
@@ -269,6 +273,13 @@ public class ListJobExecutionsResponseBody extends TeaModel {
 
         public static Records create() {
             return builder().build();
+        }
+
+        /**
+         * @return appGroupId
+         */
+        public Long getAppGroupId() {
+            return this.appGroupId;
         }
 
         /**
@@ -440,6 +451,7 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long appGroupId; 
             private String appName; 
             private Integer attempt; 
             private String dataTime; 
@@ -469,6 +481,7 @@ public class ListJobExecutionsResponseBody extends TeaModel {
             } 
 
             private Builder(Records model) {
+                this.appGroupId = model.appGroupId;
                 this.appName = model.appName;
                 this.attempt = model.attempt;
                 this.dataTime = model.dataTime;
@@ -494,6 +507,14 @@ public class ListJobExecutionsResponseBody extends TeaModel {
                 this.workflowName = model.workflowName;
                 this.xAttrs = model.xAttrs;
             } 
+
+            /**
+             * AppGroupId.
+             */
+            public Builder appGroupId(Long appGroupId) {
+                this.appGroupId = appGroupId;
+                return this;
+            }
 
             /**
              * AppName.

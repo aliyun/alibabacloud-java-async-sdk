@@ -22,6 +22,10 @@ public class OperateExecuteJobRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppGroupId")
+    private Long appGroupId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AppName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
@@ -51,6 +55,7 @@ public class OperateExecuteJobRequest extends Request {
     private OperateExecuteJobRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.appGroupId = builder.appGroupId;
         this.appName = builder.appName;
         this.clusterId = builder.clusterId;
         this.instanceParameters = builder.instanceParameters;
@@ -77,6 +82,13 @@ public class OperateExecuteJobRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return appGroupId
+     */
+    public Long getAppGroupId() {
+        return this.appGroupId;
     }
 
     /**
@@ -123,6 +135,7 @@ public class OperateExecuteJobRequest extends Request {
 
     public static final class Builder extends Request.Builder<OperateExecuteJobRequest, Builder> {
         private String regionId; 
+        private Long appGroupId; 
         private String appName; 
         private String clusterId; 
         private String instanceParameters; 
@@ -137,6 +150,7 @@ public class OperateExecuteJobRequest extends Request {
         private Builder(OperateExecuteJobRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.appGroupId = request.appGroupId;
             this.appName = request.appName;
             this.clusterId = request.clusterId;
             this.instanceParameters = request.instanceParameters;
@@ -151,6 +165,15 @@ public class OperateExecuteJobRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * AppGroupId.
+         */
+        public Builder appGroupId(Long appGroupId) {
+            this.putBodyParameter("AppGroupId", appGroupId);
+            this.appGroupId = appGroupId;
             return this;
         }
 

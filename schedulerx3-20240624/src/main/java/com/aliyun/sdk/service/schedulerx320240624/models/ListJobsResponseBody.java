@@ -160,6 +160,9 @@ public class ListJobsResponseBody extends TeaModel {
      * <p>ListJobsResponseBody</p>
      */
     public static class Records extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppGroupId")
+        private Long appGroupId;
+
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
@@ -269,6 +272,7 @@ public class ListJobsResponseBody extends TeaModel {
         private String xattrs;
 
         private Records(Builder builder) {
+            this.appGroupId = builder.appGroupId;
             this.appName = builder.appName;
             this.attemptInterval = builder.attemptInterval;
             this.calendar = builder.calendar;
@@ -313,6 +317,13 @@ public class ListJobsResponseBody extends TeaModel {
 
         public static Records create() {
             return builder().build();
+        }
+
+        /**
+         * @return appGroupId
+         */
+        public Long getAppGroupId() {
+            return this.appGroupId;
         }
 
         /**
@@ -568,6 +579,7 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long appGroupId; 
             private String appName; 
             private Integer attemptInterval; 
             private String calendar; 
@@ -609,6 +621,7 @@ public class ListJobsResponseBody extends TeaModel {
             } 
 
             private Builder(Records model) {
+                this.appGroupId = model.appGroupId;
                 this.appName = model.appName;
                 this.attemptInterval = model.attemptInterval;
                 this.calendar = model.calendar;
@@ -646,6 +659,14 @@ public class ListJobsResponseBody extends TeaModel {
                 this.workflowId = model.workflowId;
                 this.xattrs = model.xattrs;
             } 
+
+            /**
+             * AppGroupId.
+             */
+            public Builder appGroupId(Long appGroupId) {
+                this.appGroupId = appGroupId;
+                return this;
+            }
 
             /**
              * AppName.

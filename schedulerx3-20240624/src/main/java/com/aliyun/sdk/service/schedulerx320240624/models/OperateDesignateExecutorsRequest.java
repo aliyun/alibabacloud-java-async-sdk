@@ -27,6 +27,10 @@ public class OperateDesignateExecutorsRequest extends Request {
     private java.util.List<String> addressList;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppGroupId")
+    private Long appGroupId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AppName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
@@ -54,6 +58,7 @@ public class OperateDesignateExecutorsRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.addressList = builder.addressList;
+        this.appGroupId = builder.appGroupId;
         this.appName = builder.appName;
         this.clusterId = builder.clusterId;
         this.designateType = builder.designateType;
@@ -86,6 +91,13 @@ public class OperateDesignateExecutorsRequest extends Request {
      */
     public java.util.List<String> getAddressList() {
         return this.addressList;
+    }
+
+    /**
+     * @return appGroupId
+     */
+    public Long getAppGroupId() {
+        return this.appGroupId;
     }
 
     /**
@@ -126,6 +138,7 @@ public class OperateDesignateExecutorsRequest extends Request {
     public static final class Builder extends Request.Builder<OperateDesignateExecutorsRequest, Builder> {
         private String regionId; 
         private java.util.List<String> addressList; 
+        private Long appGroupId; 
         private String appName; 
         private String clusterId; 
         private Integer designateType; 
@@ -140,6 +153,7 @@ public class OperateDesignateExecutorsRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.addressList = request.addressList;
+            this.appGroupId = request.appGroupId;
             this.appName = request.appName;
             this.clusterId = request.clusterId;
             this.designateType = request.designateType;
@@ -163,6 +177,15 @@ public class OperateDesignateExecutorsRequest extends Request {
             String addressListShrink = shrink(addressList, "AddressList", "json");
             this.putBodyParameter("AddressList", addressListShrink);
             this.addressList = addressList;
+            return this;
+        }
+
+        /**
+         * AppGroupId.
+         */
+        public Builder appGroupId(Long appGroupId) {
+            this.putBodyParameter("AppGroupId", appGroupId);
+            this.appGroupId = appGroupId;
             return this;
         }
 

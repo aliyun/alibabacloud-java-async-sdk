@@ -22,6 +22,10 @@ public class UpdateJobRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppGroupId")
+    private Long appGroupId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AppName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
@@ -99,7 +103,7 @@ public class UpdateJobRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RouteStrategy")
-    @com.aliyun.core.annotation.Validation(maximum = 9, minimum = 1)
+    @com.aliyun.core.annotation.Validation(maximum = 20, minimum = 1)
     private Integer routeStrategy;
 
     @com.aliyun.core.annotation.Body
@@ -137,6 +141,7 @@ public class UpdateJobRequest extends Request {
     private UpdateJobRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.appGroupId = builder.appGroupId;
         this.appName = builder.appName;
         this.attemptInterval = builder.attemptInterval;
         this.calendar = builder.calendar;
@@ -183,6 +188,13 @@ public class UpdateJobRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return appGroupId
+     */
+    public Long getAppGroupId() {
+        return this.appGroupId;
     }
 
     /**
@@ -369,6 +381,7 @@ public class UpdateJobRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateJobRequest, Builder> {
         private String regionId; 
+        private Long appGroupId; 
         private String appName; 
         private Integer attemptInterval; 
         private String calendar; 
@@ -403,6 +416,7 @@ public class UpdateJobRequest extends Request {
         private Builder(UpdateJobRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.appGroupId = request.appGroupId;
             this.appName = request.appName;
             this.attemptInterval = request.attemptInterval;
             this.calendar = request.calendar;
@@ -437,6 +451,15 @@ public class UpdateJobRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * AppGroupId.
+         */
+        public Builder appGroupId(Long appGroupId) {
+            this.putBodyParameter("AppGroupId", appGroupId);
+            this.appGroupId = appGroupId;
             return this;
         }
 

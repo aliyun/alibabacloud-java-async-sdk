@@ -22,6 +22,10 @@ public class DeleteJobsRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppGroupId")
+    private Long appGroupId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AppName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
@@ -38,6 +42,7 @@ public class DeleteJobsRequest extends Request {
     private DeleteJobsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.appGroupId = builder.appGroupId;
         this.appName = builder.appName;
         this.clusterId = builder.clusterId;
         this.jobIds = builder.jobIds;
@@ -64,6 +69,13 @@ public class DeleteJobsRequest extends Request {
     }
 
     /**
+     * @return appGroupId
+     */
+    public Long getAppGroupId() {
+        return this.appGroupId;
+    }
+
+    /**
      * @return appName
      */
     public String getAppName() {
@@ -86,6 +98,7 @@ public class DeleteJobsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteJobsRequest, Builder> {
         private String regionId; 
+        private Long appGroupId; 
         private String appName; 
         private String clusterId; 
         private java.util.List<Long> jobIds; 
@@ -97,6 +110,7 @@ public class DeleteJobsRequest extends Request {
         private Builder(DeleteJobsRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.appGroupId = request.appGroupId;
             this.appName = request.appName;
             this.clusterId = request.clusterId;
             this.jobIds = request.jobIds;
@@ -108,6 +122,15 @@ public class DeleteJobsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * AppGroupId.
+         */
+        public Builder appGroupId(Long appGroupId) {
+            this.putBodyParameter("AppGroupId", appGroupId);
+            this.appGroupId = appGroupId;
             return this;
         }
 
