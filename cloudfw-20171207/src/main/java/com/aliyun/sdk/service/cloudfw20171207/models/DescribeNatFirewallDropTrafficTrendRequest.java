@@ -87,7 +87,10 @@ public class DescribeNatFirewallDropTrafficTrendRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>查询结束时间。本参数实际为必填项，未提供时 API 返回 ErrorTimeError(400)。需提供秒级 Unix 时间戳，且 EndTime 应晚于 StartTime。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1758334822</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -105,7 +108,10 @@ public class DescribeNatFirewallDropTrafficTrendRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>查询起始时间。本参数实际为必填项，未提供时 API 返回 ErrorTimeError(400)。需提供秒级 Unix 时间戳，且 StartTime 应早于 EndTime。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1740968766</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

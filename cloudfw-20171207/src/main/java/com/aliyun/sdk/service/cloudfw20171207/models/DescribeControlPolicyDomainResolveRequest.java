@@ -115,7 +115,10 @@ public class DescribeControlPolicyDomainResolveRequest extends Request {
         } 
 
         /**
-         * Domain.
+         * <p>需解析的域名。本参数实际为必填项，调用时需提供（required 保持 false 以兼容存量调用方契约）。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -133,7 +136,10 @@ public class DescribeControlPolicyDomainResolveRequest extends Request {
         }
 
         /**
-         * IpVersion.
+         * <p>IP 版本。本参数实际为必填项，调用时需提供。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder ipVersion(Integer ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);
@@ -151,7 +157,10 @@ public class DescribeControlPolicyDomainResolveRequest extends Request {
         }
 
         /**
-         * RegionNo.
+         * <p>地域编号。本参数实际为必填项，调用时需提供（required 保持 false 以兼容存量调用方契约）。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);

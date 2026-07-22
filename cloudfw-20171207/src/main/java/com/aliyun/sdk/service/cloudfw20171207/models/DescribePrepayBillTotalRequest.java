@@ -131,7 +131,10 @@ public class DescribePrepayBillTotalRequest extends Request {
         } 
 
         /**
-         * BillType.
+         * <p>账单类型。本参数实际为必填项，未传时返回 -103204（invalid params in request）错误。可选值：sdl（敏感数据保护）、elastic_traffic（弹性流量）。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sdl</p>
          */
         public Builder billType(String billType) {
             this.putQueryParameter("BillType", billType);

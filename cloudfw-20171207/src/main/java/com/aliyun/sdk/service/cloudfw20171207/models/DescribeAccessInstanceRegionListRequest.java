@@ -73,7 +73,10 @@ public class DescribeAccessInstanceRegionListRequest extends Request {
         } 
 
         /**
-         * AccessInstanceStatus.
+         * <p>实例状态（可选），用于按状态筛选。本接口的地域列表查询主要依据 AccessInstanceType 分流。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ready</p>
          */
         public Builder accessInstanceStatus(String accessInstanceStatus) {
             this.putQueryParameter("AccessInstanceStatus", accessInstanceStatus);
@@ -82,7 +85,10 @@ public class DescribeAccessInstanceRegionListRequest extends Request {
         }
 
         /**
-         * AccessInstanceType.
+         * <p>实例类型。可选值 PrivateDns（默认，不传时等同 PrivateDns）、AckClusterConnector；传入其他值时返回 ErrorParameters。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AckClusterConnector</p>
          */
         public Builder accessInstanceType(String accessInstanceType) {
             this.putQueryParameter("AccessInstanceType", accessInstanceType);

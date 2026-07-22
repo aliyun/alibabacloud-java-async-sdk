@@ -80,6 +80,7 @@ public class DescribeOutgoingDestinationRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceIp")
+    @Deprecated
     private String sourceIp;
 
     @com.aliyun.core.annotation.Query
@@ -437,7 +438,10 @@ public class DescribeOutgoingDestinationRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * <p>访问源的IP地址。（该字段已经废弃）</p>
+         * 
+         * <strong>example:</strong>
+         * <p>106.3.198.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

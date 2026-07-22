@@ -143,7 +143,10 @@ public class DescribeVpcFirewallPrecheckDetailRequest extends Request {
         } 
 
         /**
-         * CenId.
+         * <p>云企业网（CEN）实例 ID（可选）。本接口的预检查询实际使用 VpcId 与 TransitRouterId（二选一），不依赖 CenId。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-hxsqf2bv6di1a****</p>
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -170,7 +173,10 @@ public class DescribeVpcFirewallPrecheckDetailRequest extends Request {
         }
 
         /**
-         * NetworkInstanceType.
+         * <p>网络实例类型（可选）。本接口的预检查询主要依据 VpcId 与 TransitRouterId 参数，不依赖本字段。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen_firewall</p>
          */
         public Builder networkInstanceType(String networkInstanceType) {
             this.putQueryParameter("NetworkInstanceType", networkInstanceType);
@@ -179,7 +185,10 @@ public class DescribeVpcFirewallPrecheckDetailRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>地域编号。本接口必填，缺失时返回 ErrorParameters(-360103)。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -188,7 +197,10 @@ public class DescribeVpcFirewallPrecheckDetailRequest extends Request {
         }
 
         /**
-         * TransitRouterId.
+         * <p>转发路由器（TR）实例 ID。VpcId 与 TransitRouterId 至少须提供其一，两者均缺省时返回 ErrorParameters(-360103)。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-2vcn4u2g86tm72****</p>
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
@@ -197,7 +209,10 @@ public class DescribeVpcFirewallPrecheckDetailRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>VPC 实例 ID。VpcId 与 TransitRouterId 至少须提供其一：查询 VPC 边界防火墙时传 VpcId，查询转发路由器（TR）场景时传 TransitRouterId；两者均缺省时返回 ErrorParameters(-360103)。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2zev8s8rxao33xt****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

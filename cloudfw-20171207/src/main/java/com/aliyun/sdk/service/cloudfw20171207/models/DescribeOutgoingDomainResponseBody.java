@@ -121,6 +121,81 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
      *
      * <p>DescribeOutgoingDomainResponseBody</p>
      */
+    public static class ApplicationPortList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ApplicationName")
+        private String applicationName;
+
+        @com.aliyun.core.annotation.NameInMap("Port")
+        private Integer port;
+
+        private ApplicationPortList(Builder builder) {
+            this.applicationName = builder.applicationName;
+            this.port = builder.port;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ApplicationPortList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return applicationName
+         */
+        public String getApplicationName() {
+            return this.applicationName;
+        }
+
+        /**
+         * @return port
+         */
+        public Integer getPort() {
+            return this.port;
+        }
+
+        public static final class Builder {
+            private String applicationName; 
+            private Integer port; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplicationPortList model) {
+                this.applicationName = model.applicationName;
+                this.port = model.port;
+            } 
+
+            /**
+             * ApplicationName.
+             */
+            public Builder applicationName(String applicationName) {
+                this.applicationName = applicationName;
+                return this;
+            }
+
+            /**
+             * Port.
+             */
+            public Builder port(Integer port) {
+                this.port = port;
+                return this;
+            }
+
+            public ApplicationPortList build() {
+                return new ApplicationPortList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeOutgoingDomainResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOutgoingDomainResponseBody</p>
+     */
     public static class TagList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClassId")
         private String classId;
@@ -303,6 +378,9 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationNameList")
         private java.util.List<String> applicationNameList;
 
+        @com.aliyun.core.annotation.NameInMap("ApplicationPortList")
+        private java.util.List<ApplicationPortList> applicationPortList;
+
         @com.aliyun.core.annotation.NameInMap("AssetCount")
         private Long assetCount;
 
@@ -373,6 +451,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             this.addressGroupName = builder.addressGroupName;
             this.addressGroupUUID = builder.addressGroupUUID;
             this.applicationNameList = builder.applicationNameList;
+            this.applicationPortList = builder.applicationPortList;
             this.assetCount = builder.assetCount;
             this.business = builder.business;
             this.categoryClassId = builder.categoryClassId;
@@ -444,6 +523,13 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
          */
         public java.util.List<String> getApplicationNameList() {
             return this.applicationNameList;
+        }
+
+        /**
+         * @return applicationPortList
+         */
+        public java.util.List<ApplicationPortList> getApplicationPortList() {
+            return this.applicationPortList;
         }
 
         /**
@@ -600,6 +686,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
             private String addressGroupName; 
             private String addressGroupUUID; 
             private java.util.List<String> applicationNameList; 
+            private java.util.List<ApplicationPortList> applicationPortList; 
             private Long assetCount; 
             private String business; 
             private String categoryClassId; 
@@ -632,6 +719,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
                 this.addressGroupName = model.addressGroupName;
                 this.addressGroupUUID = model.addressGroupUUID;
                 this.applicationNameList = model.applicationNameList;
+                this.applicationPortList = model.applicationPortList;
                 this.assetCount = model.assetCount;
                 this.business = model.business;
                 this.categoryClassId = model.categoryClassId;
@@ -723,6 +811,14 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
              */
             public Builder applicationNameList(java.util.List<String> applicationNameList) {
                 this.applicationNameList = applicationNameList;
+                return this;
+            }
+
+            /**
+             * ApplicationPortList.
+             */
+            public Builder applicationPortList(java.util.List<ApplicationPortList> applicationPortList) {
+                this.applicationPortList = applicationPortList;
                 return this;
             }
 

@@ -20,11 +20,15 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AbnormalResourceStatusList")
     private java.util.List<AbnormalResourceStatusList> abnormalResourceStatusList;
 
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private PutEnableFwSwitchResponseBody(Builder builder) {
         this.abnormalResourceStatusList = builder.abnormalResourceStatusList;
+        this.dryRun = builder.dryRun;
         this.requestId = builder.requestId;
     }
 
@@ -48,6 +52,13 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -56,6 +67,7 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<AbnormalResourceStatusList> abnormalResourceStatusList; 
+        private Boolean dryRun; 
         private String requestId; 
 
         private Builder() {
@@ -63,6 +75,7 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
 
         private Builder(PutEnableFwSwitchResponseBody model) {
             this.abnormalResourceStatusList = model.abnormalResourceStatusList;
+            this.dryRun = model.dryRun;
             this.requestId = model.requestId;
         } 
 
@@ -71,6 +84,14 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
          */
         public Builder abnormalResourceStatusList(java.util.List<AbnormalResourceStatusList> abnormalResourceStatusList) {
             this.abnormalResourceStatusList = abnormalResourceStatusList;
+            return this;
+        }
+
+        /**
+         * <p>标识本次为 DryRun 预检成功响应；取值 true 表示仅完成预检、未执行真实变更。真实调用不返回该字段或为 false。</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.dryRun = dryRun;
             return this;
         }
 

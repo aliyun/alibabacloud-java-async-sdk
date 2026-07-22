@@ -286,7 +286,10 @@ public class DescribeVpcFirewallAccessDetailRequest extends Request {
         } 
 
         /**
-         * AssetIP.
+         * <p>资产 IP。AssetIP 和 Port 至少需要提供一个，两者都为空时 API 返回 400 错误（-340165 asset ip and port cannot be empty at the same time）。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         public Builder assetIP(String assetIP) {
             this.putQueryParameter("AssetIP", assetIP);
@@ -397,7 +400,10 @@ public class DescribeVpcFirewallAccessDetailRequest extends Request {
         }
 
         /**
-         * Port.
+         * <p>访问端口。AssetIP 和 Port 至少需要提供一个，两者都为空时 API 返回 400 错误（-340165 asset ip and port cannot be empty at the same time）。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -436,6 +442,7 @@ public class DescribeVpcFirewallAccessDetailRequest extends Request {
         }
 
         /**
+         * <p>VPC 实例 ID。必填项，为空时返回 ErrorVpcId(-340158) 错误。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

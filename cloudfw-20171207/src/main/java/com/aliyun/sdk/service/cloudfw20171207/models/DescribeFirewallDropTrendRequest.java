@@ -87,7 +87,10 @@ public class DescribeFirewallDropTrendRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>查询结束时间。本参数实际为必填项且需与 StartTime 同时提供，需传秒级 Unix 时间戳且应晚于 StartTime；未提供时 API 返回 ErrorTimeError(400)。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1758474000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -105,7 +108,10 @@ public class DescribeFirewallDropTrendRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>查询起始时间。本参数实际为必填项且需与 EndTime 同时提供，需传秒级 Unix 时间戳且应早于 EndTime；未提供时 API 返回 ErrorTimeError(400)。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1758470400</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

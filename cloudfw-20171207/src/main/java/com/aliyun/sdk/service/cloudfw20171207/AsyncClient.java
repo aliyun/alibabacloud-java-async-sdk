@@ -127,6 +127,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateInstanceSyncTaskResponse> createInstanceSyncTask(CreateInstanceSyncTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>创建 IPS 私网关联信息。【前置条件】本功能处于公测阶段，调用前需联系客户经理开通；可通过 DescribeIpsPrivateAssoc 查询 FunctionAssocStatus 确认开通状态。</p>
+     * 
      * @param request the request parameters of CreateIpsPrivateAssoc  CreateIpsPrivateAssocRequest
      * @return CreateIpsPrivateAssocResponse
      */
@@ -1249,6 +1252,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSlsAnalyzeOpenStatusResponse> describeSlsAnalyzeOpenStatus(DescribeSlsAnalyzeOpenStatusRequest request);
 
     /**
+     * @param request the request parameters of DescribeTaskDispatchStatus  DescribeTaskDispatchStatusRequest
+     * @return DescribeTaskDispatchStatusResponse
+     */
+    CompletableFuture<DescribeTaskDispatchStatusResponse> describeTaskDispatchStatus(DescribeTaskDispatchStatusRequest request);
+
+    /**
      * @param request the request parameters of DescribeThreatIntelligenceSwitch  DescribeThreatIntelligenceSwitchRequest
      * @return DescribeThreatIntelligenceSwitchResponse
      */
@@ -1470,6 +1479,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVpcFirewallListResponse> describeVpcFirewallList(DescribeVpcFirewallListRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>获取防火墙手动交换机列表。【必填参数】OwnerId（所属用户 ID，Long 类型）为空时返回 ErrorOwnerId；regionNo（地域）为空时返回 ErrorRegionNoError；vpcId 为空时返回 ErrorVpcIdError。【前置条件】可先调用 DescribeVpcFirewallList 获取：VpcFirewallId、OwnerId（取自响应的 LocalVpc.OwnerId 或 PeerVpc.OwnerId）、VpcId（取自 LocalVpc.VpcId 或 PeerVpc.VpcId）。</p>
+     * 
      * @param request the request parameters of DescribeVpcFirewallManualVSwitchList  DescribeVpcFirewallManualVSwitchListRequest
      * @return DescribeVpcFirewallManualVSwitchListResponse
      */
@@ -1499,6 +1511,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVpcFirewallSummaryInfoResponse> describeVpcFirewallSummaryInfo(DescribeVpcFirewallSummaryInfoRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>查询 VPC 互访的资产信息。调用时 IsAITraffic 需传 &quot;true&quot;，否则返回 -340103 错误。</p>
+     * 
      * @param request the request parameters of DescribeVpcFirewallTrafficAssetList  DescribeVpcFirewallTrafficAssetListRequest
      * @return DescribeVpcFirewallTrafficAssetListResponse
      */
@@ -1541,6 +1556,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableSdlProtectedAssetResponse> disableSdlProtectedAsset(DisableSdlProtectedAssetRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>开启指定资产的数据泄露检测（SDL）保护。</p>
+     * 
      * @param request the request parameters of EnableSdlProtectedAsset  EnableSdlProtectedAssetRequest
      * @return EnableSdlProtectedAssetResponse
      */
@@ -1693,6 +1711,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifySensitiveSwitchResponse
      */
     CompletableFuture<ModifySensitiveSwitchResponse> modifySensitiveSwitch(ModifySensitiveSwitchRequest request);
+
+    /**
+     * @param request the request parameters of ModifySlsDispatchConfig  ModifySlsDispatchConfigRequest
+     * @return ModifySlsDispatchConfigResponse
+     */
+    CompletableFuture<ModifySlsDispatchConfigResponse> modifySlsDispatchConfig(ModifySlsDispatchConfigRequest request);
 
     /**
      * @param request the request parameters of ModifySlsDispatchStatus  ModifySlsDispatchStatusRequest

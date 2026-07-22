@@ -101,7 +101,10 @@ public class DescribeFirewallTaskRequest extends Request {
         } 
 
         /**
-         * ChildInstanceId.
+         * <p>子实例 ID。TaskId 和 ChildInstanceId 至少需要提供一个，未指定时 API 返回 ErrorParameters(400)。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vfw-tr-cd6000c588214403****</p>
          */
         public Builder childInstanceId(String childInstanceId) {
             this.putQueryParameter("ChildInstanceId", childInstanceId);
@@ -119,7 +122,10 @@ public class DescribeFirewallTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>任务 ID。TaskId 和 ChildInstanceId 至少需要提供一个，未指定时 API 返回 ErrorParameters(400)。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>199431783</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

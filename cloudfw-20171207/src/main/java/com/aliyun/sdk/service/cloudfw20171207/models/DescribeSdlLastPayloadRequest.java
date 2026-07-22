@@ -129,7 +129,10 @@ public class DescribeSdlLastPayloadRequest extends Request {
         } 
 
         /**
-         * DstIp.
+         * <p>目的 IP。可选参数，用于按目的 IP 过滤。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.100.102.XXX</p>
          */
         public Builder dstIp(String dstIp) {
             this.putQueryParameter("DstIp", dstIp);
@@ -138,7 +141,10 @@ public class DescribeSdlLastPayloadRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>查询结束时间（秒级 Unix 时间戳）。本参数实际为必填项，缺失时 API 返回 -340111 错误。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1534408267</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -156,7 +162,10 @@ public class DescribeSdlLastPayloadRequest extends Request {
         }
 
         /**
-         * SensitiveCategory.
+         * <p>敏感数据分类。本参数实际为必填项，缺失时 API 返回 -340103 错误。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id_card</p>
          */
         public Builder sensitiveCategory(String sensitiveCategory) {
             this.putQueryParameter("SensitiveCategory", sensitiveCategory);
@@ -165,7 +174,10 @@ public class DescribeSdlLastPayloadRequest extends Request {
         }
 
         /**
-         * SrcIp.
+         * <p>源 IP。可选参数，用于按源 IP 过滤。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121.40.84.XXX</p>
          */
         public Builder srcIp(String srcIp) {
             this.putQueryParameter("SrcIp", srcIp);
@@ -174,7 +186,10 @@ public class DescribeSdlLastPayloadRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>查询起始时间（秒级 Unix 时间戳）。本参数实际为必填项，缺失时 API 返回 -340111 错误。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1656837360</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

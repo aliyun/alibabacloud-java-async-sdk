@@ -140,6 +140,7 @@ public class DescribePostpayBillRequest extends Request {
         }
 
         /**
+         * <p>账单查询结束时间，使用秒级 Unix 时间戳表示，应晚于 StartTime。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +153,10 @@ public class DescribePostpayBillRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>账单聚合的时间粒度（秒）。本参数实际为必填项，未传时返回 ERR_PARAMS_INVALID(-103204)。可选值：3600（按整时聚合）、86400（按整天聚合）。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder interval(Integer interval) {
             this.putQueryParameter("Interval", interval);
@@ -179,6 +183,7 @@ public class DescribePostpayBillRequest extends Request {
         }
 
         /**
+         * <p>账单查询起始时间，使用秒级 Unix 时间戳表示。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

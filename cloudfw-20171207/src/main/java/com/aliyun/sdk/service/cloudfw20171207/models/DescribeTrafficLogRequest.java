@@ -123,6 +123,10 @@ public class DescribeTrafficLogRequest extends Request {
     private String pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryId")
+    private String queryId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleId")
     private String ruleId;
 
@@ -212,6 +216,7 @@ public class DescribeTrafficLogRequest extends Request {
         this.natFirewallId = builder.natFirewallId;
         this.natGatewayId = builder.natGatewayId;
         this.pageSize = builder.pageSize;
+        this.queryId = builder.queryId;
         this.ruleId = builder.ruleId;
         this.ruleResult = builder.ruleResult;
         this.ruleSource = builder.ruleSource;
@@ -425,6 +430,13 @@ public class DescribeTrafficLogRequest extends Request {
     }
 
     /**
+     * @return queryId
+     */
+    public String getQueryId() {
+        return this.queryId;
+    }
+
+    /**
      * @return ruleId
      */
     public String getRuleId() {
@@ -556,6 +568,7 @@ public class DescribeTrafficLogRequest extends Request {
         private String natFirewallId; 
         private String natGatewayId; 
         private String pageSize; 
+        private String queryId; 
         private String ruleId; 
         private String ruleResult; 
         private String ruleSource; 
@@ -604,6 +617,7 @@ public class DescribeTrafficLogRequest extends Request {
             this.natFirewallId = request.natFirewallId;
             this.natGatewayId = request.natGatewayId;
             this.pageSize = request.pageSize;
+            this.queryId = request.queryId;
             this.ruleId = request.ruleId;
             this.ruleResult = request.ruleResult;
             this.ruleSource = request.ruleSource;
@@ -855,6 +869,15 @@ public class DescribeTrafficLogRequest extends Request {
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * QueryId.
+         */
+        public Builder queryId(String queryId) {
+            this.putQueryParameter("QueryId", queryId);
+            this.queryId = queryId;
             return this;
         }
 

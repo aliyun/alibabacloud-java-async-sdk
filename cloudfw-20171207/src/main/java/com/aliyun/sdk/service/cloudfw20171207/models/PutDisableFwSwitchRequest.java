@@ -18,6 +18,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class PutDisableFwSwitchRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpVersion")
     private String ipVersion;
 
@@ -48,6 +57,8 @@ public class PutDisableFwSwitchRequest extends Request {
 
     private PutDisableFwSwitchRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.ipVersion = builder.ipVersion;
         this.ipaddrList = builder.ipaddrList;
         this.lang = builder.lang;
@@ -68,6 +79,20 @@ public class PutDisableFwSwitchRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -120,6 +145,8 @@ public class PutDisableFwSwitchRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<PutDisableFwSwitchRequest, Builder> {
+        private String clientToken; 
+        private Boolean dryRun; 
         private String ipVersion; 
         private java.util.List<String> ipaddrList; 
         private String lang; 
@@ -134,6 +161,8 @@ public class PutDisableFwSwitchRequest extends Request {
 
         private Builder(PutDisableFwSwitchRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.ipVersion = request.ipVersion;
             this.ipaddrList = request.ipaddrList;
             this.lang = request.lang;
@@ -142,6 +171,24 @@ public class PutDisableFwSwitchRequest extends Request {
             this.resourceTypeList = request.resourceTypeList;
             this.sourceIp = request.sourceIp;
         } 
+
+        /**
+         * <p>保证请求幂等性的客户端令牌。由客户端生成，需保证在不同请求间唯一；数据类型 String，大小写敏感，格式为 [0-9a-zA-Z-_]{1,64}，建议使用 UUID。服务端在有效期内（600 秒）保证幂等：相同 ClientToken 且相同业务参数的重复请求返回与首次一致的结果；相同 ClientToken 但业务参数不同时返回 HTTP 400 及 IdempotentParameterMismatch 错误码。</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>是否只预检此次请求。取值 true 时仅执行参数合法性、身份权限、资源存在性、配额限制与依赖关系等执行前校验，不创建/更新/删除真实资源、不触发真实异步引流任务、不产生计费/通知/回调等下游副作用；预检成功时响应中 DryRun=true，与真实调用响应可区分；预检失败返回可机器识别的错误码（如 ErrorParamsInvalid 参数错误、ErrorAuthentication 权限不足、ErrorInstanceOpenIpNumExceed 配额不足）。取值 false（默认）表示正常发起请求并执行关闭操作。</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
 
         /**
          * IpVersion.

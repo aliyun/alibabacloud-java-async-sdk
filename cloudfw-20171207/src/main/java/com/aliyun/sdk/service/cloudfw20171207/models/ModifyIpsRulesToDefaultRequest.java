@@ -169,7 +169,13 @@ public class ModifyIpsRulesToDefaultRequest extends Request {
         }
 
         /**
-         * Rules.
+         * <p>规则列表。存在条件必填依赖：当 RuleType 为 customize 时，本参数与 AttackApp 至少须提供一个；仅传 RuleType 而不传 Rules 或 AttackApp 时，API 返回 400 ErrorParameters。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *   &quot;uuid_1&quot;,
+         *   &quot;uuid_2&quot;
+         * ]</p>
          */
         public Builder rules(String rules) {
             this.putQueryParameter("Rules", rules);

@@ -115,7 +115,10 @@ public class DescribeAccessInstanceTaskRequest extends Request {
         } 
 
         /**
-         * AccessInstanceId.
+         * <p>同步节点 ID。TaskId 与 AccessInstanceId 至少须提供一个，未同时提供时 API 返回 400 错误。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pdi-3bc2f91695ee48bd9377</p>
          */
         public Builder accessInstanceId(String accessInstanceId) {
             this.putQueryParameter("AccessInstanceId", accessInstanceId);
@@ -151,7 +154,10 @@ public class DescribeAccessInstanceTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>任务 ID。TaskId 与 AccessInstanceId 至少须提供一个，未同时提供时 API 返回 400 错误。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task-c92d4544ef7b6a42</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

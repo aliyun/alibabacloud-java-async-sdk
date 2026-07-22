@@ -73,7 +73,7 @@ public class EnableSdlProtectedAssetRequest extends Request {
         } 
 
         /**
-         * IpList.
+         * <p>需开启数据泄露保护的资产 IP 列表。</p>
          */
         public Builder ipList(java.util.List<String> ipList) {
             this.putQueryParameter("IpList", ipList);

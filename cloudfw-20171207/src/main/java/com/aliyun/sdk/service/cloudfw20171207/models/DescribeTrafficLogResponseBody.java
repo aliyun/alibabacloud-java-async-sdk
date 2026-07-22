@@ -23,12 +23,16 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
+    @com.aliyun.core.annotation.NameInMap("QueryId")
+    private String queryId;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeTrafficLogResponseBody(Builder builder) {
         this.dataList = builder.dataList;
         this.pageInfo = builder.pageInfo;
+        this.queryId = builder.queryId;
         this.requestId = builder.requestId;
     }
 
@@ -59,6 +63,13 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
     }
 
     /**
+     * @return queryId
+     */
+    public String getQueryId() {
+        return this.queryId;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -68,6 +79,7 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<DataList> dataList; 
         private PageInfo pageInfo; 
+        private String queryId; 
         private String requestId; 
 
         private Builder() {
@@ -76,6 +88,7 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         private Builder(DescribeTrafficLogResponseBody model) {
             this.dataList = model.dataList;
             this.pageInfo = model.pageInfo;
+            this.queryId = model.queryId;
             this.requestId = model.requestId;
         } 
 
@@ -92,6 +105,14 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
+            return this;
+        }
+
+        /**
+         * QueryId.
+         */
+        public Builder queryId(String queryId) {
+            this.queryId = queryId;
             return this;
         }
 

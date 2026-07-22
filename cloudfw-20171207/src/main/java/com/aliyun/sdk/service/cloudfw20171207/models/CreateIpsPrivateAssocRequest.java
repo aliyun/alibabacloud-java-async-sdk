@@ -82,7 +82,10 @@ public class CreateIpsPrivateAssocRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>资源实例 ID。本参数实际为必填项，未提供时 API 返回 -103201。取值约束：仅接受已受云防火墙保护的 NAT 网关实例 ID（格式 ngw-<em>），传入 vpc-</em>、eip-* 等其他资源类型将被拒绝。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-c5vhmjdfp5t****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);

@@ -36,6 +36,7 @@ public class DescribeOutgoingDestinationCategoryRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceIp")
+    @Deprecated
     private String sourceIp;
 
     @com.aliyun.core.annotation.Query
@@ -145,7 +146,10 @@ public class DescribeOutgoingDestinationCategoryRequest extends Request {
         } 
 
         /**
-         * CategoryId.
+         * <p>目的分类 ID。有效取值为产品预定义的目的分类枚举（共 25+ 个），如 TrustedDomain（信誉网站）、AliPay（支付宝产品）、CDN（CDN 服务）等；完整枚举值及语义请参考产品文档。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>All</p>
          */
         public Builder categoryId(String categoryId) {
             this.putQueryParameter("CategoryId", categoryId);
@@ -154,7 +158,10 @@ public class DescribeOutgoingDestinationCategoryRequest extends Request {
         }
 
         /**
-         * DstType.
+         * <p>目的类型。本参数实际为必填项，缺失时返回 ErrorDstType(-340149)。可选值：DST_TYPE_DOMAIN（域名）、DST_TYPE_IP（IP）。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>domain</p>
          */
         public Builder dstType(String dstType) {
             this.putQueryParameter("DstType", dstType);

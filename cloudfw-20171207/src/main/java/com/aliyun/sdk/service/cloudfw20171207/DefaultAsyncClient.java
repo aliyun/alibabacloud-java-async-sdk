@@ -342,6 +342,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>创建 IPS 私网关联信息。【前置条件】本功能处于公测阶段，调用前需联系客户经理开通；可通过 DescribeIpsPrivateAssoc 查询 FunctionAssocStatus 确认开通状态。</p>
+     * 
      * @param request the request parameters of CreateIpsPrivateAssoc  CreateIpsPrivateAssocRequest
      * @return CreateIpsPrivateAssocResponse
      */
@@ -3480,6 +3483,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeTaskDispatchStatus  DescribeTaskDispatchStatusRequest
+     * @return DescribeTaskDispatchStatusResponse
+     */
+    @Override
+    public CompletableFuture<DescribeTaskDispatchStatusResponse> describeTaskDispatchStatus(DescribeTaskDispatchStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeTaskDispatchStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeTaskDispatchStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeTaskDispatchStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeThreatIntelligenceSwitch  DescribeThreatIntelligenceSwitchRequest
      * @return DescribeThreatIntelligenceSwitchResponse
      */
@@ -4061,6 +4082,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>获取防火墙手动交换机列表。【必填参数】OwnerId（所属用户 ID，Long 类型）为空时返回 ErrorOwnerId；regionNo（地域）为空时返回 ErrorRegionNoError；vpcId 为空时返回 ErrorVpcIdError。【前置条件】可先调用 DescribeVpcFirewallList 获取：VpcFirewallId、OwnerId（取自响应的 LocalVpc.OwnerId 或 PeerVpc.OwnerId）、VpcId（取自 LocalVpc.VpcId 或 PeerVpc.VpcId）。</p>
+     * 
      * @param request the request parameters of DescribeVpcFirewallManualVSwitchList  DescribeVpcFirewallManualVSwitchListRequest
      * @return DescribeVpcFirewallManualVSwitchListResponse
      */
@@ -4138,6 +4162,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>查询 VPC 互访的资产信息。调用时 IsAITraffic 需传 &quot;true&quot;，否则返回 -340103 错误。</p>
+     * 
      * @param request the request parameters of DescribeVpcFirewallTrafficAssetList  DescribeVpcFirewallTrafficAssetListRequest
      * @return DescribeVpcFirewallTrafficAssetListResponse
      */
@@ -4264,6 +4291,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>开启指定资产的数据泄露检测（SDL）保护。</p>
+     * 
      * @param request the request parameters of EnableSdlProtectedAsset  EnableSdlProtectedAssetRequest
      * @return EnableSdlProtectedAssetResponse
      */
@@ -4664,6 +4694,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifySensitiveSwitchResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifySlsDispatchConfig  ModifySlsDispatchConfigRequest
+     * @return ModifySlsDispatchConfigResponse
+     */
+    @Override
+    public CompletableFuture<ModifySlsDispatchConfigResponse> modifySlsDispatchConfig(ModifySlsDispatchConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifySlsDispatchConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifySlsDispatchConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifySlsDispatchConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -240,7 +240,10 @@ public class DescribeVpcFirewallTrafficAssetListRequest extends Request {
         }
 
         /**
-         * IsAITraffic.
+         * <p>是否查询 AI 流量。必传项，需传 &quot;true&quot;，否则返回参数错误。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isAITraffic(String isAITraffic) {
             this.putQueryParameter("IsAITraffic", isAITraffic);

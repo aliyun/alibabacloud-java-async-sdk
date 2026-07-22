@@ -17,10 +17,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutDisableFwSwitchResponseBody</p>
  */
 public class PutDisableFwSwitchResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private PutDisableFwSwitchResponseBody(Builder builder) {
+        this.dryRun = builder.dryRun;
         this.requestId = builder.requestId;
     }
 
@@ -37,6 +41,13 @@ public class PutDisableFwSwitchResponseBody extends TeaModel {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -44,14 +55,24 @@ public class PutDisableFwSwitchResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean dryRun; 
         private String requestId; 
 
         private Builder() {
         } 
 
         private Builder(PutDisableFwSwitchResponseBody model) {
+            this.dryRun = model.dryRun;
             this.requestId = model.requestId;
         } 
+
+        /**
+         * <p>标识本次为 DryRun 预检成功响应；取值 true 表示仅完成预检、未执行真实变更。真实调用不返回该字段或为 false。</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.dryRun = dryRun;
+            return this;
+        }
 
         /**
          * <p>The ID of the request.</p>

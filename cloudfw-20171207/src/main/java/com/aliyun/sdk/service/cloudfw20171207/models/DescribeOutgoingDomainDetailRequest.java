@@ -289,7 +289,10 @@ public class DescribeOutgoingDomainDetailRequest extends Request {
         }
 
         /**
-         * Domain.
+         * <p>要查询的目的域名。Domain 与 DomainList 至少提供其一，未指定时 API 返回 ErrorDomainName(400)。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -298,7 +301,7 @@ public class DescribeOutgoingDomainDetailRequest extends Request {
         }
 
         /**
-         * DomainList.
+         * <p>要查询的目的域名列表。Domain 与 DomainList 至少提供其一，未指定时 API 返回 ErrorDomainName(400)。</p>
          */
         public Builder domainList(java.util.List<String> domainList) {
             this.putQueryParameter("DomainList", domainList);
