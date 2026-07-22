@@ -1,3 +1,6 @@
+2026-07-22 Version: 1.0.7
+- Generated java-async 2025-11-27 for ThirdswAicall.
+
 2026-07-13 Version: 1.0.6
 - Generated java-async 2025-11-27 for ThirdswAicall.
 
