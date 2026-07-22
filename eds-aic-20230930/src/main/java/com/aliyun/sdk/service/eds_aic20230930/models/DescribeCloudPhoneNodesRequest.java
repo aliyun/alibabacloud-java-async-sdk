@@ -54,6 +54,14 @@ public class DescribeCloudPhoneNodesRequest extends Request {
     private String serverType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortKey")
+    private String sortKey;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortType")
+    private String sortType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
@@ -72,6 +80,8 @@ public class DescribeCloudPhoneNodesRequest extends Request {
         this.nodeName = builder.nodeName;
         this.nodeNameList = builder.nodeNameList;
         this.serverType = builder.serverType;
+        this.sortKey = builder.sortKey;
+        this.sortType = builder.sortType;
         this.status = builder.status;
         this.tags = builder.tags;
     }
@@ -153,6 +163,20 @@ public class DescribeCloudPhoneNodesRequest extends Request {
     }
 
     /**
+     * @return sortKey
+     */
+    public String getSortKey() {
+        return this.sortKey;
+    }
+
+    /**
+     * @return sortType
+     */
+    public String getSortType() {
+        return this.sortType;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -176,6 +200,8 @@ public class DescribeCloudPhoneNodesRequest extends Request {
         private String nodeName; 
         private java.util.List<String> nodeNameList; 
         private String serverType; 
+        private String sortKey; 
+        private String sortType; 
         private String status; 
         private java.util.List<Tags> tags; 
 
@@ -194,6 +220,8 @@ public class DescribeCloudPhoneNodesRequest extends Request {
             this.nodeName = request.nodeName;
             this.nodeNameList = request.nodeNameList;
             this.serverType = request.serverType;
+            this.sortKey = request.sortKey;
+            this.sortType = request.sortType;
             this.status = request.status;
             this.tags = request.tags;
         } 
@@ -298,6 +326,24 @@ public class DescribeCloudPhoneNodesRequest extends Request {
         public Builder serverType(String serverType) {
             this.putQueryParameter("ServerType", serverType);
             this.serverType = serverType;
+            return this;
+        }
+
+        /**
+         * SortKey.
+         */
+        public Builder sortKey(String sortKey) {
+            this.putQueryParameter("SortKey", sortKey);
+            this.sortKey = sortKey;
+            return this;
+        }
+
+        /**
+         * SortType.
+         */
+        public Builder sortType(String sortType) {
+            this.putQueryParameter("SortType", sortType);
+            this.sortType = sortType;
             return this;
         }
 

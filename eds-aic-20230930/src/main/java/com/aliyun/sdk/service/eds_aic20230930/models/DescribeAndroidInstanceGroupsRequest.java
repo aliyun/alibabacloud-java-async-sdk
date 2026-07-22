@@ -59,6 +59,14 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
     private String saleMode;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortKey")
+    private String sortKey;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortType")
+    private String sortType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
@@ -78,6 +86,8 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
         this.nextToken = builder.nextToken;
         this.policyGroupId = builder.policyGroupId;
         this.saleMode = builder.saleMode;
+        this.sortKey = builder.sortKey;
+        this.sortType = builder.sortType;
         this.status = builder.status;
         this.tags = builder.tags;
     }
@@ -166,6 +176,20 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
     }
 
     /**
+     * @return sortKey
+     */
+    public String getSortKey() {
+        return this.sortKey;
+    }
+
+    /**
+     * @return sortType
+     */
+    public String getSortType() {
+        return this.sortType;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -190,6 +214,8 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
         private String nextToken; 
         private String policyGroupId; 
         private String saleMode; 
+        private String sortKey; 
+        private String sortType; 
         private String status; 
         private java.util.List<Tags> tags; 
 
@@ -209,6 +235,8 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
             this.nextToken = request.nextToken;
             this.policyGroupId = request.policyGroupId;
             this.saleMode = request.saleMode;
+            this.sortKey = request.sortKey;
+            this.sortType = request.sortType;
             this.status = request.status;
             this.tags = request.tags;
         } 
@@ -334,6 +362,24 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
         public Builder saleMode(String saleMode) {
             this.putQueryParameter("SaleMode", saleMode);
             this.saleMode = saleMode;
+            return this;
+        }
+
+        /**
+         * SortKey.
+         */
+        public Builder sortKey(String sortKey) {
+            this.putQueryParameter("SortKey", sortKey);
+            this.sortKey = sortKey;
+            return this;
+        }
+
+        /**
+         * SortType.
+         */
+        public Builder sortType(String sortType) {
+            this.putQueryParameter("SortType", sortType);
+            this.sortType = sortType;
             return this;
         }
 

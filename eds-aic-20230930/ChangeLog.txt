@@ -1,3 +1,6 @@
+2026-07-22 Version: 4.0.72
+- Generated java-async 2023-09-30 for eds-aic.
+
 2026-07-13 Version: 4.0.71
 - Generated java-async 2023-09-30 for eds-aic.
 

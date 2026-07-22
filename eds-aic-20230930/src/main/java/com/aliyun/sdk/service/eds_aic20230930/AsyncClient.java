@@ -181,6 +181,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePolicyGroupResponse> createPolicyGroup(CreatePolicyGroupRequest request);
 
     /**
+     * @param request the request parameters of CreateScheduledTask  CreateScheduledTaskRequest
+     * @return CreateScheduledTaskResponse
+     */
+    CompletableFuture<CreateScheduledTaskResponse> createScheduledTask(CreateScheduledTaskRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to create a screenshot of a cloud phone instance and upload it to the default Object Storage Service (OSS) bucket. The operation returns a task ID, which you can use with the DescribeTasks operation to get the download link for the screenshot.</p>
      * 
@@ -258,6 +264,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeletePolicyGroupResponse
      */
     CompletableFuture<DeletePolicyGroupResponse> deletePolicyGroup(DeletePolicyGroupRequest request);
+
+    /**
+     * @param request the request parameters of DeleteScheduledTask  DeleteScheduledTaskRequest
+     * @return DeleteScheduledTaskResponse
+     */
+    CompletableFuture<DeleteScheduledTaskResponse> deleteScheduledTask(DeleteScheduledTaskRequest request);
 
     /**
      * @param request the request parameters of DeleteSystemPropertyTemplates  DeleteSystemPropertyTemplatesRequest
@@ -387,6 +399,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeRegionsResponse
      */
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeScheduledTaskExecutions  DescribeScheduledTaskExecutionsRequest
+     * @return DescribeScheduledTaskExecutionsResponse
+     */
+    CompletableFuture<DescribeScheduledTaskExecutionsResponse> describeScheduledTaskExecutions(DescribeScheduledTaskExecutionsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeScheduledTasks  DescribeScheduledTasksRequest
+     * @return DescribeScheduledTasksResponse
+     */
+    CompletableFuture<DescribeScheduledTasksResponse> describeScheduledTasks(DescribeScheduledTasksRequest request);
 
     /**
      * @param request the request parameters of DescribeSpec  DescribeSpecRequest
@@ -603,6 +627,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyPolicyGroupResponse
      */
     CompletableFuture<ModifyPolicyGroupResponse> modifyPolicyGroup(ModifyPolicyGroupRequest request);
+
+    /**
+     * @param request the request parameters of ModifyScheduledTask  ModifyScheduledTaskRequest
+     * @return ModifyScheduledTaskResponse
+     */
+    CompletableFuture<ModifyScheduledTaskResponse> modifyScheduledTask(ModifyScheduledTaskRequest request);
 
     /**
      * @param request the request parameters of ModifySystemPropertyTemplate  ModifySystemPropertyTemplateRequest
