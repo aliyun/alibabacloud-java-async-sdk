@@ -44,6 +44,10 @@ public class ImageTranslationStandardRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TranslatingBrandInTheProduct")
     private Boolean translatingBrandInTheProduct;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseImageEditor")
+    private Boolean useImageEditor;
+
     private ImageTranslationStandardRequest(Builder builder) {
         super(builder);
         this.glossary = builder.glossary;
@@ -52,6 +56,7 @@ public class ImageTranslationStandardRequest extends Request {
         this.sourceLanguage = builder.sourceLanguage;
         this.targetLanguage = builder.targetLanguage;
         this.translatingBrandInTheProduct = builder.translatingBrandInTheProduct;
+        this.useImageEditor = builder.useImageEditor;
     }
 
     public static Builder builder() {
@@ -109,6 +114,13 @@ public class ImageTranslationStandardRequest extends Request {
         return this.translatingBrandInTheProduct;
     }
 
+    /**
+     * @return useImageEditor
+     */
+    public Boolean getUseImageEditor() {
+        return this.useImageEditor;
+    }
+
     public static final class Builder extends Request.Builder<ImageTranslationStandardRequest, Builder> {
         private String glossary; 
         private String imageUrl; 
@@ -116,6 +128,7 @@ public class ImageTranslationStandardRequest extends Request {
         private String sourceLanguage; 
         private String targetLanguage; 
         private Boolean translatingBrandInTheProduct; 
+        private Boolean useImageEditor; 
 
         private Builder() {
             super();
@@ -129,6 +142,7 @@ public class ImageTranslationStandardRequest extends Request {
             this.sourceLanguage = request.sourceLanguage;
             this.targetLanguage = request.targetLanguage;
             this.translatingBrandInTheProduct = request.translatingBrandInTheProduct;
+            this.useImageEditor = request.useImageEditor;
         } 
 
         /**
@@ -191,6 +205,15 @@ public class ImageTranslationStandardRequest extends Request {
         public Builder translatingBrandInTheProduct(Boolean translatingBrandInTheProduct) {
             this.putQueryParameter("TranslatingBrandInTheProduct", translatingBrandInTheProduct);
             this.translatingBrandInTheProduct = translatingBrandInTheProduct;
+            return this;
+        }
+
+        /**
+         * UseImageEditor.
+         */
+        public Builder useImageEditor(Boolean useImageEditor) {
+            this.putQueryParameter("UseImageEditor", useImageEditor);
+            this.useImageEditor = useImageEditor;
             return this;
         }
 
