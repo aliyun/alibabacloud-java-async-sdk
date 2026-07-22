@@ -1712,6 +1712,12 @@ public class GetMediaResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BusinessType")
         private String businessType;
 
+        @com.aliyun.core.annotation.NameInMap("CategoryId")
+        private Long categoryId;
+
+        @com.aliyun.core.annotation.NameInMap("CategoryName")
+        private String categoryName;
+
         @com.aliyun.core.annotation.NameInMap("CoverURL")
         private String coverURL;
 
@@ -1762,6 +1768,8 @@ public class GetMediaResponseBody extends TeaModel {
 
         private MediaBasicInfo(Builder builder) {
             this.businessType = builder.businessType;
+            this.categoryId = builder.categoryId;
+            this.categoryName = builder.categoryName;
             this.coverURL = builder.coverURL;
             this.createTime = builder.createTime;
             this.description = builder.description;
@@ -1793,6 +1801,20 @@ public class GetMediaResponseBody extends TeaModel {
          */
         public String getBusinessType() {
             return this.businessType;
+        }
+
+        /**
+         * @return categoryId
+         */
+        public Long getCategoryId() {
+            return this.categoryId;
+        }
+
+        /**
+         * @return categoryName
+         */
+        public String getCategoryName() {
+            return this.categoryName;
         }
 
         /**
@@ -1909,6 +1931,8 @@ public class GetMediaResponseBody extends TeaModel {
 
         public static final class Builder {
             private String businessType; 
+            private Long categoryId; 
+            private String categoryName; 
             private String coverURL; 
             private String createTime; 
             private String description; 
@@ -1931,6 +1955,8 @@ public class GetMediaResponseBody extends TeaModel {
 
             private Builder(MediaBasicInfo model) {
                 this.businessType = model.businessType;
+                this.categoryId = model.categoryId;
+                this.categoryName = model.categoryName;
                 this.coverURL = model.coverURL;
                 this.createTime = model.createTime;
                 this.description = model.description;
@@ -1954,6 +1980,22 @@ public class GetMediaResponseBody extends TeaModel {
              */
             public Builder businessType(String businessType) {
                 this.businessType = businessType;
+                return this;
+            }
+
+            /**
+             * CategoryId.
+             */
+            public Builder categoryId(Long categoryId) {
+                this.categoryId = categoryId;
+                return this;
+            }
+
+            /**
+             * CategoryName.
+             */
+            public Builder categoryName(String categoryName) {
+                this.categoryName = categoryName;
                 return this;
             }
 

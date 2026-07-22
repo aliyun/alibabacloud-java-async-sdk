@@ -26,10 +26,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchGetMediasResponse> batchGetMedias(BatchGetMediasRequest request);
 
     /**
+     * @param request the request parameters of CreateAssetCategory  CreateAssetCategoryRequest
+     * @return CreateAssetCategoryResponse
+     */
+    CompletableFuture<CreateAssetCategoryResponse> createAssetCategory(CreateAssetCategoryRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAssetCategory  DeleteAssetCategoryRequest
+     * @return DeleteAssetCategoryResponse
+     */
+    CompletableFuture<DeleteAssetCategoryResponse> deleteAssetCategory(DeleteAssetCategoryRequest request);
+
+    /**
      * @param request the request parameters of DeleteMedias  DeleteMediasRequest
      * @return DeleteMediasResponse
      */
     CompletableFuture<DeleteMediasResponse> deleteMedias(DeleteMediasRequest request);
+
+    /**
+     * @param request the request parameters of GetAssetCategory  GetAssetCategoryRequest
+     * @return GetAssetCategoryResponse
+     */
+    CompletableFuture<GetAssetCategoryResponse> getAssetCategory(GetAssetCategoryRequest request);
 
     /**
      * @param request the request parameters of GetImageGenerationJob  GetImageGenerationJobRequest
@@ -62,6 +80,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ImportMediaResponse> importMedia(ImportMediaRequest request);
 
     /**
+     * @param request the request parameters of ListAssetCategories  ListAssetCategoriesRequest
+     * @return ListAssetCategoriesResponse
+     */
+    CompletableFuture<ListAssetCategoriesResponse> listAssetCategories(ListAssetCategoriesRequest request);
+
+    /**
+     * @param request the request parameters of SearchMedia  SearchMediaRequest
+     * @return SearchMediaResponse
+     */
+    CompletableFuture<SearchMediaResponse> searchMedia(SearchMediaRequest request);
+
+    /**
      * @param request the request parameters of SubmitImageGenerationJob  SubmitImageGenerationJobRequest
      * @return SubmitImageGenerationJobResponse
      */
@@ -78,6 +108,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitVideoGenerationJobResponse
      */
     CompletableFuture<SubmitVideoGenerationJobResponse> submitVideoGenerationJob(SubmitVideoGenerationJobRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAssetCategory  UpdateAssetCategoryRequest
+     * @return UpdateAssetCategoryResponse
+     */
+    CompletableFuture<UpdateAssetCategoryResponse> updateAssetCategory(UpdateAssetCategoryRequest request);
 
     /**
      * @param request the request parameters of UpdateMedia  UpdateMediaRequest

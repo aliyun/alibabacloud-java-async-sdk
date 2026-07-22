@@ -26,6 +26,10 @@ public class UpdateMediaRequest extends Request {
     private Boolean appendTags;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CategoryId")
+    private Long categoryId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CoverURL")
     private String coverURL;
 
@@ -61,6 +65,7 @@ public class UpdateMediaRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.appendTags = builder.appendTags;
+        this.categoryId = builder.categoryId;
         this.coverURL = builder.coverURL;
         this.description = builder.description;
         this.dynamicMetaData = builder.dynamicMetaData;
@@ -96,6 +101,13 @@ public class UpdateMediaRequest extends Request {
      */
     public Boolean getAppendTags() {
         return this.appendTags;
+    }
+
+    /**
+     * @return categoryId
+     */
+    public Long getCategoryId() {
+        return this.categoryId;
     }
 
     /**
@@ -157,6 +169,7 @@ public class UpdateMediaRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateMediaRequest, Builder> {
         private String regionId; 
         private Boolean appendTags; 
+        private Long categoryId; 
         private String coverURL; 
         private String description; 
         private String dynamicMetaData; 
@@ -174,6 +187,7 @@ public class UpdateMediaRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.appendTags = request.appendTags;
+            this.categoryId = request.categoryId;
             this.coverURL = request.coverURL;
             this.description = request.description;
             this.dynamicMetaData = request.dynamicMetaData;
@@ -199,6 +213,15 @@ public class UpdateMediaRequest extends Request {
         public Builder appendTags(Boolean appendTags) {
             this.putQueryParameter("AppendTags", appendTags);
             this.appendTags = appendTags;
+            return this;
+        }
+
+        /**
+         * CategoryId.
+         */
+        public Builder categoryId(Long categoryId) {
+            this.putQueryParameter("CategoryId", categoryId);
+            this.categoryId = categoryId;
             return this;
         }
 

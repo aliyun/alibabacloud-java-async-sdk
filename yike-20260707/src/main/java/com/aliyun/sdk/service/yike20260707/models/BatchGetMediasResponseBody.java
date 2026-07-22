@@ -1691,6 +1691,12 @@ public class BatchGetMediasResponseBody extends TeaModel {
      * <p>BatchGetMediasResponseBody</p>
      */
     public static class MediaBasicInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CategoryId")
+        private Long categoryId;
+
+        @com.aliyun.core.annotation.NameInMap("CategoryName")
+        private String categoryName;
+
         @com.aliyun.core.annotation.NameInMap("CoverURL")
         private String coverURL;
 
@@ -1734,6 +1740,8 @@ public class BatchGetMediasResponseBody extends TeaModel {
         private String userData;
 
         private MediaBasicInfo(Builder builder) {
+            this.categoryId = builder.categoryId;
+            this.categoryName = builder.categoryName;
             this.coverURL = builder.coverURL;
             this.createTime = builder.createTime;
             this.description = builder.description;
@@ -1756,6 +1764,20 @@ public class BatchGetMediasResponseBody extends TeaModel {
 
         public static MediaBasicInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return categoryId
+         */
+        public Long getCategoryId() {
+            return this.categoryId;
+        }
+
+        /**
+         * @return categoryName
+         */
+        public String getCategoryName() {
+            return this.categoryName;
         }
 
         /**
@@ -1857,6 +1879,8 @@ public class BatchGetMediasResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long categoryId; 
+            private String categoryName; 
             private String coverURL; 
             private String createTime; 
             private String description; 
@@ -1876,6 +1900,8 @@ public class BatchGetMediasResponseBody extends TeaModel {
             } 
 
             private Builder(MediaBasicInfo model) {
+                this.categoryId = model.categoryId;
+                this.categoryName = model.categoryName;
                 this.coverURL = model.coverURL;
                 this.createTime = model.createTime;
                 this.description = model.description;
@@ -1891,6 +1917,22 @@ public class BatchGetMediasResponseBody extends TeaModel {
                 this.title = model.title;
                 this.userData = model.userData;
             } 
+
+            /**
+             * CategoryId.
+             */
+            public Builder categoryId(Long categoryId) {
+                this.categoryId = categoryId;
+                return this;
+            }
+
+            /**
+             * CategoryName.
+             */
+            public Builder categoryName(String categoryName) {
+                this.categoryName = categoryName;
+                return this;
+            }
 
             /**
              * CoverURL.
