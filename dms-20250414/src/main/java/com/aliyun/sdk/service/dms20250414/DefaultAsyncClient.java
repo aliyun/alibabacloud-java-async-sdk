@@ -374,6 +374,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteDataAgent  DeleteDataAgentRequest
+     * @return DeleteDataAgentResponse
+     */
+    @Override
+    public CompletableFuture<DeleteDataAgentResponse> deleteDataAgent(DeleteDataAgentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteDataAgent").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteDataAgentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteDataAgentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteDataAgentAccuracyTest  DeleteDataAgentAccuracyTestRequest
      * @return DeleteDataAgentAccuracyTestResponse
      */
@@ -590,6 +608,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeDataAgentMetrics  DescribeDataAgentMetricsRequest
+     * @return DescribeDataAgentMetricsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeDataAgentMetricsResponse> describeDataAgentMetrics(DescribeDataAgentMetricsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDataAgentMetrics").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDataAgentMetricsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDataAgentMetricsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeDataAgentSession  DescribeDataAgentSessionRequest
      * @return DescribeDataAgentSessionResponse
      */
@@ -692,6 +728,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<FileUploadCallbackResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetAgenticAgentByInstallToken  GetAgenticAgentByInstallTokenRequest
+     * @return GetAgenticAgentByInstallTokenResponse
+     */
+    @Override
+    public CompletableFuture<GetAgenticAgentByInstallTokenResponse> getAgenticAgentByInstallToken(GetAgenticAgentByInstallTokenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAgenticAgentByInstallToken").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAgenticAgentByInstallTokenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAgenticAgentByInstallTokenResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

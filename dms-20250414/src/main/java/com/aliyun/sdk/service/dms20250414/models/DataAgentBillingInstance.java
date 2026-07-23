@@ -38,6 +38,9 @@ public class DataAgentBillingInstance extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FreeAgentSeats")
     private Integer freeAgentSeats;
 
+    @com.aliyun.core.annotation.NameInMap("FreeLLM")
+    private Integer freeLLM;
+
     @com.aliyun.core.annotation.NameInMap("GmtCreated")
     private Long gmtCreated;
 
@@ -70,6 +73,7 @@ public class DataAgentBillingInstance extends TeaModel {
         this.commodityCode = builder.commodityCode;
         this.expireTime = builder.expireTime;
         this.freeAgentSeats = builder.freeAgentSeats;
+        this.freeLLM = builder.freeLLM;
         this.gmtCreated = builder.gmtCreated;
         this.gmtModified = builder.gmtModified;
         this.isDefault = builder.isDefault;
@@ -142,6 +146,13 @@ public class DataAgentBillingInstance extends TeaModel {
     }
 
     /**
+     * @return freeLLM
+     */
+    public Integer getFreeLLM() {
+        return this.freeLLM;
+    }
+
+    /**
      * @return gmtCreated
      */
     public Long getGmtCreated() {
@@ -205,6 +216,7 @@ public class DataAgentBillingInstance extends TeaModel {
         private String commodityCode; 
         private Long expireTime; 
         private Integer freeAgentSeats; 
+        private Integer freeLLM; 
         private Long gmtCreated; 
         private Long gmtModified; 
         private Boolean isDefault; 
@@ -225,6 +237,7 @@ public class DataAgentBillingInstance extends TeaModel {
             this.commodityCode = model.commodityCode;
             this.expireTime = model.expireTime;
             this.freeAgentSeats = model.freeAgentSeats;
+            this.freeLLM = model.freeLLM;
             this.gmtCreated = model.gmtCreated;
             this.gmtModified = model.gmtModified;
             this.isDefault = model.isDefault;
@@ -288,6 +301,14 @@ public class DataAgentBillingInstance extends TeaModel {
          */
         public Builder freeAgentSeats(Integer freeAgentSeats) {
             this.freeAgentSeats = freeAgentSeats;
+            return this;
+        }
+
+        /**
+         * FreeLLM.
+         */
+        public Builder freeLLM(Integer freeLLM) {
+            this.freeLLM = freeLLM;
             return this;
         }
 

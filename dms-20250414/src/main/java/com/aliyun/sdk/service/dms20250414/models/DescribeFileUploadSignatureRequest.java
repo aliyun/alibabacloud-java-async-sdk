@@ -25,10 +25,15 @@ public class DescribeFileUploadSignatureRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("DmsUnit")
     private String dmsUnit;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private DescribeFileUploadSignatureRequest(Builder builder) {
         super(builder);
         this.callFrom = builder.callFrom;
         this.dmsUnit = builder.dmsUnit;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -58,9 +63,17 @@ public class DescribeFileUploadSignatureRequest extends Request {
         return this.dmsUnit;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeFileUploadSignatureRequest, Builder> {
         private String callFrom; 
         private String dmsUnit; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -70,6 +83,7 @@ public class DescribeFileUploadSignatureRequest extends Request {
             super(request);
             this.callFrom = request.callFrom;
             this.dmsUnit = request.dmsUnit;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -87,6 +101,15 @@ public class DescribeFileUploadSignatureRequest extends Request {
         public Builder dmsUnit(String dmsUnit) {
             this.putQueryParameter("DmsUnit", dmsUnit);
             this.dmsUnit = dmsUnit;
+            return this;
+        }
+
+        /**
+         * WorkspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 

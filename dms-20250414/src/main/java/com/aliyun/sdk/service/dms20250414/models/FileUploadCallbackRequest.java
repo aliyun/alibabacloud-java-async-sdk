@@ -43,6 +43,10 @@ public class FileUploadCallbackRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String uploadLocation;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private FileUploadCallbackRequest(Builder builder) {
         super(builder);
         this.callFrom = builder.callFrom;
@@ -51,6 +55,7 @@ public class FileUploadCallbackRequest extends Request {
         this.filename = builder.filename;
         this.ossBucket = builder.ossBucket;
         this.uploadLocation = builder.uploadLocation;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -108,6 +113,13 @@ public class FileUploadCallbackRequest extends Request {
         return this.uploadLocation;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<FileUploadCallbackRequest, Builder> {
         private String callFrom; 
         private String dmsUnit; 
@@ -115,6 +127,7 @@ public class FileUploadCallbackRequest extends Request {
         private String filename; 
         private String ossBucket; 
         private String uploadLocation; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -128,6 +141,7 @@ public class FileUploadCallbackRequest extends Request {
             this.filename = request.filename;
             this.ossBucket = request.ossBucket;
             this.uploadLocation = request.uploadLocation;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -184,6 +198,15 @@ public class FileUploadCallbackRequest extends Request {
         public Builder uploadLocation(String uploadLocation) {
             this.putQueryParameter("UploadLocation", uploadLocation);
             this.uploadLocation = uploadLocation;
+            return this;
+        }
+
+        /**
+         * WorkspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 

@@ -26,11 +26,11 @@ public class AgenticCatalog extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CatalogUuid")
     private String catalogUuid;
 
-    @com.aliyun.core.annotation.NameInMap("DataSourceType")
-    private String dataSourceType;
-
     @com.aliyun.core.annotation.NameInMap("DataSourceUuid")
     private String dataSourceUuid;
+
+    @com.aliyun.core.annotation.NameInMap("DbType")
+    private String dbType;
 
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
@@ -54,8 +54,8 @@ public class AgenticCatalog extends TeaModel {
         this.catalogBizAttrs = builder.catalogBizAttrs;
         this.catalogType = builder.catalogType;
         this.catalogUuid = builder.catalogUuid;
-        this.dataSourceType = builder.dataSourceType;
         this.dataSourceUuid = builder.dataSourceUuid;
+        this.dbType = builder.dbType;
         this.description = builder.description;
         this.name = builder.name;
         this.properties = builder.properties;
@@ -98,17 +98,17 @@ public class AgenticCatalog extends TeaModel {
     }
 
     /**
-     * @return dataSourceType
-     */
-    public String getDataSourceType() {
-        return this.dataSourceType;
-    }
-
-    /**
      * @return dataSourceUuid
      */
     public String getDataSourceUuid() {
         return this.dataSourceUuid;
+    }
+
+    /**
+     * @return dbType
+     */
+    public String getDbType() {
+        return this.dbType;
     }
 
     /**
@@ -157,8 +157,8 @@ public class AgenticCatalog extends TeaModel {
         private java.util.Map<String, ?> catalogBizAttrs; 
         private String catalogType; 
         private String catalogUuid; 
-        private String dataSourceType; 
         private String dataSourceUuid; 
+        private String dbType; 
         private String description; 
         private String name; 
         private java.util.Map<String, ?> properties; 
@@ -173,8 +173,8 @@ public class AgenticCatalog extends TeaModel {
             this.catalogBizAttrs = model.catalogBizAttrs;
             this.catalogType = model.catalogType;
             this.catalogUuid = model.catalogUuid;
-            this.dataSourceType = model.dataSourceType;
             this.dataSourceUuid = model.dataSourceUuid;
+            this.dbType = model.dbType;
             this.description = model.description;
             this.name = model.name;
             this.properties = model.properties;
@@ -208,18 +208,18 @@ public class AgenticCatalog extends TeaModel {
         }
 
         /**
-         * DataSourceType.
-         */
-        public Builder dataSourceType(String dataSourceType) {
-            this.dataSourceType = dataSourceType;
-            return this;
-        }
-
-        /**
          * DataSourceUuid.
          */
         public Builder dataSourceUuid(String dataSourceUuid) {
             this.dataSourceUuid = dataSourceUuid;
+            return this;
+        }
+
+        /**
+         * DbType.
+         */
+        public Builder dbType(String dbType) {
+            this.dbType = dbType;
             return this;
         }
 

@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>OpenClawInstanceVO</p>
  */
 public class OpenClawInstanceVO extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AgentType")
+    private String agentType;
+
     @com.aliyun.core.annotation.NameInMap("AliyunAccountUid")
     private String aliyunAccountUid;
 
@@ -65,6 +68,12 @@ public class OpenClawInstanceVO extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MemorySize")
     private Integer memorySize;
 
+    @com.aliyun.core.annotation.NameInMap("ModelCallQuota")
+    private Long modelCallQuota;
+
+    @com.aliyun.core.annotation.NameInMap("ModelCallUsed")
+    private Long modelCallUsed;
+
     @com.aliyun.core.annotation.NameInMap("OpenclawToken")
     private String openclawToken;
 
@@ -90,6 +99,7 @@ public class OpenClawInstanceVO extends TeaModel {
     private String variables;
 
     private OpenClawInstanceVO(Builder builder) {
+        this.agentType = builder.agentType;
         this.aliyunAccountUid = builder.aliyunAccountUid;
         this.authType = builder.authType;
         this.basicAuthPassword = builder.basicAuthPassword;
@@ -106,6 +116,8 @@ public class OpenClawInstanceVO extends TeaModel {
         this.lastActiveTime = builder.lastActiveTime;
         this.lockTime = builder.lockTime;
         this.memorySize = builder.memorySize;
+        this.modelCallQuota = builder.modelCallQuota;
+        this.modelCallUsed = builder.modelCallUsed;
         this.openclawToken = builder.openclawToken;
         this.ownerUid = builder.ownerUid;
         this.publicDomain = builder.publicDomain;
@@ -126,6 +138,13 @@ public class OpenClawInstanceVO extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentType
+     */
+    public String getAgentType() {
+        return this.agentType;
     }
 
     /**
@@ -241,6 +260,20 @@ public class OpenClawInstanceVO extends TeaModel {
     }
 
     /**
+     * @return modelCallQuota
+     */
+    public Long getModelCallQuota() {
+        return this.modelCallQuota;
+    }
+
+    /**
+     * @return modelCallUsed
+     */
+    public Long getModelCallUsed() {
+        return this.modelCallUsed;
+    }
+
+    /**
      * @return openclawToken
      */
     public String getOpenclawToken() {
@@ -297,6 +330,7 @@ public class OpenClawInstanceVO extends TeaModel {
     }
 
     public static final class Builder {
+        private String agentType; 
         private String aliyunAccountUid; 
         private String authType; 
         private String basicAuthPassword; 
@@ -313,6 +347,8 @@ public class OpenClawInstanceVO extends TeaModel {
         private String lastActiveTime; 
         private String lockTime; 
         private Integer memorySize; 
+        private Long modelCallQuota; 
+        private Long modelCallUsed; 
         private String openclawToken; 
         private String ownerUid; 
         private String publicDomain; 
@@ -326,6 +362,7 @@ public class OpenClawInstanceVO extends TeaModel {
         } 
 
         private Builder(OpenClawInstanceVO model) {
+            this.agentType = model.agentType;
             this.aliyunAccountUid = model.aliyunAccountUid;
             this.authType = model.authType;
             this.basicAuthPassword = model.basicAuthPassword;
@@ -342,6 +379,8 @@ public class OpenClawInstanceVO extends TeaModel {
             this.lastActiveTime = model.lastActiveTime;
             this.lockTime = model.lockTime;
             this.memorySize = model.memorySize;
+            this.modelCallQuota = model.modelCallQuota;
+            this.modelCallUsed = model.modelCallUsed;
             this.openclawToken = model.openclawToken;
             this.ownerUid = model.ownerUid;
             this.publicDomain = model.publicDomain;
@@ -351,6 +390,14 @@ public class OpenClawInstanceVO extends TeaModel {
             this.trialExpireTime = model.trialExpireTime;
             this.variables = model.variables;
         } 
+
+        /**
+         * AgentType.
+         */
+        public Builder agentType(String agentType) {
+            this.agentType = agentType;
+            return this;
+        }
 
         /**
          * AliyunAccountUid.
@@ -477,6 +524,22 @@ public class OpenClawInstanceVO extends TeaModel {
          */
         public Builder memorySize(Integer memorySize) {
             this.memorySize = memorySize;
+            return this;
+        }
+
+        /**
+         * ModelCallQuota.
+         */
+        public Builder modelCallQuota(Long modelCallQuota) {
+            this.modelCallQuota = modelCallQuota;
+            return this;
+        }
+
+        /**
+         * ModelCallUsed.
+         */
+        public Builder modelCallUsed(Long modelCallUsed) {
+            this.modelCallUsed = modelCallUsed;
             return this;
         }
 

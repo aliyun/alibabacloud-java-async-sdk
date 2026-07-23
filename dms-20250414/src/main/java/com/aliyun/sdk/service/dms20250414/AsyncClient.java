@@ -128,6 +128,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteCustomAgentResponse> deleteCustomAgent(DeleteCustomAgentRequest request);
 
     /**
+     * @param request the request parameters of DeleteDataAgent  DeleteDataAgentRequest
+     * @return DeleteDataAgentResponse
+     */
+    CompletableFuture<DeleteDataAgentResponse> deleteDataAgent(DeleteDataAgentRequest request);
+
+    /**
      * @param request the request parameters of DeleteDataAgentAccuracyTest  DeleteDataAgentAccuracyTestRequest
      * @return DeleteDataAgentAccuracyTestResponse
      */
@@ -200,6 +206,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeCustomAgentResponse> describeCustomAgent(DescribeCustomAgentRequest request);
 
     /**
+     * @param request the request parameters of DescribeDataAgentMetrics  DescribeDataAgentMetricsRequest
+     * @return DescribeDataAgentMetricsResponse
+     */
+    CompletableFuture<DescribeDataAgentMetricsResponse> describeDataAgentMetrics(DescribeDataAgentMetricsRequest request);
+
+    /**
      * @param request the request parameters of DescribeDataAgentSession  DescribeDataAgentSessionRequest
      * @return DescribeDataAgentSessionResponse
      */
@@ -234,6 +246,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return FileUploadCallbackResponse
      */
     CompletableFuture<FileUploadCallbackResponse> fileUploadCallback(FileUploadCallbackRequest request);
+
+    /**
+     * @param request the request parameters of GetAgenticAgentByInstallToken  GetAgenticAgentByInstallTokenRequest
+     * @return GetAgenticAgentByInstallTokenResponse
+     */
+    CompletableFuture<GetAgenticAgentByInstallTokenResponse> getAgenticAgentByInstallToken(GetAgenticAgentByInstallTokenRequest request);
 
     /**
      * @param request the request parameters of GetAirflow  GetAirflowRequest

@@ -209,6 +209,9 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentResult")
         private String agentResult;
 
+        @com.aliyun.core.annotation.NameInMap("AgentSql")
+        private String agentSql;
+
         @com.aliyun.core.annotation.NameInMap("AnswerResult")
         private String answerResult;
 
@@ -230,12 +233,16 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResultId")
         private String resultId;
 
+        @com.aliyun.core.annotation.NameInMap("SessionId")
+        private String sessionId;
+
         @com.aliyun.core.annotation.NameInMap("SubtaskId")
         private String subtaskId;
 
         private Content(Builder builder) {
             this.accuracyTestTaskId = builder.accuracyTestTaskId;
             this.agentResult = builder.agentResult;
+            this.agentSql = builder.agentSql;
             this.answerResult = builder.answerResult;
             this.answerSql = builder.answerSql;
             this.isTrue = builder.isTrue;
@@ -243,6 +250,7 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
             this.reason = builder.reason;
             this.recommendation = builder.recommendation;
             this.resultId = builder.resultId;
+            this.sessionId = builder.sessionId;
             this.subtaskId = builder.subtaskId;
         }
 
@@ -266,6 +274,13 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
          */
         public String getAgentResult() {
             return this.agentResult;
+        }
+
+        /**
+         * @return agentSql
+         */
+        public String getAgentSql() {
+            return this.agentSql;
         }
 
         /**
@@ -318,6 +333,13 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
         }
 
         /**
+         * @return sessionId
+         */
+        public String getSessionId() {
+            return this.sessionId;
+        }
+
+        /**
          * @return subtaskId
          */
         public String getSubtaskId() {
@@ -327,6 +349,7 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
         public static final class Builder {
             private String accuracyTestTaskId; 
             private String agentResult; 
+            private String agentSql; 
             private String answerResult; 
             private String answerSql; 
             private Boolean isTrue; 
@@ -334,6 +357,7 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
             private String reason; 
             private String recommendation; 
             private String resultId; 
+            private String sessionId; 
             private String subtaskId; 
 
             private Builder() {
@@ -342,6 +366,7 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
             private Builder(Content model) {
                 this.accuracyTestTaskId = model.accuracyTestTaskId;
                 this.agentResult = model.agentResult;
+                this.agentSql = model.agentSql;
                 this.answerResult = model.answerResult;
                 this.answerSql = model.answerSql;
                 this.isTrue = model.isTrue;
@@ -349,6 +374,7 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
                 this.reason = model.reason;
                 this.recommendation = model.recommendation;
                 this.resultId = model.resultId;
+                this.sessionId = model.sessionId;
                 this.subtaskId = model.subtaskId;
             } 
 
@@ -365,6 +391,14 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
              */
             public Builder agentResult(String agentResult) {
                 this.agentResult = agentResult;
+                return this;
+            }
+
+            /**
+             * AgentSql.
+             */
+            public Builder agentSql(String agentSql) {
+                this.agentSql = agentSql;
                 return this;
             }
 
@@ -425,6 +459,14 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
             }
 
             /**
+             * SessionId.
+             */
+            public Builder sessionId(String sessionId) {
+                this.sessionId = sessionId;
+                return this;
+            }
+
+            /**
              * SubtaskId.
              */
             public Builder subtaskId(String subtaskId) {
@@ -458,11 +500,17 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CorrectCount")
         private Long correctCount;
 
+        @com.aliyun.core.annotation.NameInMap("FailedCount")
+        private String failedCount;
+
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Long pageNumber;
 
         @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
+
+        @com.aliyun.core.annotation.NameInMap("PendingCount")
+        private String pendingCount;
 
         @com.aliyun.core.annotation.NameInMap("TotalElements")
         private Integer totalElements;
@@ -475,8 +523,10 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
             this.accuracyTestTaskId = builder.accuracyTestTaskId;
             this.content = builder.content;
             this.correctCount = builder.correctCount;
+            this.failedCount = builder.failedCount;
             this.pageNumber = builder.pageNumber;
             this.pageSize = builder.pageSize;
+            this.pendingCount = builder.pendingCount;
             this.totalElements = builder.totalElements;
             this.totalPages = builder.totalPages;
         }
@@ -518,6 +568,13 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
         }
 
         /**
+         * @return failedCount
+         */
+        public String getFailedCount() {
+            return this.failedCount;
+        }
+
+        /**
          * @return pageNumber
          */
         public Long getPageNumber() {
@@ -529,6 +586,13 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
          */
         public Long getPageSize() {
             return this.pageSize;
+        }
+
+        /**
+         * @return pendingCount
+         */
+        public String getPendingCount() {
+            return this.pendingCount;
         }
 
         /**
@@ -550,8 +614,10 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
             private String accuracyTestTaskId; 
             private java.util.List<Content> content; 
             private Long correctCount; 
+            private String failedCount; 
             private Long pageNumber; 
             private Long pageSize; 
+            private String pendingCount; 
             private Integer totalElements; 
             private Integer totalPages; 
 
@@ -563,8 +629,10 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
                 this.accuracyTestTaskId = model.accuracyTestTaskId;
                 this.content = model.content;
                 this.correctCount = model.correctCount;
+                this.failedCount = model.failedCount;
                 this.pageNumber = model.pageNumber;
                 this.pageSize = model.pageSize;
+                this.pendingCount = model.pendingCount;
                 this.totalElements = model.totalElements;
                 this.totalPages = model.totalPages;
             } 
@@ -602,6 +670,14 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
             }
 
             /**
+             * FailedCount.
+             */
+            public Builder failedCount(String failedCount) {
+                this.failedCount = failedCount;
+                return this;
+            }
+
+            /**
              * PageNumber.
              */
             public Builder pageNumber(Long pageNumber) {
@@ -614,6 +690,14 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
+                return this;
+            }
+
+            /**
+             * PendingCount.
+             */
+            public Builder pendingCount(String pendingCount) {
+                this.pendingCount = pendingCount;
                 return this;
             }
 

@@ -170,14 +170,29 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dataset")
         private String dataset;
 
+        @com.aliyun.core.annotation.NameInMap("Datasource")
+        private String datasource;
+
+        @com.aliyun.core.annotation.NameInMap("Desc")
+        private String desc;
+
         @com.aliyun.core.annotation.NameInMap("EvaluationPrompt")
         private String evaluationPrompt;
 
         @com.aliyun.core.annotation.NameInMap("FileId")
         private String fileId;
 
+        @com.aliyun.core.annotation.NameInMap("MaxConcurrent")
+        private Integer maxConcurrent;
+
         @com.aliyun.core.annotation.NameInMap("Mode")
         private Integer mode;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("NeedDelete")
+        private Boolean needDelete;
 
         @com.aliyun.core.annotation.NameInMap("WorkspaceId")
         private String workspaceId;
@@ -186,9 +201,14 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
             this.accuracyTest = builder.accuracyTest;
             this.agentId = builder.agentId;
             this.dataset = builder.dataset;
+            this.datasource = builder.datasource;
+            this.desc = builder.desc;
             this.evaluationPrompt = builder.evaluationPrompt;
             this.fileId = builder.fileId;
+            this.maxConcurrent = builder.maxConcurrent;
             this.mode = builder.mode;
+            this.name = builder.name;
+            this.needDelete = builder.needDelete;
             this.workspaceId = builder.workspaceId;
         }
 
@@ -222,6 +242,20 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
         }
 
         /**
+         * @return datasource
+         */
+        public String getDatasource() {
+            return this.datasource;
+        }
+
+        /**
+         * @return desc
+         */
+        public String getDesc() {
+            return this.desc;
+        }
+
+        /**
          * @return evaluationPrompt
          */
         public String getEvaluationPrompt() {
@@ -236,10 +270,31 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxConcurrent
+         */
+        public Integer getMaxConcurrent() {
+            return this.maxConcurrent;
+        }
+
+        /**
          * @return mode
          */
         public Integer getMode() {
             return this.mode;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return needDelete
+         */
+        public Boolean getNeedDelete() {
+            return this.needDelete;
         }
 
         /**
@@ -253,9 +308,14 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
             private String accuracyTest; 
             private String agentId; 
             private String dataset; 
+            private String datasource; 
+            private String desc; 
             private String evaluationPrompt; 
             private String fileId; 
+            private Integer maxConcurrent; 
             private Integer mode; 
+            private String name; 
+            private Boolean needDelete; 
             private String workspaceId; 
 
             private Builder() {
@@ -265,9 +325,14 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
                 this.accuracyTest = model.accuracyTest;
                 this.agentId = model.agentId;
                 this.dataset = model.dataset;
+                this.datasource = model.datasource;
+                this.desc = model.desc;
                 this.evaluationPrompt = model.evaluationPrompt;
                 this.fileId = model.fileId;
+                this.maxConcurrent = model.maxConcurrent;
                 this.mode = model.mode;
+                this.name = model.name;
+                this.needDelete = model.needDelete;
                 this.workspaceId = model.workspaceId;
             } 
 
@@ -299,6 +364,22 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
             }
 
             /**
+             * Datasource.
+             */
+            public Builder datasource(String datasource) {
+                this.datasource = datasource;
+                return this;
+            }
+
+            /**
+             * Desc.
+             */
+            public Builder desc(String desc) {
+                this.desc = desc;
+                return this;
+            }
+
+            /**
              * EvaluationPrompt.
              */
             public Builder evaluationPrompt(String evaluationPrompt) {
@@ -315,10 +396,34 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
             }
 
             /**
+             * MaxConcurrent.
+             */
+            public Builder maxConcurrent(Integer maxConcurrent) {
+                this.maxConcurrent = maxConcurrent;
+                return this;
+            }
+
+            /**
              * Mode.
              */
             public Builder mode(Integer mode) {
                 this.mode = mode;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * NeedDelete.
+             */
+            public Builder needDelete(Boolean needDelete) {
+                this.needDelete = needDelete;
                 return this;
             }
 

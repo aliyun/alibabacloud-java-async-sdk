@@ -26,6 +26,10 @@ public class CreateDataAgentAccuracyTestRequest extends Request {
     private String dataset;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Datasource")
+    private String datasource;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Desc")
     private String desc;
 
@@ -73,6 +77,7 @@ public class CreateDataAgentAccuracyTestRequest extends Request {
         super(builder);
         this.customAgentId = builder.customAgentId;
         this.dataset = builder.dataset;
+        this.datasource = builder.datasource;
         this.desc = builder.desc;
         this.dmsUnit = builder.dmsUnit;
         this.evaluationPrompt = builder.evaluationPrompt;
@@ -111,6 +116,13 @@ public class CreateDataAgentAccuracyTestRequest extends Request {
      */
     public String getDataset() {
         return this.dataset;
+    }
+
+    /**
+     * @return datasource
+     */
+    public String getDatasource() {
+        return this.datasource;
     }
 
     /**
@@ -193,6 +205,7 @@ public class CreateDataAgentAccuracyTestRequest extends Request {
     public static final class Builder extends Request.Builder<CreateDataAgentAccuracyTestRequest, Builder> {
         private String customAgentId; 
         private String dataset; 
+        private String datasource; 
         private String desc; 
         private String dmsUnit; 
         private String evaluationPrompt; 
@@ -213,6 +226,7 @@ public class CreateDataAgentAccuracyTestRequest extends Request {
             super(request);
             this.customAgentId = request.customAgentId;
             this.dataset = request.dataset;
+            this.datasource = request.datasource;
             this.desc = request.desc;
             this.dmsUnit = request.dmsUnit;
             this.evaluationPrompt = request.evaluationPrompt;
@@ -241,6 +255,15 @@ public class CreateDataAgentAccuracyTestRequest extends Request {
         public Builder dataset(String dataset) {
             this.putQueryParameter("Dataset", dataset);
             this.dataset = dataset;
+            return this;
+        }
+
+        /**
+         * Datasource.
+         */
+        public Builder datasource(String datasource) {
+            this.putQueryParameter("Datasource", datasource);
+            this.datasource = datasource;
             return this;
         }
 

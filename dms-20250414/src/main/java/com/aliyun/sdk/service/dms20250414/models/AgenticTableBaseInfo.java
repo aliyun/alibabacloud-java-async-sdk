@@ -38,9 +38,6 @@ public class AgenticTableBaseInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("TableType")
     private String tableType;
 
-    @com.aliyun.core.annotation.NameInMap("TableUuid")
-    private String tableUuid;
-
     private AgenticTableBaseInfo(Builder builder) {
         this.catalogType = builder.catalogType;
         this.databaseUuid = builder.databaseUuid;
@@ -49,7 +46,6 @@ public class AgenticTableBaseInfo extends TeaModel {
         this.name = builder.name;
         this.qualifiedName = builder.qualifiedName;
         this.tableType = builder.tableType;
-        this.tableUuid = builder.tableUuid;
     }
 
     public static Builder builder() {
@@ -113,13 +109,6 @@ public class AgenticTableBaseInfo extends TeaModel {
         return this.tableType;
     }
 
-    /**
-     * @return tableUuid
-     */
-    public String getTableUuid() {
-        return this.tableUuid;
-    }
-
     public static final class Builder {
         private String catalogType; 
         private String databaseUuid; 
@@ -128,7 +117,6 @@ public class AgenticTableBaseInfo extends TeaModel {
         private String name; 
         private String qualifiedName; 
         private String tableType; 
-        private String tableUuid; 
 
         private Builder() {
         } 
@@ -141,7 +129,6 @@ public class AgenticTableBaseInfo extends TeaModel {
             this.name = model.name;
             this.qualifiedName = model.qualifiedName;
             this.tableType = model.tableType;
-            this.tableUuid = model.tableUuid;
         } 
 
         /**
@@ -197,14 +184,6 @@ public class AgenticTableBaseInfo extends TeaModel {
          */
         public Builder tableType(String tableType) {
             this.tableType = tableType;
-            return this;
-        }
-
-        /**
-         * TableUuid.
-         */
-        public Builder tableUuid(String tableUuid) {
-            this.tableUuid = tableUuid;
             return this;
         }
 

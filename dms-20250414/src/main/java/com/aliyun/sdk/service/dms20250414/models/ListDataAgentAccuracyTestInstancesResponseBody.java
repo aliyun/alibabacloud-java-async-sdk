@@ -296,6 +296,9 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
+        @com.aliyun.core.annotation.NameInMap("Datasource")
+        private String datasource;
+
         @com.aliyun.core.annotation.NameInMap("FileId")
         private String fileId;
 
@@ -327,6 +330,7 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
             this.accuracyTestInsId = builder.accuracyTestInsId;
             this.agentId = builder.agentId;
             this.creator = builder.creator;
+            this.datasource = builder.datasource;
             this.fileId = builder.fileId;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
@@ -365,6 +369,13 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
          */
         public String getCreator() {
             return this.creator;
+        }
+
+        /**
+         * @return datasource
+         */
+        public String getDatasource() {
+            return this.datasource;
         }
 
         /**
@@ -434,6 +445,7 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
             private String accuracyTestInsId; 
             private String agentId; 
             private String creator; 
+            private String datasource; 
             private String fileId; 
             private String gmtCreate; 
             private String gmtModified; 
@@ -451,6 +463,7 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
                 this.accuracyTestInsId = model.accuracyTestInsId;
                 this.agentId = model.agentId;
                 this.creator = model.creator;
+                this.datasource = model.datasource;
                 this.fileId = model.fileId;
                 this.gmtCreate = model.gmtCreate;
                 this.gmtModified = model.gmtModified;
@@ -483,6 +496,14 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
              */
             public Builder creator(String creator) {
                 this.creator = creator;
+                return this;
+            }
+
+            /**
+             * Datasource.
+             */
+            public Builder datasource(String datasource) {
+                this.datasource = datasource;
                 return this;
             }
 

@@ -12,67 +12,51 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DmsGatewayOrder} extends {@link TeaModel}
+ * {@link ManagedDaOrderVO} extends {@link TeaModel}
  *
- * <p>DmsGatewayOrder</p>
+ * <p>ManagedDaOrderVO</p>
  */
-public class DmsGatewayOrder extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("BizType")
-    private String bizType;
-
-    @com.aliyun.core.annotation.NameInMap("ChargeType")
-    private String chargeType;
-
-    @com.aliyun.core.annotation.NameInMap("CommodityCode")
-    private String commodityCode;
-
-    @com.aliyun.core.annotation.NameInMap("ExpireTime")
+public class ManagedDaOrderVO extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("expireTime")
     private String expireTime;
 
-    @com.aliyun.core.annotation.NameInMap("FreeOrder")
-    private Boolean freeOrder;
-
-    @com.aliyun.core.annotation.NameInMap("GmtCreate")
+    @com.aliyun.core.annotation.NameInMap("gmtCreate")
     private String gmtCreate;
 
-    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
 
-    @com.aliyun.core.annotation.NameInMap("InstanceType")
-    private String instanceType;
-
-    @com.aliyun.core.annotation.NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("orderId")
     private Long orderId;
 
-    @com.aliyun.core.annotation.NameInMap("PayNum")
+    @com.aliyun.core.annotation.NameInMap("payNum")
     private Integer payNum;
 
-    @com.aliyun.core.annotation.NameInMap("Region")
+    @com.aliyun.core.annotation.NameInMap("region")
     private String region;
 
-    @com.aliyun.core.annotation.NameInMap("State")
+    @com.aliyun.core.annotation.NameInMap("state")
     private String state;
 
-    private DmsGatewayOrder(Builder builder) {
-        this.bizType = builder.bizType;
-        this.chargeType = builder.chargeType;
-        this.commodityCode = builder.commodityCode;
+    @com.aliyun.core.annotation.NameInMap("subscriptionPlan")
+    private String subscriptionPlan;
+
+    private ManagedDaOrderVO(Builder builder) {
         this.expireTime = builder.expireTime;
-        this.freeOrder = builder.freeOrder;
         this.gmtCreate = builder.gmtCreate;
         this.instanceId = builder.instanceId;
-        this.instanceType = builder.instanceType;
         this.orderId = builder.orderId;
         this.payNum = builder.payNum;
         this.region = builder.region;
         this.state = builder.state;
+        this.subscriptionPlan = builder.subscriptionPlan;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DmsGatewayOrder create() {
+    public static ManagedDaOrderVO create() {
         return builder().build();
     }
 
@@ -81,38 +65,10 @@ public class DmsGatewayOrder extends TeaModel {
     }
 
     /**
-     * @return bizType
-     */
-    public String getBizType() {
-        return this.bizType;
-    }
-
-    /**
-     * @return chargeType
-     */
-    public String getChargeType() {
-        return this.chargeType;
-    }
-
-    /**
-     * @return commodityCode
-     */
-    public String getCommodityCode() {
-        return this.commodityCode;
-    }
-
-    /**
      * @return expireTime
      */
     public String getExpireTime() {
         return this.expireTime;
-    }
-
-    /**
-     * @return freeOrder
-     */
-    public Boolean getFreeOrder() {
-        return this.freeOrder;
     }
 
     /**
@@ -127,13 +83,6 @@ public class DmsGatewayOrder extends TeaModel {
      */
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    /**
-     * @return instanceType
-     */
-    public String getInstanceType() {
-        return this.instanceType;
     }
 
     /**
@@ -164,64 +113,39 @@ public class DmsGatewayOrder extends TeaModel {
         return this.state;
     }
 
+    /**
+     * @return subscriptionPlan
+     */
+    public String getSubscriptionPlan() {
+        return this.subscriptionPlan;
+    }
+
     public static final class Builder {
-        private String bizType; 
-        private String chargeType; 
-        private String commodityCode; 
         private String expireTime; 
-        private Boolean freeOrder; 
         private String gmtCreate; 
         private String instanceId; 
-        private String instanceType; 
         private Long orderId; 
         private Integer payNum; 
         private String region; 
         private String state; 
+        private String subscriptionPlan; 
 
         private Builder() {
         } 
 
-        private Builder(DmsGatewayOrder model) {
-            this.bizType = model.bizType;
-            this.chargeType = model.chargeType;
-            this.commodityCode = model.commodityCode;
+        private Builder(ManagedDaOrderVO model) {
             this.expireTime = model.expireTime;
-            this.freeOrder = model.freeOrder;
             this.gmtCreate = model.gmtCreate;
             this.instanceId = model.instanceId;
-            this.instanceType = model.instanceType;
             this.orderId = model.orderId;
             this.payNum = model.payNum;
             this.region = model.region;
             this.state = model.state;
+            this.subscriptionPlan = model.subscriptionPlan;
         } 
 
         /**
-         * BizType.
-         */
-        public Builder bizType(String bizType) {
-            this.bizType = bizType;
-            return this;
-        }
-
-        /**
-         * ChargeType.
-         */
-        public Builder chargeType(String chargeType) {
-            this.chargeType = chargeType;
-            return this;
-        }
-
-        /**
-         * CommodityCode.
-         */
-        public Builder commodityCode(String commodityCode) {
-            this.commodityCode = commodityCode;
-            return this;
-        }
-
-        /**
-         * ExpireTime.
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -229,15 +153,7 @@ public class DmsGatewayOrder extends TeaModel {
         }
 
         /**
-         * FreeOrder.
-         */
-        public Builder freeOrder(Boolean freeOrder) {
-            this.freeOrder = freeOrder;
-            return this;
-        }
-
-        /**
-         * GmtCreate.
+         * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -245,7 +161,7 @@ public class DmsGatewayOrder extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * instanceId.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -253,15 +169,7 @@ public class DmsGatewayOrder extends TeaModel {
         }
 
         /**
-         * InstanceType.
-         */
-        public Builder instanceType(String instanceType) {
-            this.instanceType = instanceType;
-            return this;
-        }
-
-        /**
-         * OrderId.
+         * orderId.
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -269,7 +177,7 @@ public class DmsGatewayOrder extends TeaModel {
         }
 
         /**
-         * PayNum.
+         * payNum.
          */
         public Builder payNum(Integer payNum) {
             this.payNum = payNum;
@@ -277,7 +185,7 @@ public class DmsGatewayOrder extends TeaModel {
         }
 
         /**
-         * Region.
+         * region.
          */
         public Builder region(String region) {
             this.region = region;
@@ -285,15 +193,23 @@ public class DmsGatewayOrder extends TeaModel {
         }
 
         /**
-         * State.
+         * state.
          */
         public Builder state(String state) {
             this.state = state;
             return this;
         }
 
-        public DmsGatewayOrder build() {
-            return new DmsGatewayOrder(this);
+        /**
+         * subscriptionPlan.
+         */
+        public Builder subscriptionPlan(String subscriptionPlan) {
+            this.subscriptionPlan = subscriptionPlan;
+            return this;
+        }
+
+        public ManagedDaOrderVO build() {
+            return new ManagedDaOrderVO(this);
         } 
 
     } 

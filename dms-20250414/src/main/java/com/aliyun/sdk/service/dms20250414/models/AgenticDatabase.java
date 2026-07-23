@@ -26,14 +26,14 @@ public class AgenticDatabase extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CatalogUuid")
     private String catalogUuid;
 
-    @com.aliyun.core.annotation.NameInMap("DataSourceType")
-    private String dataSourceType;
-
     @com.aliyun.core.annotation.NameInMap("DatabaseBizAttrs")
     private java.util.Map<String, ?> databaseBizAttrs;
 
     @com.aliyun.core.annotation.NameInMap("DatabaseUuid")
     private String databaseUuid;
+
+    @com.aliyun.core.annotation.NameInMap("DbType")
+    private String dbType;
 
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
@@ -66,9 +66,9 @@ public class AgenticDatabase extends TeaModel {
         this.catalogName = builder.catalogName;
         this.catalogType = builder.catalogType;
         this.catalogUuid = builder.catalogUuid;
-        this.dataSourceType = builder.dataSourceType;
         this.databaseBizAttrs = builder.databaseBizAttrs;
         this.databaseUuid = builder.databaseUuid;
+        this.dbType = builder.dbType;
         this.description = builder.description;
         this.engineMeta = builder.engineMeta;
         this.name = builder.name;
@@ -114,13 +114,6 @@ public class AgenticDatabase extends TeaModel {
     }
 
     /**
-     * @return dataSourceType
-     */
-    public String getDataSourceType() {
-        return this.dataSourceType;
-    }
-
-    /**
      * @return databaseBizAttrs
      */
     public java.util.Map<String, ?> getDatabaseBizAttrs() {
@@ -132,6 +125,13 @@ public class AgenticDatabase extends TeaModel {
      */
     public String getDatabaseUuid() {
         return this.databaseUuid;
+    }
+
+    /**
+     * @return dbType
+     */
+    public String getDbType() {
+        return this.dbType;
     }
 
     /**
@@ -201,9 +201,9 @@ public class AgenticDatabase extends TeaModel {
         private String catalogName; 
         private String catalogType; 
         private String catalogUuid; 
-        private String dataSourceType; 
         private java.util.Map<String, ?> databaseBizAttrs; 
         private String databaseUuid; 
+        private String dbType; 
         private String description; 
         private AgenticDatabaseEngineMeta engineMeta; 
         private String name; 
@@ -221,9 +221,9 @@ public class AgenticDatabase extends TeaModel {
             this.catalogName = model.catalogName;
             this.catalogType = model.catalogType;
             this.catalogUuid = model.catalogUuid;
-            this.dataSourceType = model.dataSourceType;
             this.databaseBizAttrs = model.databaseBizAttrs;
             this.databaseUuid = model.databaseUuid;
+            this.dbType = model.dbType;
             this.description = model.description;
             this.engineMeta = model.engineMeta;
             this.name = model.name;
@@ -260,14 +260,6 @@ public class AgenticDatabase extends TeaModel {
         }
 
         /**
-         * DataSourceType.
-         */
-        public Builder dataSourceType(String dataSourceType) {
-            this.dataSourceType = dataSourceType;
-            return this;
-        }
-
-        /**
          * DatabaseBizAttrs.
          */
         public Builder databaseBizAttrs(java.util.Map<String, ?> databaseBizAttrs) {
@@ -280,6 +272,14 @@ public class AgenticDatabase extends TeaModel {
          */
         public Builder databaseUuid(String databaseUuid) {
             this.databaseUuid = databaseUuid;
+            return this;
+        }
+
+        /**
+         * DbType.
+         */
+        public Builder dbType(String dbType) {
+            this.dbType = dbType;
             return this;
         }
 

@@ -37,6 +37,10 @@ public class ListDataCenterDatabaseRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SearchKey")
     private String searchKey;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private ListDataCenterDatabaseRequest(Builder builder) {
         super(builder);
         this.callFrom = builder.callFrom;
@@ -44,6 +48,7 @@ public class ListDataCenterDatabaseRequest extends Request {
         this.importType = builder.importType;
         this.language = builder.language;
         this.searchKey = builder.searchKey;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -94,12 +99,20 @@ public class ListDataCenterDatabaseRequest extends Request {
         return this.searchKey;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<ListDataCenterDatabaseRequest, Builder> {
         private String callFrom; 
         private String dmsUnit; 
         private String importType; 
         private String language; 
         private String searchKey; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -112,6 +125,7 @@ public class ListDataCenterDatabaseRequest extends Request {
             this.importType = request.importType;
             this.language = request.language;
             this.searchKey = request.searchKey;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -156,6 +170,15 @@ public class ListDataCenterDatabaseRequest extends Request {
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
             this.searchKey = searchKey;
+            return this;
+        }
+
+        /**
+         * WorkspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 

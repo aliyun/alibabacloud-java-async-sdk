@@ -30,6 +30,10 @@ public class UpdateDataAgentAccuracyTestRequest extends Request {
     private String dataset;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Datasource")
+    private String datasource;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Desc")
     private String desc;
 
@@ -74,6 +78,7 @@ public class UpdateDataAgentAccuracyTestRequest extends Request {
         this.accuracyTestInsId = builder.accuracyTestInsId;
         this.customerAgentId = builder.customerAgentId;
         this.dataset = builder.dataset;
+        this.datasource = builder.datasource;
         this.desc = builder.desc;
         this.dmsUnit = builder.dmsUnit;
         this.evaluationPrompt = builder.evaluationPrompt;
@@ -118,6 +123,13 @@ public class UpdateDataAgentAccuracyTestRequest extends Request {
      */
     public String getDataset() {
         return this.dataset;
+    }
+
+    /**
+     * @return datasource
+     */
+    public String getDatasource() {
+        return this.datasource;
     }
 
     /**
@@ -194,6 +206,7 @@ public class UpdateDataAgentAccuracyTestRequest extends Request {
         private String accuracyTestInsId; 
         private String customerAgentId; 
         private String dataset; 
+        private String datasource; 
         private String desc; 
         private String dmsUnit; 
         private String evaluationPrompt; 
@@ -214,6 +227,7 @@ public class UpdateDataAgentAccuracyTestRequest extends Request {
             this.accuracyTestInsId = request.accuracyTestInsId;
             this.customerAgentId = request.customerAgentId;
             this.dataset = request.dataset;
+            this.datasource = request.datasource;
             this.desc = request.desc;
             this.dmsUnit = request.dmsUnit;
             this.evaluationPrompt = request.evaluationPrompt;
@@ -250,6 +264,15 @@ public class UpdateDataAgentAccuracyTestRequest extends Request {
         public Builder dataset(String dataset) {
             this.putQueryParameter("Dataset", dataset);
             this.dataset = dataset;
+            return this;
+        }
+
+        /**
+         * Datasource.
+         */
+        public Builder datasource(String datasource) {
+            this.putQueryParameter("Datasource", datasource);
+            this.datasource = datasource;
             return this;
         }
 

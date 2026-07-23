@@ -26,6 +26,9 @@ public class OpenClawInstanceQuotaVO extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DeepResearchCallUsed")
     private String deepResearchCallUsed;
 
+    @com.aliyun.core.annotation.NameInMap("InstanceDesc")
+    private String instanceDesc;
+
     @com.aliyun.core.annotation.NameInMap("InstanceGmtCreate")
     private String instanceGmtCreate;
 
@@ -53,10 +56,14 @@ public class OpenClawInstanceQuotaVO extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SkillPlanCallUsed")
     private String skillPlanCallUsed;
 
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private Integer status;
+
     private OpenClawInstanceQuotaVO(Builder builder) {
         this.aliyunAccountUid = builder.aliyunAccountUid;
         this.deepResearchCallQuota = builder.deepResearchCallQuota;
         this.deepResearchCallUsed = builder.deepResearchCallUsed;
+        this.instanceDesc = builder.instanceDesc;
         this.instanceGmtCreate = builder.instanceGmtCreate;
         this.instanceId = builder.instanceId;
         this.instanceName = builder.instanceName;
@@ -66,6 +73,7 @@ public class OpenClawInstanceQuotaVO extends TeaModel {
         this.refreshDay = builder.refreshDay;
         this.skillPlanCallQuota = builder.skillPlanCallQuota;
         this.skillPlanCallUsed = builder.skillPlanCallUsed;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
@@ -99,6 +107,13 @@ public class OpenClawInstanceQuotaVO extends TeaModel {
      */
     public String getDeepResearchCallUsed() {
         return this.deepResearchCallUsed;
+    }
+
+    /**
+     * @return instanceDesc
+     */
+    public String getInstanceDesc() {
+        return this.instanceDesc;
     }
 
     /**
@@ -164,10 +179,18 @@ public class OpenClawInstanceQuotaVO extends TeaModel {
         return this.skillPlanCallUsed;
     }
 
+    /**
+     * @return status
+     */
+    public Integer getStatus() {
+        return this.status;
+    }
+
     public static final class Builder {
         private String aliyunAccountUid; 
         private String deepResearchCallQuota; 
         private String deepResearchCallUsed; 
+        private String instanceDesc; 
         private String instanceGmtCreate; 
         private String instanceId; 
         private String instanceName; 
@@ -177,6 +200,7 @@ public class OpenClawInstanceQuotaVO extends TeaModel {
         private String refreshDay; 
         private String skillPlanCallQuota; 
         private String skillPlanCallUsed; 
+        private Integer status; 
 
         private Builder() {
         } 
@@ -185,6 +209,7 @@ public class OpenClawInstanceQuotaVO extends TeaModel {
             this.aliyunAccountUid = model.aliyunAccountUid;
             this.deepResearchCallQuota = model.deepResearchCallQuota;
             this.deepResearchCallUsed = model.deepResearchCallUsed;
+            this.instanceDesc = model.instanceDesc;
             this.instanceGmtCreate = model.instanceGmtCreate;
             this.instanceId = model.instanceId;
             this.instanceName = model.instanceName;
@@ -194,6 +219,7 @@ public class OpenClawInstanceQuotaVO extends TeaModel {
             this.refreshDay = model.refreshDay;
             this.skillPlanCallQuota = model.skillPlanCallQuota;
             this.skillPlanCallUsed = model.skillPlanCallUsed;
+            this.status = model.status;
         } 
 
         /**
@@ -217,6 +243,14 @@ public class OpenClawInstanceQuotaVO extends TeaModel {
          */
         public Builder deepResearchCallUsed(String deepResearchCallUsed) {
             this.deepResearchCallUsed = deepResearchCallUsed;
+            return this;
+        }
+
+        /**
+         * InstanceDesc.
+         */
+        public Builder instanceDesc(String instanceDesc) {
+            this.instanceDesc = instanceDesc;
             return this;
         }
 
@@ -289,6 +323,14 @@ public class OpenClawInstanceQuotaVO extends TeaModel {
          */
         public Builder skillPlanCallUsed(String skillPlanCallUsed) {
             this.skillPlanCallUsed = skillPlanCallUsed;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(Integer status) {
+            this.status = status;
             return this;
         }
 
