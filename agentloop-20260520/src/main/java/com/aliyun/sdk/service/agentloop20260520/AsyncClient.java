@@ -74,6 +74,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateEvaluatorSkillResponse> createEvaluatorSkill(CreateEvaluatorSkillRequest request);
 
     /**
+     * @param request the request parameters of CreateExperimentPlan  CreateExperimentPlanRequest
+     * @return CreateExperimentPlanResponse
+     */
+    CompletableFuture<CreateExperimentPlanResponse> createExperimentPlan(CreateExperimentPlanRequest request);
+
+    /**
+     * @param request the request parameters of CreateExperimentRun  CreateExperimentRunRequest
+     * @return CreateExperimentRunResponse
+     */
+    CompletableFuture<CreateExperimentRunResponse> createExperimentRun(CreateExperimentRunRequest request);
+
+    /**
      * @param request the request parameters of CreatePipeline  CreatePipelineRequest
      * @return CreatePipelineResponse
      */
@@ -126,6 +138,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteEvaluatorSkillResponse
      */
     CompletableFuture<DeleteEvaluatorSkillResponse> deleteEvaluatorSkill(DeleteEvaluatorSkillRequest request);
+
+    /**
+     * @param request the request parameters of DeleteExperimentPlan  DeleteExperimentPlanRequest
+     * @return DeleteExperimentPlanResponse
+     */
+    CompletableFuture<DeleteExperimentPlanResponse> deleteExperimentPlan(DeleteExperimentPlanRequest request);
+
+    /**
+     * @param request the request parameters of DeleteExperimentRun  DeleteExperimentRunRequest
+     * @return DeleteExperimentRunResponse
+     */
+    CompletableFuture<DeleteExperimentRunResponse> deleteExperimentRun(DeleteExperimentRunRequest request);
 
     /**
      * @param request the request parameters of DeletePipeline  DeletePipelineRequest
@@ -194,6 +218,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetEvaluatorSkillResponse> getEvaluatorSkill(GetEvaluatorSkillRequest request);
 
     /**
+     * @param request the request parameters of GetExperimentPlan  GetExperimentPlanRequest
+     * @return GetExperimentPlanResponse
+     */
+    CompletableFuture<GetExperimentPlanResponse> getExperimentPlan(GetExperimentPlanRequest request);
+
+    /**
+     * @param request the request parameters of GetExperimentRun  GetExperimentRunRequest
+     * @return GetExperimentRunResponse
+     */
+    CompletableFuture<GetExperimentRunResponse> getExperimentRun(GetExperimentRunRequest request);
+
+    /**
      * @param request the request parameters of GetPipeline  GetPipelineRequest
      * @return GetPipelineResponse
      */
@@ -258,6 +294,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListEvaluatorsResponse
      */
     CompletableFuture<ListEvaluatorsResponse> listEvaluators(ListEvaluatorsRequest request);
+
+    /**
+     * @param request the request parameters of ListExperimentPlans  ListExperimentPlansRequest
+     * @return ListExperimentPlansResponse
+     */
+    CompletableFuture<ListExperimentPlansResponse> listExperimentPlans(ListExperimentPlansRequest request);
+
+    /**
+     * @param request the request parameters of ListExperimentRuns  ListExperimentRunsRequest
+     * @return ListExperimentRunsResponse
+     */
+    CompletableFuture<ListExperimentRunsResponse> listExperimentRuns(ListExperimentRunsRequest request);
 
     /**
      * @param request the request parameters of ListPipelineRuns  ListPipelineRunsRequest
@@ -348,6 +396,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateEvaluatorSkillResponse
      */
     CompletableFuture<UpdateEvaluatorSkillResponse> updateEvaluatorSkill(UpdateEvaluatorSkillRequest request);
+
+    /**
+     * @param request the request parameters of UpdateExperimentPlan  UpdateExperimentPlanRequest
+     * @return UpdateExperimentPlanResponse
+     */
+    CompletableFuture<UpdateExperimentPlanResponse> updateExperimentPlan(UpdateExperimentPlanRequest request);
+
+    /**
+     * @param request the request parameters of UpdateExperimentRun  UpdateExperimentRunRequest
+     * @return UpdateExperimentRunResponse
+     */
+    CompletableFuture<UpdateExperimentRunResponse> updateExperimentRun(UpdateExperimentRunRequest request);
 
     /**
      * @param request the request parameters of UpdatePipeline  UpdatePipelineRequest

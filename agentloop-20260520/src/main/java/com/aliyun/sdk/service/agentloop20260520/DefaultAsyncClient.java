@@ -212,6 +212,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateExperimentPlan  CreateExperimentPlanRequest
+     * @return CreateExperimentPlanResponse
+     */
+    @Override
+    public CompletableFuture<CreateExperimentPlanResponse> createExperimentPlan(CreateExperimentPlanRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateExperimentPlan").setMethod(HttpMethod.POST).setPathRegex("/api/v1/experiments/{agentSpace}/plans").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateExperimentPlanResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateExperimentPlanResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateExperimentRun  CreateExperimentRunRequest
+     * @return CreateExperimentRunResponse
+     */
+    @Override
+    public CompletableFuture<CreateExperimentRunResponse> createExperimentRun(CreateExperimentRunRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateExperimentRun").setMethod(HttpMethod.POST).setPathRegex("/api/v1/experimentruns/{agentSpace}/execute").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateExperimentRunResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateExperimentRunResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreatePipeline  CreatePipelineRequest
      * @return CreatePipelineResponse
      */
@@ -368,6 +404,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteEvaluatorSkillResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteExperimentPlan  DeleteExperimentPlanRequest
+     * @return DeleteExperimentPlanResponse
+     */
+    @Override
+    public CompletableFuture<DeleteExperimentPlanResponse> deleteExperimentPlan(DeleteExperimentPlanRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteExperimentPlan").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/experiments/{agentSpace}/plans/{planId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteExperimentPlanResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteExperimentPlanResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteExperimentRun  DeleteExperimentRunRequest
+     * @return DeleteExperimentRunResponse
+     */
+    @Override
+    public CompletableFuture<DeleteExperimentRunResponse> deleteExperimentRun(DeleteExperimentRunRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteExperimentRun").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/experimentruns/{agentSpace}/records/{recordId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteExperimentRunResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteExperimentRunResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -572,6 +644,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetExperimentPlan  GetExperimentPlanRequest
+     * @return GetExperimentPlanResponse
+     */
+    @Override
+    public CompletableFuture<GetExperimentPlanResponse> getExperimentPlan(GetExperimentPlanRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetExperimentPlan").setMethod(HttpMethod.GET).setPathRegex("/api/v1/experiments/{agentSpace}/plans/{planId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetExperimentPlanResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetExperimentPlanResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetExperimentRun  GetExperimentRunRequest
+     * @return GetExperimentRunResponse
+     */
+    @Override
+    public CompletableFuture<GetExperimentRunResponse> getExperimentRun(GetExperimentRunRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetExperimentRun").setMethod(HttpMethod.GET).setPathRegex("/api/v1/experimentruns/{agentSpace}/records/{recordId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetExperimentRunResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetExperimentRunResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetPipeline  GetPipelineRequest
      * @return GetPipelineResponse
      */
@@ -764,6 +872,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListEvaluatorsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListExperimentPlans  ListExperimentPlansRequest
+     * @return ListExperimentPlansResponse
+     */
+    @Override
+    public CompletableFuture<ListExperimentPlansResponse> listExperimentPlans(ListExperimentPlansRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListExperimentPlans").setMethod(HttpMethod.GET).setPathRegex("/api/v1/experiments/{agentSpace}/plans").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListExperimentPlansResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListExperimentPlansResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListExperimentRuns  ListExperimentRunsRequest
+     * @return ListExperimentRunsResponse
+     */
+    @Override
+    public CompletableFuture<ListExperimentRunsResponse> listExperimentRuns(ListExperimentRunsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListExperimentRuns").setMethod(HttpMethod.GET).setPathRegex("/api/v1/experimentruns/{agentSpace}/records").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListExperimentRunsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListExperimentRunsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1034,6 +1178,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateEvaluatorSkillResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateExperimentPlan  UpdateExperimentPlanRequest
+     * @return UpdateExperimentPlanResponse
+     */
+    @Override
+    public CompletableFuture<UpdateExperimentPlanResponse> updateExperimentPlan(UpdateExperimentPlanRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateExperimentPlan").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/experiments/{agentSpace}/plans/{planId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateExperimentPlanResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateExperimentPlanResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateExperimentRun  UpdateExperimentRunRequest
+     * @return UpdateExperimentRunResponse
+     */
+    @Override
+    public CompletableFuture<UpdateExperimentRunResponse> updateExperimentRun(UpdateExperimentRunRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateExperimentRun").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/experimentruns/{agentSpace}/records/{recordId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateExperimentRunResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateExperimentRunResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
