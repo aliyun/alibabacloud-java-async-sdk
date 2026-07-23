@@ -92,6 +92,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeviceUpdateResponse> deviceUpdate(DeviceUpdateRequest request);
 
     /**
+     * @param request the request parameters of InterruptForArbitration  InterruptForArbitrationRequest
+     * @return InterruptForArbitrationResponse
+     */
+    CompletableFuture<InterruptForArbitrationResponse> interruptForArbitration(InterruptForArbitrationRequest request);
+
+    /**
      * @param request the request parameters of ListCommand  ListCommandRequest
      * @return ListCommandResponse
      */
