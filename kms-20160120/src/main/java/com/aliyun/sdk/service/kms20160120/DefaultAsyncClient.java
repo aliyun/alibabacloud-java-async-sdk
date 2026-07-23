@@ -60,9 +60,7 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("ap-southeast-6", "kms.ap-southeast-6.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "kms.ap-southeast-5.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "kms.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "kms.ap-southeast-2.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "kms.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-south-1", "kms.ap-south-1.aliyuncs.com"),
             new TeaPair("ap-northeast-2", "kms.ap-northeast-2.aliyuncs.com"),
             new TeaPair("ap-northeast-1", "kms.ap-northeast-1.aliyuncs.com")
         );
@@ -1150,6 +1148,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetManagedDataKey  GetManagedDataKeyRequest
+     * @return GetManagedDataKeyResponse
+     */
+    @Override
+    public CompletableFuture<GetManagedDataKeyResponse> getManagedDataKey(GetManagedDataKeyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetManagedDataKey").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetManagedDataKeyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetManagedDataKeyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>The returned parameters can be used to call the <a href="https://www.alibabacloud.com/help/en/key-management-service/latest/importkeymaterial">ImportKeyMaterial</a> operation.</p>
      * <ul>
@@ -1447,6 +1463,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListKmsInstancesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListManagedDataKeyVersions  ListManagedDataKeyVersionsRequest
+     * @return ListManagedDataKeyVersionsResponse
+     */
+    @Override
+    public CompletableFuture<ListManagedDataKeyVersionsResponse> listManagedDataKeyVersions(ListManagedDataKeyVersionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListManagedDataKeyVersions").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListManagedDataKeyVersionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListManagedDataKeyVersionsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

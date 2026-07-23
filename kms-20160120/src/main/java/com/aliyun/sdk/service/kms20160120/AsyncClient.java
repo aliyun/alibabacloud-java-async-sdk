@@ -579,6 +579,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetKmsInstanceQuotaInfosResponse> getKmsInstanceQuotaInfos(GetKmsInstanceQuotaInfosRequest request);
 
     /**
+     * @param request the request parameters of GetManagedDataKey  GetManagedDataKeyRequest
+     * @return GetManagedDataKeyResponse
+     */
+    CompletableFuture<GetManagedDataKeyResponse> getManagedDataKey(GetManagedDataKeyRequest request);
+
+    /**
      * <b>description</b> :
      * <p>The returned parameters can be used to call the <a href="https://www.alibabacloud.com/help/en/key-management-service/latest/importkeymaterial">ImportKeyMaterial</a> operation.</p>
      * <ul>
@@ -724,6 +730,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListKmsInstancesResponse
      */
     CompletableFuture<ListKmsInstancesResponse> listKmsInstances(ListKmsInstancesRequest request);
+
+    /**
+     * @param request the request parameters of ListManagedDataKeyVersions  ListManagedDataKeyVersionsRequest
+     * @return ListManagedDataKeyVersionsResponse
+     */
+    CompletableFuture<ListManagedDataKeyVersionsResponse> listManagedDataKeyVersions(ListManagedDataKeyVersionsRequest request);
 
     /**
      * @param request the request parameters of ListNetworkRules  ListNetworkRulesRequest
