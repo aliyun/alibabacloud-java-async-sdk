@@ -20,6 +20,9 @@ public class ChatConversationResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Answer")
     private String answer;
 
+    @com.aliyun.core.annotation.NameInMap("CallId")
+    private String callId;
+
     @com.aliyun.core.annotation.NameInMap("ConversationId")
     private String conversationId;
 
@@ -32,6 +35,9 @@ public class ChatConversationResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Event")
     private String event;
 
+    @com.aliyun.core.annotation.NameInMap("Func")
+    private String func;
+
     @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
@@ -41,15 +47,21 @@ public class ChatConversationResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("SkillName")
+    private String skillName;
+
     private ChatConversationResponseBody(Builder builder) {
         this.answer = builder.answer;
+        this.callId = builder.callId;
         this.conversationId = builder.conversationId;
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
         this.event = builder.event;
+        this.func = builder.func;
         this.gmtCreateTime = builder.gmtCreateTime;
         this.messageId = builder.messageId;
         this.requestId = builder.requestId;
+        this.skillName = builder.skillName;
     }
 
     public static Builder builder() {
@@ -69,6 +81,13 @@ public class ChatConversationResponseBody extends TeaModel {
      */
     public String getAnswer() {
         return this.answer;
+    }
+
+    /**
+     * @return callId
+     */
+    public String getCallId() {
+        return this.callId;
     }
 
     /**
@@ -100,6 +119,13 @@ public class ChatConversationResponseBody extends TeaModel {
     }
 
     /**
+     * @return func
+     */
+    public String getFunc() {
+        return this.func;
+    }
+
+    /**
      * @return gmtCreateTime
      */
     public String getGmtCreateTime() {
@@ -120,28 +146,41 @@ public class ChatConversationResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return skillName
+     */
+    public String getSkillName() {
+        return this.skillName;
+    }
+
     public static final class Builder {
         private String answer; 
+        private String callId; 
         private String conversationId; 
         private String errorCode; 
         private String errorMessage; 
         private String event; 
+        private String func; 
         private String gmtCreateTime; 
         private String messageId; 
         private String requestId; 
+        private String skillName; 
 
         private Builder() {
         } 
 
         private Builder(ChatConversationResponseBody model) {
             this.answer = model.answer;
+            this.callId = model.callId;
             this.conversationId = model.conversationId;
             this.errorCode = model.errorCode;
             this.errorMessage = model.errorMessage;
             this.event = model.event;
+            this.func = model.func;
             this.gmtCreateTime = model.gmtCreateTime;
             this.messageId = model.messageId;
             this.requestId = model.requestId;
+            this.skillName = model.skillName;
         } 
 
         /**
@@ -149,6 +188,14 @@ public class ChatConversationResponseBody extends TeaModel {
          */
         public Builder answer(String answer) {
             this.answer = answer;
+            return this;
+        }
+
+        /**
+         * CallId.
+         */
+        public Builder callId(String callId) {
+            this.callId = callId;
             return this;
         }
 
@@ -185,6 +232,14 @@ public class ChatConversationResponseBody extends TeaModel {
         }
 
         /**
+         * Func.
+         */
+        public Builder func(String func) {
+            this.func = func;
+            return this;
+        }
+
+        /**
          * GmtCreateTime.
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
@@ -205,6 +260,14 @@ public class ChatConversationResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SkillName.
+         */
+        public Builder skillName(String skillName) {
+            this.skillName = skillName;
             return this;
         }
 

@@ -44,6 +44,12 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("StartStatus")
     private String startStatus;
 
+    @com.aliyun.core.annotation.NameInMap("StopMessage")
+    private String stopMessage;
+
+    @com.aliyun.core.annotation.NameInMap("StopStatus")
+    private String stopStatus;
+
     @com.aliyun.core.annotation.NameInMap("TrafficControlTaskId")
     private String trafficControlTaskId;
 
@@ -57,6 +63,8 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.startMessage = builder.startMessage;
         this.startStatus = builder.startStatus;
+        this.stopMessage = builder.stopMessage;
+        this.stopStatus = builder.stopStatus;
         this.trafficControlTaskId = builder.trafficControlTaskId;
     }
 
@@ -136,6 +144,20 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
     }
 
     /**
+     * @return stopMessage
+     */
+    public String getStopMessage() {
+        return this.stopMessage;
+    }
+
+    /**
+     * @return stopStatus
+     */
+    public String getStopStatus() {
+        return this.stopStatus;
+    }
+
+    /**
      * @return trafficControlTaskId
      */
     public String getTrafficControlTaskId() {
@@ -152,6 +174,8 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
         private String requestId; 
         private String startMessage; 
         private String startStatus; 
+        private String stopMessage; 
+        private String stopStatus; 
         private String trafficControlTaskId; 
 
         private Builder() {
@@ -167,6 +191,8 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
             this.requestId = model.requestId;
             this.startMessage = model.startMessage;
             this.startStatus = model.startStatus;
+            this.stopMessage = model.stopMessage;
+            this.stopStatus = model.stopStatus;
             this.trafficControlTaskId = model.trafficControlTaskId;
         } 
 
@@ -239,6 +265,22 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
          */
         public Builder startStatus(String startStatus) {
             this.startStatus = startStatus;
+            return this;
+        }
+
+        /**
+         * StopMessage.
+         */
+        public Builder stopMessage(String stopMessage) {
+            this.stopMessage = stopMessage;
+            return this;
+        }
+
+        /**
+         * StopStatus.
+         */
+        public Builder stopStatus(String stopStatus) {
+            this.stopStatus = stopStatus;
             return this;
         }
 

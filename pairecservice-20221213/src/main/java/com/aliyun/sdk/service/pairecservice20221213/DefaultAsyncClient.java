@@ -30,8 +30,19 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "PaiRecService";
         this.version = "2022-12-13";
-        this.endpointRule = "";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("us-west-1", "pairecservice.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "pairecservice.us-east-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "pairecservice.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "pairecservice.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "pairecservice.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "pairecservice.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "pairecservice.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-beijing", "pairecservice.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "pairecservice.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "pairecservice.ap-southeast-1.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -2805,6 +2816,49 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ShoppingAssistant  ShoppingAssistantRequest
+     * @return ShoppingAssistantResponse
+     */
+    @Override
+    public CompletableFuture<ShoppingAssistantResponse> shoppingAssistant(ShoppingAssistantRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ShoppingAssistant").setMethod(HttpMethod.POST).setPathRegex("/api/v1/conversations/shopping_assistant/chat").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ShoppingAssistantResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ShoppingAssistantResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public <ReturnT> CompletableFuture<ReturnT> shoppingAssistantWithAsyncResponseHandler(ShoppingAssistantRequest request, AsyncResponseHandler<ShoppingAssistantResponse, ReturnT> responseHandler) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ShoppingAssistant").setMethod(HttpMethod.POST).setPathRegex("/api/v1/conversations/shopping_assistant/chat").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withResponseHandler(responseHandler).withOutput(ShoppingAssistantResponse.create());
+            return this.handler.execute(params)
+                    .thenCompose((output) -> CompletableFuture.completedFuture(responseHandler.transform((ShoppingAssistantResponse)output)));
+        } catch (Exception e) {
+            CompletableFuture<ReturnT> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<ShoppingAssistantResponseBody> shoppingAssistantWithResponseIterable(ShoppingAssistantRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("ShoppingAssistant").setMethod(HttpMethod.POST).setPathRegex("/api/v1/conversations/shopping_assistant/chat").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+        ShoppingAssistantResponseBodyIterator iterator = ShoppingAssistantResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
      * @param request the request parameters of SplitTrafficControlTarget  SplitTrafficControlTargetRequest
      * @return SplitTrafficControlTargetResponse
      */
@@ -2871,6 +2925,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<StopSampleConsistencyJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of StopTrafficControlFlinkTask  StopTrafficControlFlinkTaskRequest
+     * @return StopTrafficControlFlinkTaskResponse
+     */
+    @Override
+    public CompletableFuture<StopTrafficControlFlinkTaskResponse> stopTrafficControlFlinkTask(StopTrafficControlFlinkTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StopTrafficControlFlinkTask").setMethod(HttpMethod.POST).setPathRegex("/api/v1/trafficcontroltasks/{TrafficControlTaskId}/action/stopflink").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopTrafficControlFlinkTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StopTrafficControlFlinkTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

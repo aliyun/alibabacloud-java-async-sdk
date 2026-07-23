@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetServiceResponseBody</p>
  */
 public class GetServiceResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("CrInstanceId")
+    private String crInstanceId;
+
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
@@ -41,6 +44,9 @@ public class GetServiceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
+    @com.aliyun.core.annotation.NameInMap("RepositoryId")
+    private String repositoryId;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -51,6 +57,7 @@ public class GetServiceResponseBody extends TeaModel {
     private String serviceResourceUri;
 
     private GetServiceResponseBody(Builder builder) {
+        this.crInstanceId = builder.crInstanceId;
         this.description = builder.description;
         this.engineConfigId = builder.engineConfigId;
         this.gmtReleasedTime = builder.gmtReleasedTime;
@@ -59,6 +66,7 @@ public class GetServiceResponseBody extends TeaModel {
         this.latestProdReleaseOrder = builder.latestProdReleaseOrder;
         this.name = builder.name;
         this.region = builder.region;
+        this.repositoryId = builder.repositoryId;
         this.requestId = builder.requestId;
         this.serviceConfig = builder.serviceConfig;
         this.serviceResourceUri = builder.serviceResourceUri;
@@ -74,6 +82,13 @@ public class GetServiceResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return crInstanceId
+     */
+    public String getCrInstanceId() {
+        return this.crInstanceId;
     }
 
     /**
@@ -133,6 +148,13 @@ public class GetServiceResponseBody extends TeaModel {
     }
 
     /**
+     * @return repositoryId
+     */
+    public String getRepositoryId() {
+        return this.repositoryId;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -154,6 +176,7 @@ public class GetServiceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String crInstanceId; 
         private String description; 
         private String engineConfigId; 
         private String gmtReleasedTime; 
@@ -162,6 +185,7 @@ public class GetServiceResponseBody extends TeaModel {
         private LatestProdReleaseOrder latestProdReleaseOrder; 
         private String name; 
         private String region; 
+        private String repositoryId; 
         private String requestId; 
         private String serviceConfig; 
         private String serviceResourceUri; 
@@ -170,6 +194,7 @@ public class GetServiceResponseBody extends TeaModel {
         } 
 
         private Builder(GetServiceResponseBody model) {
+            this.crInstanceId = model.crInstanceId;
             this.description = model.description;
             this.engineConfigId = model.engineConfigId;
             this.gmtReleasedTime = model.gmtReleasedTime;
@@ -178,10 +203,19 @@ public class GetServiceResponseBody extends TeaModel {
             this.latestProdReleaseOrder = model.latestProdReleaseOrder;
             this.name = model.name;
             this.region = model.region;
+            this.repositoryId = model.repositoryId;
             this.requestId = model.requestId;
             this.serviceConfig = model.serviceConfig;
             this.serviceResourceUri = model.serviceResourceUri;
         } 
+
+        /**
+         * CrInstanceId.
+         */
+        public Builder crInstanceId(String crInstanceId) {
+            this.crInstanceId = crInstanceId;
+            return this;
+        }
 
         /**
          * Description.
@@ -244,6 +278,14 @@ public class GetServiceResponseBody extends TeaModel {
          */
         public Builder region(String region) {
             this.region = region;
+            return this;
+        }
+
+        /**
+         * RepositoryId.
+         */
+        public Builder repositoryId(String repositoryId) {
+            this.repositoryId = repositoryId;
             return this;
         }
 

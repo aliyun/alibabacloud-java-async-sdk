@@ -149,6 +149,10 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
     private String itemTablePartitionFieldFormat;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxcomputeSchema")
+    private String maxcomputeSchema;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
     @com.aliyun.core.annotation.Validation(required = true)
     private String name;
@@ -259,6 +263,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         this.itemTable = builder.itemTable;
         this.itemTablePartitionField = builder.itemTablePartitionField;
         this.itemTablePartitionFieldFormat = builder.itemTablePartitionFieldFormat;
+        this.maxcomputeSchema = builder.maxcomputeSchema;
         this.name = builder.name;
         this.ossResourceId = builder.ossResourceId;
         this.predictWorkerCount = builder.predictWorkerCount;
@@ -503,6 +508,13 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
     }
 
     /**
+     * @return maxcomputeSchema
+     */
+    public String getMaxcomputeSchema() {
+        return this.maxcomputeSchema;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -659,6 +671,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         private String itemTable; 
         private String itemTablePartitionField; 
         private String itemTablePartitionFieldFormat; 
+        private String maxcomputeSchema; 
         private String name; 
         private String ossResourceId; 
         private Integer predictWorkerCount; 
@@ -714,6 +727,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
             this.itemTable = request.itemTable;
             this.itemTablePartitionField = request.itemTablePartitionField;
             this.itemTablePartitionFieldFormat = request.itemTablePartitionFieldFormat;
+            this.maxcomputeSchema = request.maxcomputeSchema;
             this.name = request.name;
             this.ossResourceId = request.ossResourceId;
             this.predictWorkerCount = request.predictWorkerCount;
@@ -1034,6 +1048,15 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         public Builder itemTablePartitionFieldFormat(String itemTablePartitionFieldFormat) {
             this.putBodyParameter("ItemTablePartitionFieldFormat", itemTablePartitionFieldFormat);
             this.itemTablePartitionFieldFormat = itemTablePartitionFieldFormat;
+            return this;
+        }
+
+        /**
+         * MaxcomputeSchema.
+         */
+        public Builder maxcomputeSchema(String maxcomputeSchema) {
+            this.putBodyParameter("MaxcomputeSchema", maxcomputeSchema);
+            this.maxcomputeSchema = maxcomputeSchema;
             return this;
         }
 

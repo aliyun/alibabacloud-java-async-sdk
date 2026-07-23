@@ -940,6 +940,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ReportSampleConsistencyJobResponse> reportSampleConsistencyJob(ReportSampleConsistencyJobRequest request);
 
     /**
+     * @param request the request parameters of ShoppingAssistant  ShoppingAssistantRequest
+     * @return ShoppingAssistantResponse
+     */
+    CompletableFuture<ShoppingAssistantResponse> shoppingAssistant(ShoppingAssistantRequest request);
+
+<ReturnT> CompletableFuture<ReturnT> shoppingAssistantWithAsyncResponseHandler(ShoppingAssistantRequest request, AsyncResponseHandler<ShoppingAssistantResponse, ReturnT> responseHandler);
+
+    ResponseIterable<ShoppingAssistantResponseBody> shoppingAssistantWithResponseIterable(ShoppingAssistantRequest request);
+
+    /**
      * @param request the request parameters of SplitTrafficControlTarget  SplitTrafficControlTargetRequest
      * @return SplitTrafficControlTargetResponse
      */
@@ -962,6 +972,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StopSampleConsistencyJobResponse
      */
     CompletableFuture<StopSampleConsistencyJobResponse> stopSampleConsistencyJob(StopSampleConsistencyJobRequest request);
+
+    /**
+     * @param request the request parameters of StopTrafficControlFlinkTask  StopTrafficControlFlinkTaskRequest
+     * @return StopTrafficControlFlinkTaskResponse
+     */
+    CompletableFuture<StopTrafficControlFlinkTaskResponse> stopTrafficControlFlinkTask(StopTrafficControlFlinkTaskRequest request);
 
     /**
      * @param request the request parameters of StopTrafficControlTarget  StopTrafficControlTargetRequest
