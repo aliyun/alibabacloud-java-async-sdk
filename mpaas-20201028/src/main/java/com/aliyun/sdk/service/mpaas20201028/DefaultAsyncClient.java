@@ -1985,6 +1985,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of QueryMiniGameInfoByApp  QueryMiniGameInfoByAppRequest
+     * @return QueryMiniGameInfoByAppResponse
+     */
+    @Override
+    public CompletableFuture<QueryMiniGameInfoByAppResponse> queryMiniGameInfoByApp(QueryMiniGameInfoByAppRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryMiniGameInfoByApp").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryMiniGameInfoByAppResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryMiniGameInfoByAppResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of QueryMpsSchedulerList  QueryMpsSchedulerListRequest
      * @return QueryMpsSchedulerListResponse
      */

@@ -650,6 +650,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryMgsTestreqbodyautogenResponse> queryMgsTestreqbodyautogen(QueryMgsTestreqbodyautogenRequest request);
 
     /**
+     * @param request the request parameters of QueryMiniGameInfoByApp  QueryMiniGameInfoByAppRequest
+     * @return QueryMiniGameInfoByAppResponse
+     */
+    CompletableFuture<QueryMiniGameInfoByAppResponse> queryMiniGameInfoByApp(QueryMiniGameInfoByAppRequest request);
+
+    /**
      * @param request the request parameters of QueryMpsSchedulerList  QueryMpsSchedulerListRequest
      * @return QueryMpsSchedulerListResponse
      */
