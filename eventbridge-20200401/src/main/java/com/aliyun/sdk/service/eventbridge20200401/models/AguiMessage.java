@@ -26,6 +26,9 @@ public class AguiMessage extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Metadata")
     private Metadata metadata;
 
+    @com.aliyun.core.annotation.NameInMap("Reasoning")
+    private String reasoning;
+
     @com.aliyun.core.annotation.NameInMap("Role")
     private String role;
 
@@ -39,6 +42,7 @@ public class AguiMessage extends TeaModel {
         this.content = builder.content;
         this.id = builder.id;
         this.metadata = builder.metadata;
+        this.reasoning = builder.reasoning;
         this.role = builder.role;
         this.toolCallId = builder.toolCallId;
         this.toolCalls = builder.toolCalls;
@@ -78,6 +82,13 @@ public class AguiMessage extends TeaModel {
     }
 
     /**
+     * @return reasoning
+     */
+    public String getReasoning() {
+        return this.reasoning;
+    }
+
+    /**
      * @return role
      */
     public String getRole() {
@@ -102,6 +113,7 @@ public class AguiMessage extends TeaModel {
         private String content; 
         private String id; 
         private Metadata metadata; 
+        private String reasoning; 
         private String role; 
         private String toolCallId; 
         private java.util.List<ToolCalls> toolCalls; 
@@ -113,6 +125,7 @@ public class AguiMessage extends TeaModel {
             this.content = model.content;
             this.id = model.id;
             this.metadata = model.metadata;
+            this.reasoning = model.reasoning;
             this.role = model.role;
             this.toolCallId = model.toolCallId;
             this.toolCalls = model.toolCalls;
@@ -139,6 +152,14 @@ public class AguiMessage extends TeaModel {
          */
         public Builder metadata(Metadata metadata) {
             this.metadata = metadata;
+            return this;
+        }
+
+        /**
+         * Reasoning.
+         */
+        public Builder reasoning(String reasoning) {
+            this.reasoning = reasoning;
             return this;
         }
 

@@ -28,8 +28,11 @@ public class CreateEventStreamingRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FilterPattern")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String filterPattern;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Metadata")
+    private String metadata;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RunOptions")
@@ -37,12 +40,10 @@ public class CreateEventStreamingRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Sink")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Sink sink;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Source")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Source source;
 
     @com.aliyun.core.annotation.Body
@@ -58,6 +59,7 @@ public class CreateEventStreamingRequest extends Request {
         this.description = builder.description;
         this.eventStreamingName = builder.eventStreamingName;
         this.filterPattern = builder.filterPattern;
+        this.metadata = builder.metadata;
         this.runOptions = builder.runOptions;
         this.sink = builder.sink;
         this.source = builder.source;
@@ -100,6 +102,13 @@ public class CreateEventStreamingRequest extends Request {
     }
 
     /**
+     * @return metadata
+     */
+    public String getMetadata() {
+        return this.metadata;
+    }
+
+    /**
      * @return runOptions
      */
     public RunOptions getRunOptions() {
@@ -138,6 +147,7 @@ public class CreateEventStreamingRequest extends Request {
         private String description; 
         private String eventStreamingName; 
         private String filterPattern; 
+        private String metadata; 
         private RunOptions runOptions; 
         private Sink sink; 
         private Source source; 
@@ -153,6 +163,7 @@ public class CreateEventStreamingRequest extends Request {
             this.description = request.description;
             this.eventStreamingName = request.eventStreamingName;
             this.filterPattern = request.filterPattern;
+            this.metadata = request.metadata;
             this.runOptions = request.runOptions;
             this.sink = request.sink;
             this.source = request.source;
@@ -187,11 +198,19 @@ public class CreateEventStreamingRequest extends Request {
 
         /**
          * <p>The rule that is used to filter events. If you leave this parameter empty, all events are matched.</p>
-         * <p>This parameter is required.</p>
          */
         public Builder filterPattern(String filterPattern) {
             this.putBodyParameter("FilterPattern", filterPattern);
             this.filterPattern = filterPattern;
+            return this;
+        }
+
+        /**
+         * Metadata.
+         */
+        public Builder metadata(String metadata) {
+            this.putBodyParameter("Metadata", metadata);
+            this.metadata = metadata;
             return this;
         }
 
@@ -207,7 +226,6 @@ public class CreateEventStreamingRequest extends Request {
 
         /**
          * <p>The event target. You must and can specify only one event target.</p>
-         * <p>This parameter is required.</p>
          */
         public Builder sink(Sink sink) {
             String sinkShrink = shrink(sink, "Sink", "json");
@@ -218,7 +236,6 @@ public class CreateEventStreamingRequest extends Request {
 
         /**
          * <p>The event provider, which is also known as the event source. You must and can specify only one event source.</p>
-         * <p>This parameter is required.</p>
          */
         public Builder source(Source source) {
             String sourceShrink = shrink(source, "Source", "json");
@@ -11763,6 +11780,113 @@ public class CreateEventStreamingRequest extends Request {
      *
      * <p>CreateEventStreamingRequest</p>
      */
+    public static class SinkRabbitMQParametersNetworkType extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private SinkRabbitMQParametersNetworkType(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SinkRabbitMQParametersNetworkType create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SinkRabbitMQParametersNetworkType model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that you want to use to transform events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TEMPLATE</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>The template based on which you want to transform events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The value before transformation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;key&quot;: &quot;value&quot;
+             * }</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public SinkRabbitMQParametersNetworkType build() {
+                return new SinkRabbitMQParametersNetworkType(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventStreamingRequest</p>
+     */
     public static class SinkRabbitMQParametersProperties extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
@@ -12080,6 +12204,111 @@ public class CreateEventStreamingRequest extends Request {
      *
      * <p>CreateEventStreamingRequest</p>
      */
+    public static class SinkRabbitMQParametersSecurityGroupId extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private SinkRabbitMQParametersSecurityGroupId(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SinkRabbitMQParametersSecurityGroupId create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SinkRabbitMQParametersSecurityGroupId model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>The template based on which you want to transform events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The rule that you want to use to route messages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>housekeeping</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public SinkRabbitMQParametersSecurityGroupId build() {
+                return new SinkRabbitMQParametersSecurityGroupId(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventStreamingRequest</p>
+     */
     public static class TargetType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
@@ -12178,6 +12407,115 @@ public class CreateEventStreamingRequest extends Request {
 
             public TargetType build() {
                 return new TargetType(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventStreamingRequest</p>
+     */
+    public static class SinkRabbitMQParametersVSwitchIds extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private SinkRabbitMQParametersVSwitchIds(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SinkRabbitMQParametersVSwitchIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SinkRabbitMQParametersVSwitchIds model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>The template based on which you want to transform events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The type of the resource to which you want to deliver events. Valid values:</p>
+             * <ul>
+             * <li>Exchange</li>
+             * <li>Queue</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Exchange/Queue</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public SinkRabbitMQParametersVSwitchIds build() {
+                return new SinkRabbitMQParametersVSwitchIds(this);
             } 
 
         } 
@@ -12294,6 +12632,111 @@ public class CreateEventStreamingRequest extends Request {
      *
      * <p>CreateEventStreamingRequest</p>
      */
+    public static class SinkRabbitMQParametersVpcId extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private SinkRabbitMQParametersVpcId(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SinkRabbitMQParametersVpcId create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SinkRabbitMQParametersVpcId model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>The template based on which you want to transform events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The name of the vhost to which the ApsaraMQ for RabbitMQ instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rabbit-host</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public SinkRabbitMQParametersVpcId build() {
+                return new SinkRabbitMQParametersVpcId(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventStreamingRequest</p>
+     */
     public static class SinkRabbitMQParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Body")
         private SinkRabbitMQParametersBody body;
@@ -12307,6 +12750,9 @@ public class CreateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("MessageId")
         private SinkRabbitMQParametersMessageId messageId;
 
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
+        private SinkRabbitMQParametersNetworkType networkType;
+
         @com.aliyun.core.annotation.NameInMap("Properties")
         private SinkRabbitMQParametersProperties properties;
 
@@ -12316,22 +12762,35 @@ public class CreateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("RoutingKey")
         private SinkRabbitMQParametersRoutingKey routingKey;
 
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+        private SinkRabbitMQParametersSecurityGroupId securityGroupId;
+
         @com.aliyun.core.annotation.NameInMap("TargetType")
         private TargetType targetType;
 
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+        private SinkRabbitMQParametersVSwitchIds vSwitchIds;
+
         @com.aliyun.core.annotation.NameInMap("VirtualHostName")
         private VirtualHostName virtualHostName;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private SinkRabbitMQParametersVpcId vpcId;
 
         private SinkRabbitMQParameters(Builder builder) {
             this.body = builder.body;
             this.exchange = builder.exchange;
             this.instanceId = builder.instanceId;
             this.messageId = builder.messageId;
+            this.networkType = builder.networkType;
             this.properties = builder.properties;
             this.queueName = builder.queueName;
             this.routingKey = builder.routingKey;
+            this.securityGroupId = builder.securityGroupId;
             this.targetType = builder.targetType;
+            this.vSwitchIds = builder.vSwitchIds;
             this.virtualHostName = builder.virtualHostName;
+            this.vpcId = builder.vpcId;
         }
 
         public static Builder builder() {
@@ -12371,6 +12830,13 @@ public class CreateEventStreamingRequest extends Request {
         }
 
         /**
+         * @return networkType
+         */
+        public SinkRabbitMQParametersNetworkType getNetworkType() {
+            return this.networkType;
+        }
+
+        /**
          * @return properties
          */
         public SinkRabbitMQParametersProperties getProperties() {
@@ -12392,10 +12858,24 @@ public class CreateEventStreamingRequest extends Request {
         }
 
         /**
+         * @return securityGroupId
+         */
+        public SinkRabbitMQParametersSecurityGroupId getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
          * @return targetType
          */
         public TargetType getTargetType() {
             return this.targetType;
+        }
+
+        /**
+         * @return vSwitchIds
+         */
+        public SinkRabbitMQParametersVSwitchIds getVSwitchIds() {
+            return this.vSwitchIds;
         }
 
         /**
@@ -12405,16 +12885,27 @@ public class CreateEventStreamingRequest extends Request {
             return this.virtualHostName;
         }
 
+        /**
+         * @return vpcId
+         */
+        public SinkRabbitMQParametersVpcId getVpcId() {
+            return this.vpcId;
+        }
+
         public static final class Builder {
             private SinkRabbitMQParametersBody body; 
             private Exchange exchange; 
             private SinkRabbitMQParametersInstanceId instanceId; 
             private SinkRabbitMQParametersMessageId messageId; 
+            private SinkRabbitMQParametersNetworkType networkType; 
             private SinkRabbitMQParametersProperties properties; 
             private SinkRabbitMQParametersQueueName queueName; 
             private SinkRabbitMQParametersRoutingKey routingKey; 
+            private SinkRabbitMQParametersSecurityGroupId securityGroupId; 
             private TargetType targetType; 
+            private SinkRabbitMQParametersVSwitchIds vSwitchIds; 
             private VirtualHostName virtualHostName; 
+            private SinkRabbitMQParametersVpcId vpcId; 
 
             private Builder() {
             } 
@@ -12424,11 +12915,15 @@ public class CreateEventStreamingRequest extends Request {
                 this.exchange = model.exchange;
                 this.instanceId = model.instanceId;
                 this.messageId = model.messageId;
+                this.networkType = model.networkType;
                 this.properties = model.properties;
                 this.queueName = model.queueName;
                 this.routingKey = model.routingKey;
+                this.securityGroupId = model.securityGroupId;
                 this.targetType = model.targetType;
+                this.vSwitchIds = model.vSwitchIds;
                 this.virtualHostName = model.virtualHostName;
+                this.vpcId = model.vpcId;
             } 
 
             /**
@@ -12464,6 +12959,14 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
+             * <p>The network type.</p>
+             */
+            public Builder networkType(SinkRabbitMQParametersNetworkType networkType) {
+                this.networkType = networkType;
+                return this;
+            }
+
+            /**
              * <p>The properties that you want to use to filter messages.</p>
              */
             public Builder properties(SinkRabbitMQParametersProperties properties) {
@@ -12488,6 +12991,14 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
+             * <p>The ID of the security group to which the Managed Service for Prometheus instance belongs.</p>
+             */
+            public Builder securityGroupId(SinkRabbitMQParametersSecurityGroupId securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
              * <p>The type of the resource to which you want to deliver events.</p>
              */
             public Builder targetType(TargetType targetType) {
@@ -12496,10 +13007,26 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
+             * VSwitchIds.
+             */
+            public Builder vSwitchIds(SinkRabbitMQParametersVSwitchIds vSwitchIds) {
+                this.vSwitchIds = vSwitchIds;
+                return this;
+            }
+
+            /**
              * <p>The name of the vhost to which the ApsaraMQ for RabbitMQ instance belongs.</p>
              */
             public Builder virtualHostName(VirtualHostName virtualHostName) {
                 this.virtualHostName = virtualHostName;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the VPC to which the Managed Service for Prometheus instance belongs.</p>
+             */
+            public Builder vpcId(SinkRabbitMQParametersVpcId vpcId) {
+                this.vpcId = vpcId;
                 return this;
             }
 
@@ -15919,6 +16446,9 @@ public class CreateEventStreamingRequest extends Request {
      * <p>CreateEventStreamingRequest</p>
      */
     public static class Sink extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SinkAgentRunParameters")
+        private SinkAgentRunParameters sinkAgentRunParameters;
+
         @com.aliyun.core.annotation.NameInMap("SinkApacheKafkaParameters")
         private SinkApacheKafkaParameters sinkApacheKafkaParameters;
 
@@ -15998,6 +16528,7 @@ public class CreateEventStreamingRequest extends Request {
         private SinkSLSParameters sinkSLSParameters;
 
         private Sink(Builder builder) {
+            this.sinkAgentRunParameters = builder.sinkAgentRunParameters;
             this.sinkApacheKafkaParameters = builder.sinkApacheKafkaParameters;
             this.sinkApacheRocketMQCheckpointParameters = builder.sinkApacheRocketMQCheckpointParameters;
             this.sinkApiDestinationParameters = builder.sinkApiDestinationParameters;
@@ -16032,6 +16563,13 @@ public class CreateEventStreamingRequest extends Request {
 
         public static Sink create() {
             return builder().build();
+        }
+
+        /**
+         * @return sinkAgentRunParameters
+         */
+        public SinkAgentRunParameters getSinkAgentRunParameters() {
+            return this.sinkAgentRunParameters;
         }
 
         /**
@@ -16217,6 +16755,7 @@ public class CreateEventStreamingRequest extends Request {
         }
 
         public static final class Builder {
+            private SinkAgentRunParameters sinkAgentRunParameters; 
             private SinkApacheKafkaParameters sinkApacheKafkaParameters; 
             private SinkApacheRocketMQCheckpointParameters sinkApacheRocketMQCheckpointParameters; 
             private SinkApiDestinationParameters sinkApiDestinationParameters; 
@@ -16248,6 +16787,7 @@ public class CreateEventStreamingRequest extends Request {
             } 
 
             private Builder(Sink model) {
+                this.sinkAgentRunParameters = model.sinkAgentRunParameters;
                 this.sinkApacheKafkaParameters = model.sinkApacheKafkaParameters;
                 this.sinkApacheRocketMQCheckpointParameters = model.sinkApacheRocketMQCheckpointParameters;
                 this.sinkApiDestinationParameters = model.sinkApiDestinationParameters;
@@ -16275,6 +16815,14 @@ public class CreateEventStreamingRequest extends Request {
                 this.sinkRocketMQParameters = model.sinkRocketMQParameters;
                 this.sinkSLSParameters = model.sinkSLSParameters;
             } 
+
+            /**
+             * SinkAgentRunParameters.
+             */
+            public Builder sinkAgentRunParameters(SinkAgentRunParameters sinkAgentRunParameters) {
+                this.sinkAgentRunParameters = sinkAgentRunParameters;
+                return this;
+            }
 
             /**
              * SinkApacheKafkaParameters.
@@ -18892,20 +19440,36 @@ public class CreateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
+        private String networkType;
+
         @com.aliyun.core.annotation.NameInMap("QueueName")
         private String queueName;
 
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+        private String securityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+        private String vSwitchIds;
+
         @com.aliyun.core.annotation.NameInMap("VirtualHostName")
         private String virtualHostName;
 
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
+
         private SourceRabbitMQParameters(Builder builder) {
             this.instanceId = builder.instanceId;
+            this.networkType = builder.networkType;
             this.queueName = builder.queueName;
             this.regionId = builder.regionId;
+            this.securityGroupId = builder.securityGroupId;
+            this.vSwitchIds = builder.vSwitchIds;
             this.virtualHostName = builder.virtualHostName;
+            this.vpcId = builder.vpcId;
         }
 
         public static Builder builder() {
@@ -18924,6 +19488,13 @@ public class CreateEventStreamingRequest extends Request {
         }
 
         /**
+         * @return networkType
+         */
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
+        /**
          * @return queueName
          */
         public String getQueueName() {
@@ -18938,26 +19509,55 @@ public class CreateEventStreamingRequest extends Request {
         }
 
         /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return vSwitchIds
+         */
+        public String getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        /**
          * @return virtualHostName
          */
         public String getVirtualHostName() {
             return this.virtualHostName;
         }
 
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
         public static final class Builder {
             private String instanceId; 
+            private String networkType; 
             private String queueName; 
             private String regionId; 
+            private String securityGroupId; 
+            private String vSwitchIds; 
             private String virtualHostName; 
+            private String vpcId; 
 
             private Builder() {
             } 
 
             private Builder(SourceRabbitMQParameters model) {
                 this.instanceId = model.instanceId;
+                this.networkType = model.networkType;
                 this.queueName = model.queueName;
                 this.regionId = model.regionId;
+                this.securityGroupId = model.securityGroupId;
+                this.vSwitchIds = model.vSwitchIds;
                 this.virtualHostName = model.virtualHostName;
+                this.vpcId = model.vpcId;
             } 
 
             /**
@@ -18968,6 +19568,14 @@ public class CreateEventStreamingRequest extends Request {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * <p>The network type.</p>
+             */
+            public Builder networkType(String networkType) {
+                this.networkType = networkType;
                 return this;
             }
 
@@ -18994,6 +19602,28 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
+             * <p>The ID of the security group to which the ApsaraMQ for Kafka instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp1iv19sp1msc7zot4wr</p>
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the vSwitch with which the ApsaraMQ for Kafka instance is associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp179l3llg3jjxwrq72hh</p>
+             */
+            public Builder vSwitchIds(String vSwitchIds) {
+                this.vSwitchIds = vSwitchIds;
+                return this;
+            }
+
+            /**
              * <p>The name of the vhost to which the ApsaraMQ for RabbitMQ instance belongs.</p>
              * 
              * <strong>example:</strong>
@@ -19001,6 +19631,17 @@ public class CreateEventStreamingRequest extends Request {
              */
             public Builder virtualHostName(String virtualHostName) {
                 this.virtualHostName = virtualHostName;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the VPC to which the ApsaraMQ for Kafka instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-8vblalsi0vbhizr77cbhu</p>
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
                 return this;
             }
 
@@ -19880,6 +20521,12 @@ public class CreateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("SourceEventBusParameters")
         private SourceEventBusParameters sourceEventBusParameters;
 
+        @com.aliyun.core.annotation.NameInMap("SourceFeiShuDocsParameters")
+        private SourceFeiShuDocsParameters sourceFeiShuDocsParameters;
+
+        @com.aliyun.core.annotation.NameInMap("SourceJDBCParameters")
+        private SourceJDBCParameters sourceJDBCParameters;
+
         @com.aliyun.core.annotation.NameInMap("SourceKafkaParameters")
         private SourceKafkaParameters sourceKafkaParameters;
 
@@ -19929,6 +20576,8 @@ public class CreateEventStreamingRequest extends Request {
             this.sourceCustomizedKafkaParameters = builder.sourceCustomizedKafkaParameters;
             this.sourceDTSParameters = builder.sourceDTSParameters;
             this.sourceEventBusParameters = builder.sourceEventBusParameters;
+            this.sourceFeiShuDocsParameters = builder.sourceFeiShuDocsParameters;
+            this.sourceJDBCParameters = builder.sourceJDBCParameters;
             this.sourceKafkaParameters = builder.sourceKafkaParameters;
             this.sourceMNSParameters = builder.sourceMNSParameters;
             this.sourceMQTTParameters = builder.sourceMQTTParameters;
@@ -19993,6 +20642,20 @@ public class CreateEventStreamingRequest extends Request {
          */
         public SourceEventBusParameters getSourceEventBusParameters() {
             return this.sourceEventBusParameters;
+        }
+
+        /**
+         * @return sourceFeiShuDocsParameters
+         */
+        public SourceFeiShuDocsParameters getSourceFeiShuDocsParameters() {
+            return this.sourceFeiShuDocsParameters;
+        }
+
+        /**
+         * @return sourceJDBCParameters
+         */
+        public SourceJDBCParameters getSourceJDBCParameters() {
+            return this.sourceJDBCParameters;
         }
 
         /**
@@ -20100,6 +20763,8 @@ public class CreateEventStreamingRequest extends Request {
             private SourceCustomizedKafkaParameters sourceCustomizedKafkaParameters; 
             private SourceDTSParameters sourceDTSParameters; 
             private SourceEventBusParameters sourceEventBusParameters; 
+            private SourceFeiShuDocsParameters sourceFeiShuDocsParameters; 
+            private SourceJDBCParameters sourceJDBCParameters; 
             private SourceKafkaParameters sourceKafkaParameters; 
             private SourceMNSParameters sourceMNSParameters; 
             private SourceMQTTParameters sourceMQTTParameters; 
@@ -20125,6 +20790,8 @@ public class CreateEventStreamingRequest extends Request {
                 this.sourceCustomizedKafkaParameters = model.sourceCustomizedKafkaParameters;
                 this.sourceDTSParameters = model.sourceDTSParameters;
                 this.sourceEventBusParameters = model.sourceEventBusParameters;
+                this.sourceFeiShuDocsParameters = model.sourceFeiShuDocsParameters;
+                this.sourceJDBCParameters = model.sourceJDBCParameters;
                 this.sourceKafkaParameters = model.sourceKafkaParameters;
                 this.sourceMNSParameters = model.sourceMNSParameters;
                 this.sourceMQTTParameters = model.sourceMQTTParameters;
@@ -20186,6 +20853,22 @@ public class CreateEventStreamingRequest extends Request {
              */
             public Builder sourceEventBusParameters(SourceEventBusParameters sourceEventBusParameters) {
                 this.sourceEventBusParameters = sourceEventBusParameters;
+                return this;
+            }
+
+            /**
+             * SourceFeiShuDocsParameters.
+             */
+            public Builder sourceFeiShuDocsParameters(SourceFeiShuDocsParameters sourceFeiShuDocsParameters) {
+                this.sourceFeiShuDocsParameters = sourceFeiShuDocsParameters;
+                return this;
+            }
+
+            /**
+             * SourceJDBCParameters.
+             */
+            public Builder sourceJDBCParameters(SourceJDBCParameters sourceJDBCParameters) {
+                this.sourceJDBCParameters = sourceJDBCParameters;
                 return this;
             }
 

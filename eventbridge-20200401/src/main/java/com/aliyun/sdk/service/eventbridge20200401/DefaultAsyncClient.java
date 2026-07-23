@@ -29,8 +29,35 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "eventbridge";
         this.version = "2020-04-01";
-        this.endpointRule = "";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("us-west-1", "eventbridge-console.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "eventbridge-console.us-east-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "eventbridge-console.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "eventbridge-console.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "eventbridge-console.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "eventbridge-console.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "eventbridge-console.cn-shenzhen-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "eventbridge-console.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "eventbridge-console.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "eventbridge-console.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "eventbridge-console.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "eventbridge-console.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "eventbridge-console.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "eventbridge-console.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "eventbridge-console.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "eventbridge-console.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "eventbridge-console.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "eventbridge-console.cn-beijing-finance-1.aliyuncs.com"),
+            new TeaPair("cn-beijing", "eventbridge-console.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "eventbridge-console.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "eventbridge-console.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "eventbridge-console.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "eventbridge-console.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "eventbridge-console.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "eventbridge-console.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "eventbridge-console.ap-northeast-1.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -337,6 +364,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteEventAnalysisJob  DeleteEventAnalysisJobRequest
+     * @return DeleteEventAnalysisJobResponse
+     */
+    @Override
+    public CompletableFuture<DeleteEventAnalysisJobResponse> deleteEventAnalysisJob(DeleteEventAnalysisJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteEventAnalysisJob").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteEventAnalysisJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteEventAnalysisJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can call this API operation to delete an event bus.</p>
      * 
@@ -352,6 +397,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteEventBusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteEventHouseRuntime  DeleteEventHouseRuntimeRequest
+     * @return DeleteEventHouseRuntimeResponse
+     */
+    @Override
+    public CompletableFuture<DeleteEventHouseRuntimeResponse> deleteEventHouseRuntime(DeleteEventHouseRuntimeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteEventHouseRuntime").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteEventHouseRuntimeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteEventHouseRuntimeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -655,6 +718,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetEventHouseRuntime  GetEventHouseRuntimeRequest
+     * @return GetEventHouseRuntimeResponse
+     */
+    @Override
+    public CompletableFuture<GetEventHouseRuntimeResponse> getEventHouseRuntime(GetEventHouseRuntimeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetEventHouseRuntime").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetEventHouseRuntimeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetEventHouseRuntimeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can call this API operation to query the details of an event stream.</p>
      * 
@@ -847,6 +928,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListEventBusesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListEventHouseRuntimes  ListEventHouseRuntimesRequest
+     * @return ListEventHouseRuntimesResponse
+     */
+    @Override
+    public CompletableFuture<ListEventHouseRuntimesResponse> listEventHouseRuntimes(ListEventHouseRuntimesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListEventHouseRuntimes").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListEventHouseRuntimesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListEventHouseRuntimesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1288,6 +1387,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateEventBusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateEventHouseRuntime  UpdateEventHouseRuntimeRequest
+     * @return UpdateEventHouseRuntimeResponse
+     */
+    @Override
+    public CompletableFuture<UpdateEventHouseRuntimeResponse> updateEventHouseRuntime(UpdateEventHouseRuntimeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateEventHouseRuntime").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateEventHouseRuntimeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateEventHouseRuntimeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

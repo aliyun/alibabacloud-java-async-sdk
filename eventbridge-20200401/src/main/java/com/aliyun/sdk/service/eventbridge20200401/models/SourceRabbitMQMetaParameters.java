@@ -47,6 +47,9 @@ public class SourceRabbitMQMetaParameters extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
     private String securityGroupId;
 
+    @com.aliyun.core.annotation.NameInMap("SyncMetaType")
+    private String syncMetaType;
+
     @com.aliyun.core.annotation.NameInMap("Username")
     private String username;
 
@@ -70,6 +73,7 @@ public class SourceRabbitMQMetaParameters extends TeaModel {
         this.password = builder.password;
         this.regex = builder.regex;
         this.securityGroupId = builder.securityGroupId;
+        this.syncMetaType = builder.syncMetaType;
         this.username = builder.username;
         this.vSwitchIds = builder.vSwitchIds;
         this.virtualHostName = builder.virtualHostName;
@@ -159,6 +163,13 @@ public class SourceRabbitMQMetaParameters extends TeaModel {
     }
 
     /**
+     * @return syncMetaType
+     */
+    public String getSyncMetaType() {
+        return this.syncMetaType;
+    }
+
+    /**
      * @return username
      */
     public String getUsername() {
@@ -197,6 +208,7 @@ public class SourceRabbitMQMetaParameters extends TeaModel {
         private String password; 
         private String regex; 
         private String securityGroupId; 
+        private String syncMetaType; 
         private String username; 
         private String vSwitchIds; 
         private String virtualHostName; 
@@ -216,6 +228,7 @@ public class SourceRabbitMQMetaParameters extends TeaModel {
             this.password = model.password;
             this.regex = model.regex;
             this.securityGroupId = model.securityGroupId;
+            this.syncMetaType = model.syncMetaType;
             this.username = model.username;
             this.vSwitchIds = model.vSwitchIds;
             this.virtualHostName = model.virtualHostName;
@@ -299,6 +312,14 @@ public class SourceRabbitMQMetaParameters extends TeaModel {
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        /**
+         * SyncMetaType.
+         */
+        public Builder syncMetaType(String syncMetaType) {
+            this.syncMetaType = syncMetaType;
             return this;
         }
 

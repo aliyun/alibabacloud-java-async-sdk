@@ -20,6 +20,15 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BodyDataType")
     private String bodyDataType;
 
+    @com.aliyun.core.annotation.NameInMap("CloudMigrationTaskId")
+    private String cloudMigrationTaskId;
+
+    @com.aliyun.core.annotation.NameInMap("DstClusterHost")
+    private String dstClusterHost;
+
+    @com.aliyun.core.annotation.NameInMap("DstClusterType")
+    private String dstClusterType;
+
     @com.aliyun.core.annotation.NameInMap("Endpoint")
     private String endpoint;
 
@@ -41,8 +50,20 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PrefetchCount")
     private String prefetchCount;
 
+    @com.aliyun.core.annotation.NameInMap("Regex")
+    private String regex;
+
     @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
     private String securityGroupId;
+
+    @com.aliyun.core.annotation.NameInMap("SrcClusterHost")
+    private String srcClusterHost;
+
+    @com.aliyun.core.annotation.NameInMap("SrcClusterType")
+    private String srcClusterType;
+
+    @com.aliyun.core.annotation.NameInMap("SyncMetaType")
+    private String syncMetaType;
 
     @com.aliyun.core.annotation.NameInMap("Username")
     private String username;
@@ -58,6 +79,9 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
 
     private SourceRabbitMQMsgSyncParameters(Builder builder) {
         this.bodyDataType = builder.bodyDataType;
+        this.cloudMigrationTaskId = builder.cloudMigrationTaskId;
+        this.dstClusterHost = builder.dstClusterHost;
+        this.dstClusterType = builder.dstClusterType;
         this.endpoint = builder.endpoint;
         this.instanceId = builder.instanceId;
         this.instanceType = builder.instanceType;
@@ -65,7 +89,11 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
         this.orderConsume = builder.orderConsume;
         this.password = builder.password;
         this.prefetchCount = builder.prefetchCount;
+        this.regex = builder.regex;
         this.securityGroupId = builder.securityGroupId;
+        this.srcClusterHost = builder.srcClusterHost;
+        this.srcClusterType = builder.srcClusterType;
+        this.syncMetaType = builder.syncMetaType;
         this.username = builder.username;
         this.vSwitchIds = builder.vSwitchIds;
         this.virtualHostName = builder.virtualHostName;
@@ -89,6 +117,27 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
      */
     public String getBodyDataType() {
         return this.bodyDataType;
+    }
+
+    /**
+     * @return cloudMigrationTaskId
+     */
+    public String getCloudMigrationTaskId() {
+        return this.cloudMigrationTaskId;
+    }
+
+    /**
+     * @return dstClusterHost
+     */
+    public String getDstClusterHost() {
+        return this.dstClusterHost;
+    }
+
+    /**
+     * @return dstClusterType
+     */
+    public String getDstClusterType() {
+        return this.dstClusterType;
     }
 
     /**
@@ -141,10 +190,38 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
     }
 
     /**
+     * @return regex
+     */
+    public String getRegex() {
+        return this.regex;
+    }
+
+    /**
      * @return securityGroupId
      */
     public String getSecurityGroupId() {
         return this.securityGroupId;
+    }
+
+    /**
+     * @return srcClusterHost
+     */
+    public String getSrcClusterHost() {
+        return this.srcClusterHost;
+    }
+
+    /**
+     * @return srcClusterType
+     */
+    public String getSrcClusterType() {
+        return this.srcClusterType;
+    }
+
+    /**
+     * @return syncMetaType
+     */
+    public String getSyncMetaType() {
+        return this.syncMetaType;
     }
 
     /**
@@ -177,6 +254,9 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
 
     public static final class Builder {
         private String bodyDataType; 
+        private String cloudMigrationTaskId; 
+        private String dstClusterHost; 
+        private String dstClusterType; 
         private String endpoint; 
         private String instanceId; 
         private String instanceType; 
@@ -184,7 +264,11 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
         private String orderConsume; 
         private String password; 
         private String prefetchCount; 
+        private String regex; 
         private String securityGroupId; 
+        private String srcClusterHost; 
+        private String srcClusterType; 
+        private String syncMetaType; 
         private String username; 
         private String vSwitchIds; 
         private String virtualHostName; 
@@ -195,6 +279,9 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
 
         private Builder(SourceRabbitMQMsgSyncParameters model) {
             this.bodyDataType = model.bodyDataType;
+            this.cloudMigrationTaskId = model.cloudMigrationTaskId;
+            this.dstClusterHost = model.dstClusterHost;
+            this.dstClusterType = model.dstClusterType;
             this.endpoint = model.endpoint;
             this.instanceId = model.instanceId;
             this.instanceType = model.instanceType;
@@ -202,7 +289,11 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
             this.orderConsume = model.orderConsume;
             this.password = model.password;
             this.prefetchCount = model.prefetchCount;
+            this.regex = model.regex;
             this.securityGroupId = model.securityGroupId;
+            this.srcClusterHost = model.srcClusterHost;
+            this.srcClusterType = model.srcClusterType;
+            this.syncMetaType = model.syncMetaType;
             this.username = model.username;
             this.vSwitchIds = model.vSwitchIds;
             this.virtualHostName = model.virtualHostName;
@@ -214,6 +305,30 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
          */
         public Builder bodyDataType(String bodyDataType) {
             this.bodyDataType = bodyDataType;
+            return this;
+        }
+
+        /**
+         * CloudMigrationTaskId.
+         */
+        public Builder cloudMigrationTaskId(String cloudMigrationTaskId) {
+            this.cloudMigrationTaskId = cloudMigrationTaskId;
+            return this;
+        }
+
+        /**
+         * DstClusterHost.
+         */
+        public Builder dstClusterHost(String dstClusterHost) {
+            this.dstClusterHost = dstClusterHost;
+            return this;
+        }
+
+        /**
+         * DstClusterType.
+         */
+        public Builder dstClusterType(String dstClusterType) {
+            this.dstClusterType = dstClusterType;
             return this;
         }
 
@@ -274,10 +389,42 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
         }
 
         /**
+         * Regex.
+         */
+        public Builder regex(String regex) {
+            this.regex = regex;
+            return this;
+        }
+
+        /**
          * SecurityGroupId.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        /**
+         * SrcClusterHost.
+         */
+        public Builder srcClusterHost(String srcClusterHost) {
+            this.srcClusterHost = srcClusterHost;
+            return this;
+        }
+
+        /**
+         * SrcClusterType.
+         */
+        public Builder srcClusterType(String srcClusterType) {
+            this.srcClusterType = srcClusterType;
+            return this;
+        }
+
+        /**
+         * SyncMetaType.
+         */
+        public Builder syncMetaType(String syncMetaType) {
+            this.syncMetaType = syncMetaType;
             return this;
         }
 

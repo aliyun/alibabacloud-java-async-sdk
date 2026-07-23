@@ -14261,6 +14261,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
      * <p>GetEventStreamingResponseBody</p>
      */
     public static class Sink extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SinkAgentRunParameters")
+        private SinkAgentRunParameters sinkAgentRunParameters;
+
         @com.aliyun.core.annotation.NameInMap("SinkApacheKafkaParameters")
         private SinkApacheKafkaParameters sinkApacheKafkaParameters;
 
@@ -14334,6 +14337,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         private SinkSLSParameters sinkSLSParameters;
 
         private Sink(Builder builder) {
+            this.sinkAgentRunParameters = builder.sinkAgentRunParameters;
             this.sinkApacheKafkaParameters = builder.sinkApacheKafkaParameters;
             this.sinkApacheRocketMQCheckpointParameters = builder.sinkApacheRocketMQCheckpointParameters;
             this.sinkApiDestinationParameters = builder.sinkApiDestinationParameters;
@@ -14366,6 +14370,13 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
         public static Sink create() {
             return builder().build();
+        }
+
+        /**
+         * @return sinkAgentRunParameters
+         */
+        public SinkAgentRunParameters getSinkAgentRunParameters() {
+            return this.sinkAgentRunParameters;
         }
 
         /**
@@ -14537,6 +14548,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private SinkAgentRunParameters sinkAgentRunParameters; 
             private SinkApacheKafkaParameters sinkApacheKafkaParameters; 
             private SinkApacheRocketMQCheckpointParameters sinkApacheRocketMQCheckpointParameters; 
             private SinkApiDestinationParameters sinkApiDestinationParameters; 
@@ -14566,6 +14578,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             } 
 
             private Builder(Sink model) {
+                this.sinkAgentRunParameters = model.sinkAgentRunParameters;
                 this.sinkApacheKafkaParameters = model.sinkApacheKafkaParameters;
                 this.sinkApacheRocketMQCheckpointParameters = model.sinkApacheRocketMQCheckpointParameters;
                 this.sinkApiDestinationParameters = model.sinkApiDestinationParameters;
@@ -14591,6 +14604,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
                 this.sinkRocketMQParameters = model.sinkRocketMQParameters;
                 this.sinkSLSParameters = model.sinkSLSParameters;
             } 
+
+            /**
+             * SinkAgentRunParameters.
+             */
+            public Builder sinkAgentRunParameters(SinkAgentRunParameters sinkAgentRunParameters) {
+                this.sinkAgentRunParameters = sinkAgentRunParameters;
+                return this;
+            }
 
             /**
              * SinkApacheKafkaParameters.
@@ -18182,6 +18203,12 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourceEventBusParameters")
         private SourceEventBusParameters sourceEventBusParameters;
 
+        @com.aliyun.core.annotation.NameInMap("SourceFeiShuDocsParameters")
+        private SourceFeiShuDocsParameters sourceFeiShuDocsParameters;
+
+        @com.aliyun.core.annotation.NameInMap("SourceJDBCParameters")
+        private SourceJDBCParameters sourceJDBCParameters;
+
         @com.aliyun.core.annotation.NameInMap("SourceKafkaParameters")
         private SourceKafkaParameters sourceKafkaParameters;
 
@@ -18231,6 +18258,8 @@ public class GetEventStreamingResponseBody extends TeaModel {
             this.sourceCustomizedKafkaParameters = builder.sourceCustomizedKafkaParameters;
             this.sourceDTSParameters = builder.sourceDTSParameters;
             this.sourceEventBusParameters = builder.sourceEventBusParameters;
+            this.sourceFeiShuDocsParameters = builder.sourceFeiShuDocsParameters;
+            this.sourceJDBCParameters = builder.sourceJDBCParameters;
             this.sourceKafkaParameters = builder.sourceKafkaParameters;
             this.sourceMNSParameters = builder.sourceMNSParameters;
             this.sourceMQTTParameters = builder.sourceMQTTParameters;
@@ -18295,6 +18324,20 @@ public class GetEventStreamingResponseBody extends TeaModel {
          */
         public SourceEventBusParameters getSourceEventBusParameters() {
             return this.sourceEventBusParameters;
+        }
+
+        /**
+         * @return sourceFeiShuDocsParameters
+         */
+        public SourceFeiShuDocsParameters getSourceFeiShuDocsParameters() {
+            return this.sourceFeiShuDocsParameters;
+        }
+
+        /**
+         * @return sourceJDBCParameters
+         */
+        public SourceJDBCParameters getSourceJDBCParameters() {
+            return this.sourceJDBCParameters;
         }
 
         /**
@@ -18402,6 +18445,8 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private SourceCustomizedKafkaParameters sourceCustomizedKafkaParameters; 
             private SourceDTSParameters sourceDTSParameters; 
             private SourceEventBusParameters sourceEventBusParameters; 
+            private SourceFeiShuDocsParameters sourceFeiShuDocsParameters; 
+            private SourceJDBCParameters sourceJDBCParameters; 
             private SourceKafkaParameters sourceKafkaParameters; 
             private SourceMNSParameters sourceMNSParameters; 
             private SourceMQTTParameters sourceMQTTParameters; 
@@ -18427,6 +18472,8 @@ public class GetEventStreamingResponseBody extends TeaModel {
                 this.sourceCustomizedKafkaParameters = model.sourceCustomizedKafkaParameters;
                 this.sourceDTSParameters = model.sourceDTSParameters;
                 this.sourceEventBusParameters = model.sourceEventBusParameters;
+                this.sourceFeiShuDocsParameters = model.sourceFeiShuDocsParameters;
+                this.sourceJDBCParameters = model.sourceJDBCParameters;
                 this.sourceKafkaParameters = model.sourceKafkaParameters;
                 this.sourceMNSParameters = model.sourceMNSParameters;
                 this.sourceMQTTParameters = model.sourceMQTTParameters;
@@ -18488,6 +18535,22 @@ public class GetEventStreamingResponseBody extends TeaModel {
              */
             public Builder sourceEventBusParameters(SourceEventBusParameters sourceEventBusParameters) {
                 this.sourceEventBusParameters = sourceEventBusParameters;
+                return this;
+            }
+
+            /**
+             * SourceFeiShuDocsParameters.
+             */
+            public Builder sourceFeiShuDocsParameters(SourceFeiShuDocsParameters sourceFeiShuDocsParameters) {
+                this.sourceFeiShuDocsParameters = sourceFeiShuDocsParameters;
+                return this;
+            }
+
+            /**
+             * SourceJDBCParameters.
+             */
+            public Builder sourceJDBCParameters(SourceJDBCParameters sourceJDBCParameters) {
+                this.sourceJDBCParameters = sourceJDBCParameters;
                 return this;
             }
 
@@ -18728,6 +18791,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FilterPattern")
         private String filterPattern;
 
+        @com.aliyun.core.annotation.NameInMap("Metadata")
+        private String metadata;
+
         @com.aliyun.core.annotation.NameInMap("RunOptions")
         private RunOptions runOptions;
 
@@ -18748,6 +18814,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             this.detailedStatus = builder.detailedStatus;
             this.eventStreamingName = builder.eventStreamingName;
             this.filterPattern = builder.filterPattern;
+            this.metadata = builder.metadata;
             this.runOptions = builder.runOptions;
             this.sink = builder.sink;
             this.source = builder.source;
@@ -18792,6 +18859,13 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
 
         /**
+         * @return metadata
+         */
+        public String getMetadata() {
+            return this.metadata;
+        }
+
+        /**
          * @return runOptions
          */
         public RunOptions getRunOptions() {
@@ -18831,6 +18905,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private DetailedStatus detailedStatus; 
             private String eventStreamingName; 
             private String filterPattern; 
+            private String metadata; 
             private RunOptions runOptions; 
             private Sink sink; 
             private Source source; 
@@ -18845,6 +18920,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
                 this.detailedStatus = model.detailedStatus;
                 this.eventStreamingName = model.eventStreamingName;
                 this.filterPattern = model.filterPattern;
+                this.metadata = model.metadata;
                 this.runOptions = model.runOptions;
                 this.sink = model.sink;
                 this.source = model.source;
@@ -18887,6 +18963,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
              */
             public Builder filterPattern(String filterPattern) {
                 this.filterPattern = filterPattern;
+                return this;
+            }
+
+            /**
+             * Metadata.
+             */
+            public Builder metadata(String metadata) {
+                this.metadata = metadata;
                 return this;
             }
 

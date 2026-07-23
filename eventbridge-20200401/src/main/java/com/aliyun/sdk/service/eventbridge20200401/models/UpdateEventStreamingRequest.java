@@ -32,8 +32,11 @@ public class UpdateEventStreamingRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FilterPattern")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String filterPattern;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Metadata")
+    private String metadata;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RunOptions")
@@ -41,12 +44,10 @@ public class UpdateEventStreamingRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Sink")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Sink sink;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Source")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Source source;
 
     @com.aliyun.core.annotation.Body
@@ -59,6 +60,7 @@ public class UpdateEventStreamingRequest extends Request {
         this.description = builder.description;
         this.eventStreamingName = builder.eventStreamingName;
         this.filterPattern = builder.filterPattern;
+        this.metadata = builder.metadata;
         this.runOptions = builder.runOptions;
         this.sink = builder.sink;
         this.source = builder.source;
@@ -107,6 +109,13 @@ public class UpdateEventStreamingRequest extends Request {
     }
 
     /**
+     * @return metadata
+     */
+    public String getMetadata() {
+        return this.metadata;
+    }
+
+    /**
      * @return runOptions
      */
     public RunOptions getRunOptions() {
@@ -139,6 +148,7 @@ public class UpdateEventStreamingRequest extends Request {
         private String description; 
         private String eventStreamingName; 
         private String filterPattern; 
+        private String metadata; 
         private RunOptions runOptions; 
         private Sink sink; 
         private Source source; 
@@ -154,6 +164,7 @@ public class UpdateEventStreamingRequest extends Request {
             this.description = request.description;
             this.eventStreamingName = request.eventStreamingName;
             this.filterPattern = request.filterPattern;
+            this.metadata = request.metadata;
             this.runOptions = request.runOptions;
             this.sink = request.sink;
             this.source = request.source;
@@ -196,7 +207,6 @@ public class UpdateEventStreamingRequest extends Request {
 
         /**
          * <p>The rule that is used to filter events. If you leave this parameter empty, all events are matched.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -224,6 +234,15 @@ public class UpdateEventStreamingRequest extends Request {
         }
 
         /**
+         * Metadata.
+         */
+        public Builder metadata(String metadata) {
+            this.putBodyParameter("Metadata", metadata);
+            this.metadata = metadata;
+            return this;
+        }
+
+        /**
          * <p>The parameters that are configured for the runtime environment.</p>
          */
         public Builder runOptions(RunOptions runOptions) {
@@ -235,7 +254,6 @@ public class UpdateEventStreamingRequest extends Request {
 
         /**
          * <p>The event target. You must and can specify only one event target.</p>
-         * <p>This parameter is required.</p>
          */
         public Builder sink(Sink sink) {
             String sinkShrink = shrink(sink, "Sink", "json");
@@ -246,7 +264,6 @@ public class UpdateEventStreamingRequest extends Request {
 
         /**
          * <p>The event provider, which is also known as the event source. You must and can specify only one event source.</p>
-         * <p>This parameter is required.</p>
          */
         public Builder source(Source source) {
             String sourceShrink = shrink(source, "Source", "json");
@@ -16438,6 +16455,9 @@ public class UpdateEventStreamingRequest extends Request {
      * <p>UpdateEventStreamingRequest</p>
      */
     public static class Sink extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SinkAgentRunParameters")
+        private SinkAgentRunParameters sinkAgentRunParameters;
+
         @com.aliyun.core.annotation.NameInMap("SinkApacheKafkaParameters")
         private SinkApacheKafkaParameters sinkApacheKafkaParameters;
 
@@ -16517,6 +16537,7 @@ public class UpdateEventStreamingRequest extends Request {
         private SinkSLSParameters sinkSLSParameters;
 
         private Sink(Builder builder) {
+            this.sinkAgentRunParameters = builder.sinkAgentRunParameters;
             this.sinkApacheKafkaParameters = builder.sinkApacheKafkaParameters;
             this.sinkApacheRocketMQCheckpointParameters = builder.sinkApacheRocketMQCheckpointParameters;
             this.sinkApiDestinationParameters = builder.sinkApiDestinationParameters;
@@ -16551,6 +16572,13 @@ public class UpdateEventStreamingRequest extends Request {
 
         public static Sink create() {
             return builder().build();
+        }
+
+        /**
+         * @return sinkAgentRunParameters
+         */
+        public SinkAgentRunParameters getSinkAgentRunParameters() {
+            return this.sinkAgentRunParameters;
         }
 
         /**
@@ -16736,6 +16764,7 @@ public class UpdateEventStreamingRequest extends Request {
         }
 
         public static final class Builder {
+            private SinkAgentRunParameters sinkAgentRunParameters; 
             private SinkApacheKafkaParameters sinkApacheKafkaParameters; 
             private SinkApacheRocketMQCheckpointParameters sinkApacheRocketMQCheckpointParameters; 
             private SinkApiDestinationParameters sinkApiDestinationParameters; 
@@ -16767,6 +16796,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             private Builder(Sink model) {
+                this.sinkAgentRunParameters = model.sinkAgentRunParameters;
                 this.sinkApacheKafkaParameters = model.sinkApacheKafkaParameters;
                 this.sinkApacheRocketMQCheckpointParameters = model.sinkApacheRocketMQCheckpointParameters;
                 this.sinkApiDestinationParameters = model.sinkApiDestinationParameters;
@@ -16794,6 +16824,14 @@ public class UpdateEventStreamingRequest extends Request {
                 this.sinkRocketMQParameters = model.sinkRocketMQParameters;
                 this.sinkSLSParameters = model.sinkSLSParameters;
             } 
+
+            /**
+             * SinkAgentRunParameters.
+             */
+            public Builder sinkAgentRunParameters(SinkAgentRunParameters sinkAgentRunParameters) {
+                this.sinkAgentRunParameters = sinkAgentRunParameters;
+                return this;
+            }
 
             /**
              * SinkApacheKafkaParameters.
@@ -20357,6 +20395,12 @@ public class UpdateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("SourceEventBusParameters")
         private SourceEventBusParameters sourceEventBusParameters;
 
+        @com.aliyun.core.annotation.NameInMap("SourceFeiShuDocsParameters")
+        private SourceFeiShuDocsParameters sourceFeiShuDocsParameters;
+
+        @com.aliyun.core.annotation.NameInMap("SourceJDBCParameters")
+        private SourceJDBCParameters sourceJDBCParameters;
+
         @com.aliyun.core.annotation.NameInMap("SourceKafkaParameters")
         private SourceKafkaParameters sourceKafkaParameters;
 
@@ -20406,6 +20450,8 @@ public class UpdateEventStreamingRequest extends Request {
             this.sourceCustomizedKafkaParameters = builder.sourceCustomizedKafkaParameters;
             this.sourceDTSParameters = builder.sourceDTSParameters;
             this.sourceEventBusParameters = builder.sourceEventBusParameters;
+            this.sourceFeiShuDocsParameters = builder.sourceFeiShuDocsParameters;
+            this.sourceJDBCParameters = builder.sourceJDBCParameters;
             this.sourceKafkaParameters = builder.sourceKafkaParameters;
             this.sourceMNSParameters = builder.sourceMNSParameters;
             this.sourceMQTTParameters = builder.sourceMQTTParameters;
@@ -20470,6 +20516,20 @@ public class UpdateEventStreamingRequest extends Request {
          */
         public SourceEventBusParameters getSourceEventBusParameters() {
             return this.sourceEventBusParameters;
+        }
+
+        /**
+         * @return sourceFeiShuDocsParameters
+         */
+        public SourceFeiShuDocsParameters getSourceFeiShuDocsParameters() {
+            return this.sourceFeiShuDocsParameters;
+        }
+
+        /**
+         * @return sourceJDBCParameters
+         */
+        public SourceJDBCParameters getSourceJDBCParameters() {
+            return this.sourceJDBCParameters;
         }
 
         /**
@@ -20577,6 +20637,8 @@ public class UpdateEventStreamingRequest extends Request {
             private SourceCustomizedKafkaParameters sourceCustomizedKafkaParameters; 
             private SourceDTSParameters sourceDTSParameters; 
             private SourceEventBusParameters sourceEventBusParameters; 
+            private SourceFeiShuDocsParameters sourceFeiShuDocsParameters; 
+            private SourceJDBCParameters sourceJDBCParameters; 
             private SourceKafkaParameters sourceKafkaParameters; 
             private SourceMNSParameters sourceMNSParameters; 
             private SourceMQTTParameters sourceMQTTParameters; 
@@ -20602,6 +20664,8 @@ public class UpdateEventStreamingRequest extends Request {
                 this.sourceCustomizedKafkaParameters = model.sourceCustomizedKafkaParameters;
                 this.sourceDTSParameters = model.sourceDTSParameters;
                 this.sourceEventBusParameters = model.sourceEventBusParameters;
+                this.sourceFeiShuDocsParameters = model.sourceFeiShuDocsParameters;
+                this.sourceJDBCParameters = model.sourceJDBCParameters;
                 this.sourceKafkaParameters = model.sourceKafkaParameters;
                 this.sourceMNSParameters = model.sourceMNSParameters;
                 this.sourceMQTTParameters = model.sourceMQTTParameters;
@@ -20663,6 +20727,22 @@ public class UpdateEventStreamingRequest extends Request {
              */
             public Builder sourceEventBusParameters(SourceEventBusParameters sourceEventBusParameters) {
                 this.sourceEventBusParameters = sourceEventBusParameters;
+                return this;
+            }
+
+            /**
+             * SourceFeiShuDocsParameters.
+             */
+            public Builder sourceFeiShuDocsParameters(SourceFeiShuDocsParameters sourceFeiShuDocsParameters) {
+                this.sourceFeiShuDocsParameters = sourceFeiShuDocsParameters;
+                return this;
+            }
+
+            /**
+             * SourceJDBCParameters.
+             */
+            public Builder sourceJDBCParameters(SourceJDBCParameters sourceJDBCParameters) {
+                this.sourceJDBCParameters = sourceJDBCParameters;
                 return this;
             }
 

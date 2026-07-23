@@ -137,6 +137,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteConnectionResponse> deleteConnection(DeleteConnectionRequest request);
 
     /**
+     * @param request the request parameters of DeleteEventAnalysisJob  DeleteEventAnalysisJobRequest
+     * @return DeleteEventAnalysisJobResponse
+     */
+    CompletableFuture<DeleteEventAnalysisJobResponse> deleteEventAnalysisJob(DeleteEventAnalysisJobRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this API operation to delete an event bus.</p>
      * 
@@ -144,6 +150,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteEventBusResponse
      */
     CompletableFuture<DeleteEventBusResponse> deleteEventBus(DeleteEventBusRequest request);
+
+    /**
+     * @param request the request parameters of DeleteEventHouseRuntime  DeleteEventHouseRuntimeRequest
+     * @return DeleteEventHouseRuntimeResponse
+     */
+    CompletableFuture<DeleteEventHouseRuntimeResponse> deleteEventHouseRuntime(DeleteEventHouseRuntimeRequest request);
 
     /**
      * <b>description</b> :
@@ -263,6 +275,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetEventBusResponse> getEventBus(GetEventBusRequest request);
 
     /**
+     * @param request the request parameters of GetEventHouseRuntime  GetEventHouseRuntimeRequest
+     * @return GetEventHouseRuntimeResponse
+     */
+    CompletableFuture<GetEventHouseRuntimeResponse> getEventHouseRuntime(GetEventHouseRuntimeRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this API operation to query the details of an event stream.</p>
      * 
@@ -339,6 +357,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListEventBusesResponse
      */
     CompletableFuture<ListEventBusesResponse> listEventBuses(ListEventBusesRequest request);
+
+    /**
+     * @param request the request parameters of ListEventHouseRuntimes  ListEventHouseRuntimesRequest
+     * @return ListEventHouseRuntimesResponse
+     */
+    CompletableFuture<ListEventHouseRuntimesResponse> listEventHouseRuntimes(ListEventHouseRuntimesRequest request);
 
     /**
      * <b>description</b> :
@@ -516,6 +540,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateEventBusResponse
      */
     CompletableFuture<UpdateEventBusResponse> updateEventBus(UpdateEventBusRequest request);
+
+    /**
+     * @param request the request parameters of UpdateEventHouseRuntime  UpdateEventHouseRuntimeRequest
+     * @return UpdateEventHouseRuntimeResponse
+     */
+    CompletableFuture<UpdateEventHouseRuntimeResponse> updateEventHouseRuntime(UpdateEventHouseRuntimeRequest request);
 
     /**
      * <b>description</b> :

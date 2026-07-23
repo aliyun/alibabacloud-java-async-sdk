@@ -12,17 +12,17 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
 
 /**
  * 
- * {@link DeleteAgentRequest} extends {@link RequestModel}
+ * {@link GetEventHouseRuntimeRequest} extends {@link RequestModel}
  *
- * <p>DeleteAgentRequest</p>
+ * <p>GetEventHouseRuntimeRequest</p>
  */
-public class DeleteAgentRequest extends Request {
-    @com.aliyun.core.annotation.Body
+public class GetEventHouseRuntimeRequest extends Request {
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
-    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 2)
+    @com.aliyun.core.annotation.Validation(maxLength = 127)
     private String name;
 
-    private DeleteAgentRequest(Builder builder) {
+    private GetEventHouseRuntimeRequest(Builder builder) {
         super(builder);
         this.name = builder.name;
     }
@@ -31,7 +31,7 @@ public class DeleteAgentRequest extends Request {
         return new Builder();
     }
 
-    public static DeleteAgentRequest create() {
+    public static GetEventHouseRuntimeRequest create() {
         return builder().build();
     }
 
@@ -47,33 +47,33 @@ public class DeleteAgentRequest extends Request {
         return this.name;
     }
 
-    public static final class Builder extends Request.Builder<DeleteAgentRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetEventHouseRuntimeRequest, Builder> {
         private String name; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteAgentRequest request) {
+        private Builder(GetEventHouseRuntimeRequest request) {
             super(request);
             this.name = request.name;
         } 
 
         /**
-         * <p>This parameter is required.</p>
+         * <p>EventHouse Runtime 名称。不传时查询默认 Runtime</p>
          * 
          * <strong>example:</strong>
-         * <p>my-agent</p>
+         * <p>default</p>
          */
         public Builder name(String name) {
-            this.putBodyParameter("Name", name);
+            this.putQueryParameter("Name", name);
             this.name = name;
             return this;
         }
 
         @Override
-        public DeleteAgentRequest build() {
-            return new DeleteAgentRequest(this);
+        public GetEventHouseRuntimeRequest build() {
+            return new GetEventHouseRuntimeRequest(this);
         } 
 
     } 

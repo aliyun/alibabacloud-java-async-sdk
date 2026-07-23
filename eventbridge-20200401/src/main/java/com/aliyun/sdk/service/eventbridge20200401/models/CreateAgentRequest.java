@@ -27,7 +27,7 @@ public class CreateAgentRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
-    @com.aliyun.core.annotation.Validation(maxLength = 128, minLength = 2)
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 2)
     private String name;
 
     @com.aliyun.core.annotation.Body
@@ -121,7 +121,10 @@ public class CreateAgentRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
