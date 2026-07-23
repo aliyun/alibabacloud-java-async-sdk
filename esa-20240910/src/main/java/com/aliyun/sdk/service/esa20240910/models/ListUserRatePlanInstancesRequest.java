@@ -26,6 +26,10 @@ public class ListUserRatePlanInstancesRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsShared")
+    private Boolean isShared;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -44,6 +48,10 @@ public class ListUserRatePlanInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RemainingExpireDays")
     private Integer remainingExpireDays;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwner")
+    private Long resourceOwner;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SortBy")
@@ -65,11 +73,13 @@ public class ListUserRatePlanInstancesRequest extends Request {
         super(builder);
         this.checkRemainingSiteQuota = builder.checkRemainingSiteQuota;
         this.instanceId = builder.instanceId;
+        this.isShared = builder.isShared;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.planNameEn = builder.planNameEn;
         this.planType = builder.planType;
         this.remainingExpireDays = builder.remainingExpireDays;
+        this.resourceOwner = builder.resourceOwner;
         this.sortBy = builder.sortBy;
         this.sortOrder = builder.sortOrder;
         this.status = builder.status;
@@ -101,6 +111,13 @@ public class ListUserRatePlanInstancesRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return isShared
+     */
+    public Boolean getIsShared() {
+        return this.isShared;
     }
 
     /**
@@ -139,6 +156,13 @@ public class ListUserRatePlanInstancesRequest extends Request {
     }
 
     /**
+     * @return resourceOwner
+     */
+    public Long getResourceOwner() {
+        return this.resourceOwner;
+    }
+
+    /**
      * @return sortBy
      */
     public String getSortBy() {
@@ -169,11 +193,13 @@ public class ListUserRatePlanInstancesRequest extends Request {
     public static final class Builder extends Request.Builder<ListUserRatePlanInstancesRequest, Builder> {
         private String checkRemainingSiteQuota; 
         private String instanceId; 
+        private Boolean isShared; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String planNameEn; 
         private String planType; 
         private Integer remainingExpireDays; 
+        private Long resourceOwner; 
         private String sortBy; 
         private String sortOrder; 
         private String status; 
@@ -187,11 +213,13 @@ public class ListUserRatePlanInstancesRequest extends Request {
             super(request);
             this.checkRemainingSiteQuota = request.checkRemainingSiteQuota;
             this.instanceId = request.instanceId;
+            this.isShared = request.isShared;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.planNameEn = request.planNameEn;
             this.planType = request.planType;
             this.remainingExpireDays = request.remainingExpireDays;
+            this.resourceOwner = request.resourceOwner;
             this.sortBy = request.sortBy;
             this.sortOrder = request.sortOrder;
             this.status = request.status;
@@ -223,6 +251,15 @@ public class ListUserRatePlanInstancesRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * IsShared.
+         */
+        public Builder isShared(Boolean isShared) {
+            this.putQueryParameter("IsShared", isShared);
+            this.isShared = isShared;
             return this;
         }
 
@@ -274,6 +311,15 @@ public class ListUserRatePlanInstancesRequest extends Request {
         public Builder remainingExpireDays(Integer remainingExpireDays) {
             this.putQueryParameter("RemainingExpireDays", remainingExpireDays);
             this.remainingExpireDays = remainingExpireDays;
+            return this;
+        }
+
+        /**
+         * ResourceOwner.
+         */
+        public Builder resourceOwner(Long resourceOwner) {
+            this.putQueryParameter("ResourceOwner", resourceOwner);
+            this.resourceOwner = resourceOwner;
             return this;
         }
 

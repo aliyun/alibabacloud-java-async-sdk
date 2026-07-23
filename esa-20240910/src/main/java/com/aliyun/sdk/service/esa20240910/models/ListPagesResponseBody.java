@@ -193,6 +193,81 @@ public class ListPagesResponseBody extends TeaModel {
      *
      * <p>ListPagesResponseBody</p>
      */
+    public static class Moderation extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Reasons")
+        private java.util.List<String> reasons;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        private Moderation(Builder builder) {
+            this.reasons = builder.reasons;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Moderation create() {
+            return builder().build();
+        }
+
+        /**
+         * @return reasons
+         */
+        public java.util.List<String> getReasons() {
+            return this.reasons;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> reasons; 
+            private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Moderation model) {
+                this.reasons = model.reasons;
+                this.status = model.status;
+            } 
+
+            /**
+             * Reasons.
+             */
+            public Builder reasons(java.util.List<String> reasons) {
+                this.reasons = reasons;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public Moderation build() {
+                return new Moderation(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListPagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPagesResponseBody</p>
+     */
     public static class Pages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -212,6 +287,9 @@ public class ListPagesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Kind")
         private String kind;
 
+        @com.aliyun.core.annotation.NameInMap("Moderation")
+        private Moderation moderation;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
@@ -224,6 +302,7 @@ public class ListPagesResponseBody extends TeaModel {
             this.description = builder.description;
             this.id = builder.id;
             this.kind = builder.kind;
+            this.moderation = builder.moderation;
             this.name = builder.name;
             this.updateTime = builder.updateTime;
         }
@@ -272,6 +351,13 @@ public class ListPagesResponseBody extends TeaModel {
         }
 
         /**
+         * @return moderation
+         */
+        public Moderation getModeration() {
+            return this.moderation;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -291,6 +377,7 @@ public class ListPagesResponseBody extends TeaModel {
             private String description; 
             private Long id; 
             private String kind; 
+            private Moderation moderation; 
             private String name; 
             private String updateTime; 
 
@@ -303,6 +390,7 @@ public class ListPagesResponseBody extends TeaModel {
                 this.description = model.description;
                 this.id = model.id;
                 this.kind = model.kind;
+                this.moderation = model.moderation;
                 this.name = model.name;
                 this.updateTime = model.updateTime;
             } 
@@ -361,6 +449,14 @@ public class ListPagesResponseBody extends TeaModel {
              */
             public Builder kind(String kind) {
                 this.kind = kind;
+                return this;
+            }
+
+            /**
+             * Moderation.
+             */
+            public Builder moderation(Moderation moderation) {
+                this.moderation = moderation;
                 return this;
             }
 

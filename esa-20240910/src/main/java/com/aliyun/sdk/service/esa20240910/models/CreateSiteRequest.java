@@ -37,6 +37,10 @@ public class CreateSiteRequest extends Request {
     private String resourceGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwner")
+    private Long resourceOwner;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SiteName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String siteName;
@@ -47,6 +51,7 @@ public class CreateSiteRequest extends Request {
         this.coverage = builder.coverage;
         this.instanceId = builder.instanceId;
         this.resourceGroupId = builder.resourceGroupId;
+        this.resourceOwner = builder.resourceOwner;
         this.siteName = builder.siteName;
     }
 
@@ -92,6 +97,13 @@ public class CreateSiteRequest extends Request {
     }
 
     /**
+     * @return resourceOwner
+     */
+    public Long getResourceOwner() {
+        return this.resourceOwner;
+    }
+
+    /**
      * @return siteName
      */
     public String getSiteName() {
@@ -103,6 +115,7 @@ public class CreateSiteRequest extends Request {
         private String coverage; 
         private String instanceId; 
         private String resourceGroupId; 
+        private Long resourceOwner; 
         private String siteName; 
 
         private Builder() {
@@ -115,6 +128,7 @@ public class CreateSiteRequest extends Request {
             this.coverage = request.coverage;
             this.instanceId = request.instanceId;
             this.resourceGroupId = request.resourceGroupId;
+            this.resourceOwner = request.resourceOwner;
             this.siteName = request.siteName;
         } 
 
@@ -175,6 +189,15 @@ public class CreateSiteRequest extends Request {
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * ResourceOwner.
+         */
+        public Builder resourceOwner(Long resourceOwner) {
+            this.putQueryParameter("ResourceOwner", resourceOwner);
+            this.resourceOwner = resourceOwner;
             return this;
         }
 

@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateRoutineBuildConfigurationRequest} extends {@link RequestModel}
+ * {@link CreateRoutineBuildConfigurationRequest} extends {@link RequestModel}
  *
- * <p>UpdateRoutineBuildConfigurationRequest</p>
+ * <p>CreateRoutineBuildConfigurationRequest</p>
  */
-public class UpdateRoutineBuildConfigurationRequest extends Request {
+public class CreateRoutineBuildConfigurationRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AssetsDirectory")
     @com.aliyun.core.annotation.Validation(maxLength = 255)
@@ -54,7 +54,7 @@ public class UpdateRoutineBuildConfigurationRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeVersion")
-    @com.aliyun.core.annotation.Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 32)
     private String nodeVersion;
 
     @com.aliyun.core.annotation.Query
@@ -64,6 +64,7 @@ public class UpdateRoutineBuildConfigurationRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Repository")
+    @com.aliyun.core.annotation.Validation(maxLength = 100)
     private String repository;
 
     @com.aliyun.core.annotation.Query
@@ -81,7 +82,11 @@ public class UpdateRoutineBuildConfigurationRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String routineName;
 
-    private UpdateRoutineBuildConfigurationRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
+    private String templateName;
+
+    private CreateRoutineBuildConfigurationRequest(Builder builder) {
         super(builder);
         this.assetsDirectory = builder.assetsDirectory;
         this.buildBranches = builder.buildBranches;
@@ -97,13 +102,14 @@ public class UpdateRoutineBuildConfigurationRequest extends Request {
         this.rootDirectory = builder.rootDirectory;
         this.routineEntry = builder.routineEntry;
         this.routineName = builder.routineName;
+        this.templateName = builder.templateName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static UpdateRoutineBuildConfigurationRequest create() {
+    public static CreateRoutineBuildConfigurationRequest create() {
         return builder().build();
     }
 
@@ -210,7 +216,14 @@ public class UpdateRoutineBuildConfigurationRequest extends Request {
         return this.routineName;
     }
 
-    public static final class Builder extends Request.Builder<UpdateRoutineBuildConfigurationRequest, Builder> {
+    /**
+     * @return templateName
+     */
+    public String getTemplateName() {
+        return this.templateName;
+    }
+
+    public static final class Builder extends Request.Builder<CreateRoutineBuildConfigurationRequest, Builder> {
         private String assetsDirectory; 
         private String buildBranches; 
         private String buildCommand; 
@@ -225,12 +238,13 @@ public class UpdateRoutineBuildConfigurationRequest extends Request {
         private String rootDirectory; 
         private String routineEntry; 
         private String routineName; 
+        private String templateName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateRoutineBuildConfigurationRequest request) {
+        private Builder(CreateRoutineBuildConfigurationRequest request) {
             super(request);
             this.assetsDirectory = request.assetsDirectory;
             this.buildBranches = request.buildBranches;
@@ -246,6 +260,7 @@ public class UpdateRoutineBuildConfigurationRequest extends Request {
             this.rootDirectory = request.rootDirectory;
             this.routineEntry = request.routineEntry;
             this.routineName = request.routineName;
+            this.templateName = request.templateName;
         } 
 
         /**
@@ -322,7 +337,10 @@ public class UpdateRoutineBuildConfigurationRequest extends Request {
         }
 
         /**
-         * NodeVersion.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22.x</p>
          */
         public Builder nodeVersion(String nodeVersion) {
             this.putQueryParameter("NodeVersion", nodeVersion);
@@ -370,7 +388,7 @@ public class UpdateRoutineBuildConfigurationRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test-routine</p>
+         * <p>rwa-test</p>
          */
         public Builder routineName(String routineName) {
             this.putQueryParameter("RoutineName", routineName);
@@ -378,9 +396,18 @@ public class UpdateRoutineBuildConfigurationRequest extends Request {
             return this;
         }
 
+        /**
+         * TemplateName.
+         */
+        public Builder templateName(String templateName) {
+            this.putQueryParameter("TemplateName", templateName);
+            this.templateName = templateName;
+            return this;
+        }
+
         @Override
-        public UpdateRoutineBuildConfigurationRequest build() {
-            return new UpdateRoutineBuildConfigurationRequest(this);
+        public CreateRoutineBuildConfigurationRequest build() {
+            return new CreateRoutineBuildConfigurationRequest(this);
         } 
 
     } 

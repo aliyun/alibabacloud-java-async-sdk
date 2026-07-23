@@ -913,6 +913,9 @@ public class CreateUserDeliveryTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
+        @com.aliyun.core.annotation.NameInMap("UseTLS")
+        private Boolean useTLS;
+
         @com.aliyun.core.annotation.NameInMap("UserAuth")
         private Boolean userAuth;
 
@@ -926,6 +929,7 @@ public class CreateUserDeliveryTaskRequest extends Request {
             this.machanismType = builder.machanismType;
             this.password = builder.password;
             this.topic = builder.topic;
+            this.useTLS = builder.useTLS;
             this.userAuth = builder.userAuth;
             this.userName = builder.userName;
         }
@@ -981,6 +985,13 @@ public class CreateUserDeliveryTaskRequest extends Request {
         }
 
         /**
+         * @return useTLS
+         */
+        public Boolean getUseTLS() {
+            return this.useTLS;
+        }
+
+        /**
          * @return userAuth
          */
         public Boolean getUserAuth() {
@@ -1001,6 +1012,7 @@ public class CreateUserDeliveryTaskRequest extends Request {
             private String machanismType; 
             private String password; 
             private String topic; 
+            private Boolean useTLS; 
             private Boolean userAuth; 
             private String userName; 
 
@@ -1014,6 +1026,7 @@ public class CreateUserDeliveryTaskRequest extends Request {
                 this.machanismType = model.machanismType;
                 this.password = model.password;
                 this.topic = model.topic;
+                this.useTLS = model.useTLS;
                 this.userAuth = model.userAuth;
                 this.userName = model.userName;
             } 
@@ -1078,6 +1091,14 @@ public class CreateUserDeliveryTaskRequest extends Request {
              */
             public Builder topic(String topic) {
                 this.topic = topic;
+                return this;
+            }
+
+            /**
+             * UseTLS.
+             */
+            public Builder useTLS(Boolean useTLS) {
+                this.useTLS = useTLS;
                 return this;
             }
 

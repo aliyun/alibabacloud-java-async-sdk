@@ -43,6 +43,10 @@ public class PurchaseRatePlanRequest extends Request {
     private String coverage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OveragePolicy")
+    private String overagePolicy;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
@@ -70,6 +74,7 @@ public class PurchaseRatePlanRequest extends Request {
         this.channel = builder.channel;
         this.chargeType = builder.chargeType;
         this.coverage = builder.coverage;
+        this.overagePolicy = builder.overagePolicy;
         this.period = builder.period;
         this.planCode = builder.planCode;
         this.planName = builder.planName;
@@ -133,6 +138,13 @@ public class PurchaseRatePlanRequest extends Request {
     }
 
     /**
+     * @return overagePolicy
+     */
+    public String getOveragePolicy() {
+        return this.overagePolicy;
+    }
+
+    /**
      * @return period
      */
     public Integer getPeriod() {
@@ -174,6 +186,7 @@ public class PurchaseRatePlanRequest extends Request {
         private String channel; 
         private String chargeType; 
         private String coverage; 
+        private String overagePolicy; 
         private Integer period; 
         private String planCode; 
         private String planName; 
@@ -192,6 +205,7 @@ public class PurchaseRatePlanRequest extends Request {
             this.channel = request.channel;
             this.chargeType = request.chargeType;
             this.coverage = request.coverage;
+            this.overagePolicy = request.overagePolicy;
             this.period = request.period;
             this.planCode = request.planCode;
             this.planName = request.planName;
@@ -275,6 +289,15 @@ public class PurchaseRatePlanRequest extends Request {
         public Builder coverage(String coverage) {
             this.putQueryParameter("Coverage", coverage);
             this.coverage = coverage;
+            return this;
+        }
+
+        /**
+         * OveragePolicy.
+         */
+        public Builder overagePolicy(String overagePolicy) {
+            this.putQueryParameter("OveragePolicy", overagePolicy);
+            this.overagePolicy = overagePolicy;
             return this;
         }
 

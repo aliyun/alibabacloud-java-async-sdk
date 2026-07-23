@@ -353,6 +353,9 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Layer4TrafficIntl")
         private String layer4TrafficIntl;
 
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
+        private String ownerId;
+
         @com.aliyun.core.annotation.NameInMap("PlanName")
         private String planName;
 
@@ -367,6 +370,12 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("RenewalStatus")
         private String renewalStatus;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceOwner")
+        private Long resourceOwner;
+
+        @com.aliyun.core.annotation.NameInMap("ShareType")
+        private String shareType;
 
         @com.aliyun.core.annotation.NameInMap("SiteQuota")
         private String siteQuota;
@@ -403,11 +412,14 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.layer4Traffic = builder.layer4Traffic;
             this.layer4TrafficIntl = builder.layer4TrafficIntl;
+            this.ownerId = builder.ownerId;
             this.planName = builder.planName;
             this.planTraffic = builder.planTraffic;
             this.planType = builder.planType;
             this.renewalDuration = builder.renewalDuration;
             this.renewalStatus = builder.renewalStatus;
+            this.resourceOwner = builder.resourceOwner;
+            this.shareType = builder.shareType;
             this.siteQuota = builder.siteQuota;
             this.sites = builder.sites;
             this.smartRoutingRequest = builder.smartRoutingRequest;
@@ -537,6 +549,13 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return ownerId
+         */
+        public String getOwnerId() {
+            return this.ownerId;
+        }
+
+        /**
          * @return planName
          */
         public String getPlanName() {
@@ -569,6 +588,20 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
          */
         public String getRenewalStatus() {
             return this.renewalStatus;
+        }
+
+        /**
+         * @return resourceOwner
+         */
+        public Long getResourceOwner() {
+            return this.resourceOwner;
+        }
+
+        /**
+         * @return shareType
+         */
+        public String getShareType() {
+            return this.shareType;
         }
 
         /**
@@ -630,11 +663,14 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             private String instanceId; 
             private String layer4Traffic; 
             private String layer4TrafficIntl; 
+            private String ownerId; 
             private String planName; 
             private String planTraffic; 
             private String planType; 
             private Long renewalDuration; 
             private String renewalStatus; 
+            private Long resourceOwner; 
+            private String shareType; 
             private String siteQuota; 
             private java.util.List<Sites> sites; 
             private String smartRoutingRequest; 
@@ -662,11 +698,14 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
                 this.instanceId = model.instanceId;
                 this.layer4Traffic = model.layer4Traffic;
                 this.layer4TrafficIntl = model.layer4TrafficIntl;
+                this.ownerId = model.ownerId;
                 this.planName = model.planName;
                 this.planTraffic = model.planTraffic;
                 this.planType = model.planType;
                 this.renewalDuration = model.renewalDuration;
                 this.renewalStatus = model.renewalStatus;
+                this.resourceOwner = model.resourceOwner;
+                this.shareType = model.shareType;
                 this.siteQuota = model.siteQuota;
                 this.sites = model.sites;
                 this.smartRoutingRequest = model.smartRoutingRequest;
@@ -831,6 +870,14 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * OwnerId.
+             */
+            public Builder ownerId(String ownerId) {
+                this.ownerId = ownerId;
+                return this;
+            }
+
+            /**
              * <p>The plan name.</p>
              * 
              * <strong>example:</strong>
@@ -877,6 +924,22 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
              */
             public Builder renewalStatus(String renewalStatus) {
                 this.renewalStatus = renewalStatus;
+                return this;
+            }
+
+            /**
+             * ResourceOwner.
+             */
+            public Builder resourceOwner(Long resourceOwner) {
+                this.resourceOwner = resourceOwner;
+                return this;
+            }
+
+            /**
+             * ShareType.
+             */
+            public Builder shareType(String shareType) {
+                this.shareType = shareType;
                 return this;
             }
 

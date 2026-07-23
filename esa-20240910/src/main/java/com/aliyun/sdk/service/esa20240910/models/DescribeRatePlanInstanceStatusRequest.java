@@ -21,9 +21,14 @@ public class DescribeRatePlanInstanceStatusRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwner")
+    private Long resourceOwner;
+
     private DescribeRatePlanInstanceStatusRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.resourceOwner = builder.resourceOwner;
     }
 
     public static Builder builder() {
@@ -46,8 +51,16 @@ public class DescribeRatePlanInstanceStatusRequest extends Request {
         return this.instanceId;
     }
 
+    /**
+     * @return resourceOwner
+     */
+    public Long getResourceOwner() {
+        return this.resourceOwner;
+    }
+
     public static final class Builder extends Request.Builder<DescribeRatePlanInstanceStatusRequest, Builder> {
         private String instanceId; 
+        private Long resourceOwner; 
 
         private Builder() {
             super();
@@ -56,6 +69,7 @@ public class DescribeRatePlanInstanceStatusRequest extends Request {
         private Builder(DescribeRatePlanInstanceStatusRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.resourceOwner = request.resourceOwner;
         } 
 
         /**
@@ -67,6 +81,15 @@ public class DescribeRatePlanInstanceStatusRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * ResourceOwner.
+         */
+        public Builder resourceOwner(Long resourceOwner) {
+            this.putQueryParameter("ResourceOwner", resourceOwner);
+            this.resourceOwner = resourceOwner;
             return this;
         }
 

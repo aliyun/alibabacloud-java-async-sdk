@@ -935,6 +935,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateRoutineBuildConfiguration  CreateRoutineBuildConfigurationRequest
+     * @return CreateRoutineBuildConfigurationResponse
+     */
+    @Override
+    public CompletableFuture<CreateRoutineBuildConfigurationResponse> createRoutineBuildConfiguration(CreateRoutineBuildConfigurationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateRoutineBuildConfiguration").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateRoutineBuildConfigurationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateRoutineBuildConfigurationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <h2><a href="#"></a>Request description</h2>
      * <ul>
@@ -2027,6 +2045,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteRoutineResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteRoutineBuildConfiguration  DeleteRoutineBuildConfigurationRequest
+     * @return DeleteRoutineBuildConfigurationResponse
+     */
+    @Override
+    public CompletableFuture<DeleteRoutineBuildConfigurationResponse> deleteRoutineBuildConfiguration(DeleteRoutineBuildConfigurationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteRoutineBuildConfiguration").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteRoutineBuildConfigurationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteRoutineBuildConfigurationResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4352,6 +4388,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetRoutineBuild  GetRoutineBuildRequest
+     * @return GetRoutineBuildResponse
+     */
+    @Override
+    public CompletableFuture<GetRoutineBuildResponse> getRoutineBuild(GetRoutineBuildRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetRoutineBuild").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetRoutineBuildResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetRoutineBuildResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetRoutineBuildConfiguration  GetRoutineBuildConfigurationRequest
+     * @return GetRoutineBuildConfigurationResponse
+     */
+    @Override
+    public CompletableFuture<GetRoutineBuildConfigurationResponse> getRoutineBuildConfiguration(GetRoutineBuildConfigurationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetRoutineBuildConfiguration").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetRoutineBuildConfigurationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetRoutineBuildConfigurationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetRoutineCodeVersion  GetRoutineCodeVersionRequest
      * @return GetRoutineCodeVersionResponse
      */
@@ -5939,6 +6011,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListRoutineBuildConfigurations  ListRoutineBuildConfigurationsRequest
+     * @return ListRoutineBuildConfigurationsResponse
+     */
+    @Override
+    public CompletableFuture<ListRoutineBuildConfigurationsResponse> listRoutineBuildConfigurations(ListRoutineBuildConfigurationsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListRoutineBuildConfigurations").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListRoutineBuildConfigurationsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListRoutineBuildConfigurationsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListRoutineBuilds  ListRoutineBuildsRequest
+     * @return ListRoutineBuildsResponse
+     */
+    @Override
+    public CompletableFuture<ListRoutineBuildsResponse> listRoutineBuilds(ListRoutineBuildsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListRoutineBuilds").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListRoutineBuildsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListRoutineBuildsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListRoutineCanaryAreas  ListRoutineCanaryAreasRequest
      * @return ListRoutineCanaryAreasResponse
      */
@@ -6679,6 +6787,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of PurchaseDDoSInstance  PurchaseDDoSInstanceRequest
+     * @return PurchaseDDoSInstanceResponse
+     */
+    @Override
+    public CompletableFuture<PurchaseDDoSInstanceResponse> purchaseDDoSInstance(PurchaseDDoSInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("PurchaseDDoSInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PurchaseDDoSInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PurchaseDDoSInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <ol>
      * <li>The package name and code can be obtained from the DescribeRatePlanPrice interface.</li>
@@ -6733,6 +6859,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<PutKvResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ReDoRoutineBuild  ReDoRoutineBuildRequest
+     * @return ReDoRoutineBuildResponse
+     */
+    @Override
+    public CompletableFuture<ReDoRoutineBuildResponse> reDoRoutineBuild(ReDoRoutineBuildRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ReDoRoutineBuild").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ReDoRoutineBuildResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ReDoRoutineBuildResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -7075,6 +7219,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<StartScheduledPreloadExecutionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of StopRoutineBuild  StopRoutineBuildRequest
+     * @return StopRoutineBuildResponse
+     */
+    @Override
+    public CompletableFuture<StopRoutineBuildResponse> stopRoutineBuild(StopRoutineBuildRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("StopRoutineBuild").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopRoutineBuildResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StopRoutineBuildResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -8050,6 +8212,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateSiteDeliveryTaskStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateSiteInstance  UpdateSiteInstanceRequest
+     * @return UpdateSiteInstanceResponse
+     */
+    @Override
+    public CompletableFuture<UpdateSiteInstanceResponse> updateSiteInstance(UpdateSiteInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateSiteInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateSiteInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateSiteInstanceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

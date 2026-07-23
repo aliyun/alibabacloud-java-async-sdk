@@ -34,6 +34,10 @@ public class ListPostpaidRatePlanInstancesRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwner")
+    private Long resourceOwner;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
@@ -55,6 +59,7 @@ public class ListPostpaidRatePlanInstancesRequest extends Request {
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.resourceOwner = builder.resourceOwner;
         this.sortBy = builder.sortBy;
         this.sortOrder = builder.sortOrder;
         this.status = builder.status;
@@ -103,6 +108,13 @@ public class ListPostpaidRatePlanInstancesRequest extends Request {
     }
 
     /**
+     * @return resourceOwner
+     */
+    public Long getResourceOwner() {
+        return this.resourceOwner;
+    }
+
+    /**
      * @return sortBy
      */
     public String getSortBy() {
@@ -135,6 +147,7 @@ public class ListPostpaidRatePlanInstancesRequest extends Request {
         private String instanceId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private Long resourceOwner; 
         private String sortBy; 
         private String sortOrder; 
         private String status; 
@@ -150,6 +163,7 @@ public class ListPostpaidRatePlanInstancesRequest extends Request {
             this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.resourceOwner = request.resourceOwner;
             this.sortBy = request.sortBy;
             this.sortOrder = request.sortOrder;
             this.status = request.status;
@@ -189,6 +203,15 @@ public class ListPostpaidRatePlanInstancesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ResourceOwner.
+         */
+        public Builder resourceOwner(Long resourceOwner) {
+            this.putQueryParameter("ResourceOwner", resourceOwner);
+            this.resourceOwner = resourceOwner;
             return this;
         }
 

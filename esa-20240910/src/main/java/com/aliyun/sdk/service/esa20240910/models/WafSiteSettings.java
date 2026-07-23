@@ -1121,10 +1121,14 @@ public class WafSiteSettings extends TeaModel {
      * <p>WafSiteSettings</p>
      */
     public static class SecurityLevel extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private Long id;
+
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SecurityLevel(Builder builder) {
+            this.id = builder.id;
             this.value = builder.value;
         }
 
@@ -1137,6 +1141,13 @@ public class WafSiteSettings extends TeaModel {
         }
 
         /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        /**
          * @return value
          */
         public String getValue() {
@@ -1144,14 +1155,24 @@ public class WafSiteSettings extends TeaModel {
         }
 
         public static final class Builder {
+            private Long id; 
             private String value; 
 
             private Builder() {
             } 
 
             private Builder(SecurityLevel model) {
+                this.id = model.id;
                 this.value = model.value;
             } 
+
+            /**
+             * Id.
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
 
             /**
              * Value.

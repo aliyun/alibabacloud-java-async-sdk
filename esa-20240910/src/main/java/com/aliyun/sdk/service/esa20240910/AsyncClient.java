@@ -324,6 +324,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRoutineResponse> createRoutine(CreateRoutineRequest request);
 
     /**
+     * @param request the request parameters of CreateRoutineBuildConfiguration  CreateRoutineBuildConfigurationRequest
+     * @return CreateRoutineBuildConfigurationResponse
+     */
+    CompletableFuture<CreateRoutineBuildConfigurationResponse> createRoutineBuildConfiguration(CreateRoutineBuildConfigurationRequest request);
+
+    /**
      * <b>description</b> :
      * <h2><a href="#"></a>Request description</h2>
      * <ul>
@@ -724,6 +730,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteRoutineResponse
      */
     CompletableFuture<DeleteRoutineResponse> deleteRoutine(DeleteRoutineRequest request);
+
+    /**
+     * @param request the request parameters of DeleteRoutineBuildConfiguration  DeleteRoutineBuildConfigurationRequest
+     * @return DeleteRoutineBuildConfigurationResponse
+     */
+    CompletableFuture<DeleteRoutineBuildConfigurationResponse> deleteRoutineBuildConfiguration(DeleteRoutineBuildConfigurationRequest request);
 
     /**
      * @param request the request parameters of DeleteRoutineCodeVersion  DeleteRoutineCodeVersionRequest
@@ -1533,6 +1545,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetRoutineAccessTokenResponse> getRoutineAccessToken(GetRoutineAccessTokenRequest request);
 
     /**
+     * @param request the request parameters of GetRoutineBuild  GetRoutineBuildRequest
+     * @return GetRoutineBuildResponse
+     */
+    CompletableFuture<GetRoutineBuildResponse> getRoutineBuild(GetRoutineBuildRequest request);
+
+    /**
+     * @param request the request parameters of GetRoutineBuildConfiguration  GetRoutineBuildConfigurationRequest
+     * @return GetRoutineBuildConfigurationResponse
+     */
+    CompletableFuture<GetRoutineBuildConfigurationResponse> getRoutineBuildConfiguration(GetRoutineBuildConfigurationRequest request);
+
+    /**
      * @param request the request parameters of GetRoutineCodeVersion  GetRoutineCodeVersionRequest
      * @return GetRoutineCodeVersionResponse
      */
@@ -2100,6 +2124,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRewriteUrlRulesResponse> listRewriteUrlRules(ListRewriteUrlRulesRequest request);
 
     /**
+     * @param request the request parameters of ListRoutineBuildConfigurations  ListRoutineBuildConfigurationsRequest
+     * @return ListRoutineBuildConfigurationsResponse
+     */
+    CompletableFuture<ListRoutineBuildConfigurationsResponse> listRoutineBuildConfigurations(ListRoutineBuildConfigurationsRequest request);
+
+    /**
+     * @param request the request parameters of ListRoutineBuilds  ListRoutineBuildsRequest
+     * @return ListRoutineBuildsResponse
+     */
+    CompletableFuture<ListRoutineBuildsResponse> listRoutineBuilds(ListRoutineBuildsRequest request);
+
+    /**
      * @param request the request parameters of ListRoutineCanaryAreas  ListRoutineCanaryAreasRequest
      * @return ListRoutineCanaryAreasResponse
      */
@@ -2360,6 +2396,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PurchaseCacheReserveResponse> purchaseCacheReserve(PurchaseCacheReserveRequest request);
 
     /**
+     * @param request the request parameters of PurchaseDDoSInstance  PurchaseDDoSInstanceRequest
+     * @return PurchaseDDoSInstanceResponse
+     */
+    CompletableFuture<PurchaseDDoSInstanceResponse> purchaseDDoSInstance(PurchaseDDoSInstanceRequest request);
+
+    /**
      * <b>description</b> :
      * <ol>
      * <li>The package name and code can be obtained from the DescribeRatePlanPrice interface.</li>
@@ -2382,6 +2424,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return PutKvResponse
      */
     CompletableFuture<PutKvResponse> putKv(PutKvRequest request);
+
+    /**
+     * @param request the request parameters of ReDoRoutineBuild  ReDoRoutineBuildRequest
+     * @return ReDoRoutineBuildResponse
+     */
+    CompletableFuture<ReDoRoutineBuildResponse> reDoRoutineBuild(ReDoRoutineBuildRequest request);
 
     /**
      * @param request the request parameters of RebuildEdgeContainerAppStagingEnv  RebuildEdgeContainerAppStagingEnvRequest
@@ -2496,6 +2544,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StartScheduledPreloadExecutionResponse
      */
     CompletableFuture<StartScheduledPreloadExecutionResponse> startScheduledPreloadExecution(StartScheduledPreloadExecutionRequest request);
+
+    /**
+     * @param request the request parameters of StopRoutineBuild  StopRoutineBuildRequest
+     * @return StopRoutineBuildResponse
+     */
+    CompletableFuture<StopRoutineBuildResponse> stopRoutineBuild(StopRoutineBuildRequest request);
 
     /**
      * @param request the request parameters of StopScheduledPreloadExecution  StopScheduledPreloadExecutionRequest
@@ -2835,6 +2889,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateSiteDeliveryTaskStatusResponse
      */
     CompletableFuture<UpdateSiteDeliveryTaskStatusResponse> updateSiteDeliveryTaskStatus(UpdateSiteDeliveryTaskStatusRequest request);
+
+    /**
+     * @param request the request parameters of UpdateSiteInstance  UpdateSiteInstanceRequest
+     * @return UpdateSiteInstanceResponse
+     */
+    CompletableFuture<UpdateSiteInstanceResponse> updateSiteInstance(UpdateSiteInstanceRequest request);
 
     /**
      * @param request the request parameters of UpdateSiteNameExclusive  UpdateSiteNameExclusiveRequest

@@ -293,6 +293,9 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
+        private String ownerId;
+
         @com.aliyun.core.annotation.NameInMap("PlanName")
         private String planName;
 
@@ -301,6 +304,9 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("PlanType")
         private String planType;
+
+        @com.aliyun.core.annotation.NameInMap("ShareType")
+        private String shareType;
 
         @com.aliyun.core.annotation.NameInMap("SiteQuota")
         private String siteQuota;
@@ -318,9 +324,11 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.expectedUpdateTime = builder.expectedUpdateTime;
             this.instanceId = builder.instanceId;
+            this.ownerId = builder.ownerId;
             this.planName = builder.planName;
             this.planNameCn = builder.planNameCn;
             this.planType = builder.planType;
+            this.shareType = builder.shareType;
             this.siteQuota = builder.siteQuota;
             this.sites = builder.sites;
             this.status = builder.status;
@@ -377,6 +385,13 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return ownerId
+         */
+        public String getOwnerId() {
+            return this.ownerId;
+        }
+
+        /**
          * @return planName
          */
         public String getPlanName() {
@@ -395,6 +410,13 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
          */
         public String getPlanType() {
             return this.planType;
+        }
+
+        /**
+         * @return shareType
+         */
+        public String getShareType() {
+            return this.shareType;
         }
 
         /**
@@ -425,9 +447,11 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
             private String createTime; 
             private String expectedUpdateTime; 
             private String instanceId; 
+            private String ownerId; 
             private String planName; 
             private String planNameCn; 
             private String planType; 
+            private String shareType; 
             private String siteQuota; 
             private java.util.List<Sites> sites; 
             private String status; 
@@ -442,9 +466,11 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
                 this.createTime = model.createTime;
                 this.expectedUpdateTime = model.expectedUpdateTime;
                 this.instanceId = model.instanceId;
+                this.ownerId = model.ownerId;
                 this.planName = model.planName;
                 this.planNameCn = model.planNameCn;
                 this.planType = model.planType;
+                this.shareType = model.shareType;
                 this.siteQuota = model.siteQuota;
                 this.sites = model.sites;
                 this.status = model.status;
@@ -499,6 +525,14 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * OwnerId.
+             */
+            public Builder ownerId(String ownerId) {
+                this.ownerId = ownerId;
+                return this;
+            }
+
+            /**
              * PlanName.
              */
             public Builder planName(String planName) {
@@ -519,6 +553,14 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
              */
             public Builder planType(String planType) {
                 this.planType = planType;
+                return this;
+            }
+
+            /**
+             * ShareType.
+             */
+            public Builder shareType(String shareType) {
+                this.shareType = shareType;
                 return this;
             }
 
