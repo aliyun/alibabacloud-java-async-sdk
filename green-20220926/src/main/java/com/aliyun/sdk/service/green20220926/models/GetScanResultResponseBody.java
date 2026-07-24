@@ -323,6 +323,9 @@ public class GetScanResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttackLevel")
         private String attackLevel;
 
+        @com.aliyun.core.annotation.NameInMap("BailianRequestId")
+        private String bailianRequestId;
+
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
@@ -331,6 +334,9 @@ public class GetScanResultResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
+
+        @com.aliyun.core.annotation.NameInMap("Ext")
+        private String ext;
 
         @com.aliyun.core.annotation.NameInMap("ExtFeedback")
         private String extFeedback;
@@ -476,9 +482,11 @@ public class GetScanResultResponseBody extends TeaModel {
             this.apiTaskId = builder.apiTaskId;
             this.appId = builder.appId;
             this.attackLevel = builder.attackLevel;
+            this.bailianRequestId = builder.bailianRequestId;
             this.content = builder.content;
             this.dataId = builder.dataId;
             this.endTime = builder.endTime;
+            this.ext = builder.ext;
             this.extFeedback = builder.extFeedback;
             this.extra = builder.extra;
             this.frameCount = builder.frameCount;
@@ -591,6 +599,13 @@ public class GetScanResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return bailianRequestId
+         */
+        public String getBailianRequestId() {
+            return this.bailianRequestId;
+        }
+
+        /**
          * @return content
          */
         public String getContent() {
@@ -609,6 +624,13 @@ public class GetScanResultResponseBody extends TeaModel {
          */
         public String getEndTime() {
             return this.endTime;
+        }
+
+        /**
+         * @return ext
+         */
+        public String getExt() {
+            return this.ext;
         }
 
         /**
@@ -935,9 +957,11 @@ public class GetScanResultResponseBody extends TeaModel {
             private String apiTaskId; 
             private String appId; 
             private String attackLevel; 
+            private String bailianRequestId; 
             private String content; 
             private String dataId; 
             private String endTime; 
+            private String ext; 
             private String extFeedback; 
             private java.util.Map<String, ?> extra; 
             private Long frameCount; 
@@ -996,9 +1020,11 @@ public class GetScanResultResponseBody extends TeaModel {
                 this.apiTaskId = model.apiTaskId;
                 this.appId = model.appId;
                 this.attackLevel = model.attackLevel;
+                this.bailianRequestId = model.bailianRequestId;
                 this.content = model.content;
                 this.dataId = model.dataId;
                 this.endTime = model.endTime;
+                this.ext = model.ext;
                 this.extFeedback = model.extFeedback;
                 this.extra = model.extra;
                 this.frameCount = model.frameCount;
@@ -1139,6 +1165,14 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
+             * BailianRequestId.
+             */
+            public Builder bailianRequestId(String bailianRequestId) {
+                this.bailianRequestId = bailianRequestId;
+                return this;
+            }
+
+            /**
              * <p>Content.</p>
              * 
              * <strong>example:</strong>
@@ -1168,6 +1202,14 @@ public class GetScanResultResponseBody extends TeaModel {
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * Ext.
+             */
+            public Builder ext(String ext) {
+                this.ext = ext;
                 return this;
             }
 

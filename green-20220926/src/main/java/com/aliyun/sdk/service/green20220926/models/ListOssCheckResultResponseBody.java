@@ -169,6 +169,156 @@ public class ListOssCheckResultResponseBody extends TeaModel {
      *
      * <p>ListOssCheckResultResponseBody</p>
      */
+    public static class LabelDetails extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("Label")
+        private String label;
+
+        private LabelDetails(Builder builder) {
+            this.description = builder.description;
+            this.label = builder.label;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LabelDetails create() {
+            return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return label
+         */
+        public String getLabel() {
+            return this.label;
+        }
+
+        public static final class Builder {
+            private String description; 
+            private String label; 
+
+            private Builder() {
+            } 
+
+            private Builder(LabelDetails model) {
+                this.description = model.description;
+                this.label = model.label;
+            } 
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * Label.
+             */
+            public Builder label(String label) {
+                this.label = label;
+                return this;
+            }
+
+            public LabelDetails build() {
+                return new LabelDetails(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListOssCheckResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOssCheckResultResponseBody</p>
+     */
+    public static class LabelDetails2 extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("Label")
+        private String label;
+
+        private LabelDetails2(Builder builder) {
+            this.description = builder.description;
+            this.label = builder.label;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LabelDetails2 create() {
+            return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return label
+         */
+        public String getLabel() {
+            return this.label;
+        }
+
+        public static final class Builder {
+            private String description; 
+            private String label; 
+
+            private Builder() {
+            } 
+
+            private Builder(LabelDetails2 model) {
+                this.description = model.description;
+                this.label = model.label;
+            } 
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * Label.
+             */
+            public Builder label(String label) {
+                this.label = label;
+                return this;
+            }
+
+            public LabelDetails2 build() {
+                return new LabelDetails2(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListOssCheckResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOssCheckResultResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
@@ -196,6 +346,12 @@ public class ListOssCheckResultResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("JobName")
         private String jobName;
+
+        @com.aliyun.core.annotation.NameInMap("LabelDetails")
+        private java.util.List<LabelDetails> labelDetails;
+
+        @com.aliyun.core.annotation.NameInMap("LabelDetails2")
+        private java.util.List<LabelDetails2> labelDetails2;
 
         @com.aliyun.core.annotation.NameInMap("Labels")
         private java.util.List<String> labels;
@@ -246,6 +402,8 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             this.imageUrl = builder.imageUrl;
             this.isCopy = builder.isCopy;
             this.jobName = builder.jobName;
+            this.labelDetails = builder.labelDetails;
+            this.labelDetails2 = builder.labelDetails2;
             this.labels = builder.labels;
             this.labels2 = builder.labels2;
             this.md5 = builder.md5;
@@ -330,6 +488,20 @@ public class ListOssCheckResultResponseBody extends TeaModel {
          */
         public String getJobName() {
             return this.jobName;
+        }
+
+        /**
+         * @return labelDetails
+         */
+        public java.util.List<LabelDetails> getLabelDetails() {
+            return this.labelDetails;
+        }
+
+        /**
+         * @return labelDetails2
+         */
+        public java.util.List<LabelDetails2> getLabelDetails2() {
+            return this.labelDetails2;
         }
 
         /**
@@ -433,6 +605,8 @@ public class ListOssCheckResultResponseBody extends TeaModel {
             private String imageUrl; 
             private Boolean isCopy; 
             private String jobName; 
+            private java.util.List<LabelDetails> labelDetails; 
+            private java.util.List<LabelDetails2> labelDetails2; 
             private java.util.List<String> labels; 
             private java.util.List<String> labels2; 
             private String md5; 
@@ -460,6 +634,8 @@ public class ListOssCheckResultResponseBody extends TeaModel {
                 this.imageUrl = model.imageUrl;
                 this.isCopy = model.isCopy;
                 this.jobName = model.jobName;
+                this.labelDetails = model.labelDetails;
+                this.labelDetails2 = model.labelDetails2;
                 this.labels = model.labels;
                 this.labels2 = model.labels2;
                 this.md5 = model.md5;
@@ -571,6 +747,22 @@ public class ListOssCheckResultResponseBody extends TeaModel {
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
+                return this;
+            }
+
+            /**
+             * LabelDetails.
+             */
+            public Builder labelDetails(java.util.List<LabelDetails> labelDetails) {
+                this.labelDetails = labelDetails;
+                return this;
+            }
+
+            /**
+             * LabelDetails2.
+             */
+            public Builder labelDetails2(java.util.List<LabelDetails2> labelDetails2) {
+                this.labelDetails2 = labelDetails2;
                 return this;
             }
 

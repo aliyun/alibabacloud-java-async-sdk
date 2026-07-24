@@ -50,6 +50,9 @@ public class GetUploadInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
+    private String securityToken;
+
     @com.aliyun.core.annotation.NameInMap("Signature")
     private String signature;
 
@@ -68,6 +71,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
         this.name = builder.name;
         this.policy = builder.policy;
         this.requestId = builder.requestId;
+        this.securityToken = builder.securityToken;
         this.signature = builder.signature;
         this.success = builder.success;
     }
@@ -162,6 +166,13 @@ public class GetUploadInfoResponseBody extends TeaModel {
     }
 
     /**
+     * @return securityToken
+     */
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    /**
      * @return signature
      */
     public String getSignature() {
@@ -187,6 +198,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
         private String name; 
         private String policy; 
         private String requestId; 
+        private String securityToken; 
         private String signature; 
         private Boolean success; 
 
@@ -205,6 +217,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
             this.name = model.name;
             this.policy = model.policy;
             this.requestId = model.requestId;
+            this.securityToken = model.securityToken;
             this.signature = model.signature;
             this.success = model.success;
         } 
@@ -327,6 +340,14 @@ public class GetUploadInfoResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SecurityToken.
+         */
+        public Builder securityToken(String securityToken) {
+            this.securityToken = securityToken;
             return this;
         }
 

@@ -62,6 +62,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CancelStockOssCheckTaskResponse> cancelStockOssCheckTask(CancelStockOssCheckTaskRequest request);
 
     /**
+     * @param request the request parameters of ConfirmAiAppScan  ConfirmAiAppScanRequest
+     * @return ConfirmAiAppScanResponse
+     */
+    CompletableFuture<ConfirmAiAppScanResponse> confirmAiAppScan(ConfirmAiAppScanRequest request);
+
+    /**
      * @param request the request parameters of CopyServiceConfig  CopyServiceConfigRequest
      * @return CopyServiceConfigResponse
      */
