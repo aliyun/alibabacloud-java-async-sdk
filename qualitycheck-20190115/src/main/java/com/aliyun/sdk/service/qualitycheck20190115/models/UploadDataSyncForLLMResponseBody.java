@@ -869,6 +869,9 @@ public class UploadDataSyncForLLMResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Hit")
         private Hit hit;
 
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
         @com.aliyun.core.annotation.NameInMap("Rid")
         private String rid;
 
@@ -878,6 +881,7 @@ public class UploadDataSyncForLLMResponseBody extends TeaModel {
         private RuleHitInfo(Builder builder) {
             this.conditionInfo = builder.conditionInfo;
             this.hit = builder.hit;
+            this.name = builder.name;
             this.rid = builder.rid;
             this.tid = builder.tid;
         }
@@ -905,6 +909,13 @@ public class UploadDataSyncForLLMResponseBody extends TeaModel {
         }
 
         /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
          * @return rid
          */
         public String getRid() {
@@ -921,6 +932,7 @@ public class UploadDataSyncForLLMResponseBody extends TeaModel {
         public static final class Builder {
             private ConditionInfo conditionInfo; 
             private Hit hit; 
+            private String name; 
             private String rid; 
             private String tid; 
 
@@ -930,6 +942,7 @@ public class UploadDataSyncForLLMResponseBody extends TeaModel {
             private Builder(RuleHitInfo model) {
                 this.conditionInfo = model.conditionInfo;
                 this.hit = model.hit;
+                this.name = model.name;
                 this.rid = model.rid;
                 this.tid = model.tid;
             } 
@@ -947,6 +960,14 @@ public class UploadDataSyncForLLMResponseBody extends TeaModel {
              */
             public Builder hit(Hit hit) {
                 this.hit = hit;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
                 return this;
             }
 

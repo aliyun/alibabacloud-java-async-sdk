@@ -926,6 +926,9 @@ public class UploadDataSyncResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LlmResponse")
         private String llmResponse;
 
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
         @com.aliyun.core.annotation.NameInMap("Rid")
         private String rid;
 
@@ -936,6 +939,7 @@ public class UploadDataSyncResponseBody extends TeaModel {
             this.conditionInfo = builder.conditionInfo;
             this.hit = builder.hit;
             this.llmResponse = builder.llmResponse;
+            this.name = builder.name;
             this.rid = builder.rid;
             this.tid = builder.tid;
         }
@@ -970,6 +974,13 @@ public class UploadDataSyncResponseBody extends TeaModel {
         }
 
         /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
          * @return rid
          */
         public String getRid() {
@@ -987,6 +998,7 @@ public class UploadDataSyncResponseBody extends TeaModel {
             private ConditionInfo conditionInfo; 
             private Hit hit; 
             private String llmResponse; 
+            private String name; 
             private String rid; 
             private String tid; 
 
@@ -997,6 +1009,7 @@ public class UploadDataSyncResponseBody extends TeaModel {
                 this.conditionInfo = model.conditionInfo;
                 this.hit = model.hit;
                 this.llmResponse = model.llmResponse;
+                this.name = model.name;
                 this.rid = model.rid;
                 this.tid = model.tid;
             } 
@@ -1022,6 +1035,14 @@ public class UploadDataSyncResponseBody extends TeaModel {
              */
             public Builder llmResponse(String llmResponse) {
                 this.llmResponse = llmResponse;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
                 return this;
             }
 

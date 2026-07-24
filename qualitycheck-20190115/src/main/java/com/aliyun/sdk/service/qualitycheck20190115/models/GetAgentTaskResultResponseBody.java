@@ -160,6 +160,186 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
      *
      * <p>GetAgentTaskResultResponseBody</p>
      */
+    public static class Dialogues extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Begin")
+        private Long begin;
+
+        @com.aliyun.core.annotation.NameInMap("EmotionValue")
+        private Integer emotionValue;
+
+        @com.aliyun.core.annotation.NameInMap("End")
+        private Long end;
+
+        @com.aliyun.core.annotation.NameInMap("HourMinSec")
+        private String hourMinSec;
+
+        @com.aliyun.core.annotation.NameInMap("Role")
+        private String role;
+
+        @com.aliyun.core.annotation.NameInMap("SpeechRate")
+        private Integer speechRate;
+
+        @com.aliyun.core.annotation.NameInMap("Words")
+        private String words;
+
+        private Dialogues(Builder builder) {
+            this.begin = builder.begin;
+            this.emotionValue = builder.emotionValue;
+            this.end = builder.end;
+            this.hourMinSec = builder.hourMinSec;
+            this.role = builder.role;
+            this.speechRate = builder.speechRate;
+            this.words = builder.words;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Dialogues create() {
+            return builder().build();
+        }
+
+        /**
+         * @return begin
+         */
+        public Long getBegin() {
+            return this.begin;
+        }
+
+        /**
+         * @return emotionValue
+         */
+        public Integer getEmotionValue() {
+            return this.emotionValue;
+        }
+
+        /**
+         * @return end
+         */
+        public Long getEnd() {
+            return this.end;
+        }
+
+        /**
+         * @return hourMinSec
+         */
+        public String getHourMinSec() {
+            return this.hourMinSec;
+        }
+
+        /**
+         * @return role
+         */
+        public String getRole() {
+            return this.role;
+        }
+
+        /**
+         * @return speechRate
+         */
+        public Integer getSpeechRate() {
+            return this.speechRate;
+        }
+
+        /**
+         * @return words
+         */
+        public String getWords() {
+            return this.words;
+        }
+
+        public static final class Builder {
+            private Long begin; 
+            private Integer emotionValue; 
+            private Long end; 
+            private String hourMinSec; 
+            private String role; 
+            private Integer speechRate; 
+            private String words; 
+
+            private Builder() {
+            } 
+
+            private Builder(Dialogues model) {
+                this.begin = model.begin;
+                this.emotionValue = model.emotionValue;
+                this.end = model.end;
+                this.hourMinSec = model.hourMinSec;
+                this.role = model.role;
+                this.speechRate = model.speechRate;
+                this.words = model.words;
+            } 
+
+            /**
+             * Begin.
+             */
+            public Builder begin(Long begin) {
+                this.begin = begin;
+                return this;
+            }
+
+            /**
+             * EmotionValue.
+             */
+            public Builder emotionValue(Integer emotionValue) {
+                this.emotionValue = emotionValue;
+                return this;
+            }
+
+            /**
+             * End.
+             */
+            public Builder end(Long end) {
+                this.end = end;
+                return this;
+            }
+
+            /**
+             * HourMinSec.
+             */
+            public Builder hourMinSec(String hourMinSec) {
+                this.hourMinSec = hourMinSec;
+                return this;
+            }
+
+            /**
+             * Role.
+             */
+            public Builder role(String role) {
+                this.role = role;
+                return this;
+            }
+
+            /**
+             * SpeechRate.
+             */
+            public Builder speechRate(Integer speechRate) {
+                this.speechRate = speechRate;
+                return this;
+            }
+
+            /**
+             * Words.
+             */
+            public Builder words(String words) {
+                this.words = words;
+                return this;
+            }
+
+            public Dialogues build() {
+                return new Dialogues(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAgentTaskResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAgentTaskResultResponseBody</p>
+     */
     public static class CustomerPromptResponse extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
@@ -866,6 +1046,12 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
      * <p>GetAgentTaskResultResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Dialogues")
+        private java.util.List<Dialogues> dialogues;
+
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
+        private String errorMessage;
+
         @com.aliyun.core.annotation.NameInMap("InputTokens")
         private String inputTokens;
 
@@ -897,6 +1083,8 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         private String vid;
 
         private Data(Builder builder) {
+            this.dialogues = builder.dialogues;
+            this.errorMessage = builder.errorMessage;
             this.inputTokens = builder.inputTokens;
             this.llmRequestId = builder.llmRequestId;
             this.outputTokens = builder.outputTokens;
@@ -915,6 +1103,20 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return dialogues
+         */
+        public java.util.List<Dialogues> getDialogues() {
+            return this.dialogues;
+        }
+
+        /**
+         * @return errorMessage
+         */
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
         /**
@@ -988,6 +1190,8 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<Dialogues> dialogues; 
+            private String errorMessage; 
             private String inputTokens; 
             private String llmRequestId; 
             private String outputTokens; 
@@ -1003,6 +1207,8 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.dialogues = model.dialogues;
+                this.errorMessage = model.errorMessage;
                 this.inputTokens = model.inputTokens;
                 this.llmRequestId = model.llmRequestId;
                 this.outputTokens = model.outputTokens;
@@ -1014,6 +1220,22 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
                 this.tyxmTurboCount = model.tyxmTurboCount;
                 this.vid = model.vid;
             } 
+
+            /**
+             * Dialogues.
+             */
+            public Builder dialogues(java.util.List<Dialogues> dialogues) {
+                this.dialogues = dialogues;
+                return this;
+            }
+
+            /**
+             * ErrorMessage.
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
+                return this;
+            }
 
             /**
              * InputTokens.
