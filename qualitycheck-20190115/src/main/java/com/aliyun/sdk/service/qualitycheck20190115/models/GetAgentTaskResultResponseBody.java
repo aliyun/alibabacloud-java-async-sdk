@@ -928,6 +928,516 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
      *
      * <p>GetAgentTaskResultResponseBody</p>
      */
+    public static class Additions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Age")
+        private String age;
+
+        @com.aliyun.core.annotation.NameInMap("AgeGroup")
+        private String ageGroup;
+
+        @com.aliyun.core.annotation.NameInMap("AgeScore")
+        private Float ageScore;
+
+        @com.aliyun.core.annotation.NameInMap("BestVoiceprintScore")
+        private Float bestVoiceprintScore;
+
+        @com.aliyun.core.annotation.NameInMap("Emotion")
+        private String emotion;
+
+        @com.aliyun.core.annotation.NameInMap("EmotionScore")
+        private Float emotionScore;
+
+        @com.aliyun.core.annotation.NameInMap("Gender")
+        private String gender;
+
+        @com.aliyun.core.annotation.NameInMap("GenderScore")
+        private Float genderScore;
+
+        @com.aliyun.core.annotation.NameInMap("IsKnownVoiceprint")
+        private Boolean isKnownVoiceprint;
+
+        @com.aliyun.core.annotation.NameInMap("Speaker")
+        private String speaker;
+
+        private Additions(Builder builder) {
+            this.age = builder.age;
+            this.ageGroup = builder.ageGroup;
+            this.ageScore = builder.ageScore;
+            this.bestVoiceprintScore = builder.bestVoiceprintScore;
+            this.emotion = builder.emotion;
+            this.emotionScore = builder.emotionScore;
+            this.gender = builder.gender;
+            this.genderScore = builder.genderScore;
+            this.isKnownVoiceprint = builder.isKnownVoiceprint;
+            this.speaker = builder.speaker;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Additions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return age
+         */
+        public String getAge() {
+            return this.age;
+        }
+
+        /**
+         * @return ageGroup
+         */
+        public String getAgeGroup() {
+            return this.ageGroup;
+        }
+
+        /**
+         * @return ageScore
+         */
+        public Float getAgeScore() {
+            return this.ageScore;
+        }
+
+        /**
+         * @return bestVoiceprintScore
+         */
+        public Float getBestVoiceprintScore() {
+            return this.bestVoiceprintScore;
+        }
+
+        /**
+         * @return emotion
+         */
+        public String getEmotion() {
+            return this.emotion;
+        }
+
+        /**
+         * @return emotionScore
+         */
+        public Float getEmotionScore() {
+            return this.emotionScore;
+        }
+
+        /**
+         * @return gender
+         */
+        public String getGender() {
+            return this.gender;
+        }
+
+        /**
+         * @return genderScore
+         */
+        public Float getGenderScore() {
+            return this.genderScore;
+        }
+
+        /**
+         * @return isKnownVoiceprint
+         */
+        public Boolean getIsKnownVoiceprint() {
+            return this.isKnownVoiceprint;
+        }
+
+        /**
+         * @return speaker
+         */
+        public String getSpeaker() {
+            return this.speaker;
+        }
+
+        public static final class Builder {
+            private String age; 
+            private String ageGroup; 
+            private Float ageScore; 
+            private Float bestVoiceprintScore; 
+            private String emotion; 
+            private Float emotionScore; 
+            private String gender; 
+            private Float genderScore; 
+            private Boolean isKnownVoiceprint; 
+            private String speaker; 
+
+            private Builder() {
+            } 
+
+            private Builder(Additions model) {
+                this.age = model.age;
+                this.ageGroup = model.ageGroup;
+                this.ageScore = model.ageScore;
+                this.bestVoiceprintScore = model.bestVoiceprintScore;
+                this.emotion = model.emotion;
+                this.emotionScore = model.emotionScore;
+                this.gender = model.gender;
+                this.genderScore = model.genderScore;
+                this.isKnownVoiceprint = model.isKnownVoiceprint;
+                this.speaker = model.speaker;
+            } 
+
+            /**
+             * Age.
+             */
+            public Builder age(String age) {
+                this.age = age;
+                return this;
+            }
+
+            /**
+             * AgeGroup.
+             */
+            public Builder ageGroup(String ageGroup) {
+                this.ageGroup = ageGroup;
+                return this;
+            }
+
+            /**
+             * AgeScore.
+             */
+            public Builder ageScore(Float ageScore) {
+                this.ageScore = ageScore;
+                return this;
+            }
+
+            /**
+             * BestVoiceprintScore.
+             */
+            public Builder bestVoiceprintScore(Float bestVoiceprintScore) {
+                this.bestVoiceprintScore = bestVoiceprintScore;
+                return this;
+            }
+
+            /**
+             * Emotion.
+             */
+            public Builder emotion(String emotion) {
+                this.emotion = emotion;
+                return this;
+            }
+
+            /**
+             * EmotionScore.
+             */
+            public Builder emotionScore(Float emotionScore) {
+                this.emotionScore = emotionScore;
+                return this;
+            }
+
+            /**
+             * Gender.
+             */
+            public Builder gender(String gender) {
+                this.gender = gender;
+                return this;
+            }
+
+            /**
+             * GenderScore.
+             */
+            public Builder genderScore(Float genderScore) {
+                this.genderScore = genderScore;
+                return this;
+            }
+
+            /**
+             * IsKnownVoiceprint.
+             */
+            public Builder isKnownVoiceprint(Boolean isKnownVoiceprint) {
+                this.isKnownVoiceprint = isKnownVoiceprint;
+                return this;
+            }
+
+            /**
+             * Speaker.
+             */
+            public Builder speaker(String speaker) {
+                this.speaker = speaker;
+                return this;
+            }
+
+            public Additions build() {
+                return new Additions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAgentTaskResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAgentTaskResultResponseBody</p>
+     */
+    public static class Dialogue extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Additions")
+        private Additions additions;
+
+        @com.aliyun.core.annotation.NameInMap("Begin")
+        private Long begin;
+
+        @com.aliyun.core.annotation.NameInMap("End")
+        private Long end;
+
+        @com.aliyun.core.annotation.NameInMap("Words")
+        private String words;
+
+        private Dialogue(Builder builder) {
+            this.additions = builder.additions;
+            this.begin = builder.begin;
+            this.end = builder.end;
+            this.words = builder.words;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Dialogue create() {
+            return builder().build();
+        }
+
+        /**
+         * @return additions
+         */
+        public Additions getAdditions() {
+            return this.additions;
+        }
+
+        /**
+         * @return begin
+         */
+        public Long getBegin() {
+            return this.begin;
+        }
+
+        /**
+         * @return end
+         */
+        public Long getEnd() {
+            return this.end;
+        }
+
+        /**
+         * @return words
+         */
+        public String getWords() {
+            return this.words;
+        }
+
+        public static final class Builder {
+            private Additions additions; 
+            private Long begin; 
+            private Long end; 
+            private String words; 
+
+            private Builder() {
+            } 
+
+            private Builder(Dialogue model) {
+                this.additions = model.additions;
+                this.begin = model.begin;
+                this.end = model.end;
+                this.words = model.words;
+            } 
+
+            /**
+             * Additions.
+             */
+            public Builder additions(Additions additions) {
+                this.additions = additions;
+                return this;
+            }
+
+            /**
+             * Begin.
+             */
+            public Builder begin(Long begin) {
+                this.begin = begin;
+                return this;
+            }
+
+            /**
+             * End.
+             */
+            public Builder end(Long end) {
+                this.end = end;
+                return this;
+            }
+
+            /**
+             * Words.
+             */
+            public Builder words(String words) {
+                this.words = words;
+                return this;
+            }
+
+            public Dialogue build() {
+                return new Dialogue(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAgentTaskResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAgentTaskResultResponseBody</p>
+     */
+    public static class Errors extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Code")
+        private String code;
+
+        @com.aliyun.core.annotation.NameInMap("Message")
+        private String message;
+
+        private Errors(Builder builder) {
+            this.code = builder.code;
+            this.message = builder.message;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Errors create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        public static final class Builder {
+            private String code; 
+            private String message; 
+
+            private Builder() {
+            } 
+
+            private Builder(Errors model) {
+                this.code = model.code;
+                this.message = model.message;
+            } 
+
+            /**
+             * Code.
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * Message.
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            public Errors build() {
+                return new Errors(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAgentTaskResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAgentTaskResultResponseBody</p>
+     */
+    public static class VoiceprintResponse extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Dialogue")
+        private java.util.List<Dialogue> dialogue;
+
+        @com.aliyun.core.annotation.NameInMap("Errors")
+        private java.util.List<Errors> errors;
+
+        private VoiceprintResponse(Builder builder) {
+            this.dialogue = builder.dialogue;
+            this.errors = builder.errors;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VoiceprintResponse create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dialogue
+         */
+        public java.util.List<Dialogue> getDialogue() {
+            return this.dialogue;
+        }
+
+        /**
+         * @return errors
+         */
+        public java.util.List<Errors> getErrors() {
+            return this.errors;
+        }
+
+        public static final class Builder {
+            private java.util.List<Dialogue> dialogue; 
+            private java.util.List<Errors> errors; 
+
+            private Builder() {
+            } 
+
+            private Builder(VoiceprintResponse model) {
+                this.dialogue = model.dialogue;
+                this.errors = model.errors;
+            } 
+
+            /**
+             * Dialogue.
+             */
+            public Builder dialogue(java.util.List<Dialogue> dialogue) {
+                this.dialogue = dialogue;
+                return this;
+            }
+
+            /**
+             * Errors.
+             */
+            public Builder errors(java.util.List<Errors> errors) {
+                this.errors = errors;
+                return this;
+            }
+
+            public VoiceprintResponse build() {
+                return new VoiceprintResponse(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAgentTaskResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAgentTaskResultResponseBody</p>
+     */
     public static class Response extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomerPromptResponse")
         private CustomerPromptResponse customerPromptResponse;
@@ -941,11 +1451,15 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagCategoryResponse")
         private TagCategoryResponse tagCategoryResponse;
 
+        @com.aliyun.core.annotation.NameInMap("VoiceprintResponse")
+        private VoiceprintResponse voiceprintResponse;
+
         private Response(Builder builder) {
             this.customerPromptResponse = builder.customerPromptResponse;
             this.fieldResponse = builder.fieldResponse;
             this.serviceInspectionResponse = builder.serviceInspectionResponse;
             this.tagCategoryResponse = builder.tagCategoryResponse;
+            this.voiceprintResponse = builder.voiceprintResponse;
         }
 
         public static Builder builder() {
@@ -984,11 +1498,19 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             return this.tagCategoryResponse;
         }
 
+        /**
+         * @return voiceprintResponse
+         */
+        public VoiceprintResponse getVoiceprintResponse() {
+            return this.voiceprintResponse;
+        }
+
         public static final class Builder {
             private CustomerPromptResponse customerPromptResponse; 
             private FieldResponse fieldResponse; 
             private ServiceInspectionResponse serviceInspectionResponse; 
             private TagCategoryResponse tagCategoryResponse; 
+            private VoiceprintResponse voiceprintResponse; 
 
             private Builder() {
             } 
@@ -998,6 +1520,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
                 this.fieldResponse = model.fieldResponse;
                 this.serviceInspectionResponse = model.serviceInspectionResponse;
                 this.tagCategoryResponse = model.tagCategoryResponse;
+                this.voiceprintResponse = model.voiceprintResponse;
             } 
 
             /**
@@ -1029,6 +1552,14 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
              */
             public Builder tagCategoryResponse(TagCategoryResponse tagCategoryResponse) {
                 this.tagCategoryResponse = tagCategoryResponse;
+                return this;
+            }
+
+            /**
+             * VoiceprintResponse.
+             */
+            public Builder voiceprintResponse(VoiceprintResponse voiceprintResponse) {
+                this.voiceprintResponse = voiceprintResponse;
                 return this;
             }
 
