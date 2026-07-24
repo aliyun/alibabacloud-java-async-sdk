@@ -590,9 +590,6 @@ public class ImageTranslationProResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LineCount")
         private Integer lineCount;
 
-        @com.aliyun.core.annotation.NameInMap("OvisErrMsg")
-        private String ovisErrMsg;
-
         @com.aliyun.core.annotation.NameInMap("TextRect")
         private TextRect textRect;
 
@@ -612,7 +609,6 @@ public class ImageTranslationProResponseBody extends TeaModel {
             this.imageRect = builder.imageRect;
             this.language = builder.language;
             this.lineCount = builder.lineCount;
-            this.ovisErrMsg = builder.ovisErrMsg;
             this.textRect = builder.textRect;
             this.valid = builder.valid;
             this.value = builder.value;
@@ -670,13 +666,6 @@ public class ImageTranslationProResponseBody extends TeaModel {
         }
 
         /**
-         * @return ovisErrMsg
-         */
-        public String getOvisErrMsg() {
-            return this.ovisErrMsg;
-        }
-
-        /**
          * @return textRect
          */
         public TextRect getTextRect() {
@@ -711,7 +700,6 @@ public class ImageTranslationProResponseBody extends TeaModel {
             private ImageRect imageRect; 
             private String language; 
             private Integer lineCount; 
-            private String ovisErrMsg; 
             private TextRect textRect; 
             private Boolean valid; 
             private String value; 
@@ -727,7 +715,6 @@ public class ImageTranslationProResponseBody extends TeaModel {
                 this.imageRect = model.imageRect;
                 this.language = model.language;
                 this.lineCount = model.lineCount;
-                this.ovisErrMsg = model.ovisErrMsg;
                 this.textRect = model.textRect;
                 this.valid = model.valid;
                 this.value = model.value;
@@ -779,14 +766,6 @@ public class ImageTranslationProResponseBody extends TeaModel {
              */
             public Builder lineCount(Integer lineCount) {
                 this.lineCount = lineCount;
-                return this;
-            }
-
-            /**
-             * <p>OVIS错误信息</p>
-             */
-            public Builder ovisErrMsg(String ovisErrMsg) {
-                this.ovisErrMsg = ovisErrMsg;
                 return this;
             }
 

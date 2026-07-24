@@ -104,6 +104,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<MaterialInspectionResponse> materialInspection(MaterialInspectionRequest request);
 
     /**
+     * @param request the request parameters of MerchandisePlacementDetection  MerchandisePlacementDetectionRequest
+     * @return MerchandisePlacementDetectionResponse
+     */
+    CompletableFuture<MerchandisePlacementDetectionResponse> merchandisePlacementDetection(MerchandisePlacementDetectionRequest request);
+
+    /**
      * @param request the request parameters of PackageWeightSizeCheck  PackageWeightSizeCheckRequest
      * @return PackageWeightSizeCheckResponse
      */
