@@ -117,6 +117,7 @@ public class ChangeDetailListOfOrderNumRequest extends Request {
         } 
 
         /**
+         * <p>Order Number</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +130,10 @@ public class ChangeDetailListOfOrderNumRequest extends Request {
         }
 
         /**
-         * page_index.
+         * <p>Page Index</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("page_index", pageIndex);
@@ -138,7 +142,10 @@ public class ChangeDetailListOfOrderNumRequest extends Request {
         }
 
         /**
-         * page_size.
+         * <p>Page Size</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("page_size", pageSize);
@@ -160,7 +167,10 @@ public class ChangeDetailListOfOrderNumRequest extends Request {
         }
 
         /**
-         * x-acs-airticket-language.
+         * <p>Multi-language, default to buyer account configuration</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en_US</p>
          */
         public Builder xAcsAirticketLanguage(String xAcsAirticketLanguage) {
             this.putHeaderParameter("x-acs-airticket-language", xAcsAirticketLanguage);

@@ -89,6 +89,7 @@ public class FlightChangeOfOrderRequest extends Request {
         } 
 
         /**
+         * <p>Order Number</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class FlightChangeOfOrderRequest extends Request {
         }
 
         /**
-         * x-acs-airticket-language.
+         * <p>Multi-language, default to buyer account configuration</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en_US</p>
          */
         public Builder xAcsAirticketLanguage(String xAcsAirticketLanguage) {
             this.putHeaderParameter("x-acs-airticket-language", xAcsAirticketLanguage);

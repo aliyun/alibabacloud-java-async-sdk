@@ -221,6 +221,9 @@ public class ChangeDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("service_fee")
         private Double serviceFee;
 
+        @com.aliyun.core.annotation.NameInMap("suez_service_fee")
+        private Double suezServiceFee;
+
         @com.aliyun.core.annotation.NameInMap("tax_fee")
         private Double taxFee;
 
@@ -229,6 +232,7 @@ public class ChangeDetailResponseBody extends TeaModel {
 
         private ChangeFee(Builder builder) {
             this.serviceFee = builder.serviceFee;
+            this.suezServiceFee = builder.suezServiceFee;
             this.taxFee = builder.taxFee;
             this.upgradeFee = builder.upgradeFee;
         }
@@ -249,6 +253,13 @@ public class ChangeDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return suezServiceFee
+         */
+        public Double getSuezServiceFee() {
+            return this.suezServiceFee;
+        }
+
+        /**
          * @return taxFee
          */
         public Double getTaxFee() {
@@ -264,6 +275,7 @@ public class ChangeDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private Double serviceFee; 
+            private Double suezServiceFee; 
             private Double taxFee; 
             private Double upgradeFee; 
 
@@ -272,6 +284,7 @@ public class ChangeDetailResponseBody extends TeaModel {
 
             private Builder(ChangeFee model) {
                 this.serviceFee = model.serviceFee;
+                this.suezServiceFee = model.suezServiceFee;
                 this.taxFee = model.taxFee;
                 this.upgradeFee = model.upgradeFee;
             } 
@@ -284,6 +297,14 @@ public class ChangeDetailResponseBody extends TeaModel {
              */
             public Builder serviceFee(Double serviceFee) {
                 this.serviceFee = serviceFee;
+                return this;
+            }
+
+            /**
+             * suez_service_fee.
+             */
+            public Builder suezServiceFee(Double suezServiceFee) {
+                this.suezServiceFee = suezServiceFee;
                 return this;
             }
 

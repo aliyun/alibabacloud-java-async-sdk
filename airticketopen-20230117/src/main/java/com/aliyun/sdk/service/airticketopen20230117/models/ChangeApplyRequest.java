@@ -163,6 +163,7 @@ public class ChangeApplyRequest extends Request {
         } 
 
         /**
+         * <p>List of passengers for change</p>
          * <p>This parameter is required.</p>
          */
         public Builder changePassengerList(java.util.List<ChangePassengerList> changePassengerList) {
@@ -173,6 +174,7 @@ public class ChangeApplyRequest extends Request {
         }
 
         /**
+         * <p>Proposed itinerary</p>
          * <p>This parameter is required.</p>
          */
         public Builder changedJourneys(java.util.List<ChangedJourneys> changedJourneys) {
@@ -183,6 +185,7 @@ public class ChangeApplyRequest extends Request {
         }
 
         /**
+         * <p>Contact information</p>
          * <p>This parameter is required.</p>
          */
         public Builder contact(Contact contact) {
@@ -193,6 +196,7 @@ public class ChangeApplyRequest extends Request {
         }
 
         /**
+         * <p>Order number</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,7 +209,10 @@ public class ChangeApplyRequest extends Request {
         }
 
         /**
-         * remark.
+         * <p>Buyer&quot;s remarks</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remark desc</p>
          */
         public Builder remark(String remark) {
             this.putBodyParameter("remark", remark);
@@ -214,6 +221,7 @@ public class ChangeApplyRequest extends Request {
         }
 
         /**
+         * <p>Change type 0: voluntary change; 1: involuntary change</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,7 +234,7 @@ public class ChangeApplyRequest extends Request {
         }
 
         /**
-         * <p>access_token</p>
+         * <p>access token</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -239,7 +247,10 @@ public class ChangeApplyRequest extends Request {
         }
 
         /**
-         * x-acs-airticket-language.
+         * <p>Multi-language, default to the buyer&quot;s account configuration</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en_US</p>
          */
         public Builder xAcsAirticketLanguage(String xAcsAirticketLanguage) {
             this.putHeaderParameter("x-acs-airticket-language", xAcsAirticketLanguage);
@@ -322,7 +333,10 @@ public class ChangeApplyRequest extends Request {
             } 
 
             /**
-             * document.
+             * <p>Document number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>411***********4411</p>
              */
             public Builder document(String document) {
                 this.document = document;
@@ -330,6 +344,7 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
+             * <p>Passenger&quot;s first name</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -341,6 +356,7 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
+             * <p>Passenger&quot;s last name</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -571,7 +587,10 @@ public class ChangeApplyRequest extends Request {
             } 
 
             /**
-             * arrival_airport.
+             * <p>Three-letter code of the arrival airport</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MFM</p>
              */
             public Builder arrivalAirport(String arrivalAirport) {
                 this.arrivalAirport = arrivalAirport;
@@ -579,6 +598,7 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
+             * <p>Three-letter code of the arrival city</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -590,7 +610,10 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * arrive_terminal.
+             * <p>Arrival terminal</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T1</p>
              */
             public Builder arriveTerminal(String arriveTerminal) {
                 this.arriveTerminal = arriveTerminal;
@@ -598,7 +621,10 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * arrive_time.
+             * <p>(Deprecated) Arrival date and time, UTC timestamp</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1677232999000</p>
              */
             public Builder arriveTime(Long arriveTime) {
                 this.arriveTime = arriveTime;
@@ -606,7 +632,10 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * arrive_time_str.
+             * <p>(Required) Arrival date and time, in the format: yyyy-MM-dd HH:mm:ss</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-20 12:30:00</p>
              */
             public Builder arriveTimeStr(String arriveTimeStr) {
                 this.arriveTimeStr = arriveTimeStr;
@@ -614,7 +643,10 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * code_share.
+             * <p>Whether it is a codeshare flight</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder codeShare(Boolean codeShare) {
                 this.codeShare = codeShare;
@@ -622,7 +654,10 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * departure_airport.
+             * <p>Three-letter code of the departure airport</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PVG</p>
              */
             public Builder departureAirport(String departureAirport) {
                 this.departureAirport = departureAirport;
@@ -630,6 +665,7 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
+             * <p>Three-letter code of the departure city</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -641,6 +677,7 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
+             * <p>Departure date (e.g., yyyyMMdd)</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -652,7 +689,10 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * departure_terminal.
+             * <p>Departure terminal</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T2</p>
              */
             public Builder departureTerminal(String departureTerminal) {
                 this.departureTerminal = departureTerminal;
@@ -660,7 +700,10 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * departure_time.
+             * <p>(Deprecated) Departure date, UTC timestamp</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1677232998000</p>
              */
             public Builder departureTime(Long departureTime) {
                 this.departureTime = departureTime;
@@ -668,7 +711,10 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * departure_time_str.
+             * <p>(Required) Departure date and time, in the format: yyyy-MM-dd HH:mm:ss</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-20 09:30:00</p>
              */
             public Builder departureTimeStr(String departureTimeStr) {
                 this.departureTimeStr = departureTimeStr;
@@ -676,6 +722,7 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
+             * <p>Marketing flight number (e.g., KA5809)</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -687,7 +734,10 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * operating_flight_no.
+             * <p>Operating flight number (e.g., CX601)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO1295</p>
              */
             public Builder operatingFlightNo(String operatingFlightNo) {
                 this.operatingFlightNo = operatingFlightNo;
@@ -741,7 +791,7 @@ public class ChangeApplyRequest extends Request {
             } 
 
             /**
-             * segment_list.
+             * <p>List of proposed segments for change</p>
              */
             public Builder segmentList(java.util.List<SegmentList> segmentList) {
                 this.segmentList = segmentList;
@@ -821,7 +871,10 @@ public class ChangeApplyRequest extends Request {
             } 
 
             /**
-             * email.
+             * <p>Email address</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gao******@gmail.com</p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -829,7 +882,10 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * mobile_country_code.
+             * <p>Country code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86</p>
              */
             public Builder mobileCountryCode(String mobileCountryCode) {
                 this.mobileCountryCode = mobileCountryCode;
@@ -837,7 +893,10 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * mobile_phone_num.
+             * <p>Contact&quot;s mobile phone number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>183*****92</p>
              */
             public Builder mobilePhoneNum(String mobilePhoneNum) {
                 this.mobilePhoneNum = mobilePhoneNum;

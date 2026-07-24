@@ -159,7 +159,10 @@ public class StandardSearchRequest extends Request {
         } 
 
         /**
-         * adults.
+         * <p>adult passenger amount 1-9</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder adults(Integer adults) {
             this.putBodyParameter("adults", adults);
@@ -168,6 +171,7 @@ public class StandardSearchRequest extends Request {
         }
 
         /**
+         * <p>itinerary list</p>
          * <p>This parameter is required.</p>
          */
         public Builder airLegs(java.util.List<AirLegs> airLegs) {
@@ -178,7 +182,18 @@ public class StandardSearchRequest extends Request {
         }
 
         /**
-         * cabin_class.
+         * <p>cabin class</p>
+         * <ol>
+         * <li><strong>ALL_CABIN</strong> : all cabin class</li>
+         * <li><strong>Y</strong> : economy class</li>
+         * <li><strong>FC</strong> : first class and business class</li>
+         * <li><strong>S</strong> : premium economy class</li>
+         * <li><strong>YS</strong> : economy class and premium economy class</li>
+         * <li><strong>YSC</strong> : economy class, premium economy class and business class</li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL_CABIN</p>
          */
         public Builder cabinClass(String cabinClass) {
             this.putBodyParameter("cabin_class", cabinClass);
@@ -187,7 +202,10 @@ public class StandardSearchRequest extends Request {
         }
 
         /**
-         * children.
+         * <p>child passenger amount 0-9</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder children(Integer children) {
             this.putBodyParameter("children", children);
@@ -196,7 +214,10 @@ public class StandardSearchRequest extends Request {
         }
 
         /**
-         * infants.
+         * <p>infant passenger amount 0-9</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder infants(Integer infants) {
             this.putBodyParameter("infants", infants);
@@ -205,7 +226,7 @@ public class StandardSearchRequest extends Request {
         }
 
         /**
-         * search_control_options.
+         * <p>search controls</p>
          */
         public Builder searchControlOptions(SearchControlOptions searchControlOptions) {
             String searchControlOptionsShrink = shrink(searchControlOptions, "search_control_options", "json");
@@ -336,7 +357,10 @@ public class StandardSearchRequest extends Request {
             } 
 
             /**
-             * arrival_airport_list.
+             * <p>arrival airport [IATA airport code]</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MFM</p>
              */
             public Builder arrivalAirportList(java.util.List<String> arrivalAirportList) {
                 this.arrivalAirportList = arrivalAirportList;
@@ -344,7 +368,10 @@ public class StandardSearchRequest extends Request {
             }
 
             /**
-             * arrival_city.
+             * <p>arrival city code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MFM</p>
              */
             public Builder arrivalCity(String arrivalCity) {
                 this.arrivalCity = arrivalCity;
@@ -352,7 +379,10 @@ public class StandardSearchRequest extends Request {
             }
 
             /**
-             * departure_airport_list.
+             * <p>departure airport [IATA airport code]</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PVG</p>
              */
             public Builder departureAirportList(java.util.List<String> departureAirportList) {
                 this.departureAirportList = departureAirportList;
@@ -360,7 +390,10 @@ public class StandardSearchRequest extends Request {
             }
 
             /**
-             * departure_city.
+             * <p>departure city code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHA</p>
              */
             public Builder departureCity(String departureCity) {
                 this.departureCity = departureCity;
@@ -368,6 +401,7 @@ public class StandardSearchRequest extends Request {
             }
 
             /**
+             * <p>departure date (eg: yyyyMMdd)</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -451,7 +485,10 @@ public class StandardSearchRequest extends Request {
             } 
 
             /**
-             * airline_excluded_list.
+             * <p>excluded airlines list</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7C</p>
              */
             public Builder airlineExcludedList(java.util.List<String> airlineExcludedList) {
                 this.airlineExcludedList = airlineExcludedList;
@@ -459,7 +496,10 @@ public class StandardSearchRequest extends Request {
             }
 
             /**
-             * airline_prefer_list.
+             * <p>preferred airlines list</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FD</p>
              */
             public Builder airlinePreferList(java.util.List<String> airlinePreferList) {
                 this.airlinePreferList = airlinePreferList;
@@ -467,7 +507,10 @@ public class StandardSearchRequest extends Request {
             }
 
             /**
-             * service_quality.
+             * <p>service quality</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A1</p>
              */
             public Builder serviceQuality(String serviceQuality) {
                 this.serviceQuality = serviceQuality;

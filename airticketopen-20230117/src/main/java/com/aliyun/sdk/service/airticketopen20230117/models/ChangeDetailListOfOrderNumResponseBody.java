@@ -140,7 +140,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Correctly processed return data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -148,7 +148,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         }
 
         /**
-         * error_code.
+         * <p>Error Code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -156,7 +159,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         }
 
         /**
-         * error_data.
+         * <p>Data carried in error handling</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorData(Object errorData) {
             this.errorData = errorData;
@@ -164,7 +170,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         }
 
         /**
-         * error_msg.
+         * <p>Error Message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -172,7 +181,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>HTTP request successful, status value is 200</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -180,7 +192,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Whether the request was successful</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -203,6 +218,9 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("service_fee")
         private Double serviceFee;
 
+        @com.aliyun.core.annotation.NameInMap("suez_service_fee")
+        private Double suezServiceFee;
+
         @com.aliyun.core.annotation.NameInMap("tax_fee")
         private Double taxFee;
 
@@ -211,6 +229,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
 
         private ChangeFee(Builder builder) {
             this.serviceFee = builder.serviceFee;
+            this.suezServiceFee = builder.suezServiceFee;
             this.taxFee = builder.taxFee;
             this.upgradeFee = builder.upgradeFee;
         }
@@ -231,6 +250,13 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         }
 
         /**
+         * @return suezServiceFee
+         */
+        public Double getSuezServiceFee() {
+            return this.suezServiceFee;
+        }
+
+        /**
          * @return taxFee
          */
         public Double getTaxFee() {
@@ -246,6 +272,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
 
         public static final class Builder {
             private Double serviceFee; 
+            private Double suezServiceFee; 
             private Double taxFee; 
             private Double upgradeFee; 
 
@@ -254,12 +281,16 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
 
             private Builder(ChangeFee model) {
                 this.serviceFee = model.serviceFee;
+                this.suezServiceFee = model.suezServiceFee;
                 this.taxFee = model.taxFee;
                 this.upgradeFee = model.upgradeFee;
             } 
 
             /**
-             * service_fee.
+             * <p>fare penalty</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder serviceFee(Double serviceFee) {
                 this.serviceFee = serviceFee;
@@ -267,7 +298,18 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * tax_fee.
+             * suez_service_fee.
+             */
+            public Builder suezServiceFee(Double suezServiceFee) {
+                this.suezServiceFee = suezServiceFee;
+                return this;
+            }
+
+            /**
+             * <p>tax difference</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder taxFee(Double taxFee) {
                 this.taxFee = taxFee;
@@ -275,7 +317,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * upgrade_fee.
+             * <p>price difference</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder upgradeFee(Double upgradeFee) {
                 this.upgradeFee = upgradeFee;
@@ -355,7 +400,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             } 
 
             /**
-             * document.
+             * <p>Document number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>411***********4411</p>
              */
             public Builder document(String document) {
                 this.document = document;
@@ -363,7 +411,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * first_name.
+             * <p>Passenger&quot;s first name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SAN</p>
              */
             public Builder firstName(String firstName) {
                 this.firstName = firstName;
@@ -371,7 +422,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * last_name.
+             * <p>Passenger&quot;s last name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZHANG</p>
              */
             public Builder lastName(String lastName) {
                 this.lastName = lastName;
@@ -438,7 +492,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             } 
 
             /**
-             * change_fee.
+             * <p>Change fee details for the passenger</p>
              */
             public Builder changeFee(ChangeFee changeFee) {
                 this.changeFee = changeFee;
@@ -446,7 +500,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * passenger.
+             * <p>Information of the passenger for change</p>
              */
             public Builder passenger(Passenger passenger) {
                 this.passenger = passenger;
@@ -526,7 +580,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             } 
 
             /**
-             * document.
+             * <p>Document Number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>411***********4411</p>
              */
             public Builder document(String document) {
                 this.document = document;
@@ -534,7 +591,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * first_name.
+             * <p>Passenger&quot;s First Name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SAN</p>
              */
             public Builder firstName(String firstName) {
                 this.firstName = firstName;
@@ -542,7 +602,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * last_name.
+             * <p>Passenger&quot;s Last Name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZHANG</p>
              */
             public Builder lastName(String lastName) {
                 this.lastName = lastName;
@@ -869,7 +932,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             } 
 
             /**
-             * arrival_airport.
+             * <p>Arrival airport three-letter code (uppercase)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MFM</p>
              */
             public Builder arrivalAirport(String arrivalAirport) {
                 this.arrivalAirport = arrivalAirport;
@@ -877,7 +943,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * arrival_city.
+             * <p>Arrival city three-letter code (uppercase)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MFM</p>
              */
             public Builder arrivalCity(String arrivalCity) {
                 this.arrivalCity = arrivalCity;
@@ -885,7 +954,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * arrival_terminal.
+             * <p>Arrival terminal of the flight</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T1</p>
              */
             public Builder arrivalTerminal(String arrivalTerminal) {
                 this.arrivalTerminal = arrivalTerminal;
@@ -893,7 +965,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * arrival_time.
+             * <p>Flight arrival date and time, in the format (yyyy-MM-dd HH:mm:ss)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-10 10:40:00</p>
              */
             public Builder arrivalTime(String arrivalTime) {
                 this.arrivalTime = arrivalTime;
@@ -901,7 +976,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * availability.
+             * <p>Number of available seats</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder availability(String availability) {
                 this.availability = availability;
@@ -909,7 +987,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * cabin.
+             * <p>Cabin class</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V</p>
              */
             public Builder cabin(String cabin) {
                 this.cabin = cabin;
@@ -917,7 +998,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * cabin_class.
+             * <p>Cabin grade</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Y</p>
              */
             public Builder cabinClass(String cabinClass) {
                 this.cabinClass = cabinClass;
@@ -925,7 +1009,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * code_share.
+             * <p>Whether it is a codeshare flight</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder codeShare(Boolean codeShare) {
                 this.codeShare = codeShare;
@@ -933,7 +1020,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * departure_airport.
+             * <p>Departure airport three-letter code (uppercase)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PVG</p>
              */
             public Builder departureAirport(String departureAirport) {
                 this.departureAirport = departureAirport;
@@ -941,7 +1031,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * departure_city.
+             * <p>Departure city three-letter code (uppercase)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHA</p>
              */
             public Builder departureCity(String departureCity) {
                 this.departureCity = departureCity;
@@ -949,7 +1042,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * departure_terminal.
+             * <p>Departure terminal of the flight</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T2</p>
              */
             public Builder departureTerminal(String departureTerminal) {
                 this.departureTerminal = departureTerminal;
@@ -957,7 +1053,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * departure_time.
+             * <p>Flight departure date and time, in the format (yyyy-MM-dd HH:mm:ss)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-10 07:55:00</p>
              */
             public Builder departureTime(String departureTime) {
                 this.departureTime = departureTime;
@@ -965,7 +1064,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * equip_type.
+             * <p>Aircraft type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32Q</p>
              */
             public Builder equipType(String equipType) {
                 this.equipType = equipType;
@@ -973,7 +1075,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * flight_duration.
+             * <p>Flight duration in minutes</p>
+             * 
+             * <strong>example:</strong>
+             * <p>165</p>
              */
             public Builder flightDuration(Integer flightDuration) {
                 this.flightDuration = flightDuration;
@@ -981,7 +1086,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * marketing_airline.
+             * <p>Marketing airline (e.g., HO)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO</p>
              */
             public Builder marketingAirline(String marketingAirline) {
                 this.marketingAirline = marketingAirline;
@@ -989,7 +1097,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * marketing_flight_no.
+             * <p>Marketing flight number (e.g., HO1295)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO1295</p>
              */
             public Builder marketingFlightNo(String marketingFlightNo) {
                 this.marketingFlightNo = marketingFlightNo;
@@ -997,7 +1108,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * marketing_flight_no_int.
+             * <p>Marketing flight number (e.g., 1295)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1295</p>
              */
             public Builder marketingFlightNoInt(Integer marketingFlightNoInt) {
                 this.marketingFlightNoInt = marketingFlightNoInt;
@@ -1005,7 +1119,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * operating_airline.
+             * <p>Operating airline (e.g., CX)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO</p>
              */
             public Builder operatingAirline(String operatingAirline) {
                 this.operatingAirline = operatingAirline;
@@ -1013,7 +1130,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * operating_flight_no.
+             * <p>Operating flight number (e.g., CX601)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO1295</p>
              */
             public Builder operatingFlightNo(String operatingFlightNo) {
                 this.operatingFlightNo = operatingFlightNo;
@@ -1021,7 +1141,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * segment_id.
+             * <p>Segment ID format: Flight number + Departure airport + Arrival airport + Departure date (MMdd)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO1295-PVG-MFM-20230310</p>
              */
             public Builder segmentId(String segmentId) {
                 this.segmentId = segmentId;
@@ -1029,7 +1152,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * stop_city_list.
+             * <p>List of stop cities, present when stopQuantity &gt; 0, multiple values separated by commas</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SEL,HKG</p>
              */
             public Builder stopCityList(String stopCityList) {
                 this.stopCityList = stopCityList;
@@ -1037,7 +1163,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * stop_quantity.
+             * <p>Number of stop cities</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder stopQuantity(Integer stopQuantity) {
                 this.stopQuantity = stopQuantity;
@@ -1104,7 +1233,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             } 
 
             /**
-             * segment_list.
+             * <p>Segment Information</p>
              */
             public Builder segmentList(java.util.List<SegmentList> segmentList) {
                 this.segmentList = segmentList;
@@ -1112,7 +1241,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * transfer_count.
+             * <p>Number of transfers</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder transferCount(Integer transferCount) {
                 this.transferCount = transferCount;
@@ -1192,7 +1324,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             } 
 
             /**
-             * email.
+             * <p>Email address</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gao******@gmail.com</p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -1200,7 +1335,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * mobile_country_code.
+             * <p>Country code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86</p>
              */
             public Builder mobileCountryCode(String mobileCountryCode) {
                 this.mobileCountryCode = mobileCountryCode;
@@ -1208,7 +1346,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * mobile_phone_num.
+             * <p>Contact&quot;s mobile phone number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>183*****92</p>
              */
             public Builder mobilePhoneNum(String mobilePhoneNum) {
                 this.mobilePhoneNum = mobilePhoneNum;
@@ -1535,7 +1676,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             } 
 
             /**
-             * arrival_airport.
+             * <p>Arrival airport three-letter code (uppercase)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MFM</p>
              */
             public Builder arrivalAirport(String arrivalAirport) {
                 this.arrivalAirport = arrivalAirport;
@@ -1543,7 +1687,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * arrival_city.
+             * <p>Arrival city three-letter code (uppercase)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MFM</p>
              */
             public Builder arrivalCity(String arrivalCity) {
                 this.arrivalCity = arrivalCity;
@@ -1551,7 +1698,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * arrival_terminal.
+             * <p>Arrival terminal of the flight</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T1</p>
              */
             public Builder arrivalTerminal(String arrivalTerminal) {
                 this.arrivalTerminal = arrivalTerminal;
@@ -1559,7 +1709,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * arrival_time.
+             * <p>Flight arrival date and time in string format (yyyy-MM-dd HH:mm:ss)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-10 10:40:00</p>
              */
             public Builder arrivalTime(String arrivalTime) {
                 this.arrivalTime = arrivalTime;
@@ -1567,7 +1720,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * availability.
+             * <p>Number of available seats</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder availability(String availability) {
                 this.availability = availability;
@@ -1575,7 +1731,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * cabin.
+             * <p>RBD</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V</p>
              */
             public Builder cabin(String cabin) {
                 this.cabin = cabin;
@@ -1583,7 +1742,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * cabin_class.
+             * <p>service class ( compartment )</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Y</p>
              */
             public Builder cabinClass(String cabinClass) {
                 this.cabinClass = cabinClass;
@@ -1591,7 +1753,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * code_share.
+             * <p>Whether it is a codeshare flight</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder codeShare(Boolean codeShare) {
                 this.codeShare = codeShare;
@@ -1599,7 +1764,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * departure_airport.
+             * <p>Departure airport three-letter code (uppercase)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PVG</p>
              */
             public Builder departureAirport(String departureAirport) {
                 this.departureAirport = departureAirport;
@@ -1607,7 +1775,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * departure_city.
+             * <p>Departure city three-letter code (uppercase)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHA</p>
              */
             public Builder departureCity(String departureCity) {
                 this.departureCity = departureCity;
@@ -1615,7 +1786,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * departure_terminal.
+             * <p>Departure terminal of the flight</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T2</p>
              */
             public Builder departureTerminal(String departureTerminal) {
                 this.departureTerminal = departureTerminal;
@@ -1623,7 +1797,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * departure_time.
+             * <p>Flight departure date and time in string format (yyyy-MM-dd HH:mm:ss)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-10 07:55:00</p>
              */
             public Builder departureTime(String departureTime) {
                 this.departureTime = departureTime;
@@ -1631,7 +1808,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * equip_type.
+             * <p>Aircraft type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32Q</p>
              */
             public Builder equipType(String equipType) {
                 this.equipType = equipType;
@@ -1639,7 +1819,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * flight_duration.
+             * <p>Flight duration in minutes</p>
+             * 
+             * <strong>example:</strong>
+             * <p>165</p>
              */
             public Builder flightDuration(Integer flightDuration) {
                 this.flightDuration = flightDuration;
@@ -1647,7 +1830,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * marketing_airline.
+             * <p>Marketing airline (e.g., HO)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO</p>
              */
             public Builder marketingAirline(String marketingAirline) {
                 this.marketingAirline = marketingAirline;
@@ -1655,7 +1841,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * marketing_flight_no.
+             * <p>Marketing flight number (e.g., HO1295)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO1295</p>
              */
             public Builder marketingFlightNo(String marketingFlightNo) {
                 this.marketingFlightNo = marketingFlightNo;
@@ -1663,7 +1852,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * marketing_flight_no_int.
+             * <p>Marketing flight number (e.g., 1295)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1295</p>
              */
             public Builder marketingFlightNoInt(Integer marketingFlightNoInt) {
                 this.marketingFlightNoInt = marketingFlightNoInt;
@@ -1671,7 +1863,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * operating_airline.
+             * <p>Operating airline (e.g., CX)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO</p>
              */
             public Builder operatingAirline(String operatingAirline) {
                 this.operatingAirline = operatingAirline;
@@ -1679,7 +1874,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * operating_flight_no.
+             * <p>Operating flight number (e.g., CX601)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO1295</p>
              */
             public Builder operatingFlightNo(String operatingFlightNo) {
                 this.operatingFlightNo = operatingFlightNo;
@@ -1687,7 +1885,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * segment_id.
+             * <p>Segment ID format: flight number + departure airport + arrival airport + departure date (MMdd)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO1295-PVG-MFM-20230310</p>
              */
             public Builder segmentId(String segmentId) {
                 this.segmentId = segmentId;
@@ -1695,7 +1896,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * stop_city_list.
+             * <p>List of stop cities, present when stopQuantity &gt; 0, multiple values separated by commas</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SEL,HKG</p>
              */
             public Builder stopCityList(String stopCityList) {
                 this.stopCityList = stopCityList;
@@ -1703,7 +1907,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * stop_quantity.
+             * <p>Number of stop cities</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder stopQuantity(Integer stopQuantity) {
                 this.stopQuantity = stopQuantity;
@@ -1770,7 +1977,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             } 
 
             /**
-             * segment_list.
+             * <p>Segment information</p>
              */
             public Builder segmentList(java.util.List<LastJourneysSegmentList> segmentList) {
                 this.segmentList = segmentList;
@@ -1778,7 +1985,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * transfer_count.
+             * <p>Number of transfers</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder transferCount(Integer transferCount) {
                 this.transferCount = transferCount;
@@ -2105,7 +2315,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             } 
 
             /**
-             * arrival_airport.
+             * <p>Three-letter code of the arrival airport (in uppercase)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MFM</p>
              */
             public Builder arrivalAirport(String arrivalAirport) {
                 this.arrivalAirport = arrivalAirport;
@@ -2113,7 +2326,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * arrival_city.
+             * <p>Three-letter code of the arrival city (in uppercase)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MFM</p>
              */
             public Builder arrivalCity(String arrivalCity) {
                 this.arrivalCity = arrivalCity;
@@ -2121,7 +2337,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * arrival_terminal.
+             * <p>Arrival terminal of the flight</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T1</p>
              */
             public Builder arrivalTerminal(String arrivalTerminal) {
                 this.arrivalTerminal = arrivalTerminal;
@@ -2129,7 +2348,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * arrival_time.
+             * <p>Arrival date and time in string format (yyyy-MM-dd HH:mm:ss)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-10 10:40:00</p>
              */
             public Builder arrivalTime(String arrivalTime) {
                 this.arrivalTime = arrivalTime;
@@ -2137,7 +2359,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * availability.
+             * <p>Number of available seats</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder availability(String availability) {
                 this.availability = availability;
@@ -2145,7 +2370,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * cabin.
+             * <p>RBD</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V</p>
              */
             public Builder cabin(String cabin) {
                 this.cabin = cabin;
@@ -2153,7 +2381,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * cabin_class.
+             * <p>service class ( compartment )</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Y</p>
              */
             public Builder cabinClass(String cabinClass) {
                 this.cabinClass = cabinClass;
@@ -2161,7 +2392,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * code_share.
+             * <p>Whether it is a code-share flight</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder codeShare(Boolean codeShare) {
                 this.codeShare = codeShare;
@@ -2169,7 +2403,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * departure_airport.
+             * <p>Three-letter code of the departure airport (in uppercase)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PVG</p>
              */
             public Builder departureAirport(String departureAirport) {
                 this.departureAirport = departureAirport;
@@ -2177,7 +2414,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * departure_city.
+             * <p>Three-letter code of the departure city (in uppercase)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHA</p>
              */
             public Builder departureCity(String departureCity) {
                 this.departureCity = departureCity;
@@ -2185,7 +2425,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * departure_terminal.
+             * <p>Departure terminal of the flight</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T2</p>
              */
             public Builder departureTerminal(String departureTerminal) {
                 this.departureTerminal = departureTerminal;
@@ -2193,7 +2436,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * departure_time.
+             * <p>Departure date and time in string format (yyyy-MM-dd HH:mm:ss)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-10 07:55:00</p>
              */
             public Builder departureTime(String departureTime) {
                 this.departureTime = departureTime;
@@ -2201,7 +2447,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * equip_type.
+             * <p>Aircraft type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32Q</p>
              */
             public Builder equipType(String equipType) {
                 this.equipType = equipType;
@@ -2209,7 +2458,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * flight_duration.
+             * <p>Flight duration in minutes</p>
+             * 
+             * <strong>example:</strong>
+             * <p>165</p>
              */
             public Builder flightDuration(Integer flightDuration) {
                 this.flightDuration = flightDuration;
@@ -2217,7 +2469,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * marketing_airline.
+             * <p>Marketing airline (e.g., HO)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO</p>
              */
             public Builder marketingAirline(String marketingAirline) {
                 this.marketingAirline = marketingAirline;
@@ -2225,7 +2480,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * marketing_flight_no.
+             * <p>Marketing flight number (e.g., HO1295)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO1295</p>
              */
             public Builder marketingFlightNo(String marketingFlightNo) {
                 this.marketingFlightNo = marketingFlightNo;
@@ -2233,7 +2491,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * marketing_flight_no_int.
+             * <p>Marketing flight number (integer part, e.g., 1295)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1295</p>
              */
             public Builder marketingFlightNoInt(Integer marketingFlightNoInt) {
                 this.marketingFlightNoInt = marketingFlightNoInt;
@@ -2241,7 +2502,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * operating_airline.
+             * <p>Operating airline (e.g., CX)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO</p>
              */
             public Builder operatingAirline(String operatingAirline) {
                 this.operatingAirline = operatingAirline;
@@ -2249,7 +2513,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * operating_flight_no.
+             * <p>Operating flight number (e.g., CX601)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO1295</p>
              */
             public Builder operatingFlightNo(String operatingFlightNo) {
                 this.operatingFlightNo = operatingFlightNo;
@@ -2257,7 +2524,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * segment_id.
+             * <p>Segment ID format: flight number + departure airport + arrival airport + departure date (MMdd)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO1295-PVG-MFM-20230310</p>
              */
             public Builder segmentId(String segmentId) {
                 this.segmentId = segmentId;
@@ -2265,7 +2535,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * stop_city_list.
+             * <p>List of stop cities, with values when stopQuantity &gt; 0, separated by commas</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SEL,HKG</p>
              */
             public Builder stopCityList(String stopCityList) {
                 this.stopCityList = stopCityList;
@@ -2273,7 +2546,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * stop_quantity.
+             * <p>Number of stop cities</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder stopQuantity(Integer stopQuantity) {
                 this.stopQuantity = stopQuantity;
@@ -2340,7 +2616,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             } 
 
             /**
-             * segment_list.
+             * <p>Segment information</p>
              */
             public Builder segmentList(java.util.List<OriginalJourneysSegmentList> segmentList) {
                 this.segmentList = segmentList;
@@ -2348,7 +2624,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * transfer_count.
+             * <p>Number of transfers</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder transferCount(Integer transferCount) {
                 this.transferCount = transferCount;
@@ -2623,7 +2902,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             } 
 
             /**
-             * change_fee_details.
+             * <p>Change fee details by passenger</p>
              */
             public Builder changeFeeDetails(java.util.List<ChangeFeeDetails> changeFeeDetails) {
                 this.changeFeeDetails = changeFeeDetails;
@@ -2631,7 +2910,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * change_order_num.
+             * <p>Change Order Number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4988430***950</p>
              */
             public Builder changeOrderNum(Long changeOrderNum) {
                 this.changeOrderNum = changeOrderNum;
@@ -2639,7 +2921,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * change_passengers.
+             * <p>List of Passengers for Change</p>
              */
             public Builder changePassengers(java.util.List<ChangePassengers> changePassengers) {
                 this.changePassengers = changePassengers;
@@ -2647,7 +2929,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * change_reason_type.
+             * <p>Change reason type 0: Voluntary change ; 1: Involuntary change due to irregular flight; 2: Involuntary change due to health reason</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder changeReasonType(Integer changeReasonType) {
                 this.changeReasonType = changeReasonType;
@@ -2655,7 +2940,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * changed_journeys.
+             * <p>Itinerary after change</p>
              */
             public Builder changedJourneys(java.util.List<ChangedJourneys> changedJourneys) {
                 this.changedJourneys = changedJourneys;
@@ -2663,7 +2948,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * close_reason.
+             * <p>Reason for Closing the Change Order</p>
+             * 
+             * <strong>example:</strong>
+             * <p>reason desc</p>
              */
             public Builder closeReason(String closeReason) {
                 this.closeReason = closeReason;
@@ -2671,7 +2959,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * close_utc_time.
+             * <p>Order closure time, UTC timestamp</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1677415244000</p>
              */
             public Builder closeUtcTime(Long closeUtcTime) {
                 this.closeUtcTime = closeUtcTime;
@@ -2679,7 +2970,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * contact.
+             * <p>Contact information for the change</p>
              */
             public Builder contact(Contact contact) {
                 this.contact = contact;
@@ -2687,7 +2978,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * create_utc_time.
+             * <p>Change order creation time, UTC timestamp</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1677415276000</p>
              */
             public Builder createUtcTime(Long createUtcTime) {
                 this.createUtcTime = createUtcTime;
@@ -2695,7 +2989,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * last_confirm_utc_time.
+             * <p>Latest payment time for the buyer, UTC timestamp</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1677415278000</p>
              */
             public Builder lastConfirmUtcTime(Long lastConfirmUtcTime) {
                 this.lastConfirmUtcTime = lastConfirmUtcTime;
@@ -2703,7 +3000,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * last_journeys.
+             * <p>The itinerary of the last change</p>
              */
             public Builder lastJourneys(java.util.List<LastJourneys> lastJourneys) {
                 this.lastJourneys = lastJourneys;
@@ -2711,7 +3008,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * order_num.
+             * <p>Order Number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5988430***541</p>
              */
             public Builder orderNum(Long orderNum) {
                 this.orderNum = orderNum;
@@ -2719,7 +3019,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * order_status.
+             * <p>Change Order Status: 0: Initial State; 1: Pending Payment; 2: Payment Successful; 3: Change Successful; 4: Change Closed</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder orderStatus(Integer orderStatus) {
                 this.orderStatus = orderStatus;
@@ -2727,7 +3030,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * original_journeys.
+             * <p>Original itinerary</p>
              */
             public Builder originalJourneys(java.util.List<OriginalJourneys> originalJourneys) {
                 this.originalJourneys = originalJourneys;
@@ -2735,7 +3038,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * pay_status.
+             * <p>Payment status 0: Initial state; 1: Pending payment; 2: Payment successful; 3: Transaction successful; 4: Successfully closed paid order; 5: Successfully closed unpaid order</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder payStatus(Integer payStatus) {
                 this.payStatus = payStatus;
@@ -2743,7 +3049,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * pay_success_utc_time.
+             * <p>Buyer&quot;s payment success time, UTC timestamp</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1677415255000</p>
              */
             public Builder paySuccessUtcTime(Long paySuccessUtcTime) {
                 this.paySuccessUtcTime = paySuccessUtcTime;
@@ -2751,7 +3060,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * total_amount.
+             * <p>Total Payment Amount for Change Order</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder totalAmount(Double totalAmount) {
                 this.totalAmount = totalAmount;
@@ -2759,7 +3071,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * transaction_no.
+             * <p>Transaction number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hkduendkd-2023-dj0</p>
              */
             public Builder transactionNo(String transactionNo) {
                 this.transactionNo = transactionNo;
@@ -2852,7 +3167,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             } 
 
             /**
-             * current_page.
+             * <p>Current page number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -2860,7 +3178,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * page_size.
+             * <p>Number of items per page</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -2868,7 +3189,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * total_count.
+             * <p>Total count</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -2876,7 +3200,10 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * total_page.
+             * <p>Total pages</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPage(Integer totalPage) {
                 this.totalPage = totalPage;
@@ -2943,7 +3270,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             } 
 
             /**
-             * list.
+             * <p>Data List</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -2951,7 +3278,7 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
             }
 
             /**
-             * pagination.
+             * <p>Pagination information</p>
              */
             public Builder pagination(Pagination pagination) {
                 this.pagination = pagination;

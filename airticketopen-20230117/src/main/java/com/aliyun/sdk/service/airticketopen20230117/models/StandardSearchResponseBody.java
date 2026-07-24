@@ -132,7 +132,10 @@ public class StandardSearchResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -140,7 +143,7 @@ public class StandardSearchResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -148,7 +151,10 @@ public class StandardSearchResponseBody extends TeaModel {
         }
 
         /**
-         * error_code.
+         * <p>error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -156,7 +162,10 @@ public class StandardSearchResponseBody extends TeaModel {
         }
 
         /**
-         * error_data.
+         * <p>error data</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorData(Object errorData) {
             this.errorData = errorData;
@@ -164,7 +173,10 @@ public class StandardSearchResponseBody extends TeaModel {
         }
 
         /**
-         * error_msg.
+         * <p>error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -172,7 +184,10 @@ public class StandardSearchResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>http reqeust has been processed successfully，status code is 200</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -180,7 +195,10 @@ public class StandardSearchResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>true represents success, false represents failure</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -506,7 +524,10 @@ public class StandardSearchResponseBody extends TeaModel {
             } 
 
             /**
-             * arrival_airport.
+             * <p>arrival airport code (capitalized)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MFM</p>
              */
             public Builder arrivalAirport(String arrivalAirport) {
                 this.arrivalAirport = arrivalAirport;
@@ -514,7 +535,10 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * arrival_city.
+             * <p>arrival city code (capitalized)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MFM</p>
              */
             public Builder arrivalCity(String arrivalCity) {
                 this.arrivalCity = arrivalCity;
@@ -522,7 +546,10 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * arrival_terminal.
+             * <p>arrival terminal</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T1</p>
              */
             public Builder arrivalTerminal(String arrivalTerminal) {
                 this.arrivalTerminal = arrivalTerminal;
@@ -530,7 +557,10 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * arrival_time.
+             * <p>arrival time in string format (yyyy-MM-dd HH:mm:ss)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-10 10:40:00</p>
              */
             public Builder arrivalTime(String arrivalTime) {
                 this.arrivalTime = arrivalTime;
@@ -538,7 +568,10 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * availability.
+             * <p>available seats (for reference only)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder availability(String availability) {
                 this.availability = availability;
@@ -546,7 +579,10 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * cabin.
+             * <p>RBD</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V</p>
              */
             public Builder cabin(String cabin) {
                 this.cabin = cabin;
@@ -554,7 +590,10 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * cabin_class.
+             * <p>cabin class</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Y</p>
              */
             public Builder cabinClass(String cabinClass) {
                 this.cabinClass = cabinClass;
@@ -562,7 +601,10 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * code_share.
+             * <p>code share or not</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder codeShare(Boolean codeShare) {
                 this.codeShare = codeShare;
@@ -570,7 +612,10 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * departure_airport.
+             * <p>departure airport code (capitalized)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PVG</p>
              */
             public Builder departureAirport(String departureAirport) {
                 this.departureAirport = departureAirport;
@@ -578,7 +623,10 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * departure_city.
+             * <p>departure city code (capitalized)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHA</p>
              */
             public Builder departureCity(String departureCity) {
                 this.departureCity = departureCity;
@@ -586,7 +634,10 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * departure_terminal.
+             * <p>departure terminal</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T2</p>
              */
             public Builder departureTerminal(String departureTerminal) {
                 this.departureTerminal = departureTerminal;
@@ -594,7 +645,10 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * departure_time.
+             * <p>departure time in string format (yyyy-MM-dd HH:mm:ss)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-10 07:55:00</p>
              */
             public Builder departureTime(String departureTime) {
                 this.departureTime = departureTime;
@@ -602,7 +656,10 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * equip_type.
+             * <p>equipment type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32Q</p>
              */
             public Builder equipType(String equipType) {
                 this.equipType = equipType;
@@ -610,7 +667,10 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * flight_duration.
+             * <p>flight time, unit: minute</p>
+             * 
+             * <strong>example:</strong>
+             * <p>165</p>
              */
             public Builder flightDuration(Integer flightDuration) {
                 this.flightDuration = flightDuration;
@@ -618,7 +678,10 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * marketing_airline.
+             * <p>marketing airline code (ex.: KA)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO</p>
              */
             public Builder marketingAirline(String marketingAirline) {
                 this.marketingAirline = marketingAirline;
@@ -626,7 +689,10 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * marketing_flight_no.
+             * <p>marketing airline flight no. (ex.: KA5809)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO1295</p>
              */
             public Builder marketingFlightNo(String marketingFlightNo) {
                 this.marketingFlightNo = marketingFlightNo;
@@ -634,7 +700,10 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * marketing_flight_no_int.
+             * <p>marketing airline integer flight no. (ex.: 5809)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1295</p>
              */
             public Builder marketingFlightNoInt(Integer marketingFlightNoInt) {
                 this.marketingFlightNoInt = marketingFlightNoInt;
@@ -642,7 +711,10 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * operating_airline.
+             * <p>operating airline code (ex.: CX)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO</p>
              */
             public Builder operatingAirline(String operatingAirline) {
                 this.operatingAirline = operatingAirline;
@@ -650,7 +722,10 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * operating_flight_no.
+             * <p>operating airline flight no. (ex.: CX601)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO1295</p>
              */
             public Builder operatingFlightNo(String operatingFlightNo) {
                 this.operatingFlightNo = operatingFlightNo;
@@ -658,7 +733,10 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * segment_id.
+             * <p>segment ID format: flight no.+departure airport[IATA airport code]+arrival airport[IATA airport code]+departure time(MMdd)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HO1295-PVG-MFM-20230310</p>
              */
             public Builder segmentId(String segmentId) {
                 this.segmentId = segmentId;
@@ -666,7 +744,11 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * stop_city_list.
+             * <p>stop city list
+             * when stop_quantity &gt; 1, use “,” for seperation</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SEL,HKG</p>
              */
             public Builder stopCityList(String stopCityList) {
                 this.stopCityList = stopCityList;
@@ -674,7 +756,10 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * stop_quantity.
+             * <p>number of stops</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder stopQuantity(Integer stopQuantity) {
                 this.stopQuantity = stopQuantity;
@@ -741,7 +826,7 @@ public class StandardSearchResponseBody extends TeaModel {
             } 
 
             /**
-             * segment_list.
+             * <p>segment Info</p>
              */
             public Builder segmentList(java.util.List<SegmentList> segmentList) {
                 this.segmentList = segmentList;
@@ -749,7 +834,10 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * transfer_count.
+             * <p>number of transfers</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder transferCount(Integer transferCount) {
                 this.transferCount = transferCount;
@@ -816,7 +904,16 @@ public class StandardSearchResponseBody extends TeaModel {
             } 
 
             /**
-             * luggage_direct_info_type.
+             * <p>through check-in baggage policy type</p>
+             * <ol>
+             * <li>baggage through check-in between segments</li>
+             * <li>baggage re-check-in needed between segments</li>
+             * <li>baggage through check-in at stop city ( applies for stop flight )</li>
+             * <li>baggage re-checkin needed at stop city ( applies for stop flight )</li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder luggageDirectInfoType(Integer luggageDirectInfoType) {
                 this.luggageDirectInfoType = luggageDirectInfoType;
@@ -824,7 +921,7 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * segment_id_list.
+             * <p>segment id list. all the listed segment ids share the same baggage through check-in policy</p>
              */
             public Builder segmentIdList(java.util.List<String> segmentIdList) {
                 this.segmentIdList = segmentIdList;
@@ -891,7 +988,7 @@ public class StandardSearchResponseBody extends TeaModel {
             } 
 
             /**
-             * passenger_baggage_allowance_mapping.
+             * <p>baggage rule mapping, key is passenger type, value is baggage allowance details</p>
              */
             public Builder passengerBaggageAllowanceMapping(java.util.Map<String, DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue> passengerBaggageAllowanceMapping) {
                 this.passengerBaggageAllowanceMapping = passengerBaggageAllowanceMapping;
@@ -899,7 +996,7 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * segment_id_list.
+             * <p>segment id list. all the listed segment id share the same baggage rule</p>
              */
             public Builder segmentIdList(java.util.List<String> segmentIdList) {
                 this.segmentIdList = segmentIdList;
@@ -966,7 +1063,7 @@ public class StandardSearchResponseBody extends TeaModel {
             } 
 
             /**
-             * refund_change_rule_map.
+             * <p>change and refund policy mapping, key is passenger type, value is change and refund policy details</p>
              */
             public Builder refundChangeRuleMap(java.util.Map<String, DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue> refundChangeRuleMap) {
                 this.refundChangeRuleMap = refundChangeRuleMap;
@@ -974,7 +1071,7 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * segment_id_list.
+             * <p>segment id list. all the listed segment ids share the same change and refund policy</p>
              */
             public Builder segmentIdList(java.util.List<String> segmentIdList) {
                 this.segmentIdList = segmentIdList;
@@ -1041,7 +1138,10 @@ public class StandardSearchResponseBody extends TeaModel {
             } 
 
             /**
-             * issue_ticket_type.
+             * <p>Issue ticket type: 1: after payment; 2: before departure; -1: unknown</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder issueTicketType(Integer issueTicketType) {
                 this.issueTicketType = issueTicketType;
@@ -1049,7 +1149,10 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * issue_time_limit.
+             * <p>Estimated issue ticket time, unit: minutes</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder issueTimeLimit(Integer issueTimeLimit) {
                 this.issueTimeLimit = issueTimeLimit;
@@ -1116,7 +1219,7 @@ public class StandardSearchResponseBody extends TeaModel {
             } 
 
             /**
-             * issue_time_info.
+             * <p>Issue ticket time related</p>
              */
             public Builder issueTimeInfo(IssueTimeInfo issueTimeInfo) {
                 this.issueTimeInfo = issueTimeInfo;
@@ -1124,7 +1227,10 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * supply_source_type.
+             * <p>Supply source type 1: Self-operated; 2: Agent; 3: Flagship store</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder supplySourceType(String supplySourceType) {
                 this.supplySourceType = supplySourceType;
@@ -1321,7 +1427,10 @@ public class StandardSearchResponseBody extends TeaModel {
             } 
 
             /**
-             * adult_price.
+             * <p>adult fare</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder adultPrice(Double adultPrice) {
                 this.adultPrice = adultPrice;
@@ -1329,7 +1438,10 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * adult_tax.
+             * <p>adult tax</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder adultTax(Double adultTax) {
                 this.adultTax = adultTax;
@@ -1337,7 +1449,10 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * child_price.
+             * <p>child fare</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder childPrice(Double childPrice) {
                 this.childPrice = childPrice;
@@ -1345,7 +1460,10 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * child_tax.
+             * <p>child tax</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder childTax(Double childTax) {
                 this.childTax = childTax;
@@ -1353,7 +1471,10 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * infant_price.
+             * <p>infant fare</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder infantPrice(Double infantPrice) {
                 this.infantPrice = infantPrice;
@@ -1361,7 +1482,10 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * infant_tax.
+             * <p>infant tax</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder infantTax(Double infantTax) {
                 this.infantTax = infantTax;
@@ -1369,7 +1493,7 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * journey_list.
+             * <p>segment</p>
              */
             public Builder journeyList(java.util.List<JourneyList> journeyList) {
                 this.journeyList = journeyList;
@@ -1377,7 +1501,7 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * segment_baggage_check_in_info_list.
+             * <p>through check-in baggage policy</p>
              */
             public Builder segmentBaggageCheckInInfoList(java.util.List<SegmentBaggageCheckInInfoList> segmentBaggageCheckInInfoList) {
                 this.segmentBaggageCheckInInfoList = segmentBaggageCheckInInfoList;
@@ -1385,7 +1509,7 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * segment_baggage_mapping_list.
+             * <p>baggage rule</p>
              */
             public Builder segmentBaggageMappingList(java.util.List<SegmentBaggageMappingList> segmentBaggageMappingList) {
                 this.segmentBaggageMappingList = segmentBaggageMappingList;
@@ -1393,7 +1517,7 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * segment_refund_change_rule_mapping_list.
+             * <p>change and refund policy</p>
              */
             public Builder segmentRefundChangeRuleMappingList(java.util.List<SegmentRefundChangeRuleMappingList> segmentRefundChangeRuleMappingList) {
                 this.segmentRefundChangeRuleMappingList = segmentRefundChangeRuleMappingList;
@@ -1401,7 +1525,7 @@ public class StandardSearchResponseBody extends TeaModel {
             }
 
             /**
-             * solution_attribute.
+             * <p>Quotation attributes</p>
              */
             public Builder solutionAttribute(SolutionAttribute solutionAttribute) {
                 this.solutionAttribute = solutionAttribute;
@@ -1466,7 +1590,7 @@ public class StandardSearchResponseBody extends TeaModel {
             } 
 
             /**
-             * solution_list.
+             * <p>solution list</p>
              */
             public Builder solutionList(java.util.List<SolutionList> solutionList) {
                 this.solutionList = solutionList;

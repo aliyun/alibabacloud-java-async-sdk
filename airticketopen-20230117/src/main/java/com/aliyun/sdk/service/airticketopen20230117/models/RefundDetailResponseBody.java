@@ -635,6 +635,9 @@ public class RefundDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("already_used_total_fee")
         private Double alreadyUsedTotalFee;
 
+        @com.aliyun.core.annotation.NameInMap("ancillary_refund_to_buyer_money")
+        private Double ancillaryRefundToBuyerMoney;
+
         @com.aliyun.core.annotation.NameInMap("modify_refund_to_buyer_money")
         private Double modifyRefundToBuyerMoney;
 
@@ -653,14 +656,19 @@ public class RefundDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("refund_to_buyer_money")
         private Double refundToBuyerMoney;
 
+        @com.aliyun.core.annotation.NameInMap("suez_service_fee")
+        private Double suezServiceFee;
+
         private RefundFee(Builder builder) {
             this.alreadyUsedTotalFee = builder.alreadyUsedTotalFee;
+            this.ancillaryRefundToBuyerMoney = builder.ancillaryRefundToBuyerMoney;
             this.modifyRefundToBuyerMoney = builder.modifyRefundToBuyerMoney;
             this.nonRefundableChangeServiceFee = builder.nonRefundableChangeServiceFee;
             this.nonRefundableChangeUpgradeFee = builder.nonRefundableChangeUpgradeFee;
             this.nonRefundableTaxFee = builder.nonRefundableTaxFee;
             this.nonRefundableTicketFee = builder.nonRefundableTicketFee;
             this.refundToBuyerMoney = builder.refundToBuyerMoney;
+            this.suezServiceFee = builder.suezServiceFee;
         }
 
         public static Builder builder() {
@@ -676,6 +684,13 @@ public class RefundDetailResponseBody extends TeaModel {
          */
         public Double getAlreadyUsedTotalFee() {
             return this.alreadyUsedTotalFee;
+        }
+
+        /**
+         * @return ancillaryRefundToBuyerMoney
+         */
+        public Double getAncillaryRefundToBuyerMoney() {
+            return this.ancillaryRefundToBuyerMoney;
         }
 
         /**
@@ -720,26 +735,37 @@ public class RefundDetailResponseBody extends TeaModel {
             return this.refundToBuyerMoney;
         }
 
+        /**
+         * @return suezServiceFee
+         */
+        public Double getSuezServiceFee() {
+            return this.suezServiceFee;
+        }
+
         public static final class Builder {
             private Double alreadyUsedTotalFee; 
+            private Double ancillaryRefundToBuyerMoney; 
             private Double modifyRefundToBuyerMoney; 
             private Double nonRefundableChangeServiceFee; 
             private Double nonRefundableChangeUpgradeFee; 
             private Double nonRefundableTaxFee; 
             private Double nonRefundableTicketFee; 
             private Double refundToBuyerMoney; 
+            private Double suezServiceFee; 
 
             private Builder() {
             } 
 
             private Builder(RefundFee model) {
                 this.alreadyUsedTotalFee = model.alreadyUsedTotalFee;
+                this.ancillaryRefundToBuyerMoney = model.ancillaryRefundToBuyerMoney;
                 this.modifyRefundToBuyerMoney = model.modifyRefundToBuyerMoney;
                 this.nonRefundableChangeServiceFee = model.nonRefundableChangeServiceFee;
                 this.nonRefundableChangeUpgradeFee = model.nonRefundableChangeUpgradeFee;
                 this.nonRefundableTaxFee = model.nonRefundableTaxFee;
                 this.nonRefundableTicketFee = model.nonRefundableTicketFee;
                 this.refundToBuyerMoney = model.refundToBuyerMoney;
+                this.suezServiceFee = model.suezServiceFee;
             } 
 
             /**
@@ -750,6 +776,14 @@ public class RefundDetailResponseBody extends TeaModel {
              */
             public Builder alreadyUsedTotalFee(Double alreadyUsedTotalFee) {
                 this.alreadyUsedTotalFee = alreadyUsedTotalFee;
+                return this;
+            }
+
+            /**
+             * ancillary_refund_to_buyer_money.
+             */
+            public Builder ancillaryRefundToBuyerMoney(Double ancillaryRefundToBuyerMoney) {
+                this.ancillaryRefundToBuyerMoney = ancillaryRefundToBuyerMoney;
                 return this;
             }
 
@@ -816,6 +850,14 @@ public class RefundDetailResponseBody extends TeaModel {
              */
             public Builder refundToBuyerMoney(Double refundToBuyerMoney) {
                 this.refundToBuyerMoney = refundToBuyerMoney;
+                return this;
+            }
+
+            /**
+             * suez_service_fee.
+             */
+            public Builder suezServiceFee(Double suezServiceFee) {
+                this.suezServiceFee = suezServiceFee;
                 return this;
             }
 
