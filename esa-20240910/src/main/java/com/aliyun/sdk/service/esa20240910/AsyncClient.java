@@ -324,6 +324,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRoutineResponse> createRoutine(CreateRoutineRequest request);
 
     /**
+     * @param request the request parameters of CreateRoutineBuild  CreateRoutineBuildRequest
+     * @return CreateRoutineBuildResponse
+     */
+    CompletableFuture<CreateRoutineBuildResponse> createRoutineBuild(CreateRoutineBuildRequest request);
+
+    /**
      * @param request the request parameters of CreateRoutineBuildConfiguration  CreateRoutineBuildConfigurationRequest
      * @return CreateRoutineBuildConfigurationResponse
      */
@@ -930,6 +936,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeDDoSOverseasAttackCountResponse
      */
     CompletableFuture<DescribeDDoSOverseasAttackCountResponse> describeDDoSOverseasAttackCount(DescribeDDoSOverseasAttackCountRequest request);
+
+    /**
+     * @param request the request parameters of DescribeDDoSPrice  DescribeDDoSPriceRequest
+     * @return DescribeDDoSPriceResponse
+     */
+    CompletableFuture<DescribeDDoSPriceResponse> describeDDoSPrice(DescribeDDoSPriceRequest request);
 
     /**
      * @param request the request parameters of DescribeDdosMaxBurstGbps  DescribeDdosMaxBurstGbpsRequest
