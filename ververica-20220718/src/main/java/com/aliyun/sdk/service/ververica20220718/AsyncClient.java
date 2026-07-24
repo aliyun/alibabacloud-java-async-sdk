@@ -86,6 +86,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSessionClusterResponse> createSessionCluster(CreateSessionClusterRequest request);
 
     /**
+     * @param request the request parameters of CreateSqlFile  CreateSqlFileRequest
+     * @return CreateSqlFileResponse
+     */
+    CompletableFuture<CreateSqlFileResponse> createSqlFile(CreateSqlFileRequest request);
+
+    /**
      * @param request the request parameters of CreateUdfArtifact  CreateUdfArtifactRequest
      * @return CreateUdfArtifactResponse
      */
@@ -108,6 +114,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDeploymentResponse
      */
     CompletableFuture<DeleteDeploymentResponse> deleteDeployment(DeleteDeploymentRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDeploymentByName  DeleteDeploymentByNameRequest
+     * @return DeleteDeploymentByNameResponse
+     */
+    CompletableFuture<DeleteDeploymentByNameResponse> deleteDeploymentByName(DeleteDeploymentByNameRequest request);
 
     /**
      * @param request the request parameters of DeleteDeploymentDraft  DeleteDeploymentDraftRequest
@@ -158,6 +170,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteSessionClusterResponse> deleteSessionCluster(DeleteSessionClusterRequest request);
 
     /**
+     * @param request the request parameters of DeleteSqlFile  DeleteSqlFileRequest
+     * @return DeleteSqlFileResponse
+     */
+    CompletableFuture<DeleteSqlFileResponse> deleteSqlFile(DeleteSqlFileRequest request);
+
+    /**
      * @param request the request parameters of DeleteUdfArtifact  DeleteUdfArtifactRequest
      * @return DeleteUdfArtifactResponse
      */
@@ -186,6 +204,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ExecuteSqlStatementResponse
      */
     CompletableFuture<ExecuteSqlStatementResponse> executeSqlStatement(ExecuteSqlStatementRequest request);
+
+    /**
+     * @param request the request parameters of FetchSqlExecutionResult  FetchSqlExecutionResultRequest
+     * @return FetchSqlExecutionResultResponse
+     */
+    CompletableFuture<FetchSqlExecutionResultResponse> fetchSqlExecutionResult(FetchSqlExecutionResultRequest request);
 
     /**
      * @param request the request parameters of FetchSqlPreviewResults  FetchSqlPreviewResultsRequest
@@ -336,6 +360,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetSessionClusterResponse
      */
     CompletableFuture<GetSessionClusterResponse> getSessionCluster(GetSessionClusterRequest request);
+
+    /**
+     * @param request the request parameters of GetSqlFile  GetSqlFileRequest
+     * @return GetSqlFileResponse
+     */
+    CompletableFuture<GetSqlFileResponse> getSqlFile(GetSqlFileRequest request);
 
     /**
      * @param request the request parameters of GetTables  GetTablesRequest
@@ -495,6 +525,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopSessionClusterResponse> stopSessionCluster(StopSessionClusterRequest request);
 
     /**
+     * @param request the request parameters of StopSqlExecution  StopSqlExecutionRequest
+     * @return StopSqlExecutionResponse
+     */
+    CompletableFuture<StopSqlExecutionResponse> stopSqlExecution(StopSqlExecutionRequest request);
+
+    /**
      * @param request the request parameters of SubmitSqlPreview  SubmitSqlPreviewRequest
      * @return SubmitSqlPreviewResponse
      */
@@ -505,6 +541,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateDeploymentResponse
      */
     CompletableFuture<UpdateDeploymentResponse> updateDeployment(UpdateDeploymentRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDeploymentByName  UpdateDeploymentByNameRequest
+     * @return UpdateDeploymentByNameResponse
+     */
+    CompletableFuture<UpdateDeploymentByNameResponse> updateDeploymentByName(UpdateDeploymentByNameRequest request);
 
     /**
      * @param request the request parameters of UpdateDeploymentDraft  UpdateDeploymentDraftRequest
@@ -547,6 +589,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateSessionClusterResponse
      */
     CompletableFuture<UpdateSessionClusterResponse> updateSessionCluster(UpdateSessionClusterRequest request);
+
+    /**
+     * @param request the request parameters of UpdateSqlFile  UpdateSqlFileRequest
+     * @return UpdateSqlFileResponse
+     */
+    CompletableFuture<UpdateSqlFileResponse> updateSqlFile(UpdateSqlFileRequest request);
 
     /**
      * @param request the request parameters of UpdateUdfArtifact  UpdateUdfArtifactRequest

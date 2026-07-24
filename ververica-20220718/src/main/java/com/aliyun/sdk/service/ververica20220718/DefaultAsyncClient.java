@@ -257,6 +257,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateSqlFile  CreateSqlFileRequest
+     * @return CreateSqlFileResponse
+     */
+    @Override
+    public CompletableFuture<CreateSqlFileResponse> createSqlFile(CreateSqlFileRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateSqlFile").setMethod(HttpMethod.POST).setPathRegex("/api/v2/namespaces/{namespace}/sql-file").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateSqlFileResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateSqlFileResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateUdfArtifact  CreateUdfArtifactRequest
      * @return CreateUdfArtifactResponse
      */
@@ -323,6 +341,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteDeploymentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteDeploymentByName  DeleteDeploymentByNameRequest
+     * @return DeleteDeploymentByNameResponse
+     */
+    @Override
+    public CompletableFuture<DeleteDeploymentByNameResponse> deleteDeploymentByName(DeleteDeploymentByNameRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteDeploymentByName").setMethod(HttpMethod.DELETE).setPathRegex("/api/v2/namespaces/{namespace}/deployments/deleteDeployment/byName").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteDeploymentByNameResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteDeploymentByNameResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -473,6 +509,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteSqlFile  DeleteSqlFileRequest
+     * @return DeleteSqlFileResponse
+     */
+    @Override
+    public CompletableFuture<DeleteSqlFileResponse> deleteSqlFile(DeleteSqlFileRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteSqlFile").setMethod(HttpMethod.DELETE).setPathRegex("/api/v2/namespaces/{namespace}/sql-file/{sqlFileId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteSqlFileResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteSqlFileResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteUdfArtifact  DeleteUdfArtifactRequest
      * @return DeleteUdfArtifactResponse
      */
@@ -557,6 +611,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ExecuteSqlStatementResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of FetchSqlExecutionResult  FetchSqlExecutionResultRequest
+     * @return FetchSqlExecutionResultResponse
+     */
+    @Override
+    public CompletableFuture<FetchSqlExecutionResultResponse> fetchSqlExecutionResult(FetchSqlExecutionResultRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("FetchSqlExecutionResult").setMethod(HttpMethod.GET).setPathRegex("/api/v2/namespaces/{namespace}/sql-execution/{sqlExecutionId}:fetchSqlExecutionResult").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(FetchSqlExecutionResultResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<FetchSqlExecutionResultResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1007,6 +1079,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetSessionClusterResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetSqlFile  GetSqlFileRequest
+     * @return GetSqlFileResponse
+     */
+    @Override
+    public CompletableFuture<GetSqlFileResponse> getSqlFile(GetSqlFileRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetSqlFile").setMethod(HttpMethod.GET).setPathRegex("/api/v2/namespaces/{namespace}/sql-file/{sqlFileId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetSqlFileResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetSqlFileResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1482,6 +1572,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of StopSqlExecution  StopSqlExecutionRequest
+     * @return StopSqlExecutionResponse
+     */
+    @Override
+    public CompletableFuture<StopSqlExecutionResponse> stopSqlExecution(StopSqlExecutionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StopSqlExecution").setMethod(HttpMethod.POST).setPathRegex("/api/v2/namespaces/{namespace}/sql-execution/{sqlExecutionId}:stop").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopSqlExecutionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StopSqlExecutionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of SubmitSqlPreview  SubmitSqlPreviewRequest
      * @return SubmitSqlPreviewResponse
      */
@@ -1512,6 +1620,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateDeploymentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateDeploymentByName  UpdateDeploymentByNameRequest
+     * @return UpdateDeploymentByNameResponse
+     */
+    @Override
+    public CompletableFuture<UpdateDeploymentByNameResponse> updateDeploymentByName(UpdateDeploymentByNameRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateDeploymentByName").setMethod(HttpMethod.PUT).setPathRegex("/api/v2/namespaces/{namespace}/deployments/updateDeployment/byName").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateDeploymentByNameResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateDeploymentByNameResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1638,6 +1764,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateSessionClusterResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateSqlFile  UpdateSqlFileRequest
+     * @return UpdateSqlFileResponse
+     */
+    @Override
+    public CompletableFuture<UpdateSqlFileResponse> updateSqlFile(UpdateSqlFileRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateSqlFile").setMethod(HttpMethod.PATCH).setPathRegex("/api/v2/namespaces/{namespace}/sql-file/{sqlFileId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateSqlFileResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateSqlFileResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
