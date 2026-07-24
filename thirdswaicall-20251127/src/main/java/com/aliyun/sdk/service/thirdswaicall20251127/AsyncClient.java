@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of CreateCallOutboundInstant  CreateCallOutboundInstantRequest
+     * @return CreateCallOutboundInstantResponse
+     */
+    CompletableFuture<CreateCallOutboundInstantResponse> createCallOutboundInstant(CreateCallOutboundInstantRequest request);
+
+    /**
      * @param request the request parameters of QueryTaskConcurrency  QueryTaskConcurrencyRequest
      * @return QueryTaskConcurrencyResponse
      */
