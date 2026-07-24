@@ -95,6 +95,12 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
      * <p>DescribeCreditDetailResponseBody</p>
      */
     public static class Details extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ApiKeyName")
+        private String apiKeyName;
+
+        @com.aliyun.core.annotation.NameInMap("CachedTokens")
+        private Long cachedTokens;
+
         @com.aliyun.core.annotation.NameInMap("ChangeTime")
         private String changeTime;
 
@@ -104,22 +110,48 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("InputTokens")
+        private Long inputTokens;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
+        private String instanceName;
+
+        @com.aliyun.core.annotation.NameInMap("ModelId")
+        private String modelId;
+
+        @com.aliyun.core.annotation.NameInMap("OutputTokens")
+        private Long outputTokens;
 
         @com.aliyun.core.annotation.NameInMap("PackageId")
         private String packageId;
 
+        @com.aliyun.core.annotation.NameInMap("RequestId")
+        private String requestId;
+
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
+        @com.aliyun.core.annotation.NameInMap("TotalTokens")
+        private Long totalTokens;
+
         private Details(Builder builder) {
+            this.apiKeyName = builder.apiKeyName;
+            this.cachedTokens = builder.cachedTokens;
             this.changeTime = builder.changeTime;
             this.creditChange = builder.creditChange;
             this.description = builder.description;
+            this.inputTokens = builder.inputTokens;
             this.instanceId = builder.instanceId;
+            this.instanceName = builder.instanceName;
+            this.modelId = builder.modelId;
+            this.outputTokens = builder.outputTokens;
             this.packageId = builder.packageId;
+            this.requestId = builder.requestId;
             this.taskId = builder.taskId;
+            this.totalTokens = builder.totalTokens;
         }
 
         public static Builder builder() {
@@ -128,6 +160,20 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
 
         public static Details create() {
             return builder().build();
+        }
+
+        /**
+         * @return apiKeyName
+         */
+        public String getApiKeyName() {
+            return this.apiKeyName;
+        }
+
+        /**
+         * @return cachedTokens
+         */
+        public Long getCachedTokens() {
+            return this.cachedTokens;
         }
 
         /**
@@ -152,10 +198,38 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return inputTokens
+         */
+        public Long getInputTokens() {
+            return this.inputTokens;
+        }
+
+        /**
          * @return instanceId
          */
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        /**
+         * @return instanceName
+         */
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        /**
+         * @return modelId
+         */
+        public String getModelId() {
+            return this.modelId;
+        }
+
+        /**
+         * @return outputTokens
+         */
+        public Long getOutputTokens() {
+            return this.outputTokens;
         }
 
         /**
@@ -166,31 +240,77 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return requestId
+         */
+        public String getRequestId() {
+            return this.requestId;
+        }
+
+        /**
          * @return taskId
          */
         public String getTaskId() {
             return this.taskId;
         }
 
+        /**
+         * @return totalTokens
+         */
+        public Long getTotalTokens() {
+            return this.totalTokens;
+        }
+
         public static final class Builder {
+            private String apiKeyName; 
+            private Long cachedTokens; 
             private String changeTime; 
             private String creditChange; 
             private String description; 
+            private Long inputTokens; 
             private String instanceId; 
+            private String instanceName; 
+            private String modelId; 
+            private Long outputTokens; 
             private String packageId; 
+            private String requestId; 
             private String taskId; 
+            private Long totalTokens; 
 
             private Builder() {
             } 
 
             private Builder(Details model) {
+                this.apiKeyName = model.apiKeyName;
+                this.cachedTokens = model.cachedTokens;
                 this.changeTime = model.changeTime;
                 this.creditChange = model.creditChange;
                 this.description = model.description;
+                this.inputTokens = model.inputTokens;
                 this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.modelId = model.modelId;
+                this.outputTokens = model.outputTokens;
                 this.packageId = model.packageId;
+                this.requestId = model.requestId;
                 this.taskId = model.taskId;
+                this.totalTokens = model.totalTokens;
             } 
+
+            /**
+             * ApiKeyName.
+             */
+            public Builder apiKeyName(String apiKeyName) {
+                this.apiKeyName = apiKeyName;
+                return this;
+            }
+
+            /**
+             * CachedTokens.
+             */
+            public Builder cachedTokens(Long cachedTokens) {
+                this.cachedTokens = cachedTokens;
+                return this;
+            }
 
             /**
              * ChangeTime.
@@ -217,10 +337,42 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             }
 
             /**
+             * InputTokens.
+             */
+            public Builder inputTokens(Long inputTokens) {
+                this.inputTokens = inputTokens;
+                return this;
+            }
+
+            /**
              * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * InstanceName.
+             */
+            public Builder instanceName(String instanceName) {
+                this.instanceName = instanceName;
+                return this;
+            }
+
+            /**
+             * ModelId.
+             */
+            public Builder modelId(String modelId) {
+                this.modelId = modelId;
+                return this;
+            }
+
+            /**
+             * OutputTokens.
+             */
+            public Builder outputTokens(Long outputTokens) {
+                this.outputTokens = outputTokens;
                 return this;
             }
 
@@ -233,10 +385,26 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             }
 
             /**
+             * RequestId.
+             */
+            public Builder requestId(String requestId) {
+                this.requestId = requestId;
+                return this;
+            }
+
+            /**
              * TaskId.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
+                return this;
+            }
+
+            /**
+             * TotalTokens.
+             */
+            public Builder totalTokens(Long totalTokens) {
+                this.totalTokens = totalTokens;
                 return this;
             }
 
@@ -257,6 +425,9 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Details")
         private java.util.List<Details> details;
 
+        @com.aliyun.core.annotation.NameInMap("NextToken")
+        private String nextToken;
+
         @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
 
@@ -271,6 +442,7 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.details = builder.details;
+            this.nextToken = builder.nextToken;
             this.pageNum = builder.pageNum;
             this.pageSize = builder.pageSize;
             this.totalCount = builder.totalCount;
@@ -290,6 +462,13 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
          */
         public java.util.List<Details> getDetails() {
             return this.details;
+        }
+
+        /**
+         * @return nextToken
+         */
+        public String getNextToken() {
+            return this.nextToken;
         }
 
         /**
@@ -322,6 +501,7 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Details> details; 
+            private String nextToken; 
             private Integer pageNum; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -332,6 +512,7 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.details = model.details;
+                this.nextToken = model.nextToken;
                 this.pageNum = model.pageNum;
                 this.pageSize = model.pageSize;
                 this.totalCount = model.totalCount;
@@ -343,6 +524,14 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
              */
             public Builder details(java.util.List<Details> details) {
                 this.details = details;
+                return this;
+            }
+
+            /**
+             * NextToken.
+             */
+            public Builder nextToken(String nextToken) {
+                this.nextToken = nextToken;
                 return this;
             }
 

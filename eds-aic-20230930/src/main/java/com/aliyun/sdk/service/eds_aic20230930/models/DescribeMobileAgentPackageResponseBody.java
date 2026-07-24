@@ -179,6 +179,12 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PackageStatus")
         private String packageStatus;
 
+        @com.aliyun.core.annotation.NameInMap("PeriodEndTime")
+        private String periodEndTime;
+
+        @com.aliyun.core.annotation.NameInMap("PeriodStartTime")
+        private String periodStartTime;
+
         @com.aliyun.core.annotation.NameInMap("UsedCredit")
         private String usedCredit;
 
@@ -190,6 +196,8 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
             this.packageSpec = builder.packageSpec;
             this.packageSpecName = builder.packageSpecName;
             this.packageStatus = builder.packageStatus;
+            this.periodEndTime = builder.periodEndTime;
+            this.periodStartTime = builder.periodStartTime;
             this.usedCredit = builder.usedCredit;
         }
 
@@ -251,6 +259,20 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         }
 
         /**
+         * @return periodEndTime
+         */
+        public String getPeriodEndTime() {
+            return this.periodEndTime;
+        }
+
+        /**
+         * @return periodStartTime
+         */
+        public String getPeriodStartTime() {
+            return this.periodStartTime;
+        }
+
+        /**
          * @return usedCredit
          */
         public String getUsedCredit() {
@@ -265,6 +287,8 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
             private String packageSpec; 
             private String packageSpecName; 
             private String packageStatus; 
+            private String periodEndTime; 
+            private String periodStartTime; 
             private String usedCredit; 
 
             private Builder() {
@@ -278,6 +302,8 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
                 this.packageSpec = model.packageSpec;
                 this.packageSpecName = model.packageSpecName;
                 this.packageStatus = model.packageStatus;
+                this.periodEndTime = model.periodEndTime;
+                this.periodStartTime = model.periodStartTime;
                 this.usedCredit = model.usedCredit;
             } 
 
@@ -334,6 +360,22 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
              */
             public Builder packageStatus(String packageStatus) {
                 this.packageStatus = packageStatus;
+                return this;
+            }
+
+            /**
+             * PeriodEndTime.
+             */
+            public Builder periodEndTime(String periodEndTime) {
+                this.periodEndTime = periodEndTime;
+                return this;
+            }
+
+            /**
+             * PeriodStartTime.
+             */
+            public Builder periodStartTime(String periodStartTime) {
+                this.periodStartTime = periodStartTime;
                 return this;
             }
 

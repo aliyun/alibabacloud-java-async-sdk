@@ -26,6 +26,14 @@ public class DescribeCreditDetailRequest extends Request {
     private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PackageIds")
     private java.util.List<String> packageIds;
 
@@ -45,6 +53,8 @@ public class DescribeCreditDetailRequest extends Request {
         super(builder);
         this.endTime = builder.endTime;
         this.instanceIds = builder.instanceIds;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.packageIds = builder.packageIds;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
@@ -79,6 +89,20 @@ public class DescribeCreditDetailRequest extends Request {
     }
 
     /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return packageIds
      */
     public java.util.List<String> getPackageIds() {
@@ -109,6 +133,8 @@ public class DescribeCreditDetailRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeCreditDetailRequest, Builder> {
         private Long endTime; 
         private java.util.List<String> instanceIds; 
+        private Integer maxResults; 
+        private String nextToken; 
         private java.util.List<String> packageIds; 
         private String pageNum; 
         private String pageSize; 
@@ -122,6 +148,8 @@ public class DescribeCreditDetailRequest extends Request {
             super(request);
             this.endTime = request.endTime;
             this.instanceIds = request.instanceIds;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
             this.packageIds = request.packageIds;
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
@@ -143,6 +171,24 @@ public class DescribeCreditDetailRequest extends Request {
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
+            return this;
+        }
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 

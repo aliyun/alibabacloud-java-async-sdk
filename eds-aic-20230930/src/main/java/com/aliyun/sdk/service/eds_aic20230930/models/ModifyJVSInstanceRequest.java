@@ -26,6 +26,10 @@ public class ModifyJVSInstanceRequest extends Request {
     private java.util.List<CreditConfig> creditConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
+    private String imageId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private java.util.List<String> instanceIds;
 
@@ -37,6 +41,7 @@ public class ModifyJVSInstanceRequest extends Request {
         super(builder);
         this.applyToAll = builder.applyToAll;
         this.creditConfig = builder.creditConfig;
+        this.imageId = builder.imageId;
         this.instanceIds = builder.instanceIds;
         this.instanceName = builder.instanceName;
     }
@@ -69,6 +74,13 @@ public class ModifyJVSInstanceRequest extends Request {
     }
 
     /**
+     * @return imageId
+     */
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    /**
      * @return instanceIds
      */
     public java.util.List<String> getInstanceIds() {
@@ -85,6 +97,7 @@ public class ModifyJVSInstanceRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyJVSInstanceRequest, Builder> {
         private Boolean applyToAll; 
         private java.util.List<CreditConfig> creditConfig; 
+        private String imageId; 
         private java.util.List<String> instanceIds; 
         private String instanceName; 
 
@@ -96,6 +109,7 @@ public class ModifyJVSInstanceRequest extends Request {
             super(request);
             this.applyToAll = request.applyToAll;
             this.creditConfig = request.creditConfig;
+            this.imageId = request.imageId;
             this.instanceIds = request.instanceIds;
             this.instanceName = request.instanceName;
         } 
@@ -115,6 +129,15 @@ public class ModifyJVSInstanceRequest extends Request {
         public Builder creditConfig(java.util.List<CreditConfig> creditConfig) {
             this.putQueryParameter("CreditConfig", creditConfig);
             this.creditConfig = creditConfig;
+            return this;
+        }
+
+        /**
+         * ImageId.
+         */
+        public Builder imageId(String imageId) {
+            this.putQueryParameter("ImageId", imageId);
+            this.imageId = imageId;
             return this;
         }
 

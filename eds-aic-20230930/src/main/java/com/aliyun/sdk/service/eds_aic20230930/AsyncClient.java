@@ -93,6 +93,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckResourceStockResponse> checkResourceStock(CheckResourceStockRequest request);
 
     /**
+     * @param request the request parameters of CreateAICloudPhone  CreateAICloudPhoneRequest
+     * @return CreateAICloudPhoneResponse
+     */
+    CompletableFuture<CreateAICloudPhoneResponse> createAICloudPhone(CreateAICloudPhoneRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before creating an instance group, ensure you understand the <a href="https://help.aliyun.com/document_detail/2807121.html">billing methods</a> supported by Cloud Phone.</p>
      * <ul>
