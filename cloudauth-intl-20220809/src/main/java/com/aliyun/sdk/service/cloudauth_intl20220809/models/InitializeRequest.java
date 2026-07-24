@@ -26,6 +26,10 @@ public class InitializeRequest extends Request {
     private String authorize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoDocPageConfig")
+    private String autoDocPageConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoRegistration")
     private String autoRegistration;
 
@@ -92,6 +96,10 @@ public class InitializeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExperienceCode")
     private String experienceCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FaceAttributeCheck")
+    private String faceAttributeCheck;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FaceGroupCodes")
@@ -245,6 +253,7 @@ public class InitializeRequest extends Request {
         super(builder);
         this.appQualityCheck = builder.appQualityCheck;
         this.authorize = builder.authorize;
+        this.autoDocPageConfig = builder.autoDocPageConfig;
         this.autoRegistration = builder.autoRegistration;
         this.callbackToken = builder.callbackToken;
         this.callbackUrl = builder.callbackUrl;
@@ -262,6 +271,7 @@ public class InitializeRequest extends Request {
         this.editOcrResult = builder.editOcrResult;
         this.email = builder.email;
         this.experienceCode = builder.experienceCode;
+        this.faceAttributeCheck = builder.faceAttributeCheck;
         this.faceGroupCodes = builder.faceGroupCodes;
         this.facePictureBase64 = builder.facePictureBase64;
         this.facePictureUrl = builder.facePictureUrl;
@@ -326,6 +336,13 @@ public class InitializeRequest extends Request {
      */
     public String getAuthorize() {
         return this.authorize;
+    }
+
+    /**
+     * @return autoDocPageConfig
+     */
+    public String getAutoDocPageConfig() {
+        return this.autoDocPageConfig;
     }
 
     /**
@@ -445,6 +462,13 @@ public class InitializeRequest extends Request {
      */
     public String getExperienceCode() {
         return this.experienceCode;
+    }
+
+    /**
+     * @return faceAttributeCheck
+     */
+    public String getFaceAttributeCheck() {
+        return this.faceAttributeCheck;
     }
 
     /**
@@ -709,6 +733,7 @@ public class InitializeRequest extends Request {
     public static final class Builder extends Request.Builder<InitializeRequest, Builder> {
         private String appQualityCheck; 
         private String authorize; 
+        private String autoDocPageConfig; 
         private String autoRegistration; 
         private String callbackToken; 
         private String callbackUrl; 
@@ -726,6 +751,7 @@ public class InitializeRequest extends Request {
         private String editOcrResult; 
         private String email; 
         private String experienceCode; 
+        private String faceAttributeCheck; 
         private String faceGroupCodes; 
         private String facePictureBase64; 
         private String facePictureUrl; 
@@ -772,6 +798,7 @@ public class InitializeRequest extends Request {
             super(request);
             this.appQualityCheck = request.appQualityCheck;
             this.authorize = request.authorize;
+            this.autoDocPageConfig = request.autoDocPageConfig;
             this.autoRegistration = request.autoRegistration;
             this.callbackToken = request.callbackToken;
             this.callbackUrl = request.callbackUrl;
@@ -789,6 +816,7 @@ public class InitializeRequest extends Request {
             this.editOcrResult = request.editOcrResult;
             this.email = request.email;
             this.experienceCode = request.experienceCode;
+            this.faceAttributeCheck = request.faceAttributeCheck;
             this.faceGroupCodes = request.faceGroupCodes;
             this.facePictureBase64 = request.facePictureBase64;
             this.facePictureUrl = request.facePictureUrl;
@@ -854,6 +882,15 @@ public class InitializeRequest extends Request {
         public Builder authorize(String authorize) {
             this.putQueryParameter("Authorize", authorize);
             this.authorize = authorize;
+            return this;
+        }
+
+        /**
+         * AutoDocPageConfig.
+         */
+        public Builder autoDocPageConfig(String autoDocPageConfig) {
+            this.putQueryParameter("AutoDocPageConfig", autoDocPageConfig);
+            this.autoDocPageConfig = autoDocPageConfig;
             return this;
         }
 
@@ -1099,6 +1136,15 @@ public class InitializeRequest extends Request {
         public Builder experienceCode(String experienceCode) {
             this.putQueryParameter("ExperienceCode", experienceCode);
             this.experienceCode = experienceCode;
+            return this;
+        }
+
+        /**
+         * FaceAttributeCheck.
+         */
+        public Builder faceAttributeCheck(String faceAttributeCheck) {
+            this.putQueryParameter("FaceAttributeCheck", faceAttributeCheck);
+            this.faceAttributeCheck = faceAttributeCheck;
             return this;
         }
 

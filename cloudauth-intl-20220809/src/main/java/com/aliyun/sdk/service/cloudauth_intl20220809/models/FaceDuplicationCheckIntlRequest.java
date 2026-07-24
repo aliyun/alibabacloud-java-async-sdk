@@ -26,6 +26,10 @@ public class FaceDuplicationCheckIntlRequest extends Request {
     private String autoRegistration;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FaceAttributeCheck")
+    private String faceAttributeCheck;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FaceGroupCodes")
     private String faceGroupCodes;
 
@@ -97,6 +101,7 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.autoRegistration = builder.autoRegistration;
+        this.faceAttributeCheck = builder.faceAttributeCheck;
         this.faceGroupCodes = builder.faceGroupCodes;
         this.faceQualityCheck = builder.faceQualityCheck;
         this.faceRegisterGroupCode = builder.faceRegisterGroupCode;
@@ -140,6 +145,13 @@ public class FaceDuplicationCheckIntlRequest extends Request {
      */
     public String getAutoRegistration() {
         return this.autoRegistration;
+    }
+
+    /**
+     * @return faceAttributeCheck
+     */
+    public String getFaceAttributeCheck() {
+        return this.faceAttributeCheck;
     }
 
     /**
@@ -257,6 +269,7 @@ public class FaceDuplicationCheckIntlRequest extends Request {
     public static final class Builder extends Request.Builder<FaceDuplicationCheckIntlRequest, Builder> {
         private String regionId; 
         private String autoRegistration; 
+        private String faceAttributeCheck; 
         private String faceGroupCodes; 
         private String faceQualityCheck; 
         private String faceRegisterGroupCode; 
@@ -282,6 +295,7 @@ public class FaceDuplicationCheckIntlRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.autoRegistration = request.autoRegistration;
+            this.faceAttributeCheck = request.faceAttributeCheck;
             this.faceGroupCodes = request.faceGroupCodes;
             this.faceQualityCheck = request.faceQualityCheck;
             this.faceRegisterGroupCode = request.faceRegisterGroupCode;
@@ -322,6 +336,15 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         public Builder autoRegistration(String autoRegistration) {
             this.putBodyParameter("AutoRegistration", autoRegistration);
             this.autoRegistration = autoRegistration;
+            return this;
+        }
+
+        /**
+         * FaceAttributeCheck.
+         */
+        public Builder faceAttributeCheck(String faceAttributeCheck) {
+            this.putBodyParameter("FaceAttributeCheck", faceAttributeCheck);
+            this.faceAttributeCheck = faceAttributeCheck;
             return this;
         }
 

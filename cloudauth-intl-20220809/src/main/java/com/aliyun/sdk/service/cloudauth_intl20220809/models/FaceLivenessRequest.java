@@ -21,6 +21,10 @@ public class FaceLivenessRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Crop")
     private String crop;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FaceAttributeCheck")
+    private String faceAttributeCheck;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FacePictureBase64")
     private String facePictureBase64;
@@ -56,6 +60,7 @@ public class FaceLivenessRequest extends Request {
     private FaceLivenessRequest(Builder builder) {
         super(builder);
         this.crop = builder.crop;
+        this.faceAttributeCheck = builder.faceAttributeCheck;
         this.facePictureBase64 = builder.facePictureBase64;
         this.facePictureUrl = builder.facePictureUrl;
         this.faceQuality = builder.faceQuality;
@@ -84,6 +89,13 @@ public class FaceLivenessRequest extends Request {
      */
     public String getCrop() {
         return this.crop;
+    }
+
+    /**
+     * @return faceAttributeCheck
+     */
+    public String getFaceAttributeCheck() {
+        return this.faceAttributeCheck;
     }
 
     /**
@@ -144,6 +156,7 @@ public class FaceLivenessRequest extends Request {
 
     public static final class Builder extends Request.Builder<FaceLivenessRequest, Builder> {
         private String crop; 
+        private String faceAttributeCheck; 
         private String facePictureBase64; 
         private String facePictureUrl; 
         private String faceQuality; 
@@ -160,6 +173,7 @@ public class FaceLivenessRequest extends Request {
         private Builder(FaceLivenessRequest request) {
             super(request);
             this.crop = request.crop;
+            this.faceAttributeCheck = request.faceAttributeCheck;
             this.facePictureBase64 = request.facePictureBase64;
             this.facePictureUrl = request.facePictureUrl;
             this.faceQuality = request.faceQuality;
@@ -185,6 +199,15 @@ public class FaceLivenessRequest extends Request {
         public Builder crop(String crop) {
             this.putQueryParameter("Crop", crop);
             this.crop = crop;
+            return this;
+        }
+
+        /**
+         * FaceAttributeCheck.
+         */
+        public Builder faceAttributeCheck(String faceAttributeCheck) {
+            this.putQueryParameter("FaceAttributeCheck", faceAttributeCheck);
+            this.faceAttributeCheck = faceAttributeCheck;
             return this;
         }
 
