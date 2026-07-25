@@ -313,6 +313,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetYikeAgentJobEstimatedCredit  GetYikeAgentJobEstimatedCreditRequest
+     * @return GetYikeAgentJobEstimatedCreditResponse
+     */
+    @Override
+    public CompletableFuture<GetYikeAgentJobEstimatedCreditResponse> getYikeAgentJobEstimatedCredit(GetYikeAgentJobEstimatedCreditRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetYikeAgentJobEstimatedCredit").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetYikeAgentJobEstimatedCreditResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetYikeAgentJobEstimatedCreditResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetYikeAssetMediaInfo  GetYikeAssetMediaInfoRequest
      * @return GetYikeAssetMediaInfoResponse
      */
@@ -325,6 +343,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetYikeAssetMediaInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetYikeJobCredit  GetYikeJobCreditRequest
+     * @return GetYikeJobCreditResponse
+     */
+    @Override
+    public CompletableFuture<GetYikeJobCreditResponse> getYikeJobCredit(GetYikeJobCreditRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetYikeJobCredit").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetYikeJobCreditResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetYikeJobCreditResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -110,10 +110,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetYikeAgentJobResponse> getYikeAgentJob(GetYikeAgentJobRequest request);
 
     /**
+     * @param request the request parameters of GetYikeAgentJobEstimatedCredit  GetYikeAgentJobEstimatedCreditRequest
+     * @return GetYikeAgentJobEstimatedCreditResponse
+     */
+    CompletableFuture<GetYikeAgentJobEstimatedCreditResponse> getYikeAgentJobEstimatedCredit(GetYikeAgentJobEstimatedCreditRequest request);
+
+    /**
      * @param request the request parameters of GetYikeAssetMediaInfo  GetYikeAssetMediaInfoRequest
      * @return GetYikeAssetMediaInfoResponse
      */
     CompletableFuture<GetYikeAssetMediaInfoResponse> getYikeAssetMediaInfo(GetYikeAssetMediaInfoRequest request);
+
+    /**
+     * @param request the request parameters of GetYikeJobCredit  GetYikeJobCreditRequest
+     * @return GetYikeJobCreditResponse
+     */
+    CompletableFuture<GetYikeJobCreditResponse> getYikeJobCredit(GetYikeJobCreditRequest request);
 
     /**
      * @param request the request parameters of GetYikeProjectExportJob  GetYikeProjectExportJobRequest
