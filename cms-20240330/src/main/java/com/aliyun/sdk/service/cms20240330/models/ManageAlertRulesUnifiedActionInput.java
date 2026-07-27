@@ -30,6 +30,9 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("armsIntegrationConfig")
     private ArmsIntegrationConfig armsIntegrationConfig;
 
+    @com.aliyun.core.annotation.NameInMap("bizSource")
+    private String bizSource;
+
     @com.aliyun.core.annotation.NameInMap("conditionConfig")
     private ConditionConfigUnified conditionConfig;
 
@@ -51,14 +54,25 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("notifyConfig")
     private NotifyConfigUnified notifyConfig;
 
+    @com.aliyun.core.annotation.NameInMap("observeResourceConfig")
+    private ObserveResourceConfig observeResourceConfig;
+
     @com.aliyun.core.annotation.NameInMap("observeResourceInstanceId")
+    @Deprecated
     private String observeResourceInstanceId;
 
     @com.aliyun.core.annotation.NameInMap("observeResourceType")
+    @Deprecated
     private String observeResourceType;
 
     @com.aliyun.core.annotation.NameInMap("queryConfig")
     private QueryConfigUnified queryConfig;
+
+    @com.aliyun.core.annotation.NameInMap("rcaConfig")
+    private AlertRuleRcaConfig rcaConfig;
+
+    @com.aliyun.core.annotation.NameInMap("regionId")
+    private String regionId;
 
     @com.aliyun.core.annotation.NameInMap("scheduleConfig")
     private ScheduleConfigUnified scheduleConfig;
@@ -77,6 +91,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         this.actionIntegrationConfig = builder.actionIntegrationConfig;
         this.annotations = builder.annotations;
         this.armsIntegrationConfig = builder.armsIntegrationConfig;
+        this.bizSource = builder.bizSource;
         this.conditionConfig = builder.conditionConfig;
         this.contentTemplate = builder.contentTemplate;
         this.datasourceConfig = builder.datasourceConfig;
@@ -84,9 +99,12 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         this.enabled = builder.enabled;
         this.labels = builder.labels;
         this.notifyConfig = builder.notifyConfig;
+        this.observeResourceConfig = builder.observeResourceConfig;
         this.observeResourceInstanceId = builder.observeResourceInstanceId;
         this.observeResourceType = builder.observeResourceType;
         this.queryConfig = builder.queryConfig;
+        this.rcaConfig = builder.rcaConfig;
+        this.regionId = builder.regionId;
         this.scheduleConfig = builder.scheduleConfig;
         this.uuid = builder.uuid;
         this.uuidList = builder.uuidList;
@@ -131,6 +149,13 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
      */
     public ArmsIntegrationConfig getArmsIntegrationConfig() {
         return this.armsIntegrationConfig;
+    }
+
+    /**
+     * @return bizSource
+     */
+    public String getBizSource() {
+        return this.bizSource;
     }
 
     /**
@@ -183,6 +208,13 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
     }
 
     /**
+     * @return observeResourceConfig
+     */
+    public ObserveResourceConfig getObserveResourceConfig() {
+        return this.observeResourceConfig;
+    }
+
+    /**
      * @return observeResourceInstanceId
      */
     public String getObserveResourceInstanceId() {
@@ -201,6 +233,20 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
      */
     public QueryConfigUnified getQueryConfig() {
         return this.queryConfig;
+    }
+
+    /**
+     * @return rcaConfig
+     */
+    public AlertRuleRcaConfig getRcaConfig() {
+        return this.rcaConfig;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -236,6 +282,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         private ActionIntegrationConfig actionIntegrationConfig; 
         private java.util.Map<String, String> annotations; 
         private ArmsIntegrationConfig armsIntegrationConfig; 
+        private String bizSource; 
         private ConditionConfigUnified conditionConfig; 
         private String contentTemplate; 
         private DatasourceConfigUnified datasourceConfig; 
@@ -243,9 +290,12 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         private Boolean enabled; 
         private java.util.Map<String, String> labels; 
         private NotifyConfigUnified notifyConfig; 
+        private ObserveResourceConfig observeResourceConfig; 
         private String observeResourceInstanceId; 
         private String observeResourceType; 
         private QueryConfigUnified queryConfig; 
+        private AlertRuleRcaConfig rcaConfig; 
+        private String regionId; 
         private ScheduleConfigUnified scheduleConfig; 
         private String uuid; 
         private java.util.List<String> uuidList; 
@@ -259,6 +309,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
             this.actionIntegrationConfig = model.actionIntegrationConfig;
             this.annotations = model.annotations;
             this.armsIntegrationConfig = model.armsIntegrationConfig;
+            this.bizSource = model.bizSource;
             this.conditionConfig = model.conditionConfig;
             this.contentTemplate = model.contentTemplate;
             this.datasourceConfig = model.datasourceConfig;
@@ -266,9 +317,12 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
             this.enabled = model.enabled;
             this.labels = model.labels;
             this.notifyConfig = model.notifyConfig;
+            this.observeResourceConfig = model.observeResourceConfig;
             this.observeResourceInstanceId = model.observeResourceInstanceId;
             this.observeResourceType = model.observeResourceType;
             this.queryConfig = model.queryConfig;
+            this.rcaConfig = model.rcaConfig;
+            this.regionId = model.regionId;
             this.scheduleConfig = model.scheduleConfig;
             this.uuid = model.uuid;
             this.uuidList = model.uuidList;
@@ -304,6 +358,14 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
          */
         public Builder armsIntegrationConfig(ArmsIntegrationConfig armsIntegrationConfig) {
             this.armsIntegrationConfig = armsIntegrationConfig;
+            return this;
+        }
+
+        /**
+         * bizSource.
+         */
+        public Builder bizSource(String bizSource) {
+            this.bizSource = bizSource;
             return this;
         }
 
@@ -364,6 +426,14 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
+         * observeResourceConfig.
+         */
+        public Builder observeResourceConfig(ObserveResourceConfig observeResourceConfig) {
+            this.observeResourceConfig = observeResourceConfig;
+            return this;
+        }
+
+        /**
          * observeResourceInstanceId.
          */
         public Builder observeResourceInstanceId(String observeResourceInstanceId) {
@@ -384,6 +454,22 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
          */
         public Builder queryConfig(QueryConfigUnified queryConfig) {
             this.queryConfig = queryConfig;
+            return this;
+        }
+
+        /**
+         * rcaConfig.
+         */
+        public Builder rcaConfig(AlertRuleRcaConfig rcaConfig) {
+            this.rcaConfig = rcaConfig;
+            return this;
+        }
+
+        /**
+         * regionId.
+         */
+        public Builder regionId(String regionId) {
+            this.regionId = regionId;
             return this;
         }
 

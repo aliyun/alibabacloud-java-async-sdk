@@ -20,8 +20,11 @@ public class ConditionConfigUnified extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("aggregate")
     private String aggregate;
 
+    @com.aliyun.core.annotation.NameInMap("alertCount")
+    private Integer alertCount;
+
     @com.aliyun.core.annotation.NameInMap("compareList")
-    private java.util.List<ApmCompositeCompareConfig> compareList;
+    private java.util.List<CompareList> compareList;
 
     @com.aliyun.core.annotation.NameInMap("compositeEscalation")
     private CloudMonitoringCompositeEscalation compositeEscalation;
@@ -65,6 +68,15 @@ public class ConditionConfigUnified extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("min")
     private Double min;
 
+    @com.aliyun.core.annotation.NameInMap("noDataAlertLevel")
+    private String noDataAlertLevel;
+
+    @com.aliyun.core.annotation.NameInMap("noDataAlertSeverity")
+    private String noDataAlertSeverity;
+
+    @com.aliyun.core.annotation.NameInMap("noDataAppendValue")
+    private Double noDataAppendValue;
+
     @com.aliyun.core.annotation.NameInMap("noDataPolicy")
     private String noDataPolicy;
 
@@ -87,10 +99,10 @@ public class ConditionConfigUnified extends TeaModel {
     private Double threshold;
 
     @com.aliyun.core.annotation.NameInMap("thresholdList")
-    private java.util.List<ApmThresholdConfig> thresholdList;
+    private java.util.List<ThresholdList> thresholdList;
 
     @com.aliyun.core.annotation.NameInMap("triggers")
-    private java.util.List<MetricSetMultiTrigger> triggers;
+    private java.util.List<Triggers> triggers;
 
     @com.aliyun.core.annotation.NameInMap("type")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -104,6 +116,7 @@ public class ConditionConfigUnified extends TeaModel {
 
     private ConditionConfigUnified(Builder builder) {
         this.aggregate = builder.aggregate;
+        this.alertCount = builder.alertCount;
         this.compareList = builder.compareList;
         this.compositeEscalation = builder.compositeEscalation;
         this.countOperator = builder.countOperator;
@@ -119,6 +132,9 @@ public class ConditionConfigUnified extends TeaModel {
         this.matchValue = builder.matchValue;
         this.max = builder.max;
         this.min = builder.min;
+        this.noDataAlertLevel = builder.noDataAlertLevel;
+        this.noDataAlertSeverity = builder.noDataAlertSeverity;
+        this.noDataAppendValue = builder.noDataAppendValue;
         this.noDataPolicy = builder.noDataPolicy;
         this.operator = builder.operator;
         this.prometheus = builder.prometheus;
@@ -153,9 +169,16 @@ public class ConditionConfigUnified extends TeaModel {
     }
 
     /**
+     * @return alertCount
+     */
+    public Integer getAlertCount() {
+        return this.alertCount;
+    }
+
+    /**
      * @return compareList
      */
-    public java.util.List<ApmCompositeCompareConfig> getCompareList() {
+    public java.util.List<CompareList> getCompareList() {
         return this.compareList;
     }
 
@@ -258,6 +281,27 @@ public class ConditionConfigUnified extends TeaModel {
     }
 
     /**
+     * @return noDataAlertLevel
+     */
+    public String getNoDataAlertLevel() {
+        return this.noDataAlertLevel;
+    }
+
+    /**
+     * @return noDataAlertSeverity
+     */
+    public String getNoDataAlertSeverity() {
+        return this.noDataAlertSeverity;
+    }
+
+    /**
+     * @return noDataAppendValue
+     */
+    public Double getNoDataAppendValue() {
+        return this.noDataAppendValue;
+    }
+
+    /**
      * @return noDataPolicy
      */
     public String getNoDataPolicy() {
@@ -309,14 +353,14 @@ public class ConditionConfigUnified extends TeaModel {
     /**
      * @return thresholdList
      */
-    public java.util.List<ApmThresholdConfig> getThresholdList() {
+    public java.util.List<ThresholdList> getThresholdList() {
         return this.thresholdList;
     }
 
     /**
      * @return triggers
      */
-    public java.util.List<MetricSetMultiTrigger> getTriggers() {
+    public java.util.List<Triggers> getTriggers() {
         return this.triggers;
     }
 
@@ -343,7 +387,8 @@ public class ConditionConfigUnified extends TeaModel {
 
     public static final class Builder {
         private String aggregate; 
-        private java.util.List<ApmCompositeCompareConfig> compareList; 
+        private Integer alertCount; 
+        private java.util.List<CompareList> compareList; 
         private CloudMonitoringCompositeEscalation compositeEscalation; 
         private String countOperator; 
         private Long countThreshold; 
@@ -358,6 +403,9 @@ public class ConditionConfigUnified extends TeaModel {
         private String matchValue; 
         private Double max; 
         private Double min; 
+        private String noDataAlertLevel; 
+        private String noDataAlertSeverity; 
+        private Double noDataAppendValue; 
         private String noDataPolicy; 
         private String operator; 
         private CloudMonitoringPrometheusEscalation prometheus; 
@@ -365,8 +413,8 @@ public class ConditionConfigUnified extends TeaModel {
         private String severity; 
         private CloudMonitoringSimpleEscalation simpleEscalation; 
         private Double threshold; 
-        private java.util.List<ApmThresholdConfig> thresholdList; 
-        private java.util.List<MetricSetMultiTrigger> triggers; 
+        private java.util.List<ThresholdList> thresholdList; 
+        private java.util.List<Triggers> triggers; 
         private String type; 
         private String yoyTimeUnit; 
         private Integer yoyTimeValue; 
@@ -376,6 +424,7 @@ public class ConditionConfigUnified extends TeaModel {
 
         private Builder(ConditionConfigUnified model) {
             this.aggregate = model.aggregate;
+            this.alertCount = model.alertCount;
             this.compareList = model.compareList;
             this.compositeEscalation = model.compositeEscalation;
             this.countOperator = model.countOperator;
@@ -391,6 +440,9 @@ public class ConditionConfigUnified extends TeaModel {
             this.matchValue = model.matchValue;
             this.max = model.max;
             this.min = model.min;
+            this.noDataAlertLevel = model.noDataAlertLevel;
+            this.noDataAlertSeverity = model.noDataAlertSeverity;
+            this.noDataAppendValue = model.noDataAppendValue;
             this.noDataPolicy = model.noDataPolicy;
             this.operator = model.operator;
             this.prometheus = model.prometheus;
@@ -414,9 +466,17 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
+         * alertCount.
+         */
+        public Builder alertCount(Integer alertCount) {
+            this.alertCount = alertCount;
+            return this;
+        }
+
+        /**
          * compareList.
          */
-        public Builder compareList(java.util.List<ApmCompositeCompareConfig> compareList) {
+        public Builder compareList(java.util.List<CompareList> compareList) {
             this.compareList = compareList;
             return this;
         }
@@ -534,6 +594,30 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
+         * noDataAlertLevel.
+         */
+        public Builder noDataAlertLevel(String noDataAlertLevel) {
+            this.noDataAlertLevel = noDataAlertLevel;
+            return this;
+        }
+
+        /**
+         * noDataAlertSeverity.
+         */
+        public Builder noDataAlertSeverity(String noDataAlertSeverity) {
+            this.noDataAlertSeverity = noDataAlertSeverity;
+            return this;
+        }
+
+        /**
+         * noDataAppendValue.
+         */
+        public Builder noDataAppendValue(Double noDataAppendValue) {
+            this.noDataAppendValue = noDataAppendValue;
+            return this;
+        }
+
+        /**
          * noDataPolicy.
          */
         public Builder noDataPolicy(String noDataPolicy) {
@@ -592,7 +676,7 @@ public class ConditionConfigUnified extends TeaModel {
         /**
          * thresholdList.
          */
-        public Builder thresholdList(java.util.List<ApmThresholdConfig> thresholdList) {
+        public Builder thresholdList(java.util.List<ThresholdList> thresholdList) {
             this.thresholdList = thresholdList;
             return this;
         }
@@ -600,7 +684,7 @@ public class ConditionConfigUnified extends TeaModel {
         /**
          * triggers.
          */
-        public Builder triggers(java.util.List<MetricSetMultiTrigger> triggers) {
+        public Builder triggers(java.util.List<Triggers> triggers) {
             this.triggers = triggers;
             return this;
         }

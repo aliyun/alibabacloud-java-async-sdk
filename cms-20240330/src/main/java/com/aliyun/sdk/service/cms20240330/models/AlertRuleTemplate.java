@@ -47,6 +47,12 @@ public class AlertRuleTemplate extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("labels")
     private String labels;
 
+    @com.aliyun.core.annotation.NameInMap("namespace")
+    private String namespace;
+
+    @com.aliyun.core.annotation.NameInMap("productCategory")
+    private String productCategory;
+
     @com.aliyun.core.annotation.NameInMap("ruleConfigs")
     private String ruleConfigs;
 
@@ -85,6 +91,8 @@ public class AlertRuleTemplate extends TeaModel {
         this.id = builder.id;
         this.isSystem = builder.isSystem;
         this.labels = builder.labels;
+        this.namespace = builder.namespace;
+        this.productCategory = builder.productCategory;
         this.ruleConfigs = builder.ruleConfigs;
         this.scenes = builder.scenes;
         this.schemaVersion = builder.schemaVersion;
@@ -179,6 +187,20 @@ public class AlertRuleTemplate extends TeaModel {
     }
 
     /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    /**
+     * @return productCategory
+     */
+    public String getProductCategory() {
+        return this.productCategory;
+    }
+
+    /**
      * @return ruleConfigs
      */
     public String getRuleConfigs() {
@@ -252,6 +274,8 @@ public class AlertRuleTemplate extends TeaModel {
         private Long id; 
         private Integer isSystem; 
         private String labels; 
+        private String namespace; 
+        private String productCategory; 
         private String ruleConfigs; 
         private String scenes; 
         private String schemaVersion; 
@@ -276,6 +300,8 @@ public class AlertRuleTemplate extends TeaModel {
             this.id = model.id;
             this.isSystem = model.isSystem;
             this.labels = model.labels;
+            this.namespace = model.namespace;
+            this.productCategory = model.productCategory;
             this.ruleConfigs = model.ruleConfigs;
             this.scenes = model.scenes;
             this.schemaVersion = model.schemaVersion;
@@ -364,6 +390,22 @@ public class AlertRuleTemplate extends TeaModel {
          */
         public Builder labels(String labels) {
             this.labels = labels;
+            return this;
+        }
+
+        /**
+         * namespace.
+         */
+        public Builder namespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+
+        /**
+         * productCategory.
+         */
+        public Builder productCategory(String productCategory) {
+            this.productCategory = productCategory;
             return this;
         }
 

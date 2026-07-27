@@ -29,8 +29,14 @@ public class DatasourceConfigUnified extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("productCategory")
     private String productCategory;
 
+    @com.aliyun.core.annotation.NameInMap("project")
+    private String project;
+
     @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.NameInMap("stores")
+    private java.util.List<Stores> stores;
 
     @com.aliyun.core.annotation.NameInMap("type")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -41,7 +47,9 @@ public class DatasourceConfigUnified extends TeaModel {
         this.legacyRaw = builder.legacyRaw;
         this.legacyType = builder.legacyType;
         this.productCategory = builder.productCategory;
+        this.project = builder.project;
         this.regionId = builder.regionId;
+        this.stores = builder.stores;
         this.type = builder.type;
     }
 
@@ -86,10 +94,24 @@ public class DatasourceConfigUnified extends TeaModel {
     }
 
     /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return stores
+     */
+    public java.util.List<Stores> getStores() {
+        return this.stores;
     }
 
     /**
@@ -104,7 +126,9 @@ public class DatasourceConfigUnified extends TeaModel {
         private String legacyRaw; 
         private String legacyType; 
         private String productCategory; 
+        private String project; 
         private String regionId; 
+        private java.util.List<Stores> stores; 
         private String type; 
 
         private Builder() {
@@ -115,7 +139,9 @@ public class DatasourceConfigUnified extends TeaModel {
             this.legacyRaw = model.legacyRaw;
             this.legacyType = model.legacyType;
             this.productCategory = model.productCategory;
+            this.project = model.project;
             this.regionId = model.regionId;
+            this.stores = model.stores;
             this.type = model.type;
         } 
 
@@ -152,10 +178,26 @@ public class DatasourceConfigUnified extends TeaModel {
         }
 
         /**
+         * project.
+         */
+        public Builder project(String project) {
+            this.project = project;
+            return this;
+        }
+
+        /**
          * regionId.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * stores.
+         */
+        public Builder stores(java.util.List<Stores> stores) {
+            this.stores = stores;
             return this;
         }
 

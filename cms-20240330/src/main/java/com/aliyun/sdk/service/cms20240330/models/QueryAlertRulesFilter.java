@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryAlertRulesFilter</p>
  */
 public class QueryAlertRulesFilter extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("bizSource")
+    private BizSourceFilter bizSource;
+
     @com.aliyun.core.annotation.NameInMap("datasourceType")
     private DatasourceTypeFilter datasourceType;
 
@@ -29,8 +32,14 @@ public class QueryAlertRulesFilter extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("labels")
     private LabelsFilter labels;
 
+    @com.aliyun.core.annotation.NameInMap("notificationChannels")
+    private NotificationChannelsFilter notificationChannels;
+
     @com.aliyun.core.annotation.NameInMap("notifyStrategyId")
     private NotifyStrategyIdFilter notifyStrategyId;
+
+    @com.aliyun.core.annotation.NameInMap("observeResourceConfig")
+    private ObserveResourceConfigFilter observeResourceConfig;
 
     @com.aliyun.core.annotation.NameInMap("observeResourceGlobalScope")
     private ObserveResourceGlobalScopeFilter observeResourceGlobalScope;
@@ -43,6 +52,7 @@ public class QueryAlertRulesFilter extends TeaModel {
     private ObserveResourceListFilter observeResourceList;
 
     @com.aliyun.core.annotation.NameInMap("observeResourceType")
+    @Deprecated
     private ObserveResourceTypeFilter observeResourceType;
 
     @com.aliyun.core.annotation.NameInMap("partitionKey")
@@ -58,11 +68,14 @@ public class QueryAlertRulesFilter extends TeaModel {
     private UuidFilter uuid;
 
     private QueryAlertRulesFilter(Builder builder) {
+        this.bizSource = builder.bizSource;
         this.datasourceType = builder.datasourceType;
         this.displayName = builder.displayName;
         this.enabled = builder.enabled;
         this.labels = builder.labels;
+        this.notificationChannels = builder.notificationChannels;
         this.notifyStrategyId = builder.notifyStrategyId;
+        this.observeResourceConfig = builder.observeResourceConfig;
         this.observeResourceGlobalScope = builder.observeResourceGlobalScope;
         this.observeResourceInstanceId = builder.observeResourceInstanceId;
         this.observeResourceList = builder.observeResourceList;
@@ -83,6 +96,13 @@ public class QueryAlertRulesFilter extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bizSource
+     */
+    public BizSourceFilter getBizSource() {
+        return this.bizSource;
     }
 
     /**
@@ -114,10 +134,24 @@ public class QueryAlertRulesFilter extends TeaModel {
     }
 
     /**
+     * @return notificationChannels
+     */
+    public NotificationChannelsFilter getNotificationChannels() {
+        return this.notificationChannels;
+    }
+
+    /**
      * @return notifyStrategyId
      */
     public NotifyStrategyIdFilter getNotifyStrategyId() {
         return this.notifyStrategyId;
+    }
+
+    /**
+     * @return observeResourceConfig
+     */
+    public ObserveResourceConfigFilter getObserveResourceConfig() {
+        return this.observeResourceConfig;
     }
 
     /**
@@ -177,11 +211,14 @@ public class QueryAlertRulesFilter extends TeaModel {
     }
 
     public static final class Builder {
+        private BizSourceFilter bizSource; 
         private DatasourceTypeFilter datasourceType; 
         private DisplayNameFilter displayName; 
         private EnabledFilter enabled; 
         private LabelsFilter labels; 
+        private NotificationChannelsFilter notificationChannels; 
         private NotifyStrategyIdFilter notifyStrategyId; 
+        private ObserveResourceConfigFilter observeResourceConfig; 
         private ObserveResourceGlobalScopeFilter observeResourceGlobalScope; 
         private String observeResourceInstanceId; 
         private ObserveResourceListFilter observeResourceList; 
@@ -195,11 +232,14 @@ public class QueryAlertRulesFilter extends TeaModel {
         } 
 
         private Builder(QueryAlertRulesFilter model) {
+            this.bizSource = model.bizSource;
             this.datasourceType = model.datasourceType;
             this.displayName = model.displayName;
             this.enabled = model.enabled;
             this.labels = model.labels;
+            this.notificationChannels = model.notificationChannels;
             this.notifyStrategyId = model.notifyStrategyId;
+            this.observeResourceConfig = model.observeResourceConfig;
             this.observeResourceGlobalScope = model.observeResourceGlobalScope;
             this.observeResourceInstanceId = model.observeResourceInstanceId;
             this.observeResourceList = model.observeResourceList;
@@ -209,6 +249,14 @@ public class QueryAlertRulesFilter extends TeaModel {
             this.status = model.status;
             this.uuid = model.uuid;
         } 
+
+        /**
+         * bizSource.
+         */
+        public Builder bizSource(BizSourceFilter bizSource) {
+            this.bizSource = bizSource;
+            return this;
+        }
 
         /**
          * datasourceType.
@@ -243,10 +291,26 @@ public class QueryAlertRulesFilter extends TeaModel {
         }
 
         /**
+         * notificationChannels.
+         */
+        public Builder notificationChannels(NotificationChannelsFilter notificationChannels) {
+            this.notificationChannels = notificationChannels;
+            return this;
+        }
+
+        /**
          * notifyStrategyId.
          */
         public Builder notifyStrategyId(NotifyStrategyIdFilter notifyStrategyId) {
             this.notifyStrategyId = notifyStrategyId;
+            return this;
+        }
+
+        /**
+         * observeResourceConfig.
+         */
+        public Builder observeResourceConfig(ObserveResourceConfigFilter observeResourceConfig) {
+            this.observeResourceConfig = observeResourceConfig;
             return this;
         }
 

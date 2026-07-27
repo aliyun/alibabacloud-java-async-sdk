@@ -25,10 +25,15 @@ public class ManageAlertRulesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("body")
     private ManageAlertRulesUnifiedActionInput body;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("callSource")
+    private String callSource;
+
     private ManageAlertRulesRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.body = builder.body;
+        this.callSource = builder.callSource;
     }
 
     public static Builder builder() {
@@ -58,9 +63,17 @@ public class ManageAlertRulesRequest extends Request {
         return this.body;
     }
 
+    /**
+     * @return callSource
+     */
+    public String getCallSource() {
+        return this.callSource;
+    }
+
     public static final class Builder extends Request.Builder<ManageAlertRulesRequest, Builder> {
         private String regionId; 
         private ManageAlertRulesUnifiedActionInput body; 
+        private String callSource; 
 
         private Builder() {
             super();
@@ -70,6 +83,7 @@ public class ManageAlertRulesRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.body = request.body;
+            this.callSource = request.callSource;
         } 
 
         /**
@@ -88,6 +102,15 @@ public class ManageAlertRulesRequest extends Request {
             String bodyShrink = shrink(body, "body", "json");
             this.putBodyParameter("body", bodyShrink);
             this.body = body;
+            return this;
+        }
+
+        /**
+         * callSource.
+         */
+        public Builder callSource(String callSource) {
+            this.putQueryParameter("callSource", callSource);
+            this.callSource = callSource;
             return this;
         }
 

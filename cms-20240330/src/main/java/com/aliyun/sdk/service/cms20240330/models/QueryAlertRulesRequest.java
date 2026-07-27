@@ -37,6 +37,10 @@ public class QueryAlertRulesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("queryJson")
+    private String queryJson;
+
     private QueryAlertRulesRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -44,6 +48,7 @@ public class QueryAlertRulesRequest extends Request {
         this.clientToken = builder.clientToken;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.queryJson = builder.queryJson;
     }
 
     public static Builder builder() {
@@ -94,12 +99,20 @@ public class QueryAlertRulesRequest extends Request {
         return this.nextToken;
     }
 
+    /**
+     * @return queryJson
+     */
+    public String getQueryJson() {
+        return this.queryJson;
+    }
+
     public static final class Builder extends Request.Builder<QueryAlertRulesRequest, Builder> {
         private String regionId; 
         private QueryAlertRulesInput body; 
         private String clientToken; 
         private Integer maxResults; 
         private String nextToken; 
+        private String queryJson; 
 
         private Builder() {
             super();
@@ -112,6 +125,7 @@ public class QueryAlertRulesRequest extends Request {
             this.clientToken = request.clientToken;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.queryJson = request.queryJson;
         } 
 
         /**
@@ -157,6 +171,15 @@ public class QueryAlertRulesRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * queryJson.
+         */
+        public Builder queryJson(String queryJson) {
+            this.putQueryParameter("queryJson", queryJson);
+            this.queryJson = queryJson;
             return this;
         }
 
