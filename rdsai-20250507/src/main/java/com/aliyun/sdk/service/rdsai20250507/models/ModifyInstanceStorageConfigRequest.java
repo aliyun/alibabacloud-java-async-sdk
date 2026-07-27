@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyInstanceStorageConfigRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BranchName")
+    private String branchName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -36,6 +40,7 @@ public class ModifyInstanceStorageConfigRequest extends Request {
 
     private ModifyInstanceStorageConfigRequest(Builder builder) {
         super(builder);
+        this.branchName = builder.branchName;
         this.clientToken = builder.clientToken;
         this.configList = builder.configList;
         this.instanceName = builder.instanceName;
@@ -53,6 +58,13 @@ public class ModifyInstanceStorageConfigRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return branchName
+     */
+    public String getBranchName() {
+        return this.branchName;
     }
 
     /**
@@ -84,6 +96,7 @@ public class ModifyInstanceStorageConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyInstanceStorageConfigRequest, Builder> {
+        private String branchName; 
         private String clientToken; 
         private java.util.List<ConfigList> configList; 
         private String instanceName; 
@@ -95,11 +108,21 @@ public class ModifyInstanceStorageConfigRequest extends Request {
 
         private Builder(ModifyInstanceStorageConfigRequest request) {
             super(request);
+            this.branchName = request.branchName;
             this.clientToken = request.clientToken;
             this.configList = request.configList;
             this.instanceName = request.instanceName;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * BranchName.
+         */
+        public Builder branchName(String branchName) {
+            this.putQueryParameter("BranchName", branchName);
+            this.branchName = branchName;
+            return this;
+        }
 
         /**
          * <p>The value of the configuration item.</p>

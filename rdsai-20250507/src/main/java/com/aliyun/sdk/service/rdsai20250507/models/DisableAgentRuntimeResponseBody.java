@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DisableAgentRuntimeResponseBody</p>
  */
 public class DisableAgentRuntimeResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("BranchName")
+    private String branchName;
+
     @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
@@ -24,6 +27,7 @@ public class DisableAgentRuntimeResponseBody extends TeaModel {
     private String requestId;
 
     private DisableAgentRuntimeResponseBody(Builder builder) {
+        this.branchName = builder.branchName;
         this.instanceName = builder.instanceName;
         this.requestId = builder.requestId;
     }
@@ -41,6 +45,13 @@ public class DisableAgentRuntimeResponseBody extends TeaModel {
     }
 
     /**
+     * @return branchName
+     */
+    public String getBranchName() {
+        return this.branchName;
+    }
+
+    /**
      * @return instanceName
      */
     public String getInstanceName() {
@@ -55,6 +66,7 @@ public class DisableAgentRuntimeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String branchName; 
         private String instanceName; 
         private String requestId; 
 
@@ -62,9 +74,18 @@ public class DisableAgentRuntimeResponseBody extends TeaModel {
         } 
 
         private Builder(DisableAgentRuntimeResponseBody model) {
+            this.branchName = model.branchName;
             this.instanceName = model.instanceName;
             this.requestId = model.requestId;
         } 
+
+        /**
+         * BranchName.
+         */
+        public Builder branchName(String branchName) {
+            this.branchName = branchName;
+            return this;
+        }
 
         /**
          * InstanceName.

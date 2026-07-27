@@ -12,26 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeAppInstanceAttributeRequest} extends {@link RequestModel}
+ * {@link ResetInstanceKeysRequest} extends {@link RequestModel}
  *
- * <p>DescribeAppInstanceAttributeRequest</p>
+ * <p>ResetInstanceKeysRequest</p>
  */
-public class DescribeAppInstanceAttributeRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("BranchName")
-    private String branchName;
-
+public class ResetInstanceKeysRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    private DescribeAppInstanceAttributeRequest(Builder builder) {
+    private ResetInstanceKeysRequest(Builder builder) {
         super(builder);
-        this.branchName = builder.branchName;
         this.instanceName = builder.instanceName;
         this.regionId = builder.regionId;
     }
@@ -40,20 +37,13 @@ public class DescribeAppInstanceAttributeRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeAppInstanceAttributeRequest create() {
+    public static ResetInstanceKeysRequest create() {
         return builder().build();
     }
 
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return branchName
-     */
-    public String getBranchName() {
-        return this.branchName;
     }
 
     /**
@@ -70,8 +60,7 @@ public class DescribeAppInstanceAttributeRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeAppInstanceAttributeRequest, Builder> {
-        private String branchName; 
+    public static final class Builder extends Request.Builder<ResetInstanceKeysRequest, Builder> {
         private String instanceName; 
         private String regionId; 
 
@@ -79,24 +68,14 @@ public class DescribeAppInstanceAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAppInstanceAttributeRequest request) {
+        private Builder(ResetInstanceKeysRequest request) {
             super(request);
-            this.branchName = request.branchName;
             this.instanceName = request.instanceName;
             this.regionId = request.regionId;
         } 
 
         /**
-         * BranchName.
-         */
-        public Builder branchName(String branchName) {
-            this.putQueryParameter("BranchName", branchName);
-            this.branchName = branchName;
-            return this;
-        }
-
-        /**
-         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ra-supabase-8moov5lxba****</p>
@@ -108,7 +87,7 @@ public class DescribeAppInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The operation that you want to perform. Set the value to <strong>DescribeAppInstanceAttribute</strong>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -120,8 +99,8 @@ public class DescribeAppInstanceAttributeRequest extends Request {
         }
 
         @Override
-        public DescribeAppInstanceAttributeRequest build() {
-            return new DescribeAppInstanceAttributeRequest(this);
+        public ResetInstanceKeysRequest build() {
+            return new ResetInstanceKeysRequest(this);
         } 
 
     } 

@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DisableAgentRuntimeRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BranchName")
+    private String branchName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -32,6 +36,7 @@ public class DisableAgentRuntimeRequest extends Request {
 
     private DisableAgentRuntimeRequest(Builder builder) {
         super(builder);
+        this.branchName = builder.branchName;
         this.clientToken = builder.clientToken;
         this.instanceName = builder.instanceName;
         this.regionId = builder.regionId;
@@ -48,6 +53,13 @@ public class DisableAgentRuntimeRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return branchName
+     */
+    public String getBranchName() {
+        return this.branchName;
     }
 
     /**
@@ -72,6 +84,7 @@ public class DisableAgentRuntimeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DisableAgentRuntimeRequest, Builder> {
+        private String branchName; 
         private String clientToken; 
         private String instanceName; 
         private String regionId; 
@@ -82,10 +95,20 @@ public class DisableAgentRuntimeRequest extends Request {
 
         private Builder(DisableAgentRuntimeRequest request) {
             super(request);
+            this.branchName = request.branchName;
             this.clientToken = request.clientToken;
             this.instanceName = request.instanceName;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * BranchName.
+         */
+        public Builder branchName(String branchName) {
+            this.putQueryParameter("BranchName", branchName);
+            this.branchName = branchName;
+            return this;
+        }
 
         /**
          * ClientToken.

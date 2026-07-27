@@ -203,6 +203,9 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
      * <p>DescribeMOTokenUsageDetailResponseBody</p>
      */
     public static class Records extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CacheTokens")
+        private Double cacheTokens;
+
         @com.aliyun.core.annotation.NameInMap("ConsumerName")
         private String consumerName;
 
@@ -231,6 +234,7 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
         private Double totalTokens;
 
         private Records(Builder builder) {
+            this.cacheTokens = builder.cacheTokens;
             this.consumerName = builder.consumerName;
             this.extraInfo = builder.extraInfo;
             this.inputTokens = builder.inputTokens;
@@ -248,6 +252,13 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
 
         public static Records create() {
             return builder().build();
+        }
+
+        /**
+         * @return cacheTokens
+         */
+        public Double getCacheTokens() {
+            return this.cacheTokens;
         }
 
         /**
@@ -314,6 +325,7 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Double cacheTokens; 
             private String consumerName; 
             private String extraInfo; 
             private Double inputTokens; 
@@ -328,6 +340,7 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
             } 
 
             private Builder(Records model) {
+                this.cacheTokens = model.cacheTokens;
                 this.consumerName = model.consumerName;
                 this.extraInfo = model.extraInfo;
                 this.inputTokens = model.inputTokens;
@@ -338,6 +351,14 @@ public class DescribeMOTokenUsageDetailResponseBody extends TeaModel {
                 this.requestTime = model.requestTime;
                 this.totalTokens = model.totalTokens;
             } 
+
+            /**
+             * CacheTokens.
+             */
+            public Builder cacheTokens(Double cacheTokens) {
+                this.cacheTokens = cacheTokens;
+                return this;
+            }
 
             /**
              * ConsumerName.

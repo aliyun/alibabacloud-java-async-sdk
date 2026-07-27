@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeInstanceEndpointsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BranchName")
+    private String branchName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
@@ -27,6 +31,7 @@ public class DescribeInstanceEndpointsRequest extends Request {
 
     private DescribeInstanceEndpointsRequest(Builder builder) {
         super(builder);
+        this.branchName = builder.branchName;
         this.instanceName = builder.instanceName;
         this.regionId = builder.regionId;
     }
@@ -45,6 +50,13 @@ public class DescribeInstanceEndpointsRequest extends Request {
     }
 
     /**
+     * @return branchName
+     */
+    public String getBranchName() {
+        return this.branchName;
+    }
+
+    /**
      * @return instanceName
      */
     public String getInstanceName() {
@@ -59,6 +71,7 @@ public class DescribeInstanceEndpointsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeInstanceEndpointsRequest, Builder> {
+        private String branchName; 
         private String instanceName; 
         private String regionId; 
 
@@ -68,9 +81,19 @@ public class DescribeInstanceEndpointsRequest extends Request {
 
         private Builder(DescribeInstanceEndpointsRequest request) {
             super(request);
+            this.branchName = request.branchName;
             this.instanceName = request.instanceName;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * BranchName.
+         */
+        public Builder branchName(String branchName) {
+            this.putQueryParameter("BranchName", branchName);
+            this.branchName = branchName;
+            return this;
+        }
 
         /**
          * <p>The region ID.</p>

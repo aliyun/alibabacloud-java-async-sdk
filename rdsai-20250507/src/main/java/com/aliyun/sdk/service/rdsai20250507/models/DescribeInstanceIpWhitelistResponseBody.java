@@ -17,6 +17,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceIpWhitelistResponseBody</p>
  */
 public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("BranchName")
+    private String branchName;
+
+    @com.aliyun.core.annotation.NameInMap("DbIpWhiteListGroups")
+    private java.util.List<DbIpWhiteListGroups> dbIpWhiteListGroups;
+
     @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
@@ -27,6 +33,8 @@ public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
     private String requestId;
 
     private DescribeInstanceIpWhitelistResponseBody(Builder builder) {
+        this.branchName = builder.branchName;
+        this.dbIpWhiteListGroups = builder.dbIpWhiteListGroups;
         this.instanceName = builder.instanceName;
         this.ipWhiteListGroups = builder.ipWhiteListGroups;
         this.requestId = builder.requestId;
@@ -42,6 +50,20 @@ public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return branchName
+     */
+    public String getBranchName() {
+        return this.branchName;
+    }
+
+    /**
+     * @return dbIpWhiteListGroups
+     */
+    public java.util.List<DbIpWhiteListGroups> getDbIpWhiteListGroups() {
+        return this.dbIpWhiteListGroups;
     }
 
     /**
@@ -66,6 +88,8 @@ public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String branchName; 
+        private java.util.List<DbIpWhiteListGroups> dbIpWhiteListGroups; 
         private String instanceName; 
         private java.util.List<IpWhiteListGroups> ipWhiteListGroups; 
         private String requestId; 
@@ -74,10 +98,28 @@ public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
         } 
 
         private Builder(DescribeInstanceIpWhitelistResponseBody model) {
+            this.branchName = model.branchName;
+            this.dbIpWhiteListGroups = model.dbIpWhiteListGroups;
             this.instanceName = model.instanceName;
             this.ipWhiteListGroups = model.ipWhiteListGroups;
             this.requestId = model.requestId;
         } 
+
+        /**
+         * BranchName.
+         */
+        public Builder branchName(String branchName) {
+            this.branchName = branchName;
+            return this;
+        }
+
+        /**
+         * DbIpWhiteListGroups.
+         */
+        public Builder dbIpWhiteListGroups(java.util.List<DbIpWhiteListGroups> dbIpWhiteListGroups) {
+            this.dbIpWhiteListGroups = dbIpWhiteListGroups;
+            return this;
+        }
 
         /**
          * <p>The ID of the RDS Supabase instance.</p>
@@ -115,6 +157,81 @@ public class DescribeInstanceIpWhitelistResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceIpWhitelistResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceIpWhitelistResponseBody</p>
+     */
+    public static class DbIpWhiteListGroups extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("GroupName")
+        private String groupName;
+
+        @com.aliyun.core.annotation.NameInMap("IpWhitelist")
+        private String ipWhitelist;
+
+        private DbIpWhiteListGroups(Builder builder) {
+            this.groupName = builder.groupName;
+            this.ipWhitelist = builder.ipWhitelist;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DbIpWhiteListGroups create() {
+            return builder().build();
+        }
+
+        /**
+         * @return groupName
+         */
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        /**
+         * @return ipWhitelist
+         */
+        public String getIpWhitelist() {
+            return this.ipWhitelist;
+        }
+
+        public static final class Builder {
+            private String groupName; 
+            private String ipWhitelist; 
+
+            private Builder() {
+            } 
+
+            private Builder(DbIpWhiteListGroups model) {
+                this.groupName = model.groupName;
+                this.ipWhitelist = model.ipWhitelist;
+            } 
+
+            /**
+             * GroupName.
+             */
+            public Builder groupName(String groupName) {
+                this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * IpWhitelist.
+             */
+            public Builder ipWhitelist(String ipWhitelist) {
+                this.ipWhitelist = ipWhitelist;
+                return this;
+            }
+
+            public DbIpWhiteListGroups build() {
+                return new DbIpWhiteListGroups(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link DescribeInstanceIpWhitelistResponseBody} extends {@link TeaModel}

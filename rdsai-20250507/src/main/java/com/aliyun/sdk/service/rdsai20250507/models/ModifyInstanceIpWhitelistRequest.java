@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyInstanceIpWhitelistRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BranchName")
+    private String branchName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -43,6 +47,7 @@ public class ModifyInstanceIpWhitelistRequest extends Request {
 
     private ModifyInstanceIpWhitelistRequest(Builder builder) {
         super(builder);
+        this.branchName = builder.branchName;
         this.clientToken = builder.clientToken;
         this.groupName = builder.groupName;
         this.instanceName = builder.instanceName;
@@ -62,6 +67,13 @@ public class ModifyInstanceIpWhitelistRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return branchName
+     */
+    public String getBranchName() {
+        return this.branchName;
     }
 
     /**
@@ -107,6 +119,7 @@ public class ModifyInstanceIpWhitelistRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyInstanceIpWhitelistRequest, Builder> {
+        private String branchName; 
         private String clientToken; 
         private String groupName; 
         private String instanceName; 
@@ -120,6 +133,7 @@ public class ModifyInstanceIpWhitelistRequest extends Request {
 
         private Builder(ModifyInstanceIpWhitelistRequest request) {
             super(request);
+            this.branchName = request.branchName;
             this.clientToken = request.clientToken;
             this.groupName = request.groupName;
             this.instanceName = request.instanceName;
@@ -127,6 +141,15 @@ public class ModifyInstanceIpWhitelistRequest extends Request {
             this.modifyMode = request.modifyMode;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * BranchName.
+         */
+        public Builder branchName(String branchName) {
+            this.putQueryParameter("BranchName", branchName);
+            this.branchName = branchName;
+            return this;
+        }
 
         /**
          * <p>The method that is used to modify the IP address whitelist. Valid values:</p>

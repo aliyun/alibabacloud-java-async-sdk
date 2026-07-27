@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyInstanceSSLRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BranchName")
+    private String branchName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CAType")
     private String CAType;
 
@@ -45,6 +49,7 @@ public class ModifyInstanceSSLRequest extends Request {
 
     private ModifyInstanceSSLRequest(Builder builder) {
         super(builder);
+        this.branchName = builder.branchName;
         this.CAType = builder.CAType;
         this.instanceName = builder.instanceName;
         this.regionId = builder.regionId;
@@ -64,6 +69,13 @@ public class ModifyInstanceSSLRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return branchName
+     */
+    public String getBranchName() {
+        return this.branchName;
     }
 
     /**
@@ -109,6 +121,7 @@ public class ModifyInstanceSSLRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyInstanceSSLRequest, Builder> {
+        private String branchName; 
         private String CAType; 
         private String instanceName; 
         private String regionId; 
@@ -122,6 +135,7 @@ public class ModifyInstanceSSLRequest extends Request {
 
         private Builder(ModifyInstanceSSLRequest request) {
             super(request);
+            this.branchName = request.branchName;
             this.CAType = request.CAType;
             this.instanceName = request.instanceName;
             this.regionId = request.regionId;
@@ -129,6 +143,15 @@ public class ModifyInstanceSSLRequest extends Request {
             this.serverCert = request.serverCert;
             this.serverKey = request.serverKey;
         } 
+
+        /**
+         * BranchName.
+         */
+        public Builder branchName(String branchName) {
+            this.putQueryParameter("BranchName", branchName);
+            this.branchName = branchName;
+            return this;
+        }
 
         /**
          * <p>Enables or disables SSL. Valid values:</p>

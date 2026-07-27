@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyInstanceRAGConfigResponseBody</p>
  */
 public class ModifyInstanceRAGConfigResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("BranchName")
+    private String branchName;
+
     @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
@@ -27,6 +30,7 @@ public class ModifyInstanceRAGConfigResponseBody extends TeaModel {
     private String status;
 
     private ModifyInstanceRAGConfigResponseBody(Builder builder) {
+        this.branchName = builder.branchName;
         this.instanceName = builder.instanceName;
         this.requestId = builder.requestId;
         this.status = builder.status;
@@ -42,6 +46,13 @@ public class ModifyInstanceRAGConfigResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return branchName
+     */
+    public String getBranchName() {
+        return this.branchName;
     }
 
     /**
@@ -66,6 +77,7 @@ public class ModifyInstanceRAGConfigResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String branchName; 
         private String instanceName; 
         private String requestId; 
         private String status; 
@@ -74,10 +86,19 @@ public class ModifyInstanceRAGConfigResponseBody extends TeaModel {
         } 
 
         private Builder(ModifyInstanceRAGConfigResponseBody model) {
+            this.branchName = model.branchName;
             this.instanceName = model.instanceName;
             this.requestId = model.requestId;
             this.status = model.status;
         } 
+
+        /**
+         * BranchName.
+         */
+        public Builder branchName(String branchName) {
+            this.branchName = branchName;
+            return this;
+        }
 
         /**
          * <p>The ID of the RDS Supabase instance.</p>

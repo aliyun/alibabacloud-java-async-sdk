@@ -12,22 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ResetInstancePasswordResponseBody} extends {@link TeaModel}
+ * {@link ResetInstanceKeysResponseBody} extends {@link TeaModel}
  *
- * <p>ResetInstancePasswordResponseBody</p>
+ * <p>ResetInstanceKeysResponseBody</p>
  */
-public class ResetInstancePasswordResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("BranchName")
-    private String branchName;
-
+public class ResetInstanceKeysResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private ResetInstancePasswordResponseBody(Builder builder) {
-        this.branchName = builder.branchName;
+    private ResetInstanceKeysResponseBody(Builder builder) {
         this.instanceName = builder.instanceName;
         this.requestId = builder.requestId;
     }
@@ -36,19 +32,12 @@ public class ResetInstancePasswordResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ResetInstancePasswordResponseBody create() {
+    public static ResetInstanceKeysResponseBody create() {
         return builder().build();
     }
 
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return branchName
-     */
-    public String getBranchName() {
-        return this.branchName;
     }
 
     /**
@@ -66,32 +55,19 @@ public class ResetInstancePasswordResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String branchName; 
         private String instanceName; 
         private String requestId; 
 
         private Builder() {
         } 
 
-        private Builder(ResetInstancePasswordResponseBody model) {
-            this.branchName = model.branchName;
+        private Builder(ResetInstanceKeysResponseBody model) {
             this.instanceName = model.instanceName;
             this.requestId = model.requestId;
         } 
 
         /**
-         * BranchName.
-         */
-        public Builder branchName(String branchName) {
-            this.branchName = branchName;
-            return this;
-        }
-
-        /**
-         * <p>The ID of the RDS Supabase instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ra-supabase-8moov5lxba****</p>
+         * InstanceName.
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -99,18 +75,18 @@ public class ResetInstancePasswordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>FE9C65D7-930F-57A5-A207-8C396329241C</p>
+         * <p>FE9C65D7-930F-57A5-A207-8C396329****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public ResetInstancePasswordResponseBody build() {
-            return new ResetInstancePasswordResponseBody(this);
+        public ResetInstanceKeysResponseBody build() {
+            return new ResetInstanceKeysResponseBody(this);
         } 
 
     } 

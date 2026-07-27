@@ -155,14 +155,22 @@ public class GetConversationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Introduction")
         private String introduction;
 
+        @com.aliyun.core.annotation.NameInMap("IsRunning")
+        private Boolean isRunning;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
+
+        @com.aliyun.core.annotation.NameInMap("UpdatedAt")
+        private String updatedAt;
 
         private Data(Builder builder) {
             this.createdAt = builder.createdAt;
             this.id = builder.id;
             this.introduction = builder.introduction;
+            this.isRunning = builder.isRunning;
             this.name = builder.name;
+            this.updatedAt = builder.updatedAt;
         }
 
         public static Builder builder() {
@@ -195,17 +203,33 @@ public class GetConversationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return isRunning
+         */
+        public Boolean getIsRunning() {
+            return this.isRunning;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
             return this.name;
         }
 
+        /**
+         * @return updatedAt
+         */
+        public String getUpdatedAt() {
+            return this.updatedAt;
+        }
+
         public static final class Builder {
             private String createdAt; 
             private String id; 
             private String introduction; 
+            private Boolean isRunning; 
             private String name; 
+            private String updatedAt; 
 
             private Builder() {
             } 
@@ -214,7 +238,9 @@ public class GetConversationsResponseBody extends TeaModel {
                 this.createdAt = model.createdAt;
                 this.id = model.id;
                 this.introduction = model.introduction;
+                this.isRunning = model.isRunning;
                 this.name = model.name;
+                this.updatedAt = model.updatedAt;
             } 
 
             /**
@@ -248,10 +274,26 @@ public class GetConversationsResponseBody extends TeaModel {
             }
 
             /**
+             * IsRunning.
+             */
+            public Builder isRunning(Boolean isRunning) {
+                this.isRunning = isRunning;
+                return this;
+            }
+
+            /**
              * <p>The name of the history conversation.</p>
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * UpdatedAt.
+             */
+            public Builder updatedAt(String updatedAt) {
+                this.updatedAt = updatedAt;
                 return this;
             }
 

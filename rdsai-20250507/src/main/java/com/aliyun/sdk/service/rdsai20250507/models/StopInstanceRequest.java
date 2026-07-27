@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class StopInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BranchName")
+    private String branchName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Force")
     private Boolean force;
 
@@ -32,6 +36,7 @@ public class StopInstanceRequest extends Request {
 
     private StopInstanceRequest(Builder builder) {
         super(builder);
+        this.branchName = builder.branchName;
         this.force = builder.force;
         this.instanceName = builder.instanceName;
         this.regionId = builder.regionId;
@@ -48,6 +53,13 @@ public class StopInstanceRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return branchName
+     */
+    public String getBranchName() {
+        return this.branchName;
     }
 
     /**
@@ -72,6 +84,7 @@ public class StopInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<StopInstanceRequest, Builder> {
+        private String branchName; 
         private Boolean force; 
         private String instanceName; 
         private String regionId; 
@@ -82,10 +95,20 @@ public class StopInstanceRequest extends Request {
 
         private Builder(StopInstanceRequest request) {
             super(request);
+            this.branchName = request.branchName;
             this.force = request.force;
             this.instanceName = request.instanceName;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * BranchName.
+         */
+        public Builder branchName(String branchName) {
+            this.putQueryParameter("BranchName", branchName);
+            this.branchName = branchName;
+            return this;
+        }
 
         /**
          * Force.

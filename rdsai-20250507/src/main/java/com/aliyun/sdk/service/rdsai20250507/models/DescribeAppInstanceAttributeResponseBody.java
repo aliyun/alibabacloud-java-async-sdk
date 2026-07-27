@@ -23,6 +23,12 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AppType")
     private String appType;
 
+    @com.aliyun.core.annotation.NameInMap("BranchName")
+    private String branchName;
+
+    @com.aliyun.core.annotation.NameInMap("BranchingEnabled")
+    private String branchingEnabled;
+
     @com.aliyun.core.annotation.NameInMap("Components")
     private java.util.List<Components> components;
 
@@ -92,6 +98,8 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     private DescribeAppInstanceAttributeResponseBody(Builder builder) {
         this.appName = builder.appName;
         this.appType = builder.appType;
+        this.branchName = builder.branchName;
+        this.branchingEnabled = builder.branchingEnabled;
         this.components = builder.components;
         this.DBInstanceName = builder.DBInstanceName;
         this.eipId = builder.eipId;
@@ -140,6 +148,20 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
      */
     public String getAppType() {
         return this.appType;
+    }
+
+    /**
+     * @return branchName
+     */
+    public String getBranchName() {
+        return this.branchName;
+    }
+
+    /**
+     * @return branchingEnabled
+     */
+    public String getBranchingEnabled() {
+        return this.branchingEnabled;
     }
 
     /**
@@ -299,6 +321,8 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public static final class Builder {
         private String appName; 
         private String appType; 
+        private String branchName; 
+        private String branchingEnabled; 
         private java.util.List<Components> components; 
         private String DBInstanceName; 
         private String eipId; 
@@ -328,6 +352,8 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         private Builder(DescribeAppInstanceAttributeResponseBody model) {
             this.appName = model.appName;
             this.appType = model.appType;
+            this.branchName = model.branchName;
+            this.branchingEnabled = model.branchingEnabled;
             this.components = model.components;
             this.DBInstanceName = model.DBInstanceName;
             this.eipId = model.eipId;
@@ -371,6 +397,22 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
          */
         public Builder appType(String appType) {
             this.appType = appType;
+            return this;
+        }
+
+        /**
+         * BranchName.
+         */
+        public Builder branchName(String branchName) {
+            this.branchName = branchName;
+            return this;
+        }
+
+        /**
+         * BranchingEnabled.
+         */
+        public Builder branchingEnabled(String branchingEnabled) {
+            this.branchingEnabled = branchingEnabled;
             return this;
         }
 

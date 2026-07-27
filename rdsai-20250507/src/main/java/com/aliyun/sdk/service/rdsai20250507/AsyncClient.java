@@ -67,6 +67,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateInspectionTaskResponse> createInspectionTask(CreateInspectionTaskRequest request);
 
     /**
+     * @param request the request parameters of CreateMOUsageDetailExport  CreateMOUsageDetailExportRequest
+     * @return CreateMOUsageDetailExportResponse
+     */
+    CompletableFuture<CreateMOUsageDetailExportResponse> createMOUsageDetailExport(CreateMOUsageDetailExportRequest request);
+
+    /**
      * @param request the request parameters of CreateSandboxTemplate  CreateSandboxTemplateRequest
      * @return CreateSandboxTemplateResponse
      */
@@ -240,6 +246,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeMOTokenUsageDetailResponse
      */
     CompletableFuture<DescribeMOTokenUsageDetailResponse> describeMOTokenUsageDetail(DescribeMOTokenUsageDetailRequest request);
+
+    /**
+     * @param request the request parameters of DescribeMOUsageDetailExport  DescribeMOUsageDetailExportRequest
+     * @return DescribeMOUsageDetailExportResponse
+     */
+    CompletableFuture<DescribeMOUsageDetailExportResponse> describeMOUsageDetailExport(DescribeMOUsageDetailExportRequest request);
 
     /**
      * @param request the request parameters of DescribeModelOperator  DescribeModelOperatorRequest
@@ -489,6 +501,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ResetApiKeyResponse
      */
     CompletableFuture<ResetApiKeyResponse> resetApiKey(ResetApiKeyRequest request);
+
+    /**
+     * @param request the request parameters of ResetInstanceKeys  ResetInstanceKeysRequest
+     * @return ResetInstanceKeysResponse
+     */
+    CompletableFuture<ResetInstanceKeysResponse> resetInstanceKeys(ResetInstanceKeysRequest request);
 
     /**
      * <b>description</b> :

@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ResetInstancePasswordRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BranchName")
+    private String branchName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DashboardPassword")
     private String dashboardPassword;
 
@@ -36,6 +40,7 @@ public class ResetInstancePasswordRequest extends Request {
 
     private ResetInstancePasswordRequest(Builder builder) {
         super(builder);
+        this.branchName = builder.branchName;
         this.dashboardPassword = builder.dashboardPassword;
         this.databasePassword = builder.databasePassword;
         this.instanceName = builder.instanceName;
@@ -53,6 +58,13 @@ public class ResetInstancePasswordRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return branchName
+     */
+    public String getBranchName() {
+        return this.branchName;
     }
 
     /**
@@ -84,6 +96,7 @@ public class ResetInstancePasswordRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ResetInstancePasswordRequest, Builder> {
+        private String branchName; 
         private String dashboardPassword; 
         private String databasePassword; 
         private String instanceName; 
@@ -95,11 +108,21 @@ public class ResetInstancePasswordRequest extends Request {
 
         private Builder(ResetInstancePasswordRequest request) {
             super(request);
+            this.branchName = request.branchName;
             this.dashboardPassword = request.dashboardPassword;
             this.databasePassword = request.databasePassword;
             this.instanceName = request.instanceName;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * BranchName.
+         */
+        public Builder branchName(String branchName) {
+            this.putQueryParameter("BranchName", branchName);
+            this.branchName = branchName;
+            return this;
+        }
 
         /**
          * <p>The ID of the RDS Supabase instance.</p>

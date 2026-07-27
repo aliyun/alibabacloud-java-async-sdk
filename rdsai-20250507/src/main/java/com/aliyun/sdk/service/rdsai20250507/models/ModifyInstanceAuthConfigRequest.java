@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyInstanceAuthConfigRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BranchName")
+    private String branchName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ConfigList")
     private java.util.List<ConfigList> configList;
 
@@ -31,6 +35,7 @@ public class ModifyInstanceAuthConfigRequest extends Request {
 
     private ModifyInstanceAuthConfigRequest(Builder builder) {
         super(builder);
+        this.branchName = builder.branchName;
         this.configList = builder.configList;
         this.instanceName = builder.instanceName;
         this.regionId = builder.regionId;
@@ -47,6 +52,13 @@ public class ModifyInstanceAuthConfigRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return branchName
+     */
+    public String getBranchName() {
+        return this.branchName;
     }
 
     /**
@@ -71,6 +83,7 @@ public class ModifyInstanceAuthConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyInstanceAuthConfigRequest, Builder> {
+        private String branchName; 
         private java.util.List<ConfigList> configList; 
         private String instanceName; 
         private String regionId; 
@@ -81,10 +94,20 @@ public class ModifyInstanceAuthConfigRequest extends Request {
 
         private Builder(ModifyInstanceAuthConfigRequest request) {
             super(request);
+            this.branchName = request.branchName;
             this.configList = request.configList;
             this.instanceName = request.instanceName;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * BranchName.
+         */
+        public Builder branchName(String branchName) {
+            this.putQueryParameter("BranchName", branchName);
+            this.branchName = branchName;
+            return this;
+        }
 
         /**
          * <p>The ID of the RDS Supabase instance.</p>

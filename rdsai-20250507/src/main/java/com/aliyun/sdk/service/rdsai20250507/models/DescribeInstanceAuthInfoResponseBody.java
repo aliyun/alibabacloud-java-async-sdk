@@ -20,6 +20,9 @@ public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ApiKeys")
     private ApiKeys apiKeys;
 
+    @com.aliyun.core.annotation.NameInMap("BranchName")
+    private String branchName;
+
     @com.aliyun.core.annotation.NameInMap("ConfigList")
     private java.util.List<ConfigList> configList;
 
@@ -34,6 +37,7 @@ public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
 
     private DescribeInstanceAuthInfoResponseBody(Builder builder) {
         this.apiKeys = builder.apiKeys;
+        this.branchName = builder.branchName;
         this.configList = builder.configList;
         this.instanceName = builder.instanceName;
         this.jwtSecret = builder.jwtSecret;
@@ -57,6 +61,13 @@ public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
      */
     public ApiKeys getApiKeys() {
         return this.apiKeys;
+    }
+
+    /**
+     * @return branchName
+     */
+    public String getBranchName() {
+        return this.branchName;
     }
 
     /**
@@ -89,6 +100,7 @@ public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
 
     public static final class Builder {
         private ApiKeys apiKeys; 
+        private String branchName; 
         private java.util.List<ConfigList> configList; 
         private String instanceName; 
         private String jwtSecret; 
@@ -99,6 +111,7 @@ public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
 
         private Builder(DescribeInstanceAuthInfoResponseBody model) {
             this.apiKeys = model.apiKeys;
+            this.branchName = model.branchName;
             this.configList = model.configList;
             this.instanceName = model.instanceName;
             this.jwtSecret = model.jwtSecret;
@@ -110,6 +123,14 @@ public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
          */
         public Builder apiKeys(ApiKeys apiKeys) {
             this.apiKeys = apiKeys;
+            return this;
+        }
+
+        /**
+         * BranchName.
+         */
+        public Builder branchName(String branchName) {
+            this.branchName = branchName;
             return this;
         }
 

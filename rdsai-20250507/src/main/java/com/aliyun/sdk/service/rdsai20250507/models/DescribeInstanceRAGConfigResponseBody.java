@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceRAGConfigResponseBody</p>
  */
 public class DescribeInstanceRAGConfigResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("BranchName")
+    private String branchName;
+
     @com.aliyun.core.annotation.NameInMap("ConfigList")
     private java.util.List<ConfigList> configList;
 
@@ -30,6 +33,7 @@ public class DescribeInstanceRAGConfigResponseBody extends TeaModel {
     private Boolean status;
 
     private DescribeInstanceRAGConfigResponseBody(Builder builder) {
+        this.branchName = builder.branchName;
         this.configList = builder.configList;
         this.instanceName = builder.instanceName;
         this.requestId = builder.requestId;
@@ -46,6 +50,13 @@ public class DescribeInstanceRAGConfigResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return branchName
+     */
+    public String getBranchName() {
+        return this.branchName;
     }
 
     /**
@@ -77,6 +88,7 @@ public class DescribeInstanceRAGConfigResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String branchName; 
         private java.util.List<ConfigList> configList; 
         private String instanceName; 
         private String requestId; 
@@ -86,11 +98,20 @@ public class DescribeInstanceRAGConfigResponseBody extends TeaModel {
         } 
 
         private Builder(DescribeInstanceRAGConfigResponseBody model) {
+            this.branchName = model.branchName;
             this.configList = model.configList;
             this.instanceName = model.instanceName;
             this.requestId = model.requestId;
             this.status = model.status;
         } 
+
+        /**
+         * BranchName.
+         */
+        public Builder branchName(String branchName) {
+            this.branchName = branchName;
+            return this;
+        }
 
         /**
          * <p>The RAG agent configurations.</p>

@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceSSLResponseBody</p>
  */
 public class DescribeInstanceSSLResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("BranchName")
+    private String branchName;
+
     @com.aliyun.core.annotation.NameInMap("CAType")
     private String CAType;
 
@@ -36,6 +39,7 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
     private String serverKey;
 
     private DescribeInstanceSSLResponseBody(Builder builder) {
+        this.branchName = builder.branchName;
         this.CAType = builder.CAType;
         this.instanceName = builder.instanceName;
         this.requestId = builder.requestId;
@@ -54,6 +58,13 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return branchName
+     */
+    public String getBranchName() {
+        return this.branchName;
     }
 
     /**
@@ -99,6 +110,7 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String branchName; 
         private String CAType; 
         private String instanceName; 
         private String requestId; 
@@ -110,6 +122,7 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         } 
 
         private Builder(DescribeInstanceSSLResponseBody model) {
+            this.branchName = model.branchName;
             this.CAType = model.CAType;
             this.instanceName = model.instanceName;
             this.requestId = model.requestId;
@@ -117,6 +130,14 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
             this.serverCert = model.serverCert;
             this.serverKey = model.serverKey;
         } 
+
+        /**
+         * BranchName.
+         */
+        public Builder branchName(String branchName) {
+            this.branchName = branchName;
+            return this;
+        }
 
         /**
          * <p>The type of the certificate. Set the value to <strong>custom</strong>, which indicates that a custom certificate is used.</p>

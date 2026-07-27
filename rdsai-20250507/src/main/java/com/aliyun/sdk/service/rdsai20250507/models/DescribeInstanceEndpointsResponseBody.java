@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceEndpointsResponseBody</p>
  */
 public class DescribeInstanceEndpointsResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("BranchName")
+    private String branchName;
+
     @com.aliyun.core.annotation.NameInMap("DBInstanceEndpoints")
     private java.util.List<DBInstanceEndpoints> DBInstanceEndpoints;
 
@@ -30,6 +33,7 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
     private String requestId;
 
     private DescribeInstanceEndpointsResponseBody(Builder builder) {
+        this.branchName = builder.branchName;
         this.DBInstanceEndpoints = builder.DBInstanceEndpoints;
         this.instanceEndpoints = builder.instanceEndpoints;
         this.instanceName = builder.instanceName;
@@ -46,6 +50,13 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return branchName
+     */
+    public String getBranchName() {
+        return this.branchName;
     }
 
     /**
@@ -77,6 +88,7 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String branchName; 
         private java.util.List<DBInstanceEndpoints> DBInstanceEndpoints; 
         private java.util.List<InstanceEndpoints> instanceEndpoints; 
         private String instanceName; 
@@ -86,11 +98,20 @@ public class DescribeInstanceEndpointsResponseBody extends TeaModel {
         } 
 
         private Builder(DescribeInstanceEndpointsResponseBody model) {
+            this.branchName = model.branchName;
             this.DBInstanceEndpoints = model.DBInstanceEndpoints;
             this.instanceEndpoints = model.instanceEndpoints;
             this.instanceName = model.instanceName;
             this.requestId = model.requestId;
         } 
+
+        /**
+         * BranchName.
+         */
+        public Builder branchName(String branchName) {
+            this.branchName = branchName;
+            return this;
+        }
 
         /**
          * <p>The information about the endpoints of the RDS instance.</p>

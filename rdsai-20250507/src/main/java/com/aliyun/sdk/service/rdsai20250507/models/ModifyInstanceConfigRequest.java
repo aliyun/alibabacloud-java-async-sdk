@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyInstanceConfigRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BranchName")
+    private String branchName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -40,6 +44,7 @@ public class ModifyInstanceConfigRequest extends Request {
 
     private ModifyInstanceConfigRequest(Builder builder) {
         super(builder);
+        this.branchName = builder.branchName;
         this.clientToken = builder.clientToken;
         this.configName = builder.configName;
         this.configValue = builder.configValue;
@@ -58,6 +63,13 @@ public class ModifyInstanceConfigRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return branchName
+     */
+    public String getBranchName() {
+        return this.branchName;
     }
 
     /**
@@ -96,6 +108,7 @@ public class ModifyInstanceConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyInstanceConfigRequest, Builder> {
+        private String branchName; 
         private String clientToken; 
         private String configName; 
         private String configValue; 
@@ -108,12 +121,22 @@ public class ModifyInstanceConfigRequest extends Request {
 
         private Builder(ModifyInstanceConfigRequest request) {
             super(request);
+            this.branchName = request.branchName;
             this.clientToken = request.clientToken;
             this.configName = request.configName;
             this.configValue = request.configValue;
             this.instanceName = request.instanceName;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * BranchName.
+         */
+        public Builder branchName(String branchName) {
+            this.putQueryParameter("BranchName", branchName);
+            this.branchName = branchName;
+            return this;
+        }
 
         /**
          * <p>The ID of the RDS Supabase instance.</p>

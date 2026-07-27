@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeInstanceIpWhitelistRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BranchName")
+    private String branchName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
@@ -31,6 +35,7 @@ public class DescribeInstanceIpWhitelistRequest extends Request {
 
     private DescribeInstanceIpWhitelistRequest(Builder builder) {
         super(builder);
+        this.branchName = builder.branchName;
         this.groupName = builder.groupName;
         this.instanceName = builder.instanceName;
         this.regionId = builder.regionId;
@@ -47,6 +52,13 @@ public class DescribeInstanceIpWhitelistRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return branchName
+     */
+    public String getBranchName() {
+        return this.branchName;
     }
 
     /**
@@ -71,6 +83,7 @@ public class DescribeInstanceIpWhitelistRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeInstanceIpWhitelistRequest, Builder> {
+        private String branchName; 
         private String groupName; 
         private String instanceName; 
         private String regionId; 
@@ -81,10 +94,20 @@ public class DescribeInstanceIpWhitelistRequest extends Request {
 
         private Builder(DescribeInstanceIpWhitelistRequest request) {
             super(request);
+            this.branchName = request.branchName;
             this.groupName = request.groupName;
             this.instanceName = request.instanceName;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * BranchName.
+         */
+        public Builder branchName(String branchName) {
+            this.putQueryParameter("BranchName", branchName);
+            this.branchName = branchName;
+            return this;
+        }
 
         /**
          * GroupName.

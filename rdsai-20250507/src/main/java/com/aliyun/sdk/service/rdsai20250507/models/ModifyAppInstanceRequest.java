@@ -18,12 +18,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyAppInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BranchName")
+    private String branchName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Components")
     private java.util.List<Components> components;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
+    private String DBInstanceName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceClass")
+    private String instanceClass;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceName")
@@ -35,8 +47,11 @@ public class ModifyAppInstanceRequest extends Request {
 
     private ModifyAppInstanceRequest(Builder builder) {
         super(builder);
+        this.branchName = builder.branchName;
         this.clientToken = builder.clientToken;
         this.components = builder.components;
+        this.DBInstanceName = builder.DBInstanceName;
+        this.instanceClass = builder.instanceClass;
         this.instanceName = builder.instanceName;
         this.regionId = builder.regionId;
     }
@@ -55,6 +70,13 @@ public class ModifyAppInstanceRequest extends Request {
     }
 
     /**
+     * @return branchName
+     */
+    public String getBranchName() {
+        return this.branchName;
+    }
+
+    /**
      * @return clientToken
      */
     public String getClientToken() {
@@ -66,6 +88,20 @@ public class ModifyAppInstanceRequest extends Request {
      */
     public java.util.List<Components> getComponents() {
         return this.components;
+    }
+
+    /**
+     * @return DBInstanceName
+     */
+    public String getDBInstanceName() {
+        return this.DBInstanceName;
+    }
+
+    /**
+     * @return instanceClass
+     */
+    public String getInstanceClass() {
+        return this.instanceClass;
     }
 
     /**
@@ -83,8 +119,11 @@ public class ModifyAppInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyAppInstanceRequest, Builder> {
+        private String branchName; 
         private String clientToken; 
         private java.util.List<Components> components; 
+        private String DBInstanceName; 
+        private String instanceClass; 
         private String instanceName; 
         private String regionId; 
 
@@ -94,11 +133,23 @@ public class ModifyAppInstanceRequest extends Request {
 
         private Builder(ModifyAppInstanceRequest request) {
             super(request);
+            this.branchName = request.branchName;
             this.clientToken = request.clientToken;
             this.components = request.components;
+            this.DBInstanceName = request.DBInstanceName;
+            this.instanceClass = request.instanceClass;
             this.instanceName = request.instanceName;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * BranchName.
+         */
+        public Builder branchName(String branchName) {
+            this.putQueryParameter("BranchName", branchName);
+            this.branchName = branchName;
+            return this;
+        }
 
         /**
          * ClientToken.
@@ -116,6 +167,24 @@ public class ModifyAppInstanceRequest extends Request {
             String componentsShrink = shrink(components, "Components", "json");
             this.putQueryParameter("Components", componentsShrink);
             this.components = components;
+            return this;
+        }
+
+        /**
+         * DBInstanceName.
+         */
+        public Builder DBInstanceName(String DBInstanceName) {
+            this.putQueryParameter("DBInstanceName", DBInstanceName);
+            this.DBInstanceName = DBInstanceName;
+            return this;
+        }
+
+        /**
+         * InstanceClass.
+         */
+        public Builder instanceClass(String instanceClass) {
+            this.putQueryParameter("InstanceClass", instanceClass);
+            this.instanceClass = instanceClass;
             return this;
         }
 

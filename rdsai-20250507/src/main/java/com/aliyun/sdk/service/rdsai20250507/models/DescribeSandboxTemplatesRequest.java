@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeSandboxTemplatesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BranchName")
+    private String branchName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceName;
@@ -49,6 +53,7 @@ public class DescribeSandboxTemplatesRequest extends Request {
 
     private DescribeSandboxTemplatesRequest(Builder builder) {
         super(builder);
+        this.branchName = builder.branchName;
         this.instanceName = builder.instanceName;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -69,6 +74,13 @@ public class DescribeSandboxTemplatesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return branchName
+     */
+    public String getBranchName() {
+        return this.branchName;
     }
 
     /**
@@ -121,6 +133,7 @@ public class DescribeSandboxTemplatesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeSandboxTemplatesRequest, Builder> {
+        private String branchName; 
         private String instanceName; 
         private Integer maxResults; 
         private String nextToken; 
@@ -135,6 +148,7 @@ public class DescribeSandboxTemplatesRequest extends Request {
 
         private Builder(DescribeSandboxTemplatesRequest request) {
             super(request);
+            this.branchName = request.branchName;
             this.instanceName = request.instanceName;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -143,6 +157,15 @@ public class DescribeSandboxTemplatesRequest extends Request {
             this.regionId = request.regionId;
             this.templateName = request.templateName;
         } 
+
+        /**
+         * BranchName.
+         */
+        public Builder branchName(String branchName) {
+            this.putQueryParameter("BranchName", branchName);
+            this.branchName = branchName;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>

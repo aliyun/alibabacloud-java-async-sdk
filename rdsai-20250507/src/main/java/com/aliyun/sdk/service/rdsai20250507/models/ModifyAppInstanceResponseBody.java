@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyAppInstanceResponseBody</p>
  */
 public class ModifyAppInstanceResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("BranchName")
+    private String branchName;
+
     @com.aliyun.core.annotation.NameInMap("Components")
     private java.util.List<Components> components;
 
@@ -27,6 +30,7 @@ public class ModifyAppInstanceResponseBody extends TeaModel {
     private String requestId;
 
     private ModifyAppInstanceResponseBody(Builder builder) {
+        this.branchName = builder.branchName;
         this.components = builder.components;
         this.instanceName = builder.instanceName;
         this.requestId = builder.requestId;
@@ -42,6 +46,13 @@ public class ModifyAppInstanceResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return branchName
+     */
+    public String getBranchName() {
+        return this.branchName;
     }
 
     /**
@@ -66,6 +77,7 @@ public class ModifyAppInstanceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String branchName; 
         private java.util.List<Components> components; 
         private String instanceName; 
         private String requestId; 
@@ -74,10 +86,19 @@ public class ModifyAppInstanceResponseBody extends TeaModel {
         } 
 
         private Builder(ModifyAppInstanceResponseBody model) {
+            this.branchName = model.branchName;
             this.components = model.components;
             this.instanceName = model.instanceName;
             this.requestId = model.requestId;
         } 
+
+        /**
+         * BranchName.
+         */
+        public Builder branchName(String branchName) {
+            this.branchName = branchName;
+            return this;
+        }
 
         /**
          * Components.

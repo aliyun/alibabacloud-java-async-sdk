@@ -22,6 +22,10 @@ public class DeleteAppInstanceRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteDBInstance")
+    private Boolean deleteDBInstance;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
@@ -32,6 +36,7 @@ public class DeleteAppInstanceRequest extends Request {
     private DeleteAppInstanceRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.deleteDBInstance = builder.deleteDBInstance;
         this.instanceName = builder.instanceName;
         this.regionId = builder.regionId;
     }
@@ -57,6 +62,13 @@ public class DeleteAppInstanceRequest extends Request {
     }
 
     /**
+     * @return deleteDBInstance
+     */
+    public Boolean getDeleteDBInstance() {
+        return this.deleteDBInstance;
+    }
+
+    /**
      * @return instanceName
      */
     public String getInstanceName() {
@@ -72,6 +84,7 @@ public class DeleteAppInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteAppInstanceRequest, Builder> {
         private String clientToken; 
+        private Boolean deleteDBInstance; 
         private String instanceName; 
         private String regionId; 
 
@@ -82,6 +95,7 @@ public class DeleteAppInstanceRequest extends Request {
         private Builder(DeleteAppInstanceRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.deleteDBInstance = request.deleteDBInstance;
             this.instanceName = request.instanceName;
             this.regionId = request.regionId;
         } 
@@ -95,6 +109,15 @@ public class DeleteAppInstanceRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DeleteDBInstance.
+         */
+        public Builder deleteDBInstance(Boolean deleteDBInstance) {
+            this.putQueryParameter("DeleteDBInstance", deleteDBInstance);
+            this.deleteDBInstance = deleteDBInstance;
             return this;
         }
 
