@@ -410,6 +410,156 @@ public class SendChatMessageRequest extends Request {
      *
      * <p>SendChatMessageRequest</p>
      */
+    public static class Tables extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AllowedColumns")
+        private java.util.List<String> allowedColumns;
+
+        @com.aliyun.core.annotation.NameInMap("RequiredRowFilter")
+        private String requiredRowFilter;
+
+        @com.aliyun.core.annotation.NameInMap("TableName")
+        private String tableName;
+
+        private Tables(Builder builder) {
+            this.allowedColumns = builder.allowedColumns;
+            this.requiredRowFilter = builder.requiredRowFilter;
+            this.tableName = builder.tableName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tables create() {
+            return builder().build();
+        }
+
+        /**
+         * @return allowedColumns
+         */
+        public java.util.List<String> getAllowedColumns() {
+            return this.allowedColumns;
+        }
+
+        /**
+         * @return requiredRowFilter
+         */
+        public String getRequiredRowFilter() {
+            return this.requiredRowFilter;
+        }
+
+        /**
+         * @return tableName
+         */
+        public String getTableName() {
+            return this.tableName;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> allowedColumns; 
+            private String requiredRowFilter; 
+            private String tableName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tables model) {
+                this.allowedColumns = model.allowedColumns;
+                this.requiredRowFilter = model.requiredRowFilter;
+                this.tableName = model.tableName;
+            } 
+
+            /**
+             * AllowedColumns.
+             */
+            public Builder allowedColumns(java.util.List<String> allowedColumns) {
+                this.allowedColumns = allowedColumns;
+                return this;
+            }
+
+            /**
+             * RequiredRowFilter.
+             */
+            public Builder requiredRowFilter(String requiredRowFilter) {
+                this.requiredRowFilter = requiredRowFilter;
+                return this;
+            }
+
+            /**
+             * TableName.
+             */
+            public Builder tableName(String tableName) {
+                this.tableName = tableName;
+                return this;
+            }
+
+            public Tables build() {
+                return new Tables(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SendChatMessageRequest} extends {@link TeaModel}
+     *
+     * <p>SendChatMessageRequest</p>
+     */
+    public static class Permission extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Tables")
+        private java.util.List<Tables> tables;
+
+        private Permission(Builder builder) {
+            this.tables = builder.tables;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Permission create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tables
+         */
+        public java.util.List<Tables> getTables() {
+            return this.tables;
+        }
+
+        public static final class Builder {
+            private java.util.List<Tables> tables; 
+
+            private Builder() {
+            } 
+
+            private Builder(Permission model) {
+                this.tables = model.tables;
+            } 
+
+            /**
+             * Tables.
+             */
+            public Builder tables(java.util.List<Tables> tables) {
+                this.tables = tables;
+                return this;
+            }
+
+            public Permission build() {
+                return new Permission(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SendChatMessageRequest} extends {@link TeaModel}
+     *
+     * <p>SendChatMessageRequest</p>
+     */
     public static class DataSource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataSourceId")
         private String dataSourceId;
@@ -438,6 +588,9 @@ public class SendChatMessageRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
+        @com.aliyun.core.annotation.NameInMap("Permission")
+        private Permission permission;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
@@ -454,6 +607,7 @@ public class SendChatMessageRequest extends Request {
             this.engine = builder.engine;
             this.fileId = builder.fileId;
             this.location = builder.location;
+            this.permission = builder.permission;
             this.regionId = builder.regionId;
             this.tables = builder.tables;
         }
@@ -530,6 +684,13 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
+         * @return permission
+         */
+        public Permission getPermission() {
+            return this.permission;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -553,6 +714,7 @@ public class SendChatMessageRequest extends Request {
             private String engine; 
             private String fileId; 
             private String location; 
+            private Permission permission; 
             private String regionId; 
             private java.util.List<String> tables; 
 
@@ -569,6 +731,7 @@ public class SendChatMessageRequest extends Request {
                 this.engine = model.engine;
                 this.fileId = model.fileId;
                 this.location = model.location;
+                this.permission = model.permission;
                 this.regionId = model.regionId;
                 this.tables = model.tables;
             } 
@@ -646,6 +809,14 @@ public class SendChatMessageRequest extends Request {
             }
 
             /**
+             * Permission.
+             */
+            public Builder permission(Permission permission) {
+                this.permission = permission;
+                return this;
+            }
+
+            /**
              * RegionId.
              */
             public Builder regionId(String regionId) {
@@ -663,6 +834,156 @@ public class SendChatMessageRequest extends Request {
 
             public DataSource build() {
                 return new DataSource(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SendChatMessageRequest} extends {@link TeaModel}
+     *
+     * <p>SendChatMessageRequest</p>
+     */
+    public static class PermissionTables extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AllowedColumns")
+        private java.util.List<String> allowedColumns;
+
+        @com.aliyun.core.annotation.NameInMap("RequiredRowFilter")
+        private String requiredRowFilter;
+
+        @com.aliyun.core.annotation.NameInMap("TableName")
+        private String tableName;
+
+        private PermissionTables(Builder builder) {
+            this.allowedColumns = builder.allowedColumns;
+            this.requiredRowFilter = builder.requiredRowFilter;
+            this.tableName = builder.tableName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PermissionTables create() {
+            return builder().build();
+        }
+
+        /**
+         * @return allowedColumns
+         */
+        public java.util.List<String> getAllowedColumns() {
+            return this.allowedColumns;
+        }
+
+        /**
+         * @return requiredRowFilter
+         */
+        public String getRequiredRowFilter() {
+            return this.requiredRowFilter;
+        }
+
+        /**
+         * @return tableName
+         */
+        public String getTableName() {
+            return this.tableName;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> allowedColumns; 
+            private String requiredRowFilter; 
+            private String tableName; 
+
+            private Builder() {
+            } 
+
+            private Builder(PermissionTables model) {
+                this.allowedColumns = model.allowedColumns;
+                this.requiredRowFilter = model.requiredRowFilter;
+                this.tableName = model.tableName;
+            } 
+
+            /**
+             * AllowedColumns.
+             */
+            public Builder allowedColumns(java.util.List<String> allowedColumns) {
+                this.allowedColumns = allowedColumns;
+                return this;
+            }
+
+            /**
+             * RequiredRowFilter.
+             */
+            public Builder requiredRowFilter(String requiredRowFilter) {
+                this.requiredRowFilter = requiredRowFilter;
+                return this;
+            }
+
+            /**
+             * TableName.
+             */
+            public Builder tableName(String tableName) {
+                this.tableName = tableName;
+                return this;
+            }
+
+            public PermissionTables build() {
+                return new PermissionTables(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SendChatMessageRequest} extends {@link TeaModel}
+     *
+     * <p>SendChatMessageRequest</p>
+     */
+    public static class DataSourcesPermission extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Tables")
+        private java.util.List<PermissionTables> tables;
+
+        private DataSourcesPermission(Builder builder) {
+            this.tables = builder.tables;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DataSourcesPermission create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tables
+         */
+        public java.util.List<PermissionTables> getTables() {
+            return this.tables;
+        }
+
+        public static final class Builder {
+            private java.util.List<PermissionTables> tables; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSourcesPermission model) {
+                this.tables = model.tables;
+            } 
+
+            /**
+             * Tables.
+             */
+            public Builder tables(java.util.List<PermissionTables> tables) {
+                this.tables = tables;
+                return this;
+            }
+
+            public DataSourcesPermission build() {
+                return new DataSourcesPermission(this);
             } 
 
         } 
@@ -702,6 +1023,9 @@ public class SendChatMessageRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
+        @com.aliyun.core.annotation.NameInMap("Permission")
+        private DataSourcesPermission permission;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
@@ -718,6 +1042,7 @@ public class SendChatMessageRequest extends Request {
             this.engine = builder.engine;
             this.fileId = builder.fileId;
             this.location = builder.location;
+            this.permission = builder.permission;
             this.regionId = builder.regionId;
             this.tables = builder.tables;
         }
@@ -794,6 +1119,13 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
+         * @return permission
+         */
+        public DataSourcesPermission getPermission() {
+            return this.permission;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -817,6 +1149,7 @@ public class SendChatMessageRequest extends Request {
             private String engine; 
             private String fileId; 
             private String location; 
+            private DataSourcesPermission permission; 
             private String regionId; 
             private java.util.List<String> tables; 
 
@@ -833,6 +1166,7 @@ public class SendChatMessageRequest extends Request {
                 this.engine = model.engine;
                 this.fileId = model.fileId;
                 this.location = model.location;
+                this.permission = model.permission;
                 this.regionId = model.regionId;
                 this.tables = model.tables;
             } 
@@ -906,6 +1240,14 @@ public class SendChatMessageRequest extends Request {
              */
             public Builder location(String location) {
                 this.location = location;
+                return this;
+            }
+
+            /**
+             * Permission.
+             */
+            public Builder permission(DataSourcesPermission permission) {
+                this.permission = permission;
                 return this;
             }
 

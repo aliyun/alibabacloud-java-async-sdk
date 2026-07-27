@@ -75,6 +75,10 @@ public class ModifyCustomAgentRequest extends Request {
     private String webReportConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WebReportTheme")
+    private String webReportTheme;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
@@ -94,6 +98,7 @@ public class ModifyCustomAgentRequest extends Request {
         this.scheduleTaskConfig = builder.scheduleTaskConfig;
         this.textReportConfig = builder.textReportConfig;
         this.webReportConfig = builder.webReportConfig;
+        this.webReportTheme = builder.webReportTheme;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -209,6 +214,13 @@ public class ModifyCustomAgentRequest extends Request {
     }
 
     /**
+     * @return webReportTheme
+     */
+    public String getWebReportTheme() {
+        return this.webReportTheme;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -230,6 +242,7 @@ public class ModifyCustomAgentRequest extends Request {
         private ScheduleTaskConfig scheduleTaskConfig; 
         private String textReportConfig; 
         private String webReportConfig; 
+        private String webReportTheme; 
         private String workspaceId; 
 
         private Builder() {
@@ -252,6 +265,7 @@ public class ModifyCustomAgentRequest extends Request {
             this.scheduleTaskConfig = request.scheduleTaskConfig;
             this.textReportConfig = request.textReportConfig;
             this.webReportConfig = request.webReportConfig;
+            this.webReportTheme = request.webReportTheme;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -385,6 +399,15 @@ public class ModifyCustomAgentRequest extends Request {
         public Builder webReportConfig(String webReportConfig) {
             this.putQueryParameter("WebReportConfig", webReportConfig);
             this.webReportConfig = webReportConfig;
+            return this;
+        }
+
+        /**
+         * WebReportTheme.
+         */
+        public Builder webReportTheme(String webReportTheme) {
+            this.putQueryParameter("WebReportTheme", webReportTheme);
+            this.webReportTheme = webReportTheme;
             return this;
         }
 

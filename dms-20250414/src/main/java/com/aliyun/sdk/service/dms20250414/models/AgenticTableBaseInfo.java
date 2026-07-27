@@ -20,6 +20,9 @@ public class AgenticTableBaseInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CatalogType")
     private String catalogType;
 
+    @com.aliyun.core.annotation.NameInMap("DatabaseQualifiedName")
+    private String databaseQualifiedName;
+
     @com.aliyun.core.annotation.NameInMap("DatabaseUuid")
     private String databaseUuid;
 
@@ -40,6 +43,7 @@ public class AgenticTableBaseInfo extends TeaModel {
 
     private AgenticTableBaseInfo(Builder builder) {
         this.catalogType = builder.catalogType;
+        this.databaseQualifiedName = builder.databaseQualifiedName;
         this.databaseUuid = builder.databaseUuid;
         this.description = builder.description;
         this.engineMeta = builder.engineMeta;
@@ -65,6 +69,13 @@ public class AgenticTableBaseInfo extends TeaModel {
      */
     public String getCatalogType() {
         return this.catalogType;
+    }
+
+    /**
+     * @return databaseQualifiedName
+     */
+    public String getDatabaseQualifiedName() {
+        return this.databaseQualifiedName;
     }
 
     /**
@@ -111,6 +122,7 @@ public class AgenticTableBaseInfo extends TeaModel {
 
     public static final class Builder {
         private String catalogType; 
+        private String databaseQualifiedName; 
         private String databaseUuid; 
         private String description; 
         private AgenticTableEngineMeta engineMeta; 
@@ -123,6 +135,7 @@ public class AgenticTableBaseInfo extends TeaModel {
 
         private Builder(AgenticTableBaseInfo model) {
             this.catalogType = model.catalogType;
+            this.databaseQualifiedName = model.databaseQualifiedName;
             this.databaseUuid = model.databaseUuid;
             this.description = model.description;
             this.engineMeta = model.engineMeta;
@@ -136,6 +149,14 @@ public class AgenticTableBaseInfo extends TeaModel {
          */
         public Builder catalogType(String catalogType) {
             this.catalogType = catalogType;
+            return this;
+        }
+
+        /**
+         * DatabaseQualifiedName.
+         */
+        public Builder databaseQualifiedName(String databaseQualifiedName) {
+            this.databaseQualifiedName = databaseQualifiedName;
             return this;
         }
 

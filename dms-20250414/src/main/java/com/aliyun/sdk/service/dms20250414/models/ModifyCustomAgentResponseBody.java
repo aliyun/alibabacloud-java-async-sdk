@@ -692,6 +692,9 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WebReportConfig")
         private String webReportConfig;
 
+        @com.aliyun.core.annotation.NameInMap("WebReportTheme")
+        private String webReportTheme;
+
         @com.aliyun.core.annotation.NameInMap("WorkspaceId")
         private String workspaceId;
 
@@ -724,6 +727,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             this.status = builder.status;
             this.textReportConfig = builder.textReportConfig;
             this.webReportConfig = builder.webReportConfig;
+            this.webReportTheme = builder.webReportTheme;
             this.workspaceId = builder.workspaceId;
         }
 
@@ -932,6 +936,13 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
         }
 
         /**
+         * @return webReportTheme
+         */
+        public String getWebReportTheme() {
+            return this.webReportTheme;
+        }
+
+        /**
          * @return workspaceId
          */
         public String getWorkspaceId() {
@@ -967,6 +978,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
             private String status; 
             private String textReportConfig; 
             private String webReportConfig; 
+            private String webReportTheme; 
             private String workspaceId; 
 
             private Builder() {
@@ -1001,6 +1013,7 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
                 this.status = model.status;
                 this.textReportConfig = model.textReportConfig;
                 this.webReportConfig = model.webReportConfig;
+                this.webReportTheme = model.webReportTheme;
                 this.workspaceId = model.workspaceId;
             } 
 
@@ -1225,6 +1238,14 @@ public class ModifyCustomAgentResponseBody extends TeaModel {
              */
             public Builder webReportConfig(String webReportConfig) {
                 this.webReportConfig = webReportConfig;
+                return this;
+            }
+
+            /**
+             * WebReportTheme.
+             */
+            public Builder webReportTheme(String webReportTheme) {
+                this.webReportTheme = webReportTheme;
                 return this;
             }
 
