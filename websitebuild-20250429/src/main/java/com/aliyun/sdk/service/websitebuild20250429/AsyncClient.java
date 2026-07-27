@@ -136,6 +136,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAppNotificationSceneResponse> createAppNotificationScene(CreateAppNotificationSceneRequest request);
 
     /**
+     * @param request the request parameters of CreateAppPlugin  CreateAppPluginRequest
+     * @return CreateAppPluginResponse
+     */
+    CompletableFuture<CreateAppPluginResponse> createAppPlugin(CreateAppPluginRequest request);
+
+    /**
      * @param request the request parameters of CreateAppTokenService  CreateAppTokenServiceRequest
      * @return CreateAppTokenServiceResponse
      */
@@ -206,6 +212,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteAppNotificationSceneResponse
      */
     CompletableFuture<DeleteAppNotificationSceneResponse> deleteAppNotificationScene(DeleteAppNotificationSceneRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAppPlugin  DeleteAppPluginRequest
+     * @return DeleteAppPluginResponse
+     */
+    CompletableFuture<DeleteAppPluginResponse> deleteAppPlugin(DeleteAppPluginRequest request);
 
     /**
      * @param request the request parameters of DeleteAppSupabaseSecrets  DeleteAppSupabaseSecretsRequest
@@ -338,6 +350,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetAppInstanceTempShortUrlResponse
      */
     CompletableFuture<GetAppInstanceTempShortUrlResponse> getAppInstanceTempShortUrl(GetAppInstanceTempShortUrlRequest request);
+
+    /**
+     * @param request the request parameters of GetAppPlugin  GetAppPluginRequest
+     * @return GetAppPluginResponse
+     */
+    CompletableFuture<GetAppPluginResponse> getAppPlugin(GetAppPluginRequest request);
 
     /**
      * @param request the request parameters of GetAppPluginConfig  GetAppPluginConfigRequest
@@ -496,6 +514,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GrantPromotionOfferForPartnerResponse> grantPromotionOfferForPartner(GrantPromotionOfferForPartnerRequest request);
 
     /**
+     * @param request the request parameters of InstallAppPlugin  InstallAppPluginRequest
+     * @return InstallAppPluginResponse
+     */
+    CompletableFuture<InstallAppPluginResponse> installAppPlugin(InstallAppPluginRequest request);
+
+    /**
      * @param request the request parameters of IntrospectAppInstanceTicketForPreview  IntrospectAppInstanceTicketForPreviewRequest
      * @return IntrospectAppInstanceTicketForPreviewResponse
      */
@@ -575,6 +599,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAppPluginConfigsResponse> listAppPluginConfigs(ListAppPluginConfigsRequest request);
 
     /**
+     * @param request the request parameters of ListAppPluginFiles  ListAppPluginFilesRequest
+     * @return ListAppPluginFilesResponse
+     */
+    CompletableFuture<ListAppPluginFilesResponse> listAppPluginFiles(ListAppPluginFilesRequest request);
+
+    /**
+     * @param request the request parameters of ListAppPluginVersions  ListAppPluginVersionsRequest
+     * @return ListAppPluginVersionsResponse
+     */
+    CompletableFuture<ListAppPluginVersionsResponse> listAppPluginVersions(ListAppPluginVersionsRequest request);
+
+    /**
      * @param request the request parameters of ListAppPlugins  ListAppPluginsRequest
      * @return ListAppPluginsResponse
      */
@@ -603,6 +639,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListIsvPaymentPluginConfigsResponse
      */
     CompletableFuture<ListIsvPaymentPluginConfigsResponse> listIsvPaymentPluginConfigs(ListIsvPaymentPluginConfigsRequest request);
+
+    /**
+     * @param request the request parameters of ListMarketplaceAppPlugins  ListMarketplaceAppPluginsRequest
+     * @return ListMarketplaceAppPluginsResponse
+     */
+    CompletableFuture<ListMarketplaceAppPluginsResponse> listMarketplaceAppPlugins(ListMarketplaceAppPluginsRequest request);
+
+    /**
+     * @param request the request parameters of ListMyAppPlugins  ListMyAppPluginsRequest
+     * @return ListMyAppPluginsResponse
+     */
+    CompletableFuture<ListMyAppPluginsResponse> listMyAppPlugins(ListMyAppPluginsRequest request);
+
+    /**
+     * @param request the request parameters of ListMyInstalledAppPlugins  ListMyInstalledAppPluginsRequest
+     * @return ListMyInstalledAppPluginsResponse
+     */
+    CompletableFuture<ListMyInstalledAppPluginsResponse> listMyInstalledAppPlugins(ListMyInstalledAppPluginsRequest request);
 
     /**
      * @param request the request parameters of ListPromotionActivitiesForPartner  ListPromotionActivitiesForPartnerRequest
@@ -877,6 +931,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RollbackAppInstancePublishResponse> rollbackAppInstancePublish(RollbackAppInstancePublishRequest request);
 
     /**
+     * @param request the request parameters of RollbackAppPluginVersion  RollbackAppPluginVersionRequest
+     * @return RollbackAppPluginVersionResponse
+     */
+    CompletableFuture<RollbackAppPluginVersionResponse> rollbackAppPluginVersion(RollbackAppPluginVersionRequest request);
+
+    /**
      * @param request the request parameters of SaveAppRequirement  SaveAppRequirementRequest
      * @return SaveAppRequirementResponse
      */
@@ -937,6 +997,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UnbindAppDomainResponse> unbindAppDomain(UnbindAppDomainRequest request);
 
     /**
+     * @param request the request parameters of UninstallAppPlugin  UninstallAppPluginRequest
+     * @return UninstallAppPluginResponse
+     */
+    CompletableFuture<UninstallAppPluginResponse> uninstallAppPlugin(UninstallAppPluginRequest request);
+
+    /**
      * @param request the request parameters of UpdateAppChatMessage  UpdateAppChatMessageRequest
      * @return UpdateAppChatMessageResponse
      */
@@ -959,6 +1025,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateAppInstanceResponse
      */
     CompletableFuture<UpdateAppInstanceResponse> updateAppInstance(UpdateAppInstanceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAppPlugin  UpdateAppPluginRequest
+     * @return UpdateAppPluginResponse
+     */
+    CompletableFuture<UpdateAppPluginResponse> updateAppPlugin(UpdateAppPluginRequest request);
 
     /**
      * <b>description</b> :
@@ -998,6 +1070,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateRbacRoleResponse
      */
     CompletableFuture<UpdateRbacRoleResponse> updateRbacRole(UpdateRbacRoleRequest request);
+
+    /**
+     * @param request the request parameters of UploadAppPluginVersion  UploadAppPluginVersionRequest
+     * @return UploadAppPluginVersionResponse
+     */
+    CompletableFuture<UploadAppPluginVersionResponse> uploadAppPluginVersion(UploadAppPluginVersionRequest request);
 
     /**
      * @param request the request parameters of UploadAppSiteValidationFile  UploadAppSiteValidationFileRequest
