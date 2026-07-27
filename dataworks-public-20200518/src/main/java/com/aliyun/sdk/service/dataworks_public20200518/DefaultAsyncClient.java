@@ -87,7 +87,9 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("me-east-1", "dataworks.me-east-1.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "dataworks.aliyuncs.com"),
             new TeaPair("us-east-1", "dataworks.us-east-1.aliyuncs.com"),
-            new TeaPair("us-west-1", "dataworks.us-west-1.aliyuncs.com")
+            new TeaPair("us-west-1", "dataworks.us-west-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "dataworks.me-central-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "dataworks.ap-northeast-2.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -1489,6 +1491,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DsgGetVisitDetail  DsgGetVisitDetailRequest
+     * @return DsgGetVisitDetailResponse
+     */
+    @Override
+    public CompletableFuture<DsgGetVisitDetailResponse> dsgGetVisitDetail(DsgGetVisitDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DsgGetVisitDetail").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DsgGetVisitDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DsgGetVisitDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DsgGetVisitStat  DsgGetVisitStatRequest
+     * @return DsgGetVisitStatResponse
+     */
+    @Override
+    public CompletableFuture<DsgGetVisitStatResponse> dsgGetVisitStat(DsgGetVisitStatRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DsgGetVisitStat").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DsgGetVisitStatResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DsgGetVisitStatResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DsgPlatformQueryProjectsAndSchemaFromMeta  DsgPlatformQueryProjectsAndSchemaFromMetaRequest
      * @return DsgPlatformQueryProjectsAndSchemaFromMetaResponse
      */
@@ -1537,6 +1575,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DsgQueryDesensStatusListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DsgQueryDetails  DsgQueryDetailsRequest
+     * @return DsgQueryDetailsResponse
+     */
+    @Override
+    public CompletableFuture<DsgQueryDetailsResponse> dsgQueryDetails(DsgQueryDetailsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DsgQueryDetails").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DsgQueryDetailsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DsgQueryDetailsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DsgQueryRowDetail  DsgQueryRowDetailRequest
+     * @return DsgQueryRowDetailResponse
+     */
+    @Override
+    public CompletableFuture<DsgQueryRowDetailResponse> dsgQueryRowDetail(DsgQueryRowDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DsgQueryRowDetail").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DsgQueryRowDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DsgQueryRowDetailResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -511,6 +511,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DsgDesensPlanUpdateStatusResponse> dsgDesensPlanUpdateStatus(DsgDesensPlanUpdateStatusRequest request);
 
     /**
+     * @param request the request parameters of DsgGetVisitDetail  DsgGetVisitDetailRequest
+     * @return DsgGetVisitDetailResponse
+     */
+    CompletableFuture<DsgGetVisitDetailResponse> dsgGetVisitDetail(DsgGetVisitDetailRequest request);
+
+    /**
+     * @param request the request parameters of DsgGetVisitStat  DsgGetVisitStatRequest
+     * @return DsgGetVisitStatResponse
+     */
+    CompletableFuture<DsgGetVisitStatResponse> dsgGetVisitStat(DsgGetVisitStatRequest request);
+
+    /**
      * @param request the request parameters of DsgPlatformQueryProjectsAndSchemaFromMeta  DsgPlatformQueryProjectsAndSchemaFromMetaRequest
      * @return DsgPlatformQueryProjectsAndSchemaFromMetaResponse
      */
@@ -527,6 +539,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DsgQueryDesensStatusListResponse
      */
     CompletableFuture<DsgQueryDesensStatusListResponse> dsgQueryDesensStatusList(DsgQueryDesensStatusListRequest request);
+
+    /**
+     * @param request the request parameters of DsgQueryDetails  DsgQueryDetailsRequest
+     * @return DsgQueryDetailsResponse
+     */
+    CompletableFuture<DsgQueryDetailsResponse> dsgQueryDetails(DsgQueryDetailsRequest request);
+
+    /**
+     * @param request the request parameters of DsgQueryRowDetail  DsgQueryRowDetailRequest
+     * @return DsgQueryRowDetailResponse
+     */
+    CompletableFuture<DsgQueryRowDetailResponse> dsgQueryRowDetail(DsgQueryRowDetailRequest request);
 
     /**
      * <b>description</b> :
