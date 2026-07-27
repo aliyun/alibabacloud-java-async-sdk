@@ -206,6 +206,9 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
+        @com.aliyun.core.annotation.NameInMap("MetaExtractInfo")
+        private String metaExtractInfo;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
@@ -233,6 +236,7 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
             this.gmtModified = builder.gmtModified;
             this.id = builder.id;
             this.message = builder.message;
+            this.metaExtractInfo = builder.metaExtractInfo;
             this.name = builder.name;
             this.overlapSize = builder.overlapSize;
             this.size = builder.size;
@@ -306,6 +310,13 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         }
 
         /**
+         * @return metaExtractInfo
+         */
+        public String getMetaExtractInfo() {
+            return this.metaExtractInfo;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -356,6 +367,7 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
             private Long gmtModified; 
             private String id; 
             private String message; 
+            private String metaExtractInfo; 
             private String name; 
             private String overlapSize; 
             private Integer size; 
@@ -375,6 +387,7 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
                 this.gmtModified = model.gmtModified;
                 this.id = model.id;
                 this.message = model.message;
+                this.metaExtractInfo = model.metaExtractInfo;
                 this.name = model.name;
                 this.overlapSize = model.overlapSize;
                 this.size = model.size;
@@ -444,6 +457,14 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
              */
             public Builder message(String message) {
                 this.message = message;
+                return this;
+            }
+
+            /**
+             * MetaExtractInfo.
+             */
+            public Builder metaExtractInfo(String metaExtractInfo) {
+                this.metaExtractInfo = metaExtractInfo;
                 return this;
             }
 
