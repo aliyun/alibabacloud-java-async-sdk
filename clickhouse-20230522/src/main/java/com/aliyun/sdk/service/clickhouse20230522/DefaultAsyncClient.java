@@ -79,7 +79,7 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("eu-west-1", "clickhouse.eu-west-1.aliyuncs.com"),
             new TeaPair("eu-central-1", "clickhouse.eu-central-1.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou", "clickhouse.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "clickhouse.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "clickhouse.cn-wulanchabu.aliyuncs.com"),
             new TeaPair("cn-huhehaote", "clickhouse.cn-huhehaote.aliyuncs.com"),
             new TeaPair("cn-guangzhou", "clickhouse.cn-guangzhou.aliyuncs.com"),
             new TeaPair("cn-chengdu", "clickhouse.cn-chengdu.aliyuncs.com"),

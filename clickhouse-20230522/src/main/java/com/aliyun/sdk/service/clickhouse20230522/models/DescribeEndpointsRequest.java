@@ -28,6 +28,7 @@ public class DescribeEndpointsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DescribeEndpointsRequest(Builder builder) {
@@ -111,6 +112,7 @@ public class DescribeEndpointsRequest extends Request {
 
         /**
          * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>

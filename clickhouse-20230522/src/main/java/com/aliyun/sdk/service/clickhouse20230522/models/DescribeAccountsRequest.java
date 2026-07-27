@@ -24,11 +24,11 @@ public class DescribeAccountsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
-    private String pageNumber;
+    private Integer pageNumber;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
-    private String pageSize;
+    private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Product")
@@ -70,14 +70,14 @@ public class DescribeAccountsRequest extends Request {
     /**
      * @return pageNumber
      */
-    public String getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
     /**
      * @return pageSize
      */
-    public String getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 
@@ -97,8 +97,8 @@ public class DescribeAccountsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeAccountsRequest, Builder> {
         private String DBInstanceId; 
-        private String pageNumber; 
-        private String pageSize; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String product; 
         private String regionId; 
 
@@ -134,7 +134,7 @@ public class DescribeAccountsRequest extends Request {
          * <strong>example:</strong>
          * <p>1</p>
          */
-        public Builder pageNumber(String pageNumber) {
+        public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
             this.pageNumber = pageNumber;
             return this;
@@ -151,7 +151,7 @@ public class DescribeAccountsRequest extends Request {
          * <strong>example:</strong>
          * <p>30</p>
          */
-        public Builder pageSize(String pageSize) {
+        public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
             return this;

@@ -24,6 +24,7 @@ public class DescribeDBInstanceAttributeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DescribeDBInstanceAttributeRequest(Builder builder) {
@@ -92,6 +93,7 @@ public class DescribeDBInstanceAttributeRequest extends Request {
          * <ul>
          * <li>cn-beijing</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
