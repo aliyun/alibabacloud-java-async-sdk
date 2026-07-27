@@ -20,6 +20,9 @@ public class OrderPageQuery extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("orderIdList")
     private java.util.List<String> orderIdList;
 
+    @com.aliyun.core.annotation.NameInMap("outPurchaseOrderId")
+    private String outPurchaseOrderId;
+
     @com.aliyun.core.annotation.NameInMap("pageNumber")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumber;
@@ -33,6 +36,7 @@ public class OrderPageQuery extends TeaModel {
 
     private OrderPageQuery(Builder builder) {
         this.orderIdList = builder.orderIdList;
+        this.outPurchaseOrderId = builder.outPurchaseOrderId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.purchaseOrderId = builder.purchaseOrderId;
@@ -58,6 +62,13 @@ public class OrderPageQuery extends TeaModel {
     }
 
     /**
+     * @return outPurchaseOrderId
+     */
+    public String getOutPurchaseOrderId() {
+        return this.outPurchaseOrderId;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -80,6 +91,7 @@ public class OrderPageQuery extends TeaModel {
 
     public static final class Builder {
         private java.util.List<String> orderIdList; 
+        private String outPurchaseOrderId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String purchaseOrderId; 
@@ -89,6 +101,7 @@ public class OrderPageQuery extends TeaModel {
 
         private Builder(OrderPageQuery model) {
             this.orderIdList = model.orderIdList;
+            this.outPurchaseOrderId = model.outPurchaseOrderId;
             this.pageNumber = model.pageNumber;
             this.pageSize = model.pageSize;
             this.purchaseOrderId = model.purchaseOrderId;
@@ -99,6 +112,14 @@ public class OrderPageQuery extends TeaModel {
          */
         public Builder orderIdList(java.util.List<String> orderIdList) {
             this.orderIdList = orderIdList;
+            return this;
+        }
+
+        /**
+         * outPurchaseOrderId.
+         */
+        public Builder outPurchaseOrderId(String outPurchaseOrderId) {
+            this.outPurchaseOrderId = outPurchaseOrderId;
             return this;
         }
 
