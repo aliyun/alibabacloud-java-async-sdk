@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyDBClusterSSLRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertValidDays")
+    private String certValidDays;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ConnectionString")
     private String connectionString;
 
@@ -64,6 +68,7 @@ public class ModifyDBClusterSSLRequest extends Request {
 
     private ModifyDBClusterSSLRequest(Builder builder) {
         super(builder);
+        this.certValidDays = builder.certValidDays;
         this.connectionString = builder.connectionString;
         this.DBClusterId = builder.DBClusterId;
         this.DBEndpointId = builder.DBEndpointId;
@@ -88,6 +93,13 @@ public class ModifyDBClusterSSLRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return certValidDays
+     */
+    public String getCertValidDays() {
+        return this.certValidDays;
     }
 
     /**
@@ -168,6 +180,7 @@ public class ModifyDBClusterSSLRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDBClusterSSLRequest, Builder> {
+        private String certValidDays; 
         private String connectionString; 
         private String DBClusterId; 
         private String DBEndpointId; 
@@ -186,6 +199,7 @@ public class ModifyDBClusterSSLRequest extends Request {
 
         private Builder(ModifyDBClusterSSLRequest request) {
             super(request);
+            this.certValidDays = request.certValidDays;
             this.connectionString = request.connectionString;
             this.DBClusterId = request.DBClusterId;
             this.DBEndpointId = request.DBEndpointId;
@@ -198,6 +212,15 @@ public class ModifyDBClusterSSLRequest extends Request {
             this.SSLAutoRotate = request.SSLAutoRotate;
             this.SSLEnabled = request.SSLEnabled;
         } 
+
+        /**
+         * CertValidDays.
+         */
+        public Builder certValidDays(String certValidDays) {
+            this.putQueryParameter("CertValidDays", certValidDays);
+            this.certValidDays = certValidDays;
+            return this;
+        }
 
         /**
          * ConnectionString.

@@ -203,11 +203,29 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
      * <p>CreateBatchConsumerResponseBody</p>
      */
     public static class Items extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Active")
+        private Boolean active;
+
         @com.aliyun.core.annotation.NameInMap("ApiKey")
         private String apiKey;
 
+        @com.aliyun.core.annotation.NameInMap("ApiKeyMd5")
+        private String apiKeyMd5;
+
+        @com.aliyun.core.annotation.NameInMap("ApiKeyStatus")
+        private String apiKeyStatus;
+
         @com.aliyun.core.annotation.NameInMap("ApiStatus")
         private String apiStatus;
+
+        @com.aliyun.core.annotation.NameInMap("BudgetLimit")
+        private Long budgetLimit;
+
+        @com.aliyun.core.annotation.NameInMap("BudgetPolicyId")
+        private String budgetPolicyId;
+
+        @com.aliyun.core.annotation.NameInMap("BudgetUsed")
+        private Long budgetUsed;
 
         @com.aliyun.core.annotation.NameInMap("ConsumerGroupId")
         private String consumerGroupId;
@@ -217,6 +235,21 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ConsumerTag")
         private String consumerTag;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
+        private String expireTime;
+
+        @com.aliyun.core.annotation.NameInMap("Expired")
+        private Boolean expired;
+
+        @com.aliyun.core.annotation.NameInMap("GmtCreated")
+        private String gmtCreated;
+
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
+        private String gmtModified;
 
         @com.aliyun.core.annotation.NameInMap("GwClusterId")
         private String gwClusterId;
@@ -228,11 +261,22 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
         private String status;
 
         private Items(Builder builder) {
+            this.active = builder.active;
             this.apiKey = builder.apiKey;
+            this.apiKeyMd5 = builder.apiKeyMd5;
+            this.apiKeyStatus = builder.apiKeyStatus;
             this.apiStatus = builder.apiStatus;
+            this.budgetLimit = builder.budgetLimit;
+            this.budgetPolicyId = builder.budgetPolicyId;
+            this.budgetUsed = builder.budgetUsed;
             this.consumerGroupId = builder.consumerGroupId;
             this.consumerId = builder.consumerId;
             this.consumerTag = builder.consumerTag;
+            this.description = builder.description;
+            this.expireTime = builder.expireTime;
+            this.expired = builder.expired;
+            this.gmtCreated = builder.gmtCreated;
+            this.gmtModified = builder.gmtModified;
             this.gwClusterId = builder.gwClusterId;
             this.name = builder.name;
             this.status = builder.status;
@@ -247,6 +291,13 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
         }
 
         /**
+         * @return active
+         */
+        public Boolean getActive() {
+            return this.active;
+        }
+
+        /**
          * @return apiKey
          */
         public String getApiKey() {
@@ -254,10 +305,45 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
         }
 
         /**
+         * @return apiKeyMd5
+         */
+        public String getApiKeyMd5() {
+            return this.apiKeyMd5;
+        }
+
+        /**
+         * @return apiKeyStatus
+         */
+        public String getApiKeyStatus() {
+            return this.apiKeyStatus;
+        }
+
+        /**
          * @return apiStatus
          */
         public String getApiStatus() {
             return this.apiStatus;
+        }
+
+        /**
+         * @return budgetLimit
+         */
+        public Long getBudgetLimit() {
+            return this.budgetLimit;
+        }
+
+        /**
+         * @return budgetPolicyId
+         */
+        public String getBudgetPolicyId() {
+            return this.budgetPolicyId;
+        }
+
+        /**
+         * @return budgetUsed
+         */
+        public Long getBudgetUsed() {
+            return this.budgetUsed;
         }
 
         /**
@@ -282,6 +368,41 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
         }
 
         /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return expireTime
+         */
+        public String getExpireTime() {
+            return this.expireTime;
+        }
+
+        /**
+         * @return expired
+         */
+        public Boolean getExpired() {
+            return this.expired;
+        }
+
+        /**
+         * @return gmtCreated
+         */
+        public String getGmtCreated() {
+            return this.gmtCreated;
+        }
+
+        /**
+         * @return gmtModified
+         */
+        public String getGmtModified() {
+            return this.gmtModified;
+        }
+
+        /**
          * @return gwClusterId
          */
         public String getGwClusterId() {
@@ -303,11 +424,22 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean active; 
             private String apiKey; 
+            private String apiKeyMd5; 
+            private String apiKeyStatus; 
             private String apiStatus; 
+            private Long budgetLimit; 
+            private String budgetPolicyId; 
+            private Long budgetUsed; 
             private String consumerGroupId; 
             private String consumerId; 
             private String consumerTag; 
+            private String description; 
+            private String expireTime; 
+            private Boolean expired; 
+            private String gmtCreated; 
+            private String gmtModified; 
             private String gwClusterId; 
             private String name; 
             private String status; 
@@ -316,15 +448,34 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
             } 
 
             private Builder(Items model) {
+                this.active = model.active;
                 this.apiKey = model.apiKey;
+                this.apiKeyMd5 = model.apiKeyMd5;
+                this.apiKeyStatus = model.apiKeyStatus;
                 this.apiStatus = model.apiStatus;
+                this.budgetLimit = model.budgetLimit;
+                this.budgetPolicyId = model.budgetPolicyId;
+                this.budgetUsed = model.budgetUsed;
                 this.consumerGroupId = model.consumerGroupId;
                 this.consumerId = model.consumerId;
                 this.consumerTag = model.consumerTag;
+                this.description = model.description;
+                this.expireTime = model.expireTime;
+                this.expired = model.expired;
+                this.gmtCreated = model.gmtCreated;
+                this.gmtModified = model.gmtModified;
                 this.gwClusterId = model.gwClusterId;
                 this.name = model.name;
                 this.status = model.status;
             } 
+
+            /**
+             * Active.
+             */
+            public Builder active(Boolean active) {
+                this.active = active;
+                return this;
+            }
 
             /**
              * ApiKey.
@@ -335,10 +486,50 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
             }
 
             /**
+             * ApiKeyMd5.
+             */
+            public Builder apiKeyMd5(String apiKeyMd5) {
+                this.apiKeyMd5 = apiKeyMd5;
+                return this;
+            }
+
+            /**
+             * ApiKeyStatus.
+             */
+            public Builder apiKeyStatus(String apiKeyStatus) {
+                this.apiKeyStatus = apiKeyStatus;
+                return this;
+            }
+
+            /**
              * ApiStatus.
              */
             public Builder apiStatus(String apiStatus) {
                 this.apiStatus = apiStatus;
+                return this;
+            }
+
+            /**
+             * BudgetLimit.
+             */
+            public Builder budgetLimit(Long budgetLimit) {
+                this.budgetLimit = budgetLimit;
+                return this;
+            }
+
+            /**
+             * BudgetPolicyId.
+             */
+            public Builder budgetPolicyId(String budgetPolicyId) {
+                this.budgetPolicyId = budgetPolicyId;
+                return this;
+            }
+
+            /**
+             * BudgetUsed.
+             */
+            public Builder budgetUsed(Long budgetUsed) {
+                this.budgetUsed = budgetUsed;
                 return this;
             }
 
@@ -363,6 +554,46 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
              */
             public Builder consumerTag(String consumerTag) {
                 this.consumerTag = consumerTag;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * ExpireTime.
+             */
+            public Builder expireTime(String expireTime) {
+                this.expireTime = expireTime;
+                return this;
+            }
+
+            /**
+             * Expired.
+             */
+            public Builder expired(Boolean expired) {
+                this.expired = expired;
+                return this;
+            }
+
+            /**
+             * GmtCreated.
+             */
+            public Builder gmtCreated(String gmtCreated) {
+                this.gmtCreated = gmtCreated;
+                return this;
+            }
+
+            /**
+             * GmtModified.
+             */
+            public Builder gmtModified(String gmtModified) {
+                this.gmtModified = gmtModified;
                 return this;
             }
 

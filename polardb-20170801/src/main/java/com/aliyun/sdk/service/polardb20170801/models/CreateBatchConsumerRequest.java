@@ -23,13 +23,19 @@ public class CreateBatchConsumerRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ConsumerGroupId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String consumerGroupId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Count")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Integer count;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreditToken")
+    private String creditToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GwClusterId")
@@ -46,6 +52,8 @@ public class CreateBatchConsumerRequest extends Request {
         this.clientToken = builder.clientToken;
         this.consumerGroupId = builder.consumerGroupId;
         this.count = builder.count;
+        this.creditToken = builder.creditToken;
+        this.description = builder.description;
         this.gwClusterId = builder.gwClusterId;
         this.regionId = builder.regionId;
     }
@@ -85,6 +93,20 @@ public class CreateBatchConsumerRequest extends Request {
     }
 
     /**
+     * @return creditToken
+     */
+    public String getCreditToken() {
+        return this.creditToken;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
      * @return gwClusterId
      */
     public String getGwClusterId() {
@@ -102,6 +124,8 @@ public class CreateBatchConsumerRequest extends Request {
         private String clientToken; 
         private String consumerGroupId; 
         private Integer count; 
+        private String creditToken; 
+        private String description; 
         private String gwClusterId; 
         private String regionId; 
 
@@ -114,6 +138,8 @@ public class CreateBatchConsumerRequest extends Request {
             this.clientToken = request.clientToken;
             this.consumerGroupId = request.consumerGroupId;
             this.count = request.count;
+            this.creditToken = request.creditToken;
+            this.description = request.description;
             this.gwClusterId = request.gwClusterId;
             this.regionId = request.regionId;
         } 
@@ -128,10 +154,7 @@ public class CreateBatchConsumerRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cg-xxxxxx</p>
+         * ConsumerGroupId.
          */
         public Builder consumerGroupId(String consumerGroupId) {
             this.putQueryParameter("ConsumerGroupId", consumerGroupId);
@@ -140,14 +163,29 @@ public class CreateBatchConsumerRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * Count.
          */
         public Builder count(Integer count) {
             this.putQueryParameter("Count", count);
             this.count = count;
+            return this;
+        }
+
+        /**
+         * CreditToken.
+         */
+        public Builder creditToken(String creditToken) {
+            this.putQueryParameter("CreditToken", creditToken);
+            this.creditToken = creditToken;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
             return this;
         }
 

@@ -261,7 +261,10 @@ public class RestartPolarClawGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F45FFACC-xxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -89,9 +89,7 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("ap-southeast-6", "polardb.ap-southeast-6.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "polardb.ap-southeast-5.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "polardb.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "polardb.ap-southeast-2.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "polardb.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-south-1", "polardb.ap-south-1.aliyuncs.com"),
             new TeaPair("ap-northeast-2", "polardb.ap-northeast-2.aliyuncs.com"),
             new TeaPair("ap-northeast-1", "polardb.ap-northeast-1.aliyuncs.com")
         );
@@ -1270,6 +1268,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateGlobalSecurityIPGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateGwConsumerOrder  CreateGwConsumerOrderRequest
+     * @return CreateGwConsumerOrderResponse
+     */
+    @Override
+    public CompletableFuture<CreateGwConsumerOrderResponse> createGwConsumerOrder(CreateGwConsumerOrderRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateGwConsumerOrder").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateGwConsumerOrderResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateGwConsumerOrderResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

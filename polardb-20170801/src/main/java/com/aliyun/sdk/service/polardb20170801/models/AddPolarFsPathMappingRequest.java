@@ -138,11 +138,19 @@ public class AddPolarFsPathMappingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
+        @com.aliyun.core.annotation.NameInMap("BucketAccessKeyId")
+        private String bucketAccessKeyId;
+
+        @com.aliyun.core.annotation.NameInMap("BucketAccessKeySecret")
+        private String bucketAccessKeySecret;
+
         @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
         private CustomBucketPathList(Builder builder) {
             this.bucket = builder.bucket;
+            this.bucketAccessKeyId = builder.bucketAccessKeyId;
+            this.bucketAccessKeySecret = builder.bucketAccessKeySecret;
             this.path = builder.path;
         }
 
@@ -162,6 +170,20 @@ public class AddPolarFsPathMappingRequest extends Request {
         }
 
         /**
+         * @return bucketAccessKeyId
+         */
+        public String getBucketAccessKeyId() {
+            return this.bucketAccessKeyId;
+        }
+
+        /**
+         * @return bucketAccessKeySecret
+         */
+        public String getBucketAccessKeySecret() {
+            return this.bucketAccessKeySecret;
+        }
+
+        /**
          * @return path
          */
         public String getPath() {
@@ -170,6 +192,8 @@ public class AddPolarFsPathMappingRequest extends Request {
 
         public static final class Builder {
             private String bucket; 
+            private String bucketAccessKeyId; 
+            private String bucketAccessKeySecret; 
             private String path; 
 
             private Builder() {
@@ -177,6 +201,8 @@ public class AddPolarFsPathMappingRequest extends Request {
 
             private Builder(CustomBucketPathList model) {
                 this.bucket = model.bucket;
+                this.bucketAccessKeyId = model.bucketAccessKeyId;
+                this.bucketAccessKeySecret = model.bucketAccessKeySecret;
                 this.path = model.path;
             } 
 
@@ -185,6 +211,22 @@ public class AddPolarFsPathMappingRequest extends Request {
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
+                return this;
+            }
+
+            /**
+             * BucketAccessKeyId.
+             */
+            public Builder bucketAccessKeyId(String bucketAccessKeyId) {
+                this.bucketAccessKeyId = bucketAccessKeyId;
+                return this;
+            }
+
+            /**
+             * BucketAccessKeySecret.
+             */
+            public Builder bucketAccessKeySecret(String bucketAccessKeySecret) {
+                this.bucketAccessKeySecret = bucketAccessKeySecret;
                 return this;
             }
 

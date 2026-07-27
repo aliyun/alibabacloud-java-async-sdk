@@ -448,6 +448,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateGlobalSecurityIPGroupResponse> createGlobalSecurityIPGroup(CreateGlobalSecurityIPGroupRequest request);
 
     /**
+     * @param request the request parameters of CreateGwConsumerOrder  CreateGwConsumerOrderRequest
+     * @return CreateGwConsumerOrderResponse
+     */
+    CompletableFuture<CreateGwConsumerOrderResponse> createGwConsumerOrder(CreateGwConsumerOrderRequest request);
+
+    /**
      * @param request the request parameters of CreateModelApi  CreateModelApiRequest
      * @return CreateModelApiResponse
      */
