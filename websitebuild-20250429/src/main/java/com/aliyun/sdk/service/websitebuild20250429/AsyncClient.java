@@ -1089,4 +1089,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<UploadMaterialFileResponse> uploadMaterialFile(UploadMaterialFileRequest request);
 
+    /**
+     * @param request the request parameters of UploadMaterialFileForAdmin  UploadMaterialFileForAdminRequest
+     * @return UploadMaterialFileForAdminResponse
+     */
+    CompletableFuture<UploadMaterialFileForAdminResponse> uploadMaterialFileForAdmin(UploadMaterialFileForAdminRequest request);
+
 }
