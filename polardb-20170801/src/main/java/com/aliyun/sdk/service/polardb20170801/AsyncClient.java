@@ -268,6 +268,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateApplicationResponse> createApplication(CreateApplicationRequest request);
 
     /**
+     * @param request the request parameters of CreateApplicationAgentRelation  CreateApplicationAgentRelationRequest
+     * @return CreateApplicationAgentRelationResponse
+     */
+    CompletableFuture<CreateApplicationAgentRelationResponse> createApplicationAgentRelation(CreateApplicationAgentRelationRequest request);
+
+    /**
      * @param request the request parameters of CreateApplicationEndpointAddress  CreateApplicationEndpointAddressRequest
      * @return CreateApplicationEndpointAddressResponse
      */
@@ -2020,6 +2026,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GenerateUpgradeReportForSyncCloneResponse> generateUpgradeReportForSyncClone(GenerateUpgradeReportForSyncCloneRequest request);
 
     /**
+     * @param request the request parameters of GetLakebaseTenantToken  GetLakebaseTenantTokenRequest
+     * @return GetLakebaseTenantTokenResponse
+     */
+    CompletableFuture<GetLakebaseTenantTokenResponse> getLakebaseTenantToken(GetLakebaseTenantTokenRequest request);
+
+    /**
      * @param request the request parameters of GetPolarAgent  GetPolarAgentRequest
      * @return GetPolarAgentResponse
      */
@@ -2687,6 +2699,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ResetGlobalDatabaseNetworkResponse
      */
     CompletableFuture<ResetGlobalDatabaseNetworkResponse> resetGlobalDatabaseNetwork(ResetGlobalDatabaseNetworkRequest request);
+
+    /**
+     * @param request the request parameters of RestartAIDBCluster  RestartAIDBClusterRequest
+     * @return RestartAIDBClusterResponse
+     */
+    CompletableFuture<RestartAIDBClusterResponse> restartAIDBCluster(RestartAIDBClusterRequest request);
 
     /**
      * @param request the request parameters of RestartDBLink  RestartDBLinkRequest

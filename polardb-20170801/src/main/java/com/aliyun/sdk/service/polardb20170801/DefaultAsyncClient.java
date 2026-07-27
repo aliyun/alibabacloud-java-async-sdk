@@ -806,6 +806,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateApplicationAgentRelation  CreateApplicationAgentRelationRequest
+     * @return CreateApplicationAgentRelationResponse
+     */
+    @Override
+    public CompletableFuture<CreateApplicationAgentRelationResponse> createApplicationAgentRelation(CreateApplicationAgentRelationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateApplicationAgentRelation").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateApplicationAgentRelationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateApplicationAgentRelationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateApplicationEndpointAddress  CreateApplicationEndpointAddressRequest
      * @return CreateApplicationEndpointAddressResponse
      */
@@ -5654,6 +5672,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetLakebaseTenantToken  GetLakebaseTenantTokenRequest
+     * @return GetLakebaseTenantTokenResponse
+     */
+    @Override
+    public CompletableFuture<GetLakebaseTenantTokenResponse> getLakebaseTenantToken(GetLakebaseTenantTokenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetLakebaseTenantToken").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetLakebaseTenantTokenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetLakebaseTenantTokenResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetPolarAgent  GetPolarAgentRequest
      * @return GetPolarAgentResponse
      */
@@ -7513,6 +7549,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ResetGlobalDatabaseNetworkResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RestartAIDBCluster  RestartAIDBClusterRequest
+     * @return RestartAIDBClusterResponse
+     */
+    @Override
+    public CompletableFuture<RestartAIDBClusterResponse> restartAIDBCluster(RestartAIDBClusterRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RestartAIDBCluster").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RestartAIDBClusterResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RestartAIDBClusterResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
