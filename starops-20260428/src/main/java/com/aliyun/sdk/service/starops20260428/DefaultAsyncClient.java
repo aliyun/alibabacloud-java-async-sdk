@@ -30,14 +30,35 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "STAROps";
         this.version = "2026-04-28";
-        this.endpointRule = "";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("cn-beijing", "starops.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "starops.ap-southeast-1.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
     @Override
     public void close() {
         this.handler.close();
+    }
+
+    /**
+     * @param request the request parameters of CreateArtifactUploadToken  CreateArtifactUploadTokenRequest
+     * @return CreateArtifactUploadTokenResponse
+     */
+    @Override
+    public CompletableFuture<CreateArtifactUploadTokenResponse> createArtifactUploadToken(CreateArtifactUploadTokenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateArtifactUploadToken").setMethod(HttpMethod.POST).setPathRegex("/digitalEmployee/{name}/artifacts/uploadToken").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateArtifactUploadTokenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateArtifactUploadTokenResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
     }
 
     /**
@@ -290,6 +311,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetArtifactResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetArtifactDownloadUrl  GetArtifactDownloadUrlRequest
+     * @return GetArtifactDownloadUrlResponse
+     */
+    @Override
+    public CompletableFuture<GetArtifactDownloadUrlResponse> getArtifactDownloadUrl(GetArtifactDownloadUrlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetArtifactDownloadUrl").setMethod(HttpMethod.GET).setPathRegex("/digitalEmployee/{name}/artifacts/downloadUrl").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetArtifactDownloadUrlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetArtifactDownloadUrlResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

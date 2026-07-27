@@ -197,6 +197,9 @@ public class GetMcpServiceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("endpoint")
         private String endpoint;
 
+        @com.aliyun.core.annotation.NameInMap("headers")
+        private java.util.Map<String, String> headers;
+
         @com.aliyun.core.annotation.NameInMap("platform")
         private String platform;
 
@@ -209,6 +212,7 @@ public class GetMcpServiceResponseBody extends TeaModel {
         private Connection(Builder builder) {
             this.auth = builder.auth;
             this.endpoint = builder.endpoint;
+            this.headers = builder.headers;
             this.platform = builder.platform;
             this.timeout = builder.timeout;
             this.transport = builder.transport;
@@ -237,6 +241,13 @@ public class GetMcpServiceResponseBody extends TeaModel {
         }
 
         /**
+         * @return headers
+         */
+        public java.util.Map<String, String> getHeaders() {
+            return this.headers;
+        }
+
+        /**
          * @return platform
          */
         public String getPlatform() {
@@ -260,6 +271,7 @@ public class GetMcpServiceResponseBody extends TeaModel {
         public static final class Builder {
             private Auth auth; 
             private String endpoint; 
+            private java.util.Map<String, String> headers; 
             private String platform; 
             private Long timeout; 
             private String transport; 
@@ -270,6 +282,7 @@ public class GetMcpServiceResponseBody extends TeaModel {
             private Builder(Connection model) {
                 this.auth = model.auth;
                 this.endpoint = model.endpoint;
+                this.headers = model.headers;
                 this.platform = model.platform;
                 this.timeout = model.timeout;
                 this.transport = model.transport;
@@ -288,6 +301,14 @@ public class GetMcpServiceResponseBody extends TeaModel {
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
+                return this;
+            }
+
+            /**
+             * headers.
+             */
+            public Builder headers(java.util.Map<String, String> headers) {
+                this.headers = headers;
                 return this;
             }
 

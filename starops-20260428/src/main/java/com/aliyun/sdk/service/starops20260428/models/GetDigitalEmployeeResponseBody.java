@@ -54,6 +54,9 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("roleArn")
     private String roleArn;
 
+    @com.aliyun.core.annotation.NameInMap("sandboxNetworkPolicy")
+    private SandboxNetworkPolicy sandboxNetworkPolicy;
+
     @com.aliyun.core.annotation.NameInMap("tags")
     private java.util.List<Tag> tags;
 
@@ -76,6 +79,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.resourceGroupId = builder.resourceGroupId;
         this.roleArn = builder.roleArn;
+        this.sandboxNetworkPolicy = builder.sandboxNetworkPolicy;
         this.tags = builder.tags;
         this.toolPolicy = builder.toolPolicy;
         this.updateTime = builder.updateTime;
@@ -178,6 +182,13 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
     }
 
     /**
+     * @return sandboxNetworkPolicy
+     */
+    public SandboxNetworkPolicy getSandboxNetworkPolicy() {
+        return this.sandboxNetworkPolicy;
+    }
+
+    /**
      * @return tags
      */
     public java.util.List<Tag> getTags() {
@@ -211,6 +222,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         private String requestId; 
         private String resourceGroupId; 
         private String roleArn; 
+        private SandboxNetworkPolicy sandboxNetworkPolicy; 
         private java.util.List<Tag> tags; 
         private ToolPolicy toolPolicy; 
         private String updateTime; 
@@ -231,6 +243,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
             this.requestId = model.requestId;
             this.resourceGroupId = model.resourceGroupId;
             this.roleArn = model.roleArn;
+            this.sandboxNetworkPolicy = model.sandboxNetworkPolicy;
             this.tags = model.tags;
             this.toolPolicy = model.toolPolicy;
             this.updateTime = model.updateTime;
@@ -332,6 +345,17 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
          */
         public Builder roleArn(String roleArn) {
             this.roleArn = roleArn;
+            return this;
+        }
+
+        /**
+         * <p>数字员工沙箱网络 ACL 策略配置。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;allowFqdns&quot;:[&quot;api.example.com&quot;],&quot;allowCidrs&quot;:[&quot;1.2.3.0/24&quot;,&quot;8.8.8.8&quot;],&quot;enableAcl&quot;:false}</p>
+         */
+        public Builder sandboxNetworkPolicy(SandboxNetworkPolicy sandboxNetworkPolicy) {
+            this.sandboxNetworkPolicy = sandboxNetworkPolicy;
             return this;
         }
 
@@ -569,12 +593,111 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
      *
      * <p>GetDigitalEmployeeResponseBody</p>
      */
+    public static class SandboxNetworkPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("allowCidrs")
+        private java.util.List<String> allowCidrs;
+
+        @com.aliyun.core.annotation.NameInMap("allowFqdns")
+        private java.util.List<String> allowFqdns;
+
+        @com.aliyun.core.annotation.NameInMap("enableAcl")
+        private Boolean enableAcl;
+
+        private SandboxNetworkPolicy(Builder builder) {
+            this.allowCidrs = builder.allowCidrs;
+            this.allowFqdns = builder.allowFqdns;
+            this.enableAcl = builder.enableAcl;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SandboxNetworkPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return allowCidrs
+         */
+        public java.util.List<String> getAllowCidrs() {
+            return this.allowCidrs;
+        }
+
+        /**
+         * @return allowFqdns
+         */
+        public java.util.List<String> getAllowFqdns() {
+            return this.allowFqdns;
+        }
+
+        /**
+         * @return enableAcl
+         */
+        public Boolean getEnableAcl() {
+            return this.enableAcl;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> allowCidrs; 
+            private java.util.List<String> allowFqdns; 
+            private Boolean enableAcl; 
+
+            private Builder() {
+            } 
+
+            private Builder(SandboxNetworkPolicy model) {
+                this.allowCidrs = model.allowCidrs;
+                this.allowFqdns = model.allowFqdns;
+                this.enableAcl = model.enableAcl;
+            } 
+
+            /**
+             * <p>允许访问的 CIDR 或 IP 列表，最多 50 个。</p>
+             */
+            public Builder allowCidrs(java.util.List<String> allowCidrs) {
+                this.allowCidrs = allowCidrs;
+                return this;
+            }
+
+            /**
+             * <p>允许访问的 FQDN 列表，最多 50 个。</p>
+             */
+            public Builder allowFqdns(java.util.List<String> allowFqdns) {
+                this.allowFqdns = allowFqdns;
+                return this;
+            }
+
+            /**
+             * <p>是否启用沙箱网络 ACL。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder enableAcl(Boolean enableAcl) {
+                this.enableAcl = enableAcl;
+                return this;
+            }
+
+            public SandboxNetworkPolicy build() {
+                return new SandboxNetworkPolicy(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetDigitalEmployeeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDigitalEmployeeResponseBody</p>
+     */
     public static class Statements extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("actions")
         private java.util.List<String> actions;
 
         @com.aliyun.core.annotation.NameInMap("apiVersion")
-        @com.aliyun.core.annotation.Validation(required = true)
+        @Deprecated
         private String apiVersion;
 
         @com.aliyun.core.annotation.NameInMap("decision")
@@ -656,7 +779,6 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
 
             /**
              * <p>本条语句对应的 Aliyun OpenAPI API 版本。</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-30</p>

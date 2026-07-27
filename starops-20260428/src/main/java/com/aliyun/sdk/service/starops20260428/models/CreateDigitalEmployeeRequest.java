@@ -57,6 +57,10 @@ public class CreateDigitalEmployeeRequest extends Request {
     private String roleArn;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sandboxNetworkPolicy")
+    private SandboxNetworkPolicy sandboxNetworkPolicy;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("tags")
     private java.util.List<Tag> tags;
 
@@ -75,6 +79,7 @@ public class CreateDigitalEmployeeRequest extends Request {
         this.name = builder.name;
         this.resourceGroupId = builder.resourceGroupId;
         this.roleArn = builder.roleArn;
+        this.sandboxNetworkPolicy = builder.sandboxNetworkPolicy;
         this.tags = builder.tags;
         this.toolPolicy = builder.toolPolicy;
     }
@@ -156,6 +161,13 @@ public class CreateDigitalEmployeeRequest extends Request {
     }
 
     /**
+     * @return sandboxNetworkPolicy
+     */
+    public SandboxNetworkPolicy getSandboxNetworkPolicy() {
+        return this.sandboxNetworkPolicy;
+    }
+
+    /**
      * @return tags
      */
     public java.util.List<Tag> getTags() {
@@ -179,6 +191,7 @@ public class CreateDigitalEmployeeRequest extends Request {
         private String name; 
         private String resourceGroupId; 
         private String roleArn; 
+        private SandboxNetworkPolicy sandboxNetworkPolicy; 
         private java.util.List<Tag> tags; 
         private ToolPolicy toolPolicy; 
 
@@ -197,6 +210,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             this.name = request.name;
             this.resourceGroupId = request.resourceGroupId;
             this.roleArn = request.roleArn;
+            this.sandboxNetworkPolicy = request.sandboxNetworkPolicy;
             this.tags = request.tags;
             this.toolPolicy = request.toolPolicy;
         } 
@@ -285,6 +299,18 @@ public class CreateDigitalEmployeeRequest extends Request {
         public Builder roleArn(String roleArn) {
             this.putBodyParameter("roleArn", roleArn);
             this.roleArn = roleArn;
+            return this;
+        }
+
+        /**
+         * <p>数字员工沙箱网络 ACL 策略配置。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;allowFqdns&quot;:[&quot;api.example.com&quot;],&quot;allowCidrs&quot;:[&quot;1.2.3.0/24&quot;,&quot;8.8.8.8&quot;],&quot;enableAcl&quot;:false}</p>
+         */
+        public Builder sandboxNetworkPolicy(SandboxNetworkPolicy sandboxNetworkPolicy) {
+            this.putBodyParameter("sandboxNetworkPolicy", sandboxNetworkPolicy);
+            this.sandboxNetworkPolicy = sandboxNetworkPolicy;
             return this;
         }
 
@@ -514,11 +540,111 @@ public class CreateDigitalEmployeeRequest extends Request {
      *
      * <p>CreateDigitalEmployeeRequest</p>
      */
+    public static class SandboxNetworkPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("allowCidrs")
+        private java.util.List<String> allowCidrs;
+
+        @com.aliyun.core.annotation.NameInMap("allowFqdns")
+        private java.util.List<String> allowFqdns;
+
+        @com.aliyun.core.annotation.NameInMap("enableAcl")
+        private Boolean enableAcl;
+
+        private SandboxNetworkPolicy(Builder builder) {
+            this.allowCidrs = builder.allowCidrs;
+            this.allowFqdns = builder.allowFqdns;
+            this.enableAcl = builder.enableAcl;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SandboxNetworkPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return allowCidrs
+         */
+        public java.util.List<String> getAllowCidrs() {
+            return this.allowCidrs;
+        }
+
+        /**
+         * @return allowFqdns
+         */
+        public java.util.List<String> getAllowFqdns() {
+            return this.allowFqdns;
+        }
+
+        /**
+         * @return enableAcl
+         */
+        public Boolean getEnableAcl() {
+            return this.enableAcl;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> allowCidrs; 
+            private java.util.List<String> allowFqdns; 
+            private Boolean enableAcl; 
+
+            private Builder() {
+            } 
+
+            private Builder(SandboxNetworkPolicy model) {
+                this.allowCidrs = model.allowCidrs;
+                this.allowFqdns = model.allowFqdns;
+                this.enableAcl = model.enableAcl;
+            } 
+
+            /**
+             * <p>允许访问的 CIDR 或 IP 列表，最多 50 个。</p>
+             */
+            public Builder allowCidrs(java.util.List<String> allowCidrs) {
+                this.allowCidrs = allowCidrs;
+                return this;
+            }
+
+            /**
+             * <p>允许访问的 FQDN 列表，最多 50 个。</p>
+             */
+            public Builder allowFqdns(java.util.List<String> allowFqdns) {
+                this.allowFqdns = allowFqdns;
+                return this;
+            }
+
+            /**
+             * <p>是否启用沙箱网络 ACL。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder enableAcl(Boolean enableAcl) {
+                this.enableAcl = enableAcl;
+                return this;
+            }
+
+            public SandboxNetworkPolicy build() {
+                return new SandboxNetworkPolicy(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDigitalEmployeeRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDigitalEmployeeRequest</p>
+     */
     public static class Statements extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("actions")
         private java.util.List<String> actions;
 
         @com.aliyun.core.annotation.NameInMap("apiVersion")
+        @Deprecated
         private String apiVersion;
 
         @com.aliyun.core.annotation.NameInMap("decision")

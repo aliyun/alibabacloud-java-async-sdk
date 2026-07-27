@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of CreateArtifactUploadToken  CreateArtifactUploadTokenRequest
+     * @return CreateArtifactUploadTokenResponse
+     */
+    CompletableFuture<CreateArtifactUploadTokenResponse> createArtifactUploadToken(CreateArtifactUploadTokenRequest request);
+
+    /**
      * @param request the request parameters of CreateChat  CreateChatRequest
      * @return CreateChatResponse
      */
@@ -96,6 +102,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetArtifactResponse
      */
     CompletableFuture<GetArtifactResponse> getArtifact(GetArtifactRequest request);
+
+    /**
+     * @param request the request parameters of GetArtifactDownloadUrl  GetArtifactDownloadUrlRequest
+     * @return GetArtifactDownloadUrlResponse
+     */
+    CompletableFuture<GetArtifactDownloadUrlResponse> getArtifactDownloadUrl(GetArtifactDownloadUrlRequest request);
 
     /**
      * @param request the request parameters of GetDigitalEmployee  GetDigitalEmployeeRequest
