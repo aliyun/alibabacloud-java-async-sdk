@@ -138,7 +138,6 @@ public class GetAccountByRowPermissionIdRequest extends Request {
         private Long rowPermissionId;
 
         @com.aliyun.core.annotation.NameInMap("RuleIds")
-        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List<Long> ruleIds;
 
         private GetAccountByRowPermissionIdQuery(Builder builder) {
@@ -192,7 +191,7 @@ public class GetAccountByRowPermissionIdRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * RuleIds.
              */
             public Builder ruleIds(java.util.List<Long> ruleIds) {
                 this.ruleIds = ruleIds;

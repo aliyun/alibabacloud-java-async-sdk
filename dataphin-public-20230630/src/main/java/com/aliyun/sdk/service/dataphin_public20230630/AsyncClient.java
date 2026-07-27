@@ -80,6 +80,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AssignQualityRuleOfAllRuleScopeSchedulesResponse> assignQualityRuleOfAllRuleScopeSchedules(AssignQualityRuleOfAllRuleScopeSchedulesRequest request);
 
     /**
+     * @param request the request parameters of BatchCreateKgEntity  BatchCreateKgEntityRequest
+     * @return BatchCreateKgEntityResponse
+     */
+    CompletableFuture<BatchCreateKgEntityResponse> batchCreateKgEntity(BatchCreateKgEntityRequest request);
+
+    /**
+     * @param request the request parameters of BatchCreateKgRelation  BatchCreateKgRelationRequest
+     * @return BatchCreateKgRelationResponse
+     */
+    CompletableFuture<BatchCreateKgRelationResponse> batchCreateKgRelation(BatchCreateKgRelationRequest request);
+
+    /**
      * @param request the request parameters of CheckComputeSourceConnectivity  CheckComputeSourceConnectivityRequest
      * @return CheckComputeSourceConnectivityResponse
      */
@@ -120,6 +132,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateAdHocFileResponse
      */
     CompletableFuture<CreateAdHocFileResponse> createAdHocFile(CreateAdHocFileRequest request);
+
+    /**
+     * @param request the request parameters of CreateBasicProject  CreateBasicProjectRequest
+     * @return CreateBasicProjectResponse
+     */
+    CompletableFuture<CreateBasicProjectResponse> createBasicProject(CreateBasicProjectRequest request);
 
     /**
      * @param request the request parameters of CreateBatchTask  CreateBatchTaskRequest
@@ -188,10 +206,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDatasetResponse> createDataset(CreateDatasetRequest request);
 
     /**
+     * @param request the request parameters of CreateDevProdProject  CreateDevProdProjectRequest
+     * @return CreateDevProdProjectResponse
+     */
+    CompletableFuture<CreateDevProdProjectResponse> createDevProdProject(CreateDevProdProjectRequest request);
+
+    /**
      * @param request the request parameters of CreateDirectory  CreateDirectoryRequest
      * @return CreateDirectoryResponse
      */
     CompletableFuture<CreateDirectoryResponse> createDirectory(CreateDirectoryRequest request);
+
+    /**
+     * @param request the request parameters of CreateKgEntity  CreateKgEntityRequest
+     * @return CreateKgEntityResponse
+     */
+    CompletableFuture<CreateKgEntityResponse> createKgEntity(CreateKgEntityRequest request);
+
+    /**
+     * @param request the request parameters of CreateKgRelation  CreateKgRelationRequest
+     * @return CreateKgRelationResponse
+     */
+    CompletableFuture<CreateKgRelationResponse> createKgRelation(CreateKgRelationRequest request);
 
     /**
      * @param request the request parameters of CreateNodeSupplement  CreateNodeSupplementRequest
@@ -392,6 +428,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDirectoryResponse> deleteDirectory(DeleteDirectoryRequest request);
 
     /**
+     * @param request the request parameters of DeleteKgEntity  DeleteKgEntityRequest
+     * @return DeleteKgEntityResponse
+     */
+    CompletableFuture<DeleteKgEntityResponse> deleteKgEntity(DeleteKgEntityRequest request);
+
+    /**
+     * @param request the request parameters of DeleteKgRelation  DeleteKgRelationRequest
+     * @return DeleteKgRelationResponse
+     */
+    CompletableFuture<DeleteKgRelationResponse> deleteKgRelation(DeleteKgRelationRequest request);
+
+    /**
+     * @param request the request parameters of DeleteProject  DeleteProjectRequest
+     * @return DeleteProjectResponse
+     */
+    CompletableFuture<DeleteProjectResponse> deleteProject(DeleteProjectRequest request);
+
+    /**
      * @param request the request parameters of DeleteQualityRules  DeleteQualityRulesRequest
      * @return DeleteQualityRulesResponse
      */
@@ -512,6 +566,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteUserGroupResponse> deleteUserGroup(DeleteUserGroupRequest request);
 
     /**
+     * @param request the request parameters of ExecKgCypher  ExecKgCypherRequest
+     * @return ExecKgCypherResponse
+     */
+    CompletableFuture<ExecKgCypherResponse> execKgCypher(ExecKgCypherRequest request);
+
+    /**
      * @param request the request parameters of ExecuteAdHocTask  ExecuteAdHocTaskRequest
      * @return ExecuteAdHocTaskResponse
      */
@@ -528,6 +588,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ExecuteTriggerNodeResponse
      */
     CompletableFuture<ExecuteTriggerNodeResponse> executeTriggerNode(ExecuteTriggerNodeRequest request);
+
+    /**
+     * @param request the request parameters of ExportKgSchema  ExportKgSchemaRequest
+     * @return ExportKgSchemaResponse
+     */
+    CompletableFuture<ExportKgSchemaResponse> exportKgSchema(ExportKgSchemaRequest request);
 
     /**
      * @param request the request parameters of FixData  FixDataRequest
@@ -786,6 +852,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetInstanceUpDownStreamResponse
      */
     CompletableFuture<GetInstanceUpDownStreamResponse> getInstanceUpDownStream(GetInstanceUpDownStreamRequest request);
+
+    /**
+     * @param request the request parameters of GetKgEntity  GetKgEntityRequest
+     * @return GetKgEntityResponse
+     */
+    CompletableFuture<GetKgEntityResponse> getKgEntity(GetKgEntityRequest request);
+
+    /**
+     * @param request the request parameters of GetKgNeighbor  GetKgNeighborRequest
+     * @return GetKgNeighborResponse
+     */
+    CompletableFuture<GetKgNeighborResponse> getKgNeighbor(GetKgNeighborRequest request);
+
+    /**
+     * @param request the request parameters of GetKgRelation  GetKgRelationRequest
+     * @return GetKgRelationResponse
+     */
+    CompletableFuture<GetKgRelationResponse> getKgRelation(GetKgRelationRequest request);
+
+    /**
+     * @param request the request parameters of GetKgSchemaPublishResult  GetKgSchemaPublishResultRequest
+     * @return GetKgSchemaPublishResultResponse
+     */
+    CompletableFuture<GetKgSchemaPublishResultResponse> getKgSchemaPublishResult(GetKgSchemaPublishResultRequest request);
 
     /**
      * @param request the request parameters of GetLatestSubmitDetail  GetLatestSubmitDetailRequest
@@ -1160,6 +1250,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GrantResourcePermissionResponse> grantResourcePermission(GrantResourcePermissionRequest request);
 
     /**
+     * @param request the request parameters of ImportKgSchema  ImportKgSchemaRequest
+     * @return ImportKgSchemaResponse
+     */
+    CompletableFuture<ImportKgSchemaResponse> importKgSchema(ImportKgSchemaRequest request);
+
+    /**
      * @param request the request parameters of ListAddableRoles  ListAddableRolesRequest
      * @return ListAddableRolesResponse
      */
@@ -1302,6 +1398,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListInstancesResponse
      */
     CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
+
+    /**
+     * @param request the request parameters of ListKgEntity  ListKgEntityRequest
+     * @return ListKgEntityResponse
+     */
+    CompletableFuture<ListKgEntityResponse> listKgEntity(ListKgEntityRequest request);
+
+    /**
+     * @param request the request parameters of ListKgRelation  ListKgRelationRequest
+     * @return ListKgRelationResponse
+     */
+    CompletableFuture<ListKgRelationResponse> listKgRelation(ListKgRelationRequest request);
 
     /**
      * @param request the request parameters of ListNodeDownStream  ListNodeDownStreamRequest
@@ -1502,6 +1610,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PublishDataServiceApiResponse> publishDataServiceApi(PublishDataServiceApiRequest request);
 
     /**
+     * @param request the request parameters of PublishKgSchema  PublishKgSchemaRequest
+     * @return PublishKgSchemaResponse
+     */
+    CompletableFuture<PublishKgSchemaResponse> publishKgSchema(PublishKgSchemaRequest request);
+
+    /**
      * @param request the request parameters of PublishObjectList  PublishObjectListRequest
      * @return PublishObjectListResponse
      */
@@ -1628,6 +1742,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateAdHocFileResponse> updateAdHocFile(UpdateAdHocFileRequest request);
 
     /**
+     * @param request the request parameters of UpdateBasicProject  UpdateBasicProjectRequest
+     * @return UpdateBasicProjectResponse
+     */
+    CompletableFuture<UpdateBasicProjectResponse> updateBasicProject(UpdateBasicProjectRequest request);
+
+    /**
      * @param request the request parameters of UpdateBatchTask  UpdateBatchTaskRequest
      * @return UpdateBatchTaskResponse
      */
@@ -1706,6 +1826,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateDatasetResponse> updateDataset(UpdateDatasetRequest request);
 
     /**
+     * @param request the request parameters of UpdateDevProdProject  UpdateDevProdProjectRequest
+     * @return UpdateDevProdProjectResponse
+     */
+    CompletableFuture<UpdateDevProdProjectResponse> updateDevProdProject(UpdateDevProdProjectRequest request);
+
+    /**
      * @param request the request parameters of UpdateFileDirectory  UpdateFileDirectoryRequest
      * @return UpdateFileDirectoryResponse
      */
@@ -1716,6 +1842,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateFileNameResponse
      */
     CompletableFuture<UpdateFileNameResponse> updateFileName(UpdateFileNameRequest request);
+
+    /**
+     * @param request the request parameters of UpdateKgEntity  UpdateKgEntityRequest
+     * @return UpdateKgEntityResponse
+     */
+    CompletableFuture<UpdateKgEntityResponse> updateKgEntity(UpdateKgEntityRequest request);
+
+    /**
+     * @param request the request parameters of UpdateKgRelation  UpdateKgRelationRequest
+     * @return UpdateKgRelationResponse
+     */
+    CompletableFuture<UpdateKgRelationResponse> updateKgRelation(UpdateKgRelationRequest request);
 
     /**
      * @param request the request parameters of UpdatePipeline  UpdatePipelineRequest

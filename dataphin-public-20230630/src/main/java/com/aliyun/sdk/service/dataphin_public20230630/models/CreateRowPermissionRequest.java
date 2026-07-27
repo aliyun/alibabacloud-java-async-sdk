@@ -254,7 +254,6 @@ public class CreateRowPermissionRequest extends Request {
         private String type;
 
         @com.aliyun.core.annotation.NameInMap("Values")
-        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List<String> values;
 
         private Expressions(Builder builder) {
@@ -368,7 +367,7 @@ public class CreateRowPermissionRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * Values.
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -546,7 +545,6 @@ public class CreateRowPermissionRequest extends Request {
         private String scopeType;
 
         @com.aliyun.core.annotation.NameInMap("Status")
-        @com.aliyun.core.annotation.Validation(required = true)
         private Integer status;
 
         @com.aliyun.core.annotation.NameInMap("UserMappingList")
@@ -667,10 +665,7 @@ public class CreateRowPermissionRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Status.
              */
             public Builder status(Integer status) {
                 this.status = status;
