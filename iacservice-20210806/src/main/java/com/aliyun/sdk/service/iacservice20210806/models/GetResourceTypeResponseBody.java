@@ -239,6 +239,9 @@ public class GetResourceTypeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("resourceListPageUrl")
         private String resourceListPageUrl;
 
+        @com.aliyun.core.annotation.NameInMap("resourceType")
+        private String resourceType;
+
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
@@ -269,6 +272,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
             this.properties = builder.properties;
             this.resourceDetailPageUrl = builder.resourceDetailPageUrl;
             this.resourceListPageUrl = builder.resourceListPageUrl;
+            this.resourceType = builder.resourceType;
             this.status = builder.status;
             this.statusStartVersion = builder.statusStartVersion;
             this.subcategory = builder.subcategory;
@@ -343,6 +347,13 @@ public class GetResourceTypeResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -400,6 +411,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
             private java.util.Map<String, ?> properties; 
             private String resourceDetailPageUrl; 
             private String resourceListPageUrl; 
+            private String resourceType; 
             private String status; 
             private String statusStartVersion; 
             private String subcategory; 
@@ -420,6 +432,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
                 this.properties = model.properties;
                 this.resourceDetailPageUrl = model.resourceDetailPageUrl;
                 this.resourceListPageUrl = model.resourceListPageUrl;
+                this.resourceType = model.resourceType;
                 this.status = model.status;
                 this.statusStartVersion = model.statusStartVersion;
                 this.subcategory = model.subcategory;
@@ -490,6 +503,14 @@ public class GetResourceTypeResponseBody extends TeaModel {
              */
             public Builder resourceListPageUrl(String resourceListPageUrl) {
                 this.resourceListPageUrl = resourceListPageUrl;
+                return this;
+            }
+
+            /**
+             * resourceType.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
                 return this;
             }
 

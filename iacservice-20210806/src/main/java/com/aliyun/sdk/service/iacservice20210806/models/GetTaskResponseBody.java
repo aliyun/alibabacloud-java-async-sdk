@@ -437,6 +437,9 @@ public class GetTaskResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("skipPropertyValidation")
         private Boolean skipPropertyValidation;
 
+        @com.aliyun.core.annotation.NameInMap("skipRegionValidation")
+        private Boolean skipRegionValidation;
+
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
@@ -476,6 +479,7 @@ public class GetTaskResponseBody extends TeaModel {
             this.protectionStrategy = builder.protectionStrategy;
             this.ramRole = builder.ramRole;
             this.skipPropertyValidation = builder.skipPropertyValidation;
+            this.skipRegionValidation = builder.skipRegionValidation;
             this.status = builder.status;
             this.tags = builder.tags;
             this.taskBackend = builder.taskBackend;
@@ -613,6 +617,13 @@ public class GetTaskResponseBody extends TeaModel {
         }
 
         /**
+         * @return skipRegionValidation
+         */
+        public Boolean getSkipRegionValidation() {
+            return this.skipRegionValidation;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -679,6 +690,7 @@ public class GetTaskResponseBody extends TeaModel {
             private java.util.List<String> protectionStrategy; 
             private String ramRole; 
             private Boolean skipPropertyValidation; 
+            private Boolean skipRegionValidation; 
             private String status; 
             private java.util.List<Tags> tags; 
             private TaskBackend taskBackend; 
@@ -708,6 +720,7 @@ public class GetTaskResponseBody extends TeaModel {
                 this.protectionStrategy = model.protectionStrategy;
                 this.ramRole = model.ramRole;
                 this.skipPropertyValidation = model.skipPropertyValidation;
+                this.skipRegionValidation = model.skipRegionValidation;
                 this.status = model.status;
                 this.tags = model.tags;
                 this.taskBackend = model.taskBackend;
@@ -850,6 +863,14 @@ public class GetTaskResponseBody extends TeaModel {
              */
             public Builder skipPropertyValidation(Boolean skipPropertyValidation) {
                 this.skipPropertyValidation = skipPropertyValidation;
+                return this;
+            }
+
+            /**
+             * skipRegionValidation.
+             */
+            public Builder skipRegionValidation(Boolean skipRegionValidation) {
+                this.skipRegionValidation = skipRegionValidation;
                 return this;
             }
 

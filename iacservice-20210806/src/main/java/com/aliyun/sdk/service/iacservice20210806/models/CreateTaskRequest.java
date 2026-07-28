@@ -74,12 +74,20 @@ public class CreateTaskRequest extends Request {
     private Boolean skipPropertyValidation;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("skipRegionValidation")
+    private Boolean skipRegionValidation;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("tags")
     private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("taskBackend")
     private TaskBackend taskBackend;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("terraformProviderVersion")
+    private String terraformProviderVersion;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("terraformVersion")
@@ -104,8 +112,10 @@ public class CreateTaskRequest extends Request {
         this.protectionStrategy = builder.protectionStrategy;
         this.ramRole = builder.ramRole;
         this.skipPropertyValidation = builder.skipPropertyValidation;
+        this.skipRegionValidation = builder.skipRegionValidation;
         this.tags = builder.tags;
         this.taskBackend = builder.taskBackend;
+        this.terraformProviderVersion = builder.terraformProviderVersion;
         this.terraformVersion = builder.terraformVersion;
         this.triggerStrategy = builder.triggerStrategy;
     }
@@ -215,6 +225,13 @@ public class CreateTaskRequest extends Request {
     }
 
     /**
+     * @return skipRegionValidation
+     */
+    public Boolean getSkipRegionValidation() {
+        return this.skipRegionValidation;
+    }
+
+    /**
      * @return tags
      */
     public java.util.List<Tags> getTags() {
@@ -226,6 +243,13 @@ public class CreateTaskRequest extends Request {
      */
     public TaskBackend getTaskBackend() {
         return this.taskBackend;
+    }
+
+    /**
+     * @return terraformProviderVersion
+     */
+    public String getTerraformProviderVersion() {
+        return this.terraformProviderVersion;
     }
 
     /**
@@ -256,8 +280,10 @@ public class CreateTaskRequest extends Request {
         private java.util.List<String> protectionStrategy; 
         private String ramRole; 
         private Boolean skipPropertyValidation; 
+        private Boolean skipRegionValidation; 
         private java.util.List<Tags> tags; 
         private TaskBackend taskBackend; 
+        private String terraformProviderVersion; 
         private String terraformVersion; 
         private String triggerStrategy; 
 
@@ -280,8 +306,10 @@ public class CreateTaskRequest extends Request {
             this.protectionStrategy = request.protectionStrategy;
             this.ramRole = request.ramRole;
             this.skipPropertyValidation = request.skipPropertyValidation;
+            this.skipRegionValidation = request.skipRegionValidation;
             this.tags = request.tags;
             this.taskBackend = request.taskBackend;
+            this.terraformProviderVersion = request.terraformProviderVersion;
             this.terraformVersion = request.terraformVersion;
             this.triggerStrategy = request.triggerStrategy;
         } 
@@ -416,6 +444,15 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
+         * skipRegionValidation.
+         */
+        public Builder skipRegionValidation(Boolean skipRegionValidation) {
+            this.putBodyParameter("skipRegionValidation", skipRegionValidation);
+            this.skipRegionValidation = skipRegionValidation;
+            return this;
+        }
+
+        /**
          * tags.
          */
         public Builder tags(java.util.List<Tags> tags) {
@@ -430,6 +467,15 @@ public class CreateTaskRequest extends Request {
         public Builder taskBackend(TaskBackend taskBackend) {
             this.putBodyParameter("taskBackend", taskBackend);
             this.taskBackend = taskBackend;
+            return this;
+        }
+
+        /**
+         * terraformProviderVersion.
+         */
+        public Builder terraformProviderVersion(String terraformProviderVersion) {
+            this.putBodyParameter("terraformProviderVersion", terraformProviderVersion);
+            this.terraformProviderVersion = terraformProviderVersion;
             return this;
         }
 

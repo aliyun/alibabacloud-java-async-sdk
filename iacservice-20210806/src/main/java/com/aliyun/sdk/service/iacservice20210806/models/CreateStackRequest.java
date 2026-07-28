@@ -31,6 +31,10 @@ public class CreateStackRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("parameterSetIds")
+    private java.util.List<String> parameterSetIds;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ramRole")
     private String ramRole;
 
@@ -52,6 +56,7 @@ public class CreateStackRequest extends Request {
         this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.name = builder.name;
+        this.parameterSetIds = builder.parameterSetIds;
         this.ramRole = builder.ramRole;
         this.source = builder.source;
         this.sourcePath = builder.sourcePath;
@@ -93,6 +98,13 @@ public class CreateStackRequest extends Request {
     }
 
     /**
+     * @return parameterSetIds
+     */
+    public java.util.List<String> getParameterSetIds() {
+        return this.parameterSetIds;
+    }
+
+    /**
      * @return ramRole
      */
     public String getRamRole() {
@@ -124,6 +136,7 @@ public class CreateStackRequest extends Request {
         private String clientToken; 
         private String description; 
         private String name; 
+        private java.util.List<String> parameterSetIds; 
         private String ramRole; 
         private String source; 
         private String sourcePath; 
@@ -138,6 +151,7 @@ public class CreateStackRequest extends Request {
             this.clientToken = request.clientToken;
             this.description = request.description;
             this.name = request.name;
+            this.parameterSetIds = request.parameterSetIds;
             this.ramRole = request.ramRole;
             this.source = request.source;
             this.sourcePath = request.sourcePath;
@@ -171,6 +185,15 @@ public class CreateStackRequest extends Request {
         public Builder name(String name) {
             this.putBodyParameter("name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * parameterSetIds.
+         */
+        public Builder parameterSetIds(java.util.List<String> parameterSetIds) {
+            this.putBodyParameter("parameterSetIds", parameterSetIds);
+            this.parameterSetIds = parameterSetIds;
             return this;
         }
 

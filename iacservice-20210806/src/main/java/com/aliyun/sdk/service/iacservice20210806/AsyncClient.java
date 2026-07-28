@@ -296,6 +296,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetProjectResponse> getProject(GetProjectRequest request);
 
     /**
+     * @param request the request parameters of GetProviderDocument  GetProviderDocumentRequest
+     * @return GetProviderDocumentResponse
+     */
+    CompletableFuture<GetProviderDocumentResponse> getProviderDocument(GetProviderDocumentRequest request);
+
+    /**
      * @param request the request parameters of GetRegistryModule  GetRegistryModuleRequest
      * @return GetRegistryModuleResponse
      */

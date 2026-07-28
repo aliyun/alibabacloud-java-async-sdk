@@ -68,8 +68,16 @@ public class UpdateTaskAttributeRequest extends Request {
     private Boolean skipPropertyValidation;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("skipRegionValidation")
+    private Boolean skipRegionValidation;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("tags")
     private java.util.List<Tags> tags;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("terraformProviderVersion")
+    private String terraformProviderVersion;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("terraformVersion")
@@ -93,7 +101,9 @@ public class UpdateTaskAttributeRequest extends Request {
         this.protectionStrategy = builder.protectionStrategy;
         this.ramRole = builder.ramRole;
         this.skipPropertyValidation = builder.skipPropertyValidation;
+        this.skipRegionValidation = builder.skipRegionValidation;
         this.tags = builder.tags;
+        this.terraformProviderVersion = builder.terraformProviderVersion;
         this.terraformVersion = builder.terraformVersion;
         this.triggerStrategy = builder.triggerStrategy;
     }
@@ -196,10 +206,24 @@ public class UpdateTaskAttributeRequest extends Request {
     }
 
     /**
+     * @return skipRegionValidation
+     */
+    public Boolean getSkipRegionValidation() {
+        return this.skipRegionValidation;
+    }
+
+    /**
      * @return tags
      */
     public java.util.List<Tags> getTags() {
         return this.tags;
+    }
+
+    /**
+     * @return terraformProviderVersion
+     */
+    public String getTerraformProviderVersion() {
+        return this.terraformProviderVersion;
     }
 
     /**
@@ -229,7 +253,9 @@ public class UpdateTaskAttributeRequest extends Request {
         private java.util.List<String> protectionStrategy; 
         private String ramRole; 
         private Boolean skipPropertyValidation; 
+        private Boolean skipRegionValidation; 
         private java.util.List<Tags> tags; 
+        private String terraformProviderVersion; 
         private String terraformVersion; 
         private String triggerStrategy; 
 
@@ -251,7 +277,9 @@ public class UpdateTaskAttributeRequest extends Request {
             this.protectionStrategy = request.protectionStrategy;
             this.ramRole = request.ramRole;
             this.skipPropertyValidation = request.skipPropertyValidation;
+            this.skipRegionValidation = request.skipRegionValidation;
             this.tags = request.tags;
+            this.terraformProviderVersion = request.terraformProviderVersion;
             this.terraformVersion = request.terraformVersion;
             this.triggerStrategy = request.triggerStrategy;
         } 
@@ -368,11 +396,29 @@ public class UpdateTaskAttributeRequest extends Request {
         }
 
         /**
+         * skipRegionValidation.
+         */
+        public Builder skipRegionValidation(Boolean skipRegionValidation) {
+            this.putBodyParameter("skipRegionValidation", skipRegionValidation);
+            this.skipRegionValidation = skipRegionValidation;
+            return this;
+        }
+
+        /**
          * tags.
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
             this.tags = tags;
+            return this;
+        }
+
+        /**
+         * terraformProviderVersion.
+         */
+        public Builder terraformProviderVersion(String terraformProviderVersion) {
+            this.putBodyParameter("terraformProviderVersion", terraformProviderVersion);
+            this.terraformProviderVersion = terraformProviderVersion;
             return this;
         }
 
