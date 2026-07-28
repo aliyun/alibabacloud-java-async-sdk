@@ -86,6 +86,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BindPolarClawAgentResponse> bindPolarClawAgent(BindPolarClawAgentRequest request);
 
     /**
+     * @param request the request parameters of BindResourceControl  BindResourceControlRequest
+     * @return BindResourceControlResponse
+     */
+    CompletableFuture<BindResourceControlResponse> bindResourceControl(BindResourceControlRequest request);
+
+    /**
      * @param request the request parameters of CancelActiveOperationTasks  CancelActiveOperationTasksRequest
      * @return CancelActiveOperationTasksResponse
      */
@@ -536,6 +542,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRateLimitPolicyResponse> createRateLimitPolicy(CreateRateLimitPolicyRequest request);
 
     /**
+     * @param request the request parameters of CreateResourceControl  CreateResourceControlRequest
+     * @return CreateResourceControlResponse
+     */
+    CompletableFuture<CreateResourceControlResponse> createResourceControl(CreateResourceControlRequest request);
+
+    /**
      * @param request the request parameters of CreateServiceLinkedRole  CreateServiceLinkedRoleRequest
      * @return CreateServiceLinkedRoleResponse
      */
@@ -871,6 +883,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteRateLimitPolicyResponse> deleteRateLimitPolicy(DeleteRateLimitPolicyRequest request);
 
     /**
+     * @param request the request parameters of DeleteResourceControl  DeleteResourceControlRequest
+     * @return DeleteResourceControlResponse
+     */
+    CompletableFuture<DeleteResourceControlResponse> deleteResourceControl(DeleteResourceControlRequest request);
+
+    /**
      * @param request the request parameters of DeleteSQLRateLimitingRules  DeleteSQLRateLimitingRulesRequest
      * @return DeleteSQLRateLimitingRulesResponse
      */
@@ -1067,6 +1085,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeApplicationSessionIdsResponse
      */
     CompletableFuture<DescribeApplicationSessionIdsResponse> describeApplicationSessionIds(DescribeApplicationSessionIdsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeApplicationUsage  DescribeApplicationUsageRequest
+     * @return DescribeApplicationUsageResponse
+     */
+    CompletableFuture<DescribeApplicationUsageResponse> describeApplicationUsage(DescribeApplicationUsageRequest request);
 
     /**
      * @param request the request parameters of DescribeApplications  DescribeApplicationsRequest
@@ -2177,6 +2201,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyApplicationDescriptionResponse> modifyApplicationDescription(ModifyApplicationDescriptionRequest request);
 
     /**
+     * @param request the request parameters of ModifyApplicationEndpointAddress  ModifyApplicationEndpointAddressRequest
+     * @return ModifyApplicationEndpointAddressResponse
+     */
+    CompletableFuture<ModifyApplicationEndpointAddressResponse> modifyApplicationEndpointAddress(ModifyApplicationEndpointAddressRequest request);
+
+    /**
      * @param request the request parameters of ModifyApplicationParameter  ModifyApplicationParameterRequest
      * @return ModifyApplicationParameterResponse
      */
@@ -2568,6 +2598,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyRateLimitPolicyResponse> modifyRateLimitPolicy(ModifyRateLimitPolicyRequest request);
 
     /**
+     * @param request the request parameters of ModifyResourceControl  ModifyResourceControlRequest
+     * @return ModifyResourceControlResponse
+     */
+    CompletableFuture<ModifyResourceControlResponse> modifyResourceControl(ModifyResourceControlRequest request);
+
+    /**
      * @param request the request parameters of ModifyResourcePackage  ModifyResourcePackageRequest
      * @return ModifyResourcePackageResponse
      */
@@ -2812,6 +2848,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UnbindPolarClawAgentResponse> unbindPolarClawAgent(UnbindPolarClawAgentRequest request);
 
     /**
+     * @param request the request parameters of UnbindResourceControl  UnbindResourceControlRequest
+     * @return UnbindResourceControlResponse
+     */
+    CompletableFuture<UnbindResourceControlResponse> unbindResourceControl(UnbindResourceControlRequest request);
+
+    /**
      * @param request the request parameters of UninstallPolarClawPlugin  UninstallPolarClawPluginRequest
      * @return UninstallPolarClawPluginResponse
      */
@@ -2864,6 +2906,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdatePolarClawSkillResponse
      */
     CompletableFuture<UpdatePolarClawSkillResponse> updatePolarClawSkill(UpdatePolarClawSkillRequest request);
+
+    /**
+     * @param request the request parameters of UpgradeApplicationVersion  UpgradeApplicationVersionRequest
+     * @return UpgradeApplicationVersionResponse
+     */
+    CompletableFuture<UpgradeApplicationVersionResponse> upgradeApplicationVersion(UpgradeApplicationVersionRequest request);
 
     /**
      * <b>description</b> :
