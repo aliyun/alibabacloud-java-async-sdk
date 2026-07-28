@@ -23,9 +23,13 @@ public class ModifyInstancesSSLResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("SSLExpiredTime")
+    private String SSLExpiredTime;
+
     private ModifyInstancesSSLResponseBody(Builder builder) {
         this.instanceNames = builder.instanceNames;
         this.requestId = builder.requestId;
+        this.SSLExpiredTime = builder.SSLExpiredTime;
     }
 
     public static Builder builder() {
@@ -54,9 +58,17 @@ public class ModifyInstancesSSLResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return SSLExpiredTime
+     */
+    public String getSSLExpiredTime() {
+        return this.SSLExpiredTime;
+    }
+
     public static final class Builder {
         private java.util.List<String> instanceNames; 
         private String requestId; 
+        private String SSLExpiredTime; 
 
         private Builder() {
         } 
@@ -64,6 +76,7 @@ public class ModifyInstancesSSLResponseBody extends TeaModel {
         private Builder(ModifyInstancesSSLResponseBody model) {
             this.instanceNames = model.instanceNames;
             this.requestId = model.requestId;
+            this.SSLExpiredTime = model.SSLExpiredTime;
         } 
 
         /**
@@ -88,6 +101,14 @@ public class ModifyInstancesSSLResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SSLExpiredTime.
+         */
+        public Builder SSLExpiredTime(String SSLExpiredTime) {
+            this.SSLExpiredTime = SSLExpiredTime;
             return this;
         }
 

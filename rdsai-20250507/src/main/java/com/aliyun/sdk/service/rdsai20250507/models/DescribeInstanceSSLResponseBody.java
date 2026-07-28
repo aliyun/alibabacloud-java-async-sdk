@@ -32,6 +32,9 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SSLEnabled")
     private String SSLEnabled;
 
+    @com.aliyun.core.annotation.NameInMap("SSLExpiredTime")
+    private String SSLExpiredTime;
+
     @com.aliyun.core.annotation.NameInMap("ServerCert")
     private String serverCert;
 
@@ -44,6 +47,7 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         this.instanceName = builder.instanceName;
         this.requestId = builder.requestId;
         this.SSLEnabled = builder.SSLEnabled;
+        this.SSLExpiredTime = builder.SSLExpiredTime;
         this.serverCert = builder.serverCert;
         this.serverKey = builder.serverKey;
     }
@@ -96,6 +100,13 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
     }
 
     /**
+     * @return SSLExpiredTime
+     */
+    public String getSSLExpiredTime() {
+        return this.SSLExpiredTime;
+    }
+
+    /**
      * @return serverCert
      */
     public String getServerCert() {
@@ -115,6 +126,7 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         private String instanceName; 
         private String requestId; 
         private String SSLEnabled; 
+        private String SSLExpiredTime; 
         private String serverCert; 
         private String serverKey; 
 
@@ -127,6 +139,7 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
             this.instanceName = model.instanceName;
             this.requestId = model.requestId;
             this.SSLEnabled = model.SSLEnabled;
+            this.SSLExpiredTime = model.SSLExpiredTime;
             this.serverCert = model.serverCert;
             this.serverKey = model.serverKey;
         } 
@@ -184,6 +197,14 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
          */
         public Builder SSLEnabled(String SSLEnabled) {
             this.SSLEnabled = SSLEnabled;
+            return this;
+        }
+
+        /**
+         * SSLExpiredTime.
+         */
+        public Builder SSLExpiredTime(String SSLExpiredTime) {
+            this.SSLExpiredTime = SSLExpiredTime;
             return this;
         }
 
