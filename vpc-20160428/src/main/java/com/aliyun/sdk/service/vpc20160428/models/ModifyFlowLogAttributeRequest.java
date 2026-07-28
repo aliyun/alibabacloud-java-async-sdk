@@ -39,6 +39,11 @@ public class ModifyFlowLogAttributeRequest extends Request {
     private String ipVersion;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogFormat")
+    @com.aliyun.core.annotation.Validation(maxLength = 512)
+    private String logFormat;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -66,6 +71,7 @@ public class ModifyFlowLogAttributeRequest extends Request {
         this.flowLogId = builder.flowLogId;
         this.flowLogName = builder.flowLogName;
         this.ipVersion = builder.ipVersion;
+        this.logFormat = builder.logFormat;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -122,6 +128,13 @@ public class ModifyFlowLogAttributeRequest extends Request {
     }
 
     /**
+     * @return logFormat
+     */
+    public String getLogFormat() {
+        return this.logFormat;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -162,6 +175,7 @@ public class ModifyFlowLogAttributeRequest extends Request {
         private String flowLogId; 
         private String flowLogName; 
         private String ipVersion; 
+        private String logFormat; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -179,6 +193,7 @@ public class ModifyFlowLogAttributeRequest extends Request {
             this.flowLogId = request.flowLogId;
             this.flowLogName = request.flowLogName;
             this.ipVersion = request.ipVersion;
+            this.logFormat = request.logFormat;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -250,6 +265,15 @@ public class ModifyFlowLogAttributeRequest extends Request {
         public Builder ipVersion(String ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);
             this.ipVersion = ipVersion;
+            return this;
+        }
+
+        /**
+         * LogFormat.
+         */
+        public Builder logFormat(String logFormat) {
+            this.putQueryParameter("LogFormat", logFormat);
+            this.logFormat = logFormat;
             return this;
         }
 

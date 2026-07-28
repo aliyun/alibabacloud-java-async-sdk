@@ -414,6 +414,9 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpVersion")
         private String ipVersion;
 
+        @com.aliyun.core.annotation.NameInMap("LogFormat")
+        private String logFormat;
+
         @com.aliyun.core.annotation.NameInMap("LogStoreName")
         private String logStoreName;
 
@@ -457,6 +460,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             this.flowLogId = builder.flowLogId;
             this.flowLogName = builder.flowLogName;
             this.ipVersion = builder.ipVersion;
+            this.logFormat = builder.logFormat;
             this.logStoreName = builder.logStoreName;
             this.projectName = builder.projectName;
             this.regionId = builder.regionId;
@@ -539,6 +543,13 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
          */
         public String getIpVersion() {
             return this.ipVersion;
+        }
+
+        /**
+         * @return logFormat
+         */
+        public String getLogFormat() {
+            return this.logFormat;
         }
 
         /**
@@ -628,6 +639,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             private String flowLogId; 
             private String flowLogName; 
             private String ipVersion; 
+            private String logFormat; 
             private String logStoreName; 
             private String projectName; 
             private String regionId; 
@@ -653,6 +665,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
                 this.flowLogId = model.flowLogId;
                 this.flowLogName = model.flowLogName;
                 this.ipVersion = model.ipVersion;
+                this.logFormat = model.logFormat;
                 this.logStoreName = model.logStoreName;
                 this.projectName = model.projectName;
                 this.regionId = model.regionId;
@@ -775,6 +788,14 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
+                return this;
+            }
+
+            /**
+             * LogFormat.
+             */
+            public Builder logFormat(String logFormat) {
+                this.logFormat = logFormat;
                 return this;
             }
 
