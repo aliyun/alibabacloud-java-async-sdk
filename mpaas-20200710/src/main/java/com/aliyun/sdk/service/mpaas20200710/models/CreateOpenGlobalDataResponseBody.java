@@ -17,6 +17,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateOpenGlobalDataResponseBody</p>
  */
 public class CreateOpenGlobalDataResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
+    private Integer httpStatusCode;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -30,6 +36,8 @@ public class CreateOpenGlobalDataResponseBody extends TeaModel {
     private String resultMessage;
 
     private CreateOpenGlobalDataResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
+        this.httpStatusCode = builder.httpStatusCode;
         this.requestId = builder.requestId;
         this.result = builder.result;
         this.resultCode = builder.resultCode;
@@ -46,6 +54,20 @@ public class CreateOpenGlobalDataResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
+    }
+
+    /**
+     * @return httpStatusCode
+     */
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     /**
@@ -77,6 +99,8 @@ public class CreateOpenGlobalDataResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
+        private Integer httpStatusCode; 
         private String requestId; 
         private Boolean result; 
         private String resultCode; 
@@ -86,11 +110,29 @@ public class CreateOpenGlobalDataResponseBody extends TeaModel {
         } 
 
         private Builder(CreateOpenGlobalDataResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.httpStatusCode = model.httpStatusCode;
             this.requestId = model.requestId;
             this.result = model.result;
             this.resultCode = model.resultCode;
             this.resultMessage = model.resultMessage;
         } 
+
+        /**
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * HttpStatusCode.
+         */
+        public Builder httpStatusCode(Integer httpStatusCode) {
+            this.httpStatusCode = httpStatusCode;
+            return this;
+        }
 
         /**
          * RequestId.
