@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class MultiModalGuardForBase64Request extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FileBase64Str")
+    private String fileBase64Str;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ImageBase64Str")
     private String imageBase64Str;
 
@@ -31,6 +35,7 @@ public class MultiModalGuardForBase64Request extends Request {
 
     private MultiModalGuardForBase64Request(Builder builder) {
         super(builder);
+        this.fileBase64Str = builder.fileBase64Str;
         this.imageBase64Str = builder.imageBase64Str;
         this.service = builder.service;
         this.serviceParameters = builder.serviceParameters;
@@ -47,6 +52,13 @@ public class MultiModalGuardForBase64Request extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return fileBase64Str
+     */
+    public String getFileBase64Str() {
+        return this.fileBase64Str;
     }
 
     /**
@@ -71,6 +83,7 @@ public class MultiModalGuardForBase64Request extends Request {
     }
 
     public static final class Builder extends Request.Builder<MultiModalGuardForBase64Request, Builder> {
+        private String fileBase64Str; 
         private String imageBase64Str; 
         private String service; 
         private String serviceParameters; 
@@ -81,10 +94,20 @@ public class MultiModalGuardForBase64Request extends Request {
 
         private Builder(MultiModalGuardForBase64Request request) {
             super(request);
+            this.fileBase64Str = request.fileBase64Str;
             this.imageBase64Str = request.imageBase64Str;
             this.service = request.service;
             this.serviceParameters = request.serviceParameters;
         } 
+
+        /**
+         * FileBase64Str.
+         */
+        public Builder fileBase64Str(String fileBase64Str) {
+            this.putBodyParameter("FileBase64Str", fileBase64Str);
+            this.fileBase64Str = fileBase64Str;
+            return this;
+        }
 
         /**
          * ImageBase64Str.

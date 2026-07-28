@@ -1105,6 +1105,522 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
      *
      * <p>DescribeFileModerationResultResponseBody</p>
      */
+    public static class AIGC extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ContentProducer")
+        private String contentProducer;
+
+        @com.aliyun.core.annotation.NameInMap("ContentPropagator")
+        private String contentPropagator;
+
+        @com.aliyun.core.annotation.NameInMap("Label")
+        private String label;
+
+        @com.aliyun.core.annotation.NameInMap("ProduceID")
+        private String produceID;
+
+        @com.aliyun.core.annotation.NameInMap("PropagateID")
+        private String propagateID;
+
+        @com.aliyun.core.annotation.NameInMap("ReservedCode1")
+        private String reservedCode1;
+
+        @com.aliyun.core.annotation.NameInMap("ReservedCode2")
+        private String reservedCode2;
+
+        private AIGC(Builder builder) {
+            this.contentProducer = builder.contentProducer;
+            this.contentPropagator = builder.contentPropagator;
+            this.label = builder.label;
+            this.produceID = builder.produceID;
+            this.propagateID = builder.propagateID;
+            this.reservedCode1 = builder.reservedCode1;
+            this.reservedCode2 = builder.reservedCode2;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AIGC create() {
+            return builder().build();
+        }
+
+        /**
+         * @return contentProducer
+         */
+        public String getContentProducer() {
+            return this.contentProducer;
+        }
+
+        /**
+         * @return contentPropagator
+         */
+        public String getContentPropagator() {
+            return this.contentPropagator;
+        }
+
+        /**
+         * @return label
+         */
+        public String getLabel() {
+            return this.label;
+        }
+
+        /**
+         * @return produceID
+         */
+        public String getProduceID() {
+            return this.produceID;
+        }
+
+        /**
+         * @return propagateID
+         */
+        public String getPropagateID() {
+            return this.propagateID;
+        }
+
+        /**
+         * @return reservedCode1
+         */
+        public String getReservedCode1() {
+            return this.reservedCode1;
+        }
+
+        /**
+         * @return reservedCode2
+         */
+        public String getReservedCode2() {
+            return this.reservedCode2;
+        }
+
+        public static final class Builder {
+            private String contentProducer; 
+            private String contentPropagator; 
+            private String label; 
+            private String produceID; 
+            private String propagateID; 
+            private String reservedCode1; 
+            private String reservedCode2; 
+
+            private Builder() {
+            } 
+
+            private Builder(AIGC model) {
+                this.contentProducer = model.contentProducer;
+                this.contentPropagator = model.contentPropagator;
+                this.label = model.label;
+                this.produceID = model.produceID;
+                this.propagateID = model.propagateID;
+                this.reservedCode1 = model.reservedCode1;
+                this.reservedCode2 = model.reservedCode2;
+            } 
+
+            /**
+             * ContentProducer.
+             */
+            public Builder contentProducer(String contentProducer) {
+                this.contentProducer = contentProducer;
+                return this;
+            }
+
+            /**
+             * ContentPropagator.
+             */
+            public Builder contentPropagator(String contentPropagator) {
+                this.contentPropagator = contentPropagator;
+                return this;
+            }
+
+            /**
+             * <p>The details of the labels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>contraband</p>
+             */
+            public Builder label(String label) {
+                this.label = label;
+                return this;
+            }
+
+            /**
+             * ProduceID.
+             */
+            public Builder produceID(String produceID) {
+                this.produceID = produceID;
+                return this;
+            }
+
+            /**
+             * PropagateID.
+             */
+            public Builder propagateID(String propagateID) {
+                this.propagateID = propagateID;
+                return this;
+            }
+
+            /**
+             * ReservedCode1.
+             */
+            public Builder reservedCode1(String reservedCode1) {
+                this.reservedCode1 = reservedCode1;
+                return this;
+            }
+
+            /**
+             * ReservedCode2.
+             */
+            public Builder reservedCode2(String reservedCode2) {
+                this.reservedCode2 = reservedCode2;
+                return this;
+            }
+
+            public AIGC build() {
+                return new AIGC(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeFileModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileModerationResultResponseBody</p>
+     */
+    public static class AigcData extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AIGC")
+        private AIGC AIGC;
+
+        @com.aliyun.core.annotation.NameInMap("Explain")
+        private String explain;
+
+        private AigcData(Builder builder) {
+            this.AIGC = builder.AIGC;
+            this.explain = builder.explain;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AigcData create() {
+            return builder().build();
+        }
+
+        /**
+         * @return AIGC
+         */
+        public AIGC getAIGC() {
+            return this.AIGC;
+        }
+
+        /**
+         * @return explain
+         */
+        public String getExplain() {
+            return this.explain;
+        }
+
+        public static final class Builder {
+            private AIGC AIGC; 
+            private String explain; 
+
+            private Builder() {
+            } 
+
+            private Builder(AigcData model) {
+                this.AIGC = model.AIGC;
+                this.explain = model.explain;
+            } 
+
+            /**
+             * AIGC.
+             */
+            public Builder AIGC(AIGC AIGC) {
+                this.AIGC = AIGC;
+                return this;
+            }
+
+            /**
+             * Explain.
+             */
+            public Builder explain(String explain) {
+                this.explain = explain;
+                return this;
+            }
+
+            public AigcData build() {
+                return new AigcData(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeFileModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileModerationResultResponseBody</p>
+     */
+    public static class Ext extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AigcData")
+        private AigcData aigcData;
+
+        private Ext(Builder builder) {
+            this.aigcData = builder.aigcData;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ext create() {
+            return builder().build();
+        }
+
+        /**
+         * @return aigcData
+         */
+        public AigcData getAigcData() {
+            return this.aigcData;
+        }
+
+        public static final class Builder {
+            private AigcData aigcData; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ext model) {
+                this.aigcData = model.aigcData;
+            } 
+
+            /**
+             * AigcData.
+             */
+            public Builder aigcData(AigcData aigcData) {
+                this.aigcData = aigcData;
+                return this;
+            }
+
+            public Ext build() {
+                return new Ext(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeFileModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileModerationResultResponseBody</p>
+     */
+    public static class RiskLabels extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Confidence")
+        private Float confidence;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("Label")
+        private String label;
+
+        private RiskLabels(Builder builder) {
+            this.confidence = builder.confidence;
+            this.description = builder.description;
+            this.label = builder.label;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RiskLabels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return confidence
+         */
+        public Float getConfidence() {
+            return this.confidence;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return label
+         */
+        public String getLabel() {
+            return this.label;
+        }
+
+        public static final class Builder {
+            private Float confidence; 
+            private String description; 
+            private String label; 
+
+            private Builder() {
+            } 
+
+            private Builder(RiskLabels model) {
+                this.confidence = model.confidence;
+                this.description = model.description;
+                this.label = model.label;
+            } 
+
+            /**
+             * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25.0</p>
+             */
+            public Builder confidence(Float confidence) {
+                this.confidence = confidence;
+                return this;
+            }
+
+            /**
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * <p>The details of the labels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>contraband</p>
+             */
+            public Builder label(String label) {
+                this.label = label;
+                return this;
+            }
+
+            public RiskLabels build() {
+                return new RiskLabels(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeFileModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileModerationResultResponseBody</p>
+     */
+    public static class RiskSummary extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Ext")
+        private Ext ext;
+
+        @com.aliyun.core.annotation.NameInMap("RiskLabels")
+        private java.util.List<RiskLabels> riskLabels;
+
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
+        private String riskLevel;
+
+        private RiskSummary(Builder builder) {
+            this.ext = builder.ext;
+            this.riskLabels = builder.riskLabels;
+            this.riskLevel = builder.riskLevel;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RiskSummary create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ext
+         */
+        public Ext getExt() {
+            return this.ext;
+        }
+
+        /**
+         * @return riskLabels
+         */
+        public java.util.List<RiskLabels> getRiskLabels() {
+            return this.riskLabels;
+        }
+
+        /**
+         * @return riskLevel
+         */
+        public String getRiskLevel() {
+            return this.riskLevel;
+        }
+
+        public static final class Builder {
+            private Ext ext; 
+            private java.util.List<RiskLabels> riskLabels; 
+            private String riskLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(RiskSummary model) {
+                this.ext = model.ext;
+                this.riskLabels = model.riskLabels;
+                this.riskLevel = model.riskLevel;
+            } 
+
+            /**
+             * Ext.
+             */
+            public Builder ext(Ext ext) {
+                this.ext = ext;
+                return this;
+            }
+
+            /**
+             * RiskLabels.
+             */
+            public Builder riskLabels(java.util.List<RiskLabels> riskLabels) {
+                this.riskLabels = riskLabels;
+                return this;
+            }
+
+            /**
+             * <p>Risk Level</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
+             */
+            public Builder riskLevel(String riskLevel) {
+                this.riskLevel = riskLevel;
+                return this;
+            }
+
+            public RiskSummary build() {
+                return new RiskSummary(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeFileModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileModerationResultResponseBody</p>
+     */
     public static class TextLabels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -1295,12 +1811,16 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageSum")
         private Integer pageSum;
 
+        @com.aliyun.core.annotation.NameInMap("RiskSummary")
+        private RiskSummary riskSummary;
+
         @com.aliyun.core.annotation.NameInMap("TextSummary")
         private TextSummary textSummary;
 
         private PageSummary(Builder builder) {
             this.imageSummary = builder.imageSummary;
             this.pageSum = builder.pageSum;
+            this.riskSummary = builder.riskSummary;
             this.textSummary = builder.textSummary;
         }
 
@@ -1327,6 +1847,13 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return riskSummary
+         */
+        public RiskSummary getRiskSummary() {
+            return this.riskSummary;
+        }
+
+        /**
          * @return textSummary
          */
         public TextSummary getTextSummary() {
@@ -1336,6 +1863,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         public static final class Builder {
             private ImageSummary imageSummary; 
             private Integer pageSum; 
+            private RiskSummary riskSummary; 
             private TextSummary textSummary; 
 
             private Builder() {
@@ -1344,6 +1872,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private Builder(PageSummary model) {
                 this.imageSummary = model.imageSummary;
                 this.pageSum = model.pageSum;
+                this.riskSummary = model.riskSummary;
                 this.textSummary = model.textSummary;
             } 
 
@@ -1363,6 +1892,14 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
              */
             public Builder pageSum(Integer pageSum) {
                 this.pageSum = pageSum;
+                return this;
+            }
+
+            /**
+             * RiskSummary.
+             */
+            public Builder riskSummary(RiskSummary riskSummary) {
+                this.riskSummary = riskSummary;
                 return this;
             }
 
