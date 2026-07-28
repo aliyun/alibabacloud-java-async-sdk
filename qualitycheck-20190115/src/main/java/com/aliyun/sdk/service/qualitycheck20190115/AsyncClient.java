@@ -191,12 +191,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDataSetResponse> deleteDataSet(DeleteDataSetRequest request);
 
     /**
-     * @param request the request parameters of DeletePrecisionTask  DeletePrecisionTaskRequest
-     * @return DeletePrecisionTaskResponse
-     */
-    CompletableFuture<DeletePrecisionTaskResponse> deletePrecisionTask(DeletePrecisionTaskRequest request);
-
-    /**
      * @param request the request parameters of DeleteQualityCheckScheme  DeleteQualityCheckSchemeRequest
      * @return DeleteQualityCheckSchemeResponse
      */
@@ -321,12 +315,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetNextResultToVerifyResponse> getNextResultToVerify(GetNextResultToVerifyRequest request);
 
     /**
-     * @param request the request parameters of GetPrecisionTask  GetPrecisionTaskRequest
-     * @return GetPrecisionTaskResponse
-     */
-    CompletableFuture<GetPrecisionTaskResponse> getPrecisionTask(GetPrecisionTaskRequest request);
-
-    /**
      * @param request the request parameters of GetQualityCheckScheme  GetQualityCheckSchemeRequest
      * @return GetQualityCheckSchemeResponse
      */
@@ -390,13 +378,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetSchemeTaskConfigResponse> getSchemeTaskConfig(GetSchemeTaskConfigRequest request);
 
     /**
-     * @deprecated OpenAPI GetScoreInfo is deprecated  * @param request  the request parameters of GetScoreInfo  GetScoreInfoRequest
-     * @return GetScoreInfoResponse
-     */
-    @Deprecated
-    CompletableFuture<GetScoreInfoResponse> getScoreInfo(GetScoreInfoRequest request);
-
-    /**
      * @deprecated OpenAPI GetSkillGroupConfig is deprecated  * @param request  the request parameters of GetSkillGroupConfig  GetSkillGroupConfigRequest
      * @return GetSkillGroupConfigResponse
      */
@@ -447,12 +428,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     @Deprecated
     CompletableFuture<ListDataSetResponse> listDataSet(ListDataSetRequest request);
-
-    /**
-     * @param request the request parameters of ListPrecisionTask  ListPrecisionTaskRequest
-     * @return ListPrecisionTaskResponse
-     */
-    CompletableFuture<ListPrecisionTaskResponse> listPrecisionTask(ListPrecisionTaskRequest request);
 
     /**
      * @param request the request parameters of ListQualityCheckScheme  ListQualityCheckSchemeRequest
@@ -556,12 +531,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitComplaintResponse
      */
     CompletableFuture<SubmitComplaintResponse> submitComplaint(SubmitComplaintRequest request);
-
-    /**
-     * @param request the request parameters of SubmitPrecisionTask  SubmitPrecisionTaskRequest
-     * @return SubmitPrecisionTaskResponse
-     */
-    CompletableFuture<SubmitPrecisionTaskResponse> submitPrecisionTask(SubmitPrecisionTaskRequest request);
 
     /**
      * @param request the request parameters of SubmitQualityCheckTask  SubmitQualityCheckTaskRequest
@@ -734,17 +703,5 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UploadRuleResponse
      */
     CompletableFuture<UploadRuleResponse> uploadRule(UploadRuleRequest request);
-
-    /**
-     * @param request the request parameters of VerifyFile  VerifyFileRequest
-     * @return VerifyFileResponse
-     */
-    CompletableFuture<VerifyFileResponse> verifyFile(VerifyFileRequest request);
-
-    /**
-     * @param request the request parameters of VerifySentence  VerifySentenceRequest
-     * @return VerifySentenceResponse
-     */
-    CompletableFuture<VerifySentenceResponse> verifySentence(VerifySentenceRequest request);
 
 }

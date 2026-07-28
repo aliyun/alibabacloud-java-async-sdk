@@ -1576,6 +1576,144 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
      *
      * <p>GetAgentTaskResultResponseBody</p>
      */
+    public static class Usage extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("InputTokens")
+        private String inputTokens;
+
+        @com.aliyun.core.annotation.NameInMap("OutputTokens")
+        private String outputTokens;
+
+        @com.aliyun.core.annotation.NameInMap("TotalTokens")
+        private String totalTokens;
+
+        @com.aliyun.core.annotation.NameInMap("TymxPlusCount")
+        private String tymxPlusCount;
+
+        @com.aliyun.core.annotation.NameInMap("TymxTurboCount")
+        private String tymxTurboCount;
+
+        private Usage(Builder builder) {
+            this.inputTokens = builder.inputTokens;
+            this.outputTokens = builder.outputTokens;
+            this.totalTokens = builder.totalTokens;
+            this.tymxPlusCount = builder.tymxPlusCount;
+            this.tymxTurboCount = builder.tymxTurboCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Usage create() {
+            return builder().build();
+        }
+
+        /**
+         * @return inputTokens
+         */
+        public String getInputTokens() {
+            return this.inputTokens;
+        }
+
+        /**
+         * @return outputTokens
+         */
+        public String getOutputTokens() {
+            return this.outputTokens;
+        }
+
+        /**
+         * @return totalTokens
+         */
+        public String getTotalTokens() {
+            return this.totalTokens;
+        }
+
+        /**
+         * @return tymxPlusCount
+         */
+        public String getTymxPlusCount() {
+            return this.tymxPlusCount;
+        }
+
+        /**
+         * @return tymxTurboCount
+         */
+        public String getTymxTurboCount() {
+            return this.tymxTurboCount;
+        }
+
+        public static final class Builder {
+            private String inputTokens; 
+            private String outputTokens; 
+            private String totalTokens; 
+            private String tymxPlusCount; 
+            private String tymxTurboCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Usage model) {
+                this.inputTokens = model.inputTokens;
+                this.outputTokens = model.outputTokens;
+                this.totalTokens = model.totalTokens;
+                this.tymxPlusCount = model.tymxPlusCount;
+                this.tymxTurboCount = model.tymxTurboCount;
+            } 
+
+            /**
+             * InputTokens.
+             */
+            public Builder inputTokens(String inputTokens) {
+                this.inputTokens = inputTokens;
+                return this;
+            }
+
+            /**
+             * OutputTokens.
+             */
+            public Builder outputTokens(String outputTokens) {
+                this.outputTokens = outputTokens;
+                return this;
+            }
+
+            /**
+             * TotalTokens.
+             */
+            public Builder totalTokens(String totalTokens) {
+                this.totalTokens = totalTokens;
+                return this;
+            }
+
+            /**
+             * TymxPlusCount.
+             */
+            public Builder tymxPlusCount(String tymxPlusCount) {
+                this.tymxPlusCount = tymxPlusCount;
+                return this;
+            }
+
+            /**
+             * TymxTurboCount.
+             */
+            public Builder tymxTurboCount(String tymxTurboCount) {
+                this.tymxTurboCount = tymxTurboCount;
+                return this;
+            }
+
+            public Usage build() {
+                return new Usage(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAgentTaskResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAgentTaskResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dialogues")
         private java.util.List<Dialogues> dialogues;
@@ -1583,14 +1721,8 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @com.aliyun.core.annotation.NameInMap("InputTokens")
-        private String inputTokens;
-
         @com.aliyun.core.annotation.NameInMap("LlmRequestId")
         private String llmRequestId;
-
-        @com.aliyun.core.annotation.NameInMap("OutputTokens")
-        private String outputTokens;
 
         @com.aliyun.core.annotation.NameInMap("Response")
         private Response response;
@@ -1601,14 +1733,8 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @com.aliyun.core.annotation.NameInMap("TotalTokens")
-        private String totalTokens;
-
-        @com.aliyun.core.annotation.NameInMap("TyxmPlusCount")
-        private String tyxmPlusCount;
-
-        @com.aliyun.core.annotation.NameInMap("TyxmTurboCount")
-        private String tyxmTurboCount;
+        @com.aliyun.core.annotation.NameInMap("Usage")
+        private Usage usage;
 
         @com.aliyun.core.annotation.NameInMap("Vid")
         private String vid;
@@ -1616,15 +1742,11 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.dialogues = builder.dialogues;
             this.errorMessage = builder.errorMessage;
-            this.inputTokens = builder.inputTokens;
             this.llmRequestId = builder.llmRequestId;
-            this.outputTokens = builder.outputTokens;
             this.response = builder.response;
             this.status = builder.status;
             this.taskId = builder.taskId;
-            this.totalTokens = builder.totalTokens;
-            this.tyxmPlusCount = builder.tyxmPlusCount;
-            this.tyxmTurboCount = builder.tyxmTurboCount;
+            this.usage = builder.usage;
             this.vid = builder.vid;
         }
 
@@ -1651,24 +1773,10 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * @return inputTokens
-         */
-        public String getInputTokens() {
-            return this.inputTokens;
-        }
-
-        /**
          * @return llmRequestId
          */
         public String getLlmRequestId() {
             return this.llmRequestId;
-        }
-
-        /**
-         * @return outputTokens
-         */
-        public String getOutputTokens() {
-            return this.outputTokens;
         }
 
         /**
@@ -1693,24 +1801,10 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * @return totalTokens
+         * @return usage
          */
-        public String getTotalTokens() {
-            return this.totalTokens;
-        }
-
-        /**
-         * @return tyxmPlusCount
-         */
-        public String getTyxmPlusCount() {
-            return this.tyxmPlusCount;
-        }
-
-        /**
-         * @return tyxmTurboCount
-         */
-        public String getTyxmTurboCount() {
-            return this.tyxmTurboCount;
+        public Usage getUsage() {
+            return this.usage;
         }
 
         /**
@@ -1723,15 +1817,11 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Dialogues> dialogues; 
             private String errorMessage; 
-            private String inputTokens; 
             private String llmRequestId; 
-            private String outputTokens; 
             private Response response; 
             private String status; 
             private String taskId; 
-            private String totalTokens; 
-            private String tyxmPlusCount; 
-            private String tyxmTurboCount; 
+            private Usage usage; 
             private String vid; 
 
             private Builder() {
@@ -1740,15 +1830,11 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.dialogues = model.dialogues;
                 this.errorMessage = model.errorMessage;
-                this.inputTokens = model.inputTokens;
                 this.llmRequestId = model.llmRequestId;
-                this.outputTokens = model.outputTokens;
                 this.response = model.response;
                 this.status = model.status;
                 this.taskId = model.taskId;
-                this.totalTokens = model.totalTokens;
-                this.tyxmPlusCount = model.tyxmPlusCount;
-                this.tyxmTurboCount = model.tyxmTurboCount;
+                this.usage = model.usage;
                 this.vid = model.vid;
             } 
 
@@ -1769,26 +1855,10 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * InputTokens.
-             */
-            public Builder inputTokens(String inputTokens) {
-                this.inputTokens = inputTokens;
-                return this;
-            }
-
-            /**
              * LlmRequestId.
              */
             public Builder llmRequestId(String llmRequestId) {
                 this.llmRequestId = llmRequestId;
-                return this;
-            }
-
-            /**
-             * OutputTokens.
-             */
-            public Builder outputTokens(String outputTokens) {
-                this.outputTokens = outputTokens;
                 return this;
             }
 
@@ -1817,26 +1887,10 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTokens.
+             * Usage.
              */
-            public Builder totalTokens(String totalTokens) {
-                this.totalTokens = totalTokens;
-                return this;
-            }
-
-            /**
-             * TyxmPlusCount.
-             */
-            public Builder tyxmPlusCount(String tyxmPlusCount) {
-                this.tyxmPlusCount = tyxmPlusCount;
-                return this;
-            }
-
-            /**
-             * TyxmTurboCount.
-             */
-            public Builder tyxmTurboCount(String tyxmTurboCount) {
-                this.tyxmTurboCount = tyxmTurboCount;
+            public Builder usage(Usage usage) {
+                this.usage = usage;
                 return this;
             }
 
