@@ -217,6 +217,81 @@ public class GetInstanceDetailResponseBody extends TeaModel {
      *
      * <p>GetInstanceDetailResponseBody</p>
      */
+    public static class PodsList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("podId")
+        private String podId;
+
+        @com.aliyun.core.annotation.NameInMap("podName")
+        private String podName;
+
+        private PodsList(Builder builder) {
+            this.podId = builder.podId;
+            this.podName = builder.podName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PodsList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return podId
+         */
+        public String getPodId() {
+            return this.podId;
+        }
+
+        /**
+         * @return podName
+         */
+        public String getPodName() {
+            return this.podName;
+        }
+
+        public static final class Builder {
+            private String podId; 
+            private String podName; 
+
+            private Builder() {
+            } 
+
+            private Builder(PodsList model) {
+                this.podId = model.podId;
+                this.podName = model.podName;
+            } 
+
+            /**
+             * podId.
+             */
+            public Builder podId(String podId) {
+                this.podId = podId;
+                return this;
+            }
+
+            /**
+             * podName.
+             */
+            public Builder podName(String podName) {
+                this.podName = podName;
+                return this;
+            }
+
+            public PodsList build() {
+                return new PodsList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetInstanceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceDetailResponseBody</p>
+     */
     public static class MilvusResourceInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComponentType")
         private String componentType;
@@ -242,6 +317,18 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
+        @com.aliyun.core.annotation.NameInMap("dataDiskEnabled")
+        private Boolean dataDiskEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("dataDiskSize")
+        private Integer dataDiskSize;
+
+        @com.aliyun.core.annotation.NameInMap("dataDiskStorageClass")
+        private String dataDiskStorageClass;
+
+        @com.aliyun.core.annotation.NameInMap("podsList")
+        private java.util.List<PodsList> podsList;
+
         private MilvusResourceInfoList(Builder builder) {
             this.componentType = builder.componentType;
             this.cuNum = builder.cuNum;
@@ -251,6 +338,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             this.payType = builder.payType;
             this.replica = builder.replica;
             this.zoneId = builder.zoneId;
+            this.dataDiskEnabled = builder.dataDiskEnabled;
+            this.dataDiskSize = builder.dataDiskSize;
+            this.dataDiskStorageClass = builder.dataDiskStorageClass;
+            this.podsList = builder.podsList;
         }
 
         public static Builder builder() {
@@ -317,6 +408,34 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             return this.zoneId;
         }
 
+        /**
+         * @return dataDiskEnabled
+         */
+        public Boolean getDataDiskEnabled() {
+            return this.dataDiskEnabled;
+        }
+
+        /**
+         * @return dataDiskSize
+         */
+        public Integer getDataDiskSize() {
+            return this.dataDiskSize;
+        }
+
+        /**
+         * @return dataDiskStorageClass
+         */
+        public String getDataDiskStorageClass() {
+            return this.dataDiskStorageClass;
+        }
+
+        /**
+         * @return podsList
+         */
+        public java.util.List<PodsList> getPodsList() {
+            return this.podsList;
+        }
+
         public static final class Builder {
             private String componentType; 
             private Integer cuNum; 
@@ -326,6 +445,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             private String payType; 
             private Integer replica; 
             private String zoneId; 
+            private Boolean dataDiskEnabled; 
+            private Integer dataDiskSize; 
+            private String dataDiskStorageClass; 
+            private java.util.List<PodsList> podsList; 
 
             private Builder() {
             } 
@@ -339,6 +462,10 @@ public class GetInstanceDetailResponseBody extends TeaModel {
                 this.payType = model.payType;
                 this.replica = model.replica;
                 this.zoneId = model.zoneId;
+                this.dataDiskEnabled = model.dataDiskEnabled;
+                this.dataDiskSize = model.dataDiskSize;
+                this.dataDiskStorageClass = model.dataDiskStorageClass;
+                this.podsList = model.podsList;
             } 
 
             /**
@@ -425,6 +552,38 @@ public class GetInstanceDetailResponseBody extends TeaModel {
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
+                return this;
+            }
+
+            /**
+             * dataDiskEnabled.
+             */
+            public Builder dataDiskEnabled(Boolean dataDiskEnabled) {
+                this.dataDiskEnabled = dataDiskEnabled;
+                return this;
+            }
+
+            /**
+             * dataDiskSize.
+             */
+            public Builder dataDiskSize(Integer dataDiskSize) {
+                this.dataDiskSize = dataDiskSize;
+                return this;
+            }
+
+            /**
+             * dataDiskStorageClass.
+             */
+            public Builder dataDiskStorageClass(String dataDiskStorageClass) {
+                this.dataDiskStorageClass = dataDiskStorageClass;
+                return this;
+            }
+
+            /**
+             * podsList.
+             */
+            public Builder podsList(java.util.List<PodsList> podsList) {
+                this.podsList = podsList;
                 return this;
             }
 
@@ -1297,6 +1456,9 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
+        @com.aliyun.core.annotation.NameInMap("maintainablePeriodTimeZone")
+        private String maintainablePeriodTimeZone;
+
         private Data(Builder builder) {
             this.aclId = builder.aclId;
             this.beginTime = builder.beginTime;
@@ -1331,6 +1493,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             this.vpcId = builder.vpcId;
             this.vswId = builder.vswId;
             this.zoneId = builder.zoneId;
+            this.maintainablePeriodTimeZone = builder.maintainablePeriodTimeZone;
         }
 
         public static Builder builder() {
@@ -1572,6 +1735,13 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             return this.zoneId;
         }
 
+        /**
+         * @return maintainablePeriodTimeZone
+         */
+        public String getMaintainablePeriodTimeZone() {
+            return this.maintainablePeriodTimeZone;
+        }
+
         public static final class Builder {
             private String aclId; 
             private Long beginTime; 
@@ -1606,6 +1776,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             private String vpcId; 
             private String vswId; 
             private String zoneId; 
+            private String maintainablePeriodTimeZone; 
 
             private Builder() {
             } 
@@ -1644,6 +1815,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
                 this.vpcId = model.vpcId;
                 this.vswId = model.vswId;
                 this.zoneId = model.zoneId;
+                this.maintainablePeriodTimeZone = model.maintainablePeriodTimeZone;
             } 
 
             /**
@@ -1989,6 +2161,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
+                return this;
+            }
+
+            /**
+             * maintainablePeriodTimeZone.
+             */
+            public Builder maintainablePeriodTimeZone(String maintainablePeriodTimeZone) {
+                this.maintainablePeriodTimeZone = maintainablePeriodTimeZone;
                 return this;
             }
 

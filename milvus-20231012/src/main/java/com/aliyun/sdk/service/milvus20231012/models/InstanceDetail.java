@@ -535,6 +535,198 @@ public class InstanceDetail extends TeaModel {
      *
      * <p>InstanceDetail</p>
      */
+    public static class DataDisk extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("performanceLevel")
+        private String performanceLevel;
+
+        @com.aliyun.core.annotation.NameInMap("size")
+        private Integer size;
+
+        @com.aliyun.core.annotation.NameInMap("storageClass")
+        private String storageClass;
+
+        private DataDisk(Builder builder) {
+            this.enabled = builder.enabled;
+            this.performanceLevel = builder.performanceLevel;
+            this.size = builder.size;
+            this.storageClass = builder.storageClass;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DataDisk create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return performanceLevel
+         */
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        /**
+         * @return size
+         */
+        public Integer getSize() {
+            return this.size;
+        }
+
+        /**
+         * @return storageClass
+         */
+        public String getStorageClass() {
+            return this.storageClass;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+            private String performanceLevel; 
+            private Integer size; 
+            private String storageClass; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataDisk model) {
+                this.enabled = model.enabled;
+                this.performanceLevel = model.performanceLevel;
+                this.size = model.size;
+                this.storageClass = model.storageClass;
+            } 
+
+            /**
+             * enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * performanceLevel.
+             */
+            public Builder performanceLevel(String performanceLevel) {
+                this.performanceLevel = performanceLevel;
+                return this;
+            }
+
+            /**
+             * size.
+             */
+            public Builder size(Integer size) {
+                this.size = size;
+                return this;
+            }
+
+            /**
+             * storageClass.
+             */
+            public Builder storageClass(String storageClass) {
+                this.storageClass = storageClass;
+                return this;
+            }
+
+            public DataDisk build() {
+                return new DataDisk(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link InstanceDetail} extends {@link TeaModel}
+     *
+     * <p>InstanceDetail</p>
+     */
+    public static class PodsList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("podId")
+        private String podId;
+
+        @com.aliyun.core.annotation.NameInMap("podName")
+        private String podName;
+
+        private PodsList(Builder builder) {
+            this.podId = builder.podId;
+            this.podName = builder.podName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PodsList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return podId
+         */
+        public String getPodId() {
+            return this.podId;
+        }
+
+        /**
+         * @return podName
+         */
+        public String getPodName() {
+            return this.podName;
+        }
+
+        public static final class Builder {
+            private String podId; 
+            private String podName; 
+
+            private Builder() {
+            } 
+
+            private Builder(PodsList model) {
+                this.podId = model.podId;
+                this.podName = model.podName;
+            } 
+
+            /**
+             * podId.
+             */
+            public Builder podId(String podId) {
+                this.podId = podId;
+                return this;
+            }
+
+            /**
+             * podName.
+             */
+            public Builder podName(String podName) {
+                this.podName = podName;
+                return this;
+            }
+
+            public PodsList build() {
+                return new PodsList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link InstanceDetail} extends {@link TeaModel}
+     *
+     * <p>InstanceDetail</p>
+     */
     public static class Components extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cuNum")
         private Integer cuNum;
@@ -542,11 +734,17 @@ public class InstanceDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cuType")
         private String cuType;
 
+        @com.aliyun.core.annotation.NameInMap("dataDisk")
+        private DataDisk dataDisk;
+
         @com.aliyun.core.annotation.NameInMap("diskSizeType")
         private String diskSizeType;
 
         @com.aliyun.core.annotation.NameInMap("payType")
         private String payType;
+
+        @com.aliyun.core.annotation.NameInMap("podsList")
+        private java.util.List<PodsList> podsList;
 
         @com.aliyun.core.annotation.NameInMap("replica")
         private Integer replica;
@@ -557,8 +755,10 @@ public class InstanceDetail extends TeaModel {
         private Components(Builder builder) {
             this.cuNum = builder.cuNum;
             this.cuType = builder.cuType;
+            this.dataDisk = builder.dataDisk;
             this.diskSizeType = builder.diskSizeType;
             this.payType = builder.payType;
+            this.podsList = builder.podsList;
             this.replica = builder.replica;
             this.type = builder.type;
         }
@@ -586,6 +786,13 @@ public class InstanceDetail extends TeaModel {
         }
 
         /**
+         * @return dataDisk
+         */
+        public DataDisk getDataDisk() {
+            return this.dataDisk;
+        }
+
+        /**
          * @return diskSizeType
          */
         public String getDiskSizeType() {
@@ -597,6 +804,13 @@ public class InstanceDetail extends TeaModel {
          */
         public String getPayType() {
             return this.payType;
+        }
+
+        /**
+         * @return podsList
+         */
+        public java.util.List<PodsList> getPodsList() {
+            return this.podsList;
         }
 
         /**
@@ -616,8 +830,10 @@ public class InstanceDetail extends TeaModel {
         public static final class Builder {
             private Integer cuNum; 
             private String cuType; 
+            private DataDisk dataDisk; 
             private String diskSizeType; 
             private String payType; 
+            private java.util.List<PodsList> podsList; 
             private Integer replica; 
             private String type; 
 
@@ -627,8 +843,10 @@ public class InstanceDetail extends TeaModel {
             private Builder(Components model) {
                 this.cuNum = model.cuNum;
                 this.cuType = model.cuType;
+                this.dataDisk = model.dataDisk;
                 this.diskSizeType = model.diskSizeType;
                 this.payType = model.payType;
+                this.podsList = model.podsList;
                 this.replica = model.replica;
                 this.type = model.type;
             } 
@@ -650,6 +868,14 @@ public class InstanceDetail extends TeaModel {
             }
 
             /**
+             * dataDisk.
+             */
+            public Builder dataDisk(DataDisk dataDisk) {
+                this.dataDisk = dataDisk;
+                return this;
+            }
+
+            /**
              * diskSizeType.
              */
             public Builder diskSizeType(String diskSizeType) {
@@ -662,6 +888,14 @@ public class InstanceDetail extends TeaModel {
              */
             public Builder payType(String payType) {
                 this.payType = payType;
+                return this;
+            }
+
+            /**
+             * podsList.
+             */
+            public Builder podsList(java.util.List<PodsList> podsList) {
+                this.podsList = podsList;
                 return this;
             }
 

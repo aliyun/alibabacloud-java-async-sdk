@@ -790,6 +790,123 @@ public class CreateInstanceRequest extends Request {
      *
      * <p>CreateInstanceRequest</p>
      */
+    public static class DataDisk extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("performanceLevel")
+        private String performanceLevel;
+
+        @com.aliyun.core.annotation.NameInMap("size")
+        private Integer size;
+
+        @com.aliyun.core.annotation.NameInMap("storageClass")
+        private String storageClass;
+
+        private DataDisk(Builder builder) {
+            this.enabled = builder.enabled;
+            this.performanceLevel = builder.performanceLevel;
+            this.size = builder.size;
+            this.storageClass = builder.storageClass;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DataDisk create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return performanceLevel
+         */
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        /**
+         * @return size
+         */
+        public Integer getSize() {
+            return this.size;
+        }
+
+        /**
+         * @return storageClass
+         */
+        public String getStorageClass() {
+            return this.storageClass;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+            private String performanceLevel; 
+            private Integer size; 
+            private String storageClass; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataDisk model) {
+                this.enabled = model.enabled;
+                this.performanceLevel = model.performanceLevel;
+                this.size = model.size;
+                this.storageClass = model.storageClass;
+            } 
+
+            /**
+             * enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * performanceLevel.
+             */
+            public Builder performanceLevel(String performanceLevel) {
+                this.performanceLevel = performanceLevel;
+                return this;
+            }
+
+            /**
+             * size.
+             */
+            public Builder size(Integer size) {
+                this.size = size;
+                return this;
+            }
+
+            /**
+             * storageClass.
+             */
+            public Builder storageClass(String storageClass) {
+                this.storageClass = storageClass;
+                return this;
+            }
+
+            public DataDisk build() {
+                return new DataDisk(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
     public static class Components extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cuNum")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -797,6 +914,9 @@ public class CreateInstanceRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("cuType")
         private String cuType;
+
+        @com.aliyun.core.annotation.NameInMap("dataDisk")
+        private DataDisk dataDisk;
 
         @com.aliyun.core.annotation.NameInMap("diskSizeType")
         private String diskSizeType;
@@ -812,6 +932,7 @@ public class CreateInstanceRequest extends Request {
         private Components(Builder builder) {
             this.cuNum = builder.cuNum;
             this.cuType = builder.cuType;
+            this.dataDisk = builder.dataDisk;
             this.diskSizeType = builder.diskSizeType;
             this.replica = builder.replica;
             this.type = builder.type;
@@ -840,6 +961,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * @return dataDisk
+         */
+        public DataDisk getDataDisk() {
+            return this.dataDisk;
+        }
+
+        /**
          * @return diskSizeType
          */
         public String getDiskSizeType() {
@@ -863,6 +991,7 @@ public class CreateInstanceRequest extends Request {
         public static final class Builder {
             private Integer cuNum; 
             private String cuType; 
+            private DataDisk dataDisk; 
             private String diskSizeType; 
             private Integer replica; 
             private String type; 
@@ -873,6 +1002,7 @@ public class CreateInstanceRequest extends Request {
             private Builder(Components model) {
                 this.cuNum = model.cuNum;
                 this.cuType = model.cuType;
+                this.dataDisk = model.dataDisk;
                 this.diskSizeType = model.diskSizeType;
                 this.replica = model.replica;
                 this.type = model.type;
@@ -894,6 +1024,14 @@ public class CreateInstanceRequest extends Request {
              */
             public Builder cuType(String cuType) {
                 this.cuType = cuType;
+                return this;
+            }
+
+            /**
+             * dataDisk.
+             */
+            public Builder dataDisk(DataDisk dataDisk) {
+                this.dataDisk = dataDisk;
                 return this;
             }
 
