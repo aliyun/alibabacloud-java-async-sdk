@@ -32,6 +32,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CancelSqlPreviewResponse> cancelSqlPreview(CancelSqlPreviewRequest request);
 
     /**
+     * @param request the request parameters of ChatAiAgent  ChatAiAgentRequest
+     * @return ChatAiAgentResponse
+     */
+    CompletableFuture<ChatAiAgentResponse> chatAiAgent(ChatAiAgentRequest request);
+
+<ReturnT> CompletableFuture<ReturnT> chatAiAgentWithAsyncResponseHandler(ChatAiAgentRequest request, AsyncResponseHandler<ChatAiAgentResponse, ReturnT> responseHandler);
+
+    ResponseIterable<ChatAiAgentResponseBody> chatAiAgentWithResponseIterable(ChatAiAgentRequest request);
+
+    /**
      * @param request the request parameters of CreateDeployment  CreateDeploymentRequest
      * @return CreateDeploymentResponse
      */
@@ -236,6 +246,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAppliedScheduledPlanResponse> getAppliedScheduledPlan(GetAppliedScheduledPlanRequest request);
 
     /**
+     * @param request the request parameters of GetAutopilotPolicy  GetAutopilotPolicyRequest
+     * @return GetAutopilotPolicyResponse
+     */
+    CompletableFuture<GetAutopilotPolicyResponse> getAutopilotPolicy(GetAutopilotPolicyRequest request);
+
+    /**
      * @param request the request parameters of GetCatalogs  GetCatalogsRequest
      * @return GetCatalogsResponse
      */
@@ -392,6 +408,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<HotUpdateJobResponse> hotUpdateJob(HotUpdateJobRequest request);
 
     /**
+     * @param request the request parameters of ListAutopilotTuningHistories  ListAutopilotTuningHistoriesRequest
+     * @return ListAutopilotTuningHistoriesResponse
+     */
+    CompletableFuture<ListAutopilotTuningHistoriesResponse> listAutopilotTuningHistories(ListAutopilotTuningHistoriesRequest request);
+
+    /**
      * @param request the request parameters of ListCustomConnectors  ListCustomConnectorsRequest
      * @return ListCustomConnectorsResponse
      */
@@ -535,6 +557,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitSqlPreviewResponse
      */
     CompletableFuture<SubmitSqlPreviewResponse> submitSqlPreview(SubmitSqlPreviewRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAutopilotPolicy  UpdateAutopilotPolicyRequest
+     * @return UpdateAutopilotPolicyResponse
+     */
+    CompletableFuture<UpdateAutopilotPolicyResponse> updateAutopilotPolicy(UpdateAutopilotPolicyRequest request);
 
     /**
      * @param request the request parameters of UpdateDeployment  UpdateDeploymentRequest

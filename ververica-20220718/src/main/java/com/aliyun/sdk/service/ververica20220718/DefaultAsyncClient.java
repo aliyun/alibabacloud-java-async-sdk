@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.ververica20220718;
 
 import com.aliyun.core.http.*;
 import com.aliyun.sdk.service.ververica20220718.models.*;
+import darabonba.core.sse.SSEHttpResponseHandler;
 import darabonba.core.utils.*;
 import com.aliyun.sdk.gateway.pop.*;
 import darabonba.core.*;
@@ -92,6 +93,49 @@ public final class DefaultAsyncClient implements AsyncClient {
             future.completeExceptionally(e);
             return future;
         }
+    }
+
+    /**
+     * @param request the request parameters of ChatAiAgent  ChatAiAgentRequest
+     * @return ChatAiAgentResponse
+     */
+    @Override
+    public CompletableFuture<ChatAiAgentResponse> chatAiAgent(ChatAiAgentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ChatAiAgent").setMethod(HttpMethod.POST).setPathRegex("/advisor/v2/namespaces/{namespace}/ai-agent/stream/agent/v2/chat").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ChatAiAgentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ChatAiAgentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public <ReturnT> CompletableFuture<ReturnT> chatAiAgentWithAsyncResponseHandler(ChatAiAgentRequest request, AsyncResponseHandler<ChatAiAgentResponse, ReturnT> responseHandler) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ChatAiAgent").setMethod(HttpMethod.POST).setPathRegex("/advisor/v2/namespaces/{namespace}/ai-agent/stream/agent/v2/chat").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withResponseHandler(responseHandler).withOutput(ChatAiAgentResponse.create());
+            return this.handler.execute(params)
+                    .thenCompose((output) -> CompletableFuture.completedFuture(responseHandler.transform((ChatAiAgentResponse)output)));
+        } catch (Exception e) {
+            CompletableFuture<ReturnT> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<ChatAiAgentResponseBody> chatAiAgentWithResponseIterable(ChatAiAgentRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("ChatAiAgent").setMethod(HttpMethod.POST).setPathRegex("/advisor/v2/namespaces/{namespace}/ai-agent/stream/agent/v2/chat").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+        ChatAiAgentResponseBodyIterator iterator = ChatAiAgentResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
     }
 
     /**
@@ -707,6 +751,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetAutopilotPolicy  GetAutopilotPolicyRequest
+     * @return GetAutopilotPolicyResponse
+     */
+    @Override
+    public CompletableFuture<GetAutopilotPolicyResponse> getAutopilotPolicy(GetAutopilotPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAutopilotPolicy").setMethod(HttpMethod.GET).setPathRegex("/autopilot/v2/namespaces/{namespace}/deployments/{deploymentId}/autopilotpolicy-describe").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAutopilotPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAutopilotPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetCatalogs  GetCatalogsRequest
      * @return GetCatalogsResponse
      */
@@ -1175,6 +1237,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListAutopilotTuningHistories  ListAutopilotTuningHistoriesRequest
+     * @return ListAutopilotTuningHistoriesResponse
+     */
+    @Override
+    public CompletableFuture<ListAutopilotTuningHistoriesResponse> listAutopilotTuningHistories(ListAutopilotTuningHistoriesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListAutopilotTuningHistories").setMethod(HttpMethod.GET).setPathRegex("/autopilot/v2/namespaces/{namespace}/deployments/{deploymentId}/tuninghistories").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAutopilotTuningHistoriesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAutopilotTuningHistoriesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListCustomConnectors  ListCustomConnectorsRequest
      * @return ListCustomConnectorsResponse
      */
@@ -1602,6 +1682,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SubmitSqlPreviewResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateAutopilotPolicy  UpdateAutopilotPolicyRequest
+     * @return UpdateAutopilotPolicyResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAutopilotPolicyResponse> updateAutopilotPolicy(UpdateAutopilotPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateAutopilotPolicy").setMethod(HttpMethod.PUT).setPathRegex("/autopilot/v2/namespaces/{namespace}/deployments/{deploymentId}/autopilotpolicy-update").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAutopilotPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAutopilotPolicyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
