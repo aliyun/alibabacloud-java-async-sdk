@@ -42,6 +42,14 @@ public class CreateMdsCubeResourceRequest extends Request {
     private String fileUrl;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HarmonyMaxVersion")
+    private String harmonyMaxVersion;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HarmonyMinVersion")
+    private String harmonyMinVersion;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("IosMaxVersion")
     private String iosMaxVersion;
 
@@ -93,6 +101,8 @@ public class CreateMdsCubeResourceRequest extends Request {
         this.appId = builder.appId;
         this.extendInfo = builder.extendInfo;
         this.fileUrl = builder.fileUrl;
+        this.harmonyMaxVersion = builder.harmonyMaxVersion;
+        this.harmonyMinVersion = builder.harmonyMinVersion;
         this.iosMaxVersion = builder.iosMaxVersion;
         this.iosMinVersion = builder.iosMinVersion;
         this.mockDataUrl = builder.mockDataUrl;
@@ -159,6 +169,20 @@ public class CreateMdsCubeResourceRequest extends Request {
      */
     public String getFileUrl() {
         return this.fileUrl;
+    }
+
+    /**
+     * @return harmonyMaxVersion
+     */
+    public String getHarmonyMaxVersion() {
+        return this.harmonyMaxVersion;
+    }
+
+    /**
+     * @return harmonyMinVersion
+     */
+    public String getHarmonyMinVersion() {
+        return this.harmonyMinVersion;
     }
 
     /**
@@ -245,6 +269,8 @@ public class CreateMdsCubeResourceRequest extends Request {
         private String appId; 
         private String extendInfo; 
         private String fileUrl; 
+        private String harmonyMaxVersion; 
+        private String harmonyMinVersion; 
         private String iosMaxVersion; 
         private String iosMinVersion; 
         private String mockDataUrl; 
@@ -269,6 +295,8 @@ public class CreateMdsCubeResourceRequest extends Request {
             this.appId = request.appId;
             this.extendInfo = request.extendInfo;
             this.fileUrl = request.fileUrl;
+            this.harmonyMaxVersion = request.harmonyMaxVersion;
+            this.harmonyMinVersion = request.harmonyMinVersion;
             this.iosMaxVersion = request.iosMaxVersion;
             this.iosMinVersion = request.iosMinVersion;
             this.mockDataUrl = request.mockDataUrl;
@@ -333,6 +361,24 @@ public class CreateMdsCubeResourceRequest extends Request {
         public Builder fileUrl(String fileUrl) {
             this.putBodyParameter("FileUrl", fileUrl);
             this.fileUrl = fileUrl;
+            return this;
+        }
+
+        /**
+         * HarmonyMaxVersion.
+         */
+        public Builder harmonyMaxVersion(String harmonyMaxVersion) {
+            this.putBodyParameter("HarmonyMaxVersion", harmonyMaxVersion);
+            this.harmonyMaxVersion = harmonyMaxVersion;
+            return this;
+        }
+
+        /**
+         * HarmonyMinVersion.
+         */
+        public Builder harmonyMinVersion(String harmonyMinVersion) {
+            this.putBodyParameter("HarmonyMinVersion", harmonyMinVersion);
+            this.harmonyMinVersion = harmonyMinVersion;
             return this;
         }
 
