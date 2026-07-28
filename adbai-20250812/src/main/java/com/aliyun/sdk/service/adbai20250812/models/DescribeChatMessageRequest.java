@@ -32,6 +32,10 @@ public class DescribeChatMessageRequest extends Request {
     private String sessionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Skill")
+    private String skill;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Timezone")
     private String timezone;
 
@@ -40,6 +44,7 @@ public class DescribeChatMessageRequest extends Request {
         this.query = builder.query;
         this.regionId = builder.regionId;
         this.sessionId = builder.sessionId;
+        this.skill = builder.skill;
         this.timezone = builder.timezone;
     }
 
@@ -78,6 +83,13 @@ public class DescribeChatMessageRequest extends Request {
     }
 
     /**
+     * @return skill
+     */
+    public String getSkill() {
+        return this.skill;
+    }
+
+    /**
      * @return timezone
      */
     public String getTimezone() {
@@ -88,6 +100,7 @@ public class DescribeChatMessageRequest extends Request {
         private String query; 
         private String regionId; 
         private String sessionId; 
+        private String skill; 
         private String timezone; 
 
         private Builder() {
@@ -99,6 +112,7 @@ public class DescribeChatMessageRequest extends Request {
             this.query = request.query;
             this.regionId = request.regionId;
             this.sessionId = request.sessionId;
+            this.skill = request.skill;
             this.timezone = request.timezone;
         } 
 
@@ -129,6 +143,15 @@ public class DescribeChatMessageRequest extends Request {
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
             this.sessionId = sessionId;
+            return this;
+        }
+
+        /**
+         * Skill.
+         */
+        public Builder skill(String skill) {
+            this.putQueryParameter("Skill", skill);
+            this.skill = skill;
             return this;
         }
 
