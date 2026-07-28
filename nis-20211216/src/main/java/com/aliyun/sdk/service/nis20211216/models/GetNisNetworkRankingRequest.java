@@ -52,7 +52,6 @@ public class GetNisNetworkRankingRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionNo")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String regionNo;
 
     @com.aliyun.core.annotation.Query
@@ -66,7 +65,6 @@ public class GetNisNetworkRankingRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TopN")
-    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer topN;
 
     @com.aliyun.core.annotation.Query
@@ -294,10 +292,7 @@ public class GetNisNetworkRankingRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-beijing</p>
+         * RegionNo.
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);

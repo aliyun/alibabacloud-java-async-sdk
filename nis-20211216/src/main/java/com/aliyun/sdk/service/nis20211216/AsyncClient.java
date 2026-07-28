@@ -153,6 +153,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetNisNetworkRankingResponse> getNisNetworkRanking(GetNisNetworkRankingRequest request);
 
     /**
+     * @param request the request parameters of GetNisTrafficMetrics  GetNisTrafficMetricsRequest
+     * @return GetNisTrafficMetricsResponse
+     */
+    CompletableFuture<GetNisTrafficMetricsResponse> getNisTrafficMetrics(GetNisTrafficMetricsRequest request);
+
+    /**
      * @deprecated OpenAPI GetTransitRouterFlowTopN is deprecated, please use nis::2021-12-16::GetNisNetworkRanking instead.  * @param request  the request parameters of GetTransitRouterFlowTopN  GetTransitRouterFlowTopNRequest
      * @return GetTransitRouterFlowTopNResponse
      */

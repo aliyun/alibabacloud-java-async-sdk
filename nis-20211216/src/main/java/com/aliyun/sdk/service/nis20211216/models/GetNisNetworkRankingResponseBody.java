@@ -131,6 +131,12 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestinationZone")
         private String destinationZone;
 
+        @com.aliyun.core.annotation.NameInMap("GlobalCountryCode")
+        private String globalCountryCode;
+
+        @com.aliyun.core.annotation.NameInMap("GlobalProvinceCode")
+        private String globalProvinceCode;
+
         @com.aliyun.core.annotation.NameInMap("IP")
         private String ip;
 
@@ -145,6 +151,9 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Isp")
         private String isp;
+
+        @com.aliyun.core.annotation.NameInMap("LineType")
+        private String lineType;
 
         @com.aliyun.core.annotation.NameInMap("NewSessionPerSecond")
         private Double newSessionPerSecond;
@@ -182,6 +191,9 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourcePort")
         private String sourcePort;
 
+        @com.aliyun.core.annotation.NameInMap("SourceRegion")
+        private String sourceRegion;
+
         @com.aliyun.core.annotation.NameInMap("SourceZone")
         private String sourceZone;
 
@@ -201,11 +213,14 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
             this.destinationPort = builder.destinationPort;
             this.destinationRegionNo = builder.destinationRegionNo;
             this.destinationZone = builder.destinationZone;
+            this.globalCountryCode = builder.globalCountryCode;
+            this.globalProvinceCode = builder.globalProvinceCode;
             this.ip = builder.ip;
             this.inBps = builder.inBps;
             this.inPps = builder.inPps;
             this.instanceId = builder.instanceId;
             this.isp = builder.isp;
+            this.lineType = builder.lineType;
             this.newSessionPerSecond = builder.newSessionPerSecond;
             this.outBps = builder.outBps;
             this.outPps = builder.outPps;
@@ -218,6 +233,7 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
             this.sourceIp = builder.sourceIp;
             this.sourceIsp = builder.sourceIsp;
             this.sourcePort = builder.sourcePort;
+            this.sourceRegion = builder.sourceRegion;
             this.sourceZone = builder.sourceZone;
             this.vbrId = builder.vbrId;
         }
@@ -315,6 +331,20 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
         }
 
         /**
+         * @return globalCountryCode
+         */
+        public String getGlobalCountryCode() {
+            return this.globalCountryCode;
+        }
+
+        /**
+         * @return globalProvinceCode
+         */
+        public String getGlobalProvinceCode() {
+            return this.globalProvinceCode;
+        }
+
+        /**
          * @return ip
          */
         public String getIp() {
@@ -347,6 +377,13 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
          */
         public String getIsp() {
             return this.isp;
+        }
+
+        /**
+         * @return lineType
+         */
+        public String getLineType() {
+            return this.lineType;
         }
 
         /**
@@ -434,6 +471,13 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourceRegion
+         */
+        public String getSourceRegion() {
+            return this.sourceRegion;
+        }
+
+        /**
          * @return sourceZone
          */
         public String getSourceZone() {
@@ -460,11 +504,14 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
             private String destinationPort; 
             private String destinationRegionNo; 
             private String destinationZone; 
+            private String globalCountryCode; 
+            private String globalProvinceCode; 
             private String ip; 
             private Double inBps; 
             private Double inPps; 
             private String instanceId; 
             private String isp; 
+            private String lineType; 
             private Double newSessionPerSecond; 
             private Double outBps; 
             private Double outPps; 
@@ -477,6 +524,7 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
             private String sourceIp; 
             private String sourceIsp; 
             private String sourcePort; 
+            private String sourceRegion; 
             private String sourceZone; 
             private String vbrId; 
 
@@ -496,11 +544,14 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
                 this.destinationPort = model.destinationPort;
                 this.destinationRegionNo = model.destinationRegionNo;
                 this.destinationZone = model.destinationZone;
+                this.globalCountryCode = model.globalCountryCode;
+                this.globalProvinceCode = model.globalProvinceCode;
                 this.ip = model.ip;
                 this.inBps = model.inBps;
                 this.inPps = model.inPps;
                 this.instanceId = model.instanceId;
                 this.isp = model.isp;
+                this.lineType = model.lineType;
                 this.newSessionPerSecond = model.newSessionPerSecond;
                 this.outBps = model.outBps;
                 this.outPps = model.outPps;
@@ -513,6 +564,7 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
                 this.sourceIp = model.sourceIp;
                 this.sourceIsp = model.sourceIsp;
                 this.sourcePort = model.sourcePort;
+                this.sourceRegion = model.sourceRegion;
                 this.sourceZone = model.sourceZone;
                 this.vbrId = model.vbrId;
             } 
@@ -614,6 +666,22 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
             }
 
             /**
+             * GlobalCountryCode.
+             */
+            public Builder globalCountryCode(String globalCountryCode) {
+                this.globalCountryCode = globalCountryCode;
+                return this;
+            }
+
+            /**
+             * GlobalProvinceCode.
+             */
+            public Builder globalProvinceCode(String globalProvinceCode) {
+                this.globalProvinceCode = globalProvinceCode;
+                return this;
+            }
+
+            /**
              * IP.
              */
             public Builder ip(String ip) {
@@ -650,6 +718,14 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
              */
             public Builder isp(String isp) {
                 this.isp = isp;
+                return this;
+            }
+
+            /**
+             * LineType.
+             */
+            public Builder lineType(String lineType) {
+                this.lineType = lineType;
                 return this;
             }
 
@@ -746,6 +822,14 @@ public class GetNisNetworkRankingResponseBody extends TeaModel {
              */
             public Builder sourcePort(String sourcePort) {
                 this.sourcePort = sourcePort;
+                return this;
+            }
+
+            /**
+             * SourceRegion.
+             */
+            public Builder sourceRegion(String sourceRegion) {
+                this.sourceRegion = sourceRegion;
                 return this;
             }
 

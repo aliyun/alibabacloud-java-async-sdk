@@ -263,6 +263,12 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Packets")
         private Double packets;
 
+        @com.aliyun.core.annotation.NameInMap("PacketsIncrease")
+        private Double packetsIncrease;
+
+        @com.aliyun.core.annotation.NameInMap("PacketsIncreaseRatio")
+        private Double packetsIncreaseRatio;
+
         @com.aliyun.core.annotation.NameInMap("PacketsLostBlackhole")
         private Double packetsLostBlackhole;
 
@@ -283,6 +289,9 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("RoundTripTime")
         private Double roundTripTime;
+
+        @com.aliyun.core.annotation.NameInMap("RoundTripTimeIncrease")
+        private Double roundTripTimeIncrease;
 
         @com.aliyun.core.annotation.NameInMap("SourceIp")
         private String sourceIp;
@@ -363,6 +372,8 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.networkInterfaceId = builder.networkInterfaceId;
             this.packets = builder.packets;
+            this.packetsIncrease = builder.packetsIncrease;
+            this.packetsIncreaseRatio = builder.packetsIncreaseRatio;
             this.packetsLostBlackhole = builder.packetsLostBlackhole;
             this.packetsLostNoRoute = builder.packetsLostNoRoute;
             this.packetsLostTTLExpired = builder.packetsLostTTLExpired;
@@ -370,6 +381,7 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
             this.publicIpAddress = builder.publicIpAddress;
             this.regionId = builder.regionId;
             this.roundTripTime = builder.roundTripTime;
+            this.roundTripTimeIncrease = builder.roundTripTimeIncrease;
             this.sourceIp = builder.sourceIp;
             this.sourcePort = builder.sourcePort;
             this.sourceRegionNo = builder.sourceRegionNo;
@@ -547,6 +559,20 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
         }
 
         /**
+         * @return packetsIncrease
+         */
+        public Double getPacketsIncrease() {
+            return this.packetsIncrease;
+        }
+
+        /**
+         * @return packetsIncreaseRatio
+         */
+        public Double getPacketsIncreaseRatio() {
+            return this.packetsIncreaseRatio;
+        }
+
+        /**
          * @return packetsLostBlackhole
          */
         public Double getPacketsLostBlackhole() {
@@ -593,6 +619,13 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
          */
         public Double getRoundTripTime() {
             return this.roundTripTime;
+        }
+
+        /**
+         * @return roundTripTimeIncrease
+         */
+        public Double getRoundTripTimeIncrease() {
+            return this.roundTripTimeIncrease;
         }
 
         /**
@@ -750,6 +783,8 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
             private String instanceId; 
             private String networkInterfaceId; 
             private Double packets; 
+            private Double packetsIncrease; 
+            private Double packetsIncreaseRatio; 
             private Double packetsLostBlackhole; 
             private Double packetsLostNoRoute; 
             private Double packetsLostTTLExpired; 
@@ -757,6 +792,7 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
             private String publicIpAddress; 
             private String regionId; 
             private Double roundTripTime; 
+            private Double roundTripTimeIncrease; 
             private String sourceIp; 
             private String sourcePort; 
             private String sourceRegionNo; 
@@ -802,6 +838,8 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
                 this.instanceId = model.instanceId;
                 this.networkInterfaceId = model.networkInterfaceId;
                 this.packets = model.packets;
+                this.packetsIncrease = model.packetsIncrease;
+                this.packetsIncreaseRatio = model.packetsIncreaseRatio;
                 this.packetsLostBlackhole = model.packetsLostBlackhole;
                 this.packetsLostNoRoute = model.packetsLostNoRoute;
                 this.packetsLostTTLExpired = model.packetsLostTTLExpired;
@@ -809,6 +847,7 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
                 this.publicIpAddress = model.publicIpAddress;
                 this.regionId = model.regionId;
                 this.roundTripTime = model.roundTripTime;
+                this.roundTripTimeIncrease = model.roundTripTimeIncrease;
                 this.sourceIp = model.sourceIp;
                 this.sourcePort = model.sourcePort;
                 this.sourceRegionNo = model.sourceRegionNo;
@@ -999,6 +1038,22 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
             }
 
             /**
+             * PacketsIncrease.
+             */
+            public Builder packetsIncrease(Double packetsIncrease) {
+                this.packetsIncrease = packetsIncrease;
+                return this;
+            }
+
+            /**
+             * PacketsIncreaseRatio.
+             */
+            public Builder packetsIncreaseRatio(Double packetsIncreaseRatio) {
+                this.packetsIncreaseRatio = packetsIncreaseRatio;
+                return this;
+            }
+
+            /**
              * PacketsLostBlackhole.
              */
             public Builder packetsLostBlackhole(Double packetsLostBlackhole) {
@@ -1051,6 +1106,14 @@ public class DescribeNisTrafficRankingResponseBody extends TeaModel {
              */
             public Builder roundTripTime(Double roundTripTime) {
                 this.roundTripTime = roundTripTime;
+                return this;
+            }
+
+            /**
+             * RoundTripTimeIncrease.
+             */
+            public Builder roundTripTimeIncrease(Double roundTripTimeIncrease) {
+                this.roundTripTimeIncrease = roundTripTimeIncrease;
                 return this;
             }
 
