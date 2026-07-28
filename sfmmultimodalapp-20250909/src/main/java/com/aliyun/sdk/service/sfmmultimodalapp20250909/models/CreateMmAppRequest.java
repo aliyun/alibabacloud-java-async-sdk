@@ -536,6 +536,9 @@ public class CreateMmAppRequest extends Request {
      * <p>CreateMmAppRequest</p>
      */
     public static class ModelConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppType")
+        private String appType;
+
         @com.aliyun.core.annotation.NameInMap("HistoryLimit")
         private Integer historyLimit;
 
@@ -549,6 +552,7 @@ public class CreateMmAppRequest extends Request {
         private String textModal;
 
         private ModelConfig(Builder builder) {
+            this.appType = builder.appType;
             this.historyLimit = builder.historyLimit;
             this.modelType = builder.modelType;
             this.openWebSearch = builder.openWebSearch;
@@ -561,6 +565,13 @@ public class CreateMmAppRequest extends Request {
 
         public static ModelConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return appType
+         */
+        public String getAppType() {
+            return this.appType;
         }
 
         /**
@@ -592,6 +603,7 @@ public class CreateMmAppRequest extends Request {
         }
 
         public static final class Builder {
+            private String appType; 
             private Integer historyLimit; 
             private String modelType; 
             private Boolean openWebSearch; 
@@ -601,11 +613,20 @@ public class CreateMmAppRequest extends Request {
             } 
 
             private Builder(ModelConfig model) {
+                this.appType = model.appType;
                 this.historyLimit = model.historyLimit;
                 this.modelType = model.modelType;
                 this.openWebSearch = model.openWebSearch;
                 this.textModal = model.textModal;
             } 
+
+            /**
+             * AppType.
+             */
+            public Builder appType(String appType) {
+                this.appType = appType;
+                return this;
+            }
 
             /**
              * HistoryLimit.

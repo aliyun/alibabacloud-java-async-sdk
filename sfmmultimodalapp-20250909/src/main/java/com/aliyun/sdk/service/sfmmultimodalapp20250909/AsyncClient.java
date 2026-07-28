@@ -104,6 +104,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCommandResponse> listCommand(ListCommandRequest request);
 
     /**
+     * @param request the request parameters of ListDomain  ListDomainRequest
+     * @return ListDomainResponse
+     */
+    CompletableFuture<ListDomainResponse> listDomain(ListDomainRequest request);
+
+    /**
      * @param request the request parameters of ListMmApp  ListMmAppRequest
      * @return ListMmAppResponse
      */
