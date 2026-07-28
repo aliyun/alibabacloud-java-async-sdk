@@ -176,6 +176,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeElasticRulesResponse> describeElasticRules(DescribeElasticRulesRequest request);
 
     /**
+     * @param request the request parameters of DescribeProfile  DescribeProfileRequest
+     * @return DescribeProfileResponse
+     */
+    CompletableFuture<DescribeProfileResponse> describeProfile(DescribeProfileRequest request);
+
+    /**
+     * @param request the request parameters of DescribeQueryExplain  DescribeQueryExplainRequest
+     * @return DescribeQueryExplainResponse
+     */
+    CompletableFuture<DescribeQueryExplainResponse> describeQueryExplain(DescribeQueryExplainRequest request);
+
+    /**
      * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
      * @return DescribeRegionsResponse
      */
@@ -186,6 +198,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeSecurityIPListResponse
      */
     CompletableFuture<DescribeSecurityIPListResponse> describeSecurityIPList(DescribeSecurityIPListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSlowQueryStats  DescribeSlowQueryStatsRequest
+     * @return DescribeSlowQueryStatsResponse
+     */
+    CompletableFuture<DescribeSlowQueryStatsResponse> describeSlowQueryStats(DescribeSlowQueryStatsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeTableSchema  DescribeTableSchemaRequest
+     * @return DescribeTableSchemaResponse
+     */
+    CompletableFuture<DescribeTableSchemaResponse> describeTableSchema(DescribeTableSchemaRequest request);
 
     /**
      * @param request the request parameters of DescribeVSwitches  DescribeVSwitchesRequest

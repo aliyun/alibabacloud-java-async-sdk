@@ -29,8 +29,34 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "selectdb";
         this.version = "2023-05-22";
-        this.endpointRule = "";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("us-west-1", "selectdb.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "selectdb.us-east-1.aliyuncs.com"),
+            new TeaPair("na-south-1", "selectdb.na-south-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "selectdb.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "selectdb.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "selectdb.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "selectdb.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "selectdb.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "selectdb.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "selectdb.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "selectdb.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "selectdb.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "selectdb.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "selectdb.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "selectdb.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "selectdb.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "selectdb.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "selectdb.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "selectdb.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "selectdb.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "selectdb.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "selectdb.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "selectdb.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "selectdb.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "selectdb.ap-northeast-1.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -484,6 +510,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeProfile  DescribeProfileRequest
+     * @return DescribeProfileResponse
+     */
+    @Override
+    public CompletableFuture<DescribeProfileResponse> describeProfile(DescribeProfileRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeProfile").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeProfileResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeProfileResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeQueryExplain  DescribeQueryExplainRequest
+     * @return DescribeQueryExplainResponse
+     */
+    @Override
+    public CompletableFuture<DescribeQueryExplainResponse> describeQueryExplain(DescribeQueryExplainRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeQueryExplain").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeQueryExplainResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeQueryExplainResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
      * @return DescribeRegionsResponse
      */
@@ -514,6 +576,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeSecurityIPListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeSlowQueryStats  DescribeSlowQueryStatsRequest
+     * @return DescribeSlowQueryStatsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeSlowQueryStatsResponse> describeSlowQueryStats(DescribeSlowQueryStatsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeSlowQueryStats").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeSlowQueryStatsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeSlowQueryStatsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeTableSchema  DescribeTableSchemaRequest
+     * @return DescribeTableSchemaResponse
+     */
+    @Override
+    public CompletableFuture<DescribeTableSchemaResponse> describeTableSchema(DescribeTableSchemaRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeTableSchema").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeTableSchemaResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeTableSchemaResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -17,11 +17,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstanceAttributeResponseBody</p>
  */
 public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("CanUpgradeVersionCommunityMap")
+    private java.util.Map<String, String> canUpgradeVersionCommunityMap;
+
     @com.aliyun.core.annotation.NameInMap("CanUpgradeVersions")
     private java.util.List<String> canUpgradeVersions;
 
     @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
+
+    @com.aliyun.core.annotation.NameInMap("CommunityVersion")
+    private String communityVersion;
 
     @com.aliyun.core.annotation.NameInMap("ConfigPatternType")
     private String configPatternType;
@@ -64,6 +70,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("LockReason")
     private String lockReason;
+
+    @com.aliyun.core.annotation.NameInMap("MCPServerServiceStatus")
+    private String MCPServerServiceStatus;
 
     @com.aliyun.core.annotation.NameInMap("MaintainEndtime")
     private String maintainEndtime;
@@ -126,8 +135,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     private String zoneId;
 
     private DescribeDBInstanceAttributeResponseBody(Builder builder) {
+        this.canUpgradeVersionCommunityMap = builder.canUpgradeVersionCommunityMap;
         this.canUpgradeVersions = builder.canUpgradeVersions;
         this.chargeType = builder.chargeType;
+        this.communityVersion = builder.communityVersion;
         this.configPatternType = builder.configPatternType;
         this.createTime = builder.createTime;
         this.DBClusterList = builder.DBClusterList;
@@ -142,6 +153,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         this.langfuseInstanceIds = builder.langfuseInstanceIds;
         this.lockMode = builder.lockMode;
         this.lockReason = builder.lockReason;
+        this.MCPServerServiceStatus = builder.MCPServerServiceStatus;
         this.maintainEndtime = builder.maintainEndtime;
         this.maintainStarttime = builder.maintainStarttime;
         this.multiZone = builder.multiZone;
@@ -177,6 +189,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return canUpgradeVersionCommunityMap
+     */
+    public java.util.Map<String, String> getCanUpgradeVersionCommunityMap() {
+        return this.canUpgradeVersionCommunityMap;
+    }
+
+    /**
      * @return canUpgradeVersions
      */
     public java.util.List<String> getCanUpgradeVersions() {
@@ -188,6 +207,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
      */
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    /**
+     * @return communityVersion
+     */
+    public String getCommunityVersion() {
+        return this.communityVersion;
     }
 
     /**
@@ -286,6 +312,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
      */
     public String getLockReason() {
         return this.lockReason;
+    }
+
+    /**
+     * @return MCPServerServiceStatus
+     */
+    public String getMCPServerServiceStatus() {
+        return this.MCPServerServiceStatus;
     }
 
     /**
@@ -429,8 +462,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.Map<String, String> canUpgradeVersionCommunityMap; 
         private java.util.List<String> canUpgradeVersions; 
         private String chargeType; 
+        private String communityVersion; 
         private String configPatternType; 
         private String createTime; 
         private java.util.List<DBClusterList> DBClusterList; 
@@ -445,6 +480,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         private java.util.List<String> langfuseInstanceIds; 
         private Long lockMode; 
         private String lockReason; 
+        private String MCPServerServiceStatus; 
         private String maintainEndtime; 
         private String maintainStarttime; 
         private java.util.List<MultiZone> multiZone; 
@@ -470,8 +506,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         } 
 
         private Builder(DescribeDBInstanceAttributeResponseBody model) {
+            this.canUpgradeVersionCommunityMap = model.canUpgradeVersionCommunityMap;
             this.canUpgradeVersions = model.canUpgradeVersions;
             this.chargeType = model.chargeType;
+            this.communityVersion = model.communityVersion;
             this.configPatternType = model.configPatternType;
             this.createTime = model.createTime;
             this.DBClusterList = model.DBClusterList;
@@ -486,6 +524,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.langfuseInstanceIds = model.langfuseInstanceIds;
             this.lockMode = model.lockMode;
             this.lockReason = model.lockReason;
+            this.MCPServerServiceStatus = model.MCPServerServiceStatus;
             this.maintainEndtime = model.maintainEndtime;
             this.maintainStarttime = model.maintainStarttime;
             this.multiZone = model.multiZone;
@@ -509,6 +548,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         } 
 
         /**
+         * CanUpgradeVersionCommunityMap.
+         */
+        public Builder canUpgradeVersionCommunityMap(java.util.Map<String, String> canUpgradeVersionCommunityMap) {
+            this.canUpgradeVersionCommunityMap = canUpgradeVersionCommunityMap;
+            return this;
+        }
+
+        /**
          * <p>The information returned.</p>
          */
         public Builder canUpgradeVersions(java.util.List<String> canUpgradeVersions) {
@@ -528,6 +575,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;
+            return this;
+        }
+
+        /**
+         * CommunityVersion.
+         */
+        public Builder communityVersion(String communityVersion) {
+            this.communityVersion = communityVersion;
             return this;
         }
 
@@ -670,6 +725,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public Builder lockReason(String lockReason) {
             this.lockReason = lockReason;
+            return this;
+        }
+
+        /**
+         * MCPServerServiceStatus.
+         */
+        public Builder MCPServerServiceStatus(String MCPServerServiceStatus) {
+            this.MCPServerServiceStatus = MCPServerServiceStatus;
             return this;
         }
 

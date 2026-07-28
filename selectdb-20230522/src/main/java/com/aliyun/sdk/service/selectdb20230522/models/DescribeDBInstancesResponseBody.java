@@ -174,6 +174,144 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
      *
      * <p>DescribeDBInstancesResponseBody</p>
      */
+    public static class FEClusterList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DbClusterId")
+        private String dbClusterId;
+
+        @com.aliyun.core.annotation.NameInMap("NodeCount")
+        private Long nodeCount;
+
+        @com.aliyun.core.annotation.NameInMap("SingleNodeCpuCores")
+        private Long singleNodeCpuCores;
+
+        @com.aliyun.core.annotation.NameInMap("SingleNodeMemoryInGB")
+        private Long singleNodeMemoryInGB;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        private FEClusterList(Builder builder) {
+            this.dbClusterId = builder.dbClusterId;
+            this.nodeCount = builder.nodeCount;
+            this.singleNodeCpuCores = builder.singleNodeCpuCores;
+            this.singleNodeMemoryInGB = builder.singleNodeMemoryInGB;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FEClusterList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dbClusterId
+         */
+        public String getDbClusterId() {
+            return this.dbClusterId;
+        }
+
+        /**
+         * @return nodeCount
+         */
+        public Long getNodeCount() {
+            return this.nodeCount;
+        }
+
+        /**
+         * @return singleNodeCpuCores
+         */
+        public Long getSingleNodeCpuCores() {
+            return this.singleNodeCpuCores;
+        }
+
+        /**
+         * @return singleNodeMemoryInGB
+         */
+        public Long getSingleNodeMemoryInGB() {
+            return this.singleNodeMemoryInGB;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String dbClusterId; 
+            private Long nodeCount; 
+            private Long singleNodeCpuCores; 
+            private Long singleNodeMemoryInGB; 
+            private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(FEClusterList model) {
+                this.dbClusterId = model.dbClusterId;
+                this.nodeCount = model.nodeCount;
+                this.singleNodeCpuCores = model.singleNodeCpuCores;
+                this.singleNodeMemoryInGB = model.singleNodeMemoryInGB;
+                this.status = model.status;
+            } 
+
+            /**
+             * DbClusterId.
+             */
+            public Builder dbClusterId(String dbClusterId) {
+                this.dbClusterId = dbClusterId;
+                return this;
+            }
+
+            /**
+             * NodeCount.
+             */
+            public Builder nodeCount(Long nodeCount) {
+                this.nodeCount = nodeCount;
+                return this;
+            }
+
+            /**
+             * SingleNodeCpuCores.
+             */
+            public Builder singleNodeCpuCores(Long singleNodeCpuCores) {
+                this.singleNodeCpuCores = singleNodeCpuCores;
+                return this;
+            }
+
+            /**
+             * SingleNodeMemoryInGB.
+             */
+            public Builder singleNodeMemoryInGB(Long singleNodeMemoryInGB) {
+                this.singleNodeMemoryInGB = singleNodeMemoryInGB;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public FEClusterList build() {
+                return new FEClusterList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDBInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancesResponseBody</p>
+     */
     public static class MultiZone extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VSwitchIds")
         private java.util.List<String> vSwitchIds;
@@ -355,6 +493,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
+        @com.aliyun.core.annotation.NameInMap("FEClusterList")
+        private java.util.List<FEClusterList> FEClusterList;
+
         @com.aliyun.core.annotation.NameInMap("GmtCreated")
         private String gmtCreated;
 
@@ -462,6 +603,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             this.engineMinorVersion = builder.engineMinorVersion;
             this.engineVersion = builder.engineVersion;
             this.expireTime = builder.expireTime;
+            this.FEClusterList = builder.FEClusterList;
             this.gmtCreated = builder.gmtCreated;
             this.gmtModified = builder.gmtModified;
             this.instanceUsedType = builder.instanceUsedType;
@@ -572,6 +714,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
          */
         public String getExpireTime() {
             return this.expireTime;
+        }
+
+        /**
+         * @return FEClusterList
+         */
+        public java.util.List<FEClusterList> getFEClusterList() {
+            return this.FEClusterList;
         }
 
         /**
@@ -809,6 +958,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String engineMinorVersion; 
             private String engineVersion; 
             private String expireTime; 
+            private java.util.List<FEClusterList> FEClusterList; 
             private String gmtCreated; 
             private String gmtModified; 
             private String instanceUsedType; 
@@ -856,6 +1006,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
                 this.engineMinorVersion = model.engineMinorVersion;
                 this.engineVersion = model.engineVersion;
                 this.expireTime = model.expireTime;
+                this.FEClusterList = model.FEClusterList;
                 this.gmtCreated = model.gmtCreated;
                 this.gmtModified = model.gmtModified;
                 this.instanceUsedType = model.instanceUsedType;
@@ -995,6 +1146,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
+                return this;
+            }
+
+            /**
+             * FEClusterList.
+             */
+            public Builder FEClusterList(java.util.List<FEClusterList> FEClusterList) {
+                this.FEClusterList = FEClusterList;
                 return this;
             }
 
