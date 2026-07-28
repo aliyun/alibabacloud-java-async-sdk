@@ -118,6 +118,10 @@ public class ListJobsRequest extends Request {
     private String resourceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceIds")
+    private String resourceIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceQuotaName")
     private String resourceQuotaName;
 
@@ -192,6 +196,7 @@ public class ListJobsRequest extends Request {
         this.pipelineId = builder.pipelineId;
         this.reasonSearch = builder.reasonSearch;
         this.resourceId = builder.resourceId;
+        this.resourceIds = builder.resourceIds;
         this.resourceQuotaName = builder.resourceQuotaName;
         this.showOwn = builder.showOwn;
         this.sortBy = builder.sortBy;
@@ -388,6 +393,13 @@ public class ListJobsRequest extends Request {
     }
 
     /**
+     * @return resourceIds
+     */
+    public String getResourceIds() {
+        return this.resourceIds;
+    }
+
+    /**
      * @return resourceQuotaName
      */
     public String getResourceQuotaName() {
@@ -496,6 +508,7 @@ public class ListJobsRequest extends Request {
         private String pipelineId; 
         private String reasonSearch; 
         private String resourceId; 
+        private String resourceIds; 
         private String resourceQuotaName; 
         private Boolean showOwn; 
         private String sortBy; 
@@ -539,6 +552,7 @@ public class ListJobsRequest extends Request {
             this.pipelineId = request.pipelineId;
             this.reasonSearch = request.reasonSearch;
             this.resourceId = request.resourceId;
+            this.resourceIds = request.resourceIds;
             this.resourceQuotaName = request.resourceQuotaName;
             this.showOwn = request.showOwn;
             this.sortBy = request.sortBy;
@@ -837,6 +851,15 @@ public class ListJobsRequest extends Request {
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
             this.resourceId = resourceId;
+            return this;
+        }
+
+        /**
+         * ResourceIds.
+         */
+        public Builder resourceIds(String resourceIds) {
+            this.putQueryParameter("ResourceIds", resourceIds);
+            this.resourceIds = resourceIds;
             return this;
         }
 

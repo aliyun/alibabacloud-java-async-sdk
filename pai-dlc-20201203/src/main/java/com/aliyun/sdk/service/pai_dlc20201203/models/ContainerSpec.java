@@ -35,6 +35,9 @@ public class ContainerSpec extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Resources")
     private ResourceRequirements resources;
 
+    @com.aliyun.core.annotation.NameInMap("SecurityContext")
+    private SecurityContext securityContext;
+
     @com.aliyun.core.annotation.NameInMap("WorkingDir")
     private String workingDir;
 
@@ -45,6 +48,7 @@ public class ContainerSpec extends TeaModel {
         this.image = builder.image;
         this.name = builder.name;
         this.resources = builder.resources;
+        this.securityContext = builder.securityContext;
         this.workingDir = builder.workingDir;
     }
 
@@ -103,6 +107,13 @@ public class ContainerSpec extends TeaModel {
     }
 
     /**
+     * @return securityContext
+     */
+    public SecurityContext getSecurityContext() {
+        return this.securityContext;
+    }
+
+    /**
      * @return workingDir
      */
     public String getWorkingDir() {
@@ -116,6 +127,7 @@ public class ContainerSpec extends TeaModel {
         private String image; 
         private String name; 
         private ResourceRequirements resources; 
+        private SecurityContext securityContext; 
         private String workingDir; 
 
         private Builder() {
@@ -128,6 +140,7 @@ public class ContainerSpec extends TeaModel {
             this.image = model.image;
             this.name = model.name;
             this.resources = model.resources;
+            this.securityContext = model.securityContext;
             this.workingDir = model.workingDir;
         } 
 
@@ -176,6 +189,14 @@ public class ContainerSpec extends TeaModel {
          */
         public Builder resources(ResourceRequirements resources) {
             this.resources = resources;
+            return this;
+        }
+
+        /**
+         * SecurityContext.
+         */
+        public Builder securityContext(SecurityContext securityContext) {
+            this.securityContext = securityContext;
             return this;
         }
 

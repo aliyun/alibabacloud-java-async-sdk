@@ -757,6 +757,9 @@ public class CreateJobRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Commit")
         private String commit;
 
+        @com.aliyun.core.annotation.NameInMap("IsSharedMountPath")
+        private Boolean isSharedMountPath;
+
         @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
@@ -764,6 +767,7 @@ public class CreateJobRequest extends Request {
             this.branch = builder.branch;
             this.codeSourceId = builder.codeSourceId;
             this.commit = builder.commit;
+            this.isSharedMountPath = builder.isSharedMountPath;
             this.mountPath = builder.mountPath;
         }
 
@@ -797,6 +801,13 @@ public class CreateJobRequest extends Request {
         }
 
         /**
+         * @return isSharedMountPath
+         */
+        public Boolean getIsSharedMountPath() {
+            return this.isSharedMountPath;
+        }
+
+        /**
          * @return mountPath
          */
         public String getMountPath() {
@@ -807,6 +818,7 @@ public class CreateJobRequest extends Request {
             private String branch; 
             private String codeSourceId; 
             private String commit; 
+            private Boolean isSharedMountPath; 
             private String mountPath; 
 
             private Builder() {
@@ -816,6 +828,7 @@ public class CreateJobRequest extends Request {
                 this.branch = model.branch;
                 this.codeSourceId = model.codeSourceId;
                 this.commit = model.commit;
+                this.isSharedMountPath = model.isSharedMountPath;
                 this.mountPath = model.mountPath;
             } 
 
@@ -849,6 +862,14 @@ public class CreateJobRequest extends Request {
              */
             public Builder commit(String commit) {
                 this.commit = commit;
+                return this;
+            }
+
+            /**
+             * IsSharedMountPath.
+             */
+            public Builder isSharedMountPath(Boolean isSharedMountPath) {
+                this.isSharedMountPath = isSharedMountPath;
                 return this;
             }
 

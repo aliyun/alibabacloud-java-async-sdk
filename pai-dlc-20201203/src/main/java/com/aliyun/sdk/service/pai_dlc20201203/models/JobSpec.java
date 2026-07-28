@@ -26,6 +26,9 @@ public class JobSpec extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ConsiderInSuccessPolicy")
     private Boolean considerInSuccessPolicy;
 
+    @com.aliyun.core.annotation.NameInMap("Driver")
+    private String driver;
+
     @com.aliyun.core.annotation.NameInMap("EcsSpec")
     private String ecsSpec;
 
@@ -92,6 +95,7 @@ public class JobSpec extends TeaModel {
         this.assignNodeSpec = builder.assignNodeSpec;
         this.autoScalingSpec = builder.autoScalingSpec;
         this.considerInSuccessPolicy = builder.considerInSuccessPolicy;
+        this.driver = builder.driver;
         this.ecsSpec = builder.ecsSpec;
         this.elasticSpotSpecs = builder.elasticSpotSpecs;
         this.extraPodSpec = builder.extraPodSpec;
@@ -145,6 +149,13 @@ public class JobSpec extends TeaModel {
      */
     public Boolean getConsiderInSuccessPolicy() {
         return this.considerInSuccessPolicy;
+    }
+
+    /**
+     * @return driver
+     */
+    public String getDriver() {
+        return this.driver;
     }
 
     /**
@@ -291,6 +302,7 @@ public class JobSpec extends TeaModel {
         private AssignNodeSpec assignNodeSpec; 
         private AutoScalingSpec autoScalingSpec; 
         private Boolean considerInSuccessPolicy; 
+        private String driver; 
         private String ecsSpec; 
         private java.util.List<ElasticSpotSpec> elasticSpotSpecs; 
         private ExtraPodSpec extraPodSpec; 
@@ -319,6 +331,7 @@ public class JobSpec extends TeaModel {
             this.assignNodeSpec = model.assignNodeSpec;
             this.autoScalingSpec = model.autoScalingSpec;
             this.considerInSuccessPolicy = model.considerInSuccessPolicy;
+            this.driver = model.driver;
             this.ecsSpec = model.ecsSpec;
             this.elasticSpotSpecs = model.elasticSpotSpecs;
             this.extraPodSpec = model.extraPodSpec;
@@ -362,6 +375,14 @@ public class JobSpec extends TeaModel {
          */
         public Builder considerInSuccessPolicy(Boolean considerInSuccessPolicy) {
             this.considerInSuccessPolicy = considerInSuccessPolicy;
+            return this;
+        }
+
+        /**
+         * Driver.
+         */
+        public Builder driver(String driver) {
+            this.driver = driver;
             return this;
         }
 

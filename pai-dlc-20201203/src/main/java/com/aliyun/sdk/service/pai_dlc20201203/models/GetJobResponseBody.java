@@ -158,6 +158,9 @@ public class GetJobResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("WorkspaceName")
     private String workspaceName;
 
+    @com.aliyun.core.annotation.NameInMap("supportedProfilingTypes")
+    private String supportedProfilingTypes;
+
     private GetJobResponseBody(Builder builder) {
         this.accessibility = builder.accessibility;
         this.clusterId = builder.clusterId;
@@ -206,6 +209,7 @@ public class GetJobResponseBody extends TeaModel {
         this.userVpc = builder.userVpc;
         this.workspaceId = builder.workspaceId;
         this.workspaceName = builder.workspaceName;
+        this.supportedProfilingTypes = builder.supportedProfilingTypes;
     }
 
     public static Builder builder() {
@@ -549,6 +553,13 @@ public class GetJobResponseBody extends TeaModel {
         return this.workspaceName;
     }
 
+    /**
+     * @return supportedProfilingTypes
+     */
+    public String getSupportedProfilingTypes() {
+        return this.supportedProfilingTypes;
+    }
+
     public static final class Builder {
         private String accessibility; 
         private String clusterId; 
@@ -597,6 +608,7 @@ public class GetJobResponseBody extends TeaModel {
         private UserVpc userVpc; 
         private String workspaceId; 
         private String workspaceName; 
+        private String supportedProfilingTypes; 
 
         private Builder() {
         } 
@@ -649,6 +661,7 @@ public class GetJobResponseBody extends TeaModel {
             this.userVpc = model.userVpc;
             this.workspaceId = model.workspaceId;
             this.workspaceName = model.workspaceName;
+            this.supportedProfilingTypes = model.supportedProfilingTypes;
         } 
 
         /**
@@ -1136,6 +1149,14 @@ public class GetJobResponseBody extends TeaModel {
             return this;
         }
 
+        /**
+         * supportedProfilingTypes.
+         */
+        public Builder supportedProfilingTypes(String supportedProfilingTypes) {
+            this.supportedProfilingTypes = supportedProfilingTypes;
+            return this;
+        }
+
         public GetJobResponseBody build() {
             return new GetJobResponseBody(this);
         } 
@@ -1518,6 +1539,9 @@ public class GetJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
+        @com.aliyun.core.annotation.NameInMap("supportedProfilingTypes")
+        private String supportedProfilingTypes;
+
         private HistoryPods(Builder builder) {
             this.duration = builder.duration;
             this.gmtCreateTime = builder.gmtCreateTime;
@@ -1532,6 +1556,7 @@ public class GetJobResponseBody extends TeaModel {
             this.status = builder.status;
             this.subStatus = builder.subStatus;
             this.type = builder.type;
+            this.supportedProfilingTypes = builder.supportedProfilingTypes;
         }
 
         public static Builder builder() {
@@ -1633,6 +1658,13 @@ public class GetJobResponseBody extends TeaModel {
             return this.type;
         }
 
+        /**
+         * @return supportedProfilingTypes
+         */
+        public String getSupportedProfilingTypes() {
+            return this.supportedProfilingTypes;
+        }
+
         public static final class Builder {
             private Double duration; 
             private String gmtCreateTime; 
@@ -1647,6 +1679,7 @@ public class GetJobResponseBody extends TeaModel {
             private String status; 
             private String subStatus; 
             private String type; 
+            private String supportedProfilingTypes; 
 
             private Builder() {
             } 
@@ -1665,6 +1698,7 @@ public class GetJobResponseBody extends TeaModel {
                 this.status = model.status;
                 this.subStatus = model.subStatus;
                 this.type = model.type;
+                this.supportedProfilingTypes = model.supportedProfilingTypes;
             } 
 
             /**
@@ -1808,6 +1842,14 @@ public class GetJobResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * supportedProfilingTypes.
+             */
+            public Builder supportedProfilingTypes(String supportedProfilingTypes) {
+                this.supportedProfilingTypes = supportedProfilingTypes;
+                return this;
+            }
+
             public HistoryPods build() {
                 return new HistoryPods(this);
             } 
@@ -1864,6 +1906,9 @@ public class GetJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
+        @com.aliyun.core.annotation.NameInMap("supportedProfilingTypes")
+        private String supportedProfilingTypes;
+
         private Pods(Builder builder) {
             this.duration = builder.duration;
             this.gmtCreateTime = builder.gmtCreateTime;
@@ -1879,6 +1924,7 @@ public class GetJobResponseBody extends TeaModel {
             this.status = builder.status;
             this.subStatus = builder.subStatus;
             this.type = builder.type;
+            this.supportedProfilingTypes = builder.supportedProfilingTypes;
         }
 
         public static Builder builder() {
@@ -1987,6 +2033,13 @@ public class GetJobResponseBody extends TeaModel {
             return this.type;
         }
 
+        /**
+         * @return supportedProfilingTypes
+         */
+        public String getSupportedProfilingTypes() {
+            return this.supportedProfilingTypes;
+        }
+
         public static final class Builder {
             private Double duration; 
             private String gmtCreateTime; 
@@ -2002,6 +2055,7 @@ public class GetJobResponseBody extends TeaModel {
             private String status; 
             private String subStatus; 
             private String type; 
+            private String supportedProfilingTypes; 
 
             private Builder() {
             } 
@@ -2021,6 +2075,7 @@ public class GetJobResponseBody extends TeaModel {
                 this.status = model.status;
                 this.subStatus = model.subStatus;
                 this.type = model.type;
+                this.supportedProfilingTypes = model.supportedProfilingTypes;
             } 
 
             /**
@@ -2176,6 +2231,14 @@ public class GetJobResponseBody extends TeaModel {
              */
             public Builder type(String type) {
                 this.type = type;
+                return this;
+            }
+
+            /**
+             * supportedProfilingTypes.
+             */
+            public Builder supportedProfilingTypes(String supportedProfilingTypes) {
+                this.supportedProfilingTypes = supportedProfilingTypes;
                 return this;
             }
 

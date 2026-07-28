@@ -56,6 +56,9 @@ public class PodItem extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
+    @com.aliyun.core.annotation.NameInMap("supportedProfilingTypes")
+    private String supportedProfilingTypes;
+
     private PodItem(Builder builder) {
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtFinishTime = builder.gmtFinishTime;
@@ -70,6 +73,7 @@ public class PodItem extends TeaModel {
         this.status = builder.status;
         this.subStatus = builder.subStatus;
         this.type = builder.type;
+        this.supportedProfilingTypes = builder.supportedProfilingTypes;
     }
 
     public static Builder builder() {
@@ -175,6 +179,13 @@ public class PodItem extends TeaModel {
         return this.type;
     }
 
+    /**
+     * @return supportedProfilingTypes
+     */
+    public String getSupportedProfilingTypes() {
+        return this.supportedProfilingTypes;
+    }
+
     public static final class Builder {
         private String gmtCreateTime; 
         private String gmtFinishTime; 
@@ -189,6 +200,7 @@ public class PodItem extends TeaModel {
         private String status; 
         private String subStatus; 
         private String type; 
+        private String supportedProfilingTypes; 
 
         private Builder() {
         } 
@@ -207,6 +219,7 @@ public class PodItem extends TeaModel {
             this.status = model.status;
             this.subStatus = model.subStatus;
             this.type = model.type;
+            this.supportedProfilingTypes = model.supportedProfilingTypes;
         } 
 
         /**
@@ -310,6 +323,14 @@ public class PodItem extends TeaModel {
          */
         public Builder type(String type) {
             this.type = type;
+            return this;
+        }
+
+        /**
+         * supportedProfilingTypes.
+         */
+        public Builder supportedProfilingTypes(String supportedProfilingTypes) {
+            this.supportedProfilingTypes = supportedProfilingTypes;
             return this;
         }
 

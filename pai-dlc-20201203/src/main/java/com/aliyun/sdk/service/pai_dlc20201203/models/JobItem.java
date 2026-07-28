@@ -200,6 +200,9 @@ public class JobItem extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("WorkspaceName")
     private String workspaceName;
 
+    @com.aliyun.core.annotation.NameInMap("supportedProfilingTypes")
+    private String supportedProfilingTypes;
+
     private JobItem(Builder builder) {
         this.accessibility = builder.accessibility;
         this.clusterId = builder.clusterId;
@@ -262,6 +265,7 @@ public class JobItem extends TeaModel {
         this.workingDir = builder.workingDir;
         this.workspaceId = builder.workspaceId;
         this.workspaceName = builder.workspaceName;
+        this.supportedProfilingTypes = builder.supportedProfilingTypes;
     }
 
     public static Builder builder() {
@@ -703,6 +707,13 @@ public class JobItem extends TeaModel {
         return this.workspaceName;
     }
 
+    /**
+     * @return supportedProfilingTypes
+     */
+    public String getSupportedProfilingTypes() {
+        return this.supportedProfilingTypes;
+    }
+
     public static final class Builder {
         private String accessibility; 
         private String clusterId; 
@@ -765,6 +776,7 @@ public class JobItem extends TeaModel {
         private String workingDir; 
         private String workspaceId; 
         private String workspaceName; 
+        private String supportedProfilingTypes; 
 
         private Builder() {
         } 
@@ -831,6 +843,7 @@ public class JobItem extends TeaModel {
             this.workingDir = model.workingDir;
             this.workspaceId = model.workspaceId;
             this.workspaceName = model.workspaceName;
+            this.supportedProfilingTypes = model.supportedProfilingTypes;
         } 
 
         /**
@@ -1318,6 +1331,14 @@ public class JobItem extends TeaModel {
          */
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = workspaceName;
+            return this;
+        }
+
+        /**
+         * supportedProfilingTypes.
+         */
+        public Builder supportedProfilingTypes(String supportedProfilingTypes) {
+            this.supportedProfilingTypes = supportedProfilingTypes;
             return this;
         }
 
