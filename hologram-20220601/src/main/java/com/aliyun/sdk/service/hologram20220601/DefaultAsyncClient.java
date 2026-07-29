@@ -29,8 +29,30 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "Hologram";
         this.version = "2022-06-01";
-        this.endpointRule = "";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("us-west-1", "hologram.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "hologram.us-east-1.aliyuncs.com"),
+            new TeaPair("na-south-1", "hologram.na-south-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "hologram.me-east-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "hologram.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "hologram.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "hologram.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "hologram.cn-shenzhen-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "hologram.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "hologram.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "hologram.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "hologram.cn-north-2-gov-1.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "hologram.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "hologram.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "hologram.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "hologram.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "hologram.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "hologram.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "hologram.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "hologram.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "hologram.ap-northeast-1.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 

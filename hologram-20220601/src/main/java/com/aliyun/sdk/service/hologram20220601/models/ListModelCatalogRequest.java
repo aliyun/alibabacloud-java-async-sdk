@@ -29,11 +29,16 @@ public class ListModelCatalogRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("provider")
+    private String provider;
+
     private ListModelCatalogRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.provider = builder.provider;
     }
 
     public static Builder builder() {
@@ -70,10 +75,18 @@ public class ListModelCatalogRequest extends Request {
         return this.nextToken;
     }
 
+    /**
+     * @return provider
+     */
+    public String getProvider() {
+        return this.provider;
+    }
+
     public static final class Builder extends Request.Builder<ListModelCatalogRequest, Builder> {
         private String instanceId; 
         private Integer maxResults; 
         private String nextToken; 
+        private String provider; 
 
         private Builder() {
             super();
@@ -84,6 +97,7 @@ public class ListModelCatalogRequest extends Request {
             this.instanceId = request.instanceId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.provider = request.provider;
         } 
 
         /**
@@ -110,6 +124,15 @@ public class ListModelCatalogRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * provider.
+         */
+        public Builder provider(String provider) {
+            this.putQueryParameter("provider", provider);
+            this.provider = provider;
             return this;
         }
 

@@ -161,6 +161,9 @@ public class ListModelCatalogResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("serviceDeployRegion")
         private String serviceDeployRegion;
 
+        @com.aliyun.core.annotation.NameInMap("supportApiKeyAccess")
+        private Boolean supportApiKeyAccess;
+
         @com.aliyun.core.annotation.NameInMap("taskType")
         private String taskType;
 
@@ -171,6 +174,7 @@ public class ListModelCatalogResponseBody extends TeaModel {
             this.paramsExample = builder.paramsExample;
             this.provider = builder.provider;
             this.serviceDeployRegion = builder.serviceDeployRegion;
+            this.supportApiKeyAccess = builder.supportApiKeyAccess;
             this.taskType = builder.taskType;
         }
 
@@ -225,6 +229,13 @@ public class ListModelCatalogResponseBody extends TeaModel {
         }
 
         /**
+         * @return supportApiKeyAccess
+         */
+        public Boolean getSupportApiKeyAccess() {
+            return this.supportApiKeyAccess;
+        }
+
+        /**
          * @return taskType
          */
         public String getTaskType() {
@@ -238,6 +249,7 @@ public class ListModelCatalogResponseBody extends TeaModel {
             private String paramsExample; 
             private String provider; 
             private String serviceDeployRegion; 
+            private Boolean supportApiKeyAccess; 
             private String taskType; 
 
             private Builder() {
@@ -250,6 +262,7 @@ public class ListModelCatalogResponseBody extends TeaModel {
                 this.paramsExample = model.paramsExample;
                 this.provider = model.provider;
                 this.serviceDeployRegion = model.serviceDeployRegion;
+                this.supportApiKeyAccess = model.supportApiKeyAccess;
                 this.taskType = model.taskType;
             } 
 
@@ -298,6 +311,14 @@ public class ListModelCatalogResponseBody extends TeaModel {
              */
             public Builder serviceDeployRegion(String serviceDeployRegion) {
                 this.serviceDeployRegion = serviceDeployRegion;
+                return this;
+            }
+
+            /**
+             * supportApiKeyAccess.
+             */
+            public Builder supportApiKeyAccess(Boolean supportApiKeyAccess) {
+                this.supportApiKeyAccess = supportApiKeyAccess;
                 return this;
             }
 

@@ -497,6 +497,9 @@ public class GetInstanceModelResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("supportApiKeyAccess")
+        private Boolean supportApiKeyAccess;
+
         @com.aliyun.core.annotation.NameInMap("taskType")
         private String taskType;
 
@@ -518,6 +521,7 @@ public class GetInstanceModelResponseBody extends TeaModel {
             this.serviceCount = builder.serviceCount;
             this.serviceDeployRegion = builder.serviceDeployRegion;
             this.status = builder.status;
+            this.supportApiKeyAccess = builder.supportApiKeyAccess;
             this.taskType = builder.taskType;
             this.version = builder.version;
         }
@@ -629,6 +633,13 @@ public class GetInstanceModelResponseBody extends TeaModel {
         }
 
         /**
+         * @return supportApiKeyAccess
+         */
+        public Boolean getSupportApiKeyAccess() {
+            return this.supportApiKeyAccess;
+        }
+
+        /**
          * @return taskType
          */
         public String getTaskType() {
@@ -657,6 +668,7 @@ public class GetInstanceModelResponseBody extends TeaModel {
             private Long serviceCount; 
             private String serviceDeployRegion; 
             private String status; 
+            private Boolean supportApiKeyAccess; 
             private String taskType; 
             private String version; 
 
@@ -678,6 +690,7 @@ public class GetInstanceModelResponseBody extends TeaModel {
                 this.serviceCount = model.serviceCount;
                 this.serviceDeployRegion = model.serviceDeployRegion;
                 this.status = model.status;
+                this.supportApiKeyAccess = model.supportApiKeyAccess;
                 this.taskType = model.taskType;
                 this.version = model.version;
             } 
@@ -791,6 +804,14 @@ public class GetInstanceModelResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * supportApiKeyAccess.
+             */
+            public Builder supportApiKeyAccess(Boolean supportApiKeyAccess) {
+                this.supportApiKeyAccess = supportApiKeyAccess;
                 return this;
             }
 
