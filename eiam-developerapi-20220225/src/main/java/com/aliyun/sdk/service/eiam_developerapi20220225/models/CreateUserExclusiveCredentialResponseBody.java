@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.eiam.dev.models.*;
  * <p>CreateUserExclusiveCredentialResponseBody</p>
  */
 public class CreateUserExclusiveCredentialResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("credentialCiphertext")
+    private String credentialCiphertext;
+
     @com.aliyun.core.annotation.NameInMap("credentialId")
     private String credentialId;
 
@@ -24,6 +27,7 @@ public class CreateUserExclusiveCredentialResponseBody extends TeaModel {
     private String credentialIdentifier;
 
     private CreateUserExclusiveCredentialResponseBody(Builder builder) {
+        this.credentialCiphertext = builder.credentialCiphertext;
         this.credentialId = builder.credentialId;
         this.credentialIdentifier = builder.credentialIdentifier;
     }
@@ -41,6 +45,13 @@ public class CreateUserExclusiveCredentialResponseBody extends TeaModel {
     }
 
     /**
+     * @return credentialCiphertext
+     */
+    public String getCredentialCiphertext() {
+        return this.credentialCiphertext;
+    }
+
+    /**
      * @return credentialId
      */
     public String getCredentialId() {
@@ -55,6 +66,7 @@ public class CreateUserExclusiveCredentialResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String credentialCiphertext; 
         private String credentialId; 
         private String credentialIdentifier; 
 
@@ -62,9 +74,18 @@ public class CreateUserExclusiveCredentialResponseBody extends TeaModel {
         } 
 
         private Builder(CreateUserExclusiveCredentialResponseBody model) {
+            this.credentialCiphertext = model.credentialCiphertext;
             this.credentialId = model.credentialId;
             this.credentialIdentifier = model.credentialIdentifier;
         } 
+
+        /**
+         * credentialCiphertext.
+         */
+        public Builder credentialCiphertext(String credentialCiphertext) {
+            this.credentialCiphertext = credentialCiphertext;
+            return this;
+        }
 
         /**
          * credentialId.

@@ -412,6 +412,123 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
      *
      * <p>ObtainCloudAccountRoleAccessCredentialResponseBody</p>
      */
+    public static class TencentCloudStsToken extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("expiration")
+        private String expiration;
+
+        @com.aliyun.core.annotation.NameInMap("tmpSecretId")
+        private String tmpSecretId;
+
+        @com.aliyun.core.annotation.NameInMap("tmpSecretKey")
+        private String tmpSecretKey;
+
+        @com.aliyun.core.annotation.NameInMap("token")
+        private String token;
+
+        private TencentCloudStsToken(Builder builder) {
+            this.expiration = builder.expiration;
+            this.tmpSecretId = builder.tmpSecretId;
+            this.tmpSecretKey = builder.tmpSecretKey;
+            this.token = builder.token;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TencentCloudStsToken create() {
+            return builder().build();
+        }
+
+        /**
+         * @return expiration
+         */
+        public String getExpiration() {
+            return this.expiration;
+        }
+
+        /**
+         * @return tmpSecretId
+         */
+        public String getTmpSecretId() {
+            return this.tmpSecretId;
+        }
+
+        /**
+         * @return tmpSecretKey
+         */
+        public String getTmpSecretKey() {
+            return this.tmpSecretKey;
+        }
+
+        /**
+         * @return token
+         */
+        public String getToken() {
+            return this.token;
+        }
+
+        public static final class Builder {
+            private String expiration; 
+            private String tmpSecretId; 
+            private String tmpSecretKey; 
+            private String token; 
+
+            private Builder() {
+            } 
+
+            private Builder(TencentCloudStsToken model) {
+                this.expiration = model.expiration;
+                this.tmpSecretId = model.tmpSecretId;
+                this.tmpSecretKey = model.tmpSecretKey;
+                this.token = model.token;
+            } 
+
+            /**
+             * expiration.
+             */
+            public Builder expiration(String expiration) {
+                this.expiration = expiration;
+                return this;
+            }
+
+            /**
+             * tmpSecretId.
+             */
+            public Builder tmpSecretId(String tmpSecretId) {
+                this.tmpSecretId = tmpSecretId;
+                return this;
+            }
+
+            /**
+             * tmpSecretKey.
+             */
+            public Builder tmpSecretKey(String tmpSecretKey) {
+                this.tmpSecretKey = tmpSecretKey;
+                return this;
+            }
+
+            /**
+             * token.
+             */
+            public Builder token(String token) {
+                this.token = token;
+                return this;
+            }
+
+            public TencentCloudStsToken build() {
+                return new TencentCloudStsToken(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ObtainCloudAccountRoleAccessCredentialResponseBody} extends {@link TeaModel}
+     *
+     * <p>ObtainCloudAccountRoleAccessCredentialResponseBody</p>
+     */
     public static class CloudAccountRoleAccessCredential extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accessCredentialExpiresAt")
         private Long accessCredentialExpiresAt;
@@ -422,10 +539,14 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
         @com.aliyun.core.annotation.NameInMap("awsStsToken")
         private AwsStsToken awsStsToken;
 
+        @com.aliyun.core.annotation.NameInMap("tencentCloudStsToken")
+        private TencentCloudStsToken tencentCloudStsToken;
+
         private CloudAccountRoleAccessCredential(Builder builder) {
             this.accessCredentialExpiresAt = builder.accessCredentialExpiresAt;
             this.alibabaCloudStsToken = builder.alibabaCloudStsToken;
             this.awsStsToken = builder.awsStsToken;
+            this.tencentCloudStsToken = builder.tencentCloudStsToken;
         }
 
         public static Builder builder() {
@@ -457,10 +578,18 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
             return this.awsStsToken;
         }
 
+        /**
+         * @return tencentCloudStsToken
+         */
+        public TencentCloudStsToken getTencentCloudStsToken() {
+            return this.tencentCloudStsToken;
+        }
+
         public static final class Builder {
             private Long accessCredentialExpiresAt; 
             private AlibabaCloudStsToken alibabaCloudStsToken; 
             private AwsStsToken awsStsToken; 
+            private TencentCloudStsToken tencentCloudStsToken; 
 
             private Builder() {
             } 
@@ -469,6 +598,7 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
                 this.accessCredentialExpiresAt = model.accessCredentialExpiresAt;
                 this.alibabaCloudStsToken = model.alibabaCloudStsToken;
                 this.awsStsToken = model.awsStsToken;
+                this.tencentCloudStsToken = model.tencentCloudStsToken;
             } 
 
             /**
@@ -492,6 +622,14 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
              */
             public Builder awsStsToken(AwsStsToken awsStsToken) {
                 this.awsStsToken = awsStsToken;
+                return this;
+            }
+
+            /**
+             * tencentCloudStsToken.
+             */
+            public Builder tencentCloudStsToken(TencentCloudStsToken tencentCloudStsToken) {
+                this.tencentCloudStsToken = tencentCloudStsToken;
                 return this;
             }
 

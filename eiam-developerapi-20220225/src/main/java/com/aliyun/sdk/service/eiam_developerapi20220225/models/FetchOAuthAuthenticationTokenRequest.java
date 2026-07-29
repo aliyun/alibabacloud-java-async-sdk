@@ -37,6 +37,14 @@ public class FetchOAuthAuthenticationTokenRequest extends Request {
     private String credentialProviderIdentifier;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("customParameters")
+    private java.util.Map<String, String> customParameters;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("forceAuthentication")
+    private Boolean forceAuthentication;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("scope")
     private String scope;
 
@@ -46,6 +54,8 @@ public class FetchOAuthAuthenticationTokenRequest extends Request {
         this.instanceId = builder.instanceId;
         this.authorization = builder.authorization;
         this.credentialProviderIdentifier = builder.credentialProviderIdentifier;
+        this.customParameters = builder.customParameters;
+        this.forceAuthentication = builder.forceAuthentication;
         this.scope = builder.scope;
     }
 
@@ -91,6 +101,20 @@ public class FetchOAuthAuthenticationTokenRequest extends Request {
     }
 
     /**
+     * @return customParameters
+     */
+    public java.util.Map<String, String> getCustomParameters() {
+        return this.customParameters;
+    }
+
+    /**
+     * @return forceAuthentication
+     */
+    public Boolean getForceAuthentication() {
+        return this.forceAuthentication;
+    }
+
+    /**
      * @return scope
      */
     public String getScope() {
@@ -102,6 +126,8 @@ public class FetchOAuthAuthenticationTokenRequest extends Request {
         private String instanceId; 
         private String authorization; 
         private String credentialProviderIdentifier; 
+        private java.util.Map<String, String> customParameters; 
+        private Boolean forceAuthentication; 
         private String scope; 
 
         private Builder() {
@@ -114,6 +140,8 @@ public class FetchOAuthAuthenticationTokenRequest extends Request {
             this.instanceId = request.instanceId;
             this.authorization = request.authorization;
             this.credentialProviderIdentifier = request.credentialProviderIdentifier;
+            this.customParameters = request.customParameters;
+            this.forceAuthentication = request.forceAuthentication;
             this.scope = request.scope;
         } 
 
@@ -159,6 +187,24 @@ public class FetchOAuthAuthenticationTokenRequest extends Request {
         public Builder credentialProviderIdentifier(String credentialProviderIdentifier) {
             this.putBodyParameter("credentialProviderIdentifier", credentialProviderIdentifier);
             this.credentialProviderIdentifier = credentialProviderIdentifier;
+            return this;
+        }
+
+        /**
+         * customParameters.
+         */
+        public Builder customParameters(java.util.Map<String, String> customParameters) {
+            this.putBodyParameter("customParameters", customParameters);
+            this.customParameters = customParameters;
+            return this;
+        }
+
+        /**
+         * forceAuthentication.
+         */
+        public Builder forceAuthentication(Boolean forceAuthentication) {
+            this.putBodyParameter("forceAuthentication", forceAuthentication);
+            this.forceAuthentication = forceAuthentication;
             return this;
         }
 

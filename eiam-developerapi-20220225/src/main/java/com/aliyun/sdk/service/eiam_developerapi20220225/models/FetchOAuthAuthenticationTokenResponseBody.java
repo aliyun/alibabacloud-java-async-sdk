@@ -50,6 +50,9 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("oauthAccessTokenContent")
     private OauthAccessTokenContent oauthAccessTokenContent;
 
+    @com.aliyun.core.annotation.NameInMap("oauthAuthorizationSession")
+    private OauthAuthorizationSession oauthAuthorizationSession;
+
     @com.aliyun.core.annotation.NameInMap("revoked")
     private Boolean revoked;
 
@@ -68,6 +71,7 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
         this.expirationTime = builder.expirationTime;
         this.instanceId = builder.instanceId;
         this.oauthAccessTokenContent = builder.oauthAccessTokenContent;
+        this.oauthAuthorizationSession = builder.oauthAuthorizationSession;
         this.revoked = builder.revoked;
         this.updateTime = builder.updateTime;
     }
@@ -162,6 +166,13 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
     }
 
     /**
+     * @return oauthAuthorizationSession
+     */
+    public OauthAuthorizationSession getOauthAuthorizationSession() {
+        return this.oauthAuthorizationSession;
+    }
+
+    /**
      * @return revoked
      */
     public Boolean getRevoked() {
@@ -187,6 +198,7 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
         private Long expirationTime; 
         private String instanceId; 
         private OauthAccessTokenContent oauthAccessTokenContent; 
+        private OauthAuthorizationSession oauthAuthorizationSession; 
         private Boolean revoked; 
         private Long updateTime; 
 
@@ -205,6 +217,7 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
             this.expirationTime = model.expirationTime;
             this.instanceId = model.instanceId;
             this.oauthAccessTokenContent = model.oauthAccessTokenContent;
+            this.oauthAuthorizationSession = model.oauthAuthorizationSession;
             this.revoked = model.revoked;
             this.updateTime = model.updateTime;
         } 
@@ -297,6 +310,14 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
          */
         public Builder oauthAccessTokenContent(OauthAccessTokenContent oauthAccessTokenContent) {
             this.oauthAccessTokenContent = oauthAccessTokenContent;
+            return this;
+        }
+
+        /**
+         * oauthAuthorizationSession.
+         */
+        public Builder oauthAuthorizationSession(OauthAuthorizationSession oauthAuthorizationSession) {
+            this.oauthAuthorizationSession = oauthAuthorizationSession;
             return this;
         }
 
@@ -413,6 +434,123 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
 
             public OauthAccessTokenContent build() {
                 return new OauthAccessTokenContent(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link FetchOAuthAuthenticationTokenResponseBody} extends {@link TeaModel}
+     *
+     * <p>FetchOAuthAuthenticationTokenResponseBody</p>
+     */
+    public static class OauthAuthorizationSession extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("authorizationUrl")
+        private String authorizationUrl;
+
+        @com.aliyun.core.annotation.NameInMap("sessionId")
+        private String sessionId;
+
+        @com.aliyun.core.annotation.NameInMap("sessionStatus")
+        private String sessionStatus;
+
+        @com.aliyun.core.annotation.NameInMap("sessionUri")
+        private String sessionUri;
+
+        private OauthAuthorizationSession(Builder builder) {
+            this.authorizationUrl = builder.authorizationUrl;
+            this.sessionId = builder.sessionId;
+            this.sessionStatus = builder.sessionStatus;
+            this.sessionUri = builder.sessionUri;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OauthAuthorizationSession create() {
+            return builder().build();
+        }
+
+        /**
+         * @return authorizationUrl
+         */
+        public String getAuthorizationUrl() {
+            return this.authorizationUrl;
+        }
+
+        /**
+         * @return sessionId
+         */
+        public String getSessionId() {
+            return this.sessionId;
+        }
+
+        /**
+         * @return sessionStatus
+         */
+        public String getSessionStatus() {
+            return this.sessionStatus;
+        }
+
+        /**
+         * @return sessionUri
+         */
+        public String getSessionUri() {
+            return this.sessionUri;
+        }
+
+        public static final class Builder {
+            private String authorizationUrl; 
+            private String sessionId; 
+            private String sessionStatus; 
+            private String sessionUri; 
+
+            private Builder() {
+            } 
+
+            private Builder(OauthAuthorizationSession model) {
+                this.authorizationUrl = model.authorizationUrl;
+                this.sessionId = model.sessionId;
+                this.sessionStatus = model.sessionStatus;
+                this.sessionUri = model.sessionUri;
+            } 
+
+            /**
+             * authorizationUrl.
+             */
+            public Builder authorizationUrl(String authorizationUrl) {
+                this.authorizationUrl = authorizationUrl;
+                return this;
+            }
+
+            /**
+             * sessionId.
+             */
+            public Builder sessionId(String sessionId) {
+                this.sessionId = sessionId;
+                return this;
+            }
+
+            /**
+             * sessionStatus.
+             */
+            public Builder sessionStatus(String sessionStatus) {
+                this.sessionStatus = sessionStatus;
+                return this;
+            }
+
+            /**
+             * sessionUri.
+             */
+            public Builder sessionUri(String sessionUri) {
+                this.sessionUri = sessionUri;
+                return this;
+            }
+
+            public OauthAuthorizationSession build() {
+                return new OauthAuthorizationSession(this);
             } 
 
         } 

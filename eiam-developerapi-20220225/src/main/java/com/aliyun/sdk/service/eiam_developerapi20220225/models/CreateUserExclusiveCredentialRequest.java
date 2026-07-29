@@ -63,6 +63,10 @@ public class CreateUserExclusiveCredentialRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("returnCiphertext")
+    private Boolean returnCiphertext;
+
     private CreateUserExclusiveCredentialRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -75,6 +79,7 @@ public class CreateUserExclusiveCredentialRequest extends Request {
         this.credentialScenarioLabel = builder.credentialScenarioLabel;
         this.credentialType = builder.credentialType;
         this.description = builder.description;
+        this.returnCiphertext = builder.returnCiphertext;
     }
 
     public static Builder builder() {
@@ -160,6 +165,13 @@ public class CreateUserExclusiveCredentialRequest extends Request {
         return this.description;
     }
 
+    /**
+     * @return returnCiphertext
+     */
+    public Boolean getReturnCiphertext() {
+        return this.returnCiphertext;
+    }
+
     public static final class Builder extends Request.Builder<CreateUserExclusiveCredentialRequest, Builder> {
         private String regionId; 
         private String instanceId; 
@@ -171,6 +183,7 @@ public class CreateUserExclusiveCredentialRequest extends Request {
         private String credentialScenarioLabel; 
         private String credentialType; 
         private String description; 
+        private Boolean returnCiphertext; 
 
         private Builder() {
             super();
@@ -188,6 +201,7 @@ public class CreateUserExclusiveCredentialRequest extends Request {
             this.credentialScenarioLabel = request.credentialScenarioLabel;
             this.credentialType = request.credentialType;
             this.description = request.description;
+            this.returnCiphertext = request.returnCiphertext;
         } 
 
         /**
@@ -292,6 +306,15 @@ public class CreateUserExclusiveCredentialRequest extends Request {
         public Builder description(String description) {
             this.putBodyParameter("description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * returnCiphertext.
+         */
+        public Builder returnCiphertext(Boolean returnCiphertext) {
+            this.putBodyParameter("returnCiphertext", returnCiphertext);
+            this.returnCiphertext = returnCiphertext;
             return this;
         }
 
