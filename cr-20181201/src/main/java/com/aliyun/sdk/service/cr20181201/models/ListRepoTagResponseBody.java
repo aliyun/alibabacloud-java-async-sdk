@@ -26,6 +26,12 @@ public class ListRepoTagResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
     @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
@@ -42,6 +48,8 @@ public class ListRepoTagResponseBody extends TeaModel {
         this.code = builder.code;
         this.images = builder.images;
         this.isSuccess = builder.isSuccess;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
@@ -82,6 +90,20 @@ public class ListRepoTagResponseBody extends TeaModel {
     }
 
     /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return pageNo
      */
     public Integer getPageNo() {
@@ -113,6 +135,8 @@ public class ListRepoTagResponseBody extends TeaModel {
         private String code; 
         private java.util.List<Images> images; 
         private Boolean isSuccess; 
+        private Integer maxResults; 
+        private String nextToken; 
         private Integer pageNo; 
         private Integer pageSize; 
         private String requestId; 
@@ -125,6 +149,8 @@ public class ListRepoTagResponseBody extends TeaModel {
             this.code = model.code;
             this.images = model.images;
             this.isSuccess = model.isSuccess;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
             this.pageNo = model.pageNo;
             this.pageSize = model.pageSize;
             this.requestId = model.requestId;
@@ -158,6 +184,22 @@ public class ListRepoTagResponseBody extends TeaModel {
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
+            return this;
+        }
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
             return this;
         }
 

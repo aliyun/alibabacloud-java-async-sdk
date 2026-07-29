@@ -27,6 +27,14 @@ public class ListRepoTagRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
@@ -43,6 +51,8 @@ public class ListRepoTagRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
         this.repoId = builder.repoId;
@@ -76,6 +86,20 @@ public class ListRepoTagRequest extends Request {
     }
 
     /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return pageNo
      */
     public Integer getPageNo() {
@@ -99,6 +123,8 @@ public class ListRepoTagRequest extends Request {
     public static final class Builder extends Request.Builder<ListRepoTagRequest, Builder> {
         private String regionId; 
         private String instanceId; 
+        private Integer maxResults; 
+        private String nextToken; 
         private Integer pageNo; 
         private Integer pageSize; 
         private String repoId; 
@@ -111,6 +137,8 @@ public class ListRepoTagRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.instanceId = request.instanceId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
             this.repoId = request.repoId;
@@ -135,6 +163,24 @@ public class ListRepoTagRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 

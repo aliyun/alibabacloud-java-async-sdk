@@ -23,6 +23,12 @@ public class ListRepositoryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("IsSuccess")
     private Boolean isSuccess;
 
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
     @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
@@ -41,6 +47,8 @@ public class ListRepositoryResponseBody extends TeaModel {
     private ListRepositoryResponseBody(Builder builder) {
         this.code = builder.code;
         this.isSuccess = builder.isSuccess;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
         this.repositories = builder.repositories;
@@ -72,6 +80,20 @@ public class ListRepositoryResponseBody extends TeaModel {
      */
     public Boolean getIsSuccess() {
         return this.isSuccess;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -112,6 +134,8 @@ public class ListRepositoryResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Boolean isSuccess; 
+        private Integer maxResults; 
+        private String nextToken; 
         private Integer pageNo; 
         private Integer pageSize; 
         private java.util.List<Repositories> repositories; 
@@ -124,6 +148,8 @@ public class ListRepositoryResponseBody extends TeaModel {
         private Builder(ListRepositoryResponseBody model) {
             this.code = model.code;
             this.isSuccess = model.isSuccess;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
             this.pageNo = model.pageNo;
             this.pageSize = model.pageSize;
             this.repositories = model.repositories;
@@ -150,6 +176,22 @@ public class ListRepositoryResponseBody extends TeaModel {
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
+            return this;
+        }
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
             return this;
         }
 
