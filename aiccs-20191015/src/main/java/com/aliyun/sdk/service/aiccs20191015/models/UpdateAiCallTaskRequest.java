@@ -23,6 +23,18 @@ public class UpdateAiCallTaskRequest extends Request {
     private java.util.List<String> callDay;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallExpireDate")
+    private String callExpireDate;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallExpireMinutes")
+    private Long callExpireMinutes;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallExpireType")
+    private Long callExpireType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CallRetryInterval")
     private Long callRetryInterval;
 
@@ -38,6 +50,10 @@ public class UpdateAiCallTaskRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("CallTime")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> callTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallableTime")
+    private java.util.List<String> callableTime;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LineEncoding")
@@ -102,10 +118,14 @@ public class UpdateAiCallTaskRequest extends Request {
     private UpdateAiCallTaskRequest(Builder builder) {
         super(builder);
         this.callDay = builder.callDay;
+        this.callExpireDate = builder.callExpireDate;
+        this.callExpireMinutes = builder.callExpireMinutes;
+        this.callExpireType = builder.callExpireType;
         this.callRetryInterval = builder.callRetryInterval;
         this.callRetryReason = builder.callRetryReason;
         this.callRetryTimes = builder.callRetryTimes;
         this.callTime = builder.callTime;
+        this.callableTime = builder.callableTime;
         this.lineEncoding = builder.lineEncoding;
         this.linePhoneNum = builder.linePhoneNum;
         this.missCallRetry = builder.missCallRetry;
@@ -143,6 +163,27 @@ public class UpdateAiCallTaskRequest extends Request {
     }
 
     /**
+     * @return callExpireDate
+     */
+    public String getCallExpireDate() {
+        return this.callExpireDate;
+    }
+
+    /**
+     * @return callExpireMinutes
+     */
+    public Long getCallExpireMinutes() {
+        return this.callExpireMinutes;
+    }
+
+    /**
+     * @return callExpireType
+     */
+    public Long getCallExpireType() {
+        return this.callExpireType;
+    }
+
+    /**
      * @return callRetryInterval
      */
     public Long getCallRetryInterval() {
@@ -168,6 +209,13 @@ public class UpdateAiCallTaskRequest extends Request {
      */
     public java.util.List<String> getCallTime() {
         return this.callTime;
+    }
+
+    /**
+     * @return callableTime
+     */
+    public java.util.List<String> getCallableTime() {
+        return this.callableTime;
     }
 
     /**
@@ -270,10 +318,14 @@ public class UpdateAiCallTaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateAiCallTaskRequest, Builder> {
         private java.util.List<String> callDay; 
+        private String callExpireDate; 
+        private Long callExpireMinutes; 
+        private Long callExpireType; 
         private Long callRetryInterval; 
         private java.util.List<String> callRetryReason; 
         private Long callRetryTimes; 
         private java.util.List<String> callTime; 
+        private java.util.List<String> callableTime; 
         private String lineEncoding; 
         private String linePhoneNum; 
         private Boolean missCallRetry; 
@@ -296,10 +348,14 @@ public class UpdateAiCallTaskRequest extends Request {
         private Builder(UpdateAiCallTaskRequest request) {
             super(request);
             this.callDay = request.callDay;
+            this.callExpireDate = request.callExpireDate;
+            this.callExpireMinutes = request.callExpireMinutes;
+            this.callExpireType = request.callExpireType;
             this.callRetryInterval = request.callRetryInterval;
             this.callRetryReason = request.callRetryReason;
             this.callRetryTimes = request.callRetryTimes;
             this.callTime = request.callTime;
+            this.callableTime = request.callableTime;
             this.lineEncoding = request.lineEncoding;
             this.linePhoneNum = request.linePhoneNum;
             this.missCallRetry = request.missCallRetry;
@@ -323,6 +379,33 @@ public class UpdateAiCallTaskRequest extends Request {
             String callDayShrink = shrink(callDay, "CallDay", "json");
             this.putQueryParameter("CallDay", callDayShrink);
             this.callDay = callDay;
+            return this;
+        }
+
+        /**
+         * CallExpireDate.
+         */
+        public Builder callExpireDate(String callExpireDate) {
+            this.putQueryParameter("CallExpireDate", callExpireDate);
+            this.callExpireDate = callExpireDate;
+            return this;
+        }
+
+        /**
+         * CallExpireMinutes.
+         */
+        public Builder callExpireMinutes(Long callExpireMinutes) {
+            this.putQueryParameter("CallExpireMinutes", callExpireMinutes);
+            this.callExpireMinutes = callExpireMinutes;
+            return this;
+        }
+
+        /**
+         * CallExpireType.
+         */
+        public Builder callExpireType(Long callExpireType) {
+            this.putQueryParameter("CallExpireType", callExpireType);
+            this.callExpireType = callExpireType;
             return this;
         }
 
@@ -361,6 +444,16 @@ public class UpdateAiCallTaskRequest extends Request {
             String callTimeShrink = shrink(callTime, "CallTime", "json");
             this.putQueryParameter("CallTime", callTimeShrink);
             this.callTime = callTime;
+            return this;
+        }
+
+        /**
+         * CallableTime.
+         */
+        public Builder callableTime(java.util.List<String> callableTime) {
+            String callableTimeShrink = shrink(callableTime, "CallableTime", "json");
+            this.putQueryParameter("CallableTime", callableTimeShrink);
+            this.callableTime = callableTime;
             return this;
         }
 

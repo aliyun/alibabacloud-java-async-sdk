@@ -253,6 +253,81 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
      *
      * <p>QueryAiCallTaskDetailResponseBody</p>
      */
+    public static class CallableTimes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EndTime")
+        private String endTime;
+
+        @com.aliyun.core.annotation.NameInMap("StartTime")
+        private String startTime;
+
+        private CallableTimes(Builder builder) {
+            this.endTime = builder.endTime;
+            this.startTime = builder.startTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CallableTimes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endTime
+         */
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public static final class Builder {
+            private String endTime; 
+            private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(CallableTimes model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(String endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            public CallableTimes build() {
+                return new CallableTimes(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link QueryAiCallTaskDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAiCallTaskDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentId")
         private String agentId;
@@ -269,8 +344,20 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CallDays")
         private java.util.List<String> callDays;
 
+        @com.aliyun.core.annotation.NameInMap("CallExpireDate")
+        private String callExpireDate;
+
+        @com.aliyun.core.annotation.NameInMap("CallExpireMinutes")
+        private Long callExpireMinutes;
+
+        @com.aliyun.core.annotation.NameInMap("CallExpireType")
+        private Long callExpireType;
+
         @com.aliyun.core.annotation.NameInMap("CallTimes")
         private java.util.List<CallTimes> callTimes;
+
+        @com.aliyun.core.annotation.NameInMap("CallableTimes")
+        private java.util.List<CallableTimes> callableTimes;
 
         @com.aliyun.core.annotation.NameInMap("CallerNumber")
         private String callerNumber;
@@ -320,7 +407,11 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
             this.applicationCode = builder.applicationCode;
             this.applicationName = builder.applicationName;
             this.callDays = builder.callDays;
+            this.callExpireDate = builder.callExpireDate;
+            this.callExpireMinutes = builder.callExpireMinutes;
+            this.callExpireType = builder.callExpireType;
             this.callTimes = builder.callTimes;
+            this.callableTimes = builder.callableTimes;
             this.callerNumber = builder.callerNumber;
             this.concurrentCount = builder.concurrentCount;
             this.lineEncoding = builder.lineEncoding;
@@ -381,10 +472,38 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return callExpireDate
+         */
+        public String getCallExpireDate() {
+            return this.callExpireDate;
+        }
+
+        /**
+         * @return callExpireMinutes
+         */
+        public Long getCallExpireMinutes() {
+            return this.callExpireMinutes;
+        }
+
+        /**
+         * @return callExpireType
+         */
+        public Long getCallExpireType() {
+            return this.callExpireType;
+        }
+
+        /**
          * @return callTimes
          */
         public java.util.List<CallTimes> getCallTimes() {
             return this.callTimes;
+        }
+
+        /**
+         * @return callableTimes
+         */
+        public java.util.List<CallableTimes> getCallableTimes() {
+            return this.callableTimes;
         }
 
         /**
@@ -491,7 +610,11 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
             private String applicationCode; 
             private String applicationName; 
             private java.util.List<String> callDays; 
+            private String callExpireDate; 
+            private Long callExpireMinutes; 
+            private Long callExpireType; 
             private java.util.List<CallTimes> callTimes; 
+            private java.util.List<CallableTimes> callableTimes; 
             private String callerNumber; 
             private Long concurrentCount; 
             private String lineEncoding; 
@@ -516,7 +639,11 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
                 this.applicationCode = model.applicationCode;
                 this.applicationName = model.applicationName;
                 this.callDays = model.callDays;
+                this.callExpireDate = model.callExpireDate;
+                this.callExpireMinutes = model.callExpireMinutes;
+                this.callExpireType = model.callExpireType;
                 this.callTimes = model.callTimes;
+                this.callableTimes = model.callableTimes;
                 this.callerNumber = model.callerNumber;
                 this.concurrentCount = model.concurrentCount;
                 this.lineEncoding = model.lineEncoding;
@@ -574,10 +701,42 @@ public class QueryAiCallTaskDetailResponseBody extends TeaModel {
             }
 
             /**
+             * CallExpireDate.
+             */
+            public Builder callExpireDate(String callExpireDate) {
+                this.callExpireDate = callExpireDate;
+                return this;
+            }
+
+            /**
+             * CallExpireMinutes.
+             */
+            public Builder callExpireMinutes(Long callExpireMinutes) {
+                this.callExpireMinutes = callExpireMinutes;
+                return this;
+            }
+
+            /**
+             * CallExpireType.
+             */
+            public Builder callExpireType(Long callExpireType) {
+                this.callExpireType = callExpireType;
+                return this;
+            }
+
+            /**
              * CallTimes.
              */
             public Builder callTimes(java.util.List<CallTimes> callTimes) {
                 this.callTimes = callTimes;
+                return this;
+            }
+
+            /**
+             * CallableTimes.
+             */
+            public Builder callableTimes(java.util.List<CallableTimes> callableTimes) {
+                this.callableTimes = callableTimes;
                 return this;
             }
 

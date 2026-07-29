@@ -458,6 +458,9 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BatchId")
         private String batchId;
 
+        @com.aliyun.core.annotation.NameInMap("BranchId")
+        private Long branchId;
+
         @com.aliyun.core.annotation.NameInMap("CallId")
         private String callId;
 
@@ -535,6 +538,7 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.batchId = builder.batchId;
+            this.branchId = builder.branchId;
             this.callId = builder.callId;
             this.callResult = builder.callResult;
             this.calledPhone = builder.calledPhone;
@@ -575,6 +579,13 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
          */
         public String getBatchId() {
             return this.batchId;
+        }
+
+        /**
+         * @return branchId
+         */
+        public Long getBranchId() {
+            return this.branchId;
         }
 
         /**
@@ -754,6 +765,7 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
 
         public static final class Builder {
             private String batchId; 
+            private Long branchId; 
             private String callId; 
             private String callResult; 
             private String calledPhone; 
@@ -785,6 +797,7 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.batchId = model.batchId;
+                this.branchId = model.branchId;
                 this.callId = model.callId;
                 this.callResult = model.callResult;
                 this.calledPhone = model.calledPhone;
@@ -817,6 +830,14 @@ public class QueryConversationDetailInfoNewResponseBody extends TeaModel {
              */
             public Builder batchId(String batchId) {
                 this.batchId = batchId;
+                return this;
+            }
+
+            /**
+             * BranchId.
+             */
+            public Builder branchId(Long branchId) {
+                this.branchId = branchId;
                 return this;
             }
 

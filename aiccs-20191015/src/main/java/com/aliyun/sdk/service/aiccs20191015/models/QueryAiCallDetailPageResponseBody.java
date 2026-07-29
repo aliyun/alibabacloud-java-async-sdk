@@ -191,6 +191,12 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BranchVersionId")
         private Long branchVersionId;
 
+        @com.aliyun.core.annotation.NameInMap("CallExpireTime")
+        private Long callExpireTime;
+
+        @com.aliyun.core.annotation.NameInMap("CallId")
+        private String callId;
+
         @com.aliyun.core.annotation.NameInMap("CallResult")
         private String callResult;
 
@@ -250,6 +256,8 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             this.branchId = builder.branchId;
             this.branchName = builder.branchName;
             this.branchVersionId = builder.branchVersionId;
+            this.callExpireTime = builder.callExpireTime;
+            this.callId = builder.callId;
             this.callResult = builder.callResult;
             this.calledNumber = builder.calledNumber;
             this.callingTime = builder.callingTime;
@@ -304,6 +312,20 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
          */
         public Long getBranchVersionId() {
             return this.branchVersionId;
+        }
+
+        /**
+         * @return callExpireTime
+         */
+        public Long getCallExpireTime() {
+            return this.callExpireTime;
+        }
+
+        /**
+         * @return callId
+         */
+        public String getCallId() {
+            return this.callId;
         }
 
         /**
@@ -437,6 +459,8 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             private Long branchId; 
             private String branchName; 
             private Long branchVersionId; 
+            private Long callExpireTime; 
+            private String callId; 
             private String callResult; 
             private String calledNumber; 
             private Long callingTime; 
@@ -464,6 +488,8 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
                 this.branchId = model.branchId;
                 this.branchName = model.branchName;
                 this.branchVersionId = model.branchVersionId;
+                this.callExpireTime = model.callExpireTime;
+                this.callId = model.callId;
                 this.callResult = model.callResult;
                 this.calledNumber = model.calledNumber;
                 this.callingTime = model.callingTime;
@@ -513,6 +539,22 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
              */
             public Builder branchVersionId(Long branchVersionId) {
                 this.branchVersionId = branchVersionId;
+                return this;
+            }
+
+            /**
+             * CallExpireTime.
+             */
+            public Builder callExpireTime(Long callExpireTime) {
+                this.callExpireTime = callExpireTime;
+                return this;
+            }
+
+            /**
+             * CallId.
+             */
+            public Builder callId(String callId) {
+                this.callId = callId;
                 return this;
             }
 

@@ -191,6 +191,15 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
 
+        @com.aliyun.core.annotation.NameInMap("CallExpireDate")
+        private String callExpireDate;
+
+        @com.aliyun.core.annotation.NameInMap("CallExpireMinutes")
+        private Long callExpireMinutes;
+
+        @com.aliyun.core.annotation.NameInMap("CallExpireType")
+        private Long callExpireType;
+
         @com.aliyun.core.annotation.NameInMap("CallingCount")
         private Long callingCount;
 
@@ -250,6 +259,9 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             this.agentName = builder.agentName;
             this.applicationCode = builder.applicationCode;
             this.applicationName = builder.applicationName;
+            this.callExpireDate = builder.callExpireDate;
+            this.callExpireMinutes = builder.callExpireMinutes;
+            this.callExpireType = builder.callExpireType;
             this.callingCount = builder.callingCount;
             this.completeRate = builder.completeRate;
             this.concurrentCount = builder.concurrentCount;
@@ -304,6 +316,27 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
          */
         public String getApplicationName() {
             return this.applicationName;
+        }
+
+        /**
+         * @return callExpireDate
+         */
+        public String getCallExpireDate() {
+            return this.callExpireDate;
+        }
+
+        /**
+         * @return callExpireMinutes
+         */
+        public Long getCallExpireMinutes() {
+            return this.callExpireMinutes;
+        }
+
+        /**
+         * @return callExpireType
+         */
+        public Long getCallExpireType() {
+            return this.callExpireType;
         }
 
         /**
@@ -437,6 +470,9 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             private String agentName; 
             private String applicationCode; 
             private String applicationName; 
+            private String callExpireDate; 
+            private Long callExpireMinutes; 
+            private Long callExpireType; 
             private Long callingCount; 
             private String completeRate; 
             private Long concurrentCount; 
@@ -464,6 +500,9 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
                 this.agentName = model.agentName;
                 this.applicationCode = model.applicationCode;
                 this.applicationName = model.applicationName;
+                this.callExpireDate = model.callExpireDate;
+                this.callExpireMinutes = model.callExpireMinutes;
+                this.callExpireType = model.callExpireType;
                 this.callingCount = model.callingCount;
                 this.completeRate = model.completeRate;
                 this.concurrentCount = model.concurrentCount;
@@ -513,6 +552,30 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
+                return this;
+            }
+
+            /**
+             * CallExpireDate.
+             */
+            public Builder callExpireDate(String callExpireDate) {
+                this.callExpireDate = callExpireDate;
+                return this;
+            }
+
+            /**
+             * CallExpireMinutes.
+             */
+            public Builder callExpireMinutes(Long callExpireMinutes) {
+                this.callExpireMinutes = callExpireMinutes;
+                return this;
+            }
+
+            /**
+             * CallExpireType.
+             */
+            public Builder callExpireType(Long callExpireType) {
+                this.callExpireType = callExpireType;
                 return this;
             }
 

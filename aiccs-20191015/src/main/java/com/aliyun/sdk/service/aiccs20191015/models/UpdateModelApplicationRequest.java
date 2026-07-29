@@ -127,6 +127,10 @@ public class UpdateModelApplicationRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PauseTime")
+    private Long pauseTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Prompt")
     private String prompt;
 
@@ -211,6 +215,7 @@ public class UpdateModelApplicationRequest extends Request {
         this.muteHangupNum = builder.muteHangupNum;
         this.mutePushMode = builder.mutePushMode;
         this.ownerId = builder.ownerId;
+        this.pauseTime = builder.pauseTime;
         this.prompt = builder.prompt;
         this.qualificationId = builder.qualificationId;
         this.qualificationName = builder.qualificationName;
@@ -430,6 +435,13 @@ public class UpdateModelApplicationRequest extends Request {
     }
 
     /**
+     * @return pauseTime
+     */
+    public Long getPauseTime() {
+        return this.pauseTime;
+    }
+
+    /**
      * @return prompt
      */
     public String getPrompt() {
@@ -555,6 +567,7 @@ public class UpdateModelApplicationRequest extends Request {
         private Long muteHangupNum; 
         private String mutePushMode; 
         private Long ownerId; 
+        private Long pauseTime; 
         private String prompt; 
         private Long qualificationId; 
         private String qualificationName; 
@@ -603,6 +616,7 @@ public class UpdateModelApplicationRequest extends Request {
             this.muteHangupNum = request.muteHangupNum;
             this.mutePushMode = request.mutePushMode;
             this.ownerId = request.ownerId;
+            this.pauseTime = request.pauseTime;
             this.prompt = request.prompt;
             this.qualificationId = request.qualificationId;
             this.qualificationName = request.qualificationName;
@@ -894,6 +908,18 @@ public class UpdateModelApplicationRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * <p>asr识别停顿时长</p>
+         * 
+         * <strong>example:</strong>
+         * <p>350</p>
+         */
+        public Builder pauseTime(Long pauseTime) {
+            this.putQueryParameter("PauseTime", pauseTime);
+            this.pauseTime = pauseTime;
             return this;
         }
 
