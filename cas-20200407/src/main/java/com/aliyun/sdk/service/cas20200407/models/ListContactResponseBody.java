@@ -212,6 +212,9 @@ public class ListContactResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("WebhookList")
+        private java.util.List<String> webhookList;
+
         @com.aliyun.core.annotation.NameInMap("Webhooks")
         private String webhooks;
 
@@ -222,6 +225,7 @@ public class ListContactResponseBody extends TeaModel {
             this.mobile = builder.mobile;
             this.mobileStatus = builder.mobileStatus;
             this.name = builder.name;
+            this.webhookList = builder.webhookList;
             this.webhooks = builder.webhooks;
         }
 
@@ -276,6 +280,13 @@ public class ListContactResponseBody extends TeaModel {
         }
 
         /**
+         * @return webhookList
+         */
+        public java.util.List<String> getWebhookList() {
+            return this.webhookList;
+        }
+
+        /**
          * @return webhooks
          */
         public String getWebhooks() {
@@ -289,6 +300,7 @@ public class ListContactResponseBody extends TeaModel {
             private String mobile; 
             private Integer mobileStatus; 
             private String name; 
+            private java.util.List<String> webhookList; 
             private String webhooks; 
 
             private Builder() {
@@ -301,6 +313,7 @@ public class ListContactResponseBody extends TeaModel {
                 this.mobile = model.mobile;
                 this.mobileStatus = model.mobileStatus;
                 this.name = model.name;
+                this.webhookList = model.webhookList;
                 this.webhooks = model.webhooks;
             } 
 
@@ -367,6 +380,14 @@ public class ListContactResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * WebhookList.
+             */
+            public Builder webhookList(java.util.List<String> webhookList) {
+                this.webhookList = webhookList;
                 return this;
             }
 

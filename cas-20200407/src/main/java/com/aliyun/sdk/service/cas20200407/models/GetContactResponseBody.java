@@ -41,6 +41,9 @@ public class GetContactResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("WebhookList")
+    private java.util.List<String> webhookList;
+
     @com.aliyun.core.annotation.NameInMap("Webhooks")
     private String webhooks;
 
@@ -53,6 +56,7 @@ public class GetContactResponseBody extends TeaModel {
         this.mobileStatus = builder.mobileStatus;
         this.name = builder.name;
         this.requestId = builder.requestId;
+        this.webhookList = builder.webhookList;
         this.webhooks = builder.webhooks;
     }
 
@@ -125,6 +129,13 @@ public class GetContactResponseBody extends TeaModel {
     }
 
     /**
+     * @return webhookList
+     */
+    public java.util.List<String> getWebhookList() {
+        return this.webhookList;
+    }
+
+    /**
      * @return webhooks
      */
     public String getWebhooks() {
@@ -140,6 +151,7 @@ public class GetContactResponseBody extends TeaModel {
         private Integer mobileStatus; 
         private String name; 
         private String requestId; 
+        private java.util.List<String> webhookList; 
         private String webhooks; 
 
         private Builder() {
@@ -154,6 +166,7 @@ public class GetContactResponseBody extends TeaModel {
             this.mobileStatus = model.mobileStatus;
             this.name = model.name;
             this.requestId = model.requestId;
+            this.webhookList = model.webhookList;
             this.webhooks = model.webhooks;
         } 
 
@@ -218,6 +231,14 @@ public class GetContactResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * WebhookList.
+         */
+        public Builder webhookList(java.util.List<String> webhookList) {
+            this.webhookList = webhookList;
             return this;
         }
 
