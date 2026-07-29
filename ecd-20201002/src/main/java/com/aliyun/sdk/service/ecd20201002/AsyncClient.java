@@ -116,12 +116,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetLoginTokenResponse> getLoginToken(GetLoginTokenRequest request);
 
     /**
-     * @param request the request parameters of IsKeepAlive  IsKeepAliveRequest
-     * @return IsKeepAliveResponse
-     */
-    CompletableFuture<IsKeepAliveResponse> isKeepAlive(IsKeepAliveRequest request);
-
-    /**
      * @param request the request parameters of QueryEdsAgentReportConfig  QueryEdsAgentReportConfigRequest
      * @return QueryEdsAgentReportConfigResponse
      */

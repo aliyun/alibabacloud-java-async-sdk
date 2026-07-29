@@ -30,7 +30,32 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "ecd";
         this.version = "2020-10-02";
         this.endpointRule = "regional";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("us-west-1", "ecd.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "ecd.us-east-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "ecd.me-east-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "ecd.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "ecd.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "ecd.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "ecd.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "ecd.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "ecd.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "ecd.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "ecd.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "ecd.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-nanjing", "ecd.cn-nanjing.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "ecd.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "ecd.cn-hangzhou-finance.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "ecd.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "ecd.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "ecd.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "ecd.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "ecd.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "ecd.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "ecd.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "ecd.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "ecd.ap-northeast-1.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -298,24 +323,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetLoginTokenResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @param request the request parameters of IsKeepAlive  IsKeepAliveRequest
-     * @return IsKeepAliveResponse
-     */
-    @Override
-    public CompletableFuture<IsKeepAliveResponse> isKeepAlive(IsKeepAliveRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("IsKeepAlive").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(IsKeepAliveResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<IsKeepAliveResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

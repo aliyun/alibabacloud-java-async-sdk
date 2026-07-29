@@ -41,6 +41,12 @@ public class GetLoginTokenResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("NickName")
     private String nickName;
 
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
+    private String officeSiteId;
+
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteName")
+    private String officeSiteName;
+
     @com.aliyun.core.annotation.NameInMap("PasswordStrategy")
     private PasswordStrategy passwordStrategy;
 
@@ -86,6 +92,8 @@ public class GetLoginTokenResponseBody extends TeaModel {
         this.loginToken = builder.loginToken;
         this.nextStage = builder.nextStage;
         this.nickName = builder.nickName;
+        this.officeSiteId = builder.officeSiteId;
+        this.officeSiteName = builder.officeSiteName;
         this.passwordStrategy = builder.passwordStrategy;
         this.phone = builder.phone;
         this.props = builder.props;
@@ -166,6 +174,20 @@ public class GetLoginTokenResponseBody extends TeaModel {
      */
     public String getNickName() {
         return this.nickName;
+    }
+
+    /**
+     * @return officeSiteId
+     */
+    public String getOfficeSiteId() {
+        return this.officeSiteId;
+    }
+
+    /**
+     * @return officeSiteName
+     */
+    public String getOfficeSiteName() {
+        return this.officeSiteName;
     }
 
     /**
@@ -261,6 +283,8 @@ public class GetLoginTokenResponseBody extends TeaModel {
         private String loginToken; 
         private String nextStage; 
         private String nickName; 
+        private String officeSiteId; 
+        private String officeSiteName; 
         private PasswordStrategy passwordStrategy; 
         private String phone; 
         private java.util.Map<String, String> props; 
@@ -286,6 +310,8 @@ public class GetLoginTokenResponseBody extends TeaModel {
             this.loginToken = model.loginToken;
             this.nextStage = model.nextStage;
             this.nickName = model.nickName;
+            this.officeSiteId = model.officeSiteId;
+            this.officeSiteName = model.officeSiteName;
             this.passwordStrategy = model.passwordStrategy;
             this.phone = model.phone;
             this.props = model.props;
@@ -391,6 +417,22 @@ public class GetLoginTokenResponseBody extends TeaModel {
          */
         public Builder nickName(String nickName) {
             this.nickName = nickName;
+            return this;
+        }
+
+        /**
+         * OfficeSiteId.
+         */
+        public Builder officeSiteId(String officeSiteId) {
+            this.officeSiteId = officeSiteId;
+            return this;
+        }
+
+        /**
+         * OfficeSiteName.
+         */
+        public Builder officeSiteName(String officeSiteName) {
+            this.officeSiteName = officeSiteName;
             return this;
         }
 

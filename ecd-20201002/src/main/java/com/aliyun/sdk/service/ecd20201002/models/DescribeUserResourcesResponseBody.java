@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUserResourcesResponseBody</p>
  */
 public class DescribeUserResourcesResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AgentBriefSummary")
+    private AgentBriefSummary agentBriefSummary;
+
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -39,6 +42,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
     private Integer totalCount;
 
     private DescribeUserResourcesResponseBody(Builder builder) {
+        this.agentBriefSummary = builder.agentBriefSummary;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.queryFailedResourceTypes = builder.queryFailedResourceTypes;
@@ -58,6 +62,13 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentBriefSummary
+     */
+    public AgentBriefSummary getAgentBriefSummary() {
+        return this.agentBriefSummary;
     }
 
     /**
@@ -110,6 +121,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private AgentBriefSummary agentBriefSummary; 
         private Integer maxResults; 
         private String nextToken; 
         private java.util.List<String> queryFailedResourceTypes; 
@@ -122,6 +134,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         } 
 
         private Builder(DescribeUserResourcesResponseBody model) {
+            this.agentBriefSummary = model.agentBriefSummary;
             this.maxResults = model.maxResults;
             this.nextToken = model.nextToken;
             this.queryFailedResourceTypes = model.queryFailedResourceTypes;
@@ -130,6 +143,14 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             this.resources = model.resources;
             this.totalCount = model.totalCount;
         } 
+
+        /**
+         * AgentBriefSummary.
+         */
+        public Builder agentBriefSummary(AgentBriefSummary agentBriefSummary) {
+            this.agentBriefSummary = agentBriefSummary;
+            return this;
+        }
 
         /**
          * <p>返回最大数量。</p>
@@ -208,6 +229,285 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUserResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserResourcesResponseBody</p>
+     */
+    public static class AgentBriefs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AgentPlatform")
+        private String agentPlatform;
+
+        @com.aliyun.core.annotation.NameInMap("AgentProvider")
+        private String agentProvider;
+
+        @com.aliyun.core.annotation.NameInMap("AvatarNoResourceUrl")
+        private String avatarNoResourceUrl;
+
+        @com.aliyun.core.annotation.NameInMap("AvatarUrl")
+        private String avatarUrl;
+
+        @com.aliyun.core.annotation.NameInMap("Count")
+        private Integer count;
+
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
+        private String displayName;
+
+        @com.aliyun.core.annotation.NameInMap("SubTitle")
+        private String subTitle;
+
+        @com.aliyun.core.annotation.NameInMap("Url")
+        private String url;
+
+        private AgentBriefs(Builder builder) {
+            this.agentPlatform = builder.agentPlatform;
+            this.agentProvider = builder.agentProvider;
+            this.avatarNoResourceUrl = builder.avatarNoResourceUrl;
+            this.avatarUrl = builder.avatarUrl;
+            this.count = builder.count;
+            this.displayName = builder.displayName;
+            this.subTitle = builder.subTitle;
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AgentBriefs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return agentPlatform
+         */
+        public String getAgentPlatform() {
+            return this.agentPlatform;
+        }
+
+        /**
+         * @return agentProvider
+         */
+        public String getAgentProvider() {
+            return this.agentProvider;
+        }
+
+        /**
+         * @return avatarNoResourceUrl
+         */
+        public String getAvatarNoResourceUrl() {
+            return this.avatarNoResourceUrl;
+        }
+
+        /**
+         * @return avatarUrl
+         */
+        public String getAvatarUrl() {
+            return this.avatarUrl;
+        }
+
+        /**
+         * @return count
+         */
+        public Integer getCount() {
+            return this.count;
+        }
+
+        /**
+         * @return displayName
+         */
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        /**
+         * @return subTitle
+         */
+        public String getSubTitle() {
+            return this.subTitle;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private String agentPlatform; 
+            private String agentProvider; 
+            private String avatarNoResourceUrl; 
+            private String avatarUrl; 
+            private Integer count; 
+            private String displayName; 
+            private String subTitle; 
+            private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(AgentBriefs model) {
+                this.agentPlatform = model.agentPlatform;
+                this.agentProvider = model.agentProvider;
+                this.avatarNoResourceUrl = model.avatarNoResourceUrl;
+                this.avatarUrl = model.avatarUrl;
+                this.count = model.count;
+                this.displayName = model.displayName;
+                this.subTitle = model.subTitle;
+                this.url = model.url;
+            } 
+
+            /**
+             * AgentPlatform.
+             */
+            public Builder agentPlatform(String agentPlatform) {
+                this.agentPlatform = agentPlatform;
+                return this;
+            }
+
+            /**
+             * AgentProvider.
+             */
+            public Builder agentProvider(String agentProvider) {
+                this.agentProvider = agentProvider;
+                return this;
+            }
+
+            /**
+             * AvatarNoResourceUrl.
+             */
+            public Builder avatarNoResourceUrl(String avatarNoResourceUrl) {
+                this.avatarNoResourceUrl = avatarNoResourceUrl;
+                return this;
+            }
+
+            /**
+             * AvatarUrl.
+             */
+            public Builder avatarUrl(String avatarUrl) {
+                this.avatarUrl = avatarUrl;
+                return this;
+            }
+
+            /**
+             * Count.
+             */
+            public Builder count(Integer count) {
+                this.count = count;
+                return this;
+            }
+
+            /**
+             * DisplayName.
+             */
+            public Builder displayName(String displayName) {
+                this.displayName = displayName;
+                return this;
+            }
+
+            /**
+             * SubTitle.
+             */
+            public Builder subTitle(String subTitle) {
+                this.subTitle = subTitle;
+                return this;
+            }
+
+            /**
+             * Url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public AgentBriefs build() {
+                return new AgentBriefs(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeUserResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserResourcesResponseBody</p>
+     */
+    public static class AgentBriefSummary extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AgentBriefs")
+        private java.util.List<AgentBriefs> agentBriefs;
+
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
+        private Integer totalCount;
+
+        private AgentBriefSummary(Builder builder) {
+            this.agentBriefs = builder.agentBriefs;
+            this.totalCount = builder.totalCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AgentBriefSummary create() {
+            return builder().build();
+        }
+
+        /**
+         * @return agentBriefs
+         */
+        public java.util.List<AgentBriefs> getAgentBriefs() {
+            return this.agentBriefs;
+        }
+
+        /**
+         * @return totalCount
+         */
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
+        public static final class Builder {
+            private java.util.List<AgentBriefs> agentBriefs; 
+            private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(AgentBriefSummary model) {
+                this.agentBriefs = model.agentBriefs;
+                this.totalCount = model.totalCount;
+            } 
+
+            /**
+             * AgentBriefs.
+             */
+            public Builder agentBriefs(java.util.List<AgentBriefs> agentBriefs) {
+                this.agentBriefs = agentBriefs;
+                return this;
+            }
+
+            /**
+             * <p>总数。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder totalCount(Integer totalCount) {
+                this.totalCount = totalCount;
+                return this;
+            }
+
+            public AgentBriefSummary build() {
+                return new AgentBriefSummary(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link DescribeUserResourcesResponseBody} extends {@link TeaModel}
@@ -1384,6 +1684,9 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
      * <p>DescribeUserResourcesResponseBody</p>
      */
     public static class Sessions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("LastClientIp")
+        private String lastClientIp;
+
         @com.aliyun.core.annotation.NameInMap("NickName")
         private String nickName;
 
@@ -1397,6 +1700,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         private String userPrincipalName;
 
         private Sessions(Builder builder) {
+            this.lastClientIp = builder.lastClientIp;
             this.nickName = builder.nickName;
             this.resourceSessionStartTime = builder.resourceSessionStartTime;
             this.userId = builder.userId;
@@ -1409,6 +1713,13 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
         public static Sessions create() {
             return builder().build();
+        }
+
+        /**
+         * @return lastClientIp
+         */
+        public String getLastClientIp() {
+            return this.lastClientIp;
         }
 
         /**
@@ -1440,6 +1751,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String lastClientIp; 
             private String nickName; 
             private String resourceSessionStartTime; 
             private String userId; 
@@ -1449,11 +1761,20 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             } 
 
             private Builder(Sessions model) {
+                this.lastClientIp = model.lastClientIp;
                 this.nickName = model.nickName;
                 this.resourceSessionStartTime = model.resourceSessionStartTime;
                 this.userId = model.userId;
                 this.userPrincipalName = model.userPrincipalName;
             } 
+
+            /**
+             * LastClientIp.
+             */
+            public Builder lastClientIp(String lastClientIp) {
+                this.lastClientIp = lastClientIp;
+                return this;
+            }
 
             /**
              * <p>用户的昵称。</p>
@@ -1515,6 +1836,9 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
     public static class Resources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessType")
         private String accessType;
+
+        @com.aliyun.core.annotation.NameInMap("AgentImUrl")
+        private String agentImUrl;
 
         @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
@@ -1651,6 +1975,9 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SubPayType")
         private String subPayType;
 
+        @com.aliyun.core.annotation.NameInMap("SupportAgentIm")
+        private Boolean supportAgentIm;
+
         @com.aliyun.core.annotation.NameInMap("SupportHibernation")
         private Boolean supportHibernation;
 
@@ -1668,6 +1995,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
         private Resources(Builder builder) {
             this.accessType = builder.accessType;
+            this.agentImUrl = builder.agentImUrl;
             this.aliUid = builder.aliUid;
             this.appId = builder.appId;
             this.authMode = builder.authMode;
@@ -1713,6 +2041,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             this.sessionType = builder.sessionType;
             this.sessions = builder.sessions;
             this.subPayType = builder.subPayType;
+            this.supportAgentIm = builder.supportAgentIm;
             this.supportHibernation = builder.supportHibernation;
             this.supportedActions = builder.supportedActions;
             this.themeColor = builder.themeColor;
@@ -1733,6 +2062,13 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
          */
         public String getAccessType() {
             return this.accessType;
+        }
+
+        /**
+         * @return agentImUrl
+         */
+        public String getAgentImUrl() {
+            return this.agentImUrl;
         }
 
         /**
@@ -2051,6 +2387,13 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         }
 
         /**
+         * @return supportAgentIm
+         */
+        public Boolean getSupportAgentIm() {
+            return this.supportAgentIm;
+        }
+
+        /**
          * @return supportHibernation
          */
         public Boolean getSupportHibernation() {
@@ -2087,6 +2430,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String accessType; 
+            private String agentImUrl; 
             private Long aliUid; 
             private String appId; 
             private String authMode; 
@@ -2132,6 +2476,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             private String sessionType; 
             private java.util.List<Sessions> sessions; 
             private String subPayType; 
+            private Boolean supportAgentIm; 
             private Boolean supportHibernation; 
             private java.util.List<String> supportedActions; 
             private String themeColor; 
@@ -2143,6 +2488,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
             private Builder(Resources model) {
                 this.accessType = model.accessType;
+                this.agentImUrl = model.agentImUrl;
                 this.aliUid = model.aliUid;
                 this.appId = model.appId;
                 this.authMode = model.authMode;
@@ -2188,6 +2534,7 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
                 this.sessionType = model.sessionType;
                 this.sessions = model.sessions;
                 this.subPayType = model.subPayType;
+                this.supportAgentIm = model.supportAgentIm;
                 this.supportHibernation = model.supportHibernation;
                 this.supportedActions = model.supportedActions;
                 this.themeColor = model.themeColor;
@@ -2209,6 +2556,14 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
              */
             public Builder accessType(String accessType) {
                 this.accessType = accessType;
+                return this;
+            }
+
+            /**
+             * AgentImUrl.
+             */
+            public Builder agentImUrl(String agentImUrl) {
+                this.agentImUrl = agentImUrl;
                 return this;
             }
 
@@ -2765,6 +3120,14 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
              */
             public Builder subPayType(String subPayType) {
                 this.subPayType = subPayType;
+                return this;
+            }
+
+            /**
+             * SupportAgentIm.
+             */
+            public Builder supportAgentIm(Boolean supportAgentIm) {
+                this.supportAgentIm = supportAgentIm;
                 return this;
             }
 
