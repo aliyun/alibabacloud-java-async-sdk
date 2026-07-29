@@ -1,115 +1,120 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gdb20190903.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDBInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateDBInstanceRequest</p>
  */
 public class CreateDBInstanceRequest extends Request {
-    @Query
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private String autoRenew;
 
-    @Query
-    @NameInMap("AutoRenewPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenewPeriod")
     private String autoRenewPeriod;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DBInstanceCategory")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceCategory")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceCategory;
 
-    @Query
-    @NameInMap("DBInstanceClass")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceClass")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceClass;
 
-    @Query
-    @NameInMap("DBInstanceDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceDescription")
     private String DBInstanceDescription;
 
-    @Query
-    @NameInMap("DBInstanceNetworkType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceNetworkType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceNetworkType;
 
-    @Query
-    @NameInMap("DBInstanceVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceVersion;
 
-    @Query
-    @NameInMap("DBNodeStorage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBNodeStorage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBNodeStorage;
 
-    @Query
-    @NameInMap("DBNodeStorageType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBNodeStorageType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBNodeStorageType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PayType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String payType;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private String period;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityIPList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityIPList")
     private String securityIPList;
 
-    @Query
-    @NameInMap("UsedTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsedTime")
     private String usedTime;
 
-    @Query
-    @NameInMap("VPCId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VPCId")
     private String VPCId;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private CreateDBInstanceRequest(Builder builder) {
@@ -147,7 +152,7 @@ public class CreateDBInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -397,7 +402,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceCategory.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ha</p>
          */
         public Builder DBInstanceCategory(String DBInstanceCategory) {
             this.putQueryParameter("DBInstanceCategory", DBInstanceCategory);
@@ -406,7 +414,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceClass.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gdb.r.xlarge</p>
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -424,7 +435,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceNetworkType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         public Builder DBInstanceNetworkType(String DBInstanceNetworkType) {
             this.putQueryParameter("DBInstanceNetworkType", DBInstanceNetworkType);
@@ -433,7 +447,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceVersion.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder DBInstanceVersion(String DBInstanceVersion) {
             this.putQueryParameter("DBInstanceVersion", DBInstanceVersion);
@@ -442,7 +459,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DBNodeStorage.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder DBNodeStorage(String DBNodeStorage) {
             this.putQueryParameter("DBNodeStorage", DBNodeStorage);
@@ -451,7 +471,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * DBNodeStorageType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
          */
         public Builder DBNodeStorageType(String DBNodeStorageType) {
             this.putQueryParameter("DBNodeStorageType", DBNodeStorageType);
@@ -478,7 +501,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * PayType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -496,7 +522,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

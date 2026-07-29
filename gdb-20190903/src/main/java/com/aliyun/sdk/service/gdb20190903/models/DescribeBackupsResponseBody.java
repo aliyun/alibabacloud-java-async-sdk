@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gdb20190903.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupsResponseBody</p>
  */
 public class DescribeBackupsResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private DescribeBackupsResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
     public static DescribeBackupsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,6 +93,17 @@ public class DescribeBackupsResponseBody extends TeaModel {
         private String pageSize; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupsResponseBody model) {
+            this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Items.
@@ -131,29 +151,35 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupsResponseBody</p>
+     */
     public static class Backup extends TeaModel {
-        @NameInMap("BackupEndTime")
+        @com.aliyun.core.annotation.NameInMap("BackupEndTime")
         private String backupEndTime;
 
-        @NameInMap("BackupId")
+        @com.aliyun.core.annotation.NameInMap("BackupId")
         private String backupId;
 
-        @NameInMap("BackupMethod")
+        @com.aliyun.core.annotation.NameInMap("BackupMethod")
         private String backupMethod;
 
-        @NameInMap("BackupSize")
+        @com.aliyun.core.annotation.NameInMap("BackupSize")
         private Long backupSize;
 
-        @NameInMap("BackupStartTime")
+        @com.aliyun.core.annotation.NameInMap("BackupStartTime")
         private String backupStartTime;
 
-        @NameInMap("BackupStatus")
+        @com.aliyun.core.annotation.NameInMap("BackupStatus")
         private String backupStatus;
 
-        @NameInMap("BackupType")
+        @com.aliyun.core.annotation.NameInMap("BackupType")
         private String backupType;
 
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
         private Backup(Builder builder) {
@@ -241,6 +267,20 @@ public class DescribeBackupsResponseBody extends TeaModel {
             private String backupType; 
             private String DBInstanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Backup model) {
+                this.backupEndTime = model.backupEndTime;
+                this.backupId = model.backupId;
+                this.backupMethod = model.backupMethod;
+                this.backupSize = model.backupSize;
+                this.backupStartTime = model.backupStartTime;
+                this.backupStatus = model.backupStatus;
+                this.backupType = model.backupType;
+                this.DBInstanceId = model.DBInstanceId;
+            } 
+
             /**
              * BackupEndTime.
              */
@@ -312,9 +352,15 @@ public class DescribeBackupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupsResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("Backup")
-        private java.util.List < Backup> backup;
+        @com.aliyun.core.annotation.NameInMap("Backup")
+        private java.util.List<Backup> backup;
 
         private Items(Builder builder) {
             this.backup = builder.backup;
@@ -331,17 +377,24 @@ public class DescribeBackupsResponseBody extends TeaModel {
         /**
          * @return backup
          */
-        public java.util.List < Backup> getBackup() {
+        public java.util.List<Backup> getBackup() {
             return this.backup;
         }
 
         public static final class Builder {
-            private java.util.List < Backup> backup; 
+            private java.util.List<Backup> backup; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.backup = model.backup;
+            } 
 
             /**
              * Backup.
              */
-            public Builder backup(java.util.List < Backup> backup) {
+            public Builder backup(java.util.List<Backup> backup) {
                 this.backup = backup;
                 return this;
             }

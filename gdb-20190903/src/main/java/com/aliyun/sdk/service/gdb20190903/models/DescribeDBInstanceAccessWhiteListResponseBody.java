@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gdb20190903.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceAccessWhiteListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceAccessWhiteListResponseBody</p>
  */
 public class DescribeDBInstanceAccessWhiteListResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBInstanceAccessWhiteListResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DescribeDBInstanceAccessWhiteListResponseBody extends TeaModel {
 
     public static DescribeDBInstanceAccessWhiteListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class DescribeDBInstanceAccessWhiteListResponseBody extends TeaModel {
     public static final class Builder {
         private Items items; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceAccessWhiteListResponseBody model) {
+            this.items = model.items;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Items.
@@ -71,14 +88,20 @@ public class DescribeDBInstanceAccessWhiteListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstanceAccessWhiteListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceAccessWhiteListResponseBody</p>
+     */
     public static class DBInstanceIPArray extends TeaModel {
-        @NameInMap("DBInstanceIPArrayAttribute")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceIPArrayAttribute")
         private String DBInstanceIPArrayAttribute;
 
-        @NameInMap("DBInstanceIPArrayName")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceIPArrayName")
         private String DBInstanceIPArrayName;
 
-        @NameInMap("SecurityIps")
+        @com.aliyun.core.annotation.NameInMap("SecurityIps")
         private String securityIps;
 
         private DBInstanceIPArray(Builder builder) {
@@ -121,6 +144,15 @@ public class DescribeDBInstanceAccessWhiteListResponseBody extends TeaModel {
             private String DBInstanceIPArrayName; 
             private String securityIps; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBInstanceIPArray model) {
+                this.DBInstanceIPArrayAttribute = model.DBInstanceIPArrayAttribute;
+                this.DBInstanceIPArrayName = model.DBInstanceIPArrayName;
+                this.securityIps = model.securityIps;
+            } 
+
             /**
              * DBInstanceIPArrayAttribute.
              */
@@ -152,9 +184,15 @@ public class DescribeDBInstanceAccessWhiteListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceAccessWhiteListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceAccessWhiteListResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("DBInstanceIPArray")
-        private java.util.List < DBInstanceIPArray> DBInstanceIPArray;
+        @com.aliyun.core.annotation.NameInMap("DBInstanceIPArray")
+        private java.util.List<DBInstanceIPArray> DBInstanceIPArray;
 
         private Items(Builder builder) {
             this.DBInstanceIPArray = builder.DBInstanceIPArray;
@@ -171,17 +209,24 @@ public class DescribeDBInstanceAccessWhiteListResponseBody extends TeaModel {
         /**
          * @return DBInstanceIPArray
          */
-        public java.util.List < DBInstanceIPArray> getDBInstanceIPArray() {
+        public java.util.List<DBInstanceIPArray> getDBInstanceIPArray() {
             return this.DBInstanceIPArray;
         }
 
         public static final class Builder {
-            private java.util.List < DBInstanceIPArray> DBInstanceIPArray; 
+            private java.util.List<DBInstanceIPArray> DBInstanceIPArray; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.DBInstanceIPArray = model.DBInstanceIPArray;
+            } 
 
             /**
              * DBInstanceIPArray.
              */
-            public Builder DBInstanceIPArray(java.util.List < DBInstanceIPArray> DBInstanceIPArray) {
+            public Builder DBInstanceIPArray(java.util.List<DBInstanceIPArray> DBInstanceIPArray) {
                 this.DBInstanceIPArray = DBInstanceIPArray;
                 return this;
             }

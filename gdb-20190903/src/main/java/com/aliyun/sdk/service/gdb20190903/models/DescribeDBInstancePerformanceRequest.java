@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gdb20190903.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstancePerformanceRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstancePerformanceRequest</p>
  */
 public class DescribeDBInstancePerformanceRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("Key")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Key")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String key;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
     private DescribeDBInstancePerformanceRequest(Builder builder) {
@@ -68,7 +73,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -156,7 +161,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -165,7 +170,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -174,7 +179,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * Key.
+         * <p>This parameter is required.</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -219,7 +224,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

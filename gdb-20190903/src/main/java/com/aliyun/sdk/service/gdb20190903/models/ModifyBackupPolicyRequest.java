@@ -1,50 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gdb20190903.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyBackupPolicyRequest} extends {@link RequestModel}
  *
  * <p>ModifyBackupPolicyRequest</p>
  */
 public class ModifyBackupPolicyRequest extends Request {
-    @Query
-    @NameInMap("BackupRetentionPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupRetentionPeriod")
     private String backupRetentionPeriod;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PreferredBackupPeriod")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupPeriod")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String preferredBackupPeriod;
 
-    @Query
-    @NameInMap("PreferredBackupTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String preferredBackupTime;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyBackupPolicyRequest(Builder builder) {
@@ -67,7 +72,7 @@ public class ModifyBackupPolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -164,7 +169,7 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -191,7 +196,7 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * PreferredBackupPeriod.
+         * <p>This parameter is required.</p>
          */
         public Builder preferredBackupPeriod(String preferredBackupPeriod) {
             this.putQueryParameter("PreferredBackupPeriod", preferredBackupPeriod);
@@ -200,7 +205,7 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * PreferredBackupTime.
+         * <p>This parameter is required.</p>
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.putQueryParameter("PreferredBackupTime", preferredBackupTime);

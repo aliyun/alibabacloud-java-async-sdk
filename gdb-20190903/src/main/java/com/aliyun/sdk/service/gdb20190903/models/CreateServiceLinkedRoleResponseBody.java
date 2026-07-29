@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gdb20190903.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateServiceLinkedRoleResponseBody} extends {@link TeaModel}
  *
  * <p>CreateServiceLinkedRoleResponseBody</p>
  */
 public class CreateServiceLinkedRoleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Role")
+    @com.aliyun.core.annotation.NameInMap("Role")
     private Role role;
 
     private CreateServiceLinkedRoleResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
 
     public static CreateServiceLinkedRoleResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Role role; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateServiceLinkedRoleResponseBody model) {
+            this.requestId = model.requestId;
+            this.role = model.role;
+        } 
 
         /**
          * RequestId.
@@ -71,32 +88,38 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateServiceLinkedRoleResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateServiceLinkedRoleResponseBody</p>
+     */
     public static class RoleRole extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("AssumeRolePolicyDocument")
+        @com.aliyun.core.annotation.NameInMap("AssumeRolePolicyDocument")
         private String assumeRolePolicyDocument;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("IsServiceLinkedRole")
+        @com.aliyun.core.annotation.NameInMap("IsServiceLinkedRole")
         private Boolean isServiceLinkedRole;
 
-        @NameInMap("LatestDeletionTask")
+        @com.aliyun.core.annotation.NameInMap("LatestDeletionTask")
         private Boolean latestDeletionTask;
 
-        @NameInMap("RoleId")
+        @com.aliyun.core.annotation.NameInMap("RoleId")
         private String roleId;
 
-        @NameInMap("RoleName")
+        @com.aliyun.core.annotation.NameInMap("RoleName")
         private String roleName;
 
-        @NameInMap("RolePrincipalName")
+        @com.aliyun.core.annotation.NameInMap("RolePrincipalName")
         private String rolePrincipalName;
 
         private RoleRole(Builder builder) {
@@ -193,6 +216,21 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
             private String roleName; 
             private String rolePrincipalName; 
 
+            private Builder() {
+            } 
+
+            private Builder(RoleRole model) {
+                this.arn = model.arn;
+                this.assumeRolePolicyDocument = model.assumeRolePolicyDocument;
+                this.createDate = model.createDate;
+                this.description = model.description;
+                this.isServiceLinkedRole = model.isServiceLinkedRole;
+                this.latestDeletionTask = model.latestDeletionTask;
+                this.roleId = model.roleId;
+                this.roleName = model.roleName;
+                this.rolePrincipalName = model.rolePrincipalName;
+            } 
+
             /**
              * Arn.
              */
@@ -272,9 +310,15 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateServiceLinkedRoleResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateServiceLinkedRoleResponseBody</p>
+     */
     public static class Role extends TeaModel {
-        @NameInMap("Role")
-        private java.util.List < RoleRole> role;
+        @com.aliyun.core.annotation.NameInMap("Role")
+        private java.util.List<RoleRole> role;
 
         private Role(Builder builder) {
             this.role = builder.role;
@@ -291,17 +335,24 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
         /**
          * @return role
          */
-        public java.util.List < RoleRole> getRole() {
+        public java.util.List<RoleRole> getRole() {
             return this.role;
         }
 
         public static final class Builder {
-            private java.util.List < RoleRole> role; 
+            private java.util.List<RoleRole> role; 
+
+            private Builder() {
+            } 
+
+            private Builder(Role model) {
+                this.role = model.role;
+            } 
 
             /**
              * Role.
              */
-            public Builder role(java.util.List < RoleRole> role) {
+            public Builder role(java.util.List<RoleRole> role) {
                 this.role = role;
                 return this;
             }

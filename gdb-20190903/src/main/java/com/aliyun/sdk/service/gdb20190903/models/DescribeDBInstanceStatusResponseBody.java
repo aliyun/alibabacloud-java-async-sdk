@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gdb20190903.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceStatusResponseBody</p>
  */
 public class DescribeDBInstanceStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeDBInstanceStatusResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DescribeDBInstanceStatusResponseBody extends TeaModel {
 
     public static DescribeDBInstanceStatusResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -48,6 +57,14 @@ public class DescribeDBInstanceStatusResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstanceStatusResponseBody model) {
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * RequestId.

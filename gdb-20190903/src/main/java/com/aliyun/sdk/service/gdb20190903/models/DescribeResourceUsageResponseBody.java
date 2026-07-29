@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gdb20190903.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResourceUsageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeResourceUsageResponseBody</p>
  */
 public class DescribeResourceUsageResponseBody extends TeaModel {
-    @NameInMap("BackupSize")
+    @com.aliyun.core.annotation.NameInMap("BackupSize")
     private Long backupSize;
 
-    @NameInMap("ColdBackupSize")
+    @com.aliyun.core.annotation.NameInMap("ColdBackupSize")
     private Long coldBackupSize;
 
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("DataSize")
+    @com.aliyun.core.annotation.NameInMap("DataSize")
     private Long dataSize;
 
-    @NameInMap("DiskUsed")
+    @com.aliyun.core.annotation.NameInMap("DiskUsed")
     private Long diskUsed;
 
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("LogSize")
+    @com.aliyun.core.annotation.NameInMap("LogSize")
     private Long logSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeResourceUsageResponseBody(Builder builder) {
@@ -53,6 +58,10 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
 
     public static DescribeResourceUsageResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -120,6 +129,20 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
         private String engine; 
         private Long logSize; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeResourceUsageResponseBody model) {
+            this.backupSize = model.backupSize;
+            this.coldBackupSize = model.coldBackupSize;
+            this.DBInstanceId = model.DBInstanceId;
+            this.dataSize = model.dataSize;
+            this.diskUsed = model.diskUsed;
+            this.engine = model.engine;
+            this.logSize = model.logSize;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * BackupSize.

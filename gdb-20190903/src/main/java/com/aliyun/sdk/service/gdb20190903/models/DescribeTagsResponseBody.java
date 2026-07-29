@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gdb20190903.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTagsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTagsResponseBody</p>
  */
 public class DescribeTagsResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private Tags tags;
 
     private DescribeTagsResponseBody(Builder builder) {
@@ -33,6 +38,10 @@ public class DescribeTagsResponseBody extends TeaModel {
 
     public static DescribeTagsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -60,6 +69,15 @@ public class DescribeTagsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Tags tags; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTagsResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.tags = model.tags;
+        } 
 
         /**
          * NextToken.
@@ -91,9 +109,15 @@ public class DescribeTagsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagsResponseBody</p>
+     */
     public static class TagValues extends TeaModel {
-        @NameInMap("TagValue")
-        private java.util.List < String > tagValue;
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private java.util.List<String> tagValue;
 
         private TagValues(Builder builder) {
             this.tagValue = builder.tagValue;
@@ -110,17 +134,24 @@ public class DescribeTagsResponseBody extends TeaModel {
         /**
          * @return tagValue
          */
-        public java.util.List < String > getTagValue() {
+        public java.util.List<String> getTagValue() {
             return this.tagValue;
         }
 
         public static final class Builder {
-            private java.util.List < String > tagValue; 
+            private java.util.List<String> tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagValues model) {
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * TagValue.
              */
-            public Builder tagValue(java.util.List < String > tagValue) {
+            public Builder tagValue(java.util.List<String> tagValue) {
                 this.tagValue = tagValue;
                 return this;
             }
@@ -132,11 +163,17 @@ public class DescribeTagsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagsResponseBody</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValues")
+        @com.aliyun.core.annotation.NameInMap("TagValues")
         private TagValues tagValues;
 
         private Tag(Builder builder) {
@@ -170,6 +207,14 @@ public class DescribeTagsResponseBody extends TeaModel {
             private String tagKey; 
             private TagValues tagValues; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValues = model.tagValues;
+            } 
+
             /**
              * TagKey.
              */
@@ -193,9 +238,15 @@ public class DescribeTagsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -212,17 +263,24 @@ public class DescribeTagsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }

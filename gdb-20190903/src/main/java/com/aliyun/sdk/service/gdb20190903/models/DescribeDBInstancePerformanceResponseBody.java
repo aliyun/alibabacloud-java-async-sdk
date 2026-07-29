@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gdb20190903.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstancePerformanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstancePerformanceResponseBody</p>
  */
 public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("PerformanceKeys")
+    @com.aliyun.core.annotation.NameInMap("PerformanceKeys")
     private PerformanceKeys performanceKeys;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDBInstancePerformanceResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
 
     public static DescribeDBInstancePerformanceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,6 +105,18 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         private PerformanceKeys performanceKeys; 
         private String requestId; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBInstancePerformanceResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.endTime = model.endTime;
+            this.engine = model.engine;
+            this.performanceKeys = model.performanceKeys;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * DBInstanceId.
@@ -151,11 +172,17 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstancePerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancePerformanceResponseBody</p>
+     */
     public static class PerformanceItemValue extends TeaModel {
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private PerformanceItemValue(Builder builder) {
@@ -189,6 +216,14 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             private Long timestamp; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(PerformanceItemValue model) {
+                this.timestamp = model.timestamp;
+                this.value = model.value;
+            } 
+
             /**
              * Timestamp.
              */
@@ -212,9 +247,15 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstancePerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancePerformanceResponseBody</p>
+     */
     public static class Points extends TeaModel {
-        @NameInMap("PerformanceItemValue")
-        private java.util.List < PerformanceItemValue> performanceItemValue;
+        @com.aliyun.core.annotation.NameInMap("PerformanceItemValue")
+        private java.util.List<PerformanceItemValue> performanceItemValue;
 
         private Points(Builder builder) {
             this.performanceItemValue = builder.performanceItemValue;
@@ -231,17 +272,24 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         /**
          * @return performanceItemValue
          */
-        public java.util.List < PerformanceItemValue> getPerformanceItemValue() {
+        public java.util.List<PerformanceItemValue> getPerformanceItemValue() {
             return this.performanceItemValue;
         }
 
         public static final class Builder {
-            private java.util.List < PerformanceItemValue> performanceItemValue; 
+            private java.util.List<PerformanceItemValue> performanceItemValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Points model) {
+                this.performanceItemValue = model.performanceItemValue;
+            } 
 
             /**
              * PerformanceItemValue.
              */
-            public Builder performanceItemValue(java.util.List < PerformanceItemValue> performanceItemValue) {
+            public Builder performanceItemValue(java.util.List<PerformanceItemValue> performanceItemValue) {
                 this.performanceItemValue = performanceItemValue;
                 return this;
             }
@@ -253,14 +301,20 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstancePerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancePerformanceResponseBody</p>
+     */
     public static class PerformanceItem extends TeaModel {
-        @NameInMap("Measurement")
+        @com.aliyun.core.annotation.NameInMap("Measurement")
         private String measurement;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("Points")
+        @com.aliyun.core.annotation.NameInMap("Points")
         private Points points;
 
         private PerformanceItem(Builder builder) {
@@ -303,6 +357,15 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             private String metricName; 
             private Points points; 
 
+            private Builder() {
+            } 
+
+            private Builder(PerformanceItem model) {
+                this.measurement = model.measurement;
+                this.metricName = model.metricName;
+                this.points = model.points;
+            } 
+
             /**
              * Measurement.
              */
@@ -334,9 +397,15 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstancePerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancePerformanceResponseBody</p>
+     */
     public static class PerformanceKeys extends TeaModel {
-        @NameInMap("PerformanceItem")
-        private java.util.List < PerformanceItem> performanceItem;
+        @com.aliyun.core.annotation.NameInMap("PerformanceItem")
+        private java.util.List<PerformanceItem> performanceItem;
 
         private PerformanceKeys(Builder builder) {
             this.performanceItem = builder.performanceItem;
@@ -353,17 +422,24 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         /**
          * @return performanceItem
          */
-        public java.util.List < PerformanceItem> getPerformanceItem() {
+        public java.util.List<PerformanceItem> getPerformanceItem() {
             return this.performanceItem;
         }
 
         public static final class Builder {
-            private java.util.List < PerformanceItem> performanceItem; 
+            private java.util.List<PerformanceItem> performanceItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(PerformanceKeys model) {
+                this.performanceItem = model.performanceItem;
+            } 
 
             /**
              * PerformanceItem.
              */
-            public Builder performanceItem(java.util.List < PerformanceItem> performanceItem) {
+            public Builder performanceItem(java.util.List<PerformanceItem> performanceItem) {
                 this.performanceItem = performanceItem;
                 return this;
             }

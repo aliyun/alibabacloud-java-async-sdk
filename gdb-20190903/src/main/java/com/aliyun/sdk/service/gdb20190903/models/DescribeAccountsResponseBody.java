@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gdb20190903.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccountsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAccountsResponseBody</p>
  */
 public class DescribeAccountsResponseBody extends TeaModel {
-    @NameInMap("Accounts")
-    private java.util.List < Accounts> accounts;
+    @com.aliyun.core.annotation.NameInMap("Accounts")
+    private java.util.List<Accounts> accounts;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAccountsResponseBody(Builder builder) {
@@ -31,10 +36,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accounts
      */
-    public java.util.List < Accounts> getAccounts() {
+    public java.util.List<Accounts> getAccounts() {
         return this.accounts;
     }
 
@@ -46,13 +55,21 @@ public class DescribeAccountsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Accounts> accounts; 
+        private java.util.List<Accounts> accounts; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAccountsResponseBody model) {
+            this.accounts = model.accounts;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Accounts.
          */
-        public Builder accounts(java.util.List < Accounts> accounts) {
+        public Builder accounts(java.util.List<Accounts> accounts) {
             this.accounts = accounts;
             return this;
         }
@@ -71,17 +88,23 @@ public class DescribeAccountsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccountsResponseBody</p>
+     */
     public static class Accounts extends TeaModel {
-        @NameInMap("AccountDescription")
+        @com.aliyun.core.annotation.NameInMap("AccountDescription")
         private String accountDescription;
 
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("AccountStatus")
+        @com.aliyun.core.annotation.NameInMap("AccountStatus")
         private String accountStatus;
 
-        @NameInMap("AccountType")
+        @com.aliyun.core.annotation.NameInMap("AccountType")
         private String accountType;
 
         private Accounts(Builder builder) {
@@ -132,6 +155,16 @@ public class DescribeAccountsResponseBody extends TeaModel {
             private String accountName; 
             private String accountStatus; 
             private String accountType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Accounts model) {
+                this.accountDescription = model.accountDescription;
+                this.accountName = model.accountName;
+                this.accountStatus = model.accountStatus;
+                this.accountType = model.accountType;
+            } 
 
             /**
              * AccountDescription.

@@ -1,53 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gdb20190903.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceAccessWhiteListRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceAccessWhiteListRequest</p>
  */
 public class ModifyDBInstanceAccessWhiteListRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceIPArrayAttribute")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceIPArrayAttribute")
     private String DBInstanceIPArrayAttribute;
 
-    @Query
-    @NameInMap("DBInstanceIPArrayName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceIPArrayName")
     private String DBInstanceIPArrayName;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("ModifyMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModifyMode")
     private String modifyMode;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityIps")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityIps")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String securityIps;
 
     private ModifyDBInstanceAccessWhiteListRequest(Builder builder) {
@@ -71,7 +76,7 @@ public class ModifyDBInstanceAccessWhiteListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -186,7 +191,7 @@ public class ModifyDBInstanceAccessWhiteListRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -240,7 +245,7 @@ public class ModifyDBInstanceAccessWhiteListRequest extends Request {
         }
 
         /**
-         * SecurityIps.
+         * <p>This parameter is required.</p>
          */
         public Builder securityIps(String securityIps) {
             this.putQueryParameter("SecurityIps", securityIps);

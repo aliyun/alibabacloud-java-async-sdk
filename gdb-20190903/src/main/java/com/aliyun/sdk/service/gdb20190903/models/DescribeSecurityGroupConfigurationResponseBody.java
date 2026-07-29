@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gdb20190903.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityGroupConfigurationResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSecurityGroupConfigurationResponseBody</p>
  */
 public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeSecurityGroupConfigurationResponseBody(Builder builder) {
@@ -33,6 +38,10 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
 
     public static DescribeSecurityGroupConfigurationResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -60,6 +69,15 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
         private String DBInstanceId; 
         private Items items; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSecurityGroupConfigurationResponseBody model) {
+            this.DBInstanceId = model.DBInstanceId;
+            this.items = model.items;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DBInstanceId.
@@ -91,14 +109,20 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSecurityGroupConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityGroupConfigurationResponseBody</p>
+     */
     public static class EcsSecurityGroupRelation extends TeaModel {
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
         private EcsSecurityGroupRelation(Builder builder) {
@@ -141,6 +165,15 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
             private String regionId; 
             private String securityGroupId; 
 
+            private Builder() {
+            } 
+
+            private Builder(EcsSecurityGroupRelation model) {
+                this.networkType = model.networkType;
+                this.regionId = model.regionId;
+                this.securityGroupId = model.securityGroupId;
+            } 
+
             /**
              * NetworkType.
              */
@@ -172,9 +205,15 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSecurityGroupConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityGroupConfigurationResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("EcsSecurityGroupRelation")
-        private java.util.List < EcsSecurityGroupRelation> ecsSecurityGroupRelation;
+        @com.aliyun.core.annotation.NameInMap("EcsSecurityGroupRelation")
+        private java.util.List<EcsSecurityGroupRelation> ecsSecurityGroupRelation;
 
         private Items(Builder builder) {
             this.ecsSecurityGroupRelation = builder.ecsSecurityGroupRelation;
@@ -191,17 +230,24 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
         /**
          * @return ecsSecurityGroupRelation
          */
-        public java.util.List < EcsSecurityGroupRelation> getEcsSecurityGroupRelation() {
+        public java.util.List<EcsSecurityGroupRelation> getEcsSecurityGroupRelation() {
             return this.ecsSecurityGroupRelation;
         }
 
         public static final class Builder {
-            private java.util.List < EcsSecurityGroupRelation> ecsSecurityGroupRelation; 
+            private java.util.List<EcsSecurityGroupRelation> ecsSecurityGroupRelation; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.ecsSecurityGroupRelation = model.ecsSecurityGroupRelation;
+            } 
 
             /**
              * EcsSecurityGroupRelation.
              */
-            public Builder ecsSecurityGroupRelation(java.util.List < EcsSecurityGroupRelation> ecsSecurityGroupRelation) {
+            public Builder ecsSecurityGroupRelation(java.util.List<EcsSecurityGroupRelation> ecsSecurityGroupRelation) {
                 this.ecsSecurityGroupRelation = ecsSecurityGroupRelation;
                 return this;
             }
