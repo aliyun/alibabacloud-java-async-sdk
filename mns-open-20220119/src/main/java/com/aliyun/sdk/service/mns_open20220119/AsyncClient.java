@@ -74,6 +74,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableEndpointResponse> enableEndpoint(EnableEndpointRequest request);
 
     /**
+     * @param request the request parameters of GetAccountAttributes  GetAccountAttributesRequest
+     * @return GetAccountAttributesResponse
+     */
+    CompletableFuture<GetAccountAttributesResponse> getAccountAttributes(GetAccountAttributesRequest request);
+
+    /**
      * @param request the request parameters of GetEndpointAttribute  GetEndpointAttributeRequest
      * @return GetEndpointAttributeResponse
      */
@@ -132,6 +138,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RevokeEndpointAclResponse
      */
     CompletableFuture<RevokeEndpointAclResponse> revokeEndpointAcl(RevokeEndpointAclRequest request);
+
+    /**
+     * @param request the request parameters of SetAccountAttributes  SetAccountAttributesRequest
+     * @return SetAccountAttributesResponse
+     */
+    CompletableFuture<SetAccountAttributesResponse> setAccountAttributes(SetAccountAttributesRequest request);
 
     /**
      * @param request the request parameters of SetQueueAttributes  SetQueueAttributesRequest
