@@ -214,6 +214,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAIDBClusterResponse> createAIDBCluster(CreateAIDBClusterRequest request);
 
     /**
+     * @param request the request parameters of CreateAIDBClusterApiKey  CreateAIDBClusterApiKeyRequest
+     * @return CreateAIDBClusterApiKeyResponse
+     */
+    CompletableFuture<CreateAIDBClusterApiKeyResponse> createAIDBClusterApiKey(CreateAIDBClusterApiKeyRequest request);
+
+    /**
      * @param request the request parameters of CreateAIDBClusterDataset  CreateAIDBClusterDatasetRequest
      * @return CreateAIDBClusterDatasetResponse
      */
@@ -566,6 +572,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAIDBClusterResponse> deleteAIDBCluster(DeleteAIDBClusterRequest request);
 
     /**
+     * @param request the request parameters of DeleteAIDBClusterApiKey  DeleteAIDBClusterApiKeyRequest
+     * @return DeleteAIDBClusterApiKeyResponse
+     */
+    CompletableFuture<DeleteAIDBClusterApiKeyResponse> deleteAIDBClusterApiKey(DeleteAIDBClusterApiKeyRequest request);
+
+    /**
      * @param request the request parameters of DeleteAIDBClusterDataset  DeleteAIDBClusterDatasetRequest
      * @return DeleteAIDBClusterDatasetResponse
      */
@@ -893,6 +905,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteSQLRateLimitingRulesResponse
      */
     CompletableFuture<DeleteSQLRateLimitingRulesResponse> deleteSQLRateLimitingRules(DeleteSQLRateLimitingRulesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAIDBClusterApiKeys  DescribeAIDBClusterApiKeysRequest
+     * @return DescribeAIDBClusterApiKeysResponse
+     */
+    CompletableFuture<DescribeAIDBClusterApiKeysResponse> describeAIDBClusterApiKeys(DescribeAIDBClusterApiKeysRequest request);
 
     /**
      * @param request the request parameters of DescribeAIDBClusterAttribute  DescribeAIDBClusterAttributeRequest

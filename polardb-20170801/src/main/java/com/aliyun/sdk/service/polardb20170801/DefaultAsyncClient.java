@@ -644,6 +644,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateAIDBClusterApiKey  CreateAIDBClusterApiKeyRequest
+     * @return CreateAIDBClusterApiKeyResponse
+     */
+    @Override
+    public CompletableFuture<CreateAIDBClusterApiKeyResponse> createAIDBClusterApiKey(CreateAIDBClusterApiKeyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateAIDBClusterApiKey").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAIDBClusterApiKeyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAIDBClusterApiKeyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateAIDBClusterDataset  CreateAIDBClusterDatasetRequest
      * @return CreateAIDBClusterDatasetResponse
      */
@@ -1596,6 +1614,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteAIDBClusterApiKey  DeleteAIDBClusterApiKeyRequest
+     * @return DeleteAIDBClusterApiKeyResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAIDBClusterApiKeyResponse> deleteAIDBClusterApiKey(DeleteAIDBClusterApiKeyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteAIDBClusterApiKey").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAIDBClusterApiKeyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAIDBClusterApiKeyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteAIDBClusterDataset  DeleteAIDBClusterDatasetRequest
      * @return DeleteAIDBClusterDatasetResponse
      */
@@ -2471,6 +2507,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteSQLRateLimitingRulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeAIDBClusterApiKeys  DescribeAIDBClusterApiKeysRequest
+     * @return DescribeAIDBClusterApiKeysResponse
+     */
+    @Override
+    public CompletableFuture<DescribeAIDBClusterApiKeysResponse> describeAIDBClusterApiKeys(DescribeAIDBClusterApiKeysRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeAIDBClusterApiKeys").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeAIDBClusterApiKeysResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeAIDBClusterApiKeysResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
