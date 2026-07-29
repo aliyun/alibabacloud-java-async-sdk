@@ -22,8 +22,16 @@ public class SubmitMediaComprehensionJobRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Input")
+    private String input;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("JobParams")
     private String jobParams;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobType")
+    private String jobType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserData")
@@ -32,7 +40,9 @@ public class SubmitMediaComprehensionJobRequest extends Request {
     private SubmitMediaComprehensionJobRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.input = builder.input;
         this.jobParams = builder.jobParams;
+        this.jobType = builder.jobType;
         this.userData = builder.userData;
     }
 
@@ -57,10 +67,24 @@ public class SubmitMediaComprehensionJobRequest extends Request {
     }
 
     /**
+     * @return input
+     */
+    public String getInput() {
+        return this.input;
+    }
+
+    /**
      * @return jobParams
      */
     public String getJobParams() {
         return this.jobParams;
+    }
+
+    /**
+     * @return jobType
+     */
+    public String getJobType() {
+        return this.jobType;
     }
 
     /**
@@ -72,7 +96,9 @@ public class SubmitMediaComprehensionJobRequest extends Request {
 
     public static final class Builder extends Request.Builder<SubmitMediaComprehensionJobRequest, Builder> {
         private String regionId; 
+        private String input; 
         private String jobParams; 
+        private String jobType; 
         private String userData; 
 
         private Builder() {
@@ -82,7 +108,9 @@ public class SubmitMediaComprehensionJobRequest extends Request {
         private Builder(SubmitMediaComprehensionJobRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.input = request.input;
             this.jobParams = request.jobParams;
+            this.jobType = request.jobType;
             this.userData = request.userData;
         } 
 
@@ -96,11 +124,29 @@ public class SubmitMediaComprehensionJobRequest extends Request {
         }
 
         /**
+         * Input.
+         */
+        public Builder input(String input) {
+            this.putQueryParameter("Input", input);
+            this.input = input;
+            return this;
+        }
+
+        /**
          * JobParams.
          */
         public Builder jobParams(String jobParams) {
             this.putQueryParameter("JobParams", jobParams);
             this.jobParams = jobParams;
+            return this;
+        }
+
+        /**
+         * JobType.
+         */
+        public Builder jobType(String jobType) {
+            this.putQueryParameter("JobType", jobType);
+            this.jobType = jobType;
             return this;
         }
 

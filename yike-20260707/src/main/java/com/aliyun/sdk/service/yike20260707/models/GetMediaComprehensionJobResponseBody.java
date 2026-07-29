@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMediaComprehensionJobResponseBody</p>
  */
 public class GetMediaComprehensionJobResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Job")
+    private Job job;
+
     @com.aliyun.core.annotation.NameInMap("MediaComprehensionJob")
     private MediaComprehensionJob mediaComprehensionJob;
 
@@ -24,6 +27,7 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
     private String requestId;
 
     private GetMediaComprehensionJobResponseBody(Builder builder) {
+        this.job = builder.job;
         this.mediaComprehensionJob = builder.mediaComprehensionJob;
         this.requestId = builder.requestId;
     }
@@ -41,6 +45,13 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
     }
 
     /**
+     * @return job
+     */
+    public Job getJob() {
+        return this.job;
+    }
+
+    /**
      * @return mediaComprehensionJob
      */
     public MediaComprehensionJob getMediaComprehensionJob() {
@@ -55,6 +66,7 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Job job; 
         private MediaComprehensionJob mediaComprehensionJob; 
         private String requestId; 
 
@@ -62,9 +74,18 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
         } 
 
         private Builder(GetMediaComprehensionJobResponseBody model) {
+            this.job = model.job;
             this.mediaComprehensionJob = model.mediaComprehensionJob;
             this.requestId = model.requestId;
         } 
+
+        /**
+         * Job.
+         */
+        public Builder job(Job job) {
+            this.job = job;
+            return this;
+        }
 
         /**
          * MediaComprehensionJob.
@@ -88,6 +109,165 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMediaComprehensionJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaComprehensionJobResponseBody</p>
+     */
+    public static class Job extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
+        private String errorCode;
+
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
+        private String errorMessage;
+
+        @com.aliyun.core.annotation.NameInMap("MediaIds")
+        private java.util.List<String> mediaIds;
+
+        @com.aliyun.core.annotation.NameInMap("Result")
+        private String result;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("UserData")
+        private String userData;
+
+        private Job(Builder builder) {
+            this.errorCode = builder.errorCode;
+            this.errorMessage = builder.errorMessage;
+            this.mediaIds = builder.mediaIds;
+            this.result = builder.result;
+            this.status = builder.status;
+            this.userData = builder.userData;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Job create() {
+            return builder().build();
+        }
+
+        /**
+         * @return errorCode
+         */
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        /**
+         * @return errorMessage
+         */
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        /**
+         * @return mediaIds
+         */
+        public java.util.List<String> getMediaIds() {
+            return this.mediaIds;
+        }
+
+        /**
+         * @return result
+         */
+        public String getResult() {
+            return this.result;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return userData
+         */
+        public String getUserData() {
+            return this.userData;
+        }
+
+        public static final class Builder {
+            private String errorCode; 
+            private String errorMessage; 
+            private java.util.List<String> mediaIds; 
+            private String result; 
+            private String status; 
+            private String userData; 
+
+            private Builder() {
+            } 
+
+            private Builder(Job model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.mediaIds = model.mediaIds;
+                this.result = model.result;
+                this.status = model.status;
+                this.userData = model.userData;
+            } 
+
+            /**
+             * ErrorCode.
+             */
+            public Builder errorCode(String errorCode) {
+                this.errorCode = errorCode;
+                return this;
+            }
+
+            /**
+             * ErrorMessage.
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
+                return this;
+            }
+
+            /**
+             * MediaIds.
+             */
+            public Builder mediaIds(java.util.List<String> mediaIds) {
+                this.mediaIds = mediaIds;
+                return this;
+            }
+
+            /**
+             * Result.
+             */
+            public Builder result(String result) {
+                this.result = result;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * UserData.
+             */
+            public Builder userData(String userData) {
+                this.userData = userData;
+                return this;
+            }
+
+            public Job build() {
+                return new Job(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link GetMediaComprehensionJobResponseBody} extends {@link TeaModel}
