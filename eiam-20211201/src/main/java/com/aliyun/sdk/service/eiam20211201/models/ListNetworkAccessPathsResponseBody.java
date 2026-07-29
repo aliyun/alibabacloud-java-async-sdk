@@ -101,6 +101,9 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
+        @com.aliyun.core.annotation.NameInMap("CrossRegionReplicationRole")
+        private String crossRegionReplicationRole;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
@@ -125,8 +128,15 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
+
+        @com.aliyun.core.annotation.NameInMap("VpcRegionId")
+        private String vpcRegionId;
+
         private NetworkAccessPaths(Builder builder) {
             this.createTime = builder.createTime;
+            this.crossRegionReplicationRole = builder.crossRegionReplicationRole;
             this.instanceId = builder.instanceId;
             this.networkAccessEndpointId = builder.networkAccessEndpointId;
             this.networkAccessPathId = builder.networkAccessPathId;
@@ -135,6 +145,8 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
             this.status = builder.status;
             this.updateTime = builder.updateTime;
             this.vSwitchId = builder.vSwitchId;
+            this.vpcId = builder.vpcId;
+            this.vpcRegionId = builder.vpcRegionId;
         }
 
         public static Builder builder() {
@@ -150,6 +162,13 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
          */
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return crossRegionReplicationRole
+         */
+        public String getCrossRegionReplicationRole() {
+            return this.crossRegionReplicationRole;
         }
 
         /**
@@ -208,8 +227,23 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
             return this.vSwitchId;
         }
 
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        /**
+         * @return vpcRegionId
+         */
+        public String getVpcRegionId() {
+            return this.vpcRegionId;
+        }
+
         public static final class Builder {
             private Long createTime; 
+            private String crossRegionReplicationRole; 
             private String instanceId; 
             private String networkAccessEndpointId; 
             private String networkAccessPathId; 
@@ -218,12 +252,15 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
             private String status; 
             private Long updateTime; 
             private String vSwitchId; 
+            private String vpcId; 
+            private String vpcRegionId; 
 
             private Builder() {
             } 
 
             private Builder(NetworkAccessPaths model) {
                 this.createTime = model.createTime;
+                this.crossRegionReplicationRole = model.crossRegionReplicationRole;
                 this.instanceId = model.instanceId;
                 this.networkAccessEndpointId = model.networkAccessEndpointId;
                 this.networkAccessPathId = model.networkAccessPathId;
@@ -232,6 +269,8 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
                 this.status = model.status;
                 this.updateTime = model.updateTime;
                 this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+                this.vpcRegionId = model.vpcRegionId;
             } 
 
             /**
@@ -242,6 +281,14 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * CrossRegionReplicationRole.
+             */
+            public Builder crossRegionReplicationRole(String crossRegionReplicationRole) {
+                this.crossRegionReplicationRole = crossRegionReplicationRole;
                 return this;
             }
 
@@ -330,6 +377,22 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            /**
+             * VpcRegionId.
+             */
+            public Builder vpcRegionId(String vpcRegionId) {
+                this.vpcRegionId = vpcRegionId;
                 return this;
             }
 

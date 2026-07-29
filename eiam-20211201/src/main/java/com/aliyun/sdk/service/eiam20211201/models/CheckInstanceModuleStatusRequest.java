@@ -37,6 +37,14 @@ public class CheckInstanceModuleStatusRequest extends Request {
     private String moduleKey;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceLabelKey")
+    private String resourceLabelKey;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceLabelValue")
+    private String resourceLabelValue;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SubFeatureKey")
     @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String subFeatureKey;
@@ -47,6 +55,8 @@ public class CheckInstanceModuleStatusRequest extends Request {
         this.featureKey = builder.featureKey;
         this.instanceId = builder.instanceId;
         this.moduleKey = builder.moduleKey;
+        this.resourceLabelKey = builder.resourceLabelKey;
+        this.resourceLabelValue = builder.resourceLabelValue;
         this.subFeatureKey = builder.subFeatureKey;
     }
 
@@ -92,6 +102,20 @@ public class CheckInstanceModuleStatusRequest extends Request {
     }
 
     /**
+     * @return resourceLabelKey
+     */
+    public String getResourceLabelKey() {
+        return this.resourceLabelKey;
+    }
+
+    /**
+     * @return resourceLabelValue
+     */
+    public String getResourceLabelValue() {
+        return this.resourceLabelValue;
+    }
+
+    /**
      * @return subFeatureKey
      */
     public String getSubFeatureKey() {
@@ -103,6 +127,8 @@ public class CheckInstanceModuleStatusRequest extends Request {
         private String featureKey; 
         private String instanceId; 
         private String moduleKey; 
+        private String resourceLabelKey; 
+        private String resourceLabelValue; 
         private String subFeatureKey; 
 
         private Builder() {
@@ -115,6 +141,8 @@ public class CheckInstanceModuleStatusRequest extends Request {
             this.featureKey = request.featureKey;
             this.instanceId = request.instanceId;
             this.moduleKey = request.moduleKey;
+            this.resourceLabelKey = request.resourceLabelKey;
+            this.resourceLabelValue = request.resourceLabelValue;
             this.subFeatureKey = request.subFeatureKey;
         } 
 
@@ -162,6 +190,24 @@ public class CheckInstanceModuleStatusRequest extends Request {
         public Builder moduleKey(String moduleKey) {
             this.putQueryParameter("ModuleKey", moduleKey);
             this.moduleKey = moduleKey;
+            return this;
+        }
+
+        /**
+         * ResourceLabelKey.
+         */
+        public Builder resourceLabelKey(String resourceLabelKey) {
+            this.putQueryParameter("ResourceLabelKey", resourceLabelKey);
+            this.resourceLabelKey = resourceLabelKey;
+            return this;
+        }
+
+        /**
+         * ResourceLabelValue.
+         */
+        public Builder resourceLabelValue(String resourceLabelValue) {
+            this.putQueryParameter("ResourceLabelValue", resourceLabelValue);
+            this.resourceLabelValue = resourceLabelValue;
             return this;
         }
 

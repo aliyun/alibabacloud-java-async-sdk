@@ -42,6 +42,10 @@ public class ListInstancesRequest extends Request {
     private Long pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceManaged")
+    private Boolean serviceManaged;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
@@ -53,6 +57,7 @@ public class ListInstancesRequest extends Request {
         this.instanceIds = builder.instanceIds;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.serviceManaged = builder.serviceManaged;
         this.status = builder.status;
     }
 
@@ -112,6 +117,13 @@ public class ListInstancesRequest extends Request {
     }
 
     /**
+     * @return serviceManaged
+     */
+    public Boolean getServiceManaged() {
+        return this.serviceManaged;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -125,6 +137,7 @@ public class ListInstancesRequest extends Request {
         private java.util.List<String> instanceIds; 
         private Long pageNumber; 
         private Long pageSize; 
+        private Boolean serviceManaged; 
         private String status; 
 
         private Builder() {
@@ -139,6 +152,7 @@ public class ListInstancesRequest extends Request {
             this.instanceIds = request.instanceIds;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.serviceManaged = request.serviceManaged;
             this.status = request.status;
         } 
 
@@ -199,6 +213,15 @@ public class ListInstancesRequest extends Request {
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ServiceManaged.
+         */
+        public Builder serviceManaged(Boolean serviceManaged) {
+            this.putQueryParameter("ServiceManaged", serviceManaged);
+            this.serviceManaged = serviceManaged;
             return this;
         }
 

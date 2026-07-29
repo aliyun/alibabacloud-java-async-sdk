@@ -139,7 +139,169 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
      *
      * <p>ListNetworkAccessEndpointsResponseBody</p>
      */
+    public static class BackupVpcEndpoint extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BackupEgressPrivateIpAddresses")
+        private java.util.List<String> backupEgressPrivateIpAddresses;
+
+        @com.aliyun.core.annotation.NameInMap("BackupEgressPublicIpAddresses")
+        private java.util.List<String> backupEgressPublicIpAddresses;
+
+        @com.aliyun.core.annotation.NameInMap("BackupSecurityGroupId")
+        private String backupSecurityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("BackupVSwitchIds")
+        private java.util.List<String> backupVSwitchIds;
+
+        @com.aliyun.core.annotation.NameInMap("BackupVpcId")
+        private String backupVpcId;
+
+        @com.aliyun.core.annotation.NameInMap("BackupVpcRegionId")
+        private String backupVpcRegionId;
+
+        private BackupVpcEndpoint(Builder builder) {
+            this.backupEgressPrivateIpAddresses = builder.backupEgressPrivateIpAddresses;
+            this.backupEgressPublicIpAddresses = builder.backupEgressPublicIpAddresses;
+            this.backupSecurityGroupId = builder.backupSecurityGroupId;
+            this.backupVSwitchIds = builder.backupVSwitchIds;
+            this.backupVpcId = builder.backupVpcId;
+            this.backupVpcRegionId = builder.backupVpcRegionId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BackupVpcEndpoint create() {
+            return builder().build();
+        }
+
+        /**
+         * @return backupEgressPrivateIpAddresses
+         */
+        public java.util.List<String> getBackupEgressPrivateIpAddresses() {
+            return this.backupEgressPrivateIpAddresses;
+        }
+
+        /**
+         * @return backupEgressPublicIpAddresses
+         */
+        public java.util.List<String> getBackupEgressPublicIpAddresses() {
+            return this.backupEgressPublicIpAddresses;
+        }
+
+        /**
+         * @return backupSecurityGroupId
+         */
+        public String getBackupSecurityGroupId() {
+            return this.backupSecurityGroupId;
+        }
+
+        /**
+         * @return backupVSwitchIds
+         */
+        public java.util.List<String> getBackupVSwitchIds() {
+            return this.backupVSwitchIds;
+        }
+
+        /**
+         * @return backupVpcId
+         */
+        public String getBackupVpcId() {
+            return this.backupVpcId;
+        }
+
+        /**
+         * @return backupVpcRegionId
+         */
+        public String getBackupVpcRegionId() {
+            return this.backupVpcRegionId;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> backupEgressPrivateIpAddresses; 
+            private java.util.List<String> backupEgressPublicIpAddresses; 
+            private String backupSecurityGroupId; 
+            private java.util.List<String> backupVSwitchIds; 
+            private String backupVpcId; 
+            private String backupVpcRegionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackupVpcEndpoint model) {
+                this.backupEgressPrivateIpAddresses = model.backupEgressPrivateIpAddresses;
+                this.backupEgressPublicIpAddresses = model.backupEgressPublicIpAddresses;
+                this.backupSecurityGroupId = model.backupSecurityGroupId;
+                this.backupVSwitchIds = model.backupVSwitchIds;
+                this.backupVpcId = model.backupVpcId;
+                this.backupVpcRegionId = model.backupVpcRegionId;
+            } 
+
+            /**
+             * BackupEgressPrivateIpAddresses.
+             */
+            public Builder backupEgressPrivateIpAddresses(java.util.List<String> backupEgressPrivateIpAddresses) {
+                this.backupEgressPrivateIpAddresses = backupEgressPrivateIpAddresses;
+                return this;
+            }
+
+            /**
+             * BackupEgressPublicIpAddresses.
+             */
+            public Builder backupEgressPublicIpAddresses(java.util.List<String> backupEgressPublicIpAddresses) {
+                this.backupEgressPublicIpAddresses = backupEgressPublicIpAddresses;
+                return this;
+            }
+
+            /**
+             * BackupSecurityGroupId.
+             */
+            public Builder backupSecurityGroupId(String backupSecurityGroupId) {
+                this.backupSecurityGroupId = backupSecurityGroupId;
+                return this;
+            }
+
+            /**
+             * BackupVSwitchIds.
+             */
+            public Builder backupVSwitchIds(java.util.List<String> backupVSwitchIds) {
+                this.backupVSwitchIds = backupVSwitchIds;
+                return this;
+            }
+
+            /**
+             * BackupVpcId.
+             */
+            public Builder backupVpcId(String backupVpcId) {
+                this.backupVpcId = backupVpcId;
+                return this;
+            }
+
+            /**
+             * BackupVpcRegionId.
+             */
+            public Builder backupVpcRegionId(String backupVpcRegionId) {
+                this.backupVpcRegionId = backupVpcRegionId;
+                return this;
+            }
+
+            public BackupVpcEndpoint build() {
+                return new BackupVpcEndpoint(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListNetworkAccessEndpointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNetworkAccessEndpointsResponseBody</p>
+     */
     public static class NetworkAccessEndpoints extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BackupVpcEndpoint")
+        private BackupVpcEndpoint backupVpcEndpoint;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
@@ -174,6 +336,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         private String vpcRegionId;
 
         private NetworkAccessEndpoints(Builder builder) {
+            this.backupVpcEndpoint = builder.backupVpcEndpoint;
             this.createTime = builder.createTime;
             this.instanceId = builder.instanceId;
             this.networkAccessEndpointId = builder.networkAccessEndpointId;
@@ -193,6 +356,13 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
 
         public static NetworkAccessEndpoints create() {
             return builder().build();
+        }
+
+        /**
+         * @return backupVpcEndpoint
+         */
+        public BackupVpcEndpoint getBackupVpcEndpoint() {
+            return this.backupVpcEndpoint;
         }
 
         /**
@@ -273,6 +443,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private BackupVpcEndpoint backupVpcEndpoint; 
             private Long createTime; 
             private String instanceId; 
             private String networkAccessEndpointId; 
@@ -289,6 +460,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             } 
 
             private Builder(NetworkAccessEndpoints model) {
+                this.backupVpcEndpoint = model.backupVpcEndpoint;
                 this.createTime = model.createTime;
                 this.instanceId = model.instanceId;
                 this.networkAccessEndpointId = model.networkAccessEndpointId;
@@ -301,6 +473,14 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
                 this.vpcId = model.vpcId;
                 this.vpcRegionId = model.vpcRegionId;
             } 
+
+            /**
+             * BackupVpcEndpoint.
+             */
+            public Builder backupVpcEndpoint(BackupVpcEndpoint backupVpcEndpoint) {
+                this.backupVpcEndpoint = backupVpcEndpoint;
+                return this;
+            }
 
             /**
              * <p>专属网络端点创建时间，Unix时间戳格式，单位为毫秒。</p>
