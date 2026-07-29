@@ -28,7 +28,6 @@ public class ModifyRemarkRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Remark")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String remark;
 
     @com.aliyun.core.annotation.Query
@@ -135,7 +134,6 @@ public class ModifyRemarkRequest extends Request {
 
         /**
          * <p>The remarks for the Anti-DDoS Origin instance.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>test-remark</p>

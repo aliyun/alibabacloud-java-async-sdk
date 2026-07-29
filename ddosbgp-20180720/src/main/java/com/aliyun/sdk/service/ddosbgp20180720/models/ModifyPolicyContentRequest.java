@@ -1301,6 +1301,231 @@ public class ModifyPolicyContentRequest extends Request {
      *
      * <p>ModifyPolicyContentRequest</p>
      */
+    public static class SipDefense extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enable")
+        private Boolean enable;
+
+        @com.aliyun.core.annotation.NameInMap("Level")
+        private String level;
+
+        @com.aliyun.core.annotation.NameInMap("SipDefend")
+        private Boolean sipDefend;
+
+        @com.aliyun.core.annotation.NameInMap("SipLearn")
+        private Boolean sipLearn;
+
+        @com.aliyun.core.annotation.NameInMap("SipModule")
+        private Boolean sipModule;
+
+        @com.aliyun.core.annotation.NameInMap("SipPort")
+        private String sipPort;
+
+        @com.aliyun.core.annotation.NameInMap("SipRate")
+        @com.aliyun.core.annotation.Validation(maximum = 4294967292D)
+        private Long sipRate;
+
+        @com.aliyun.core.annotation.NameInMap("SipStartMbps")
+        @com.aliyun.core.annotation.Validation(maximum = 34359, minimum = 1)
+        private Long sipStartMbps;
+
+        @com.aliyun.core.annotation.NameInMap("SipStartPps")
+        @com.aliyun.core.annotation.Validation(maximum = 2147483647, minimum = 1)
+        private Long sipStartPps;
+
+        private SipDefense(Builder builder) {
+            this.enable = builder.enable;
+            this.level = builder.level;
+            this.sipDefend = builder.sipDefend;
+            this.sipLearn = builder.sipLearn;
+            this.sipModule = builder.sipModule;
+            this.sipPort = builder.sipPort;
+            this.sipRate = builder.sipRate;
+            this.sipStartMbps = builder.sipStartMbps;
+            this.sipStartPps = builder.sipStartPps;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SipDefense create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        /**
+         * @return level
+         */
+        public String getLevel() {
+            return this.level;
+        }
+
+        /**
+         * @return sipDefend
+         */
+        public Boolean getSipDefend() {
+            return this.sipDefend;
+        }
+
+        /**
+         * @return sipLearn
+         */
+        public Boolean getSipLearn() {
+            return this.sipLearn;
+        }
+
+        /**
+         * @return sipModule
+         */
+        public Boolean getSipModule() {
+            return this.sipModule;
+        }
+
+        /**
+         * @return sipPort
+         */
+        public String getSipPort() {
+            return this.sipPort;
+        }
+
+        /**
+         * @return sipRate
+         */
+        public Long getSipRate() {
+            return this.sipRate;
+        }
+
+        /**
+         * @return sipStartMbps
+         */
+        public Long getSipStartMbps() {
+            return this.sipStartMbps;
+        }
+
+        /**
+         * @return sipStartPps
+         */
+        public Long getSipStartPps() {
+            return this.sipStartPps;
+        }
+
+        public static final class Builder {
+            private Boolean enable; 
+            private String level; 
+            private Boolean sipDefend; 
+            private Boolean sipLearn; 
+            private Boolean sipModule; 
+            private String sipPort; 
+            private Long sipRate; 
+            private Long sipStartMbps; 
+            private Long sipStartPps; 
+
+            private Builder() {
+            } 
+
+            private Builder(SipDefense model) {
+                this.enable = model.enable;
+                this.level = model.level;
+                this.sipDefend = model.sipDefend;
+                this.sipLearn = model.sipLearn;
+                this.sipModule = model.sipModule;
+                this.sipPort = model.sipPort;
+                this.sipRate = model.sipRate;
+                this.sipStartMbps = model.sipStartMbps;
+                this.sipStartPps = model.sipStartPps;
+            } 
+
+            /**
+             * Enable.
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            /**
+             * Level.
+             */
+            public Builder level(String level) {
+                this.level = level;
+                return this;
+            }
+
+            /**
+             * SipDefend.
+             */
+            public Builder sipDefend(Boolean sipDefend) {
+                this.sipDefend = sipDefend;
+                return this;
+            }
+
+            /**
+             * SipLearn.
+             */
+            public Builder sipLearn(Boolean sipLearn) {
+                this.sipLearn = sipLearn;
+                return this;
+            }
+
+            /**
+             * SipModule.
+             */
+            public Builder sipModule(Boolean sipModule) {
+                this.sipModule = sipModule;
+                return this;
+            }
+
+            /**
+             * SipPort.
+             */
+            public Builder sipPort(String sipPort) {
+                this.sipPort = sipPort;
+                return this;
+            }
+
+            /**
+             * SipRate.
+             */
+            public Builder sipRate(Long sipRate) {
+                this.sipRate = sipRate;
+                return this;
+            }
+
+            /**
+             * SipStartMbps.
+             */
+            public Builder sipStartMbps(Long sipStartMbps) {
+                this.sipStartMbps = sipStartMbps;
+                return this;
+            }
+
+            /**
+             * SipStartPps.
+             */
+            public Builder sipStartPps(Long sipStartPps) {
+                this.sipStartPps = sipStartPps;
+                return this;
+            }
+
+            public SipDefense build() {
+                return new SipDefense(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyPolicyContentRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyPolicyContentRequest</p>
+     */
     public static class SourceBlockList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlockExpireSeconds")
         @com.aliyun.core.annotation.Validation(required = true, maximum = 2592000, minimum = 60)
@@ -1611,6 +1836,9 @@ public class ModifyPolicyContentRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("RegionBlockProvinceList")
         private java.util.List<Integer> regionBlockProvinceList;
 
+        @com.aliyun.core.annotation.NameInMap("SipDefense")
+        private SipDefense sipDefense;
+
         @com.aliyun.core.annotation.NameInMap("SourceBlockList")
         private java.util.List<SourceBlockList> sourceBlockList;
 
@@ -1632,6 +1860,7 @@ public class ModifyPolicyContentRequest extends Request {
             this.reflectBlockUdpPortList = builder.reflectBlockUdpPortList;
             this.regionBlockCountryList = builder.regionBlockCountryList;
             this.regionBlockProvinceList = builder.regionBlockProvinceList;
+            this.sipDefense = builder.sipDefense;
             this.sourceBlockList = builder.sourceBlockList;
             this.sourceLimit = builder.sourceLimit;
             this.whitenGfbrNets = builder.whitenGfbrNets;
@@ -1723,6 +1952,13 @@ public class ModifyPolicyContentRequest extends Request {
         }
 
         /**
+         * @return sipDefense
+         */
+        public SipDefense getSipDefense() {
+            return this.sipDefense;
+        }
+
+        /**
          * @return sourceBlockList
          */
         public java.util.List<SourceBlockList> getSourceBlockList() {
@@ -1755,6 +1991,7 @@ public class ModifyPolicyContentRequest extends Request {
             private java.util.List<Integer> reflectBlockUdpPortList; 
             private java.util.List<Integer> regionBlockCountryList; 
             private java.util.List<Integer> regionBlockProvinceList; 
+            private SipDefense sipDefense; 
             private java.util.List<SourceBlockList> sourceBlockList; 
             private SourceLimit sourceLimit; 
             private Boolean whitenGfbrNets; 
@@ -1774,6 +2011,7 @@ public class ModifyPolicyContentRequest extends Request {
                 this.reflectBlockUdpPortList = model.reflectBlockUdpPortList;
                 this.regionBlockCountryList = model.regionBlockCountryList;
                 this.regionBlockProvinceList = model.regionBlockProvinceList;
+                this.sipDefense = model.sipDefense;
                 this.sourceBlockList = model.sourceBlockList;
                 this.sourceLimit = model.sourceLimit;
                 this.whitenGfbrNets = model.whitenGfbrNets;
@@ -1884,6 +2122,14 @@ public class ModifyPolicyContentRequest extends Request {
              */
             public Builder regionBlockProvinceList(java.util.List<Integer> regionBlockProvinceList) {
                 this.regionBlockProvinceList = regionBlockProvinceList;
+                return this;
+            }
+
+            /**
+             * SipDefense.
+             */
+            public Builder sipDefense(SipDefense sipDefense) {
+                this.sipDefense = sipDefense;
                 return this;
             }
 

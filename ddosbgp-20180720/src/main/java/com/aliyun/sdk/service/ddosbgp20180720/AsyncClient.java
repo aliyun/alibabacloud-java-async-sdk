@@ -163,6 +163,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeInstanceSpecsResponse> describeInstanceSpecs(DescribeInstanceSpecsRequest request);
 
     /**
+     * @param request the request parameters of DescribeNetworkLayerIntercepts  DescribeNetworkLayerInterceptsRequest
+     * @return DescribeNetworkLayerInterceptsResponse
+     */
+    CompletableFuture<DescribeNetworkLayerInterceptsResponse> describeNetworkLayerIntercepts(DescribeNetworkLayerInterceptsRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call the DescribeOpEntities operation to query the operation logs of an instance by page.</p>
      * <h3>Limit</h3>

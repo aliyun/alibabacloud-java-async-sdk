@@ -50,7 +50,11 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-hangzhou-finance", "ddosbgp.aliyuncs.com"),
             new TeaPair("cn-shenzhen-finance-1", "ddosbgp.aliyuncs.com"),
             new TeaPair("cn-shanghai-finance-1", "ddosbgp.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "ddosbgp.aliyuncs.com")
+            new TeaPair("cn-north-2-gov-1", "ddosbgp.aliyuncs.com"),
+            new TeaPair("us-west-1", "ddosbgp.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "ddosbgp.us-east-1.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "ddosbgp.cn-hongkong.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "ddosbgp.ap-southeast-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -414,6 +418,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeInstanceSpecsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeNetworkLayerIntercepts  DescribeNetworkLayerInterceptsRequest
+     * @return DescribeNetworkLayerInterceptsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeNetworkLayerInterceptsResponse> describeNetworkLayerIntercepts(DescribeNetworkLayerInterceptsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeNetworkLayerIntercepts").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeNetworkLayerInterceptsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeNetworkLayerInterceptsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
