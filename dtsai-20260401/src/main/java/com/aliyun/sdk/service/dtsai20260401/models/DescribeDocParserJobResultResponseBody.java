@@ -32,6 +32,12 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Result")
     private String result;
 
+    @com.aliyun.core.annotation.NameInMap("ResultType")
+    private String resultType;
+
+    @com.aliyun.core.annotation.NameInMap("ResultUrl")
+    private String resultUrl;
+
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
@@ -41,6 +47,8 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
         this.httpStatusCode = builder.httpStatusCode;
         this.requestId = builder.requestId;
         this.result = builder.result;
+        this.resultType = builder.resultType;
+        this.resultUrl = builder.resultUrl;
         this.success = builder.success;
     }
 
@@ -92,6 +100,20 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
     }
 
     /**
+     * @return resultType
+     */
+    public String getResultType() {
+        return this.resultType;
+    }
+
+    /**
+     * @return resultUrl
+     */
+    public String getResultUrl() {
+        return this.resultUrl;
+    }
+
+    /**
      * @return success
      */
     public Boolean getSuccess() {
@@ -104,6 +126,8 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private String result; 
+        private String resultType; 
+        private String resultUrl; 
         private Boolean success; 
 
         private Builder() {
@@ -115,6 +139,8 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
             this.httpStatusCode = model.httpStatusCode;
             this.requestId = model.requestId;
             this.result = model.result;
+            this.resultType = model.resultType;
+            this.resultUrl = model.resultUrl;
             this.success = model.success;
         } 
 
@@ -155,6 +181,22 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
          */
         public Builder result(String result) {
             this.result = result;
+            return this;
+        }
+
+        /**
+         * ResultType.
+         */
+        public Builder resultType(String resultType) {
+            this.resultType = resultType;
+            return this;
+        }
+
+        /**
+         * ResultUrl.
+         */
+        public Builder resultUrl(String resultUrl) {
+            this.resultUrl = resultUrl;
             return this;
         }
 
