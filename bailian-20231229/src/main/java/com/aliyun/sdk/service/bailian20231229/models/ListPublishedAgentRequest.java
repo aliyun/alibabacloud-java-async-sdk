@@ -29,11 +29,16 @@ public class ListPublishedAgentRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("subTypes")
+    private java.util.List<String> subTypes;
+
     private ListPublishedAgentRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
+        this.subTypes = builder.subTypes;
     }
 
     public static Builder builder() {
@@ -70,10 +75,18 @@ public class ListPublishedAgentRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return subTypes
+     */
+    public java.util.List<String> getSubTypes() {
+        return this.subTypes;
+    }
+
     public static final class Builder extends Request.Builder<ListPublishedAgentRequest, Builder> {
         private String workspaceId; 
         private Integer pageNo; 
         private Integer pageSize; 
+        private java.util.List<String> subTypes; 
 
         private Builder() {
             super();
@@ -84,6 +97,7 @@ public class ListPublishedAgentRequest extends Request {
             this.workspaceId = request.workspaceId;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
+            this.subTypes = request.subTypes;
         } 
 
         /**
@@ -110,6 +124,16 @@ public class ListPublishedAgentRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * subTypes.
+         */
+        public Builder subTypes(java.util.List<String> subTypes) {
+            String subTypesShrink = shrink(subTypes, "subTypes", "json");
+            this.putQueryParameter("subTypes", subTypesShrink);
+            this.subTypes = subTypes;
             return this;
         }
 

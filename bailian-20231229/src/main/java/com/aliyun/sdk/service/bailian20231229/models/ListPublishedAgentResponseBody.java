@@ -932,6 +932,9 @@ public class ListPublishedAgentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
 
+        @com.aliyun.core.annotation.NameInMap("description")
+        private String description;
+
         @com.aliyun.core.annotation.NameInMap("instructions")
         private String instructions;
 
@@ -941,12 +944,21 @@ public class ListPublishedAgentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("subType")
+        private String subType;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private Integer type;
+
         private List(Builder builder) {
             this.applicationConfig = builder.applicationConfig;
             this.code = builder.code;
+            this.description = builder.description;
             this.instructions = builder.instructions;
             this.modelId = builder.modelId;
             this.name = builder.name;
+            this.subType = builder.subType;
+            this.type = builder.type;
         }
 
         public static Builder builder() {
@@ -972,6 +984,13 @@ public class ListPublishedAgentResponseBody extends TeaModel {
         }
 
         /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
          * @return instructions
          */
         public String getInstructions() {
@@ -992,12 +1011,29 @@ public class ListPublishedAgentResponseBody extends TeaModel {
             return this.name;
         }
 
+        /**
+         * @return subType
+         */
+        public String getSubType() {
+            return this.subType;
+        }
+
+        /**
+         * @return type
+         */
+        public Integer getType() {
+            return this.type;
+        }
+
         public static final class Builder {
             private ApplicationConfig applicationConfig; 
             private String code; 
+            private String description; 
             private String instructions; 
             private String modelId; 
             private String name; 
+            private String subType; 
+            private Integer type; 
 
             private Builder() {
             } 
@@ -1005,9 +1041,12 @@ public class ListPublishedAgentResponseBody extends TeaModel {
             private Builder(List model) {
                 this.applicationConfig = model.applicationConfig;
                 this.code = model.code;
+                this.description = model.description;
                 this.instructions = model.instructions;
                 this.modelId = model.modelId;
                 this.name = model.name;
+                this.subType = model.subType;
+                this.type = model.type;
             } 
 
             /**
@@ -1023,6 +1062,14 @@ public class ListPublishedAgentResponseBody extends TeaModel {
              */
             public Builder code(String code) {
                 this.code = code;
+                return this;
+            }
+
+            /**
+             * description.
+             */
+            public Builder description(String description) {
+                this.description = description;
                 return this;
             }
 
@@ -1047,6 +1094,22 @@ public class ListPublishedAgentResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * subType.
+             */
+            public Builder subType(String subType) {
+                this.subType = subType;
+                return this;
+            }
+
+            /**
+             * type.
+             */
+            public Builder type(Integer type) {
+                this.type = type;
                 return this;
             }
 
