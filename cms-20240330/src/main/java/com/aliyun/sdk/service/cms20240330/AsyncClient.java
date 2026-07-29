@@ -170,6 +170,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateServiceRecordResponse> createServiceRecord(CreateServiceRecordRequest request);
 
     /**
+     * @param request the request parameters of CreateServiceTask  CreateServiceTaskRequest
+     * @return CreateServiceTaskResponse
+     */
+    CompletableFuture<CreateServiceTaskResponse> createServiceTask(CreateServiceTaskRequest request);
+
+    /**
      * @param request the request parameters of CreateTicket  CreateTicketRequest
      * @return CreateTicketResponse
      */
@@ -327,6 +333,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteServiceRecordResponse
      */
     CompletableFuture<DeleteServiceRecordResponse> deleteServiceRecord(DeleteServiceRecordRequest request);
+
+    /**
+     * @param request the request parameters of DeleteServiceTask  DeleteServiceTaskRequest
+     * @return DeleteServiceTaskResponse
+     */
+    CompletableFuture<DeleteServiceTaskResponse> deleteServiceTask(DeleteServiceTaskRequest request);
 
     /**
      * <b>description</b> :
@@ -569,6 +581,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetServiceRecordResponse> getServiceRecord(GetServiceRecordRequest request);
 
     /**
+     * @param request the request parameters of GetServiceTask  GetServiceTaskRequest
+     * @return GetServiceTaskResponse
+     */
+    CompletableFuture<GetServiceTaskResponse> getServiceTask(GetServiceTaskRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Get Umodel configuration information</p>
      * 
@@ -799,6 +817,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListServiceRecordsResponse
      */
     CompletableFuture<ListServiceRecordsResponse> listServiceRecords(ListServiceRecordsRequest request);
+
+    /**
+     * @param request the request parameters of ListServiceTask  ListServiceTaskRequest
+     * @return ListServiceTaskResponse
+     */
+    CompletableFuture<ListServiceTaskResponse> listServiceTask(ListServiceTaskRequest request);
 
     /**
      * @param request the request parameters of ListServices  ListServicesRequest
