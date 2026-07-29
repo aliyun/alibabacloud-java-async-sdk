@@ -1019,13 +1019,9 @@ public class SearchMediaResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EntityId")
         private String entityId;
 
-        @com.aliyun.core.annotation.NameInMap("Type")
-        private String type;
-
         private DynamicMetaData(Builder builder) {
             this.data = builder.data;
             this.entityId = builder.entityId;
-            this.type = builder.type;
         }
 
         public static Builder builder() {
@@ -1050,17 +1046,9 @@ public class SearchMediaResponseBody extends TeaModel {
             return this.entityId;
         }
 
-        /**
-         * @return type
-         */
-        public String getType() {
-            return this.type;
-        }
-
         public static final class Builder {
             private String data; 
             private String entityId; 
-            private String type; 
 
             private Builder() {
             } 
@@ -1068,7 +1056,6 @@ public class SearchMediaResponseBody extends TeaModel {
             private Builder(DynamicMetaData model) {
                 this.data = model.data;
                 this.entityId = model.entityId;
-                this.type = model.type;
             } 
 
             /**
@@ -1087,196 +1074,8 @@ public class SearchMediaResponseBody extends TeaModel {
                 return this;
             }
 
-            /**
-             * Type.
-             */
-            public Builder type(String type) {
-                this.type = type;
-                return this;
-            }
-
             public DynamicMetaData build() {
                 return new DynamicMetaData(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link SearchMediaResponseBody} extends {@link TeaModel}
-     *
-     * <p>SearchMediaResponseBody</p>
-     */
-    public static class MediaExtraInfo extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("AiAuditJobId")
-        private String aiAuditJobId;
-
-        @com.aliyun.core.annotation.NameInMap("AiAuditLabel")
-        private String aiAuditLabel;
-
-        @com.aliyun.core.annotation.NameInMap("AiAuditResult")
-        private String aiAuditResult;
-
-        @com.aliyun.core.annotation.NameInMap("AiAuditStatus")
-        private String aiAuditStatus;
-
-        @com.aliyun.core.annotation.NameInMap("AiAuditTemplate")
-        private String aiAuditTemplate;
-
-        @com.aliyun.core.annotation.NameInMap("ManualAuditResult")
-        private String manualAuditResult;
-
-        @com.aliyun.core.annotation.NameInMap("ManualAuditStatus")
-        private String manualAuditStatus;
-
-        private MediaExtraInfo(Builder builder) {
-            this.aiAuditJobId = builder.aiAuditJobId;
-            this.aiAuditLabel = builder.aiAuditLabel;
-            this.aiAuditResult = builder.aiAuditResult;
-            this.aiAuditStatus = builder.aiAuditStatus;
-            this.aiAuditTemplate = builder.aiAuditTemplate;
-            this.manualAuditResult = builder.manualAuditResult;
-            this.manualAuditStatus = builder.manualAuditStatus;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static MediaExtraInfo create() {
-            return builder().build();
-        }
-
-        /**
-         * @return aiAuditJobId
-         */
-        public String getAiAuditJobId() {
-            return this.aiAuditJobId;
-        }
-
-        /**
-         * @return aiAuditLabel
-         */
-        public String getAiAuditLabel() {
-            return this.aiAuditLabel;
-        }
-
-        /**
-         * @return aiAuditResult
-         */
-        public String getAiAuditResult() {
-            return this.aiAuditResult;
-        }
-
-        /**
-         * @return aiAuditStatus
-         */
-        public String getAiAuditStatus() {
-            return this.aiAuditStatus;
-        }
-
-        /**
-         * @return aiAuditTemplate
-         */
-        public String getAiAuditTemplate() {
-            return this.aiAuditTemplate;
-        }
-
-        /**
-         * @return manualAuditResult
-         */
-        public String getManualAuditResult() {
-            return this.manualAuditResult;
-        }
-
-        /**
-         * @return manualAuditStatus
-         */
-        public String getManualAuditStatus() {
-            return this.manualAuditStatus;
-        }
-
-        public static final class Builder {
-            private String aiAuditJobId; 
-            private String aiAuditLabel; 
-            private String aiAuditResult; 
-            private String aiAuditStatus; 
-            private String aiAuditTemplate; 
-            private String manualAuditResult; 
-            private String manualAuditStatus; 
-
-            private Builder() {
-            } 
-
-            private Builder(MediaExtraInfo model) {
-                this.aiAuditJobId = model.aiAuditJobId;
-                this.aiAuditLabel = model.aiAuditLabel;
-                this.aiAuditResult = model.aiAuditResult;
-                this.aiAuditStatus = model.aiAuditStatus;
-                this.aiAuditTemplate = model.aiAuditTemplate;
-                this.manualAuditResult = model.manualAuditResult;
-                this.manualAuditStatus = model.manualAuditStatus;
-            } 
-
-            /**
-             * AiAuditJobId.
-             */
-            public Builder aiAuditJobId(String aiAuditJobId) {
-                this.aiAuditJobId = aiAuditJobId;
-                return this;
-            }
-
-            /**
-             * AiAuditLabel.
-             */
-            public Builder aiAuditLabel(String aiAuditLabel) {
-                this.aiAuditLabel = aiAuditLabel;
-                return this;
-            }
-
-            /**
-             * AiAuditResult.
-             */
-            public Builder aiAuditResult(String aiAuditResult) {
-                this.aiAuditResult = aiAuditResult;
-                return this;
-            }
-
-            /**
-             * AiAuditStatus.
-             */
-            public Builder aiAuditStatus(String aiAuditStatus) {
-                this.aiAuditStatus = aiAuditStatus;
-                return this;
-            }
-
-            /**
-             * AiAuditTemplate.
-             */
-            public Builder aiAuditTemplate(String aiAuditTemplate) {
-                this.aiAuditTemplate = aiAuditTemplate;
-                return this;
-            }
-
-            /**
-             * ManualAuditResult.
-             */
-            public Builder manualAuditResult(String manualAuditResult) {
-                this.manualAuditResult = manualAuditResult;
-                return this;
-            }
-
-            /**
-             * ManualAuditStatus.
-             */
-            public Builder manualAuditStatus(String manualAuditStatus) {
-                this.manualAuditStatus = manualAuditStatus;
-                return this;
-            }
-
-            public MediaExtraInfo build() {
-                return new MediaExtraInfo(this);
             } 
 
         } 
@@ -1292,12 +1091,8 @@ public class SearchMediaResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DynamicMetaData")
         private DynamicMetaData dynamicMetaData;
 
-        @com.aliyun.core.annotation.NameInMap("MediaExtraInfo")
-        private MediaExtraInfo mediaExtraInfo;
-
         private MediaDynamicInfo(Builder builder) {
             this.dynamicMetaData = builder.dynamicMetaData;
-            this.mediaExtraInfo = builder.mediaExtraInfo;
         }
 
         public static Builder builder() {
@@ -1315,23 +1110,14 @@ public class SearchMediaResponseBody extends TeaModel {
             return this.dynamicMetaData;
         }
 
-        /**
-         * @return mediaExtraInfo
-         */
-        public MediaExtraInfo getMediaExtraInfo() {
-            return this.mediaExtraInfo;
-        }
-
         public static final class Builder {
             private DynamicMetaData dynamicMetaData; 
-            private MediaExtraInfo mediaExtraInfo; 
 
             private Builder() {
             } 
 
             private Builder(MediaDynamicInfo model) {
                 this.dynamicMetaData = model.dynamicMetaData;
-                this.mediaExtraInfo = model.mediaExtraInfo;
             } 
 
             /**
@@ -1339,14 +1125,6 @@ public class SearchMediaResponseBody extends TeaModel {
              */
             public Builder dynamicMetaData(DynamicMetaData dynamicMetaData) {
                 this.dynamicMetaData = dynamicMetaData;
-                return this;
-            }
-
-            /**
-             * MediaExtraInfo.
-             */
-            public Builder mediaExtraInfo(MediaExtraInfo mediaExtraInfo) {
-                this.mediaExtraInfo = mediaExtraInfo;
                 return this;
             }
 
@@ -1364,9 +1142,6 @@ public class SearchMediaResponseBody extends TeaModel {
      * <p>SearchMediaResponseBody</p>
      */
     public static class MediaInfoList extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("CustomFields")
-        private String customFields;
-
         @com.aliyun.core.annotation.NameInMap("FileInfoList")
         private java.util.List<FileInfoList> fileInfoList;
 
@@ -1380,7 +1155,6 @@ public class SearchMediaResponseBody extends TeaModel {
         private String mediaId;
 
         private MediaInfoList(Builder builder) {
-            this.customFields = builder.customFields;
             this.fileInfoList = builder.fileInfoList;
             this.mediaBasicInfo = builder.mediaBasicInfo;
             this.mediaDynamicInfo = builder.mediaDynamicInfo;
@@ -1393,13 +1167,6 @@ public class SearchMediaResponseBody extends TeaModel {
 
         public static MediaInfoList create() {
             return builder().build();
-        }
-
-        /**
-         * @return customFields
-         */
-        public String getCustomFields() {
-            return this.customFields;
         }
 
         /**
@@ -1431,7 +1198,6 @@ public class SearchMediaResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String customFields; 
             private java.util.List<FileInfoList> fileInfoList; 
             private MediaBasicInfo mediaBasicInfo; 
             private MediaDynamicInfo mediaDynamicInfo; 
@@ -1441,20 +1207,11 @@ public class SearchMediaResponseBody extends TeaModel {
             } 
 
             private Builder(MediaInfoList model) {
-                this.customFields = model.customFields;
                 this.fileInfoList = model.fileInfoList;
                 this.mediaBasicInfo = model.mediaBasicInfo;
                 this.mediaDynamicInfo = model.mediaDynamicInfo;
                 this.mediaId = model.mediaId;
             } 
-
-            /**
-             * CustomFields.
-             */
-            public Builder customFields(String customFields) {
-                this.customFields = customFields;
-                return this;
-            }
 
             /**
              * FileInfoList.

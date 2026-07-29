@@ -24,7 +24,7 @@ public class ListAssetCategoriesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Total")
-    private String total;
+    private Long total;
 
     private ListAssetCategoriesResponseBody(Builder builder) {
         this.categories = builder.categories;
@@ -61,14 +61,14 @@ public class ListAssetCategoriesResponseBody extends TeaModel {
     /**
      * @return total
      */
-    public String getTotal() {
+    public Long getTotal() {
         return this.total;
     }
 
     public static final class Builder {
         private java.util.List<Categories> categories; 
         private String requestId; 
-        private String total; 
+        private Long total; 
 
         private Builder() {
         } 
@@ -98,7 +98,7 @@ public class ListAssetCategoriesResponseBody extends TeaModel {
         /**
          * Total.
          */
-        public Builder total(String total) {
+        public Builder total(Long total) {
             this.total = total;
             return this;
         }

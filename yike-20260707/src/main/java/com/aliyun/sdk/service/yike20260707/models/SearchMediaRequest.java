@@ -26,10 +26,6 @@ public class SearchMediaRequest extends Request {
     private Long categoryId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("EntityId")
-    private String entityId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Match")
     private String match;
 
@@ -46,10 +42,6 @@ public class SearchMediaRequest extends Request {
     private String scrollToken;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("SearchLibName")
-    private String searchLibName;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
@@ -57,12 +49,10 @@ public class SearchMediaRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.categoryId = builder.categoryId;
-        this.entityId = builder.entityId;
         this.match = builder.match;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
         this.scrollToken = builder.scrollToken;
-        this.searchLibName = builder.searchLibName;
         this.sortBy = builder.sortBy;
     }
 
@@ -94,13 +84,6 @@ public class SearchMediaRequest extends Request {
     }
 
     /**
-     * @return entityId
-     */
-    public String getEntityId() {
-        return this.entityId;
-    }
-
-    /**
      * @return match
      */
     public String getMatch() {
@@ -129,13 +112,6 @@ public class SearchMediaRequest extends Request {
     }
 
     /**
-     * @return searchLibName
-     */
-    public String getSearchLibName() {
-        return this.searchLibName;
-    }
-
-    /**
      * @return sortBy
      */
     public String getSortBy() {
@@ -145,12 +121,10 @@ public class SearchMediaRequest extends Request {
     public static final class Builder extends Request.Builder<SearchMediaRequest, Builder> {
         private String regionId; 
         private Long categoryId; 
-        private String entityId; 
         private String match; 
         private Integer pageNo; 
         private Integer pageSize; 
         private String scrollToken; 
-        private String searchLibName; 
         private String sortBy; 
 
         private Builder() {
@@ -161,12 +135,10 @@ public class SearchMediaRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.categoryId = request.categoryId;
-            this.entityId = request.entityId;
             this.match = request.match;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
             this.scrollToken = request.scrollToken;
-            this.searchLibName = request.searchLibName;
             this.sortBy = request.sortBy;
         } 
 
@@ -185,15 +157,6 @@ public class SearchMediaRequest extends Request {
         public Builder categoryId(Long categoryId) {
             this.putQueryParameter("CategoryId", categoryId);
             this.categoryId = categoryId;
-            return this;
-        }
-
-        /**
-         * EntityId.
-         */
-        public Builder entityId(String entityId) {
-            this.putQueryParameter("EntityId", entityId);
-            this.entityId = entityId;
             return this;
         }
 
@@ -230,15 +193,6 @@ public class SearchMediaRequest extends Request {
         public Builder scrollToken(String scrollToken) {
             this.putQueryParameter("ScrollToken", scrollToken);
             this.scrollToken = scrollToken;
-            return this;
-        }
-
-        /**
-         * SearchLibName.
-         */
-        public Builder searchLibName(String searchLibName) {
-            this.putQueryParameter("SearchLibName", searchLibName);
-            this.searchLibName = searchLibName;
             return this;
         }
 
