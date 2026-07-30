@@ -68,10 +68,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetMediaComprehensionJobResponse> getMediaComprehensionJob(GetMediaComprehensionJobRequest request);
 
     /**
+     * @param request the request parameters of GetRemakeScriptJob  GetRemakeScriptJobRequest
+     * @return GetRemakeScriptJobResponse
+     */
+    CompletableFuture<GetRemakeScriptJobResponse> getRemakeScriptJob(GetRemakeScriptJobRequest request);
+
+    /**
      * @param request the request parameters of GetVideoGenerationJob  GetVideoGenerationJobRequest
      * @return GetVideoGenerationJobResponse
      */
     CompletableFuture<GetVideoGenerationJobResponse> getVideoGenerationJob(GetVideoGenerationJobRequest request);
+
+    /**
+     * @param request the request parameters of GetVideoRenderJob  GetVideoRenderJobRequest
+     * @return GetVideoRenderJobResponse
+     */
+    CompletableFuture<GetVideoRenderJobResponse> getVideoRenderJob(GetVideoRenderJobRequest request);
 
     /**
      * @param request the request parameters of GetYikeAccountCredit  GetYikeAccountCreditRequest
@@ -116,10 +128,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitMediaComprehensionJobResponse> submitMediaComprehensionJob(SubmitMediaComprehensionJobRequest request);
 
     /**
+     * @param request the request parameters of SubmitRemakeScriptJob  SubmitRemakeScriptJobRequest
+     * @return SubmitRemakeScriptJobResponse
+     */
+    CompletableFuture<SubmitRemakeScriptJobResponse> submitRemakeScriptJob(SubmitRemakeScriptJobRequest request);
+
+    /**
      * @param request the request parameters of SubmitVideoGenerationJob  SubmitVideoGenerationJobRequest
      * @return SubmitVideoGenerationJobResponse
      */
     CompletableFuture<SubmitVideoGenerationJobResponse> submitVideoGenerationJob(SubmitVideoGenerationJobRequest request);
+
+    /**
+     * @param request the request parameters of SubmitVideoRenderJob  SubmitVideoRenderJobRequest
+     * @return SubmitVideoRenderJobResponse
+     */
+    CompletableFuture<SubmitVideoRenderJobResponse> submitVideoRenderJob(SubmitVideoRenderJobRequest request);
 
     /**
      * @param request the request parameters of SubmitVideoTranslationJob  SubmitVideoTranslationJobRequest
