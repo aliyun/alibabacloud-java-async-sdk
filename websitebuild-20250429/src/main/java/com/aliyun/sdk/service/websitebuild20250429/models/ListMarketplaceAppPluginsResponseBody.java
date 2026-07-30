@@ -293,6 +293,9 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("Extend")
+        private String extend;
+
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
@@ -323,6 +326,7 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.category = builder.category;
             this.description = builder.description;
+            this.extend = builder.extend;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.hotCount = builder.hotCount;
@@ -354,6 +358,13 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return extend
+         */
+        public String getExtend() {
+            return this.extend;
         }
 
         /**
@@ -422,6 +433,7 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
         public static final class Builder {
             private String category; 
             private String description; 
+            private String extend; 
             private String gmtCreate; 
             private String gmtModified; 
             private Integer hotCount; 
@@ -438,6 +450,7 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.category = model.category;
                 this.description = model.description;
+                this.extend = model.extend;
                 this.gmtCreate = model.gmtCreate;
                 this.gmtModified = model.gmtModified;
                 this.hotCount = model.hotCount;
@@ -462,6 +475,14 @@ public class ListMarketplaceAppPluginsResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * Extend.
+             */
+            public Builder extend(String extend) {
+                this.extend = extend;
                 return this;
             }
 
