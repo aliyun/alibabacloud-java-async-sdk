@@ -35,6 +35,7 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-shenzhen", "adbai.cn-shenzhen.aliyuncs.com"),
             new TeaPair("cn-shanghai", "adbai.cn-shanghai.aliyuncs.com"),
             new TeaPair("cn-hangzhou", "adbai.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "adbai.cn-guangzhou.aliyuncs.com"),
             new TeaPair("cn-beijing", "adbai.cn-beijing.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "adbai.ap-southeast-1.aliyuncs.com"),
             new TeaPair("ap-northeast-1", "adbai.ap-northeast-1.aliyuncs.com")
@@ -84,6 +85,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateMultiModelKnowledgeBase  CreateMultiModelKnowledgeBaseRequest
+     * @return CreateMultiModelKnowledgeBaseResponse
+     */
+    @Override
+    public CompletableFuture<CreateMultiModelKnowledgeBaseResponse> createMultiModelKnowledgeBase(CreateMultiModelKnowledgeBaseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateMultiModelKnowledgeBase").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateMultiModelKnowledgeBaseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateMultiModelKnowledgeBaseResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteAgentPlatform  DeleteAgentPlatformRequest
      * @return DeleteAgentPlatformResponse
      */
@@ -114,6 +133,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteEmbodiedAIPlatformResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteMultiModalKnowledgeBase  DeleteMultiModalKnowledgeBaseRequest
+     * @return DeleteMultiModalKnowledgeBaseResponse
+     */
+    @Override
+    public CompletableFuture<DeleteMultiModalKnowledgeBaseResponse> deleteMultiModalKnowledgeBase(DeleteMultiModalKnowledgeBaseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteMultiModalKnowledgeBase").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteMultiModalKnowledgeBaseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteMultiModalKnowledgeBaseResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

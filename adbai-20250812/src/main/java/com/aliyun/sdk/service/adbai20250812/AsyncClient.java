@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateEmbodiedAIPlatformResponse> createEmbodiedAIPlatform(CreateEmbodiedAIPlatformRequest request);
 
     /**
+     * @param request the request parameters of CreateMultiModelKnowledgeBase  CreateMultiModelKnowledgeBaseRequest
+     * @return CreateMultiModelKnowledgeBaseResponse
+     */
+    CompletableFuture<CreateMultiModelKnowledgeBaseResponse> createMultiModelKnowledgeBase(CreateMultiModelKnowledgeBaseRequest request);
+
+    /**
      * @param request the request parameters of DeleteAgentPlatform  DeleteAgentPlatformRequest
      * @return DeleteAgentPlatformResponse
      */
@@ -42,6 +48,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteEmbodiedAIPlatformResponse
      */
     CompletableFuture<DeleteEmbodiedAIPlatformResponse> deleteEmbodiedAIPlatform(DeleteEmbodiedAIPlatformRequest request);
+
+    /**
+     * @param request the request parameters of DeleteMultiModalKnowledgeBase  DeleteMultiModalKnowledgeBaseRequest
+     * @return DeleteMultiModalKnowledgeBaseResponse
+     */
+    CompletableFuture<DeleteMultiModalKnowledgeBaseResponse> deleteMultiModalKnowledgeBase(DeleteMultiModalKnowledgeBaseRequest request);
 
     /**
      * @param request the request parameters of DescribeChatMessage  DescribeChatMessageRequest
