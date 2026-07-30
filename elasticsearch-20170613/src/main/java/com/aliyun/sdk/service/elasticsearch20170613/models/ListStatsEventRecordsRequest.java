@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListStatsEventRecordsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("endTime")
+    private Long endTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("eventType")
     private String eventType;
 
@@ -26,13 +30,19 @@ public class ListStatsEventRecordsRequest extends Request {
     private String level;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("startTime")
+    private Long startTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
     private ListStatsEventRecordsRequest(Builder builder) {
         super(builder);
+        this.endTime = builder.endTime;
         this.eventType = builder.eventType;
         this.level = builder.level;
+        this.startTime = builder.startTime;
         this.status = builder.status;
     }
 
@@ -50,6 +60,13 @@ public class ListStatsEventRecordsRequest extends Request {
     }
 
     /**
+     * @return endTime
+     */
+    public Long getEndTime() {
+        return this.endTime;
+    }
+
+    /**
      * @return eventType
      */
     public String getEventType() {
@@ -64,6 +81,13 @@ public class ListStatsEventRecordsRequest extends Request {
     }
 
     /**
+     * @return startTime
+     */
+    public Long getStartTime() {
+        return this.startTime;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -71,8 +95,10 @@ public class ListStatsEventRecordsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListStatsEventRecordsRequest, Builder> {
+        private Long endTime; 
         private String eventType; 
         private String level; 
+        private Long startTime; 
         private String status; 
 
         private Builder() {
@@ -81,10 +107,21 @@ public class ListStatsEventRecordsRequest extends Request {
 
         private Builder(ListStatsEventRecordsRequest request) {
             super(request);
+            this.endTime = request.endTime;
             this.eventType = request.eventType;
             this.level = request.level;
+            this.startTime = request.startTime;
             this.status = request.status;
         } 
+
+        /**
+         * endTime.
+         */
+        public Builder endTime(Long endTime) {
+            this.putQueryParameter("endTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
 
         /**
          * eventType.
@@ -101,6 +138,15 @@ public class ListStatsEventRecordsRequest extends Request {
         public Builder level(String level) {
             this.putQueryParameter("level", level);
             this.level = level;
+            return this;
+        }
+
+        /**
+         * startTime.
+         */
+        public Builder startTime(Long startTime) {
+            this.putQueryParameter("startTime", startTime);
+            this.startTime = startTime;
             return this;
         }
 
