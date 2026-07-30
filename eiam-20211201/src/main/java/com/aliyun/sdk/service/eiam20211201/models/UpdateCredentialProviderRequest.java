@@ -341,8 +341,29 @@ public class UpdateCredentialProviderRequest extends Request {
      * <p>UpdateCredentialProviderRequest</p>
      */
     public static class OAuthProviderConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AuthorizationEndpoint")
+        private String authorizationEndpoint;
+
+        @com.aliyun.core.annotation.NameInMap("AuthorizationFlow")
+        private String authorizationFlow;
+
         @com.aliyun.core.annotation.NameInMap("ClientSecret")
         private String clientSecret;
+
+        @com.aliyun.core.annotation.NameInMap("DiscoveryUrl")
+        private String discoveryUrl;
+
+        @com.aliyun.core.annotation.NameInMap("Issuer")
+        private String issuer;
+
+        @com.aliyun.core.annotation.NameInMap("PkceChallengeMethod")
+        private String pkceChallengeMethod;
+
+        @com.aliyun.core.annotation.NameInMap("PkceEnabled")
+        private Boolean pkceEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("ProviderVendor")
+        private String providerVendor;
 
         @com.aliyun.core.annotation.NameInMap("Scope")
         private String scope;
@@ -351,7 +372,14 @@ public class UpdateCredentialProviderRequest extends Request {
         private String tokenEndpoint;
 
         private OAuthProviderConfig(Builder builder) {
+            this.authorizationEndpoint = builder.authorizationEndpoint;
+            this.authorizationFlow = builder.authorizationFlow;
             this.clientSecret = builder.clientSecret;
+            this.discoveryUrl = builder.discoveryUrl;
+            this.issuer = builder.issuer;
+            this.pkceChallengeMethod = builder.pkceChallengeMethod;
+            this.pkceEnabled = builder.pkceEnabled;
+            this.providerVendor = builder.providerVendor;
             this.scope = builder.scope;
             this.tokenEndpoint = builder.tokenEndpoint;
         }
@@ -365,10 +393,59 @@ public class UpdateCredentialProviderRequest extends Request {
         }
 
         /**
+         * @return authorizationEndpoint
+         */
+        public String getAuthorizationEndpoint() {
+            return this.authorizationEndpoint;
+        }
+
+        /**
+         * @return authorizationFlow
+         */
+        public String getAuthorizationFlow() {
+            return this.authorizationFlow;
+        }
+
+        /**
          * @return clientSecret
          */
         public String getClientSecret() {
             return this.clientSecret;
+        }
+
+        /**
+         * @return discoveryUrl
+         */
+        public String getDiscoveryUrl() {
+            return this.discoveryUrl;
+        }
+
+        /**
+         * @return issuer
+         */
+        public String getIssuer() {
+            return this.issuer;
+        }
+
+        /**
+         * @return pkceChallengeMethod
+         */
+        public String getPkceChallengeMethod() {
+            return this.pkceChallengeMethod;
+        }
+
+        /**
+         * @return pkceEnabled
+         */
+        public Boolean getPkceEnabled() {
+            return this.pkceEnabled;
+        }
+
+        /**
+         * @return providerVendor
+         */
+        public String getProviderVendor() {
+            return this.providerVendor;
         }
 
         /**
@@ -386,7 +463,14 @@ public class UpdateCredentialProviderRequest extends Request {
         }
 
         public static final class Builder {
+            private String authorizationEndpoint; 
+            private String authorizationFlow; 
             private String clientSecret; 
+            private String discoveryUrl; 
+            private String issuer; 
+            private String pkceChallengeMethod; 
+            private Boolean pkceEnabled; 
+            private String providerVendor; 
             private String scope; 
             private String tokenEndpoint; 
 
@@ -394,10 +478,33 @@ public class UpdateCredentialProviderRequest extends Request {
             } 
 
             private Builder(OAuthProviderConfig model) {
+                this.authorizationEndpoint = model.authorizationEndpoint;
+                this.authorizationFlow = model.authorizationFlow;
                 this.clientSecret = model.clientSecret;
+                this.discoveryUrl = model.discoveryUrl;
+                this.issuer = model.issuer;
+                this.pkceChallengeMethod = model.pkceChallengeMethod;
+                this.pkceEnabled = model.pkceEnabled;
+                this.providerVendor = model.providerVendor;
                 this.scope = model.scope;
                 this.tokenEndpoint = model.tokenEndpoint;
             } 
+
+            /**
+             * <p>用于引导用户进行授权的端点地址。条件必填：当AuthorizationFlow=user_federation且ProviderVendor=custom时必填；预置厂商可通过DiscoveryUrl自动填充</p>
+             */
+            public Builder authorizationEndpoint(String authorizationEndpoint) {
+                this.authorizationEndpoint = authorizationEndpoint;
+                return this;
+            }
+
+            /**
+             * <p>OAuth的具体授权类型。m2m: 机器对机器(2LO, Client Credentials)；user_federation: 用户联邦(3LO, Authorization Code)</p>
+             */
+            public Builder authorizationFlow(String authorizationFlow) {
+                this.authorizationFlow = authorizationFlow;
+                return this;
+            }
 
             /**
              * <p>OAuth协议中的client_secret，客户端密钥。</p>
@@ -407,6 +514,46 @@ public class UpdateCredentialProviderRequest extends Request {
              */
             public Builder clientSecret(String clientSecret) {
                 this.clientSecret = clientSecret;
+                return this;
+            }
+
+            /**
+             * <p>用于自动获取OAuth端点配置的Discovery文档地址。条件可选：当AuthorizationFlow=user_federation时使用，如不提供DiscoveryUrl，则需手动配置TokenEndpoint、AuthorizationEndpoint等字段</p>
+             */
+            public Builder discoveryUrl(String discoveryUrl) {
+                this.discoveryUrl = discoveryUrl;
+                return this;
+            }
+
+            /**
+             * Issuer.
+             */
+            public Builder issuer(String issuer) {
+                this.issuer = issuer;
+                return this;
+            }
+
+            /**
+             * <p>PKCE code_challenge 生成方法。默认s256</p>
+             */
+            public Builder pkceChallengeMethod(String pkceChallengeMethod) {
+                this.pkceChallengeMethod = pkceChallengeMethod;
+                return this;
+            }
+
+            /**
+             * <p>是否使用PKCE扩展增强安全性，推荐始终启用</p>
+             */
+            public Builder pkceEnabled(Boolean pkceEnabled) {
+                this.pkceEnabled = pkceEnabled;
+                return this;
+            }
+
+            /**
+             * <p>预置厂商或自定义配置。非必填，默认值：custom</p>
+             */
+            public Builder providerVendor(String providerVendor) {
+                this.providerVendor = providerVendor;
                 return this;
             }
 

@@ -132,7 +132,7 @@ public class UpdateAuthorizationServerDescriptionRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>iauths_system</p>
+         * <p>iauths_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
          */
         public Builder authorizationServerId(String authorizationServerId) {
             this.putQueryParameter("AuthorizationServerId", authorizationServerId);
@@ -156,7 +156,7 @@ public class UpdateAuthorizationServerDescriptionRequest extends Request {
          * <p>授权服务器描述，最长128字符。</p>
          * 
          * <strong>example:</strong>
-         * <p>description of authorization server</p>
+         * <p>这是一个授权服务器。</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
