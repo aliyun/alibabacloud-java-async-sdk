@@ -32,6 +32,9 @@ public class GetDatasetResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("isFavorite")
     private Boolean isFavorite;
 
+    @com.aliyun.core.annotation.NameInMap("labels")
+    private java.util.Map<String, java.util.List<String>> labels;
+
     @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
 
@@ -50,6 +53,7 @@ public class GetDatasetResponseBody extends TeaModel {
         this.datasetName = builder.datasetName;
         this.description = builder.description;
         this.isFavorite = builder.isFavorite;
+        this.labels = builder.labels;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
         this.schema = builder.schema;
@@ -104,6 +108,13 @@ public class GetDatasetResponseBody extends TeaModel {
     }
 
     /**
+     * @return labels
+     */
+    public java.util.Map<String, java.util.List<String>> getLabels() {
+        return this.labels;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -137,6 +148,7 @@ public class GetDatasetResponseBody extends TeaModel {
         private String datasetName; 
         private String description; 
         private Boolean isFavorite; 
+        private java.util.Map<String, java.util.List<String>> labels; 
         private String regionId; 
         private String requestId; 
         private java.util.Map<String, IndexKey> schema; 
@@ -151,6 +163,7 @@ public class GetDatasetResponseBody extends TeaModel {
             this.datasetName = model.datasetName;
             this.description = model.description;
             this.isFavorite = model.isFavorite;
+            this.labels = model.labels;
             this.regionId = model.regionId;
             this.requestId = model.requestId;
             this.schema = model.schema;
@@ -197,6 +210,14 @@ public class GetDatasetResponseBody extends TeaModel {
          */
         public Builder isFavorite(Boolean isFavorite) {
             this.isFavorite = isFavorite;
+            return this;
+        }
+
+        /**
+         * labels.
+         */
+        public Builder labels(java.util.Map<String, java.util.List<String>> labels) {
+            this.labels = labels;
             return this;
         }
 

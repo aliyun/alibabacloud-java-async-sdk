@@ -48,6 +48,10 @@ public class CreateExperimentPlanRequest extends Request {
     private java.util.Map<String, ?> input;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pipelineName")
+    private String pipelineName;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("planName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String planName;
@@ -69,6 +73,7 @@ public class CreateExperimentPlanRequest extends Request {
         this.experimentType = builder.experimentType;
         this.experiments = builder.experiments;
         this.input = builder.input;
+        this.pipelineName = builder.pipelineName;
         this.planName = builder.planName;
         this.querySql = builder.querySql;
         this.selectedItemIds = builder.selectedItemIds;
@@ -137,6 +142,13 @@ public class CreateExperimentPlanRequest extends Request {
     }
 
     /**
+     * @return pipelineName
+     */
+    public String getPipelineName() {
+        return this.pipelineName;
+    }
+
+    /**
      * @return planName
      */
     public String getPlanName() {
@@ -165,6 +177,7 @@ public class CreateExperimentPlanRequest extends Request {
         private String experimentType; 
         private java.util.List<ExperimentConfig> experiments; 
         private java.util.Map<String, ?> input; 
+        private String pipelineName; 
         private String planName; 
         private String querySql; 
         private java.util.List<String> selectedItemIds; 
@@ -182,6 +195,7 @@ public class CreateExperimentPlanRequest extends Request {
             this.experimentType = request.experimentType;
             this.experiments = request.experiments;
             this.input = request.input;
+            this.pipelineName = request.pipelineName;
             this.planName = request.planName;
             this.querySql = request.querySql;
             this.selectedItemIds = request.selectedItemIds;
@@ -250,6 +264,15 @@ public class CreateExperimentPlanRequest extends Request {
         public Builder input(java.util.Map<String, ?> input) {
             this.putBodyParameter("input", input);
             this.input = input;
+            return this;
+        }
+
+        /**
+         * pipelineName.
+         */
+        public Builder pipelineName(String pipelineName) {
+            this.putBodyParameter("pipelineName", pipelineName);
+            this.pipelineName = pipelineName;
             return this;
         }
 

@@ -38,6 +38,9 @@ public class GetExperimentPlanResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("input")
     private java.util.Map<String, ?> input;
 
+    @com.aliyun.core.annotation.NameInMap("pipelineName")
+    private String pipelineName;
+
     @com.aliyun.core.annotation.NameInMap("planId")
     private String planId;
 
@@ -67,6 +70,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         this.experimentType = builder.experimentType;
         this.experiments = builder.experiments;
         this.input = builder.input;
+        this.pipelineName = builder.pipelineName;
         this.planId = builder.planId;
         this.planName = builder.planName;
         this.querySql = builder.querySql;
@@ -138,6 +142,13 @@ public class GetExperimentPlanResponseBody extends TeaModel {
     }
 
     /**
+     * @return pipelineName
+     */
+    public String getPipelineName() {
+        return this.pipelineName;
+    }
+
+    /**
      * @return planId
      */
     public String getPlanId() {
@@ -194,6 +205,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         private String experimentType; 
         private java.util.List<ExperimentConfig> experiments; 
         private java.util.Map<String, ?> input; 
+        private String pipelineName; 
         private String planId; 
         private String planName; 
         private String querySql; 
@@ -213,6 +225,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
             this.experimentType = model.experimentType;
             this.experiments = model.experiments;
             this.input = model.input;
+            this.pipelineName = model.pipelineName;
             this.planId = model.planId;
             this.planName = model.planName;
             this.querySql = model.querySql;
@@ -275,6 +288,14 @@ public class GetExperimentPlanResponseBody extends TeaModel {
          */
         public Builder input(java.util.Map<String, ?> input) {
             this.input = input;
+            return this;
+        }
+
+        /**
+         * pipelineName.
+         */
+        public Builder pipelineName(String pipelineName) {
+            this.pipelineName = pipelineName;
             return this;
         }
 

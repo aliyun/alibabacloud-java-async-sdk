@@ -27,6 +27,10 @@ public class ListDatasetsRequest extends Request {
     private String datasetName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("labels")
+    private java.util.Map<String, java.util.List<String>> labels;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("maxResults")
     private Integer maxResults;
 
@@ -38,6 +42,7 @@ public class ListDatasetsRequest extends Request {
         super(builder);
         this.agentSpace = builder.agentSpace;
         this.datasetName = builder.datasetName;
+        this.labels = builder.labels;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
     }
@@ -70,6 +75,13 @@ public class ListDatasetsRequest extends Request {
     }
 
     /**
+     * @return labels
+     */
+    public java.util.Map<String, java.util.List<String>> getLabels() {
+        return this.labels;
+    }
+
+    /**
      * @return maxResults
      */
     public Integer getMaxResults() {
@@ -86,6 +98,7 @@ public class ListDatasetsRequest extends Request {
     public static final class Builder extends Request.Builder<ListDatasetsRequest, Builder> {
         private String agentSpace; 
         private String datasetName; 
+        private java.util.Map<String, java.util.List<String>> labels; 
         private Integer maxResults; 
         private String nextToken; 
 
@@ -97,6 +110,7 @@ public class ListDatasetsRequest extends Request {
             super(request);
             this.agentSpace = request.agentSpace;
             this.datasetName = request.datasetName;
+            this.labels = request.labels;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
         } 
@@ -119,6 +133,16 @@ public class ListDatasetsRequest extends Request {
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("datasetName", datasetName);
             this.datasetName = datasetName;
+            return this;
+        }
+
+        /**
+         * labels.
+         */
+        public Builder labels(java.util.Map<String, java.util.List<String>> labels) {
+            String labelsShrink = shrink(labels, "labels", "json");
+            this.putQueryParameter("labels", labelsShrink);
+            this.labels = labels;
             return this;
         }
 
