@@ -381,6 +381,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetOAuthAuthorizationSession  GetOAuthAuthorizationSessionRequest
+     * @return GetOAuthAuthorizationSessionResponse
+     */
+    @Override
+    public CompletableFuture<GetOAuthAuthorizationSessionResponse> getOAuthAuthorizationSession(GetOAuthAuthorizationSessionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetOAuthAuthorizationSession").setMethod(HttpMethod.POST).setPathRegex("/v2/{instanceId}/oauthAuthorizationSessions/_/actions/get").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetOAuthAuthorizationSessionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetOAuthAuthorizationSessionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetOrganizationalUnit  GetOrganizationalUnitRequest
      * @return GetOrganizationalUnitResponse
      */

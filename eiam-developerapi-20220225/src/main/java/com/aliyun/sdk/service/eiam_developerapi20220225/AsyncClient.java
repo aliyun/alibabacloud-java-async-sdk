@@ -138,6 +138,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetGroupResponse> getGroup(GetGroupRequest request);
 
     /**
+     * @param request the request parameters of GetOAuthAuthorizationSession  GetOAuthAuthorizationSessionRequest
+     * @return GetOAuthAuthorizationSessionResponse
+     */
+    CompletableFuture<GetOAuthAuthorizationSessionResponse> getOAuthAuthorizationSession(GetOAuthAuthorizationSessionRequest request);
+
+    /**
      * @param request the request parameters of GetOrganizationalUnit  GetOrganizationalUnitRequest
      * @return GetOrganizationalUnitResponse
      */
