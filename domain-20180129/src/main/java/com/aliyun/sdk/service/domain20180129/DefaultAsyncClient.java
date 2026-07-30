@@ -29,8 +29,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "Domain";
         this.version = "2018-01-29";
-        this.endpointRule = "central";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("cn-hangzhou", "domain.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "domain-intl.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -376,6 +379,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteRegistrantProfileResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DomainKnowledgeRetrieve  DomainKnowledgeRetrieveRequest
+     * @return DomainKnowledgeRetrieveResponse
+     */
+    @Override
+    public CompletableFuture<DomainKnowledgeRetrieveResponse> domainKnowledgeRetrieve(DomainKnowledgeRetrieveRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DomainKnowledgeRetrieve").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DomainKnowledgeRetrieveResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DomainKnowledgeRetrieveResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

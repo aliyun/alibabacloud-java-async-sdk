@@ -134,6 +134,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteRegistrantProfileResponse> deleteRegistrantProfile(DeleteRegistrantProfileRequest request);
 
     /**
+     * @param request the request parameters of DomainKnowledgeRetrieve  DomainKnowledgeRetrieveRequest
+     * @return DomainKnowledgeRetrieveResponse
+     */
+    CompletableFuture<DomainKnowledgeRetrieveResponse> domainKnowledgeRetrieve(DomainKnowledgeRetrieveRequest request);
+
+    /**
      * @param request the request parameters of DomainSpecialBizCancel  DomainSpecialBizCancelRequest
      * @return DomainSpecialBizCancelResponse
      */
