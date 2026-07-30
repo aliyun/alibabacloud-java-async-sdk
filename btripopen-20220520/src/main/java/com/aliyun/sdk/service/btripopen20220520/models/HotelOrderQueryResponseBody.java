@@ -649,6 +649,81 @@ public class HotelOrderQueryResponseBody extends TeaModel {
      *
      * <p>HotelOrderQueryResponseBody</p>
      */
+    public static class DailyBreakfastList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("breakfastCount")
+        private Integer breakfastCount;
+
+        @com.aliyun.core.annotation.NameInMap("date")
+        private String date;
+
+        private DailyBreakfastList(Builder builder) {
+            this.breakfastCount = builder.breakfastCount;
+            this.date = builder.date;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DailyBreakfastList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return breakfastCount
+         */
+        public Integer getBreakfastCount() {
+            return this.breakfastCount;
+        }
+
+        /**
+         * @return date
+         */
+        public String getDate() {
+            return this.date;
+        }
+
+        public static final class Builder {
+            private Integer breakfastCount; 
+            private String date; 
+
+            private Builder() {
+            } 
+
+            private Builder(DailyBreakfastList model) {
+                this.breakfastCount = model.breakfastCount;
+                this.date = model.date;
+            } 
+
+            /**
+             * breakfastCount.
+             */
+            public Builder breakfastCount(Integer breakfastCount) {
+                this.breakfastCount = breakfastCount;
+                return this;
+            }
+
+            /**
+             * date.
+             */
+            public Builder date(String date) {
+                this.date = date;
+                return this;
+            }
+
+            public DailyBreakfastList build() {
+                return new DailyBreakfastList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link HotelOrderQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotelOrderQueryResponseBody</p>
+     */
     public static class OrderBaseInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("apply_id")
         private String applyId;
@@ -664,6 +739,9 @@ public class HotelOrderQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("corp_name")
         private String corpName;
+
+        @com.aliyun.core.annotation.NameInMap("dailyBreakfastList")
+        private DailyBreakfastList dailyBreakfastList;
 
         @com.aliyun.core.annotation.NameInMap("depart_id")
         private String departId;
@@ -722,6 +800,7 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             this.category = builder.category;
             this.corpId = builder.corpId;
             this.corpName = builder.corpName;
+            this.dailyBreakfastList = builder.dailyBreakfastList;
             this.departId = builder.departId;
             this.departName = builder.departName;
             this.exceedApplyNos = builder.exceedApplyNos;
@@ -782,6 +861,13 @@ public class HotelOrderQueryResponseBody extends TeaModel {
          */
         public String getCorpName() {
             return this.corpName;
+        }
+
+        /**
+         * @return dailyBreakfastList
+         */
+        public DailyBreakfastList getDailyBreakfastList() {
+            return this.dailyBreakfastList;
         }
 
         /**
@@ -909,6 +995,7 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             private Integer category; 
             private String corpId; 
             private String corpName; 
+            private DailyBreakfastList dailyBreakfastList; 
             private String departId; 
             private String departName; 
             private java.util.List<String> exceedApplyNos; 
@@ -936,6 +1023,7 @@ public class HotelOrderQueryResponseBody extends TeaModel {
                 this.category = model.category;
                 this.corpId = model.corpId;
                 this.corpName = model.corpName;
+                this.dailyBreakfastList = model.dailyBreakfastList;
                 this.departId = model.departId;
                 this.departName = model.departName;
                 this.exceedApplyNos = model.exceedApplyNos;
@@ -992,6 +1080,14 @@ public class HotelOrderQueryResponseBody extends TeaModel {
              */
             public Builder corpName(String corpName) {
                 this.corpName = corpName;
+                return this;
+            }
+
+            /**
+             * dailyBreakfastList.
+             */
+            public Builder dailyBreakfastList(DailyBreakfastList dailyBreakfastList) {
+                this.dailyBreakfastList = dailyBreakfastList;
                 return this;
             }
 
