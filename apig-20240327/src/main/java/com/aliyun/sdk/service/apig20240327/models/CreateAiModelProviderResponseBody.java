@@ -497,6 +497,9 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("source")
         private String source;
 
+        @com.aliyun.core.annotation.NameInMap("sourceURL")
+        private String sourceURL;
+
         @com.aliyun.core.annotation.NameInMap("updateTime")
         private String updateTime;
 
@@ -510,6 +513,7 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
             this.modelName = builder.modelName;
             this.modelProvider = builder.modelProvider;
             this.source = builder.source;
+            this.sourceURL = builder.sourceURL;
             this.updateTime = builder.updateTime;
         }
 
@@ -585,6 +589,13 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourceURL
+         */
+        public String getSourceURL() {
+            return this.sourceURL;
+        }
+
+        /**
          * @return updateTime
          */
         public String getUpdateTime() {
@@ -601,6 +612,7 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
             private String modelName; 
             private String modelProvider; 
             private String source; 
+            private String sourceURL; 
             private String updateTime; 
 
             private Builder() {
@@ -616,6 +628,7 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
                 this.modelName = model.modelName;
                 this.modelProvider = model.modelProvider;
                 this.source = model.source;
+                this.sourceURL = model.sourceURL;
                 this.updateTime = model.updateTime;
             } 
 
@@ -688,6 +701,14 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
              */
             public Builder source(String source) {
                 this.source = source;
+                return this;
+            }
+
+            /**
+             * sourceURL.
+             */
+            public Builder sourceURL(String sourceURL) {
+                this.sourceURL = sourceURL;
                 return this;
             }
 

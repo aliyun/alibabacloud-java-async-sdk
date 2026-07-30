@@ -49,6 +49,10 @@ public class ListGatewaysRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("tag")
     private java.util.List<Tag> tag;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("vpcId")
+    private String vpcId;
+
     private ListGatewaysRequest(Builder builder) {
         super(builder);
         this.gatewayId = builder.gatewayId;
@@ -59,6 +63,7 @@ public class ListGatewaysRequest extends Request {
         this.pageSize = builder.pageSize;
         this.resourceGroupId = builder.resourceGroupId;
         this.tag = builder.tag;
+        this.vpcId = builder.vpcId;
     }
 
     public static Builder builder() {
@@ -130,6 +135,13 @@ public class ListGatewaysRequest extends Request {
         return this.tag;
     }
 
+    /**
+     * @return vpcId
+     */
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
     public static final class Builder extends Request.Builder<ListGatewaysRequest, Builder> {
         private String gatewayId; 
         private String gatewayType; 
@@ -139,6 +151,7 @@ public class ListGatewaysRequest extends Request {
         private Integer pageSize; 
         private String resourceGroupId; 
         private java.util.List<Tag> tag; 
+        private String vpcId; 
 
         private Builder() {
             super();
@@ -154,6 +167,7 @@ public class ListGatewaysRequest extends Request {
             this.pageSize = request.pageSize;
             this.resourceGroupId = request.resourceGroupId;
             this.tag = request.tag;
+            this.vpcId = request.vpcId;
         } 
 
         /**
@@ -247,6 +261,15 @@ public class ListGatewaysRequest extends Request {
             String tagShrink = shrink(tag, "tag", "json");
             this.putQueryParameter("tag", tagShrink);
             this.tag = tag;
+            return this;
+        }
+
+        /**
+         * vpcId.
+         */
+        public Builder vpcId(String vpcId) {
+            this.putQueryParameter("vpcId", vpcId);
+            this.vpcId = vpcId;
             return this;
         }
 

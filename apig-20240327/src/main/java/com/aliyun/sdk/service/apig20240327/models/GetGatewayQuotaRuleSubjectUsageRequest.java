@@ -30,6 +30,10 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends Request {
     private String subjectId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("filterFailedRequests")
+    private Boolean filterFailedRequests;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Integer pageNumber;
 
@@ -42,6 +46,7 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends Request {
         this.gatewayId = builder.gatewayId;
         this.ruleId = builder.ruleId;
         this.subjectId = builder.subjectId;
+        this.filterFailedRequests = builder.filterFailedRequests;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
     }
@@ -81,6 +86,13 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends Request {
     }
 
     /**
+     * @return filterFailedRequests
+     */
+    public Boolean getFilterFailedRequests() {
+        return this.filterFailedRequests;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -98,6 +110,7 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends Request {
         private String gatewayId; 
         private String ruleId; 
         private String subjectId; 
+        private Boolean filterFailedRequests; 
         private Integer pageNumber; 
         private Integer pageSize; 
 
@@ -110,6 +123,7 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends Request {
             this.gatewayId = request.gatewayId;
             this.ruleId = request.ruleId;
             this.subjectId = request.subjectId;
+            this.filterFailedRequests = request.filterFailedRequests;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
         } 
@@ -138,6 +152,15 @@ public class GetGatewayQuotaRuleSubjectUsageRequest extends Request {
         public Builder subjectId(String subjectId) {
             this.putPathParameter("subjectId", subjectId);
             this.subjectId = subjectId;
+            return this;
+        }
+
+        /**
+         * filterFailedRequests.
+         */
+        public Builder filterFailedRequests(Boolean filterFailedRequests) {
+            this.putQueryParameter("filterFailedRequests", filterFailedRequests);
+            this.filterFailedRequests = filterFailedRequests;
             return this;
         }
 

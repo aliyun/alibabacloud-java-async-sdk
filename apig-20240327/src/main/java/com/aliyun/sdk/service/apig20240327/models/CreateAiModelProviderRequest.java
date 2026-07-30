@@ -36,12 +36,17 @@ public class CreateAiModelProviderRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("serviceIds")
     private java.util.List<String> serviceIds;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clientToken")
+    private String clientToken;
+
     private CreateAiModelProviderRequest(Builder builder) {
         super(builder);
         this.displayName = builder.displayName;
         this.gatewayId = builder.gatewayId;
         this.provider = builder.provider;
         this.serviceIds = builder.serviceIds;
+        this.clientToken = builder.clientToken;
     }
 
     public static Builder builder() {
@@ -85,11 +90,19 @@ public class CreateAiModelProviderRequest extends Request {
         return this.serviceIds;
     }
 
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
     public static final class Builder extends Request.Builder<CreateAiModelProviderRequest, Builder> {
         private String displayName; 
         private String gatewayId; 
         private String provider; 
         private java.util.List<String> serviceIds; 
+        private String clientToken; 
 
         private Builder() {
             super();
@@ -101,6 +114,7 @@ public class CreateAiModelProviderRequest extends Request {
             this.gatewayId = request.gatewayId;
             this.provider = request.provider;
             this.serviceIds = request.serviceIds;
+            this.clientToken = request.clientToken;
         } 
 
         /**
@@ -145,6 +159,15 @@ public class CreateAiModelProviderRequest extends Request {
         public Builder serviceIds(java.util.List<String> serviceIds) {
             this.putBodyParameter("serviceIds", serviceIds);
             this.serviceIds = serviceIds;
+            return this;
+        }
+
+        /**
+         * clientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("clientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 

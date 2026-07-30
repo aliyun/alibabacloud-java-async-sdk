@@ -29,6 +29,9 @@ public class Service extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("createTimestamp")
     private Long createTimestamp;
 
+    @com.aliyun.core.annotation.NameInMap("dnsServers")
+    private java.util.List<String> dnsServers;
+
     @com.aliyun.core.annotation.NameInMap("expressType")
     private String expressType;
 
@@ -44,6 +47,9 @@ public class Service extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("healthStatus")
     private String healthStatus;
 
+    @com.aliyun.core.annotation.NameInMap("healthyPanicThreshold")
+    private Float healthyPanicThreshold;
+
     @com.aliyun.core.annotation.NameInMap("labelDetails")
     private java.util.List<LabelDetail> labelDetails;
 
@@ -55,6 +61,9 @@ public class Service extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("namespace")
     private String namespace;
+
+    @com.aliyun.core.annotation.NameInMap("outlierDetection")
+    private OutlierDetection outlierDetection;
 
     @com.aliyun.core.annotation.NameInMap("outlierEndpoints")
     private java.util.List<String> outlierEndpoints;
@@ -97,15 +106,18 @@ public class Service extends TeaModel {
         this.agentServiceConfig = builder.agentServiceConfig;
         this.aiServiceConfig = builder.aiServiceConfig;
         this.createTimestamp = builder.createTimestamp;
+        this.dnsServers = builder.dnsServers;
         this.expressType = builder.expressType;
         this.gatewayId = builder.gatewayId;
         this.groupName = builder.groupName;
         this.healthCheck = builder.healthCheck;
         this.healthStatus = builder.healthStatus;
+        this.healthyPanicThreshold = builder.healthyPanicThreshold;
         this.labelDetails = builder.labelDetails;
         this.modelProviderId = builder.modelProviderId;
         this.name = builder.name;
         this.namespace = builder.namespace;
+        this.outlierDetection = builder.outlierDetection;
         this.outlierEndpoints = builder.outlierEndpoints;
         this.ports = builder.ports;
         this.protocol = builder.protocol;
@@ -161,6 +173,13 @@ public class Service extends TeaModel {
     }
 
     /**
+     * @return dnsServers
+     */
+    public java.util.List<String> getDnsServers() {
+        return this.dnsServers;
+    }
+
+    /**
      * @return expressType
      */
     public String getExpressType() {
@@ -196,6 +215,13 @@ public class Service extends TeaModel {
     }
 
     /**
+     * @return healthyPanicThreshold
+     */
+    public Float getHealthyPanicThreshold() {
+        return this.healthyPanicThreshold;
+    }
+
+    /**
      * @return labelDetails
      */
     public java.util.List<LabelDetail> getLabelDetails() {
@@ -221,6 +247,13 @@ public class Service extends TeaModel {
      */
     public String getNamespace() {
         return this.namespace;
+    }
+
+    /**
+     * @return outlierDetection
+     */
+    public OutlierDetection getOutlierDetection() {
+        return this.outlierDetection;
     }
 
     /**
@@ -312,15 +345,18 @@ public class Service extends TeaModel {
         private AgentServiceConfig agentServiceConfig; 
         private AiServiceConfig aiServiceConfig; 
         private Long createTimestamp; 
+        private java.util.List<String> dnsServers; 
         private String expressType; 
         private String gatewayId; 
         private String groupName; 
         private ServiceHealthCheck healthCheck; 
         private String healthStatus; 
+        private Float healthyPanicThreshold; 
         private java.util.List<LabelDetail> labelDetails; 
         private String modelProviderId; 
         private String name; 
         private String namespace; 
+        private OutlierDetection outlierDetection; 
         private java.util.List<String> outlierEndpoints; 
         private java.util.List<Ports> ports; 
         private String protocol; 
@@ -342,15 +378,18 @@ public class Service extends TeaModel {
             this.agentServiceConfig = model.agentServiceConfig;
             this.aiServiceConfig = model.aiServiceConfig;
             this.createTimestamp = model.createTimestamp;
+            this.dnsServers = model.dnsServers;
             this.expressType = model.expressType;
             this.gatewayId = model.gatewayId;
             this.groupName = model.groupName;
             this.healthCheck = model.healthCheck;
             this.healthStatus = model.healthStatus;
+            this.healthyPanicThreshold = model.healthyPanicThreshold;
             this.labelDetails = model.labelDetails;
             this.modelProviderId = model.modelProviderId;
             this.name = model.name;
             this.namespace = model.namespace;
+            this.outlierDetection = model.outlierDetection;
             this.outlierEndpoints = model.outlierEndpoints;
             this.ports = model.ports;
             this.protocol = model.protocol;
@@ -398,6 +437,14 @@ public class Service extends TeaModel {
         }
 
         /**
+         * dnsServers.
+         */
+        public Builder dnsServers(java.util.List<String> dnsServers) {
+            this.dnsServers = dnsServers;
+            return this;
+        }
+
+        /**
          * expressType.
          */
         public Builder expressType(String expressType) {
@@ -438,6 +485,14 @@ public class Service extends TeaModel {
         }
 
         /**
+         * healthyPanicThreshold.
+         */
+        public Builder healthyPanicThreshold(Float healthyPanicThreshold) {
+            this.healthyPanicThreshold = healthyPanicThreshold;
+            return this;
+        }
+
+        /**
          * labelDetails.
          */
         public Builder labelDetails(java.util.List<LabelDetail> labelDetails) {
@@ -466,6 +521,14 @@ public class Service extends TeaModel {
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
+            return this;
+        }
+
+        /**
+         * outlierDetection.
+         */
+        public Builder outlierDetection(OutlierDetection outlierDetection) {
+            this.outlierDetection = outlierDetection;
             return this;
         }
 
@@ -571,6 +634,144 @@ public class Service extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link Service} extends {@link TeaModel}
+     *
+     * <p>Service</p>
+     */
+    public static class OutlierDetection extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("baseEjectionTime")
+        private Integer baseEjectionTime;
+
+        @com.aliyun.core.annotation.NameInMap("enable")
+        private Boolean enable;
+
+        @com.aliyun.core.annotation.NameInMap("failurePercentageMinimumHosts")
+        private Integer failurePercentageMinimumHosts;
+
+        @com.aliyun.core.annotation.NameInMap("failurePercentageThreshold")
+        private Integer failurePercentageThreshold;
+
+        @com.aliyun.core.annotation.NameInMap("interval")
+        private Integer interval;
+
+        private OutlierDetection(Builder builder) {
+            this.baseEjectionTime = builder.baseEjectionTime;
+            this.enable = builder.enable;
+            this.failurePercentageMinimumHosts = builder.failurePercentageMinimumHosts;
+            this.failurePercentageThreshold = builder.failurePercentageThreshold;
+            this.interval = builder.interval;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OutlierDetection create() {
+            return builder().build();
+        }
+
+        /**
+         * @return baseEjectionTime
+         */
+        public Integer getBaseEjectionTime() {
+            return this.baseEjectionTime;
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        /**
+         * @return failurePercentageMinimumHosts
+         */
+        public Integer getFailurePercentageMinimumHosts() {
+            return this.failurePercentageMinimumHosts;
+        }
+
+        /**
+         * @return failurePercentageThreshold
+         */
+        public Integer getFailurePercentageThreshold() {
+            return this.failurePercentageThreshold;
+        }
+
+        /**
+         * @return interval
+         */
+        public Integer getInterval() {
+            return this.interval;
+        }
+
+        public static final class Builder {
+            private Integer baseEjectionTime; 
+            private Boolean enable; 
+            private Integer failurePercentageMinimumHosts; 
+            private Integer failurePercentageThreshold; 
+            private Integer interval; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutlierDetection model) {
+                this.baseEjectionTime = model.baseEjectionTime;
+                this.enable = model.enable;
+                this.failurePercentageMinimumHosts = model.failurePercentageMinimumHosts;
+                this.failurePercentageThreshold = model.failurePercentageThreshold;
+                this.interval = model.interval;
+            } 
+
+            /**
+             * baseEjectionTime.
+             */
+            public Builder baseEjectionTime(Integer baseEjectionTime) {
+                this.baseEjectionTime = baseEjectionTime;
+                return this;
+            }
+
+            /**
+             * enable.
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            /**
+             * failurePercentageMinimumHosts.
+             */
+            public Builder failurePercentageMinimumHosts(Integer failurePercentageMinimumHosts) {
+                this.failurePercentageMinimumHosts = failurePercentageMinimumHosts;
+                return this;
+            }
+
+            /**
+             * failurePercentageThreshold.
+             */
+            public Builder failurePercentageThreshold(Integer failurePercentageThreshold) {
+                this.failurePercentageThreshold = failurePercentageThreshold;
+                return this;
+            }
+
+            /**
+             * interval.
+             */
+            public Builder interval(Integer interval) {
+                this.interval = interval;
+                return this;
+            }
+
+            public OutlierDetection build() {
+                return new OutlierDetection(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link Service} extends {@link TeaModel}
