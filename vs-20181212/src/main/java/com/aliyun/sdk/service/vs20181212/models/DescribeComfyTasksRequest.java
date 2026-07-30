@@ -26,6 +26,10 @@ public class DescribeComfyTasksRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    private String taskId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskState")
     private String taskState;
 
@@ -37,6 +41,7 @@ public class DescribeComfyTasksRequest extends Request {
         super(builder);
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.taskId = builder.taskId;
         this.taskState = builder.taskState;
         this.workflowId = builder.workflowId;
     }
@@ -69,6 +74,13 @@ public class DescribeComfyTasksRequest extends Request {
     }
 
     /**
+     * @return taskId
+     */
+    public String getTaskId() {
+        return this.taskId;
+    }
+
+    /**
      * @return taskState
      */
     public String getTaskState() {
@@ -85,6 +97,7 @@ public class DescribeComfyTasksRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeComfyTasksRequest, Builder> {
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String taskId; 
         private String taskState; 
         private String workflowId; 
 
@@ -96,6 +109,7 @@ public class DescribeComfyTasksRequest extends Request {
             super(request);
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.taskId = request.taskId;
             this.taskState = request.taskState;
             this.workflowId = request.workflowId;
         } 
@@ -115,6 +129,15 @@ public class DescribeComfyTasksRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * TaskId.
+         */
+        public Builder taskId(String taskId) {
+            this.putQueryParameter("TaskId", taskId);
+            this.taskId = taskId;
             return this;
         }
 
