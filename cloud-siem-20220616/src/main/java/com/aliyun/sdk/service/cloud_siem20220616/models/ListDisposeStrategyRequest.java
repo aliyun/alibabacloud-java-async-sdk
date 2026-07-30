@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDisposeStrategyRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertUuid")
+    private String alertUuid;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
     @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Integer currentPage;
@@ -40,8 +44,28 @@ public class ListDisposeStrategyRequest extends Request {
     private String entityType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EntityUuidList")
+    private java.util.List<String> entityUuidList;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GroupBy")
+    private String groupBy;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GroupKey")
+    private String groupKey;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("IncidentUuid")
     private String incidentUuid;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Order")
@@ -69,8 +93,16 @@ public class ListDisposeStrategyRequest extends Request {
     private String playbookUuid;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QueryMode")
+    private String queryMode;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResponseRuleId")
+    private String responseRuleId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RoleFor")
@@ -93,26 +125,39 @@ public class ListDisposeStrategyRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StrategyId")
+    private String strategyId;
+
     private ListDisposeStrategyRequest(Builder builder) {
         super(builder);
+        this.alertUuid = builder.alertUuid;
         this.currentPage = builder.currentPage;
         this.effectiveStatus = builder.effectiveStatus;
         this.endTime = builder.endTime;
         this.entityIdentity = builder.entityIdentity;
         this.entityType = builder.entityType;
+        this.entityUuidList = builder.entityUuidList;
+        this.groupBy = builder.groupBy;
+        this.groupKey = builder.groupKey;
         this.incidentUuid = builder.incidentUuid;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.order = builder.order;
         this.orderField = builder.orderField;
         this.pageSize = builder.pageSize;
         this.playbookName = builder.playbookName;
         this.playbookTypes = builder.playbookTypes;
         this.playbookUuid = builder.playbookUuid;
+        this.queryMode = builder.queryMode;
         this.regionId = builder.regionId;
+        this.responseRuleId = builder.responseRuleId;
         this.roleFor = builder.roleFor;
         this.roleType = builder.roleType;
         this.sophonTaskId = builder.sophonTaskId;
         this.startTime = builder.startTime;
         this.status = builder.status;
+        this.strategyId = builder.strategyId;
     }
 
     public static Builder builder() {
@@ -126,6 +171,13 @@ public class ListDisposeStrategyRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return alertUuid
+     */
+    public String getAlertUuid() {
+        return this.alertUuid;
     }
 
     /**
@@ -164,10 +216,45 @@ public class ListDisposeStrategyRequest extends Request {
     }
 
     /**
+     * @return entityUuidList
+     */
+    public java.util.List<String> getEntityUuidList() {
+        return this.entityUuidList;
+    }
+
+    /**
+     * @return groupBy
+     */
+    public String getGroupBy() {
+        return this.groupBy;
+    }
+
+    /**
+     * @return groupKey
+     */
+    public String getGroupKey() {
+        return this.groupKey;
+    }
+
+    /**
      * @return incidentUuid
      */
     public String getIncidentUuid() {
         return this.incidentUuid;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -213,10 +300,24 @@ public class ListDisposeStrategyRequest extends Request {
     }
 
     /**
+     * @return queryMode
+     */
+    public String getQueryMode() {
+        return this.queryMode;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return responseRuleId
+     */
+    public String getResponseRuleId() {
+        return this.responseRuleId;
     }
 
     /**
@@ -254,25 +355,41 @@ public class ListDisposeStrategyRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return strategyId
+     */
+    public String getStrategyId() {
+        return this.strategyId;
+    }
+
     public static final class Builder extends Request.Builder<ListDisposeStrategyRequest, Builder> {
+        private String alertUuid; 
         private Integer currentPage; 
         private Integer effectiveStatus; 
         private Long endTime; 
         private String entityIdentity; 
         private String entityType; 
+        private java.util.List<String> entityUuidList; 
+        private String groupBy; 
+        private String groupKey; 
         private String incidentUuid; 
+        private Integer maxResults; 
+        private String nextToken; 
         private String order; 
         private String orderField; 
         private Integer pageSize; 
         private String playbookName; 
         private String playbookTypes; 
         private String playbookUuid; 
+        private String queryMode; 
         private String regionId; 
+        private String responseRuleId; 
         private Long roleFor; 
         private Integer roleType; 
         private String sophonTaskId; 
         private Long startTime; 
         private Integer status; 
+        private String strategyId; 
 
         private Builder() {
             super();
@@ -280,25 +397,43 @@ public class ListDisposeStrategyRequest extends Request {
 
         private Builder(ListDisposeStrategyRequest request) {
             super(request);
+            this.alertUuid = request.alertUuid;
             this.currentPage = request.currentPage;
             this.effectiveStatus = request.effectiveStatus;
             this.endTime = request.endTime;
             this.entityIdentity = request.entityIdentity;
             this.entityType = request.entityType;
+            this.entityUuidList = request.entityUuidList;
+            this.groupBy = request.groupBy;
+            this.groupKey = request.groupKey;
             this.incidentUuid = request.incidentUuid;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
             this.order = request.order;
             this.orderField = request.orderField;
             this.pageSize = request.pageSize;
             this.playbookName = request.playbookName;
             this.playbookTypes = request.playbookTypes;
             this.playbookUuid = request.playbookUuid;
+            this.queryMode = request.queryMode;
             this.regionId = request.regionId;
+            this.responseRuleId = request.responseRuleId;
             this.roleFor = request.roleFor;
             this.roleType = request.roleType;
             this.sophonTaskId = request.sophonTaskId;
             this.startTime = request.startTime;
             this.status = request.status;
+            this.strategyId = request.strategyId;
         } 
+
+        /**
+         * AlertUuid.
+         */
+        public Builder alertUuid(String alertUuid) {
+            this.putBodyParameter("AlertUuid", alertUuid);
+            this.alertUuid = alertUuid;
+            return this;
+        }
 
         /**
          * <p>The page number. Pages start from page 1.</p>
@@ -372,11 +507,57 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
+         * EntityUuidList.
+         */
+        public Builder entityUuidList(java.util.List<String> entityUuidList) {
+            String entityUuidListShrink = shrink(entityUuidList, "EntityUuidList", "json");
+            this.putBodyParameter("EntityUuidList", entityUuidListShrink);
+            this.entityUuidList = entityUuidList;
+            return this;
+        }
+
+        /**
+         * GroupBy.
+         */
+        public Builder groupBy(String groupBy) {
+            this.putBodyParameter("GroupBy", groupBy);
+            this.groupBy = groupBy;
+            return this;
+        }
+
+        /**
+         * GroupKey.
+         */
+        public Builder groupKey(String groupKey) {
+            this.putBodyParameter("GroupKey", groupKey);
+            this.groupKey = groupKey;
+            return this;
+        }
+
+        /**
          * IncidentUuid.
          */
         public Builder incidentUuid(String incidentUuid) {
             this.putBodyParameter("IncidentUuid", incidentUuid);
             this.incidentUuid = incidentUuid;
+            return this;
+        }
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 
@@ -470,6 +651,15 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
+         * QueryMode.
+         */
+        public Builder queryMode(String queryMode) {
+            this.putBodyParameter("QueryMode", queryMode);
+            this.queryMode = queryMode;
+            return this;
+        }
+
+        /**
          * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
          * <ul>
          * <li>cn-hangzhou: Your assets reside in regions in China.</li>
@@ -482,6 +672,15 @@ public class ListDisposeStrategyRequest extends Request {
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResponseRuleId.
+         */
+        public Builder responseRuleId(String responseRuleId) {
+            this.putBodyParameter("ResponseRuleId", responseRuleId);
+            this.responseRuleId = responseRuleId;
             return this;
         }
 
@@ -544,6 +743,15 @@ public class ListDisposeStrategyRequest extends Request {
         public Builder status(Integer status) {
             this.putBodyParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * StrategyId.
+         */
+        public Builder strategyId(String strategyId) {
+            this.putBodyParameter("StrategyId", strategyId);
+            this.strategyId = strategyId;
             return this;
         }
 

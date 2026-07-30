@@ -176,6 +176,345 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
      *
      * <p>ListDisposeStrategyResponseBody</p>
      */
+    public static class GroupMeta extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("GroupInfo")
+        private Object groupInfo;
+
+        private GroupMeta(Builder builder) {
+            this.groupInfo = builder.groupInfo;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GroupMeta create() {
+            return builder().build();
+        }
+
+        /**
+         * @return groupInfo
+         */
+        public Object getGroupInfo() {
+            return this.groupInfo;
+        }
+
+        public static final class Builder {
+            private Object groupInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupMeta model) {
+                this.groupInfo = model.groupInfo;
+            } 
+
+            /**
+             * GroupInfo.
+             */
+            public Builder groupInfo(Object groupInfo) {
+                this.groupInfo = groupInfo;
+                return this;
+            }
+
+            public GroupMeta build() {
+                return new GroupMeta(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListDisposeStrategyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDisposeStrategyResponseBody</p>
+     */
+    public static class Groups extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FailedCount")
+        private Long failedCount;
+
+        @com.aliyun.core.annotation.NameInMap("FirstOccurrenceTime")
+        private Long firstOccurrenceTime;
+
+        @com.aliyun.core.annotation.NameInMap("GroupBy")
+        private String groupBy;
+
+        @com.aliyun.core.annotation.NameInMap("GroupKey")
+        private String groupKey;
+
+        @com.aliyun.core.annotation.NameInMap("GroupMeta")
+        private GroupMeta groupMeta;
+
+        @com.aliyun.core.annotation.NameInMap("GroupName")
+        private String groupName;
+
+        @com.aliyun.core.annotation.NameInMap("GroupTitle")
+        private String groupTitle;
+
+        @com.aliyun.core.annotation.NameInMap("LastOccurrenceTime")
+        private Long lastOccurrenceTime;
+
+        @com.aliyun.core.annotation.NameInMap("LatestModifiedTime")
+        private Long latestModifiedTime;
+
+        @com.aliyun.core.annotation.NameInMap("RunningCount")
+        private Long runningCount;
+
+        @com.aliyun.core.annotation.NameInMap("SuccessCount")
+        private Long successCount;
+
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
+        private Long totalCount;
+
+        private Groups(Builder builder) {
+            this.failedCount = builder.failedCount;
+            this.firstOccurrenceTime = builder.firstOccurrenceTime;
+            this.groupBy = builder.groupBy;
+            this.groupKey = builder.groupKey;
+            this.groupMeta = builder.groupMeta;
+            this.groupName = builder.groupName;
+            this.groupTitle = builder.groupTitle;
+            this.lastOccurrenceTime = builder.lastOccurrenceTime;
+            this.latestModifiedTime = builder.latestModifiedTime;
+            this.runningCount = builder.runningCount;
+            this.successCount = builder.successCount;
+            this.totalCount = builder.totalCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Groups create() {
+            return builder().build();
+        }
+
+        /**
+         * @return failedCount
+         */
+        public Long getFailedCount() {
+            return this.failedCount;
+        }
+
+        /**
+         * @return firstOccurrenceTime
+         */
+        public Long getFirstOccurrenceTime() {
+            return this.firstOccurrenceTime;
+        }
+
+        /**
+         * @return groupBy
+         */
+        public String getGroupBy() {
+            return this.groupBy;
+        }
+
+        /**
+         * @return groupKey
+         */
+        public String getGroupKey() {
+            return this.groupKey;
+        }
+
+        /**
+         * @return groupMeta
+         */
+        public GroupMeta getGroupMeta() {
+            return this.groupMeta;
+        }
+
+        /**
+         * @return groupName
+         */
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        /**
+         * @return groupTitle
+         */
+        public String getGroupTitle() {
+            return this.groupTitle;
+        }
+
+        /**
+         * @return lastOccurrenceTime
+         */
+        public Long getLastOccurrenceTime() {
+            return this.lastOccurrenceTime;
+        }
+
+        /**
+         * @return latestModifiedTime
+         */
+        public Long getLatestModifiedTime() {
+            return this.latestModifiedTime;
+        }
+
+        /**
+         * @return runningCount
+         */
+        public Long getRunningCount() {
+            return this.runningCount;
+        }
+
+        /**
+         * @return successCount
+         */
+        public Long getSuccessCount() {
+            return this.successCount;
+        }
+
+        /**
+         * @return totalCount
+         */
+        public Long getTotalCount() {
+            return this.totalCount;
+        }
+
+        public static final class Builder {
+            private Long failedCount; 
+            private Long firstOccurrenceTime; 
+            private String groupBy; 
+            private String groupKey; 
+            private GroupMeta groupMeta; 
+            private String groupName; 
+            private String groupTitle; 
+            private Long lastOccurrenceTime; 
+            private Long latestModifiedTime; 
+            private Long runningCount; 
+            private Long successCount; 
+            private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Groups model) {
+                this.failedCount = model.failedCount;
+                this.firstOccurrenceTime = model.firstOccurrenceTime;
+                this.groupBy = model.groupBy;
+                this.groupKey = model.groupKey;
+                this.groupMeta = model.groupMeta;
+                this.groupName = model.groupName;
+                this.groupTitle = model.groupTitle;
+                this.lastOccurrenceTime = model.lastOccurrenceTime;
+                this.latestModifiedTime = model.latestModifiedTime;
+                this.runningCount = model.runningCount;
+                this.successCount = model.successCount;
+                this.totalCount = model.totalCount;
+            } 
+
+            /**
+             * FailedCount.
+             */
+            public Builder failedCount(Long failedCount) {
+                this.failedCount = failedCount;
+                return this;
+            }
+
+            /**
+             * FirstOccurrenceTime.
+             */
+            public Builder firstOccurrenceTime(Long firstOccurrenceTime) {
+                this.firstOccurrenceTime = firstOccurrenceTime;
+                return this;
+            }
+
+            /**
+             * GroupBy.
+             */
+            public Builder groupBy(String groupBy) {
+                this.groupBy = groupBy;
+                return this;
+            }
+
+            /**
+             * GroupKey.
+             */
+            public Builder groupKey(String groupKey) {
+                this.groupKey = groupKey;
+                return this;
+            }
+
+            /**
+             * GroupMeta.
+             */
+            public Builder groupMeta(GroupMeta groupMeta) {
+                this.groupMeta = groupMeta;
+                return this;
+            }
+
+            /**
+             * GroupName.
+             */
+            public Builder groupName(String groupName) {
+                this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * GroupTitle.
+             */
+            public Builder groupTitle(String groupTitle) {
+                this.groupTitle = groupTitle;
+                return this;
+            }
+
+            /**
+             * LastOccurrenceTime.
+             */
+            public Builder lastOccurrenceTime(Long lastOccurrenceTime) {
+                this.lastOccurrenceTime = lastOccurrenceTime;
+                return this;
+            }
+
+            /**
+             * LatestModifiedTime.
+             */
+            public Builder latestModifiedTime(Long latestModifiedTime) {
+                this.latestModifiedTime = latestModifiedTime;
+                return this;
+            }
+
+            /**
+             * RunningCount.
+             */
+            public Builder runningCount(Long runningCount) {
+                this.runningCount = runningCount;
+                return this;
+            }
+
+            /**
+             * SuccessCount.
+             */
+            public Builder successCount(Long successCount) {
+                this.successCount = successCount;
+                return this;
+            }
+
+            /**
+             * TotalCount.
+             */
+            public Builder totalCount(Long totalCount) {
+                this.totalCount = totalCount;
+                return this;
+            }
+
+            public Groups build() {
+                return new Groups(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListDisposeStrategyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDisposeStrategyResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
@@ -282,6 +621,9 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
      * <p>ListDisposeStrategyResponseBody</p>
      */
     public static class ResponseData extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AlertName")
+        private String alertName;
+
         @com.aliyun.core.annotation.NameInMap("AlertUuid")
         private String alertUuid;
 
@@ -349,6 +691,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         private String taskUrl;
 
         private ResponseData(Builder builder) {
+            this.alertName = builder.alertName;
             this.alertUuid = builder.alertUuid;
             this.aliuid = builder.aliuid;
             this.effectiveStatus = builder.effectiveStatus;
@@ -379,6 +722,13 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
 
         public static ResponseData create() {
             return builder().build();
+        }
+
+        /**
+         * @return alertName
+         */
+        public String getAlertName() {
+            return this.alertName;
         }
 
         /**
@@ -536,6 +886,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String alertName; 
             private String alertUuid; 
             private Long aliuid; 
             private Integer effectiveStatus; 
@@ -563,6 +914,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             } 
 
             private Builder(ResponseData model) {
+                this.alertName = model.alertName;
                 this.alertUuid = model.alertUuid;
                 this.aliuid = model.aliuid;
                 this.effectiveStatus = model.effectiveStatus;
@@ -586,6 +938,14 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
                 this.taskParam = model.taskParam;
                 this.taskUrl = model.taskUrl;
             } 
+
+            /**
+             * AlertName.
+             */
+            public Builder alertName(String alertName) {
+                this.alertName = alertName;
+                return this;
+            }
 
             /**
              * <p>The UUID of the alert.</p>
@@ -893,6 +1253,9 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
      * <p>ListDisposeStrategyResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Groups")
+        private java.util.List<Groups> groups;
+
         @com.aliyun.core.annotation.NameInMap("PageInfo")
         private PageInfo pageInfo;
 
@@ -900,6 +1263,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         private java.util.List<ResponseData> responseData;
 
         private Data(Builder builder) {
+            this.groups = builder.groups;
             this.pageInfo = builder.pageInfo;
             this.responseData = builder.responseData;
         }
@@ -910,6 +1274,13 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return groups
+         */
+        public java.util.List<Groups> getGroups() {
+            return this.groups;
         }
 
         /**
@@ -927,6 +1298,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<Groups> groups; 
             private PageInfo pageInfo; 
             private java.util.List<ResponseData> responseData; 
 
@@ -934,9 +1306,18 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.groups = model.groups;
                 this.pageInfo = model.pageInfo;
                 this.responseData = model.responseData;
             } 
+
+            /**
+             * Groups.
+             */
+            public Builder groups(java.util.List<Groups> groups) {
+                this.groups = groups;
+                return this;
+            }
 
             /**
              * <p>The pagination information.</p>
