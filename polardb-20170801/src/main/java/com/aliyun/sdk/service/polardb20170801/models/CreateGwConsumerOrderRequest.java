@@ -23,7 +23,6 @@ public class CreateGwConsumerOrderRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExpireTime")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String expireTime;
 
     @com.aliyun.core.annotation.Query
@@ -143,10 +142,7 @@ public class CreateGwConsumerOrderRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2027-07-23T03:09:08Z</p>
+         * ExpireTime.
          */
         public Builder expireTime(String expireTime) {
             this.putQueryParameter("ExpireTime", expireTime);

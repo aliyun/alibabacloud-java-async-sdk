@@ -85,6 +85,7 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-hongkong", "polardb.cn-hongkong.aliyuncs.com"),
             new TeaPair("cn-guangzhou", "polardb.cn-guangzhou.aliyuncs.com"),
             new TeaPair("cn-chengdu", "polardb.cn-chengdu.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "polardb.ap-southeast-8.aliyuncs.com"),
             new TeaPair("ap-southeast-7", "polardb.ap-southeast-7.aliyuncs.com"),
             new TeaPair("ap-southeast-6", "polardb.ap-southeast-6.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "polardb.ap-southeast-5.aliyuncs.com"),
