@@ -222,6 +222,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ImageTranslationPlus  ImageTranslationPlusRequest
+     * @return ImageTranslationPlusResponse
+     */
+    @Override
+    public CompletableFuture<ImageTranslationPlusResponse> imageTranslationPlus(ImageTranslationPlusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ImageTranslationPlus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ImageTranslationPlusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ImageTranslationPlusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ImageTranslationPro  ImageTranslationProRequest
      * @return ImageTranslationProResponse
      */
