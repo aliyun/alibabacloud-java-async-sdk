@@ -203,6 +203,9 @@ public class ListConfigsResponseBody extends TeaModel {
      * <p>ListConfigsResponseBody</p>
      */
     public static class Configs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConfigId")
+        private String configId;
+
         @com.aliyun.core.annotation.NameInMap("ConfigKey")
         private String configKey;
 
@@ -219,6 +222,7 @@ public class ListConfigsResponseBody extends TeaModel {
         private java.util.List<Labels> labels;
 
         private Configs(Builder builder) {
+            this.configId = builder.configId;
             this.configKey = builder.configKey;
             this.configValue = builder.configValue;
             this.gmtCreateTime = builder.gmtCreateTime;
@@ -232,6 +236,13 @@ public class ListConfigsResponseBody extends TeaModel {
 
         public static Configs create() {
             return builder().build();
+        }
+
+        /**
+         * @return configId
+         */
+        public String getConfigId() {
+            return this.configId;
         }
 
         /**
@@ -270,6 +281,7 @@ public class ListConfigsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String configId; 
             private String configKey; 
             private String configValue; 
             private String gmtCreateTime; 
@@ -280,12 +292,21 @@ public class ListConfigsResponseBody extends TeaModel {
             } 
 
             private Builder(Configs model) {
+                this.configId = model.configId;
                 this.configKey = model.configKey;
                 this.configValue = model.configValue;
                 this.gmtCreateTime = model.gmtCreateTime;
                 this.gmtModifiedTime = model.gmtModifiedTime;
                 this.labels = model.labels;
             } 
+
+            /**
+             * ConfigId.
+             */
+            public Builder configId(String configId) {
+                this.configId = configId;
+                return this;
+            }
 
             /**
              * <p>The key of the configuration item. Supported keys:</p>

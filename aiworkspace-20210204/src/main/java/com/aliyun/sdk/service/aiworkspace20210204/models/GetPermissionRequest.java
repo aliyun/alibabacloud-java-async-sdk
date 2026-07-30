@@ -32,6 +32,14 @@ public class GetPermissionRequest extends Request {
     private String accessibility;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallerAccessKeyId")
+    private String callerAccessKeyId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallerSecurityToken")
+    private String callerSecurityToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CallerType")
     private String callerType;
 
@@ -64,6 +72,8 @@ public class GetPermissionRequest extends Request {
         this.workspaceId = builder.workspaceId;
         this.permissionCode = builder.permissionCode;
         this.accessibility = builder.accessibility;
+        this.callerAccessKeyId = builder.callerAccessKeyId;
+        this.callerSecurityToken = builder.callerSecurityToken;
         this.callerType = builder.callerType;
         this.callerUid = builder.callerUid;
         this.creator = builder.creator;
@@ -105,6 +115,20 @@ public class GetPermissionRequest extends Request {
      */
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    /**
+     * @return callerAccessKeyId
+     */
+    public String getCallerAccessKeyId() {
+        return this.callerAccessKeyId;
+    }
+
+    /**
+     * @return callerSecurityToken
+     */
+    public String getCallerSecurityToken() {
+        return this.callerSecurityToken;
     }
 
     /**
@@ -160,6 +184,8 @@ public class GetPermissionRequest extends Request {
         private String workspaceId; 
         private String permissionCode; 
         private String accessibility; 
+        private String callerAccessKeyId; 
+        private String callerSecurityToken; 
         private String callerType; 
         private String callerUid; 
         private String creator; 
@@ -177,6 +203,8 @@ public class GetPermissionRequest extends Request {
             this.workspaceId = request.workspaceId;
             this.permissionCode = request.permissionCode;
             this.accessibility = request.accessibility;
+            this.callerAccessKeyId = request.callerAccessKeyId;
+            this.callerSecurityToken = request.callerSecurityToken;
             this.callerType = request.callerType;
             this.callerUid = request.callerUid;
             this.creator = request.creator;
@@ -225,6 +253,24 @@ public class GetPermissionRequest extends Request {
         public Builder accessibility(String accessibility) {
             this.putQueryParameter("Accessibility", accessibility);
             this.accessibility = accessibility;
+            return this;
+        }
+
+        /**
+         * CallerAccessKeyId.
+         */
+        public Builder callerAccessKeyId(String callerAccessKeyId) {
+            this.putQueryParameter("CallerAccessKeyId", callerAccessKeyId);
+            this.callerAccessKeyId = callerAccessKeyId;
+            return this;
+        }
+
+        /**
+         * CallerSecurityToken.
+         */
+        public Builder callerSecurityToken(String callerSecurityToken) {
+            this.putQueryParameter("CallerSecurityToken", callerSecurityToken);
+            this.callerSecurityToken = callerSecurityToken;
             return this;
         }
 
