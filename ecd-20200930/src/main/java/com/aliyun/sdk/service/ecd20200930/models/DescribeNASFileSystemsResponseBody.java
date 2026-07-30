@@ -422,6 +422,9 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProfileCompatible")
         private Boolean profileCompatible;
 
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
+        private String protocolType;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
@@ -460,6 +463,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             this.officeSites = builder.officeSites;
             this.productType = builder.productType;
             this.profileCompatible = builder.profileCompatible;
+            this.protocolType = builder.protocolType;
             this.regionId = builder.regionId;
             this.scene = builder.scene;
             this.sizeQuota = builder.sizeQuota;
@@ -610,6 +614,13 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         }
 
         /**
+         * @return protocolType
+         */
+        public String getProtocolType() {
+            return this.protocolType;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -671,6 +682,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             private java.util.List<OfficeSites> officeSites; 
             private String productType; 
             private Boolean profileCompatible; 
+            private String protocolType; 
             private String regionId; 
             private String scene; 
             private Long sizeQuota; 
@@ -701,6 +713,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
                 this.officeSites = model.officeSites;
                 this.productType = model.productType;
                 this.profileCompatible = model.profileCompatible;
+                this.protocolType = model.protocolType;
                 this.regionId = model.regionId;
                 this.scene = model.scene;
                 this.sizeQuota = model.sizeQuota;
@@ -921,6 +934,14 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
              */
             public Builder profileCompatible(Boolean profileCompatible) {
                 this.profileCompatible = profileCompatible;
+                return this;
+            }
+
+            /**
+             * ProtocolType.
+             */
+            public Builder protocolType(String protocolType) {
+                this.protocolType = protocolType;
                 return this;
             }
 

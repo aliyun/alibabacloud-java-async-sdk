@@ -35,6 +35,10 @@ public class CreateNASFileSystemRequest extends Request {
     private String officeSiteId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProtocolType")
+    private String protocolType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -49,6 +53,7 @@ public class CreateNASFileSystemRequest extends Request {
         this.encryptType = builder.encryptType;
         this.name = builder.name;
         this.officeSiteId = builder.officeSiteId;
+        this.protocolType = builder.protocolType;
         this.regionId = builder.regionId;
         this.storageType = builder.storageType;
     }
@@ -95,6 +100,13 @@ public class CreateNASFileSystemRequest extends Request {
     }
 
     /**
+     * @return protocolType
+     */
+    public String getProtocolType() {
+        return this.protocolType;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -113,6 +125,7 @@ public class CreateNASFileSystemRequest extends Request {
         private String encryptType; 
         private String name; 
         private String officeSiteId; 
+        private String protocolType; 
         private String regionId; 
         private String storageType; 
 
@@ -126,6 +139,7 @@ public class CreateNASFileSystemRequest extends Request {
             this.encryptType = request.encryptType;
             this.name = request.name;
             this.officeSiteId = request.officeSiteId;
+            this.protocolType = request.protocolType;
             this.regionId = request.regionId;
             this.storageType = request.storageType;
         } 
@@ -187,6 +201,15 @@ public class CreateNASFileSystemRequest extends Request {
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
             this.officeSiteId = officeSiteId;
+            return this;
+        }
+
+        /**
+         * ProtocolType.
+         */
+        public Builder protocolType(String protocolType) {
+            this.putQueryParameter("ProtocolType", protocolType);
+            this.protocolType = protocolType;
             return this;
         }
 

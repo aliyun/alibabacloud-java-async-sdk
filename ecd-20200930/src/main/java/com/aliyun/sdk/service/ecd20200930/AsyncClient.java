@@ -524,6 +524,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateTemplateResponse> createTemplate(CreateTemplateRequest request);
 
     /**
+     * @param request the request parameters of CreateVirtualBridge  CreateVirtualBridgeRequest
+     * @return CreateVirtualBridgeResponse
+     */
+    CompletableFuture<CreateVirtualBridgeResponse> createVirtualBridge(CreateVirtualBridgeRequest request);
+
+    /**
      * @param request the request parameters of DeleteAutoSnapshotPolicy  DeleteAutoSnapshotPolicyRequest
      * @return DeleteAutoSnapshotPolicyResponse
      */
@@ -737,6 +743,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteTemplatesResponse
      */
     CompletableFuture<DeleteTemplatesResponse> deleteTemplates(DeleteTemplatesRequest request);
+
+    /**
+     * @param request the request parameters of DeleteVirtualBridge  DeleteVirtualBridgeRequest
+     * @return DeleteVirtualBridgeResponse
+     */
+    CompletableFuture<DeleteVirtualBridgeResponse> deleteVirtualBridge(DeleteVirtualBridgeRequest request);
 
     /**
      * <b>description</b> :
@@ -1057,6 +1069,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeNetworkPackagesResponse
      */
     CompletableFuture<DescribeNetworkPackagesResponse> describeNetworkPackages(DescribeNetworkPackagesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeOfficeSiteBridgeInfo  DescribeOfficeSiteBridgeInfoRequest
+     * @return DescribeOfficeSiteBridgeInfoResponse
+     */
+    CompletableFuture<DescribeOfficeSiteBridgeInfoResponse> describeOfficeSiteBridgeInfo(DescribeOfficeSiteBridgeInfoRequest request);
 
     /**
      * @param request the request parameters of DescribeOfficeSites  DescribeOfficeSitesRequest
@@ -1454,6 +1472,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListUserAdOrganizationUnitsResponse> listUserAdOrganizationUnits(ListUserAdOrganizationUnitsRequest request);
 
     /**
+     * @param request the request parameters of ListVirtualBridges  ListVirtualBridgesRequest
+     * @return ListVirtualBridgesResponse
+     */
+    CompletableFuture<ListVirtualBridgesResponse> listVirtualBridges(ListVirtualBridgesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>After a virtual MFA device is locked, its status changes to LOCKED. The Active Directory (AD) user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the <a href="https://help.aliyun.com/document_detail/206212.html">UnlockVirtualMFADevice</a> operation to unlock the device.</p>
      * 
@@ -1754,6 +1778,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyOfficeSiteAttributeResponse> modifyOfficeSiteAttribute(ModifyOfficeSiteAttributeRequest request);
 
     /**
+     * @param request the request parameters of ModifyOfficeSiteBridgeInfo  ModifyOfficeSiteBridgeInfoRequest
+     * @return ModifyOfficeSiteBridgeInfoResponse
+     */
+    CompletableFuture<ModifyOfficeSiteBridgeInfoResponse> modifyOfficeSiteBridgeInfo(ModifyOfficeSiteBridgeInfoRequest request);
+
+    /**
      * @param request the request parameters of ModifyOfficeSiteCrossDesktopAccess  ModifyOfficeSiteCrossDesktopAccessRequest
      * @return ModifyOfficeSiteCrossDesktopAccessResponse
      */
@@ -1841,6 +1871,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyUserToDesktopGroupResponse
      */
     CompletableFuture<ModifyUserToDesktopGroupResponse> modifyUserToDesktopGroup(ModifyUserToDesktopGroupRequest request);
+
+    /**
+     * @param request the request parameters of ModifyVirtualBridgeLevel  ModifyVirtualBridgeLevelRequest
+     * @return ModifyVirtualBridgeLevelResponse
+     */
+    CompletableFuture<ModifyVirtualBridgeLevelResponse> modifyVirtualBridgeLevel(ModifyVirtualBridgeLevelRequest request);
+
+    /**
+     * @param request the request parameters of ModifyVirtualBridgeStatus  ModifyVirtualBridgeStatusRequest
+     * @return ModifyVirtualBridgeStatusResponse
+     */
+    CompletableFuture<ModifyVirtualBridgeStatusResponse> modifyVirtualBridgeStatus(ModifyVirtualBridgeStatusRequest request);
 
     /**
      * @param request the request parameters of MoveCdsFile  MoveCdsFileRequest
@@ -1944,6 +1986,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RenewNetworkPackagesResponse
      */
     CompletableFuture<RenewNetworkPackagesResponse> renewNetworkPackages(RenewNetworkPackagesRequest request);
+
+    /**
+     * @param request the request parameters of RenewVirtualBridge  RenewVirtualBridgeRequest
+     * @return RenewVirtualBridgeResponse
+     */
+    CompletableFuture<RenewVirtualBridgeResponse> renewVirtualBridge(RenewVirtualBridgeRequest request);
 
     /**
      * <b>description</b> :
