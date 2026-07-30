@@ -41,6 +41,9 @@ public class JobSettings extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Driver")
     private String driver;
 
+    @com.aliyun.core.annotation.NameInMap("ElasticSpotJobMaxRestartTimes")
+    private Integer elasticSpotJobMaxRestartTimes;
+
     @com.aliyun.core.annotation.NameInMap("EnableCPUAffinity")
     private Boolean enableCPUAffinity;
 
@@ -101,6 +104,7 @@ public class JobSettings extends TeaModel {
         this.dataJuicerConfig = builder.dataJuicerConfig;
         this.disableEcsStockCheck = builder.disableEcsStockCheck;
         this.driver = builder.driver;
+        this.elasticSpotJobMaxRestartTimes = builder.elasticSpotJobMaxRestartTimes;
         this.enableCPUAffinity = builder.enableCPUAffinity;
         this.enableDSWDev = builder.enableDSWDev;
         this.enableErrorMonitoringInAIMaster = builder.enableErrorMonitoringInAIMaster;
@@ -186,6 +190,13 @@ public class JobSettings extends TeaModel {
      */
     public String getDriver() {
         return this.driver;
+    }
+
+    /**
+     * @return elasticSpotJobMaxRestartTimes
+     */
+    public Integer getElasticSpotJobMaxRestartTimes() {
+        return this.elasticSpotJobMaxRestartTimes;
     }
 
     /**
@@ -316,6 +327,7 @@ public class JobSettings extends TeaModel {
         private DataJuicerConfig dataJuicerConfig; 
         private Boolean disableEcsStockCheck; 
         private String driver; 
+        private Integer elasticSpotJobMaxRestartTimes; 
         private Boolean enableCPUAffinity; 
         private Boolean enableDSWDev; 
         private Boolean enableErrorMonitoringInAIMaster; 
@@ -346,6 +358,7 @@ public class JobSettings extends TeaModel {
             this.dataJuicerConfig = model.dataJuicerConfig;
             this.disableEcsStockCheck = model.disableEcsStockCheck;
             this.driver = model.driver;
+            this.elasticSpotJobMaxRestartTimes = model.elasticSpotJobMaxRestartTimes;
             this.enableCPUAffinity = model.enableCPUAffinity;
             this.enableDSWDev = model.enableDSWDev;
             this.enableErrorMonitoringInAIMaster = model.enableErrorMonitoringInAIMaster;
@@ -426,6 +439,14 @@ public class JobSettings extends TeaModel {
          */
         public Builder driver(String driver) {
             this.driver = driver;
+            return this;
+        }
+
+        /**
+         * ElasticSpotJobMaxRestartTimes.
+         */
+        public Builder elasticSpotJobMaxRestartTimes(Integer elasticSpotJobMaxRestartTimes) {
+            this.elasticSpotJobMaxRestartTimes = elasticSpotJobMaxRestartTimes;
             return this;
         }
 
