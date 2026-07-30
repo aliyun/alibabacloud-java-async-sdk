@@ -26,6 +26,10 @@ public class ModelRouterUpdateClientRequest extends Request {
     private String address;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("allowedModelGroupConfig")
+    private String allowedModelGroupConfig;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("allowedModels")
     private String allowedModels;
 
@@ -53,6 +57,7 @@ public class ModelRouterUpdateClientRequest extends Request {
         super(builder);
         this.id = builder.id;
         this.address = builder.address;
+        this.allowedModelGroupConfig = builder.allowedModelGroupConfig;
         this.allowedModels = builder.allowedModels;
         this.contact = builder.contact;
         this.discount = builder.discount;
@@ -86,6 +91,13 @@ public class ModelRouterUpdateClientRequest extends Request {
      */
     public String getAddress() {
         return this.address;
+    }
+
+    /**
+     * @return allowedModelGroupConfig
+     */
+    public String getAllowedModelGroupConfig() {
+        return this.allowedModelGroupConfig;
     }
 
     /**
@@ -133,6 +145,7 @@ public class ModelRouterUpdateClientRequest extends Request {
     public static final class Builder extends Request.Builder<ModelRouterUpdateClientRequest, Builder> {
         private Long id; 
         private String address; 
+        private String allowedModelGroupConfig; 
         private String allowedModels; 
         private String contact; 
         private Double discount; 
@@ -148,6 +161,7 @@ public class ModelRouterUpdateClientRequest extends Request {
             super(request);
             this.id = request.id;
             this.address = request.address;
+            this.allowedModelGroupConfig = request.allowedModelGroupConfig;
             this.allowedModels = request.allowedModels;
             this.contact = request.contact;
             this.discount = request.discount;
@@ -171,6 +185,15 @@ public class ModelRouterUpdateClientRequest extends Request {
         public Builder address(String address) {
             this.putBodyParameter("address", address);
             this.address = address;
+            return this;
+        }
+
+        /**
+         * allowedModelGroupConfig.
+         */
+        public Builder allowedModelGroupConfig(String allowedModelGroupConfig) {
+            this.putBodyParameter("allowedModelGroupConfig", allowedModelGroupConfig);
+            this.allowedModelGroupConfig = allowedModelGroupConfig;
             return this;
         }
 
