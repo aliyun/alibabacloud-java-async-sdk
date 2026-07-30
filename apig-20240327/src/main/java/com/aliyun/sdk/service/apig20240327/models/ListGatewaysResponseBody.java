@@ -920,6 +920,9 @@ public class ListGatewaysResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("gatewayId")
         private String gatewayId;
 
+        @com.aliyun.core.annotation.NameInMap("gatewayMode")
+        private String gatewayMode;
+
         @com.aliyun.core.annotation.NameInMap("gatewayType")
         private String gatewayType;
 
@@ -978,6 +981,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             this.expireTimestamp = builder.expireTimestamp;
             this.gatewayEdition = builder.gatewayEdition;
             this.gatewayId = builder.gatewayId;
+            this.gatewayMode = builder.gatewayMode;
             this.gatewayType = builder.gatewayType;
             this.legacy = builder.legacy;
             this.loadBalancers = builder.loadBalancers;
@@ -1045,6 +1049,13 @@ public class ListGatewaysResponseBody extends TeaModel {
          */
         public String getGatewayId() {
             return this.gatewayId;
+        }
+
+        /**
+         * @return gatewayMode
+         */
+        public String getGatewayMode() {
+            return this.gatewayMode;
         }
 
         /**
@@ -1173,6 +1184,7 @@ public class ListGatewaysResponseBody extends TeaModel {
             private Long expireTimestamp; 
             private String gatewayEdition; 
             private String gatewayId; 
+            private String gatewayMode; 
             private String gatewayType; 
             private Boolean legacy; 
             private java.util.List<LoadBalancers> loadBalancers; 
@@ -1201,6 +1213,7 @@ public class ListGatewaysResponseBody extends TeaModel {
                 this.expireTimestamp = model.expireTimestamp;
                 this.gatewayEdition = model.gatewayEdition;
                 this.gatewayId = model.gatewayId;
+                this.gatewayMode = model.gatewayMode;
                 this.gatewayType = model.gatewayType;
                 this.legacy = model.legacy;
                 this.loadBalancers = model.loadBalancers;
@@ -1286,6 +1299,14 @@ public class ListGatewaysResponseBody extends TeaModel {
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
+                return this;
+            }
+
+            /**
+             * gatewayMode.
+             */
+            public Builder gatewayMode(String gatewayMode) {
+                this.gatewayMode = gatewayMode;
                 return this;
             }
 

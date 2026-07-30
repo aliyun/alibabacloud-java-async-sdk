@@ -1241,6 +1241,9 @@ public class GetGatewayResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("gatewayId")
         private String gatewayId;
 
+        @com.aliyun.core.annotation.NameInMap("gatewayMode")
+        private String gatewayMode;
+
         @com.aliyun.core.annotation.NameInMap("gatewayType")
         private String gatewayType;
 
@@ -1277,6 +1280,9 @@ public class GetGatewayResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("targetVersion")
         private String targetVersion;
 
+        @com.aliyun.core.annotation.NameInMap("tenantId")
+        private String tenantId;
+
         @com.aliyun.core.annotation.NameInMap("updateTimestamp")
         private Long updateTimestamp;
 
@@ -1300,6 +1306,7 @@ public class GetGatewayResponseBody extends TeaModel {
             this.expireTimestamp = builder.expireTimestamp;
             this.gatewayEdition = builder.gatewayEdition;
             this.gatewayId = builder.gatewayId;
+            this.gatewayMode = builder.gatewayMode;
             this.gatewayType = builder.gatewayType;
             this.isp = builder.isp;
             this.loadBalancers = builder.loadBalancers;
@@ -1312,6 +1319,7 @@ public class GetGatewayResponseBody extends TeaModel {
             this.status = builder.status;
             this.tags = builder.tags;
             this.targetVersion = builder.targetVersion;
+            this.tenantId = builder.tenantId;
             this.updateTimestamp = builder.updateTimestamp;
             this.vSwitch = builder.vSwitch;
             this.version = builder.version;
@@ -1374,6 +1382,13 @@ public class GetGatewayResponseBody extends TeaModel {
          */
         public String getGatewayId() {
             return this.gatewayId;
+        }
+
+        /**
+         * @return gatewayMode
+         */
+        public String getGatewayMode() {
+            return this.gatewayMode;
         }
 
         /**
@@ -1461,6 +1476,13 @@ public class GetGatewayResponseBody extends TeaModel {
         }
 
         /**
+         * @return tenantId
+         */
+        public String getTenantId() {
+            return this.tenantId;
+        }
+
+        /**
          * @return updateTimestamp
          */
         public Long getUpdateTimestamp() {
@@ -1503,6 +1525,7 @@ public class GetGatewayResponseBody extends TeaModel {
             private Long expireTimestamp; 
             private String gatewayEdition; 
             private String gatewayId; 
+            private String gatewayMode; 
             private String gatewayType; 
             private String isp; 
             private java.util.List<LoadBalancers> loadBalancers; 
@@ -1515,6 +1538,7 @@ public class GetGatewayResponseBody extends TeaModel {
             private String status; 
             private java.util.List<Tags> tags; 
             private String targetVersion; 
+            private String tenantId; 
             private Long updateTimestamp; 
             private VSwitch vSwitch; 
             private String version; 
@@ -1532,6 +1556,7 @@ public class GetGatewayResponseBody extends TeaModel {
                 this.expireTimestamp = model.expireTimestamp;
                 this.gatewayEdition = model.gatewayEdition;
                 this.gatewayId = model.gatewayId;
+                this.gatewayMode = model.gatewayMode;
                 this.gatewayType = model.gatewayType;
                 this.isp = model.isp;
                 this.loadBalancers = model.loadBalancers;
@@ -1544,6 +1569,7 @@ public class GetGatewayResponseBody extends TeaModel {
                 this.status = model.status;
                 this.tags = model.tags;
                 this.targetVersion = model.targetVersion;
+                this.tenantId = model.tenantId;
                 this.updateTimestamp = model.updateTimestamp;
                 this.vSwitch = model.vSwitch;
                 this.version = model.version;
@@ -1629,6 +1655,14 @@ public class GetGatewayResponseBody extends TeaModel {
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
+                return this;
+            }
+
+            /**
+             * gatewayMode.
+             */
+            public Builder gatewayMode(String gatewayMode) {
+                this.gatewayMode = gatewayMode;
                 return this;
             }
 
@@ -1753,6 +1787,14 @@ public class GetGatewayResponseBody extends TeaModel {
              */
             public Builder targetVersion(String targetVersion) {
                 this.targetVersion = targetVersion;
+                return this;
+            }
+
+            /**
+             * tenantId.
+             */
+            public Builder tenantId(String tenantId) {
+                this.tenantId = tenantId;
                 return this;
             }
 

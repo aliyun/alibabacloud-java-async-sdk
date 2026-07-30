@@ -26,6 +26,10 @@ public class CreateGatewayRequest extends Request {
     private String gatewayEdition;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("gatewayMode")
+    private String gatewayMode;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("gatewayType")
     private String gatewayType;
 
@@ -65,6 +69,7 @@ public class CreateGatewayRequest extends Request {
         super(builder);
         this.chargeType = builder.chargeType;
         this.gatewayEdition = builder.gatewayEdition;
+        this.gatewayMode = builder.gatewayMode;
         this.gatewayType = builder.gatewayType;
         this.logConfig = builder.logConfig;
         this.name = builder.name;
@@ -101,6 +106,13 @@ public class CreateGatewayRequest extends Request {
      */
     public String getGatewayEdition() {
         return this.gatewayEdition;
+    }
+
+    /**
+     * @return gatewayMode
+     */
+    public String getGatewayMode() {
+        return this.gatewayMode;
     }
 
     /**
@@ -169,6 +181,7 @@ public class CreateGatewayRequest extends Request {
     public static final class Builder extends Request.Builder<CreateGatewayRequest, Builder> {
         private String chargeType; 
         private String gatewayEdition; 
+        private String gatewayMode; 
         private String gatewayType; 
         private LogConfig logConfig; 
         private String name; 
@@ -187,6 +200,7 @@ public class CreateGatewayRequest extends Request {
             super(request);
             this.chargeType = request.chargeType;
             this.gatewayEdition = request.gatewayEdition;
+            this.gatewayMode = request.gatewayMode;
             this.gatewayType = request.gatewayType;
             this.logConfig = request.logConfig;
             this.name = request.name;
@@ -216,6 +230,15 @@ public class CreateGatewayRequest extends Request {
         public Builder gatewayEdition(String gatewayEdition) {
             this.putBodyParameter("gatewayEdition", gatewayEdition);
             this.gatewayEdition = gatewayEdition;
+            return this;
+        }
+
+        /**
+         * gatewayMode.
+         */
+        public Builder gatewayMode(String gatewayMode) {
+            this.putBodyParameter("gatewayMode", gatewayMode);
+            this.gatewayMode = gatewayMode;
             return this;
         }
 
