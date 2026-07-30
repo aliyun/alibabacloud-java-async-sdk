@@ -122,6 +122,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PackageWeightSizeCheckResponse> packageWeightSizeCheck(PackageWeightSizeCheckRequest request);
 
     /**
+     * @param request the request parameters of PrepaidTextTranslate  PrepaidTextTranslateRequest
+     * @return PrepaidTextTranslateResponse
+     */
+    CompletableFuture<PrepaidTextTranslateResponse> prepaidTextTranslate(PrepaidTextTranslateRequest request);
+
+    /**
      * @param request the request parameters of QueryAsyncTaskResult  QueryAsyncTaskResultRequest
      * @return QueryAsyncTaskResultResponse
      */
