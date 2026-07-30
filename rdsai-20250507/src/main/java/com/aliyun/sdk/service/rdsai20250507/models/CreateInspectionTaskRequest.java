@@ -49,6 +49,10 @@ public class CreateInspectionTaskRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    private String templateId;
+
     private CreateInspectionTaskRequest(Builder builder) {
         super(builder);
         this.endTime = builder.endTime;
@@ -59,6 +63,7 @@ public class CreateInspectionTaskRequest extends Request {
         this.reportRegionId = builder.reportRegionId;
         this.reportType = builder.reportType;
         this.startTime = builder.startTime;
+        this.templateId = builder.templateId;
     }
 
     public static Builder builder() {
@@ -130,6 +135,13 @@ public class CreateInspectionTaskRequest extends Request {
         return this.startTime;
     }
 
+    /**
+     * @return templateId
+     */
+    public String getTemplateId() {
+        return this.templateId;
+    }
+
     public static final class Builder extends Request.Builder<CreateInspectionTaskRequest, Builder> {
         private String endTime; 
         private String inspectionItems; 
@@ -139,6 +151,7 @@ public class CreateInspectionTaskRequest extends Request {
         private String reportRegionId; 
         private String reportType; 
         private String startTime; 
+        private String templateId; 
 
         private Builder() {
             super();
@@ -154,6 +167,7 @@ public class CreateInspectionTaskRequest extends Request {
             this.reportRegionId = request.reportRegionId;
             this.reportType = request.reportType;
             this.startTime = request.startTime;
+            this.templateId = request.templateId;
         } 
 
         /**
@@ -252,6 +266,15 @@ public class CreateInspectionTaskRequest extends Request {
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * TemplateId.
+         */
+        public Builder templateId(String templateId) {
+            this.putQueryParameter("TemplateId", templateId);
+            this.templateId = templateId;
             return this;
         }
 

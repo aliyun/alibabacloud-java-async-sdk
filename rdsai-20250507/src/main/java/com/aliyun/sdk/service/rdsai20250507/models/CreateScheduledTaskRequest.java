@@ -59,6 +59,10 @@ public class CreateScheduledTaskRequest extends Request {
     private String startTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    private String templateId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TimeRange")
     private String timeRange;
 
@@ -74,6 +78,7 @@ public class CreateScheduledTaskRequest extends Request {
         this.reportRegionId = builder.reportRegionId;
         this.reportType = builder.reportType;
         this.startTime = builder.startTime;
+        this.templateId = builder.templateId;
         this.timeRange = builder.timeRange;
     }
 
@@ -161,6 +166,13 @@ public class CreateScheduledTaskRequest extends Request {
     }
 
     /**
+     * @return templateId
+     */
+    public String getTemplateId() {
+        return this.templateId;
+    }
+
+    /**
      * @return timeRange
      */
     public String getTimeRange() {
@@ -178,6 +190,7 @@ public class CreateScheduledTaskRequest extends Request {
         private String reportRegionId; 
         private String reportType; 
         private String startTime; 
+        private String templateId; 
         private String timeRange; 
 
         private Builder() {
@@ -196,6 +209,7 @@ public class CreateScheduledTaskRequest extends Request {
             this.reportRegionId = request.reportRegionId;
             this.reportType = request.reportType;
             this.startTime = request.startTime;
+            this.templateId = request.templateId;
             this.timeRange = request.timeRange;
         } 
 
@@ -306,6 +320,15 @@ public class CreateScheduledTaskRequest extends Request {
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * TemplateId.
+         */
+        public Builder templateId(String templateId) {
+            this.putQueryParameter("TemplateId", templateId);
+            this.templateId = templateId;
             return this;
         }
 

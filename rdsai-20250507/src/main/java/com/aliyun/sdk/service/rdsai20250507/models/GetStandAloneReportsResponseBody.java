@@ -242,6 +242,12 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
+        private String templateId;
+
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
+        private String templateName;
+
         private Reports(Builder builder) {
             this.createdTime = builder.createdTime;
             this.endTime = builder.endTime;
@@ -252,6 +258,8 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
             this.startTime = builder.startTime;
             this.status = builder.status;
             this.taskId = builder.taskId;
+            this.templateId = builder.templateId;
+            this.templateName = builder.templateName;
         }
 
         public static Builder builder() {
@@ -325,6 +333,20 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
             return this.taskId;
         }
 
+        /**
+         * @return templateId
+         */
+        public String getTemplateId() {
+            return this.templateId;
+        }
+
+        /**
+         * @return templateName
+         */
+        public String getTemplateName() {
+            return this.templateName;
+        }
+
         public static final class Builder {
             private String createdTime; 
             private String endTime; 
@@ -335,6 +357,8 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
             private String startTime; 
             private String status; 
             private String taskId; 
+            private String templateId; 
+            private String templateName; 
 
             private Builder() {
             } 
@@ -349,6 +373,8 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
                 this.startTime = model.startTime;
                 this.status = model.status;
                 this.taskId = model.taskId;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
             } 
 
             /**
@@ -435,6 +461,22 @@ public class GetStandAloneReportsResponseBody extends TeaModel {
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
+                return this;
+            }
+
+            /**
+             * TemplateId.
+             */
+            public Builder templateId(String templateId) {
+                this.templateId = templateId;
+                return this;
+            }
+
+            /**
+             * TemplateName.
+             */
+            public Builder templateName(String templateName) {
+                this.templateName = templateName;
                 return this;
             }
 

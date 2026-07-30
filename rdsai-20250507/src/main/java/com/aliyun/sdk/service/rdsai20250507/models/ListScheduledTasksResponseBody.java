@@ -248,6 +248,12 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskStartTime")
         private String taskStartTime;
 
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
+        private String templateId;
+
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
+        private String templateName;
+
         @com.aliyun.core.annotation.NameInMap("TimeRange")
         private String timeRange;
 
@@ -263,6 +269,8 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             this.reportType = builder.reportType;
             this.scheduledId = builder.scheduledId;
             this.taskStartTime = builder.taskStartTime;
+            this.templateId = builder.templateId;
+            this.templateName = builder.templateName;
             this.timeRange = builder.timeRange;
         }
 
@@ -352,6 +360,20 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return templateId
+         */
+        public String getTemplateId() {
+            return this.templateId;
+        }
+
+        /**
+         * @return templateName
+         */
+        public String getTemplateName() {
+            return this.templateName;
+        }
+
+        /**
          * @return timeRange
          */
         public String getTimeRange() {
@@ -370,6 +392,8 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             private String reportType; 
             private String scheduledId; 
             private String taskStartTime; 
+            private String templateId; 
+            private String templateName; 
             private String timeRange; 
 
             private Builder() {
@@ -387,6 +411,8 @@ public class ListScheduledTasksResponseBody extends TeaModel {
                 this.reportType = model.reportType;
                 this.scheduledId = model.scheduledId;
                 this.taskStartTime = model.taskStartTime;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
                 this.timeRange = model.timeRange;
             } 
 
@@ -501,6 +527,22 @@ public class ListScheduledTasksResponseBody extends TeaModel {
              */
             public Builder taskStartTime(String taskStartTime) {
                 this.taskStartTime = taskStartTime;
+                return this;
+            }
+
+            /**
+             * TemplateId.
+             */
+            public Builder templateId(String templateId) {
+                this.templateId = templateId;
+                return this;
+            }
+
+            /**
+             * TemplateName.
+             */
+            public Builder templateName(String templateName) {
+                this.templateName = templateName;
                 return this;
             }
 

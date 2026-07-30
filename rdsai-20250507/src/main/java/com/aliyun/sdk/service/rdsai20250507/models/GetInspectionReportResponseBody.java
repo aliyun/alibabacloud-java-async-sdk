@@ -29,11 +29,19 @@ public class GetInspectionReportResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    private String templateId;
+
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
+    private String templateName;
+
     private GetInspectionReportResponseBody(Builder builder) {
         this.data = builder.data;
         this.markdownText = builder.markdownText;
         this.requestId = builder.requestId;
         this.taskId = builder.taskId;
+        this.templateId = builder.templateId;
+        this.templateName = builder.templateName;
     }
 
     public static Builder builder() {
@@ -76,11 +84,27 @@ public class GetInspectionReportResponseBody extends TeaModel {
         return this.taskId;
     }
 
+    /**
+     * @return templateId
+     */
+    public String getTemplateId() {
+        return this.templateId;
+    }
+
+    /**
+     * @return templateName
+     */
+    public String getTemplateName() {
+        return this.templateName;
+    }
+
     public static final class Builder {
         private java.util.List<Data> data; 
         private String markdownText; 
         private String requestId; 
         private String taskId; 
+        private String templateId; 
+        private String templateName; 
 
         private Builder() {
         } 
@@ -90,6 +114,8 @@ public class GetInspectionReportResponseBody extends TeaModel {
             this.markdownText = model.markdownText;
             this.requestId = model.requestId;
             this.taskId = model.taskId;
+            this.templateId = model.templateId;
+            this.templateName = model.templateName;
         } 
 
         /**
@@ -127,6 +153,22 @@ public class GetInspectionReportResponseBody extends TeaModel {
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
+            return this;
+        }
+
+        /**
+         * TemplateId.
+         */
+        public Builder templateId(String templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+
+        /**
+         * TemplateName.
+         */
+        public Builder templateName(String templateName) {
+            this.templateName = templateName;
             return this;
         }
 
