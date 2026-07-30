@@ -32,7 +32,8 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.version = "2020-01-16";
         this.endpointRule = "central";
         this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("cn-shanghai", "das.cn-shanghai.aliyuncs.com")
+            new TeaPair("cn-shanghai", "das.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "das.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }

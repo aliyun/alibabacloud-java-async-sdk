@@ -22,6 +22,10 @@ public class GetYaoChiAgentRequest extends Request {
     private String extraInfo;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageKeys")
+    private String imageKeys;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Query")
     @com.aliyun.core.annotation.Validation(required = true)
     private String query;
@@ -37,6 +41,7 @@ public class GetYaoChiAgentRequest extends Request {
     private GetYaoChiAgentRequest(Builder builder) {
         super(builder);
         this.extraInfo = builder.extraInfo;
+        this.imageKeys = builder.imageKeys;
         this.query = builder.query;
         this.sessionId = builder.sessionId;
         this.source = builder.source;
@@ -63,6 +68,13 @@ public class GetYaoChiAgentRequest extends Request {
     }
 
     /**
+     * @return imageKeys
+     */
+    public String getImageKeys() {
+        return this.imageKeys;
+    }
+
+    /**
      * @return query
      */
     public String getQuery() {
@@ -85,6 +97,7 @@ public class GetYaoChiAgentRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetYaoChiAgentRequest, Builder> {
         private String extraInfo; 
+        private String imageKeys; 
         private String query; 
         private String sessionId; 
         private String source; 
@@ -96,6 +109,7 @@ public class GetYaoChiAgentRequest extends Request {
         private Builder(GetYaoChiAgentRequest request) {
             super(request);
             this.extraInfo = request.extraInfo;
+            this.imageKeys = request.imageKeys;
             this.query = request.query;
             this.sessionId = request.sessionId;
             this.source = request.source;
@@ -107,6 +121,15 @@ public class GetYaoChiAgentRequest extends Request {
         public Builder extraInfo(String extraInfo) {
             this.putQueryParameter("ExtraInfo", extraInfo);
             this.extraInfo = extraInfo;
+            return this;
+        }
+
+        /**
+         * ImageKeys.
+         */
+        public Builder imageKeys(String imageKeys) {
+            this.putQueryParameter("ImageKeys", imageKeys);
+            this.imageKeys = imageKeys;
             return this;
         }
 

@@ -30,6 +30,10 @@ public class GetInstanceGroupInspectReportListRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReportType")
+    private String reportType;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("StartTime")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -40,6 +44,7 @@ public class GetInstanceGroupInspectReportListRequest extends Request {
         this.agentId = builder.agentId;
         this.endTime = builder.endTime;
         this.groupId = builder.groupId;
+        this.reportType = builder.reportType;
         this.startTime = builder.startTime;
     }
 
@@ -78,6 +83,13 @@ public class GetInstanceGroupInspectReportListRequest extends Request {
     }
 
     /**
+     * @return reportType
+     */
+    public String getReportType() {
+        return this.reportType;
+    }
+
+    /**
      * @return startTime
      */
     public Long getStartTime() {
@@ -88,6 +100,7 @@ public class GetInstanceGroupInspectReportListRequest extends Request {
         private String agentId; 
         private Long endTime; 
         private String groupId; 
+        private String reportType; 
         private Long startTime; 
 
         private Builder() {
@@ -99,6 +112,7 @@ public class GetInstanceGroupInspectReportListRequest extends Request {
             this.agentId = request.agentId;
             this.endTime = request.endTime;
             this.groupId = request.groupId;
+            this.reportType = request.reportType;
             this.startTime = request.startTime;
         } 
 
@@ -129,6 +143,15 @@ public class GetInstanceGroupInspectReportListRequest extends Request {
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
             this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * ReportType.
+         */
+        public Builder reportType(String reportType) {
+            this.putQueryParameter("ReportType", reportType);
+            this.reportType = reportType;
             return this;
         }
 

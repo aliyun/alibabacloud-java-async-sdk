@@ -26,10 +26,15 @@ public class GetInstanceGroupInspectReportDetailRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String reportId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReportType")
+    private String reportType;
+
     private GetInstanceGroupInspectReportDetailRequest(Builder builder) {
         super(builder);
         this.agentId = builder.agentId;
         this.reportId = builder.reportId;
+        this.reportType = builder.reportType;
     }
 
     public static Builder builder() {
@@ -59,9 +64,17 @@ public class GetInstanceGroupInspectReportDetailRequest extends Request {
         return this.reportId;
     }
 
+    /**
+     * @return reportType
+     */
+    public String getReportType() {
+        return this.reportType;
+    }
+
     public static final class Builder extends Request.Builder<GetInstanceGroupInspectReportDetailRequest, Builder> {
         private String agentId; 
         private String reportId; 
+        private String reportType; 
 
         private Builder() {
             super();
@@ -71,6 +84,7 @@ public class GetInstanceGroupInspectReportDetailRequest extends Request {
             super(request);
             this.agentId = request.agentId;
             this.reportId = request.reportId;
+            this.reportType = request.reportType;
         } 
 
         /**
@@ -91,6 +105,15 @@ public class GetInstanceGroupInspectReportDetailRequest extends Request {
         public Builder reportId(String reportId) {
             this.putBodyParameter("ReportId", reportId);
             this.reportId = reportId;
+            return this;
+        }
+
+        /**
+         * ReportType.
+         */
+        public Builder reportType(String reportType) {
+            this.putQueryParameter("ReportType", reportType);
+            this.reportType = reportType;
             return this;
         }
 

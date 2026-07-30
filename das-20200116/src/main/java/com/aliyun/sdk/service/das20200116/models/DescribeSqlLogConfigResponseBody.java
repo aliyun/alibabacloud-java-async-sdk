@@ -189,6 +189,9 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CollectorVersion")
         private String collectorVersion;
 
+        @com.aliyun.core.annotation.NameInMap("Enable")
+        private Boolean enable;
+
         @com.aliyun.core.annotation.NameInMap("HotEnable")
         private Boolean hotEnable;
 
@@ -239,6 +242,7 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
             this.coldRetention = builder.coldRetention;
             this.coldStartTime = builder.coldStartTime;
             this.collectorVersion = builder.collectorVersion;
+            this.enable = builder.enable;
             this.hotEnable = builder.hotEnable;
             this.hotRetention = builder.hotRetention;
             this.hotStartTime = builder.hotStartTime;
@@ -290,6 +294,13 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
          */
         public String getCollectorVersion() {
             return this.collectorVersion;
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
         }
 
         /**
@@ -402,6 +413,7 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
             private Integer coldRetention; 
             private Long coldStartTime; 
             private String collectorVersion; 
+            private Boolean enable; 
             private Boolean hotEnable; 
             private Integer hotRetention; 
             private Long hotStartTime; 
@@ -426,6 +438,7 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
                 this.coldRetention = model.coldRetention;
                 this.coldStartTime = model.coldStartTime;
                 this.collectorVersion = model.collectorVersion;
+                this.enable = model.enable;
                 this.hotEnable = model.hotEnable;
                 this.hotRetention = model.hotRetention;
                 this.hotStartTime = model.hotStartTime;
@@ -497,6 +510,14 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
              */
             public Builder collectorVersion(String collectorVersion) {
                 this.collectorVersion = collectorVersion;
+                return this;
+            }
+
+            /**
+             * Enable.
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
                 return this;
             }
 
