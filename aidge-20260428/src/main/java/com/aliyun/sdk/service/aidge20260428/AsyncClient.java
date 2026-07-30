@@ -146,6 +146,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TextTranslateResponse> textTranslate(TextTranslateRequest request);
 
     /**
+     * @param request the request parameters of VideoGeneration  VideoGenerationRequest
+     * @return VideoGenerationResponse
+     */
+    CompletableFuture<VideoGenerationResponse> videoGeneration(VideoGenerationRequest request);
+
+    /**
      * @param request the request parameters of VideoTranslation  VideoTranslationRequest
      * @return VideoTranslationResponse
      */

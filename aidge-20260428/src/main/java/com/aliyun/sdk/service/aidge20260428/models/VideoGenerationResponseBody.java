@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link QueryAsyncTaskResultResponseBody} extends {@link TeaModel}
+ * {@link VideoGenerationResponseBody} extends {@link TeaModel}
  *
- * <p>QueryAsyncTaskResultResponseBody</p>
+ * <p>VideoGenerationResponseBody</p>
  */
-public class QueryAsyncTaskResultResponseBody extends TeaModel {
+public class VideoGenerationResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -32,7 +32,7 @@ public class QueryAsyncTaskResultResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private QueryAsyncTaskResultResponseBody(Builder builder) {
+    private VideoGenerationResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -44,7 +44,7 @@ public class QueryAsyncTaskResultResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static QueryAsyncTaskResultResponseBody create() {
+    public static VideoGenerationResponseBody create() {
         return builder().build();
     }
 
@@ -97,7 +97,7 @@ public class QueryAsyncTaskResultResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(QueryAsyncTaskResultResponseBody model) {
+        private Builder(VideoGenerationResponseBody model) {
             this.code = model.code;
             this.data = model.data;
             this.message = model.message;
@@ -145,34 +145,26 @@ public class QueryAsyncTaskResultResponseBody extends TeaModel {
             return this;
         }
 
-        public QueryAsyncTaskResultResponseBody build() {
-            return new QueryAsyncTaskResultResponseBody(this);
+        public VideoGenerationResponseBody build() {
+            return new VideoGenerationResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link QueryAsyncTaskResultResponseBody} extends {@link TeaModel}
+     * {@link VideoGenerationResponseBody} extends {@link TeaModel}
      *
-     * <p>QueryAsyncTaskResultResponseBody</p>
+     * <p>VideoGenerationResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Result")
-        private String result;
-
-        @com.aliyun.core.annotation.NameInMap("Status")
-        private String status;
-
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         @com.aliyun.core.annotation.NameInMap("UsageMap")
-        private java.util.Map<String, ?> usageMap;
+        private java.util.Map<String, Long> usageMap;
 
         private Data(Builder builder) {
-            this.result = builder.result;
-            this.status = builder.status;
             this.taskId = builder.taskId;
             this.usageMap = builder.usageMap;
         }
@@ -186,20 +178,6 @@ public class QueryAsyncTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * @return result
-         */
-        public String getResult() {
-            return this.result;
-        }
-
-        /**
-         * @return status
-         */
-        public String getStatus() {
-            return this.status;
-        }
-
-        /**
          * @return taskId
          */
         public String getTaskId() {
@@ -209,41 +187,21 @@ public class QueryAsyncTaskResultResponseBody extends TeaModel {
         /**
          * @return usageMap
          */
-        public java.util.Map<String, ?> getUsageMap() {
+        public java.util.Map<String, Long> getUsageMap() {
             return this.usageMap;
         }
 
         public static final class Builder {
-            private String result; 
-            private String status; 
             private String taskId; 
-            private java.util.Map<String, ?> usageMap; 
+            private java.util.Map<String, Long> usageMap; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
-                this.result = model.result;
-                this.status = model.status;
                 this.taskId = model.taskId;
                 this.usageMap = model.usageMap;
             } 
-
-            /**
-             * Result.
-             */
-            public Builder result(String result) {
-                this.result = result;
-                return this;
-            }
-
-            /**
-             * Status.
-             */
-            public Builder status(String status) {
-                this.status = status;
-                return this;
-            }
 
             /**
              * TaskId.
@@ -256,7 +214,7 @@ public class QueryAsyncTaskResultResponseBody extends TeaModel {
             /**
              * UsageMap.
              */
-            public Builder usageMap(java.util.Map<String, ?> usageMap) {
+            public Builder usageMap(java.util.Map<String, Long> usageMap) {
                 this.usageMap = usageMap;
                 return this;
             }
