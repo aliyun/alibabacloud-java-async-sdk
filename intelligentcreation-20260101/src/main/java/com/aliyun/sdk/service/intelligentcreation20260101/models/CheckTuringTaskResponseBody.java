@@ -161,6 +161,9 @@ public class CheckTuringTaskResponseBody extends TeaModel {
      * <p>CheckTuringTaskResponseBody</p>
      */
     public static class Result extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("failBizCode")
+        private String failBizCode;
+
         @com.aliyun.core.annotation.NameInMap("failCode")
         private String failCode;
 
@@ -177,6 +180,7 @@ public class CheckTuringTaskResponseBody extends TeaModel {
         private String videoUrl;
 
         private Result(Builder builder) {
+            this.failBizCode = builder.failBizCode;
             this.failCode = builder.failCode;
             this.failMsg = builder.failMsg;
             this.status = builder.status;
@@ -190,6 +194,13 @@ public class CheckTuringTaskResponseBody extends TeaModel {
 
         public static Result create() {
             return builder().build();
+        }
+
+        /**
+         * @return failBizCode
+         */
+        public String getFailBizCode() {
+            return this.failBizCode;
         }
 
         /**
@@ -228,6 +239,7 @@ public class CheckTuringTaskResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String failBizCode; 
             private String failCode; 
             private String failMsg; 
             private String status; 
@@ -238,12 +250,21 @@ public class CheckTuringTaskResponseBody extends TeaModel {
             } 
 
             private Builder(Result model) {
+                this.failBizCode = model.failBizCode;
                 this.failCode = model.failCode;
                 this.failMsg = model.failMsg;
                 this.status = model.status;
                 this.taskId = model.taskId;
                 this.videoUrl = model.videoUrl;
             } 
+
+            /**
+             * failBizCode.
+             */
+            public Builder failBizCode(String failBizCode) {
+                this.failBizCode = failBizCode;
+                return this;
+            }
 
             /**
              * failCode.
