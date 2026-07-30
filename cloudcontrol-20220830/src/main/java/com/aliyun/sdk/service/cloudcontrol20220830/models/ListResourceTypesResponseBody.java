@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudcontrol20220830.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourceTypesResponseBody} extends {@link TeaModel}
  *
  * <p>ListResourceTypesResponseBody</p>
@@ -21,7 +27,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("resourceTypes")
-    private java.util.List < ResourceTypes> resourceTypes;
+    private java.util.List<ResourceTypes> resourceTypes;
 
     @com.aliyun.core.annotation.NameInMap("totalCount")
     private Integer totalCount;
@@ -40,6 +46,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
 
     public static ListResourceTypesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -66,7 +76,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
     /**
      * @return resourceTypes
      */
-    public java.util.List < ResourceTypes> getResourceTypes() {
+    public java.util.List<ResourceTypes> getResourceTypes() {
         return this.resourceTypes;
     }
 
@@ -81,11 +91,25 @@ public class ListResourceTypesResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < ResourceTypes> resourceTypes; 
+        private java.util.List<ResourceTypes> resourceTypes; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListResourceTypesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.resourceTypes = model.resourceTypes;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * maxResults.
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,7 +117,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS::Disk</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,7 +128,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The ID of a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,15 +139,18 @@ public class ListResourceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * resourceTypes.
+         * <p>The information about the resource types.</p>
          */
-        public Builder resourceTypes(java.util.List < ResourceTypes> resourceTypes) {
+        public Builder resourceTypes(java.util.List<ResourceTypes> resourceTypes) {
             this.resourceTypes = resourceTypes;
             return this;
         }
 
         /**
-         * totalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,9 +163,15 @@ public class ListResourceTypesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListResourceTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceTypesResponseBody</p>
+     */
     public static class Create extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("permissions")
-        private java.util.List < String > permissions;
+        private java.util.List<String> permissions;
 
         private Create(Builder builder) {
             this.permissions = builder.permissions;
@@ -149,17 +188,24 @@ public class ListResourceTypesResponseBody extends TeaModel {
         /**
          * @return permissions
          */
-        public java.util.List < String > getPermissions() {
+        public java.util.List<String> getPermissions() {
             return this.permissions;
         }
 
         public static final class Builder {
-            private java.util.List < String > permissions; 
+            private java.util.List<String> permissions; 
+
+            private Builder() {
+            } 
+
+            private Builder(Create model) {
+                this.permissions = model.permissions;
+            } 
 
             /**
-             * permissions.
+             * <p>The RAM permissions required.</p>
              */
-            public Builder permissions(java.util.List < String > permissions) {
+            public Builder permissions(java.util.List<String> permissions) {
                 this.permissions = permissions;
                 return this;
             }
@@ -171,9 +217,15 @@ public class ListResourceTypesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourceTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceTypesResponseBody</p>
+     */
     public static class Delete extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("permissions")
-        private java.util.List < String > permissions;
+        private java.util.List<String> permissions;
 
         private Delete(Builder builder) {
             this.permissions = builder.permissions;
@@ -190,17 +242,24 @@ public class ListResourceTypesResponseBody extends TeaModel {
         /**
          * @return permissions
          */
-        public java.util.List < String > getPermissions() {
+        public java.util.List<String> getPermissions() {
             return this.permissions;
         }
 
         public static final class Builder {
-            private java.util.List < String > permissions; 
+            private java.util.List<String> permissions; 
+
+            private Builder() {
+            } 
+
+            private Builder(Delete model) {
+                this.permissions = model.permissions;
+            } 
 
             /**
-             * permissions.
+             * <p>The RAM permissions required.</p>
              */
-            public Builder permissions(java.util.List < String > permissions) {
+            public Builder permissions(java.util.List<String> permissions) {
                 this.permissions = permissions;
                 return this;
             }
@@ -212,9 +271,15 @@ public class ListResourceTypesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourceTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceTypesResponseBody</p>
+     */
     public static class Get extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("permissions")
-        private java.util.List < String > permissions;
+        private java.util.List<String> permissions;
 
         private Get(Builder builder) {
             this.permissions = builder.permissions;
@@ -231,17 +296,24 @@ public class ListResourceTypesResponseBody extends TeaModel {
         /**
          * @return permissions
          */
-        public java.util.List < String > getPermissions() {
+        public java.util.List<String> getPermissions() {
             return this.permissions;
         }
 
         public static final class Builder {
-            private java.util.List < String > permissions; 
+            private java.util.List<String> permissions; 
+
+            private Builder() {
+            } 
+
+            private Builder(Get model) {
+                this.permissions = model.permissions;
+            } 
 
             /**
-             * permissions.
+             * <p>The RAM permissions required.</p>
              */
-            public Builder permissions(java.util.List < String > permissions) {
+            public Builder permissions(java.util.List<String> permissions) {
                 this.permissions = permissions;
                 return this;
             }
@@ -253,9 +325,15 @@ public class ListResourceTypesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourceTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceTypesResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("permissions")
-        private java.util.List < String > permissions;
+        private java.util.List<String> permissions;
 
         private List(Builder builder) {
             this.permissions = builder.permissions;
@@ -272,17 +350,24 @@ public class ListResourceTypesResponseBody extends TeaModel {
         /**
          * @return permissions
          */
-        public java.util.List < String > getPermissions() {
+        public java.util.List<String> getPermissions() {
             return this.permissions;
         }
 
         public static final class Builder {
-            private java.util.List < String > permissions; 
+            private java.util.List<String> permissions; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.permissions = model.permissions;
+            } 
 
             /**
-             * permissions.
+             * <p>The RAM permissions required.</p>
              */
-            public Builder permissions(java.util.List < String > permissions) {
+            public Builder permissions(java.util.List<String> permissions) {
                 this.permissions = permissions;
                 return this;
             }
@@ -294,9 +379,15 @@ public class ListResourceTypesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourceTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceTypesResponseBody</p>
+     */
     public static class Update extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("permissions")
-        private java.util.List < String > permissions;
+        private java.util.List<String> permissions;
 
         private Update(Builder builder) {
             this.permissions = builder.permissions;
@@ -313,17 +404,24 @@ public class ListResourceTypesResponseBody extends TeaModel {
         /**
          * @return permissions
          */
-        public java.util.List < String > getPermissions() {
+        public java.util.List<String> getPermissions() {
             return this.permissions;
         }
 
         public static final class Builder {
-            private java.util.List < String > permissions; 
+            private java.util.List<String> permissions; 
+
+            private Builder() {
+            } 
+
+            private Builder(Update model) {
+                this.permissions = model.permissions;
+            } 
 
             /**
-             * permissions.
+             * <p>The RAM permissions required.</p>
              */
-            public Builder permissions(java.util.List < String > permissions) {
+            public Builder permissions(java.util.List<String> permissions) {
                 this.permissions = permissions;
                 return this;
             }
@@ -335,6 +433,12 @@ public class ListResourceTypesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourceTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceTypesResponseBody</p>
+     */
     public static class Handlers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("create")
         private Create create;
@@ -409,8 +513,19 @@ public class ListResourceTypesResponseBody extends TeaModel {
             private List list; 
             private Update update; 
 
+            private Builder() {
+            } 
+
+            private Builder(Handlers model) {
+                this.create = model.create;
+                this.delete = model.delete;
+                this.get = model.get;
+                this.list = model.list;
+                this.update = model.update;
+            } 
+
             /**
-             * create.
+             * <p>The information about the create operation.</p>
              */
             public Builder create(Create create) {
                 this.create = create;
@@ -418,7 +533,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * delete.
+             * <p>The information about the delete operation.</p>
              */
             public Builder delete(Delete delete) {
                 this.delete = delete;
@@ -426,7 +541,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * get.
+             * <p>The information about the query operation.</p>
              */
             public Builder get(Get get) {
                 this.get = get;
@@ -434,7 +549,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * list.
+             * <p>The information about the list operation.</p>
              */
             public Builder list(List list) {
                 this.list = list;
@@ -442,7 +557,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * update.
+             * <p>The information about the update operation.</p>
              */
             public Builder update(Update update) {
                 this.update = update;
@@ -456,6 +571,12 @@ public class ListResourceTypesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourceTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceTypesResponseBody</p>
+     */
     public static class Info extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("chargeType")
         private String chargeType;
@@ -518,8 +639,21 @@ public class ListResourceTypesResponseBody extends TeaModel {
             private String description; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(Info model) {
+                this.chargeType = model.chargeType;
+                this.deliveryScope = model.deliveryScope;
+                this.description = model.description;
+                this.title = model.title;
+            } 
+
             /**
-             * chargeType.
+             * <p>Billing method<br>paid free</p>
+             * 
+             * <strong>example:</strong>
+             * <p>paid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -527,7 +661,13 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * deliveryScope.
+             * <p>The deployment level of the resource.</p>
+             * <p>center</p>
+             * <p>region</p>
+             * <p>zone</p>
+             * 
+             * <strong>example:</strong>
+             * <p>region</p>
              */
             public Builder deliveryScope(String deliveryScope) {
                 this.deliveryScope = deliveryScope;
@@ -535,7 +675,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description of the resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>An ECS instance is equivalent to a virtual machine, including the most basic computing components such as CPU, memory, operating system, network, and disk. You can easily customize and change the configuration of the instance. You have full control over the virtual machine.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -543,7 +686,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * title.
+             * <p>The name of the resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Instance</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -557,21 +703,27 @@ public class ListResourceTypesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourceTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceTypesResponseBody</p>
+     */
     public static class ResourceTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createOnlyProperties")
-        private java.util.List < String > createOnlyProperties;
+        private java.util.List<String> createOnlyProperties;
 
         @com.aliyun.core.annotation.NameInMap("deleteOnlyProperties")
-        private java.util.List < String > deleteOnlyProperties;
+        private java.util.List<String> deleteOnlyProperties;
 
         @com.aliyun.core.annotation.NameInMap("filterProperties")
-        private java.util.List < String > filterProperties;
+        private java.util.List<String> filterProperties;
 
         @com.aliyun.core.annotation.NameInMap("getOnlyProperties")
-        private java.util.List < String > getOnlyProperties;
+        private java.util.List<String> getOnlyProperties;
 
         @com.aliyun.core.annotation.NameInMap("getResponseProperties")
-        private java.util.List < String > getResponseProperties;
+        private java.util.List<String> getResponseProperties;
 
         @com.aliyun.core.annotation.NameInMap("handlers")
         private Handlers handlers;
@@ -580,10 +732,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
         private Info info;
 
         @com.aliyun.core.annotation.NameInMap("listOnlyProperties")
-        private java.util.List < String > listOnlyProperties;
+        private java.util.List<String> listOnlyProperties;
 
         @com.aliyun.core.annotation.NameInMap("listResponseProperties")
-        private java.util.List < String > listResponseProperties;
+        private java.util.List<String> listResponseProperties;
 
         @com.aliyun.core.annotation.NameInMap("primaryIdentifier")
         private String primaryIdentifier;
@@ -592,28 +744,28 @@ public class ListResourceTypesResponseBody extends TeaModel {
         private String product;
 
         @com.aliyun.core.annotation.NameInMap("properties")
-        private java.util.Map < String, ? > properties;
+        private java.util.Map<String, ?> properties;
 
         @com.aliyun.core.annotation.NameInMap("publicProperties")
-        private java.util.List < String > publicProperties;
+        private java.util.List<String> publicProperties;
 
         @com.aliyun.core.annotation.NameInMap("readOnlyProperties")
-        private java.util.List < String > readOnlyProperties;
+        private java.util.List<String> readOnlyProperties;
 
         @com.aliyun.core.annotation.NameInMap("required")
-        private java.util.List < String > required;
+        private java.util.List<String> required;
 
         @com.aliyun.core.annotation.NameInMap("resourceType")
         private String resourceType;
 
         @com.aliyun.core.annotation.NameInMap("sensitiveInfoProperties")
-        private java.util.List < String > sensitiveInfoProperties;
+        private java.util.List<String> sensitiveInfoProperties;
 
         @com.aliyun.core.annotation.NameInMap("updateOnlyProperties")
-        private java.util.List < String > updateOnlyProperties;
+        private java.util.List<String> updateOnlyProperties;
 
         @com.aliyun.core.annotation.NameInMap("updateTypeProperties")
-        private java.util.List < String > updateTypeProperties;
+        private java.util.List<String> updateTypeProperties;
 
         private ResourceTypes(Builder builder) {
             this.createOnlyProperties = builder.createOnlyProperties;
@@ -648,35 +800,35 @@ public class ListResourceTypesResponseBody extends TeaModel {
         /**
          * @return createOnlyProperties
          */
-        public java.util.List < String > getCreateOnlyProperties() {
+        public java.util.List<String> getCreateOnlyProperties() {
             return this.createOnlyProperties;
         }
 
         /**
          * @return deleteOnlyProperties
          */
-        public java.util.List < String > getDeleteOnlyProperties() {
+        public java.util.List<String> getDeleteOnlyProperties() {
             return this.deleteOnlyProperties;
         }
 
         /**
          * @return filterProperties
          */
-        public java.util.List < String > getFilterProperties() {
+        public java.util.List<String> getFilterProperties() {
             return this.filterProperties;
         }
 
         /**
          * @return getOnlyProperties
          */
-        public java.util.List < String > getGetOnlyProperties() {
+        public java.util.List<String> getGetOnlyProperties() {
             return this.getOnlyProperties;
         }
 
         /**
          * @return getResponseProperties
          */
-        public java.util.List < String > getGetResponseProperties() {
+        public java.util.List<String> getGetResponseProperties() {
             return this.getResponseProperties;
         }
 
@@ -697,14 +849,14 @@ public class ListResourceTypesResponseBody extends TeaModel {
         /**
          * @return listOnlyProperties
          */
-        public java.util.List < String > getListOnlyProperties() {
+        public java.util.List<String> getListOnlyProperties() {
             return this.listOnlyProperties;
         }
 
         /**
          * @return listResponseProperties
          */
-        public java.util.List < String > getListResponseProperties() {
+        public java.util.List<String> getListResponseProperties() {
             return this.listResponseProperties;
         }
 
@@ -725,28 +877,28 @@ public class ListResourceTypesResponseBody extends TeaModel {
         /**
          * @return properties
          */
-        public java.util.Map < String, ? > getProperties() {
+        public java.util.Map<String, ?> getProperties() {
             return this.properties;
         }
 
         /**
          * @return publicProperties
          */
-        public java.util.List < String > getPublicProperties() {
+        public java.util.List<String> getPublicProperties() {
             return this.publicProperties;
         }
 
         /**
          * @return readOnlyProperties
          */
-        public java.util.List < String > getReadOnlyProperties() {
+        public java.util.List<String> getReadOnlyProperties() {
             return this.readOnlyProperties;
         }
 
         /**
          * @return required
          */
-        public java.util.List < String > getRequired() {
+        public java.util.List<String> getRequired() {
             return this.required;
         }
 
@@ -760,87 +912,112 @@ public class ListResourceTypesResponseBody extends TeaModel {
         /**
          * @return sensitiveInfoProperties
          */
-        public java.util.List < String > getSensitiveInfoProperties() {
+        public java.util.List<String> getSensitiveInfoProperties() {
             return this.sensitiveInfoProperties;
         }
 
         /**
          * @return updateOnlyProperties
          */
-        public java.util.List < String > getUpdateOnlyProperties() {
+        public java.util.List<String> getUpdateOnlyProperties() {
             return this.updateOnlyProperties;
         }
 
         /**
          * @return updateTypeProperties
          */
-        public java.util.List < String > getUpdateTypeProperties() {
+        public java.util.List<String> getUpdateTypeProperties() {
             return this.updateTypeProperties;
         }
 
         public static final class Builder {
-            private java.util.List < String > createOnlyProperties; 
-            private java.util.List < String > deleteOnlyProperties; 
-            private java.util.List < String > filterProperties; 
-            private java.util.List < String > getOnlyProperties; 
-            private java.util.List < String > getResponseProperties; 
+            private java.util.List<String> createOnlyProperties; 
+            private java.util.List<String> deleteOnlyProperties; 
+            private java.util.List<String> filterProperties; 
+            private java.util.List<String> getOnlyProperties; 
+            private java.util.List<String> getResponseProperties; 
             private Handlers handlers; 
             private Info info; 
-            private java.util.List < String > listOnlyProperties; 
-            private java.util.List < String > listResponseProperties; 
+            private java.util.List<String> listOnlyProperties; 
+            private java.util.List<String> listResponseProperties; 
             private String primaryIdentifier; 
             private String product; 
-            private java.util.Map < String, ? > properties; 
-            private java.util.List < String > publicProperties; 
-            private java.util.List < String > readOnlyProperties; 
-            private java.util.List < String > required; 
+            private java.util.Map<String, ?> properties; 
+            private java.util.List<String> publicProperties; 
+            private java.util.List<String> readOnlyProperties; 
+            private java.util.List<String> required; 
             private String resourceType; 
-            private java.util.List < String > sensitiveInfoProperties; 
-            private java.util.List < String > updateOnlyProperties; 
-            private java.util.List < String > updateTypeProperties; 
+            private java.util.List<String> sensitiveInfoProperties; 
+            private java.util.List<String> updateOnlyProperties; 
+            private java.util.List<String> updateTypeProperties; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceTypes model) {
+                this.createOnlyProperties = model.createOnlyProperties;
+                this.deleteOnlyProperties = model.deleteOnlyProperties;
+                this.filterProperties = model.filterProperties;
+                this.getOnlyProperties = model.getOnlyProperties;
+                this.getResponseProperties = model.getResponseProperties;
+                this.handlers = model.handlers;
+                this.info = model.info;
+                this.listOnlyProperties = model.listOnlyProperties;
+                this.listResponseProperties = model.listResponseProperties;
+                this.primaryIdentifier = model.primaryIdentifier;
+                this.product = model.product;
+                this.properties = model.properties;
+                this.publicProperties = model.publicProperties;
+                this.readOnlyProperties = model.readOnlyProperties;
+                this.required = model.required;
+                this.resourceType = model.resourceType;
+                this.sensitiveInfoProperties = model.sensitiveInfoProperties;
+                this.updateOnlyProperties = model.updateOnlyProperties;
+                this.updateTypeProperties = model.updateTypeProperties;
+            } 
 
             /**
-             * createOnlyProperties.
+             * <p>The properties that are specific to the create operation. You need to specify these properties when you create the resource. These properties are not returned when you query the resource.</p>
              */
-            public Builder createOnlyProperties(java.util.List < String > createOnlyProperties) {
+            public Builder createOnlyProperties(java.util.List<String> createOnlyProperties) {
                 this.createOnlyProperties = createOnlyProperties;
                 return this;
             }
 
             /**
-             * deleteOnlyProperties.
+             * <p>The properties that are specific to the delete operation. You need to specify these properties when you delete the resource. These properties are not returned when you query the resource.</p>
              */
-            public Builder deleteOnlyProperties(java.util.List < String > deleteOnlyProperties) {
+            public Builder deleteOnlyProperties(java.util.List<String> deleteOnlyProperties) {
                 this.deleteOnlyProperties = deleteOnlyProperties;
                 return this;
             }
 
             /**
-             * filterProperties.
+             * <p>The properties that can be used to filter the resource when you list the resource.</p>
              */
-            public Builder filterProperties(java.util.List < String > filterProperties) {
+            public Builder filterProperties(java.util.List<String> filterProperties) {
                 this.filterProperties = filterProperties;
                 return this;
             }
 
             /**
-             * getOnlyProperties.
+             * <p>The properties that are specific to the query operation. You need to specify these properties when you query the resource. These properties are not returned in the query result.</p>
              */
-            public Builder getOnlyProperties(java.util.List < String > getOnlyProperties) {
+            public Builder getOnlyProperties(java.util.List<String> getOnlyProperties) {
                 this.getOnlyProperties = getOnlyProperties;
                 return this;
             }
 
             /**
-             * getResponseProperties.
+             * <p>The properties that are returned when you query the resource.</p>
              */
-            public Builder getResponseProperties(java.util.List < String > getResponseProperties) {
+            public Builder getResponseProperties(java.util.List<String> getResponseProperties) {
                 this.getResponseProperties = getResponseProperties;
                 return this;
             }
 
             /**
-             * handlers.
+             * <p>The information about the operation, including the required Resource Access Management (RAM) permissions.</p>
              */
             public Builder handlers(Handlers handlers) {
                 this.handlers = handlers;
@@ -848,7 +1025,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * info.
+             * <p>The information about the resource type.</p>
              */
             public Builder info(Info info) {
                 this.info = info;
@@ -856,23 +1033,26 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * listOnlyProperties.
+             * <p>The properties that are specific to the list operation. You need to specify these properties when you list the resource. These properties are not returned when you query the resource.</p>
              */
-            public Builder listOnlyProperties(java.util.List < String > listOnlyProperties) {
+            public Builder listOnlyProperties(java.util.List<String> listOnlyProperties) {
                 this.listOnlyProperties = listOnlyProperties;
                 return this;
             }
 
             /**
-             * listResponseProperties.
+             * <p>The properties that are returned when you list the resource.</p>
              */
-            public Builder listResponseProperties(java.util.List < String > listResponseProperties) {
+            public Builder listResponseProperties(java.util.List<String> listResponseProperties) {
                 this.listResponseProperties = listResponseProperties;
                 return this;
             }
 
             /**
-             * primaryIdentifier.
+             * <p>The ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/properties/InstanceId</p>
              */
             public Builder primaryIdentifier(String primaryIdentifier) {
                 this.primaryIdentifier = primaryIdentifier;
@@ -880,7 +1060,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * product.
+             * <p>The code of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder product(String product) {
                 this.product = product;
@@ -888,39 +1071,42 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * properties.
+             * <p>The resource properties. The key specifies the property name and the value specifies the details of the property.</p>
              */
-            public Builder properties(java.util.Map < String, ? > properties) {
+            public Builder properties(java.util.Map<String, ?> properties) {
                 this.properties = properties;
                 return this;
             }
 
             /**
-             * publicProperties.
+             * <p>The common properties of the resource. The common properties are not operation-specific.</p>
              */
-            public Builder publicProperties(java.util.List < String > publicProperties) {
+            public Builder publicProperties(java.util.List<String> publicProperties) {
                 this.publicProperties = publicProperties;
                 return this;
             }
 
             /**
-             * readOnlyProperties.
+             * <p>The read-only properties. These properties are returned only when you list or query the resource. You do not need to specify these properties when you create or update the resource.</p>
              */
-            public Builder readOnlyProperties(java.util.List < String > readOnlyProperties) {
+            public Builder readOnlyProperties(java.util.List<String> readOnlyProperties) {
                 this.readOnlyProperties = readOnlyProperties;
                 return this;
             }
 
             /**
-             * required.
+             * <p>The properties that must be specified when you create the resource.</p>
              */
-            public Builder required(java.util.List < String > required) {
+            public Builder required(java.util.List<String> required) {
                 this.required = required;
                 return this;
             }
 
             /**
-             * resourceType.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Instance</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -928,25 +1114,25 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * sensitiveInfoProperties.
+             * <p>The sensitive properties, such as the password.</p>
              */
-            public Builder sensitiveInfoProperties(java.util.List < String > sensitiveInfoProperties) {
+            public Builder sensitiveInfoProperties(java.util.List<String> sensitiveInfoProperties) {
                 this.sensitiveInfoProperties = sensitiveInfoProperties;
                 return this;
             }
 
             /**
-             * updateOnlyProperties.
+             * <p>The properties that are specific to the update operation. You need to specify these properties when you update the resource. These properties are not returned when you query the resource.</p>
              */
-            public Builder updateOnlyProperties(java.util.List < String > updateOnlyProperties) {
+            public Builder updateOnlyProperties(java.util.List<String> updateOnlyProperties) {
                 this.updateOnlyProperties = updateOnlyProperties;
                 return this;
             }
 
             /**
-             * updateTypeProperties.
+             * <p>The properties that can be modified.</p>
              */
-            public Builder updateTypeProperties(java.util.List < String > updateTypeProperties) {
+            public Builder updateTypeProperties(java.util.List<String> updateTypeProperties) {
                 this.updateTypeProperties = updateTypeProperties;
                 return this;
             }

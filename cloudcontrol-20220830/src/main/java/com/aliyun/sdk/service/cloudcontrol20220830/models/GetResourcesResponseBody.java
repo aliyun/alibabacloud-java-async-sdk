@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudcontrol20220830.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>GetResourcesResponseBody</p>
@@ -24,7 +30,7 @@ public class GetResourcesResponseBody extends TeaModel {
     private Resource resource;
 
     @com.aliyun.core.annotation.NameInMap("resources")
-    private java.util.List < Resources> resources;
+    private java.util.List<Resources> resources;
 
     @com.aliyun.core.annotation.NameInMap("totalCount")
     private Integer totalCount;
@@ -44,6 +50,10 @@ public class GetResourcesResponseBody extends TeaModel {
 
     public static GetResourcesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -77,7 +87,7 @@ public class GetResourcesResponseBody extends TeaModel {
     /**
      * @return resources
      */
-    public java.util.List < Resources> getResources() {
+    public java.util.List<Resources> getResources() {
         return this.resources;
     }
 
@@ -93,11 +103,26 @@ public class GetResourcesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Resource resource; 
-        private java.util.List < Resources> resources; 
+        private java.util.List<Resources> resources; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetResourcesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.resource = model.resource;
+            this.resources = model.resources;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * maxResults.
+         * <p>The maximum number of entries returned. Return result of the List operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -105,7 +130,10 @@ public class GetResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists. Return result of the List operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -113,7 +141,10 @@ public class GetResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +152,7 @@ public class GetResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * resource.
+         * <p>The specified resource. Return result of the Get operation.</p>
          */
         public Builder resource(Resource resource) {
             this.resource = resource;
@@ -129,15 +160,18 @@ public class GetResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * resources.
+         * <p>The resource list. Return result of the List operation.</p>
          */
-        public Builder resources(java.util.List < Resources> resources) {
+        public Builder resources(java.util.List<Resources> resources) {
             this.resources = resources;
             return this;
         }
 
         /**
-         * totalCount.
+         * <p>The total number of entries returned. Return result of the List operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -150,9 +184,15 @@ public class GetResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourcesResponseBody</p>
+     */
     public static class Resource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("resourceAttributes")
-        private java.util.Map < String, ? > resourceAttributes;
+        private java.util.Map<String, ?> resourceAttributes;
 
         @com.aliyun.core.annotation.NameInMap("resourceId")
         private String resourceId;
@@ -173,7 +213,7 @@ public class GetResourcesResponseBody extends TeaModel {
         /**
          * @return resourceAttributes
          */
-        public java.util.Map < String, ? > getResourceAttributes() {
+        public java.util.Map<String, ?> getResourceAttributes() {
             return this.resourceAttributes;
         }
 
@@ -185,19 +225,33 @@ public class GetResourcesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > resourceAttributes; 
+            private java.util.Map<String, ?> resourceAttributes; 
             private String resourceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Resource model) {
+                this.resourceAttributes = model.resourceAttributes;
+                this.resourceId = model.resourceId;
+            } 
+
             /**
-             * resourceAttributes.
+             * <p>The resource properties in the JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Status&quot;:&quot;Available&quot;,&quot;Description&quot;:&quot;&quot;,&quot;AccountPrivilege&quot;:&quot;RoleReadWrite&quot;,&quot;InstanceId&quot;:&quot;r-8vbf5abe31c9c4d4&quot;,&quot;RegionId&quot;:&quot;cn-zhangjiakou&quot;,&quot;AccountType&quot;:&quot;Normal&quot;,&quot;TypeInfo&quot;:{},&quot;AccountName&quot;:&quot;cctest&quot;}</p>
              */
-            public Builder resourceAttributes(java.util.Map < String, ? > resourceAttributes) {
+            public Builder resourceAttributes(java.util.Map<String, ?> resourceAttributes) {
                 this.resourceAttributes = resourceAttributes;
                 return this;
             }
 
             /**
-             * resourceId.
+             * <p>The ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cctest</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -211,9 +265,15 @@ public class GetResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourcesResponseBody</p>
+     */
     public static class Resources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("resourceAttributes")
-        private java.util.Map < String, ? > resourceAttributes;
+        private java.util.Map<String, ?> resourceAttributes;
 
         @com.aliyun.core.annotation.NameInMap("resourceId")
         private String resourceId;
@@ -234,7 +294,7 @@ public class GetResourcesResponseBody extends TeaModel {
         /**
          * @return resourceAttributes
          */
-        public java.util.Map < String, ? > getResourceAttributes() {
+        public java.util.Map<String, ?> getResourceAttributes() {
             return this.resourceAttributes;
         }
 
@@ -246,19 +306,33 @@ public class GetResourcesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > resourceAttributes; 
+            private java.util.Map<String, ?> resourceAttributes; 
             private String resourceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Resources model) {
+                this.resourceAttributes = model.resourceAttributes;
+                this.resourceId = model.resourceId;
+            } 
+
             /**
-             * resourceAttributes.
+             * <p>The resource properties in the JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Status&quot;:&quot;Available&quot;,&quot;Description&quot;:&quot;&quot;,&quot;AccountPrivilege&quot;:&quot;RoleReadWrite&quot;,&quot;InstanceId&quot;:&quot;r-8vbf5abe31c9c4d4&quot;,&quot;RegionId&quot;:&quot;cn-zhangjiakou&quot;,&quot;AccountType&quot;:&quot;Normal&quot;,&quot;TypeInfo&quot;:{},&quot;AccountName&quot;:&quot;cctest&quot;}</p>
              */
-            public Builder resourceAttributes(java.util.Map < String, ? > resourceAttributes) {
+            public Builder resourceAttributes(java.util.Map<String, ?> resourceAttributes) {
                 this.resourceAttributes = resourceAttributes;
                 return this;
             }
 
             /**
-             * resourceId.
+             * <p>The ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cctest</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;

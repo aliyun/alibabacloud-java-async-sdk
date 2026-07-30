@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetTaskResponse} extends {@link TeaModel}
+ * {@link ListSupportedPricingApisResponse} extends {@link TeaModel}
  *
- * <p>GetTaskResponse</p>
+ * <p>ListSupportedPricingApisResponse</p>
  */
-public class GetTaskResponse extends Response {
+public class ListSupportedPricingApisResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class GetTaskResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetTaskResponseBody body;
+    private ListSupportedPricingApisResponseBody body;
 
-    private GetTaskResponse(BuilderImpl builder) {
+    private ListSupportedPricingApisResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetTaskResponse create() {
+    public static ListSupportedPricingApisResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class GetTaskResponse extends Response {
     /**
      * @return body
      */
-    public GetTaskResponseBody getBody() {
+    public ListSupportedPricingApisResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetTaskResponse, Builder> {
+    public interface Builder extends Response.Builder<ListSupportedPricingApisResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetTaskResponseBody body);
+        Builder body(ListSupportedPricingApisResponseBody body);
 
         @Override
-        GetTaskResponse build();
+        ListSupportedPricingApisResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetTaskResponse, Builder>
+            extends Response.BuilderImpl<ListSupportedPricingApisResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private GetTaskResponseBody body; 
+        private ListSupportedPricingApisResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetTaskResponse response) {
+        private BuilderImpl(ListSupportedPricingApisResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class GetTaskResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetTaskResponseBody body) {
+        public Builder body(ListSupportedPricingApisResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetTaskResponse build() {
-            return new GetTaskResponse(this);
+        public ListSupportedPricingApisResponse build() {
+            return new ListSupportedPricingApisResponse(this);
         } 
 
     } 

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudcontrol20220830.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateResourceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateResourceResponseBody</p>
@@ -36,6 +42,10 @@ public class CreateResourceResponseBody extends TeaModel {
 
     public static CreateResourceResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -72,8 +82,21 @@ public class CreateResourceResponseBody extends TeaModel {
         private String resourcePath; 
         private String taskId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateResourceResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourceId = model.resourceId;
+            this.resourcePath = model.resourcePath;
+            this.taskId = model.taskId;
+        } 
+
         /**
-         * requestId.
+         * <p>The ID of a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,7 +104,10 @@ public class CreateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * resourceId.
+         * <p>The ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cctest</p>
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
@@ -89,7 +115,10 @@ public class CreateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * resourcePath.
+         * <p>The path of the resources. The relative resource ID. The resource path contains the complete resource location (parent resource/child resource).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance/r-8vbf5abe31c9c4d4/Account/cctest</p>
          */
         public Builder resourcePath(String resourcePath) {
             this.resourcePath = resourcePath;
@@ -97,7 +126,10 @@ public class CreateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * taskId.
+         * <p>The ID of the asynchronous task. If the operation is asynchronous, this field is returned. In this case, the HTTP status code 202 is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task-433aead756057fff8189a7ce5****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

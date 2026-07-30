@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudcontrol20220830.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourceTypesRequest} extends {@link RequestModel}
  *
  * <p>ListResourceTypesRequest</p>
@@ -31,7 +37,7 @@ public class ListResourceTypesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("resourceTypes")
-    private java.util.List < String > resourceTypes;
+    private java.util.List<String> resourceTypes;
 
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("x-acs-accept-language")
@@ -55,7 +61,7 @@ public class ListResourceTypesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -91,7 +97,7 @@ public class ListResourceTypesRequest extends Request {
     /**
      * @return resourceTypes
      */
-    public java.util.List < String > getResourceTypes() {
+    public java.util.List<String> getResourceTypes() {
         return this.resourceTypes;
     }
 
@@ -107,7 +113,7 @@ public class ListResourceTypesRequest extends Request {
         private String product; 
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < String > resourceTypes; 
+        private java.util.List<String> resourceTypes; 
         private String xAcsAcceptLanguage; 
 
         private Builder() {
@@ -125,7 +131,11 @@ public class ListResourceTypesRequest extends Request {
         } 
 
         /**
-         * provider.
+         * <p>The Cloud service provider. Only Aliyun is supported.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun</p>
          */
         public Builder provider(String provider) {
             this.putPathParameter("provider", provider);
@@ -134,7 +144,11 @@ public class ListResourceTypesRequest extends Request {
         }
 
         /**
-         * product.
+         * <p>The code of the service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder product(String product) {
             this.putPathParameter("product", product);
@@ -143,7 +157,10 @@ public class ListResourceTypesRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -152,7 +169,10 @@ public class ListResourceTypesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. If you leave this parameter empty, the query starts from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS::Disk</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -161,9 +181,9 @@ public class ListResourceTypesRequest extends Request {
         }
 
         /**
-         * resourceTypes.
+         * <p>The information about the resource types.</p>
          */
-        public Builder resourceTypes(java.util.List < String > resourceTypes) {
+        public Builder resourceTypes(java.util.List<String> resourceTypes) {
             String resourceTypesShrink = shrink(resourceTypes, "resourceTypes", "simple");
             this.putQueryParameter("resourceTypes", resourceTypesShrink);
             this.resourceTypes = resourceTypes;
@@ -171,7 +191,12 @@ public class ListResourceTypesRequest extends Request {
         }
 
         /**
-         * x-acs-accept-language.
+         * <p>Select the language in which the response is returned.</p>
+         * <p>zh_CH: Chinese (default).</p>
+         * <p>en_US: English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh_CH</p>
          */
         public Builder xAcsAcceptLanguage(String xAcsAcceptLanguage) {
             this.putHeaderParameter("x-acs-accept-language", xAcsAcceptLanguage);

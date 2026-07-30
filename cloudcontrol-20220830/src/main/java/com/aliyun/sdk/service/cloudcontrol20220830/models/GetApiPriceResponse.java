@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetTaskResponse} extends {@link TeaModel}
+ * {@link GetApiPriceResponse} extends {@link TeaModel}
  *
- * <p>GetTaskResponse</p>
+ * <p>GetApiPriceResponse</p>
  */
-public class GetTaskResponse extends Response {
+public class GetApiPriceResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class GetTaskResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetTaskResponseBody body;
+    private GetApiPriceResponseBody body;
 
-    private GetTaskResponse(BuilderImpl builder) {
+    private GetApiPriceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetTaskResponse create() {
+    public static GetApiPriceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class GetTaskResponse extends Response {
     /**
      * @return body
      */
-    public GetTaskResponseBody getBody() {
+    public GetApiPriceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetTaskResponse, Builder> {
+    public interface Builder extends Response.Builder<GetApiPriceResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetTaskResponseBody body);
+        Builder body(GetApiPriceResponseBody body);
 
         @Override
-        GetTaskResponse build();
+        GetApiPriceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetTaskResponse, Builder>
+            extends Response.BuilderImpl<GetApiPriceResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private GetTaskResponseBody body; 
+        private GetApiPriceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetTaskResponse response) {
+        private BuilderImpl(GetApiPriceResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class GetTaskResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetTaskResponseBody body) {
+        public Builder body(GetApiPriceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetTaskResponse build() {
-            return new GetTaskResponse(this);
+        public GetApiPriceResponse build() {
+            return new GetApiPriceResponse(this);
         } 
 
     } 

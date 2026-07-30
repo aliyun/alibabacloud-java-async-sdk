@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudcontrol20220830.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTaskResponseBody} extends {@link TeaModel}
  *
  * <p>GetTaskResponseBody</p>
@@ -30,6 +36,10 @@ public class GetTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class GetTaskResponseBody extends TeaModel {
         private String requestId; 
         private Task task; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetTaskResponseBody model) {
+            this.requestId = model.requestId;
+            this.task = model.task;
+        } 
+
         /**
-         * requestId.
+         * <p>The ID of a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class GetTaskResponseBody extends TeaModel {
         }
 
         /**
-         * task.
+         * <p>The information about the task.</p>
          */
         public Builder task(Task task) {
             this.task = task;
@@ -70,6 +91,12 @@ public class GetTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTaskResponseBody</p>
+     */
     public static class Error extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
@@ -108,8 +135,19 @@ public class GetTaskResponseBody extends TeaModel {
             private String code; 
             private String message; 
 
+            private Builder() {
+            } 
+
+            private Builder(Error model) {
+                this.code = model.code;
+                this.message = model.message;
+            } 
+
             /**
-             * code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OperationFailure.OperationFailed</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -117,7 +155,14 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *      &quot;requestId&quot;: &quot;123****&quot;,
+             *      &quot;errorCode&quot;: &quot;InvalidRamUser.NoPermission&quot;,
+             *      &quot;errorMsg&quot;: &quot;Ram user is not authorized to perform the operation.&quot;
+             * }</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -131,6 +176,12 @@ public class GetTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTaskResponseBody</p>
+     */
     public static class Task extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
@@ -265,8 +316,27 @@ public class GetTaskResponseBody extends TeaModel {
             private String taskAction; 
             private String taskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Task model) {
+                this.createTime = model.createTime;
+                this.error = model.error;
+                this.product = model.product;
+                this.regionId = model.regionId;
+                this.resourceId = model.resourceId;
+                this.resourcePath = model.resourcePath;
+                this.resourceType = model.resourceType;
+                this.status = model.status;
+                this.taskAction = model.taskAction;
+                this.taskId = model.taskId;
+            } 
+
             /**
-             * createTime.
+             * <p>The time when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-09T00:46:03Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -274,7 +344,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * error.
+             * <p>The error returned for the task.</p>
              */
             public Builder error(Error error) {
                 this.error = error;
@@ -282,7 +352,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * product.
+             * <p>The code of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder product(String product) {
                 this.product = product;
@@ -290,7 +363,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -298,7 +374,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * resourceId.
+             * <p>The ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-8vbascjthm7kzhp3****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -306,7 +385,11 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * resourcePath.
+             * <p>The path of the resources. The relative resource ID. The resource path contains the complete resource location (parent resource/child resource).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Instance/i-8vbascjthm7kzhp3****
+             * Instance/r-8vbf5abe31c9c4d4/Account/cctest</p>
              */
             public Builder resourcePath(String resourcePath) {
                 this.resourcePath = resourcePath;
@@ -314,7 +397,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * resourceType.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Instance</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -322,7 +408,16 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The task state.</p>
+             * <p>Pending</p>
+             * <p>Running</p>
+             * <p>Succeeded</p>
+             * <p>Failed</p>
+             * <p>Cancelling</p>
+             * <p>Cancelled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Succeeded</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -330,7 +425,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * taskAction.
+             * <p>The type of the task operation. Valid values: Create, Update, and Delete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Create</p>
              */
             public Builder taskAction(String taskAction) {
                 this.taskAction = taskAction;
@@ -338,7 +436,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * taskId.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task-433aead756057fff8189a7ce5****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

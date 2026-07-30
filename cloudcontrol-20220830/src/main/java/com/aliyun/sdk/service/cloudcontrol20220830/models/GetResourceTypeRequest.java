@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudcontrol20220830.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourceTypeRequest} extends {@link RequestModel}
  *
  * <p>GetResourceTypeRequest</p>
@@ -33,7 +39,7 @@ public class GetResourceTypeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -67,7 +73,14 @@ public class GetResourceTypeRequest extends Request {
         } 
 
         /**
-         * requestPath.
+         * <p>The request path. Specify this parameter in the following format: /api/v1/providers/{provider}/products/{product}/resourceTypes/{resourceType}</p>
+         * <p>Variables in the request path. Valid values:</p>
+         * <p>provider: the cloud service provider. Currently, only Aliyun is supported.</p>
+         * <p>product: the product code.</p>
+         * <p>resourceType: the type of the resource. If there is a parent resource, the format is {parent resource type code}/{resource type code}</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/api/v1/providers/Aliyun/products/Redis/resourceTypes/DBInstance</p>
          */
         public Builder requestPath(String requestPath) {
             this.putPathParameter("requestPath", requestPath);
@@ -76,7 +89,12 @@ public class GetResourceTypeRequest extends Request {
         }
 
         /**
-         * x-acs-accept-language.
+         * <p>The language selected for the returned product.</p>
+         * <p>zh_CH: Chinese (default)</p>
+         * <p>en_US: English</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh_CH</p>
          */
         public Builder xAcsAcceptLanguage(String xAcsAcceptLanguage) {
             this.putHeaderParameter("x-acs-accept-language", xAcsAcceptLanguage);

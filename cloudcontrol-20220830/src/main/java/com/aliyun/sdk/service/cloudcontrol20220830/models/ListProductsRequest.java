@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudcontrol20220830.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProductsRequest} extends {@link RequestModel}
  *
  * <p>ListProductsRequest</p>
@@ -44,7 +50,7 @@ public class ListProductsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -96,7 +102,11 @@ public class ListProductsRequest extends Request {
         } 
 
         /**
-         * provider.
+         * <p>The Cloud service provider. Only Aliyun is supported.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun</p>
          */
         public Builder provider(String provider) {
             this.putPathParameter("provider", provider);
@@ -105,7 +115,10 @@ public class ListProductsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The number of entries per page. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -114,7 +127,10 @@ public class ListProductsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. If you leave this parameter empty, the query starts from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -123,7 +139,12 @@ public class ListProductsRequest extends Request {
         }
 
         /**
-         * x-acs-accept-language.
+         * <p>Select the language in which the response is returned.</p>
+         * <p>zh_CH: Chinese (default).</p>
+         * <p>en_US: English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh_CH</p>
          */
         public Builder xAcsAcceptLanguage(String xAcsAcceptLanguage) {
             this.putHeaderParameter("x-acs-accept-language", xAcsAcceptLanguage);

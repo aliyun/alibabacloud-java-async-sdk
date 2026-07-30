@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudcontrol20220830.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPriceResponseBody} extends {@link TeaModel}
  *
  * <p>GetPriceResponseBody</p>
@@ -30,6 +36,10 @@ public class GetPriceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return price
      */
@@ -48,8 +58,16 @@ public class GetPriceResponseBody extends TeaModel {
         private Price price; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetPriceResponseBody model) {
+            this.price = model.price;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * price.
+         * <p>The price.</p>
          */
         public Builder price(Price price) {
             this.price = price;
@@ -57,7 +75,10 @@ public class GetPriceResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class GetPriceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPriceResponseBody</p>
+     */
     public static class ModuleDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("costAfterDiscount")
         private Float costAfterDiscount;
@@ -156,8 +183,23 @@ public class GetPriceResponseBody extends TeaModel {
             private Float originalCost; 
             private String priceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ModuleDetails model) {
+                this.costAfterDiscount = model.costAfterDiscount;
+                this.invoiceDiscount = model.invoiceDiscount;
+                this.moduleCode = model.moduleCode;
+                this.moduleName = model.moduleName;
+                this.originalCost = model.originalCost;
+                this.priceType = model.priceType;
+            } 
+
             /**
-             * costAfterDiscount.
+             * <p>The discount price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.02</p>
              */
             public Builder costAfterDiscount(Float costAfterDiscount) {
                 this.costAfterDiscount = costAfterDiscount;
@@ -165,7 +207,10 @@ public class GetPriceResponseBody extends TeaModel {
             }
 
             /**
-             * invoiceDiscount.
+             * <p>The discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder invoiceDiscount(Float invoiceDiscount) {
                 this.invoiceDiscount = invoiceDiscount;
@@ -173,7 +218,10 @@ public class GetPriceResponseBody extends TeaModel {
             }
 
             /**
-             * moduleCode.
+             * <p>The code of the pricing module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InstanceRent</p>
              */
             public Builder moduleCode(String moduleCode) {
                 this.moduleCode = moduleCode;
@@ -181,7 +229,10 @@ public class GetPriceResponseBody extends TeaModel {
             }
 
             /**
-             * moduleName.
+             * <p>The name of the pricing module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InstanceRent</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -189,7 +240,10 @@ public class GetPriceResponseBody extends TeaModel {
             }
 
             /**
-             * originalCost.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000.0</p>
              */
             public Builder originalCost(Float originalCost) {
                 this.originalCost = originalCost;
@@ -197,7 +251,10 @@ public class GetPriceResponseBody extends TeaModel {
             }
 
             /**
-             * priceType.
+             * <p>The price type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder priceType(String priceType) {
                 this.priceType = priceType;
@@ -211,6 +268,12 @@ public class GetPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPriceResponseBody</p>
+     */
     public static class PromotionDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("promotionDesc")
         private String promotionDesc;
@@ -261,8 +324,20 @@ public class GetPriceResponseBody extends TeaModel {
             private Long promotionId; 
             private String promotionName; 
 
+            private Builder() {
+            } 
+
+            private Builder(PromotionDetails model) {
+                this.promotionDesc = model.promotionDesc;
+                this.promotionId = model.promotionId;
+                this.promotionName = model.promotionName;
+            } 
+
             /**
-             * promotionDesc.
+             * <p>The description of the promotion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>37284</p>
              */
             public Builder promotionDesc(String promotionDesc) {
                 this.promotionDesc = promotionDesc;
@@ -270,7 +345,7 @@ public class GetPriceResponseBody extends TeaModel {
             }
 
             /**
-             * promotionId.
+             * <p>The ID of the promotion.</p>
              */
             public Builder promotionId(Long promotionId) {
                 this.promotionId = promotionId;
@@ -278,7 +353,7 @@ public class GetPriceResponseBody extends TeaModel {
             }
 
             /**
-             * promotionName.
+             * <p>The name of the promotion.</p>
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -292,6 +367,12 @@ public class GetPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPriceResponseBody</p>
+     */
     public static class Price extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("currency")
         private String currency;
@@ -300,13 +381,13 @@ public class GetPriceResponseBody extends TeaModel {
         private Float discountPrice;
 
         @com.aliyun.core.annotation.NameInMap("moduleDetails")
-        private java.util.List < ModuleDetails> moduleDetails;
+        private java.util.List<ModuleDetails> moduleDetails;
 
         @com.aliyun.core.annotation.NameInMap("originalPrice")
         private Float originalPrice;
 
         @com.aliyun.core.annotation.NameInMap("promotionDetails")
-        private java.util.List < PromotionDetails> promotionDetails;
+        private java.util.List<PromotionDetails> promotionDetails;
 
         @com.aliyun.core.annotation.NameInMap("tradePrice")
         private Float tradePrice;
@@ -345,7 +426,7 @@ public class GetPriceResponseBody extends TeaModel {
         /**
          * @return moduleDetails
          */
-        public java.util.List < ModuleDetails> getModuleDetails() {
+        public java.util.List<ModuleDetails> getModuleDetails() {
             return this.moduleDetails;
         }
 
@@ -359,7 +440,7 @@ public class GetPriceResponseBody extends TeaModel {
         /**
          * @return promotionDetails
          */
-        public java.util.List < PromotionDetails> getPromotionDetails() {
+        public java.util.List<PromotionDetails> getPromotionDetails() {
             return this.promotionDetails;
         }
 
@@ -373,13 +454,28 @@ public class GetPriceResponseBody extends TeaModel {
         public static final class Builder {
             private String currency; 
             private Float discountPrice; 
-            private java.util.List < ModuleDetails> moduleDetails; 
+            private java.util.List<ModuleDetails> moduleDetails; 
             private Float originalPrice; 
-            private java.util.List < PromotionDetails> promotionDetails; 
+            private java.util.List<PromotionDetails> promotionDetails; 
             private Float tradePrice; 
 
+            private Builder() {
+            } 
+
+            private Builder(Price model) {
+                this.currency = model.currency;
+                this.discountPrice = model.discountPrice;
+                this.moduleDetails = model.moduleDetails;
+                this.originalPrice = model.originalPrice;
+                this.promotionDetails = model.promotionDetails;
+                this.tradePrice = model.tradePrice;
+            } 
+
             /**
-             * currency.
+             * <p>The currency type. Valid values: CNY: Chinese Yuan. USD: US dollar. JPY: Japanese Yen.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -387,7 +483,10 @@ public class GetPriceResponseBody extends TeaModel {
             }
 
             /**
-             * discountPrice.
+             * <p>The discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -395,15 +494,18 @@ public class GetPriceResponseBody extends TeaModel {
             }
 
             /**
-             * moduleDetails.
+             * <p>The order details of the pricing module.</p>
              */
-            public Builder moduleDetails(java.util.List < ModuleDetails> moduleDetails) {
+            public Builder moduleDetails(java.util.List<ModuleDetails> moduleDetails) {
                 this.moduleDetails = moduleDetails;
                 return this;
             }
 
             /**
-             * originalPrice.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>760.0</p>
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -411,15 +513,18 @@ public class GetPriceResponseBody extends TeaModel {
             }
 
             /**
-             * promotionDetails.
+             * <p>The details of the promotion.</p>
              */
-            public Builder promotionDetails(java.util.List < PromotionDetails> promotionDetails) {
+            public Builder promotionDetails(java.util.List<PromotionDetails> promotionDetails) {
                 this.promotionDetails = promotionDetails;
                 return this;
             }
 
             /**
-             * tradePrice.
+             * <p>The discount price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;

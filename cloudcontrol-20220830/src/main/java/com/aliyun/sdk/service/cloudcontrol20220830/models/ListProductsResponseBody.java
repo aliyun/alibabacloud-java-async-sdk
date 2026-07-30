@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudcontrol20220830.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProductsResponseBody} extends {@link TeaModel}
  *
  * <p>ListProductsResponseBody</p>
@@ -18,7 +24,7 @@ public class ListProductsResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("products")
-    private java.util.List < Products> products;
+    private java.util.List<Products> products;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -42,6 +48,10 @@ public class ListProductsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -59,7 +69,7 @@ public class ListProductsResponseBody extends TeaModel {
     /**
      * @return products
      */
-    public java.util.List < Products> getProducts() {
+    public java.util.List<Products> getProducts() {
         return this.products;
     }
 
@@ -80,12 +90,26 @@ public class ListProductsResponseBody extends TeaModel {
     public static final class Builder {
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < Products> products; 
+        private java.util.List<Products> products; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListProductsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.products = model.products;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * maxResults.
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,7 +117,10 @@ public class ListProductsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Redis</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,15 +128,18 @@ public class ListProductsResponseBody extends TeaModel {
         }
 
         /**
-         * products.
+         * <p>The cloud services.</p>
          */
-        public Builder products(java.util.List < Products> products) {
+        public Builder products(java.util.List<Products> products) {
             this.products = products;
             return this;
         }
 
         /**
-         * requestId.
+         * <p>The ID of a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +147,10 @@ public class ListProductsResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +163,12 @@ public class ListProductsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProductsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProductsResponseBody</p>
+     */
     public static class Products extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("productCode")
         private String productCode;
@@ -168,8 +207,19 @@ public class ListProductsResponseBody extends TeaModel {
             private String productCode; 
             private String productName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Products model) {
+                this.productCode = model.productCode;
+                this.productName = model.productName;
+            } 
+
             /**
-             * productCode.
+             * <p>The code of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -177,7 +227,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * productName.
+             * <p>The service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Elastic Compute Service</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
