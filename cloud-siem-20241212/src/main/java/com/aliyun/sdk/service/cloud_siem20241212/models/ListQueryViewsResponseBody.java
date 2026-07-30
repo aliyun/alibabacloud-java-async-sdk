@@ -17,6 +17,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListQueryViewsResponseBody</p>
  */
 public class ListQueryViewsResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("LogProjectName")
+    private String logProjectName;
+
+    @com.aliyun.core.annotation.NameInMap("LogRegionId")
+    private String logRegionId;
+
+    @com.aliyun.core.annotation.NameInMap("LogStoreName")
+    private String logStoreName;
+
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -30,6 +39,9 @@ public class ListQueryViewsResponseBody extends TeaModel {
     private String requestId;
 
     private ListQueryViewsResponseBody(Builder builder) {
+        this.logProjectName = builder.logProjectName;
+        this.logRegionId = builder.logRegionId;
+        this.logStoreName = builder.logStoreName;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.queryViews = builder.queryViews;
@@ -46,6 +58,27 @@ public class ListQueryViewsResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return logProjectName
+     */
+    public String getLogProjectName() {
+        return this.logProjectName;
+    }
+
+    /**
+     * @return logRegionId
+     */
+    public String getLogRegionId() {
+        return this.logRegionId;
+    }
+
+    /**
+     * @return logStoreName
+     */
+    public String getLogStoreName() {
+        return this.logStoreName;
     }
 
     /**
@@ -77,6 +110,9 @@ public class ListQueryViewsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String logProjectName; 
+        private String logRegionId; 
+        private String logStoreName; 
         private Integer maxResults; 
         private String nextToken; 
         private java.util.List<QueryViews> queryViews; 
@@ -86,11 +122,38 @@ public class ListQueryViewsResponseBody extends TeaModel {
         } 
 
         private Builder(ListQueryViewsResponseBody model) {
+            this.logProjectName = model.logProjectName;
+            this.logRegionId = model.logRegionId;
+            this.logStoreName = model.logStoreName;
             this.maxResults = model.maxResults;
             this.nextToken = model.nextToken;
             this.queryViews = model.queryViews;
             this.requestId = model.requestId;
         } 
+
+        /**
+         * LogProjectName.
+         */
+        public Builder logProjectName(String logProjectName) {
+            this.logProjectName = logProjectName;
+            return this;
+        }
+
+        /**
+         * LogRegionId.
+         */
+        public Builder logRegionId(String logRegionId) {
+            this.logRegionId = logRegionId;
+            return this;
+        }
+
+        /**
+         * LogStoreName.
+         */
+        public Builder logStoreName(String logStoreName) {
+            this.logStoreName = logStoreName;
+            return this;
+        }
 
         /**
          * MaxResults.

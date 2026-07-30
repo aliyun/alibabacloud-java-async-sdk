@@ -31,7 +31,6 @@ public class CreateDetectionRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AlertLevel")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String alertLevel;
 
     @com.aliyun.core.annotation.Body
@@ -44,7 +43,6 @@ public class CreateDetectionRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AlertSchemaId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String alertSchemaId;
 
     @com.aliyun.core.annotation.Body
@@ -65,7 +63,6 @@ public class CreateDetectionRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AlertType")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String alertType;
 
     @com.aliyun.core.annotation.Body
@@ -87,7 +84,7 @@ public class CreateDetectionRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DetectionRuleName")
-    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128)
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String detectionRuleName;
 
     @com.aliyun.core.annotation.Body
@@ -104,8 +101,11 @@ public class CreateDetectionRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DetectionRuleType")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String detectionRuleType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DetectionRules")
+    private String detectionRules;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EntityMappings")
@@ -129,7 +129,6 @@ public class CreateDetectionRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("LogSchemaId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String logSchemaId;
 
     @com.aliyun.core.annotation.Body
@@ -195,6 +194,7 @@ public class CreateDetectionRuleRequest extends Request {
         this.detectionRuleTemplateId = builder.detectionRuleTemplateId;
         this.detectionRuleTemplateVersion = builder.detectionRuleTemplateVersion;
         this.detectionRuleType = builder.detectionRuleType;
+        this.detectionRules = builder.detectionRules;
         this.entityMappings = builder.entityMappings;
         this.incidentAggregationExpression = builder.incidentAggregationExpression;
         this.incidentAggregationType = builder.incidentAggregationType;
@@ -374,6 +374,13 @@ public class CreateDetectionRuleRequest extends Request {
     }
 
     /**
+     * @return detectionRules
+     */
+    public String getDetectionRules() {
+        return this.detectionRules;
+    }
+
+    /**
      * @return entityMappings
      */
     public String getEntityMappings() {
@@ -507,6 +514,7 @@ public class CreateDetectionRuleRequest extends Request {
         private String detectionRuleTemplateId; 
         private String detectionRuleTemplateVersion; 
         private String detectionRuleType; 
+        private String detectionRules; 
         private String entityMappings; 
         private String incidentAggregationExpression; 
         private String incidentAggregationType; 
@@ -551,6 +559,7 @@ public class CreateDetectionRuleRequest extends Request {
             this.detectionRuleTemplateId = request.detectionRuleTemplateId;
             this.detectionRuleTemplateVersion = request.detectionRuleTemplateVersion;
             this.detectionRuleType = request.detectionRuleType;
+            this.detectionRules = request.detectionRules;
             this.entityMappings = request.entityMappings;
             this.incidentAggregationExpression = request.incidentAggregationExpression;
             this.incidentAggregationType = request.incidentAggregationType;
@@ -597,10 +606,7 @@ public class CreateDetectionRuleRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * AlertLevel.
          */
         public Builder alertLevel(String alertLevel) {
             this.putBodyParameter("AlertLevel", alertLevel);
@@ -627,10 +633,7 @@ public class CreateDetectionRuleRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ALERT_ACTIVITY</p>
+         * AlertSchemaId.
          */
         public Builder alertSchemaId(String alertSchemaId) {
             this.putBodyParameter("AlertSchemaId", alertSchemaId);
@@ -675,10 +678,7 @@ public class CreateDetectionRuleRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>WebShell</p>
+         * AlertType.
          */
         public Builder alertType(String alertType) {
             this.putBodyParameter("AlertType", alertType);
@@ -723,10 +723,7 @@ public class CreateDetectionRuleRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dr-ha1i09ob3zmqrs85****</p>
+         * DetectionRuleName.
          */
         public Builder detectionRuleName(String detectionRuleName) {
             this.putBodyParameter("DetectionRuleName", detectionRuleName);
@@ -762,14 +759,20 @@ public class CreateDetectionRuleRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>custom</p>
+         * DetectionRuleType.
          */
         public Builder detectionRuleType(String detectionRuleType) {
             this.putBodyParameter("DetectionRuleType", detectionRuleType);
             this.detectionRuleType = detectionRuleType;
+            return this;
+        }
+
+        /**
+         * DetectionRules.
+         */
+        public Builder detectionRules(String detectionRules) {
+            this.putBodyParameter("DetectionRules", detectionRules);
+            this.detectionRules = detectionRules;
             return this;
         }
 
@@ -819,10 +822,7 @@ public class CreateDetectionRuleRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>API_RISK_ACTIVITY</p>
+         * LogSchemaId.
          */
         public Builder logSchemaId(String logSchemaId) {
             this.putBodyParameter("LogSchemaId", logSchemaId);

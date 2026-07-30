@@ -869,6 +869,15 @@ public class GetDataStorageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogProject")
         private String logProject;
 
+        @com.aliyun.core.annotation.NameInMap("LogProjectState")
+        private String logProjectState;
+
+        @com.aliyun.core.annotation.NameInMap("LogProjectStateChangeAllowed")
+        private Boolean logProjectStateChangeAllowed;
+
+        @com.aliyun.core.annotation.NameInMap("LogServiceDisabled")
+        private Boolean logServiceDisabled;
+
         @com.aliyun.core.annotation.NameInMap("NormalizationLogStores")
         private java.util.List<NormalizationLogStores> normalizationLogStores;
 
@@ -892,6 +901,9 @@ public class GetDataStorageResponseBody extends TeaModel {
             this.dataStorageUsedCapacity = builder.dataStorageUsedCapacity;
             this.dataStorageUsedCapacityDetail = builder.dataStorageUsedCapacityDetail;
             this.logProject = builder.logProject;
+            this.logProjectState = builder.logProjectState;
+            this.logProjectStateChangeAllowed = builder.logProjectStateChangeAllowed;
+            this.logServiceDisabled = builder.logServiceDisabled;
             this.normalizationLogStores = builder.normalizationLogStores;
             this.normalizationLogViews = builder.normalizationLogViews;
             this.recordLogStores = builder.recordLogStores;
@@ -957,6 +969,27 @@ public class GetDataStorageResponseBody extends TeaModel {
         }
 
         /**
+         * @return logProjectState
+         */
+        public String getLogProjectState() {
+            return this.logProjectState;
+        }
+
+        /**
+         * @return logProjectStateChangeAllowed
+         */
+        public Boolean getLogProjectStateChangeAllowed() {
+            return this.logProjectStateChangeAllowed;
+        }
+
+        /**
+         * @return logServiceDisabled
+         */
+        public Boolean getLogServiceDisabled() {
+            return this.logServiceDisabled;
+        }
+
+        /**
          * @return normalizationLogStores
          */
         public java.util.List<NormalizationLogStores> getNormalizationLogStores() {
@@ -999,6 +1032,9 @@ public class GetDataStorageResponseBody extends TeaModel {
             private Double dataStorageUsedCapacity; 
             private String dataStorageUsedCapacityDetail; 
             private String logProject; 
+            private String logProjectState; 
+            private Boolean logProjectStateChangeAllowed; 
+            private Boolean logServiceDisabled; 
             private java.util.List<NormalizationLogStores> normalizationLogStores; 
             private java.util.List<NormalizationLogViews> normalizationLogViews; 
             private java.util.List<RecordLogStores> recordLogStores; 
@@ -1016,6 +1052,9 @@ public class GetDataStorageResponseBody extends TeaModel {
                 this.dataStorageUsedCapacity = model.dataStorageUsedCapacity;
                 this.dataStorageUsedCapacityDetail = model.dataStorageUsedCapacityDetail;
                 this.logProject = model.logProject;
+                this.logProjectState = model.logProjectState;
+                this.logProjectStateChangeAllowed = model.logProjectStateChangeAllowed;
+                this.logServiceDisabled = model.logServiceDisabled;
                 this.normalizationLogStores = model.normalizationLogStores;
                 this.normalizationLogViews = model.normalizationLogViews;
                 this.recordLogStores = model.recordLogStores;
@@ -1076,6 +1115,30 @@ public class GetDataStorageResponseBody extends TeaModel {
              */
             public Builder logProject(String logProject) {
                 this.logProject = logProject;
+                return this;
+            }
+
+            /**
+             * LogProjectState.
+             */
+            public Builder logProjectState(String logProjectState) {
+                this.logProjectState = logProjectState;
+                return this;
+            }
+
+            /**
+             * LogProjectStateChangeAllowed.
+             */
+            public Builder logProjectStateChangeAllowed(Boolean logProjectStateChangeAllowed) {
+                this.logProjectStateChangeAllowed = logProjectStateChangeAllowed;
+                return this;
+            }
+
+            /**
+             * LogServiceDisabled.
+             */
+            public Builder logServiceDisabled(Boolean logServiceDisabled) {
+                this.logServiceDisabled = logServiceDisabled;
                 return this;
             }
 
