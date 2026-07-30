@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyJVSInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentVersion")
+    private String agentVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApplyToAll")
     private Boolean applyToAll;
 
@@ -39,6 +43,7 @@ public class ModifyJVSInstanceRequest extends Request {
 
     private ModifyJVSInstanceRequest(Builder builder) {
         super(builder);
+        this.agentVersion = builder.agentVersion;
         this.applyToAll = builder.applyToAll;
         this.creditConfig = builder.creditConfig;
         this.imageId = builder.imageId;
@@ -57,6 +62,13 @@ public class ModifyJVSInstanceRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentVersion
+     */
+    public String getAgentVersion() {
+        return this.agentVersion;
     }
 
     /**
@@ -95,6 +107,7 @@ public class ModifyJVSInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyJVSInstanceRequest, Builder> {
+        private String agentVersion; 
         private Boolean applyToAll; 
         private java.util.List<CreditConfig> creditConfig; 
         private String imageId; 
@@ -107,12 +120,22 @@ public class ModifyJVSInstanceRequest extends Request {
 
         private Builder(ModifyJVSInstanceRequest request) {
             super(request);
+            this.agentVersion = request.agentVersion;
             this.applyToAll = request.applyToAll;
             this.creditConfig = request.creditConfig;
             this.imageId = request.imageId;
             this.instanceIds = request.instanceIds;
             this.instanceName = request.instanceName;
         } 
+
+        /**
+         * <p>目标版本号，如2607W1，支持latest自动解析为最新可用版本</p>
+         */
+        public Builder agentVersion(String agentVersion) {
+            this.putQueryParameter("AgentVersion", agentVersion);
+            this.agentVersion = agentVersion;
+            return this;
+        }
 
         /**
          * ApplyToAll.
