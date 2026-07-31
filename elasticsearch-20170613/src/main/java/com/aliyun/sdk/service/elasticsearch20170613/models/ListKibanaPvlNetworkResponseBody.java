@@ -185,6 +185,9 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("endpointStatus")
         private String endpointStatus;
 
+        @com.aliyun.core.annotation.NameInMap("managedSecurityGroup")
+        private Boolean managedSecurityGroup;
+
         @com.aliyun.core.annotation.NameInMap("pvlId")
         private String pvlId;
 
@@ -202,6 +205,7 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
             this.endpointId = builder.endpointId;
             this.endpointName = builder.endpointName;
             this.endpointStatus = builder.endpointStatus;
+            this.managedSecurityGroup = builder.managedSecurityGroup;
             this.pvlId = builder.pvlId;
             this.securityGroups = builder.securityGroups;
             this.vSwitchIdsZone = builder.vSwitchIdsZone;
@@ -245,6 +249,13 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
         }
 
         /**
+         * @return managedSecurityGroup
+         */
+        public Boolean getManagedSecurityGroup() {
+            return this.managedSecurityGroup;
+        }
+
+        /**
          * @return pvlId
          */
         public String getPvlId() {
@@ -277,6 +288,7 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
             private String endpointId; 
             private String endpointName; 
             private String endpointStatus; 
+            private Boolean managedSecurityGroup; 
             private String pvlId; 
             private java.util.List<String> securityGroups; 
             private java.util.List<VSwitchIdsZone> vSwitchIdsZone; 
@@ -290,6 +302,7 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
                 this.endpointId = model.endpointId;
                 this.endpointName = model.endpointName;
                 this.endpointStatus = model.endpointStatus;
+                this.managedSecurityGroup = model.managedSecurityGroup;
                 this.pvlId = model.pvlId;
                 this.securityGroups = model.securityGroups;
                 this.vSwitchIdsZone = model.vSwitchIdsZone;
@@ -325,6 +338,14 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
              */
             public Builder endpointStatus(String endpointStatus) {
                 this.endpointStatus = endpointStatus;
+                return this;
+            }
+
+            /**
+             * managedSecurityGroup.
+             */
+            public Builder managedSecurityGroup(Boolean managedSecurityGroup) {
+                this.managedSecurityGroup = managedSecurityGroup;
                 return this;
             }
 

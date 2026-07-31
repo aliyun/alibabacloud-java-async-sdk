@@ -1388,6 +1388,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("diskEncryption")
         private Boolean diskEncryption;
 
+        @com.aliyun.core.annotation.NameInMap("diskPreference")
+        private String diskPreference;
+
         @com.aliyun.core.annotation.NameInMap("diskType")
         private String diskType;
 
@@ -1403,6 +1406,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private NodeSpec(Builder builder) {
             this.disk = builder.disk;
             this.diskEncryption = builder.diskEncryption;
+            this.diskPreference = builder.diskPreference;
             this.diskType = builder.diskType;
             this.performanceLevel = builder.performanceLevel;
             this.spec = builder.spec;
@@ -1429,6 +1433,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
          */
         public Boolean getDiskEncryption() {
             return this.diskEncryption;
+        }
+
+        /**
+         * @return diskPreference
+         */
+        public String getDiskPreference() {
+            return this.diskPreference;
         }
 
         /**
@@ -1462,6 +1473,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private Integer disk; 
             private Boolean diskEncryption; 
+            private String diskPreference; 
             private String diskType; 
             private String performanceLevel; 
             private String spec; 
@@ -1473,6 +1485,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Builder(NodeSpec model) {
                 this.disk = model.disk;
                 this.diskEncryption = model.diskEncryption;
+                this.diskPreference = model.diskPreference;
                 this.diskType = model.diskType;
                 this.performanceLevel = model.performanceLevel;
                 this.spec = model.spec;
@@ -1492,6 +1505,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
              */
             public Builder diskEncryption(Boolean diskEncryption) {
                 this.diskEncryption = diskEncryption;
+                return this;
+            }
+
+            /**
+             * diskPreference.
+             */
+            public Builder diskPreference(String diskPreference) {
+                this.diskPreference = diskPreference;
                 return this;
             }
 

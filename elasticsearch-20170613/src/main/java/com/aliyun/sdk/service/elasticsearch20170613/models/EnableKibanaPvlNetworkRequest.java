@@ -27,8 +27,11 @@ public class EnableKibanaPvlNetworkRequest extends Request {
     private String endpointName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("managedSecurityGroup")
+    private Boolean managedSecurityGroup;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("securityGroups")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> securityGroups;
 
     @com.aliyun.core.annotation.Body
@@ -47,6 +50,7 @@ public class EnableKibanaPvlNetworkRequest extends Request {
         super(builder);
         this.instanceId = builder.instanceId;
         this.endpointName = builder.endpointName;
+        this.managedSecurityGroup = builder.managedSecurityGroup;
         this.securityGroups = builder.securityGroups;
         this.vSwitchIdsZone = builder.vSwitchIdsZone;
         this.vpcId = builder.vpcId;
@@ -81,6 +85,13 @@ public class EnableKibanaPvlNetworkRequest extends Request {
     }
 
     /**
+     * @return managedSecurityGroup
+     */
+    public Boolean getManagedSecurityGroup() {
+        return this.managedSecurityGroup;
+    }
+
+    /**
      * @return securityGroups
      */
     public java.util.List<String> getSecurityGroups() {
@@ -111,6 +122,7 @@ public class EnableKibanaPvlNetworkRequest extends Request {
     public static final class Builder extends Request.Builder<EnableKibanaPvlNetworkRequest, Builder> {
         private String instanceId; 
         private String endpointName; 
+        private Boolean managedSecurityGroup; 
         private java.util.List<String> securityGroups; 
         private java.util.List<VSwitchIdsZone> vSwitchIdsZone; 
         private String vpcId; 
@@ -124,6 +136,7 @@ public class EnableKibanaPvlNetworkRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.endpointName = request.endpointName;
+            this.managedSecurityGroup = request.managedSecurityGroup;
             this.securityGroups = request.securityGroups;
             this.vSwitchIdsZone = request.vSwitchIdsZone;
             this.vpcId = request.vpcId;
@@ -152,7 +165,16 @@ public class EnableKibanaPvlNetworkRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * managedSecurityGroup.
+         */
+        public Builder managedSecurityGroup(Boolean managedSecurityGroup) {
+            this.putBodyParameter("managedSecurityGroup", managedSecurityGroup);
+            this.managedSecurityGroup = managedSecurityGroup;
+            return this;
+        }
+
+        /**
+         * securityGroups.
          */
         public Builder securityGroups(java.util.List<String> securityGroups) {
             this.putBodyParameter("securityGroups", securityGroups);
