@@ -122,6 +122,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPublishedMmAppResponse> listPublishedMmApp(ListPublishedMmAppRequest request);
 
     /**
+     * @param request the request parameters of ListVoice  ListVoiceRequest
+     * @return ListVoiceResponse
+     */
+    CompletableFuture<ListVoiceResponse> listVoice(ListVoiceRequest request);
+
+    /**
      * @param request the request parameters of MmAppBindingMcp  MmAppBindingMcpRequest
      * @return MmAppBindingMcpResponse
      */
@@ -170,6 +176,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryProfileResponse> queryProfile(QueryProfileRequest request);
 
     /**
+     * @param request the request parameters of QuerySelectOptions  QuerySelectOptionsRequest
+     * @return QuerySelectOptionsResponse
+     */
+    CompletableFuture<QuerySelectOptionsResponse> querySelectOptions(QuerySelectOptionsRequest request);
+
+    /**
      * @param request the request parameters of QueryUserProfile  QueryUserProfileRequest
      * @return QueryUserProfileResponse
      */
@@ -192,6 +204,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateMmAppResponse
      */
     CompletableFuture<UpdateMmAppResponse> updateMmApp(UpdateMmAppRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMmAppAndBinding  UpdateMmAppAndBindingRequest
+     * @return UpdateMmAppAndBindingResponse
+     */
+    CompletableFuture<UpdateMmAppAndBindingResponse> updateMmAppAndBinding(UpdateMmAppAndBindingRequest request);
 
     /**
      * @param request the request parameters of UpdateMmAppMemory  UpdateMmAppMemoryRequest
