@@ -752,6 +752,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModelRouterBatchBindModelGroup  ModelRouterBatchBindModelGroupRequest
+     * @return ModelRouterBatchBindModelGroupResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterBatchBindModelGroupResponse> modelRouterBatchBindModelGroup(ModelRouterBatchBindModelGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterBatchBindModelGroup").setMethod(HttpMethod.POST).setPathRegex("/api/v1/modelRouter/open/clients/batch-bind-model-group").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterBatchBindModelGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterBatchBindModelGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ModelRouterBillingCostTabs  ModelRouterBillingCostTabsRequest
      * @return ModelRouterBillingCostTabsResponse
      */
@@ -957,6 +975,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModelRouterCreateModelGroup  ModelRouterCreateModelGroupRequest
+     * @return ModelRouterCreateModelGroupResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterCreateModelGroupResponse> modelRouterCreateModelGroup(ModelRouterCreateModelGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterCreateModelGroup").setMethod(HttpMethod.POST).setPathRegex("/api/v1/modelRouter/open/model-groups").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterCreateModelGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterCreateModelGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ModelRouterCreateSubscription  ModelRouterCreateSubscriptionRequest
      * @return ModelRouterCreateSubscriptionResponse
      */
@@ -1047,6 +1083,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModelRouterDeleteModelGroup  ModelRouterDeleteModelGroupRequest
+     * @return ModelRouterDeleteModelGroupResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterDeleteModelGroupResponse> modelRouterDeleteModelGroup(ModelRouterDeleteModelGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterDeleteModelGroup").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/modelRouter/open/model-groups/{groupId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterDeleteModelGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterDeleteModelGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ModelRouterGetClientBalance  ModelRouterGetClientBalanceRequest
      * @return ModelRouterGetClientBalanceResponse
      */
@@ -1077,6 +1131,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModelRouterGetClientBalanceLogsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterListBalanceOrders  ModelRouterListBalanceOrdersRequest
+     * @return ModelRouterListBalanceOrdersResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterListBalanceOrdersResponse> modelRouterListBalanceOrders(ModelRouterListBalanceOrdersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterListBalanceOrders").setMethod(HttpMethod.GET).setPathRegex("/api/v1/modelRouter/open/clients/{id}/balance/orders").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterListBalanceOrdersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterListBalanceOrdersResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1353,6 +1425,96 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModelRouterQueryModelGroup  ModelRouterQueryModelGroupRequest
+     * @return ModelRouterQueryModelGroupResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterQueryModelGroupResponse> modelRouterQueryModelGroup(ModelRouterQueryModelGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterQueryModelGroup").setMethod(HttpMethod.GET).setPathRegex("/api/v1/modelRouter/open/model-groups/{groupId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterQueryModelGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterQueryModelGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterQueryModelGroupClients  ModelRouterQueryModelGroupClientsRequest
+     * @return ModelRouterQueryModelGroupClientsResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterQueryModelGroupClientsResponse> modelRouterQueryModelGroupClients(ModelRouterQueryModelGroupClientsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterQueryModelGroupClients").setMethod(HttpMethod.GET).setPathRegex("/api/v1/modelRouter/open/model-groups/{groupId}/clients").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterQueryModelGroupClientsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterQueryModelGroupClientsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterQueryModelGroupList  ModelRouterQueryModelGroupListRequest
+     * @return ModelRouterQueryModelGroupListResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterQueryModelGroupListResponse> modelRouterQueryModelGroupList(ModelRouterQueryModelGroupListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterQueryModelGroupList").setMethod(HttpMethod.GET).setPathRegex("/api/v1/modelRouter/open/model-groups").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterQueryModelGroupListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterQueryModelGroupListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterQueryModelGroupModels  ModelRouterQueryModelGroupModelsRequest
+     * @return ModelRouterQueryModelGroupModelsResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterQueryModelGroupModelsResponse> modelRouterQueryModelGroupModels(ModelRouterQueryModelGroupModelsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterQueryModelGroupModels").setMethod(HttpMethod.GET).setPathRegex("/api/v1/modelRouter/open/model-groups/{groupId}/models").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterQueryModelGroupModelsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterQueryModelGroupModelsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterQueryModelGroupsByApiKey  ModelRouterQueryModelGroupsByApiKeyRequest
+     * @return ModelRouterQueryModelGroupsByApiKeyResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterQueryModelGroupsByApiKeyResponse> modelRouterQueryModelGroupsByApiKey(ModelRouterQueryModelGroupsByApiKeyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterQueryModelGroupsByApiKey").setMethod(HttpMethod.GET).setPathRegex("/api/v1/modelRouter/open/apikeys/{id}/model-groups").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterQueryModelGroupsByApiKeyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterQueryModelGroupsByApiKeyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ModelRouterQueryModelList  ModelRouterQueryModelListRequest
      * @return ModelRouterQueryModelListResponse
      */
@@ -1581,6 +1743,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModelRouterUpdateModelResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterUpdateModelGroup  ModelRouterUpdateModelGroupRequest
+     * @return ModelRouterUpdateModelGroupResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterUpdateModelGroupResponse> modelRouterUpdateModelGroup(ModelRouterUpdateModelGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterUpdateModelGroup").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/modelRouter/open/model-groups/{groupId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterUpdateModelGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterUpdateModelGroupResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

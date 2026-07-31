@@ -250,6 +250,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTextbookAssistantSceneDetailsResponse> listTextbookAssistantSceneDetails(ListTextbookAssistantSceneDetailsRequest request);
 
     /**
+     * @param request the request parameters of ModelRouterBatchBindModelGroup  ModelRouterBatchBindModelGroupRequest
+     * @return ModelRouterBatchBindModelGroupResponse
+     */
+    CompletableFuture<ModelRouterBatchBindModelGroupResponse> modelRouterBatchBindModelGroup(ModelRouterBatchBindModelGroupRequest request);
+
+    /**
      * @param request the request parameters of ModelRouterBillingCostTabs  ModelRouterBillingCostTabsRequest
      * @return ModelRouterBillingCostTabsResponse
      */
@@ -314,6 +320,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModelRouterCreateModelResponse> modelRouterCreateModel(ModelRouterCreateModelRequest request);
 
     /**
+     * @param request the request parameters of ModelRouterCreateModelGroup  ModelRouterCreateModelGroupRequest
+     * @return ModelRouterCreateModelGroupResponse
+     */
+    CompletableFuture<ModelRouterCreateModelGroupResponse> modelRouterCreateModelGroup(ModelRouterCreateModelGroupRequest request);
+
+    /**
      * @param request the request parameters of ModelRouterCreateSubscription  ModelRouterCreateSubscriptionRequest
      * @return ModelRouterCreateSubscriptionResponse
      */
@@ -344,6 +356,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModelRouterDeleteModelResponse> modelRouterDeleteModel(ModelRouterDeleteModelRequest request);
 
     /**
+     * @param request the request parameters of ModelRouterDeleteModelGroup  ModelRouterDeleteModelGroupRequest
+     * @return ModelRouterDeleteModelGroupResponse
+     */
+    CompletableFuture<ModelRouterDeleteModelGroupResponse> modelRouterDeleteModelGroup(ModelRouterDeleteModelGroupRequest request);
+
+    /**
      * @param request the request parameters of ModelRouterGetClientBalance  ModelRouterGetClientBalanceRequest
      * @return ModelRouterGetClientBalanceResponse
      */
@@ -354,6 +372,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModelRouterGetClientBalanceLogsResponse
      */
     CompletableFuture<ModelRouterGetClientBalanceLogsResponse> modelRouterGetClientBalanceLogs(ModelRouterGetClientBalanceLogsRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterListBalanceOrders  ModelRouterListBalanceOrdersRequest
+     * @return ModelRouterListBalanceOrdersResponse
+     */
+    CompletableFuture<ModelRouterListBalanceOrdersResponse> modelRouterListBalanceOrders(ModelRouterListBalanceOrdersRequest request);
 
     /**
      * @param request the request parameters of ModelRouterListSubscriptions  ModelRouterListSubscriptionsRequest
@@ -446,6 +470,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModelRouterQueryModelResponse> modelRouterQueryModel(ModelRouterQueryModelRequest request);
 
     /**
+     * @param request the request parameters of ModelRouterQueryModelGroup  ModelRouterQueryModelGroupRequest
+     * @return ModelRouterQueryModelGroupResponse
+     */
+    CompletableFuture<ModelRouterQueryModelGroupResponse> modelRouterQueryModelGroup(ModelRouterQueryModelGroupRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterQueryModelGroupClients  ModelRouterQueryModelGroupClientsRequest
+     * @return ModelRouterQueryModelGroupClientsResponse
+     */
+    CompletableFuture<ModelRouterQueryModelGroupClientsResponse> modelRouterQueryModelGroupClients(ModelRouterQueryModelGroupClientsRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterQueryModelGroupList  ModelRouterQueryModelGroupListRequest
+     * @return ModelRouterQueryModelGroupListResponse
+     */
+    CompletableFuture<ModelRouterQueryModelGroupListResponse> modelRouterQueryModelGroupList(ModelRouterQueryModelGroupListRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterQueryModelGroupModels  ModelRouterQueryModelGroupModelsRequest
+     * @return ModelRouterQueryModelGroupModelsResponse
+     */
+    CompletableFuture<ModelRouterQueryModelGroupModelsResponse> modelRouterQueryModelGroupModels(ModelRouterQueryModelGroupModelsRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterQueryModelGroupsByApiKey  ModelRouterQueryModelGroupsByApiKeyRequest
+     * @return ModelRouterQueryModelGroupsByApiKeyResponse
+     */
+    CompletableFuture<ModelRouterQueryModelGroupsByApiKeyResponse> modelRouterQueryModelGroupsByApiKey(ModelRouterQueryModelGroupsByApiKeyRequest request);
+
+    /**
      * @param request the request parameters of ModelRouterQueryModelList  ModelRouterQueryModelListRequest
      * @return ModelRouterQueryModelListResponse
      */
@@ -522,6 +576,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModelRouterUpdateModelResponse
      */
     CompletableFuture<ModelRouterUpdateModelResponse> modelRouterUpdateModel(ModelRouterUpdateModelRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterUpdateModelGroup  ModelRouterUpdateModelGroupRequest
+     * @return ModelRouterUpdateModelGroupResponse
+     */
+    CompletableFuture<ModelRouterUpdateModelGroupResponse> modelRouterUpdateModelGroup(ModelRouterUpdateModelGroupRequest request);
 
     /**
      * @param request the request parameters of PersonalizedTextToImageAddInferenceJob  PersonalizedTextToImageAddInferenceJobRequest
