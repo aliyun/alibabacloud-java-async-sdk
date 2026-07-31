@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddKnowledgeFile  AddKnowledgeFileRequest
+     * @return AddKnowledgeFileResponse
+     */
+    CompletableFuture<AddKnowledgeFileResponse> addKnowledgeFile(AddKnowledgeFileRequest request);
+
+    /**
      * <b>description</b> :
      * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
@@ -90,6 +96,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CheckBindRamUserResponse
      */
     CompletableFuture<CheckBindRamUserResponse> checkBindRamUser(CheckBindRamUserRequest request);
+
+    /**
+     * @param request the request parameters of CheckFormationSchemaExists  CheckFormationSchemaExistsRequest
+     * @return CheckFormationSchemaExistsResponse
+     */
+    CompletableFuture<CheckFormationSchemaExistsResponse> checkFormationSchemaExists(CheckFormationSchemaExistsRequest request);
 
     /**
      * <b>description</b> :
@@ -203,6 +215,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateElasticPlanResponse> createElasticPlan(CreateElasticPlanRequest request);
 
     /**
+     * @param request the request parameters of CreateFormationCrawler  CreateFormationCrawlerRequest
+     * @return CreateFormationCrawlerResponse
+     */
+    CompletableFuture<CreateFormationCrawlerResponse> createFormationCrawler(CreateFormationCrawlerRequest request);
+
+    /**
      * @param request the request parameters of CreateLakeStorage  CreateLakeStorageRequest
      * @return CreateLakeStorageResponse
      */
@@ -232,6 +250,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreatePerformanceViewResponse
      */
     CompletableFuture<CreatePerformanceViewResponse> createPerformanceView(CreatePerformanceViewRequest request);
+
+    /**
+     * @param request the request parameters of CreateSemanticView  CreateSemanticViewRequest
+     * @return CreateSemanticViewResponse
+     */
+    CompletableFuture<CreateSemanticViewResponse> createSemanticView(CreateSemanticViewRequest request);
 
     /**
      * <b>description</b> :
@@ -333,6 +357,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteElasticPlanResponse> deleteElasticPlan(DeleteElasticPlanRequest request);
 
     /**
+     * @param request the request parameters of DeleteFormationCrawler  DeleteFormationCrawlerRequest
+     * @return DeleteFormationCrawlerResponse
+     */
+    CompletableFuture<DeleteFormationCrawlerResponse> deleteFormationCrawler(DeleteFormationCrawlerRequest request);
+
+    /**
      * <b>description</b> :
      * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
@@ -352,6 +382,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeletePerformanceViewResponse
      */
     CompletableFuture<DeletePerformanceViewResponse> deletePerformanceView(DeletePerformanceViewRequest request);
+
+    /**
+     * @param request the request parameters of DeleteSemanticView  DeleteSemanticViewRequest
+     * @return DeleteSemanticViewResponse
+     */
+    CompletableFuture<DeleteSemanticViewResponse> deleteSemanticView(DeleteSemanticViewRequest request);
 
     /**
      * <b>description</b> :
@@ -901,20 +937,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeKernelVersionResponse> describeKernelVersion(DescribeKernelVersionRequest request);
 
     /**
-     * @param request the request parameters of DescribeLLMAnswer  DescribeLLMAnswerRequest
-     * @return DescribeLLMAnswerResponse
-     */
-    CompletableFuture<DescribeLLMAnswerResponse> describeLLMAnswer(DescribeLLMAnswerRequest request);
-
-    ResponseIterable<DescribeLLMAnswerResponseBody> describeLLMAnswerWithResponseIterable(DescribeLLMAnswerRequest request);
-
-    /**
-     * @param request the request parameters of DescribeLLMSimilarQuestions  DescribeLLMSimilarQuestionsRequest
-     * @return DescribeLLMSimilarQuestionsResponse
-     */
-    CompletableFuture<DescribeLLMSimilarQuestionsResponse> describeLLMSimilarQuestions(DescribeLLMSimilarQuestionsRequest request);
-
-    /**
      * @param request the request parameters of DescribeLakeCacheSize  DescribeLakeCacheSizeRequest
      * @return DescribeLakeCacheSizeResponse
      */
@@ -977,6 +999,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribePerformanceViewsResponse
      */
     CompletableFuture<DescribePerformanceViewsResponse> describePerformanceViews(DescribePerformanceViewsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeProcessList  DescribeProcessListRequest
+     * @return DescribeProcessListResponse
+     */
+    CompletableFuture<DescribeProcessListResponse> describeProcessList(DescribeProcessListRequest request);
 
     /**
      * <b>description</b> :
@@ -1262,6 +1290,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExistRunningSQLEngineResponse> existRunningSQLEngine(ExistRunningSQLEngineRequest request);
 
     /**
+     * @param request the request parameters of GenerateSqlBySemanticSql  GenerateSqlBySemanticSqlRequest
+     * @return GenerateSqlBySemanticSqlResponse
+     */
+    CompletableFuture<GenerateSqlBySemanticSqlResponse> generateSqlBySemanticSql(GenerateSqlBySemanticSqlRequest request);
+
+    /**
      * <b>description</b> :
      * <p>The API diagnosis report contains whether the current user has all permissions required by the AnalyticDB for Spark related features. The scope of the permissions may exceed the minimum requirements of the business. The diagnostic report of the current API is used to quickly initialize the environment of AnalyticDB for Spark. If fine-grained permission configuration is needed, see <a href="https://www.alibabacloud.com/help/zh/analyticdb/analyticdb-for-mysql/user-guide/create-the-aliyunadbsparkprocessingdatarole-role-for-a-ram-user-and-grant-permissions-to-the-role?spm=a2c63.p38356.help-menu-92664.d_2_5_0.48362a487dMzm9#section-y2z-ucd-1ko">Configure fine-grained permissions in AnalyDB for Spark.</a></p>
      * 
@@ -1269,12 +1303,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetADBSparkNecessaryRAMPermissionsResponse
      */
     CompletableFuture<GetADBSparkNecessaryRAMPermissionsResponse> getADBSparkNecessaryRAMPermissions(GetADBSparkNecessaryRAMPermissionsRequest request);
-
-    /**
-     * @param request the request parameters of GetApsManagedDatabases  GetApsManagedDatabasesRequest
-     * @return GetApsManagedDatabasesResponse
-     */
-    CompletableFuture<GetApsManagedDatabasesResponse> getApsManagedDatabases(GetApsManagedDatabasesRequest request);
 
     /**
      * @param request the request parameters of GetCreateTableSQL  GetCreateTableSQLRequest
@@ -1295,10 +1323,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDatabaseObjectsResponse> getDatabaseObjects(GetDatabaseObjectsRequest request);
 
     /**
+     * @param request the request parameters of GetFormationCrawler  GetFormationCrawlerRequest
+     * @return GetFormationCrawlerResponse
+     */
+    CompletableFuture<GetFormationCrawlerResponse> getFormationCrawler(GetFormationCrawlerRequest request);
+
+    /**
+     * @param request the request parameters of GetKnowledgeRecall  GetKnowledgeRecallRequest
+     * @return GetKnowledgeRecallResponse
+     */
+    CompletableFuture<GetKnowledgeRecallResponse> getKnowledgeRecall(GetKnowledgeRecallRequest request);
+
+    /**
      * @param request the request parameters of GetLakeStorage  GetLakeStorageRequest
      * @return GetLakeStorageResponse
      */
     CompletableFuture<GetLakeStorageResponse> getLakeStorage(GetLakeStorageRequest request);
+
+    /**
+     * @param request the request parameters of GetSemanticView  GetSemanticViewRequest
+     * @return GetSemanticViewResponse
+     */
+    CompletableFuture<GetSemanticViewResponse> getSemanticView(GetSemanticViewRequest request);
 
     /**
      * <b>description</b> :
@@ -1607,27 +1653,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<KillSparkSQLEngineResponse> killSparkSQLEngine(KillSparkSQLEngineRequest request);
 
     /**
-     * @param request the request parameters of ListApsLifecycleStrategy  ListApsLifecycleStrategyRequest
-     * @return ListApsLifecycleStrategyResponse
-     */
-    CompletableFuture<ListApsLifecycleStrategyResponse> listApsLifecycleStrategy(ListApsLifecycleStrategyRequest request);
-
-    /**
-     * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
-     * 
-     * @param request the request parameters of ListApsOptimizationStrategy  ListApsOptimizationStrategyRequest
-     * @return ListApsOptimizationStrategyResponse
-     */
-    CompletableFuture<ListApsOptimizationStrategyResponse> listApsOptimizationStrategy(ListApsOptimizationStrategyRequest request);
-
-    /**
-     * @param request the request parameters of ListApsOptimizationTasks  ListApsOptimizationTasksRequest
-     * @return ListApsOptimizationTasksResponse
-     */
-    CompletableFuture<ListApsOptimizationTasksResponse> listApsOptimizationTasks(ListApsOptimizationTasksRequest request);
-
-    /**
      * <b>description</b> :
      * <p>This API allows you to obtain a list of configured webhooks based on <code>RegionId</code>, <code>DBClusterId</code>, and optional <code>JobType</code>. The <code>JobType</code> parameter specifies the task type, such as SLS/OSS export task. If the parameter is provided, webhooks related to the task type are returned. If the parameter is not provided, all types of webhooks are returned.
      * Note: Make sure that the <code>RegionId</code> and <code>DBClusterId</code> you provided are correct. Otherwise, the webhook information may not be obtained correctly.</p>
@@ -1648,6 +1673,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListResultExportJobHistoryResponse
      */
     CompletableFuture<ListResultExportJobHistoryResponse> listResultExportJobHistory(ListResultExportJobHistoryRequest request);
+
+    /**
+     * @param request the request parameters of ListSemanticViewNames  ListSemanticViewNamesRequest
+     * @return ListSemanticViewNamesResponse
+     */
+    CompletableFuture<ListSemanticViewNamesResponse> listSemanticViewNames(ListSemanticViewNamesRequest request);
 
     /**
      * <b>description</b> :
@@ -1816,15 +1847,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyClusterAccessWhiteListResponse> modifyClusterAccessWhiteList(ModifyClusterAccessWhiteListRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
-     * 
-     * @param request the request parameters of ModifyClusterConnectionString  ModifyClusterConnectionStringRequest
-     * @return ModifyClusterConnectionStringResponse
-     */
-    CompletableFuture<ModifyClusterConnectionStringResponse> modifyClusterConnectionString(ModifyClusterConnectionStringRequest request);
-
-    /**
      * @param request the request parameters of ModifyCompactionServiceSwitch  ModifyCompactionServiceSwitchRequest
      * @return ModifyCompactionServiceSwitchResponse
      */
@@ -1962,6 +1984,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PreloadSparkAppMetricsResponse> preloadSparkAppMetrics(PreloadSparkAppMetricsRequest request);
 
     /**
+     * @param request the request parameters of QueryFormationInstsByTaskID  QueryFormationInstsByTaskIDRequest
+     * @return QueryFormationInstsByTaskIDResponse
+     */
+    CompletableFuture<QueryFormationInstsByTaskIDResponse> queryFormationInstsByTaskID(QueryFormationInstsByTaskIDRequest request);
+
+    /**
+     * @param request the request parameters of QueryFormationTaskByID  QueryFormationTaskByIDRequest
+     * @return QueryFormationTaskByIDResponse
+     */
+    CompletableFuture<QueryFormationTaskByIDResponse> queryFormationTaskByID(QueryFormationTaskByIDRequest request);
+
+    /**
+     * @param request the request parameters of QueryFormationTasksByType  QueryFormationTasksByTypeRequest
+     * @return QueryFormationTasksByTypeResponse
+     */
+    CompletableFuture<QueryFormationTasksByTypeResponse> queryFormationTasksByType(QueryFormationTasksByTypeRequest request);
+
+    /**
      * <b>description</b> :
      * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
@@ -1969,6 +2009,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ReleaseClusterPublicConnectionResponse
      */
     CompletableFuture<ReleaseClusterPublicConnectionResponse> releaseClusterPublicConnection(ReleaseClusterPublicConnectionRequest request);
+
+    /**
+     * @param request the request parameters of RenameSemanticView  RenameSemanticViewRequest
+     * @return RenameSemanticViewResponse
+     */
+    CompletableFuture<RenameSemanticViewResponse> renameSemanticView(RenameSemanticViewRequest request);
+
+    /**
+     * @param request the request parameters of ReplaceSemanticView  ReplaceSemanticViewRequest
+     * @return ReplaceSemanticViewResponse
+     */
+    CompletableFuture<ReplaceSemanticViewResponse> replaceSemanticView(ReplaceSemanticViewRequest request);
 
     /**
      * <b>description</b> :
@@ -1984,6 +2036,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RevokeOperatorPermissionResponse
      */
     CompletableFuture<RevokeOperatorPermissionResponse> revokeOperatorPermission(RevokeOperatorPermissionRequest request);
+
+    /**
+     * @param request the request parameters of RunMaterializedViewRecommend  RunMaterializedViewRecommendRequest
+     * @return RunMaterializedViewRecommendResponse
+     */
+    CompletableFuture<RunMaterializedViewRecommendResponse> runMaterializedViewRecommend(RunMaterializedViewRecommendRequest request);
+
+    /**
+     * @param request the request parameters of SearchSemanticViews  SearchSemanticViewsRequest
+     * @return SearchSemanticViewsResponse
+     */
+    CompletableFuture<SearchSemanticViewsResponse> searchSemanticViews(SearchSemanticViewsRequest request);
 
     /**
      * <b>description</b> :
@@ -2007,6 +2071,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartApsJobResponse> startApsJob(StartApsJobRequest request);
 
     /**
+     * @param request the request parameters of StartFormationCrawler  StartFormationCrawlerRequest
+     * @return StartFormationCrawlerResponse
+     */
+    CompletableFuture<StartFormationCrawlerResponse> startFormationCrawler(StartFormationCrawlerRequest request);
+
+    /**
      * @param request the request parameters of StartSparkReplSession  StartSparkReplSessionRequest
      * @return StartSparkReplSessionResponse
      */
@@ -2022,6 +2092,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     @Deprecated
     CompletableFuture<StartSparkSQLEngineResponse> startSparkSQLEngine(StartSparkSQLEngineRequest request);
+
+    /**
+     * @param request the request parameters of StopFormationCrawler  StopFormationCrawlerRequest
+     * @return StopFormationCrawlerResponse
+     */
+    CompletableFuture<StopFormationCrawlerResponse> stopFormationCrawler(StopFormationCrawlerRequest request);
 
     /**
      * @param request the request parameters of SubmitResultExportJob  SubmitResultExportJobRequest
@@ -2088,6 +2164,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateApsWebhookResponse
      */
     CompletableFuture<UpdateApsWebhookResponse> updateApsWebhook(UpdateApsWebhookRequest request);
+
+    /**
+     * @param request the request parameters of UpdateFormationCrawler  UpdateFormationCrawlerRequest
+     * @return UpdateFormationCrawlerResponse
+     */
+    CompletableFuture<UpdateFormationCrawlerResponse> updateFormationCrawler(UpdateFormationCrawlerRequest request);
+
+    /**
+     * @param request the request parameters of UpdateFormationCrawlerScheduleState  UpdateFormationCrawlerScheduleStateRequest
+     * @return UpdateFormationCrawlerScheduleStateResponse
+     */
+    CompletableFuture<UpdateFormationCrawlerScheduleStateResponse> updateFormationCrawlerScheduleState(UpdateFormationCrawlerScheduleStateRequest request);
 
     /**
      * @param request the request parameters of UpdateLakeStorage  UpdateLakeStorageRequest

@@ -31,10 +31,6 @@ public class DescribeHistoryTasksStatRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("OwnerId")
-    private Long ownerId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -42,14 +38,6 @@ public class DescribeHistoryTasksStatRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
-    private Long resourceOwnerAccount;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityToken")
@@ -81,11 +69,8 @@ public class DescribeHistoryTasksStatRequest extends Request {
         this.fromExecTime = builder.fromExecTime;
         this.fromStartTime = builder.fromStartTime;
         this.instanceId = builder.instanceId;
-        this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
-        this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
         this.status = builder.status;
         this.taskId = builder.taskId;
@@ -129,13 +114,6 @@ public class DescribeHistoryTasksStatRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -147,20 +125,6 @@ public class DescribeHistoryTasksStatRequest extends Request {
      */
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    /**
-     * @return resourceOwnerAccount
-     */
-    public Long getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     /**
@@ -209,11 +173,8 @@ public class DescribeHistoryTasksStatRequest extends Request {
         private Integer fromExecTime; 
         private String fromStartTime; 
         private String instanceId; 
-        private Long ownerId; 
         private String regionId; 
         private String resourceGroupId; 
-        private Long resourceOwnerAccount; 
-        private Long resourceOwnerId; 
         private String securityToken; 
         private String status; 
         private String taskId; 
@@ -230,11 +191,8 @@ public class DescribeHistoryTasksStatRequest extends Request {
             this.fromExecTime = request.fromExecTime;
             this.fromStartTime = request.fromStartTime;
             this.instanceId = request.instanceId;
-            this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
-            this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
             this.status = request.status;
             this.taskId = request.taskId;
@@ -281,15 +239,6 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
          * <p>The ID of the region where the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
@@ -311,24 +260,6 @@ public class DescribeHistoryTasksStatRequest extends Request {
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-
-        /**
-         * ResourceOwnerAccount.
-         */
-        public Builder resourceOwnerAccount(Long resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * ResourceOwnerId.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 

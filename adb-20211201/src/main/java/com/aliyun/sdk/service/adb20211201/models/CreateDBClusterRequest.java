@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateDBClusterRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AINodeNumber")
+    private Integer AINodeNumber;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AINodeSpec")
+    private String AINodeSpec;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BackupSetId")
     private String backupSetId;
 
@@ -141,6 +149,8 @@ public class CreateDBClusterRequest extends Request {
 
     private CreateDBClusterRequest(Builder builder) {
         super(builder);
+        this.AINodeNumber = builder.AINodeNumber;
+        this.AINodeSpec = builder.AINodeSpec;
         this.backupSetId = builder.backupSetId;
         this.cloneSourceRegionId = builder.cloneSourceRegionId;
         this.computeResource = builder.computeResource;
@@ -183,6 +193,20 @@ public class CreateDBClusterRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return AINodeNumber
+     */
+    public Integer getAINodeNumber() {
+        return this.AINodeNumber;
+    }
+
+    /**
+     * @return AINodeSpec
+     */
+    public String getAINodeSpec() {
+        return this.AINodeSpec;
     }
 
     /**
@@ -389,6 +413,8 @@ public class CreateDBClusterRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDBClusterRequest, Builder> {
+        private Integer AINodeNumber; 
+        private String AINodeSpec; 
         private String backupSetId; 
         private String cloneSourceRegionId; 
         private String computeResource; 
@@ -425,6 +451,8 @@ public class CreateDBClusterRequest extends Request {
 
         private Builder(CreateDBClusterRequest request) {
             super(request);
+            this.AINodeNumber = request.AINodeNumber;
+            this.AINodeSpec = request.AINodeSpec;
             this.backupSetId = request.backupSetId;
             this.cloneSourceRegionId = request.cloneSourceRegionId;
             this.computeResource = request.computeResource;
@@ -455,6 +483,24 @@ public class CreateDBClusterRequest extends Request {
             this.vSwitchId = request.vSwitchId;
             this.zoneId = request.zoneId;
         } 
+
+        /**
+         * AINodeNumber.
+         */
+        public Builder AINodeNumber(Integer AINodeNumber) {
+            this.putQueryParameter("AINodeNumber", AINodeNumber);
+            this.AINodeNumber = AINodeNumber;
+            return this;
+        }
+
+        /**
+         * AINodeSpec.
+         */
+        public Builder AINodeSpec(String AINodeSpec) {
+            this.putQueryParameter("AINodeSpec", AINodeSpec);
+            this.AINodeSpec = AINodeSpec;
+            return this;
+        }
 
         /**
          * <p>The ID of the backup set that you want to use to restore data.</p>

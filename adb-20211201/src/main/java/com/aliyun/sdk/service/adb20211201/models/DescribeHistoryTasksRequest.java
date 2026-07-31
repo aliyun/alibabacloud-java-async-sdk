@@ -35,10 +35,6 @@ public class DescribeHistoryTasksRequest extends Request {
     private String instanceType;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("OwnerId")
-    private Long ownerId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     @com.aliyun.core.annotation.Validation(maximum = 2147483647, minimum = 1)
     private Integer pageNumber;
@@ -55,10 +51,6 @@ public class DescribeHistoryTasksRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
-    private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
@@ -87,12 +79,10 @@ public class DescribeHistoryTasksRequest extends Request {
         this.fromStartTime = builder.fromStartTime;
         this.instanceId = builder.instanceId;
         this.instanceType = builder.instanceType;
-        this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
-        this.resourceOwnerId = builder.resourceOwnerId;
         this.status = builder.status;
         this.taskId = builder.taskId;
         this.taskType = builder.taskType;
@@ -142,13 +132,6 @@ public class DescribeHistoryTasksRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -174,13 +157,6 @@ public class DescribeHistoryTasksRequest extends Request {
      */
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    /**
-     * @return resourceOwnerId
-     */
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     /**
@@ -223,12 +199,10 @@ public class DescribeHistoryTasksRequest extends Request {
         private String fromStartTime; 
         private String instanceId; 
         private String instanceType; 
-        private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
         private String resourceGroupId; 
-        private Long resourceOwnerId; 
         private String status; 
         private String taskId; 
         private String taskType; 
@@ -245,12 +219,10 @@ public class DescribeHistoryTasksRequest extends Request {
             this.fromStartTime = request.fromStartTime;
             this.instanceId = request.instanceId;
             this.instanceType = request.instanceType;
-            this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
-            this.resourceOwnerId = request.resourceOwnerId;
             this.status = request.status;
             this.taskId = request.taskId;
             this.taskType = request.taskType;
@@ -308,15 +280,6 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
          * <p>The number of the page to return. Valid range: positive integers. Default value: 1</p>
          * 
          * <strong>example:</strong>
@@ -361,15 +324,6 @@ public class DescribeHistoryTasksRequest extends Request {
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-
-        /**
-         * ResourceOwnerId.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 

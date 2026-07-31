@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyDBResourceGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AtmConfig")
+    private AtmConfig atmConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoStopInterval")
     private String autoStopInterval;
 
@@ -106,6 +110,7 @@ public class ModifyDBResourceGroupRequest extends Request {
 
     private ModifyDBResourceGroupRequest(Builder builder) {
         super(builder);
+        this.atmConfig = builder.atmConfig;
         this.autoStopInterval = builder.autoStopInterval;
         this.clusterMode = builder.clusterMode;
         this.clusterSizeResource = builder.clusterSizeResource;
@@ -140,6 +145,13 @@ public class ModifyDBResourceGroupRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return atmConfig
+     */
+    public AtmConfig getAtmConfig() {
+        return this.atmConfig;
     }
 
     /**
@@ -290,6 +302,7 @@ public class ModifyDBResourceGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDBResourceGroupRequest, Builder> {
+        private AtmConfig atmConfig; 
         private String autoStopInterval; 
         private String clusterMode; 
         private String clusterSizeResource; 
@@ -318,6 +331,7 @@ public class ModifyDBResourceGroupRequest extends Request {
 
         private Builder(ModifyDBResourceGroupRequest request) {
             super(request);
+            this.atmConfig = request.atmConfig;
             this.autoStopInterval = request.autoStopInterval;
             this.clusterMode = request.clusterMode;
             this.clusterSizeResource = request.clusterSizeResource;
@@ -340,6 +354,16 @@ public class ModifyDBResourceGroupRequest extends Request {
             this.status = request.status;
             this.targetResourceGroupName = request.targetResourceGroupName;
         } 
+
+        /**
+         * AtmConfig.
+         */
+        public Builder atmConfig(AtmConfig atmConfig) {
+            String atmConfigShrink = shrink(atmConfig, "AtmConfig", "json");
+            this.putQueryParameter("AtmConfig", atmConfigShrink);
+            this.atmConfig = atmConfig;
+            return this;
+        }
 
         /**
          * AutoStopInterval.
@@ -602,6 +626,270 @@ public class ModifyDBResourceGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyDBResourceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyDBResourceGroupRequest</p>
+     */
+    public static class AtmConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AuthNodeNum")
+        private Integer authNodeNum;
+
+        @com.aliyun.core.annotation.NameInMap("AuthNodeSpec")
+        private String authNodeSpec;
+
+        @com.aliyun.core.annotation.NameInMap("InsertNodeNum")
+        private Integer insertNodeNum;
+
+        @com.aliyun.core.annotation.NameInMap("InsertNodeSpec")
+        private String insertNodeSpec;
+
+        @com.aliyun.core.annotation.NameInMap("SelectNodeCacheSize")
+        private Integer selectNodeCacheSize;
+
+        @com.aliyun.core.annotation.NameInMap("SelectNodeNum")
+        private Integer selectNodeNum;
+
+        @com.aliyun.core.annotation.NameInMap("SelectNodeSpec")
+        private String selectNodeSpec;
+
+        @com.aliyun.core.annotation.NameInMap("StorageNodeDiskSize")
+        private Integer storageNodeDiskSize;
+
+        @com.aliyun.core.annotation.NameInMap("StorageNodeDiskType")
+        private String storageNodeDiskType;
+
+        @com.aliyun.core.annotation.NameInMap("StorageNodeNum")
+        private Integer storageNodeNum;
+
+        @com.aliyun.core.annotation.NameInMap("StorageNodeSpec")
+        private String storageNodeSpec;
+
+        private AtmConfig(Builder builder) {
+            this.authNodeNum = builder.authNodeNum;
+            this.authNodeSpec = builder.authNodeSpec;
+            this.insertNodeNum = builder.insertNodeNum;
+            this.insertNodeSpec = builder.insertNodeSpec;
+            this.selectNodeCacheSize = builder.selectNodeCacheSize;
+            this.selectNodeNum = builder.selectNodeNum;
+            this.selectNodeSpec = builder.selectNodeSpec;
+            this.storageNodeDiskSize = builder.storageNodeDiskSize;
+            this.storageNodeDiskType = builder.storageNodeDiskType;
+            this.storageNodeNum = builder.storageNodeNum;
+            this.storageNodeSpec = builder.storageNodeSpec;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AtmConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return authNodeNum
+         */
+        public Integer getAuthNodeNum() {
+            return this.authNodeNum;
+        }
+
+        /**
+         * @return authNodeSpec
+         */
+        public String getAuthNodeSpec() {
+            return this.authNodeSpec;
+        }
+
+        /**
+         * @return insertNodeNum
+         */
+        public Integer getInsertNodeNum() {
+            return this.insertNodeNum;
+        }
+
+        /**
+         * @return insertNodeSpec
+         */
+        public String getInsertNodeSpec() {
+            return this.insertNodeSpec;
+        }
+
+        /**
+         * @return selectNodeCacheSize
+         */
+        public Integer getSelectNodeCacheSize() {
+            return this.selectNodeCacheSize;
+        }
+
+        /**
+         * @return selectNodeNum
+         */
+        public Integer getSelectNodeNum() {
+            return this.selectNodeNum;
+        }
+
+        /**
+         * @return selectNodeSpec
+         */
+        public String getSelectNodeSpec() {
+            return this.selectNodeSpec;
+        }
+
+        /**
+         * @return storageNodeDiskSize
+         */
+        public Integer getStorageNodeDiskSize() {
+            return this.storageNodeDiskSize;
+        }
+
+        /**
+         * @return storageNodeDiskType
+         */
+        public String getStorageNodeDiskType() {
+            return this.storageNodeDiskType;
+        }
+
+        /**
+         * @return storageNodeNum
+         */
+        public Integer getStorageNodeNum() {
+            return this.storageNodeNum;
+        }
+
+        /**
+         * @return storageNodeSpec
+         */
+        public String getStorageNodeSpec() {
+            return this.storageNodeSpec;
+        }
+
+        public static final class Builder {
+            private Integer authNodeNum; 
+            private String authNodeSpec; 
+            private Integer insertNodeNum; 
+            private String insertNodeSpec; 
+            private Integer selectNodeCacheSize; 
+            private Integer selectNodeNum; 
+            private String selectNodeSpec; 
+            private Integer storageNodeDiskSize; 
+            private String storageNodeDiskType; 
+            private Integer storageNodeNum; 
+            private String storageNodeSpec; 
+
+            private Builder() {
+            } 
+
+            private Builder(AtmConfig model) {
+                this.authNodeNum = model.authNodeNum;
+                this.authNodeSpec = model.authNodeSpec;
+                this.insertNodeNum = model.insertNodeNum;
+                this.insertNodeSpec = model.insertNodeSpec;
+                this.selectNodeCacheSize = model.selectNodeCacheSize;
+                this.selectNodeNum = model.selectNodeNum;
+                this.selectNodeSpec = model.selectNodeSpec;
+                this.storageNodeDiskSize = model.storageNodeDiskSize;
+                this.storageNodeDiskType = model.storageNodeDiskType;
+                this.storageNodeNum = model.storageNodeNum;
+                this.storageNodeSpec = model.storageNodeSpec;
+            } 
+
+            /**
+             * AuthNodeNum.
+             */
+            public Builder authNodeNum(Integer authNodeNum) {
+                this.authNodeNum = authNodeNum;
+                return this;
+            }
+
+            /**
+             * AuthNodeSpec.
+             */
+            public Builder authNodeSpec(String authNodeSpec) {
+                this.authNodeSpec = authNodeSpec;
+                return this;
+            }
+
+            /**
+             * InsertNodeNum.
+             */
+            public Builder insertNodeNum(Integer insertNodeNum) {
+                this.insertNodeNum = insertNodeNum;
+                return this;
+            }
+
+            /**
+             * InsertNodeSpec.
+             */
+            public Builder insertNodeSpec(String insertNodeSpec) {
+                this.insertNodeSpec = insertNodeSpec;
+                return this;
+            }
+
+            /**
+             * SelectNodeCacheSize.
+             */
+            public Builder selectNodeCacheSize(Integer selectNodeCacheSize) {
+                this.selectNodeCacheSize = selectNodeCacheSize;
+                return this;
+            }
+
+            /**
+             * SelectNodeNum.
+             */
+            public Builder selectNodeNum(Integer selectNodeNum) {
+                this.selectNodeNum = selectNodeNum;
+                return this;
+            }
+
+            /**
+             * SelectNodeSpec.
+             */
+            public Builder selectNodeSpec(String selectNodeSpec) {
+                this.selectNodeSpec = selectNodeSpec;
+                return this;
+            }
+
+            /**
+             * StorageNodeDiskSize.
+             */
+            public Builder storageNodeDiskSize(Integer storageNodeDiskSize) {
+                this.storageNodeDiskSize = storageNodeDiskSize;
+                return this;
+            }
+
+            /**
+             * StorageNodeDiskType.
+             */
+            public Builder storageNodeDiskType(String storageNodeDiskType) {
+                this.storageNodeDiskType = storageNodeDiskType;
+                return this;
+            }
+
+            /**
+             * StorageNodeNum.
+             */
+            public Builder storageNodeNum(Integer storageNodeNum) {
+                this.storageNodeNum = storageNodeNum;
+                return this;
+            }
+
+            /**
+             * StorageNodeSpec.
+             */
+            public Builder storageNodeSpec(String storageNodeSpec) {
+                this.storageNodeSpec = storageNodeSpec;
+                return this;
+            }
+
+            public AtmConfig build() {
+                return new AtmConfig(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link ModifyDBResourceGroupRequest} extends {@link TeaModel}
@@ -1237,6 +1525,9 @@ public class ModifyDBResourceGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("StorageMounts")
         private java.util.List<StorageMounts> storageMounts;
 
+        @com.aliyun.core.annotation.NameInMap("UserDefinedRequirements")
+        private String userDefinedRequirements;
+
         @com.aliyun.core.annotation.NameInMap("WorkerGroups")
         private java.util.List<WorkerGroups> workerGroups;
 
@@ -1249,6 +1540,7 @@ public class ModifyDBResourceGroupRequest extends Request {
             this.headSpec = builder.headSpec;
             this.headSpecType = builder.headSpecType;
             this.storageMounts = builder.storageMounts;
+            this.userDefinedRequirements = builder.userDefinedRequirements;
             this.workerGroups = builder.workerGroups;
         }
 
@@ -1317,6 +1609,13 @@ public class ModifyDBResourceGroupRequest extends Request {
         }
 
         /**
+         * @return userDefinedRequirements
+         */
+        public String getUserDefinedRequirements() {
+            return this.userDefinedRequirements;
+        }
+
+        /**
          * @return workerGroups
          */
         public java.util.List<WorkerGroups> getWorkerGroups() {
@@ -1332,6 +1631,7 @@ public class ModifyDBResourceGroupRequest extends Request {
             private String headSpec; 
             private String headSpecType; 
             private java.util.List<StorageMounts> storageMounts; 
+            private String userDefinedRequirements; 
             private java.util.List<WorkerGroups> workerGroups; 
 
             private Builder() {
@@ -1346,6 +1646,7 @@ public class ModifyDBResourceGroupRequest extends Request {
                 this.headSpec = model.headSpec;
                 this.headSpecType = model.headSpecType;
                 this.storageMounts = model.storageMounts;
+                this.userDefinedRequirements = model.userDefinedRequirements;
                 this.workerGroups = model.workerGroups;
             } 
 
@@ -1410,6 +1711,14 @@ public class ModifyDBResourceGroupRequest extends Request {
              */
             public Builder storageMounts(java.util.List<StorageMounts> storageMounts) {
                 this.storageMounts = storageMounts;
+                return this;
+            }
+
+            /**
+             * UserDefinedRequirements.
+             */
+            public Builder userDefinedRequirements(String userDefinedRequirements) {
+                this.userDefinedRequirements = userDefinedRequirements;
                 return this;
             }
 

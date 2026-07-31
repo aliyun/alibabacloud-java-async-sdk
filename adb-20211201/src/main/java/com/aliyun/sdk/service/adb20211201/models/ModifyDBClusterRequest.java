@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyDBClusterRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AINodeNumber")
+    private Integer AINodeNumber;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AINodeSpec")
+    private String AINodeSpec;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ComputeResource")
     private String computeResource;
 
@@ -52,6 +60,8 @@ public class ModifyDBClusterRequest extends Request {
 
     private ModifyDBClusterRequest(Builder builder) {
         super(builder);
+        this.AINodeNumber = builder.AINodeNumber;
+        this.AINodeSpec = builder.AINodeSpec;
         this.computeResource = builder.computeResource;
         this.DBClusterId = builder.DBClusterId;
         this.enableDefaultResourcePool = builder.enableDefaultResourcePool;
@@ -73,6 +83,20 @@ public class ModifyDBClusterRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return AINodeNumber
+     */
+    public Integer getAINodeNumber() {
+        return this.AINodeNumber;
+    }
+
+    /**
+     * @return AINodeSpec
+     */
+    public String getAINodeSpec() {
+        return this.AINodeSpec;
     }
 
     /**
@@ -132,6 +156,8 @@ public class ModifyDBClusterRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDBClusterRequest, Builder> {
+        private Integer AINodeNumber; 
+        private String AINodeSpec; 
         private String computeResource; 
         private String DBClusterId; 
         private Boolean enableDefaultResourcePool; 
@@ -147,6 +173,8 @@ public class ModifyDBClusterRequest extends Request {
 
         private Builder(ModifyDBClusterRequest request) {
             super(request);
+            this.AINodeNumber = request.AINodeNumber;
+            this.AINodeSpec = request.AINodeSpec;
             this.computeResource = request.computeResource;
             this.DBClusterId = request.DBClusterId;
             this.enableDefaultResourcePool = request.enableDefaultResourcePool;
@@ -156,6 +184,24 @@ public class ModifyDBClusterRequest extends Request {
             this.reservedNodeSize = request.reservedNodeSize;
             this.storageResource = request.storageResource;
         } 
+
+        /**
+         * AINodeNumber.
+         */
+        public Builder AINodeNumber(Integer AINodeNumber) {
+            this.putQueryParameter("AINodeNumber", AINodeNumber);
+            this.AINodeNumber = AINodeNumber;
+            return this;
+        }
+
+        /**
+         * AINodeSpec.
+         */
+        public Builder AINodeSpec(String AINodeSpec) {
+            this.putQueryParameter("AINodeSpec", AINodeSpec);
+            this.AINodeSpec = AINodeSpec;
+            return this;
+        }
 
         /**
          * <p>The reserved computing resources. Valid values: 0ACU to 4096ACU. The value must be in increments of 16ACU. Each ACU is approximately equal to 1 core and 4 GB memory.</p>

@@ -52,6 +52,10 @@ public class DescribeSQLPatternsRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SqlPatternHash")
+    private Long sqlPatternHash;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
@@ -69,6 +73,7 @@ public class DescribeSQLPatternsRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.sqlPatternHash = builder.sqlPatternHash;
         this.startTime = builder.startTime;
         this.userName = builder.userName;
     }
@@ -143,6 +148,13 @@ public class DescribeSQLPatternsRequest extends Request {
     }
 
     /**
+     * @return sqlPatternHash
+     */
+    public Long getSqlPatternHash() {
+        return this.sqlPatternHash;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -165,6 +177,7 @@ public class DescribeSQLPatternsRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
+        private Long sqlPatternHash; 
         private String startTime; 
         private String userName; 
 
@@ -182,6 +195,7 @@ public class DescribeSQLPatternsRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.sqlPatternHash = request.sqlPatternHash;
             this.startTime = request.startTime;
             this.userName = request.userName;
         } 
@@ -322,6 +336,15 @@ public class DescribeSQLPatternsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * SqlPatternHash.
+         */
+        public Builder sqlPatternHash(Long sqlPatternHash) {
+            this.putQueryParameter("SqlPatternHash", sqlPatternHash);
+            this.sqlPatternHash = sqlPatternHash;
             return this;
         }
 

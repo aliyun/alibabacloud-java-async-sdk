@@ -18,8 +18,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateDBResourceGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AtmConfig")
+    private AtmConfig atmConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoStopInterval")
     private String autoStopInterval;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Classification")
+    private String classification;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterMode")
@@ -97,6 +105,10 @@ public class CreateDBResourceGroupRequest extends Request {
     private java.util.List<Rules> rules;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalePolicy")
+    private String scalePolicy;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SpecName")
     private String specName;
 
@@ -106,7 +118,9 @@ public class CreateDBResourceGroupRequest extends Request {
 
     private CreateDBResourceGroupRequest(Builder builder) {
         super(builder);
+        this.atmConfig = builder.atmConfig;
         this.autoStopInterval = builder.autoStopInterval;
+        this.classification = builder.classification;
         this.clusterMode = builder.clusterMode;
         this.clusterSizeResource = builder.clusterSizeResource;
         this.DBClusterId = builder.DBClusterId;
@@ -125,6 +139,7 @@ public class CreateDBResourceGroupRequest extends Request {
         this.rayConfig = builder.rayConfig;
         this.regionId = builder.regionId;
         this.rules = builder.rules;
+        this.scalePolicy = builder.scalePolicy;
         this.specName = builder.specName;
         this.targetResourceGroupName = builder.targetResourceGroupName;
     }
@@ -143,10 +158,24 @@ public class CreateDBResourceGroupRequest extends Request {
     }
 
     /**
+     * @return atmConfig
+     */
+    public AtmConfig getAtmConfig() {
+        return this.atmConfig;
+    }
+
+    /**
      * @return autoStopInterval
      */
     public String getAutoStopInterval() {
         return this.autoStopInterval;
+    }
+
+    /**
+     * @return classification
+     */
+    public String getClassification() {
+        return this.classification;
     }
 
     /**
@@ -276,6 +305,13 @@ public class CreateDBResourceGroupRequest extends Request {
     }
 
     /**
+     * @return scalePolicy
+     */
+    public String getScalePolicy() {
+        return this.scalePolicy;
+    }
+
+    /**
      * @return specName
      */
     public String getSpecName() {
@@ -290,7 +326,9 @@ public class CreateDBResourceGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDBResourceGroupRequest, Builder> {
+        private AtmConfig atmConfig; 
         private String autoStopInterval; 
+        private String classification; 
         private String clusterMode; 
         private String clusterSizeResource; 
         private String DBClusterId; 
@@ -309,6 +347,7 @@ public class CreateDBResourceGroupRequest extends Request {
         private RayConfig rayConfig; 
         private String regionId; 
         private java.util.List<Rules> rules; 
+        private String scalePolicy; 
         private String specName; 
         private String targetResourceGroupName; 
 
@@ -318,7 +357,9 @@ public class CreateDBResourceGroupRequest extends Request {
 
         private Builder(CreateDBResourceGroupRequest request) {
             super(request);
+            this.atmConfig = request.atmConfig;
             this.autoStopInterval = request.autoStopInterval;
+            this.classification = request.classification;
             this.clusterMode = request.clusterMode;
             this.clusterSizeResource = request.clusterSizeResource;
             this.DBClusterId = request.DBClusterId;
@@ -337,9 +378,20 @@ public class CreateDBResourceGroupRequest extends Request {
             this.rayConfig = request.rayConfig;
             this.regionId = request.regionId;
             this.rules = request.rules;
+            this.scalePolicy = request.scalePolicy;
             this.specName = request.specName;
             this.targetResourceGroupName = request.targetResourceGroupName;
         } 
+
+        /**
+         * AtmConfig.
+         */
+        public Builder atmConfig(AtmConfig atmConfig) {
+            String atmConfigShrink = shrink(atmConfig, "AtmConfig", "json");
+            this.putQueryParameter("AtmConfig", atmConfigShrink);
+            this.atmConfig = atmConfig;
+            return this;
+        }
 
         /**
          * AutoStopInterval.
@@ -347,6 +399,15 @@ public class CreateDBResourceGroupRequest extends Request {
         public Builder autoStopInterval(String autoStopInterval) {
             this.putQueryParameter("AutoStopInterval", autoStopInterval);
             this.autoStopInterval = autoStopInterval;
+            return this;
+        }
+
+        /**
+         * Classification.
+         */
+        public Builder classification(String classification) {
+            this.putQueryParameter("Classification", classification);
+            this.classification = classification;
             return this;
         }
 
@@ -580,6 +641,15 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
+         * ScalePolicy.
+         */
+        public Builder scalePolicy(String scalePolicy) {
+            this.putQueryParameter("ScalePolicy", scalePolicy);
+            this.scalePolicy = scalePolicy;
+            return this;
+        }
+
+        /**
          * <p>A reserved parameter.</p>
          */
         public Builder specName(String specName) {
@@ -604,6 +674,270 @@ public class CreateDBResourceGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDBResourceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDBResourceGroupRequest</p>
+     */
+    public static class AtmConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AuthNodeNum")
+        private Integer authNodeNum;
+
+        @com.aliyun.core.annotation.NameInMap("AuthNodeSpec")
+        private String authNodeSpec;
+
+        @com.aliyun.core.annotation.NameInMap("InsertNodeNum")
+        private Integer insertNodeNum;
+
+        @com.aliyun.core.annotation.NameInMap("InsertNodeSpec")
+        private String insertNodeSpec;
+
+        @com.aliyun.core.annotation.NameInMap("SelectNodeCacheSize")
+        private Integer selectNodeCacheSize;
+
+        @com.aliyun.core.annotation.NameInMap("SelectNodeNum")
+        private Integer selectNodeNum;
+
+        @com.aliyun.core.annotation.NameInMap("SelectNodeSpec")
+        private String selectNodeSpec;
+
+        @com.aliyun.core.annotation.NameInMap("StorageNodeDiskSize")
+        private Integer storageNodeDiskSize;
+
+        @com.aliyun.core.annotation.NameInMap("StorageNodeDiskType")
+        private String storageNodeDiskType;
+
+        @com.aliyun.core.annotation.NameInMap("StorageNodeNum")
+        private Integer storageNodeNum;
+
+        @com.aliyun.core.annotation.NameInMap("StorageNodeSpec")
+        private String storageNodeSpec;
+
+        private AtmConfig(Builder builder) {
+            this.authNodeNum = builder.authNodeNum;
+            this.authNodeSpec = builder.authNodeSpec;
+            this.insertNodeNum = builder.insertNodeNum;
+            this.insertNodeSpec = builder.insertNodeSpec;
+            this.selectNodeCacheSize = builder.selectNodeCacheSize;
+            this.selectNodeNum = builder.selectNodeNum;
+            this.selectNodeSpec = builder.selectNodeSpec;
+            this.storageNodeDiskSize = builder.storageNodeDiskSize;
+            this.storageNodeDiskType = builder.storageNodeDiskType;
+            this.storageNodeNum = builder.storageNodeNum;
+            this.storageNodeSpec = builder.storageNodeSpec;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AtmConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return authNodeNum
+         */
+        public Integer getAuthNodeNum() {
+            return this.authNodeNum;
+        }
+
+        /**
+         * @return authNodeSpec
+         */
+        public String getAuthNodeSpec() {
+            return this.authNodeSpec;
+        }
+
+        /**
+         * @return insertNodeNum
+         */
+        public Integer getInsertNodeNum() {
+            return this.insertNodeNum;
+        }
+
+        /**
+         * @return insertNodeSpec
+         */
+        public String getInsertNodeSpec() {
+            return this.insertNodeSpec;
+        }
+
+        /**
+         * @return selectNodeCacheSize
+         */
+        public Integer getSelectNodeCacheSize() {
+            return this.selectNodeCacheSize;
+        }
+
+        /**
+         * @return selectNodeNum
+         */
+        public Integer getSelectNodeNum() {
+            return this.selectNodeNum;
+        }
+
+        /**
+         * @return selectNodeSpec
+         */
+        public String getSelectNodeSpec() {
+            return this.selectNodeSpec;
+        }
+
+        /**
+         * @return storageNodeDiskSize
+         */
+        public Integer getStorageNodeDiskSize() {
+            return this.storageNodeDiskSize;
+        }
+
+        /**
+         * @return storageNodeDiskType
+         */
+        public String getStorageNodeDiskType() {
+            return this.storageNodeDiskType;
+        }
+
+        /**
+         * @return storageNodeNum
+         */
+        public Integer getStorageNodeNum() {
+            return this.storageNodeNum;
+        }
+
+        /**
+         * @return storageNodeSpec
+         */
+        public String getStorageNodeSpec() {
+            return this.storageNodeSpec;
+        }
+
+        public static final class Builder {
+            private Integer authNodeNum; 
+            private String authNodeSpec; 
+            private Integer insertNodeNum; 
+            private String insertNodeSpec; 
+            private Integer selectNodeCacheSize; 
+            private Integer selectNodeNum; 
+            private String selectNodeSpec; 
+            private Integer storageNodeDiskSize; 
+            private String storageNodeDiskType; 
+            private Integer storageNodeNum; 
+            private String storageNodeSpec; 
+
+            private Builder() {
+            } 
+
+            private Builder(AtmConfig model) {
+                this.authNodeNum = model.authNodeNum;
+                this.authNodeSpec = model.authNodeSpec;
+                this.insertNodeNum = model.insertNodeNum;
+                this.insertNodeSpec = model.insertNodeSpec;
+                this.selectNodeCacheSize = model.selectNodeCacheSize;
+                this.selectNodeNum = model.selectNodeNum;
+                this.selectNodeSpec = model.selectNodeSpec;
+                this.storageNodeDiskSize = model.storageNodeDiskSize;
+                this.storageNodeDiskType = model.storageNodeDiskType;
+                this.storageNodeNum = model.storageNodeNum;
+                this.storageNodeSpec = model.storageNodeSpec;
+            } 
+
+            /**
+             * AuthNodeNum.
+             */
+            public Builder authNodeNum(Integer authNodeNum) {
+                this.authNodeNum = authNodeNum;
+                return this;
+            }
+
+            /**
+             * AuthNodeSpec.
+             */
+            public Builder authNodeSpec(String authNodeSpec) {
+                this.authNodeSpec = authNodeSpec;
+                return this;
+            }
+
+            /**
+             * InsertNodeNum.
+             */
+            public Builder insertNodeNum(Integer insertNodeNum) {
+                this.insertNodeNum = insertNodeNum;
+                return this;
+            }
+
+            /**
+             * InsertNodeSpec.
+             */
+            public Builder insertNodeSpec(String insertNodeSpec) {
+                this.insertNodeSpec = insertNodeSpec;
+                return this;
+            }
+
+            /**
+             * SelectNodeCacheSize.
+             */
+            public Builder selectNodeCacheSize(Integer selectNodeCacheSize) {
+                this.selectNodeCacheSize = selectNodeCacheSize;
+                return this;
+            }
+
+            /**
+             * SelectNodeNum.
+             */
+            public Builder selectNodeNum(Integer selectNodeNum) {
+                this.selectNodeNum = selectNodeNum;
+                return this;
+            }
+
+            /**
+             * SelectNodeSpec.
+             */
+            public Builder selectNodeSpec(String selectNodeSpec) {
+                this.selectNodeSpec = selectNodeSpec;
+                return this;
+            }
+
+            /**
+             * StorageNodeDiskSize.
+             */
+            public Builder storageNodeDiskSize(Integer storageNodeDiskSize) {
+                this.storageNodeDiskSize = storageNodeDiskSize;
+                return this;
+            }
+
+            /**
+             * StorageNodeDiskType.
+             */
+            public Builder storageNodeDiskType(String storageNodeDiskType) {
+                this.storageNodeDiskType = storageNodeDiskType;
+                return this;
+            }
+
+            /**
+             * StorageNodeNum.
+             */
+            public Builder storageNodeNum(Integer storageNodeNum) {
+                this.storageNodeNum = storageNodeNum;
+                return this;
+            }
+
+            /**
+             * StorageNodeSpec.
+             */
+            public Builder storageNodeSpec(String storageNodeSpec) {
+                this.storageNodeSpec = storageNodeSpec;
+                return this;
+            }
+
+            public AtmConfig build() {
+                return new AtmConfig(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link CreateDBResourceGroupRequest} extends {@link TeaModel}
@@ -968,6 +1302,9 @@ public class CreateDBResourceGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("HeadSpecType")
         private String headSpecType;
 
+        @com.aliyun.core.annotation.NameInMap("UserDefinedRequirements")
+        private String userDefinedRequirements;
+
         @com.aliyun.core.annotation.NameInMap("WorkerGroups")
         private java.util.List<WorkerGroups> workerGroups;
 
@@ -978,6 +1315,7 @@ public class CreateDBResourceGroupRequest extends Request {
             this.headDiskCapacity = builder.headDiskCapacity;
             this.headSpec = builder.headSpec;
             this.headSpecType = builder.headSpecType;
+            this.userDefinedRequirements = builder.userDefinedRequirements;
             this.workerGroups = builder.workerGroups;
         }
 
@@ -1032,6 +1370,13 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
+         * @return userDefinedRequirements
+         */
+        public String getUserDefinedRequirements() {
+            return this.userDefinedRequirements;
+        }
+
+        /**
          * @return workerGroups
          */
         public java.util.List<WorkerGroups> getWorkerGroups() {
@@ -1045,6 +1390,7 @@ public class CreateDBResourceGroupRequest extends Request {
             private String headDiskCapacity; 
             private String headSpec; 
             private String headSpecType; 
+            private String userDefinedRequirements; 
             private java.util.List<WorkerGroups> workerGroups; 
 
             private Builder() {
@@ -1057,6 +1403,7 @@ public class CreateDBResourceGroupRequest extends Request {
                 this.headDiskCapacity = model.headDiskCapacity;
                 this.headSpec = model.headSpec;
                 this.headSpecType = model.headSpecType;
+                this.userDefinedRequirements = model.userDefinedRequirements;
                 this.workerGroups = model.workerGroups;
             } 
 
@@ -1105,6 +1452,14 @@ public class CreateDBResourceGroupRequest extends Request {
              */
             public Builder headSpecType(String headSpecType) {
                 this.headSpecType = headSpecType;
+                return this;
+            }
+
+            /**
+             * UserDefinedRequirements.
+             */
+            public Builder userDefinedRequirements(String userDefinedRequirements) {
+                this.userDefinedRequirements = userDefinedRequirements;
                 return this;
             }
 

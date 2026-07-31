@@ -97,6 +97,270 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
      *
      * <p>DescribeDBResourceGroupResponseBody</p>
      */
+    public static class AtmConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AuthNodeNum")
+        private String authNodeNum;
+
+        @com.aliyun.core.annotation.NameInMap("AuthNodeSpec")
+        private String authNodeSpec;
+
+        @com.aliyun.core.annotation.NameInMap("InsertNodeNum")
+        private String insertNodeNum;
+
+        @com.aliyun.core.annotation.NameInMap("InsertNodeSpec")
+        private String insertNodeSpec;
+
+        @com.aliyun.core.annotation.NameInMap("SelectNodeCacheSize")
+        private String selectNodeCacheSize;
+
+        @com.aliyun.core.annotation.NameInMap("SelectNodeNum")
+        private String selectNodeNum;
+
+        @com.aliyun.core.annotation.NameInMap("SelectNodeSpec")
+        private String selectNodeSpec;
+
+        @com.aliyun.core.annotation.NameInMap("StorageNodeDiskSize")
+        private String storageNodeDiskSize;
+
+        @com.aliyun.core.annotation.NameInMap("StorageNodeDiskType")
+        private String storageNodeDiskType;
+
+        @com.aliyun.core.annotation.NameInMap("StorageNodeNum")
+        private String storageNodeNum;
+
+        @com.aliyun.core.annotation.NameInMap("StorageNodeSpec")
+        private String storageNodeSpec;
+
+        private AtmConfig(Builder builder) {
+            this.authNodeNum = builder.authNodeNum;
+            this.authNodeSpec = builder.authNodeSpec;
+            this.insertNodeNum = builder.insertNodeNum;
+            this.insertNodeSpec = builder.insertNodeSpec;
+            this.selectNodeCacheSize = builder.selectNodeCacheSize;
+            this.selectNodeNum = builder.selectNodeNum;
+            this.selectNodeSpec = builder.selectNodeSpec;
+            this.storageNodeDiskSize = builder.storageNodeDiskSize;
+            this.storageNodeDiskType = builder.storageNodeDiskType;
+            this.storageNodeNum = builder.storageNodeNum;
+            this.storageNodeSpec = builder.storageNodeSpec;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AtmConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return authNodeNum
+         */
+        public String getAuthNodeNum() {
+            return this.authNodeNum;
+        }
+
+        /**
+         * @return authNodeSpec
+         */
+        public String getAuthNodeSpec() {
+            return this.authNodeSpec;
+        }
+
+        /**
+         * @return insertNodeNum
+         */
+        public String getInsertNodeNum() {
+            return this.insertNodeNum;
+        }
+
+        /**
+         * @return insertNodeSpec
+         */
+        public String getInsertNodeSpec() {
+            return this.insertNodeSpec;
+        }
+
+        /**
+         * @return selectNodeCacheSize
+         */
+        public String getSelectNodeCacheSize() {
+            return this.selectNodeCacheSize;
+        }
+
+        /**
+         * @return selectNodeNum
+         */
+        public String getSelectNodeNum() {
+            return this.selectNodeNum;
+        }
+
+        /**
+         * @return selectNodeSpec
+         */
+        public String getSelectNodeSpec() {
+            return this.selectNodeSpec;
+        }
+
+        /**
+         * @return storageNodeDiskSize
+         */
+        public String getStorageNodeDiskSize() {
+            return this.storageNodeDiskSize;
+        }
+
+        /**
+         * @return storageNodeDiskType
+         */
+        public String getStorageNodeDiskType() {
+            return this.storageNodeDiskType;
+        }
+
+        /**
+         * @return storageNodeNum
+         */
+        public String getStorageNodeNum() {
+            return this.storageNodeNum;
+        }
+
+        /**
+         * @return storageNodeSpec
+         */
+        public String getStorageNodeSpec() {
+            return this.storageNodeSpec;
+        }
+
+        public static final class Builder {
+            private String authNodeNum; 
+            private String authNodeSpec; 
+            private String insertNodeNum; 
+            private String insertNodeSpec; 
+            private String selectNodeCacheSize; 
+            private String selectNodeNum; 
+            private String selectNodeSpec; 
+            private String storageNodeDiskSize; 
+            private String storageNodeDiskType; 
+            private String storageNodeNum; 
+            private String storageNodeSpec; 
+
+            private Builder() {
+            } 
+
+            private Builder(AtmConfig model) {
+                this.authNodeNum = model.authNodeNum;
+                this.authNodeSpec = model.authNodeSpec;
+                this.insertNodeNum = model.insertNodeNum;
+                this.insertNodeSpec = model.insertNodeSpec;
+                this.selectNodeCacheSize = model.selectNodeCacheSize;
+                this.selectNodeNum = model.selectNodeNum;
+                this.selectNodeSpec = model.selectNodeSpec;
+                this.storageNodeDiskSize = model.storageNodeDiskSize;
+                this.storageNodeDiskType = model.storageNodeDiskType;
+                this.storageNodeNum = model.storageNodeNum;
+                this.storageNodeSpec = model.storageNodeSpec;
+            } 
+
+            /**
+             * AuthNodeNum.
+             */
+            public Builder authNodeNum(String authNodeNum) {
+                this.authNodeNum = authNodeNum;
+                return this;
+            }
+
+            /**
+             * AuthNodeSpec.
+             */
+            public Builder authNodeSpec(String authNodeSpec) {
+                this.authNodeSpec = authNodeSpec;
+                return this;
+            }
+
+            /**
+             * InsertNodeNum.
+             */
+            public Builder insertNodeNum(String insertNodeNum) {
+                this.insertNodeNum = insertNodeNum;
+                return this;
+            }
+
+            /**
+             * InsertNodeSpec.
+             */
+            public Builder insertNodeSpec(String insertNodeSpec) {
+                this.insertNodeSpec = insertNodeSpec;
+                return this;
+            }
+
+            /**
+             * SelectNodeCacheSize.
+             */
+            public Builder selectNodeCacheSize(String selectNodeCacheSize) {
+                this.selectNodeCacheSize = selectNodeCacheSize;
+                return this;
+            }
+
+            /**
+             * SelectNodeNum.
+             */
+            public Builder selectNodeNum(String selectNodeNum) {
+                this.selectNodeNum = selectNodeNum;
+                return this;
+            }
+
+            /**
+             * SelectNodeSpec.
+             */
+            public Builder selectNodeSpec(String selectNodeSpec) {
+                this.selectNodeSpec = selectNodeSpec;
+                return this;
+            }
+
+            /**
+             * StorageNodeDiskSize.
+             */
+            public Builder storageNodeDiskSize(String storageNodeDiskSize) {
+                this.storageNodeDiskSize = storageNodeDiskSize;
+                return this;
+            }
+
+            /**
+             * StorageNodeDiskType.
+             */
+            public Builder storageNodeDiskType(String storageNodeDiskType) {
+                this.storageNodeDiskType = storageNodeDiskType;
+                return this;
+            }
+
+            /**
+             * StorageNodeNum.
+             */
+            public Builder storageNodeNum(String storageNodeNum) {
+                this.storageNodeNum = storageNodeNum;
+                return this;
+            }
+
+            /**
+             * StorageNodeSpec.
+             */
+            public Builder storageNodeSpec(String storageNodeSpec) {
+                this.storageNodeSpec = storageNodeSpec;
+                return this;
+            }
+
+            public AtmConfig build() {
+                return new AtmConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDBResourceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBResourceGroupResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndCronExpression")
         private String endCronExpression;
@@ -725,8 +989,14 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RayGrafanaAddress")
         private String rayGrafanaAddress;
 
+        @com.aliyun.core.annotation.NameInMap("RayServePublicAddress")
+        private String rayServePublicAddress;
+
         @com.aliyun.core.annotation.NameInMap("StorageMounts")
         private java.util.List<StorageMounts> storageMounts;
+
+        @com.aliyun.core.annotation.NameInMap("UserDefinedRequirements")
+        private String userDefinedRequirements;
 
         @com.aliyun.core.annotation.NameInMap("WorkerGroups")
         private java.util.List<WorkerGroups> workerGroups;
@@ -742,7 +1012,9 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             this.rayClusterAddress = builder.rayClusterAddress;
             this.rayDashboardAddress = builder.rayDashboardAddress;
             this.rayGrafanaAddress = builder.rayGrafanaAddress;
+            this.rayServePublicAddress = builder.rayServePublicAddress;
             this.storageMounts = builder.storageMounts;
+            this.userDefinedRequirements = builder.userDefinedRequirements;
             this.workerGroups = builder.workerGroups;
         }
 
@@ -825,10 +1097,24 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return rayServePublicAddress
+         */
+        public String getRayServePublicAddress() {
+            return this.rayServePublicAddress;
+        }
+
+        /**
          * @return storageMounts
          */
         public java.util.List<StorageMounts> getStorageMounts() {
             return this.storageMounts;
+        }
+
+        /**
+         * @return userDefinedRequirements
+         */
+        public String getUserDefinedRequirements() {
+            return this.userDefinedRequirements;
         }
 
         /**
@@ -849,7 +1135,9 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             private String rayClusterAddress; 
             private String rayDashboardAddress; 
             private String rayGrafanaAddress; 
+            private String rayServePublicAddress; 
             private java.util.List<StorageMounts> storageMounts; 
+            private String userDefinedRequirements; 
             private java.util.List<WorkerGroups> workerGroups; 
 
             private Builder() {
@@ -866,7 +1154,9 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
                 this.rayClusterAddress = model.rayClusterAddress;
                 this.rayDashboardAddress = model.rayDashboardAddress;
                 this.rayGrafanaAddress = model.rayGrafanaAddress;
+                this.rayServePublicAddress = model.rayServePublicAddress;
                 this.storageMounts = model.storageMounts;
+                this.userDefinedRequirements = model.userDefinedRequirements;
                 this.workerGroups = model.workerGroups;
             } 
 
@@ -951,10 +1241,26 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
+             * RayServePublicAddress.
+             */
+            public Builder rayServePublicAddress(String rayServePublicAddress) {
+                this.rayServePublicAddress = rayServePublicAddress;
+                return this;
+            }
+
+            /**
              * StorageMounts.
              */
             public Builder storageMounts(java.util.List<StorageMounts> storageMounts) {
                 this.storageMounts = storageMounts;
+                return this;
+            }
+
+            /**
+             * UserDefinedRequirements.
+             */
+            public Builder userDefinedRequirements(String userDefinedRequirements) {
+                this.userDefinedRequirements = userDefinedRequirements;
                 return this;
             }
 
@@ -1085,8 +1391,14 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
      * <p>DescribeDBResourceGroupResponseBody</p>
      */
     public static class GroupsInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AtmConfig")
+        private AtmConfig atmConfig;
+
         @com.aliyun.core.annotation.NameInMap("AutoStopInterval")
         private String autoStopInterval;
+
+        @com.aliyun.core.annotation.NameInMap("Classification")
+        private String classification;
 
         @com.aliyun.core.annotation.NameInMap("ClusterMode")
         private String clusterMode;
@@ -1152,6 +1464,9 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RunningClusterCount")
         private Integer runningClusterCount;
 
+        @com.aliyun.core.annotation.NameInMap("ScalePolicy")
+        private String scalePolicy;
+
         @com.aliyun.core.annotation.NameInMap("SpecName")
         private String specName;
 
@@ -1165,7 +1480,9 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         private String updateTime;
 
         private GroupsInfo(Builder builder) {
+            this.atmConfig = builder.atmConfig;
             this.autoStopInterval = builder.autoStopInterval;
+            this.classification = builder.classification;
             this.clusterMode = builder.clusterMode;
             this.clusterSizeResource = builder.clusterSizeResource;
             this.createTime = builder.createTime;
@@ -1187,6 +1504,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             this.rayConfig = builder.rayConfig;
             this.rules = builder.rules;
             this.runningClusterCount = builder.runningClusterCount;
+            this.scalePolicy = builder.scalePolicy;
             this.specName = builder.specName;
             this.status = builder.status;
             this.targetResourceGroupName = builder.targetResourceGroupName;
@@ -1202,10 +1520,24 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return atmConfig
+         */
+        public AtmConfig getAtmConfig() {
+            return this.atmConfig;
+        }
+
+        /**
          * @return autoStopInterval
          */
         public String getAutoStopInterval() {
             return this.autoStopInterval;
+        }
+
+        /**
+         * @return classification
+         */
+        public String getClassification() {
+            return this.classification;
         }
 
         /**
@@ -1356,6 +1688,13 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return scalePolicy
+         */
+        public String getScalePolicy() {
+            return this.scalePolicy;
+        }
+
+        /**
          * @return specName
          */
         public String getSpecName() {
@@ -1384,7 +1723,9 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private AtmConfig atmConfig; 
             private String autoStopInterval; 
+            private String classification; 
             private String clusterMode; 
             private String clusterSizeResource; 
             private String createTime; 
@@ -1406,6 +1747,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             private RayConfig rayConfig; 
             private java.util.List<GroupsInfoRules> rules; 
             private Integer runningClusterCount; 
+            private String scalePolicy; 
             private String specName; 
             private String status; 
             private String targetResourceGroupName; 
@@ -1415,7 +1757,9 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             } 
 
             private Builder(GroupsInfo model) {
+                this.atmConfig = model.atmConfig;
                 this.autoStopInterval = model.autoStopInterval;
+                this.classification = model.classification;
                 this.clusterMode = model.clusterMode;
                 this.clusterSizeResource = model.clusterSizeResource;
                 this.createTime = model.createTime;
@@ -1437,6 +1781,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
                 this.rayConfig = model.rayConfig;
                 this.rules = model.rules;
                 this.runningClusterCount = model.runningClusterCount;
+                this.scalePolicy = model.scalePolicy;
                 this.specName = model.specName;
                 this.status = model.status;
                 this.targetResourceGroupName = model.targetResourceGroupName;
@@ -1444,10 +1789,26 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             } 
 
             /**
+             * AtmConfig.
+             */
+            public Builder atmConfig(AtmConfig atmConfig) {
+                this.atmConfig = atmConfig;
+                return this;
+            }
+
+            /**
              * AutoStopInterval.
              */
             public Builder autoStopInterval(String autoStopInterval) {
                 this.autoStopInterval = autoStopInterval;
+                return this;
+            }
+
+            /**
+             * Classification.
+             */
+            public Builder classification(String classification) {
+                this.classification = classification;
                 return this;
             }
 
@@ -1667,6 +2028,14 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
              */
             public Builder runningClusterCount(Integer runningClusterCount) {
                 this.runningClusterCount = runningClusterCount;
+                return this;
+            }
+
+            /**
+             * ScalePolicy.
+             */
+            public Builder scalePolicy(String scalePolicy) {
+                this.scalePolicy = scalePolicy;
                 return this;
             }
 

@@ -45,6 +45,10 @@ public class CreateAccountRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RamUserList")
+    private java.util.List<String> ramUserList;
+
     private CreateAccountRequest(Builder builder) {
         super(builder);
         this.accountDescription = builder.accountDescription;
@@ -53,6 +57,7 @@ public class CreateAccountRequest extends Request {
         this.accountType = builder.accountType;
         this.DBClusterId = builder.DBClusterId;
         this.engine = builder.engine;
+        this.ramUserList = builder.ramUserList;
     }
 
     public static Builder builder() {
@@ -110,6 +115,13 @@ public class CreateAccountRequest extends Request {
         return this.engine;
     }
 
+    /**
+     * @return ramUserList
+     */
+    public java.util.List<String> getRamUserList() {
+        return this.ramUserList;
+    }
+
     public static final class Builder extends Request.Builder<CreateAccountRequest, Builder> {
         private String accountDescription; 
         private String accountName; 
@@ -117,6 +129,7 @@ public class CreateAccountRequest extends Request {
         private String accountType; 
         private String DBClusterId; 
         private String engine; 
+        private java.util.List<String> ramUserList; 
 
         private Builder() {
             super();
@@ -130,6 +143,7 @@ public class CreateAccountRequest extends Request {
             this.accountType = request.accountType;
             this.DBClusterId = request.DBClusterId;
             this.engine = request.engine;
+            this.ramUserList = request.ramUserList;
         } 
 
         /**
@@ -228,6 +242,16 @@ public class CreateAccountRequest extends Request {
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
             this.engine = engine;
+            return this;
+        }
+
+        /**
+         * RamUserList.
+         */
+        public Builder ramUserList(java.util.List<String> ramUserList) {
+            String ramUserListShrink = shrink(ramUserList, "RamUserList", "json");
+            this.putQueryParameter("RamUserList", ramUserListShrink);
+            this.ramUserList = ramUserList;
             return this;
         }
 

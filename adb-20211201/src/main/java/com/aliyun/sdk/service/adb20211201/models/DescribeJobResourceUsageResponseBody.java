@@ -290,6 +290,9 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
         private String resourceGroupName;
 
+        @com.aliyun.core.annotation.NameInMap("SparkAppName")
+        private String sparkAppName;
+
         @com.aliyun.core.annotation.NameInMap("UseCachePool")
         private Boolean useCachePool;
 
@@ -299,6 +302,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             this.jobId = builder.jobId;
             this.jobStartTime = builder.jobStartTime;
             this.resourceGroupName = builder.resourceGroupName;
+            this.sparkAppName = builder.sparkAppName;
             this.useCachePool = builder.useCachePool;
         }
 
@@ -346,6 +350,13 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         }
 
         /**
+         * @return sparkAppName
+         */
+        public String getSparkAppName() {
+            return this.sparkAppName;
+        }
+
+        /**
          * @return useCachePool
          */
         public Boolean getUseCachePool() {
@@ -358,6 +369,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             private String jobId; 
             private String jobStartTime; 
             private String resourceGroupName; 
+            private String sparkAppName; 
             private Boolean useCachePool; 
 
             private Builder() {
@@ -369,6 +381,7 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
                 this.jobId = model.jobId;
                 this.jobStartTime = model.jobStartTime;
                 this.resourceGroupName = model.resourceGroupName;
+                this.sparkAppName = model.sparkAppName;
                 this.useCachePool = model.useCachePool;
             } 
 
@@ -421,6 +434,14 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
              */
             public Builder resourceGroupName(String resourceGroupName) {
                 this.resourceGroupName = resourceGroupName;
+                return this;
+            }
+
+            /**
+             * SparkAppName.
+             */
+            public Builder sparkAppName(String sparkAppName) {
+                this.sparkAppName = sparkAppName;
                 return this;
             }
 

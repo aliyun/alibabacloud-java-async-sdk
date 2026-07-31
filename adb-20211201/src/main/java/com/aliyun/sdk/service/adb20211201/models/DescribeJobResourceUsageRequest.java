@@ -36,6 +36,10 @@ public class DescribeJobResourceUsageRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SparkAppName")
+    private String sparkAppName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
     @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
@@ -46,6 +50,7 @@ public class DescribeJobResourceUsageRequest extends Request {
         this.endTime = builder.endTime;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.sparkAppName = builder.sparkAppName;
         this.startTime = builder.startTime;
     }
 
@@ -91,6 +96,13 @@ public class DescribeJobResourceUsageRequest extends Request {
     }
 
     /**
+     * @return sparkAppName
+     */
+    public String getSparkAppName() {
+        return this.sparkAppName;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -102,6 +114,7 @@ public class DescribeJobResourceUsageRequest extends Request {
         private String endTime; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String sparkAppName; 
         private String startTime; 
 
         private Builder() {
@@ -114,6 +127,7 @@ public class DescribeJobResourceUsageRequest extends Request {
             this.endTime = request.endTime;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.sparkAppName = request.sparkAppName;
             this.startTime = request.startTime;
         } 
 
@@ -158,6 +172,15 @@ public class DescribeJobResourceUsageRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * SparkAppName.
+         */
+        public Builder sparkAppName(String sparkAppName) {
+            this.putQueryParameter("SparkAppName", sparkAppName);
+            this.sparkAppName = sparkAppName;
             return this;
         }
 

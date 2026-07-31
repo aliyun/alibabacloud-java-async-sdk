@@ -97,6 +97,60 @@ public class DescribeAccountsResponseBody extends TeaModel {
      *
      * <p>DescribeAccountsResponseBody</p>
      */
+    public static class RamUserList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RamUserList")
+        private java.util.List<String> ramUserList;
+
+        private RamUserList(Builder builder) {
+            this.ramUserList = builder.ramUserList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RamUserList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ramUserList
+         */
+        public java.util.List<String> getRamUserList() {
+            return this.ramUserList;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> ramUserList; 
+
+            private Builder() {
+            } 
+
+            private Builder(RamUserList model) {
+                this.ramUserList = model.ramUserList;
+            } 
+
+            /**
+             * RamUserList.
+             */
+            public Builder ramUserList(java.util.List<String> ramUserList) {
+                this.ramUserList = ramUserList;
+                return this;
+            }
+
+            public RamUserList build() {
+                return new RamUserList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccountsResponseBody</p>
+     */
     public static class DBAccount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountDescription")
         private String accountDescription;
@@ -113,6 +167,9 @@ public class DescribeAccountsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
+        @com.aliyun.core.annotation.NameInMap("RamUserList")
+        private RamUserList ramUserList;
+
         @com.aliyun.core.annotation.NameInMap("RamUsers")
         private String ramUsers;
 
@@ -122,6 +179,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             this.accountStatus = builder.accountStatus;
             this.accountType = builder.accountType;
             this.engine = builder.engine;
+            this.ramUserList = builder.ramUserList;
             this.ramUsers = builder.ramUsers;
         }
 
@@ -169,6 +227,13 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
+         * @return ramUserList
+         */
+        public RamUserList getRamUserList() {
+            return this.ramUserList;
+        }
+
+        /**
          * @return ramUsers
          */
         public String getRamUsers() {
@@ -181,6 +246,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             private String accountStatus; 
             private String accountType; 
             private String engine; 
+            private RamUserList ramUserList; 
             private String ramUsers; 
 
             private Builder() {
@@ -192,6 +258,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
                 this.accountStatus = model.accountStatus;
                 this.accountType = model.accountType;
                 this.engine = model.engine;
+                this.ramUserList = model.ramUserList;
                 this.ramUsers = model.ramUsers;
             } 
 
@@ -260,6 +327,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
              */
             public Builder engine(String engine) {
                 this.engine = engine;
+                return this;
+            }
+
+            /**
+             * RamUserList.
+             */
+            public Builder ramUserList(RamUserList ramUserList) {
+                this.ramUserList = ramUserList;
                 return this;
             }
 
