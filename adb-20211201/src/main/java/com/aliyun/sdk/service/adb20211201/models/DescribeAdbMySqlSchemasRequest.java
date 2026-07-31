@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAdbMySqlSchemasRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Catalog")
+    private String catalog;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
@@ -29,6 +33,7 @@ public class DescribeAdbMySqlSchemasRequest extends Request {
 
     private DescribeAdbMySqlSchemasRequest(Builder builder) {
         super(builder);
+        this.catalog = builder.catalog;
         this.DBClusterId = builder.DBClusterId;
         this.regionId = builder.regionId;
     }
@@ -47,6 +52,13 @@ public class DescribeAdbMySqlSchemasRequest extends Request {
     }
 
     /**
+     * @return catalog
+     */
+    public String getCatalog() {
+        return this.catalog;
+    }
+
+    /**
      * @return DBClusterId
      */
     public String getDBClusterId() {
@@ -61,6 +73,7 @@ public class DescribeAdbMySqlSchemasRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeAdbMySqlSchemasRequest, Builder> {
+        private String catalog; 
         private String DBClusterId; 
         private String regionId; 
 
@@ -70,9 +83,19 @@ public class DescribeAdbMySqlSchemasRequest extends Request {
 
         private Builder(DescribeAdbMySqlSchemasRequest request) {
             super(request);
+            this.catalog = request.catalog;
             this.DBClusterId = request.DBClusterId;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * Catalog.
+         */
+        public Builder catalog(String catalog) {
+            this.putQueryParameter("Catalog", catalog);
+            this.catalog = catalog;
+            return this;
+        }
 
         /**
          * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>

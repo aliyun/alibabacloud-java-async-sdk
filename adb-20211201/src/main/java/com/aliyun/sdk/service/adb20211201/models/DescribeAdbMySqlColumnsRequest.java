@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAdbMySqlColumnsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Catalog")
+    private String catalog;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
@@ -37,6 +41,7 @@ public class DescribeAdbMySqlColumnsRequest extends Request {
 
     private DescribeAdbMySqlColumnsRequest(Builder builder) {
         super(builder);
+        this.catalog = builder.catalog;
         this.DBClusterId = builder.DBClusterId;
         this.regionId = builder.regionId;
         this.schema = builder.schema;
@@ -54,6 +59,13 @@ public class DescribeAdbMySqlColumnsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return catalog
+     */
+    public String getCatalog() {
+        return this.catalog;
     }
 
     /**
@@ -85,6 +97,7 @@ public class DescribeAdbMySqlColumnsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeAdbMySqlColumnsRequest, Builder> {
+        private String catalog; 
         private String DBClusterId; 
         private String regionId; 
         private String schema; 
@@ -96,11 +109,21 @@ public class DescribeAdbMySqlColumnsRequest extends Request {
 
         private Builder(DescribeAdbMySqlColumnsRequest request) {
             super(request);
+            this.catalog = request.catalog;
             this.DBClusterId = request.DBClusterId;
             this.regionId = request.regionId;
             this.schema = request.schema;
             this.tableName = request.tableName;
         } 
+
+        /**
+         * Catalog.
+         */
+        public Builder catalog(String catalog) {
+            this.putQueryParameter("Catalog", catalog);
+            this.catalog = catalog;
+            return this;
+        }
 
         /**
          * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
