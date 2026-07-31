@@ -1548,8 +1548,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv6Address")
         private String ipv6Address;
 
+        @com.aliyun.core.annotation.NameInMap("Primary")
+        private Boolean primary;
+
         private Ipv6Set(Builder builder) {
             this.ipv6Address = builder.ipv6Address;
+            this.primary = builder.primary;
         }
 
         public static Builder builder() {
@@ -1567,14 +1571,23 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.ipv6Address;
         }
 
+        /**
+         * @return primary
+         */
+        public Boolean getPrimary() {
+            return this.primary;
+        }
+
         public static final class Builder {
             private String ipv6Address; 
+            private Boolean primary; 
 
             private Builder() {
             } 
 
             private Builder(Ipv6Set model) {
                 this.ipv6Address = model.ipv6Address;
+                this.primary = model.primary;
             } 
 
             /**
@@ -1585,6 +1598,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder ipv6Address(String ipv6Address) {
                 this.ipv6Address = ipv6Address;
+                return this;
+            }
+
+            /**
+             * Primary.
+             */
+            public Builder primary(Boolean primary) {
+                this.primary = primary;
                 return this;
             }
 
@@ -2591,6 +2612,60 @@ public class DescribeInstancesResponseBody extends TeaModel {
      *
      * <p>DescribeInstancesResponseBody</p>
      */
+    public static class SecurityOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableSecureBoot")
+        private Boolean enableSecureBoot;
+
+        private SecurityOptions(Builder builder) {
+            this.enableSecureBoot = builder.enableSecureBoot;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecurityOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableSecureBoot
+         */
+        public Boolean getEnableSecureBoot() {
+            return this.enableSecureBoot;
+        }
+
+        public static final class Builder {
+            private Boolean enableSecureBoot; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityOptions model) {
+                this.enableSecureBoot = model.enableSecureBoot;
+            } 
+
+            /**
+             * EnableSecureBoot.
+             */
+            public Builder enableSecureBoot(Boolean enableSecureBoot) {
+                this.enableSecureBoot = enableSecureBoot;
+                return this;
+            }
+
+            public SecurityOptions build() {
+                return new SecurityOptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -3078,6 +3153,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
         private SecurityGroupIds securityGroupIds;
 
+        @com.aliyun.core.annotation.NameInMap("SecurityOptions")
+        private SecurityOptions securityOptions;
+
         @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
 
@@ -3171,6 +3249,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.resourceGroupId = builder.resourceGroupId;
             this.saleCycle = builder.saleCycle;
             this.securityGroupIds = builder.securityGroupIds;
+            this.securityOptions = builder.securityOptions;
             this.serialNumber = builder.serialNumber;
             this.spotDuration = builder.spotDuration;
             this.spotInterruptionBehavior = builder.spotInterruptionBehavior;
@@ -3586,6 +3665,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return securityOptions
+         */
+        public SecurityOptions getSecurityOptions() {
+            return this.securityOptions;
+        }
+
+        /**
          * @return serialNumber
          */
         public String getSerialNumber() {
@@ -3726,6 +3812,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String resourceGroupId; 
             private String saleCycle; 
             private SecurityGroupIds securityGroupIds; 
+            private SecurityOptions securityOptions; 
             private String serialNumber; 
             private Integer spotDuration; 
             private String spotInterruptionBehavior; 
@@ -3799,6 +3886,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
                 this.resourceGroupId = model.resourceGroupId;
                 this.saleCycle = model.saleCycle;
                 this.securityGroupIds = model.securityGroupIds;
+                this.securityOptions = model.securityOptions;
                 this.serialNumber = model.serialNumber;
                 this.spotDuration = model.spotDuration;
                 this.spotInterruptionBehavior = model.spotInterruptionBehavior;
@@ -4422,6 +4510,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder securityGroupIds(SecurityGroupIds securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
+                return this;
+            }
+
+            /**
+             * SecurityOptions.
+             */
+            public Builder securityOptions(SecurityOptions securityOptions) {
+                this.securityOptions = securityOptions;
                 return this;
             }
 

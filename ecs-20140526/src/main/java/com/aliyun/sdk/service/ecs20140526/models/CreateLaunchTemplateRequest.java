@@ -2743,10 +2743,14 @@ public class CreateLaunchTemplateRequest extends Request {
      * <p>CreateLaunchTemplateRequest</p>
      */
     public static class SecurityOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableSecureBoot")
+        private Boolean enableSecureBoot;
+
         @com.aliyun.core.annotation.NameInMap("TrustedSystemMode")
         private String trustedSystemMode;
 
         private SecurityOptions(Builder builder) {
+            this.enableSecureBoot = builder.enableSecureBoot;
             this.trustedSystemMode = builder.trustedSystemMode;
         }
 
@@ -2759,6 +2763,13 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
+         * @return enableSecureBoot
+         */
+        public Boolean getEnableSecureBoot() {
+            return this.enableSecureBoot;
+        }
+
+        /**
          * @return trustedSystemMode
          */
         public String getTrustedSystemMode() {
@@ -2766,14 +2777,24 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         public static final class Builder {
+            private Boolean enableSecureBoot; 
             private String trustedSystemMode; 
 
             private Builder() {
             } 
 
             private Builder(SecurityOptions model) {
+                this.enableSecureBoot = model.enableSecureBoot;
                 this.trustedSystemMode = model.trustedSystemMode;
             } 
+
+            /**
+             * EnableSecureBoot.
+             */
+            public Builder enableSecureBoot(Boolean enableSecureBoot) {
+                this.enableSecureBoot = enableSecureBoot;
+                return this;
+            }
 
             /**
              * TrustedSystemMode.

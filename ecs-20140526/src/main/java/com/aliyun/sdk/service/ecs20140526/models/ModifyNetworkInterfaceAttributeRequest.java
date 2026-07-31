@@ -34,6 +34,10 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnablePrimaryIPv6")
+    private Boolean enablePrimaryIPv6;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnhancedNetwork")
     private EnhancedNetwork enhancedNetwork;
 
@@ -97,6 +101,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         this.connectionTrackingConfiguration = builder.connectionTrackingConfiguration;
         this.deleteOnRelease = builder.deleteOnRelease;
         this.description = builder.description;
+        this.enablePrimaryIPv6 = builder.enablePrimaryIPv6;
         this.enhancedNetwork = builder.enhancedNetwork;
         this.networkInterfaceId = builder.networkInterfaceId;
         this.networkInterfaceName = builder.networkInterfaceName;
@@ -152,6 +157,13 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return enablePrimaryIPv6
+     */
+    public Boolean getEnablePrimaryIPv6() {
+        return this.enablePrimaryIPv6;
     }
 
     /**
@@ -257,6 +269,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         private ConnectionTrackingConfiguration connectionTrackingConfiguration; 
         private Boolean deleteOnRelease; 
         private String description; 
+        private Boolean enablePrimaryIPv6; 
         private EnhancedNetwork enhancedNetwork; 
         private String networkInterfaceId; 
         private String networkInterfaceName; 
@@ -282,6 +295,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             this.connectionTrackingConfiguration = request.connectionTrackingConfiguration;
             this.deleteOnRelease = request.deleteOnRelease;
             this.description = request.description;
+            this.enablePrimaryIPv6 = request.enablePrimaryIPv6;
             this.enhancedNetwork = request.enhancedNetwork;
             this.networkInterfaceId = request.networkInterfaceId;
             this.networkInterfaceName = request.networkInterfaceName;
@@ -342,6 +356,15 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * EnablePrimaryIPv6.
+         */
+        public Builder enablePrimaryIPv6(Boolean enablePrimaryIPv6) {
+            this.putQueryParameter("EnablePrimaryIPv6", enablePrimaryIPv6);
+            this.enablePrimaryIPv6 = enablePrimaryIPv6;
             return this;
         }
 

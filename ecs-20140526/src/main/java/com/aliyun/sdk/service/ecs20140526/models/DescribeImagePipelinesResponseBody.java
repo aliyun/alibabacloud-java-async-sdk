@@ -1445,6 +1445,60 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
      *
      * <p>DescribeImagePipelinesResponseBody</p>
      */
+    public static class RepairItems extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RepairItem")
+        private java.util.List<String> repairItem;
+
+        private RepairItems(Builder builder) {
+            this.repairItem = builder.repairItem;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RepairItems create() {
+            return builder().build();
+        }
+
+        /**
+         * @return repairItem
+         */
+        public java.util.List<String> getRepairItem() {
+            return this.repairItem;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> repairItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(RepairItems model) {
+                this.repairItem = model.repairItem;
+            } 
+
+            /**
+             * RepairItem.
+             */
+            public Builder repairItem(java.util.List<String> repairItem) {
+                this.repairItem = repairItem;
+                return this;
+            }
+
+            public RepairItems build() {
+                return new RepairItems(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeImagePipelinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagePipelinesResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -1689,6 +1743,9 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         @Deprecated
         private String nvmeSupport;
 
+        @com.aliyun.core.annotation.NameInMap("RepairItems")
+        private RepairItems repairItems;
+
         @com.aliyun.core.annotation.NameInMap("RepairMode")
         private String repairMode;
 
@@ -1728,6 +1785,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
             this.name = builder.name;
             this.nvmeSupport = builder.nvmeSupport;
+            this.repairItems = builder.repairItems;
             this.repairMode = builder.repairMode;
             this.resourceGroupId = builder.resourceGroupId;
             this.systemDiskSize = builder.systemDiskSize;
@@ -1865,6 +1923,13 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
 
         /**
+         * @return repairItems
+         */
+        public RepairItems getRepairItems() {
+            return this.repairItems;
+        }
+
+        /**
          * @return repairMode
          */
         public String getRepairMode() {
@@ -1931,6 +1996,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             private Integer internetMaxBandwidthOut; 
             private String name; 
             private String nvmeSupport; 
+            private RepairItems repairItems; 
             private String repairMode; 
             private String resourceGroupId; 
             private Integer systemDiskSize; 
@@ -1960,6 +2026,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
                 this.internetMaxBandwidthOut = model.internetMaxBandwidthOut;
                 this.name = model.name;
                 this.nvmeSupport = model.nvmeSupport;
+                this.repairItems = model.repairItems;
                 this.repairMode = model.repairMode;
                 this.resourceGroupId = model.resourceGroupId;
                 this.systemDiskSize = model.systemDiskSize;
@@ -2158,6 +2225,14 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
              */
             public Builder nvmeSupport(String nvmeSupport) {
                 this.nvmeSupport = nvmeSupport;
+                return this;
+            }
+
+            /**
+             * RepairItems.
+             */
+            public Builder repairItems(RepairItems repairItems) {
+                this.repairItems = repairItems;
                 return this;
             }
 

@@ -1070,6 +1070,60 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
      *
      * <p>DescribeInstanceTypesResponseBody</p>
      */
+    public static class SecurityOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SecureBootSupport")
+        private String secureBootSupport;
+
+        private SecurityOptions(Builder builder) {
+            this.secureBootSupport = builder.secureBootSupport;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecurityOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return secureBootSupport
+         */
+        public String getSecureBootSupport() {
+            return this.secureBootSupport;
+        }
+
+        public static final class Builder {
+            private String secureBootSupport; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityOptions model) {
+                this.secureBootSupport = model.secureBootSupport;
+            } 
+
+            /**
+             * SecureBootSupport.
+             */
+            public Builder secureBootSupport(String secureBootSupport) {
+                this.secureBootSupport = secureBootSupport;
+                return this;
+            }
+
+            public SecurityOptions build() {
+                return new SecurityOptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstanceTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTypesResponseBody</p>
+     */
     public static class SupportedBootModes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedBootMode")
         private java.util.List<String> supportedBootMode;
@@ -1254,6 +1308,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecondaryEniQueueNumber")
         private Integer secondaryEniQueueNumber;
 
+        @com.aliyun.core.annotation.NameInMap("SecurityOptions")
+        private SecurityOptions securityOptions;
+
         @com.aliyun.core.annotation.NameInMap("SupportedBootModes")
         private SupportedBootModes supportedBootModes;
 
@@ -1304,6 +1361,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             this.primaryEniQueueNumber = builder.primaryEniQueueNumber;
             this.queuePairNumber = builder.queuePairNumber;
             this.secondaryEniQueueNumber = builder.secondaryEniQueueNumber;
+            this.securityOptions = builder.securityOptions;
             this.supportedBootModes = builder.supportedBootModes;
             this.totalEniQueueQuantity = builder.totalEniQueueQuantity;
         }
@@ -1618,6 +1676,13 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
+         * @return securityOptions
+         */
+        public SecurityOptions getSecurityOptions() {
+            return this.securityOptions;
+        }
+
+        /**
          * @return supportedBootModes
          */
         public SupportedBootModes getSupportedBootModes() {
@@ -1675,6 +1740,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             private Integer primaryEniQueueNumber; 
             private Integer queuePairNumber; 
             private Integer secondaryEniQueueNumber; 
+            private SecurityOptions securityOptions; 
             private SupportedBootModes supportedBootModes; 
             private Integer totalEniQueueQuantity; 
 
@@ -1725,6 +1791,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
                 this.primaryEniQueueNumber = model.primaryEniQueueNumber;
                 this.queuePairNumber = model.queuePairNumber;
                 this.secondaryEniQueueNumber = model.secondaryEniQueueNumber;
+                this.securityOptions = model.securityOptions;
                 this.supportedBootModes = model.supportedBootModes;
                 this.totalEniQueueQuantity = model.totalEniQueueQuantity;
             } 
@@ -2238,6 +2305,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
              */
             public Builder secondaryEniQueueNumber(Integer secondaryEniQueueNumber) {
                 this.secondaryEniQueueNumber = secondaryEniQueueNumber;
+                return this;
+            }
+
+            /**
+             * SecurityOptions.
+             */
+            public Builder securityOptions(SecurityOptions securityOptions) {
+                this.securityOptions = securityOptions;
                 return this;
             }
 

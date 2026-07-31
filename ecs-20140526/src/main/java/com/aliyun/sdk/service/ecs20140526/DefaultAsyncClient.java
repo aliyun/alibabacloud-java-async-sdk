@@ -99,9 +99,7 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("ap-southeast-6", "ecs.ap-southeast-6.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "ecs.ap-southeast-5.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "ecs.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "ecs.ap-southeast-2.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "ecs.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-south-1", "ecs.ap-south-1.aliyuncs.com"),
             new TeaPair("ap-northeast-2", "ecs.ap-northeast-2.aliyuncs.com"),
             new TeaPair("ap-northeast-1", "ecs.ap-northeast-1.aliyuncs.com")
         );

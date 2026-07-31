@@ -1967,8 +1967,12 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv6Address")
         private String ipv6Address;
 
+        @com.aliyun.core.annotation.NameInMap("Primary")
+        private Boolean primary;
+
         private Ipv6Set(Builder builder) {
             this.ipv6Address = builder.ipv6Address;
+            this.primary = builder.primary;
         }
 
         public static Builder builder() {
@@ -1986,14 +1990,23 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             return this.ipv6Address;
         }
 
+        /**
+         * @return primary
+         */
+        public Boolean getPrimary() {
+            return this.primary;
+        }
+
         public static final class Builder {
             private String ipv6Address; 
+            private Boolean primary; 
 
             private Builder() {
             } 
 
             private Builder(Ipv6Set model) {
                 this.ipv6Address = model.ipv6Address;
+                this.primary = model.primary;
             } 
 
             /**
@@ -2004,6 +2017,14 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
              */
             public Builder ipv6Address(String ipv6Address) {
                 this.ipv6Address = ipv6Address;
+                return this;
+            }
+
+            /**
+             * Primary.
+             */
+            public Builder primary(Boolean primary) {
+                this.primary = primary;
                 return this;
             }
 

@@ -2794,9 +2794,13 @@ public class RunInstancesRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("TrustedSystemMode")
         private String trustedSystemMode;
 
+        @com.aliyun.core.annotation.NameInMap("EnableSecureBoot")
+        private Boolean enableSecureBoot;
+
         private SecurityOptions(Builder builder) {
             this.confidentialComputingMode = builder.confidentialComputingMode;
             this.trustedSystemMode = builder.trustedSystemMode;
+            this.enableSecureBoot = builder.enableSecureBoot;
         }
 
         public static Builder builder() {
@@ -2821,9 +2825,17 @@ public class RunInstancesRequest extends Request {
             return this.trustedSystemMode;
         }
 
+        /**
+         * @return enableSecureBoot
+         */
+        public Boolean getEnableSecureBoot() {
+            return this.enableSecureBoot;
+        }
+
         public static final class Builder {
             private String confidentialComputingMode; 
             private String trustedSystemMode; 
+            private Boolean enableSecureBoot; 
 
             private Builder() {
             } 
@@ -2831,6 +2843,7 @@ public class RunInstancesRequest extends Request {
             private Builder(SecurityOptions model) {
                 this.confidentialComputingMode = model.confidentialComputingMode;
                 this.trustedSystemMode = model.trustedSystemMode;
+                this.enableSecureBoot = model.enableSecureBoot;
             } 
 
             /**
@@ -2874,6 +2887,14 @@ public class RunInstancesRequest extends Request {
              */
             public Builder trustedSystemMode(String trustedSystemMode) {
                 this.trustedSystemMode = trustedSystemMode;
+                return this;
+            }
+
+            /**
+             * EnableSecureBoot.
+             */
+            public Builder enableSecureBoot(Boolean enableSecureBoot) {
+                this.enableSecureBoot = enableSecureBoot;
                 return this;
             }
 

@@ -104,6 +104,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
     private SecurityGroupIds securityGroupIds;
 
+    @com.aliyun.core.annotation.NameInMap("SecurityOptions")
+    private SecurityOptions securityOptions;
+
     @com.aliyun.core.annotation.NameInMap("SerialNumber")
     private String serialNumber;
 
@@ -152,6 +155,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
         this.securityGroupIds = builder.securityGroupIds;
+        this.securityOptions = builder.securityOptions;
         this.serialNumber = builder.serialNumber;
         this.status = builder.status;
         this.stoppedMode = builder.stoppedMode;
@@ -376,6 +380,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return securityOptions
+     */
+    public SecurityOptions getSecurityOptions() {
+        return this.securityOptions;
+    }
+
+    /**
      * @return serialNumber
      */
     public String getSerialNumber() {
@@ -447,6 +458,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         private String regionId; 
         private String requestId; 
         private SecurityGroupIds securityGroupIds; 
+        private SecurityOptions securityOptions; 
         private String serialNumber; 
         private String status; 
         private String stoppedMode; 
@@ -487,6 +499,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             this.regionId = model.regionId;
             this.requestId = model.requestId;
             this.securityGroupIds = model.securityGroupIds;
+            this.securityOptions = model.securityOptions;
             this.serialNumber = model.serialNumber;
             this.status = model.status;
             this.stoppedMode = model.stoppedMode;
@@ -828,6 +841,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
          */
         public Builder securityGroupIds(SecurityGroupIds securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
+            return this;
+        }
+
+        /**
+         * SecurityOptions.
+         */
+        public Builder securityOptions(SecurityOptions securityOptions) {
+            this.securityOptions = securityOptions;
             return this;
         }
 
@@ -1539,6 +1560,60 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
 
             public SecurityGroupIds build() {
                 return new SecurityGroupIds(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceAttributeResponseBody</p>
+     */
+    public static class SecurityOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableSecureBoot")
+        private Boolean enableSecureBoot;
+
+        private SecurityOptions(Builder builder) {
+            this.enableSecureBoot = builder.enableSecureBoot;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecurityOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableSecureBoot
+         */
+        public Boolean getEnableSecureBoot() {
+            return this.enableSecureBoot;
+        }
+
+        public static final class Builder {
+            private Boolean enableSecureBoot; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityOptions model) {
+                this.enableSecureBoot = model.enableSecureBoot;
+            } 
+
+            /**
+             * EnableSecureBoot.
+             */
+            public Builder enableSecureBoot(Boolean enableSecureBoot) {
+                this.enableSecureBoot = enableSecureBoot;
+                return this;
+            }
+
+            public SecurityOptions build() {
+                return new SecurityOptions(this);
             } 
 
         } 

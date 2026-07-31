@@ -103,6 +103,10 @@ public class CreateImagePipelineRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepairItem")
+    private java.util.List<String> repairItem;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RepairMode")
     private String repairMode;
 
@@ -160,6 +164,7 @@ public class CreateImagePipelineRequest extends Request {
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.repairItem = builder.repairItem;
         this.repairMode = builder.repairMode;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -325,6 +330,13 @@ public class CreateImagePipelineRequest extends Request {
     }
 
     /**
+     * @return repairItem
+     */
+    public java.util.List<String> getRepairItem() {
+        return this.repairItem;
+    }
+
+    /**
      * @return repairMode
      */
     public String getRepairMode() {
@@ -408,6 +420,7 @@ public class CreateImagePipelineRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
+        private java.util.List<String> repairItem; 
         private String repairMode; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
@@ -444,6 +457,7 @@ public class CreateImagePipelineRequest extends Request {
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.repairItem = request.repairItem;
             this.repairMode = request.repairMode;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -708,6 +722,15 @@ public class CreateImagePipelineRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RepairItem.
+         */
+        public Builder repairItem(java.util.List<String> repairItem) {
+            this.putQueryParameter("RepairItem", repairItem);
+            this.repairItem = repairItem;
             return this;
         }
 
