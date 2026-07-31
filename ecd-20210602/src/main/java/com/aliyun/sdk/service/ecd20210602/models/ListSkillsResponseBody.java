@@ -295,6 +295,81 @@ public class ListSkillsResponseBody extends TeaModel {
      *
      * <p>ListSkillsResponseBody</p>
      */
+    public static class SupportAgentList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagId")
+        private String tagId;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private SupportAgentList(Builder builder) {
+            this.tagId = builder.tagId;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SupportAgentList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagId
+         */
+        public String getTagId() {
+            return this.tagId;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagId; 
+            private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportAgentList model) {
+                this.tagId = model.tagId;
+                this.tagValue = model.tagValue;
+            } 
+
+            /**
+             * TagId.
+             */
+            public Builder tagId(String tagId) {
+                this.tagId = tagId;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public SupportAgentList build() {
+                return new SupportAgentList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListSkillsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSkillsResponseBody</p>
+     */
     public static class Skills extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiKey")
         private String apiKey;
@@ -344,6 +419,9 @@ public class ListSkillsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupplierType")
         private String supplierType;
 
+        @com.aliyun.core.annotation.NameInMap("SupportAgentList")
+        private java.util.List<SupportAgentList> supportAgentList;
+
         private Skills(Builder builder) {
             this.apiKey = builder.apiKey;
             this.author = builder.author;
@@ -361,6 +439,7 @@ public class ListSkillsResponseBody extends TeaModel {
             this.sourceMarket = builder.sourceMarket;
             this.sourceMarketName = builder.sourceMarketName;
             this.supplierType = builder.supplierType;
+            this.supportAgentList = builder.supportAgentList;
         }
 
         public static Builder builder() {
@@ -483,6 +562,13 @@ public class ListSkillsResponseBody extends TeaModel {
             return this.supplierType;
         }
 
+        /**
+         * @return supportAgentList
+         */
+        public java.util.List<SupportAgentList> getSupportAgentList() {
+            return this.supportAgentList;
+        }
+
         public static final class Builder {
             private String apiKey; 
             private String author; 
@@ -500,6 +586,7 @@ public class ListSkillsResponseBody extends TeaModel {
             private String sourceMarket; 
             private String sourceMarketName; 
             private String supplierType; 
+            private java.util.List<SupportAgentList> supportAgentList; 
 
             private Builder() {
             } 
@@ -521,6 +608,7 @@ public class ListSkillsResponseBody extends TeaModel {
                 this.sourceMarket = model.sourceMarket;
                 this.sourceMarketName = model.sourceMarketName;
                 this.supplierType = model.supplierType;
+                this.supportAgentList = model.supportAgentList;
             } 
 
             /**
@@ -648,6 +736,14 @@ public class ListSkillsResponseBody extends TeaModel {
              */
             public Builder supplierType(String supplierType) {
                 this.supplierType = supplierType;
+                return this;
+            }
+
+            /**
+             * SupportAgentList.
+             */
+            public Builder supportAgentList(java.util.List<SupportAgentList> supportAgentList) {
+                this.supportAgentList = supportAgentList;
                 return this;
             }
 
