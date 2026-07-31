@@ -313,6 +313,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteVirtualResourceResponse> deleteVirtualResource(DeleteVirtualResourceRequest request);
 
     /**
+     * @param request the request parameters of DescribeArtifact  DescribeArtifactRequest
+     * @return DescribeArtifactResponse
+     */
+    CompletableFuture<DescribeArtifactResponse> describeArtifact(DescribeArtifactRequest request);
+
+    /**
      * @param request the request parameters of DescribeBenchmarkTask  DescribeBenchmarkTaskRequest
      * @return DescribeBenchmarkTaskResponse
      */

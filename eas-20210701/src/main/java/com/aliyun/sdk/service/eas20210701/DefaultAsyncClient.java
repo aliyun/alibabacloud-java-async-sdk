@@ -890,6 +890,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeArtifact  DescribeArtifactRequest
+     * @return DescribeArtifactResponse
+     */
+    @Override
+    public CompletableFuture<DescribeArtifactResponse> describeArtifact(DescribeArtifactRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeArtifact").setMethod(HttpMethod.GET).setPathRegex("/api/v2/artifacts/{ClusterId}/{ArtifactName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeArtifactResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeArtifactResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeBenchmarkTask  DescribeBenchmarkTaskRequest
      * @return DescribeBenchmarkTaskResponse
      */
