@@ -267,6 +267,9 @@ public class CreateMultiOrderRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("InstanceIds")
         private java.util.List<String> instanceIds;
 
+        @com.aliyun.core.annotation.NameInMap("PaidCallBackUrl")
+        private String paidCallBackUrl;
+
         @com.aliyun.core.annotation.NameInMap("Period")
         private Integer period;
 
@@ -290,6 +293,7 @@ public class CreateMultiOrderRequest extends Request {
             this.buyChange = builder.buyChange;
             this.components = builder.components;
             this.instanceIds = builder.instanceIds;
+            this.paidCallBackUrl = builder.paidCallBackUrl;
             this.period = builder.period;
             this.periodUnit = builder.periodUnit;
             this.promotionId = builder.promotionId;
@@ -348,6 +352,13 @@ public class CreateMultiOrderRequest extends Request {
         }
 
         /**
+         * @return paidCallBackUrl
+         */
+        public String getPaidCallBackUrl() {
+            return this.paidCallBackUrl;
+        }
+
+        /**
          * @return period
          */
         public Integer getPeriod() {
@@ -389,6 +400,7 @@ public class CreateMultiOrderRequest extends Request {
             private Boolean buyChange; 
             private java.util.List<Components> components; 
             private java.util.List<String> instanceIds; 
+            private String paidCallBackUrl; 
             private Integer period; 
             private String periodUnit; 
             private String promotionId; 
@@ -405,6 +417,7 @@ public class CreateMultiOrderRequest extends Request {
                 this.buyChange = model.buyChange;
                 this.components = model.components;
                 this.instanceIds = model.instanceIds;
+                this.paidCallBackUrl = model.paidCallBackUrl;
                 this.period = model.period;
                 this.periodUnit = model.periodUnit;
                 this.promotionId = model.promotionId;
@@ -457,6 +470,14 @@ public class CreateMultiOrderRequest extends Request {
              */
             public Builder instanceIds(java.util.List<String> instanceIds) {
                 this.instanceIds = instanceIds;
+                return this;
+            }
+
+            /**
+             * PaidCallBackUrl.
+             */
+            public Builder paidCallBackUrl(String paidCallBackUrl) {
+                this.paidCallBackUrl = paidCallBackUrl;
                 return this;
             }
 

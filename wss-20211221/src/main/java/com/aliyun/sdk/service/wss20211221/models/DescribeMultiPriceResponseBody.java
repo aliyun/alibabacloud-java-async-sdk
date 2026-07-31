@@ -509,6 +509,9 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
      * <p>DescribeMultiPriceResponseBody</p>
      */
     public static class Promotions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ActivityId")
+        private String activityId;
+
         @com.aliyun.core.annotation.NameInMap("OptionCode")
         private String optionCode;
 
@@ -525,6 +528,7 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
         private Boolean selected;
 
         private Promotions(Builder builder) {
+            this.activityId = builder.activityId;
             this.optionCode = builder.optionCode;
             this.promotionDesc = builder.promotionDesc;
             this.promotionId = builder.promotionId;
@@ -538,6 +542,13 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
 
         public static Promotions create() {
             return builder().build();
+        }
+
+        /**
+         * @return activityId
+         */
+        public String getActivityId() {
+            return this.activityId;
         }
 
         /**
@@ -576,6 +587,7 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String activityId; 
             private String optionCode; 
             private String promotionDesc; 
             private String promotionId; 
@@ -586,12 +598,21 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             } 
 
             private Builder(Promotions model) {
+                this.activityId = model.activityId;
                 this.optionCode = model.optionCode;
                 this.promotionDesc = model.promotionDesc;
                 this.promotionId = model.promotionId;
                 this.promotionName = model.promotionName;
                 this.selected = model.selected;
             } 
+
+            /**
+             * ActivityId.
+             */
+            public Builder activityId(String activityId) {
+                this.activityId = activityId;
+                return this;
+            }
 
             /**
              * OptionCode.
