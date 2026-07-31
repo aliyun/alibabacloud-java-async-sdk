@@ -1101,6 +1101,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeUrlObservationDataResponse> describeUrlObservationData(DescribeUrlObservationDataRequest request);
 
     /**
+     * @param request the request parameters of DescribeUserResourcePackage  DescribeUserResourcePackageRequest
+     * @return DescribeUserResourcePackageResponse
+     */
+    CompletableFuture<DescribeUserResourcePackageResponse> describeUserResourcePackage(DescribeUserResourcePackageRequest request);
+
+    /**
      * @param request the request parameters of DescribeWafUsageData  DescribeWafUsageDataRequest
      * @return DescribeWafUsageDataResponse
      */
@@ -1537,6 +1543,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetRedirectRuleResponse
      */
     CompletableFuture<GetRedirectRuleResponse> getRedirectRule(GetRedirectRuleRequest request);
+
+    /**
+     * @param request the request parameters of GetReleaseTime  GetReleaseTimeRequest
+     * @return GetReleaseTimeResponse
+     */
+    CompletableFuture<GetReleaseTimeResponse> getReleaseTime(GetReleaseTimeRequest request);
 
     /**
      * @param request the request parameters of GetRewriteUrlRule  GetRewriteUrlRuleRequest
