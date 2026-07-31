@@ -262,6 +262,12 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
      * <p>DescribeInstanceAttributeResponseBody</p>
      */
     public static class InstanceAttribute extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AiCreditStatus")
+        private String aiCreditStatus;
+
+        @com.aliyun.core.annotation.NameInMap("AiOpsModule")
+        private String aiOpsModule;
+
         @com.aliyun.core.annotation.NameInMap("AppOperationModule")
         private String appOperationModule;
 
@@ -377,6 +383,8 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         private java.util.List<WhiteListPolicies> whiteListPolicies;
 
         private InstanceAttribute(Builder builder) {
+            this.aiCreditStatus = builder.aiCreditStatus;
+            this.aiOpsModule = builder.aiOpsModule;
             this.appOperationModule = builder.appOperationModule;
             this.authorizedSecurityGroups = builder.authorizedSecurityGroups;
             this.bandwidth = builder.bandwidth;
@@ -423,6 +431,20 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
 
         public static InstanceAttribute create() {
             return builder().build();
+        }
+
+        /**
+         * @return aiCreditStatus
+         */
+        public String getAiCreditStatus() {
+            return this.aiCreditStatus;
+        }
+
+        /**
+         * @return aiOpsModule
+         */
+        public String getAiOpsModule() {
+            return this.aiOpsModule;
         }
 
         /**
@@ -692,6 +714,8 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String aiCreditStatus; 
+            private String aiOpsModule; 
             private String appOperationModule; 
             private java.util.List<String> authorizedSecurityGroups; 
             private String bandwidth; 
@@ -735,6 +759,8 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             } 
 
             private Builder(InstanceAttribute model) {
+                this.aiCreditStatus = model.aiCreditStatus;
+                this.aiOpsModule = model.aiOpsModule;
                 this.appOperationModule = model.appOperationModule;
                 this.authorizedSecurityGroups = model.authorizedSecurityGroups;
                 this.bandwidth = model.bandwidth;
@@ -774,6 +800,22 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
                 this.webTerminalModule = model.webTerminalModule;
                 this.whiteListPolicies = model.whiteListPolicies;
             } 
+
+            /**
+             * AiCreditStatus.
+             */
+            public Builder aiCreditStatus(String aiCreditStatus) {
+                this.aiCreditStatus = aiCreditStatus;
+                return this;
+            }
+
+            /**
+             * AiOpsModule.
+             */
+            public Builder aiOpsModule(String aiOpsModule) {
+                this.aiOpsModule = aiOpsModule;
+                return this;
+            }
 
             /**
              * AppOperationModule.
