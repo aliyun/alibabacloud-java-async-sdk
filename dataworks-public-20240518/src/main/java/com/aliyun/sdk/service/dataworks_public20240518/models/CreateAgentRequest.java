@@ -23,7 +23,7 @@ public class CreateAgentRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CallableAgents")
-    private java.util.List<String> callableAgents;
+    private java.util.List<CallableAgents> callableAgents;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
@@ -48,7 +48,7 @@ public class CreateAgentRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Skills")
-    private java.util.List<String> skills;
+    private java.util.List<Skills> skills;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SystemPrompt")
@@ -56,7 +56,7 @@ public class CreateAgentRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Tools")
-    private java.util.List<String> tools;
+    private java.util.List<Tools> tools;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Visibility")
@@ -105,7 +105,7 @@ public class CreateAgentRequest extends Request {
     /**
      * @return callableAgents
      */
-    public java.util.List<String> getCallableAgents() {
+    public java.util.List<CallableAgents> getCallableAgents() {
         return this.callableAgents;
     }
 
@@ -147,7 +147,7 @@ public class CreateAgentRequest extends Request {
     /**
      * @return skills
      */
-    public java.util.List<String> getSkills() {
+    public java.util.List<Skills> getSkills() {
         return this.skills;
     }
 
@@ -161,7 +161,7 @@ public class CreateAgentRequest extends Request {
     /**
      * @return tools
      */
-    public java.util.List<String> getTools() {
+    public java.util.List<Tools> getTools() {
         return this.tools;
     }
 
@@ -181,15 +181,15 @@ public class CreateAgentRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateAgentRequest, Builder> {
         private String regionId; 
-        private java.util.List<String> callableAgents; 
+        private java.util.List<CallableAgents> callableAgents; 
         private String description; 
         private String displayName; 
         private java.util.Map<String, ?> metadata; 
         private java.util.Map<String, ?> model; 
         private String name; 
-        private java.util.List<String> skills; 
+        private java.util.List<Skills> skills; 
         private String systemPrompt; 
-        private java.util.List<String> tools; 
+        private java.util.List<Tools> tools; 
         private String visibility; 
         private VisibilityScope visibilityScope; 
 
@@ -225,7 +225,7 @@ public class CreateAgentRequest extends Request {
         /**
          * CallableAgents.
          */
-        public Builder callableAgents(java.util.List<String> callableAgents) {
+        public Builder callableAgents(java.util.List<CallableAgents> callableAgents) {
             String callableAgentsShrink = shrink(callableAgents, "CallableAgents", "json");
             this.putBodyParameter("CallableAgents", callableAgentsShrink);
             this.callableAgents = callableAgents;
@@ -285,7 +285,7 @@ public class CreateAgentRequest extends Request {
         /**
          * Skills.
          */
-        public Builder skills(java.util.List<String> skills) {
+        public Builder skills(java.util.List<Skills> skills) {
             String skillsShrink = shrink(skills, "Skills", "json");
             this.putBodyParameter("Skills", skillsShrink);
             this.skills = skills;
@@ -304,7 +304,7 @@ public class CreateAgentRequest extends Request {
         /**
          * Tools.
          */
-        public Builder tools(java.util.List<String> tools) {
+        public Builder tools(java.util.List<Tools> tools) {
             String toolsShrink = shrink(tools, "Tools", "json");
             this.putBodyParameter("Tools", toolsShrink);
             this.tools = tools;
@@ -337,6 +337,177 @@ public class CreateAgentRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAgentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAgentRequest</p>
+     */
+    public static class CallableAgents extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private CallableAgents(Builder builder) {
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CallableAgents create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(CallableAgents model) {
+                this.name = model.name;
+            } 
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-agent</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public CallableAgents build() {
+                return new CallableAgents(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateAgentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAgentRequest</p>
+     */
+    public static class Skills extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private Skills(Builder builder) {
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Skills create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Skills model) {
+                this.name = model.name;
+            } 
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-agent</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public Skills build() {
+                return new Skills(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateAgentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAgentRequest</p>
+     */
+    public static class Tools extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private Tools(Builder builder) {
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tools create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tools model) {
+                this.name = model.name;
+            } 
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-agent</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public Tools build() {
+                return new Tools(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link CreateAgentRequest} extends {@link TeaModel}

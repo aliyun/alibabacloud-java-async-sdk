@@ -446,6 +446,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSecurityStrategyResponse> createSecurityStrategy(CreateSecurityStrategyRequest request);
 
     /**
+     * @param request the request parameters of CreateSemanticJob  CreateSemanticJobRequest
+     * @return CreateSemanticJobResponse
+     */
+    CompletableFuture<CreateSemanticJobResponse> createSemanticJob(CreateSemanticJobRequest request);
+
+    /**
      * @param request the request parameters of CreateSkill  CreateSkillRequest
      * @return CreateSkillResponse
      */
@@ -794,6 +800,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteSecurityStrategyResponse> deleteSecurityStrategy(DeleteSecurityStrategyRequest request);
 
     /**
+     * @param request the request parameters of DeleteSemanticJob  DeleteSemanticJobRequest
+     * @return DeleteSemanticJobResponse
+     */
+    CompletableFuture<DeleteSemanticJobResponse> deleteSemanticJob(DeleteSemanticJobRequest request);
+
+    /**
      * @param request the request parameters of DeleteSkill  DeleteSkillRequest
      * @return DeleteSkillResponse
      */
@@ -867,6 +879,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DissociateProjectFromResourceGroupResponse
      */
     CompletableFuture<DissociateProjectFromResourceGroupResponse> dissociateProjectFromResourceGroup(DissociateProjectFromResourceGroupRequest request);
+
+    /**
+     * @param request the request parameters of DownloadSemanticResults  DownloadSemanticResultsRequest
+     * @return DownloadSemanticResultsResponse
+     */
+    CompletableFuture<DownloadSemanticResultsResponse> downloadSemanticResults(DownloadSemanticResultsRequest request);
 
     /**
      * @param request the request parameters of EnableProcessDefinition  EnableProcessDefinitionRequest
@@ -1332,6 +1350,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetSecurityStrategyResponse> getSecurityStrategy(GetSecurityStrategyRequest request);
 
     /**
+     * @param request the request parameters of GetSemanticJobDetail  GetSemanticJobDetailRequest
+     * @return GetSemanticJobDetailResponse
+     */
+    CompletableFuture<GetSemanticJobDetailResponse> getSemanticJobDetail(GetSemanticJobDetailRequest request);
+
+    /**
+     * @param request the request parameters of GetSemanticJobLog  GetSemanticJobLogRequest
+     * @return GetSemanticJobLogResponse
+     */
+    CompletableFuture<GetSemanticJobLogResponse> getSemanticJobLog(GetSemanticJobLogRequest request);
+
+    /**
      * @param request the request parameters of GetSkill  GetSkillRequest
      * @return GetSkillResponse
      */
@@ -1413,6 +1443,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ImportWorkflowDefinitionResponse
      */
     CompletableFuture<ImportWorkflowDefinitionResponse> importWorkflowDefinition(ImportWorkflowDefinitionRequest request);
+
+    /**
+     * @param request the request parameters of KillSemanticJob  KillSemanticJobRequest
+     * @return KillSemanticJobResponse
+     */
+    CompletableFuture<KillSemanticJobResponse> killSemanticJob(KillSemanticJobRequest request);
 
     /**
      * @param request the request parameters of ListAgentSessionArtifacts  ListAgentSessionArtifactsRequest
@@ -1950,6 +1986,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListSecurityStrategiesResponse> listSecurityStrategies(ListSecurityStrategiesRequest request);
 
     /**
+     * @param request the request parameters of ListSemanticJobRuns  ListSemanticJobRunsRequest
+     * @return ListSemanticJobRunsResponse
+     */
+    CompletableFuture<ListSemanticJobRunsResponse> listSemanticJobRuns(ListSemanticJobRunsRequest request);
+
+    /**
+     * @param request the request parameters of ListSemanticJobs  ListSemanticJobsRequest
+     * @return ListSemanticJobsResponse
+     */
+    CompletableFuture<ListSemanticJobsResponse> listSemanticJobs(ListSemanticJobsRequest request);
+
+    /**
      * @param request the request parameters of ListSkills  ListSkillsRequest
      * @return ListSkillsResponse
      */
@@ -2158,6 +2206,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RollbackParameterResponse
      */
     CompletableFuture<RollbackParameterResponse> rollbackParameter(RollbackParameterRequest request);
+
+    /**
+     * @param request the request parameters of RunSemanticJob  RunSemanticJobRequest
+     * @return RunSemanticJobResponse
+     */
+    CompletableFuture<RunSemanticJobResponse> runSemanticJob(RunSemanticJobRequest request);
 
     /**
      * <b>description</b> :
@@ -2516,6 +2570,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateSecurityStrategyResponse> updateSecurityStrategy(UpdateSecurityStrategyRequest request);
 
     /**
+     * @param request the request parameters of UpdateSkill  UpdateSkillRequest
+     * @return UpdateSkillResponse
+     */
+    CompletableFuture<UpdateSkillResponse> updateSkill(UpdateSkillRequest request);
+
+    /**
      * @param request the request parameters of UpdateTableBusinessMetadata  UpdateTableBusinessMetadataRequest
      * @return UpdateTableBusinessMetadataResponse
      */
@@ -2561,5 +2621,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateWorkflowDefinitionResponse
      */
     CompletableFuture<UpdateWorkflowDefinitionResponse> updateWorkflowDefinition(UpdateWorkflowDefinitionRequest request);
+
+    /**
+     * @param request the request parameters of UploadSemanticFile  UploadSemanticFileRequest
+     * @return UploadSemanticFileResponse
+     */
+    CompletableFuture<UploadSemanticFileResponse> uploadSemanticFile(UploadSemanticFileRequest request);
 
 }

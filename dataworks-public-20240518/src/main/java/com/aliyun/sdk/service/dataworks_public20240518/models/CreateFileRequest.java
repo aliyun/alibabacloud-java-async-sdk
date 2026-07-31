@@ -108,6 +108,10 @@ public class CreateFileRequest extends Request {
     private String inputParameters;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OutputList")
+    private String outputList;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("OutputParameters")
     private String outputParameters;
 
@@ -183,6 +187,7 @@ public class CreateFileRequest extends Request {
         this.imageId = builder.imageId;
         this.inputList = builder.inputList;
         this.inputParameters = builder.inputParameters;
+        this.outputList = builder.outputList;
         this.outputParameters = builder.outputParameters;
         this.owner = builder.owner;
         this.paraValue = builder.paraValue;
@@ -366,6 +371,13 @@ public class CreateFileRequest extends Request {
     }
 
     /**
+     * @return outputList
+     */
+    public String getOutputList() {
+        return this.outputList;
+    }
+
+    /**
      * @return outputParameters
      */
     public String getOutputParameters() {
@@ -479,6 +491,7 @@ public class CreateFileRequest extends Request {
         private String imageId; 
         private String inputList; 
         private String inputParameters; 
+        private String outputList; 
         private String outputParameters; 
         private String owner; 
         private String paraValue; 
@@ -521,6 +534,7 @@ public class CreateFileRequest extends Request {
             this.imageId = request.imageId;
             this.inputList = request.inputList;
             this.inputParameters = request.inputParameters;
+            this.outputList = request.outputList;
             this.outputParameters = request.outputParameters;
             this.owner = request.owner;
             this.paraValue = request.paraValue;
@@ -841,6 +855,15 @@ public class CreateFileRequest extends Request {
         public Builder inputParameters(String inputParameters) {
             this.putBodyParameter("InputParameters", inputParameters);
             this.inputParameters = inputParameters;
+            return this;
+        }
+
+        /**
+         * OutputList.
+         */
+        public Builder outputList(String outputList) {
+            this.putBodyParameter("OutputList", outputList);
+            this.outputList = outputList;
             return this;
         }
 
