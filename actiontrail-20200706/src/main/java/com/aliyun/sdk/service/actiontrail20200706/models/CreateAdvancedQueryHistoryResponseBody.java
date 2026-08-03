@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAdvancedQueryHistoryResponseBody</p>
  */
 public class CreateAdvancedQueryHistoryResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("DryRunResult")
+    private String dryRunResult;
+
     @com.aliyun.core.annotation.NameInMap("QueryId")
     private String queryId;
 
@@ -30,6 +33,7 @@ public class CreateAdvancedQueryHistoryResponseBody extends TeaModel {
     private Boolean simpleQuery;
 
     private CreateAdvancedQueryHistoryResponseBody(Builder builder) {
+        this.dryRunResult = builder.dryRunResult;
         this.queryId = builder.queryId;
         this.querySql = builder.querySql;
         this.requestId = builder.requestId;
@@ -46,6 +50,13 @@ public class CreateAdvancedQueryHistoryResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return dryRunResult
+     */
+    public String getDryRunResult() {
+        return this.dryRunResult;
     }
 
     /**
@@ -77,6 +88,7 @@ public class CreateAdvancedQueryHistoryResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String dryRunResult; 
         private String queryId; 
         private String querySql; 
         private String requestId; 
@@ -86,11 +98,20 @@ public class CreateAdvancedQueryHistoryResponseBody extends TeaModel {
         } 
 
         private Builder(CreateAdvancedQueryHistoryResponseBody model) {
+            this.dryRunResult = model.dryRunResult;
             this.queryId = model.queryId;
             this.querySql = model.querySql;
             this.requestId = model.requestId;
             this.simpleQuery = model.simpleQuery;
         } 
+
+        /**
+         * DryRunResult.
+         */
+        public Builder dryRunResult(String dryRunResult) {
+            this.dryRunResult = dryRunResult;
+            return this;
+        }
 
         /**
          * QueryId.

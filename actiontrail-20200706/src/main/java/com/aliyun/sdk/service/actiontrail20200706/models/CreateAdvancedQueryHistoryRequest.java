@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateAdvancedQueryHistoryRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("QuerySql")
     private String querySql;
 
@@ -28,6 +32,7 @@ public class CreateAdvancedQueryHistoryRequest extends Request {
 
     private CreateAdvancedQueryHistoryRequest(Builder builder) {
         super(builder);
+        this.dryRun = builder.dryRun;
         this.querySql = builder.querySql;
         this.simpleQuery = builder.simpleQuery;
     }
@@ -46,6 +51,13 @@ public class CreateAdvancedQueryHistoryRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return querySql
      */
     public String getQuerySql() {
@@ -60,6 +72,7 @@ public class CreateAdvancedQueryHistoryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateAdvancedQueryHistoryRequest, Builder> {
+        private Boolean dryRun; 
         private String querySql; 
         private Boolean simpleQuery; 
 
@@ -69,9 +82,19 @@ public class CreateAdvancedQueryHistoryRequest extends Request {
 
         private Builder(CreateAdvancedQueryHistoryRequest request) {
             super(request);
+            this.dryRun = request.dryRun;
             this.querySql = request.querySql;
             this.simpleQuery = request.simpleQuery;
         } 
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
 
         /**
          * QuerySql.
