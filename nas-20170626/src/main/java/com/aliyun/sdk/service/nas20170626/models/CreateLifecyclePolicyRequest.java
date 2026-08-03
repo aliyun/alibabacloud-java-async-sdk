@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateLifecyclePolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteRules")
+    private java.util.List<DeleteRules> deleteRules;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
@@ -61,6 +65,7 @@ public class CreateLifecyclePolicyRequest extends Request {
 
     private CreateLifecyclePolicyRequest(Builder builder) {
         super(builder);
+        this.deleteRules = builder.deleteRules;
         this.description = builder.description;
         this.fileSystemId = builder.fileSystemId;
         this.lifecyclePolicyName = builder.lifecyclePolicyName;
@@ -84,6 +89,13 @@ public class CreateLifecyclePolicyRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return deleteRules
+     */
+    public java.util.List<DeleteRules> getDeleteRules() {
+        return this.deleteRules;
     }
 
     /**
@@ -157,6 +169,7 @@ public class CreateLifecyclePolicyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateLifecyclePolicyRequest, Builder> {
+        private java.util.List<DeleteRules> deleteRules; 
         private String description; 
         private String fileSystemId; 
         private String lifecyclePolicyName; 
@@ -174,6 +187,7 @@ public class CreateLifecyclePolicyRequest extends Request {
 
         private Builder(CreateLifecyclePolicyRequest request) {
             super(request);
+            this.deleteRules = request.deleteRules;
             this.description = request.description;
             this.fileSystemId = request.fileSystemId;
             this.lifecyclePolicyName = request.lifecyclePolicyName;
@@ -185,6 +199,15 @@ public class CreateLifecyclePolicyRequest extends Request {
             this.storageType = request.storageType;
             this.transitRules = request.transitRules;
         } 
+
+        /**
+         * DeleteRules.
+         */
+        public Builder deleteRules(java.util.List<DeleteRules> deleteRules) {
+            this.putQueryParameter("DeleteRules", deleteRules);
+            this.deleteRules = deleteRules;
+            return this;
+        }
 
         /**
          * <p>The description of the lifecycle policy.</p>
@@ -358,6 +381,81 @@ public class CreateLifecyclePolicyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateLifecyclePolicyRequest} extends {@link TeaModel}
+     *
+     * <p>CreateLifecyclePolicyRequest</p>
+     */
+    public static class DeleteRules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Attribute")
+        private String attribute;
+
+        @com.aliyun.core.annotation.NameInMap("Threshold")
+        private String threshold;
+
+        private DeleteRules(Builder builder) {
+            this.attribute = builder.attribute;
+            this.threshold = builder.threshold;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DeleteRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return attribute
+         */
+        public String getAttribute() {
+            return this.attribute;
+        }
+
+        /**
+         * @return threshold
+         */
+        public String getThreshold() {
+            return this.threshold;
+        }
+
+        public static final class Builder {
+            private String attribute; 
+            private String threshold; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeleteRules model) {
+                this.attribute = model.attribute;
+                this.threshold = model.threshold;
+            } 
+
+            /**
+             * Attribute.
+             */
+            public Builder attribute(String attribute) {
+                this.attribute = attribute;
+                return this;
+            }
+
+            /**
+             * Threshold.
+             */
+            public Builder threshold(String threshold) {
+                this.threshold = threshold;
+                return this;
+            }
+
+            public DeleteRules build() {
+                return new DeleteRules(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link CreateLifecyclePolicyRequest} extends {@link TeaModel}

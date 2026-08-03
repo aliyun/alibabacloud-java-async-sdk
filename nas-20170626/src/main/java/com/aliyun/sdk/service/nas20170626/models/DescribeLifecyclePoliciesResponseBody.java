@@ -169,6 +169,81 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
      *
      * <p>DescribeLifecyclePoliciesResponseBody</p>
      */
+    public static class DeleteRules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Attribute")
+        private String attribute;
+
+        @com.aliyun.core.annotation.NameInMap("Threshold")
+        private String threshold;
+
+        private DeleteRules(Builder builder) {
+            this.attribute = builder.attribute;
+            this.threshold = builder.threshold;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DeleteRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return attribute
+         */
+        public String getAttribute() {
+            return this.attribute;
+        }
+
+        /**
+         * @return threshold
+         */
+        public String getThreshold() {
+            return this.threshold;
+        }
+
+        public static final class Builder {
+            private String attribute; 
+            private String threshold; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeleteRules model) {
+                this.attribute = model.attribute;
+                this.threshold = model.threshold;
+            } 
+
+            /**
+             * Attribute.
+             */
+            public Builder attribute(String attribute) {
+                this.attribute = attribute;
+                return this;
+            }
+
+            /**
+             * Threshold.
+             */
+            public Builder threshold(String threshold) {
+                this.threshold = threshold;
+                return this;
+            }
+
+            public DeleteRules build() {
+                return new DeleteRules(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeLifecyclePoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLifecyclePoliciesResponseBody</p>
+     */
     public static class RetrieveRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attribute")
         private String attribute;
@@ -335,6 +410,9 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("DeleteRules")
+        private java.util.List<DeleteRules> deleteRules;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
@@ -370,6 +448,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
 
         private LifecyclePolicies(Builder builder) {
             this.createTime = builder.createTime;
+            this.deleteRules = builder.deleteRules;
             this.description = builder.description;
             this.fileSystemId = builder.fileSystemId;
             this.lifecyclePolicyId = builder.lifecyclePolicyId;
@@ -396,6 +475,13 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return deleteRules
+         */
+        public java.util.List<DeleteRules> getDeleteRules() {
+            return this.deleteRules;
         }
 
         /**
@@ -477,6 +563,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String createTime; 
+            private java.util.List<DeleteRules> deleteRules; 
             private String description; 
             private String fileSystemId; 
             private String lifecyclePolicyId; 
@@ -494,6 +581,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
 
             private Builder(LifecyclePolicies model) {
                 this.createTime = model.createTime;
+                this.deleteRules = model.deleteRules;
                 this.description = model.description;
                 this.fileSystemId = model.fileSystemId;
                 this.lifecyclePolicyId = model.lifecyclePolicyId;
@@ -516,6 +604,14 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * DeleteRules.
+             */
+            public Builder deleteRules(java.util.List<DeleteRules> deleteRules) {
+                this.deleteRules = deleteRules;
                 return this;
             }
 

@@ -882,6 +882,9 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableABE")
         private Boolean enableABE;
 
+        @com.aliyun.core.annotation.NameInMap("EnableDataInsight")
+        private Boolean enableDataInsight;
+
         @com.aliyun.core.annotation.NameInMap("EnableOplock")
         private Boolean enableOplock;
 
@@ -890,6 +893,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
         private Options(Builder builder) {
             this.enableABE = builder.enableABE;
+            this.enableDataInsight = builder.enableDataInsight;
             this.enableOplock = builder.enableOplock;
             this.vscAccessPointAccessOnly = builder.vscAccessPointAccessOnly;
         }
@@ -910,6 +914,13 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableDataInsight
+         */
+        public Boolean getEnableDataInsight() {
+            return this.enableDataInsight;
+        }
+
+        /**
          * @return enableOplock
          */
         public Boolean getEnableOplock() {
@@ -925,6 +936,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean enableABE; 
+            private Boolean enableDataInsight; 
             private Boolean enableOplock; 
             private Boolean vscAccessPointAccessOnly; 
 
@@ -933,6 +945,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
             private Builder(Options model) {
                 this.enableABE = model.enableABE;
+                this.enableDataInsight = model.enableDataInsight;
                 this.enableOplock = model.enableOplock;
                 this.vscAccessPointAccessOnly = model.vscAccessPointAccessOnly;
             } 
@@ -942,6 +955,14 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
              */
             public Builder enableABE(Boolean enableABE) {
                 this.enableABE = enableABE;
+                return this;
+            }
+
+            /**
+             * EnableDataInsight.
+             */
+            public Builder enableDataInsight(Boolean enableDataInsight) {
+                this.enableDataInsight = enableDataInsight;
                 return this;
             }
 

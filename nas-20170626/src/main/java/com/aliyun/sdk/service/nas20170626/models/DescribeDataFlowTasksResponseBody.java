@@ -512,6 +512,9 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
+        @com.aliyun.core.annotation.NameInMap("EntryList")
+        private String entryList;
+
         @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
@@ -569,6 +572,7 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             this.directory = builder.directory;
             this.dstDirectory = builder.dstDirectory;
             this.endTime = builder.endTime;
+            this.entryList = builder.entryList;
             this.errorMsg = builder.errorMsg;
             this.fileSystemPath = builder.fileSystemPath;
             this.filesystemId = builder.filesystemId;
@@ -642,6 +646,13 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
          */
         public String getEndTime() {
             return this.endTime;
+        }
+
+        /**
+         * @return entryList
+         */
+        public String getEntryList() {
+            return this.entryList;
         }
 
         /**
@@ -764,6 +775,7 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             private String directory; 
             private String dstDirectory; 
             private String endTime; 
+            private String entryList; 
             private String errorMsg; 
             private String fileSystemPath; 
             private String filesystemId; 
@@ -792,6 +804,7 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
                 this.directory = model.directory;
                 this.dstDirectory = model.dstDirectory;
                 this.endTime = model.endTime;
+                this.entryList = model.entryList;
                 this.errorMsg = model.errorMsg;
                 this.fileSystemPath = model.fileSystemPath;
                 this.filesystemId = model.filesystemId;
@@ -897,6 +910,14 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * EntryList.
+             */
+            public Builder entryList(String entryList) {
+                this.entryList = entryList;
                 return this;
             }
 
