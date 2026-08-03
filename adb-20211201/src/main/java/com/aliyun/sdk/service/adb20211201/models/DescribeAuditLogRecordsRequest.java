@@ -31,6 +31,10 @@ public class DescribeAuditLogRecordsRequest extends Request {
     private String endTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineType")
+    private String engineType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HostAddress")
     private String hostAddress;
 
@@ -102,6 +106,7 @@ public class DescribeAuditLogRecordsRequest extends Request {
         this.DBClusterId = builder.DBClusterId;
         this.DBName = builder.DBName;
         this.endTime = builder.endTime;
+        this.engineType = builder.engineType;
         this.hostAddress = builder.hostAddress;
         this.order = builder.order;
         this.orderType = builder.orderType;
@@ -152,6 +157,13 @@ public class DescribeAuditLogRecordsRequest extends Request {
      */
     public String getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return engineType
+     */
+    public String getEngineType() {
+        return this.engineType;
     }
 
     /**
@@ -270,6 +282,7 @@ public class DescribeAuditLogRecordsRequest extends Request {
         private String DBClusterId; 
         private String DBName; 
         private String endTime; 
+        private String engineType; 
         private String hostAddress; 
         private String order; 
         private String orderType; 
@@ -296,6 +309,7 @@ public class DescribeAuditLogRecordsRequest extends Request {
             this.DBClusterId = request.DBClusterId;
             this.DBName = request.DBName;
             this.endTime = request.endTime;
+            this.engineType = request.engineType;
             this.hostAddress = request.hostAddress;
             this.order = request.order;
             this.orderType = request.orderType;
@@ -359,6 +373,15 @@ public class DescribeAuditLogRecordsRequest extends Request {
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * EngineType.
+         */
+        public Builder engineType(String engineType) {
+            this.putQueryParameter("EngineType", engineType);
+            this.engineType = engineType;
             return this;
         }
 
