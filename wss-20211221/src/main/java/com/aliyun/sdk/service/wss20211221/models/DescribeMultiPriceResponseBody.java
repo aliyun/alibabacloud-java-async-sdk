@@ -512,8 +512,20 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActivityId")
         private String activityId;
 
+        @com.aliyun.core.annotation.NameInMap("Effective")
+        private Boolean effective;
+
+        @com.aliyun.core.annotation.NameInMap("EndTimestamp")
+        private String endTimestamp;
+
         @com.aliyun.core.annotation.NameInMap("OptionCode")
         private String optionCode;
+
+        @com.aliyun.core.annotation.NameInMap("PriceBreakReduceValue")
+        private String priceBreakReduceValue;
+
+        @com.aliyun.core.annotation.NameInMap("PriceBreakThreshold")
+        private String priceBreakThreshold;
 
         @com.aliyun.core.annotation.NameInMap("PromotionDesc")
         private String promotionDesc;
@@ -527,13 +539,21 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Selected")
         private Boolean selected;
 
+        @com.aliyun.core.annotation.NameInMap("StartTimestamp")
+        private String startTimestamp;
+
         private Promotions(Builder builder) {
             this.activityId = builder.activityId;
+            this.effective = builder.effective;
+            this.endTimestamp = builder.endTimestamp;
             this.optionCode = builder.optionCode;
+            this.priceBreakReduceValue = builder.priceBreakReduceValue;
+            this.priceBreakThreshold = builder.priceBreakThreshold;
             this.promotionDesc = builder.promotionDesc;
             this.promotionId = builder.promotionId;
             this.promotionName = builder.promotionName;
             this.selected = builder.selected;
+            this.startTimestamp = builder.startTimestamp;
         }
 
         public static Builder builder() {
@@ -552,10 +572,38 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
         }
 
         /**
+         * @return effective
+         */
+        public Boolean getEffective() {
+            return this.effective;
+        }
+
+        /**
+         * @return endTimestamp
+         */
+        public String getEndTimestamp() {
+            return this.endTimestamp;
+        }
+
+        /**
          * @return optionCode
          */
         public String getOptionCode() {
             return this.optionCode;
+        }
+
+        /**
+         * @return priceBreakReduceValue
+         */
+        public String getPriceBreakReduceValue() {
+            return this.priceBreakReduceValue;
+        }
+
+        /**
+         * @return priceBreakThreshold
+         */
+        public String getPriceBreakThreshold() {
+            return this.priceBreakThreshold;
         }
 
         /**
@@ -586,24 +634,41 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             return this.selected;
         }
 
+        /**
+         * @return startTimestamp
+         */
+        public String getStartTimestamp() {
+            return this.startTimestamp;
+        }
+
         public static final class Builder {
             private String activityId; 
+            private Boolean effective; 
+            private String endTimestamp; 
             private String optionCode; 
+            private String priceBreakReduceValue; 
+            private String priceBreakThreshold; 
             private String promotionDesc; 
             private String promotionId; 
             private String promotionName; 
             private Boolean selected; 
+            private String startTimestamp; 
 
             private Builder() {
             } 
 
             private Builder(Promotions model) {
                 this.activityId = model.activityId;
+                this.effective = model.effective;
+                this.endTimestamp = model.endTimestamp;
                 this.optionCode = model.optionCode;
+                this.priceBreakReduceValue = model.priceBreakReduceValue;
+                this.priceBreakThreshold = model.priceBreakThreshold;
                 this.promotionDesc = model.promotionDesc;
                 this.promotionId = model.promotionId;
                 this.promotionName = model.promotionName;
                 this.selected = model.selected;
+                this.startTimestamp = model.startTimestamp;
             } 
 
             /**
@@ -615,10 +680,42 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
             }
 
             /**
+             * Effective.
+             */
+            public Builder effective(Boolean effective) {
+                this.effective = effective;
+                return this;
+            }
+
+            /**
+             * EndTimestamp.
+             */
+            public Builder endTimestamp(String endTimestamp) {
+                this.endTimestamp = endTimestamp;
+                return this;
+            }
+
+            /**
              * OptionCode.
              */
             public Builder optionCode(String optionCode) {
                 this.optionCode = optionCode;
+                return this;
+            }
+
+            /**
+             * PriceBreakReduceValue.
+             */
+            public Builder priceBreakReduceValue(String priceBreakReduceValue) {
+                this.priceBreakReduceValue = priceBreakReduceValue;
+                return this;
+            }
+
+            /**
+             * PriceBreakThreshold.
+             */
+            public Builder priceBreakThreshold(String priceBreakThreshold) {
+                this.priceBreakThreshold = priceBreakThreshold;
                 return this;
             }
 
@@ -651,6 +748,14 @@ public class DescribeMultiPriceResponseBody extends TeaModel {
              */
             public Builder selected(Boolean selected) {
                 this.selected = selected;
+                return this;
+            }
+
+            /**
+             * StartTimestamp.
+             */
+            public Builder startTimestamp(String startTimestamp) {
+                this.startTimestamp = startTimestamp;
                 return this;
             }
 
