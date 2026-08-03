@@ -1489,6 +1489,60 @@ public class VideoModerationResultResponseBody extends TeaModel {
      *
      * <p>VideoModerationResultResponseBody</p>
      */
+    public static class ResultsAigcData extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Explain")
+        private String explain;
+
+        private ResultsAigcData(Builder builder) {
+            this.explain = builder.explain;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResultsAigcData create() {
+            return builder().build();
+        }
+
+        /**
+         * @return explain
+         */
+        public String getExplain() {
+            return this.explain;
+        }
+
+        public static final class Builder {
+            private String explain; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultsAigcData model) {
+                this.explain = model.explain;
+            } 
+
+            /**
+             * Explain.
+             */
+            public Builder explain(String explain) {
+                this.explain = explain;
+                return this;
+            }
+
+            public ResultsAigcData build() {
+                return new ResultsAigcData(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link VideoModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>VideoModerationResultResponseBody</p>
+     */
     public static class CustomImage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
@@ -2267,6 +2321,9 @@ public class VideoModerationResultResponseBody extends TeaModel {
      * <p>VideoModerationResultResponseBody</p>
      */
     public static class Results extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AigcData")
+        private ResultsAigcData aigcData;
+
         @com.aliyun.core.annotation.NameInMap("CustomImage")
         private java.util.List<CustomImage> customImage;
 
@@ -2289,6 +2346,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         private VlContent vlContent;
 
         private Results(Builder builder) {
+            this.aigcData = builder.aigcData;
             this.customImage = builder.customImage;
             this.logoData = builder.logoData;
             this.publicFigure = builder.publicFigure;
@@ -2304,6 +2362,13 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
         public static Results create() {
             return builder().build();
+        }
+
+        /**
+         * @return aigcData
+         */
+        public ResultsAigcData getAigcData() {
+            return this.aigcData;
         }
 
         /**
@@ -2356,6 +2421,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private ResultsAigcData aigcData; 
             private java.util.List<CustomImage> customImage; 
             private java.util.List<LogoData> logoData; 
             private java.util.List<PublicFigure> publicFigure; 
@@ -2368,6 +2434,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             } 
 
             private Builder(Results model) {
+                this.aigcData = model.aigcData;
                 this.customImage = model.customImage;
                 this.logoData = model.logoData;
                 this.publicFigure = model.publicFigure;
@@ -2376,6 +2443,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
                 this.textInImage = model.textInImage;
                 this.vlContent = model.vlContent;
             } 
+
+            /**
+             * AigcData.
+             */
+            public Builder aigcData(ResultsAigcData aigcData) {
+                this.aigcData = aigcData;
+                return this;
+            }
 
             /**
              * <p>If a custom image library is hit, information about the custom image library is returned.</p>
