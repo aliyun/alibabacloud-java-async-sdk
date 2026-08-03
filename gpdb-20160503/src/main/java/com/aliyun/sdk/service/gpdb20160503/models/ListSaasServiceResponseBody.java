@@ -157,12 +157,177 @@ public class ListSaasServiceResponseBody extends TeaModel {
      *
      * <p>ListSaasServiceResponseBody</p>
      */
+    public static class Components extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ComponentId")
+        private String componentId;
+
+        @com.aliyun.core.annotation.NameInMap("ComponentType")
+        private String componentType;
+
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        private String createTime;
+
+        @com.aliyun.core.annotation.NameInMap("Cu")
+        private String cu;
+
+        @com.aliyun.core.annotation.NameInMap("DeletionProtection")
+        private Boolean deletionProtection;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        private Components(Builder builder) {
+            this.componentId = builder.componentId;
+            this.componentType = builder.componentType;
+            this.createTime = builder.createTime;
+            this.cu = builder.cu;
+            this.deletionProtection = builder.deletionProtection;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Components create() {
+            return builder().build();
+        }
+
+        /**
+         * @return componentId
+         */
+        public String getComponentId() {
+            return this.componentId;
+        }
+
+        /**
+         * @return componentType
+         */
+        public String getComponentType() {
+            return this.componentType;
+        }
+
+        /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
+         * @return cu
+         */
+        public String getCu() {
+            return this.cu;
+        }
+
+        /**
+         * @return deletionProtection
+         */
+        public Boolean getDeletionProtection() {
+            return this.deletionProtection;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String componentId; 
+            private String componentType; 
+            private String createTime; 
+            private String cu; 
+            private Boolean deletionProtection; 
+            private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Components model) {
+                this.componentId = model.componentId;
+                this.componentType = model.componentType;
+                this.createTime = model.createTime;
+                this.cu = model.cu;
+                this.deletionProtection = model.deletionProtection;
+                this.status = model.status;
+            } 
+
+            /**
+             * ComponentId.
+             */
+            public Builder componentId(String componentId) {
+                this.componentId = componentId;
+                return this;
+            }
+
+            /**
+             * ComponentType.
+             */
+            public Builder componentType(String componentType) {
+                this.componentType = componentType;
+                return this;
+            }
+
+            /**
+             * CreateTime.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * Cu.
+             */
+            public Builder cu(String cu) {
+                this.cu = cu;
+                return this;
+            }
+
+            /**
+             * DeletionProtection.
+             */
+            public Builder deletionProtection(Boolean deletionProtection) {
+                this.deletionProtection = deletionProtection;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public Components build() {
+                return new Components(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListSaasServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSaasServiceResponseBody</p>
+     */
     public static class Items extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Components")
+        private java.util.List<Components> components;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
         @com.aliyun.core.annotation.NameInMap("Cu")
         private Integer cu;
+
+        @com.aliyun.core.annotation.NameInMap("DeletionProtection")
+        private Boolean deletionProtection;
 
         @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
@@ -186,8 +351,10 @@ public class ListSaasServiceResponseBody extends TeaModel {
         private String status;
 
         private Items(Builder builder) {
+            this.components = builder.components;
             this.createTime = builder.createTime;
             this.cu = builder.cu;
+            this.deletionProtection = builder.deletionProtection;
             this.expireTime = builder.expireTime;
             this.payType = builder.payType;
             this.plan = builder.plan;
@@ -206,6 +373,13 @@ public class ListSaasServiceResponseBody extends TeaModel {
         }
 
         /**
+         * @return components
+         */
+        public java.util.List<Components> getComponents() {
+            return this.components;
+        }
+
+        /**
          * @return createTime
          */
         public String getCreateTime() {
@@ -217,6 +391,13 @@ public class ListSaasServiceResponseBody extends TeaModel {
          */
         public Integer getCu() {
             return this.cu;
+        }
+
+        /**
+         * @return deletionProtection
+         */
+        public Boolean getDeletionProtection() {
+            return this.deletionProtection;
         }
 
         /**
@@ -269,8 +450,10 @@ public class ListSaasServiceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<Components> components; 
             private String createTime; 
             private Integer cu; 
+            private Boolean deletionProtection; 
             private String expireTime; 
             private String payType; 
             private String plan; 
@@ -283,8 +466,10 @@ public class ListSaasServiceResponseBody extends TeaModel {
             } 
 
             private Builder(Items model) {
+                this.components = model.components;
                 this.createTime = model.createTime;
                 this.cu = model.cu;
+                this.deletionProtection = model.deletionProtection;
                 this.expireTime = model.expireTime;
                 this.payType = model.payType;
                 this.plan = model.plan;
@@ -293,6 +478,14 @@ public class ListSaasServiceResponseBody extends TeaModel {
                 this.serviceType = model.serviceType;
                 this.status = model.status;
             } 
+
+            /**
+             * Components.
+             */
+            public Builder components(java.util.List<Components> components) {
+                this.components = components;
+                return this;
+            }
 
             /**
              * CreateTime.
@@ -307,6 +500,14 @@ public class ListSaasServiceResponseBody extends TeaModel {
              */
             public Builder cu(Integer cu) {
                 this.cu = cu;
+                return this;
+            }
+
+            /**
+             * DeletionProtection.
+             */
+            public Builder deletionProtection(Boolean deletionProtection) {
+                this.deletionProtection = deletionProtection;
                 return this;
             }
 

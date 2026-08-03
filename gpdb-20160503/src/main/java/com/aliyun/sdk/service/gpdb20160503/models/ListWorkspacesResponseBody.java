@@ -433,12 +433,177 @@ public class ListWorkspacesResponseBody extends TeaModel {
      *
      * <p>ListWorkspacesResponseBody</p>
      */
-    public static class Services extends TeaModel {
+    public static class Components extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
         @com.aliyun.core.annotation.NameInMap("Cu")
         private String cu;
+
+        @com.aliyun.core.annotation.NameInMap("DeletionProtection")
+        private Boolean deletionProtection;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("componentId")
+        private String componentId;
+
+        @com.aliyun.core.annotation.NameInMap("componentType")
+        private String componentType;
+
+        private Components(Builder builder) {
+            this.createTime = builder.createTime;
+            this.cu = builder.cu;
+            this.deletionProtection = builder.deletionProtection;
+            this.status = builder.status;
+            this.componentId = builder.componentId;
+            this.componentType = builder.componentType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Components create() {
+            return builder().build();
+        }
+
+        /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
+         * @return cu
+         */
+        public String getCu() {
+            return this.cu;
+        }
+
+        /**
+         * @return deletionProtection
+         */
+        public Boolean getDeletionProtection() {
+            return this.deletionProtection;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return componentId
+         */
+        public String getComponentId() {
+            return this.componentId;
+        }
+
+        /**
+         * @return componentType
+         */
+        public String getComponentType() {
+            return this.componentType;
+        }
+
+        public static final class Builder {
+            private String createTime; 
+            private String cu; 
+            private Boolean deletionProtection; 
+            private String status; 
+            private String componentId; 
+            private String componentType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Components model) {
+                this.createTime = model.createTime;
+                this.cu = model.cu;
+                this.deletionProtection = model.deletionProtection;
+                this.status = model.status;
+                this.componentId = model.componentId;
+                this.componentType = model.componentType;
+            } 
+
+            /**
+             * CreateTime.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * Cu.
+             */
+            public Builder cu(String cu) {
+                this.cu = cu;
+                return this;
+            }
+
+            /**
+             * DeletionProtection.
+             */
+            public Builder deletionProtection(Boolean deletionProtection) {
+                this.deletionProtection = deletionProtection;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * componentId.
+             */
+            public Builder componentId(String componentId) {
+                this.componentId = componentId;
+                return this;
+            }
+
+            /**
+             * componentType.
+             */
+            public Builder componentType(String componentType) {
+                this.componentType = componentType;
+                return this;
+            }
+
+            public Components build() {
+                return new Components(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListWorkspacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkspacesResponseBody</p>
+     */
+    public static class Services extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Components")
+        private java.util.List<Components> components;
+
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        private String createTime;
+
+        @com.aliyun.core.annotation.NameInMap("Cu")
+        private String cu;
+
+        @com.aliyun.core.annotation.NameInMap("DeletionProtection")
+        private Boolean deletionProtection;
 
         @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
@@ -462,8 +627,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         private String status;
 
         private Services(Builder builder) {
+            this.components = builder.components;
             this.createTime = builder.createTime;
             this.cu = builder.cu;
+            this.deletionProtection = builder.deletionProtection;
             this.expireTime = builder.expireTime;
             this.payType = builder.payType;
             this.plan = builder.plan;
@@ -482,6 +649,13 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
+         * @return components
+         */
+        public java.util.List<Components> getComponents() {
+            return this.components;
+        }
+
+        /**
          * @return createTime
          */
         public String getCreateTime() {
@@ -493,6 +667,13 @@ public class ListWorkspacesResponseBody extends TeaModel {
          */
         public String getCu() {
             return this.cu;
+        }
+
+        /**
+         * @return deletionProtection
+         */
+        public Boolean getDeletionProtection() {
+            return this.deletionProtection;
         }
 
         /**
@@ -545,8 +726,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<Components> components; 
             private String createTime; 
             private String cu; 
+            private Boolean deletionProtection; 
             private String expireTime; 
             private String payType; 
             private String plan; 
@@ -559,8 +742,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             } 
 
             private Builder(Services model) {
+                this.components = model.components;
                 this.createTime = model.createTime;
                 this.cu = model.cu;
+                this.deletionProtection = model.deletionProtection;
                 this.expireTime = model.expireTime;
                 this.payType = model.payType;
                 this.plan = model.plan;
@@ -569,6 +754,14 @@ public class ListWorkspacesResponseBody extends TeaModel {
                 this.serviceType = model.serviceType;
                 this.status = model.status;
             } 
+
+            /**
+             * Components.
+             */
+            public Builder components(java.util.List<Components> components) {
+                this.components = components;
+                return this;
+            }
 
             /**
              * CreateTime.
@@ -583,6 +776,14 @@ public class ListWorkspacesResponseBody extends TeaModel {
              */
             public Builder cu(String cu) {
                 this.cu = cu;
+                return this;
+            }
+
+            /**
+             * DeletionProtection.
+             */
+            public Builder deletionProtection(Boolean deletionProtection) {
+                this.deletionProtection = deletionProtection;
                 return this;
             }
 
