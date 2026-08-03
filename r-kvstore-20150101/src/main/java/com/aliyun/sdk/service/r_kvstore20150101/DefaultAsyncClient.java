@@ -74,28 +74,32 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("na-south-1", "r-kvstore.na-south-1.aliyuncs.com"),
             new TeaPair("me-east-1", "r-kvstore.me-east-1.aliyuncs.com"),
             new TeaPair("me-central-1", "r-kvstore.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-west-2", "r-kvstore.eu-west-2.aliyuncs.com"),
             new TeaPair("eu-west-1", "r-kvstore.eu-west-1.aliyuncs.com"),
             new TeaPair("eu-central-1", "r-kvstore.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhongwei", "r-kvstore.cn-zhongwei.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-jva", "r-kvstore.cn-zhengzhou-jva.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou", "r-kvstore.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu-gic-1", "r-kvstore.cn-wulanchabu-gic-1.aliyuncs.com"),
             new TeaPair("cn-wuhan-lr", "r-kvstore.cn-wuhan-lr.aliyuncs.com"),
             new TeaPair("cn-shenzhen-finance-1", "r-kvstore.cn-shenzhen-finance-1.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "r-kvstore.cn-shenzhen.aliyuncs.com"),
             new TeaPair("cn-shanghai-finance-1", "r-kvstore.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "r-kvstore.cn-north-2-gov-1.aliyuncs.com"),
             new TeaPair("cn-nanjing", "r-kvstore.cn-nanjing.aliyuncs.com"),
             new TeaPair("cn-huhehaote", "r-kvstore.cn-huhehaote.aliyuncs.com"),
             new TeaPair("cn-hongkong", "r-kvstore.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-heyuan-acdr-1", "r-kvstore.cn-heyuan-acdr-1.aliyuncs.com"),
             new TeaPair("cn-guangzhou", "r-kvstore.cn-guangzhou.aliyuncs.com"),
             new TeaPair("cn-fuzhou", "r-kvstore.cn-fuzhou.aliyuncs.com"),
             new TeaPair("cn-chengdu", "r-kvstore.cn-chengdu.aliyuncs.com"),
             new TeaPair("cn-beijing-finance-1", "r-kvstore.cn-beijing-finance-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "r-kvstore.ap-southeast-8.aliyuncs.com"),
             new TeaPair("ap-southeast-7", "r-kvstore.ap-southeast-7.aliyuncs.com"),
             new TeaPair("ap-southeast-6", "r-kvstore.ap-southeast-6.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "r-kvstore.ap-southeast-5.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "r-kvstore.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "r-kvstore.ap-southeast-2.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "r-kvstore.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-south-1", "r-kvstore.ap-south-1.aliyuncs.com"),
             new TeaPair("ap-northeast-2", "r-kvstore.ap-northeast-2.aliyuncs.com"),
             new TeaPair("ap-northeast-1", "r-kvstore.ap-northeast-1.aliyuncs.com")
         );
@@ -198,6 +202,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CancelActiveOperationTasksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CancelInspectionTask  CancelInspectionTaskRequest
+     * @return CancelInspectionTaskResponse
+     */
+    @Override
+    public CompletableFuture<CancelInspectionTaskResponse> cancelInspectionTask(CancelInspectionTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CancelInspectionTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CancelInspectionTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CancelInspectionTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -338,6 +360,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateGlobalSecurityIPGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateInspectionSchedule  CreateInspectionScheduleRequest
+     * @return CreateInspectionScheduleResponse
+     */
+    @Override
+    public CompletableFuture<CreateInspectionScheduleResponse> createInspectionSchedule(CreateInspectionScheduleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateInspectionSchedule").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateInspectionScheduleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateInspectionScheduleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateInspectionTask  CreateInspectionTaskRequest
+     * @return CreateInspectionTaskResponse
+     */
+    @Override
+    public CompletableFuture<CreateInspectionTaskResponse> createInspectionTask(CreateInspectionTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateInspectionTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateInspectionTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateInspectionTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -590,6 +648,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteGlobalSecurityIPGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteInspectionSchedule  DeleteInspectionScheduleRequest
+     * @return DeleteInspectionScheduleResponse
+     */
+    @Override
+    public CompletableFuture<DeleteInspectionScheduleResponse> deleteInspectionSchedule(DeleteInspectionScheduleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteInspectionSchedule").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteInspectionScheduleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteInspectionScheduleResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1296,6 +1372,78 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeHistoryTasksStatResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeInspectionScheduleReports  DescribeInspectionScheduleReportsRequest
+     * @return DescribeInspectionScheduleReportsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeInspectionScheduleReportsResponse> describeInspectionScheduleReports(DescribeInspectionScheduleReportsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeInspectionScheduleReports").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeInspectionScheduleReportsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeInspectionScheduleReportsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeInspectionSchedules  DescribeInspectionSchedulesRequest
+     * @return DescribeInspectionSchedulesResponse
+     */
+    @Override
+    public CompletableFuture<DescribeInspectionSchedulesResponse> describeInspectionSchedules(DescribeInspectionSchedulesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeInspectionSchedules").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeInspectionSchedulesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeInspectionSchedulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeInspectionTaskReport  DescribeInspectionTaskReportRequest
+     * @return DescribeInspectionTaskReportResponse
+     */
+    @Override
+    public CompletableFuture<DescribeInspectionTaskReportResponse> describeInspectionTaskReport(DescribeInspectionTaskReportRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeInspectionTaskReport").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeInspectionTaskReportResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeInspectionTaskReportResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeInspectionTasks  DescribeInspectionTasksRequest
+     * @return DescribeInspectionTasksResponse
+     */
+    @Override
+    public CompletableFuture<DescribeInspectionTasksResponse> describeInspectionTasks(DescribeInspectionTasksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeInspectionTasks").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeInspectionTasksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeInspectionTasksResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2547,6 +2695,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModifyInspectionSchedule  ModifyInspectionScheduleRequest
+     * @return ModifyInspectionScheduleResponse
+     */
+    @Override
+    public CompletableFuture<ModifyInspectionScheduleResponse> modifyInspectionSchedule(ModifyInspectionScheduleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyInspectionSchedule").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyInspectionScheduleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyInspectionScheduleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can also modify the information of an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/43874.html">Change or reset the password</a>.</p>
      * 
@@ -3230,6 +3396,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of RetryInspectionTask  RetryInspectionTaskRequest
+     * @return RetryInspectionTaskResponse
+     */
+    @Override
+    public CompletableFuture<RetryInspectionTaskResponse> retryInspectionTask(RetryInspectionTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RetryInspectionTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RetryInspectionTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RetryInspectionTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of StartTairKVCacheCustomInstance  StartTairKVCacheCustomInstanceRequest
      * @return StartTairKVCacheCustomInstanceResponse
      */
@@ -3317,6 +3501,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SwitchInstanceProxyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SwitchInstanceToTargetZone  SwitchInstanceToTargetZoneRequest
+     * @return SwitchInstanceToTargetZoneResponse
+     */
+    @Override
+    public CompletableFuture<SwitchInstanceToTargetZoneResponse> switchInstanceToTargetZone(SwitchInstanceToTargetZoneRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SwitchInstanceToTargetZone").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SwitchInstanceToTargetZoneResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SwitchInstanceToTargetZoneResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

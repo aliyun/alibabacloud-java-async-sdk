@@ -52,6 +52,10 @@ public class CreateTairSkvDdbTableRequest extends Request {
     private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreTime")
+    private String restoreTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Schema")
     private String schema;
 
@@ -87,6 +91,7 @@ public class CreateTairSkvDdbTableRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.restoreTime = builder.restoreTime;
         this.schema = builder.schema;
         this.securityToken = builder.securityToken;
         this.srcDBInstanceId = builder.srcDBInstanceId;
@@ -165,6 +170,13 @@ public class CreateTairSkvDdbTableRequest extends Request {
     }
 
     /**
+     * @return restoreTime
+     */
+    public String getRestoreTime() {
+        return this.restoreTime;
+    }
+
+    /**
      * @return schema
      */
     public String getSchema() {
@@ -215,6 +227,7 @@ public class CreateTairSkvDdbTableRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String restoreTime; 
         private String schema; 
         private String securityToken; 
         private String srcDBInstanceId; 
@@ -236,6 +249,7 @@ public class CreateTairSkvDdbTableRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.restoreTime = request.restoreTime;
             this.schema = request.schema;
             this.securityToken = request.securityToken;
             this.srcDBInstanceId = request.srcDBInstanceId;
@@ -319,6 +333,15 @@ public class CreateTairSkvDdbTableRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * RestoreTime.
+         */
+        public Builder restoreTime(String restoreTime) {
+            this.putQueryParameter("RestoreTime", restoreTime);
+            this.restoreTime = restoreTime;
             return this;
         }
 

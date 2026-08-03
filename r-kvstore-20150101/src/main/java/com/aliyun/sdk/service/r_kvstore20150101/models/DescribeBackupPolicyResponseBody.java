@@ -20,6 +20,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private AccessDeniedDetail accessDeniedDetail;
 
+    @com.aliyun.core.annotation.NameInMap("BackupLogStartTime")
+    private String backupLogStartTime;
+
     @com.aliyun.core.annotation.NameInMap("BackupRetentionPeriod")
     private String backupRetentionPeriod;
 
@@ -43,6 +46,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
 
     private DescribeBackupPolicyResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
+        this.backupLogStartTime = builder.backupLogStartTime;
         this.backupRetentionPeriod = builder.backupRetentionPeriod;
         this.dbsInstance = builder.dbsInstance;
         this.enableBackupLog = builder.enableBackupLog;
@@ -69,6 +73,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
      */
     public AccessDeniedDetail getAccessDeniedDetail() {
         return this.accessDeniedDetail;
+    }
+
+    /**
+     * @return backupLogStartTime
+     */
+    public String getBackupLogStartTime() {
+        return this.backupLogStartTime;
     }
 
     /**
@@ -122,6 +133,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
 
     public static final class Builder {
         private AccessDeniedDetail accessDeniedDetail; 
+        private String backupLogStartTime; 
         private String backupRetentionPeriod; 
         private String dbsInstance; 
         private Integer enableBackupLog; 
@@ -135,6 +147,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
 
         private Builder(DescribeBackupPolicyResponseBody model) {
             this.accessDeniedDetail = model.accessDeniedDetail;
+            this.backupLogStartTime = model.backupLogStartTime;
             this.backupRetentionPeriod = model.backupRetentionPeriod;
             this.dbsInstance = model.dbsInstance;
             this.enableBackupLog = model.enableBackupLog;
@@ -149,6 +162,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * BackupLogStartTime.
+         */
+        public Builder backupLogStartTime(String backupLogStartTime) {
+            this.backupLogStartTime = backupLogStartTime;
             return this;
         }
 

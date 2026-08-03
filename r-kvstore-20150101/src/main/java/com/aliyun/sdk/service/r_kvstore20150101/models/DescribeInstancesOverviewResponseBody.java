@@ -164,6 +164,9 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
+        @com.aliyun.core.annotation.NameInMap("NodeType")
+        private String nodeType;
+
         @com.aliyun.core.annotation.NameInMap("PrivateIp")
         private String privateIp;
 
@@ -200,6 +203,7 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
             this.instanceStatus = builder.instanceStatus;
             this.instanceType = builder.instanceType;
             this.networkType = builder.networkType;
+            this.nodeType = builder.nodeType;
             this.privateIp = builder.privateIp;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
@@ -316,6 +320,13 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
         }
 
         /**
+         * @return nodeType
+         */
+        public String getNodeType() {
+            return this.nodeType;
+        }
+
+        /**
          * @return privateIp
          */
         public String getPrivateIp() {
@@ -379,6 +390,7 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
             private String instanceStatus; 
             private String instanceType; 
             private String networkType; 
+            private String nodeType; 
             private String privateIp; 
             private String regionId; 
             private String resourceGroupId; 
@@ -405,6 +417,7 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
                 this.instanceStatus = model.instanceStatus;
                 this.instanceType = model.instanceType;
                 this.networkType = model.networkType;
+                this.nodeType = model.nodeType;
                 this.privateIp = model.privateIp;
                 this.regionId = model.regionId;
                 this.resourceGroupId = model.resourceGroupId;
@@ -603,6 +616,14 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
+                return this;
+            }
+
+            /**
+             * NodeType.
+             */
+            public Builder nodeType(String nodeType) {
+                this.nodeType = nodeType;
                 return this;
             }
 

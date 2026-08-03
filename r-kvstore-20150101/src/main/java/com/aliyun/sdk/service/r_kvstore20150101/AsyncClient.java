@@ -68,6 +68,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CancelActiveOperationTasksResponse> cancelActiveOperationTasks(CancelActiveOperationTasksRequest request);
 
     /**
+     * @param request the request parameters of CancelInspectionTask  CancelInspectionTaskRequest
+     * @return CancelInspectionTaskResponse
+     */
+    CompletableFuture<CancelInspectionTaskResponse> cancelInspectionTask(CancelInspectionTaskRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  For information about Transparent Data Encryption (TDE) and the usage notes of TDE, see <a href="https://help.aliyun.com/document_detail/265913.html">Enable TDE</a>.</p>
      * <ul>
@@ -134,6 +140,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateGlobalSecurityIPGroupResponse
      */
     CompletableFuture<CreateGlobalSecurityIPGroupResponse> createGlobalSecurityIPGroup(CreateGlobalSecurityIPGroupRequest request);
+
+    /**
+     * @param request the request parameters of CreateInspectionSchedule  CreateInspectionScheduleRequest
+     * @return CreateInspectionScheduleResponse
+     */
+    CompletableFuture<CreateInspectionScheduleResponse> createInspectionSchedule(CreateInspectionScheduleRequest request);
+
+    /**
+     * @param request the request parameters of CreateInspectionTask  CreateInspectionTaskRequest
+     * @return CreateInspectionTaskResponse
+     */
+    CompletableFuture<CreateInspectionTaskResponse> createInspectionTask(CreateInspectionTaskRequest request);
 
     /**
      * <b>description</b> :
@@ -242,6 +260,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteGlobalSecurityIPGroupResponse
      */
     CompletableFuture<DeleteGlobalSecurityIPGroupResponse> deleteGlobalSecurityIPGroup(DeleteGlobalSecurityIPGroupRequest request);
+
+    /**
+     * @param request the request parameters of DeleteInspectionSchedule  DeleteInspectionScheduleRequest
+     * @return DeleteInspectionScheduleResponse
+     */
+    CompletableFuture<DeleteInspectionScheduleResponse> deleteInspectionSchedule(DeleteInspectionScheduleRequest request);
 
     /**
      * <b>description</b> :
@@ -540,6 +564,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeHistoryTasksStatResponse
      */
     CompletableFuture<DescribeHistoryTasksStatResponse> describeHistoryTasksStat(DescribeHistoryTasksStatRequest request);
+
+    /**
+     * @param request the request parameters of DescribeInspectionScheduleReports  DescribeInspectionScheduleReportsRequest
+     * @return DescribeInspectionScheduleReportsResponse
+     */
+    CompletableFuture<DescribeInspectionScheduleReportsResponse> describeInspectionScheduleReports(DescribeInspectionScheduleReportsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeInspectionSchedules  DescribeInspectionSchedulesRequest
+     * @return DescribeInspectionSchedulesResponse
+     */
+    CompletableFuture<DescribeInspectionSchedulesResponse> describeInspectionSchedules(DescribeInspectionSchedulesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeInspectionTaskReport  DescribeInspectionTaskReportRequest
+     * @return DescribeInspectionTaskReportResponse
+     */
+    CompletableFuture<DescribeInspectionTaskReportResponse> describeInspectionTaskReport(DescribeInspectionTaskReportRequest request);
+
+    /**
+     * @param request the request parameters of DescribeInspectionTasks  DescribeInspectionTasksRequest
+     * @return DescribeInspectionTasksResponse
+     */
+    CompletableFuture<DescribeInspectionTasksResponse> describeInspectionTasks(DescribeInspectionTasksRequest request);
 
     /**
      * @param request the request parameters of DescribeInstanceAttribute  DescribeInstanceAttributeRequest
@@ -1043,6 +1091,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyGlobalSecurityIPGroupRelationResponse> modifyGlobalSecurityIPGroupRelation(ModifyGlobalSecurityIPGroupRelationRequest request);
 
     /**
+     * @param request the request parameters of ModifyInspectionSchedule  ModifyInspectionScheduleRequest
+     * @return ModifyInspectionScheduleResponse
+     */
+    CompletableFuture<ModifyInspectionScheduleResponse> modifyInspectionSchedule(ModifyInspectionScheduleRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can also modify the information of an instance in the Tair (Redis OSS-compatible) console. For more information, see <a href="https://help.aliyun.com/document_detail/43874.html">Change or reset the password</a>.</p>
      * 
@@ -1342,6 +1396,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RestoreInstanceResponse> restoreInstance(RestoreInstanceRequest request);
 
     /**
+     * @param request the request parameters of RetryInspectionTask  RetryInspectionTaskRequest
+     * @return RetryInspectionTaskResponse
+     */
+    CompletableFuture<RetryInspectionTaskResponse> retryInspectionTask(RetryInspectionTaskRequest request);
+
+    /**
      * @param request the request parameters of StartTairKVCacheCustomInstance  StartTairKVCacheCustomInstanceRequest
      * @return StartTairKVCacheCustomInstanceResponse
      */
@@ -1385,6 +1445,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SwitchInstanceProxyResponse
      */
     CompletableFuture<SwitchInstanceProxyResponse> switchInstanceProxy(SwitchInstanceProxyRequest request);
+
+    /**
+     * @param request the request parameters of SwitchInstanceToTargetZone  SwitchInstanceToTargetZoneRequest
+     * @return SwitchInstanceToTargetZoneResponse
+     */
+    CompletableFuture<SwitchInstanceToTargetZoneResponse> switchInstanceToTargetZone(SwitchInstanceToTargetZoneRequest request);
 
     /**
      * @param request the request parameters of SwitchInstanceZoneFailOver  SwitchInstanceZoneFailOverRequest

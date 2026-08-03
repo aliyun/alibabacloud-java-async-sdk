@@ -22,6 +22,10 @@ public class DescribeParameterGroupsRequest extends Request {
     private String dbType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
+    private String engineVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -49,6 +53,7 @@ public class DescribeParameterGroupsRequest extends Request {
     private DescribeParameterGroupsRequest(Builder builder) {
         super(builder);
         this.dbType = builder.dbType;
+        this.engineVersion = builder.engineVersion;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -75,6 +80,13 @@ public class DescribeParameterGroupsRequest extends Request {
      */
     public String getDbType() {
         return this.dbType;
+    }
+
+    /**
+     * @return engineVersion
+     */
+    public String getEngineVersion() {
+        return this.engineVersion;
     }
 
     /**
@@ -121,6 +133,7 @@ public class DescribeParameterGroupsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeParameterGroupsRequest, Builder> {
         private String dbType; 
+        private String engineVersion; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -135,6 +148,7 @@ public class DescribeParameterGroupsRequest extends Request {
         private Builder(DescribeParameterGroupsRequest request) {
             super(request);
             this.dbType = request.dbType;
+            this.engineVersion = request.engineVersion;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -157,6 +171,15 @@ public class DescribeParameterGroupsRequest extends Request {
         public Builder dbType(String dbType) {
             this.putQueryParameter("DbType", dbType);
             this.dbType = dbType;
+            return this;
+        }
+
+        /**
+         * EngineVersion.
+         */
+        public Builder engineVersion(String engineVersion) {
+            this.putQueryParameter("EngineVersion", engineVersion);
+            this.engineVersion = engineVersion;
             return this;
         }
 
