@@ -30,6 +30,10 @@ public class ModifyPhysicalConnectionAttributeRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DownDelayTime")
+    private Integer downDelayTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LineOperator")
     private String lineOperator;
 
@@ -84,6 +88,7 @@ public class ModifyPhysicalConnectionAttributeRequest extends Request {
         this.circuitCode = builder.circuitCode;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
+        this.downDelayTime = builder.downDelayTime;
         this.lineOperator = builder.lineOperator;
         this.name = builder.name;
         this.ownerAccount = builder.ownerAccount;
@@ -130,6 +135,13 @@ public class ModifyPhysicalConnectionAttributeRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return downDelayTime
+     */
+    public Integer getDownDelayTime() {
+        return this.downDelayTime;
     }
 
     /**
@@ -220,6 +232,7 @@ public class ModifyPhysicalConnectionAttributeRequest extends Request {
         private String circuitCode; 
         private String clientToken; 
         private String description; 
+        private Integer downDelayTime; 
         private String lineOperator; 
         private String name; 
         private String ownerAccount; 
@@ -242,6 +255,7 @@ public class ModifyPhysicalConnectionAttributeRequest extends Request {
             this.circuitCode = request.circuitCode;
             this.clientToken = request.clientToken;
             this.description = request.description;
+            this.downDelayTime = request.downDelayTime;
             this.lineOperator = request.lineOperator;
             this.name = request.name;
             this.ownerAccount = request.ownerAccount;
@@ -294,6 +308,15 @@ public class ModifyPhysicalConnectionAttributeRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * DownDelayTime.
+         */
+        public Builder downDelayTime(Integer downDelayTime) {
+            this.putQueryParameter("DownDelayTime", downDelayTime);
+            this.downDelayTime = downDelayTime;
             return this;
         }
 

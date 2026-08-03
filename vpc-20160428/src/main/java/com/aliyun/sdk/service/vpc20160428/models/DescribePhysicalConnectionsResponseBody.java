@@ -529,6 +529,12 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("DeviceFeaturesSelected")
+        private String deviceFeaturesSelected;
+
+        @com.aliyun.core.annotation.NameInMap("DownDelayTime")
+        private Integer downDelayTime;
+
         @com.aliyun.core.annotation.NameInMap("EnabledTime")
         private String enabledTime;
 
@@ -630,6 +636,8 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             this.circuitCode = builder.circuitCode;
             this.creationTime = builder.creationTime;
             this.description = builder.description;
+            this.deviceFeaturesSelected = builder.deviceFeaturesSelected;
+            this.downDelayTime = builder.downDelayTime;
             this.enabledTime = builder.enabledTime;
             this.endTime = builder.endTime;
             this.expectSpec = builder.expectSpec;
@@ -738,6 +746,20 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return deviceFeaturesSelected
+         */
+        public String getDeviceFeaturesSelected() {
+            return this.deviceFeaturesSelected;
+        }
+
+        /**
+         * @return downDelayTime
+         */
+        public Integer getDownDelayTime() {
+            return this.downDelayTime;
         }
 
         /**
@@ -961,6 +983,8 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
             private String circuitCode; 
             private String creationTime; 
             private String description; 
+            private String deviceFeaturesSelected; 
+            private Integer downDelayTime; 
             private String enabledTime; 
             private String endTime; 
             private String expectSpec; 
@@ -1006,6 +1030,8 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
                 this.circuitCode = model.circuitCode;
                 this.creationTime = model.creationTime;
                 this.description = model.description;
+                this.deviceFeaturesSelected = model.deviceFeaturesSelected;
+                this.downDelayTime = model.downDelayTime;
                 this.enabledTime = model.enabledTime;
                 this.endTime = model.endTime;
                 this.expectSpec = model.expectSpec;
@@ -1152,6 +1178,22 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * DeviceFeaturesSelected.
+             */
+            public Builder deviceFeaturesSelected(String deviceFeaturesSelected) {
+                this.deviceFeaturesSelected = deviceFeaturesSelected;
+                return this;
+            }
+
+            /**
+             * DownDelayTime.
+             */
+            public Builder downDelayTime(Integer downDelayTime) {
+                this.downDelayTime = downDelayTime;
                 return this;
             }
 
