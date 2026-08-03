@@ -179,6 +179,9 @@ public class DownloadRecordingResponseBody extends TeaModel {
      * <p>DownloadRecordingResponseBody</p>
      */
     public static class DownloadParams extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EarlyMediaSignatureUrl")
+        private String earlyMediaSignatureUrl;
+
         @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
@@ -189,6 +192,7 @@ public class DownloadRecordingResponseBody extends TeaModel {
         private String voiceSliceRecordingListJson;
 
         private DownloadParams(Builder builder) {
+            this.earlyMediaSignatureUrl = builder.earlyMediaSignatureUrl;
             this.fileName = builder.fileName;
             this.signatureUrl = builder.signatureUrl;
             this.voiceSliceRecordingListJson = builder.voiceSliceRecordingListJson;
@@ -200,6 +204,13 @@ public class DownloadRecordingResponseBody extends TeaModel {
 
         public static DownloadParams create() {
             return builder().build();
+        }
+
+        /**
+         * @return earlyMediaSignatureUrl
+         */
+        public String getEarlyMediaSignatureUrl() {
+            return this.earlyMediaSignatureUrl;
         }
 
         /**
@@ -224,6 +235,7 @@ public class DownloadRecordingResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String earlyMediaSignatureUrl; 
             private String fileName; 
             private String signatureUrl; 
             private String voiceSliceRecordingListJson; 
@@ -232,10 +244,19 @@ public class DownloadRecordingResponseBody extends TeaModel {
             } 
 
             private Builder(DownloadParams model) {
+                this.earlyMediaSignatureUrl = model.earlyMediaSignatureUrl;
                 this.fileName = model.fileName;
                 this.signatureUrl = model.signatureUrl;
                 this.voiceSliceRecordingListJson = model.voiceSliceRecordingListJson;
             } 
+
+            /**
+             * EarlyMediaSignatureUrl.
+             */
+            public Builder earlyMediaSignatureUrl(String earlyMediaSignatureUrl) {
+                this.earlyMediaSignatureUrl = earlyMediaSignatureUrl;
+                return this;
+            }
 
             /**
              * FileName.
