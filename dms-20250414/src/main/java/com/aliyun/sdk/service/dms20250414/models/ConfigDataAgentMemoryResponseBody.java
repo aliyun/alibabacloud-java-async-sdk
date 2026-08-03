@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link OperateCustomAgentResponseBody} extends {@link TeaModel}
+ * {@link ConfigDataAgentMemoryResponseBody} extends {@link TeaModel}
  *
- * <p>OperateCustomAgentResponseBody</p>
+ * <p>ConfigDataAgentMemoryResponseBody</p>
  */
-public class OperateCustomAgentResponseBody extends TeaModel {
+public class ConfigDataAgentMemoryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
@@ -32,7 +32,7 @@ public class OperateCustomAgentResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private OperateCustomAgentResponseBody(Builder builder) {
+    private ConfigDataAgentMemoryResponseBody(Builder builder) {
         this.data = builder.data;
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
@@ -44,7 +44,7 @@ public class OperateCustomAgentResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static OperateCustomAgentResponseBody create() {
+    public static ConfigDataAgentMemoryResponseBody create() {
         return builder().build();
     }
 
@@ -97,7 +97,7 @@ public class OperateCustomAgentResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(OperateCustomAgentResponseBody model) {
+        private Builder(ConfigDataAgentMemoryResponseBody model) {
             this.data = model.data;
             this.errorCode = model.errorCode;
             this.errorMessage = model.errorMessage;
@@ -130,7 +130,10 @@ public class OperateCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -145,32 +148,28 @@ public class OperateCustomAgentResponseBody extends TeaModel {
             return this;
         }
 
-        public OperateCustomAgentResponseBody build() {
-            return new OperateCustomAgentResponseBody(this);
+        public ConfigDataAgentMemoryResponseBody build() {
+            return new ConfigDataAgentMemoryResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link OperateCustomAgentResponseBody} extends {@link TeaModel}
+     * {@link ConfigDataAgentMemoryResponseBody} extends {@link TeaModel}
      *
-     * <p>OperateCustomAgentResponseBody</p>
+     * <p>ConfigDataAgentMemoryResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("CustomAgentId")
-        private String customAgentId;
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
 
-        @com.aliyun.core.annotation.NameInMap("Message")
-        private String message;
-
-        @com.aliyun.core.annotation.NameInMap("Success")
-        private Boolean success;
+        @com.aliyun.core.annotation.NameInMap("RecallEnabled")
+        private Boolean recallEnabled;
 
         private Data(Builder builder) {
-            this.customAgentId = builder.customAgentId;
-            this.message = builder.message;
-            this.success = builder.success;
+            this.enabled = builder.enabled;
+            this.recallEnabled = builder.recallEnabled;
         }
 
         public static Builder builder() {
@@ -182,61 +181,44 @@ public class OperateCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * @return customAgentId
+         * @return enabled
          */
-        public String getCustomAgentId() {
-            return this.customAgentId;
+        public Boolean getEnabled() {
+            return this.enabled;
         }
 
         /**
-         * @return message
+         * @return recallEnabled
          */
-        public String getMessage() {
-            return this.message;
-        }
-
-        /**
-         * @return success
-         */
-        public Boolean getSuccess() {
-            return this.success;
+        public Boolean getRecallEnabled() {
+            return this.recallEnabled;
         }
 
         public static final class Builder {
-            private String customAgentId; 
-            private String message; 
-            private Boolean success; 
+            private Boolean enabled; 
+            private Boolean recallEnabled; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
-                this.customAgentId = model.customAgentId;
-                this.message = model.message;
-                this.success = model.success;
+                this.enabled = model.enabled;
+                this.recallEnabled = model.recallEnabled;
             } 
 
             /**
-             * CustomAgentId.
+             * Enabled.
              */
-            public Builder customAgentId(String customAgentId) {
-                this.customAgentId = customAgentId;
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
                 return this;
             }
 
             /**
-             * Message.
+             * RecallEnabled.
              */
-            public Builder message(String message) {
-                this.message = message;
-                return this;
-            }
-
-            /**
-             * Success.
-             */
-            public Builder success(Boolean success) {
-                this.success = success;
+            public Builder recallEnabled(Boolean recallEnabled) {
+                this.recallEnabled = recallEnabled;
                 return this;
             }
 

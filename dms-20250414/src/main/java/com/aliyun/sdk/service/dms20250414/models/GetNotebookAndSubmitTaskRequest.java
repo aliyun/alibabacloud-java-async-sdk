@@ -142,9 +142,6 @@ public class GetNotebookAndSubmitTaskRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{&quot;dt&quot;: &quot;2022-10-14&quot;}</p>
          */
         public Builder params(String params) {
             this.putBodyParameter("Params", params);
@@ -154,9 +151,6 @@ public class GetNotebookAndSubmitTaskRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>/Workspace/code/default/test.ipynb</p>
          */
         public Builder path(String path) {
             this.putBodyParameter("Path", path);
@@ -175,9 +169,6 @@ public class GetNotebookAndSubmitTaskRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>8vkixxxxx***</p>
          */
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("SessionId", sessionId);

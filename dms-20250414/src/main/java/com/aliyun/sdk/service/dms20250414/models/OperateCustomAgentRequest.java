@@ -90,9 +90,6 @@ public class OperateCustomAgentRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ca-4y3ca4khkcu**********ysf</p>
          */
         public Builder customAgentId(String customAgentId) {
             this.putQueryParameter("CustomAgentId", customAgentId);
@@ -102,9 +99,6 @@ public class OperateCustomAgentRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>RELEASE</p>
          */
         public Builder operateType(String operateType) {
             this.putQueryParameter("OperateType", operateType);

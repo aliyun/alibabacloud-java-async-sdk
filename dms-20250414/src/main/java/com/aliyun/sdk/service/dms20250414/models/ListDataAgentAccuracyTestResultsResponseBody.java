@@ -172,10 +172,7 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

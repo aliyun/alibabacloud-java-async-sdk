@@ -44,10 +44,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchUpdateDataLakePartitionsResponse> batchUpdateDataLakePartitions(BatchUpdateDataLakePartitionsRequest request);
 
     /**
+     * @param request the request parameters of CheckDataAgentMemoryConfig  CheckDataAgentMemoryConfigRequest
+     * @return CheckDataAgentMemoryConfigResponse
+     */
+    CompletableFuture<CheckDataAgentMemoryConfigResponse> checkDataAgentMemoryConfig(CheckDataAgentMemoryConfigRequest request);
+
+    /**
      * @param request the request parameters of ConfigAirflow  ConfigAirflowRequest
      * @return ConfigAirflowResponse
      */
     CompletableFuture<ConfigAirflowResponse> configAirflow(ConfigAirflowRequest request);
+
+    /**
+     * @param request the request parameters of ConfigDataAgentMemory  ConfigDataAgentMemoryRequest
+     * @return ConfigDataAgentMemoryResponse
+     */
+    CompletableFuture<ConfigDataAgentMemoryResponse> configDataAgentMemory(ConfigDataAgentMemoryRequest request);
 
     /**
      * @param request the request parameters of CreateAirflow  CreateAirflowRequest
@@ -144,6 +156,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDataAgentKnowledgeBaseResponse
      */
     CompletableFuture<DeleteDataAgentKnowledgeBaseResponse> deleteDataAgentKnowledgeBase(DeleteDataAgentKnowledgeBaseRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDataAgentMemory  DeleteDataAgentMemoryRequest
+     * @return DeleteDataAgentMemoryResponse
+     */
+    CompletableFuture<DeleteDataAgentMemoryResponse> deleteDataAgentMemory(DeleteDataAgentMemoryRequest request);
 
     /**
      * @param request the request parameters of DeleteDataAgentWorkspace  DeleteDataAgentWorkspaceRequest
@@ -382,6 +400,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDataAgentAccuracyTestTasksResponse> listDataAgentAccuracyTestTasks(ListDataAgentAccuracyTestTasksRequest request);
 
     /**
+     * @param request the request parameters of ListDataAgentMemory  ListDataAgentMemoryRequest
+     * @return ListDataAgentMemoryResponse
+     */
+    CompletableFuture<ListDataAgentMemoryResponse> listDataAgentMemory(ListDataAgentMemoryRequest request);
+
+    /**
      * @param request the request parameters of ListDataAgentSession  ListDataAgentSessionRequest
      * @return ListDataAgentSessionResponse
      */
@@ -578,6 +602,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateDataAgentAccuracyTestResponse
      */
     CompletableFuture<UpdateDataAgentAccuracyTestResponse> updateDataAgentAccuracyTest(UpdateDataAgentAccuracyTestRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDataAgentMemory  UpdateDataAgentMemoryRequest
+     * @return UpdateDataAgentMemoryResponse
+     */
+    CompletableFuture<UpdateDataAgentMemoryResponse> updateDataAgentMemory(UpdateDataAgentMemoryRequest request);
 
     /**
      * @param request the request parameters of UpdateDataAgentSpaceInfo  UpdateDataAgentSpaceInfoRequest

@@ -99,9 +99,6 @@ public class GetAirflowRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>af-b3a7f110a6vmvn7****</p>
          */
         public Builder airflowId(String airflowId) {
             this.putQueryParameter("AirflowId", airflowId);
@@ -111,9 +108,6 @@ public class GetAirflowRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>8630242382****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

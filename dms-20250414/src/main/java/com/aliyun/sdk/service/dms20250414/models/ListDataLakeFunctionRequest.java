@@ -169,9 +169,6 @@ public class ListDataLakeFunctionRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>hive</p>
          */
         public Builder catalogName(String catalogName) {
             this.putQueryParameter("CatalogName", catalogName);

@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link OperateCustomAgentResponseBody} extends {@link TeaModel}
+ * {@link DeleteDataAgentMemoryResponseBody} extends {@link TeaModel}
  *
- * <p>OperateCustomAgentResponseBody</p>
+ * <p>DeleteDataAgentMemoryResponseBody</p>
  */
-public class OperateCustomAgentResponseBody extends TeaModel {
+public class DeleteDataAgentMemoryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
@@ -32,7 +32,7 @@ public class OperateCustomAgentResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private OperateCustomAgentResponseBody(Builder builder) {
+    private DeleteDataAgentMemoryResponseBody(Builder builder) {
         this.data = builder.data;
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
@@ -44,7 +44,7 @@ public class OperateCustomAgentResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static OperateCustomAgentResponseBody create() {
+    public static DeleteDataAgentMemoryResponseBody create() {
         return builder().build();
     }
 
@@ -97,7 +97,7 @@ public class OperateCustomAgentResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(OperateCustomAgentResponseBody model) {
+        private Builder(DeleteDataAgentMemoryResponseBody model) {
             this.data = model.data;
             this.errorCode = model.errorCode;
             this.errorMessage = model.errorMessage;
@@ -130,7 +130,10 @@ public class OperateCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -145,31 +148,27 @@ public class OperateCustomAgentResponseBody extends TeaModel {
             return this;
         }
 
-        public OperateCustomAgentResponseBody build() {
-            return new OperateCustomAgentResponseBody(this);
+        public DeleteDataAgentMemoryResponseBody build() {
+            return new DeleteDataAgentMemoryResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link OperateCustomAgentResponseBody} extends {@link TeaModel}
+     * {@link DeleteDataAgentMemoryResponseBody} extends {@link TeaModel}
      *
-     * <p>OperateCustomAgentResponseBody</p>
+     * <p>DeleteDataAgentMemoryResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("CustomAgentId")
-        private String customAgentId;
-
-        @com.aliyun.core.annotation.NameInMap("Message")
-        private String message;
+        @com.aliyun.core.annotation.NameInMap("JobId")
+        private String jobId;
 
         @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private Data(Builder builder) {
-            this.customAgentId = builder.customAgentId;
-            this.message = builder.message;
+            this.jobId = builder.jobId;
             this.success = builder.success;
         }
 
@@ -182,17 +181,10 @@ public class OperateCustomAgentResponseBody extends TeaModel {
         }
 
         /**
-         * @return customAgentId
+         * @return jobId
          */
-        public String getCustomAgentId() {
-            return this.customAgentId;
-        }
-
-        /**
-         * @return message
-         */
-        public String getMessage() {
-            return this.message;
+        public String getJobId() {
+            return this.jobId;
         }
 
         /**
@@ -203,32 +195,22 @@ public class OperateCustomAgentResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String customAgentId; 
-            private String message; 
+            private String jobId; 
             private Boolean success; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
-                this.customAgentId = model.customAgentId;
-                this.message = model.message;
+                this.jobId = model.jobId;
                 this.success = model.success;
             } 
 
             /**
-             * CustomAgentId.
+             * JobId.
              */
-            public Builder customAgentId(String customAgentId) {
-                this.customAgentId = customAgentId;
-                return this;
-            }
-
-            /**
-             * Message.
-             */
-            public Builder message(String message) {
-                this.message = message;
+            public Builder jobId(String jobId) {
+                this.jobId = jobId;
                 return this;
             }
 

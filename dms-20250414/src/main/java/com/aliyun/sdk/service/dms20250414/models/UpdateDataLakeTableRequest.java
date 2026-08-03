@@ -156,9 +156,6 @@ public class UpdateDataLakeTableRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>hive</p>
          */
         public Builder catalogName(String catalogName) {
             this.putQueryParameter("CatalogName", catalogName);
@@ -168,9 +165,6 @@ public class UpdateDataLakeTableRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>default</p>
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
