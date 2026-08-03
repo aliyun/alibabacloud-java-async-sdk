@@ -212,6 +212,9 @@ public class ListIncidentsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DetectionRuleId")
         private String detectionRuleId;
 
+        @com.aliyun.core.annotation.NameInMap("DetectionRuleName")
+        private String detectionRuleName;
+
         @com.aliyun.core.annotation.NameInMap("EntityInfos")
         private String entityInfos;
 
@@ -256,6 +259,7 @@ public class ListIncidentsResponseBody extends TeaModel {
             this.attckTactics = builder.attckTactics;
             this.createTime = builder.createTime;
             this.detectionRuleId = builder.detectionRuleId;
+            this.detectionRuleName = builder.detectionRuleName;
             this.entityInfos = builder.entityInfos;
             this.incidentDescription = builder.incidentDescription;
             this.incidentName = builder.incidentName;
@@ -305,6 +309,13 @@ public class ListIncidentsResponseBody extends TeaModel {
          */
         public String getDetectionRuleId() {
             return this.detectionRuleId;
+        }
+
+        /**
+         * @return detectionRuleName
+         */
+        public String getDetectionRuleName() {
+            return this.detectionRuleName;
         }
 
         /**
@@ -403,6 +414,7 @@ public class ListIncidentsResponseBody extends TeaModel {
             private String attckTactics; 
             private Long createTime; 
             private String detectionRuleId; 
+            private String detectionRuleName; 
             private String entityInfos; 
             private String incidentDescription; 
             private String incidentName; 
@@ -425,6 +437,7 @@ public class ListIncidentsResponseBody extends TeaModel {
                 this.attckTactics = model.attckTactics;
                 this.createTime = model.createTime;
                 this.detectionRuleId = model.detectionRuleId;
+                this.detectionRuleName = model.detectionRuleName;
                 this.entityInfos = model.entityInfos;
                 this.incidentDescription = model.incidentDescription;
                 this.incidentName = model.incidentName;
@@ -469,6 +482,14 @@ public class ListIncidentsResponseBody extends TeaModel {
              */
             public Builder detectionRuleId(String detectionRuleId) {
                 this.detectionRuleId = detectionRuleId;
+                return this;
+            }
+
+            /**
+             * DetectionRuleName.
+             */
+            public Builder detectionRuleName(String detectionRuleName) {
+                this.detectionRuleName = detectionRuleName;
                 return this;
             }
 

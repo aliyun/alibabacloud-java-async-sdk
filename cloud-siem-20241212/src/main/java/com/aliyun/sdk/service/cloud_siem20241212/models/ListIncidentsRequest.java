@@ -22,6 +22,10 @@ public class ListIncidentsRequest extends Request {
     private String alertUuid;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DetectionRuleIds")
+    private java.util.List<String> detectionRuleIds;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
@@ -110,6 +114,7 @@ public class ListIncidentsRequest extends Request {
     private ListIncidentsRequest(Builder builder) {
         super(builder);
         this.alertUuid = builder.alertUuid;
+        this.detectionRuleIds = builder.detectionRuleIds;
         this.endTime = builder.endTime;
         this.incidentName = builder.incidentName;
         this.incidentStatus = builder.incidentStatus;
@@ -151,6 +156,13 @@ public class ListIncidentsRequest extends Request {
      */
     public String getAlertUuid() {
         return this.alertUuid;
+    }
+
+    /**
+     * @return detectionRuleIds
+     */
+    public java.util.List<String> getDetectionRuleIds() {
+        return this.detectionRuleIds;
     }
 
     /**
@@ -302,6 +314,7 @@ public class ListIncidentsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListIncidentsRequest, Builder> {
         private String alertUuid; 
+        private java.util.List<String> detectionRuleIds; 
         private Long endTime; 
         private String incidentName; 
         private Integer incidentStatus; 
@@ -331,6 +344,7 @@ public class ListIncidentsRequest extends Request {
         private Builder(ListIncidentsRequest request) {
             super(request);
             this.alertUuid = request.alertUuid;
+            this.detectionRuleIds = request.detectionRuleIds;
             this.endTime = request.endTime;
             this.incidentName = request.incidentName;
             this.incidentStatus = request.incidentStatus;
@@ -360,6 +374,15 @@ public class ListIncidentsRequest extends Request {
         public Builder alertUuid(String alertUuid) {
             this.putBodyParameter("AlertUuid", alertUuid);
             this.alertUuid = alertUuid;
+            return this;
+        }
+
+        /**
+         * DetectionRuleIds.
+         */
+        public Builder detectionRuleIds(java.util.List<String> detectionRuleIds) {
+            this.putBodyParameter("DetectionRuleIds", detectionRuleIds);
+            this.detectionRuleIds = detectionRuleIds;
             return this;
         }
 
