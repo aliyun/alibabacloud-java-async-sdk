@@ -59,6 +59,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ExpireTime")
     private String expireTime;
 
+    @com.aliyun.core.annotation.NameInMap("FEClusterList")
+    private java.util.List<FEClusterList> FEClusterList;
+
     @com.aliyun.core.annotation.NameInMap("GmtModified")
     private String gmtModified;
 
@@ -149,6 +152,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         this.engineMinorVersion = builder.engineMinorVersion;
         this.engineVersion = builder.engineVersion;
         this.expireTime = builder.expireTime;
+        this.FEClusterList = builder.FEClusterList;
         this.gmtModified = builder.gmtModified;
         this.langfuseInstanceIds = builder.langfuseInstanceIds;
         this.lockMode = builder.lockMode;
@@ -284,6 +288,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
      */
     public String getExpireTime() {
         return this.expireTime;
+    }
+
+    /**
+     * @return FEClusterList
+     */
+    public java.util.List<FEClusterList> getFEClusterList() {
+        return this.FEClusterList;
     }
 
     /**
@@ -476,6 +487,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         private String engineMinorVersion; 
         private String engineVersion; 
         private String expireTime; 
+        private java.util.List<FEClusterList> FEClusterList; 
         private String gmtModified; 
         private java.util.List<String> langfuseInstanceIds; 
         private Long lockMode; 
@@ -520,6 +532,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.engineMinorVersion = model.engineMinorVersion;
             this.engineVersion = model.engineVersion;
             this.expireTime = model.expireTime;
+            this.FEClusterList = model.FEClusterList;
             this.gmtModified = model.gmtModified;
             this.langfuseInstanceIds = model.langfuseInstanceIds;
             this.lockMode = model.lockMode;
@@ -684,6 +697,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
+            return this;
+        }
+
+        /**
+         * FEClusterList.
+         */
+        public Builder FEClusterList(java.util.List<FEClusterList> FEClusterList) {
+            this.FEClusterList = FEClusterList;
             return this;
         }
 
@@ -1526,6 +1547,158 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
             public DBClusterList build() {
                 return new DBClusterList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDBInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceAttributeResponseBody</p>
+     */
+    public static class FEClusterList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DbClusterId")
+        private String dbClusterId;
+
+        @com.aliyun.core.annotation.NameInMap("NodeCount")
+        private Long nodeCount;
+
+        @com.aliyun.core.annotation.NameInMap("SingleNodeCpuCores")
+        private Long singleNodeCpuCores;
+
+        @com.aliyun.core.annotation.NameInMap("SingleNodeMemoryInGB")
+        private Long singleNodeMemoryInGB;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        private FEClusterList(Builder builder) {
+            this.dbClusterId = builder.dbClusterId;
+            this.nodeCount = builder.nodeCount;
+            this.singleNodeCpuCores = builder.singleNodeCpuCores;
+            this.singleNodeMemoryInGB = builder.singleNodeMemoryInGB;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FEClusterList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dbClusterId
+         */
+        public String getDbClusterId() {
+            return this.dbClusterId;
+        }
+
+        /**
+         * @return nodeCount
+         */
+        public Long getNodeCount() {
+            return this.nodeCount;
+        }
+
+        /**
+         * @return singleNodeCpuCores
+         */
+        public Long getSingleNodeCpuCores() {
+            return this.singleNodeCpuCores;
+        }
+
+        /**
+         * @return singleNodeMemoryInGB
+         */
+        public Long getSingleNodeMemoryInGB() {
+            return this.singleNodeMemoryInGB;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String dbClusterId; 
+            private Long nodeCount; 
+            private Long singleNodeCpuCores; 
+            private Long singleNodeMemoryInGB; 
+            private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(FEClusterList model) {
+                this.dbClusterId = model.dbClusterId;
+                this.nodeCount = model.nodeCount;
+                this.singleNodeCpuCores = model.singleNodeCpuCores;
+                this.singleNodeMemoryInGB = model.singleNodeMemoryInGB;
+                this.status = model.status;
+            } 
+
+            /**
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>selectdb-cn-h033cjs****-be</p>
+             */
+            public Builder dbClusterId(String dbClusterId) {
+                this.dbClusterId = dbClusterId;
+                return this;
+            }
+
+            /**
+             * NodeCount.
+             */
+            public Builder nodeCount(Long nodeCount) {
+                this.nodeCount = nodeCount;
+                return this;
+            }
+
+            /**
+             * SingleNodeCpuCores.
+             */
+            public Builder singleNodeCpuCores(Long singleNodeCpuCores) {
+                this.singleNodeCpuCores = singleNodeCpuCores;
+                return this;
+            }
+
+            /**
+             * SingleNodeMemoryInGB.
+             */
+            public Builder singleNodeMemoryInGB(Long singleNodeMemoryInGB) {
+                this.singleNodeMemoryInGB = singleNodeMemoryInGB;
+                return this;
+            }
+
+            /**
+             * <p>The state of the cluster. Valid values:</p>
+             * <ul>
+             * <li><strong>CREATING</strong>: The cluster is being created.</li>
+             * <li><strong>ACTIVATION</strong>: The cluster is running.</li>
+             * <li><strong>RESOURCE_CHANGING</strong>: The resource configuration of the cluster is being changed.</li>
+             * <li><strong>ORDER_PREPARING</strong>: The order is being confirmed.</li>
+             * <li><strong>READONLY_RESOURCE_CHANGING</strong>: The resource configuration of the cluster is being changed and the cluster is write-locked.</li>
+             * <li><strong>DELETING</strong>: The cluster is being deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVATION</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public FEClusterList build() {
+                return new FEClusterList(this);
             } 
 
         } 

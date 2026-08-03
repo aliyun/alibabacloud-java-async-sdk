@@ -74,6 +74,14 @@ public class CreateDBInstanceRequest extends Request {
     private String engineVersion;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FEClassCode")
+    private String FEClassCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FENodeCount")
+    private String FENodeCount;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MultiZone")
     private java.util.List<MultiZone> multiZone;
 
@@ -144,6 +152,8 @@ public class CreateDBInstanceRequest extends Request {
         this.deployScheme = builder.deployScheme;
         this.engine = builder.engine;
         this.engineVersion = builder.engineVersion;
+        this.FEClassCode = builder.FEClassCode;
+        this.FENodeCount = builder.FENodeCount;
         this.multiZone = builder.multiZone;
         this.period = builder.period;
         this.regionId = builder.regionId;
@@ -264,6 +274,20 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     /**
+     * @return FEClassCode
+     */
+    public String getFEClassCode() {
+        return this.FEClassCode;
+    }
+
+    /**
+     * @return FENodeCount
+     */
+    public String getFENodeCount() {
+        return this.FENodeCount;
+    }
+
+    /**
      * @return multiZone
      */
     public java.util.List<MultiZone> getMultiZone() {
@@ -368,6 +392,8 @@ public class CreateDBInstanceRequest extends Request {
         private String deployScheme; 
         private String engine; 
         private String engineVersion; 
+        private String FEClassCode; 
+        private String FENodeCount; 
         private java.util.List<MultiZone> multiZone; 
         private String period; 
         private String regionId; 
@@ -401,6 +427,8 @@ public class CreateDBInstanceRequest extends Request {
             this.deployScheme = request.deployScheme;
             this.engine = request.engine;
             this.engineVersion = request.engineVersion;
+            this.FEClassCode = request.FEClassCode;
+            this.FENodeCount = request.FENodeCount;
             this.multiZone = request.multiZone;
             this.period = request.period;
             this.regionId = request.regionId;
@@ -572,6 +600,24 @@ public class CreateDBInstanceRequest extends Request {
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
             this.engineVersion = engineVersion;
+            return this;
+        }
+
+        /**
+         * FEClassCode.
+         */
+        public Builder FEClassCode(String FEClassCode) {
+            this.putQueryParameter("FEClassCode", FEClassCode);
+            this.FEClassCode = FEClassCode;
+            return this;
+        }
+
+        /**
+         * FENodeCount.
+         */
+        public Builder FENodeCount(String FENodeCount) {
+            this.putQueryParameter("FENodeCount", FENodeCount);
+            this.FENodeCount = FENodeCount;
             return this;
         }
 
