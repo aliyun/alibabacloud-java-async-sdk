@@ -1617,6 +1617,9 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
      * <p>DescribeNetworkInterfaceAttributeResponseBody</p>
      */
     public static class EnhancedNetwork extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableExpress")
+        private Boolean enableExpress;
+
         @com.aliyun.core.annotation.NameInMap("EnableRss")
         private Boolean enableRss;
 
@@ -1630,6 +1633,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         private Integer virtualFunctionTotalQueueNumber;
 
         private EnhancedNetwork(Builder builder) {
+            this.enableExpress = builder.enableExpress;
             this.enableRss = builder.enableRss;
             this.enableSriov = builder.enableSriov;
             this.virtualFunctionQuantity = builder.virtualFunctionQuantity;
@@ -1642,6 +1646,13 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
         public static EnhancedNetwork create() {
             return builder().build();
+        }
+
+        /**
+         * @return enableExpress
+         */
+        public Boolean getEnableExpress() {
+            return this.enableExpress;
         }
 
         /**
@@ -1673,6 +1684,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean enableExpress; 
             private Boolean enableRss; 
             private Boolean enableSriov; 
             private Integer virtualFunctionQuantity; 
@@ -1682,11 +1694,20 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             } 
 
             private Builder(EnhancedNetwork model) {
+                this.enableExpress = model.enableExpress;
                 this.enableRss = model.enableRss;
                 this.enableSriov = model.enableSriov;
                 this.virtualFunctionQuantity = model.virtualFunctionQuantity;
                 this.virtualFunctionTotalQueueNumber = model.virtualFunctionTotalQueueNumber;
             } 
+
+            /**
+             * EnableExpress.
+             */
+            public Builder enableExpress(Boolean enableExpress) {
+                this.enableExpress = enableExpress;
+                return this;
+            }
 
             /**
              * <blockquote>

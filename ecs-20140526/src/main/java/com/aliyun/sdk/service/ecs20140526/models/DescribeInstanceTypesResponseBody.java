@@ -546,6 +546,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
      * <p>DescribeInstanceTypesResponseBody</p>
      */
     public static class EnhancedNetwork extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ExpressSupport")
+        private Boolean expressSupport;
+
         @com.aliyun.core.annotation.NameInMap("RssSupport")
         private Boolean rssSupport;
 
@@ -556,6 +559,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         private Integer vfQueueNumberPerEni;
 
         private EnhancedNetwork(Builder builder) {
+            this.expressSupport = builder.expressSupport;
             this.rssSupport = builder.rssSupport;
             this.sriovSupport = builder.sriovSupport;
             this.vfQueueNumberPerEni = builder.vfQueueNumberPerEni;
@@ -567,6 +571,13 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
         public static EnhancedNetwork create() {
             return builder().build();
+        }
+
+        /**
+         * @return expressSupport
+         */
+        public Boolean getExpressSupport() {
+            return this.expressSupport;
         }
 
         /**
@@ -591,6 +602,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean expressSupport; 
             private Boolean rssSupport; 
             private Boolean sriovSupport; 
             private Integer vfQueueNumberPerEni; 
@@ -599,10 +611,19 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             } 
 
             private Builder(EnhancedNetwork model) {
+                this.expressSupport = model.expressSupport;
                 this.rssSupport = model.rssSupport;
                 this.sriovSupport = model.sriovSupport;
                 this.vfQueueNumberPerEni = model.vfQueueNumberPerEni;
             } 
+
+            /**
+             * ExpressSupport.
+             */
+            public Builder expressSupport(Boolean expressSupport) {
+                this.expressSupport = expressSupport;
+                return this;
+            }
 
             /**
              * <blockquote>
