@@ -347,6 +347,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateGenerateAICoachScriptTask  CreateGenerateAICoachScriptTaskRequest
+     * @return CreateGenerateAICoachScriptTaskResponse
+     */
+    @Override
+    public CompletableFuture<CreateGenerateAICoachScriptTaskResponse> createGenerateAICoachScriptTask(CreateGenerateAICoachScriptTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateGenerateAICoachScriptTask").setMethod(HttpMethod.POST).setPathRegex("/yic/yic-console/openService/v1/aicoach/scriptGenerateTask").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateGenerateAICoachScriptTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateGenerateAICoachScriptTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateIllustrationTask  CreateIllustrationTaskRequest
      * @return CreateIllustrationTaskResponse
      */
@@ -635,6 +653,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetAICoachDebugResult  GetAICoachDebugResultRequest
+     * @return GetAICoachDebugResultResponse
+     */
+    @Override
+    public CompletableFuture<GetAICoachDebugResultResponse> getAICoachDebugResult(GetAICoachDebugResultRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAICoachDebugResult").setMethod(HttpMethod.GET).setPathRegex("/yic/yic-console/openService/v1/aicoach/getDebugResult").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAICoachDebugResultResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAICoachDebugResultResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetAICoachScript  GetAICoachScriptRequest
      * @return GetAICoachScriptResponse
      */
@@ -647,6 +683,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetAICoachScriptResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetAICoachScriptGenerateTask  GetAICoachScriptGenerateTaskRequest
+     * @return GetAICoachScriptGenerateTaskResponse
+     */
+    @Override
+    public CompletableFuture<GetAICoachScriptGenerateTaskResponse> getAICoachScriptGenerateTask(GetAICoachScriptGenerateTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAICoachScriptGenerateTask").setMethod(HttpMethod.GET).setPathRegex("/yic/yic-console/openService/v1/aicoach/scriptGenerateTask").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAICoachScriptGenerateTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAICoachScriptGenerateTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -891,6 +945,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListAICoachTaskPageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListAICoachTaskSession  ListAICoachTaskSessionRequest
+     * @return ListAICoachTaskSessionResponse
+     */
+    @Override
+    public CompletableFuture<ListAICoachTaskSessionResponse> listAICoachTaskSession(ListAICoachTaskSessionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListAICoachTaskSession").setMethod(HttpMethod.GET).setPathRegex("/yic/yic-console/openService/v1/aicoach/listTaskSession").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAICoachTaskSessionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAICoachTaskSessionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1376,6 +1448,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<StopProjectTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SubmitAICoachDebug  SubmitAICoachDebugRequest
+     * @return SubmitAICoachDebugResponse
+     */
+    @Override
+    public CompletableFuture<SubmitAICoachDebugResponse> submitAICoachDebug(SubmitAICoachDebugRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SubmitAICoachDebug").setMethod(HttpMethod.POST).setPathRegex("/yic/yic-console/openService/v1/aicoach/saveDebug").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitAICoachDebugResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitAICoachDebugResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -23,6 +23,9 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
+    @com.aliyun.core.annotation.NameInMap("extendCustomNameMap")
+    private java.util.Map<String, String> extendCustomNameMap;
+
     @com.aliyun.core.annotation.NameInMap("list")
     private java.util.List<List> list;
 
@@ -38,6 +41,7 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
     private ListAICoachScriptPageResponseBody(Builder builder) {
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
+        this.extendCustomNameMap = builder.extendCustomNameMap;
         this.list = builder.list;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -71,6 +75,13 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
     }
 
     /**
+     * @return extendCustomNameMap
+     */
+    public java.util.Map<String, String> getExtendCustomNameMap() {
+        return this.extendCustomNameMap;
+    }
+
+    /**
      * @return list
      */
     public java.util.List<List> getList() {
@@ -101,6 +112,7 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
     public static final class Builder {
         private String errorCode; 
         private String errorMessage; 
+        private java.util.Map<String, String> extendCustomNameMap; 
         private java.util.List<List> list; 
         private String requestId; 
         private Boolean success; 
@@ -112,6 +124,7 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         private Builder(ListAICoachScriptPageResponseBody model) {
             this.errorCode = model.errorCode;
             this.errorMessage = model.errorMessage;
+            this.extendCustomNameMap = model.extendCustomNameMap;
             this.list = model.list;
             this.requestId = model.requestId;
             this.success = model.success;
@@ -131,6 +144,14 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
+            return this;
+        }
+
+        /**
+         * extendCustomNameMap.
+         */
+        public Builder extendCustomNameMap(java.util.Map<String, String> extendCustomNameMap) {
+            this.extendCustomNameMap = extendCustomNameMap;
             return this;
         }
 

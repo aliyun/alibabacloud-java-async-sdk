@@ -62,6 +62,9 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("expressivenessList")
     private java.util.List<ExpressivenessList> expressivenessList;
 
+    @com.aliyun.core.annotation.NameInMap("extendCustomNameMap")
+    private java.util.Map<String, String> extendCustomNameMap;
+
     @com.aliyun.core.annotation.NameInMap("gifDynamicUrl")
     private String gifDynamicUrl;
 
@@ -159,6 +162,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         this.evaluateReportFlag = builder.evaluateReportFlag;
         this.expressiveness = builder.expressiveness;
         this.expressivenessList = builder.expressivenessList;
+        this.extendCustomNameMap = builder.extendCustomNameMap;
         this.gifDynamicUrl = builder.gifDynamicUrl;
         this.gifStaticUrl = builder.gifStaticUrl;
         this.gmtCreate = builder.gmtCreate;
@@ -303,6 +307,13 @@ public class GetAICoachScriptResponseBody extends TeaModel {
      */
     public java.util.List<ExpressivenessList> getExpressivenessList() {
         return this.expressivenessList;
+    }
+
+    /**
+     * @return extendCustomNameMap
+     */
+    public java.util.Map<String, String> getExtendCustomNameMap() {
+        return this.extendCustomNameMap;
     }
 
     /**
@@ -510,6 +521,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         private Boolean evaluateReportFlag; 
         private java.util.Map<String, Integer> expressiveness; 
         private java.util.List<ExpressivenessList> expressivenessList; 
+        private java.util.Map<String, String> extendCustomNameMap; 
         private String gifDynamicUrl; 
         private String gifStaticUrl; 
         private String gmtCreate; 
@@ -557,6 +569,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
             this.evaluateReportFlag = model.evaluateReportFlag;
             this.expressiveness = model.expressiveness;
             this.expressivenessList = model.expressivenessList;
+            this.extendCustomNameMap = model.extendCustomNameMap;
             this.gifDynamicUrl = model.gifDynamicUrl;
             this.gifStaticUrl = model.gifStaticUrl;
             this.gmtCreate = model.gmtCreate;
@@ -703,6 +716,14 @@ public class GetAICoachScriptResponseBody extends TeaModel {
          */
         public Builder expressivenessList(java.util.List<ExpressivenessList> expressivenessList) {
             this.expressivenessList = expressivenessList;
+            return this;
+        }
+
+        /**
+         * extendCustomNameMap.
+         */
+        public Builder extendCustomNameMap(java.util.Map<String, String> extendCustomNameMap) {
+            this.extendCustomNameMap = extendCustomNameMap;
             return this;
         }
 

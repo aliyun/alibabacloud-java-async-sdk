@@ -29,6 +29,9 @@ public class GetAICoachTaskSessionReportResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("evaluationResult")
     private String evaluationResult;
 
+    @com.aliyun.core.annotation.NameInMap("extendCustomNameMap")
+    private java.util.Map<String, String> extendCustomNameMap;
+
     @com.aliyun.core.annotation.NameInMap("feedback")
     private Boolean feedback;
 
@@ -52,6 +55,7 @@ public class GetAICoachTaskSessionReportResponseBody extends TeaModel {
         this.endTime = builder.endTime;
         this.evaluationRating = builder.evaluationRating;
         this.evaluationResult = builder.evaluationResult;
+        this.extendCustomNameMap = builder.extendCustomNameMap;
         this.feedback = builder.feedback;
         this.requestId = builder.requestId;
         this.scriptName = builder.scriptName;
@@ -101,6 +105,13 @@ public class GetAICoachTaskSessionReportResponseBody extends TeaModel {
     }
 
     /**
+     * @return extendCustomNameMap
+     */
+    public java.util.Map<String, String> getExtendCustomNameMap() {
+        return this.extendCustomNameMap;
+    }
+
+    /**
      * @return feedback
      */
     public Boolean getFeedback() {
@@ -147,6 +158,7 @@ public class GetAICoachTaskSessionReportResponseBody extends TeaModel {
         private String endTime; 
         private String evaluationRating; 
         private String evaluationResult; 
+        private java.util.Map<String, String> extendCustomNameMap; 
         private Boolean feedback; 
         private String requestId; 
         private String scriptName; 
@@ -162,6 +174,7 @@ public class GetAICoachTaskSessionReportResponseBody extends TeaModel {
             this.endTime = model.endTime;
             this.evaluationRating = model.evaluationRating;
             this.evaluationResult = model.evaluationResult;
+            this.extendCustomNameMap = model.extendCustomNameMap;
             this.feedback = model.feedback;
             this.requestId = model.requestId;
             this.scriptName = model.scriptName;
@@ -199,6 +212,14 @@ public class GetAICoachTaskSessionReportResponseBody extends TeaModel {
          */
         public Builder evaluationResult(String evaluationResult) {
             this.evaluationResult = evaluationResult;
+            return this;
+        }
+
+        /**
+         * extendCustomNameMap.
+         */
+        public Builder extendCustomNameMap(java.util.Map<String, String> extendCustomNameMap) {
+            this.extendCustomNameMap = extendCustomNameMap;
             return this;
         }
 

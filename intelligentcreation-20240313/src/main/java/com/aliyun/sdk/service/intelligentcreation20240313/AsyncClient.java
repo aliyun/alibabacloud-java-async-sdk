@@ -122,6 +122,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAnchorResponse> createAnchor(CreateAnchorRequest request);
 
     /**
+     * @param request the request parameters of CreateGenerateAICoachScriptTask  CreateGenerateAICoachScriptTaskRequest
+     * @return CreateGenerateAICoachScriptTaskResponse
+     */
+    CompletableFuture<CreateGenerateAICoachScriptTaskResponse> createGenerateAICoachScriptTask(CreateGenerateAICoachScriptTaskRequest request);
+
+    /**
      * @param request the request parameters of CreateIllustrationTask  CreateIllustrationTaskRequest
      * @return CreateIllustrationTaskResponse
      */
@@ -218,10 +224,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAICoachCheatDetectionResponse> getAICoachCheatDetection(GetAICoachCheatDetectionRequest request);
 
     /**
+     * @param request the request parameters of GetAICoachDebugResult  GetAICoachDebugResultRequest
+     * @return GetAICoachDebugResultResponse
+     */
+    CompletableFuture<GetAICoachDebugResultResponse> getAICoachDebugResult(GetAICoachDebugResultRequest request);
+
+    /**
      * @param request the request parameters of GetAICoachScript  GetAICoachScriptRequest
      * @return GetAICoachScriptResponse
      */
     CompletableFuture<GetAICoachScriptResponse> getAICoachScript(GetAICoachScriptRequest request);
+
+    /**
+     * @param request the request parameters of GetAICoachScriptGenerateTask  GetAICoachScriptGenerateTaskRequest
+     * @return GetAICoachScriptGenerateTaskResponse
+     */
+    CompletableFuture<GetAICoachScriptGenerateTaskResponse> getAICoachScriptGenerateTask(GetAICoachScriptGenerateTaskRequest request);
 
     /**
      * @param request the request parameters of GetAICoachTaskSessionHistory  GetAICoachTaskSessionHistoryRequest
@@ -302,6 +320,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAICoachTaskPageResponse
      */
     CompletableFuture<ListAICoachTaskPageResponse> listAICoachTaskPage(ListAICoachTaskPageRequest request);
+
+    /**
+     * @param request the request parameters of ListAICoachTaskSession  ListAICoachTaskSessionRequest
+     * @return ListAICoachTaskSessionResponse
+     */
+    CompletableFuture<ListAICoachTaskSessionResponse> listAICoachTaskSession(ListAICoachTaskSessionRequest request);
 
     /**
      * @param request the request parameters of ListAgents  ListAgentsRequest
@@ -458,6 +482,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StopProjectTaskResponse
      */
     CompletableFuture<StopProjectTaskResponse> stopProjectTask(StopProjectTaskRequest request);
+
+    /**
+     * @param request the request parameters of SubmitAICoachDebug  SubmitAICoachDebugRequest
+     * @return SubmitAICoachDebugResponse
+     */
+    CompletableFuture<SubmitAICoachDebugResponse> submitAICoachDebug(SubmitAICoachDebugRequest request);
 
     /**
      * @param request the request parameters of SubmitImageToVideoTask  SubmitImageToVideoTaskRequest
