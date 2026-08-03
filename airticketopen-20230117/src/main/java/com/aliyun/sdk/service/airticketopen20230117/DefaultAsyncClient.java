@@ -557,4 +557,472 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of applyRefund  ApplyRefundRequest
+     * @return ApplyRefundResponse
+     */
+    @Override
+    public CompletableFuture<ApplyRefundResponse> applyRefund(ApplyRefundRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("applyRefund").setMethod(HttpMethod.POST).setPathRegex("/applyRefund").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ApplyRefundResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ApplyRefundResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of batchGetHotelDetail  BatchGetHotelDetailRequest
+     * @return BatchGetHotelDetailResponse
+     */
+    @Override
+    public CompletableFuture<BatchGetHotelDetailResponse> batchGetHotelDetail(BatchGetHotelDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("batchGetHotelDetail").setMethod(HttpMethod.POST).setPathRegex("/batchGetHotelDetail").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchGetHotelDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchGetHotelDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of cancelOrRefund  CancelOrRefundRequest
+     * @return CancelOrRefundResponse
+     */
+    @Override
+    public CompletableFuture<CancelOrRefundResponse> cancelOrRefund(CancelOrRefundRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("cancelOrRefund").setMethod(HttpMethod.POST).setPathRegex("/cancelOrRefund").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CancelOrRefundResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CancelOrRefundResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of cancelOrder  CancelOrderRequest
+     * @return CancelOrderResponse
+     */
+    @Override
+    public CompletableFuture<CancelOrderResponse> cancelOrder(CancelOrderRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("cancelOrder").setMethod(HttpMethod.POST).setPathRegex("/cancelOrder").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CancelOrderResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CancelOrderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of createAndPay  CreateAndPayRequest
+     * @return CreateAndPayResponse
+     */
+    @Override
+    public CompletableFuture<CreateAndPayResponse> createAndPay(CreateAndPayRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("createAndPay").setMethod(HttpMethod.POST).setPathRegex("/createAndPay").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAndPayResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAndPayResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of createOrder  CreateOrderRequest
+     * @return CreateOrderResponse
+     */
+    @Override
+    public CompletableFuture<CreateOrderResponse> createOrder(CreateOrderRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("createOrder").setMethod(HttpMethod.POST).setPathRegex("/createOrder").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateOrderResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateOrderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of globalHotelApplyRefund  GlobalHotelApplyRefundRequest
+     * @return GlobalHotelApplyRefundResponse
+     */
+    @Override
+    public CompletableFuture<GlobalHotelApplyRefundResponse> globalHotelApplyRefund(GlobalHotelApplyRefundRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("globalHotelApplyRefund").setMethod(HttpMethod.POST).setPathRegex("/globalHotelApplyRefund").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GlobalHotelApplyRefundResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GlobalHotelApplyRefundResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of globalHotelBatchGetHotelDetail  GlobalHotelBatchGetHotelDetailRequest
+     * @return GlobalHotelBatchGetHotelDetailResponse
+     */
+    @Override
+    public CompletableFuture<GlobalHotelBatchGetHotelDetailResponse> globalHotelBatchGetHotelDetail(GlobalHotelBatchGetHotelDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("globalHotelBatchGetHotelDetail").setMethod(HttpMethod.POST).setPathRegex("/globalHotelBatchGetHotelDetail").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GlobalHotelBatchGetHotelDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GlobalHotelBatchGetHotelDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of globalHotelCancelOrRefund  GlobalHotelCancelOrRefundRequest
+     * @return GlobalHotelCancelOrRefundResponse
+     */
+    @Override
+    public CompletableFuture<GlobalHotelCancelOrRefundResponse> globalHotelCancelOrRefund(GlobalHotelCancelOrRefundRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("globalHotelCancelOrRefund").setMethod(HttpMethod.POST).setPathRegex("/globalHotelCancelOrRefund").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GlobalHotelCancelOrRefundResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GlobalHotelCancelOrRefundResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of globalHotelCancelOrder  GlobalHotelCancelOrderRequest
+     * @return GlobalHotelCancelOrderResponse
+     */
+    @Override
+    public CompletableFuture<GlobalHotelCancelOrderResponse> globalHotelCancelOrder(GlobalHotelCancelOrderRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("globalHotelCancelOrder").setMethod(HttpMethod.POST).setPathRegex("/globalHotelCancelOrder").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GlobalHotelCancelOrderResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GlobalHotelCancelOrderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of globalHotelCreateAndPay  GlobalHotelCreateAndPayRequest
+     * @return GlobalHotelCreateAndPayResponse
+     */
+    @Override
+    public CompletableFuture<GlobalHotelCreateAndPayResponse> globalHotelCreateAndPay(GlobalHotelCreateAndPayRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("globalHotelCreateAndPay").setMethod(HttpMethod.POST).setPathRegex("/globalHotelCreateAndPay").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GlobalHotelCreateAndPayResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GlobalHotelCreateAndPayResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of globalHotelCreateOrder  GlobalHotelCreateOrderRequest
+     * @return GlobalHotelCreateOrderResponse
+     */
+    @Override
+    public CompletableFuture<GlobalHotelCreateOrderResponse> globalHotelCreateOrder(GlobalHotelCreateOrderRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("globalHotelCreateOrder").setMethod(HttpMethod.POST).setPathRegex("/globalHotelCreateOrder").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GlobalHotelCreateOrderResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GlobalHotelCreateOrderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of globalHotelPay  GlobalHotelPayRequest
+     * @return GlobalHotelPayResponse
+     */
+    @Override
+    public CompletableFuture<GlobalHotelPayResponse> globalHotelPay(GlobalHotelPayRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("globalHotelPay").setMethod(HttpMethod.POST).setPathRegex("/globalHotelPay").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GlobalHotelPayResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GlobalHotelPayResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of globalHotelQueryAvailability  GlobalHotelQueryAvailabilityRequest
+     * @return GlobalHotelQueryAvailabilityResponse
+     */
+    @Override
+    public CompletableFuture<GlobalHotelQueryAvailabilityResponse> globalHotelQueryAvailability(GlobalHotelQueryAvailabilityRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("globalHotelQueryAvailability").setMethod(HttpMethod.POST).setPathRegex("/globalHotelQueryAvailability").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GlobalHotelQueryAvailabilityResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GlobalHotelQueryAvailabilityResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of globalHotelQueryCalendarAvailability  GlobalHotelQueryCalendarAvailabilityRequest
+     * @return GlobalHotelQueryCalendarAvailabilityResponse
+     */
+    @Override
+    public CompletableFuture<GlobalHotelQueryCalendarAvailabilityResponse> globalHotelQueryCalendarAvailability(GlobalHotelQueryCalendarAvailabilityRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("globalHotelQueryCalendarAvailability").setMethod(HttpMethod.POST).setPathRegex("/globalHotelQueryCalendarAvailability").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GlobalHotelQueryCalendarAvailabilityResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GlobalHotelQueryCalendarAvailabilityResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of globalHotelQueryOrder  GlobalHotelQueryOrderRequest
+     * @return GlobalHotelQueryOrderResponse
+     */
+    @Override
+    public CompletableFuture<GlobalHotelQueryOrderResponse> globalHotelQueryOrder(GlobalHotelQueryOrderRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("globalHotelQueryOrder").setMethod(HttpMethod.POST).setPathRegex("/globalHotelQueryOrder").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GlobalHotelQueryOrderResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GlobalHotelQueryOrderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of globalHotelSearchCityPage  GlobalHotelSearchCityPageRequest
+     * @return GlobalHotelSearchCityPageResponse
+     */
+    @Override
+    public CompletableFuture<GlobalHotelSearchCityPageResponse> globalHotelSearchCityPage(GlobalHotelSearchCityPageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("globalHotelSearchCityPage").setMethod(HttpMethod.POST).setPathRegex("/globalHotelSearchCityPage").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GlobalHotelSearchCityPageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GlobalHotelSearchCityPageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of globalHotelSearchHotelList  GlobalHotelSearchHotelListRequest
+     * @return GlobalHotelSearchHotelListResponse
+     */
+    @Override
+    public CompletableFuture<GlobalHotelSearchHotelListResponse> globalHotelSearchHotelList(GlobalHotelSearchHotelListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("globalHotelSearchHotelList").setMethod(HttpMethod.POST).setPathRegex("/globalHotelSearchHotelList").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GlobalHotelSearchHotelListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GlobalHotelSearchHotelListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of globalHotelValidatePrice  GlobalHotelValidatePriceRequest
+     * @return GlobalHotelValidatePriceResponse
+     */
+    @Override
+    public CompletableFuture<GlobalHotelValidatePriceResponse> globalHotelValidatePrice(GlobalHotelValidatePriceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("globalHotelValidatePrice").setMethod(HttpMethod.POST).setPathRegex("/globalHotelValidatePrice").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GlobalHotelValidatePriceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GlobalHotelValidatePriceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of pay  PayRequest
+     * @return PayResponse
+     */
+    @Override
+    public CompletableFuture<PayResponse> pay(PayRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("pay").setMethod(HttpMethod.POST).setPathRegex("/pay").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PayResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PayResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of queryAvailability  QueryAvailabilityRequest
+     * @return QueryAvailabilityResponse
+     */
+    @Override
+    public CompletableFuture<QueryAvailabilityResponse> queryAvailability(QueryAvailabilityRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("queryAvailability").setMethod(HttpMethod.POST).setPathRegex("/queryAvailability").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryAvailabilityResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryAvailabilityResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of queryCalendarAvailability  QueryCalendarAvailabilityRequest
+     * @return QueryCalendarAvailabilityResponse
+     */
+    @Override
+    public CompletableFuture<QueryCalendarAvailabilityResponse> queryCalendarAvailability(QueryCalendarAvailabilityRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("queryCalendarAvailability").setMethod(HttpMethod.POST).setPathRegex("/queryCalendarAvailability").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryCalendarAvailabilityResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryCalendarAvailabilityResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of queryOrder  QueryOrderRequest
+     * @return QueryOrderResponse
+     */
+    @Override
+    public CompletableFuture<QueryOrderResponse> queryOrder(QueryOrderRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("queryOrder").setMethod(HttpMethod.POST).setPathRegex("/queryOrder").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryOrderResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryOrderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of searchCityPage  SearchCityPageRequest
+     * @return SearchCityPageResponse
+     */
+    @Override
+    public CompletableFuture<SearchCityPageResponse> searchCityPage(SearchCityPageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("searchCityPage").setMethod(HttpMethod.POST).setPathRegex("/searchCityPage").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SearchCityPageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SearchCityPageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of searchHotelList  SearchHotelListRequest
+     * @return SearchHotelListResponse
+     */
+    @Override
+    public CompletableFuture<SearchHotelListResponse> searchHotelList(SearchHotelListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("searchHotelList").setMethod(HttpMethod.POST).setPathRegex("/globalHotel/searchHotelList").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SearchHotelListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SearchHotelListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of validatePrice  ValidatePriceRequest
+     * @return ValidatePriceResponse
+     */
+    @Override
+    public CompletableFuture<ValidatePriceResponse> validatePrice(ValidatePriceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("validatePrice").setMethod(HttpMethod.POST).setPathRegex("/validatePrice").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ValidatePriceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ValidatePriceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
 }

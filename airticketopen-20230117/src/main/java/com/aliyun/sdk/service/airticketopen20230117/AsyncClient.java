@@ -213,4 +213,160 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<TransitVisaResponse> transitVisa(TransitVisaRequest request);
 
+    /**
+     * @param request the request parameters of applyRefund  ApplyRefundRequest
+     * @return ApplyRefundResponse
+     */
+    CompletableFuture<ApplyRefundResponse> applyRefund(ApplyRefundRequest request);
+
+    /**
+     * @param request the request parameters of batchGetHotelDetail  BatchGetHotelDetailRequest
+     * @return BatchGetHotelDetailResponse
+     */
+    CompletableFuture<BatchGetHotelDetailResponse> batchGetHotelDetail(BatchGetHotelDetailRequest request);
+
+    /**
+     * @param request the request parameters of cancelOrRefund  CancelOrRefundRequest
+     * @return CancelOrRefundResponse
+     */
+    CompletableFuture<CancelOrRefundResponse> cancelOrRefund(CancelOrRefundRequest request);
+
+    /**
+     * @param request the request parameters of cancelOrder  CancelOrderRequest
+     * @return CancelOrderResponse
+     */
+    CompletableFuture<CancelOrderResponse> cancelOrder(CancelOrderRequest request);
+
+    /**
+     * @param request the request parameters of createAndPay  CreateAndPayRequest
+     * @return CreateAndPayResponse
+     */
+    CompletableFuture<CreateAndPayResponse> createAndPay(CreateAndPayRequest request);
+
+    /**
+     * @param request the request parameters of createOrder  CreateOrderRequest
+     * @return CreateOrderResponse
+     */
+    CompletableFuture<CreateOrderResponse> createOrder(CreateOrderRequest request);
+
+    /**
+     * @param request the request parameters of globalHotelApplyRefund  GlobalHotelApplyRefundRequest
+     * @return GlobalHotelApplyRefundResponse
+     */
+    CompletableFuture<GlobalHotelApplyRefundResponse> globalHotelApplyRefund(GlobalHotelApplyRefundRequest request);
+
+    /**
+     * @param request the request parameters of globalHotelBatchGetHotelDetail  GlobalHotelBatchGetHotelDetailRequest
+     * @return GlobalHotelBatchGetHotelDetailResponse
+     */
+    CompletableFuture<GlobalHotelBatchGetHotelDetailResponse> globalHotelBatchGetHotelDetail(GlobalHotelBatchGetHotelDetailRequest request);
+
+    /**
+     * @param request the request parameters of globalHotelCancelOrRefund  GlobalHotelCancelOrRefundRequest
+     * @return GlobalHotelCancelOrRefundResponse
+     */
+    CompletableFuture<GlobalHotelCancelOrRefundResponse> globalHotelCancelOrRefund(GlobalHotelCancelOrRefundRequest request);
+
+    /**
+     * @param request the request parameters of globalHotelCancelOrder  GlobalHotelCancelOrderRequest
+     * @return GlobalHotelCancelOrderResponse
+     */
+    CompletableFuture<GlobalHotelCancelOrderResponse> globalHotelCancelOrder(GlobalHotelCancelOrderRequest request);
+
+    /**
+     * @param request the request parameters of globalHotelCreateAndPay  GlobalHotelCreateAndPayRequest
+     * @return GlobalHotelCreateAndPayResponse
+     */
+    CompletableFuture<GlobalHotelCreateAndPayResponse> globalHotelCreateAndPay(GlobalHotelCreateAndPayRequest request);
+
+    /**
+     * @param request the request parameters of globalHotelCreateOrder  GlobalHotelCreateOrderRequest
+     * @return GlobalHotelCreateOrderResponse
+     */
+    CompletableFuture<GlobalHotelCreateOrderResponse> globalHotelCreateOrder(GlobalHotelCreateOrderRequest request);
+
+    /**
+     * @param request the request parameters of globalHotelPay  GlobalHotelPayRequest
+     * @return GlobalHotelPayResponse
+     */
+    CompletableFuture<GlobalHotelPayResponse> globalHotelPay(GlobalHotelPayRequest request);
+
+    /**
+     * @param request the request parameters of globalHotelQueryAvailability  GlobalHotelQueryAvailabilityRequest
+     * @return GlobalHotelQueryAvailabilityResponse
+     */
+    CompletableFuture<GlobalHotelQueryAvailabilityResponse> globalHotelQueryAvailability(GlobalHotelQueryAvailabilityRequest request);
+
+    /**
+     * @param request the request parameters of globalHotelQueryCalendarAvailability  GlobalHotelQueryCalendarAvailabilityRequest
+     * @return GlobalHotelQueryCalendarAvailabilityResponse
+     */
+    CompletableFuture<GlobalHotelQueryCalendarAvailabilityResponse> globalHotelQueryCalendarAvailability(GlobalHotelQueryCalendarAvailabilityRequest request);
+
+    /**
+     * @param request the request parameters of globalHotelQueryOrder  GlobalHotelQueryOrderRequest
+     * @return GlobalHotelQueryOrderResponse
+     */
+    CompletableFuture<GlobalHotelQueryOrderResponse> globalHotelQueryOrder(GlobalHotelQueryOrderRequest request);
+
+    /**
+     * @param request the request parameters of globalHotelSearchCityPage  GlobalHotelSearchCityPageRequest
+     * @return GlobalHotelSearchCityPageResponse
+     */
+    CompletableFuture<GlobalHotelSearchCityPageResponse> globalHotelSearchCityPage(GlobalHotelSearchCityPageRequest request);
+
+    /**
+     * @param request the request parameters of globalHotelSearchHotelList  GlobalHotelSearchHotelListRequest
+     * @return GlobalHotelSearchHotelListResponse
+     */
+    CompletableFuture<GlobalHotelSearchHotelListResponse> globalHotelSearchHotelList(GlobalHotelSearchHotelListRequest request);
+
+    /**
+     * @param request the request parameters of globalHotelValidatePrice  GlobalHotelValidatePriceRequest
+     * @return GlobalHotelValidatePriceResponse
+     */
+    CompletableFuture<GlobalHotelValidatePriceResponse> globalHotelValidatePrice(GlobalHotelValidatePriceRequest request);
+
+    /**
+     * @param request the request parameters of pay  PayRequest
+     * @return PayResponse
+     */
+    CompletableFuture<PayResponse> pay(PayRequest request);
+
+    /**
+     * @param request the request parameters of queryAvailability  QueryAvailabilityRequest
+     * @return QueryAvailabilityResponse
+     */
+    CompletableFuture<QueryAvailabilityResponse> queryAvailability(QueryAvailabilityRequest request);
+
+    /**
+     * @param request the request parameters of queryCalendarAvailability  QueryCalendarAvailabilityRequest
+     * @return QueryCalendarAvailabilityResponse
+     */
+    CompletableFuture<QueryCalendarAvailabilityResponse> queryCalendarAvailability(QueryCalendarAvailabilityRequest request);
+
+    /**
+     * @param request the request parameters of queryOrder  QueryOrderRequest
+     * @return QueryOrderResponse
+     */
+    CompletableFuture<QueryOrderResponse> queryOrder(QueryOrderRequest request);
+
+    /**
+     * @param request the request parameters of searchCityPage  SearchCityPageRequest
+     * @return SearchCityPageResponse
+     */
+    CompletableFuture<SearchCityPageResponse> searchCityPage(SearchCityPageRequest request);
+
+    /**
+     * @param request the request parameters of searchHotelList  SearchHotelListRequest
+     * @return SearchHotelListResponse
+     */
+    CompletableFuture<SearchHotelListResponse> searchHotelList(SearchHotelListRequest request);
+
+    /**
+     * @param request the request parameters of validatePrice  ValidatePriceRequest
+     * @return ValidatePriceResponse
+     */
+    CompletableFuture<ValidatePriceResponse> validatePrice(ValidatePriceRequest request);
+
 }
