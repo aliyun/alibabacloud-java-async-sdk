@@ -32,13 +32,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
             new TeaPair("us-west-1", "alikafka.us-west-1.aliyuncs.com"),
+            new TeaPair("us-southeast-1", "alikafka.us-southeast-1.aliyuncs.com"),
             new TeaPair("us-east-1", "alikafka.us-east-1.aliyuncs.com"),
             new TeaPair("na-south-1", "alikafka.na-south-1.aliyuncs.com"),
             new TeaPair("me-east-1", "alikafka.me-east-1.aliyuncs.com"),
             new TeaPair("me-central-1", "alikafka.me-central-1.aliyuncs.com"),
             new TeaPair("eu-west-1", "alikafka.eu-west-1.aliyuncs.com"),
             new TeaPair("eu-central-1", "alikafka.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-jva", "alikafka.cn-zhengzhou-jva.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou", "alikafka.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu-gic-1", "alikafka.cn-wulanchabu-gic-1.aliyuncs.com"),
             new TeaPair("cn-wulanchabu", "alikafka.cn-wulanchabu.aliyuncs.com"),
             new TeaPair("cn-shenzhen-finance-1", "alikafka.cn-shenzhen-finance-1.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "alikafka.cn-shenzhen.aliyuncs.com"),
@@ -51,13 +54,14 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-hangzhou-finance", "alikafka.cn-hangzhou-finance.aliyuncs.com"),
             new TeaPair("cn-hangzhou", "alikafka.cn-hangzhou.aliyuncs.com"),
             new TeaPair("cn-guangzhou", "alikafka.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-fuzhou", "alikafka.cn-fuzhou.aliyuncs.com"),
             new TeaPair("cn-chengdu", "alikafka.cn-chengdu.aliyuncs.com"),
             new TeaPair("cn-beijing-finance-1", "alikafka.cn-beijing-finance-1.aliyuncs.com"),
             new TeaPair("cn-beijing", "alikafka.cn-beijing.aliyuncs.com"),
             new TeaPair("ap-southeast-7", "alikafka.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "alikafka.ap-southeast-6.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "alikafka.ap-southeast-5.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "alikafka.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "alikafka.ap-southeast-2.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "alikafka.ap-southeast-1.aliyuncs.com"),
             new TeaPair("ap-northeast-2", "alikafka.ap-northeast-2.aliyuncs.com"),
             new TeaPair("ap-northeast-1", "alikafka.ap-northeast-1.aliyuncs.com")
@@ -83,6 +87,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<AddUserDefinedSgResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of BatchDeleteTopics  BatchDeleteTopicsRequest
+     * @return BatchDeleteTopicsResponse
+     */
+    @Override
+    public CompletableFuture<BatchDeleteTopicsResponse> batchDeleteTopics(BatchDeleteTopicsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BatchDeleteTopics").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchDeleteTopicsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchDeleteTopicsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

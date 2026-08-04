@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddUserDefinedSgResponse> addUserDefinedSg(AddUserDefinedSgRequest request);
 
     /**
+     * @param request the request parameters of BatchDeleteTopics  BatchDeleteTopicsRequest
+     * @return BatchDeleteTopicsResponse
+     */
+    CompletableFuture<BatchDeleteTopicsResponse> batchDeleteTopics(BatchDeleteTopicsRequest request);
+
+    /**
      * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
      */
