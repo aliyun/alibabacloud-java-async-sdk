@@ -20,6 +20,9 @@ public class ClientDTO extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("address")
     private String address;
 
+    @com.aliyun.core.annotation.NameInMap("allowedModelGroupConfig")
+    private String allowedModelGroupConfig;
+
     @com.aliyun.core.annotation.NameInMap("allowedModels")
     private String allowedModels;
 
@@ -32,6 +35,9 @@ public class ClientDTO extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("deleteTag")
     private Integer deleteTag;
 
+    @com.aliyun.core.annotation.NameInMap("discount")
+    private Double discount;
+
     @com.aliyun.core.annotation.NameInMap("gmtCreate")
     private String gmtCreate;
 
@@ -41,27 +47,45 @@ public class ClientDTO extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("id")
     private Long id;
 
+    @com.aliyun.core.annotation.NameInMap("level")
+    private Integer level;
+
     @com.aliyun.core.annotation.NameInMap("main")
     private Integer main;
 
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
+    @com.aliyun.core.annotation.NameInMap("nodeType")
+    private String nodeType;
+
+    @com.aliyun.core.annotation.NameInMap("parentId")
+    private Long parentId;
+
     @com.aliyun.core.annotation.NameInMap("remark")
     private String remark;
 
+    @com.aliyun.core.annotation.NameInMap("userId")
+    private Long userId;
+
     private ClientDTO(Builder builder) {
         this.address = builder.address;
+        this.allowedModelGroupConfig = builder.allowedModelGroupConfig;
         this.allowedModels = builder.allowedModels;
         this.clientUuid = builder.clientUuid;
         this.contact = builder.contact;
         this.deleteTag = builder.deleteTag;
+        this.discount = builder.discount;
         this.gmtCreate = builder.gmtCreate;
         this.gmtModified = builder.gmtModified;
         this.id = builder.id;
+        this.level = builder.level;
         this.main = builder.main;
         this.name = builder.name;
+        this.nodeType = builder.nodeType;
+        this.parentId = builder.parentId;
         this.remark = builder.remark;
+        this.userId = builder.userId;
     }
 
     public static Builder builder() {
@@ -81,6 +105,13 @@ public class ClientDTO extends TeaModel {
      */
     public String getAddress() {
         return this.address;
+    }
+
+    /**
+     * @return allowedModelGroupConfig
+     */
+    public String getAllowedModelGroupConfig() {
+        return this.allowedModelGroupConfig;
     }
 
     /**
@@ -112,6 +143,13 @@ public class ClientDTO extends TeaModel {
     }
 
     /**
+     * @return discount
+     */
+    public Double getDiscount() {
+        return this.discount;
+    }
+
+    /**
      * @return gmtCreate
      */
     public String getGmtCreate() {
@@ -133,6 +171,13 @@ public class ClientDTO extends TeaModel {
     }
 
     /**
+     * @return level
+     */
+    public Integer getLevel() {
+        return this.level;
+    }
+
+    /**
      * @return main
      */
     public Integer getMain() {
@@ -147,40 +192,73 @@ public class ClientDTO extends TeaModel {
     }
 
     /**
+     * @return nodeType
+     */
+    public String getNodeType() {
+        return this.nodeType;
+    }
+
+    /**
+     * @return parentId
+     */
+    public Long getParentId() {
+        return this.parentId;
+    }
+
+    /**
      * @return remark
      */
     public String getRemark() {
         return this.remark;
     }
 
+    /**
+     * @return userId
+     */
+    public Long getUserId() {
+        return this.userId;
+    }
+
     public static final class Builder {
         private String address; 
+        private String allowedModelGroupConfig; 
         private String allowedModels; 
         private String clientUuid; 
         private String contact; 
         private Integer deleteTag; 
+        private Double discount; 
         private String gmtCreate; 
         private String gmtModified; 
         private Long id; 
+        private Integer level; 
         private Integer main; 
         private String name; 
+        private String nodeType; 
+        private Long parentId; 
         private String remark; 
+        private Long userId; 
 
         private Builder() {
         } 
 
         private Builder(ClientDTO model) {
             this.address = model.address;
+            this.allowedModelGroupConfig = model.allowedModelGroupConfig;
             this.allowedModels = model.allowedModels;
             this.clientUuid = model.clientUuid;
             this.contact = model.contact;
             this.deleteTag = model.deleteTag;
+            this.discount = model.discount;
             this.gmtCreate = model.gmtCreate;
             this.gmtModified = model.gmtModified;
             this.id = model.id;
+            this.level = model.level;
             this.main = model.main;
             this.name = model.name;
+            this.nodeType = model.nodeType;
+            this.parentId = model.parentId;
             this.remark = model.remark;
+            this.userId = model.userId;
         } 
 
         /**
@@ -188,6 +266,14 @@ public class ClientDTO extends TeaModel {
          */
         public Builder address(String address) {
             this.address = address;
+            return this;
+        }
+
+        /**
+         * allowedModelGroupConfig.
+         */
+        public Builder allowedModelGroupConfig(String allowedModelGroupConfig) {
+            this.allowedModelGroupConfig = allowedModelGroupConfig;
             return this;
         }
 
@@ -224,6 +310,14 @@ public class ClientDTO extends TeaModel {
         }
 
         /**
+         * discount.
+         */
+        public Builder discount(Double discount) {
+            this.discount = discount;
+            return this;
+        }
+
+        /**
          * gmtCreate.
          */
         public Builder gmtCreate(String gmtCreate) {
@@ -248,6 +342,14 @@ public class ClientDTO extends TeaModel {
         }
 
         /**
+         * level.
+         */
+        public Builder level(Integer level) {
+            this.level = level;
+            return this;
+        }
+
+        /**
          * main.
          */
         public Builder main(Integer main) {
@@ -264,10 +366,34 @@ public class ClientDTO extends TeaModel {
         }
 
         /**
+         * nodeType.
+         */
+        public Builder nodeType(String nodeType) {
+            this.nodeType = nodeType;
+            return this;
+        }
+
+        /**
+         * parentId.
+         */
+        public Builder parentId(Long parentId) {
+            this.parentId = parentId;
+            return this;
+        }
+
+        /**
          * remark.
          */
         public Builder remark(String remark) {
             this.remark = remark;
+            return this;
+        }
+
+        /**
+         * userId.
+         */
+        public Builder userId(Long userId) {
+            this.userId = userId;
             return this;
         }
 

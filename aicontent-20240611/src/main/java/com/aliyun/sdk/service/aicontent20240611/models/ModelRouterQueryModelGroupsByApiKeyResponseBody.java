@@ -179,6 +179,9 @@ public class ModelRouterQueryModelGroupsByApiKeyResponseBody extends TeaModel {
      * <p>ModelRouterQueryModelGroupsByApiKeyResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("bindType")
+        private String bindType;
+
         @com.aliyun.core.annotation.NameInMap("clientId")
         private Long clientId;
 
@@ -189,6 +192,7 @@ public class ModelRouterQueryModelGroupsByApiKeyResponseBody extends TeaModel {
         private java.util.List<Long> standaloneModelList;
 
         private Data(Builder builder) {
+            this.bindType = builder.bindType;
             this.clientId = builder.clientId;
             this.groups = builder.groups;
             this.standaloneModelList = builder.standaloneModelList;
@@ -200,6 +204,13 @@ public class ModelRouterQueryModelGroupsByApiKeyResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return bindType
+         */
+        public String getBindType() {
+            return this.bindType;
         }
 
         /**
@@ -224,6 +235,7 @@ public class ModelRouterQueryModelGroupsByApiKeyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String bindType; 
             private Long clientId; 
             private java.util.List<ModelGroupDTO> groups; 
             private java.util.List<Long> standaloneModelList; 
@@ -232,10 +244,19 @@ public class ModelRouterQueryModelGroupsByApiKeyResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.bindType = model.bindType;
                 this.clientId = model.clientId;
                 this.groups = model.groups;
                 this.standaloneModelList = model.standaloneModelList;
             } 
+
+            /**
+             * bindType.
+             */
+            public Builder bindType(String bindType) {
+                this.bindType = bindType;
+                return this;
+            }
 
             /**
              * clientId.

@@ -35,6 +35,12 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("dimValues")
     private String dimValues;
 
+    @com.aliyun.core.annotation.NameInMap("memberUserId")
+    private Long memberUserId;
+
+    @com.aliyun.core.annotation.NameInMap("memberUserName")
+    private String memberUserName;
+
     @com.aliyun.core.annotation.NameInMap("modelCode")
     private String modelCode;
 
@@ -44,8 +50,14 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("modelName")
     private String modelName;
 
+    @com.aliyun.core.annotation.NameInMap("modelSymbol")
+    private String modelSymbol;
+
     @com.aliyun.core.annotation.NameInMap("modelType")
     private String modelType;
+
+    @com.aliyun.core.annotation.NameInMap("modelVersion")
+    private Integer modelVersion;
 
     @com.aliyun.core.annotation.NameInMap("payableAmount")
     private Float payableAmount;
@@ -66,10 +78,14 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
         this.clientId = builder.clientId;
         this.clientName = builder.clientName;
         this.dimValues = builder.dimValues;
+        this.memberUserId = builder.memberUserId;
+        this.memberUserName = builder.memberUserName;
         this.modelCode = builder.modelCode;
         this.modelId = builder.modelId;
         this.modelName = builder.modelName;
+        this.modelSymbol = builder.modelSymbol;
         this.modelType = builder.modelType;
+        this.modelVersion = builder.modelVersion;
         this.payableAmount = builder.payableAmount;
         this.summaryTime = builder.summaryTime;
         this.tiers = builder.tiers;
@@ -131,6 +147,20 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
     }
 
     /**
+     * @return memberUserId
+     */
+    public Long getMemberUserId() {
+        return this.memberUserId;
+    }
+
+    /**
+     * @return memberUserName
+     */
+    public String getMemberUserName() {
+        return this.memberUserName;
+    }
+
+    /**
      * @return modelCode
      */
     public String getModelCode() {
@@ -152,10 +182,24 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
     }
 
     /**
+     * @return modelSymbol
+     */
+    public String getModelSymbol() {
+        return this.modelSymbol;
+    }
+
+    /**
      * @return modelType
      */
     public String getModelType() {
         return this.modelType;
+    }
+
+    /**
+     * @return modelVersion
+     */
+    public Integer getModelVersion() {
+        return this.modelVersion;
     }
 
     /**
@@ -193,10 +237,14 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
         private Long clientId; 
         private String clientName; 
         private String dimValues; 
+        private Long memberUserId; 
+        private String memberUserName; 
         private String modelCode; 
         private Long modelId; 
         private String modelName; 
+        private String modelSymbol; 
         private String modelType; 
+        private Integer modelVersion; 
         private Float payableAmount; 
         private Long summaryTime; 
         private java.util.List<BillingBillTierDTO> tiers; 
@@ -212,10 +260,14 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
             this.clientId = model.clientId;
             this.clientName = model.clientName;
             this.dimValues = model.dimValues;
+            this.memberUserId = model.memberUserId;
+            this.memberUserName = model.memberUserName;
             this.modelCode = model.modelCode;
             this.modelId = model.modelId;
             this.modelName = model.modelName;
+            this.modelSymbol = model.modelSymbol;
             this.modelType = model.modelType;
+            this.modelVersion = model.modelVersion;
             this.payableAmount = model.payableAmount;
             this.summaryTime = model.summaryTime;
             this.tiers = model.tiers;
@@ -271,6 +323,22 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
         }
 
         /**
+         * memberUserId.
+         */
+        public Builder memberUserId(Long memberUserId) {
+            this.memberUserId = memberUserId;
+            return this;
+        }
+
+        /**
+         * memberUserName.
+         */
+        public Builder memberUserName(String memberUserName) {
+            this.memberUserName = memberUserName;
+            return this;
+        }
+
+        /**
          * modelCode.
          */
         public Builder modelCode(String modelCode) {
@@ -295,10 +363,26 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
         }
 
         /**
+         * modelSymbol.
+         */
+        public Builder modelSymbol(String modelSymbol) {
+            this.modelSymbol = modelSymbol;
+            return this;
+        }
+
+        /**
          * modelType.
          */
         public Builder modelType(String modelType) {
             this.modelType = modelType;
+            return this;
+        }
+
+        /**
+         * modelVersion.
+         */
+        public Builder modelVersion(Integer modelVersion) {
+            this.modelVersion = modelVersion;
             return this;
         }
 

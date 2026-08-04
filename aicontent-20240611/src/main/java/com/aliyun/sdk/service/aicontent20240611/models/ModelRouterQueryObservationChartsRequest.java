@@ -30,6 +30,10 @@ public class ModelRouterQueryObservationChartsRequest extends Request {
     private String endTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("memberUserIds")
+    private String memberUserIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("modelId")
     private Long modelId;
 
@@ -46,6 +50,7 @@ public class ModelRouterQueryObservationChartsRequest extends Request {
         this.apiKeyId = builder.apiKeyId;
         this.clientId = builder.clientId;
         this.endTime = builder.endTime;
+        this.memberUserIds = builder.memberUserIds;
         this.modelId = builder.modelId;
         this.startTime = builder.startTime;
         this.timeRange = builder.timeRange;
@@ -86,6 +91,13 @@ public class ModelRouterQueryObservationChartsRequest extends Request {
     }
 
     /**
+     * @return memberUserIds
+     */
+    public String getMemberUserIds() {
+        return this.memberUserIds;
+    }
+
+    /**
      * @return modelId
      */
     public Long getModelId() {
@@ -110,6 +122,7 @@ public class ModelRouterQueryObservationChartsRequest extends Request {
         private Long apiKeyId; 
         private Long clientId; 
         private String endTime; 
+        private String memberUserIds; 
         private Long modelId; 
         private String startTime; 
         private String timeRange; 
@@ -123,6 +136,7 @@ public class ModelRouterQueryObservationChartsRequest extends Request {
             this.apiKeyId = request.apiKeyId;
             this.clientId = request.clientId;
             this.endTime = request.endTime;
+            this.memberUserIds = request.memberUserIds;
             this.modelId = request.modelId;
             this.startTime = request.startTime;
             this.timeRange = request.timeRange;
@@ -152,6 +166,15 @@ public class ModelRouterQueryObservationChartsRequest extends Request {
         public Builder endTime(String endTime) {
             this.putQueryParameter("endTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * memberUserIds.
+         */
+        public Builder memberUserIds(String memberUserIds) {
+            this.putQueryParameter("memberUserIds", memberUserIds);
+            this.memberUserIds = memberUserIds;
             return this;
         }
 

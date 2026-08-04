@@ -40,6 +40,10 @@ public class ModelRouterQueryUsageBreakdownRequest extends Request {
     private Integer maxResults;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("memberUserIds")
+    private String memberUserIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
@@ -63,6 +67,7 @@ public class ModelRouterQueryUsageBreakdownRequest extends Request {
         this.endTime = builder.endTime;
         this.granularity = builder.granularity;
         this.maxResults = builder.maxResults;
+        this.memberUserIds = builder.memberUserIds;
         this.nextToken = builder.nextToken;
         this.page = builder.page;
         this.pageSize = builder.pageSize;
@@ -118,6 +123,13 @@ public class ModelRouterQueryUsageBreakdownRequest extends Request {
     }
 
     /**
+     * @return memberUserIds
+     */
+    public String getMemberUserIds() {
+        return this.memberUserIds;
+    }
+
+    /**
      * @return nextToken
      */
     public String getNextToken() {
@@ -151,6 +163,7 @@ public class ModelRouterQueryUsageBreakdownRequest extends Request {
         private Long endTime; 
         private String granularity; 
         private Integer maxResults; 
+        private String memberUserIds; 
         private String nextToken; 
         private Integer page; 
         private Integer pageSize; 
@@ -167,6 +180,7 @@ public class ModelRouterQueryUsageBreakdownRequest extends Request {
             this.endTime = request.endTime;
             this.granularity = request.granularity;
             this.maxResults = request.maxResults;
+            this.memberUserIds = request.memberUserIds;
             this.nextToken = request.nextToken;
             this.page = request.page;
             this.pageSize = request.pageSize;
@@ -221,6 +235,15 @@ public class ModelRouterQueryUsageBreakdownRequest extends Request {
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
             this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * memberUserIds.
+         */
+        public Builder memberUserIds(String memberUserIds) {
+            this.putQueryParameter("memberUserIds", memberUserIds);
+            this.memberUserIds = memberUserIds;
             return this;
         }
 

@@ -29,6 +29,12 @@ public class UsageBreakdownRowDTO extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("clientName")
     private String clientName;
 
+    @com.aliyun.core.annotation.NameInMap("memberUserId")
+    private Long memberUserId;
+
+    @com.aliyun.core.annotation.NameInMap("memberUserName")
+    private String memberUserName;
+
     @com.aliyun.core.annotation.NameInMap("metrics")
     private java.util.List<MetricKVPairDTO> metrics;
 
@@ -52,6 +58,8 @@ public class UsageBreakdownRowDTO extends TeaModel {
         this.apiKeyName = builder.apiKeyName;
         this.clientId = builder.clientId;
         this.clientName = builder.clientName;
+        this.memberUserId = builder.memberUserId;
+        this.memberUserName = builder.memberUserName;
         this.metrics = builder.metrics;
         this.modelCode = builder.modelCode;
         this.modelId = builder.modelId;
@@ -101,6 +109,20 @@ public class UsageBreakdownRowDTO extends TeaModel {
     }
 
     /**
+     * @return memberUserId
+     */
+    public Long getMemberUserId() {
+        return this.memberUserId;
+    }
+
+    /**
+     * @return memberUserName
+     */
+    public String getMemberUserName() {
+        return this.memberUserName;
+    }
+
+    /**
      * @return metrics
      */
     public java.util.List<MetricKVPairDTO> getMetrics() {
@@ -147,6 +169,8 @@ public class UsageBreakdownRowDTO extends TeaModel {
         private String apiKeyName; 
         private Long clientId; 
         private String clientName; 
+        private Long memberUserId; 
+        private String memberUserName; 
         private java.util.List<MetricKVPairDTO> metrics; 
         private String modelCode; 
         private Long modelId; 
@@ -162,6 +186,8 @@ public class UsageBreakdownRowDTO extends TeaModel {
             this.apiKeyName = model.apiKeyName;
             this.clientId = model.clientId;
             this.clientName = model.clientName;
+            this.memberUserId = model.memberUserId;
+            this.memberUserName = model.memberUserName;
             this.metrics = model.metrics;
             this.modelCode = model.modelCode;
             this.modelId = model.modelId;
@@ -199,6 +225,22 @@ public class UsageBreakdownRowDTO extends TeaModel {
          */
         public Builder clientName(String clientName) {
             this.clientName = clientName;
+            return this;
+        }
+
+        /**
+         * memberUserId.
+         */
+        public Builder memberUserId(Long memberUserId) {
+            this.memberUserId = memberUserId;
+            return this;
+        }
+
+        /**
+         * memberUserName.
+         */
+        public Builder memberUserName(String memberUserName) {
+            this.memberUserName = memberUserName;
             return this;
         }
 

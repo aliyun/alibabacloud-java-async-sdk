@@ -256,6 +256,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModelRouterBatchBindModelGroupResponse> modelRouterBatchBindModelGroup(ModelRouterBatchBindModelGroupRequest request);
 
     /**
+     * @param request the request parameters of ModelRouterBatchCreateMemberApiKeys  ModelRouterBatchCreateMemberApiKeysRequest
+     * @return ModelRouterBatchCreateMemberApiKeysResponse
+     */
+    CompletableFuture<ModelRouterBatchCreateMemberApiKeysResponse> modelRouterBatchCreateMemberApiKeys(ModelRouterBatchCreateMemberApiKeysRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterBatchCreateModel  ModelRouterBatchCreateModelRequest
+     * @return ModelRouterBatchCreateModelResponse
+     */
+    CompletableFuture<ModelRouterBatchCreateModelResponse> modelRouterBatchCreateModel(ModelRouterBatchCreateModelRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterBatchDisableMemberApiKeys  ModelRouterBatchDisableMemberApiKeysRequest
+     * @return ModelRouterBatchDisableMemberApiKeysResponse
+     */
+    CompletableFuture<ModelRouterBatchDisableMemberApiKeysResponse> modelRouterBatchDisableMemberApiKeys(ModelRouterBatchDisableMemberApiKeysRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterBatchResetMemberAuthorization  ModelRouterBatchResetMemberAuthorizationRequest
+     * @return ModelRouterBatchResetMemberAuthorizationResponse
+     */
+    CompletableFuture<ModelRouterBatchResetMemberAuthorizationResponse> modelRouterBatchResetMemberAuthorization(ModelRouterBatchResetMemberAuthorizationRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterBatchSetMemberAuthorization  ModelRouterBatchSetMemberAuthorizationRequest
+     * @return ModelRouterBatchSetMemberAuthorizationResponse
+     */
+    CompletableFuture<ModelRouterBatchSetMemberAuthorizationResponse> modelRouterBatchSetMemberAuthorization(ModelRouterBatchSetMemberAuthorizationRequest request);
+
+    /**
      * @param request the request parameters of ModelRouterBillingCostTabs  ModelRouterBillingCostTabsRequest
      * @return ModelRouterBillingCostTabsResponse
      */
@@ -276,6 +306,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModelRouterConfigureClientBalanceResponse
      */
     CompletableFuture<ModelRouterConfigureClientBalanceResponse> modelRouterConfigureClientBalance(ModelRouterConfigureClientBalanceRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterConfigureMemberBalance  ModelRouterConfigureMemberBalanceRequest
+     * @return ModelRouterConfigureMemberBalanceResponse
+     */
+    CompletableFuture<ModelRouterConfigureMemberBalanceResponse> modelRouterConfigureMemberBalance(ModelRouterConfigureMemberBalanceRequest request);
 
     /**
      * @param request the request parameters of ModelRouterCopyApiKey  ModelRouterCopyApiKeyRequest
@@ -314,6 +350,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModelRouterCreateConversationResponse> modelRouterCreateConversation(ModelRouterCreateConversationRequest request);
 
     /**
+     * @param request the request parameters of ModelRouterCreateMemberApiKey  ModelRouterCreateMemberApiKeyRequest
+     * @return ModelRouterCreateMemberApiKeyResponse
+     */
+    CompletableFuture<ModelRouterCreateMemberApiKeyResponse> modelRouterCreateMemberApiKey(ModelRouterCreateMemberApiKeyRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterCreateMemberBalanceTransaction  ModelRouterCreateMemberBalanceTransactionRequest
+     * @return ModelRouterCreateMemberBalanceTransactionResponse
+     */
+    CompletableFuture<ModelRouterCreateMemberBalanceTransactionResponse> modelRouterCreateMemberBalanceTransaction(ModelRouterCreateMemberBalanceTransactionRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterCreateMemberSubscription  ModelRouterCreateMemberSubscriptionRequest
+     * @return ModelRouterCreateMemberSubscriptionResponse
+     */
+    CompletableFuture<ModelRouterCreateMemberSubscriptionResponse> modelRouterCreateMemberSubscription(ModelRouterCreateMemberSubscriptionRequest request);
+
+    /**
      * @param request the request parameters of ModelRouterCreateModel  ModelRouterCreateModelRequest
      * @return ModelRouterCreateModelResponse
      */
@@ -330,6 +384,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModelRouterCreateSubscriptionResponse
      */
     CompletableFuture<ModelRouterCreateSubscriptionResponse> modelRouterCreateSubscription(ModelRouterCreateSubscriptionRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterCreateUser  ModelRouterCreateUserRequest
+     * @return ModelRouterCreateUserResponse
+     */
+    CompletableFuture<ModelRouterCreateUserResponse> modelRouterCreateUser(ModelRouterCreateUserRequest request);
 
     /**
      * @param request the request parameters of ModelRouterDeleteApiKey  ModelRouterDeleteApiKeyRequest
@@ -362,6 +422,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModelRouterDeleteModelGroupResponse> modelRouterDeleteModelGroup(ModelRouterDeleteModelGroupRequest request);
 
     /**
+     * @param request the request parameters of ModelRouterDeleteUser  ModelRouterDeleteUserRequest
+     * @return ModelRouterDeleteUserResponse
+     */
+    CompletableFuture<ModelRouterDeleteUserResponse> modelRouterDeleteUser(ModelRouterDeleteUserRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterExportMemberBalanceOrders  ModelRouterExportMemberBalanceOrdersRequest
+     * @return ModelRouterExportMemberBalanceOrdersResponse
+     */
+    CompletableFuture<ModelRouterExportMemberBalanceOrdersResponse> modelRouterExportMemberBalanceOrders(ModelRouterExportMemberBalanceOrdersRequest request);
+
+    /**
      * @param request the request parameters of ModelRouterGetClientBalance  ModelRouterGetClientBalanceRequest
      * @return ModelRouterGetClientBalanceResponse
      */
@@ -374,10 +446,58 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModelRouterGetClientBalanceLogsResponse> modelRouterGetClientBalanceLogs(ModelRouterGetClientBalanceLogsRequest request);
 
     /**
+     * @param request the request parameters of ModelRouterGetDeptBalanceSummary  ModelRouterGetDeptBalanceSummaryRequest
+     * @return ModelRouterGetDeptBalanceSummaryResponse
+     */
+    CompletableFuture<ModelRouterGetDeptBalanceSummaryResponse> modelRouterGetDeptBalanceSummary(ModelRouterGetDeptBalanceSummaryRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterGetMemberApiKeys  ModelRouterGetMemberApiKeysRequest
+     * @return ModelRouterGetMemberApiKeysResponse
+     */
+    CompletableFuture<ModelRouterGetMemberApiKeysResponse> modelRouterGetMemberApiKeys(ModelRouterGetMemberApiKeysRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterGetMemberBalance  ModelRouterGetMemberBalanceRequest
+     * @return ModelRouterGetMemberBalanceResponse
+     */
+    CompletableFuture<ModelRouterGetMemberBalanceResponse> modelRouterGetMemberBalance(ModelRouterGetMemberBalanceRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterGetMemberBalanceLogs  ModelRouterGetMemberBalanceLogsRequest
+     * @return ModelRouterGetMemberBalanceLogsResponse
+     */
+    CompletableFuture<ModelRouterGetMemberBalanceLogsResponse> modelRouterGetMemberBalanceLogs(ModelRouterGetMemberBalanceLogsRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterGetUserRoles  ModelRouterGetUserRolesRequest
+     * @return ModelRouterGetUserRolesResponse
+     */
+    CompletableFuture<ModelRouterGetUserRolesResponse> modelRouterGetUserRoles(ModelRouterGetUserRolesRequest request);
+
+    /**
      * @param request the request parameters of ModelRouterListBalanceOrders  ModelRouterListBalanceOrdersRequest
      * @return ModelRouterListBalanceOrdersResponse
      */
     CompletableFuture<ModelRouterListBalanceOrdersResponse> modelRouterListBalanceOrders(ModelRouterListBalanceOrdersRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterListDeptMembers  ModelRouterListDeptMembersRequest
+     * @return ModelRouterListDeptMembersResponse
+     */
+    CompletableFuture<ModelRouterListDeptMembersResponse> modelRouterListDeptMembers(ModelRouterListDeptMembersRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterListMemberBalanceOrders  ModelRouterListMemberBalanceOrdersRequest
+     * @return ModelRouterListMemberBalanceOrdersResponse
+     */
+    CompletableFuture<ModelRouterListMemberBalanceOrdersResponse> modelRouterListMemberBalanceOrders(ModelRouterListMemberBalanceOrdersRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterListMemberSubscriptions  ModelRouterListMemberSubscriptionsRequest
+     * @return ModelRouterListMemberSubscriptionsResponse
+     */
+    CompletableFuture<ModelRouterListMemberSubscriptionsResponse> modelRouterListMemberSubscriptions(ModelRouterListMemberSubscriptionsRequest request);
 
     /**
      * @param request the request parameters of ModelRouterListSubscriptions  ModelRouterListSubscriptionsRequest
@@ -494,6 +614,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModelRouterQueryModelGroupModelsResponse> modelRouterQueryModelGroupModels(ModelRouterQueryModelGroupModelsRequest request);
 
     /**
+     * @param request the request parameters of ModelRouterQueryModelGroupUsers  ModelRouterQueryModelGroupUsersRequest
+     * @return ModelRouterQueryModelGroupUsersResponse
+     */
+    CompletableFuture<ModelRouterQueryModelGroupUsersResponse> modelRouterQueryModelGroupUsers(ModelRouterQueryModelGroupUsersRequest request);
+
+    /**
      * @param request the request parameters of ModelRouterQueryModelGroupsByApiKey  ModelRouterQueryModelGroupsByApiKeyRequest
      * @return ModelRouterQueryModelGroupsByApiKeyResponse
      */
@@ -542,16 +668,58 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModelRouterQueryUsageBreakdownResponse> modelRouterQueryUsageBreakdown(ModelRouterQueryUsageBreakdownRequest request);
 
     /**
+     * @param request the request parameters of ModelRouterQueryUserList  ModelRouterQueryUserListRequest
+     * @return ModelRouterQueryUserListResponse
+     */
+    CompletableFuture<ModelRouterQueryUserListResponse> modelRouterQueryUserList(ModelRouterQueryUserListRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterResetMemberAuthorization  ModelRouterResetMemberAuthorizationRequest
+     * @return ModelRouterResetMemberAuthorizationResponse
+     */
+    CompletableFuture<ModelRouterResetMemberAuthorizationResponse> modelRouterResetMemberAuthorization(ModelRouterResetMemberAuthorizationRequest request);
+
+    /**
      * @param request the request parameters of ModelRouterSaveFlowConfig  ModelRouterSaveFlowConfigRequest
      * @return ModelRouterSaveFlowConfigResponse
      */
     CompletableFuture<ModelRouterSaveFlowConfigResponse> modelRouterSaveFlowConfig(ModelRouterSaveFlowConfigRequest request);
 
     /**
+     * @param request the request parameters of ModelRouterSearchClientTree  ModelRouterSearchClientTreeRequest
+     * @return ModelRouterSearchClientTreeResponse
+     */
+    CompletableFuture<ModelRouterSearchClientTreeResponse> modelRouterSearchClientTree(ModelRouterSearchClientTreeRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterSetMemberAuthorization  ModelRouterSetMemberAuthorizationRequest
+     * @return ModelRouterSetMemberAuthorizationResponse
+     */
+    CompletableFuture<ModelRouterSetMemberAuthorizationResponse> modelRouterSetMemberAuthorization(ModelRouterSetMemberAuthorizationRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterSetUserRoles  ModelRouterSetUserRolesRequest
+     * @return ModelRouterSetUserRolesResponse
+     */
+    CompletableFuture<ModelRouterSetUserRolesResponse> modelRouterSetUserRoles(ModelRouterSetUserRolesRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterStopMemberSubscription  ModelRouterStopMemberSubscriptionRequest
+     * @return ModelRouterStopMemberSubscriptionResponse
+     */
+    CompletableFuture<ModelRouterStopMemberSubscriptionResponse> modelRouterStopMemberSubscription(ModelRouterStopMemberSubscriptionRequest request);
+
+    /**
      * @param request the request parameters of ModelRouterStopSubscription  ModelRouterStopSubscriptionRequest
      * @return ModelRouterStopSubscriptionResponse
      */
     CompletableFuture<ModelRouterStopSubscriptionResponse> modelRouterStopSubscription(ModelRouterStopSubscriptionRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterTransferToMember  ModelRouterTransferToMemberRequest
+     * @return ModelRouterTransferToMemberResponse
+     */
+    CompletableFuture<ModelRouterTransferToMemberResponse> modelRouterTransferToMember(ModelRouterTransferToMemberRequest request);
 
     /**
      * @param request the request parameters of ModelRouterUpdateBillingRule  ModelRouterUpdateBillingRuleRequest
@@ -582,6 +750,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModelRouterUpdateModelGroupResponse
      */
     CompletableFuture<ModelRouterUpdateModelGroupResponse> modelRouterUpdateModelGroup(ModelRouterUpdateModelGroupRequest request);
+
+    /**
+     * @param request the request parameters of ModelRouterUpdateUser  ModelRouterUpdateUserRequest
+     * @return ModelRouterUpdateUserResponse
+     */
+    CompletableFuture<ModelRouterUpdateUserResponse> modelRouterUpdateUser(ModelRouterUpdateUserRequest request);
 
     /**
      * @param request the request parameters of PersonalizedTextToImageAddInferenceJob  PersonalizedTextToImageAddInferenceJobRequest

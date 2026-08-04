@@ -41,6 +41,12 @@ public class ApiKeyDTO extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("keyPreview")
     private String keyPreview;
 
+    @com.aliyun.core.annotation.NameInMap("memberUserId")
+    private Long memberUserId;
+
+    @com.aliyun.core.annotation.NameInMap("memberUserName")
+    private String memberUserName;
+
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
@@ -53,6 +59,8 @@ public class ApiKeyDTO extends TeaModel {
         this.id = builder.id;
         this.key = builder.key;
         this.keyPreview = builder.keyPreview;
+        this.memberUserId = builder.memberUserId;
+        this.memberUserName = builder.memberUserName;
         this.name = builder.name;
     }
 
@@ -125,6 +133,20 @@ public class ApiKeyDTO extends TeaModel {
     }
 
     /**
+     * @return memberUserId
+     */
+    public Long getMemberUserId() {
+        return this.memberUserId;
+    }
+
+    /**
+     * @return memberUserName
+     */
+    public String getMemberUserName() {
+        return this.memberUserName;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -140,6 +162,8 @@ public class ApiKeyDTO extends TeaModel {
         private Long id; 
         private String key; 
         private String keyPreview; 
+        private Long memberUserId; 
+        private String memberUserName; 
         private String name; 
 
         private Builder() {
@@ -154,6 +178,8 @@ public class ApiKeyDTO extends TeaModel {
             this.id = model.id;
             this.key = model.key;
             this.keyPreview = model.keyPreview;
+            this.memberUserId = model.memberUserId;
+            this.memberUserName = model.memberUserName;
             this.name = model.name;
         } 
 
@@ -218,6 +244,22 @@ public class ApiKeyDTO extends TeaModel {
          */
         public Builder keyPreview(String keyPreview) {
             this.keyPreview = keyPreview;
+            return this;
+        }
+
+        /**
+         * memberUserId.
+         */
+        public Builder memberUserId(Long memberUserId) {
+            this.memberUserId = memberUserId;
+            return this;
+        }
+
+        /**
+         * memberUserName.
+         */
+        public Builder memberUserName(String memberUserName) {
+            this.memberUserName = memberUserName;
             return this;
         }
 

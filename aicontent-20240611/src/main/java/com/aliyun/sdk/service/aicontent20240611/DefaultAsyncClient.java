@@ -770,6 +770,96 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModelRouterBatchCreateMemberApiKeys  ModelRouterBatchCreateMemberApiKeysRequest
+     * @return ModelRouterBatchCreateMemberApiKeysResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterBatchCreateMemberApiKeysResponse> modelRouterBatchCreateMemberApiKeys(ModelRouterBatchCreateMemberApiKeysRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterBatchCreateMemberApiKeys").setMethod(HttpMethod.POST).setPathRegex("/api/v1/modelRouter/open/clients/{id}/member-apikeys").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterBatchCreateMemberApiKeysResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterBatchCreateMemberApiKeysResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterBatchCreateModel  ModelRouterBatchCreateModelRequest
+     * @return ModelRouterBatchCreateModelResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterBatchCreateModelResponse> modelRouterBatchCreateModel(ModelRouterBatchCreateModelRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterBatchCreateModel").setMethod(HttpMethod.POST).setPathRegex("/api/v1/modelRouter/open/models/batch").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterBatchCreateModelResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterBatchCreateModelResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterBatchDisableMemberApiKeys  ModelRouterBatchDisableMemberApiKeysRequest
+     * @return ModelRouterBatchDisableMemberApiKeysResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterBatchDisableMemberApiKeysResponse> modelRouterBatchDisableMemberApiKeys(ModelRouterBatchDisableMemberApiKeysRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterBatchDisableMemberApiKeys").setMethod(HttpMethod.POST).setPathRegex("/api/v1/modelRouter/open/clients/{id}/member-apikeys/disable").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterBatchDisableMemberApiKeysResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterBatchDisableMemberApiKeysResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterBatchResetMemberAuthorization  ModelRouterBatchResetMemberAuthorizationRequest
+     * @return ModelRouterBatchResetMemberAuthorizationResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterBatchResetMemberAuthorizationResponse> modelRouterBatchResetMemberAuthorization(ModelRouterBatchResetMemberAuthorizationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterBatchResetMemberAuthorization").setMethod(HttpMethod.POST).setPathRegex("/api/v1/modelRouter/open/clients/{id}/member-authorizations/reset").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterBatchResetMemberAuthorizationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterBatchResetMemberAuthorizationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterBatchSetMemberAuthorization  ModelRouterBatchSetMemberAuthorizationRequest
+     * @return ModelRouterBatchSetMemberAuthorizationResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterBatchSetMemberAuthorizationResponse> modelRouterBatchSetMemberAuthorization(ModelRouterBatchSetMemberAuthorizationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterBatchSetMemberAuthorization").setMethod(HttpMethod.POST).setPathRegex("/api/v1/modelRouter/open/clients/{id}/member-authorizations").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterBatchSetMemberAuthorizationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterBatchSetMemberAuthorizationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ModelRouterBillingCostTabs  ModelRouterBillingCostTabsRequest
      * @return ModelRouterBillingCostTabsResponse
      */
@@ -843,6 +933,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModelRouterConfigureClientBalanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterConfigureMemberBalance  ModelRouterConfigureMemberBalanceRequest
+     * @return ModelRouterConfigureMemberBalanceResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterConfigureMemberBalanceResponse> modelRouterConfigureMemberBalance(ModelRouterConfigureMemberBalanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterConfigureMemberBalance").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/modelRouter/open/clients/{clientId}/members/{id}/balance").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterConfigureMemberBalanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterConfigureMemberBalanceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -957,6 +1065,60 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModelRouterCreateMemberApiKey  ModelRouterCreateMemberApiKeyRequest
+     * @return ModelRouterCreateMemberApiKeyResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterCreateMemberApiKeyResponse> modelRouterCreateMemberApiKey(ModelRouterCreateMemberApiKeyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterCreateMemberApiKey").setMethod(HttpMethod.POST).setPathRegex("/api/v1/modelRouter/open/clients/{clientId}/members/{id}/apikeys").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterCreateMemberApiKeyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterCreateMemberApiKeyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterCreateMemberBalanceTransaction  ModelRouterCreateMemberBalanceTransactionRequest
+     * @return ModelRouterCreateMemberBalanceTransactionResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterCreateMemberBalanceTransactionResponse> modelRouterCreateMemberBalanceTransaction(ModelRouterCreateMemberBalanceTransactionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterCreateMemberBalanceTransaction").setMethod(HttpMethod.POST).setPathRegex("/api/v1/modelRouter/open/clients/{clientId}/members/{id}/balance/transactions").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterCreateMemberBalanceTransactionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterCreateMemberBalanceTransactionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterCreateMemberSubscription  ModelRouterCreateMemberSubscriptionRequest
+     * @return ModelRouterCreateMemberSubscriptionResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterCreateMemberSubscriptionResponse> modelRouterCreateMemberSubscription(ModelRouterCreateMemberSubscriptionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterCreateMemberSubscription").setMethod(HttpMethod.POST).setPathRegex("/api/v1/modelRouter/open/clients/{clientId}/members/{id}/balance/subscription").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterCreateMemberSubscriptionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterCreateMemberSubscriptionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ModelRouterCreateModel  ModelRouterCreateModelRequest
      * @return ModelRouterCreateModelResponse
      */
@@ -1005,6 +1167,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModelRouterCreateSubscriptionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterCreateUser  ModelRouterCreateUserRequest
+     * @return ModelRouterCreateUserResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterCreateUserResponse> modelRouterCreateUser(ModelRouterCreateUserRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterCreateUser").setMethod(HttpMethod.POST).setPathRegex("/api/v1/modelRouter/open/users").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterCreateUserResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterCreateUserResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1101,6 +1281,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModelRouterDeleteUser  ModelRouterDeleteUserRequest
+     * @return ModelRouterDeleteUserResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterDeleteUserResponse> modelRouterDeleteUser(ModelRouterDeleteUserRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterDeleteUser").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/modelRouter/open/users/{id}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterDeleteUserResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterDeleteUserResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterExportMemberBalanceOrders  ModelRouterExportMemberBalanceOrdersRequest
+     * @return ModelRouterExportMemberBalanceOrdersResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterExportMemberBalanceOrdersResponse> modelRouterExportMemberBalanceOrders(ModelRouterExportMemberBalanceOrdersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterExportMemberBalanceOrders").setMethod(HttpMethod.GET).setPathRegex("/api/v1/modelRouter/open/clients/{clientId}/members/{id}/balance/orders/export").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterExportMemberBalanceOrdersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterExportMemberBalanceOrdersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ModelRouterGetClientBalance  ModelRouterGetClientBalanceRequest
      * @return ModelRouterGetClientBalanceResponse
      */
@@ -1137,6 +1353,96 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModelRouterGetDeptBalanceSummary  ModelRouterGetDeptBalanceSummaryRequest
+     * @return ModelRouterGetDeptBalanceSummaryResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterGetDeptBalanceSummaryResponse> modelRouterGetDeptBalanceSummary(ModelRouterGetDeptBalanceSummaryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterGetDeptBalanceSummary").setMethod(HttpMethod.GET).setPathRegex("/api/v1/modelRouter/open/clients/{id}/balance-summary").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterGetDeptBalanceSummaryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterGetDeptBalanceSummaryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterGetMemberApiKeys  ModelRouterGetMemberApiKeysRequest
+     * @return ModelRouterGetMemberApiKeysResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterGetMemberApiKeysResponse> modelRouterGetMemberApiKeys(ModelRouterGetMemberApiKeysRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterGetMemberApiKeys").setMethod(HttpMethod.GET).setPathRegex("/api/v1/modelRouter/open/clients/{clientId}/members/{id}/apikeys").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterGetMemberApiKeysResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterGetMemberApiKeysResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterGetMemberBalance  ModelRouterGetMemberBalanceRequest
+     * @return ModelRouterGetMemberBalanceResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterGetMemberBalanceResponse> modelRouterGetMemberBalance(ModelRouterGetMemberBalanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterGetMemberBalance").setMethod(HttpMethod.GET).setPathRegex("/api/v1/modelRouter/open/clients/{clientId}/members/{id}/balance").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterGetMemberBalanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterGetMemberBalanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterGetMemberBalanceLogs  ModelRouterGetMemberBalanceLogsRequest
+     * @return ModelRouterGetMemberBalanceLogsResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterGetMemberBalanceLogsResponse> modelRouterGetMemberBalanceLogs(ModelRouterGetMemberBalanceLogsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterGetMemberBalanceLogs").setMethod(HttpMethod.GET).setPathRegex("/api/v1/modelRouter/open/clients/{clientId}/members/{id}/balance/logs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterGetMemberBalanceLogsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterGetMemberBalanceLogsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterGetUserRoles  ModelRouterGetUserRolesRequest
+     * @return ModelRouterGetUserRolesResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterGetUserRolesResponse> modelRouterGetUserRoles(ModelRouterGetUserRolesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterGetUserRoles").setMethod(HttpMethod.GET).setPathRegex("/api/v1/modelRouter/open/users/{id}/roles").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterGetUserRolesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterGetUserRolesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ModelRouterListBalanceOrders  ModelRouterListBalanceOrdersRequest
      * @return ModelRouterListBalanceOrdersResponse
      */
@@ -1149,6 +1455,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModelRouterListBalanceOrdersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterListDeptMembers  ModelRouterListDeptMembersRequest
+     * @return ModelRouterListDeptMembersResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterListDeptMembersResponse> modelRouterListDeptMembers(ModelRouterListDeptMembersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterListDeptMembers").setMethod(HttpMethod.GET).setPathRegex("/api/v1/modelRouter/open/clients/{id}/members").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterListDeptMembersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterListDeptMembersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterListMemberBalanceOrders  ModelRouterListMemberBalanceOrdersRequest
+     * @return ModelRouterListMemberBalanceOrdersResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterListMemberBalanceOrdersResponse> modelRouterListMemberBalanceOrders(ModelRouterListMemberBalanceOrdersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterListMemberBalanceOrders").setMethod(HttpMethod.GET).setPathRegex("/api/v1/modelRouter/open/clients/{clientId}/members/{id}/balance/orders").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterListMemberBalanceOrdersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterListMemberBalanceOrdersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterListMemberSubscriptions  ModelRouterListMemberSubscriptionsRequest
+     * @return ModelRouterListMemberSubscriptionsResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterListMemberSubscriptionsResponse> modelRouterListMemberSubscriptions(ModelRouterListMemberSubscriptionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterListMemberSubscriptions").setMethod(HttpMethod.GET).setPathRegex("/api/v1/modelRouter/open/clients/{clientId}/members/{id}/balance/subscription").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterListMemberSubscriptionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterListMemberSubscriptionsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1497,6 +1857,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModelRouterQueryModelGroupUsers  ModelRouterQueryModelGroupUsersRequest
+     * @return ModelRouterQueryModelGroupUsersResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterQueryModelGroupUsersResponse> modelRouterQueryModelGroupUsers(ModelRouterQueryModelGroupUsersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterQueryModelGroupUsers").setMethod(HttpMethod.GET).setPathRegex("/api/v1/modelRouter/open/model-groups/{groupId}/users").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterQueryModelGroupUsersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterQueryModelGroupUsersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ModelRouterQueryModelGroupsByApiKey  ModelRouterQueryModelGroupsByApiKeyRequest
      * @return ModelRouterQueryModelGroupsByApiKeyResponse
      */
@@ -1641,6 +2019,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModelRouterQueryUserList  ModelRouterQueryUserListRequest
+     * @return ModelRouterQueryUserListResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterQueryUserListResponse> modelRouterQueryUserList(ModelRouterQueryUserListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterQueryUserList").setMethod(HttpMethod.GET).setPathRegex("/api/v1/modelRouter/open/users").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterQueryUserListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterQueryUserListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterResetMemberAuthorization  ModelRouterResetMemberAuthorizationRequest
+     * @return ModelRouterResetMemberAuthorizationResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterResetMemberAuthorizationResponse> modelRouterResetMemberAuthorization(ModelRouterResetMemberAuthorizationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterResetMemberAuthorization").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/modelRouter/open/clients/{clientId}/members/{id}/authorization").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterResetMemberAuthorizationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterResetMemberAuthorizationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ModelRouterSaveFlowConfig  ModelRouterSaveFlowConfigRequest
      * @return ModelRouterSaveFlowConfigResponse
      */
@@ -1659,6 +2073,78 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModelRouterSearchClientTree  ModelRouterSearchClientTreeRequest
+     * @return ModelRouterSearchClientTreeResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterSearchClientTreeResponse> modelRouterSearchClientTree(ModelRouterSearchClientTreeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterSearchClientTree").setMethod(HttpMethod.GET).setPathRegex("/api/v1/modelRouter/open/clients/tree/search").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterSearchClientTreeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterSearchClientTreeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterSetMemberAuthorization  ModelRouterSetMemberAuthorizationRequest
+     * @return ModelRouterSetMemberAuthorizationResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterSetMemberAuthorizationResponse> modelRouterSetMemberAuthorization(ModelRouterSetMemberAuthorizationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterSetMemberAuthorization").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/modelRouter/open/clients/{clientId}/members/{id}/authorization").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterSetMemberAuthorizationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterSetMemberAuthorizationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterSetUserRoles  ModelRouterSetUserRolesRequest
+     * @return ModelRouterSetUserRolesResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterSetUserRolesResponse> modelRouterSetUserRoles(ModelRouterSetUserRolesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterSetUserRoles").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/modelRouter/open/users/{id}/roles").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterSetUserRolesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterSetUserRolesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterStopMemberSubscription  ModelRouterStopMemberSubscriptionRequest
+     * @return ModelRouterStopMemberSubscriptionResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterStopMemberSubscriptionResponse> modelRouterStopMemberSubscription(ModelRouterStopMemberSubscriptionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterStopMemberSubscription").setMethod(HttpMethod.POST).setPathRegex("/api/v1/modelRouter/open/clients/{clientId}/members/{id}/balance/subscription/stop").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterStopMemberSubscriptionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterStopMemberSubscriptionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ModelRouterStopSubscription  ModelRouterStopSubscriptionRequest
      * @return ModelRouterStopSubscriptionResponse
      */
@@ -1671,6 +2157,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModelRouterStopSubscriptionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterTransferToMember  ModelRouterTransferToMemberRequest
+     * @return ModelRouterTransferToMemberResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterTransferToMemberResponse> modelRouterTransferToMember(ModelRouterTransferToMemberRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterTransferToMember").setMethod(HttpMethod.POST).setPathRegex("/api/v1/modelRouter/open/clients/{clientId}/members/{id}/transfer").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterTransferToMemberResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterTransferToMemberResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1761,6 +2265,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModelRouterUpdateModelGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterUpdateUser  ModelRouterUpdateUserRequest
+     * @return ModelRouterUpdateUserResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterUpdateUserResponse> modelRouterUpdateUser(ModelRouterUpdateUserRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterUpdateUser").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/modelRouter/open/users/{id}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterUpdateUserResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterUpdateUserResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

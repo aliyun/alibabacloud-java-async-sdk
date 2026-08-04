@@ -38,6 +38,10 @@ public class ModelRouterQueryObservationLogsRequest extends Request {
     private Integer maxResults;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("memberUserIds")
+    private String memberUserIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("modelId")
     private Long modelId;
 
@@ -80,6 +84,7 @@ public class ModelRouterQueryObservationLogsRequest extends Request {
         this.endTime = builder.endTime;
         this.groupBy = builder.groupBy;
         this.maxResults = builder.maxResults;
+        this.memberUserIds = builder.memberUserIds;
         this.modelId = builder.modelId;
         this.needTotalCount = builder.needTotalCount;
         this.nextToken = builder.nextToken;
@@ -137,6 +142,13 @@ public class ModelRouterQueryObservationLogsRequest extends Request {
      */
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    /**
+     * @return memberUserIds
+     */
+    public String getMemberUserIds() {
+        return this.memberUserIds;
     }
 
     /**
@@ -208,6 +220,7 @@ public class ModelRouterQueryObservationLogsRequest extends Request {
         private String endTime; 
         private String groupBy; 
         private Integer maxResults; 
+        private String memberUserIds; 
         private Long modelId; 
         private Boolean needTotalCount; 
         private String nextToken; 
@@ -229,6 +242,7 @@ public class ModelRouterQueryObservationLogsRequest extends Request {
             this.endTime = request.endTime;
             this.groupBy = request.groupBy;
             this.maxResults = request.maxResults;
+            this.memberUserIds = request.memberUserIds;
             this.modelId = request.modelId;
             this.needTotalCount = request.needTotalCount;
             this.nextToken = request.nextToken;
@@ -282,6 +296,15 @@ public class ModelRouterQueryObservationLogsRequest extends Request {
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
             this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * memberUserIds.
+         */
+        public Builder memberUserIds(String memberUserIds) {
+            this.putQueryParameter("memberUserIds", memberUserIds);
+            this.memberUserIds = memberUserIds;
             return this;
         }
 

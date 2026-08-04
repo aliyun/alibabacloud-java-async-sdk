@@ -26,12 +26,20 @@ public class ModelRouterQueryApiKeyListRequest extends Request {
     private String groupBy;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("includeMemberKeys")
+    private Boolean includeMemberKeys;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("keyword")
     private String keyword;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("maxResults")
     private Integer maxResults;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("memberUserIds")
+    private String memberUserIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("needTotalCount")
@@ -65,8 +73,10 @@ public class ModelRouterQueryApiKeyListRequest extends Request {
         super(builder);
         this.clientId = builder.clientId;
         this.groupBy = builder.groupBy;
+        this.includeMemberKeys = builder.includeMemberKeys;
         this.keyword = builder.keyword;
         this.maxResults = builder.maxResults;
+        this.memberUserIds = builder.memberUserIds;
         this.needTotalCount = builder.needTotalCount;
         this.nextToken = builder.nextToken;
         this.orderBy = builder.orderBy;
@@ -104,6 +114,13 @@ public class ModelRouterQueryApiKeyListRequest extends Request {
     }
 
     /**
+     * @return includeMemberKeys
+     */
+    public Boolean getIncludeMemberKeys() {
+        return this.includeMemberKeys;
+    }
+
+    /**
      * @return keyword
      */
     public String getKeyword() {
@@ -115,6 +132,13 @@ public class ModelRouterQueryApiKeyListRequest extends Request {
      */
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    /**
+     * @return memberUserIds
+     */
+    public String getMemberUserIds() {
+        return this.memberUserIds;
     }
 
     /**
@@ -169,8 +193,10 @@ public class ModelRouterQueryApiKeyListRequest extends Request {
     public static final class Builder extends Request.Builder<ModelRouterQueryApiKeyListRequest, Builder> {
         private Long clientId; 
         private String groupBy; 
+        private Boolean includeMemberKeys; 
         private String keyword; 
         private Integer maxResults; 
+        private String memberUserIds; 
         private Boolean needTotalCount; 
         private String nextToken; 
         private String orderBy; 
@@ -187,8 +213,10 @@ public class ModelRouterQueryApiKeyListRequest extends Request {
             super(request);
             this.clientId = request.clientId;
             this.groupBy = request.groupBy;
+            this.includeMemberKeys = request.includeMemberKeys;
             this.keyword = request.keyword;
             this.maxResults = request.maxResults;
+            this.memberUserIds = request.memberUserIds;
             this.needTotalCount = request.needTotalCount;
             this.nextToken = request.nextToken;
             this.orderBy = request.orderBy;
@@ -217,6 +245,15 @@ public class ModelRouterQueryApiKeyListRequest extends Request {
         }
 
         /**
+         * includeMemberKeys.
+         */
+        public Builder includeMemberKeys(Boolean includeMemberKeys) {
+            this.putQueryParameter("includeMemberKeys", includeMemberKeys);
+            this.includeMemberKeys = includeMemberKeys;
+            return this;
+        }
+
+        /**
          * keyword.
          */
         public Builder keyword(String keyword) {
@@ -231,6 +268,15 @@ public class ModelRouterQueryApiKeyListRequest extends Request {
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
             this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * memberUserIds.
+         */
+        public Builder memberUserIds(String memberUserIds) {
+            this.putQueryParameter("memberUserIds", memberUserIds);
+            this.memberUserIds = memberUserIds;
             return this;
         }
 

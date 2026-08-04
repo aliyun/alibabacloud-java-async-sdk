@@ -54,6 +54,10 @@ public class ModelRouterQueryClientListRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("parentId")
+    private Long parentId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("status")
     private Integer status;
 
@@ -68,6 +72,7 @@ public class ModelRouterQueryClientListRequest extends Request {
         this.orderDirection = builder.orderDirection;
         this.pageIndex = builder.pageIndex;
         this.pageSize = builder.pageSize;
+        this.parentId = builder.parentId;
         this.status = builder.status;
     }
 
@@ -148,6 +153,13 @@ public class ModelRouterQueryClientListRequest extends Request {
     }
 
     /**
+     * @return parentId
+     */
+    public Long getParentId() {
+        return this.parentId;
+    }
+
+    /**
      * @return status
      */
     public Integer getStatus() {
@@ -164,6 +176,7 @@ public class ModelRouterQueryClientListRequest extends Request {
         private String orderDirection; 
         private Integer pageIndex; 
         private Integer pageSize; 
+        private Long parentId; 
         private Integer status; 
 
         private Builder() {
@@ -181,6 +194,7 @@ public class ModelRouterQueryClientListRequest extends Request {
             this.orderDirection = request.orderDirection;
             this.pageIndex = request.pageIndex;
             this.pageSize = request.pageSize;
+            this.parentId = request.parentId;
             this.status = request.status;
         } 
 
@@ -262,6 +276,15 @@ public class ModelRouterQueryClientListRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * parentId.
+         */
+        public Builder parentId(Long parentId) {
+            this.putQueryParameter("parentId", parentId);
+            this.parentId = parentId;
             return this;
         }
 

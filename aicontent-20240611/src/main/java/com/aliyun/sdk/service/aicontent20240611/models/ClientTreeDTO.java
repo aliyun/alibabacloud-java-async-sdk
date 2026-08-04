@@ -59,11 +59,17 @@ public class ClientTreeDTO extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
+    @com.aliyun.core.annotation.NameInMap("nodeType")
+    private String nodeType;
+
     @com.aliyun.core.annotation.NameInMap("parentId")
     private Long parentId;
 
     @com.aliyun.core.annotation.NameInMap("remark")
     private String remark;
+
+    @com.aliyun.core.annotation.NameInMap("userId")
+    private Long userId;
 
     private ClientTreeDTO(Builder builder) {
         this.address = builder.address;
@@ -80,8 +86,10 @@ public class ClientTreeDTO extends TeaModel {
         this.level = builder.level;
         this.main = builder.main;
         this.name = builder.name;
+        this.nodeType = builder.nodeType;
         this.parentId = builder.parentId;
         this.remark = builder.remark;
+        this.userId = builder.userId;
     }
 
     public static Builder builder() {
@@ -195,6 +203,13 @@ public class ClientTreeDTO extends TeaModel {
     }
 
     /**
+     * @return nodeType
+     */
+    public String getNodeType() {
+        return this.nodeType;
+    }
+
+    /**
      * @return parentId
      */
     public Long getParentId() {
@@ -206,6 +221,13 @@ public class ClientTreeDTO extends TeaModel {
      */
     public String getRemark() {
         return this.remark;
+    }
+
+    /**
+     * @return userId
+     */
+    public Long getUserId() {
+        return this.userId;
     }
 
     public static final class Builder {
@@ -223,8 +245,10 @@ public class ClientTreeDTO extends TeaModel {
         private Integer level; 
         private Integer main; 
         private String name; 
+        private String nodeType; 
         private Long parentId; 
         private String remark; 
+        private Long userId; 
 
         private Builder() {
         } 
@@ -244,8 +268,10 @@ public class ClientTreeDTO extends TeaModel {
             this.level = model.level;
             this.main = model.main;
             this.name = model.name;
+            this.nodeType = model.nodeType;
             this.parentId = model.parentId;
             this.remark = model.remark;
+            this.userId = model.userId;
         } 
 
         /**
@@ -361,6 +387,14 @@ public class ClientTreeDTO extends TeaModel {
         }
 
         /**
+         * nodeType.
+         */
+        public Builder nodeType(String nodeType) {
+            this.nodeType = nodeType;
+            return this;
+        }
+
+        /**
          * parentId.
          */
         public Builder parentId(Long parentId) {
@@ -373,6 +407,14 @@ public class ClientTreeDTO extends TeaModel {
          */
         public Builder remark(String remark) {
             this.remark = remark;
+            return this;
+        }
+
+        /**
+         * userId.
+         */
+        public Builder userId(Long userId) {
+            this.userId = userId;
             return this;
         }
 
