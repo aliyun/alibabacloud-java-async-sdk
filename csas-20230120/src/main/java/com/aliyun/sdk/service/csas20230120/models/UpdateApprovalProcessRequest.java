@@ -1614,6 +1614,198 @@ public class UpdateApprovalProcessRequest extends Request {
      *
      * <p>UpdateApprovalProcessRequest</p>
      */
+    public static class PrivateAccessBlockSchemaConfigFieldMap extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DisplayField")
+        private String displayField;
+
+        @com.aliyun.core.annotation.NameInMap("DisplayFieldValue")
+        private String displayFieldValue;
+
+        @com.aliyun.core.annotation.NameInMap("SystemField")
+        private String systemField;
+
+        private PrivateAccessBlockSchemaConfigFieldMap(Builder builder) {
+            this.displayField = builder.displayField;
+            this.displayFieldValue = builder.displayFieldValue;
+            this.systemField = builder.systemField;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PrivateAccessBlockSchemaConfigFieldMap create() {
+            return builder().build();
+        }
+
+        /**
+         * @return displayField
+         */
+        public String getDisplayField() {
+            return this.displayField;
+        }
+
+        /**
+         * @return displayFieldValue
+         */
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        /**
+         * @return systemField
+         */
+        public String getSystemField() {
+            return this.systemField;
+        }
+
+        public static final class Builder {
+            private String displayField; 
+            private String displayFieldValue; 
+            private String systemField; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivateAccessBlockSchemaConfigFieldMap model) {
+                this.displayField = model.displayField;
+                this.displayFieldValue = model.displayFieldValue;
+                this.systemField = model.systemField;
+            } 
+
+            /**
+             * DisplayField.
+             */
+            public Builder displayField(String displayField) {
+                this.displayField = displayField;
+                return this;
+            }
+
+            /**
+             * DisplayFieldValue.
+             */
+            public Builder displayFieldValue(String displayFieldValue) {
+                this.displayFieldValue = displayFieldValue;
+                return this;
+            }
+
+            /**
+             * SystemField.
+             */
+            public Builder systemField(String systemField) {
+                this.systemField = systemField;
+                return this;
+            }
+
+            public PrivateAccessBlockSchemaConfigFieldMap build() {
+                return new PrivateAccessBlockSchemaConfigFieldMap(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateApprovalProcessRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateApprovalProcessRequest</p>
+     */
+    public static class PrivateAccessBlockSchemaConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ExternalProcessId")
+        private String externalProcessId;
+
+        @com.aliyun.core.annotation.NameInMap("FieldMap")
+        private java.util.List<PrivateAccessBlockSchemaConfigFieldMap> fieldMap;
+
+        @com.aliyun.core.annotation.NameInMap("SchemaId")
+        private String schemaId;
+
+        private PrivateAccessBlockSchemaConfig(Builder builder) {
+            this.externalProcessId = builder.externalProcessId;
+            this.fieldMap = builder.fieldMap;
+            this.schemaId = builder.schemaId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PrivateAccessBlockSchemaConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return externalProcessId
+         */
+        public String getExternalProcessId() {
+            return this.externalProcessId;
+        }
+
+        /**
+         * @return fieldMap
+         */
+        public java.util.List<PrivateAccessBlockSchemaConfigFieldMap> getFieldMap() {
+            return this.fieldMap;
+        }
+
+        /**
+         * @return schemaId
+         */
+        public String getSchemaId() {
+            return this.schemaId;
+        }
+
+        public static final class Builder {
+            private String externalProcessId; 
+            private java.util.List<PrivateAccessBlockSchemaConfigFieldMap> fieldMap; 
+            private String schemaId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivateAccessBlockSchemaConfig model) {
+                this.externalProcessId = model.externalProcessId;
+                this.fieldMap = model.fieldMap;
+                this.schemaId = model.schemaId;
+            } 
+
+            /**
+             * ExternalProcessId.
+             */
+            public Builder externalProcessId(String externalProcessId) {
+                this.externalProcessId = externalProcessId;
+                return this;
+            }
+
+            /**
+             * FieldMap.
+             */
+            public Builder fieldMap(java.util.List<PrivateAccessBlockSchemaConfigFieldMap> fieldMap) {
+                this.fieldMap = fieldMap;
+                return this;
+            }
+
+            /**
+             * SchemaId.
+             */
+            public Builder schemaId(String schemaId) {
+                this.schemaId = schemaId;
+                return this;
+            }
+
+            public PrivateAccessBlockSchemaConfig build() {
+                return new PrivateAccessBlockSchemaConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateApprovalProcessRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateApprovalProcessRequest</p>
+     */
     public static class SoftwareBlockSchemaConfigFieldMap extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayField")
         private String displayField;
@@ -2020,6 +2212,9 @@ public class UpdateApprovalProcessRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("PeripheralBlockSchemaConfig")
         private PeripheralBlockSchemaConfig peripheralBlockSchemaConfig;
 
+        @com.aliyun.core.annotation.NameInMap("PrivateAccessBlockSchemaConfig")
+        private PrivateAccessBlockSchemaConfig privateAccessBlockSchemaConfig;
+
         @com.aliyun.core.annotation.NameInMap("SoftwareBlockSchemaConfig")
         private SoftwareBlockSchemaConfig softwareBlockSchemaConfig;
 
@@ -2034,6 +2229,7 @@ public class UpdateApprovalProcessRequest extends Request {
             this.domainWhitelistSchemaConfig = builder.domainWhitelistSchemaConfig;
             this.endpointHardeningSchemaConfig = builder.endpointHardeningSchemaConfig;
             this.peripheralBlockSchemaConfig = builder.peripheralBlockSchemaConfig;
+            this.privateAccessBlockSchemaConfig = builder.privateAccessBlockSchemaConfig;
             this.softwareBlockSchemaConfig = builder.softwareBlockSchemaConfig;
             this.softwareHardeningSchemaConfig = builder.softwareHardeningSchemaConfig;
         }
@@ -2096,6 +2292,13 @@ public class UpdateApprovalProcessRequest extends Request {
         }
 
         /**
+         * @return privateAccessBlockSchemaConfig
+         */
+        public PrivateAccessBlockSchemaConfig getPrivateAccessBlockSchemaConfig() {
+            return this.privateAccessBlockSchemaConfig;
+        }
+
+        /**
          * @return softwareBlockSchemaConfig
          */
         public SoftwareBlockSchemaConfig getSoftwareBlockSchemaConfig() {
@@ -2117,6 +2320,7 @@ public class UpdateApprovalProcessRequest extends Request {
             private DomainWhitelistSchemaConfig domainWhitelistSchemaConfig; 
             private EndpointHardeningSchemaConfig endpointHardeningSchemaConfig; 
             private PeripheralBlockSchemaConfig peripheralBlockSchemaConfig; 
+            private PrivateAccessBlockSchemaConfig privateAccessBlockSchemaConfig; 
             private SoftwareBlockSchemaConfig softwareBlockSchemaConfig; 
             private SoftwareHardeningSchemaConfig softwareHardeningSchemaConfig; 
 
@@ -2131,6 +2335,7 @@ public class UpdateApprovalProcessRequest extends Request {
                 this.domainWhitelistSchemaConfig = model.domainWhitelistSchemaConfig;
                 this.endpointHardeningSchemaConfig = model.endpointHardeningSchemaConfig;
                 this.peripheralBlockSchemaConfig = model.peripheralBlockSchemaConfig;
+                this.privateAccessBlockSchemaConfig = model.privateAccessBlockSchemaConfig;
                 this.softwareBlockSchemaConfig = model.softwareBlockSchemaConfig;
                 this.softwareHardeningSchemaConfig = model.softwareHardeningSchemaConfig;
             } 
@@ -2192,6 +2397,14 @@ public class UpdateApprovalProcessRequest extends Request {
             }
 
             /**
+             * PrivateAccessBlockSchemaConfig.
+             */
+            public Builder privateAccessBlockSchemaConfig(PrivateAccessBlockSchemaConfig privateAccessBlockSchemaConfig) {
+                this.privateAccessBlockSchemaConfig = privateAccessBlockSchemaConfig;
+                return this;
+            }
+
+            /**
              * SoftwareBlockSchemaConfig.
              */
             public Builder softwareBlockSchemaConfig(SoftwareBlockSchemaConfig softwareBlockSchemaConfig) {
@@ -2242,6 +2455,9 @@ public class UpdateApprovalProcessRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("PeripheralBlockSchemaId")
         private String peripheralBlockSchemaId;
 
+        @com.aliyun.core.annotation.NameInMap("PrivateAccessBlockSchemaId")
+        private String privateAccessBlockSchemaId;
+
         @com.aliyun.core.annotation.NameInMap("SoftwareBlockSchemaId")
         private String softwareBlockSchemaId;
 
@@ -2256,6 +2472,7 @@ public class UpdateApprovalProcessRequest extends Request {
             this.domainWhitelistSchemaId = builder.domainWhitelistSchemaId;
             this.endpointHardeningSchemaId = builder.endpointHardeningSchemaId;
             this.peripheralBlockSchemaId = builder.peripheralBlockSchemaId;
+            this.privateAccessBlockSchemaId = builder.privateAccessBlockSchemaId;
             this.softwareBlockSchemaId = builder.softwareBlockSchemaId;
             this.softwareHardeningSchemaId = builder.softwareHardeningSchemaId;
         }
@@ -2318,6 +2535,13 @@ public class UpdateApprovalProcessRequest extends Request {
         }
 
         /**
+         * @return privateAccessBlockSchemaId
+         */
+        public String getPrivateAccessBlockSchemaId() {
+            return this.privateAccessBlockSchemaId;
+        }
+
+        /**
          * @return softwareBlockSchemaId
          */
         public String getSoftwareBlockSchemaId() {
@@ -2339,6 +2563,7 @@ public class UpdateApprovalProcessRequest extends Request {
             private String domainWhitelistSchemaId; 
             private String endpointHardeningSchemaId; 
             private String peripheralBlockSchemaId; 
+            private String privateAccessBlockSchemaId; 
             private String softwareBlockSchemaId; 
             private String softwareHardeningSchemaId; 
 
@@ -2353,6 +2578,7 @@ public class UpdateApprovalProcessRequest extends Request {
                 this.domainWhitelistSchemaId = model.domainWhitelistSchemaId;
                 this.endpointHardeningSchemaId = model.endpointHardeningSchemaId;
                 this.peripheralBlockSchemaId = model.peripheralBlockSchemaId;
+                this.privateAccessBlockSchemaId = model.privateAccessBlockSchemaId;
                 this.softwareBlockSchemaId = model.softwareBlockSchemaId;
                 this.softwareHardeningSchemaId = model.softwareHardeningSchemaId;
             } 
@@ -2410,6 +2636,14 @@ public class UpdateApprovalProcessRequest extends Request {
              */
             public Builder peripheralBlockSchemaId(String peripheralBlockSchemaId) {
                 this.peripheralBlockSchemaId = peripheralBlockSchemaId;
+                return this;
+            }
+
+            /**
+             * PrivateAccessBlockSchemaId.
+             */
+            public Builder privateAccessBlockSchemaId(String privateAccessBlockSchemaId) {
+                this.privateAccessBlockSchemaId = privateAccessBlockSchemaId;
                 return this;
             }
 

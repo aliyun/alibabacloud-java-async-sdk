@@ -177,6 +177,9 @@ public class CreateApprovalProcessRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("PeripheralBlockSchemaId")
         private String peripheralBlockSchemaId;
 
+        @com.aliyun.core.annotation.NameInMap("PrivateAccessBlockSchemaId")
+        private String privateAccessBlockSchemaId;
+
         @com.aliyun.core.annotation.NameInMap("SoftwareBlockSchemaId")
         private String softwareBlockSchemaId;
 
@@ -191,6 +194,7 @@ public class CreateApprovalProcessRequest extends Request {
             this.domainWhitelistSchemaId = builder.domainWhitelistSchemaId;
             this.endpointHardeningSchemaId = builder.endpointHardeningSchemaId;
             this.peripheralBlockSchemaId = builder.peripheralBlockSchemaId;
+            this.privateAccessBlockSchemaId = builder.privateAccessBlockSchemaId;
             this.softwareBlockSchemaId = builder.softwareBlockSchemaId;
             this.softwareHardeningSchemaId = builder.softwareHardeningSchemaId;
         }
@@ -253,6 +257,13 @@ public class CreateApprovalProcessRequest extends Request {
         }
 
         /**
+         * @return privateAccessBlockSchemaId
+         */
+        public String getPrivateAccessBlockSchemaId() {
+            return this.privateAccessBlockSchemaId;
+        }
+
+        /**
          * @return softwareBlockSchemaId
          */
         public String getSoftwareBlockSchemaId() {
@@ -274,6 +285,7 @@ public class CreateApprovalProcessRequest extends Request {
             private String domainWhitelistSchemaId; 
             private String endpointHardeningSchemaId; 
             private String peripheralBlockSchemaId; 
+            private String privateAccessBlockSchemaId; 
             private String softwareBlockSchemaId; 
             private String softwareHardeningSchemaId; 
 
@@ -288,6 +300,7 @@ public class CreateApprovalProcessRequest extends Request {
                 this.domainWhitelistSchemaId = model.domainWhitelistSchemaId;
                 this.endpointHardeningSchemaId = model.endpointHardeningSchemaId;
                 this.peripheralBlockSchemaId = model.peripheralBlockSchemaId;
+                this.privateAccessBlockSchemaId = model.privateAccessBlockSchemaId;
                 this.softwareBlockSchemaId = model.softwareBlockSchemaId;
                 this.softwareHardeningSchemaId = model.softwareHardeningSchemaId;
             } 
@@ -345,6 +358,14 @@ public class CreateApprovalProcessRequest extends Request {
              */
             public Builder peripheralBlockSchemaId(String peripheralBlockSchemaId) {
                 this.peripheralBlockSchemaId = peripheralBlockSchemaId;
+                return this;
+            }
+
+            /**
+             * PrivateAccessBlockSchemaId.
+             */
+            public Builder privateAccessBlockSchemaId(String privateAccessBlockSchemaId) {
+                this.privateAccessBlockSchemaId = privateAccessBlockSchemaId;
                 return this;
             }
 

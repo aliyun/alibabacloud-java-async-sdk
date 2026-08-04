@@ -100,6 +100,10 @@ public class ListUserDevicesRequest extends Request {
     private Boolean sharingStatus;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnBios")
+    private String snBios;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SnSystem")
     private String snSystem;
 
@@ -137,6 +141,7 @@ public class ListUserDevicesRequest extends Request {
         this.pageSize = builder.pageSize;
         this.saseUserId = builder.saseUserId;
         this.sharingStatus = builder.sharingStatus;
+        this.snBios = builder.snBios;
         this.snSystem = builder.snSystem;
         this.sortBy = builder.sortBy;
         this.username = builder.username;
@@ -297,6 +302,13 @@ public class ListUserDevicesRequest extends Request {
     }
 
     /**
+     * @return snBios
+     */
+    public String getSnBios() {
+        return this.snBios;
+    }
+
+    /**
      * @return snSystem
      */
     public String getSnSystem() {
@@ -345,6 +357,7 @@ public class ListUserDevicesRequest extends Request {
         private Long pageSize; 
         private String saseUserId; 
         private Boolean sharingStatus; 
+        private String snBios; 
         private String snSystem; 
         private String sortBy; 
         private String username; 
@@ -376,6 +389,7 @@ public class ListUserDevicesRequest extends Request {
             this.pageSize = request.pageSize;
             this.saseUserId = request.saseUserId;
             this.sharingStatus = request.sharingStatus;
+            this.snBios = request.snBios;
             this.snSystem = request.snSystem;
             this.sortBy = request.sortBy;
             this.username = request.username;
@@ -565,6 +579,15 @@ public class ListUserDevicesRequest extends Request {
         public Builder sharingStatus(Boolean sharingStatus) {
             this.putQueryParameter("SharingStatus", sharingStatus);
             this.sharingStatus = sharingStatus;
+            return this;
+        }
+
+        /**
+         * SnBios.
+         */
+        public Builder snBios(String snBios) {
+            this.putQueryParameter("SnBios", snBios);
+            this.snBios = snBios;
             return this;
         }
 

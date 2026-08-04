@@ -1585,6 +1585,219 @@ public class GetApprovalProcessResponseBody extends TeaModel {
      *
      * <p>GetApprovalProcessResponseBody</p>
      */
+    public static class PrivateAccessBlockPoliciesFieldMap extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DisplayField")
+        private String displayField;
+
+        @com.aliyun.core.annotation.NameInMap("DisplayFieldValue")
+        private String displayFieldValue;
+
+        @com.aliyun.core.annotation.NameInMap("SystemField")
+        private String systemField;
+
+        private PrivateAccessBlockPoliciesFieldMap(Builder builder) {
+            this.displayField = builder.displayField;
+            this.displayFieldValue = builder.displayFieldValue;
+            this.systemField = builder.systemField;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PrivateAccessBlockPoliciesFieldMap create() {
+            return builder().build();
+        }
+
+        /**
+         * @return displayField
+         */
+        public String getDisplayField() {
+            return this.displayField;
+        }
+
+        /**
+         * @return displayFieldValue
+         */
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        /**
+         * @return systemField
+         */
+        public String getSystemField() {
+            return this.systemField;
+        }
+
+        public static final class Builder {
+            private String displayField; 
+            private String displayFieldValue; 
+            private String systemField; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivateAccessBlockPoliciesFieldMap model) {
+                this.displayField = model.displayField;
+                this.displayFieldValue = model.displayFieldValue;
+                this.systemField = model.systemField;
+            } 
+
+            /**
+             * DisplayField.
+             */
+            public Builder displayField(String displayField) {
+                this.displayField = displayField;
+                return this;
+            }
+
+            /**
+             * DisplayFieldValue.
+             */
+            public Builder displayFieldValue(String displayFieldValue) {
+                this.displayFieldValue = displayFieldValue;
+                return this;
+            }
+
+            /**
+             * SystemField.
+             */
+            public Builder systemField(String systemField) {
+                this.systemField = systemField;
+                return this;
+            }
+
+            public PrivateAccessBlockPoliciesFieldMap build() {
+                return new PrivateAccessBlockPoliciesFieldMap(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetApprovalProcessResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApprovalProcessResponseBody</p>
+     */
+    public static class PrivateAccessBlockPolicies extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ExternalProcessId")
+        private String externalProcessId;
+
+        @com.aliyun.core.annotation.NameInMap("FieldMap")
+        private java.util.List<PrivateAccessBlockPoliciesFieldMap> fieldMap;
+
+        @com.aliyun.core.annotation.NameInMap("PolicyIds")
+        private java.util.List<String> policyIds;
+
+        @com.aliyun.core.annotation.NameInMap("SchemaId")
+        private String schemaId;
+
+        private PrivateAccessBlockPolicies(Builder builder) {
+            this.externalProcessId = builder.externalProcessId;
+            this.fieldMap = builder.fieldMap;
+            this.policyIds = builder.policyIds;
+            this.schemaId = builder.schemaId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PrivateAccessBlockPolicies create() {
+            return builder().build();
+        }
+
+        /**
+         * @return externalProcessId
+         */
+        public String getExternalProcessId() {
+            return this.externalProcessId;
+        }
+
+        /**
+         * @return fieldMap
+         */
+        public java.util.List<PrivateAccessBlockPoliciesFieldMap> getFieldMap() {
+            return this.fieldMap;
+        }
+
+        /**
+         * @return policyIds
+         */
+        public java.util.List<String> getPolicyIds() {
+            return this.policyIds;
+        }
+
+        /**
+         * @return schemaId
+         */
+        public String getSchemaId() {
+            return this.schemaId;
+        }
+
+        public static final class Builder {
+            private String externalProcessId; 
+            private java.util.List<PrivateAccessBlockPoliciesFieldMap> fieldMap; 
+            private java.util.List<String> policyIds; 
+            private String schemaId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivateAccessBlockPolicies model) {
+                this.externalProcessId = model.externalProcessId;
+                this.fieldMap = model.fieldMap;
+                this.policyIds = model.policyIds;
+                this.schemaId = model.schemaId;
+            } 
+
+            /**
+             * ExternalProcessId.
+             */
+            public Builder externalProcessId(String externalProcessId) {
+                this.externalProcessId = externalProcessId;
+                return this;
+            }
+
+            /**
+             * FieldMap.
+             */
+            public Builder fieldMap(java.util.List<PrivateAccessBlockPoliciesFieldMap> fieldMap) {
+                this.fieldMap = fieldMap;
+                return this;
+            }
+
+            /**
+             * PolicyIds.
+             */
+            public Builder policyIds(java.util.List<String> policyIds) {
+                this.policyIds = policyIds;
+                return this;
+            }
+
+            /**
+             * SchemaId.
+             */
+            public Builder schemaId(String schemaId) {
+                this.schemaId = schemaId;
+                return this;
+            }
+
+            public PrivateAccessBlockPolicies build() {
+                return new PrivateAccessBlockPolicies(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetApprovalProcessResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApprovalProcessResponseBody</p>
+     */
     public static class ProcessNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SaseUserId")
         private String saseUserId;
@@ -2123,6 +2336,9 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PeripheralBlockPolicies")
         private PeripheralBlockPolicies peripheralBlockPolicies;
 
+        @com.aliyun.core.annotation.NameInMap("PrivateAccessBlockPolicies")
+        private PrivateAccessBlockPolicies privateAccessBlockPolicies;
+
         @com.aliyun.core.annotation.NameInMap("ProcessId")
         private String processId;
 
@@ -2151,6 +2367,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             this.eventLabel = builder.eventLabel;
             this.externalConfig = builder.externalConfig;
             this.peripheralBlockPolicies = builder.peripheralBlockPolicies;
+            this.privateAccessBlockPolicies = builder.privateAccessBlockPolicies;
             this.processId = builder.processId;
             this.processName = builder.processName;
             this.processNodes = builder.processNodes;
@@ -2251,6 +2468,13 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         }
 
         /**
+         * @return privateAccessBlockPolicies
+         */
+        public PrivateAccessBlockPolicies getPrivateAccessBlockPolicies() {
+            return this.privateAccessBlockPolicies;
+        }
+
+        /**
          * @return processId
          */
         public String getProcessId() {
@@ -2298,6 +2522,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             private String eventLabel; 
             private String externalConfig; 
             private PeripheralBlockPolicies peripheralBlockPolicies; 
+            private PrivateAccessBlockPolicies privateAccessBlockPolicies; 
             private String processId; 
             private String processName; 
             private java.util.List<java.util.List<ProcessNodes>> processNodes; 
@@ -2320,6 +2545,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
                 this.eventLabel = model.eventLabel;
                 this.externalConfig = model.externalConfig;
                 this.peripheralBlockPolicies = model.peripheralBlockPolicies;
+                this.privateAccessBlockPolicies = model.privateAccessBlockPolicies;
                 this.processId = model.processId;
                 this.processName = model.processName;
                 this.processNodes = model.processNodes;
@@ -2420,6 +2646,14 @@ public class GetApprovalProcessResponseBody extends TeaModel {
              */
             public Builder peripheralBlockPolicies(PeripheralBlockPolicies peripheralBlockPolicies) {
                 this.peripheralBlockPolicies = peripheralBlockPolicies;
+                return this;
+            }
+
+            /**
+             * PrivateAccessBlockPolicies.
+             */
+            public Builder privateAccessBlockPolicies(PrivateAccessBlockPolicies privateAccessBlockPolicies) {
+                this.privateAccessBlockPolicies = privateAccessBlockPolicies;
                 return this;
             }
 

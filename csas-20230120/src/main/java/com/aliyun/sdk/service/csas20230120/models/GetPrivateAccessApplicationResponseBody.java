@@ -233,6 +233,9 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagIds")
         private java.util.List<String> tagIds;
 
+        @com.aliyun.core.annotation.NameInMap("UnauthorizedAccessConfig")
+        private PAApplicationUnauthorizedAccessConfig unauthorizedAccessConfig;
+
         private Application(Builder builder) {
             this.addressGroups = builder.addressGroups;
             this.addresses = builder.addresses;
@@ -252,6 +255,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             this.protocol = builder.protocol;
             this.status = builder.status;
             this.tagIds = builder.tagIds;
+            this.unauthorizedAccessConfig = builder.unauthorizedAccessConfig;
         }
 
         public static Builder builder() {
@@ -388,6 +392,13 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             return this.tagIds;
         }
 
+        /**
+         * @return unauthorizedAccessConfig
+         */
+        public PAApplicationUnauthorizedAccessConfig getUnauthorizedAccessConfig() {
+            return this.unauthorizedAccessConfig;
+        }
+
         public static final class Builder {
             private java.util.List<AddressGroup> addressGroups; 
             private java.util.List<String> addresses; 
@@ -407,6 +418,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             private String protocol; 
             private String status; 
             private java.util.List<String> tagIds; 
+            private PAApplicationUnauthorizedAccessConfig unauthorizedAccessConfig; 
 
             private Builder() {
             } 
@@ -430,6 +442,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
                 this.protocol = model.protocol;
                 this.status = model.status;
                 this.tagIds = model.tagIds;
+                this.unauthorizedAccessConfig = model.unauthorizedAccessConfig;
             } 
 
             /**
@@ -610,6 +623,14 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
              */
             public Builder tagIds(java.util.List<String> tagIds) {
                 this.tagIds = tagIds;
+                return this;
+            }
+
+            /**
+             * UnauthorizedAccessConfig.
+             */
+            public Builder unauthorizedAccessConfig(PAApplicationUnauthorizedAccessConfig unauthorizedAccessConfig) {
+                this.unauthorizedAccessConfig = unauthorizedAccessConfig;
                 return this;
             }
 

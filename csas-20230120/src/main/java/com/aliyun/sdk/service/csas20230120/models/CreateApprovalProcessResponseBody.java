@@ -619,6 +619,81 @@ public class CreateApprovalProcessResponseBody extends TeaModel {
      *
      * <p>CreateApprovalProcessResponseBody</p>
      */
+    public static class PrivateAccessBlockPolicies extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PolicyIds")
+        private java.util.List<String> policyIds;
+
+        @com.aliyun.core.annotation.NameInMap("SchemaId")
+        private String schemaId;
+
+        private PrivateAccessBlockPolicies(Builder builder) {
+            this.policyIds = builder.policyIds;
+            this.schemaId = builder.schemaId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PrivateAccessBlockPolicies create() {
+            return builder().build();
+        }
+
+        /**
+         * @return policyIds
+         */
+        public java.util.List<String> getPolicyIds() {
+            return this.policyIds;
+        }
+
+        /**
+         * @return schemaId
+         */
+        public String getSchemaId() {
+            return this.schemaId;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> policyIds; 
+            private String schemaId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivateAccessBlockPolicies model) {
+                this.policyIds = model.policyIds;
+                this.schemaId = model.schemaId;
+            } 
+
+            /**
+             * PolicyIds.
+             */
+            public Builder policyIds(java.util.List<String> policyIds) {
+                this.policyIds = policyIds;
+                return this;
+            }
+
+            /**
+             * SchemaId.
+             */
+            public Builder schemaId(String schemaId) {
+                this.schemaId = schemaId;
+                return this;
+            }
+
+            public PrivateAccessBlockPolicies build() {
+                return new PrivateAccessBlockPolicies(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateApprovalProcessResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateApprovalProcessResponseBody</p>
+     */
     public static class ProcessNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SaseUserId")
         private String saseUserId;
@@ -872,6 +947,9 @@ public class CreateApprovalProcessResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PeripheralBlockPolicies")
         private PeripheralBlockPolicies peripheralBlockPolicies;
 
+        @com.aliyun.core.annotation.NameInMap("PrivateAccessBlockPolicies")
+        private PrivateAccessBlockPolicies privateAccessBlockPolicies;
+
         @com.aliyun.core.annotation.NameInMap("ProcessId")
         private String processId;
 
@@ -897,6 +975,7 @@ public class CreateApprovalProcessResponseBody extends TeaModel {
             this.domainWhitelistPolicies = builder.domainWhitelistPolicies;
             this.endpointHardeningPolicies = builder.endpointHardeningPolicies;
             this.peripheralBlockPolicies = builder.peripheralBlockPolicies;
+            this.privateAccessBlockPolicies = builder.privateAccessBlockPolicies;
             this.processId = builder.processId;
             this.processName = builder.processName;
             this.processNodes = builder.processNodes;
@@ -976,6 +1055,13 @@ public class CreateApprovalProcessResponseBody extends TeaModel {
         }
 
         /**
+         * @return privateAccessBlockPolicies
+         */
+        public PrivateAccessBlockPolicies getPrivateAccessBlockPolicies() {
+            return this.privateAccessBlockPolicies;
+        }
+
+        /**
          * @return processId
          */
         public String getProcessId() {
@@ -1020,6 +1106,7 @@ public class CreateApprovalProcessResponseBody extends TeaModel {
             private DomainWhitelistPolicies domainWhitelistPolicies; 
             private EndpointHardeningPolicies endpointHardeningPolicies; 
             private PeripheralBlockPolicies peripheralBlockPolicies; 
+            private PrivateAccessBlockPolicies privateAccessBlockPolicies; 
             private String processId; 
             private String processName; 
             private java.util.List<java.util.List<ProcessNodes>> processNodes; 
@@ -1039,6 +1126,7 @@ public class CreateApprovalProcessResponseBody extends TeaModel {
                 this.domainWhitelistPolicies = model.domainWhitelistPolicies;
                 this.endpointHardeningPolicies = model.endpointHardeningPolicies;
                 this.peripheralBlockPolicies = model.peripheralBlockPolicies;
+                this.privateAccessBlockPolicies = model.privateAccessBlockPolicies;
                 this.processId = model.processId;
                 this.processName = model.processName;
                 this.processNodes = model.processNodes;
@@ -1115,6 +1203,14 @@ public class CreateApprovalProcessResponseBody extends TeaModel {
              */
             public Builder peripheralBlockPolicies(PeripheralBlockPolicies peripheralBlockPolicies) {
                 this.peripheralBlockPolicies = peripheralBlockPolicies;
+                return this;
+            }
+
+            /**
+             * PrivateAccessBlockPolicies.
+             */
+            public Builder privateAccessBlockPolicies(PrivateAccessBlockPolicies privateAccessBlockPolicies) {
+                this.privateAccessBlockPolicies = privateAccessBlockPolicies;
                 return this;
             }
 

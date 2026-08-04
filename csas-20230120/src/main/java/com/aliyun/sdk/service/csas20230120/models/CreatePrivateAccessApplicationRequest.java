@@ -72,6 +72,10 @@ public class CreatePrivateAccessApplicationRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TagIds")
     private java.util.List<String> tagIds;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UnauthorizedAccessConfig")
+    private PAApplicationUnauthorizedAccessConfig unauthorizedAccessConfig;
+
     private CreatePrivateAccessApplicationRequest(Builder builder) {
         super(builder);
         this.addressGroups = builder.addressGroups;
@@ -87,6 +91,7 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         this.protocol = builder.protocol;
         this.status = builder.status;
         this.tagIds = builder.tagIds;
+        this.unauthorizedAccessConfig = builder.unauthorizedAccessConfig;
     }
 
     public static Builder builder() {
@@ -193,6 +198,13 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         return this.tagIds;
     }
 
+    /**
+     * @return unauthorizedAccessConfig
+     */
+    public PAApplicationUnauthorizedAccessConfig getUnauthorizedAccessConfig() {
+        return this.unauthorizedAccessConfig;
+    }
+
     public static final class Builder extends Request.Builder<CreatePrivateAccessApplicationRequest, Builder> {
         private java.util.List<AddressGroup> addressGroups; 
         private java.util.List<String> addresses; 
@@ -207,6 +219,7 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         private String protocol; 
         private String status; 
         private java.util.List<String> tagIds; 
+        private PAApplicationUnauthorizedAccessConfig unauthorizedAccessConfig; 
 
         private Builder() {
             super();
@@ -227,6 +240,7 @@ public class CreatePrivateAccessApplicationRequest extends Request {
             this.protocol = request.protocol;
             this.status = request.status;
             this.tagIds = request.tagIds;
+            this.unauthorizedAccessConfig = request.unauthorizedAccessConfig;
         } 
 
         /**
@@ -378,6 +392,16 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         public Builder tagIds(java.util.List<String> tagIds) {
             this.putBodyParameter("TagIds", tagIds);
             this.tagIds = tagIds;
+            return this;
+        }
+
+        /**
+         * UnauthorizedAccessConfig.
+         */
+        public Builder unauthorizedAccessConfig(PAApplicationUnauthorizedAccessConfig unauthorizedAccessConfig) {
+            String unauthorizedAccessConfigShrink = shrink(unauthorizedAccessConfig, "UnauthorizedAccessConfig", "json");
+            this.putBodyParameter("UnauthorizedAccessConfig", unauthorizedAccessConfigShrink);
+            this.unauthorizedAccessConfig = unauthorizedAccessConfig;
             return this;
         }
 

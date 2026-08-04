@@ -449,6 +449,9 @@ public class ListConnectorsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UpgradeTime")
         private UpgradeTime upgradeTime;
 
+        @com.aliyun.core.annotation.NameInMap("VipCidr")
+        private String vipCidr;
+
         private Connectors(Builder builder) {
             this.accelerateStatus = builder.accelerateStatus;
             this.applications = builder.applications;
@@ -462,6 +465,7 @@ public class ListConnectorsResponseBody extends TeaModel {
             this.status = builder.status;
             this.switchStatus = builder.switchStatus;
             this.upgradeTime = builder.upgradeTime;
+            this.vipCidr = builder.vipCidr;
         }
 
         public static Builder builder() {
@@ -556,6 +560,13 @@ public class ListConnectorsResponseBody extends TeaModel {
             return this.upgradeTime;
         }
 
+        /**
+         * @return vipCidr
+         */
+        public String getVipCidr() {
+            return this.vipCidr;
+        }
+
         public static final class Builder {
             private String accelerateStatus; 
             private java.util.List<Applications> applications; 
@@ -569,6 +580,7 @@ public class ListConnectorsResponseBody extends TeaModel {
             private String status; 
             private String switchStatus; 
             private UpgradeTime upgradeTime; 
+            private String vipCidr; 
 
             private Builder() {
             } 
@@ -586,6 +598,7 @@ public class ListConnectorsResponseBody extends TeaModel {
                 this.status = model.status;
                 this.switchStatus = model.switchStatus;
                 this.upgradeTime = model.upgradeTime;
+                this.vipCidr = model.vipCidr;
             } 
 
             /**
@@ -720,6 +733,14 @@ public class ListConnectorsResponseBody extends TeaModel {
              */
             public Builder upgradeTime(UpgradeTime upgradeTime) {
                 this.upgradeTime = upgradeTime;
+                return this;
+            }
+
+            /**
+             * VipCidr.
+             */
+            public Builder vipCidr(String vipCidr) {
+                this.vipCidr = vipCidr;
                 return this;
             }
 
