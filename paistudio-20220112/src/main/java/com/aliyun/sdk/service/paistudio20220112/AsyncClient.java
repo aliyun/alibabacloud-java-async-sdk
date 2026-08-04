@@ -218,6 +218,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAlgorithmsResponse> listAlgorithms(ListAlgorithmsRequest request);
 
     /**
+     * @param request the request parameters of ListNodePods  ListNodePodsRequest
+     * @return ListNodePodsResponse
+     */
+    CompletableFuture<ListNodePodsResponse> listNodePods(ListNodePodsRequest request);
+
+    /**
      * @param request the request parameters of ListNodeTypes  ListNodeTypesRequest
      * @return ListNodeTypesResponse
      */

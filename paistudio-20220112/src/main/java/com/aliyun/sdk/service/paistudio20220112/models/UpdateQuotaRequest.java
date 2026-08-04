@@ -30,6 +30,10 @@ public class UpdateQuotaRequest extends Request {
     private java.util.List<Label> labels;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PropagateDefaultGPUDriver")
+    private Boolean propagateDefaultGPUDriver;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("QueueStrategy")
     private String queueStrategy;
 
@@ -46,6 +50,7 @@ public class UpdateQuotaRequest extends Request {
         this.quotaId = builder.quotaId;
         this.description = builder.description;
         this.labels = builder.labels;
+        this.propagateDefaultGPUDriver = builder.propagateDefaultGPUDriver;
         this.queueStrategy = builder.queueStrategy;
         this.quotaConfig = builder.quotaConfig;
         this.quotaName = builder.quotaName;
@@ -86,6 +91,13 @@ public class UpdateQuotaRequest extends Request {
     }
 
     /**
+     * @return propagateDefaultGPUDriver
+     */
+    public Boolean getPropagateDefaultGPUDriver() {
+        return this.propagateDefaultGPUDriver;
+    }
+
+    /**
      * @return queueStrategy
      */
     public String getQueueStrategy() {
@@ -110,6 +122,7 @@ public class UpdateQuotaRequest extends Request {
         private String quotaId; 
         private String description; 
         private java.util.List<Label> labels; 
+        private Boolean propagateDefaultGPUDriver; 
         private String queueStrategy; 
         private QuotaConfig quotaConfig; 
         private String quotaName; 
@@ -123,6 +136,7 @@ public class UpdateQuotaRequest extends Request {
             this.quotaId = request.quotaId;
             this.description = request.description;
             this.labels = request.labels;
+            this.propagateDefaultGPUDriver = request.propagateDefaultGPUDriver;
             this.queueStrategy = request.queueStrategy;
             this.quotaConfig = request.quotaConfig;
             this.quotaName = request.quotaName;
@@ -155,6 +169,15 @@ public class UpdateQuotaRequest extends Request {
         public Builder labels(java.util.List<Label> labels) {
             this.putBodyParameter("Labels", labels);
             this.labels = labels;
+            return this;
+        }
+
+        /**
+         * PropagateDefaultGPUDriver.
+         */
+        public Builder propagateDefaultGPUDriver(Boolean propagateDefaultGPUDriver) {
+            this.putBodyParameter("PropagateDefaultGPUDriver", propagateDefaultGPUDriver);
+            this.propagateDefaultGPUDriver = propagateDefaultGPUDriver;
             return this;
         }
 

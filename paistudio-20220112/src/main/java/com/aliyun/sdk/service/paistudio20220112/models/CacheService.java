@@ -32,6 +32,9 @@ public class CacheService extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GmtCreated")
     private String gmtCreated;
 
+    @com.aliyun.core.annotation.NameInMap("IsSharded")
+    private Boolean isSharded;
+
     @com.aliyun.core.annotation.NameInMap("NetworkType")
     private String networkType;
 
@@ -62,6 +65,7 @@ public class CacheService extends TeaModel {
         this.clusterId = builder.clusterId;
         this.createdBy = builder.createdBy;
         this.gmtCreated = builder.gmtCreated;
+        this.isSharded = builder.isSharded;
         this.networkType = builder.networkType;
         this.quotaId = builder.quotaId;
         this.status = builder.status;
@@ -117,6 +121,13 @@ public class CacheService extends TeaModel {
      */
     public String getGmtCreated() {
         return this.gmtCreated;
+    }
+
+    /**
+     * @return isSharded
+     */
+    public Boolean getIsSharded() {
+        return this.isSharded;
     }
 
     /**
@@ -181,6 +192,7 @@ public class CacheService extends TeaModel {
         private String clusterId; 
         private String createdBy; 
         private String gmtCreated; 
+        private Boolean isSharded; 
         private String networkType; 
         private String quotaId; 
         private String status; 
@@ -199,6 +211,7 @@ public class CacheService extends TeaModel {
             this.clusterId = model.clusterId;
             this.createdBy = model.createdBy;
             this.gmtCreated = model.gmtCreated;
+            this.isSharded = model.isSharded;
             this.networkType = model.networkType;
             this.quotaId = model.quotaId;
             this.status = model.status;
@@ -246,6 +259,14 @@ public class CacheService extends TeaModel {
          */
         public Builder gmtCreated(String gmtCreated) {
             this.gmtCreated = gmtCreated;
+            return this;
+        }
+
+        /**
+         * IsSharded.
+         */
+        public Builder isSharded(Boolean isSharded) {
+            this.isSharded = isSharded;
             return this;
         }
 

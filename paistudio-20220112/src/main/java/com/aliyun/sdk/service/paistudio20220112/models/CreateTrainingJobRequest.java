@@ -46,6 +46,10 @@ public class CreateTrainingJobRequest extends Request {
     private ComputeResource computeResource;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CredentialConfig")
+    private CredentialConfig credentialConfig;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Environments")
     private java.util.Map<String, String> environments;
 
@@ -116,6 +120,7 @@ public class CreateTrainingJobRequest extends Request {
         this.assignNodeSpec = builder.assignNodeSpec;
         this.codeDir = builder.codeDir;
         this.computeResource = builder.computeResource;
+        this.credentialConfig = builder.credentialConfig;
         this.environments = builder.environments;
         this.experimentConfig = builder.experimentConfig;
         this.hyperParameters = builder.hyperParameters;
@@ -193,6 +198,13 @@ public class CreateTrainingJobRequest extends Request {
      */
     public ComputeResource getComputeResource() {
         return this.computeResource;
+    }
+
+    /**
+     * @return credentialConfig
+     */
+    public CredentialConfig getCredentialConfig() {
+        return this.credentialConfig;
     }
 
     /**
@@ -308,6 +320,7 @@ public class CreateTrainingJobRequest extends Request {
         private AssignNodeSpec assignNodeSpec; 
         private Location codeDir; 
         private ComputeResource computeResource; 
+        private CredentialConfig credentialConfig; 
         private java.util.Map<String, String> environments; 
         private ExperimentConfig experimentConfig; 
         private java.util.List<HyperParameters> hyperParameters; 
@@ -337,6 +350,7 @@ public class CreateTrainingJobRequest extends Request {
             this.assignNodeSpec = request.assignNodeSpec;
             this.codeDir = request.codeDir;
             this.computeResource = request.computeResource;
+            this.credentialConfig = request.credentialConfig;
             this.environments = request.environments;
             this.experimentConfig = request.experimentConfig;
             this.hyperParameters = request.hyperParameters;
@@ -414,6 +428,15 @@ public class CreateTrainingJobRequest extends Request {
         public Builder computeResource(ComputeResource computeResource) {
             this.putBodyParameter("ComputeResource", computeResource);
             this.computeResource = computeResource;
+            return this;
+        }
+
+        /**
+         * CredentialConfig.
+         */
+        public Builder credentialConfig(CredentialConfig credentialConfig) {
+            this.putBodyParameter("CredentialConfig", credentialConfig);
+            this.credentialConfig = credentialConfig;
             return this;
         }
 
@@ -1106,6 +1129,9 @@ public class CreateTrainingJobRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Options")
         private String options;
 
+        @com.aliyun.core.annotation.NameInMap("RoleArn")
+        private String roleArn;
+
         @com.aliyun.core.annotation.NameInMap("VersionName")
         private String versionName;
 
@@ -1114,6 +1140,7 @@ public class CreateTrainingJobRequest extends Request {
             this.inputUri = builder.inputUri;
             this.name = builder.name;
             this.options = builder.options;
+            this.roleArn = builder.roleArn;
             this.versionName = builder.versionName;
         }
 
@@ -1154,6 +1181,13 @@ public class CreateTrainingJobRequest extends Request {
         }
 
         /**
+         * @return roleArn
+         */
+        public String getRoleArn() {
+            return this.roleArn;
+        }
+
+        /**
          * @return versionName
          */
         public String getVersionName() {
@@ -1165,6 +1199,7 @@ public class CreateTrainingJobRequest extends Request {
             private String inputUri; 
             private String name; 
             private String options; 
+            private String roleArn; 
             private String versionName; 
 
             private Builder() {
@@ -1175,6 +1210,7 @@ public class CreateTrainingJobRequest extends Request {
                 this.inputUri = model.inputUri;
                 this.name = model.name;
                 this.options = model.options;
+                this.roleArn = model.roleArn;
                 this.versionName = model.versionName;
             } 
 
@@ -1207,6 +1243,14 @@ public class CreateTrainingJobRequest extends Request {
              */
             public Builder options(String options) {
                 this.options = options;
+                return this;
+            }
+
+            /**
+             * RoleArn.
+             */
+            public Builder roleArn(String roleArn) {
+                this.roleArn = roleArn;
                 return this;
             }
 
@@ -1316,6 +1360,9 @@ public class CreateTrainingJobRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("OutputUri")
         private String outputUri;
 
+        @com.aliyun.core.annotation.NameInMap("RoleArn")
+        private String roleArn;
+
         @com.aliyun.core.annotation.NameInMap("VersionName")
         private String versionName;
 
@@ -1323,6 +1370,7 @@ public class CreateTrainingJobRequest extends Request {
             this.datasetId = builder.datasetId;
             this.name = builder.name;
             this.outputUri = builder.outputUri;
+            this.roleArn = builder.roleArn;
             this.versionName = builder.versionName;
         }
 
@@ -1356,6 +1404,13 @@ public class CreateTrainingJobRequest extends Request {
         }
 
         /**
+         * @return roleArn
+         */
+        public String getRoleArn() {
+            return this.roleArn;
+        }
+
+        /**
          * @return versionName
          */
         public String getVersionName() {
@@ -1366,6 +1421,7 @@ public class CreateTrainingJobRequest extends Request {
             private String datasetId; 
             private String name; 
             private String outputUri; 
+            private String roleArn; 
             private String versionName; 
 
             private Builder() {
@@ -1375,6 +1431,7 @@ public class CreateTrainingJobRequest extends Request {
                 this.datasetId = model.datasetId;
                 this.name = model.name;
                 this.outputUri = model.outputUri;
+                this.roleArn = model.roleArn;
                 this.versionName = model.versionName;
             } 
 
@@ -1399,6 +1456,14 @@ public class CreateTrainingJobRequest extends Request {
              */
             public Builder outputUri(String outputUri) {
                 this.outputUri = outputUri;
+                return this;
+            }
+
+            /**
+             * RoleArn.
+             */
+            public Builder roleArn(String roleArn) {
+                this.roleArn = roleArn;
                 return this;
             }
 

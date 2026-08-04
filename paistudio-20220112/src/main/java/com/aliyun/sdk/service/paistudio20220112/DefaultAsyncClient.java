@@ -49,7 +49,12 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-qingdao", "pai.cn-qingdao.aliyuncs.com"),
             new TeaPair("cn-shanghai-finance-1", "pai.cn-shanghai-finance-1.aliyuncs.com"),
             new TeaPair("cn-wulanchabu", "pai.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "pai.cn-zhangjiakou.aliyuncs.com")
+            new TeaPair("cn-zhangjiakou", "pai.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("us-southeast-1", "pai.us-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-zhongwei", "pai.cn-zhongwei.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "pai.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "pai.ap-southeast-8.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "pai.ap-northeast-2.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -636,6 +641,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListAlgorithmsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListNodePods  ListNodePodsRequest
+     * @return ListNodePodsResponse
+     */
+    @Override
+    public CompletableFuture<ListNodePodsResponse> listNodePods(ListNodePodsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListNodePods").setMethod(HttpMethod.GET).setPathRegex("/api/v1/nodes/{NodeId}/Pods").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListNodePodsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListNodePodsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

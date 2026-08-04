@@ -44,6 +44,9 @@ public class QuotaConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EniCacheConfig")
     private EniCacheConfig eniCacheConfig;
 
+    @com.aliyun.core.annotation.NameInMap("IsEncryptedResource")
+    private Boolean isEncryptedResource;
+
     @com.aliyun.core.annotation.NameInMap("OversoldUsageConfig")
     private OversoldUsageConfig oversoldUsageConfig;
 
@@ -71,6 +74,9 @@ public class QuotaConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("UserVpc")
     private UserVpc userVpc;
 
+    @com.aliyun.core.annotation.NameInMap("WorkloadTypes")
+    private java.util.List<String> workloadTypes;
+
     private QuotaConfig(Builder builder) {
         this.ACS = builder.ACS;
         this.clusterId = builder.clusterId;
@@ -81,6 +87,7 @@ public class QuotaConfig extends TeaModel {
         this.enableSelfQuotaPreemption = builder.enableSelfQuotaPreemption;
         this.enableSubQuotaPreemption = builder.enableSubQuotaPreemption;
         this.eniCacheConfig = builder.eniCacheConfig;
+        this.isEncryptedResource = builder.isEncryptedResource;
         this.oversoldUsageConfig = builder.oversoldUsageConfig;
         this.resourceSpecs = builder.resourceSpecs;
         this.sandboxCacheConfig = builder.sandboxCacheConfig;
@@ -90,6 +97,7 @@ public class QuotaConfig extends TeaModel {
         this.supportRDMA = builder.supportRDMA;
         this.useCase = builder.useCase;
         this.userVpc = builder.userVpc;
+        this.workloadTypes = builder.workloadTypes;
     }
 
     public static Builder builder() {
@@ -168,6 +176,13 @@ public class QuotaConfig extends TeaModel {
     }
 
     /**
+     * @return isEncryptedResource
+     */
+    public Boolean getIsEncryptedResource() {
+        return this.isEncryptedResource;
+    }
+
+    /**
      * @return oversoldUsageConfig
      */
     public OversoldUsageConfig getOversoldUsageConfig() {
@@ -230,6 +245,13 @@ public class QuotaConfig extends TeaModel {
         return this.userVpc;
     }
 
+    /**
+     * @return workloadTypes
+     */
+    public java.util.List<String> getWorkloadTypes() {
+        return this.workloadTypes;
+    }
+
     public static final class Builder {
         private ACS ACS; 
         private String clusterId; 
@@ -240,6 +262,7 @@ public class QuotaConfig extends TeaModel {
         private Boolean enableSelfQuotaPreemption; 
         private Boolean enableSubQuotaPreemption; 
         private EniCacheConfig eniCacheConfig; 
+        private Boolean isEncryptedResource; 
         private OversoldUsageConfig oversoldUsageConfig; 
         private java.util.List<WorkspaceSpecs> resourceSpecs; 
         private SandboxCacheConfig sandboxCacheConfig; 
@@ -249,6 +272,7 @@ public class QuotaConfig extends TeaModel {
         private Boolean supportRDMA; 
         private String useCase; 
         private UserVpc userVpc; 
+        private java.util.List<String> workloadTypes; 
 
         private Builder() {
         } 
@@ -263,6 +287,7 @@ public class QuotaConfig extends TeaModel {
             this.enableSelfQuotaPreemption = model.enableSelfQuotaPreemption;
             this.enableSubQuotaPreemption = model.enableSubQuotaPreemption;
             this.eniCacheConfig = model.eniCacheConfig;
+            this.isEncryptedResource = model.isEncryptedResource;
             this.oversoldUsageConfig = model.oversoldUsageConfig;
             this.resourceSpecs = model.resourceSpecs;
             this.sandboxCacheConfig = model.sandboxCacheConfig;
@@ -272,6 +297,7 @@ public class QuotaConfig extends TeaModel {
             this.supportRDMA = model.supportRDMA;
             this.useCase = model.useCase;
             this.userVpc = model.userVpc;
+            this.workloadTypes = model.workloadTypes;
         } 
 
         /**
@@ -347,6 +373,14 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
+         * IsEncryptedResource.
+         */
+        public Builder isEncryptedResource(Boolean isEncryptedResource) {
+            this.isEncryptedResource = isEncryptedResource;
+            return this;
+        }
+
+        /**
          * OversoldUsageConfig.
          */
         public Builder oversoldUsageConfig(OversoldUsageConfig oversoldUsageConfig) {
@@ -415,6 +449,14 @@ public class QuotaConfig extends TeaModel {
          */
         public Builder userVpc(UserVpc userVpc) {
             this.userVpc = userVpc;
+            return this;
+        }
+
+        /**
+         * WorkloadTypes.
+         */
+        public Builder workloadTypes(java.util.List<String> workloadTypes) {
+            this.workloadTypes = workloadTypes;
             return this;
         }
 

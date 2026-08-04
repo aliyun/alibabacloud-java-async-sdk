@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>NodeDrainParameters</p>
  */
 public class NodeDrainParameters extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Force")
+    private Boolean force;
+
     @com.aliyun.core.annotation.NameInMap("PodFromSubProducts")
     private java.util.List<String> podFromSubProducts;
 
@@ -24,6 +27,7 @@ public class NodeDrainParameters extends TeaModel {
     private java.util.List<String> podNames;
 
     private NodeDrainParameters(Builder builder) {
+        this.force = builder.force;
         this.podFromSubProducts = builder.podFromSubProducts;
         this.podNames = builder.podNames;
     }
@@ -41,6 +45,13 @@ public class NodeDrainParameters extends TeaModel {
     }
 
     /**
+     * @return force
+     */
+    public Boolean getForce() {
+        return this.force;
+    }
+
+    /**
      * @return podFromSubProducts
      */
     public java.util.List<String> getPodFromSubProducts() {
@@ -55,6 +66,7 @@ public class NodeDrainParameters extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean force; 
         private java.util.List<String> podFromSubProducts; 
         private java.util.List<String> podNames; 
 
@@ -62,9 +74,18 @@ public class NodeDrainParameters extends TeaModel {
         } 
 
         private Builder(NodeDrainParameters model) {
+            this.force = model.force;
             this.podFromSubProducts = model.podFromSubProducts;
             this.podNames = model.podNames;
         } 
+
+        /**
+         * Force.
+         */
+        public Builder force(Boolean force) {
+            this.force = force;
+            return this;
+        }
 
         /**
          * PodFromSubProducts.

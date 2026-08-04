@@ -572,6 +572,9 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("RoleArn")
+        private String roleArn;
+
         @com.aliyun.core.annotation.NameInMap("VersionName")
         private String versionName;
 
@@ -579,6 +582,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             this.datasetId = builder.datasetId;
             this.inputUri = builder.inputUri;
             this.name = builder.name;
+            this.roleArn = builder.roleArn;
             this.versionName = builder.versionName;
         }
 
@@ -612,6 +616,13 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         }
 
         /**
+         * @return roleArn
+         */
+        public String getRoleArn() {
+            return this.roleArn;
+        }
+
+        /**
          * @return versionName
          */
         public String getVersionName() {
@@ -622,6 +633,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             private String datasetId; 
             private String inputUri; 
             private String name; 
+            private String roleArn; 
             private String versionName; 
 
             private Builder() {
@@ -631,6 +643,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
                 this.datasetId = model.datasetId;
                 this.inputUri = model.inputUri;
                 this.name = model.name;
+                this.roleArn = model.roleArn;
                 this.versionName = model.versionName;
             } 
 
@@ -655,6 +668,14 @@ public class ListTrainingJobsResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * RoleArn.
+             */
+            public Builder roleArn(String roleArn) {
+                this.roleArn = roleArn;
                 return this;
             }
 
@@ -764,6 +785,9 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OutputUri")
         private String outputUri;
 
+        @com.aliyun.core.annotation.NameInMap("RoleArn")
+        private String roleArn;
+
         @com.aliyun.core.annotation.NameInMap("VersionName")
         private String versionName;
 
@@ -771,6 +795,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             this.datasetId = builder.datasetId;
             this.name = builder.name;
             this.outputUri = builder.outputUri;
+            this.roleArn = builder.roleArn;
             this.versionName = builder.versionName;
         }
 
@@ -804,6 +829,13 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         }
 
         /**
+         * @return roleArn
+         */
+        public String getRoleArn() {
+            return this.roleArn;
+        }
+
+        /**
          * @return versionName
          */
         public String getVersionName() {
@@ -814,6 +846,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             private String datasetId; 
             private String name; 
             private String outputUri; 
+            private String roleArn; 
             private String versionName; 
 
             private Builder() {
@@ -823,6 +856,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
                 this.datasetId = model.datasetId;
                 this.name = model.name;
                 this.outputUri = model.outputUri;
+                this.roleArn = model.roleArn;
                 this.versionName = model.versionName;
             } 
 
@@ -847,6 +881,14 @@ public class ListTrainingJobsResponseBody extends TeaModel {
              */
             public Builder outputUri(String outputUri) {
                 this.outputUri = outputUri;
+                return this;
+            }
+
+            /**
+             * RoleArn.
+             */
+            public Builder roleArn(String roleArn) {
+                this.roleArn = roleArn;
                 return this;
             }
 
@@ -1220,6 +1262,9 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComputeResource")
         private ComputeResource computeResource;
 
+        @com.aliyun.core.annotation.NameInMap("CredentialConfig")
+        private CredentialConfig credentialConfig;
+
         @com.aliyun.core.annotation.NameInMap("DlcJobId")
         private String dlcJobId;
 
@@ -1295,6 +1340,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             this.algorithmVersion = builder.algorithmVersion;
             this.assignNodeSpec = builder.assignNodeSpec;
             this.computeResource = builder.computeResource;
+            this.credentialConfig = builder.credentialConfig;
             this.dlcJobId = builder.dlcJobId;
             this.environments = builder.environments;
             this.experimentConfig = builder.experimentConfig;
@@ -1361,6 +1407,13 @@ public class ListTrainingJobsResponseBody extends TeaModel {
          */
         public ComputeResource getComputeResource() {
             return this.computeResource;
+        }
+
+        /**
+         * @return credentialConfig
+         */
+        public CredentialConfig getCredentialConfig() {
+            return this.credentialConfig;
         }
 
         /**
@@ -1530,6 +1583,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             private String algorithmVersion; 
             private AssignNodeSpec assignNodeSpec; 
             private ComputeResource computeResource; 
+            private CredentialConfig credentialConfig; 
             private String dlcJobId; 
             private java.util.Map<String, String> environments; 
             private ExperimentConfig experimentConfig; 
@@ -1563,6 +1617,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
                 this.algorithmVersion = model.algorithmVersion;
                 this.assignNodeSpec = model.assignNodeSpec;
                 this.computeResource = model.computeResource;
+                this.credentialConfig = model.credentialConfig;
                 this.dlcJobId = model.dlcJobId;
                 this.environments = model.environments;
                 this.experimentConfig = model.experimentConfig;
@@ -1625,6 +1680,14 @@ public class ListTrainingJobsResponseBody extends TeaModel {
              */
             public Builder computeResource(ComputeResource computeResource) {
                 this.computeResource = computeResource;
+                return this;
+            }
+
+            /**
+             * CredentialConfig.
+             */
+            public Builder credentialConfig(CredentialConfig credentialConfig) {
+                this.credentialConfig = credentialConfig;
                 return this;
             }
 
