@@ -164,7 +164,10 @@ public class GetAirflowResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Reuqest ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E0D21075-CD3E-4D98-8264-****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -650,7 +653,10 @@ public class GetAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>VPC ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2zevqv4obraqd5p****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

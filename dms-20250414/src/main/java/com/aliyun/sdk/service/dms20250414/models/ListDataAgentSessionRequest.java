@@ -26,6 +26,10 @@ public class ListDataAgentSessionRequest extends Request {
     private Long createStartTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreatorId")
+    private String creatorId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CustomAgentId")
     private String customAgentId;
 
@@ -65,6 +69,7 @@ public class ListDataAgentSessionRequest extends Request {
         super(builder);
         this.createEndTime = builder.createEndTime;
         this.createStartTime = builder.createStartTime;
+        this.creatorId = builder.creatorId;
         this.customAgentId = builder.customAgentId;
         this.DMSUnit = builder.DMSUnit;
         this.isSaved = builder.isSaved;
@@ -101,6 +106,13 @@ public class ListDataAgentSessionRequest extends Request {
      */
     public Long getCreateStartTime() {
         return this.createStartTime;
+    }
+
+    /**
+     * @return creatorId
+     */
+    public String getCreatorId() {
+        return this.creatorId;
     }
 
     /**
@@ -169,6 +181,7 @@ public class ListDataAgentSessionRequest extends Request {
     public static final class Builder extends Request.Builder<ListDataAgentSessionRequest, Builder> {
         private Long createEndTime; 
         private Long createStartTime; 
+        private String creatorId; 
         private String customAgentId; 
         private String DMSUnit; 
         private Boolean isSaved; 
@@ -187,6 +200,7 @@ public class ListDataAgentSessionRequest extends Request {
             super(request);
             this.createEndTime = request.createEndTime;
             this.createStartTime = request.createStartTime;
+            this.creatorId = request.creatorId;
             this.customAgentId = request.customAgentId;
             this.DMSUnit = request.DMSUnit;
             this.isSaved = request.isSaved;
@@ -213,6 +227,15 @@ public class ListDataAgentSessionRequest extends Request {
         public Builder createStartTime(Long createStartTime) {
             this.putQueryParameter("CreateStartTime", createStartTime);
             this.createStartTime = createStartTime;
+            return this;
+        }
+
+        /**
+         * CreatorId.
+         */
+        public Builder creatorId(String creatorId) {
+            this.putQueryParameter("CreatorId", creatorId);
+            this.creatorId = creatorId;
             return this;
         }
 

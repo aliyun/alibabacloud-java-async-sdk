@@ -41,6 +41,12 @@ public class AgenticDmsInstanceSyncTask extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GmtModified")
     private String gmtModified;
 
+    @com.aliyun.core.annotation.NameInMap("OperatorMode")
+    private String operatorMode;
+
+    @com.aliyun.core.annotation.NameInMap("RequestedOperatorMode")
+    private String requestedOperatorMode;
+
     @com.aliyun.core.annotation.NameInMap("SkippedCount")
     private Integer skippedCount;
 
@@ -68,6 +74,8 @@ public class AgenticDmsInstanceSyncTask extends TeaModel {
         this.failedCount = builder.failedCount;
         this.gmtCreate = builder.gmtCreate;
         this.gmtModified = builder.gmtModified;
+        this.operatorMode = builder.operatorMode;
+        this.requestedOperatorMode = builder.requestedOperatorMode;
         this.skippedCount = builder.skippedCount;
         this.status = builder.status;
         this.successCount = builder.successCount;
@@ -145,6 +153,20 @@ public class AgenticDmsInstanceSyncTask extends TeaModel {
     }
 
     /**
+     * @return operatorMode
+     */
+    public String getOperatorMode() {
+        return this.operatorMode;
+    }
+
+    /**
+     * @return requestedOperatorMode
+     */
+    public String getRequestedOperatorMode() {
+        return this.requestedOperatorMode;
+    }
+
+    /**
      * @return skippedCount
      */
     public Integer getSkippedCount() {
@@ -195,6 +217,8 @@ public class AgenticDmsInstanceSyncTask extends TeaModel {
         private Integer failedCount; 
         private String gmtCreate; 
         private String gmtModified; 
+        private String operatorMode; 
+        private String requestedOperatorMode; 
         private Integer skippedCount; 
         private String status; 
         private Integer successCount; 
@@ -214,6 +238,8 @@ public class AgenticDmsInstanceSyncTask extends TeaModel {
             this.failedCount = model.failedCount;
             this.gmtCreate = model.gmtCreate;
             this.gmtModified = model.gmtModified;
+            this.operatorMode = model.operatorMode;
+            this.requestedOperatorMode = model.requestedOperatorMode;
             this.skippedCount = model.skippedCount;
             this.status = model.status;
             this.successCount = model.successCount;
@@ -283,6 +309,22 @@ public class AgenticDmsInstanceSyncTask extends TeaModel {
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
+            return this;
+        }
+
+        /**
+         * OperatorMode.
+         */
+        public Builder operatorMode(String operatorMode) {
+            this.operatorMode = operatorMode;
+            return this;
+        }
+
+        /**
+         * RequestedOperatorMode.
+         */
+        public Builder requestedOperatorMode(String requestedOperatorMode) {
+            this.requestedOperatorMode = requestedOperatorMode;
             return this;
         }
 

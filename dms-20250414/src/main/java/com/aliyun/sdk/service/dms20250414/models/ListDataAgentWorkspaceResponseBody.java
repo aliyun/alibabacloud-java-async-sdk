@@ -206,6 +206,9 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
+        @com.aliyun.core.annotation.NameInMap("CreatorName")
+        private String creatorName;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
@@ -218,8 +221,14 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RoleName")
         private String roleName;
 
+        @com.aliyun.core.annotation.NameInMap("RunningSessionCount")
+        private Integer runningSessionCount;
+
         @com.aliyun.core.annotation.NameInMap("TotalMember")
         private Long totalMember;
+
+        @com.aliyun.core.annotation.NameInMap("TotalSessionCount")
+        private Integer totalSessionCount;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -236,11 +245,14 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         private Content(Builder builder) {
             this.createTime = builder.createTime;
             this.creator = builder.creator;
+            this.creatorName = builder.creatorName;
             this.description = builder.description;
             this.isSessionShareEnabled = builder.isSessionShareEnabled;
             this.modifyTime = builder.modifyTime;
             this.roleName = builder.roleName;
+            this.runningSessionCount = builder.runningSessionCount;
             this.totalMember = builder.totalMember;
+            this.totalSessionCount = builder.totalSessionCount;
             this.type = builder.type;
             this.workspaceId = builder.workspaceId;
             this.workspaceName = builder.workspaceName;
@@ -267,6 +279,13 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
          */
         public String getCreator() {
             return this.creator;
+        }
+
+        /**
+         * @return creatorName
+         */
+        public String getCreatorName() {
+            return this.creatorName;
         }
 
         /**
@@ -298,10 +317,24 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         }
 
         /**
+         * @return runningSessionCount
+         */
+        public Integer getRunningSessionCount() {
+            return this.runningSessionCount;
+        }
+
+        /**
          * @return totalMember
          */
         public Long getTotalMember() {
             return this.totalMember;
+        }
+
+        /**
+         * @return totalSessionCount
+         */
+        public Integer getTotalSessionCount() {
+            return this.totalSessionCount;
         }
 
         /**
@@ -335,11 +368,14 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
         public static final class Builder {
             private Long createTime; 
             private String creator; 
+            private String creatorName; 
             private String description; 
             private Boolean isSessionShareEnabled; 
             private Long modifyTime; 
             private String roleName; 
+            private Integer runningSessionCount; 
             private Long totalMember; 
+            private Integer totalSessionCount; 
             private String type; 
             private String workspaceId; 
             private String workspaceName; 
@@ -351,11 +387,14 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             private Builder(Content model) {
                 this.createTime = model.createTime;
                 this.creator = model.creator;
+                this.creatorName = model.creatorName;
                 this.description = model.description;
                 this.isSessionShareEnabled = model.isSessionShareEnabled;
                 this.modifyTime = model.modifyTime;
                 this.roleName = model.roleName;
+                this.runningSessionCount = model.runningSessionCount;
                 this.totalMember = model.totalMember;
+                this.totalSessionCount = model.totalSessionCount;
                 this.type = model.type;
                 this.workspaceId = model.workspaceId;
                 this.workspaceName = model.workspaceName;
@@ -375,6 +414,14 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
              */
             public Builder creator(String creator) {
                 this.creator = creator;
+                return this;
+            }
+
+            /**
+             * CreatorName.
+             */
+            public Builder creatorName(String creatorName) {
+                this.creatorName = creatorName;
                 return this;
             }
 
@@ -411,10 +458,26 @@ public class ListDataAgentWorkspaceResponseBody extends TeaModel {
             }
 
             /**
+             * RunningSessionCount.
+             */
+            public Builder runningSessionCount(Integer runningSessionCount) {
+                this.runningSessionCount = runningSessionCount;
+                return this;
+            }
+
+            /**
              * TotalMember.
              */
             public Builder totalMember(Long totalMember) {
                 this.totalMember = totalMember;
+                return this;
+            }
+
+            /**
+             * TotalSessionCount.
+             */
+            public Builder totalSessionCount(Integer totalSessionCount) {
+                this.totalSessionCount = totalSessionCount;
                 return this;
             }
 

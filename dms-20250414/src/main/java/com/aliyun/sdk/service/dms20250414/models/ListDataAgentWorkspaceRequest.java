@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDataAgentWorkspaceRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Creator")
+    private String creator;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DMSUnit")
     private String DMSUnit;
 
@@ -58,6 +62,7 @@ public class ListDataAgentWorkspaceRequest extends Request {
 
     private ListDataAgentWorkspaceRequest(Builder builder) {
         super(builder);
+        this.creator = builder.creator;
         this.DMSUnit = builder.DMSUnit;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -80,6 +85,13 @@ public class ListDataAgentWorkspaceRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return creator
+     */
+    public String getCreator() {
+        return this.creator;
     }
 
     /**
@@ -146,6 +158,7 @@ public class ListDataAgentWorkspaceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListDataAgentWorkspaceRequest, Builder> {
+        private String creator; 
         private String DMSUnit; 
         private Integer maxResults; 
         private String nextToken; 
@@ -162,6 +175,7 @@ public class ListDataAgentWorkspaceRequest extends Request {
 
         private Builder(ListDataAgentWorkspaceRequest request) {
             super(request);
+            this.creator = request.creator;
             this.DMSUnit = request.DMSUnit;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -172,6 +186,15 @@ public class ListDataAgentWorkspaceRequest extends Request {
             this.workspaceName = request.workspaceName;
             this.workspaceType = request.workspaceType;
         } 
+
+        /**
+         * Creator.
+         */
+        public Builder creator(String creator) {
+            this.putQueryParameter("Creator", creator);
+            this.creator = creator;
+            return this;
+        }
 
         /**
          * DMSUnit.

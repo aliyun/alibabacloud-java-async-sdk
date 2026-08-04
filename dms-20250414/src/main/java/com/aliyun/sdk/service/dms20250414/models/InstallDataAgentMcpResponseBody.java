@@ -12,13 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link OperateCustomAgentResponseBody} extends {@link TeaModel}
+ * {@link InstallDataAgentMcpResponseBody} extends {@link TeaModel}
  *
- * <p>OperateCustomAgentResponseBody</p>
+ * <p>InstallDataAgentMcpResponseBody</p>
  */
-public class OperateCustomAgentResponseBody extends TeaModel {
+public class InstallDataAgentMcpResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private Data data;
+    private Object data;
 
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
@@ -32,7 +32,7 @@ public class OperateCustomAgentResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private OperateCustomAgentResponseBody(Builder builder) {
+    private InstallDataAgentMcpResponseBody(Builder builder) {
         this.data = builder.data;
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
@@ -44,7 +44,7 @@ public class OperateCustomAgentResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static OperateCustomAgentResponseBody create() {
+    public static InstallDataAgentMcpResponseBody create() {
         return builder().build();
     }
 
@@ -55,7 +55,7 @@ public class OperateCustomAgentResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public Data getData() {
+    public Object getData() {
         return this.data;
     }
 
@@ -88,7 +88,7 @@ public class OperateCustomAgentResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Data data; 
+        private Object data; 
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
@@ -97,7 +97,7 @@ public class OperateCustomAgentResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(OperateCustomAgentResponseBody model) {
+        private Builder(InstallDataAgentMcpResponseBody model) {
             this.data = model.data;
             this.errorCode = model.errorCode;
             this.errorMessage = model.errorMessage;
@@ -108,7 +108,7 @@ public class OperateCustomAgentResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(Data data) {
+        public Builder data(Object data) {
             this.data = data;
             return this;
         }
@@ -133,7 +133,7 @@ public class OperateCustomAgentResponseBody extends TeaModel {
          * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
+         * <p>67E910F2-***-695C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -148,106 +148,10 @@ public class OperateCustomAgentResponseBody extends TeaModel {
             return this;
         }
 
-        public OperateCustomAgentResponseBody build() {
-            return new OperateCustomAgentResponseBody(this);
+        public InstallDataAgentMcpResponseBody build() {
+            return new InstallDataAgentMcpResponseBody(this);
         } 
 
     } 
 
-    /**
-     * 
-     * {@link OperateCustomAgentResponseBody} extends {@link TeaModel}
-     *
-     * <p>OperateCustomAgentResponseBody</p>
-     */
-    public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("CustomAgentId")
-        private String customAgentId;
-
-        @com.aliyun.core.annotation.NameInMap("Message")
-        private String message;
-
-        @com.aliyun.core.annotation.NameInMap("Success")
-        private Boolean success;
-
-        private Data(Builder builder) {
-            this.customAgentId = builder.customAgentId;
-            this.message = builder.message;
-            this.success = builder.success;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Data create() {
-            return builder().build();
-        }
-
-        /**
-         * @return customAgentId
-         */
-        public String getCustomAgentId() {
-            return this.customAgentId;
-        }
-
-        /**
-         * @return message
-         */
-        public String getMessage() {
-            return this.message;
-        }
-
-        /**
-         * @return success
-         */
-        public Boolean getSuccess() {
-            return this.success;
-        }
-
-        public static final class Builder {
-            private String customAgentId; 
-            private String message; 
-            private Boolean success; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.customAgentId = model.customAgentId;
-                this.message = model.message;
-                this.success = model.success;
-            } 
-
-            /**
-             * CustomAgentId.
-             */
-            public Builder customAgentId(String customAgentId) {
-                this.customAgentId = customAgentId;
-                return this;
-            }
-
-            /**
-             * Message.
-             */
-            public Builder message(String message) {
-                this.message = message;
-                return this;
-            }
-
-            /**
-             * Success.
-             */
-            public Builder success(Boolean success) {
-                this.success = success;
-                return this;
-            }
-
-            public Data build() {
-                return new Data(this);
-            } 
-
-        } 
-
-    }
 }

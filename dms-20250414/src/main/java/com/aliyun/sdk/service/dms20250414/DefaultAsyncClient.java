@@ -464,6 +464,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteDataAgentMcp  DeleteDataAgentMcpRequest
+     * @return DeleteDataAgentMcpResponse
+     */
+    @Override
+    public CompletableFuture<DeleteDataAgentMcpResponse> deleteDataAgentMcp(DeleteDataAgentMcpRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteDataAgentMcp").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteDataAgentMcpResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteDataAgentMcpResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteDataAgentMemory  DeleteDataAgentMemoryRequest
      * @return DeleteDataAgentMemoryResponse
      */
@@ -852,6 +870,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetDataAgentMcp  GetDataAgentMcpRequest
+     * @return GetDataAgentMcpResponse
+     */
+    @Override
+    public CompletableFuture<GetDataAgentMcpResponse> getDataAgentMcp(GetDataAgentMcpRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetDataAgentMcp").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDataAgentMcpResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDataAgentMcpResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetDataAgentSubAccountInfo  GetDataAgentSubAccountInfoRequest
      * @return GetDataAgentSubAccountInfoResponse
      */
@@ -978,6 +1014,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetListMcpServerToolsResult  GetListMcpServerToolsResultRequest
+     * @return GetListMcpServerToolsResultResponse
+     */
+    @Override
+    public CompletableFuture<GetListMcpServerToolsResultResponse> getListMcpServerToolsResult(GetListMcpServerToolsResultRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetListMcpServerToolsResult").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetListMcpServerToolsResultResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetListMcpServerToolsResultResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetNotebookAndSubmitTask  GetNotebookAndSubmitTaskRequest
      * @return GetNotebookAndSubmitTaskResponse
      */
@@ -1086,6 +1140,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of InitWorkspaceSystemMcpServer  InitWorkspaceSystemMcpServerRequest
+     * @return InitWorkspaceSystemMcpServerResponse
+     */
+    @Override
+    public CompletableFuture<InitWorkspaceSystemMcpServerResponse> initWorkspaceSystemMcpServer(InitWorkspaceSystemMcpServerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("InitWorkspaceSystemMcpServer").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(InitWorkspaceSystemMcpServerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<InitWorkspaceSystemMcpServerResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of InstallDataAgentMcp  InstallDataAgentMcpRequest
+     * @return InstallDataAgentMcpResponse
+     */
+    @Override
+    public CompletableFuture<InstallDataAgentMcpResponse> installDataAgentMcp(InstallDataAgentMcpRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("InstallDataAgentMcp").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(InstallDataAgentMcpResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<InstallDataAgentMcpResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListAirflowVersions  ListAirflowVersionsRequest
      * @return ListAirflowVersionsResponse
      */
@@ -1188,6 +1278,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListDataAgentAccuracyTestTasksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListDataAgentMcp  ListDataAgentMcpRequest
+     * @return ListDataAgentMcpResponse
+     */
+    @Override
+    public CompletableFuture<ListDataAgentMcpResponse> listDataAgentMcp(ListDataAgentMcpRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListDataAgentMcp").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDataAgentMcpResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDataAgentMcpResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1590,6 +1698,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModifyDataAgentMcp  ModifyDataAgentMcpRequest
+     * @return ModifyDataAgentMcpResponse
+     */
+    @Override
+    public CompletableFuture<ModifyDataAgentMcpResponse> modifyDataAgentMcp(ModifyDataAgentMcpRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyDataAgentMcp").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyDataAgentMcpResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyDataAgentMcpResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of OperateCustomAgent  OperateCustomAgentRequest
      * @return OperateCustomAgentResponse
      */
@@ -1746,6 +1872,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<StartDataAgentAccuracyTestTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of StartListMcpServerTools  StartListMcpServerToolsRequest
+     * @return StartListMcpServerToolsResponse
+     */
+    @Override
+    public CompletableFuture<StartListMcpServerToolsResponse> startListMcpServerTools(StartListMcpServerToolsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("StartListMcpServerTools").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StartListMcpServerToolsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StartListMcpServerToolsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

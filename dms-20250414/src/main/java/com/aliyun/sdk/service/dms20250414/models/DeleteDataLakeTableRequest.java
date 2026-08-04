@@ -142,6 +142,9 @@ public class DeleteDataLakeTableRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hive</p>
          */
         public Builder catalogName(String catalogName) {
             this.putQueryParameter("CatalogName", catalogName);
@@ -151,6 +154,9 @@ public class DeleteDataLakeTableRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -160,6 +166,9 @@ public class DeleteDataLakeTableRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_table</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

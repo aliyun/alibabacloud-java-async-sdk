@@ -145,6 +145,9 @@ public class CreateDataAgentKnowledgeBaseRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KnowledgeBaseTest</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -154,6 +157,9 @@ public class CreateDataAgentKnowledgeBaseRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8i5tw7omgaax*********n909jid</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

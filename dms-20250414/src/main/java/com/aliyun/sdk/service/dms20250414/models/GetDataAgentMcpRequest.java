@@ -12,29 +12,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetAirflowRequest} extends {@link RequestModel}
+ * {@link GetDataAgentMcpRequest} extends {@link RequestModel}
  *
- * <p>GetAirflowRequest</p>
+ * <p>GetDataAgentMcpRequest</p>
  */
-public class GetAirflowRequest extends Request {
-    @com.aliyun.core.annotation.Host
-    @com.aliyun.core.annotation.NameInMap("RegionId")
-    private String regionId;
-
+public class GetDataAgentMcpRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("AirflowId")
+    @com.aliyun.core.annotation.NameInMap("McpServerId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String airflowId;
+    private String mcpServerId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
-    private GetAirflowRequest(Builder builder) {
+    private GetDataAgentMcpRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
-        this.airflowId = builder.airflowId;
+        this.mcpServerId = builder.mcpServerId;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -42,7 +37,7 @@ public class GetAirflowRequest extends Request {
         return new Builder();
     }
 
-    public static GetAirflowRequest create() {
+    public static GetDataAgentMcpRequest create() {
         return builder().build();
     }
 
@@ -52,17 +47,10 @@ public class GetAirflowRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return mcpServerId
      */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return airflowId
-     */
-    public String getAirflowId() {
-        return this.airflowId;
+    public String getMcpServerId() {
+        return this.mcpServerId;
     }
 
     /**
@@ -72,28 +60,29 @@ public class GetAirflowRequest extends Request {
         return this.workspaceId;
     }
 
-    public static final class Builder extends Request.Builder<GetAirflowRequest, Builder> {
-        private String regionId; 
-        private String airflowId; 
+    public static final class Builder extends Request.Builder<GetDataAgentMcpRequest, Builder> {
+        private String mcpServerId; 
         private String workspaceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetAirflowRequest request) {
+        private Builder(GetDataAgentMcpRequest request) {
             super(request);
-            this.regionId = request.regionId;
-            this.airflowId = request.airflowId;
+            this.mcpServerId = request.mcpServerId;
             this.workspaceId = request.workspaceId;
         } 
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44lg***z65</p>
          */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder mcpServerId(String mcpServerId) {
+            this.putQueryParameter("McpServerId", mcpServerId);
+            this.mcpServerId = mcpServerId;
             return this;
         }
 
@@ -101,19 +90,7 @@ public class GetAirflowRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>af-b3a7f110a6vmvn7****</p>
-         */
-        public Builder airflowId(String airflowId) {
-            this.putQueryParameter("AirflowId", airflowId);
-            this.airflowId = airflowId;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>8630242382****</p>
+         * <p>atvx***xmz</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);
@@ -122,8 +99,8 @@ public class GetAirflowRequest extends Request {
         }
 
         @Override
-        public GetAirflowRequest build() {
-            return new GetAirflowRequest(this);
+        public GetDataAgentMcpRequest build() {
+            return new GetDataAgentMcpRequest(this);
         } 
 
     } 

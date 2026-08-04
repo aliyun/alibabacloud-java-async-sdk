@@ -158,6 +158,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDataAgentKnowledgeBaseResponse> deleteDataAgentKnowledgeBase(DeleteDataAgentKnowledgeBaseRequest request);
 
     /**
+     * @param request the request parameters of DeleteDataAgentMcp  DeleteDataAgentMcpRequest
+     * @return DeleteDataAgentMcpResponse
+     */
+    CompletableFuture<DeleteDataAgentMcpResponse> deleteDataAgentMcp(DeleteDataAgentMcpRequest request);
+
+    /**
      * @param request the request parameters of DeleteDataAgentMemory  DeleteDataAgentMemoryRequest
      * @return DeleteDataAgentMemoryResponse
      */
@@ -286,6 +292,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     ResponseIterable<GetChatContentResponseBody> getChatContentWithResponseIterable(GetChatContentRequest request);
 
     /**
+     * @param request the request parameters of GetDataAgentMcp  GetDataAgentMcpRequest
+     * @return GetDataAgentMcpResponse
+     */
+    CompletableFuture<GetDataAgentMcpResponse> getDataAgentMcp(GetDataAgentMcpRequest request);
+
+    /**
      * @param request the request parameters of GetDataAgentSubAccountInfo  GetDataAgentSubAccountInfoRequest
      * @return GetDataAgentSubAccountInfoResponse
      */
@@ -328,6 +340,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDataLakeTableResponse> getDataLakeTable(GetDataLakeTableRequest request);
 
     /**
+     * @param request the request parameters of GetListMcpServerToolsResult  GetListMcpServerToolsResultRequest
+     * @return GetListMcpServerToolsResultResponse
+     */
+    CompletableFuture<GetListMcpServerToolsResultResponse> getListMcpServerToolsResult(GetListMcpServerToolsResultRequest request);
+
+    /**
      * @param request the request parameters of GetNotebookAndSubmitTask  GetNotebookAndSubmitTaskRequest
      * @return GetNotebookAndSubmitTaskResponse
      */
@@ -364,6 +382,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetWorkspaceQuotaResponse> getWorkspaceQuota(GetWorkspaceQuotaRequest request);
 
     /**
+     * @param request the request parameters of InitWorkspaceSystemMcpServer  InitWorkspaceSystemMcpServerRequest
+     * @return InitWorkspaceSystemMcpServerResponse
+     */
+    CompletableFuture<InitWorkspaceSystemMcpServerResponse> initWorkspaceSystemMcpServer(InitWorkspaceSystemMcpServerRequest request);
+
+    /**
+     * @param request the request parameters of InstallDataAgentMcp  InstallDataAgentMcpRequest
+     * @return InstallDataAgentMcpResponse
+     */
+    CompletableFuture<InstallDataAgentMcpResponse> installDataAgentMcp(InstallDataAgentMcpRequest request);
+
+    /**
      * @param request the request parameters of ListAirflowVersions  ListAirflowVersionsRequest
      * @return ListAirflowVersionsResponse
      */
@@ -398,6 +428,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListDataAgentAccuracyTestTasksResponse
      */
     CompletableFuture<ListDataAgentAccuracyTestTasksResponse> listDataAgentAccuracyTestTasks(ListDataAgentAccuracyTestTasksRequest request);
+
+    /**
+     * @param request the request parameters of ListDataAgentMcp  ListDataAgentMcpRequest
+     * @return ListDataAgentMcpResponse
+     */
+    CompletableFuture<ListDataAgentMcpResponse> listDataAgentMcp(ListDataAgentMcpRequest request);
 
     /**
      * @param request the request parameters of ListDataAgentMemory  ListDataAgentMemoryRequest
@@ -532,6 +568,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyCustomAgentResponse> modifyCustomAgent(ModifyCustomAgentRequest request);
 
     /**
+     * @param request the request parameters of ModifyDataAgentMcp  ModifyDataAgentMcpRequest
+     * @return ModifyDataAgentMcpResponse
+     */
+    CompletableFuture<ModifyDataAgentMcpResponse> modifyDataAgentMcp(ModifyDataAgentMcpRequest request);
+
+    /**
      * @param request the request parameters of OperateCustomAgent  OperateCustomAgentRequest
      * @return OperateCustomAgentResponse
      */
@@ -584,6 +626,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StartDataAgentAccuracyTestTaskResponse
      */
     CompletableFuture<StartDataAgentAccuracyTestTaskResponse> startDataAgentAccuracyTestTask(StartDataAgentAccuracyTestTaskRequest request);
+
+    /**
+     * @param request the request parameters of StartListMcpServerTools  StartListMcpServerToolsRequest
+     * @return StartListMcpServerToolsResponse
+     */
+    CompletableFuture<StartListMcpServerToolsResponse> startListMcpServerTools(StartListMcpServerToolsRequest request);
 
     /**
      * @param request the request parameters of StopDataAgentAccuracyTestTask  StopDataAgentAccuracyTestTaskRequest

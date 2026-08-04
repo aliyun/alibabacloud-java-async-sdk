@@ -84,6 +84,9 @@ public class DescribeKnowledgeBaseStatsRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kb-***</p>
          */
         public Builder kbUuid(String kbUuid) {
             this.putQueryParameter("KbUuid", kbUuid);

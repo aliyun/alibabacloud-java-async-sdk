@@ -12,13 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateDataAgentKnowledgeBaseResponseBody} extends {@link TeaModel}
+ * {@link DeleteDataAgentMcpResponseBody} extends {@link TeaModel}
  *
- * <p>CreateDataAgentKnowledgeBaseResponseBody</p>
+ * <p>DeleteDataAgentMcpResponseBody</p>
  */
-public class CreateDataAgentKnowledgeBaseResponseBody extends TeaModel {
+public class DeleteDataAgentMcpResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private Data data;
+    private Object data;
 
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
@@ -32,7 +32,7 @@ public class CreateDataAgentKnowledgeBaseResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private CreateDataAgentKnowledgeBaseResponseBody(Builder builder) {
+    private DeleteDataAgentMcpResponseBody(Builder builder) {
         this.data = builder.data;
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
@@ -44,7 +44,7 @@ public class CreateDataAgentKnowledgeBaseResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateDataAgentKnowledgeBaseResponseBody create() {
+    public static DeleteDataAgentMcpResponseBody create() {
         return builder().build();
     }
 
@@ -55,7 +55,7 @@ public class CreateDataAgentKnowledgeBaseResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public Data getData() {
+    public Object getData() {
         return this.data;
     }
 
@@ -88,7 +88,7 @@ public class CreateDataAgentKnowledgeBaseResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Data data; 
+        private Object data; 
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
@@ -97,7 +97,7 @@ public class CreateDataAgentKnowledgeBaseResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(CreateDataAgentKnowledgeBaseResponseBody model) {
+        private Builder(DeleteDataAgentMcpResponseBody model) {
             this.data = model.data;
             this.errorCode = model.errorCode;
             this.errorMessage = model.errorMessage;
@@ -108,7 +108,7 @@ public class CreateDataAgentKnowledgeBaseResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(Data data) {
+        public Builder data(Object data) {
             this.data = data;
             return this;
         }
@@ -130,10 +130,7 @@ public class CreateDataAgentKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>67E910F2-4B62-5B0C-ACA3-7547695C****</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -148,64 +145,10 @@ public class CreateDataAgentKnowledgeBaseResponseBody extends TeaModel {
             return this;
         }
 
-        public CreateDataAgentKnowledgeBaseResponseBody build() {
-            return new CreateDataAgentKnowledgeBaseResponseBody(this);
+        public DeleteDataAgentMcpResponseBody build() {
+            return new DeleteDataAgentMcpResponseBody(this);
         } 
 
     } 
 
-    /**
-     * 
-     * {@link CreateDataAgentKnowledgeBaseResponseBody} extends {@link TeaModel}
-     *
-     * <p>CreateDataAgentKnowledgeBaseResponseBody</p>
-     */
-    public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("KbUuid")
-        private String kbUuid;
-
-        private Data(Builder builder) {
-            this.kbUuid = builder.kbUuid;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Data create() {
-            return builder().build();
-        }
-
-        /**
-         * @return kbUuid
-         */
-        public String getKbUuid() {
-            return this.kbUuid;
-        }
-
-        public static final class Builder {
-            private String kbUuid; 
-
-            private Builder() {
-            } 
-
-            private Builder(Data model) {
-                this.kbUuid = model.kbUuid;
-            } 
-
-            /**
-             * KbUuid.
-             */
-            public Builder kbUuid(String kbUuid) {
-                this.kbUuid = kbUuid;
-                return this;
-            }
-
-            public Data build() {
-                return new Data(this);
-            } 
-
-        } 
-
-    }
 }
