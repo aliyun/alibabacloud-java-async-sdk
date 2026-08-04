@@ -197,6 +197,123 @@ public class ListIndicesResponseBody extends TeaModel {
      *
      * <p>ListIndicesResponseBody</p>
      */
+    public static class StructuredIndexConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("IsRecall")
+        private Boolean isRecall;
+
+        @com.aliyun.core.annotation.NameInMap("IsSearch")
+        private Boolean isSearch;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private StructuredIndexConfig(Builder builder) {
+            this.isRecall = builder.isRecall;
+            this.isSearch = builder.isSearch;
+            this.name = builder.name;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StructuredIndexConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return isRecall
+         */
+        public Boolean getIsRecall() {
+            return this.isRecall;
+        }
+
+        /**
+         * @return isSearch
+         */
+        public Boolean getIsSearch() {
+            return this.isSearch;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private Boolean isRecall; 
+            private Boolean isSearch; 
+            private String name; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(StructuredIndexConfig model) {
+                this.isRecall = model.isRecall;
+                this.isSearch = model.isSearch;
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
+            /**
+             * IsRecall.
+             */
+            public Builder isRecall(Boolean isRecall) {
+                this.isRecall = isRecall;
+                return this;
+            }
+
+            /**
+             * IsSearch.
+             */
+            public Builder isSearch(Boolean isSearch) {
+                this.isSearch = isSearch;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public StructuredIndexConfig build() {
+                return new StructuredIndexConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListIndicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIndicesResponseBody</p>
+     */
     public static class Indices extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChunkSize")
         private Integer chunkSize;
@@ -249,6 +366,9 @@ public class ListIndicesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StructureType")
         private String structureType;
 
+        @com.aliyun.core.annotation.NameInMap("StructuredIndexConfig")
+        private java.util.List<StructuredIndexConfig> structuredIndexConfig;
+
         private Indices(Builder builder) {
             this.chunkSize = builder.chunkSize;
             this.confgModel = builder.confgModel;
@@ -267,6 +387,7 @@ public class ListIndicesResponseBody extends TeaModel {
             this.sinkType = builder.sinkType;
             this.sourceType = builder.sourceType;
             this.structureType = builder.structureType;
+            this.structuredIndexConfig = builder.structuredIndexConfig;
         }
 
         public static Builder builder() {
@@ -396,6 +517,13 @@ public class ListIndicesResponseBody extends TeaModel {
             return this.structureType;
         }
 
+        /**
+         * @return structuredIndexConfig
+         */
+        public java.util.List<StructuredIndexConfig> getStructuredIndexConfig() {
+            return this.structuredIndexConfig;
+        }
+
         public static final class Builder {
             private Integer chunkSize; 
             private String confgModel; 
@@ -414,6 +542,7 @@ public class ListIndicesResponseBody extends TeaModel {
             private String sinkType; 
             private String sourceType; 
             private String structureType; 
+            private java.util.List<StructuredIndexConfig> structuredIndexConfig; 
 
             private Builder() {
             } 
@@ -436,6 +565,7 @@ public class ListIndicesResponseBody extends TeaModel {
                 this.sinkType = model.sinkType;
                 this.sourceType = model.sourceType;
                 this.structureType = model.structureType;
+                this.structuredIndexConfig = model.structuredIndexConfig;
             } 
 
             /**
@@ -649,6 +779,14 @@ public class ListIndicesResponseBody extends TeaModel {
              */
             public Builder structureType(String structureType) {
                 this.structureType = structureType;
+                return this;
+            }
+
+            /**
+             * StructuredIndexConfig.
+             */
+            public Builder structuredIndexConfig(java.util.List<StructuredIndexConfig> structuredIndexConfig) {
+                this.structuredIndexConfig = structuredIndexConfig;
                 return this;
             }
 
