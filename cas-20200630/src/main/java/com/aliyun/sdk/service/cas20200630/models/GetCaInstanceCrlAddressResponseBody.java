@@ -20,6 +20,9 @@ public class GetCaInstanceCrlAddressResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CaInstanceStatus")
     private String caInstanceStatus;
 
+    @com.aliyun.core.annotation.NameInMap("CaType")
+    private String caType;
+
     @com.aliyun.core.annotation.NameInMap("CrlUrl")
     private String crlUrl;
 
@@ -34,6 +37,7 @@ public class GetCaInstanceCrlAddressResponseBody extends TeaModel {
 
     private GetCaInstanceCrlAddressResponseBody(Builder builder) {
         this.caInstanceStatus = builder.caInstanceStatus;
+        this.caType = builder.caType;
         this.crlUrl = builder.crlUrl;
         this.hashCode = builder.hashCode;
         this.nextUpdateTime = builder.nextUpdateTime;
@@ -57,6 +61,13 @@ public class GetCaInstanceCrlAddressResponseBody extends TeaModel {
      */
     public String getCaInstanceStatus() {
         return this.caInstanceStatus;
+    }
+
+    /**
+     * @return caType
+     */
+    public String getCaType() {
+        return this.caType;
     }
 
     /**
@@ -89,6 +100,7 @@ public class GetCaInstanceCrlAddressResponseBody extends TeaModel {
 
     public static final class Builder {
         private String caInstanceStatus; 
+        private String caType; 
         private String crlUrl; 
         private String hashCode; 
         private String nextUpdateTime; 
@@ -99,6 +111,7 @@ public class GetCaInstanceCrlAddressResponseBody extends TeaModel {
 
         private Builder(GetCaInstanceCrlAddressResponseBody model) {
             this.caInstanceStatus = model.caInstanceStatus;
+            this.caType = model.caType;
             this.crlUrl = model.crlUrl;
             this.hashCode = model.hashCode;
             this.nextUpdateTime = model.nextUpdateTime;
@@ -110,6 +123,14 @@ public class GetCaInstanceCrlAddressResponseBody extends TeaModel {
          */
         public Builder caInstanceStatus(String caInstanceStatus) {
             this.caInstanceStatus = caInstanceStatus;
+            return this;
+        }
+
+        /**
+         * CaType.
+         */
+        public Builder caType(String caType) {
+            this.caType = caType;
             return this;
         }
 
