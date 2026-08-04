@@ -31,6 +31,14 @@ public class ListWorkspacesRequest extends Request {
     private String region;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("tags")
+    private java.util.List<Tags> tags;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("workspaceName")
     private String workspaceName;
 
@@ -43,6 +51,8 @@ public class ListWorkspacesRequest extends Request {
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.region = builder.region;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.tags = builder.tags;
         this.workspaceName = builder.workspaceName;
         this.workspaceNameList = builder.workspaceNameList;
     }
@@ -82,6 +92,20 @@ public class ListWorkspacesRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return workspaceName
      */
     public String getWorkspaceName() {
@@ -99,6 +123,8 @@ public class ListWorkspacesRequest extends Request {
         private Integer maxResults; 
         private String nextToken; 
         private String region; 
+        private String resourceGroupId; 
+        private java.util.List<Tags> tags; 
         private String workspaceName; 
         private java.util.List<String> workspaceNameList; 
 
@@ -111,6 +137,8 @@ public class ListWorkspacesRequest extends Request {
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.region = request.region;
+            this.resourceGroupId = request.resourceGroupId;
+            this.tags = request.tags;
             this.workspaceName = request.workspaceName;
             this.workspaceNameList = request.workspaceNameList;
         } 
@@ -156,6 +184,25 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
+         * resourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("resourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            String tagsShrink = shrink(tags, "tags", "json");
+            this.putQueryParameter("tags", tagsShrink);
+            this.tags = tags;
+            return this;
+        }
+
+        /**
          * <p>Workspace name, fuzzy search</p>
          * 
          * <strong>example:</strong>
@@ -187,4 +234,79 @@ public class ListWorkspacesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListWorkspacesRequest} extends {@link TeaModel}
+     *
+     * <p>ListWorkspacesRequest</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }
