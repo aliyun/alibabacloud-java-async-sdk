@@ -129,6 +129,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckJDBCSourceNetConnectionResponse> checkJDBCSourceNetConnection(CheckJDBCSourceNetConnectionRequest request);
 
     /**
+     * @param request the request parameters of CheckSaasServiceVersion  CheckSaasServiceVersionRequest
+     * @return CheckSaasServiceVersionResponse
+     */
+    CompletableFuture<CheckSaasServiceVersionResponse> checkSaasServiceVersion(CheckSaasServiceVersionRequest request);
+
+    /**
      * @param request the request parameters of CheckServiceLinkedRole  CheckServiceLinkedRoleRequest
      * @return CheckServiceLinkedRoleResponse
      */
@@ -1281,6 +1287,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAccountResponse> getAccount(GetAccountRequest request);
 
     /**
+     * @param request the request parameters of GetApiEndpoints  GetApiEndpointsRequest
+     * @return GetApiEndpointsResponse
+     */
+    CompletableFuture<GetApiEndpointsResponse> getApiEndpoints(GetApiEndpointsRequest request);
+
+    /**
      * @param request the request parameters of GetApiKey  GetApiKeyRequest
      * @return GetApiKeyResponse
      */
@@ -1381,6 +1393,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetWorkspaceResponse
      */
     CompletableFuture<GetWorkspaceResponse> getWorkspace(GetWorkspaceRequest request);
+
+    /**
+     * @param request the request parameters of GrantApiKey  GrantApiKeyRequest
+     * @return GrantApiKeyResponse
+     */
+    CompletableFuture<GrantApiKeyResponse> grantApiKey(GrantApiKeyRequest request);
 
     /**
      * @param request the request parameters of GrantCollection  GrantCollectionRequest
@@ -1780,6 +1798,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifySQLCollectorPolicyResponse> modifySQLCollectorPolicy(ModifySQLCollectorPolicyRequest request);
 
     /**
+     * @param request the request parameters of ModifySaasServiceDeletionProtection  ModifySaasServiceDeletionProtectionRequest
+     * @return ModifySaasServiceDeletionProtectionResponse
+     */
+    CompletableFuture<ModifySaasServiceDeletionProtectionResponse> modifySaasServiceDeletionProtection(ModifySaasServiceDeletionProtectionRequest request);
+
+    /**
      * <b>description</b> :
      * <p>To ensure the security and stability of AnalyticDB for PostgreSQL instances, the system denies all external IP addresses to access AnalyticDB for PostgreSQL instances by default. Before you can use an AnalyticDB for PostgreSQL instance, you must add the IP address or CIDR block of your client to the IP address whitelist of the instance.</p>
      * <h2>Limits</h2>
@@ -1994,6 +2018,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ResumeSupabaseProjectResponse> resumeSupabaseProject(ResumeSupabaseProjectRequest request);
 
     /**
+     * @param request the request parameters of RevokeApiKey  RevokeApiKeyRequest
+     * @return RevokeApiKeyResponse
+     */
+    CompletableFuture<RevokeApiKeyResponse> revokeApiKey(RevokeApiKeyRequest request);
+
+    /**
      * @param request the request parameters of SetAsDefaultBranch  SetAsDefaultBranchRequest
      * @return SetAsDefaultBranchResponse
      */
@@ -2099,6 +2129,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateDBInstancePlanResponse
      */
     CompletableFuture<UpdateDBInstancePlanResponse> updateDBInstancePlan(UpdateDBInstancePlanRequest request);
+
+    /**
+     * @param request the request parameters of UpdateSaasServiceVersion  UpdateSaasServiceVersionRequest
+     * @return UpdateSaasServiceVersionResponse
+     */
+    CompletableFuture<UpdateSaasServiceVersionResponse> updateSaasServiceVersion(UpdateSaasServiceVersionRequest request);
 
     /**
      * <b>description</b> :
