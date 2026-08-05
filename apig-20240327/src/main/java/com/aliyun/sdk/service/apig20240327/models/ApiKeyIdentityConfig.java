@@ -20,6 +20,9 @@ public class ApiKeyIdentityConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("apikeySource")
     private ApikeySource apikeySource;
 
+    @com.aliyun.core.annotation.NameInMap("apikeySources")
+    private java.util.List<ApikeySources> apikeySources;
+
     @com.aliyun.core.annotation.NameInMap("credentials")
     private java.util.List<Credentials> credentials;
 
@@ -28,6 +31,7 @@ public class ApiKeyIdentityConfig extends TeaModel {
 
     private ApiKeyIdentityConfig(Builder builder) {
         this.apikeySource = builder.apikeySource;
+        this.apikeySources = builder.apikeySources;
         this.credentials = builder.credentials;
         this.type = builder.type;
     }
@@ -52,6 +56,13 @@ public class ApiKeyIdentityConfig extends TeaModel {
     }
 
     /**
+     * @return apikeySources
+     */
+    public java.util.List<ApikeySources> getApikeySources() {
+        return this.apikeySources;
+    }
+
+    /**
      * @return credentials
      */
     public java.util.List<Credentials> getCredentials() {
@@ -67,6 +78,7 @@ public class ApiKeyIdentityConfig extends TeaModel {
 
     public static final class Builder {
         private ApikeySource apikeySource; 
+        private java.util.List<ApikeySources> apikeySources; 
         private java.util.List<Credentials> credentials; 
         private String type; 
 
@@ -75,15 +87,24 @@ public class ApiKeyIdentityConfig extends TeaModel {
 
         private Builder(ApiKeyIdentityConfig model) {
             this.apikeySource = model.apikeySource;
+            this.apikeySources = model.apikeySources;
             this.credentials = model.credentials;
             this.type = model.type;
         } 
 
         /**
-         * apikeySource.
+         * <p>API Key 单来源兼容字段。未携带 apikeySources 时，服务端按该字段解释为单项来源；新多来源调用方使用 apikeySources。</p>
          */
         public Builder apikeySource(ApikeySource apikeySource) {
             this.apikeySource = apikeySource;
+            return this;
+        }
+
+        /**
+         * <p>API Key 凭证来源完整集合。集合包含一至三项；多来源仅适用于 AI 网关 Header 模式，Query String 和非 AI 网关仅允许单来源。与 apikeySource 同时提交时，后者必须与兼容投影一致。</p>
+         */
+        public Builder apikeySources(java.util.List<ApikeySources> apikeySources) {
+            this.apikeySources = apikeySources;
             return this;
         }
 
@@ -179,6 +200,81 @@ public class ApiKeyIdentityConfig extends TeaModel {
 
             public ApikeySource build() {
                 return new ApikeySource(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ApiKeyIdentityConfig} extends {@link TeaModel}
+     *
+     * <p>ApiKeyIdentityConfig</p>
+     */
+    public static class ApikeySources extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("source")
+        private String source;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private ApikeySources(Builder builder) {
+            this.source = builder.source;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ApikeySources create() {
+            return builder().build();
+        }
+
+        /**
+         * @return source
+         */
+        public String getSource() {
+            return this.source;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String source; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApikeySources model) {
+                this.source = model.source;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>凭证来源类别。</p>
+             */
+            public Builder source(String source) {
+                this.source = source;
+                return this;
+            }
+
+            /**
+             * <p>HTTP Header 或 Query String 的字段名称。</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public ApikeySources build() {
+                return new ApikeySources(this);
             } 
 
         } 
