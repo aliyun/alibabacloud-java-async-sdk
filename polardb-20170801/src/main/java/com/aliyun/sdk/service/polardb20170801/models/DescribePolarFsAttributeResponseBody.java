@@ -26,6 +26,12 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AcceleratingEnable")
     private String acceleratingEnable;
 
+    @com.aliyun.core.annotation.NameInMap("AuthorizedUserArnIds")
+    private String authorizedUserArnIds;
+
+    @com.aliyun.core.annotation.NameInMap("AuthorizedUserIds")
+    private String authorizedUserIds;
+
     @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Double bandwidth;
 
@@ -153,6 +159,8 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         this.accelerateType = builder.accelerateType;
         this.acceleratedStorageSpace = builder.acceleratedStorageSpace;
         this.acceleratingEnable = builder.acceleratingEnable;
+        this.authorizedUserArnIds = builder.authorizedUserArnIds;
+        this.authorizedUserIds = builder.authorizedUserIds;
         this.bandwidth = builder.bandwidth;
         this.bandwidthBaseLine = builder.bandwidthBaseLine;
         this.bucketId = builder.bucketId;
@@ -227,6 +235,20 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
      */
     public String getAcceleratingEnable() {
         return this.acceleratingEnable;
+    }
+
+    /**
+     * @return authorizedUserArnIds
+     */
+    public String getAuthorizedUserArnIds() {
+        return this.authorizedUserArnIds;
+    }
+
+    /**
+     * @return authorizedUserIds
+     */
+    public String getAuthorizedUserIds() {
+        return this.authorizedUserIds;
     }
 
     /**
@@ -520,6 +542,8 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         private String accelerateType; 
         private Double acceleratedStorageSpace; 
         private String acceleratingEnable; 
+        private String authorizedUserArnIds; 
+        private String authorizedUserIds; 
         private Double bandwidth; 
         private Double bandwidthBaseLine; 
         private String bucketId; 
@@ -569,6 +593,8 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
             this.accelerateType = model.accelerateType;
             this.acceleratedStorageSpace = model.acceleratedStorageSpace;
             this.acceleratingEnable = model.acceleratingEnable;
+            this.authorizedUserArnIds = model.authorizedUserArnIds;
+            this.authorizedUserIds = model.authorizedUserIds;
             this.bandwidth = model.bandwidth;
             this.bandwidthBaseLine = model.bandwidthBaseLine;
             this.bucketId = model.bucketId;
@@ -633,6 +659,22 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
          */
         public Builder acceleratingEnable(String acceleratingEnable) {
             this.acceleratingEnable = acceleratingEnable;
+            return this;
+        }
+
+        /**
+         * AuthorizedUserArnIds.
+         */
+        public Builder authorizedUserArnIds(String authorizedUserArnIds) {
+            this.authorizedUserArnIds = authorizedUserArnIds;
+            return this;
+        }
+
+        /**
+         * AuthorizedUserIds.
+         */
+        public Builder authorizedUserIds(String authorizedUserIds) {
+            this.authorizedUserIds = authorizedUserIds;
             return this;
         }
 
