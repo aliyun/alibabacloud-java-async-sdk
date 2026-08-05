@@ -170,6 +170,9 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
      * <p>DescribeCreditUsageInfoResponseBody</p>
      */
     public static class UsageInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ContactGroupNames")
+        private java.util.List<String> contactGroupNames;
+
         @com.aliyun.core.annotation.NameInMap("CreditTrendList")
         private java.util.List<CreditTrendList> creditTrendList;
 
@@ -187,6 +190,9 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("DayUsedCredit")
         private Long dayUsedCredit;
+
+        @com.aliyun.core.annotation.NameInMap("LastTriggeredAt")
+        private String lastTriggeredAt;
 
         @com.aliyun.core.annotation.NameInMap("PeriodTotalCredit")
         private Long periodTotalCredit;
@@ -216,12 +222,14 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         private Long weekUsedCredit;
 
         private UsageInfo(Builder builder) {
+            this.contactGroupNames = builder.contactGroupNames;
             this.creditTrendList = builder.creditTrendList;
             this.currentInstanceId = builder.currentInstanceId;
             this.currentRemainCredit = builder.currentRemainCredit;
             this.currentTotalCredit = builder.currentTotalCredit;
             this.currentUsedCredit = builder.currentUsedCredit;
             this.dayUsedCredit = builder.dayUsedCredit;
+            this.lastTriggeredAt = builder.lastTriggeredAt;
             this.periodTotalCredit = builder.periodTotalCredit;
             this.periodUsedCredit = builder.periodUsedCredit;
             this.remainCredit = builder.remainCredit;
@@ -239,6 +247,13 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
 
         public static UsageInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return contactGroupNames
+         */
+        public java.util.List<String> getContactGroupNames() {
+            return this.contactGroupNames;
         }
 
         /**
@@ -281,6 +296,13 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
          */
         public Long getDayUsedCredit() {
             return this.dayUsedCredit;
+        }
+
+        /**
+         * @return lastTriggeredAt
+         */
+        public String getLastTriggeredAt() {
+            return this.lastTriggeredAt;
         }
 
         /**
@@ -347,12 +369,14 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<String> contactGroupNames; 
             private java.util.List<CreditTrendList> creditTrendList; 
             private String currentInstanceId; 
             private Long currentRemainCredit; 
             private Long currentTotalCredit; 
             private Long currentUsedCredit; 
             private Long dayUsedCredit; 
+            private String lastTriggeredAt; 
             private Long periodTotalCredit; 
             private Long periodUsedCredit; 
             private Long remainCredit; 
@@ -367,12 +391,14 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             } 
 
             private Builder(UsageInfo model) {
+                this.contactGroupNames = model.contactGroupNames;
                 this.creditTrendList = model.creditTrendList;
                 this.currentInstanceId = model.currentInstanceId;
                 this.currentRemainCredit = model.currentRemainCredit;
                 this.currentTotalCredit = model.currentTotalCredit;
                 this.currentUsedCredit = model.currentUsedCredit;
                 this.dayUsedCredit = model.dayUsedCredit;
+                this.lastTriggeredAt = model.lastTriggeredAt;
                 this.periodTotalCredit = model.periodTotalCredit;
                 this.periodUsedCredit = model.periodUsedCredit;
                 this.remainCredit = model.remainCredit;
@@ -383,6 +409,14 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
                 this.warnPercent = model.warnPercent;
                 this.weekUsedCredit = model.weekUsedCredit;
             } 
+
+            /**
+             * ContactGroupNames.
+             */
+            public Builder contactGroupNames(java.util.List<String> contactGroupNames) {
+                this.contactGroupNames = contactGroupNames;
+                return this;
+            }
 
             /**
              * CreditTrendList.
@@ -429,6 +463,14 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
              */
             public Builder dayUsedCredit(Long dayUsedCredit) {
                 this.dayUsedCredit = dayUsedCredit;
+                return this;
+            }
+
+            /**
+             * LastTriggeredAt.
+             */
+            public Builder lastTriggeredAt(String lastTriggeredAt) {
+                this.lastTriggeredAt = lastTriggeredAt;
                 return this;
             }
 
