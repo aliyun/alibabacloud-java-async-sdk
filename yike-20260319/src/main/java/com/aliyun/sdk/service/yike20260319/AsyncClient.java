@@ -44,6 +44,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchGetYikeAssetMediaInfosResponse> batchGetYikeAssetMediaInfos(BatchGetYikeAssetMediaInfosRequest request);
 
     /**
+     * @param request the request parameters of CreateInfiniteCanvas  CreateInfiniteCanvasRequest
+     * @return CreateInfiniteCanvasResponse
+     */
+    CompletableFuture<CreateInfiniteCanvasResponse> createInfiniteCanvas(CreateInfiniteCanvasRequest request);
+
+    /**
      * @param request the request parameters of CreateYikeAssetUpload  CreateYikeAssetUploadRequest
      * @return CreateYikeAssetUploadResponse
      */
@@ -74,16 +80,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateYikeWorkspaceResponse> createYikeWorkspace(CreateYikeWorkspaceRequest request);
 
     /**
+     * @param request the request parameters of DeleteInfiniteCanvas  DeleteInfiniteCanvasRequest
+     * @return DeleteInfiniteCanvasResponse
+     */
+    CompletableFuture<DeleteInfiniteCanvasResponse> deleteInfiniteCanvas(DeleteInfiniteCanvasRequest request);
+
+    /**
      * @param request the request parameters of DeleteYikeAssetMediaInfos  DeleteYikeAssetMediaInfosRequest
      * @return DeleteYikeAssetMediaInfosResponse
      */
     CompletableFuture<DeleteYikeAssetMediaInfosResponse> deleteYikeAssetMediaInfos(DeleteYikeAssetMediaInfosRequest request);
 
     /**
+     * @param request the request parameters of GenerateYikeLoginToken  GenerateYikeLoginTokenRequest
+     * @return GenerateYikeLoginTokenResponse
+     */
+    CompletableFuture<GenerateYikeLoginTokenResponse> generateYikeLoginToken(GenerateYikeLoginTokenRequest request);
+
+    /**
      * @param request the request parameters of GetImageGenerationJob  GetImageGenerationJobRequest
      * @return GetImageGenerationJobResponse
      */
     CompletableFuture<GetImageGenerationJobResponse> getImageGenerationJob(GetImageGenerationJobRequest request);
+
+    /**
+     * @param request the request parameters of GetInfiniteCanvas  GetInfiniteCanvasRequest
+     * @return GetInfiniteCanvasResponse
+     */
+    CompletableFuture<GetInfiniteCanvasResponse> getInfiniteCanvas(GetInfiniteCanvasRequest request);
 
     /**
      * @param request the request parameters of GetVideoGenerationJob  GetVideoGenerationJobRequest
@@ -162,6 +186,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetYikeVoiceNarratorJobResponse
      */
     CompletableFuture<GetYikeVoiceNarratorJobResponse> getYikeVoiceNarratorJob(GetYikeVoiceNarratorJobRequest request);
+
+    /**
+     * @param request the request parameters of ListInfiniteCanvases  ListInfiniteCanvasesRequest
+     * @return ListInfiniteCanvasesResponse
+     */
+    CompletableFuture<ListInfiniteCanvasesResponse> listInfiniteCanvases(ListInfiniteCanvasesRequest request);
 
     /**
      * @param request the request parameters of ListYikeAssetFolders  ListYikeAssetFoldersRequest
@@ -270,6 +300,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitYikeVoiceNarratorJobResponse
      */
     CompletableFuture<SubmitYikeVoiceNarratorJobResponse> submitYikeVoiceNarratorJob(SubmitYikeVoiceNarratorJobRequest request);
+
+    /**
+     * @param request the request parameters of UpdateInfiniteCanvas  UpdateInfiniteCanvasRequest
+     * @return UpdateInfiniteCanvasResponse
+     */
+    CompletableFuture<UpdateInfiniteCanvasResponse> updateInfiniteCanvas(UpdateInfiniteCanvasRequest request);
 
     /**
      * @param request the request parameters of UpdateYikeProduction  UpdateYikeProductionRequest
