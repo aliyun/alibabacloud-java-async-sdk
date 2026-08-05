@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>NodePodInfo</p>
  */
 public class NodePodInfo extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("GPUIndexes")
+    private java.util.List<Integer> GPUIndexes;
+
     @com.aliyun.core.annotation.NameInMap("Phase")
     private String phase;
 
@@ -39,6 +42,7 @@ public class NodePodInfo extends TeaModel {
     private String workloadType;
 
     private NodePodInfo(Builder builder) {
+        this.GPUIndexes = builder.GPUIndexes;
         this.phase = builder.phase;
         this.podIP = builder.podIP;
         this.podName = builder.podName;
@@ -58,6 +62,13 @@ public class NodePodInfo extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return GPUIndexes
+     */
+    public java.util.List<Integer> getGPUIndexes() {
+        return this.GPUIndexes;
     }
 
     /**
@@ -110,6 +121,7 @@ public class NodePodInfo extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List<Integer> GPUIndexes; 
         private String phase; 
         private String podIP; 
         private String podName; 
@@ -122,6 +134,7 @@ public class NodePodInfo extends TeaModel {
         } 
 
         private Builder(NodePodInfo model) {
+            this.GPUIndexes = model.GPUIndexes;
             this.phase = model.phase;
             this.podIP = model.podIP;
             this.podName = model.podName;
@@ -130,6 +143,14 @@ public class NodePodInfo extends TeaModel {
             this.workloadId = model.workloadId;
             this.workloadType = model.workloadType;
         } 
+
+        /**
+         * GPUIndexes.
+         */
+        public Builder GPUIndexes(java.util.List<Integer> GPUIndexes) {
+            this.GPUIndexes = GPUIndexes;
+            return this;
+        }
 
         /**
          * Phase.
