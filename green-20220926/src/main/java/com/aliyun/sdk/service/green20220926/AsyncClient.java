@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddAnswerSampleResponse> addAnswerSample(AddAnswerSampleRequest request);
 
     /**
+     * @param request the request parameters of AddAppAgent  AddAppAgentRequest
+     * @return AddAppAgentResponse
+     */
+    CompletableFuture<AddAppAgentResponse> addAppAgent(AddAppAgentRequest request);
+
+    /**
      * @param request the request parameters of AddImageLib  AddImageLibRequest
      * @return AddImageLibResponse
      */
@@ -68,6 +74,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ConfirmAiAppScanResponse> confirmAiAppScan(ConfirmAiAppScanRequest request);
 
     /**
+     * @param request the request parameters of CopyAppConfig  CopyAppConfigRequest
+     * @return CopyAppConfigResponse
+     */
+    CompletableFuture<CopyAppConfigResponse> copyAppConfig(CopyAppConfigRequest request);
+
+    /**
      * @param request the request parameters of CopyServiceConfig  CopyServiceConfigRequest
      * @return CopyServiceConfigResponse
      */
@@ -84,6 +96,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateAnswerLibResponse
      */
     CompletableFuture<CreateAnswerLibResponse> createAnswerLib(CreateAnswerLibRequest request);
+
+    /**
+     * @param request the request parameters of CreateAppConfig  CreateAppConfigRequest
+     * @return CreateAppConfigResponse
+     */
+    CompletableFuture<CreateAppConfigResponse> createAppConfig(CreateAppConfigRequest request);
 
     /**
      * @param request the request parameters of CreateCallback  CreateCallbackRequest
@@ -120,6 +138,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteAnswerSampleResponse
      */
     CompletableFuture<DeleteAnswerSampleResponse> deleteAnswerSample(DeleteAnswerSampleRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAppAgent  DeleteAppAgentRequest
+     * @return DeleteAppAgentResponse
+     */
+    CompletableFuture<DeleteAppAgentResponse> deleteAppAgent(DeleteAppAgentRequest request);
 
     /**
      * @param request the request parameters of DeleteCallback  DeleteCallbackRequest
@@ -216,6 +240,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetAnswerImportProgressResponse
      */
     CompletableFuture<GetAnswerImportProgressResponse> getAnswerImportProgress(GetAnswerImportProgressRequest request);
+
+    /**
+     * @param request the request parameters of GetAppConfig  GetAppConfigRequest
+     * @return GetAppConfigResponse
+     */
+    CompletableFuture<GetAppConfigResponse> getAppConfig(GetAppConfigRequest request);
 
     /**
      * @param request the request parameters of GetBackupBucketsList  GetBackupBucketsListRequest
@@ -398,6 +428,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAnswerLibResponse> listAnswerLib(ListAnswerLibRequest request);
 
     /**
+     * @param request the request parameters of ListAppConfigHistory  ListAppConfigHistoryRequest
+     * @return ListAppConfigHistoryResponse
+     */
+    CompletableFuture<ListAppConfigHistoryResponse> listAppConfigHistory(ListAppConfigHistoryRequest request);
+
+    /**
+     * @param request the request parameters of ListAppConfigs  ListAppConfigsRequest
+     * @return ListAppConfigsResponse
+     */
+    CompletableFuture<ListAppConfigsResponse> listAppConfigs(ListAppConfigsRequest request);
+
+    /**
      * @param request the request parameters of ListCallback  ListCallbackRequest
      * @return ListCallbackResponse
      */
@@ -460,6 +502,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyAnswerLibResponse> modifyAnswerLib(ModifyAnswerLibRequest request);
 
     /**
+     * @param request the request parameters of ModifyAppAgent  ModifyAppAgentRequest
+     * @return ModifyAppAgentResponse
+     */
+    CompletableFuture<ModifyAppAgentResponse> modifyAppAgent(ModifyAppAgentRequest request);
+
+    /**
+     * @param request the request parameters of ModifyAppInfo  ModifyAppInfoRequest
+     * @return ModifyAppInfoResponse
+     */
+    CompletableFuture<ModifyAppInfoResponse> modifyAppInfo(ModifyAppInfoRequest request);
+
+    /**
      * @param request the request parameters of ModifyCallback  ModifyCallbackRequest
      * @return ModifyCallbackResponse
      */
@@ -484,6 +538,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<OssCheckResultListResponse> ossCheckResultList(OssCheckResultListRequest request);
 
     /**
+     * @param request the request parameters of PublishAppConfig  PublishAppConfigRequest
+     * @return PublishAppConfigResponse
+     */
+    CompletableFuture<PublishAppConfigResponse> publishAppConfig(PublishAppConfigRequest request);
+
+    /**
      * @param request the request parameters of QueryAnswerSampleByPage  QueryAnswerSampleByPageRequest
      * @return QueryAnswerSampleByPageResponse
      */
@@ -500,6 +560,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryCallbackByPageResponse
      */
     CompletableFuture<QueryCallbackByPageResponse> queryCallbackByPage(QueryCallbackByPageRequest request);
+
+    /**
+     * @param request the request parameters of RecoverAppConfigHistory  RecoverAppConfigHistoryRequest
+     * @return RecoverAppConfigHistoryResponse
+     */
+    CompletableFuture<RecoverAppConfigHistoryResponse> recoverAppConfigHistory(RecoverAppConfigHistoryRequest request);
 
     /**
      * @param request the request parameters of StopOnlineTest  StopOnlineTestRequest
