@@ -308,6 +308,9 @@ public class GetAppPluginResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Extend")
         private String extend;
 
+        @com.aliyun.core.annotation.NameInMap("GitRef")
+        private String gitRef;
+
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
@@ -328,6 +331,9 @@ public class GetAppPluginResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("PluginName")
         private String pluginName;
+
+        @com.aliyun.core.annotation.NameInMap("RepositoryUrl")
+        private String repositoryUrl;
 
         @com.aliyun.core.annotation.NameInMap("SkillHeader")
         private String skillHeader;
@@ -352,6 +358,7 @@ public class GetAppPluginResponseBody extends TeaModel {
             this.display = builder.display;
             this.enabled = builder.enabled;
             this.extend = builder.extend;
+            this.gitRef = builder.gitRef;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.hooks = builder.hooks;
@@ -359,6 +366,7 @@ public class GetAppPluginResponseBody extends TeaModel {
             this.icon = builder.icon;
             this.pluginId = builder.pluginId;
             this.pluginName = builder.pluginName;
+            this.repositoryUrl = builder.repositoryUrl;
             this.skillHeader = builder.skillHeader;
             this.status = builder.status;
             this.tags = builder.tags;
@@ -424,6 +432,13 @@ public class GetAppPluginResponseBody extends TeaModel {
         }
 
         /**
+         * @return gitRef
+         */
+        public String getGitRef() {
+            return this.gitRef;
+        }
+
+        /**
          * @return gmtCreate
          */
         public String getGmtCreate() {
@@ -473,6 +488,13 @@ public class GetAppPluginResponseBody extends TeaModel {
         }
 
         /**
+         * @return repositoryUrl
+         */
+        public String getRepositoryUrl() {
+            return this.repositoryUrl;
+        }
+
+        /**
          * @return skillHeader
          */
         public String getSkillHeader() {
@@ -515,6 +537,7 @@ public class GetAppPluginResponseBody extends TeaModel {
             private Integer display; 
             private Integer enabled; 
             private String extend; 
+            private String gitRef; 
             private String gmtCreate; 
             private String gmtModified; 
             private String hooks; 
@@ -522,6 +545,7 @@ public class GetAppPluginResponseBody extends TeaModel {
             private String icon; 
             private String pluginId; 
             private String pluginName; 
+            private String repositoryUrl; 
             private String skillHeader; 
             private String status; 
             private String tags; 
@@ -539,6 +563,7 @@ public class GetAppPluginResponseBody extends TeaModel {
                 this.display = model.display;
                 this.enabled = model.enabled;
                 this.extend = model.extend;
+                this.gitRef = model.gitRef;
                 this.gmtCreate = model.gmtCreate;
                 this.gmtModified = model.gmtModified;
                 this.hooks = model.hooks;
@@ -546,6 +571,7 @@ public class GetAppPluginResponseBody extends TeaModel {
                 this.icon = model.icon;
                 this.pluginId = model.pluginId;
                 this.pluginName = model.pluginName;
+                this.repositoryUrl = model.repositoryUrl;
                 this.skillHeader = model.skillHeader;
                 this.status = model.status;
                 this.tags = model.tags;
@@ -610,6 +636,14 @@ public class GetAppPluginResponseBody extends TeaModel {
             }
 
             /**
+             * GitRef.
+             */
+            public Builder gitRef(String gitRef) {
+                this.gitRef = gitRef;
+                return this;
+            }
+
+            /**
              * GmtCreate.
              */
             public Builder gmtCreate(String gmtCreate) {
@@ -662,6 +696,14 @@ public class GetAppPluginResponseBody extends TeaModel {
              */
             public Builder pluginName(String pluginName) {
                 this.pluginName = pluginName;
+                return this;
+            }
+
+            /**
+             * RepositoryUrl.
+             */
+            public Builder repositoryUrl(String repositoryUrl) {
+                this.repositoryUrl = repositoryUrl;
                 return this;
             }
 

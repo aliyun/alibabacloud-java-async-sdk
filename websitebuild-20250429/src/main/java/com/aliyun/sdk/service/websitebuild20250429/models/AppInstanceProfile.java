@@ -41,6 +41,9 @@ public class AppInstanceProfile extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DeployArea")
     private String deployArea;
 
+    @com.aliyun.core.annotation.NameInMap("IcpbaNo")
+    private String icpbaNo;
+
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
@@ -86,6 +89,7 @@ public class AppInstanceProfile extends TeaModel {
         this.commodityCode = builder.commodityCode;
         this.customerService = builder.customerService;
         this.deployArea = builder.deployArea;
+        this.icpbaNo = builder.icpbaNo;
         this.instanceId = builder.instanceId;
         this.openChatBi = builder.openChatBi;
         this.ordTime = builder.ordTime;
@@ -166,6 +170,13 @@ public class AppInstanceProfile extends TeaModel {
      */
     public String getDeployArea() {
         return this.deployArea;
+    }
+
+    /**
+     * @return icpbaNo
+     */
+    public String getIcpbaNo() {
+        return this.icpbaNo;
     }
 
     /**
@@ -261,6 +272,7 @@ public class AppInstanceProfile extends TeaModel {
         private String commodityCode; 
         private String customerService; 
         private String deployArea; 
+        private String icpbaNo; 
         private String instanceId; 
         private Boolean openChatBi; 
         private String ordTime; 
@@ -286,6 +298,7 @@ public class AppInstanceProfile extends TeaModel {
             this.commodityCode = model.commodityCode;
             this.customerService = model.customerService;
             this.deployArea = model.deployArea;
+            this.icpbaNo = model.icpbaNo;
             this.instanceId = model.instanceId;
             this.openChatBi = model.openChatBi;
             this.ordTime = model.ordTime;
@@ -361,6 +374,14 @@ public class AppInstanceProfile extends TeaModel {
          */
         public Builder deployArea(String deployArea) {
             this.deployArea = deployArea;
+            return this;
+        }
+
+        /**
+         * IcpbaNo.
+         */
+        public Builder icpbaNo(String icpbaNo) {
+            this.icpbaNo = icpbaNo;
             return this;
         }
 
