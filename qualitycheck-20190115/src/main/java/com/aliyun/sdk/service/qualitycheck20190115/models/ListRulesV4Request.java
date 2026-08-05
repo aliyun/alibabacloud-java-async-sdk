@@ -103,6 +103,10 @@ public class ListRulesV4Request extends Request {
     private Integer status;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TargetType")
+    private String targetType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Type")
     private Integer type;
 
@@ -145,6 +149,7 @@ public class ListRulesV4Request extends Request {
         this.sourceType = builder.sourceType;
         this.startTime = builder.startTime;
         this.status = builder.status;
+        this.targetType = builder.targetType;
         this.type = builder.type;
         this.typeName = builder.typeName;
         this.updateEndTime = builder.updateEndTime;
@@ -313,6 +318,13 @@ public class ListRulesV4Request extends Request {
     }
 
     /**
+     * @return targetType
+     */
+    public String getTargetType() {
+        return this.targetType;
+    }
+
+    /**
      * @return type
      */
     public Integer getType() {
@@ -369,6 +381,7 @@ public class ListRulesV4Request extends Request {
         private Integer sourceType; 
         private String startTime; 
         private Integer status; 
+        private String targetType; 
         private Integer type; 
         private String typeName; 
         private String updateEndTime; 
@@ -402,6 +415,7 @@ public class ListRulesV4Request extends Request {
             this.sourceType = request.sourceType;
             this.startTime = request.startTime;
             this.status = request.status;
+            this.targetType = request.targetType;
             this.type = request.type;
             this.typeName = request.typeName;
             this.updateEndTime = request.updateEndTime;
@@ -595,6 +609,15 @@ public class ListRulesV4Request extends Request {
         public Builder status(Integer status) {
             this.putBodyParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * TargetType.
+         */
+        public Builder targetType(String targetType) {
+            this.putBodyParameter("TargetType", targetType);
+            this.targetType = targetType;
             return this;
         }
 
