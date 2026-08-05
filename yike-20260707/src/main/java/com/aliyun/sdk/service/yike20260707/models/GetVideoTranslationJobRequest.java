@@ -1,0 +1,81 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.yike20260707.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link GetVideoTranslationJobRequest} extends {@link RequestModel}
+ *
+ * <p>GetVideoTranslationJobRequest</p>
+ */
+public class GetVideoTranslationJobRequest extends Request {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String jobId;
+
+    private GetVideoTranslationJobRequest(Builder builder) {
+        super(builder);
+        this.jobId = builder.jobId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static GetVideoTranslationJobRequest create() {
+        return builder().build();
+    }
+
+@Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return jobId
+     */
+    public String getJobId() {
+        return this.jobId;
+    }
+
+    public static final class Builder extends Request.Builder<GetVideoTranslationJobRequest, Builder> {
+        private String jobId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(GetVideoTranslationJobRequest request) {
+            super(request);
+            this.jobId = request.jobId;
+        } 
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtj_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         */
+        public Builder jobId(String jobId) {
+            this.putBodyParameter("JobId", jobId);
+            this.jobId = jobId;
+            return this;
+        }
+
+        @Override
+        public GetVideoTranslationJobRequest build() {
+            return new GetVideoTranslationJobRequest(this);
+        } 
+
+    } 
+
+}

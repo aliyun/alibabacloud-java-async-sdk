@@ -86,6 +86,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetVideoRenderJobResponse> getVideoRenderJob(GetVideoRenderJobRequest request);
 
     /**
+     * @param request the request parameters of GetVideoTranslationJob  GetVideoTranslationJobRequest
+     * @return GetVideoTranslationJobResponse
+     */
+    CompletableFuture<GetVideoTranslationJobResponse> getVideoTranslationJob(GetVideoTranslationJobRequest request);
+
+    /**
      * @param request the request parameters of GetYikeAccountCredit  GetYikeAccountCreditRequest
      * @return GetYikeAccountCreditResponse
      */
