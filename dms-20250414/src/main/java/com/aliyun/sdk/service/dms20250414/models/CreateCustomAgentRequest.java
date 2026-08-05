@@ -50,6 +50,10 @@ public class CreateCustomAgentRequest extends Request {
     private java.util.List<KnowledgeConfigList> knowledgeConfigList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KnowledgeSemanticConfigList")
+    private java.util.List<KnowledgeSemanticConfigList> knowledgeSemanticConfigList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
@@ -87,6 +91,7 @@ public class CreateCustomAgentRequest extends Request {
         this.instruction = builder.instruction;
         this.knowledge = builder.knowledge;
         this.knowledgeConfigList = builder.knowledgeConfigList;
+        this.knowledgeSemanticConfigList = builder.knowledgeSemanticConfigList;
         this.name = builder.name;
         this.relatedSessionId = builder.relatedSessionId;
         this.scheduleTaskConfig = builder.scheduleTaskConfig;
@@ -166,6 +171,13 @@ public class CreateCustomAgentRequest extends Request {
     }
 
     /**
+     * @return knowledgeSemanticConfigList
+     */
+    public java.util.List<KnowledgeSemanticConfigList> getKnowledgeSemanticConfigList() {
+        return this.knowledgeSemanticConfigList;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -223,6 +235,7 @@ public class CreateCustomAgentRequest extends Request {
         private String instruction; 
         private String knowledge; 
         private java.util.List<KnowledgeConfigList> knowledgeConfigList; 
+        private java.util.List<KnowledgeSemanticConfigList> knowledgeSemanticConfigList; 
         private String name; 
         private String relatedSessionId; 
         private ScheduleTaskConfig scheduleTaskConfig; 
@@ -245,6 +258,7 @@ public class CreateCustomAgentRequest extends Request {
             this.instruction = request.instruction;
             this.knowledge = request.knowledge;
             this.knowledgeConfigList = request.knowledgeConfigList;
+            this.knowledgeSemanticConfigList = request.knowledgeSemanticConfigList;
             this.name = request.name;
             this.relatedSessionId = request.relatedSessionId;
             this.scheduleTaskConfig = request.scheduleTaskConfig;
@@ -326,6 +340,16 @@ public class CreateCustomAgentRequest extends Request {
             String knowledgeConfigListShrink = shrink(knowledgeConfigList, "KnowledgeConfigList", "json");
             this.putQueryParameter("KnowledgeConfigList", knowledgeConfigListShrink);
             this.knowledgeConfigList = knowledgeConfigList;
+            return this;
+        }
+
+        /**
+         * KnowledgeSemanticConfigList.
+         */
+        public Builder knowledgeSemanticConfigList(java.util.List<KnowledgeSemanticConfigList> knowledgeSemanticConfigList) {
+            String knowledgeSemanticConfigListShrink = shrink(knowledgeSemanticConfigList, "KnowledgeSemanticConfigList", "json");
+            this.putQueryParameter("KnowledgeSemanticConfigList", knowledgeSemanticConfigListShrink);
+            this.knowledgeSemanticConfigList = knowledgeSemanticConfigList;
             return this;
         }
 
@@ -746,6 +770,123 @@ public class CreateCustomAgentRequest extends Request {
 
             public KnowledgeConfigList build() {
                 return new KnowledgeConfigList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateCustomAgentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCustomAgentRequest</p>
+     */
+    public static class KnowledgeSemanticConfigList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DbId")
+        private String dbId;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private String instanceId;
+
+        @com.aliyun.core.annotation.NameInMap("KnowledgeUuid")
+        private String knowledgeUuid;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private KnowledgeSemanticConfigList(Builder builder) {
+            this.dbId = builder.dbId;
+            this.instanceId = builder.instanceId;
+            this.knowledgeUuid = builder.knowledgeUuid;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static KnowledgeSemanticConfigList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dbId
+         */
+        public String getDbId() {
+            return this.dbId;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
+         * @return knowledgeUuid
+         */
+        public String getKnowledgeUuid() {
+            return this.knowledgeUuid;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String dbId; 
+            private String instanceId; 
+            private String knowledgeUuid; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(KnowledgeSemanticConfigList model) {
+                this.dbId = model.dbId;
+                this.instanceId = model.instanceId;
+                this.knowledgeUuid = model.knowledgeUuid;
+                this.type = model.type;
+            } 
+
+            /**
+             * DbId.
+             */
+            public Builder dbId(String dbId) {
+                this.dbId = dbId;
+                return this;
+            }
+
+            /**
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * KnowledgeUuid.
+             */
+            public Builder knowledgeUuid(String knowledgeUuid) {
+                this.knowledgeUuid = knowledgeUuid;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public KnowledgeSemanticConfigList build() {
+                return new KnowledgeSemanticConfigList(this);
             } 
 
         } 
