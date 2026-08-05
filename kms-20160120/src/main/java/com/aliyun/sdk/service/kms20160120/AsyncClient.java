@@ -195,6 +195,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AsymmetricVerifyResponse> asymmetricVerify(AsymmetricVerifyRequest request);
 
     /**
+     * @param request the request parameters of BatchGetSecretValue  BatchGetSecretValueRequest
+     * @return BatchGetSecretValueResponse
+     */
+    CompletableFuture<BatchGetSecretValueResponse> batchGetSecretValue(BatchGetSecretValueRequest request);
+
+    /**
      * <b>description</b> :
      * <p>If the deletion task of a CMK is canceled, the CMK returns to the Enabled state.</p>
      * 

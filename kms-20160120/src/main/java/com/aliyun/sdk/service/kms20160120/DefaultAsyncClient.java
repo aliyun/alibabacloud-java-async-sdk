@@ -33,6 +33,7 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.endpointMap = CommonUtil.buildMap(
             new TeaPair("us-west-1", "kms.us-west-1.aliyuncs.com"),
             new TeaPair("us-east-1", "kms.us-east-1.aliyuncs.com"),
+            new TeaPair("na-south-1", "kms.na-south-1.aliyuncs.com"),
             new TeaPair("me-east-1", "kms.me-east-1.aliyuncs.com"),
             new TeaPair("me-central-1", "kms.me-central-1.aliyuncs.com"),
             new TeaPair("eu-west-1", "kms.eu-west-1.aliyuncs.com"),
@@ -48,6 +49,7 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-qingdao", "kms.cn-qingdao.aliyuncs.com"),
             new TeaPair("cn-huhehaote", "kms.cn-huhehaote.aliyuncs.com"),
             new TeaPair("cn-hongkong", "kms.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-heyuan-acdr-1", "kms.cn-heyuan-acdr-1.aliyuncs.com"),
             new TeaPair("cn-heyuan", "kms.cn-heyuan.aliyuncs.com"),
             new TeaPair("cn-hangzhou-finance", "kms.cn-hangzhou-finance.aliyuncs.com"),
             new TeaPair("cn-hangzhou", "kms.cn-hangzhou.aliyuncs.com"),
@@ -290,6 +292,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<AsymmetricVerifyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of BatchGetSecretValue  BatchGetSecretValueRequest
+     * @return BatchGetSecretValueResponse
+     */
+    @Override
+    public CompletableFuture<BatchGetSecretValueResponse> batchGetSecretValue(BatchGetSecretValueRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BatchGetSecretValue").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchGetSecretValueResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchGetSecretValueResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
