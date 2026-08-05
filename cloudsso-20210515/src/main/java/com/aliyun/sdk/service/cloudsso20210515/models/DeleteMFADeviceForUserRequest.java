@@ -26,6 +26,10 @@ public class DeleteMFADeviceForUserRequest extends Request {
     private String MFADeviceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MfaType")
+    private String mfaType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
@@ -33,6 +37,7 @@ public class DeleteMFADeviceForUserRequest extends Request {
         super(builder);
         this.directoryId = builder.directoryId;
         this.MFADeviceId = builder.MFADeviceId;
+        this.mfaType = builder.mfaType;
         this.userId = builder.userId;
     }
 
@@ -64,6 +69,13 @@ public class DeleteMFADeviceForUserRequest extends Request {
     }
 
     /**
+     * @return mfaType
+     */
+    public String getMfaType() {
+        return this.mfaType;
+    }
+
+    /**
      * @return userId
      */
     public String getUserId() {
@@ -73,6 +85,7 @@ public class DeleteMFADeviceForUserRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteMFADeviceForUserRequest, Builder> {
         private String directoryId; 
         private String MFADeviceId; 
+        private String mfaType; 
         private String userId; 
 
         private Builder() {
@@ -83,6 +96,7 @@ public class DeleteMFADeviceForUserRequest extends Request {
             super(request);
             this.directoryId = request.directoryId;
             this.MFADeviceId = request.MFADeviceId;
+            this.mfaType = request.mfaType;
             this.userId = request.userId;
         } 
 
@@ -108,6 +122,15 @@ public class DeleteMFADeviceForUserRequest extends Request {
         public Builder MFADeviceId(String MFADeviceId) {
             this.putQueryParameter("MFADeviceId", MFADeviceId);
             this.MFADeviceId = MFADeviceId;
+            return this;
+        }
+
+        /**
+         * MfaType.
+         */
+        public Builder mfaType(String mfaType) {
+            this.putQueryParameter("MfaType", mfaType);
+            this.mfaType = mfaType;
             return this;
         }
 

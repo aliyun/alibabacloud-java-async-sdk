@@ -134,6 +134,9 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EffectiveTime")
         private String effectiveTime;
 
+        @com.aliyun.core.annotation.NameInMap("LastUseTime")
+        private String lastUseTime;
+
         @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
@@ -142,6 +145,7 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
             this.deviceName = builder.deviceName;
             this.deviceType = builder.deviceType;
             this.effectiveTime = builder.effectiveTime;
+            this.lastUseTime = builder.lastUseTime;
             this.userId = builder.userId;
         }
 
@@ -182,6 +186,13 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
         }
 
         /**
+         * @return lastUseTime
+         */
+        public String getLastUseTime() {
+            return this.lastUseTime;
+        }
+
+        /**
          * @return userId
          */
         public String getUserId() {
@@ -193,6 +204,7 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
             private String deviceName; 
             private String deviceType; 
             private String effectiveTime; 
+            private String lastUseTime; 
             private String userId; 
 
             private Builder() {
@@ -203,6 +215,7 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
                 this.deviceName = model.deviceName;
                 this.deviceType = model.deviceType;
                 this.effectiveTime = model.effectiveTime;
+                this.lastUseTime = model.lastUseTime;
                 this.userId = model.userId;
             } 
 
@@ -247,6 +260,14 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
              */
             public Builder effectiveTime(String effectiveTime) {
                 this.effectiveTime = effectiveTime;
+                return this;
+            }
+
+            /**
+             * LastUseTime.
+             */
+            public Builder lastUseTime(String lastUseTime) {
+                this.lastUseTime = lastUseTime;
                 return this;
             }
 

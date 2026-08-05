@@ -98,6 +98,9 @@ public class GetMFAAuthenticationSettingInfoResponseBody extends TeaModel {
      * <p>GetMFAAuthenticationSettingInfoResponseBody</p>
      */
     public static class MFAAuthenticationSettingInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AllowedVerificationTypes")
+        private java.util.List<String> allowedVerificationTypes;
+
         @com.aliyun.core.annotation.NameInMap("MfaAuthenticationAdvanceSettings")
         private String mfaAuthenticationAdvanceSettings;
 
@@ -105,6 +108,7 @@ public class GetMFAAuthenticationSettingInfoResponseBody extends TeaModel {
         private String operationForRiskLogin;
 
         private MFAAuthenticationSettingInfo(Builder builder) {
+            this.allowedVerificationTypes = builder.allowedVerificationTypes;
             this.mfaAuthenticationAdvanceSettings = builder.mfaAuthenticationAdvanceSettings;
             this.operationForRiskLogin = builder.operationForRiskLogin;
         }
@@ -115,6 +119,13 @@ public class GetMFAAuthenticationSettingInfoResponseBody extends TeaModel {
 
         public static MFAAuthenticationSettingInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return allowedVerificationTypes
+         */
+        public java.util.List<String> getAllowedVerificationTypes() {
+            return this.allowedVerificationTypes;
         }
 
         /**
@@ -132,6 +143,7 @@ public class GetMFAAuthenticationSettingInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<String> allowedVerificationTypes; 
             private String mfaAuthenticationAdvanceSettings; 
             private String operationForRiskLogin; 
 
@@ -139,9 +151,18 @@ public class GetMFAAuthenticationSettingInfoResponseBody extends TeaModel {
             } 
 
             private Builder(MFAAuthenticationSettingInfo model) {
+                this.allowedVerificationTypes = model.allowedVerificationTypes;
                 this.mfaAuthenticationAdvanceSettings = model.mfaAuthenticationAdvanceSettings;
                 this.operationForRiskLogin = model.operationForRiskLogin;
             } 
+
+            /**
+             * AllowedVerificationTypes.
+             */
+            public Builder allowedVerificationTypes(java.util.List<String> allowedVerificationTypes) {
+                this.allowedVerificationTypes = allowedVerificationTypes;
+                return this;
+            }
 
             /**
              * <p>The MFA policy of all users. Valid values:</p>

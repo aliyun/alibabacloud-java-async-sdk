@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateMFAAuthenticationSettingsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowedVerificationTypes")
+    private java.util.List<String> allowedVerificationTypes;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
@@ -31,6 +35,7 @@ public class UpdateMFAAuthenticationSettingsRequest extends Request {
 
     private UpdateMFAAuthenticationSettingsRequest(Builder builder) {
         super(builder);
+        this.allowedVerificationTypes = builder.allowedVerificationTypes;
         this.directoryId = builder.directoryId;
         this.MFAAuthenticationSettings = builder.MFAAuthenticationSettings;
         this.operationForRiskLogin = builder.operationForRiskLogin;
@@ -47,6 +52,13 @@ public class UpdateMFAAuthenticationSettingsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return allowedVerificationTypes
+     */
+    public java.util.List<String> getAllowedVerificationTypes() {
+        return this.allowedVerificationTypes;
     }
 
     /**
@@ -71,6 +83,7 @@ public class UpdateMFAAuthenticationSettingsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateMFAAuthenticationSettingsRequest, Builder> {
+        private java.util.List<String> allowedVerificationTypes; 
         private String directoryId; 
         private String MFAAuthenticationSettings; 
         private String operationForRiskLogin; 
@@ -81,10 +94,21 @@ public class UpdateMFAAuthenticationSettingsRequest extends Request {
 
         private Builder(UpdateMFAAuthenticationSettingsRequest request) {
             super(request);
+            this.allowedVerificationTypes = request.allowedVerificationTypes;
             this.directoryId = request.directoryId;
             this.MFAAuthenticationSettings = request.MFAAuthenticationSettings;
             this.operationForRiskLogin = request.operationForRiskLogin;
         } 
+
+        /**
+         * AllowedVerificationTypes.
+         */
+        public Builder allowedVerificationTypes(java.util.List<String> allowedVerificationTypes) {
+            String allowedVerificationTypesShrink = shrink(allowedVerificationTypes, "AllowedVerificationTypes", "json");
+            this.putQueryParameter("AllowedVerificationTypes", allowedVerificationTypesShrink);
+            this.allowedVerificationTypes = allowedVerificationTypes;
+            return this;
+        }
 
         /**
          * <p>The ID of the directory.</p>
