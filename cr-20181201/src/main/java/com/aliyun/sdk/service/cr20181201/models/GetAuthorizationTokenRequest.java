@@ -22,6 +22,11 @@ public class GetAuthorizationTokenRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpiresInHours")
+    @com.aliyun.core.annotation.Validation(maximum = 24, minimum = 1)
+    private Integer expiresInHours;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -29,6 +34,7 @@ public class GetAuthorizationTokenRequest extends Request {
     private GetAuthorizationTokenRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.expiresInHours = builder.expiresInHours;
         this.instanceId = builder.instanceId;
     }
 
@@ -53,6 +59,13 @@ public class GetAuthorizationTokenRequest extends Request {
     }
 
     /**
+     * @return expiresInHours
+     */
+    public Integer getExpiresInHours() {
+        return this.expiresInHours;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -61,6 +74,7 @@ public class GetAuthorizationTokenRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetAuthorizationTokenRequest, Builder> {
         private String regionId; 
+        private Integer expiresInHours; 
         private String instanceId; 
 
         private Builder() {
@@ -70,15 +84,28 @@ public class GetAuthorizationTokenRequest extends Request {
         private Builder(GetAuthorizationTokenRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.expiresInHours = request.expiresInHours;
             this.instanceId = request.instanceId;
         } 
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ExpiresInHours.
+         */
+        public Builder expiresInHours(Integer expiresInHours) {
+            this.putQueryParameter("ExpiresInHours", expiresInHours);
+            this.expiresInHours = expiresInHours;
             return this;
         }
 
