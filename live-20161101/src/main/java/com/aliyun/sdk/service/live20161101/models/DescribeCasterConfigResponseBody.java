@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCasterConfigResponseBody</p>
  */
 public class DescribeCasterConfigResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AudioMixerMode")
+    private String audioMixerMode;
+
     @com.aliyun.core.annotation.NameInMap("AutoSwitchUrgentConfig")
     private String autoSwitchUrgentConfig;
 
@@ -78,6 +81,7 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
     private String urgentMaterialId;
 
     private DescribeCasterConfigResponseBody(Builder builder) {
+        this.audioMixerMode = builder.audioMixerMode;
         this.autoSwitchUrgentConfig = builder.autoSwitchUrgentConfig;
         this.autoSwitchUrgentOn = builder.autoSwitchUrgentOn;
         this.callbackUrl = builder.callbackUrl;
@@ -110,6 +114,13 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return audioMixerMode
+     */
+    public String getAudioMixerMode() {
+        return this.audioMixerMode;
     }
 
     /**
@@ -253,6 +264,7 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String audioMixerMode; 
         private String autoSwitchUrgentConfig; 
         private String autoSwitchUrgentOn; 
         private String callbackUrl; 
@@ -278,6 +290,7 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
         } 
 
         private Builder(DescribeCasterConfigResponseBody model) {
+            this.audioMixerMode = model.audioMixerMode;
             this.autoSwitchUrgentConfig = model.autoSwitchUrgentConfig;
             this.autoSwitchUrgentOn = model.autoSwitchUrgentOn;
             this.callbackUrl = model.callbackUrl;
@@ -299,6 +312,14 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
             this.urgentLiveStreamUrl = model.urgentLiveStreamUrl;
             this.urgentMaterialId = model.urgentMaterialId;
         } 
+
+        /**
+         * AudioMixerMode.
+         */
+        public Builder audioMixerMode(String audioMixerMode) {
+            this.audioMixerMode = audioMixerMode;
+            return this;
+        }
 
         /**
          * <p>The configuration for automatic switchover to the standby resource. The <code>eofThres</code> field specifies the duration after which the production studio automatically switches to the standby resource if a stream interruption occurs. Unit: seconds.</p>

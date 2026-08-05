@@ -31,6 +31,10 @@ public class SetLiveDomainCertificateRequest extends Request {
     private String domainName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ForceSet")
     private String forceSet;
 
@@ -60,6 +64,7 @@ public class SetLiveDomainCertificateRequest extends Request {
         this.certName = builder.certName;
         this.certType = builder.certType;
         this.domainName = builder.domainName;
+        this.dryRun = builder.dryRun;
         this.forceSet = builder.forceSet;
         this.ownerId = builder.ownerId;
         this.SSLPri = builder.SSLPri;
@@ -100,6 +105,13 @@ public class SetLiveDomainCertificateRequest extends Request {
      */
     public String getDomainName() {
         return this.domainName;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -148,6 +160,7 @@ public class SetLiveDomainCertificateRequest extends Request {
         private String certName; 
         private String certType; 
         private String domainName; 
+        private Boolean dryRun; 
         private String forceSet; 
         private Long ownerId; 
         private String SSLPri; 
@@ -164,6 +177,7 @@ public class SetLiveDomainCertificateRequest extends Request {
             this.certName = request.certName;
             this.certType = request.certType;
             this.domainName = request.domainName;
+            this.dryRun = request.dryRun;
             this.forceSet = request.forceSet;
             this.ownerId = request.ownerId;
             this.SSLPri = request.SSLPri;
@@ -211,6 +225,15 @@ public class SetLiveDomainCertificateRequest extends Request {
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
             this.domainName = domainName;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

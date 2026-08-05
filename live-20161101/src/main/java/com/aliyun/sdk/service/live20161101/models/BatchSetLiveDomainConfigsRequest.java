@@ -23,6 +23,10 @@ public class BatchSetLiveDomainConfigsRequest extends Request {
     private String domainNames;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Functions")
     @com.aliyun.core.annotation.Validation(required = true)
     private String functions;
@@ -42,6 +46,7 @@ public class BatchSetLiveDomainConfigsRequest extends Request {
     private BatchSetLiveDomainConfigsRequest(Builder builder) {
         super(builder);
         this.domainNames = builder.domainNames;
+        this.dryRun = builder.dryRun;
         this.functions = builder.functions;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -66,6 +71,13 @@ public class BatchSetLiveDomainConfigsRequest extends Request {
      */
     public String getDomainNames() {
         return this.domainNames;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -98,6 +110,7 @@ public class BatchSetLiveDomainConfigsRequest extends Request {
 
     public static final class Builder extends Request.Builder<BatchSetLiveDomainConfigsRequest, Builder> {
         private String domainNames; 
+        private Boolean dryRun; 
         private String functions; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -110,6 +123,7 @@ public class BatchSetLiveDomainConfigsRequest extends Request {
         private Builder(BatchSetLiveDomainConfigsRequest request) {
             super(request);
             this.domainNames = request.domainNames;
+            this.dryRun = request.dryRun;
             this.functions = request.functions;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -126,6 +140,15 @@ public class BatchSetLiveDomainConfigsRequest extends Request {
         public Builder domainNames(String domainNames) {
             this.putQueryParameter("DomainNames", domainNames);
             this.domainNames = domainNames;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 
