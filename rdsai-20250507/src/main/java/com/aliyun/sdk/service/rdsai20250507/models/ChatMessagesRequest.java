@@ -191,6 +191,9 @@ public class ChatMessagesRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
+        @com.aliyun.core.annotation.NameInMap("ModelId")
+        private String modelId;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
@@ -204,6 +207,7 @@ public class ChatMessagesRequest extends Request {
             this.customAgentId = builder.customAgentId;
             this.enableThinking = builder.enableThinking;
             this.language = builder.language;
+            this.modelId = builder.modelId;
             this.regionId = builder.regionId;
             this.thinkEffort = builder.thinkEffort;
             this.timezone = builder.timezone;
@@ -239,6 +243,13 @@ public class ChatMessagesRequest extends Request {
         }
 
         /**
+         * @return modelId
+         */
+        public String getModelId() {
+            return this.modelId;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -263,6 +274,7 @@ public class ChatMessagesRequest extends Request {
             private String customAgentId; 
             private String enableThinking; 
             private String language; 
+            private String modelId; 
             private String regionId; 
             private String thinkEffort; 
             private String timezone; 
@@ -274,6 +286,7 @@ public class ChatMessagesRequest extends Request {
                 this.customAgentId = model.customAgentId;
                 this.enableThinking = model.enableThinking;
                 this.language = model.language;
+                this.modelId = model.modelId;
                 this.regionId = model.regionId;
                 this.thinkEffort = model.thinkEffort;
                 this.timezone = model.timezone;
@@ -300,6 +313,14 @@ public class ChatMessagesRequest extends Request {
              */
             public Builder language(String language) {
                 this.language = language;
+                return this;
+            }
+
+            /**
+             * ModelId.
+             */
+            public Builder modelId(String modelId) {
+                this.modelId = modelId;
                 return this;
             }
 
