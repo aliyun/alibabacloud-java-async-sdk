@@ -2600,10 +2600,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
     /**
+     * @param request the request parameters of TraceSite  TraceSiteRequest
+     * @return TraceSiteResponse
+     */
+    CompletableFuture<TraceSiteResponse> traceSite(TraceSiteRequest request);
+
+    /**
      * @param request the request parameters of UntagResources  UntagResourcesRequest
      * @return UntagResourcesResponse
      */
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of UpdateBotSpec  UpdateBotSpecRequest
+     * @return UpdateBotSpecResponse
+     */
+    CompletableFuture<UpdateBotSpecResponse> updateBotSpec(UpdateBotSpecRequest request);
 
     /**
      * @param request the request parameters of UpdateCacheReserve  UpdateCacheReserveRequest
@@ -2670,6 +2682,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateCustomScenePolicyResponse
      */
     CompletableFuture<UpdateCustomScenePolicyResponse> updateCustomScenePolicy(UpdateCustomScenePolicyRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDDoSSpec  UpdateDDoSSpecRequest
+     * @return UpdateDDoSSpecResponse
+     */
+    CompletableFuture<UpdateDDoSSpecResponse> updateDDoSSpec(UpdateDDoSSpecRequest request);
 
     /**
      * @param request the request parameters of UpdateDevelopmentMode  UpdateDevelopmentModeRequest
