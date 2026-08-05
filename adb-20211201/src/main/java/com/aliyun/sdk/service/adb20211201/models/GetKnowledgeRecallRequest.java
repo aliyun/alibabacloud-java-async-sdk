@@ -31,11 +31,16 @@ public class GetKnowledgeRecallRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Topk")
     private Integer topk;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("User")
+    private String user;
+
     private GetKnowledgeRecallRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
         this.question = builder.question;
         this.topk = builder.topk;
+        this.user = builder.user;
     }
 
     public static Builder builder() {
@@ -72,10 +77,18 @@ public class GetKnowledgeRecallRequest extends Request {
         return this.topk;
     }
 
+    /**
+     * @return user
+     */
+    public String getUser() {
+        return this.user;
+    }
+
     public static final class Builder extends Request.Builder<GetKnowledgeRecallRequest, Builder> {
         private String DBClusterId; 
         private String question; 
         private Integer topk; 
+        private String user; 
 
         private Builder() {
             super();
@@ -86,6 +99,7 @@ public class GetKnowledgeRecallRequest extends Request {
             this.DBClusterId = request.DBClusterId;
             this.question = request.question;
             this.topk = request.topk;
+            this.user = request.user;
         } 
 
         /**
@@ -118,6 +132,15 @@ public class GetKnowledgeRecallRequest extends Request {
         public Builder topk(Integer topk) {
             this.putQueryParameter("Topk", topk);
             this.topk = topk;
+            return this;
+        }
+
+        /**
+         * User.
+         */
+        public Builder user(String user) {
+            this.putQueryParameter("User", user);
+            this.user = user;
             return this;
         }
 
