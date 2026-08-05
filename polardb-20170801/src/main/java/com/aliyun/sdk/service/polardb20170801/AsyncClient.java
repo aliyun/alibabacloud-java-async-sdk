@@ -472,6 +472,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateGwConsumerOrderResponse> createGwConsumerOrder(CreateGwConsumerOrderRequest request);
 
     /**
+     * @param request the request parameters of CreateLakebaseS3Account  CreateLakebaseS3AccountRequest
+     * @return CreateLakebaseS3AccountResponse
+     */
+    CompletableFuture<CreateLakebaseS3AccountResponse> createLakebaseS3Account(CreateLakebaseS3AccountRequest request);
+
+    /**
      * @param request the request parameters of CreateModelApi  CreateModelApiRequest
      * @return CreateModelApiResponse
      */
@@ -524,6 +530,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreatePolarClawCronJobResponse
      */
     CompletableFuture<CreatePolarClawCronJobResponse> createPolarClawCronJob(CreatePolarClawCronJobRequest request);
+
+    /**
+     * @param request the request parameters of CreatePolarFs  CreatePolarFsRequest
+     * @return CreatePolarFsResponse
+     */
+    CompletableFuture<CreatePolarFsResponse> createPolarFs(CreatePolarFsRequest request);
 
     /**
      * <b>description</b> :
@@ -809,6 +821,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteGlobalSecurityIPGroupResponse> deleteGlobalSecurityIPGroup(DeleteGlobalSecurityIPGroupRequest request);
 
     /**
+     * @param request the request parameters of DeleteLakebaseS3Account  DeleteLakebaseS3AccountRequest
+     * @return DeleteLakebaseS3AccountResponse
+     */
+    CompletableFuture<DeleteLakebaseS3AccountResponse> deleteLakebaseS3Account(DeleteLakebaseS3AccountRequest request);
+
+    /**
      * @param request the request parameters of DeleteMaskingRules  DeleteMaskingRulesRequest
      * @return DeleteMaskingRulesResponse
      */
@@ -861,6 +879,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeletePolarClawCronJobResponse
      */
     CompletableFuture<DeletePolarClawCronJobResponse> deletePolarClawCronJob(DeletePolarClawCronJobRequest request);
+
+    /**
+     * @param request the request parameters of DeletePolarFs  DeletePolarFsRequest
+     * @return DeletePolarFsResponse
+     */
+    CompletableFuture<DeletePolarFsResponse> deletePolarFs(DeletePolarFsRequest request);
 
     /**
      * <b>description</b> :
@@ -1614,6 +1638,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeHistoryTasksStatResponse> describeHistoryTasksStat(DescribeHistoryTasksStatRequest request);
 
     /**
+     * @param request the request parameters of DescribeLakebaseS3Account  DescribeLakebaseS3AccountRequest
+     * @return DescribeLakebaseS3AccountResponse
+     */
+    CompletableFuture<DescribeLakebaseS3AccountResponse> describeLakebaseS3Account(DescribeLakebaseS3AccountRequest request);
+
+    /**
      * @param request the request parameters of DescribeLicenseOrderDetails  DescribeLicenseOrderDetailsRequest
      * @return DescribeLicenseOrderDetailsResponse
      */
@@ -1798,6 +1828,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribePolarFsAttributeResponse
      */
     CompletableFuture<DescribePolarFsAttributeResponse> describePolarFsAttribute(DescribePolarFsAttributeRequest request);
+
+    /**
+     * @param request the request parameters of DescribePolarFsMapping  DescribePolarFsMappingRequest
+     * @return DescribePolarFsMappingResponse
+     */
+    CompletableFuture<DescribePolarFsMappingResponse> describePolarFsMapping(DescribePolarFsMappingRequest request);
 
     /**
      * <b>description</b> :
@@ -2121,6 +2157,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return InstallPolarClawSkillResponse
      */
     CompletableFuture<InstallPolarClawSkillResponse> installPolarClawSkill(InstallPolarClawSkillRequest request);
+
+    /**
+     * @param request the request parameters of ListLakebaseS3Accounts  ListLakebaseS3AccountsRequest
+     * @return ListLakebaseS3AccountsResponse
+     */
+    CompletableFuture<ListLakebaseS3AccountsResponse> listLakebaseS3Accounts(ListLakebaseS3AccountsRequest request);
 
     /**
      * @param request the request parameters of ListOrders  ListOrdersRequest
@@ -2608,6 +2650,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyPendingMaintenanceActionResponse
      */
     CompletableFuture<ModifyPendingMaintenanceActionResponse> modifyPendingMaintenanceAction(ModifyPendingMaintenanceActionRequest request);
+
+    /**
+     * @param request the request parameters of ModifyPolarFsMappingAuth  ModifyPolarFsMappingAuthRequest
+     * @return ModifyPolarFsMappingAuthResponse
+     */
+    CompletableFuture<ModifyPolarFsMappingAuthResponse> modifyPolarFsMappingAuth(ModifyPolarFsMappingAuthRequest request);
 
     /**
      * @param request the request parameters of ModifyRateLimitPolicy  ModifyRateLimitPolicyRequest
