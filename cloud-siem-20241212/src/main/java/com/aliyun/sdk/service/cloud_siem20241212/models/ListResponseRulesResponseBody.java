@@ -228,6 +228,9 @@ public class ListResponseRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResponseRulePriority")
         private Integer responseRulePriority;
 
+        @com.aliyun.core.annotation.NameInMap("ResponseRuleRemark")
+        private String responseRuleRemark;
+
         @com.aliyun.core.annotation.NameInMap("ResponseRuleStatus")
         private Integer responseRuleStatus;
 
@@ -248,6 +251,7 @@ public class ListResponseRulesResponseBody extends TeaModel {
             this.responseRuleId = builder.responseRuleId;
             this.responseRuleName = builder.responseRuleName;
             this.responseRulePriority = builder.responseRulePriority;
+            this.responseRuleRemark = builder.responseRuleRemark;
             this.responseRuleStatus = builder.responseRuleStatus;
             this.responseRuleType = builder.responseRuleType;
             this.responseTriggerType = builder.responseTriggerType;
@@ -312,6 +316,13 @@ public class ListResponseRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return responseRuleRemark
+         */
+        public String getResponseRuleRemark() {
+            return this.responseRuleRemark;
+        }
+
+        /**
          * @return responseRuleStatus
          */
         public Integer getResponseRuleStatus() {
@@ -347,6 +358,7 @@ public class ListResponseRulesResponseBody extends TeaModel {
             private String responseRuleId; 
             private String responseRuleName; 
             private Integer responseRulePriority; 
+            private String responseRuleRemark; 
             private Integer responseRuleStatus; 
             private String responseRuleType; 
             private String responseTriggerType; 
@@ -363,6 +375,7 @@ public class ListResponseRulesResponseBody extends TeaModel {
                 this.responseRuleId = model.responseRuleId;
                 this.responseRuleName = model.responseRuleName;
                 this.responseRulePriority = model.responseRulePriority;
+                this.responseRuleRemark = model.responseRuleRemark;
                 this.responseRuleStatus = model.responseRuleStatus;
                 this.responseRuleType = model.responseRuleType;
                 this.responseTriggerType = model.responseTriggerType;
@@ -422,6 +435,14 @@ public class ListResponseRulesResponseBody extends TeaModel {
              */
             public Builder responseRulePriority(Integer responseRulePriority) {
                 this.responseRulePriority = responseRulePriority;
+                return this;
+            }
+
+            /**
+             * ResponseRuleRemark.
+             */
+            public Builder responseRuleRemark(String responseRuleRemark) {
+                this.responseRuleRemark = responseRuleRemark;
                 return this;
             }
 

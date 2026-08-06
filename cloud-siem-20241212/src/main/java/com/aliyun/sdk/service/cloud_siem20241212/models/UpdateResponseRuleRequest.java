@@ -58,6 +58,10 @@ public class UpdateResponseRuleRequest extends Request {
     private Integer responseRulePriority;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResponseRuleRemark")
+    private String responseRuleRemark;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ResponseRuleStatus")
     private Integer responseRuleStatus;
 
@@ -77,6 +81,7 @@ public class UpdateResponseRuleRequest extends Request {
         this.responseRuleId = builder.responseRuleId;
         this.responseRuleName = builder.responseRuleName;
         this.responseRulePriority = builder.responseRulePriority;
+        this.responseRuleRemark = builder.responseRuleRemark;
         this.responseRuleStatus = builder.responseRuleStatus;
         this.responseTriggerType = builder.responseTriggerType;
     }
@@ -165,6 +170,13 @@ public class UpdateResponseRuleRequest extends Request {
     }
 
     /**
+     * @return responseRuleRemark
+     */
+    public String getResponseRuleRemark() {
+        return this.responseRuleRemark;
+    }
+
+    /**
      * @return responseRuleStatus
      */
     public Integer getResponseRuleStatus() {
@@ -189,6 +201,7 @@ public class UpdateResponseRuleRequest extends Request {
         private String responseRuleId; 
         private String responseRuleName; 
         private Integer responseRulePriority; 
+        private String responseRuleRemark; 
         private Integer responseRuleStatus; 
         private String responseTriggerType; 
 
@@ -208,6 +221,7 @@ public class UpdateResponseRuleRequest extends Request {
             this.responseRuleId = request.responseRuleId;
             this.responseRuleName = request.responseRuleName;
             this.responseRulePriority = request.responseRulePriority;
+            this.responseRuleRemark = request.responseRuleRemark;
             this.responseRuleStatus = request.responseRuleStatus;
             this.responseTriggerType = request.responseTriggerType;
         } 
@@ -299,6 +313,15 @@ public class UpdateResponseRuleRequest extends Request {
         public Builder responseRulePriority(Integer responseRulePriority) {
             this.putBodyParameter("ResponseRulePriority", responseRulePriority);
             this.responseRulePriority = responseRulePriority;
+            return this;
+        }
+
+        /**
+         * ResponseRuleRemark.
+         */
+        public Builder responseRuleRemark(String responseRuleRemark) {
+            this.putBodyParameter("ResponseRuleRemark", responseRuleRemark);
+            this.responseRuleRemark = responseRuleRemark;
             return this;
         }
 

@@ -54,6 +54,10 @@ public class CreateResponseRuleRequest extends Request {
     private String responseRulePriority;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResponseRuleRemark")
+    private String responseRuleRemark;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ResponseTriggerType")
     private String responseTriggerType;
 
@@ -76,6 +80,7 @@ public class CreateResponseRuleRequest extends Request {
         this.responseExecutionCondition = builder.responseExecutionCondition;
         this.responseRuleName = builder.responseRuleName;
         this.responseRulePriority = builder.responseRulePriority;
+        this.responseRuleRemark = builder.responseRuleRemark;
         this.responseTriggerType = builder.responseTriggerType;
         this.roleFor = builder.roleFor;
         this.roleType = builder.roleType;
@@ -158,6 +163,13 @@ public class CreateResponseRuleRequest extends Request {
     }
 
     /**
+     * @return responseRuleRemark
+     */
+    public String getResponseRuleRemark() {
+        return this.responseRuleRemark;
+    }
+
+    /**
      * @return responseTriggerType
      */
     public String getResponseTriggerType() {
@@ -188,6 +200,7 @@ public class CreateResponseRuleRequest extends Request {
         private String responseExecutionCondition; 
         private String responseRuleName; 
         private String responseRulePriority; 
+        private String responseRuleRemark; 
         private String responseTriggerType; 
         private Long roleFor; 
         private Integer roleType; 
@@ -207,6 +220,7 @@ public class CreateResponseRuleRequest extends Request {
             this.responseExecutionCondition = request.responseExecutionCondition;
             this.responseRuleName = request.responseRuleName;
             this.responseRulePriority = request.responseRulePriority;
+            this.responseRuleRemark = request.responseRuleRemark;
             this.responseTriggerType = request.responseTriggerType;
             this.roleFor = request.roleFor;
             this.roleType = request.roleType;
@@ -290,6 +304,15 @@ public class CreateResponseRuleRequest extends Request {
         public Builder responseRulePriority(String responseRulePriority) {
             this.putBodyParameter("ResponseRulePriority", responseRulePriority);
             this.responseRulePriority = responseRulePriority;
+            return this;
+        }
+
+        /**
+         * ResponseRuleRemark.
+         */
+        public Builder responseRuleRemark(String responseRuleRemark) {
+            this.putBodyParameter("ResponseRuleRemark", responseRuleRemark);
+            this.responseRuleRemark = responseRuleRemark;
             return this;
         }
 
