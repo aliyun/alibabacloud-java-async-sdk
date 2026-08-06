@@ -22,6 +22,14 @@ public class CreateCostRuleRequest extends Request {
     private String cacheCostPointsPerMillion;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveTargetType")
+    private String effectiveTargetType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveTargetValue")
+    private String effectiveTargetValue;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GwClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String gwClusterId;
@@ -51,6 +59,8 @@ public class CreateCostRuleRequest extends Request {
     private CreateCostRuleRequest(Builder builder) {
         super(builder);
         this.cacheCostPointsPerMillion = builder.cacheCostPointsPerMillion;
+        this.effectiveTargetType = builder.effectiveTargetType;
+        this.effectiveTargetValue = builder.effectiveTargetValue;
         this.gwClusterId = builder.gwClusterId;
         this.inputCostPointsPerMillion = builder.inputCostPointsPerMillion;
         this.modelName = builder.modelName;
@@ -77,6 +87,20 @@ public class CreateCostRuleRequest extends Request {
      */
     public String getCacheCostPointsPerMillion() {
         return this.cacheCostPointsPerMillion;
+    }
+
+    /**
+     * @return effectiveTargetType
+     */
+    public String getEffectiveTargetType() {
+        return this.effectiveTargetType;
+    }
+
+    /**
+     * @return effectiveTargetValue
+     */
+    public String getEffectiveTargetValue() {
+        return this.effectiveTargetValue;
     }
 
     /**
@@ -123,6 +147,8 @@ public class CreateCostRuleRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateCostRuleRequest, Builder> {
         private String cacheCostPointsPerMillion; 
+        private String effectiveTargetType; 
+        private String effectiveTargetValue; 
         private String gwClusterId; 
         private String inputCostPointsPerMillion; 
         private String modelName; 
@@ -137,6 +163,8 @@ public class CreateCostRuleRequest extends Request {
         private Builder(CreateCostRuleRequest request) {
             super(request);
             this.cacheCostPointsPerMillion = request.cacheCostPointsPerMillion;
+            this.effectiveTargetType = request.effectiveTargetType;
+            this.effectiveTargetValue = request.effectiveTargetValue;
             this.gwClusterId = request.gwClusterId;
             this.inputCostPointsPerMillion = request.inputCostPointsPerMillion;
             this.modelName = request.modelName;
@@ -151,6 +179,24 @@ public class CreateCostRuleRequest extends Request {
         public Builder cacheCostPointsPerMillion(String cacheCostPointsPerMillion) {
             this.putQueryParameter("CacheCostPointsPerMillion", cacheCostPointsPerMillion);
             this.cacheCostPointsPerMillion = cacheCostPointsPerMillion;
+            return this;
+        }
+
+        /**
+         * EffectiveTargetType.
+         */
+        public Builder effectiveTargetType(String effectiveTargetType) {
+            this.putQueryParameter("EffectiveTargetType", effectiveTargetType);
+            this.effectiveTargetType = effectiveTargetType;
+            return this;
+        }
+
+        /**
+         * EffectiveTargetValue.
+         */
+        public Builder effectiveTargetValue(String effectiveTargetValue) {
+            this.putQueryParameter("EffectiveTargetValue", effectiveTargetValue);
+            this.effectiveTargetValue = effectiveTargetValue;
             return this;
         }
 

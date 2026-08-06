@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCostRulesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveTargetType")
+    private String effectiveTargetType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveTargetValue")
+    private String effectiveTargetValue;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GwClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String gwClusterId;
@@ -44,6 +52,8 @@ public class DescribeCostRulesRequest extends Request {
 
     private DescribeCostRulesRequest(Builder builder) {
         super(builder);
+        this.effectiveTargetType = builder.effectiveTargetType;
+        this.effectiveTargetValue = builder.effectiveTargetValue;
         this.gwClusterId = builder.gwClusterId;
         this.modelName = builder.modelName;
         this.modelServiceId = builder.modelServiceId;
@@ -63,6 +73,20 @@ public class DescribeCostRulesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return effectiveTargetType
+     */
+    public String getEffectiveTargetType() {
+        return this.effectiveTargetType;
+    }
+
+    /**
+     * @return effectiveTargetValue
+     */
+    public String getEffectiveTargetValue() {
+        return this.effectiveTargetValue;
     }
 
     /**
@@ -108,6 +132,8 @@ public class DescribeCostRulesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeCostRulesRequest, Builder> {
+        private String effectiveTargetType; 
+        private String effectiveTargetValue; 
         private String gwClusterId; 
         private String modelName; 
         private String modelServiceId; 
@@ -121,6 +147,8 @@ public class DescribeCostRulesRequest extends Request {
 
         private Builder(DescribeCostRulesRequest request) {
             super(request);
+            this.effectiveTargetType = request.effectiveTargetType;
+            this.effectiveTargetValue = request.effectiveTargetValue;
             this.gwClusterId = request.gwClusterId;
             this.modelName = request.modelName;
             this.modelServiceId = request.modelServiceId;
@@ -128,6 +156,24 @@ public class DescribeCostRulesRequest extends Request {
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * EffectiveTargetType.
+         */
+        public Builder effectiveTargetType(String effectiveTargetType) {
+            this.putQueryParameter("EffectiveTargetType", effectiveTargetType);
+            this.effectiveTargetType = effectiveTargetType;
+            return this;
+        }
+
+        /**
+         * EffectiveTargetValue.
+         */
+        public Builder effectiveTargetValue(String effectiveTargetValue) {
+            this.putQueryParameter("EffectiveTargetValue", effectiveTargetValue);
+            this.effectiveTargetValue = effectiveTargetValue;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>

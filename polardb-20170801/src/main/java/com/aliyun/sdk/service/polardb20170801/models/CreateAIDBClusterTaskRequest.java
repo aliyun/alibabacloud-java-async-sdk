@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateAIDBClusterTaskRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomOssBucketName")
+    private String customOssBucketName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
@@ -25,6 +29,10 @@ public class CreateAIDBClusterTaskRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceClass")
     private String DBInstanceClass;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataserviceMode")
+    private String dataserviceMode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DatasetPath")
@@ -104,8 +112,10 @@ public class CreateAIDBClusterTaskRequest extends Request {
 
     private CreateAIDBClusterTaskRequest(Builder builder) {
         super(builder);
+        this.customOssBucketName = builder.customOssBucketName;
         this.DBClusterId = builder.DBClusterId;
         this.DBInstanceClass = builder.DBInstanceClass;
+        this.dataserviceMode = builder.dataserviceMode;
         this.datasetPath = builder.datasetPath;
         this.evalDatasetPath = builder.evalDatasetPath;
         this.kubeType = builder.kubeType;
@@ -140,6 +150,13 @@ public class CreateAIDBClusterTaskRequest extends Request {
     }
 
     /**
+     * @return customOssBucketName
+     */
+    public String getCustomOssBucketName() {
+        return this.customOssBucketName;
+    }
+
+    /**
      * @return DBClusterId
      */
     public String getDBClusterId() {
@@ -151,6 +168,13 @@ public class CreateAIDBClusterTaskRequest extends Request {
      */
     public String getDBInstanceClass() {
         return this.DBInstanceClass;
+    }
+
+    /**
+     * @return dataserviceMode
+     */
+    public String getDataserviceMode() {
+        return this.dataserviceMode;
     }
 
     /**
@@ -280,8 +304,10 @@ public class CreateAIDBClusterTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateAIDBClusterTaskRequest, Builder> {
+        private String customOssBucketName; 
         private String DBClusterId; 
         private String DBInstanceClass; 
+        private String dataserviceMode; 
         private String datasetPath; 
         private String evalDatasetPath; 
         private String kubeType; 
@@ -307,8 +333,10 @@ public class CreateAIDBClusterTaskRequest extends Request {
 
         private Builder(CreateAIDBClusterTaskRequest request) {
             super(request);
+            this.customOssBucketName = request.customOssBucketName;
             this.DBClusterId = request.DBClusterId;
             this.DBInstanceClass = request.DBInstanceClass;
+            this.dataserviceMode = request.dataserviceMode;
             this.datasetPath = request.datasetPath;
             this.evalDatasetPath = request.evalDatasetPath;
             this.kubeType = request.kubeType;
@@ -330,6 +358,15 @@ public class CreateAIDBClusterTaskRequest extends Request {
         } 
 
         /**
+         * CustomOssBucketName.
+         */
+        public Builder customOssBucketName(String customOssBucketName) {
+            this.putQueryParameter("CustomOssBucketName", customOssBucketName);
+            this.customOssBucketName = customOssBucketName;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -347,6 +384,15 @@ public class CreateAIDBClusterTaskRequest extends Request {
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
             this.DBInstanceClass = DBInstanceClass;
+            return this;
+        }
+
+        /**
+         * DataserviceMode.
+         */
+        public Builder dataserviceMode(String dataserviceMode) {
+            this.putQueryParameter("DataserviceMode", dataserviceMode);
+            this.dataserviceMode = dataserviceMode;
             return this;
         }
 

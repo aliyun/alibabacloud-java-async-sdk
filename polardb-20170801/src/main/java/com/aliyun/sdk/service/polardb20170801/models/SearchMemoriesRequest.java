@@ -40,8 +40,15 @@ public class SearchMemoriesRequest extends Request {
     private String memoryUserId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Page")
+    private Integer page;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Query")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String query;
 
     @com.aliyun.core.annotation.Query
@@ -55,6 +62,8 @@ public class SearchMemoriesRequest extends Request {
         this.createTimeEnd = builder.createTimeEnd;
         this.memoryAgentId = builder.memoryAgentId;
         this.memoryUserId = builder.memoryUserId;
+        this.page = builder.page;
+        this.pageSize = builder.pageSize;
         this.query = builder.query;
         this.topK = builder.topK;
     }
@@ -108,6 +117,20 @@ public class SearchMemoriesRequest extends Request {
     }
 
     /**
+     * @return page
+     */
+    public Integer getPage() {
+        return this.page;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return query
      */
     public String getQuery() {
@@ -127,6 +150,8 @@ public class SearchMemoriesRequest extends Request {
         private String createTimeEnd; 
         private String memoryAgentId; 
         private String memoryUserId; 
+        private Integer page; 
+        private Integer pageSize; 
         private String query; 
         private String topK; 
 
@@ -141,6 +166,8 @@ public class SearchMemoriesRequest extends Request {
             this.createTimeEnd = request.createTimeEnd;
             this.memoryAgentId = request.memoryAgentId;
             this.memoryUserId = request.memoryUserId;
+            this.page = request.page;
+            this.pageSize = request.pageSize;
             this.query = request.query;
             this.topK = request.topK;
         } 
@@ -197,10 +224,25 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>who are you</p>
+         * Page.
+         */
+        public Builder page(Integer page) {
+            this.putQueryParameter("Page", page);
+            this.page = page;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * Query.
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);

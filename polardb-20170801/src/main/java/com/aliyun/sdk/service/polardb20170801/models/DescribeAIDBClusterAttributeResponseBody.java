@@ -35,6 +35,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DBClusterStatus")
     private String DBClusterStatus;
 
+    @com.aliyun.core.annotation.NameInMap("DBInstanceStatusDesc")
+    private String DBInstanceStatusDesc;
+
     @com.aliyun.core.annotation.NameInMap("DBNodes")
     private java.util.List<DBNodes> DBNodes;
 
@@ -71,8 +74,14 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MaxQPM")
     private String maxQPM;
 
+    @com.aliyun.core.annotation.NameInMap("MaxTPM")
+    private String maxTPM;
+
     @com.aliyun.core.annotation.NameInMap("ModelName")
     private String modelName;
+
+    @com.aliyun.core.annotation.NameInMap("ModelSpaceName")
+    private String modelSpaceName;
 
     @com.aliyun.core.annotation.NameInMap("ModelType")
     private String modelType;
@@ -126,6 +135,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         this.DBClusterDescription = builder.DBClusterDescription;
         this.DBClusterId = builder.DBClusterId;
         this.DBClusterStatus = builder.DBClusterStatus;
+        this.DBInstanceStatusDesc = builder.DBInstanceStatusDesc;
         this.DBNodes = builder.DBNodes;
         this.DBVersion = builder.DBVersion;
         this.ecsSecurityGroupId = builder.ecsSecurityGroupId;
@@ -138,7 +148,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         this.kubeClusterId = builder.kubeClusterId;
         this.lockMode = builder.lockMode;
         this.maxQPM = builder.maxQPM;
+        this.maxTPM = builder.maxTPM;
         this.modelName = builder.modelName;
+        this.modelSpaceName = builder.modelSpaceName;
         this.modelType = builder.modelType;
         this.payType = builder.payType;
         this.publicIp = builder.publicIp;
@@ -208,6 +220,13 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
      */
     public String getDBClusterStatus() {
         return this.DBClusterStatus;
+    }
+
+    /**
+     * @return DBInstanceStatusDesc
+     */
+    public String getDBInstanceStatusDesc() {
+        return this.DBInstanceStatusDesc;
     }
 
     /**
@@ -295,10 +314,24 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return maxTPM
+     */
+    public String getMaxTPM() {
+        return this.maxTPM;
+    }
+
+    /**
      * @return modelName
      */
     public String getModelName() {
         return this.modelName;
+    }
+
+    /**
+     * @return modelSpaceName
+     */
+    public String getModelSpaceName() {
+        return this.modelSpaceName;
     }
 
     /**
@@ -413,6 +446,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         private String DBClusterDescription; 
         private String DBClusterId; 
         private String DBClusterStatus; 
+        private String DBInstanceStatusDesc; 
         private java.util.List<DBNodes> DBNodes; 
         private String DBVersion; 
         private String ecsSecurityGroupId; 
@@ -425,7 +459,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         private String kubeClusterId; 
         private String lockMode; 
         private String maxQPM; 
+        private String maxTPM; 
         private String modelName; 
+        private String modelSpaceName; 
         private String modelType; 
         private String payType; 
         private String publicIp; 
@@ -452,6 +488,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
             this.DBClusterDescription = model.DBClusterDescription;
             this.DBClusterId = model.DBClusterId;
             this.DBClusterStatus = model.DBClusterStatus;
+            this.DBInstanceStatusDesc = model.DBInstanceStatusDesc;
             this.DBNodes = model.DBNodes;
             this.DBVersion = model.DBVersion;
             this.ecsSecurityGroupId = model.ecsSecurityGroupId;
@@ -464,7 +501,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
             this.kubeClusterId = model.kubeClusterId;
             this.lockMode = model.lockMode;
             this.maxQPM = model.maxQPM;
+            this.maxTPM = model.maxTPM;
             this.modelName = model.modelName;
+            this.modelSpaceName = model.modelSpaceName;
             this.modelType = model.modelType;
             this.payType = model.payType;
             this.publicIp = model.publicIp;
@@ -527,6 +566,14 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
          */
         public Builder DBClusterStatus(String DBClusterStatus) {
             this.DBClusterStatus = DBClusterStatus;
+            return this;
+        }
+
+        /**
+         * DBInstanceStatusDesc.
+         */
+        public Builder DBInstanceStatusDesc(String DBInstanceStatusDesc) {
+            this.DBInstanceStatusDesc = DBInstanceStatusDesc;
             return this;
         }
 
@@ -627,10 +674,26 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * MaxTPM.
+         */
+        public Builder maxTPM(String maxTPM) {
+            this.maxTPM = maxTPM;
+            return this;
+        }
+
+        /**
          * ModelName.
          */
         public Builder modelName(String modelName) {
             this.modelName = modelName;
+            return this;
+        }
+
+        /**
+         * ModelSpaceName.
+         */
+        public Builder modelSpaceName(String modelSpaceName) {
+            this.modelSpaceName = modelSpaceName;
             return this;
         }
 
@@ -907,6 +970,123 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
      *
      * <p>DescribeAIDBClusterAttributeResponseBody</p>
      */
+    public static class SupportedApis extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ApiName")
+        private String apiName;
+
+        @com.aliyun.core.annotation.NameInMap("GenerationMode")
+        private String generationMode;
+
+        @com.aliyun.core.annotation.NameInMap("Path")
+        private String path;
+
+        @com.aliyun.core.annotation.NameInMap("Protocol")
+        private String protocol;
+
+        private SupportedApis(Builder builder) {
+            this.apiName = builder.apiName;
+            this.generationMode = builder.generationMode;
+            this.path = builder.path;
+            this.protocol = builder.protocol;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SupportedApis create() {
+            return builder().build();
+        }
+
+        /**
+         * @return apiName
+         */
+        public String getApiName() {
+            return this.apiName;
+        }
+
+        /**
+         * @return generationMode
+         */
+        public String getGenerationMode() {
+            return this.generationMode;
+        }
+
+        /**
+         * @return path
+         */
+        public String getPath() {
+            return this.path;
+        }
+
+        /**
+         * @return protocol
+         */
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        public static final class Builder {
+            private String apiName; 
+            private String generationMode; 
+            private String path; 
+            private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportedApis model) {
+                this.apiName = model.apiName;
+                this.generationMode = model.generationMode;
+                this.path = model.path;
+                this.protocol = model.protocol;
+            } 
+
+            /**
+             * ApiName.
+             */
+            public Builder apiName(String apiName) {
+                this.apiName = apiName;
+                return this;
+            }
+
+            /**
+             * GenerationMode.
+             */
+            public Builder generationMode(String generationMode) {
+                this.generationMode = generationMode;
+                return this;
+            }
+
+            /**
+             * Path.
+             */
+            public Builder path(String path) {
+                this.path = path;
+                return this;
+            }
+
+            /**
+             * Protocol.
+             */
+            public Builder protocol(String protocol) {
+                this.protocol = protocol;
+                return this;
+            }
+
+            public SupportedApis build() {
+                return new SupportedApis(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAIDBClusterAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAIDBClusterAttributeResponseBody</p>
+     */
     public static class DBNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChildVolumes")
         private java.util.List<ChildVolumes> childVolumes;
@@ -938,8 +1118,14 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MemorySize")
         private String memorySize;
 
+        @com.aliyun.core.annotation.NameInMap("ModelName")
+        private String modelName;
+
         @com.aliyun.core.annotation.NameInMap("PublicIp")
         private String publicIp;
+
+        @com.aliyun.core.annotation.NameInMap("SupportedApis")
+        private java.util.List<SupportedApis> supportedApis;
 
         @com.aliyun.core.annotation.NameInMap("VNodeId")
         private String vNodeId;
@@ -964,7 +1150,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
             this.GPU = builder.GPU;
             this.linkIP = builder.linkIP;
             this.memorySize = builder.memorySize;
+            this.modelName = builder.modelName;
             this.publicIp = builder.publicIp;
+            this.supportedApis = builder.supportedApis;
             this.vNodeId = builder.vNodeId;
             this.VPCId = builder.VPCId;
             this.vSwitchId = builder.vSwitchId;
@@ -1050,10 +1238,24 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return modelName
+         */
+        public String getModelName() {
+            return this.modelName;
+        }
+
+        /**
          * @return publicIp
          */
         public String getPublicIp() {
             return this.publicIp;
+        }
+
+        /**
+         * @return supportedApis
+         */
+        public java.util.List<SupportedApis> getSupportedApis() {
+            return this.supportedApis;
         }
 
         /**
@@ -1095,7 +1297,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
             private String GPU; 
             private String linkIP; 
             private String memorySize; 
+            private String modelName; 
             private String publicIp; 
+            private java.util.List<SupportedApis> supportedApis; 
             private String vNodeId; 
             private String VPCId; 
             private String vSwitchId; 
@@ -1115,7 +1319,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
                 this.GPU = model.GPU;
                 this.linkIP = model.linkIP;
                 this.memorySize = model.memorySize;
+                this.modelName = model.modelName;
                 this.publicIp = model.publicIp;
+                this.supportedApis = model.supportedApis;
                 this.vNodeId = model.vNodeId;
                 this.VPCId = model.VPCId;
                 this.vSwitchId = model.vSwitchId;
@@ -1203,10 +1409,26 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * ModelName.
+             */
+            public Builder modelName(String modelName) {
+                this.modelName = modelName;
+                return this;
+            }
+
+            /**
              * PublicIp.
              */
             public Builder publicIp(String publicIp) {
                 this.publicIp = publicIp;
+                return this;
+            }
+
+            /**
+             * SupportedApis.
+             */
+            public Builder supportedApis(java.util.List<SupportedApis> supportedApis) {
+                this.supportedApis = supportedApis;
                 return this;
             }
 

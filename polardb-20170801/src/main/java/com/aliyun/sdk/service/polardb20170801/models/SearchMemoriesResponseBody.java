@@ -17,15 +17,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SearchMemoriesResponseBody</p>
  */
 public class SearchMemoriesResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Page")
+    private String page;
+
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private String pageSize;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Results")
     private java.util.List<Results> results;
 
+    @com.aliyun.core.annotation.NameInMap("Total")
+    private String total;
+
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
+    private String totalPages;
+
     private SearchMemoriesResponseBody(Builder builder) {
+        this.page = builder.page;
+        this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
         this.results = builder.results;
+        this.total = builder.total;
+        this.totalPages = builder.totalPages;
     }
 
     public static Builder builder() {
@@ -38,6 +54,20 @@ public class SearchMemoriesResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return page
+     */
+    public String getPage() {
+        return this.page;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public String getPageSize() {
+        return this.pageSize;
     }
 
     /**
@@ -54,17 +84,55 @@ public class SearchMemoriesResponseBody extends TeaModel {
         return this.results;
     }
 
+    /**
+     * @return total
+     */
+    public String getTotal() {
+        return this.total;
+    }
+
+    /**
+     * @return totalPages
+     */
+    public String getTotalPages() {
+        return this.totalPages;
+    }
+
     public static final class Builder {
+        private String page; 
+        private String pageSize; 
         private String requestId; 
         private java.util.List<Results> results; 
+        private String total; 
+        private String totalPages; 
 
         private Builder() {
         } 
 
         private Builder(SearchMemoriesResponseBody model) {
+            this.page = model.page;
+            this.pageSize = model.pageSize;
             this.requestId = model.requestId;
             this.results = model.results;
+            this.total = model.total;
+            this.totalPages = model.totalPages;
         } 
+
+        /**
+         * Page.
+         */
+        public Builder page(String page) {
+            this.page = page;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(String pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
 
         /**
          * RequestId.
@@ -79,6 +147,22 @@ public class SearchMemoriesResponseBody extends TeaModel {
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
+            return this;
+        }
+
+        /**
+         * Total.
+         */
+        public Builder total(String total) {
+            this.total = total;
+            return this;
+        }
+
+        /**
+         * TotalPages.
+         */
+        public Builder totalPages(String totalPages) {
+            this.totalPages = totalPages;
             return this;
         }
 

@@ -23,6 +23,10 @@ public class DeleteAIDBClusterApiKeyRequest extends Request {
     private String apiKey;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModelSpaceName")
+    private String modelSpaceName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -30,6 +34,7 @@ public class DeleteAIDBClusterApiKeyRequest extends Request {
     private DeleteAIDBClusterApiKeyRequest(Builder builder) {
         super(builder);
         this.apiKey = builder.apiKey;
+        this.modelSpaceName = builder.modelSpaceName;
         this.regionId = builder.regionId;
     }
 
@@ -54,6 +59,13 @@ public class DeleteAIDBClusterApiKeyRequest extends Request {
     }
 
     /**
+     * @return modelSpaceName
+     */
+    public String getModelSpaceName() {
+        return this.modelSpaceName;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -62,6 +74,7 @@ public class DeleteAIDBClusterApiKeyRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteAIDBClusterApiKeyRequest, Builder> {
         private String apiKey; 
+        private String modelSpaceName; 
         private String regionId; 
 
         private Builder() {
@@ -71,6 +84,7 @@ public class DeleteAIDBClusterApiKeyRequest extends Request {
         private Builder(DeleteAIDBClusterApiKeyRequest request) {
             super(request);
             this.apiKey = request.apiKey;
+            this.modelSpaceName = request.modelSpaceName;
             this.regionId = request.regionId;
         } 
 
@@ -83,6 +97,15 @@ public class DeleteAIDBClusterApiKeyRequest extends Request {
         public Builder apiKey(String apiKey) {
             this.putQueryParameter("ApiKey", apiKey);
             this.apiKey = apiKey;
+            return this;
+        }
+
+        /**
+         * ModelSpaceName.
+         */
+        public Builder modelSpaceName(String modelSpaceName) {
+            this.putQueryParameter("ModelSpaceName", modelSpaceName);
+            this.modelSpaceName = modelSpaceName;
             return this;
         }
 

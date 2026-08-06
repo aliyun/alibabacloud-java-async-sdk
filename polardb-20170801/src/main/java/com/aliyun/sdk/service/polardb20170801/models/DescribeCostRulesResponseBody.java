@@ -188,6 +188,12 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CostRuleId")
         private String costRuleId;
 
+        @com.aliyun.core.annotation.NameInMap("EffectiveTargetType")
+        private String effectiveTargetType;
+
+        @com.aliyun.core.annotation.NameInMap("EffectiveTargetValue")
+        private String effectiveTargetValue;
+
         @com.aliyun.core.annotation.NameInMap("GmtCreated")
         private String gmtCreated;
 
@@ -212,6 +218,8 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         private Items(Builder builder) {
             this.cacheCostPointsPerMillion = builder.cacheCostPointsPerMillion;
             this.costRuleId = builder.costRuleId;
+            this.effectiveTargetType = builder.effectiveTargetType;
+            this.effectiveTargetValue = builder.effectiveTargetValue;
             this.gmtCreated = builder.gmtCreated;
             this.gmtModified = builder.gmtModified;
             this.gwClusterId = builder.gwClusterId;
@@ -241,6 +249,20 @@ public class DescribeCostRulesResponseBody extends TeaModel {
          */
         public String getCostRuleId() {
             return this.costRuleId;
+        }
+
+        /**
+         * @return effectiveTargetType
+         */
+        public String getEffectiveTargetType() {
+            return this.effectiveTargetType;
+        }
+
+        /**
+         * @return effectiveTargetValue
+         */
+        public String getEffectiveTargetValue() {
+            return this.effectiveTargetValue;
         }
 
         /**
@@ -295,6 +317,8 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         public static final class Builder {
             private String cacheCostPointsPerMillion; 
             private String costRuleId; 
+            private String effectiveTargetType; 
+            private String effectiveTargetValue; 
             private String gmtCreated; 
             private String gmtModified; 
             private String gwClusterId; 
@@ -309,6 +333,8 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             private Builder(Items model) {
                 this.cacheCostPointsPerMillion = model.cacheCostPointsPerMillion;
                 this.costRuleId = model.costRuleId;
+                this.effectiveTargetType = model.effectiveTargetType;
+                this.effectiveTargetValue = model.effectiveTargetValue;
                 this.gmtCreated = model.gmtCreated;
                 this.gmtModified = model.gmtModified;
                 this.gwClusterId = model.gwClusterId;
@@ -331,6 +357,22 @@ public class DescribeCostRulesResponseBody extends TeaModel {
              */
             public Builder costRuleId(String costRuleId) {
                 this.costRuleId = costRuleId;
+                return this;
+            }
+
+            /**
+             * EffectiveTargetType.
+             */
+            public Builder effectiveTargetType(String effectiveTargetType) {
+                this.effectiveTargetType = effectiveTargetType;
+                return this;
+            }
+
+            /**
+             * EffectiveTargetValue.
+             */
+            public Builder effectiveTargetValue(String effectiveTargetValue) {
+                this.effectiveTargetValue = effectiveTargetValue;
                 return this;
             }
 

@@ -69,6 +69,10 @@ public class DescribeApplicationPerformanceRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("filter")
+    private java.util.Map<String, ?> filter;
+
     private DescribeApplicationPerformanceRequest(Builder builder) {
         super(builder);
         this.applicationId = builder.applicationId;
@@ -83,6 +87,7 @@ public class DescribeApplicationPerformanceRequest extends Request {
         this.modelService = builder.modelService;
         this.startStep = builder.startStep;
         this.startTime = builder.startTime;
+        this.filter = builder.filter;
     }
 
     public static Builder builder() {
@@ -182,6 +187,13 @@ public class DescribeApplicationPerformanceRequest extends Request {
         return this.startTime;
     }
 
+    /**
+     * @return filter
+     */
+    public java.util.Map<String, ?> getFilter() {
+        return this.filter;
+    }
+
     public static final class Builder extends Request.Builder<DescribeApplicationPerformanceRequest, Builder> {
         private String applicationId; 
         private String consumer; 
@@ -195,6 +207,7 @@ public class DescribeApplicationPerformanceRequest extends Request {
         private String modelService; 
         private Long startStep; 
         private String startTime; 
+        private java.util.Map<String, ?> filter; 
 
         private Builder() {
             super();
@@ -214,6 +227,7 @@ public class DescribeApplicationPerformanceRequest extends Request {
             this.modelService = request.modelService;
             this.startStep = request.startStep;
             this.startTime = request.startTime;
+            this.filter = request.filter;
         } 
 
         /**
@@ -333,6 +347,16 @@ public class DescribeApplicationPerformanceRequest extends Request {
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * filter.
+         */
+        public Builder filter(java.util.Map<String, ?> filter) {
+            String filterShrink = shrink(filter, "filter", "json");
+            this.putQueryParameter("filter", filterShrink);
+            this.filter = filter;
             return this;
         }
 

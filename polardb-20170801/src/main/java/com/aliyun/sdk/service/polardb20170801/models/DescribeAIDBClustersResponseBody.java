@@ -323,6 +323,9 @@ public class DescribeAIDBClustersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LockMode")
         private String lockMode;
 
+        @com.aliyun.core.annotation.NameInMap("ModelSpace")
+        private String modelSpace;
+
         @com.aliyun.core.annotation.NameInMap("ModelType")
         private String modelType;
 
@@ -368,6 +371,7 @@ public class DescribeAIDBClustersResponseBody extends TeaModel {
             this.expired = builder.expired;
             this.kubeClusterId = builder.kubeClusterId;
             this.lockMode = builder.lockMode;
+            this.modelSpace = builder.modelSpace;
             this.modelType = builder.modelType;
             this.payType = builder.payType;
             this.regionId = builder.regionId;
@@ -467,6 +471,13 @@ public class DescribeAIDBClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return modelSpace
+         */
+        public String getModelSpace() {
+            return this.modelSpace;
+        }
+
+        /**
          * @return modelType
          */
         public String getModelType() {
@@ -555,6 +566,7 @@ public class DescribeAIDBClustersResponseBody extends TeaModel {
             private Boolean expired; 
             private String kubeClusterId; 
             private String lockMode; 
+            private String modelSpace; 
             private String modelType; 
             private String payType; 
             private String regionId; 
@@ -582,6 +594,7 @@ public class DescribeAIDBClustersResponseBody extends TeaModel {
                 this.expired = model.expired;
                 this.kubeClusterId = model.kubeClusterId;
                 this.lockMode = model.lockMode;
+                this.modelSpace = model.modelSpace;
                 this.modelType = model.modelType;
                 this.payType = model.payType;
                 this.regionId = model.regionId;
@@ -680,6 +693,14 @@ public class DescribeAIDBClustersResponseBody extends TeaModel {
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
+                return this;
+            }
+
+            /**
+             * ModelSpace.
+             */
+            public Builder modelSpace(String modelSpace) {
+                this.modelSpace = modelSpace;
                 return this;
             }
 

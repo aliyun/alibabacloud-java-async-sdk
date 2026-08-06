@@ -20,11 +20,19 @@ public class DescribeAIDBClusterApiKeysResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ApiKeys")
     private java.util.List<ApiKeys> apiKeys;
 
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    private String pageNumber;
+
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private String pageSize;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAIDBClusterApiKeysResponseBody(Builder builder) {
         this.apiKeys = builder.apiKeys;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
     }
 
@@ -48,6 +56,20 @@ public class DescribeAIDBClusterApiKeysResponseBody extends TeaModel {
     }
 
     /**
+     * @return pageNumber
+     */
+    public String getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public String getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -56,6 +78,8 @@ public class DescribeAIDBClusterApiKeysResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<ApiKeys> apiKeys; 
+        private String pageNumber; 
+        private String pageSize; 
         private String requestId; 
 
         private Builder() {
@@ -63,6 +87,8 @@ public class DescribeAIDBClusterApiKeysResponseBody extends TeaModel {
 
         private Builder(DescribeAIDBClusterApiKeysResponseBody model) {
             this.apiKeys = model.apiKeys;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
             this.requestId = model.requestId;
         } 
 
@@ -71,6 +97,22 @@ public class DescribeAIDBClusterApiKeysResponseBody extends TeaModel {
          */
         public Builder apiKeys(java.util.List<ApiKeys> apiKeys) {
             this.apiKeys = apiKeys;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(String pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(String pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 

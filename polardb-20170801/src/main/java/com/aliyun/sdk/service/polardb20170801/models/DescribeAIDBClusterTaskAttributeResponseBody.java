@@ -26,6 +26,9 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
+    @com.aliyun.core.annotation.NameInMap("CustomBucketInfo")
+    private CustomBucketInfo customBucketInfo;
+
     @com.aliyun.core.annotation.NameInMap("DBClusterDescription")
     private String DBClusterDescription;
 
@@ -84,6 +87,7 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         this.accessInfo = builder.accessInfo;
         this.clusterNetworkType = builder.clusterNetworkType;
         this.createTime = builder.createTime;
+        this.customBucketInfo = builder.customBucketInfo;
         this.DBClusterDescription = builder.DBClusterDescription;
         this.DBClusterId = builder.DBClusterId;
         this.DBClusterStatus = builder.DBClusterStatus;
@@ -135,6 +139,13 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
      */
     public String getCreateTime() {
         return this.createTime;
+    }
+
+    /**
+     * @return customBucketInfo
+     */
+    public CustomBucketInfo getCustomBucketInfo() {
+        return this.customBucketInfo;
     }
 
     /**
@@ -267,6 +278,7 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         private String accessInfo; 
         private String clusterNetworkType; 
         private String createTime; 
+        private CustomBucketInfo customBucketInfo; 
         private String DBClusterDescription; 
         private String DBClusterId; 
         private String DBClusterStatus; 
@@ -293,6 +305,7 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
             this.accessInfo = model.accessInfo;
             this.clusterNetworkType = model.clusterNetworkType;
             this.createTime = model.createTime;
+            this.customBucketInfo = model.customBucketInfo;
             this.DBClusterDescription = model.DBClusterDescription;
             this.DBClusterId = model.DBClusterId;
             this.DBClusterStatus = model.DBClusterStatus;
@@ -334,6 +347,14 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
+            return this;
+        }
+
+        /**
+         * CustomBucketInfo.
+         */
+        public Builder customBucketInfo(CustomBucketInfo customBucketInfo) {
+            this.customBucketInfo = customBucketInfo;
             return this;
         }
 
@@ -490,6 +511,60 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAIDBClusterTaskAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAIDBClusterTaskAttributeResponseBody</p>
+     */
+    public static class CustomBucketInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CustomOssBucketName")
+        private String customOssBucketName;
+
+        private CustomBucketInfo(Builder builder) {
+            this.customOssBucketName = builder.customOssBucketName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomBucketInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return customOssBucketName
+         */
+        public String getCustomOssBucketName() {
+            return this.customOssBucketName;
+        }
+
+        public static final class Builder {
+            private String customOssBucketName; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomBucketInfo model) {
+                this.customOssBucketName = model.customOssBucketName;
+            } 
+
+            /**
+             * CustomOssBucketName.
+             */
+            public Builder customOssBucketName(String customOssBucketName) {
+                this.customOssBucketName = customOssBucketName;
+                return this;
+            }
+
+            public CustomBucketInfo build() {
+                return new CustomBucketInfo(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link DescribeAIDBClusterTaskAttributeResponseBody} extends {@link TeaModel}

@@ -22,6 +22,10 @@ public class CreateAIDBClusterApiKeyRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModelSpaceName")
+    private String modelSpaceName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -29,6 +33,7 @@ public class CreateAIDBClusterApiKeyRequest extends Request {
     private CreateAIDBClusterApiKeyRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
+        this.modelSpaceName = builder.modelSpaceName;
         this.regionId = builder.regionId;
     }
 
@@ -53,6 +58,13 @@ public class CreateAIDBClusterApiKeyRequest extends Request {
     }
 
     /**
+     * @return modelSpaceName
+     */
+    public String getModelSpaceName() {
+        return this.modelSpaceName;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -61,6 +73,7 @@ public class CreateAIDBClusterApiKeyRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateAIDBClusterApiKeyRequest, Builder> {
         private String description; 
+        private String modelSpaceName; 
         private String regionId; 
 
         private Builder() {
@@ -70,6 +83,7 @@ public class CreateAIDBClusterApiKeyRequest extends Request {
         private Builder(CreateAIDBClusterApiKeyRequest request) {
             super(request);
             this.description = request.description;
+            this.modelSpaceName = request.modelSpaceName;
             this.regionId = request.regionId;
         } 
 
@@ -79,6 +93,15 @@ public class CreateAIDBClusterApiKeyRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * ModelSpaceName.
+         */
+        public Builder modelSpaceName(String modelSpaceName) {
+            this.putQueryParameter("ModelSpaceName", modelSpaceName);
+            this.modelSpaceName = modelSpaceName;
             return this;
         }
 

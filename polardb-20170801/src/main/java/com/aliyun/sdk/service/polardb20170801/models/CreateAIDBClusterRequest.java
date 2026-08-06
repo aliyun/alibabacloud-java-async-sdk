@@ -34,6 +34,10 @@ public class CreateAIDBClusterRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreatePublicEndpoint")
+    private String createPublicEndpoint;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterDescription")
     private String DBClusterDescription;
 
@@ -43,7 +47,6 @@ public class CreateAIDBClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBNodeClass")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String DBNodeClass;
 
     @com.aliyun.core.annotation.Query
@@ -81,6 +84,10 @@ public class CreateAIDBClusterRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ModelName")
     private String modelName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModelSpace")
+    private String modelSpace;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -160,6 +167,7 @@ public class CreateAIDBClusterRequest extends Request {
         this.autoRenew = builder.autoRenew;
         this.autoUseCoupon = builder.autoUseCoupon;
         this.clientToken = builder.clientToken;
+        this.createPublicEndpoint = builder.createPublicEndpoint;
         this.DBClusterDescription = builder.DBClusterDescription;
         this.DBClusterId = builder.DBClusterId;
         this.DBNodeClass = builder.DBNodeClass;
@@ -172,6 +180,7 @@ public class CreateAIDBClusterRequest extends Request {
         this.kubernetesConfig = builder.kubernetesConfig;
         this.managementMode = builder.managementMode;
         this.modelName = builder.modelName;
+        this.modelSpace = builder.modelSpace;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.password = builder.password;
@@ -230,6 +239,13 @@ public class CreateAIDBClusterRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return createPublicEndpoint
+     */
+    public String getCreatePublicEndpoint() {
+        return this.createPublicEndpoint;
     }
 
     /**
@@ -314,6 +330,13 @@ public class CreateAIDBClusterRequest extends Request {
      */
     public String getModelName() {
         return this.modelName;
+    }
+
+    /**
+     * @return modelSpace
+     */
+    public String getModelSpace() {
+        return this.modelSpace;
     }
 
     /**
@@ -440,6 +463,7 @@ public class CreateAIDBClusterRequest extends Request {
         private String autoRenew; 
         private Boolean autoUseCoupon; 
         private String clientToken; 
+        private String createPublicEndpoint; 
         private String DBClusterDescription; 
         private String DBClusterId; 
         private String DBNodeClass; 
@@ -452,6 +476,7 @@ public class CreateAIDBClusterRequest extends Request {
         private String kubernetesConfig; 
         private String managementMode; 
         private String modelName; 
+        private String modelSpace; 
         private String ownerAccount; 
         private Long ownerId; 
         private String password; 
@@ -480,6 +505,7 @@ public class CreateAIDBClusterRequest extends Request {
             this.autoRenew = request.autoRenew;
             this.autoUseCoupon = request.autoUseCoupon;
             this.clientToken = request.clientToken;
+            this.createPublicEndpoint = request.createPublicEndpoint;
             this.DBClusterDescription = request.DBClusterDescription;
             this.DBClusterId = request.DBClusterId;
             this.DBNodeClass = request.DBNodeClass;
@@ -492,6 +518,7 @@ public class CreateAIDBClusterRequest extends Request {
             this.kubernetesConfig = request.kubernetesConfig;
             this.managementMode = request.managementMode;
             this.modelName = request.modelName;
+            this.modelSpace = request.modelSpace;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.password = request.password;
@@ -548,6 +575,15 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
+         * CreatePublicEndpoint.
+         */
+        public Builder createPublicEndpoint(String createPublicEndpoint) {
+            this.putQueryParameter("CreatePublicEndpoint", createPublicEndpoint);
+            this.createPublicEndpoint = createPublicEndpoint;
+            return this;
+        }
+
+        /**
          * DBClusterDescription.
          */
         public Builder DBClusterDescription(String DBClusterDescription) {
@@ -566,10 +602,7 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>polar.pg.g4.6xlarge.gu4</p>
+         * DBNodeClass.
          */
         public Builder DBNodeClass(String DBNodeClass) {
             this.putQueryParameter("DBNodeClass", DBNodeClass);
@@ -658,6 +691,15 @@ public class CreateAIDBClusterRequest extends Request {
         public Builder modelName(String modelName) {
             this.putQueryParameter("ModelName", modelName);
             this.modelName = modelName;
+            return this;
+        }
+
+        /**
+         * ModelSpace.
+         */
+        public Builder modelSpace(String modelSpace) {
+            this.putQueryParameter("ModelSpace", modelSpace);
+            this.modelSpace = modelSpace;
             return this;
         }
 

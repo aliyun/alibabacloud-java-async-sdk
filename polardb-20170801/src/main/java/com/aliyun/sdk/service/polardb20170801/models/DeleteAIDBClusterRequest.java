@@ -22,9 +22,14 @@ public class DeleteAIDBClusterRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModelSpace")
+    private String modelSpace;
+
     private DeleteAIDBClusterRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.modelSpace = builder.modelSpace;
     }
 
     public static Builder builder() {
@@ -47,8 +52,16 @@ public class DeleteAIDBClusterRequest extends Request {
         return this.DBClusterId;
     }
 
+    /**
+     * @return modelSpace
+     */
+    public String getModelSpace() {
+        return this.modelSpace;
+    }
+
     public static final class Builder extends Request.Builder<DeleteAIDBClusterRequest, Builder> {
         private String DBClusterId; 
+        private String modelSpace; 
 
         private Builder() {
             super();
@@ -57,6 +70,7 @@ public class DeleteAIDBClusterRequest extends Request {
         private Builder(DeleteAIDBClusterRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.modelSpace = request.modelSpace;
         } 
 
         /**
@@ -68,6 +82,15 @@ public class DeleteAIDBClusterRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * ModelSpace.
+         */
+        public Builder modelSpace(String modelSpace) {
+            this.putQueryParameter("ModelSpace", modelSpace);
+            this.modelSpace = modelSpace;
             return this;
         }
 

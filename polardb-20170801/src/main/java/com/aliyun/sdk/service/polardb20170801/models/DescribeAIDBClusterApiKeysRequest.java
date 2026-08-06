@@ -18,12 +18,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAIDBClusterApiKeysRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModelSpaceName")
+    private String modelSpaceName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DescribeAIDBClusterApiKeysRequest(Builder builder) {
         super(builder);
+        this.modelSpaceName = builder.modelSpaceName;
         this.regionId = builder.regionId;
     }
 
@@ -41,6 +46,13 @@ public class DescribeAIDBClusterApiKeysRequest extends Request {
     }
 
     /**
+     * @return modelSpaceName
+     */
+    public String getModelSpaceName() {
+        return this.modelSpaceName;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -48,6 +60,7 @@ public class DescribeAIDBClusterApiKeysRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeAIDBClusterApiKeysRequest, Builder> {
+        private String modelSpaceName; 
         private String regionId; 
 
         private Builder() {
@@ -56,8 +69,18 @@ public class DescribeAIDBClusterApiKeysRequest extends Request {
 
         private Builder(DescribeAIDBClusterApiKeysRequest request) {
             super(request);
+            this.modelSpaceName = request.modelSpaceName;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * ModelSpaceName.
+         */
+        public Builder modelSpaceName(String modelSpaceName) {
+            this.putQueryParameter("ModelSpaceName", modelSpaceName);
+            this.modelSpaceName = modelSpaceName;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
