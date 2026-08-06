@@ -242,12 +242,16 @@ public class MultiModalAgentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContentLength")
         private Long contentLength;
 
+        @com.aliyun.core.annotation.NameInMap("Credits")
+        private Double credits;
+
         @com.aliyun.core.annotation.NameInMap("PromptLength")
         private Long promptLength;
 
         private Usage(Builder builder) {
             this.agentDetail = builder.agentDetail;
             this.contentLength = builder.contentLength;
+            this.credits = builder.credits;
             this.promptLength = builder.promptLength;
         }
 
@@ -274,6 +278,13 @@ public class MultiModalAgentResponseBody extends TeaModel {
         }
 
         /**
+         * @return credits
+         */
+        public Double getCredits() {
+            return this.credits;
+        }
+
+        /**
          * @return promptLength
          */
         public Long getPromptLength() {
@@ -283,6 +294,7 @@ public class MultiModalAgentResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.Map<String, ?> agentDetail; 
             private Long contentLength; 
+            private Double credits; 
             private Long promptLength; 
 
             private Builder() {
@@ -291,6 +303,7 @@ public class MultiModalAgentResponseBody extends TeaModel {
             private Builder(Usage model) {
                 this.agentDetail = model.agentDetail;
                 this.contentLength = model.contentLength;
+                this.credits = model.credits;
                 this.promptLength = model.promptLength;
             } 
 
@@ -307,6 +320,14 @@ public class MultiModalAgentResponseBody extends TeaModel {
              */
             public Builder contentLength(Long contentLength) {
                 this.contentLength = contentLength;
+                return this;
+            }
+
+            /**
+             * Credits.
+             */
+            public Builder credits(Double credits) {
+                this.credits = credits;
                 return this;
             }
 
