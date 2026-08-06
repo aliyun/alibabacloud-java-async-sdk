@@ -99,6 +99,10 @@ public class CreateImageRequest extends Request {
     private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecureBootOptions")
+    private SecureBootOptions secureBootOptions;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SnapshotId")
     private String snapshotId;
 
@@ -128,6 +132,7 @@ public class CreateImageRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.secureBootOptions = builder.secureBootOptions;
         this.snapshotId = builder.snapshotId;
         this.tag = builder.tag;
     }
@@ -286,6 +291,13 @@ public class CreateImageRequest extends Request {
     }
 
     /**
+     * @return secureBootOptions
+     */
+    public SecureBootOptions getSecureBootOptions() {
+        return this.secureBootOptions;
+    }
+
+    /**
      * @return snapshotId
      */
     public String getSnapshotId() {
@@ -320,6 +332,7 @@ public class CreateImageRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private SecureBootOptions secureBootOptions; 
         private String snapshotId; 
         private java.util.List<Tag> tag; 
 
@@ -349,6 +362,7 @@ public class CreateImageRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.secureBootOptions = request.secureBootOptions;
             this.snapshotId = request.snapshotId;
             this.tag = request.tag;
         } 
@@ -623,6 +637,15 @@ public class CreateImageRequest extends Request {
         }
 
         /**
+         * SecureBootOptions.
+         */
+        public Builder secureBootOptions(SecureBootOptions secureBootOptions) {
+            this.putQueryParameter("SecureBootOptions", secureBootOptions);
+            this.secureBootOptions = secureBootOptions;
+            return this;
+        }
+
+        /**
          * <p>The ID of the snapshot from which to create the custom image.</p>
          * <blockquote>
          * <p> To create a custom image from only a system disk snapshot of an ECS instance, you can specify this parameter or <code>DiskDeviceMapping.N.SnapshotId</code> to specify the snapshot ID. If you add data disk snapshots, you can use only <code>DiskDeviceMapping.N.SnapshotId</code> to specify snapshots.</p>
@@ -857,6 +880,60 @@ public class CreateImageRequest extends Request {
 
             public Features build() {
                 return new Features(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateImageRequest} extends {@link TeaModel}
+     *
+     * <p>CreateImageRequest</p>
+     */
+    public static class SecureBootOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SecureBootSupport")
+        private String secureBootSupport;
+
+        private SecureBootOptions(Builder builder) {
+            this.secureBootSupport = builder.secureBootSupport;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecureBootOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return secureBootSupport
+         */
+        public String getSecureBootSupport() {
+            return this.secureBootSupport;
+        }
+
+        public static final class Builder {
+            private String secureBootSupport; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecureBootOptions model) {
+                this.secureBootSupport = model.secureBootSupport;
+            } 
+
+            /**
+             * SecureBootSupport.
+             */
+            public Builder secureBootSupport(String secureBootSupport) {
+                this.secureBootSupport = secureBootSupport;
+                return this;
+            }
+
+            public SecureBootOptions build() {
+                return new SecureBootOptions(this);
             } 
 
         } 

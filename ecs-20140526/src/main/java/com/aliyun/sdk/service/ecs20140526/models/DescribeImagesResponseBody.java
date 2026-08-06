@@ -966,6 +966,60 @@ public class DescribeImagesResponseBody extends TeaModel {
      *
      * <p>DescribeImagesResponseBody</p>
      */
+    public static class SecureBootOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SecureBootSupport")
+        private String secureBootSupport;
+
+        private SecureBootOptions(Builder builder) {
+            this.secureBootSupport = builder.secureBootSupport;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecureBootOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return secureBootSupport
+         */
+        public String getSecureBootSupport() {
+            return this.secureBootSupport;
+        }
+
+        public static final class Builder {
+            private String secureBootSupport; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecureBootOptions model) {
+                this.secureBootSupport = model.secureBootSupport;
+            } 
+
+            /**
+             * SecureBootSupport.
+             */
+            public Builder secureBootSupport(String secureBootSupport) {
+                this.secureBootSupport = secureBootSupport;
+                return this;
+            }
+
+            public SecureBootOptions build() {
+                return new SecureBootOptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeImagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagesResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -1186,6 +1240,9 @@ public class DescribeImagesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("SecureBootOptions")
+        private SecureBootOptions secureBootOptions;
+
         @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
@@ -1233,6 +1290,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             this.productCode = builder.productCode;
             this.progress = builder.progress;
             this.resourceGroupId = builder.resourceGroupId;
+            this.secureBootOptions = builder.secureBootOptions;
             this.size = builder.size;
             this.status = builder.status;
             this.supplierName = builder.supplierName;
@@ -1446,6 +1504,13 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         /**
+         * @return secureBootOptions
+         */
+        public SecureBootOptions getSecureBootOptions() {
+            return this.secureBootOptions;
+        }
+
+        /**
          * @return size
          */
         public Integer getSize() {
@@ -1516,6 +1581,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             private String productCode; 
             private String progress; 
             private String resourceGroupId; 
+            private SecureBootOptions secureBootOptions; 
             private Integer size; 
             private String status; 
             private String supplierName; 
@@ -1555,6 +1621,7 @@ public class DescribeImagesResponseBody extends TeaModel {
                 this.productCode = model.productCode;
                 this.progress = model.progress;
                 this.resourceGroupId = model.resourceGroupId;
+                this.secureBootOptions = model.secureBootOptions;
                 this.size = model.size;
                 this.status = model.status;
                 this.supplierName = model.supplierName;
@@ -1885,6 +1952,14 @@ public class DescribeImagesResponseBody extends TeaModel {
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * SecureBootOptions.
+             */
+            public Builder secureBootOptions(SecureBootOptions secureBootOptions) {
+                this.secureBootOptions = secureBootOptions;
                 return this;
             }
 
