@@ -76,6 +76,9 @@ public class VerifyCatalogKmsRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_catalog</p>
          */
         public Builder catalog(String catalog) {
             this.putPathParameter("catalog", catalog);
@@ -85,6 +88,9 @@ public class VerifyCatalogKmsRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-1234567890abcdef</p>
          */
         public Builder kmsKeyId(String kmsKeyId) {
             this.putBodyParameter("kmsKeyId", kmsKeyId);

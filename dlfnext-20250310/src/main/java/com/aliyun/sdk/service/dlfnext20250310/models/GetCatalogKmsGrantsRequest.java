@@ -61,6 +61,9 @@ public class GetCatalogKmsGrantsRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_catalog</p>
          */
         public Builder catalog(String catalog) {
             this.putPathParameter("catalog", catalog);

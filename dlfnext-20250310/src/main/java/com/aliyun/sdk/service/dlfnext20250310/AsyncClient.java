@@ -488,6 +488,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateRoleUsersResponse> updateRoleUsers(UpdateRoleUsersRequest request);
 
     /**
+     * @param request the request parameters of UpdateVpcConfig  UpdateVpcConfigRequest
+     * @return UpdateVpcConfigResponse
+     */
+    CompletableFuture<UpdateVpcConfigResponse> updateVpcConfig(UpdateVpcConfigRequest request);
+
+    /**
      * @param request the request parameters of VerifyCatalogKms  VerifyCatalogKmsRequest
      * @return VerifyCatalogKmsResponse
      */

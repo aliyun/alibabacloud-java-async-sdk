@@ -1457,6 +1457,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateVpcConfig  UpdateVpcConfigRequest
+     * @return UpdateVpcConfigResponse
+     */
+    @Override
+    public CompletableFuture<UpdateVpcConfigResponse> updateVpcConfig(UpdateVpcConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateVpcConfig").setMethod(HttpMethod.POST).setPathRegex("/dlf/v1/auth/vpc").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateVpcConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateVpcConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of VerifyCatalogKms  VerifyCatalogKmsRequest
      * @return VerifyCatalogKmsResponse
      */
