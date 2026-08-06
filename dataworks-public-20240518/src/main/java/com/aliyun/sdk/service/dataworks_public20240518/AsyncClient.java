@@ -155,6 +155,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateComputeResourceResponse> createComputeResource(CreateComputeResourceRequest request);
 
     /**
+     * @param request the request parameters of CreateCrawler  CreateCrawlerRequest
+     * @return CreateCrawlerResponse
+     */
+    CompletableFuture<CreateCrawlerResponse> createCrawler(CreateCrawlerRequest request);
+
+    /**
      * @param request the request parameters of CreateCustomAttribute  CreateCustomAttributeRequest
      * @return CreateCustomAttributeResponse
      */
@@ -533,6 +539,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteComputeResourceResponse
      */
     CompletableFuture<DeleteComputeResourceResponse> deleteComputeResource(DeleteComputeResourceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCrawler  DeleteCrawlerRequest
+     * @return DeleteCrawlerResponse
+     */
+    CompletableFuture<DeleteCrawlerResponse> deleteCrawler(DeleteCrawlerRequest request);
 
     /**
      * @param request the request parameters of DeleteCustomAttribute  DeleteCustomAttributeRequest
@@ -1001,6 +1013,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetComputeResourceResponse
      */
     CompletableFuture<GetComputeResourceResponse> getComputeResource(GetComputeResourceRequest request);
+
+    /**
+     * @param request the request parameters of GetCrawler  GetCrawlerRequest
+     * @return GetCrawlerResponse
+     */
+    CompletableFuture<GetCrawlerResponse> getCrawler(GetCrawlerRequest request);
+
+    /**
+     * @param request the request parameters of GetCrawlerTypeCapabilities  GetCrawlerTypeCapabilitiesRequest
+     * @return GetCrawlerTypeCapabilitiesResponse
+     */
+    CompletableFuture<GetCrawlerTypeCapabilitiesResponse> getCrawlerTypeCapabilities(GetCrawlerTypeCapabilitiesRequest request);
 
     /**
      * <b>description</b> :
@@ -1520,10 +1544,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListComputeResourcesResponse> listComputeResources(ListComputeResourcesRequest request);
 
     /**
+     * @param request the request parameters of ListCrawlerRuns  ListCrawlerRunsRequest
+     * @return ListCrawlerRunsResponse
+     */
+    CompletableFuture<ListCrawlerRunsResponse> listCrawlerRuns(ListCrawlerRunsRequest request);
+
+    /**
      * @param request the request parameters of ListCrawlerTypes  ListCrawlerTypesRequest
      * @return ListCrawlerTypesResponse
      */
     CompletableFuture<ListCrawlerTypesResponse> listCrawlerTypes(ListCrawlerTypesRequest request);
+
+    /**
+     * @param request the request parameters of ListCrawlers  ListCrawlersRequest
+     * @return ListCrawlersResponse
+     */
+    CompletableFuture<ListCrawlersResponse> listCrawlers(ListCrawlersRequest request);
 
     /**
      * @param request the request parameters of ListCustomAgents  ListCustomAgentsRequest
@@ -2208,6 +2244,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RollbackParameterResponse> rollbackParameter(RollbackParameterRequest request);
 
     /**
+     * @param request the request parameters of RunCrawler  RunCrawlerRequest
+     * @return RunCrawlerResponse
+     */
+    CompletableFuture<RunCrawlerResponse> runCrawler(RunCrawlerRequest request);
+
+    /**
      * @param request the request parameters of RunSemanticJob  RunSemanticJobRequest
      * @return RunSemanticJobResponse
      */
@@ -2239,6 +2281,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StartWorkflowInstancesResponse
      */
     CompletableFuture<StartWorkflowInstancesResponse> startWorkflowInstances(StartWorkflowInstancesRequest request);
+
+    /**
+     * @param request the request parameters of StopCrawler  StopCrawlerRequest
+     * @return StopCrawlerResponse
+     */
+    CompletableFuture<StopCrawlerResponse> stopCrawler(StopCrawlerRequest request);
 
     /**
      * <b>description</b> :
@@ -2359,6 +2407,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateComputeResourceResponse
      */
     CompletableFuture<UpdateComputeResourceResponse> updateComputeResource(UpdateComputeResourceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateCrawler  UpdateCrawlerRequest
+     * @return UpdateCrawlerResponse
+     */
+    CompletableFuture<UpdateCrawlerResponse> updateCrawler(UpdateCrawlerRequest request);
 
     /**
      * @param request the request parameters of UpdateCustomAttribute  UpdateCustomAttributeRequest
