@@ -1031,6 +1031,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableAndCleanRecycleBinResponse> disableAndCleanRecycleBin(DisableAndCleanRecycleBinRequest request);
 
     /**
+     * @param request the request parameters of DisableDataInsight  DisableDataInsightRequest
+     * @return DisableDataInsightResponse
+     */
+    CompletableFuture<DisableDataInsightResponse> disableDataInsight(DisableDataInsightRequest request);
+
+    /**
      * @param request the request parameters of DisableNfsAcl  DisableNfsAclRequest
      * @return DisableNfsAclResponse
      */
@@ -1041,6 +1047,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DisableSmbAclResponse
      */
     CompletableFuture<DisableSmbAclResponse> disableSmbAcl(DisableSmbAclRequest request);
+
+    /**
+     * @param request the request parameters of EnableDataInsight  EnableDataInsightRequest
+     * @return EnableDataInsightResponse
+     */
+    CompletableFuture<EnableDataInsightResponse> enableDataInsight(EnableDataInsightRequest request);
 
     /**
      * @param request the request parameters of EnableNfsAcl  EnableNfsAclRequest
@@ -1107,6 +1119,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAccessPointsResponse
      */
     CompletableFuture<ListAccessPointsResponse> listAccessPoints(ListAccessPointsRequest request);
+
+    /**
+     * @param request the request parameters of ListDataInsightDirectories  ListDataInsightDirectoriesRequest
+     * @return ListDataInsightDirectoriesResponse
+     */
+    CompletableFuture<ListDataInsightDirectoriesResponse> listDataInsightDirectories(ListDataInsightDirectoriesRequest request);
 
     /**
      * <b>description</b> :
