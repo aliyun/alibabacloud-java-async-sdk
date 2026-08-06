@@ -96,6 +96,10 @@ public class ModifyInstanceSpecRequest extends Request {
     private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecondaryZoneId")
+    private String secondaryZoneId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
@@ -146,6 +150,7 @@ public class ModifyInstanceSpecRequest extends Request {
         this.replicaCount = builder.replicaCount;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.secondaryZoneId = builder.secondaryZoneId;
         this.securityToken = builder.securityToken;
         this.shardCount = builder.shardCount;
         this.slaveReadOnlyCount = builder.slaveReadOnlyCount;
@@ -302,6 +307,13 @@ public class ModifyInstanceSpecRequest extends Request {
     }
 
     /**
+     * @return secondaryZoneId
+     */
+    public String getSecondaryZoneId() {
+        return this.secondaryZoneId;
+    }
+
+    /**
      * @return securityToken
      */
     public String getSecurityToken() {
@@ -370,6 +382,7 @@ public class ModifyInstanceSpecRequest extends Request {
         private Integer replicaCount; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String secondaryZoneId; 
         private String securityToken; 
         private Integer shardCount; 
         private Integer slaveReadOnlyCount; 
@@ -403,6 +416,7 @@ public class ModifyInstanceSpecRequest extends Request {
             this.replicaCount = request.replicaCount;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.secondaryZoneId = request.secondaryZoneId;
             this.securityToken = request.securityToken;
             this.shardCount = request.shardCount;
             this.slaveReadOnlyCount = request.slaveReadOnlyCount;
@@ -683,6 +697,15 @@ public class ModifyInstanceSpecRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SecondaryZoneId.
+         */
+        public Builder secondaryZoneId(String secondaryZoneId) {
+            this.putQueryParameter("SecondaryZoneId", secondaryZoneId);
+            this.secondaryZoneId = secondaryZoneId;
             return this;
         }
 
