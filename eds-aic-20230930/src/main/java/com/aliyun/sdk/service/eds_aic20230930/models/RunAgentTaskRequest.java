@@ -30,6 +30,10 @@ public class RunAgentTaskRequest extends Request {
     private Integer maxSteps;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RunConfig")
+    private RunConfig runConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScheduleId")
     private String scheduleId;
 
@@ -54,6 +58,7 @@ public class RunAgentTaskRequest extends Request {
         this.bizRegionId = builder.bizRegionId;
         this.instanceIds = builder.instanceIds;
         this.maxSteps = builder.maxSteps;
+        this.runConfig = builder.runConfig;
         this.scheduleId = builder.scheduleId;
         this.targets = builder.targets;
         this.taskConfigId = builder.taskConfigId;
@@ -96,6 +101,13 @@ public class RunAgentTaskRequest extends Request {
     }
 
     /**
+     * @return runConfig
+     */
+    public RunConfig getRunConfig() {
+        return this.runConfig;
+    }
+
+    /**
      * @return scheduleId
      */
     public String getScheduleId() {
@@ -134,6 +146,7 @@ public class RunAgentTaskRequest extends Request {
         private String bizRegionId; 
         private java.util.List<String> instanceIds; 
         private Integer maxSteps; 
+        private RunConfig runConfig; 
         private String scheduleId; 
         private java.util.List<Targets> targets; 
         private String taskConfigId; 
@@ -149,6 +162,7 @@ public class RunAgentTaskRequest extends Request {
             this.bizRegionId = request.bizRegionId;
             this.instanceIds = request.instanceIds;
             this.maxSteps = request.maxSteps;
+            this.runConfig = request.runConfig;
             this.scheduleId = request.scheduleId;
             this.targets = request.targets;
             this.taskConfigId = request.taskConfigId;
@@ -180,6 +194,16 @@ public class RunAgentTaskRequest extends Request {
         public Builder maxSteps(Integer maxSteps) {
             this.putQueryParameter("MaxSteps", maxSteps);
             this.maxSteps = maxSteps;
+            return this;
+        }
+
+        /**
+         * RunConfig.
+         */
+        public Builder runConfig(RunConfig runConfig) {
+            String runConfigShrink = shrink(runConfig, "RunConfig", "json");
+            this.putQueryParameter("RunConfig", runConfigShrink);
+            this.runConfig = runConfig;
             return this;
         }
 
@@ -235,6 +259,60 @@ public class RunAgentTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RunAgentTaskRequest} extends {@link TeaModel}
+     *
+     * <p>RunAgentTaskRequest</p>
+     */
+    public static class RunConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Skills")
+        private java.util.List<String> skills;
+
+        private RunConfig(Builder builder) {
+            this.skills = builder.skills;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RunConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return skills
+         */
+        public java.util.List<String> getSkills() {
+            return this.skills;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> skills; 
+
+            private Builder() {
+            } 
+
+            private Builder(RunConfig model) {
+                this.skills = model.skills;
+            } 
+
+            /**
+             * Skills.
+             */
+            public Builder skills(java.util.List<String> skills) {
+                this.skills = skills;
+                return this;
+            }
+
+            public RunConfig build() {
+                return new RunConfig(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link RunAgentTaskRequest} extends {@link TeaModel}

@@ -110,6 +110,9 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("DurationMs")
+        private Long durationMs;
+
         @com.aliyun.core.annotation.NameInMap("InputTokens")
         private Long inputTokens;
 
@@ -137,12 +140,16 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TotalTokens")
         private Long totalTokens;
 
+        @com.aliyun.core.annotation.NameInMap("TtftMs")
+        private Long ttftMs;
+
         private Details(Builder builder) {
             this.apiKeyName = builder.apiKeyName;
             this.cachedTokens = builder.cachedTokens;
             this.changeTime = builder.changeTime;
             this.creditChange = builder.creditChange;
             this.description = builder.description;
+            this.durationMs = builder.durationMs;
             this.inputTokens = builder.inputTokens;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
@@ -152,6 +159,7 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             this.requestId = builder.requestId;
             this.taskId = builder.taskId;
             this.totalTokens = builder.totalTokens;
+            this.ttftMs = builder.ttftMs;
         }
 
         public static Builder builder() {
@@ -195,6 +203,13 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return durationMs
+         */
+        public Long getDurationMs() {
+            return this.durationMs;
         }
 
         /**
@@ -260,12 +275,20 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             return this.totalTokens;
         }
 
+        /**
+         * @return ttftMs
+         */
+        public Long getTtftMs() {
+            return this.ttftMs;
+        }
+
         public static final class Builder {
             private String apiKeyName; 
             private Long cachedTokens; 
             private String changeTime; 
             private String creditChange; 
             private String description; 
+            private Long durationMs; 
             private Long inputTokens; 
             private String instanceId; 
             private String instanceName; 
@@ -275,6 +298,7 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             private String requestId; 
             private String taskId; 
             private Long totalTokens; 
+            private Long ttftMs; 
 
             private Builder() {
             } 
@@ -285,6 +309,7 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
                 this.changeTime = model.changeTime;
                 this.creditChange = model.creditChange;
                 this.description = model.description;
+                this.durationMs = model.durationMs;
                 this.inputTokens = model.inputTokens;
                 this.instanceId = model.instanceId;
                 this.instanceName = model.instanceName;
@@ -294,6 +319,7 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
                 this.requestId = model.requestId;
                 this.taskId = model.taskId;
                 this.totalTokens = model.totalTokens;
+                this.ttftMs = model.ttftMs;
             } 
 
             /**
@@ -333,6 +359,14 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * DurationMs.
+             */
+            public Builder durationMs(Long durationMs) {
+                this.durationMs = durationMs;
                 return this;
             }
 
@@ -405,6 +439,14 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
              */
             public Builder totalTokens(Long totalTokens) {
                 this.totalTokens = totalTokens;
+                return this;
+            }
+
+            /**
+             * TtftMs.
+             */
+            public Builder ttftMs(Long ttftMs) {
+                this.ttftMs = ttftMs;
                 return this;
             }
 

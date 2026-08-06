@@ -206,12 +206,16 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxSteps")
         private Integer maxSteps;
 
+        @com.aliyun.core.annotation.NameInMap("Skills")
+        private java.util.List<String> skills;
+
         @com.aliyun.core.annotation.NameInMap("TimeoutSeconds")
         private Integer timeoutSeconds;
 
         private RunConfig(Builder builder) {
             this.extraParams = builder.extraParams;
             this.maxSteps = builder.maxSteps;
+            this.skills = builder.skills;
             this.timeoutSeconds = builder.timeoutSeconds;
         }
 
@@ -238,6 +242,13 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return skills
+         */
+        public java.util.List<String> getSkills() {
+            return this.skills;
+        }
+
+        /**
          * @return timeoutSeconds
          */
         public Integer getTimeoutSeconds() {
@@ -247,6 +258,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         public static final class Builder {
             private String extraParams; 
             private Integer maxSteps; 
+            private java.util.List<String> skills; 
             private Integer timeoutSeconds; 
 
             private Builder() {
@@ -255,6 +267,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             private Builder(RunConfig model) {
                 this.extraParams = model.extraParams;
                 this.maxSteps = model.maxSteps;
+                this.skills = model.skills;
                 this.timeoutSeconds = model.timeoutSeconds;
             } 
 
@@ -271,6 +284,14 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
              */
             public Builder maxSteps(Integer maxSteps) {
                 this.maxSteps = maxSteps;
+                return this;
+            }
+
+            /**
+             * Skills.
+             */
+            public Builder skills(java.util.List<String> skills) {
+                this.skills = skills;
                 return this;
             }
 

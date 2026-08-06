@@ -617,6 +617,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyInstanceChargeTypeResponse> modifyInstanceChargeType(ModifyInstanceChargeTypeRequest request);
 
     /**
+     * @param request the request parameters of ModifyInstanceGroupSpec  ModifyInstanceGroupSpecRequest
+     * @return ModifyInstanceGroupSpecResponse
+     */
+    CompletableFuture<ModifyInstanceGroupSpecResponse> modifyInstanceGroupSpec(ModifyInstanceGroupSpecRequest request);
+
+    /**
      * @param request the request parameters of ModifyJVSInstance  ModifyJVSInstanceRequest
      * @return ModifyJVSInstanceResponse
      */
