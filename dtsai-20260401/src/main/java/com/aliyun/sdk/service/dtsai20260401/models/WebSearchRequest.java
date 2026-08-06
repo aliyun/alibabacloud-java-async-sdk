@@ -31,11 +31,21 @@ public class WebSearchRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UrlScopeDomains")
+    private String urlScopeDomains;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UrlScopeMode")
+    private String urlScopeMode;
+
     private WebSearchRequest(Builder builder) {
         super(builder);
         this.maxResults = builder.maxResults;
         this.query = builder.query;
         this.regionId = builder.regionId;
+        this.urlScopeDomains = builder.urlScopeDomains;
+        this.urlScopeMode = builder.urlScopeMode;
     }
 
     public static Builder builder() {
@@ -72,10 +82,26 @@ public class WebSearchRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return urlScopeDomains
+     */
+    public String getUrlScopeDomains() {
+        return this.urlScopeDomains;
+    }
+
+    /**
+     * @return urlScopeMode
+     */
+    public String getUrlScopeMode() {
+        return this.urlScopeMode;
+    }
+
     public static final class Builder extends Request.Builder<WebSearchRequest, Builder> {
         private Integer maxResults; 
         private String query; 
         private String regionId; 
+        private String urlScopeDomains; 
+        private String urlScopeMode; 
 
         private Builder() {
             super();
@@ -86,6 +112,8 @@ public class WebSearchRequest extends Request {
             this.maxResults = request.maxResults;
             this.query = request.query;
             this.regionId = request.regionId;
+            this.urlScopeDomains = request.urlScopeDomains;
+            this.urlScopeMode = request.urlScopeMode;
         } 
 
         /**
@@ -118,6 +146,24 @@ public class WebSearchRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * UrlScopeDomains.
+         */
+        public Builder urlScopeDomains(String urlScopeDomains) {
+            this.putQueryParameter("UrlScopeDomains", urlScopeDomains);
+            this.urlScopeDomains = urlScopeDomains;
+            return this;
+        }
+
+        /**
+         * UrlScopeMode.
+         */
+        public Builder urlScopeMode(String urlScopeMode) {
+            this.putQueryParameter("UrlScopeMode", urlScopeMode);
+            this.urlScopeMode = urlScopeMode;
             return this;
         }
 
