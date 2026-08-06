@@ -26,10 +26,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request);
 
     /**
+     * @param request the request parameters of CreateOutboundCallRestriction  CreateOutboundCallRestrictionRequest
+     * @return CreateOutboundCallRestrictionResponse
+     */
+    CompletableFuture<CreateOutboundCallRestrictionResponse> createOutboundCallRestriction(CreateOutboundCallRestrictionRequest request);
+
+    /**
      * @param request the request parameters of DeleteInstance  DeleteInstanceRequest
      * @return DeleteInstanceResponse
      */
     CompletableFuture<DeleteInstanceResponse> deleteInstance(DeleteInstanceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteOutboundCallRestriction  DeleteOutboundCallRestrictionRequest
+     * @return DeleteOutboundCallRestrictionResponse
+     */
+    CompletableFuture<DeleteOutboundCallRestrictionResponse> deleteOutboundCallRestriction(DeleteOutboundCallRestrictionRequest request);
 
     /**
      * @param request the request parameters of GetInstance  GetInstanceRequest
@@ -42,6 +54,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListInstancesResponse
      */
     CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
+
+    /**
+     * @param request the request parameters of ListOutboundCallRestrictions  ListOutboundCallRestrictionsRequest
+     * @return ListOutboundCallRestrictionsResponse
+     */
+    CompletableFuture<ListOutboundCallRestrictionsResponse> listOutboundCallRestrictions(ListOutboundCallRestrictionsRequest request);
 
     /**
      * @param request the request parameters of UpdateInstance  UpdateInstanceRequest
