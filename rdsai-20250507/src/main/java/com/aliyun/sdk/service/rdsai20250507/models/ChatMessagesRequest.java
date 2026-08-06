@@ -26,6 +26,10 @@ public class ChatMessagesRequest extends Request {
     private String eventMode;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Files")
+    private java.util.List<Files> files;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Inputs")
     private Inputs inputs;
 
@@ -42,6 +46,7 @@ public class ChatMessagesRequest extends Request {
         super(builder);
         this.conversationId = builder.conversationId;
         this.eventMode = builder.eventMode;
+        this.files = builder.files;
         this.inputs = builder.inputs;
         this.parentMessageId = builder.parentMessageId;
         this.query = builder.query;
@@ -75,6 +80,13 @@ public class ChatMessagesRequest extends Request {
     }
 
     /**
+     * @return files
+     */
+    public java.util.List<Files> getFiles() {
+        return this.files;
+    }
+
+    /**
      * @return inputs
      */
     public Inputs getInputs() {
@@ -98,6 +110,7 @@ public class ChatMessagesRequest extends Request {
     public static final class Builder extends Request.Builder<ChatMessagesRequest, Builder> {
         private String conversationId; 
         private String eventMode; 
+        private java.util.List<Files> files; 
         private Inputs inputs; 
         private String parentMessageId; 
         private String query; 
@@ -110,6 +123,7 @@ public class ChatMessagesRequest extends Request {
             super(request);
             this.conversationId = request.conversationId;
             this.eventMode = request.eventMode;
+            this.files = request.files;
             this.inputs = request.inputs;
             this.parentMessageId = request.parentMessageId;
             this.query = request.query;
@@ -133,6 +147,16 @@ public class ChatMessagesRequest extends Request {
         public Builder eventMode(String eventMode) {
             this.putQueryParameter("EventMode", eventMode);
             this.eventMode = eventMode;
+            return this;
+        }
+
+        /**
+         * Files.
+         */
+        public Builder files(java.util.List<Files> files) {
+            String filesShrink = shrink(files, "Files", "json");
+            this.putQueryParameter("Files", filesShrink);
+            this.files = files;
             return this;
         }
 
@@ -175,6 +199,102 @@ public class ChatMessagesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ChatMessagesRequest} extends {@link TeaModel}
+     *
+     * <p>ChatMessagesRequest</p>
+     */
+    public static class Files extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TransferMethod")
+        private String transferMethod;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("UploadFileId")
+        private String uploadFileId;
+
+        private Files(Builder builder) {
+            this.transferMethod = builder.transferMethod;
+            this.type = builder.type;
+            this.uploadFileId = builder.uploadFileId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Files create() {
+            return builder().build();
+        }
+
+        /**
+         * @return transferMethod
+         */
+        public String getTransferMethod() {
+            return this.transferMethod;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return uploadFileId
+         */
+        public String getUploadFileId() {
+            return this.uploadFileId;
+        }
+
+        public static final class Builder {
+            private String transferMethod; 
+            private String type; 
+            private String uploadFileId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Files model) {
+                this.transferMethod = model.transferMethod;
+                this.type = model.type;
+                this.uploadFileId = model.uploadFileId;
+            } 
+
+            /**
+             * TransferMethod.
+             */
+            public Builder transferMethod(String transferMethod) {
+                this.transferMethod = transferMethod;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * UploadFileId.
+             */
+            public Builder uploadFileId(String uploadFileId) {
+                this.uploadFileId = uploadFileId;
+                return this;
+            }
+
+            public Files build() {
+                return new Files(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link ChatMessagesRequest} extends {@link TeaModel}

@@ -220,6 +220,102 @@ public class GetMessagesResponseBody extends TeaModel {
      *
      * <p>GetMessagesResponseBody</p>
      */
+    public static class MessageFiles extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private String id;
+
+        @com.aliyun.core.annotation.NameInMap("PreviewUrl")
+        private String previewUrl;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private MessageFiles(Builder builder) {
+            this.id = builder.id;
+            this.previewUrl = builder.previewUrl;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MessageFiles create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return previewUrl
+         */
+        public String getPreviewUrl() {
+            return this.previewUrl;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String id; 
+            private String previewUrl; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(MessageFiles model) {
+                this.id = model.id;
+                this.previewUrl = model.previewUrl;
+                this.type = model.type;
+            } 
+
+            /**
+             * Id.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * PreviewUrl.
+             */
+            public Builder previewUrl(String previewUrl) {
+                this.previewUrl = previewUrl;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public MessageFiles build() {
+                return new MessageFiles(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetMessagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMessagesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Answer")
         private String answer;
@@ -251,6 +347,9 @@ public class GetMessagesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LastSentEntryId")
         private String lastSentEntryId;
 
+        @com.aliyun.core.annotation.NameInMap("MessageFiles")
+        private java.util.List<MessageFiles> messageFiles;
+
         @com.aliyun.core.annotation.NameInMap("Query")
         private String query;
 
@@ -271,6 +370,7 @@ public class GetMessagesResponseBody extends TeaModel {
             this.generationStatus = builder.generationStatus;
             this.id = builder.id;
             this.lastSentEntryId = builder.lastSentEntryId;
+            this.messageFiles = builder.messageFiles;
             this.query = builder.query;
             this.retrieverResources = builder.retrieverResources;
             this.streamKey = builder.streamKey;
@@ -355,6 +455,13 @@ public class GetMessagesResponseBody extends TeaModel {
         }
 
         /**
+         * @return messageFiles
+         */
+        public java.util.List<MessageFiles> getMessageFiles() {
+            return this.messageFiles;
+        }
+
+        /**
          * @return query
          */
         public String getQuery() {
@@ -386,6 +493,7 @@ public class GetMessagesResponseBody extends TeaModel {
             private String generationStatus; 
             private String id; 
             private String lastSentEntryId; 
+            private java.util.List<MessageFiles> messageFiles; 
             private String query; 
             private java.util.List<?> retrieverResources; 
             private String streamKey; 
@@ -404,6 +512,7 @@ public class GetMessagesResponseBody extends TeaModel {
                 this.generationStatus = model.generationStatus;
                 this.id = model.id;
                 this.lastSentEntryId = model.lastSentEntryId;
+                this.messageFiles = model.messageFiles;
                 this.query = model.query;
                 this.retrieverResources = model.retrieverResources;
                 this.streamKey = model.streamKey;
@@ -498,6 +607,14 @@ public class GetMessagesResponseBody extends TeaModel {
              */
             public Builder lastSentEntryId(String lastSentEntryId) {
                 this.lastSentEntryId = lastSentEntryId;
+                return this;
+            }
+
+            /**
+             * MessageFiles.
+             */
+            public Builder messageFiles(java.util.List<MessageFiles> messageFiles) {
+                this.messageFiles = messageFiles;
                 return this;
             }
 
