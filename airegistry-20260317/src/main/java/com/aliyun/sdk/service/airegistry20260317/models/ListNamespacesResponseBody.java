@@ -101,6 +101,9 @@ public class ListNamespacesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("IpWhitelist")
+        private String ipWhitelist;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
@@ -109,6 +112,12 @@ public class ListNamespacesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("PromptCount")
         private Integer promptCount;
+
+        @com.aliyun.core.annotation.NameInMap("PublicAccessEnabled")
+        private Boolean publicAccessEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("PublicDomain")
+        private String publicDomain;
 
         @com.aliyun.core.annotation.NameInMap("SkillCount")
         private Integer skillCount;
@@ -125,9 +134,12 @@ public class ListNamespacesResponseBody extends TeaModel {
         private Items(Builder builder) {
             this.createdTime = builder.createdTime;
             this.description = builder.description;
+            this.ipWhitelist = builder.ipWhitelist;
             this.name = builder.name;
             this.namespaceId = builder.namespaceId;
             this.promptCount = builder.promptCount;
+            this.publicAccessEnabled = builder.publicAccessEnabled;
+            this.publicDomain = builder.publicDomain;
             this.skillCount = builder.skillCount;
             this.source = builder.source;
             this.sourceIndex = builder.sourceIndex;
@@ -157,6 +169,13 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
+         * @return ipWhitelist
+         */
+        public String getIpWhitelist() {
+            return this.ipWhitelist;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -175,6 +194,20 @@ public class ListNamespacesResponseBody extends TeaModel {
          */
         public Integer getPromptCount() {
             return this.promptCount;
+        }
+
+        /**
+         * @return publicAccessEnabled
+         */
+        public Boolean getPublicAccessEnabled() {
+            return this.publicAccessEnabled;
+        }
+
+        /**
+         * @return publicDomain
+         */
+        public String getPublicDomain() {
+            return this.publicDomain;
         }
 
         /**
@@ -208,9 +241,12 @@ public class ListNamespacesResponseBody extends TeaModel {
         public static final class Builder {
             private String createdTime; 
             private String description; 
+            private String ipWhitelist; 
             private String name; 
             private String namespaceId; 
             private Integer promptCount; 
+            private Boolean publicAccessEnabled; 
+            private String publicDomain; 
             private Integer skillCount; 
             private String source; 
             private Integer sourceIndex; 
@@ -222,9 +258,12 @@ public class ListNamespacesResponseBody extends TeaModel {
             private Builder(Items model) {
                 this.createdTime = model.createdTime;
                 this.description = model.description;
+                this.ipWhitelist = model.ipWhitelist;
                 this.name = model.name;
                 this.namespaceId = model.namespaceId;
                 this.promptCount = model.promptCount;
+                this.publicAccessEnabled = model.publicAccessEnabled;
+                this.publicDomain = model.publicDomain;
                 this.skillCount = model.skillCount;
                 this.source = model.source;
                 this.sourceIndex = model.sourceIndex;
@@ -244,6 +283,14 @@ public class ListNamespacesResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * IpWhitelist.
+             */
+            public Builder ipWhitelist(String ipWhitelist) {
+                this.ipWhitelist = ipWhitelist;
                 return this;
             }
 
@@ -268,6 +315,22 @@ public class ListNamespacesResponseBody extends TeaModel {
              */
             public Builder promptCount(Integer promptCount) {
                 this.promptCount = promptCount;
+                return this;
+            }
+
+            /**
+             * PublicAccessEnabled.
+             */
+            public Builder publicAccessEnabled(Boolean publicAccessEnabled) {
+                this.publicAccessEnabled = publicAccessEnabled;
+                return this;
+            }
+
+            /**
+             * PublicDomain.
+             */
+            public Builder publicDomain(String publicDomain) {
+                this.publicDomain = publicDomain;
                 return this;
             }
 

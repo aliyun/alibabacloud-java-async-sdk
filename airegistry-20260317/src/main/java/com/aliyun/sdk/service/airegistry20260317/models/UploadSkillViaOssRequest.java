@@ -35,12 +35,17 @@ public class UploadSkillViaOssRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Overwrite")
     private Boolean overwrite;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetVersion")
+    private String targetVersion;
+
     private UploadSkillViaOssRequest(Builder builder) {
         super(builder);
         this.commitMsg = builder.commitMsg;
         this.namespaceId = builder.namespaceId;
         this.ossObjectName = builder.ossObjectName;
         this.overwrite = builder.overwrite;
+        this.targetVersion = builder.targetVersion;
     }
 
     public static Builder builder() {
@@ -84,11 +89,19 @@ public class UploadSkillViaOssRequest extends Request {
         return this.overwrite;
     }
 
+    /**
+     * @return targetVersion
+     */
+    public String getTargetVersion() {
+        return this.targetVersion;
+    }
+
     public static final class Builder extends Request.Builder<UploadSkillViaOssRequest, Builder> {
         private String commitMsg; 
         private String namespaceId; 
         private String ossObjectName; 
         private Boolean overwrite; 
+        private String targetVersion; 
 
         private Builder() {
             super();
@@ -100,6 +113,7 @@ public class UploadSkillViaOssRequest extends Request {
             this.namespaceId = request.namespaceId;
             this.ossObjectName = request.ossObjectName;
             this.overwrite = request.overwrite;
+            this.targetVersion = request.targetVersion;
         } 
 
         /**
@@ -141,6 +155,15 @@ public class UploadSkillViaOssRequest extends Request {
         public Builder overwrite(Boolean overwrite) {
             this.putQueryParameter("Overwrite", overwrite);
             this.overwrite = overwrite;
+            return this;
+        }
+
+        /**
+         * TargetVersion.
+         */
+        public Builder targetVersion(String targetVersion) {
+            this.putQueryParameter("TargetVersion", targetVersion);
+            this.targetVersion = targetVersion;
             return this;
         }
 
