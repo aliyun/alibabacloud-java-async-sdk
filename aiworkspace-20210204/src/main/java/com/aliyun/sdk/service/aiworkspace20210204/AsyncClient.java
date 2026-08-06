@@ -162,6 +162,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateProductOrdersResponse> createProductOrders(CreateProductOrdersRequest request);
 
     /**
+     * @param request the request parameters of CreatePrompt  CreatePromptRequest
+     * @return CreatePromptResponse
+     */
+    CompletableFuture<CreatePromptResponse> createPrompt(CreatePromptRequest request);
+
+    /**
      * @param request the request parameters of CreateRun  CreateRunRequest
      * @return CreateRunResponse
      */
@@ -286,6 +292,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteModelVersionLabelsResponse
      */
     CompletableFuture<DeleteModelVersionLabelsResponse> deleteModelVersionLabels(DeleteModelVersionLabelsRequest request);
+
+    /**
+     * @param request the request parameters of DeletePrompt  DeletePromptRequest
+     * @return DeletePromptResponse
+     */
+    CompletableFuture<DeletePromptResponse> deletePrompt(DeletePromptRequest request);
 
     /**
      * @param request the request parameters of DeleteRun  DeleteRunRequest
@@ -426,6 +438,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetPermissionResponse> getPermission(GetPermissionRequest request);
 
     /**
+     * @param request the request parameters of GetPrompt  GetPromptRequest
+     * @return GetPromptResponse
+     */
+    CompletableFuture<GetPromptResponse> getPrompt(GetPromptRequest request);
+
+    /**
      * @param request the request parameters of GetRun  GetRunRequest
      * @return GetRunResponse
      */
@@ -544,6 +562,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListProductsResponse
      */
     CompletableFuture<ListProductsResponse> listProducts(ListProductsRequest request);
+
+    /**
+     * @param request the request parameters of ListPrompts  ListPromptsRequest
+     * @return ListPromptsResponse
+     */
+    CompletableFuture<ListPromptsResponse> listPrompts(ListPromptsRequest request);
 
     /**
      * @param request the request parameters of ListQuotas  ListQuotasRequest
@@ -733,6 +757,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateModelVersionResponse
      */
     CompletableFuture<UpdateModelVersionResponse> updateModelVersion(UpdateModelVersionRequest request);
+
+    /**
+     * @param request the request parameters of UpdatePrompt  UpdatePromptRequest
+     * @return UpdatePromptResponse
+     */
+    CompletableFuture<UpdatePromptResponse> updatePrompt(UpdatePromptRequest request);
 
     /**
      * @param request the request parameters of UpdateRun  UpdateRunRequest
