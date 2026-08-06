@@ -248,6 +248,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeMOTokenUsageDetailResponse> describeMOTokenUsageDetail(DescribeMOTokenUsageDetailRequest request);
 
     /**
+     * @param request the request parameters of DescribeMOTokenUsageSummary  DescribeMOTokenUsageSummaryRequest
+     * @return DescribeMOTokenUsageSummaryResponse
+     */
+    CompletableFuture<DescribeMOTokenUsageSummaryResponse> describeMOTokenUsageSummary(DescribeMOTokenUsageSummaryRequest request);
+
+    /**
      * @param request the request parameters of DescribeMOUsageDetailExport  DescribeMOUsageDetailExportRequest
      * @return DescribeMOUsageDetailExportResponse
      */
