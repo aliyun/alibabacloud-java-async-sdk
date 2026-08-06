@@ -31,6 +31,10 @@ public class CreateRepoSyncTaskRequest extends Request {
     private Boolean override;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
+    private Integer priority;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RepoId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String repoId;
@@ -74,6 +78,7 @@ public class CreateRepoSyncTaskRequest extends Request {
         this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.override = builder.override;
+        this.priority = builder.priority;
         this.repoId = builder.repoId;
         this.tag = builder.tag;
         this.targetInstanceId = builder.targetInstanceId;
@@ -116,6 +121,13 @@ public class CreateRepoSyncTaskRequest extends Request {
      */
     public Boolean getOverride() {
         return this.override;
+    }
+
+    /**
+     * @return priority
+     */
+    public Integer getPriority() {
+        return this.priority;
     }
 
     /**
@@ -178,6 +190,7 @@ public class CreateRepoSyncTaskRequest extends Request {
         private String regionId; 
         private String instanceId; 
         private Boolean override; 
+        private Integer priority; 
         private String repoId; 
         private String tag; 
         private String targetInstanceId; 
@@ -196,6 +209,7 @@ public class CreateRepoSyncTaskRequest extends Request {
             this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.override = request.override;
+            this.priority = request.priority;
             this.repoId = request.repoId;
             this.tag = request.tag;
             this.targetInstanceId = request.targetInstanceId;
@@ -233,6 +247,15 @@ public class CreateRepoSyncTaskRequest extends Request {
         public Builder override(Boolean override) {
             this.putQueryParameter("Override", override);
             this.override = override;
+            return this;
+        }
+
+        /**
+         * Priority.
+         */
+        public Builder priority(Integer priority) {
+            this.putQueryParameter("Priority", priority);
+            this.priority = priority;
             return this;
         }
 

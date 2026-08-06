@@ -242,6 +242,12 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private Long modifiedTime;
 
+        @com.aliyun.core.annotation.NameInMap("NamespaceNameFilter")
+        private String namespaceNameFilter;
+
+        @com.aliyun.core.annotation.NameInMap("Priority")
+        private Integer priority;
+
         @com.aliyun.core.annotation.NameInMap("RepoNameFilter")
         private String repoNameFilter;
 
@@ -284,6 +290,8 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             this.localRegionId = builder.localRegionId;
             this.localRepoName = builder.localRepoName;
             this.modifiedTime = builder.modifiedTime;
+            this.namespaceNameFilter = builder.namespaceNameFilter;
+            this.priority = builder.priority;
             this.repoNameFilter = builder.repoNameFilter;
             this.syncDirection = builder.syncDirection;
             this.syncRuleId = builder.syncRuleId;
@@ -359,6 +367,20 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
          */
         public Long getModifiedTime() {
             return this.modifiedTime;
+        }
+
+        /**
+         * @return namespaceNameFilter
+         */
+        public String getNamespaceNameFilter() {
+            return this.namespaceNameFilter;
+        }
+
+        /**
+         * @return priority
+         */
+        public Integer getPriority() {
+            return this.priority;
         }
 
         /**
@@ -447,6 +469,8 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
             private String localRegionId; 
             private String localRepoName; 
             private Long modifiedTime; 
+            private String namespaceNameFilter; 
+            private Integer priority; 
             private String repoNameFilter; 
             private String syncDirection; 
             private String syncRuleId; 
@@ -471,6 +495,8 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
                 this.localRegionId = model.localRegionId;
                 this.localRepoName = model.localRepoName;
                 this.modifiedTime = model.modifiedTime;
+                this.namespaceNameFilter = model.namespaceNameFilter;
+                this.priority = model.priority;
                 this.repoNameFilter = model.repoNameFilter;
                 this.syncDirection = model.syncDirection;
                 this.syncRuleId = model.syncRuleId;
@@ -571,6 +597,22 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
+                return this;
+            }
+
+            /**
+             * NamespaceNameFilter.
+             */
+            public Builder namespaceNameFilter(String namespaceNameFilter) {
+                this.namespaceNameFilter = namespaceNameFilter;
+                return this;
+            }
+
+            /**
+             * Priority.
+             */
+            public Builder priority(Integer priority) {
+                this.priority = priority;
                 return this;
             }
 

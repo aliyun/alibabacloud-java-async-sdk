@@ -549,6 +549,9 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private Long modifiedTime;
 
+        @com.aliyun.core.annotation.NameInMap("Priority")
+        private Integer priority;
+
         @com.aliyun.core.annotation.NameInMap("SyncBatchTaskId")
         private String syncBatchTaskId;
 
@@ -579,6 +582,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             this.linkId = builder.linkId;
             this.modifedTime = builder.modifedTime;
             this.modifiedTime = builder.modifiedTime;
+            this.priority = builder.priority;
             this.syncBatchTaskId = builder.syncBatchTaskId;
             this.syncRuleId = builder.syncRuleId;
             this.syncTaskId = builder.syncTaskId;
@@ -653,6 +657,13 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
+         * @return priority
+         */
+        public Integer getPriority() {
+            return this.priority;
+        }
+
+        /**
          * @return syncBatchTaskId
          */
         public String getSyncBatchTaskId() {
@@ -710,6 +721,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             private String linkId; 
             private Long modifedTime; 
             private Long modifiedTime; 
+            private Integer priority; 
             private String syncBatchTaskId; 
             private String syncRuleId; 
             private String syncTaskId; 
@@ -730,6 +742,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
                 this.linkId = model.linkId;
                 this.modifedTime = model.modifedTime;
                 this.modifiedTime = model.modifiedTime;
+                this.priority = model.priority;
                 this.syncBatchTaskId = model.syncBatchTaskId;
                 this.syncRuleId = model.syncRuleId;
                 this.syncTaskId = model.syncTaskId;
@@ -817,6 +830,14 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
+                return this;
+            }
+
+            /**
+             * Priority.
+             */
+            public Builder priority(Integer priority) {
+                this.priority = priority;
                 return this;
             }
 

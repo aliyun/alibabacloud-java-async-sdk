@@ -35,6 +35,9 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("LayerTasks")
     private java.util.List<LayerTasks> layerTasks;
 
+    @com.aliyun.core.annotation.NameInMap("Priority")
+    private Integer priority;
+
     @com.aliyun.core.annotation.NameInMap("Progress")
     private Long progress;
 
@@ -72,6 +75,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         this.imageTo = builder.imageTo;
         this.isSuccess = builder.isSuccess;
         this.layerTasks = builder.layerTasks;
+        this.priority = builder.priority;
         this.progress = builder.progress;
         this.requestId = builder.requestId;
         this.syncBatchTaskId = builder.syncBatchTaskId;
@@ -136,6 +140,13 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
      */
     public java.util.List<LayerTasks> getLayerTasks() {
         return this.layerTasks;
+    }
+
+    /**
+     * @return priority
+     */
+    public Integer getPriority() {
+        return this.priority;
     }
 
     /**
@@ -215,6 +226,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
         private ImageTo imageTo; 
         private Boolean isSuccess; 
         private java.util.List<LayerTasks> layerTasks; 
+        private Integer priority; 
         private Long progress; 
         private String requestId; 
         private String syncBatchTaskId; 
@@ -236,6 +248,7 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
             this.imageTo = model.imageTo;
             this.isSuccess = model.isSuccess;
             this.layerTasks = model.layerTasks;
+            this.priority = model.priority;
             this.progress = model.progress;
             this.requestId = model.requestId;
             this.syncBatchTaskId = model.syncBatchTaskId;
@@ -302,6 +315,14 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
          */
         public Builder layerTasks(java.util.List<LayerTasks> layerTasks) {
             this.layerTasks = layerTasks;
+            return this;
+        }
+
+        /**
+         * Priority.
+         */
+        public Builder priority(Integer priority) {
+            this.priority = priority;
             return this;
         }
 

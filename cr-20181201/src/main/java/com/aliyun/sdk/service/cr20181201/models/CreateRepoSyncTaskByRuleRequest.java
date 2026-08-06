@@ -27,6 +27,10 @@ public class CreateRepoSyncTaskByRuleRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
+    private Integer priority;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RepoId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String repoId;
@@ -45,6 +49,7 @@ public class CreateRepoSyncTaskByRuleRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
+        this.priority = builder.priority;
         this.repoId = builder.repoId;
         this.syncRuleId = builder.syncRuleId;
         this.tag = builder.tag;
@@ -78,6 +83,13 @@ public class CreateRepoSyncTaskByRuleRequest extends Request {
     }
 
     /**
+     * @return priority
+     */
+    public Integer getPriority() {
+        return this.priority;
+    }
+
+    /**
      * @return repoId
      */
     public String getRepoId() {
@@ -101,6 +113,7 @@ public class CreateRepoSyncTaskByRuleRequest extends Request {
     public static final class Builder extends Request.Builder<CreateRepoSyncTaskByRuleRequest, Builder> {
         private String regionId; 
         private String instanceId; 
+        private Integer priority; 
         private String repoId; 
         private String syncRuleId; 
         private String tag; 
@@ -113,6 +126,7 @@ public class CreateRepoSyncTaskByRuleRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.instanceId = request.instanceId;
+            this.priority = request.priority;
             this.repoId = request.repoId;
             this.syncRuleId = request.syncRuleId;
             this.tag = request.tag;
@@ -140,6 +154,15 @@ public class CreateRepoSyncTaskByRuleRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * Priority.
+         */
+        public Builder priority(Integer priority) {
+            this.putQueryParameter("Priority", priority);
+            this.priority = priority;
             return this;
         }
 

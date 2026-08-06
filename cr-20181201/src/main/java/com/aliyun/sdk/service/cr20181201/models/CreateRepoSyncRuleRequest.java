@@ -32,8 +32,15 @@ public class CreateRepoSyncRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NamespaceName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String namespaceName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceNameFilter")
+    private String namespaceNameFilter;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
+    private Integer priority;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RepoName")
@@ -69,7 +76,6 @@ public class CreateRepoSyncRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetNamespaceName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String targetNamespaceName;
 
     @com.aliyun.core.annotation.Query
@@ -91,6 +97,8 @@ public class CreateRepoSyncRuleRequest extends Request {
         this.instanceId = builder.instanceId;
         this.linkId = builder.linkId;
         this.namespaceName = builder.namespaceName;
+        this.namespaceNameFilter = builder.namespaceNameFilter;
+        this.priority = builder.priority;
         this.repoName = builder.repoName;
         this.repoNameFilter = builder.repoNameFilter;
         this.syncRuleName = builder.syncRuleName;
@@ -143,6 +151,20 @@ public class CreateRepoSyncRuleRequest extends Request {
      */
     public String getNamespaceName() {
         return this.namespaceName;
+    }
+
+    /**
+     * @return namespaceNameFilter
+     */
+    public String getNamespaceNameFilter() {
+        return this.namespaceNameFilter;
+    }
+
+    /**
+     * @return priority
+     */
+    public Integer getPriority() {
+        return this.priority;
     }
 
     /**
@@ -227,6 +249,8 @@ public class CreateRepoSyncRuleRequest extends Request {
         private String instanceId; 
         private String linkId; 
         private String namespaceName; 
+        private String namespaceNameFilter; 
+        private Integer priority; 
         private String repoName; 
         private String repoNameFilter; 
         private String syncRuleName; 
@@ -249,6 +273,8 @@ public class CreateRepoSyncRuleRequest extends Request {
             this.instanceId = request.instanceId;
             this.linkId = request.linkId;
             this.namespaceName = request.namespaceName;
+            this.namespaceNameFilter = request.namespaceNameFilter;
+            this.priority = request.priority;
             this.repoName = request.repoName;
             this.repoNameFilter = request.repoNameFilter;
             this.syncRuleName = request.syncRuleName;
@@ -295,7 +321,6 @@ public class CreateRepoSyncRuleRequest extends Request {
 
         /**
          * <p>The namespace name of the source instance.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ns1</p>
@@ -303,6 +328,24 @@ public class CreateRepoSyncRuleRequest extends Request {
         public Builder namespaceName(String namespaceName) {
             this.putQueryParameter("NamespaceName", namespaceName);
             this.namespaceName = namespaceName;
+            return this;
+        }
+
+        /**
+         * NamespaceNameFilter.
+         */
+        public Builder namespaceNameFilter(String namespaceNameFilter) {
+            this.putQueryParameter("NamespaceNameFilter", namespaceNameFilter);
+            this.namespaceNameFilter = namespaceNameFilter;
+            return this;
+        }
+
+        /**
+         * Priority.
+         */
+        public Builder priority(Integer priority) {
+            this.putQueryParameter("Priority", priority);
+            this.priority = priority;
             return this;
         }
 
@@ -407,7 +450,6 @@ public class CreateRepoSyncRuleRequest extends Request {
 
         /**
          * <p>The namespace name of the destination instance.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ns1</p>
