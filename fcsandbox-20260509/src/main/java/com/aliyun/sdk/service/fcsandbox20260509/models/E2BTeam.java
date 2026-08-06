@@ -26,6 +26,9 @@ public class E2BTeam extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("plan")
+    private String plan;
+
     @com.aliyun.core.annotation.NameInMap("resourceGroupID")
     private String resourceGroupID;
 
@@ -45,6 +48,7 @@ public class E2BTeam extends TeaModel {
         this.allowUpdateTeamName = builder.allowUpdateTeamName;
         this.createdTime = builder.createdTime;
         this.description = builder.description;
+        this.plan = builder.plan;
         this.resourceGroupID = builder.resourceGroupID;
         this.status = builder.status;
         this.teamID = builder.teamID;
@@ -86,6 +90,13 @@ public class E2BTeam extends TeaModel {
     }
 
     /**
+     * @return plan
+     */
+    public String getPlan() {
+        return this.plan;
+    }
+
+    /**
      * @return resourceGroupID
      */
     public String getResourceGroupID() {
@@ -124,6 +135,7 @@ public class E2BTeam extends TeaModel {
         private Boolean allowUpdateTeamName; 
         private String createdTime; 
         private String description; 
+        private String plan; 
         private String resourceGroupID; 
         private String status; 
         private String teamID; 
@@ -137,6 +149,7 @@ public class E2BTeam extends TeaModel {
             this.allowUpdateTeamName = model.allowUpdateTeamName;
             this.createdTime = model.createdTime;
             this.description = model.description;
+            this.plan = model.plan;
             this.resourceGroupID = model.resourceGroupID;
             this.status = model.status;
             this.teamID = model.teamID;
@@ -165,6 +178,14 @@ public class E2BTeam extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * plan.
+         */
+        public Builder plan(String plan) {
+            this.plan = plan;
             return this;
         }
 

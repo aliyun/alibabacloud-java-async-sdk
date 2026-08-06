@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateTemplateInput</p>
  */
 public class UpdateTemplateInput extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("containerConfiguration")
+    private ContainerConfiguration containerConfiguration;
+
     @com.aliyun.core.annotation.NameInMap("logConfiguration")
     private LogConfiguration logConfiguration;
 
@@ -24,6 +27,7 @@ public class UpdateTemplateInput extends TeaModel {
     private NetworkConfiguration networkConfiguration;
 
     private UpdateTemplateInput(Builder builder) {
+        this.containerConfiguration = builder.containerConfiguration;
         this.logConfiguration = builder.logConfiguration;
         this.networkConfiguration = builder.networkConfiguration;
     }
@@ -41,6 +45,13 @@ public class UpdateTemplateInput extends TeaModel {
     }
 
     /**
+     * @return containerConfiguration
+     */
+    public ContainerConfiguration getContainerConfiguration() {
+        return this.containerConfiguration;
+    }
+
+    /**
      * @return logConfiguration
      */
     public LogConfiguration getLogConfiguration() {
@@ -55,6 +66,7 @@ public class UpdateTemplateInput extends TeaModel {
     }
 
     public static final class Builder {
+        private ContainerConfiguration containerConfiguration; 
         private LogConfiguration logConfiguration; 
         private NetworkConfiguration networkConfiguration; 
 
@@ -62,9 +74,18 @@ public class UpdateTemplateInput extends TeaModel {
         } 
 
         private Builder(UpdateTemplateInput model) {
+            this.containerConfiguration = model.containerConfiguration;
             this.logConfiguration = model.logConfiguration;
             this.networkConfiguration = model.networkConfiguration;
         } 
+
+        /**
+         * containerConfiguration.
+         */
+        public Builder containerConfiguration(ContainerConfiguration containerConfiguration) {
+            this.containerConfiguration = containerConfiguration;
+            return this;
+        }
 
         /**
          * logConfiguration.

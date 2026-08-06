@@ -20,6 +20,9 @@ public class CreateTeamInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("plan")
+    private String plan;
+
     @com.aliyun.core.annotation.NameInMap("resourceGroupID")
     private String resourceGroupID;
 
@@ -28,6 +31,7 @@ public class CreateTeamInput extends TeaModel {
 
     private CreateTeamInput(Builder builder) {
         this.description = builder.description;
+        this.plan = builder.plan;
         this.resourceGroupID = builder.resourceGroupID;
         this.teamName = builder.teamName;
     }
@@ -52,6 +56,13 @@ public class CreateTeamInput extends TeaModel {
     }
 
     /**
+     * @return plan
+     */
+    public String getPlan() {
+        return this.plan;
+    }
+
+    /**
      * @return resourceGroupID
      */
     public String getResourceGroupID() {
@@ -67,6 +78,7 @@ public class CreateTeamInput extends TeaModel {
 
     public static final class Builder {
         private String description; 
+        private String plan; 
         private String resourceGroupID; 
         private String teamName; 
 
@@ -75,6 +87,7 @@ public class CreateTeamInput extends TeaModel {
 
         private Builder(CreateTeamInput model) {
             this.description = model.description;
+            this.plan = model.plan;
             this.resourceGroupID = model.resourceGroupID;
             this.teamName = model.teamName;
         } 
@@ -84,6 +97,14 @@ public class CreateTeamInput extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * plan.
+         */
+        public Builder plan(String plan) {
+            this.plan = plan;
             return this;
         }
 

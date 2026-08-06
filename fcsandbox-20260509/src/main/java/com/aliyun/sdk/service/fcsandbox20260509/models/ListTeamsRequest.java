@@ -26,6 +26,10 @@ public class ListTeamsRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("plan")
+    private String plan;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("resourceGroupID")
     private String resourceGroupID;
 
@@ -37,6 +41,7 @@ public class ListTeamsRequest extends Request {
         super(builder);
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.plan = builder.plan;
         this.resourceGroupID = builder.resourceGroupID;
         this.teamName = builder.teamName;
     }
@@ -69,6 +74,13 @@ public class ListTeamsRequest extends Request {
     }
 
     /**
+     * @return plan
+     */
+    public String getPlan() {
+        return this.plan;
+    }
+
+    /**
      * @return resourceGroupID
      */
     public String getResourceGroupID() {
@@ -85,6 +97,7 @@ public class ListTeamsRequest extends Request {
     public static final class Builder extends Request.Builder<ListTeamsRequest, Builder> {
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String plan; 
         private String resourceGroupID; 
         private String teamName; 
 
@@ -96,6 +109,7 @@ public class ListTeamsRequest extends Request {
             super(request);
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.plan = request.plan;
             this.resourceGroupID = request.resourceGroupID;
             this.teamName = request.teamName;
         } 
@@ -115,6 +129,15 @@ public class ListTeamsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * plan.
+         */
+        public Builder plan(String plan) {
+            this.putQueryParameter("plan", plan);
+            this.plan = plan;
             return this;
         }
 

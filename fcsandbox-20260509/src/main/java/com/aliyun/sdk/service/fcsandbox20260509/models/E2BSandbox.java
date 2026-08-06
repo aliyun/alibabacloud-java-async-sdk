@@ -65,6 +65,9 @@ public class E2BSandbox extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("teamName")
     private String teamName;
 
+    @com.aliyun.core.annotation.NameInMap("teamPlan")
+    private String teamPlan;
+
     @com.aliyun.core.annotation.NameInMap("templateID")
     private String templateID;
 
@@ -91,6 +94,7 @@ public class E2BSandbox extends TeaModel {
         this.state = builder.state;
         this.teamID = builder.teamID;
         this.teamName = builder.teamName;
+        this.teamPlan = builder.teamPlan;
         this.templateID = builder.templateID;
         this.templateName = builder.templateName;
         this.userID = builder.userID;
@@ -221,6 +225,13 @@ public class E2BSandbox extends TeaModel {
     }
 
     /**
+     * @return teamPlan
+     */
+    public String getTeamPlan() {
+        return this.teamPlan;
+    }
+
+    /**
      * @return templateID
      */
     public String getTemplateID() {
@@ -258,6 +269,7 @@ public class E2BSandbox extends TeaModel {
         private String state; 
         private String teamID; 
         private String teamName; 
+        private String teamPlan; 
         private String templateID; 
         private String templateName; 
         private String userID; 
@@ -282,6 +294,7 @@ public class E2BSandbox extends TeaModel {
             this.state = model.state;
             this.teamID = model.teamID;
             this.teamName = model.teamName;
+            this.teamPlan = model.teamPlan;
             this.templateID = model.templateID;
             this.templateName = model.templateName;
             this.userID = model.userID;
@@ -412,6 +425,14 @@ public class E2BSandbox extends TeaModel {
          */
         public Builder teamName(String teamName) {
             this.teamName = teamName;
+            return this;
+        }
+
+        /**
+         * teamPlan.
+         */
+        public Builder teamPlan(String teamPlan) {
+            this.teamPlan = teamPlan;
             return this;
         }
 

@@ -23,6 +23,9 @@ public class E2BListedTemplate extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("category")
     private String category;
 
+    @com.aliyun.core.annotation.NameInMap("containerConfiguration")
+    private ContainerConfiguration containerConfiguration;
+
     @com.aliyun.core.annotation.NameInMap("cpuCount")
     private Integer cpuCount;
 
@@ -59,6 +62,9 @@ public class E2BListedTemplate extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("teamName")
     private String teamName;
 
+    @com.aliyun.core.annotation.NameInMap("teamPlan")
+    private String teamPlan;
+
     @com.aliyun.core.annotation.NameInMap("templateID")
     private String templateID;
 
@@ -71,6 +77,7 @@ public class E2BListedTemplate extends TeaModel {
     private E2BListedTemplate(Builder builder) {
         this.buildStatus = builder.buildStatus;
         this.category = builder.category;
+        this.containerConfiguration = builder.containerConfiguration;
         this.cpuCount = builder.cpuCount;
         this.createdAt = builder.createdAt;
         this.functionName = builder.functionName;
@@ -83,6 +90,7 @@ public class E2BListedTemplate extends TeaModel {
         this.tags = builder.tags;
         this.teamID = builder.teamID;
         this.teamName = builder.teamName;
+        this.teamPlan = builder.teamPlan;
         this.templateID = builder.templateID;
         this.updatedAt = builder.updatedAt;
         this.userID = builder.userID;
@@ -112,6 +120,13 @@ public class E2BListedTemplate extends TeaModel {
      */
     public String getCategory() {
         return this.category;
+    }
+
+    /**
+     * @return containerConfiguration
+     */
+    public ContainerConfiguration getContainerConfiguration() {
+        return this.containerConfiguration;
     }
 
     /**
@@ -199,6 +214,13 @@ public class E2BListedTemplate extends TeaModel {
     }
 
     /**
+     * @return teamPlan
+     */
+    public String getTeamPlan() {
+        return this.teamPlan;
+    }
+
+    /**
      * @return templateID
      */
     public String getTemplateID() {
@@ -222,6 +244,7 @@ public class E2BListedTemplate extends TeaModel {
     public static final class Builder {
         private String buildStatus; 
         private String category; 
+        private ContainerConfiguration containerConfiguration; 
         private Integer cpuCount; 
         private String createdAt; 
         private String functionName; 
@@ -234,6 +257,7 @@ public class E2BListedTemplate extends TeaModel {
         private java.util.List<E2BTemplateTag> tags; 
         private String teamID; 
         private String teamName; 
+        private String teamPlan; 
         private String templateID; 
         private String updatedAt; 
         private String userID; 
@@ -244,6 +268,7 @@ public class E2BListedTemplate extends TeaModel {
         private Builder(E2BListedTemplate model) {
             this.buildStatus = model.buildStatus;
             this.category = model.category;
+            this.containerConfiguration = model.containerConfiguration;
             this.cpuCount = model.cpuCount;
             this.createdAt = model.createdAt;
             this.functionName = model.functionName;
@@ -256,6 +281,7 @@ public class E2BListedTemplate extends TeaModel {
             this.tags = model.tags;
             this.teamID = model.teamID;
             this.teamName = model.teamName;
+            this.teamPlan = model.teamPlan;
             this.templateID = model.templateID;
             this.updatedAt = model.updatedAt;
             this.userID = model.userID;
@@ -274,6 +300,14 @@ public class E2BListedTemplate extends TeaModel {
          */
         public Builder category(String category) {
             this.category = category;
+            return this;
+        }
+
+        /**
+         * containerConfiguration.
+         */
+        public Builder containerConfiguration(ContainerConfiguration containerConfiguration) {
+            this.containerConfiguration = containerConfiguration;
             return this;
         }
 
@@ -370,6 +404,14 @@ public class E2BListedTemplate extends TeaModel {
          */
         public Builder teamName(String teamName) {
             this.teamName = teamName;
+            return this;
+        }
+
+        /**
+         * teamPlan.
+         */
+        public Builder teamPlan(String teamPlan) {
+            this.teamPlan = teamPlan;
             return this;
         }
 

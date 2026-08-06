@@ -50,6 +50,9 @@ public class ApiKey extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("teamName")
     private String teamName;
 
+    @com.aliyun.core.annotation.NameInMap("teamPlan")
+    private String teamPlan;
+
     @com.aliyun.core.annotation.NameInMap("userID")
     private String userID;
 
@@ -68,6 +71,7 @@ public class ApiKey extends TeaModel {
         this.status = builder.status;
         this.teamID = builder.teamID;
         this.teamName = builder.teamName;
+        this.teamPlan = builder.teamPlan;
         this.userID = builder.userID;
         this.username = builder.username;
     }
@@ -162,6 +166,13 @@ public class ApiKey extends TeaModel {
     }
 
     /**
+     * @return teamPlan
+     */
+    public String getTeamPlan() {
+        return this.teamPlan;
+    }
+
+    /**
      * @return userID
      */
     public String getUserID() {
@@ -187,6 +198,7 @@ public class ApiKey extends TeaModel {
         private String status; 
         private String teamID; 
         private String teamName; 
+        private String teamPlan; 
         private String userID; 
         private String username; 
 
@@ -205,6 +217,7 @@ public class ApiKey extends TeaModel {
             this.status = model.status;
             this.teamID = model.teamID;
             this.teamName = model.teamName;
+            this.teamPlan = model.teamPlan;
             this.userID = model.userID;
             this.username = model.username;
         } 
@@ -294,6 +307,14 @@ public class ApiKey extends TeaModel {
          */
         public Builder teamName(String teamName) {
             this.teamName = teamName;
+            return this;
+        }
+
+        /**
+         * teamPlan.
+         */
+        public Builder teamPlan(String teamPlan) {
+            this.teamPlan = teamPlan;
             return this;
         }
 
