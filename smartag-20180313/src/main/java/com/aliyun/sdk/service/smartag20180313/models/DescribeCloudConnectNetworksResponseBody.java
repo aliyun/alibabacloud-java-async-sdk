@@ -311,6 +311,9 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssociatedCenOwnerId")
         private String associatedCenOwnerId;
 
+        @com.aliyun.core.annotation.NameInMap("AssociatedCenStatus")
+        private String associatedCenStatus;
+
         @com.aliyun.core.annotation.NameInMap("AssociatedCloudBoxCount")
         private String associatedCloudBoxCount;
 
@@ -319,6 +322,12 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("CcnId")
         private String ccnId;
+
+        @com.aliyun.core.annotation.NameInMap("CenStatusErrorCode")
+        private String cenStatusErrorCode;
+
+        @com.aliyun.core.annotation.NameInMap("CenStatusErrorMessage")
+        private String cenStatusErrorMessage;
 
         @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
@@ -338,6 +347,9 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NewAgw")
         private Boolean newAgw;
 
+        @com.aliyun.core.annotation.NameInMap("ProcessingCenId")
+        private String processingCenId;
+
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
@@ -353,15 +365,19 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
         private CloudConnectNetwork(Builder builder) {
             this.associatedCenId = builder.associatedCenId;
             this.associatedCenOwnerId = builder.associatedCenOwnerId;
+            this.associatedCenStatus = builder.associatedCenStatus;
             this.associatedCloudBoxCount = builder.associatedCloudBoxCount;
             this.availableCloudBoxCount = builder.availableCloudBoxCount;
             this.ccnId = builder.ccnId;
+            this.cenStatusErrorCode = builder.cenStatusErrorCode;
+            this.cenStatusErrorMessage = builder.cenStatusErrorMessage;
             this.cidrBlock = builder.cidrBlock;
             this.createTime = builder.createTime;
             this.description = builder.description;
             this.interworkingStatus = builder.interworkingStatus;
             this.name = builder.name;
             this.newAgw = builder.newAgw;
+            this.processingCenId = builder.processingCenId;
             this.resourceGroupId = builder.resourceGroupId;
             this.snatCidrBlock = builder.snatCidrBlock;
             this.subnet = builder.subnet;
@@ -391,6 +407,13 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
         }
 
         /**
+         * @return associatedCenStatus
+         */
+        public String getAssociatedCenStatus() {
+            return this.associatedCenStatus;
+        }
+
+        /**
          * @return associatedCloudBoxCount
          */
         public String getAssociatedCloudBoxCount() {
@@ -409,6 +432,20 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
          */
         public String getCcnId() {
             return this.ccnId;
+        }
+
+        /**
+         * @return cenStatusErrorCode
+         */
+        public String getCenStatusErrorCode() {
+            return this.cenStatusErrorCode;
+        }
+
+        /**
+         * @return cenStatusErrorMessage
+         */
+        public String getCenStatusErrorMessage() {
+            return this.cenStatusErrorMessage;
         }
 
         /**
@@ -454,6 +491,13 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
         }
 
         /**
+         * @return processingCenId
+         */
+        public String getProcessingCenId() {
+            return this.processingCenId;
+        }
+
+        /**
          * @return resourceGroupId
          */
         public String getResourceGroupId() {
@@ -484,15 +528,19 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
         public static final class Builder {
             private String associatedCenId; 
             private String associatedCenOwnerId; 
+            private String associatedCenStatus; 
             private String associatedCloudBoxCount; 
             private String availableCloudBoxCount; 
             private String ccnId; 
+            private String cenStatusErrorCode; 
+            private String cenStatusErrorMessage; 
             private String cidrBlock; 
             private Long createTime; 
             private String description; 
             private String interworkingStatus; 
             private String name; 
             private Boolean newAgw; 
+            private String processingCenId; 
             private String resourceGroupId; 
             private String snatCidrBlock; 
             private String subnet; 
@@ -504,15 +552,19 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
             private Builder(CloudConnectNetwork model) {
                 this.associatedCenId = model.associatedCenId;
                 this.associatedCenOwnerId = model.associatedCenOwnerId;
+                this.associatedCenStatus = model.associatedCenStatus;
                 this.associatedCloudBoxCount = model.associatedCloudBoxCount;
                 this.availableCloudBoxCount = model.availableCloudBoxCount;
                 this.ccnId = model.ccnId;
+                this.cenStatusErrorCode = model.cenStatusErrorCode;
+                this.cenStatusErrorMessage = model.cenStatusErrorMessage;
                 this.cidrBlock = model.cidrBlock;
                 this.createTime = model.createTime;
                 this.description = model.description;
                 this.interworkingStatus = model.interworkingStatus;
                 this.name = model.name;
                 this.newAgw = model.newAgw;
+                this.processingCenId = model.processingCenId;
                 this.resourceGroupId = model.resourceGroupId;
                 this.snatCidrBlock = model.snatCidrBlock;
                 this.subnet = model.subnet;
@@ -538,6 +590,14 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
              */
             public Builder associatedCenOwnerId(String associatedCenOwnerId) {
                 this.associatedCenOwnerId = associatedCenOwnerId;
+                return this;
+            }
+
+            /**
+             * AssociatedCenStatus.
+             */
+            public Builder associatedCenStatus(String associatedCenStatus) {
+                this.associatedCenStatus = associatedCenStatus;
                 return this;
             }
 
@@ -571,6 +631,22 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
              */
             public Builder ccnId(String ccnId) {
                 this.ccnId = ccnId;
+                return this;
+            }
+
+            /**
+             * CenStatusErrorCode.
+             */
+            public Builder cenStatusErrorCode(String cenStatusErrorCode) {
+                this.cenStatusErrorCode = cenStatusErrorCode;
+                return this;
+            }
+
+            /**
+             * CenStatusErrorMessage.
+             */
+            public Builder cenStatusErrorMessage(String cenStatusErrorMessage) {
+                this.cenStatusErrorMessage = cenStatusErrorMessage;
                 return this;
             }
 
@@ -638,6 +714,14 @@ public class DescribeCloudConnectNetworksResponseBody extends TeaModel {
              */
             public Builder newAgw(Boolean newAgw) {
                 this.newAgw = newAgw;
+                return this;
+            }
+
+            /**
+             * ProcessingCenId.
+             */
+            public Builder processingCenId(String processingCenId) {
+                this.processingCenId = processingCenId;
                 return this;
             }
 

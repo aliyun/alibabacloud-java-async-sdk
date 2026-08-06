@@ -1,3 +1,6 @@
+2026-08-06 Version: 1.0.3
+- Generated java-async 2018-03-13 for Smartag.
+
 2026-07-31 Version: 1.0.2
 - Generated java-async 2018-03-13 for Smartag.
 
