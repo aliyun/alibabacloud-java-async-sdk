@@ -158,6 +158,9 @@ public class ListModelTemplatesResponseBody extends TeaModel {
      * <p>ListModelTemplatesResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AgentPlatform")
+        private String agentPlatform;
+
         @com.aliyun.core.annotation.NameInMap("AgentProvider")
         private String agentProvider;
 
@@ -177,6 +180,7 @@ public class ListModelTemplatesResponseBody extends TeaModel {
         private String name;
 
         private Data(Builder builder) {
+            this.agentPlatform = builder.agentPlatform;
             this.agentProvider = builder.agentProvider;
             this.config = builder.config;
             this.description = builder.description;
@@ -191,6 +195,13 @@ public class ListModelTemplatesResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return agentPlatform
+         */
+        public String getAgentPlatform() {
+            return this.agentPlatform;
         }
 
         /**
@@ -236,6 +247,7 @@ public class ListModelTemplatesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String agentPlatform; 
             private String agentProvider; 
             private String config; 
             private String description; 
@@ -247,6 +259,7 @@ public class ListModelTemplatesResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.agentPlatform = model.agentPlatform;
                 this.agentProvider = model.agentProvider;
                 this.config = model.config;
                 this.description = model.description;
@@ -254,6 +267,14 @@ public class ListModelTemplatesResponseBody extends TeaModel {
                 this.modelTemplateId = model.modelTemplateId;
                 this.name = model.name;
             } 
+
+            /**
+             * AgentPlatform.
+             */
+            public Builder agentPlatform(String agentPlatform) {
+                this.agentPlatform = agentPlatform;
+                return this;
+            }
 
             /**
              * AgentProvider.

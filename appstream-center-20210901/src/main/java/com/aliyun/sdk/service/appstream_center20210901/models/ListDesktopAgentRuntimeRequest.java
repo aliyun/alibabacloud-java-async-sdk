@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDesktopAgentRuntimeRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentImOnlineStatus")
+    private String agentImOnlineStatus;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AgentInstanceStatuses")
     private java.util.List<String> agentInstanceStatuses;
 
@@ -30,12 +34,28 @@ public class ListDesktopAgentRuntimeRequest extends Request {
     private String agentPlatform;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentPlatformList")
+    private java.util.List<String> agentPlatformList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AgentProvider")
     private String agentProvider;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentProviderList")
+    private java.util.List<String> agentProviderList;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentTemplateIds")
+    private java.util.List<String> agentTemplateIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AuthUsers")
     private java.util.List<String> authUsers;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizRegionId")
+    private String bizRegionId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BizType")
@@ -86,6 +106,10 @@ public class ListDesktopAgentRuntimeRequest extends Request {
     private String modelTemplateId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
+    private String officeSiteId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -103,11 +127,16 @@ public class ListDesktopAgentRuntimeRequest extends Request {
 
     private ListDesktopAgentRuntimeRequest(Builder builder) {
         super(builder);
+        this.agentImOnlineStatus = builder.agentImOnlineStatus;
         this.agentInstanceStatuses = builder.agentInstanceStatuses;
         this.agentInstanceVersions = builder.agentInstanceVersions;
         this.agentPlatform = builder.agentPlatform;
+        this.agentPlatformList = builder.agentPlatformList;
         this.agentProvider = builder.agentProvider;
+        this.agentProviderList = builder.agentProviderList;
+        this.agentTemplateIds = builder.agentTemplateIds;
         this.authUsers = builder.authUsers;
+        this.bizRegionId = builder.bizRegionId;
         this.bizType = builder.bizType;
         this.channelConfigure = builder.channelConfigure;
         this.deploymentSource = builder.deploymentSource;
@@ -120,6 +149,7 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         this.managementStatus = builder.managementStatus;
         this.modelConfigure = builder.modelConfigure;
         this.modelTemplateId = builder.modelTemplateId;
+        this.officeSiteId = builder.officeSiteId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.resourceGroupId = builder.resourceGroupId;
@@ -137,6 +167,13 @@ public class ListDesktopAgentRuntimeRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentImOnlineStatus
+     */
+    public String getAgentImOnlineStatus() {
+        return this.agentImOnlineStatus;
     }
 
     /**
@@ -161,6 +198,13 @@ public class ListDesktopAgentRuntimeRequest extends Request {
     }
 
     /**
+     * @return agentPlatformList
+     */
+    public java.util.List<String> getAgentPlatformList() {
+        return this.agentPlatformList;
+    }
+
+    /**
      * @return agentProvider
      */
     public String getAgentProvider() {
@@ -168,10 +212,31 @@ public class ListDesktopAgentRuntimeRequest extends Request {
     }
 
     /**
+     * @return agentProviderList
+     */
+    public java.util.List<String> getAgentProviderList() {
+        return this.agentProviderList;
+    }
+
+    /**
+     * @return agentTemplateIds
+     */
+    public java.util.List<String> getAgentTemplateIds() {
+        return this.agentTemplateIds;
+    }
+
+    /**
      * @return authUsers
      */
     public java.util.List<String> getAuthUsers() {
         return this.authUsers;
+    }
+
+    /**
+     * @return bizRegionId
+     */
+    public String getBizRegionId() {
+        return this.bizRegionId;
     }
 
     /**
@@ -259,6 +324,13 @@ public class ListDesktopAgentRuntimeRequest extends Request {
     }
 
     /**
+     * @return officeSiteId
+     */
+    public String getOfficeSiteId() {
+        return this.officeSiteId;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -287,11 +359,16 @@ public class ListDesktopAgentRuntimeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListDesktopAgentRuntimeRequest, Builder> {
+        private String agentImOnlineStatus; 
         private java.util.List<String> agentInstanceStatuses; 
         private java.util.List<String> agentInstanceVersions; 
         private String agentPlatform; 
+        private java.util.List<String> agentPlatformList; 
         private String agentProvider; 
+        private java.util.List<String> agentProviderList; 
+        private java.util.List<String> agentTemplateIds; 
         private java.util.List<String> authUsers; 
+        private String bizRegionId; 
         private Integer bizType; 
         private Boolean channelConfigure; 
         private String deploymentSource; 
@@ -304,6 +381,7 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         private String managementStatus; 
         private Boolean modelConfigure; 
         private String modelTemplateId; 
+        private String officeSiteId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String resourceGroupId; 
@@ -315,11 +393,16 @@ public class ListDesktopAgentRuntimeRequest extends Request {
 
         private Builder(ListDesktopAgentRuntimeRequest request) {
             super(request);
+            this.agentImOnlineStatus = request.agentImOnlineStatus;
             this.agentInstanceStatuses = request.agentInstanceStatuses;
             this.agentInstanceVersions = request.agentInstanceVersions;
             this.agentPlatform = request.agentPlatform;
+            this.agentPlatformList = request.agentPlatformList;
             this.agentProvider = request.agentProvider;
+            this.agentProviderList = request.agentProviderList;
+            this.agentTemplateIds = request.agentTemplateIds;
             this.authUsers = request.authUsers;
+            this.bizRegionId = request.bizRegionId;
             this.bizType = request.bizType;
             this.channelConfigure = request.channelConfigure;
             this.deploymentSource = request.deploymentSource;
@@ -332,11 +415,21 @@ public class ListDesktopAgentRuntimeRequest extends Request {
             this.managementStatus = request.managementStatus;
             this.modelConfigure = request.modelConfigure;
             this.modelTemplateId = request.modelTemplateId;
+            this.officeSiteId = request.officeSiteId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceIds = request.resourceIds;
         } 
+
+        /**
+         * AgentImOnlineStatus.
+         */
+        public Builder agentImOnlineStatus(String agentImOnlineStatus) {
+            this.putQueryParameter("AgentImOnlineStatus", agentImOnlineStatus);
+            this.agentImOnlineStatus = agentImOnlineStatus;
+            return this;
+        }
 
         /**
          * AgentInstanceStatuses.
@@ -366,6 +459,15 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         }
 
         /**
+         * AgentPlatformList.
+         */
+        public Builder agentPlatformList(java.util.List<String> agentPlatformList) {
+            this.putQueryParameter("AgentPlatformList", agentPlatformList);
+            this.agentPlatformList = agentPlatformList;
+            return this;
+        }
+
+        /**
          * AgentProvider.
          */
         public Builder agentProvider(String agentProvider) {
@@ -375,11 +477,38 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         }
 
         /**
+         * AgentProviderList.
+         */
+        public Builder agentProviderList(java.util.List<String> agentProviderList) {
+            this.putQueryParameter("AgentProviderList", agentProviderList);
+            this.agentProviderList = agentProviderList;
+            return this;
+        }
+
+        /**
+         * AgentTemplateIds.
+         */
+        public Builder agentTemplateIds(java.util.List<String> agentTemplateIds) {
+            this.putQueryParameter("AgentTemplateIds", agentTemplateIds);
+            this.agentTemplateIds = agentTemplateIds;
+            return this;
+        }
+
+        /**
          * AuthUsers.
          */
         public Builder authUsers(java.util.List<String> authUsers) {
             this.putQueryParameter("AuthUsers", authUsers);
             this.authUsers = authUsers;
+            return this;
+        }
+
+        /**
+         * BizRegionId.
+         */
+        public Builder bizRegionId(String bizRegionId) {
+            this.putQueryParameter("BizRegionId", bizRegionId);
+            this.bizRegionId = bizRegionId;
             return this;
         }
 
@@ -488,6 +617,15 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         public Builder modelTemplateId(String modelTemplateId) {
             this.putQueryParameter("ModelTemplateId", modelTemplateId);
             this.modelTemplateId = modelTemplateId;
+            return this;
+        }
+
+        /**
+         * OfficeSiteId.
+         */
+        public Builder officeSiteId(String officeSiteId) {
+            this.putQueryParameter("OfficeSiteId", officeSiteId);
+            this.officeSiteId = officeSiteId;
             return this;
         }
 

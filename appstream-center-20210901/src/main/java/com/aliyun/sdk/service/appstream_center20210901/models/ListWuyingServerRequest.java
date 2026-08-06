@@ -34,8 +34,28 @@ public class ListWuyingServerRequest extends Request {
     private String chargeType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CreateTimeEnd")
+    private String createTimeEnd;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CreateTimeStart")
+    private String createTimeStart;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExpiredTimeEnd")
+    private String expiredTimeEnd;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExpiredTimeStart")
+    private String expiredTimeStart;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceIp")
+    private String networkInterfaceIp;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
@@ -78,13 +98,22 @@ public class ListWuyingServerRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("WuyingServerNameOrId")
     private String wuyingServerNameOrId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
+    private String zoneId;
+
     private ListWuyingServerRequest(Builder builder) {
         super(builder);
         this.addVirtualNodePoolStatusList = builder.addVirtualNodePoolStatusList;
         this.bizRegionId = builder.bizRegionId;
         this.bizType = builder.bizType;
         this.chargeType = builder.chargeType;
+        this.createTimeEnd = builder.createTimeEnd;
+        this.createTimeStart = builder.createTimeStart;
+        this.expiredTimeEnd = builder.expiredTimeEnd;
+        this.expiredTimeStart = builder.expiredTimeStart;
         this.imageId = builder.imageId;
+        this.networkInterfaceIp = builder.networkInterfaceIp;
         this.officeSiteId = builder.officeSiteId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -95,6 +124,7 @@ public class ListWuyingServerRequest extends Request {
         this.virtualNodePoolId = builder.virtualNodePoolId;
         this.wuyingServerIdList = builder.wuyingServerIdList;
         this.wuyingServerNameOrId = builder.wuyingServerNameOrId;
+        this.zoneId = builder.zoneId;
     }
 
     public static Builder builder() {
@@ -139,10 +169,45 @@ public class ListWuyingServerRequest extends Request {
     }
 
     /**
+     * @return createTimeEnd
+     */
+    public String getCreateTimeEnd() {
+        return this.createTimeEnd;
+    }
+
+    /**
+     * @return createTimeStart
+     */
+    public String getCreateTimeStart() {
+        return this.createTimeStart;
+    }
+
+    /**
+     * @return expiredTimeEnd
+     */
+    public String getExpiredTimeEnd() {
+        return this.expiredTimeEnd;
+    }
+
+    /**
+     * @return expiredTimeStart
+     */
+    public String getExpiredTimeStart() {
+        return this.expiredTimeStart;
+    }
+
+    /**
      * @return imageId
      */
     public String getImageId() {
         return this.imageId;
+    }
+
+    /**
+     * @return networkInterfaceIp
+     */
+    public String getNetworkInterfaceIp() {
+        return this.networkInterfaceIp;
     }
 
     /**
@@ -215,12 +280,24 @@ public class ListWuyingServerRequest extends Request {
         return this.wuyingServerNameOrId;
     }
 
+    /**
+     * @return zoneId
+     */
+    public String getZoneId() {
+        return this.zoneId;
+    }
+
     public static final class Builder extends Request.Builder<ListWuyingServerRequest, Builder> {
         private java.util.List<String> addVirtualNodePoolStatusList; 
         private String bizRegionId; 
         private Integer bizType; 
         private String chargeType; 
+        private String createTimeEnd; 
+        private String createTimeStart; 
+        private String expiredTimeEnd; 
+        private String expiredTimeStart; 
         private String imageId; 
+        private String networkInterfaceIp; 
         private String officeSiteId; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -231,6 +308,7 @@ public class ListWuyingServerRequest extends Request {
         private String virtualNodePoolId; 
         private java.util.List<String> wuyingServerIdList; 
         private String wuyingServerNameOrId; 
+        private String zoneId; 
 
         private Builder() {
             super();
@@ -242,7 +320,12 @@ public class ListWuyingServerRequest extends Request {
             this.bizRegionId = request.bizRegionId;
             this.bizType = request.bizType;
             this.chargeType = request.chargeType;
+            this.createTimeEnd = request.createTimeEnd;
+            this.createTimeStart = request.createTimeStart;
+            this.expiredTimeEnd = request.expiredTimeEnd;
+            this.expiredTimeStart = request.expiredTimeStart;
             this.imageId = request.imageId;
+            this.networkInterfaceIp = request.networkInterfaceIp;
             this.officeSiteId = request.officeSiteId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -253,6 +336,7 @@ public class ListWuyingServerRequest extends Request {
             this.virtualNodePoolId = request.virtualNodePoolId;
             this.wuyingServerIdList = request.wuyingServerIdList;
             this.wuyingServerNameOrId = request.wuyingServerNameOrId;
+            this.zoneId = request.zoneId;
         } 
 
         /**
@@ -298,6 +382,42 @@ public class ListWuyingServerRequest extends Request {
         }
 
         /**
+         * CreateTimeEnd.
+         */
+        public Builder createTimeEnd(String createTimeEnd) {
+            this.putBodyParameter("CreateTimeEnd", createTimeEnd);
+            this.createTimeEnd = createTimeEnd;
+            return this;
+        }
+
+        /**
+         * CreateTimeStart.
+         */
+        public Builder createTimeStart(String createTimeStart) {
+            this.putBodyParameter("CreateTimeStart", createTimeStart);
+            this.createTimeStart = createTimeStart;
+            return this;
+        }
+
+        /**
+         * ExpiredTimeEnd.
+         */
+        public Builder expiredTimeEnd(String expiredTimeEnd) {
+            this.putBodyParameter("ExpiredTimeEnd", expiredTimeEnd);
+            this.expiredTimeEnd = expiredTimeEnd;
+            return this;
+        }
+
+        /**
+         * ExpiredTimeStart.
+         */
+        public Builder expiredTimeStart(String expiredTimeStart) {
+            this.putBodyParameter("ExpiredTimeStart", expiredTimeStart);
+            this.expiredTimeStart = expiredTimeStart;
+            return this;
+        }
+
+        /**
          * <p>The image ID.</p>
          * 
          * <strong>example:</strong>
@@ -306,6 +426,15 @@ public class ListWuyingServerRequest extends Request {
         public Builder imageId(String imageId) {
             this.putBodyParameter("ImageId", imageId);
             this.imageId = imageId;
+            return this;
+        }
+
+        /**
+         * NetworkInterfaceIp.
+         */
+        public Builder networkInterfaceIp(String networkInterfaceIp) {
+            this.putBodyParameter("NetworkInterfaceIp", networkInterfaceIp);
+            this.networkInterfaceIp = networkInterfaceIp;
             return this;
         }
 
@@ -417,6 +546,15 @@ public class ListWuyingServerRequest extends Request {
         public Builder wuyingServerNameOrId(String wuyingServerNameOrId) {
             this.putBodyParameter("WuyingServerNameOrId", wuyingServerNameOrId);
             this.wuyingServerNameOrId = wuyingServerNameOrId;
+            return this;
+        }
+
+        /**
+         * ZoneId.
+         */
+        public Builder zoneId(String zoneId) {
+            this.putBodyParameter("ZoneId", zoneId);
+            this.zoneId = zoneId;
             return this;
         }
 

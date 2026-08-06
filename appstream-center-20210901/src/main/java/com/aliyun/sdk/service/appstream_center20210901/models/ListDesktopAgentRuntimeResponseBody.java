@@ -158,6 +158,9 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
      * <p>ListDesktopAgentRuntimeResponseBody</p>
      */
     public static class AgentImInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AgentImOnlineStatus")
+        private String agentImOnlineStatus;
+
         @com.aliyun.core.annotation.NameInMap("AgentImStatus")
         private String agentImStatus;
 
@@ -165,6 +168,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         private String cloudSpaceStatus;
 
         private AgentImInfo(Builder builder) {
+            this.agentImOnlineStatus = builder.agentImOnlineStatus;
             this.agentImStatus = builder.agentImStatus;
             this.cloudSpaceStatus = builder.cloudSpaceStatus;
         }
@@ -175,6 +179,13 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
 
         public static AgentImInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return agentImOnlineStatus
+         */
+        public String getAgentImOnlineStatus() {
+            return this.agentImOnlineStatus;
         }
 
         /**
@@ -192,6 +203,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String agentImOnlineStatus; 
             private String agentImStatus; 
             private String cloudSpaceStatus; 
 
@@ -199,9 +211,18 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             } 
 
             private Builder(AgentImInfo model) {
+                this.agentImOnlineStatus = model.agentImOnlineStatus;
                 this.agentImStatus = model.agentImStatus;
                 this.cloudSpaceStatus = model.cloudSpaceStatus;
             } 
+
+            /**
+             * AgentImOnlineStatus.
+             */
+            public Builder agentImOnlineStatus(String agentImOnlineStatus) {
+                this.agentImOnlineStatus = agentImOnlineStatus;
+                return this;
+            }
 
             /**
              * AgentImStatus.

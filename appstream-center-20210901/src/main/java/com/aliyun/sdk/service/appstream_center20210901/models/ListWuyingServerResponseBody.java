@@ -839,6 +839,9 @@ public class ListWuyingServerResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WuyingServerName")
         private String wuyingServerName;
 
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
+        private String zoneId;
+
         private WuyingServerList(Builder builder) {
             this.addVirtualNodePoolStatus = builder.addVirtualNodePoolStatus;
             this.aliUid = builder.aliUid;
@@ -879,6 +882,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             this.vkVersion = builder.vkVersion;
             this.wuyingServerId = builder.wuyingServerId;
             this.wuyingServerName = builder.wuyingServerName;
+            this.zoneId = builder.zoneId;
         }
 
         public static Builder builder() {
@@ -1162,6 +1166,13 @@ public class ListWuyingServerResponseBody extends TeaModel {
             return this.wuyingServerName;
         }
 
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
         public static final class Builder {
             private String addVirtualNodePoolStatus; 
             private Long aliUid; 
@@ -1202,6 +1213,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             private String vkVersion; 
             private String wuyingServerId; 
             private String wuyingServerName; 
+            private String zoneId; 
 
             private Builder() {
             } 
@@ -1246,6 +1258,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
                 this.vkVersion = model.vkVersion;
                 this.wuyingServerId = model.wuyingServerId;
                 this.wuyingServerName = model.wuyingServerName;
+                this.zoneId = model.zoneId;
             } 
 
             /**
@@ -1608,6 +1621,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
              */
             public Builder wuyingServerName(String wuyingServerName) {
                 this.wuyingServerName = wuyingServerName;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
                 return this;
             }
 

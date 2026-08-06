@@ -22,9 +22,16 @@ public class ListModelTemplatesRequest extends Request {
     private String agentPlatform;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentPlatformList")
+    private java.util.List<String> agentPlatformList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AgentProvider")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String agentProvider;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentProviderList")
+    private java.util.List<String> agentProviderList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BizType")
@@ -50,7 +57,9 @@ public class ListModelTemplatesRequest extends Request {
     private ListModelTemplatesRequest(Builder builder) {
         super(builder);
         this.agentPlatform = builder.agentPlatform;
+        this.agentPlatformList = builder.agentPlatformList;
         this.agentProvider = builder.agentProvider;
+        this.agentProviderList = builder.agentProviderList;
         this.bizType = builder.bizType;
         this.hasModel = builder.hasModel;
         this.modelTemplateIdList = builder.modelTemplateIdList;
@@ -79,10 +88,24 @@ public class ListModelTemplatesRequest extends Request {
     }
 
     /**
+     * @return agentPlatformList
+     */
+    public java.util.List<String> getAgentPlatformList() {
+        return this.agentPlatformList;
+    }
+
+    /**
      * @return agentProvider
      */
     public String getAgentProvider() {
         return this.agentProvider;
+    }
+
+    /**
+     * @return agentProviderList
+     */
+    public java.util.List<String> getAgentProviderList() {
+        return this.agentProviderList;
     }
 
     /**
@@ -122,7 +145,9 @@ public class ListModelTemplatesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListModelTemplatesRequest, Builder> {
         private String agentPlatform; 
+        private java.util.List<String> agentPlatformList; 
         private String agentProvider; 
+        private java.util.List<String> agentProviderList; 
         private Integer bizType; 
         private Boolean hasModel; 
         private java.util.List<String> modelTemplateIdList; 
@@ -136,7 +161,9 @@ public class ListModelTemplatesRequest extends Request {
         private Builder(ListModelTemplatesRequest request) {
             super(request);
             this.agentPlatform = request.agentPlatform;
+            this.agentPlatformList = request.agentPlatformList;
             this.agentProvider = request.agentProvider;
+            this.agentProviderList = request.agentProviderList;
             this.bizType = request.bizType;
             this.hasModel = request.hasModel;
             this.modelTemplateIdList = request.modelTemplateIdList;
@@ -154,14 +181,29 @@ public class ListModelTemplatesRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>OpenClaw</p>
+         * AgentPlatformList.
+         */
+        public Builder agentPlatformList(java.util.List<String> agentPlatformList) {
+            this.putQueryParameter("AgentPlatformList", agentPlatformList);
+            this.agentPlatformList = agentPlatformList;
+            return this;
+        }
+
+        /**
+         * AgentProvider.
          */
         public Builder agentProvider(String agentProvider) {
             this.putQueryParameter("AgentProvider", agentProvider);
             this.agentProvider = agentProvider;
+            return this;
+        }
+
+        /**
+         * AgentProviderList.
+         */
+        public Builder agentProviderList(java.util.List<String> agentProviderList) {
+            this.putQueryParameter("AgentProviderList", agentProviderList);
+            this.agentProviderList = agentProviderList;
             return this;
         }
 
