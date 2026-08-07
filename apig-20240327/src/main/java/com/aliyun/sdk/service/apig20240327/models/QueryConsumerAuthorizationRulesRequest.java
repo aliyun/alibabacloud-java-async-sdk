@@ -26,6 +26,10 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
     private String consumerGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("consumerGroupNameLike")
+    private String consumerGroupNameLike;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("consumerId")
     private String consumerId;
 
@@ -73,6 +77,7 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
         super(builder);
         this.apiNameLike = builder.apiNameLike;
         this.consumerGroupId = builder.consumerGroupId;
+        this.consumerGroupNameLike = builder.consumerGroupNameLike;
         this.consumerId = builder.consumerId;
         this.consumerNameLike = builder.consumerNameLike;
         this.environmentId = builder.environmentId;
@@ -111,6 +116,13 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
      */
     public String getConsumerGroupId() {
         return this.consumerGroupId;
+    }
+
+    /**
+     * @return consumerGroupNameLike
+     */
+    public String getConsumerGroupNameLike() {
+        return this.consumerGroupNameLike;
     }
 
     /**
@@ -193,6 +205,7 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
     public static final class Builder extends Request.Builder<QueryConsumerAuthorizationRulesRequest, Builder> {
         private String apiNameLike; 
         private String consumerGroupId; 
+        private String consumerGroupNameLike; 
         private String consumerId; 
         private String consumerNameLike; 
         private String environmentId; 
@@ -213,6 +226,7 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
             super(request);
             this.apiNameLike = request.apiNameLike;
             this.consumerGroupId = request.consumerGroupId;
+            this.consumerGroupNameLike = request.consumerGroupNameLike;
             this.consumerId = request.consumerId;
             this.consumerNameLike = request.consumerNameLike;
             this.environmentId = request.environmentId;
@@ -244,6 +258,15 @@ public class QueryConsumerAuthorizationRulesRequest extends Request {
         public Builder consumerGroupId(String consumerGroupId) {
             this.putQueryParameter("consumerGroupId", consumerGroupId);
             this.consumerGroupId = consumerGroupId;
+            return this;
+        }
+
+        /**
+         * consumerGroupNameLike.
+         */
+        public Builder consumerGroupNameLike(String consumerGroupNameLike) {
+            this.putQueryParameter("consumerGroupNameLike", consumerGroupNameLike);
+            this.consumerGroupNameLike = consumerGroupNameLike;
             return this;
         }
 
