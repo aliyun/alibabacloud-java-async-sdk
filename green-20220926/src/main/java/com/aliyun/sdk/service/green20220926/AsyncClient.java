@@ -290,6 +290,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetFeatureConfigResponse> getFeatureConfig(GetFeatureConfigRequest request);
 
     /**
+     * @param request the request parameters of GetGuardLogStats  GetGuardLogStatsRequest
+     * @return GetGuardLogStatsResponse
+     */
+    CompletableFuture<GetGuardLogStatsResponse> getGuardLogStats(GetGuardLogStatsRequest request);
+
+    /**
      * @param request the request parameters of GetImageSceneLabelConf  GetImageSceneLabelConfRequest
      * @return GetImageSceneLabelConfResponse
      */
@@ -402,6 +408,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetTuneProposalByIdResponse
      */
     CompletableFuture<GetTuneProposalByIdResponse> getTuneProposalById(GetTuneProposalByIdRequest request);
+
+    /**
+     * @param request the request parameters of GetUploadContent  GetUploadContentRequest
+     * @return GetUploadContentResponse
+     */
+    CompletableFuture<GetUploadContentResponse> getUploadContent(GetUploadContentRequest request);
 
     /**
      * @param request the request parameters of GetUploadInfo  GetUploadInfoRequest
