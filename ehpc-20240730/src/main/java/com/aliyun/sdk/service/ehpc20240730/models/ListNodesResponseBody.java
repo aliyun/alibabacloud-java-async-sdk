@@ -311,6 +311,9 @@ public class ListNodesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("QueueName")
         private String queueName;
 
+        @com.aliyun.core.annotation.NameInMap("Reason")
+        private String reason;
+
         @com.aliyun.core.annotation.NameInMap("SpotStrategy")
         private String spotStrategy;
 
@@ -345,6 +348,7 @@ public class ListNodesResponseBody extends TeaModel {
             this.keepAlive = builder.keepAlive;
             this.publicIpAddress = builder.publicIpAddress;
             this.queueName = builder.queueName;
+            this.reason = builder.reason;
             this.spotStrategy = builder.spotStrategy;
             this.stateInSched = builder.stateInSched;
             this.status = builder.status;
@@ -447,6 +451,13 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
+         * @return reason
+         */
+        public String getReason() {
+            return this.reason;
+        }
+
+        /**
          * @return spotStrategy
          */
         public String getSpotStrategy() {
@@ -508,6 +519,7 @@ public class ListNodesResponseBody extends TeaModel {
             private Boolean keepAlive; 
             private String publicIpAddress; 
             private String queueName; 
+            private String reason; 
             private String spotStrategy; 
             private String stateInSched; 
             private String status; 
@@ -532,6 +544,7 @@ public class ListNodesResponseBody extends TeaModel {
                 this.keepAlive = model.keepAlive;
                 this.publicIpAddress = model.publicIpAddress;
                 this.queueName = model.queueName;
+                this.reason = model.reason;
                 this.spotStrategy = model.spotStrategy;
                 this.stateInSched = model.stateInSched;
                 this.status = model.status;
@@ -674,6 +687,14 @@ public class ListNodesResponseBody extends TeaModel {
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
+                return this;
+            }
+
+            /**
+             * Reason.
+             */
+            public Builder reason(String reason) {
+                this.reason = reason;
                 return this;
             }
 
