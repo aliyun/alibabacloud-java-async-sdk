@@ -38,6 +38,10 @@ public class DescribeDataObjectsRequest extends Request {
     private Long domainId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineType")
+    private String engineType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FeatureType")
     private Integer featureType;
 
@@ -145,6 +149,7 @@ public class DescribeDataObjectsRequest extends Request {
         this.currentPage = builder.currentPage;
         this.dbName = builder.dbName;
         this.domainId = builder.domainId;
+        this.engineType = builder.engineType;
         this.featureType = builder.featureType;
         this.fileCategoryCode = builder.fileCategoryCode;
         this.fileType = builder.fileType;
@@ -218,6 +223,13 @@ public class DescribeDataObjectsRequest extends Request {
      */
     public Long getDomainId() {
         return this.domainId;
+    }
+
+    /**
+     * @return engineType
+     */
+    public String getEngineType() {
+        return this.engineType;
     }
 
     /**
@@ -401,6 +413,7 @@ public class DescribeDataObjectsRequest extends Request {
         private Integer currentPage; 
         private String dbName; 
         private Long domainId; 
+        private String engineType; 
         private Integer featureType; 
         private Long fileCategoryCode; 
         private Long fileType; 
@@ -438,6 +451,7 @@ public class DescribeDataObjectsRequest extends Request {
             this.currentPage = request.currentPage;
             this.dbName = request.dbName;
             this.domainId = request.domainId;
+            this.engineType = request.engineType;
             this.featureType = request.featureType;
             this.fileCategoryCode = request.fileCategoryCode;
             this.fileType = request.fileType;
@@ -513,6 +527,15 @@ public class DescribeDataObjectsRequest extends Request {
         public Builder domainId(Long domainId) {
             this.putQueryParameter("DomainId", domainId);
             this.domainId = domainId;
+            return this;
+        }
+
+        /**
+         * EngineType.
+         */
+        public Builder engineType(String engineType) {
+            this.putQueryParameter("EngineType", engineType);
+            this.engineType = engineType;
             return this;
         }
 

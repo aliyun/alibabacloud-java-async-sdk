@@ -485,6 +485,9 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
 
+        @com.aliyun.core.annotation.NameInMap("EngineType")
+        private String engineType;
+
         @com.aliyun.core.annotation.NameInMap("FileCategoryCode")
         private Integer fileCategoryCode;
 
@@ -587,6 +590,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
             this.comment = builder.comment;
             this.dataType = builder.dataType;
             this.dbName = builder.dbName;
+            this.engineType = builder.engineType;
             this.fileCategoryCode = builder.fileCategoryCode;
             this.id = builder.id;
             this.instanceDescription = builder.instanceDescription;
@@ -662,6 +666,13 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
          */
         public String getDbName() {
             return this.dbName;
+        }
+
+        /**
+         * @return engineType
+         */
+        public String getEngineType() {
+            return this.engineType;
         }
 
         /**
@@ -894,6 +905,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
             private String comment; 
             private String dataType; 
             private String dbName; 
+            private String engineType; 
             private Integer fileCategoryCode; 
             private String id; 
             private String instanceDescription; 
@@ -936,6 +948,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
                 this.comment = model.comment;
                 this.dataType = model.dataType;
                 this.dbName = model.dbName;
+                this.engineType = model.engineType;
                 this.fileCategoryCode = model.fileCategoryCode;
                 this.id = model.id;
                 this.instanceDescription = model.instanceDescription;
@@ -1007,6 +1020,14 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
+                return this;
+            }
+
+            /**
+             * EngineType.
+             */
+            public Builder engineType(String engineType) {
+                this.engineType = engineType;
                 return this;
             }
 
