@@ -47,6 +47,10 @@ public class ListLineagesRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecentDays")
+    private Integer recentDays;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
@@ -67,6 +71,7 @@ public class ListLineagesRequest extends Request {
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.recentDays = builder.recentDays;
         this.sortBy = builder.sortBy;
         this.srcEntityId = builder.srcEntityId;
         this.srcEntityName = builder.srcEntityName;
@@ -135,6 +140,13 @@ public class ListLineagesRequest extends Request {
     }
 
     /**
+     * @return recentDays
+     */
+    public Integer getRecentDays() {
+        return this.recentDays;
+    }
+
+    /**
      * @return sortBy
      */
     public String getSortBy() {
@@ -163,6 +175,7 @@ public class ListLineagesRequest extends Request {
         private String order; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private Integer recentDays; 
         private String sortBy; 
         private String srcEntityId; 
         private String srcEntityName; 
@@ -180,6 +193,7 @@ public class ListLineagesRequest extends Request {
             this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.recentDays = request.recentDays;
             this.sortBy = request.sortBy;
             this.srcEntityId = request.srcEntityId;
             this.srcEntityName = request.srcEntityName;
@@ -245,6 +259,15 @@ public class ListLineagesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RecentDays.
+         */
+        public Builder recentDays(Integer recentDays) {
+            this.putQueryParameter("RecentDays", recentDays);
+            this.recentDays = recentDays;
             return this;
         }
 
