@@ -56,6 +56,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddPolarFsQuotaResponse> addPolarFsQuota(AddPolarFsQuotaRequest request);
 
     /**
+     * @param request the request parameters of AddPolarOSSAuthorizedAccount  AddPolarOSSAuthorizedAccountRequest
+     * @return AddPolarOSSAuthorizedAccountResponse
+     */
+    CompletableFuture<AddPolarOSSAuthorizedAccountResponse> addPolarOSSAuthorizedAccount(AddPolarOSSAuthorizedAccountRequest request);
+
+    /**
      * @param request the request parameters of AddSQLRateLimitingRules  AddSQLRateLimitingRulesRequest
      * @return AddSQLRateLimitingRulesResponse
      */
@@ -911,6 +917,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeletePolarFsQuotaResponse
      */
     CompletableFuture<DeletePolarFsQuotaResponse> deletePolarFsQuota(DeletePolarFsQuotaRequest request);
+
+    /**
+     * @param request the request parameters of DeletePolarOSSAuthorizedAccount  DeletePolarOSSAuthorizedAccountRequest
+     * @return DeletePolarOSSAuthorizedAccountResponse
+     */
+    CompletableFuture<DeletePolarOSSAuthorizedAccountResponse> deletePolarOSSAuthorizedAccount(DeletePolarOSSAuthorizedAccountRequest request);
 
     /**
      * @param request the request parameters of DeleteRateLimitPolicy  DeleteRateLimitPolicyRequest

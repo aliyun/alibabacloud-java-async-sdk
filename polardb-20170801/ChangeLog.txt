@@ -1,3 +1,6 @@
+2026-08-07 Version: 6.0.18
+- Generated java-async 2017-08-01 for polardb.
+
 2026-08-06 Version: 6.0.17
 - Generated java-async 2017-08-01 for polardb.
 
