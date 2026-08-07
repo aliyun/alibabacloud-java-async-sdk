@@ -390,7 +390,145 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
      *
      * <p>DescribeAutoSnapshotPolicyExResponseBody</p>
      */
+    public static class TargetTag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private TargetTag(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TargetTag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(TargetTag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
+            /**
+             * <p>The tag key of the automatic snapshot policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * <p>The tag value of the automatic snapshot policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public TargetTag build() {
+                return new TargetTag(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAutoSnapshotPolicyExResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoSnapshotPolicyExResponseBody</p>
+     */
+    public static class TargetTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TargetTag")
+        private java.util.List<TargetTag> targetTag;
+
+        private TargetTags(Builder builder) {
+            this.targetTag = builder.targetTag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TargetTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return targetTag
+         */
+        public java.util.List<TargetTag> getTargetTag() {
+            return this.targetTag;
+        }
+
+        public static final class Builder {
+            private java.util.List<TargetTag> targetTag; 
+
+            private Builder() {
+            } 
+
+            private Builder(TargetTags model) {
+                this.targetTag = model.targetTag;
+            } 
+
+            /**
+             * TargetTag.
+             */
+            public Builder targetTag(java.util.List<TargetTag> targetTag) {
+                this.targetTag = targetTag;
+                return this;
+            }
+
+            public TargetTags build() {
+                return new TargetTags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAutoSnapshotPolicyExResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoSnapshotPolicyExResponseBody</p>
+     */
     public static class AutoSnapshotPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AssociationType")
+        private String associationType;
+
         @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicyId")
         private String autoSnapshotPolicyId;
 
@@ -433,6 +571,9 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TargetCopyRegions")
         private String targetCopyRegions;
 
+        @com.aliyun.core.annotation.NameInMap("TargetTags")
+        private TargetTags targetTags;
+
         @com.aliyun.core.annotation.NameInMap("TimePoints")
         private String timePoints;
 
@@ -443,6 +584,7 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         private Integer volumeNums;
 
         private AutoSnapshotPolicy(Builder builder) {
+            this.associationType = builder.associationType;
             this.autoSnapshotPolicyId = builder.autoSnapshotPolicyId;
             this.autoSnapshotPolicyName = builder.autoSnapshotPolicyName;
             this.copiedSnapshotsRetentionDays = builder.copiedSnapshotsRetentionDays;
@@ -457,6 +599,7 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             this.status = builder.status;
             this.tags = builder.tags;
             this.targetCopyRegions = builder.targetCopyRegions;
+            this.targetTags = builder.targetTags;
             this.timePoints = builder.timePoints;
             this.type = builder.type;
             this.volumeNums = builder.volumeNums;
@@ -468,6 +611,13 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
 
         public static AutoSnapshotPolicy create() {
             return builder().build();
+        }
+
+        /**
+         * @return associationType
+         */
+        public String getAssociationType() {
+            return this.associationType;
         }
 
         /**
@@ -569,6 +719,13 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         }
 
         /**
+         * @return targetTags
+         */
+        public TargetTags getTargetTags() {
+            return this.targetTags;
+        }
+
+        /**
          * @return timePoints
          */
         public String getTimePoints() {
@@ -590,6 +747,7 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String associationType; 
             private String autoSnapshotPolicyId; 
             private String autoSnapshotPolicyName; 
             private Integer copiedSnapshotsRetentionDays; 
@@ -604,6 +762,7 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             private String status; 
             private Tags tags; 
             private String targetCopyRegions; 
+            private TargetTags targetTags; 
             private String timePoints; 
             private String type; 
             private Integer volumeNums; 
@@ -612,6 +771,7 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
             } 
 
             private Builder(AutoSnapshotPolicy model) {
+                this.associationType = model.associationType;
                 this.autoSnapshotPolicyId = model.autoSnapshotPolicyId;
                 this.autoSnapshotPolicyName = model.autoSnapshotPolicyName;
                 this.copiedSnapshotsRetentionDays = model.copiedSnapshotsRetentionDays;
@@ -626,10 +786,19 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
                 this.status = model.status;
                 this.tags = model.tags;
                 this.targetCopyRegions = model.targetCopyRegions;
+                this.targetTags = model.targetTags;
                 this.timePoints = model.timePoints;
                 this.type = model.type;
                 this.volumeNums = model.volumeNums;
             } 
+
+            /**
+             * AssociationType.
+             */
+            public Builder associationType(String associationType) {
+                this.associationType = associationType;
+                return this;
+            }
 
             /**
              * <p>The ID of the automatic snapshot policy.</p>
@@ -790,6 +959,14 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
              */
             public Builder targetCopyRegions(String targetCopyRegions) {
                 this.targetCopyRegions = targetCopyRegions;
+                return this;
+            }
+
+            /**
+             * TargetTags.
+             */
+            public Builder targetTags(TargetTags targetTags) {
+                this.targetTags = targetTags;
                 return this;
             }
 

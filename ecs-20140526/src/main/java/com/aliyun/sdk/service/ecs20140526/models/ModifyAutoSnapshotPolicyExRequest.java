@@ -50,6 +50,10 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
     private String targetCopyRegions;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetTags")
+    private java.util.List<TargetTags> targetTags;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("autoSnapshotPolicyId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String autoSnapshotPolicyId;
@@ -85,6 +89,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.targetCopyRegions = builder.targetCopyRegions;
+        this.targetTags = builder.targetTags;
         this.autoSnapshotPolicyId = builder.autoSnapshotPolicyId;
         this.autoSnapshotPolicyName = builder.autoSnapshotPolicyName;
         this.regionId = builder.regionId;
@@ -163,6 +168,13 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
     }
 
     /**
+     * @return targetTags
+     */
+    public java.util.List<TargetTags> getTargetTags() {
+        return this.targetTags;
+    }
+
+    /**
      * @return autoSnapshotPolicyId
      */
     public String getAutoSnapshotPolicyId() {
@@ -213,6 +225,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String targetCopyRegions; 
+        private java.util.List<TargetTags> targetTags; 
         private String autoSnapshotPolicyId; 
         private String autoSnapshotPolicyName; 
         private String regionId; 
@@ -234,6 +247,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.targetCopyRegions = request.targetCopyRegions;
+            this.targetTags = request.targetTags;
             this.autoSnapshotPolicyId = request.autoSnapshotPolicyId;
             this.autoSnapshotPolicyName = request.autoSnapshotPolicyName;
             this.regionId = request.regionId;
@@ -329,6 +343,15 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
         public Builder targetCopyRegions(String targetCopyRegions) {
             this.putQueryParameter("TargetCopyRegions", targetCopyRegions);
             this.targetCopyRegions = targetCopyRegions;
+            return this;
+        }
+
+        /**
+         * TargetTags.
+         */
+        public Builder targetTags(java.util.List<TargetTags> targetTags) {
+            this.putQueryParameter("TargetTags", targetTags);
+            this.targetTags = targetTags;
             return this;
         }
 
@@ -635,6 +658,81 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
 
             public CopyEncryptionConfiguration build() {
                 return new CopyEncryptionConfiguration(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyAutoSnapshotPolicyExRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyAutoSnapshotPolicyExRequest</p>
+     */
+    public static class TargetTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private TargetTags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TargetTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TargetTags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public TargetTags build() {
+                return new TargetTags(this);
             } 
 
         } 

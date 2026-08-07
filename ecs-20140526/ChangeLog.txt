@@ -1,3 +1,6 @@
+2026-08-07 Version: 8.0.59
+- Generated java-async 2014-05-26 for Ecs.
+
 2026-08-06 Version: 8.0.58
 - Generated java-async 2014-05-26 for Ecs.
 

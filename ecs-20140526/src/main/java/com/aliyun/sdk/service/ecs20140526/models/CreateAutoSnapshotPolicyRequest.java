@@ -22,6 +22,10 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
     private String sourceRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssociationType")
+    private String associationType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CopiedSnapshotsRetentionDays")
     private Integer copiedSnapshotsRetentionDays;
 
@@ -62,6 +66,10 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
     private String targetCopyRegions;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetTags")
+    private java.util.List<TargetTags> targetTags;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("autoSnapshotPolicyName")
     private String autoSnapshotPolicyName;
 
@@ -88,6 +96,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
     private CreateAutoSnapshotPolicyRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
+        this.associationType = builder.associationType;
         this.copiedSnapshotsRetentionDays = builder.copiedSnapshotsRetentionDays;
         this.copyEncryptionConfiguration = builder.copyEncryptionConfiguration;
         this.enableCrossRegionCopy = builder.enableCrossRegionCopy;
@@ -98,6 +107,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         this.storageLocationArn = builder.storageLocationArn;
         this.tag = builder.tag;
         this.targetCopyRegions = builder.targetCopyRegions;
+        this.targetTags = builder.targetTags;
         this.autoSnapshotPolicyName = builder.autoSnapshotPolicyName;
         this.regionId = builder.regionId;
         this.repeatWeekdays = builder.repeatWeekdays;
@@ -123,6 +133,13 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
      */
     public String getSourceRegionId() {
         return this.sourceRegionId;
+    }
+
+    /**
+     * @return associationType
+     */
+    public String getAssociationType() {
+        return this.associationType;
     }
 
     /**
@@ -196,6 +213,13 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
     }
 
     /**
+     * @return targetTags
+     */
+    public java.util.List<TargetTags> getTargetTags() {
+        return this.targetTags;
+    }
+
+    /**
      * @return autoSnapshotPolicyName
      */
     public String getAutoSnapshotPolicyName() {
@@ -232,6 +256,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateAutoSnapshotPolicyRequest, Builder> {
         private String sourceRegionId; 
+        private String associationType; 
         private Integer copiedSnapshotsRetentionDays; 
         private CopyEncryptionConfiguration copyEncryptionConfiguration; 
         private Boolean enableCrossRegionCopy; 
@@ -242,6 +267,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         private String storageLocationArn; 
         private java.util.List<Tag> tag; 
         private String targetCopyRegions; 
+        private java.util.List<TargetTags> targetTags; 
         private String autoSnapshotPolicyName; 
         private String regionId; 
         private String repeatWeekdays; 
@@ -255,6 +281,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         private Builder(CreateAutoSnapshotPolicyRequest request) {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
+            this.associationType = request.associationType;
             this.copiedSnapshotsRetentionDays = request.copiedSnapshotsRetentionDays;
             this.copyEncryptionConfiguration = request.copyEncryptionConfiguration;
             this.enableCrossRegionCopy = request.enableCrossRegionCopy;
@@ -265,6 +292,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
             this.storageLocationArn = request.storageLocationArn;
             this.tag = request.tag;
             this.targetCopyRegions = request.targetCopyRegions;
+            this.targetTags = request.targetTags;
             this.autoSnapshotPolicyName = request.autoSnapshotPolicyName;
             this.regionId = request.regionId;
             this.repeatWeekdays = request.repeatWeekdays;
@@ -278,6 +306,15 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         public Builder sourceRegionId(String sourceRegionId) {
             this.putHostParameter("SourceRegionId", sourceRegionId);
             this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * AssociationType.
+         */
+        public Builder associationType(String associationType) {
+            this.putQueryParameter("AssociationType", associationType);
+            this.associationType = associationType;
             return this;
         }
 
@@ -394,6 +431,15 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         public Builder targetCopyRegions(String targetCopyRegions) {
             this.putQueryParameter("TargetCopyRegions", targetCopyRegions);
             this.targetCopyRegions = targetCopyRegions;
+            return this;
+        }
+
+        /**
+         * TargetTags.
+         */
+        public Builder targetTags(java.util.List<TargetTags> targetTags) {
+            this.putQueryParameter("TargetTags", targetTags);
+            this.targetTags = targetTags;
             return this;
         }
 
@@ -781,6 +827,87 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
 
             public Tag build() {
                 return new Tag(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateAutoSnapshotPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAutoSnapshotPolicyRequest</p>
+     */
+    public static class TargetTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private TargetTags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TargetTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TargetTags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The key of tag N to add to the automatic snapshot policy. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The value of tag N to add to the automatic snapshot policy. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with acs:.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public TargetTags build() {
+                return new TargetTags(this);
             } 
 
         } 
