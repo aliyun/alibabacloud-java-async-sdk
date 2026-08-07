@@ -1653,6 +1653,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GenerateAuthCode  GenerateAuthCodeRequest
+     * @return GenerateAuthCodeResponse
+     */
+    @Override
+    public CompletableFuture<GenerateAuthCodeResponse> generateAuthCode(GenerateAuthCodeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GenerateAuthCode").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/auth/generateAuthCode").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GenerateAuthCodeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GenerateAuthCodeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetActivityList  GetActivityListRequest
      * @return GetActivityListResponse
      */
@@ -2889,6 +2907,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetUserResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetUserDocumentPermission  GetUserDocumentPermissionRequest
+     * @return GetUserDocumentPermissionResponse
+     */
+    @Override
+    public CompletableFuture<GetUserDocumentPermissionResponse> getUserDocumentPermission(GetUserDocumentPermissionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetUserDocumentPermission").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/documents/getUserDocumentPermission").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetUserDocumentPermissionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetUserDocumentPermissionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

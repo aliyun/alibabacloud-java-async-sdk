@@ -556,6 +556,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<FinishTicketResponse> finishTicket(FinishTicketRequest request);
 
     /**
+     * @param request the request parameters of GenerateAuthCode  GenerateAuthCodeRequest
+     * @return GenerateAuthCodeResponse
+     */
+    CompletableFuture<GenerateAuthCodeResponse> generateAuthCode(GenerateAuthCodeRequest request);
+
+    /**
      * @param request the request parameters of GetActivityList  GetActivityListRequest
      * @return GetActivityListResponse
      */
@@ -968,6 +974,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetUserResponse
      */
     CompletableFuture<GetUserResponse> getUser(GetUserRequest request);
+
+    /**
+     * @param request the request parameters of GetUserDocumentPermission  GetUserDocumentPermissionRequest
+     * @return GetUserDocumentPermissionResponse
+     */
+    CompletableFuture<GetUserDocumentPermissionResponse> getUserDocumentPermission(GetUserDocumentPermissionRequest request);
 
     /**
      * @param request the request parameters of GetUserId  GetUserIdRequest
