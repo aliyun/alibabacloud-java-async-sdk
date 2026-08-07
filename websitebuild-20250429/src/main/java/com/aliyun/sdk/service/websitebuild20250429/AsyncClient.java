@@ -797,6 +797,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryInspirationBalanceResponse> queryInspirationBalance(QueryInspirationBalanceRequest request);
 
     /**
+     * @param request the request parameters of QueryInspirationBalanceForPartner  QueryInspirationBalanceForPartnerRequest
+     * @return QueryInspirationBalanceForPartnerResponse
+     */
+    CompletableFuture<QueryInspirationBalanceForPartnerResponse> queryInspirationBalanceForPartner(QueryInspirationBalanceForPartnerRequest request);
+
+    /**
      * @param request the request parameters of QueryInspirationConsumeRecords  QueryInspirationConsumeRecordsRequest
      * @return QueryInspirationConsumeRecordsResponse
      */

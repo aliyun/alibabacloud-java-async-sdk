@@ -2377,6 +2377,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of QueryInspirationBalanceForPartner  QueryInspirationBalanceForPartnerRequest
+     * @return QueryInspirationBalanceForPartnerResponse
+     */
+    @Override
+    public CompletableFuture<QueryInspirationBalanceForPartnerResponse> queryInspirationBalanceForPartner(QueryInspirationBalanceForPartnerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryInspirationBalanceForPartner").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryInspirationBalanceForPartnerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryInspirationBalanceForPartnerResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of QueryInspirationConsumeRecords  QueryInspirationConsumeRecordsRequest
      * @return QueryInspirationConsumeRecordsResponse
      */
