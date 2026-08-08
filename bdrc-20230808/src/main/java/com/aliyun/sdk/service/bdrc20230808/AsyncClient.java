@@ -134,6 +134,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableCheckResourceResponse> enableCheckResource(EnableCheckResourceRequest request);
 
     /**
+     * @param request the request parameters of EnableCrossAccountManagement  EnableCrossAccountManagementRequest
+     * @return EnableCrossAccountManagementResponse
+     */
+    CompletableFuture<EnableCrossAccountManagementResponse> enableCrossAccountManagement(EnableCrossAccountManagementRequest request);
+
+    /**
      * @param request the request parameters of GetBdrcService  GetBdrcServiceRequest
      * @return GetBdrcServiceResponse
      */
@@ -156,6 +162,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetResourceCategoryResponse
      */
     CompletableFuture<GetResourceCategoryResponse> getResourceCategory(GetResourceCategoryRequest request);
+
+    /**
+     * @param request the request parameters of ListCrossAccounts  ListCrossAccountsRequest
+     * @return ListCrossAccountsResponse
+     */
+    CompletableFuture<ListCrossAccountsResponse> listCrossAccounts(ListCrossAccountsRequest request);
 
     /**
      * @param request the request parameters of ListMessages  ListMessagesRequest
@@ -186,6 +198,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return OpenBdrcServiceResponse
      */
     CompletableFuture<OpenBdrcServiceResponse> openBdrcService(OpenBdrcServiceRequest request);
+
+    /**
+     * @param request the request parameters of PrecheckResourceCount  PrecheckResourceCountRequest
+     * @return PrecheckResourceCountResponse
+     */
+    CompletableFuture<PrecheckResourceCountResponse> precheckResourceCount(PrecheckResourceCountRequest request);
+
+    /**
+     * @param request the request parameters of UpdateCrossAccounts  UpdateCrossAccountsRequest
+     * @return UpdateCrossAccountsResponse
+     */
+    CompletableFuture<UpdateCrossAccountsResponse> updateCrossAccounts(UpdateCrossAccountsRequest request);
 
     /**
      * @param request the request parameters of UpdateProtectionPolicy  UpdateProtectionPolicyRequest

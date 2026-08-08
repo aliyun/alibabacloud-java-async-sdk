@@ -386,6 +386,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of EnableCrossAccountManagement  EnableCrossAccountManagementRequest
+     * @return EnableCrossAccountManagementResponse
+     */
+    @Override
+    public CompletableFuture<EnableCrossAccountManagementResponse> enableCrossAccountManagement(EnableCrossAccountManagementRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("EnableCrossAccountManagement").setMethod(HttpMethod.POST).setPathRegex("/api/v1/cross-accounts/enable-management").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnableCrossAccountManagementResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnableCrossAccountManagementResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetBdrcService  GetBdrcServiceRequest
      * @return GetBdrcServiceResponse
      */
@@ -452,6 +470,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetResourceCategoryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListCrossAccounts  ListCrossAccountsRequest
+     * @return ListCrossAccountsResponse
+     */
+    @Override
+    public CompletableFuture<ListCrossAccountsResponse> listCrossAccounts(ListCrossAccountsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListCrossAccounts").setMethod(HttpMethod.GET).setPathRegex("/api/v1/cross-accounts").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListCrossAccountsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListCrossAccountsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -542,6 +578,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<OpenBdrcServiceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of PrecheckResourceCount  PrecheckResourceCountRequest
+     * @return PrecheckResourceCountResponse
+     */
+    @Override
+    public CompletableFuture<PrecheckResourceCountResponse> precheckResourceCount(PrecheckResourceCountRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PrecheckResourceCount").setMethod(HttpMethod.POST).setPathRegex("/api/v1/resources/precheck-count").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PrecheckResourceCountResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PrecheckResourceCountResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateCrossAccounts  UpdateCrossAccountsRequest
+     * @return UpdateCrossAccountsResponse
+     */
+    @Override
+    public CompletableFuture<UpdateCrossAccountsResponse> updateCrossAccounts(UpdateCrossAccountsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateCrossAccounts").setMethod(HttpMethod.PATCH).setPathRegex("/api/v1/cross-accounts").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateCrossAccountsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateCrossAccountsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
