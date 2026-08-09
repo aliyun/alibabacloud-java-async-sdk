@@ -281,6 +281,9 @@ public class ListScriptsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentLlm")
         private Boolean agentLlm;
 
+        @com.aliyun.core.annotation.NameInMap("ChatBotId")
+        private String chatBotId;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
@@ -347,6 +350,7 @@ public class ListScriptsResponseBody extends TeaModel {
         private List(Builder builder) {
             this.agentKey = builder.agentKey;
             this.agentLlm = builder.agentLlm;
+            this.chatBotId = builder.chatBotId;
             this.createTime = builder.createTime;
             this.debugStatus = builder.debugStatus;
             this.emotionEnable = builder.emotionEnable;
@@ -390,6 +394,13 @@ public class ListScriptsResponseBody extends TeaModel {
          */
         public Boolean getAgentLlm() {
             return this.agentLlm;
+        }
+
+        /**
+         * @return chatBotId
+         */
+        public String getChatBotId() {
+            return this.chatBotId;
         }
 
         /**
@@ -542,6 +553,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public static final class Builder {
             private String agentKey; 
             private Boolean agentLlm; 
+            private String chatBotId; 
             private Long createTime; 
             private String debugStatus; 
             private Boolean emotionEnable; 
@@ -570,6 +582,7 @@ public class ListScriptsResponseBody extends TeaModel {
             private Builder(List model) {
                 this.agentKey = model.agentKey;
                 this.agentLlm = model.agentLlm;
+                this.chatBotId = model.chatBotId;
                 this.createTime = model.createTime;
                 this.debugStatus = model.debugStatus;
                 this.emotionEnable = model.emotionEnable;
@@ -606,6 +619,14 @@ public class ListScriptsResponseBody extends TeaModel {
              */
             public Builder agentLlm(Boolean agentLlm) {
                 this.agentLlm = agentLlm;
+                return this;
+            }
+
+            /**
+             * ChatBotId.
+             */
+            public Builder chatBotId(String chatBotId) {
+                this.chatBotId = chatBotId;
                 return this;
             }
 

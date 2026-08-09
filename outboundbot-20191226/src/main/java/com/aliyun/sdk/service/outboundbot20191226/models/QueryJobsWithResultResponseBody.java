@@ -740,6 +740,9 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskEndReason")
         private String taskEndReason;
 
+        @com.aliyun.core.annotation.NameInMap("VoiceName")
+        private String voiceName;
+
         private LatestTask(Builder builder) {
             this.callDuration = builder.callDuration;
             this.callDurationDisplay = builder.callDurationDisplay;
@@ -756,6 +759,7 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
             this.statusName = builder.statusName;
             this.tagHits = builder.tagHits;
             this.taskEndReason = builder.taskEndReason;
+            this.voiceName = builder.voiceName;
         }
 
         public static Builder builder() {
@@ -871,6 +875,13 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
             return this.taskEndReason;
         }
 
+        /**
+         * @return voiceName
+         */
+        public String getVoiceName() {
+            return this.voiceName;
+        }
+
         public static final class Builder {
             private Integer callDuration; 
             private String callDurationDisplay; 
@@ -887,6 +898,7 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
             private String statusName; 
             private java.util.List<TagHits> tagHits; 
             private String taskEndReason; 
+            private String voiceName; 
 
             private Builder() {
             } 
@@ -907,6 +919,7 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
                 this.statusName = model.statusName;
                 this.tagHits = model.tagHits;
                 this.taskEndReason = model.taskEndReason;
+                this.voiceName = model.voiceName;
             } 
 
             /**
@@ -1026,6 +1039,14 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
              */
             public Builder taskEndReason(String taskEndReason) {
                 this.taskEndReason = taskEndReason;
+                return this;
+            }
+
+            /**
+             * VoiceName.
+             */
+            public Builder voiceName(String voiceName) {
+                this.voiceName = voiceName;
                 return this;
             }
 

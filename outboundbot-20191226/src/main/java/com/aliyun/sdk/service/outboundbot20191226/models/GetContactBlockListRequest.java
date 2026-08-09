@@ -34,12 +34,17 @@ public class GetContactBlockListRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchPattern")
+    private String searchPattern;
+
     private GetContactBlockListRequest(Builder builder) {
         super(builder);
         this.countTotalRow = builder.countTotalRow;
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.searchPattern = builder.searchPattern;
     }
 
     public static Builder builder() {
@@ -83,11 +88,19 @@ public class GetContactBlockListRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return searchPattern
+     */
+    public String getSearchPattern() {
+        return this.searchPattern;
+    }
+
     public static final class Builder extends Request.Builder<GetContactBlockListRequest, Builder> {
         private Boolean countTotalRow; 
         private String instanceId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String searchPattern; 
 
         private Builder() {
             super();
@@ -99,6 +112,7 @@ public class GetContactBlockListRequest extends Request {
             this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.searchPattern = request.searchPattern;
         } 
 
         /**
@@ -137,6 +151,15 @@ public class GetContactBlockListRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * SearchPattern.
+         */
+        public Builder searchPattern(String searchPattern) {
+            this.putQueryParameter("SearchPattern", searchPattern);
+            this.searchPattern = searchPattern;
             return this;
         }
 
