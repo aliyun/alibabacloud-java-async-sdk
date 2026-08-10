@@ -32,8 +32,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.version = "2025-05-07";
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("us-west-1", "rdsai.us-west-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "rdsai.eu-central-1.aliyuncs.com"),
             new TeaPair("cn-wulanchabu", "rdsai.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "rdsai.aliyuncs.com"),
             new TeaPair("cn-shanghai", "rdsai.aliyuncs.com"),
@@ -45,7 +43,9 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("ap-southeast-5", "rdsai.ap-southeast-5.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "rdsai.ap-southeast-3.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "rdsai.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "rdsai.ap-northeast-1.aliyuncs.com")
+            new TeaPair("ap-northeast-1", "rdsai.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "rdsai.eu-central-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "rdsai.us-west-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -141,6 +141,69 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateAppInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>创建 API Key（返回明文 apiKey）。</p>
+     * 
+     * @param request the request parameters of CreateContextDatabaseApiKey  CreateContextDatabaseApiKeyRequest
+     * @return CreateContextDatabaseApiKeyResponse
+     */
+    @Override
+    public CompletableFuture<CreateContextDatabaseApiKeyResponse> createContextDatabaseApiKey(CreateContextDatabaseApiKeyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateContextDatabaseApiKey").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateContextDatabaseApiKeyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateContextDatabaseApiKeyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>创建成员；当 GenerateInitialKey=true 时同时签发首把 API Key（返回明文 apiKey）。</p>
+     * 
+     * @param request the request parameters of CreateContextDatabaseMember  CreateContextDatabaseMemberRequest
+     * @return CreateContextDatabaseMemberResponse
+     */
+    @Override
+    public CompletableFuture<CreateContextDatabaseMemberResponse> createContextDatabaseMember(CreateContextDatabaseMemberRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateContextDatabaseMember").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateContextDatabaseMemberResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateContextDatabaseMemberResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>创建 workspace + 首位成员 + 首把 API Key 的一次性引导，返回明文 apiKey。</p>
+     * 
+     * @param request the request parameters of CreateContextDatabaseWorkspace  CreateContextDatabaseWorkspaceRequest
+     * @return CreateContextDatabaseWorkspaceResponse
+     */
+    @Override
+    public CompletableFuture<CreateContextDatabaseWorkspaceResponse> createContextDatabaseWorkspace(CreateContextDatabaseWorkspaceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateContextDatabaseWorkspace").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateContextDatabaseWorkspaceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateContextDatabaseWorkspaceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -295,6 +358,48 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteAppInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>删除成员（硬删除，不可恢复）。</p>
+     * 
+     * @param request the request parameters of DeleteContextDatabaseMember  DeleteContextDatabaseMemberRequest
+     * @return DeleteContextDatabaseMemberResponse
+     */
+    @Override
+    public CompletableFuture<DeleteContextDatabaseMemberResponse> deleteContextDatabaseMember(DeleteContextDatabaseMemberRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteContextDatabaseMember").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteContextDatabaseMemberResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteContextDatabaseMemberResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>删除 workspace（硬删除，不可恢复）。</p>
+     * 
+     * @param request the request parameters of DeleteContextDatabaseWorkspace  DeleteContextDatabaseWorkspaceRequest
+     * @return DeleteContextDatabaseWorkspaceResponse
+     */
+    @Override
+    public CompletableFuture<DeleteContextDatabaseWorkspaceResponse> deleteContextDatabaseWorkspace(DeleteContextDatabaseWorkspaceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteContextDatabaseWorkspace").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteContextDatabaseWorkspaceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteContextDatabaseWorkspaceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -958,6 +1063,75 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>列出成员名下的 API Key。</p>
+     * 
+     * @param request the request parameters of ListContextDatabaseApiKeys  ListContextDatabaseApiKeysRequest
+     * @return ListContextDatabaseApiKeysResponse
+     */
+    @Override
+    public CompletableFuture<ListContextDatabaseApiKeysResponse> listContextDatabaseApiKeys(ListContextDatabaseApiKeysRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListContextDatabaseApiKeys").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListContextDatabaseApiKeysResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListContextDatabaseApiKeysResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>列出 workspace 下成员。</p>
+     * 
+     * @param request the request parameters of ListContextDatabaseMembers  ListContextDatabaseMembersRequest
+     * @return ListContextDatabaseMembersResponse
+     */
+    @Override
+    public CompletableFuture<ListContextDatabaseMembersResponse> listContextDatabaseMembers(ListContextDatabaseMembersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListContextDatabaseMembers").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListContextDatabaseMembersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListContextDatabaseMembersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该API用于获取指定条件下的工作区列表。</li>
+     * <li><code>workspaceId</code> 和 <code>status</code> 参数均为可选，可以根据需要进行过滤。</li>
+     * <li>如果不提供任何过滤参数，则返回调用方账号下的所有工作区。</li>
+     * <li>注意：确保在请求中包含必要的认证信息（如callerUid、requestId等），否则将导致请求失败。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListContextDatabaseWorkspaces  ListContextDatabaseWorkspacesRequest
+     * @return ListContextDatabaseWorkspacesResponse
+     */
+    @Override
+    public CompletableFuture<ListContextDatabaseWorkspacesResponse> listContextDatabaseWorkspaces(ListContextDatabaseWorkspacesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListContextDatabaseWorkspaces").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListContextDatabaseWorkspacesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListContextDatabaseWorkspacesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListCustomAgent  ListCustomAgentRequest
      * @return ListCustomAgentResponse
      */
@@ -1403,6 +1577,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>吊销 API Key。</p>
+     * 
+     * @param request the request parameters of RevokeContextDatabaseApiKey  RevokeContextDatabaseApiKeyRequest
+     * @return RevokeContextDatabaseApiKeyResponse
+     */
+    @Override
+    public CompletableFuture<RevokeContextDatabaseApiKeyResponse> revokeContextDatabaseApiKey(RevokeContextDatabaseApiKeyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RevokeContextDatabaseApiKey").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RevokeContextDatabaseApiKeyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RevokeContextDatabaseApiKeyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <h3><a href="#"></a>Supported database engine</h3>
      * <p>RDS PostgreSQL</p>
      * <h3><a href="#"></a>References</h3>
@@ -1462,6 +1657,69 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateApiKeyQuotaResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>更新 API Key 的展示元数据；<code>Name</code> 与 <code>Description</code> 至少传其一。明文 Key 不重新签发。</p>
+     * 
+     * @param request the request parameters of UpdateContextDatabaseApiKey  UpdateContextDatabaseApiKeyRequest
+     * @return UpdateContextDatabaseApiKeyResponse
+     */
+    @Override
+    public CompletableFuture<UpdateContextDatabaseApiKeyResponse> updateContextDatabaseApiKey(UpdateContextDatabaseApiKeyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateContextDatabaseApiKey").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateContextDatabaseApiKeyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateContextDatabaseApiKeyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>更新成员的角色 / 状态。</p>
+     * 
+     * @param request the request parameters of UpdateContextDatabaseMember  UpdateContextDatabaseMemberRequest
+     * @return UpdateContextDatabaseMemberResponse
+     */
+    @Override
+    public CompletableFuture<UpdateContextDatabaseMemberResponse> updateContextDatabaseMember(UpdateContextDatabaseMemberRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateContextDatabaseMember").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateContextDatabaseMemberResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateContextDatabaseMemberResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>修改 workspace 名称。</p>
+     * 
+     * @param request the request parameters of UpdateContextDatabaseWorkspace  UpdateContextDatabaseWorkspaceRequest
+     * @return UpdateContextDatabaseWorkspaceResponse
+     */
+    @Override
+    public CompletableFuture<UpdateContextDatabaseWorkspaceResponse> updateContextDatabaseWorkspace(UpdateContextDatabaseWorkspaceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateContextDatabaseWorkspace").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateContextDatabaseWorkspaceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateContextDatabaseWorkspaceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -55,6 +55,33 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAppInstanceResponse> createAppInstance(CreateAppInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>创建 API Key（返回明文 apiKey）。</p>
+     * 
+     * @param request the request parameters of CreateContextDatabaseApiKey  CreateContextDatabaseApiKeyRequest
+     * @return CreateContextDatabaseApiKeyResponse
+     */
+    CompletableFuture<CreateContextDatabaseApiKeyResponse> createContextDatabaseApiKey(CreateContextDatabaseApiKeyRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>创建成员；当 GenerateInitialKey=true 时同时签发首把 API Key（返回明文 apiKey）。</p>
+     * 
+     * @param request the request parameters of CreateContextDatabaseMember  CreateContextDatabaseMemberRequest
+     * @return CreateContextDatabaseMemberResponse
+     */
+    CompletableFuture<CreateContextDatabaseMemberResponse> createContextDatabaseMember(CreateContextDatabaseMemberRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>创建 workspace + 首位成员 + 首把 API Key 的一次性引导，返回明文 apiKey。</p>
+     * 
+     * @param request the request parameters of CreateContextDatabaseWorkspace  CreateContextDatabaseWorkspaceRequest
+     * @return CreateContextDatabaseWorkspaceResponse
+     */
+    CompletableFuture<CreateContextDatabaseWorkspaceResponse> createContextDatabaseWorkspace(CreateContextDatabaseWorkspaceRequest request);
+
+    /**
      * @param request the request parameters of CreateCustomAgent  CreateCustomAgentRequest
      * @return CreateCustomAgentResponse
      */
@@ -111,6 +138,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteAppInstanceResponse
      */
     CompletableFuture<DeleteAppInstanceResponse> deleteAppInstance(DeleteAppInstanceRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>删除成员（硬删除，不可恢复）。</p>
+     * 
+     * @param request the request parameters of DeleteContextDatabaseMember  DeleteContextDatabaseMemberRequest
+     * @return DeleteContextDatabaseMemberResponse
+     */
+    CompletableFuture<DeleteContextDatabaseMemberResponse> deleteContextDatabaseMember(DeleteContextDatabaseMemberRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>删除 workspace（硬删除，不可恢复）。</p>
+     * 
+     * @param request the request parameters of DeleteContextDatabaseWorkspace  DeleteContextDatabaseWorkspaceRequest
+     * @return DeleteContextDatabaseWorkspaceResponse
+     */
+    CompletableFuture<DeleteContextDatabaseWorkspaceResponse> deleteContextDatabaseWorkspace(DeleteContextDatabaseWorkspaceRequest request);
 
     /**
      * @param request the request parameters of DeleteCustomAgent  DeleteCustomAgentRequest
@@ -362,6 +407,39 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListApiKeysResponse> listApiKeys(ListApiKeysRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>列出成员名下的 API Key。</p>
+     * 
+     * @param request the request parameters of ListContextDatabaseApiKeys  ListContextDatabaseApiKeysRequest
+     * @return ListContextDatabaseApiKeysResponse
+     */
+    CompletableFuture<ListContextDatabaseApiKeysResponse> listContextDatabaseApiKeys(ListContextDatabaseApiKeysRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>列出 workspace 下成员。</p>
+     * 
+     * @param request the request parameters of ListContextDatabaseMembers  ListContextDatabaseMembersRequest
+     * @return ListContextDatabaseMembersResponse
+     */
+    CompletableFuture<ListContextDatabaseMembersResponse> listContextDatabaseMembers(ListContextDatabaseMembersRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该API用于获取指定条件下的工作区列表。</li>
+     * <li><code>workspaceId</code> 和 <code>status</code> 参数均为可选，可以根据需要进行过滤。</li>
+     * <li>如果不提供任何过滤参数，则返回调用方账号下的所有工作区。</li>
+     * <li>注意：确保在请求中包含必要的认证信息（如callerUid、requestId等），否则将导致请求失败。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListContextDatabaseWorkspaces  ListContextDatabaseWorkspacesRequest
+     * @return ListContextDatabaseWorkspacesResponse
+     */
+    CompletableFuture<ListContextDatabaseWorkspacesResponse> listContextDatabaseWorkspaces(ListContextDatabaseWorkspacesRequest request);
+
+    /**
      * @param request the request parameters of ListCustomAgent  ListCustomAgentRequest
      * @return ListCustomAgentResponse
      */
@@ -543,6 +621,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>吊销 API Key。</p>
+     * 
+     * @param request the request parameters of RevokeContextDatabaseApiKey  RevokeContextDatabaseApiKeyRequest
+     * @return RevokeContextDatabaseApiKeyResponse
+     */
+    CompletableFuture<RevokeContextDatabaseApiKeyResponse> revokeContextDatabaseApiKey(RevokeContextDatabaseApiKeyRequest request);
+
+    /**
+     * <b>description</b> :
      * <h3><a href="#"></a>Supported database engine</h3>
      * <p>RDS PostgreSQL</p>
      * <h3><a href="#"></a>References</h3>
@@ -570,6 +657,33 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateApiKeyQuotaResponse
      */
     CompletableFuture<UpdateApiKeyQuotaResponse> updateApiKeyQuota(UpdateApiKeyQuotaRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>更新 API Key 的展示元数据；<code>Name</code> 与 <code>Description</code> 至少传其一。明文 Key 不重新签发。</p>
+     * 
+     * @param request the request parameters of UpdateContextDatabaseApiKey  UpdateContextDatabaseApiKeyRequest
+     * @return UpdateContextDatabaseApiKeyResponse
+     */
+    CompletableFuture<UpdateContextDatabaseApiKeyResponse> updateContextDatabaseApiKey(UpdateContextDatabaseApiKeyRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>更新成员的角色 / 状态。</p>
+     * 
+     * @param request the request parameters of UpdateContextDatabaseMember  UpdateContextDatabaseMemberRequest
+     * @return UpdateContextDatabaseMemberResponse
+     */
+    CompletableFuture<UpdateContextDatabaseMemberResponse> updateContextDatabaseMember(UpdateContextDatabaseMemberRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>修改 workspace 名称。</p>
+     * 
+     * @param request the request parameters of UpdateContextDatabaseWorkspace  UpdateContextDatabaseWorkspaceRequest
+     * @return UpdateContextDatabaseWorkspaceResponse
+     */
+    CompletableFuture<UpdateContextDatabaseWorkspaceResponse> updateContextDatabaseWorkspace(UpdateContextDatabaseWorkspaceRequest request);
 
     /**
      * @param request the request parameters of UpdateCustomAgent  UpdateCustomAgentRequest
