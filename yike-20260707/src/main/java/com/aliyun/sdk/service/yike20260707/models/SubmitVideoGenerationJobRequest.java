@@ -54,6 +54,10 @@ public class SubmitVideoGenerationJobRequest extends Request {
     private Integer n;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Output")
+    private String output;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Resolution")
     private String resolution;
 
@@ -76,6 +80,7 @@ public class SubmitVideoGenerationJobRequest extends Request {
         this.jobType = builder.jobType;
         this.model = builder.model;
         this.n = builder.n;
+        this.output = builder.output;
         this.resolution = builder.resolution;
         this.scene = builder.scene;
         this.userData = builder.userData;
@@ -158,6 +163,13 @@ public class SubmitVideoGenerationJobRequest extends Request {
     }
 
     /**
+     * @return output
+     */
+    public String getOutput() {
+        return this.output;
+    }
+
+    /**
      * @return resolution
      */
     public String getResolution() {
@@ -188,6 +200,7 @@ public class SubmitVideoGenerationJobRequest extends Request {
         private String jobType; 
         private String model; 
         private Integer n; 
+        private String output; 
         private String resolution; 
         private String scene; 
         private String userData; 
@@ -207,6 +220,7 @@ public class SubmitVideoGenerationJobRequest extends Request {
             this.jobType = request.jobType;
             this.model = request.model;
             this.n = request.n;
+            this.output = request.output;
             this.resolution = request.resolution;
             this.scene = request.scene;
             this.userData = request.userData;
@@ -290,6 +304,15 @@ public class SubmitVideoGenerationJobRequest extends Request {
         public Builder n(Integer n) {
             this.putQueryParameter("N", n);
             this.n = n;
+            return this;
+        }
+
+        /**
+         * Output.
+         */
+        public Builder output(String output) {
+            this.putQueryParameter("Output", output);
+            this.output = output;
             return this;
         }
 

@@ -1,0 +1,192 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.yike20260707.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link ListInfiniteCanvasesRequest} extends {@link RequestModel}
+ *
+ * <p>ListInfiniteCanvasesRequest</p>
+ */
+public class ListInfiniteCanvasesRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
+    private String keyword;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
+    private Integer pageNo;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
+    private String sortBy;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortOrder")
+    private String sortOrder;
+
+    private ListInfiniteCanvasesRequest(Builder builder) {
+        super(builder);
+        this.regionId = builder.regionId;
+        this.keyword = builder.keyword;
+        this.pageNo = builder.pageNo;
+        this.pageSize = builder.pageSize;
+        this.sortBy = builder.sortBy;
+        this.sortOrder = builder.sortOrder;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ListInfiniteCanvasesRequest create() {
+        return builder().build();
+    }
+
+@Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return keyword
+     */
+    public String getKeyword() {
+        return this.keyword;
+    }
+
+    /**
+     * @return pageNo
+     */
+    public Integer getPageNo() {
+        return this.pageNo;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
+     * @return sortBy
+     */
+    public String getSortBy() {
+        return this.sortBy;
+    }
+
+    /**
+     * @return sortOrder
+     */
+    public String getSortOrder() {
+        return this.sortOrder;
+    }
+
+    public static final class Builder extends Request.Builder<ListInfiniteCanvasesRequest, Builder> {
+        private String regionId; 
+        private String keyword; 
+        private Integer pageNo; 
+        private Integer pageSize; 
+        private String sortBy; 
+        private String sortOrder; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(ListInfiniteCanvasesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.keyword = request.keyword;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.sortBy = request.sortBy;
+            this.sortOrder = request.sortOrder;
+        } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Keyword.
+         */
+        public Builder keyword(String keyword) {
+            this.putQueryParameter("Keyword", keyword);
+            this.keyword = keyword;
+            return this;
+        }
+
+        /**
+         * PageNo.
+         */
+        public Builder pageNo(Integer pageNo) {
+            this.putQueryParameter("PageNo", pageNo);
+            this.pageNo = pageNo;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * SortBy.
+         */
+        public Builder sortBy(String sortBy) {
+            this.putQueryParameter("SortBy", sortBy);
+            this.sortBy = sortBy;
+            return this;
+        }
+
+        /**
+         * SortOrder.
+         */
+        public Builder sortOrder(String sortOrder) {
+            this.putQueryParameter("SortOrder", sortOrder);
+            this.sortOrder = sortOrder;
+            return this;
+        }
+
+        @Override
+        public ListInfiniteCanvasesRequest build() {
+            return new ListInfiniteCanvasesRequest(this);
+        } 
+
+    } 
+
+}

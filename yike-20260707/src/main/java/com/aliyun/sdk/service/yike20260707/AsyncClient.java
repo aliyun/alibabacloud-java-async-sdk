@@ -32,16 +32,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAssetCategoryResponse> createAssetCategory(CreateAssetCategoryRequest request);
 
     /**
+     * @param request the request parameters of CreateInfiniteCanvas  CreateInfiniteCanvasRequest
+     * @return CreateInfiniteCanvasResponse
+     */
+    CompletableFuture<CreateInfiniteCanvasResponse> createInfiniteCanvas(CreateInfiniteCanvasRequest request);
+
+    /**
      * @param request the request parameters of DeleteAssetCategory  DeleteAssetCategoryRequest
      * @return DeleteAssetCategoryResponse
      */
     CompletableFuture<DeleteAssetCategoryResponse> deleteAssetCategory(DeleteAssetCategoryRequest request);
 
     /**
+     * @param request the request parameters of DeleteInfiniteCanvas  DeleteInfiniteCanvasRequest
+     * @return DeleteInfiniteCanvasResponse
+     */
+    CompletableFuture<DeleteInfiniteCanvasResponse> deleteInfiniteCanvas(DeleteInfiniteCanvasRequest request);
+
+    /**
      * @param request the request parameters of DeleteMedias  DeleteMediasRequest
      * @return DeleteMediasResponse
      */
     CompletableFuture<DeleteMediasResponse> deleteMedias(DeleteMediasRequest request);
+
+    /**
+     * @param request the request parameters of GenerateYikeLoginToken  GenerateYikeLoginTokenRequest
+     * @return GenerateYikeLoginTokenResponse
+     */
+    CompletableFuture<GenerateYikeLoginTokenResponse> generateYikeLoginToken(GenerateYikeLoginTokenRequest request);
 
     /**
      * @param request the request parameters of GetAssetCategory  GetAssetCategoryRequest
@@ -54,6 +72,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetImageGenerationJobResponse
      */
     CompletableFuture<GetImageGenerationJobResponse> getImageGenerationJob(GetImageGenerationJobRequest request);
+
+    /**
+     * @param request the request parameters of GetInfiniteCanvas  GetInfiniteCanvasRequest
+     * @return GetInfiniteCanvasResponse
+     */
+    CompletableFuture<GetInfiniteCanvasResponse> getInfiniteCanvas(GetInfiniteCanvasRequest request);
 
     /**
      * @param request the request parameters of GetMedia  GetMediaRequest
@@ -116,6 +140,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAssetCategoriesResponse> listAssetCategories(ListAssetCategoriesRequest request);
 
     /**
+     * @param request the request parameters of ListInfiniteCanvases  ListInfiniteCanvasesRequest
+     * @return ListInfiniteCanvasesResponse
+     */
+    CompletableFuture<ListInfiniteCanvasesResponse> listInfiniteCanvases(ListInfiniteCanvasesRequest request);
+
+    /**
      * @param request the request parameters of SearchMedia  SearchMediaRequest
      * @return SearchMediaResponse
      */
@@ -162,6 +192,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateAssetCategoryResponse
      */
     CompletableFuture<UpdateAssetCategoryResponse> updateAssetCategory(UpdateAssetCategoryRequest request);
+
+    /**
+     * @param request the request parameters of UpdateInfiniteCanvas  UpdateInfiniteCanvasRequest
+     * @return UpdateInfiniteCanvasResponse
+     */
+    CompletableFuture<UpdateInfiniteCanvasResponse> updateInfiniteCanvas(UpdateInfiniteCanvasRequest request);
 
     /**
      * @param request the request parameters of UpdateMedia  UpdateMediaRequest

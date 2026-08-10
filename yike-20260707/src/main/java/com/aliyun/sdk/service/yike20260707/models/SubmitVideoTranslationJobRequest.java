@@ -42,7 +42,6 @@ public class SubmitVideoTranslationJobRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Output")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String output;
 
     @com.aliyun.core.annotation.Body
@@ -215,10 +214,7 @@ public class SubmitVideoTranslationJobRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{&quot;OssUri&quot;:&quot;oss://bucket/output/&quot;}</p>
+         * Output.
          */
         public Builder output(String output) {
             this.putBodyParameter("Output", output);
