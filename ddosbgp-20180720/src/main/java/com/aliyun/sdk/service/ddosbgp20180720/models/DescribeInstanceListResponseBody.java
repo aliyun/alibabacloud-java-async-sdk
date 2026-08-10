@@ -209,6 +209,9 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpType")
         private String ipType;
 
+        @com.aliyun.core.annotation.NameInMap("LogExt")
+        private String logExt;
+
         @com.aliyun.core.annotation.NameInMap("Product")
         private String product;
 
@@ -233,6 +236,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.instanceType = builder.instanceType;
             this.ipType = builder.ipType;
+            this.logExt = builder.logExt;
             this.product = builder.product;
             this.remark = builder.remark;
             this.resourceGroupId = builder.resourceGroupId;
@@ -325,6 +329,13 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         }
 
         /**
+         * @return logExt
+         */
+        public String getLogExt() {
+            return this.logExt;
+        }
+
+        /**
          * @return product
          */
         public String getProduct() {
@@ -364,6 +375,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             private String instanceId; 
             private String instanceType; 
             private String ipType; 
+            private String logExt; 
             private String product; 
             private String remark; 
             private String resourceGroupId; 
@@ -384,6 +396,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
                 this.instanceId = model.instanceId;
                 this.instanceType = model.instanceType;
                 this.ipType = model.ipType;
+                this.logExt = model.logExt;
                 this.product = model.product;
                 this.remark = model.remark;
                 this.resourceGroupId = model.resourceGroupId;
@@ -531,6 +544,14 @@ public class DescribeInstanceListResponseBody extends TeaModel {
              */
             public Builder ipType(String ipType) {
                 this.ipType = ipType;
+                return this;
+            }
+
+            /**
+             * LogExt.
+             */
+            public Builder logExt(String logExt) {
+                this.logExt = logExt;
                 return this;
             }
 
