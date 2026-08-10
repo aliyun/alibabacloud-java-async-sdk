@@ -303,6 +303,9 @@ public class ListExecutorGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("EnableJobs")
+        private Integer enableJobs;
+
         @com.aliyun.core.annotation.NameInMap("IntegrationType")
         private String integrationType;
 
@@ -341,6 +344,7 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             this.cmsWorkspaceId = builder.cmsWorkspaceId;
             this.currentJobs = builder.currentJobs;
             this.description = builder.description;
+            this.enableJobs = builder.enableJobs;
             this.integrationType = builder.integrationType;
             this.maxJobs = builder.maxJobs;
             this.name = builder.name;
@@ -408,6 +412,13 @@ public class ListExecutorGroupResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return enableJobs
+         */
+        public Integer getEnableJobs() {
+            return this.enableJobs;
         }
 
         /**
@@ -488,6 +499,7 @@ public class ListExecutorGroupResponseBody extends TeaModel {
             private String cmsWorkspaceId; 
             private Integer currentJobs; 
             private String description; 
+            private Integer enableJobs; 
             private String integrationType; 
             private Integer maxJobs; 
             private String name; 
@@ -510,6 +522,7 @@ public class ListExecutorGroupResponseBody extends TeaModel {
                 this.cmsWorkspaceId = model.cmsWorkspaceId;
                 this.currentJobs = model.currentJobs;
                 this.description = model.description;
+                this.enableJobs = model.enableJobs;
                 this.integrationType = model.integrationType;
                 this.maxJobs = model.maxJobs;
                 this.name = model.name;
@@ -575,6 +588,14 @@ public class ListExecutorGroupResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * EnableJobs.
+             */
+            public Builder enableJobs(Integer enableJobs) {
+                this.enableJobs = enableJobs;
                 return this;
             }
 

@@ -71,6 +71,10 @@ public class UpdateJobRequest extends Request {
     private Long jobId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Label")
+    private String label;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MaxAttempt")
     private Integer maxAttempt;
 
@@ -152,6 +156,7 @@ public class UpdateJobRequest extends Request {
         this.executorBlockStrategy = builder.executorBlockStrategy;
         this.jobHandler = builder.jobHandler;
         this.jobId = builder.jobId;
+        this.label = builder.label;
         this.maxAttempt = builder.maxAttempt;
         this.maxConcurrency = builder.maxConcurrency;
         this.name = builder.name;
@@ -265,6 +270,13 @@ public class UpdateJobRequest extends Request {
      */
     public Long getJobId() {
         return this.jobId;
+    }
+
+    /**
+     * @return label
+     */
+    public String getLabel() {
+        return this.label;
     }
 
     /**
@@ -392,6 +404,7 @@ public class UpdateJobRequest extends Request {
         private Integer executorBlockStrategy; 
         private String jobHandler; 
         private Long jobId; 
+        private String label; 
         private Integer maxAttempt; 
         private Integer maxConcurrency; 
         private String name; 
@@ -427,6 +440,7 @@ public class UpdateJobRequest extends Request {
             this.executorBlockStrategy = request.executorBlockStrategy;
             this.jobHandler = request.jobHandler;
             this.jobId = request.jobId;
+            this.label = request.label;
             this.maxAttempt = request.maxAttempt;
             this.maxConcurrency = request.maxConcurrency;
             this.name = request.name;
@@ -559,6 +573,15 @@ public class UpdateJobRequest extends Request {
         public Builder jobId(Long jobId) {
             this.putBodyParameter("JobId", jobId);
             this.jobId = jobId;
+            return this;
+        }
+
+        /**
+         * Label.
+         */
+        public Builder label(String label) {
+            this.putBodyParameter("Label", label);
+            this.label = label;
             return this;
         }
 

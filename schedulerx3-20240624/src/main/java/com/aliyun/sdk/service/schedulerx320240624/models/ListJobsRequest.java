@@ -47,6 +47,10 @@ public class ListJobsRequest extends Request {
     private String jobName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Label")
+    private String label;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
@@ -71,6 +75,7 @@ public class ListJobsRequest extends Request {
         this.jobHandler = builder.jobHandler;
         this.jobId = builder.jobId;
         this.jobName = builder.jobName;
+        this.label = builder.label;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.status = builder.status;
@@ -140,6 +145,13 @@ public class ListJobsRequest extends Request {
     }
 
     /**
+     * @return label
+     */
+    public String getLabel() {
+        return this.label;
+    }
+
+    /**
      * @return pageNum
      */
     public Integer getPageNum() {
@@ -175,6 +187,7 @@ public class ListJobsRequest extends Request {
         private String jobHandler; 
         private Long jobId; 
         private String jobName; 
+        private String label; 
         private Integer pageNum; 
         private Integer pageSize; 
         private String status; 
@@ -193,6 +206,7 @@ public class ListJobsRequest extends Request {
             this.jobHandler = request.jobHandler;
             this.jobId = request.jobId;
             this.jobName = request.jobName;
+            this.label = request.label;
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
             this.status = request.status;
@@ -262,6 +276,15 @@ public class ListJobsRequest extends Request {
         public Builder jobName(String jobName) {
             this.putQueryParameter("JobName", jobName);
             this.jobName = jobName;
+            return this;
+        }
+
+        /**
+         * Label.
+         */
+        public Builder label(String label) {
+            this.putQueryParameter("Label", label);
+            this.label = label;
             return this;
         }
 

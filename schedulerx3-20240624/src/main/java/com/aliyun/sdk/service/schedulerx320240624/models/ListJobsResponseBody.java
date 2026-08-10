@@ -205,6 +205,9 @@ public class ListJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("JobType")
         private String jobType;
 
+        @com.aliyun.core.annotation.NameInMap("Label")
+        private String label;
+
         @com.aliyun.core.annotation.NameInMap("LastExecuteEndTime")
         private String lastExecuteEndTime;
 
@@ -287,6 +290,7 @@ public class ListJobsResponseBody extends TeaModel {
             this.jobHandler = builder.jobHandler;
             this.jobId = builder.jobId;
             this.jobType = builder.jobType;
+            this.label = builder.label;
             this.lastExecuteEndTime = builder.lastExecuteEndTime;
             this.lastExecuteStatus = builder.lastExecuteStatus;
             this.maxAttempt = builder.maxAttempt;
@@ -422,6 +426,13 @@ public class ListJobsResponseBody extends TeaModel {
          */
         public String getJobType() {
             return this.jobType;
+        }
+
+        /**
+         * @return label
+         */
+        public String getLabel() {
+            return this.label;
         }
 
         /**
@@ -594,6 +605,7 @@ public class ListJobsResponseBody extends TeaModel {
             private String jobHandler; 
             private Long jobId; 
             private String jobType; 
+            private String label; 
             private String lastExecuteEndTime; 
             private Integer lastExecuteStatus; 
             private Integer maxAttempt; 
@@ -636,6 +648,7 @@ public class ListJobsResponseBody extends TeaModel {
                 this.jobHandler = model.jobHandler;
                 this.jobId = model.jobId;
                 this.jobType = model.jobType;
+                this.label = model.label;
                 this.lastExecuteEndTime = model.lastExecuteEndTime;
                 this.lastExecuteStatus = model.lastExecuteStatus;
                 this.maxAttempt = model.maxAttempt;
@@ -777,6 +790,14 @@ public class ListJobsResponseBody extends TeaModel {
              */
             public Builder jobType(String jobType) {
                 this.jobType = jobType;
+                return this;
+            }
+
+            /**
+             * Label.
+             */
+            public Builder label(String label) {
+                this.label = label;
                 return this;
             }
 
