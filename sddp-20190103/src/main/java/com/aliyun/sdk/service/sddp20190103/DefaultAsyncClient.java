@@ -32,11 +32,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
             new TeaPair("cn-hongkong", "sddp-api.cn-hongkong.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "sddp.ap-southeast-1.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou", "sddp.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "sddp.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "sddp.cn-hangzhou.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "sddp.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "sddp.ap-southeast-1.aliyuncs.com")
+            new TeaPair("cn-hangzhou", "sddp.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "sddp.cn-shanghai.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }

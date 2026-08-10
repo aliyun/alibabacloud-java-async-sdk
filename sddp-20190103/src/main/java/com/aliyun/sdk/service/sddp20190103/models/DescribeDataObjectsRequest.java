@@ -30,6 +30,14 @@ public class DescribeDataObjectsRequest extends Request {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Cursor")
+    private String cursor;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CursorDirection")
+    private String cursorDirection;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DbName")
     private String dbName;
 
@@ -147,6 +155,8 @@ public class DescribeDataObjectsRequest extends Request {
         this.APIVersion = builder.APIVersion;
         this.bucket = builder.bucket;
         this.currentPage = builder.currentPage;
+        this.cursor = builder.cursor;
+        this.cursorDirection = builder.cursorDirection;
         this.dbName = builder.dbName;
         this.domainId = builder.domainId;
         this.engineType = builder.engineType;
@@ -209,6 +219,20 @@ public class DescribeDataObjectsRequest extends Request {
      */
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    /**
+     * @return cursor
+     */
+    public String getCursor() {
+        return this.cursor;
+    }
+
+    /**
+     * @return cursorDirection
+     */
+    public String getCursorDirection() {
+        return this.cursorDirection;
     }
 
     /**
@@ -411,6 +435,8 @@ public class DescribeDataObjectsRequest extends Request {
         private Integer APIVersion; 
         private String bucket; 
         private Integer currentPage; 
+        private String cursor; 
+        private String cursorDirection; 
         private String dbName; 
         private Long domainId; 
         private String engineType; 
@@ -449,6 +475,8 @@ public class DescribeDataObjectsRequest extends Request {
             this.APIVersion = request.APIVersion;
             this.bucket = request.bucket;
             this.currentPage = request.currentPage;
+            this.cursor = request.cursor;
+            this.cursorDirection = request.cursorDirection;
             this.dbName = request.dbName;
             this.domainId = request.domainId;
             this.engineType = request.engineType;
@@ -506,6 +534,24 @@ public class DescribeDataObjectsRequest extends Request {
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * Cursor.
+         */
+        public Builder cursor(String cursor) {
+            this.putQueryParameter("Cursor", cursor);
+            this.cursor = cursor;
+            return this;
+        }
+
+        /**
+         * CursorDirection.
+         */
+        public Builder cursorDirection(String cursorDirection) {
+            this.putQueryParameter("CursorDirection", cursorDirection);
+            this.cursorDirection = cursorDirection;
             return this;
         }
 

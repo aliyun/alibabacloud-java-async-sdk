@@ -20,23 +20,51 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
+    private String errorCode;
+
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
+    private String errorMessage;
+
+    @com.aliyun.core.annotation.NameInMap("HasNext")
+    private Boolean hasNext;
+
+    @com.aliyun.core.annotation.NameInMap("HasPrevious")
+    private Boolean hasPrevious;
+
     @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List<Items> items;
+
+    @com.aliyun.core.annotation.NameInMap("NextCursor")
+    private String nextCursor;
 
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
+    @com.aliyun.core.annotation.NameInMap("PreviousCursor")
+    private String previousCursor;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("SyncStatus")
+    private String syncStatus;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDataObjectsResponseBody(Builder builder) {
         this.currentPage = builder.currentPage;
+        this.errorCode = builder.errorCode;
+        this.errorMessage = builder.errorMessage;
+        this.hasNext = builder.hasNext;
+        this.hasPrevious = builder.hasPrevious;
         this.items = builder.items;
+        this.nextCursor = builder.nextCursor;
         this.pageSize = builder.pageSize;
+        this.previousCursor = builder.previousCursor;
         this.requestId = builder.requestId;
+        this.syncStatus = builder.syncStatus;
         this.totalCount = builder.totalCount;
     }
 
@@ -60,10 +88,45 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
     }
 
     /**
+     * @return errorCode
+     */
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    /**
+     * @return errorMessage
+     */
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    /**
+     * @return hasNext
+     */
+    public Boolean getHasNext() {
+        return this.hasNext;
+    }
+
+    /**
+     * @return hasPrevious
+     */
+    public Boolean getHasPrevious() {
+        return this.hasPrevious;
+    }
+
+    /**
      * @return items
      */
     public java.util.List<Items> getItems() {
         return this.items;
+    }
+
+    /**
+     * @return nextCursor
+     */
+    public String getNextCursor() {
+        return this.nextCursor;
     }
 
     /**
@@ -74,10 +137,24 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
     }
 
     /**
+     * @return previousCursor
+     */
+    public String getPreviousCursor() {
+        return this.previousCursor;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
+    }
+
+    /**
+     * @return syncStatus
+     */
+    public String getSyncStatus() {
+        return this.syncStatus;
     }
 
     /**
@@ -89,9 +166,16 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPage; 
+        private String errorCode; 
+        private String errorMessage; 
+        private Boolean hasNext; 
+        private Boolean hasPrevious; 
         private java.util.List<Items> items; 
+        private String nextCursor; 
         private Integer pageSize; 
+        private String previousCursor; 
         private String requestId; 
+        private String syncStatus; 
         private Integer totalCount; 
 
         private Builder() {
@@ -99,9 +183,16 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
 
         private Builder(DescribeDataObjectsResponseBody model) {
             this.currentPage = model.currentPage;
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.hasNext = model.hasNext;
+            this.hasPrevious = model.hasPrevious;
             this.items = model.items;
+            this.nextCursor = model.nextCursor;
             this.pageSize = model.pageSize;
+            this.previousCursor = model.previousCursor;
             this.requestId = model.requestId;
+            this.syncStatus = model.syncStatus;
             this.totalCount = model.totalCount;
         } 
 
@@ -117,10 +208,50 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         }
 
         /**
+         * ErrorCode.
+         */
+        public Builder errorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+
+        /**
+         * ErrorMessage.
+         */
+        public Builder errorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+
+        /**
+         * HasNext.
+         */
+        public Builder hasNext(Boolean hasNext) {
+            this.hasNext = hasNext;
+            return this;
+        }
+
+        /**
+         * HasPrevious.
+         */
+        public Builder hasPrevious(Boolean hasPrevious) {
+            this.hasPrevious = hasPrevious;
+            return this;
+        }
+
+        /**
          * <p>List of data objects.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
+            return this;
+        }
+
+        /**
+         * NextCursor.
+         */
+        public Builder nextCursor(String nextCursor) {
+            this.nextCursor = nextCursor;
             return this;
         }
 
@@ -136,6 +267,14 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         }
 
         /**
+         * PreviousCursor.
+         */
+        public Builder previousCursor(String previousCursor) {
+            this.previousCursor = previousCursor;
+            return this;
+        }
+
+        /**
          * <p>The ID of this call request is a unique identifier generated by Alibaba Cloud for the request, which can be used to troubleshoot and locate issues.</p>
          * 
          * <strong>example:</strong>
@@ -143,6 +282,14 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SyncStatus.
+         */
+        public Builder syncStatus(String syncStatus) {
+            this.syncStatus = syncStatus;
             return this;
         }
 
