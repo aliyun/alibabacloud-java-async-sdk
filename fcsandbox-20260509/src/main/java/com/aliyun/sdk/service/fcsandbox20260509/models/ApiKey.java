@@ -35,11 +35,20 @@ public class ApiKey extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("expireTime")
     private String expireTime;
 
+    @com.aliyun.core.annotation.NameInMap("ipBlacklist")
+    private java.util.List<IPConfig> ipBlacklist;
+
+    @com.aliyun.core.annotation.NameInMap("ipWhitelist")
+    private java.util.List<IPConfig> ipWhitelist;
+
     @com.aliyun.core.annotation.NameInMap("lastUsedTime")
     private String lastUsedTime;
 
     @com.aliyun.core.annotation.NameInMap("resourceGroupID")
     private String resourceGroupID;
+
+    @com.aliyun.core.annotation.NameInMap("source")
+    private String source;
 
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
@@ -66,8 +75,11 @@ public class ApiKey extends TeaModel {
         this.apiKeyValue = builder.apiKeyValue;
         this.createdTime = builder.createdTime;
         this.expireTime = builder.expireTime;
+        this.ipBlacklist = builder.ipBlacklist;
+        this.ipWhitelist = builder.ipWhitelist;
         this.lastUsedTime = builder.lastUsedTime;
         this.resourceGroupID = builder.resourceGroupID;
+        this.source = builder.source;
         this.status = builder.status;
         this.teamID = builder.teamID;
         this.teamName = builder.teamName;
@@ -131,6 +143,20 @@ public class ApiKey extends TeaModel {
     }
 
     /**
+     * @return ipBlacklist
+     */
+    public java.util.List<IPConfig> getIpBlacklist() {
+        return this.ipBlacklist;
+    }
+
+    /**
+     * @return ipWhitelist
+     */
+    public java.util.List<IPConfig> getIpWhitelist() {
+        return this.ipWhitelist;
+    }
+
+    /**
      * @return lastUsedTime
      */
     public String getLastUsedTime() {
@@ -142,6 +168,13 @@ public class ApiKey extends TeaModel {
      */
     public String getResourceGroupID() {
         return this.resourceGroupID;
+    }
+
+    /**
+     * @return source
+     */
+    public String getSource() {
+        return this.source;
     }
 
     /**
@@ -193,8 +226,11 @@ public class ApiKey extends TeaModel {
         private String apiKeyValue; 
         private String createdTime; 
         private String expireTime; 
+        private java.util.List<IPConfig> ipBlacklist; 
+        private java.util.List<IPConfig> ipWhitelist; 
         private String lastUsedTime; 
         private String resourceGroupID; 
+        private String source; 
         private String status; 
         private String teamID; 
         private String teamName; 
@@ -212,8 +248,11 @@ public class ApiKey extends TeaModel {
             this.apiKeyValue = model.apiKeyValue;
             this.createdTime = model.createdTime;
             this.expireTime = model.expireTime;
+            this.ipBlacklist = model.ipBlacklist;
+            this.ipWhitelist = model.ipWhitelist;
             this.lastUsedTime = model.lastUsedTime;
             this.resourceGroupID = model.resourceGroupID;
+            this.source = model.source;
             this.status = model.status;
             this.teamID = model.teamID;
             this.teamName = model.teamName;
@@ -271,6 +310,22 @@ public class ApiKey extends TeaModel {
         }
 
         /**
+         * ipBlacklist.
+         */
+        public Builder ipBlacklist(java.util.List<IPConfig> ipBlacklist) {
+            this.ipBlacklist = ipBlacklist;
+            return this;
+        }
+
+        /**
+         * ipWhitelist.
+         */
+        public Builder ipWhitelist(java.util.List<IPConfig> ipWhitelist) {
+            this.ipWhitelist = ipWhitelist;
+            return this;
+        }
+
+        /**
          * lastUsedTime.
          */
         public Builder lastUsedTime(String lastUsedTime) {
@@ -283,6 +338,14 @@ public class ApiKey extends TeaModel {
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.resourceGroupID = resourceGroupID;
+            return this;
+        }
+
+        /**
+         * source.
+         */
+        public Builder source(String source) {
+            this.source = source;
             return this;
         }
 

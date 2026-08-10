@@ -12,31 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateApiKeyInput} extends {@link TeaModel}
+ * {@link ImportApiKeyInput} extends {@link TeaModel}
  *
- * <p>CreateApiKeyInput</p>
+ * <p>ImportApiKeyInput</p>
  */
-public class CreateApiKeyInput extends TeaModel {
+public class ImportApiKeyInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("apiKeyName")
     private String apiKeyName;
+
+    @com.aliyun.core.annotation.NameInMap("apiKeyValue")
+    private String apiKeyValue;
 
     @com.aliyun.core.annotation.NameInMap("expireTime")
     private String expireTime;
 
-    @com.aliyun.core.annotation.NameInMap("ipBlacklist")
-    private java.util.List<IPConfig> ipBlacklist;
-
-    @com.aliyun.core.annotation.NameInMap("ipWhitelist")
-    private java.util.List<IPConfig> ipWhitelist;
-
     @com.aliyun.core.annotation.NameInMap("teamID")
     private String teamID;
 
-    private CreateApiKeyInput(Builder builder) {
+    private ImportApiKeyInput(Builder builder) {
         this.apiKeyName = builder.apiKeyName;
+        this.apiKeyValue = builder.apiKeyValue;
         this.expireTime = builder.expireTime;
-        this.ipBlacklist = builder.ipBlacklist;
-        this.ipWhitelist = builder.ipWhitelist;
         this.teamID = builder.teamID;
     }
 
@@ -44,7 +40,7 @@ public class CreateApiKeyInput extends TeaModel {
         return new Builder();
     }
 
-    public static CreateApiKeyInput create() {
+    public static ImportApiKeyInput create() {
         return builder().build();
     }
 
@@ -60,24 +56,17 @@ public class CreateApiKeyInput extends TeaModel {
     }
 
     /**
+     * @return apiKeyValue
+     */
+    public String getApiKeyValue() {
+        return this.apiKeyValue;
+    }
+
+    /**
      * @return expireTime
      */
     public String getExpireTime() {
         return this.expireTime;
-    }
-
-    /**
-     * @return ipBlacklist
-     */
-    public java.util.List<IPConfig> getIpBlacklist() {
-        return this.ipBlacklist;
-    }
-
-    /**
-     * @return ipWhitelist
-     */
-    public java.util.List<IPConfig> getIpWhitelist() {
-        return this.ipWhitelist;
     }
 
     /**
@@ -89,19 +78,17 @@ public class CreateApiKeyInput extends TeaModel {
 
     public static final class Builder {
         private String apiKeyName; 
+        private String apiKeyValue; 
         private String expireTime; 
-        private java.util.List<IPConfig> ipBlacklist; 
-        private java.util.List<IPConfig> ipWhitelist; 
         private String teamID; 
 
         private Builder() {
         } 
 
-        private Builder(CreateApiKeyInput model) {
+        private Builder(ImportApiKeyInput model) {
             this.apiKeyName = model.apiKeyName;
+            this.apiKeyValue = model.apiKeyValue;
             this.expireTime = model.expireTime;
-            this.ipBlacklist = model.ipBlacklist;
-            this.ipWhitelist = model.ipWhitelist;
             this.teamID = model.teamID;
         } 
 
@@ -114,26 +101,18 @@ public class CreateApiKeyInput extends TeaModel {
         }
 
         /**
+         * apiKeyValue.
+         */
+        public Builder apiKeyValue(String apiKeyValue) {
+            this.apiKeyValue = apiKeyValue;
+            return this;
+        }
+
+        /**
          * expireTime.
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
-            return this;
-        }
-
-        /**
-         * ipBlacklist.
-         */
-        public Builder ipBlacklist(java.util.List<IPConfig> ipBlacklist) {
-            this.ipBlacklist = ipBlacklist;
-            return this;
-        }
-
-        /**
-         * ipWhitelist.
-         */
-        public Builder ipWhitelist(java.util.List<IPConfig> ipWhitelist) {
-            this.ipWhitelist = ipWhitelist;
             return this;
         }
 
@@ -145,8 +124,8 @@ public class CreateApiKeyInput extends TeaModel {
             return this;
         }
 
-        public CreateApiKeyInput build() {
-            return new CreateApiKeyInput(this);
+        public ImportApiKeyInput build() {
+            return new ImportApiKeyInput(this);
         } 
 
     } 

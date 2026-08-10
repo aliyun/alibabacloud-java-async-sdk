@@ -23,12 +23,20 @@ public class UpdateApiKeyInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("expireTime")
     private String expireTime;
 
+    @com.aliyun.core.annotation.NameInMap("ipBlacklist")
+    private java.util.List<IPConfig> ipBlacklist;
+
+    @com.aliyun.core.annotation.NameInMap("ipWhitelist")
+    private java.util.List<IPConfig> ipWhitelist;
+
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
     private UpdateApiKeyInput(Builder builder) {
         this.apiKeyName = builder.apiKeyName;
         this.expireTime = builder.expireTime;
+        this.ipBlacklist = builder.ipBlacklist;
+        this.ipWhitelist = builder.ipWhitelist;
         this.status = builder.status;
     }
 
@@ -59,6 +67,20 @@ public class UpdateApiKeyInput extends TeaModel {
     }
 
     /**
+     * @return ipBlacklist
+     */
+    public java.util.List<IPConfig> getIpBlacklist() {
+        return this.ipBlacklist;
+    }
+
+    /**
+     * @return ipWhitelist
+     */
+    public java.util.List<IPConfig> getIpWhitelist() {
+        return this.ipWhitelist;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -68,6 +90,8 @@ public class UpdateApiKeyInput extends TeaModel {
     public static final class Builder {
         private String apiKeyName; 
         private String expireTime; 
+        private java.util.List<IPConfig> ipBlacklist; 
+        private java.util.List<IPConfig> ipWhitelist; 
         private String status; 
 
         private Builder() {
@@ -76,6 +100,8 @@ public class UpdateApiKeyInput extends TeaModel {
         private Builder(UpdateApiKeyInput model) {
             this.apiKeyName = model.apiKeyName;
             this.expireTime = model.expireTime;
+            this.ipBlacklist = model.ipBlacklist;
+            this.ipWhitelist = model.ipWhitelist;
             this.status = model.status;
         } 
 
@@ -92,6 +118,22 @@ public class UpdateApiKeyInput extends TeaModel {
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
+            return this;
+        }
+
+        /**
+         * ipBlacklist.
+         */
+        public Builder ipBlacklist(java.util.List<IPConfig> ipBlacklist) {
+            this.ipBlacklist = ipBlacklist;
+            return this;
+        }
+
+        /**
+         * ipWhitelist.
+         */
+        public Builder ipWhitelist(java.util.List<IPConfig> ipWhitelist) {
+            this.ipWhitelist = ipWhitelist;
             return this;
         }
 
