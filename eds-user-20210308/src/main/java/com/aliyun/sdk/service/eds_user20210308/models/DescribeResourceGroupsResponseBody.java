@@ -332,11 +332,15 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TimerStatus")
         private String timerStatus;
 
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
         private Timers(Builder builder) {
             this.bindStatus = builder.bindStatus;
             this.id = builder.id;
             this.name = builder.name;
             this.timerStatus = builder.timerStatus;
+            this.type = builder.type;
         }
 
         public static Builder builder() {
@@ -375,11 +379,19 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             return this.timerStatus;
         }
 
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
         public static final class Builder {
             private String bindStatus; 
             private String id; 
             private String name; 
             private String timerStatus; 
+            private String type; 
 
             private Builder() {
             } 
@@ -389,6 +401,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
                 this.id = model.id;
                 this.name = model.name;
                 this.timerStatus = model.timerStatus;
+                this.type = model.type;
             } 
 
             /**
@@ -423,6 +436,14 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
              */
             public Builder timerStatus(String timerStatus) {
                 this.timerStatus = timerStatus;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 
