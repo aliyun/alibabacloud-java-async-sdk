@@ -371,6 +371,9 @@ public class ListBranchesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ServiceType")
         private String serviceType;
 
+        @com.aliyun.core.annotation.NameInMap("SpbProjectId")
+        private String spbProjectId;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -392,6 +395,7 @@ public class ListBranchesResponseBody extends TeaModel {
             this.projectId = builder.projectId;
             this._protected = builder._protected;
             this.serviceType = builder.serviceType;
+            this.spbProjectId = builder.spbProjectId;
             this.status = builder.status;
             this.tags = builder.tags;
         }
@@ -503,6 +507,13 @@ public class ListBranchesResponseBody extends TeaModel {
         }
 
         /**
+         * @return spbProjectId
+         */
+        public String getSpbProjectId() {
+            return this.spbProjectId;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -531,6 +542,7 @@ public class ListBranchesResponseBody extends TeaModel {
             private String projectId; 
             private Boolean _protected; 
             private String serviceType; 
+            private String spbProjectId; 
             private String status; 
             private Tags tags; 
 
@@ -552,6 +564,7 @@ public class ListBranchesResponseBody extends TeaModel {
                 this.projectId = model.projectId;
                 this._protected = model._protected;
                 this.serviceType = model.serviceType;
+                this.spbProjectId = model.spbProjectId;
                 this.status = model.status;
                 this.tags = model.tags;
             } 
@@ -665,6 +678,14 @@ public class ListBranchesResponseBody extends TeaModel {
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
+                return this;
+            }
+
+            /**
+             * SpbProjectId.
+             */
+            public Builder spbProjectId(String spbProjectId) {
+                this.spbProjectId = spbProjectId;
                 return this;
             }
 
