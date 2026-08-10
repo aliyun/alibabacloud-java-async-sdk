@@ -93,6 +93,10 @@ public class FaceDuplicationCheckIntlRequest extends Request {
     private String targetFacePictureUrl;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UpdateFaceIfUserExists")
+    private String updateFaceIfUserExists;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VerifyModel")
     @com.aliyun.core.annotation.Validation(required = true)
     private String verifyModel;
@@ -117,6 +121,7 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         this.sourceFacePictureUrl = builder.sourceFacePictureUrl;
         this.targetFacePicture = builder.targetFacePicture;
         this.targetFacePictureUrl = builder.targetFacePictureUrl;
+        this.updateFaceIfUserExists = builder.updateFaceIfUserExists;
         this.verifyModel = builder.verifyModel;
     }
 
@@ -260,6 +265,13 @@ public class FaceDuplicationCheckIntlRequest extends Request {
     }
 
     /**
+     * @return updateFaceIfUserExists
+     */
+    public String getUpdateFaceIfUserExists() {
+        return this.updateFaceIfUserExists;
+    }
+
+    /**
      * @return verifyModel
      */
     public String getVerifyModel() {
@@ -285,6 +297,7 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         private String sourceFacePictureUrl; 
         private String targetFacePicture; 
         private String targetFacePictureUrl; 
+        private String updateFaceIfUserExists; 
         private String verifyModel; 
 
         private Builder() {
@@ -311,6 +324,7 @@ public class FaceDuplicationCheckIntlRequest extends Request {
             this.sourceFacePictureUrl = request.sourceFacePictureUrl;
             this.targetFacePicture = request.targetFacePicture;
             this.targetFacePictureUrl = request.targetFacePictureUrl;
+            this.updateFaceIfUserExists = request.updateFaceIfUserExists;
             this.verifyModel = request.verifyModel;
         } 
 
@@ -537,6 +551,15 @@ public class FaceDuplicationCheckIntlRequest extends Request {
         public Builder targetFacePictureUrl(String targetFacePictureUrl) {
             this.putBodyParameter("TargetFacePictureUrl", targetFacePictureUrl);
             this.targetFacePictureUrl = targetFacePictureUrl;
+            return this;
+        }
+
+        /**
+         * UpdateFaceIfUserExists.
+         */
+        public Builder updateFaceIfUserExists(String updateFaceIfUserExists) {
+            this.putBodyParameter("UpdateFaceIfUserExists", updateFaceIfUserExists);
+            this.updateFaceIfUserExists = updateFaceIfUserExists;
             return this;
         }
 

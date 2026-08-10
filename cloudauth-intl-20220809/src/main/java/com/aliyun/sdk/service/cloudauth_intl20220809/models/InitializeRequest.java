@@ -242,6 +242,10 @@ public class InitializeRequest extends Request {
     private String templateType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpdateFaceIfUserExists")
+    private String updateFaceIfUserExists;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UseNFC")
     private String useNFC;
 
@@ -307,6 +311,7 @@ public class InitializeRequest extends Request {
         this.templateConfig = builder.templateConfig;
         this.templateRanCount = builder.templateRanCount;
         this.templateType = builder.templateType;
+        this.updateFaceIfUserExists = builder.updateFaceIfUserExists;
         this.useNFC = builder.useNFC;
         this.verifyModel = builder.verifyModel;
     }
@@ -717,6 +722,13 @@ public class InitializeRequest extends Request {
     }
 
     /**
+     * @return updateFaceIfUserExists
+     */
+    public String getUpdateFaceIfUserExists() {
+        return this.updateFaceIfUserExists;
+    }
+
+    /**
      * @return useNFC
      */
     public String getUseNFC() {
@@ -787,6 +799,7 @@ public class InitializeRequest extends Request {
         private String templateConfig; 
         private String templateRanCount; 
         private String templateType; 
+        private String updateFaceIfUserExists; 
         private String useNFC; 
         private String verifyModel; 
 
@@ -852,6 +865,7 @@ public class InitializeRequest extends Request {
             this.templateConfig = request.templateConfig;
             this.templateRanCount = request.templateRanCount;
             this.templateType = request.templateType;
+            this.updateFaceIfUserExists = request.updateFaceIfUserExists;
             this.useNFC = request.useNFC;
             this.verifyModel = request.verifyModel;
         } 
@@ -1638,6 +1652,15 @@ public class InitializeRequest extends Request {
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);
             this.templateType = templateType;
+            return this;
+        }
+
+        /**
+         * UpdateFaceIfUserExists.
+         */
+        public Builder updateFaceIfUserExists(String updateFaceIfUserExists) {
+            this.putQueryParameter("UpdateFaceIfUserExists", updateFaceIfUserExists);
+            this.updateFaceIfUserExists = updateFaceIfUserExists;
             return this;
         }
 
