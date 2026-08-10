@@ -32,14 +32,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.version = "2025-04-14";
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("us-west-1", "dms.us-west-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "dms.us-east-1.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "dms.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-beijing", "dms.cn-beijing.aliyuncs.com"),
             new TeaPair("cn-shanghai", "dms.cn-shanghai.aliyuncs.com"),
             new TeaPair("cn-hongkong", "dms.cn-hongkong.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "dms.ap-southeast-1.aliyuncs.com"),
             new TeaPair("cn-hangzhou", "dms.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-beijing", "dms.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "dms.ap-southeast-1.aliyuncs.com")
+            new TeaPair("us-west-1", "dms.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "dms.us-east-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -900,6 +900,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetDataAgentSubAccountInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDataAgentTaskModelUsage  GetDataAgentTaskModelUsageRequest
+     * @return GetDataAgentTaskModelUsageResponse
+     */
+    @Override
+    public CompletableFuture<GetDataAgentTaskModelUsageResponse> getDataAgentTaskModelUsage(GetDataAgentTaskModelUsageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetDataAgentTaskModelUsage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDataAgentTaskModelUsageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDataAgentTaskModelUsageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDataAgentTaskModelUsageMetrics  GetDataAgentTaskModelUsageMetricsRequest
+     * @return GetDataAgentTaskModelUsageMetricsResponse
+     */
+    @Override
+    public CompletableFuture<GetDataAgentTaskModelUsageMetricsResponse> getDataAgentTaskModelUsageMetrics(GetDataAgentTaskModelUsageMetricsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetDataAgentTaskModelUsageMetrics").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDataAgentTaskModelUsageMetricsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDataAgentTaskModelUsageMetricsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

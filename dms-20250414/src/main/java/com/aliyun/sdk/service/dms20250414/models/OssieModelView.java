@@ -26,6 +26,9 @@ public class OssieModelView extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("DocFormat")
+    private String docFormat;
+
     @com.aliyun.core.annotation.NameInMap("DomainTopic")
     private String domainTopic;
 
@@ -40,6 +43,9 @@ public class OssieModelView extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("KnowledgeUuid")
     private String knowledgeUuid;
+
+    @com.aliyun.core.annotation.NameInMap("RawDoc")
+    private String rawDoc;
 
     @com.aliyun.core.annotation.NameInMap("SemanticType")
     private String semanticType;
@@ -63,11 +69,13 @@ public class OssieModelView extends TeaModel {
         this.catalogUuid = builder.catalogUuid;
         this.databaseUuid = builder.databaseUuid;
         this.description = builder.description;
+        this.docFormat = builder.docFormat;
         this.domainTopic = builder.domainTopic;
         this.expr = builder.expr;
         this.gmtCreated = builder.gmtCreated;
         this.gmtModified = builder.gmtModified;
         this.knowledgeUuid = builder.knowledgeUuid;
+        this.rawDoc = builder.rawDoc;
         this.semanticType = builder.semanticType;
         this.source = builder.source;
         this.summary = builder.summary;
@@ -110,6 +118,13 @@ public class OssieModelView extends TeaModel {
     }
 
     /**
+     * @return docFormat
+     */
+    public String getDocFormat() {
+        return this.docFormat;
+    }
+
+    /**
      * @return domainTopic
      */
     public String getDomainTopic() {
@@ -142,6 +157,13 @@ public class OssieModelView extends TeaModel {
      */
     public String getKnowledgeUuid() {
         return this.knowledgeUuid;
+    }
+
+    /**
+     * @return rawDoc
+     */
+    public String getRawDoc() {
+        return this.rawDoc;
     }
 
     /**
@@ -190,11 +212,13 @@ public class OssieModelView extends TeaModel {
         private String catalogUuid; 
         private String databaseUuid; 
         private String description; 
+        private String docFormat; 
         private String domainTopic; 
         private String expr; 
         private Long gmtCreated; 
         private Long gmtModified; 
         private String knowledgeUuid; 
+        private String rawDoc; 
         private String semanticType; 
         private String source; 
         private String summary; 
@@ -209,11 +233,13 @@ public class OssieModelView extends TeaModel {
             this.catalogUuid = model.catalogUuid;
             this.databaseUuid = model.databaseUuid;
             this.description = model.description;
+            this.docFormat = model.docFormat;
             this.domainTopic = model.domainTopic;
             this.expr = model.expr;
             this.gmtCreated = model.gmtCreated;
             this.gmtModified = model.gmtModified;
             this.knowledgeUuid = model.knowledgeUuid;
+            this.rawDoc = model.rawDoc;
             this.semanticType = model.semanticType;
             this.source = model.source;
             this.summary = model.summary;
@@ -243,6 +269,14 @@ public class OssieModelView extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * DocFormat.
+         */
+        public Builder docFormat(String docFormat) {
+            this.docFormat = docFormat;
             return this;
         }
 
@@ -283,6 +317,14 @@ public class OssieModelView extends TeaModel {
          */
         public Builder knowledgeUuid(String knowledgeUuid) {
             this.knowledgeUuid = knowledgeUuid;
+            return this;
+        }
+
+        /**
+         * RawDoc.
+         */
+        public Builder rawDoc(String rawDoc) {
+            this.rawDoc = rawDoc;
             return this;
         }
 

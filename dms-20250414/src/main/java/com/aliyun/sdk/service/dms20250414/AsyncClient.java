@@ -304,6 +304,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDataAgentSubAccountInfoResponse> getDataAgentSubAccountInfo(GetDataAgentSubAccountInfoRequest request);
 
     /**
+     * @param request the request parameters of GetDataAgentTaskModelUsage  GetDataAgentTaskModelUsageRequest
+     * @return GetDataAgentTaskModelUsageResponse
+     */
+    CompletableFuture<GetDataAgentTaskModelUsageResponse> getDataAgentTaskModelUsage(GetDataAgentTaskModelUsageRequest request);
+
+    /**
+     * @param request the request parameters of GetDataAgentTaskModelUsageMetrics  GetDataAgentTaskModelUsageMetricsRequest
+     * @return GetDataAgentTaskModelUsageMetricsResponse
+     */
+    CompletableFuture<GetDataAgentTaskModelUsageMetricsResponse> getDataAgentTaskModelUsageMetrics(GetDataAgentTaskModelUsageMetricsRequest request);
+
+    /**
      * @param request the request parameters of GetDataAgentWorkspaceInfo  GetDataAgentWorkspaceInfoRequest
      * @return GetDataAgentWorkspaceInfoResponse
      */
