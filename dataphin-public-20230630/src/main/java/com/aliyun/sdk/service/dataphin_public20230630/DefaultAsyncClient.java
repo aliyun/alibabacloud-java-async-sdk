@@ -1720,6 +1720,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ExecuteDDL  ExecuteDDLRequest
+     * @return ExecuteDDLResponse
+     */
+    @Override
+    public CompletableFuture<ExecuteDDLResponse> executeDDL(ExecuteDDLRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ExecuteDDL").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ExecuteDDLResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ExecuteDDLResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ExecuteManualNode  ExecuteManualNodeRequest
      * @return ExecuteManualNodeResponse
      */
@@ -4276,6 +4294,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListPipelines  ListPipelinesRequest
+     * @return ListPipelinesResponse
+     */
+    @Override
+    public CompletableFuture<ListPipelinesResponse> listPipelines(ListPipelinesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListPipelines").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListPipelinesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListPipelinesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListProjectMembers  ListProjectMembersRequest
      * @return ListProjectMembersResponse
      */
@@ -4486,6 +4522,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListRowPermissionByUserIdResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListSecurityClassify  ListSecurityClassifyRequest
+     * @return ListSecurityClassifyResponse
+     */
+    @Override
+    public CompletableFuture<ListSecurityClassifyResponse> listSecurityClassify(ListSecurityClassifyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListSecurityClassify").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListSecurityClassifyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListSecurityClassifyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -5068,6 +5122,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of SearchKgBySemantic  SearchKgBySemanticRequest
+     * @return SearchKgBySemanticResponse
+     */
+    @Override
+    public CompletableFuture<SearchKgBySemanticResponse> searchKgBySemantic(SearchKgBySemanticRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SearchKgBySemantic").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SearchKgBySemanticResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SearchKgBySemanticResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of StopAdHocTask  StopAdHocTaskRequest
      * @return StopAdHocTaskResponse
      */
@@ -5098,6 +5170,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SubmitBatchTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SubmitPipelineById  SubmitPipelineByIdRequest
+     * @return SubmitPipelineByIdResponse
+     */
+    @Override
+    public CompletableFuture<SubmitPipelineByIdResponse> submitPipelineById(SubmitPipelineByIdRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SubmitPipelineById").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitPipelineByIdResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitPipelineByIdResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

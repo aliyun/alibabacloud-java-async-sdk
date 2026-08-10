@@ -150,6 +150,9 @@ public class AddTenantMembersBySourceUserRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("SourceId")
         private String sourceId;
 
+        @com.aliyun.core.annotation.NameInMap("SourceType")
+        private String sourceType;
+
         private SourceUserList(Builder builder) {
             this.accountName = builder.accountName;
             this.dingNumber = builder.dingNumber;
@@ -157,6 +160,7 @@ public class AddTenantMembersBySourceUserRequest extends Request {
             this.mail = builder.mail;
             this.mobilePhone = builder.mobilePhone;
             this.sourceId = builder.sourceId;
+            this.sourceType = builder.sourceType;
         }
 
         public static Builder builder() {
@@ -209,6 +213,13 @@ public class AddTenantMembersBySourceUserRequest extends Request {
             return this.sourceId;
         }
 
+        /**
+         * @return sourceType
+         */
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
         public static final class Builder {
             private String accountName; 
             private String dingNumber; 
@@ -216,6 +227,7 @@ public class AddTenantMembersBySourceUserRequest extends Request {
             private String mail; 
             private String mobilePhone; 
             private String sourceId; 
+            private String sourceType; 
 
             private Builder() {
             } 
@@ -227,6 +239,7 @@ public class AddTenantMembersBySourceUserRequest extends Request {
                 this.mail = model.mail;
                 this.mobilePhone = model.mobilePhone;
                 this.sourceId = model.sourceId;
+                this.sourceType = model.sourceType;
             } 
 
             /**
@@ -274,6 +287,14 @@ public class AddTenantMembersBySourceUserRequest extends Request {
              */
             public Builder sourceId(String sourceId) {
                 this.sourceId = sourceId;
+                return this;
+            }
+
+            /**
+             * SourceType.
+             */
+            public Builder sourceType(String sourceType) {
+                this.sourceType = sourceType;
                 return this;
             }
 

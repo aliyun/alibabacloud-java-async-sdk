@@ -578,6 +578,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExecuteAdHocTaskResponse> executeAdHocTask(ExecuteAdHocTaskRequest request);
 
     /**
+     * @param request the request parameters of ExecuteDDL  ExecuteDDLRequest
+     * @return ExecuteDDLResponse
+     */
+    CompletableFuture<ExecuteDDLResponse> executeDDL(ExecuteDDLRequest request);
+
+    /**
      * @param request the request parameters of ExecuteManualNode  ExecuteManualNodeRequest
      * @return ExecuteManualNodeResponse
      */
@@ -1430,6 +1436,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListOperationRecordResponse> listOperationRecord(ListOperationRecordRequest request);
 
     /**
+     * @param request the request parameters of ListPipelines  ListPipelinesRequest
+     * @return ListPipelinesResponse
+     */
+    CompletableFuture<ListPipelinesResponse> listPipelines(ListPipelinesRequest request);
+
+    /**
      * @param request the request parameters of ListProjectMembers  ListProjectMembersRequest
      * @return ListProjectMembersResponse
      */
@@ -1500,6 +1512,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListRowPermissionByUserIdResponse
      */
     CompletableFuture<ListRowPermissionByUserIdResponse> listRowPermissionByUserId(ListRowPermissionByUserIdRequest request);
+
+    /**
+     * @param request the request parameters of ListSecurityClassify  ListSecurityClassifyRequest
+     * @return ListSecurityClassifyResponse
+     */
+    CompletableFuture<ListSecurityClassifyResponse> listSecurityClassify(ListSecurityClassifyRequest request);
 
     /**
      * @param request the request parameters of ListSecurityIdentifyRecords  ListSecurityIdentifyRecordsRequest
@@ -1694,6 +1712,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RevokeResourcePermissionResponse> revokeResourcePermission(RevokeResourcePermissionRequest request);
 
     /**
+     * @param request the request parameters of SearchKgBySemantic  SearchKgBySemanticRequest
+     * @return SearchKgBySemanticResponse
+     */
+    CompletableFuture<SearchKgBySemanticResponse> searchKgBySemantic(SearchKgBySemanticRequest request);
+
+    /**
      * @param request the request parameters of StopAdHocTask  StopAdHocTaskRequest
      * @return StopAdHocTaskResponse
      */
@@ -1704,6 +1728,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitBatchTaskResponse
      */
     CompletableFuture<SubmitBatchTaskResponse> submitBatchTask(SubmitBatchTaskRequest request);
+
+    /**
+     * @param request the request parameters of SubmitPipelineById  SubmitPipelineByIdRequest
+     * @return SubmitPipelineByIdResponse
+     */
+    CompletableFuture<SubmitPipelineByIdResponse> submitPipelineById(SubmitPipelineByIdRequest request);
 
     /**
      * @param request the request parameters of SubmitQualityRuleTasks  SubmitQualityRuleTasksRequest
