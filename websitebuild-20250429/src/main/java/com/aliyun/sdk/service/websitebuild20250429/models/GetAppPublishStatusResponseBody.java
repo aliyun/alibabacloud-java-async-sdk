@@ -293,6 +293,9 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentStep")
         private String currentStep;
 
+        @com.aliyun.core.annotation.NameInMap("CurrentStepCode")
+        private String currentStepCode;
+
         @com.aliyun.core.annotation.NameInMap("DeployChannel")
         private String deployChannel;
 
@@ -301,6 +304,9 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ErrorStep")
         private String errorStep;
+
+        @com.aliyun.core.annotation.NameInMap("ErrorStepCode")
+        private String errorStepCode;
 
         @com.aliyun.core.annotation.NameInMap("IsFinish")
         private Boolean isFinish;
@@ -313,6 +319,9 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("OrderType")
         private String orderType;
+
+        @com.aliyun.core.annotation.NameInMap("OrderTypeCode")
+        private String orderTypeCode;
 
         @com.aliyun.core.annotation.NameInMap("Percent")
         private Integer percent;
@@ -329,6 +338,9 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SiteId")
         private String siteId;
 
+        @com.aliyun.core.annotation.NameInMap("StepCodes")
+        private java.util.List<String> stepCodes;
+
         @com.aliyun.core.annotation.NameInMap("Steps")
         private java.util.List<String> steps;
 
@@ -338,18 +350,22 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         private Module(Builder builder) {
             this.canQuickRevert = builder.canQuickRevert;
             this.currentStep = builder.currentStep;
+            this.currentStepCode = builder.currentStepCode;
             this.deployChannel = builder.deployChannel;
             this.description = builder.description;
             this.errorStep = builder.errorStep;
+            this.errorStepCode = builder.errorStepCode;
             this.isFinish = builder.isFinish;
             this.isSuccess = builder.isSuccess;
             this.msg = builder.msg;
             this.orderType = builder.orderType;
+            this.orderTypeCode = builder.orderTypeCode;
             this.percent = builder.percent;
             this.publishNumber = builder.publishNumber;
             this.publishOrderId = builder.publishOrderId;
             this.publishTime = builder.publishTime;
             this.siteId = builder.siteId;
+            this.stepCodes = builder.stepCodes;
             this.steps = builder.steps;
             this.subchannel = builder.subchannel;
         }
@@ -377,6 +393,13 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         }
 
         /**
+         * @return currentStepCode
+         */
+        public String getCurrentStepCode() {
+            return this.currentStepCode;
+        }
+
+        /**
          * @return deployChannel
          */
         public String getDeployChannel() {
@@ -395,6 +418,13 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
          */
         public String getErrorStep() {
             return this.errorStep;
+        }
+
+        /**
+         * @return errorStepCode
+         */
+        public String getErrorStepCode() {
+            return this.errorStepCode;
         }
 
         /**
@@ -423,6 +453,13 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
          */
         public String getOrderType() {
             return this.orderType;
+        }
+
+        /**
+         * @return orderTypeCode
+         */
+        public String getOrderTypeCode() {
+            return this.orderTypeCode;
         }
 
         /**
@@ -461,6 +498,13 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         }
 
         /**
+         * @return stepCodes
+         */
+        public java.util.List<String> getStepCodes() {
+            return this.stepCodes;
+        }
+
+        /**
          * @return steps
          */
         public java.util.List<String> getSteps() {
@@ -477,18 +521,22 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String canQuickRevert; 
             private String currentStep; 
+            private String currentStepCode; 
             private String deployChannel; 
             private String description; 
             private String errorStep; 
+            private String errorStepCode; 
             private Boolean isFinish; 
             private Boolean isSuccess; 
             private String msg; 
             private String orderType; 
+            private String orderTypeCode; 
             private Integer percent; 
             private String publishNumber; 
             private Long publishOrderId; 
             private String publishTime; 
             private String siteId; 
+            private java.util.List<String> stepCodes; 
             private java.util.List<String> steps; 
             private String subchannel; 
 
@@ -498,18 +546,22 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
             private Builder(Module model) {
                 this.canQuickRevert = model.canQuickRevert;
                 this.currentStep = model.currentStep;
+                this.currentStepCode = model.currentStepCode;
                 this.deployChannel = model.deployChannel;
                 this.description = model.description;
                 this.errorStep = model.errorStep;
+                this.errorStepCode = model.errorStepCode;
                 this.isFinish = model.isFinish;
                 this.isSuccess = model.isSuccess;
                 this.msg = model.msg;
                 this.orderType = model.orderType;
+                this.orderTypeCode = model.orderTypeCode;
                 this.percent = model.percent;
                 this.publishNumber = model.publishNumber;
                 this.publishOrderId = model.publishOrderId;
                 this.publishTime = model.publishTime;
                 this.siteId = model.siteId;
+                this.stepCodes = model.stepCodes;
                 this.steps = model.steps;
                 this.subchannel = model.subchannel;
             } 
@@ -527,6 +579,14 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
              */
             public Builder currentStep(String currentStep) {
                 this.currentStep = currentStep;
+                return this;
+            }
+
+            /**
+             * CurrentStepCode.
+             */
+            public Builder currentStepCode(String currentStepCode) {
+                this.currentStepCode = currentStepCode;
                 return this;
             }
 
@@ -551,6 +611,14 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
              */
             public Builder errorStep(String errorStep) {
                 this.errorStep = errorStep;
+                return this;
+            }
+
+            /**
+             * ErrorStepCode.
+             */
+            public Builder errorStepCode(String errorStepCode) {
+                this.errorStepCode = errorStepCode;
                 return this;
             }
 
@@ -583,6 +651,14 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;
+                return this;
+            }
+
+            /**
+             * OrderTypeCode.
+             */
+            public Builder orderTypeCode(String orderTypeCode) {
+                this.orderTypeCode = orderTypeCode;
                 return this;
             }
 
@@ -626,6 +702,14 @@ public class GetAppPublishStatusResponseBody extends TeaModel {
              */
             public Builder siteId(String siteId) {
                 this.siteId = siteId;
+                return this;
+            }
+
+            /**
+             * StepCodes.
+             */
+            public Builder stepCodes(java.util.List<String> stepCodes) {
+                this.stepCodes = stepCodes;
                 return this;
             }
 
