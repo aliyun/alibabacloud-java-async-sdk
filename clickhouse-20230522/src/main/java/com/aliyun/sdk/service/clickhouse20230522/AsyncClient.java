@@ -386,6 +386,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyLangfuseProjectMembershipResponse> modifyLangfuseProjectMembership(ModifyLangfuseProjectMembershipRequest request);
 
     /**
+     * @param request the request parameters of ModifyLangfuseSecurityIPList  ModifyLangfuseSecurityIPListRequest
+     * @return ModifyLangfuseSecurityIPListResponse
+     */
+    CompletableFuture<ModifyLangfuseSecurityIPListResponse> modifyLangfuseSecurityIPList(ModifyLangfuseSecurityIPListRequest request);
+
+    /**
      * @param request the request parameters of ModifySecurityIPList  ModifySecurityIPListRequest
      * @return ModifySecurityIPListResponse
      */

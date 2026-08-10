@@ -1199,6 +1199,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModifyLangfuseSecurityIPList  ModifyLangfuseSecurityIPListRequest
+     * @return ModifyLangfuseSecurityIPListResponse
+     */
+    @Override
+    public CompletableFuture<ModifyLangfuseSecurityIPListResponse> modifyLangfuseSecurityIPList(ModifyLangfuseSecurityIPListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyLangfuseSecurityIPList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyLangfuseSecurityIPListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyLangfuseSecurityIPListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ModifySecurityIPList  ModifySecurityIPListRequest
      * @return ModifySecurityIPListResponse
      */
