@@ -191,6 +191,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListNisInspectionTasksResponse> listNisInspectionTasks(ListNisInspectionTasksRequest request);
 
     /**
+     * @param request the request parameters of SendNapalStreamMessage  SendNapalStreamMessageRequest
+     * @return SendNapalStreamMessageResponse
+     */
+    CompletableFuture<SendNapalStreamMessageResponse> sendNapalStreamMessage(SendNapalStreamMessageRequest request);
+
+    ResponseIterable<SendNapalStreamMessageResponseBody> sendNapalStreamMessageWithResponseIterable(SendNapalStreamMessageRequest request);
+
+    /**
      * @param request the request parameters of StartNisInspectionTask  StartNisInspectionTaskRequest
      * @return StartNisInspectionTaskResponse
      */

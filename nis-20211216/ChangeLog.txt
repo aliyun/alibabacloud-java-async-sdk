@@ -1,3 +1,6 @@
+2026-08-10 Version: 2.0.11
+- Generated java-async 2021-12-16 for nis.
+
 2026-07-28 Version: 2.0.10
 - Generated java-async 2021-12-16 for nis.
 
