@@ -158,6 +158,9 @@ public class GetEntitiyStatResponseBody extends TeaModel {
      * <p>GetEntitiyStatResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AlertNum")
+        private Long alertNum;
+
         @com.aliyun.core.annotation.NameInMap("EntityNum")
         private Integer entityNum;
 
@@ -167,10 +170,15 @@ public class GetEntitiyStatResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EntityUuid")
         private String entityUuid;
 
+        @com.aliyun.core.annotation.NameInMap("IncidentNum")
+        private Long incidentNum;
+
         private Data(Builder builder) {
+            this.alertNum = builder.alertNum;
             this.entityNum = builder.entityNum;
             this.entityType = builder.entityType;
             this.entityUuid = builder.entityUuid;
+            this.incidentNum = builder.incidentNum;
         }
 
         public static Builder builder() {
@@ -179,6 +187,13 @@ public class GetEntitiyStatResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return alertNum
+         */
+        public Long getAlertNum() {
+            return this.alertNum;
         }
 
         /**
@@ -202,19 +217,38 @@ public class GetEntitiyStatResponseBody extends TeaModel {
             return this.entityUuid;
         }
 
+        /**
+         * @return incidentNum
+         */
+        public Long getIncidentNum() {
+            return this.incidentNum;
+        }
+
         public static final class Builder {
+            private Long alertNum; 
             private Integer entityNum; 
             private String entityType; 
             private String entityUuid; 
+            private Long incidentNum; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
+                this.alertNum = model.alertNum;
                 this.entityNum = model.entityNum;
                 this.entityType = model.entityType;
                 this.entityUuid = model.entityUuid;
+                this.incidentNum = model.incidentNum;
             } 
+
+            /**
+             * AlertNum.
+             */
+            public Builder alertNum(Long alertNum) {
+                this.alertNum = alertNum;
+                return this;
+            }
 
             /**
              * EntityNum.
@@ -237,6 +271,14 @@ public class GetEntitiyStatResponseBody extends TeaModel {
              */
             public Builder entityUuid(String entityUuid) {
                 this.entityUuid = entityUuid;
+                return this;
+            }
+
+            /**
+             * IncidentNum.
+             */
+            public Builder incidentNum(Long incidentNum) {
+                this.incidentNum = incidentNum;
                 return this;
             }
 
