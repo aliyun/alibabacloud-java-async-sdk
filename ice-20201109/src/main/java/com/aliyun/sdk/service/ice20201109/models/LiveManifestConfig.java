@@ -38,6 +38,9 @@ public class LiveManifestConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MinVideoBitrate")
     private Integer minVideoBitrate;
 
+    @com.aliyun.core.annotation.NameInMap("PartHoldBackMs")
+    private Integer partHoldBackMs;
+
     @com.aliyun.core.annotation.NameInMap("PresentationDelay")
     private Integer presentationDelay;
 
@@ -58,6 +61,7 @@ public class LiveManifestConfig extends TeaModel {
         this.minBufferTime = builder.minBufferTime;
         this.minUpdatePeriod = builder.minUpdatePeriod;
         this.minVideoBitrate = builder.minVideoBitrate;
+        this.partHoldBackMs = builder.partHoldBackMs;
         this.presentationDelay = builder.presentationDelay;
         this.segmentCount = builder.segmentCount;
         this.segmentTemplateFormat = builder.segmentTemplateFormat;
@@ -126,6 +130,13 @@ public class LiveManifestConfig extends TeaModel {
     }
 
     /**
+     * @return partHoldBackMs
+     */
+    public Integer getPartHoldBackMs() {
+        return this.partHoldBackMs;
+    }
+
+    /**
      * @return presentationDelay
      */
     public Integer getPresentationDelay() {
@@ -161,6 +172,7 @@ public class LiveManifestConfig extends TeaModel {
         private Integer minBufferTime; 
         private Integer minUpdatePeriod; 
         private Integer minVideoBitrate; 
+        private Integer partHoldBackMs; 
         private Integer presentationDelay; 
         private Integer segmentCount; 
         private String segmentTemplateFormat; 
@@ -177,6 +189,7 @@ public class LiveManifestConfig extends TeaModel {
             this.minBufferTime = model.minBufferTime;
             this.minUpdatePeriod = model.minUpdatePeriod;
             this.minVideoBitrate = model.minVideoBitrate;
+            this.partHoldBackMs = model.partHoldBackMs;
             this.presentationDelay = model.presentationDelay;
             this.segmentCount = model.segmentCount;
             this.segmentTemplateFormat = model.segmentTemplateFormat;
@@ -236,6 +249,14 @@ public class LiveManifestConfig extends TeaModel {
          */
         public Builder minVideoBitrate(Integer minVideoBitrate) {
             this.minVideoBitrate = minVideoBitrate;
+            return this;
+        }
+
+        /**
+         * PartHoldBackMs.
+         */
+        public Builder partHoldBackMs(Integer partHoldBackMs) {
+            this.partHoldBackMs = partHoldBackMs;
             return this;
         }
 

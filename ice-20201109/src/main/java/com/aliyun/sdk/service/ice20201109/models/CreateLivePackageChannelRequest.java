@@ -42,12 +42,10 @@ public class CreateLivePackageChannelRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SegmentCount")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Integer segmentCount;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SegmentDuration")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Integer segmentDuration;
 
     private CreateLivePackageChannelRequest(Builder builder) {
@@ -209,7 +207,6 @@ public class CreateLivePackageChannelRequest extends Request {
 
         /**
          * <p>The number of M3U8 segments. Valid values: 2 to 100.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -222,7 +219,6 @@ public class CreateLivePackageChannelRequest extends Request {
 
         /**
          * <p>The segment duration. Valid values: 1 to 30.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>

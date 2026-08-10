@@ -23,6 +23,9 @@ public class LivePackagingConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("LiveManifestConfigs")
     private java.util.List<LiveManifestConfig> liveManifestConfigs;
 
+    @com.aliyun.core.annotation.NameInMap("PartDurationMs")
+    private Integer partDurationMs;
+
     @com.aliyun.core.annotation.NameInMap("SegmentDuration")
     private Integer segmentDuration;
 
@@ -32,6 +35,7 @@ public class LivePackagingConfig extends TeaModel {
     private LivePackagingConfig(Builder builder) {
         this.drmConfig = builder.drmConfig;
         this.liveManifestConfigs = builder.liveManifestConfigs;
+        this.partDurationMs = builder.partDurationMs;
         this.segmentDuration = builder.segmentDuration;
         this.useAudioRenditionGroups = builder.useAudioRenditionGroups;
     }
@@ -63,6 +67,13 @@ public class LivePackagingConfig extends TeaModel {
     }
 
     /**
+     * @return partDurationMs
+     */
+    public Integer getPartDurationMs() {
+        return this.partDurationMs;
+    }
+
+    /**
      * @return segmentDuration
      */
     public Integer getSegmentDuration() {
@@ -79,6 +90,7 @@ public class LivePackagingConfig extends TeaModel {
     public static final class Builder {
         private DrmConfig drmConfig; 
         private java.util.List<LiveManifestConfig> liveManifestConfigs; 
+        private Integer partDurationMs; 
         private Integer segmentDuration; 
         private Boolean useAudioRenditionGroups; 
 
@@ -88,6 +100,7 @@ public class LivePackagingConfig extends TeaModel {
         private Builder(LivePackagingConfig model) {
             this.drmConfig = model.drmConfig;
             this.liveManifestConfigs = model.liveManifestConfigs;
+            this.partDurationMs = model.partDurationMs;
             this.segmentDuration = model.segmentDuration;
             this.useAudioRenditionGroups = model.useAudioRenditionGroups;
         } 
@@ -105,6 +118,14 @@ public class LivePackagingConfig extends TeaModel {
          */
         public Builder liveManifestConfigs(java.util.List<LiveManifestConfig> liveManifestConfigs) {
             this.liveManifestConfigs = liveManifestConfigs;
+            return this;
+        }
+
+        /**
+         * PartDurationMs.
+         */
+        public Builder partDurationMs(Integer partDurationMs) {
+            this.partDurationMs = partDurationMs;
             return this;
         }
 
