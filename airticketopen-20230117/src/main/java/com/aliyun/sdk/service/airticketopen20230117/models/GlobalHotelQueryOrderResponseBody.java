@@ -1802,14 +1802,14 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RoomIndex")
         private Integer roomIndex;
 
-        @com.aliyun.core.annotation.NameInMap("RoomName")
-        private String roomName;
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
 
         private RoomStays(Builder builder) {
             this.confirmationId = builder.confirmationId;
             this.guests = builder.guests;
             this.roomIndex = builder.roomIndex;
-            this.roomName = builder.roomName;
+            this.status = builder.status;
         }
 
         public static Builder builder() {
@@ -1842,17 +1842,17 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         }
 
         /**
-         * @return roomName
+         * @return status
          */
-        public String getRoomName() {
-            return this.roomName;
+        public String getStatus() {
+            return this.status;
         }
 
         public static final class Builder {
             private String confirmationId; 
             private java.util.List<Guests> guests; 
             private Integer roomIndex; 
-            private String roomName; 
+            private String status; 
 
             private Builder() {
             } 
@@ -1861,7 +1861,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
                 this.confirmationId = model.confirmationId;
                 this.guests = model.guests;
                 this.roomIndex = model.roomIndex;
-                this.roomName = model.roomName;
+                this.status = model.status;
             } 
 
             /**
@@ -1889,10 +1889,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * RoomName.
+             * Status.
              */
-            public Builder roomName(String roomName) {
-                this.roomName = roomName;
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 

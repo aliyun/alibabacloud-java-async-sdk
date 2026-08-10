@@ -206,9 +206,6 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Region")
         private Integer region;
 
-        @com.aliyun.core.annotation.NameInMap("Type")
-        private Integer type;
-
         private Cities(Builder builder) {
             this.cnName = builder.cnName;
             this.code = builder.code;
@@ -218,7 +215,6 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
             this.level = builder.level;
             this.parentCode = builder.parentCode;
             this.region = builder.region;
-            this.type = builder.type;
         }
 
         public static Builder builder() {
@@ -285,13 +281,6 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
             return this.region;
         }
 
-        /**
-         * @return type
-         */
-        public Integer getType() {
-            return this.type;
-        }
-
         public static final class Builder {
             private String cnName; 
             private Integer code; 
@@ -301,7 +290,6 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
             private Integer level; 
             private Integer parentCode; 
             private Integer region; 
-            private Integer type; 
 
             private Builder() {
             } 
@@ -315,7 +303,6 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
                 this.level = model.level;
                 this.parentCode = model.parentCode;
                 this.region = model.region;
-                this.type = model.type;
             } 
 
             /**
@@ -379,14 +366,6 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
              */
             public Builder region(Integer region) {
                 this.region = region;
-                return this;
-            }
-
-            /**
-             * Type.
-             */
-            public Builder type(Integer type) {
-                this.type = type;
                 return this;
             }
 

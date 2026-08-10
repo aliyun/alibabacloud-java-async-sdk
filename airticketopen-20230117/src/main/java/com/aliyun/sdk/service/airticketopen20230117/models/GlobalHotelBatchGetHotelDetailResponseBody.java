@@ -185,16 +185,16 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @com.aliyun.core.annotation.NameInMap("FacilityId")
-        private String facilityId;
-
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
         private Facilities(Builder builder) {
             this.description = builder.description;
-            this.facilityId = builder.facilityId;
             this.name = builder.name;
+            this.type = builder.type;
         }
 
         public static Builder builder() {
@@ -213,31 +213,31 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         }
 
         /**
-         * @return facilityId
-         */
-        public String getFacilityId() {
-            return this.facilityId;
-        }
-
-        /**
          * @return name
          */
         public String getName() {
             return this.name;
         }
 
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
         public static final class Builder {
             private String description; 
-            private String facilityId; 
             private String name; 
+            private String type; 
 
             private Builder() {
             } 
 
             private Builder(Facilities model) {
                 this.description = model.description;
-                this.facilityId = model.facilityId;
                 this.name = model.name;
+                this.type = model.type;
             } 
 
             /**
@@ -249,18 +249,18 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FacilityId.
-             */
-            public Builder facilityId(String facilityId) {
-                this.facilityId = facilityId;
-                return this;
-            }
-
-            /**
              * Name.
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 
