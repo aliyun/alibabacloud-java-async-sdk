@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddAppAgentResponse> addAppAgent(AddAppAgentRequest request);
 
     /**
+     * @param request the request parameters of AddAppConfig  AddAppConfigRequest
+     * @return AddAppConfigResponse
+     */
+    CompletableFuture<AddAppConfigResponse> addAppConfig(AddAppConfigRequest request);
+
+    /**
      * @param request the request parameters of AddImageLib  AddImageLibRequest
      * @return AddImageLibResponse
      */
@@ -236,6 +242,48 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExportTextScanResultResponse> exportTextScanResult(ExportTextScanResultRequest request);
 
     /**
+     * @param request the request parameters of GetAiAppDetail  GetAiAppDetailRequest
+     * @return GetAiAppDetailResponse
+     */
+    CompletableFuture<GetAiAppDetailResponse> getAiAppDetail(GetAiAppDetailRequest request);
+
+    /**
+     * @param request the request parameters of GetAiAppDetailStat  GetAiAppDetailStatRequest
+     * @return GetAiAppDetailStatResponse
+     */
+    CompletableFuture<GetAiAppDetailStatResponse> getAiAppDetailStat(GetAiAppDetailStatRequest request);
+
+    /**
+     * @param request the request parameters of GetAiAppDetailTopo  GetAiAppDetailTopoRequest
+     * @return GetAiAppDetailTopoResponse
+     */
+    CompletableFuture<GetAiAppDetailTopoResponse> getAiAppDetailTopo(GetAiAppDetailTopoRequest request);
+
+    /**
+     * @param request the request parameters of GetAiAppNodeDetail  GetAiAppNodeDetailRequest
+     * @return GetAiAppNodeDetailResponse
+     */
+    CompletableFuture<GetAiAppNodeDetailResponse> getAiAppNodeDetail(GetAiAppNodeDetailRequest request);
+
+    /**
+     * @param request the request parameters of GetAiAppOverview  GetAiAppOverviewRequest
+     * @return GetAiAppOverviewResponse
+     */
+    CompletableFuture<GetAiAppOverviewResponse> getAiAppOverview(GetAiAppOverviewRequest request);
+
+    /**
+     * @param request the request parameters of GetAiAppStats  GetAiAppStatsRequest
+     * @return GetAiAppStatsResponse
+     */
+    CompletableFuture<GetAiAppStatsResponse> getAiAppStats(GetAiAppStatsRequest request);
+
+    /**
+     * @param request the request parameters of GetAiAppTraceDetail  GetAiAppTraceDetailRequest
+     * @return GetAiAppTraceDetailResponse
+     */
+    CompletableFuture<GetAiAppTraceDetailResponse> getAiAppTraceDetail(GetAiAppTraceDetailRequest request);
+
+    /**
      * @param request the request parameters of GetAnswerImportProgress  GetAnswerImportProgressRequest
      * @return GetAnswerImportProgressResponse
      */
@@ -294,6 +342,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetGuardLogStatsResponse
      */
     CompletableFuture<GetGuardLogStatsResponse> getGuardLogStats(GetGuardLogStatsRequest request);
+
+    /**
+     * @param request the request parameters of GetGuardStatus  GetGuardStatusRequest
+     * @return GetGuardStatusResponse
+     */
+    CompletableFuture<GetGuardStatusResponse> getGuardStatus(GetGuardStatusRequest request);
 
     /**
      * @param request the request parameters of GetImageSceneLabelConf  GetImageSceneLabelConfRequest
@@ -360,6 +414,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetPromptTestResultResponse
      */
     CompletableFuture<GetPromptTestResultResponse> getPromptTestResult(GetPromptTestResultRequest request);
+
+    /**
+     * @param request the request parameters of GetQpsStats  GetQpsStatsRequest
+     * @return GetQpsStatsResponse
+     */
+    CompletableFuture<GetQpsStatsResponse> getQpsStats(GetQpsStatsRequest request);
+
+    /**
+     * @param request the request parameters of GetRiskStats  GetRiskStatsRequest
+     * @return GetRiskStatsResponse
+     */
+    CompletableFuture<GetRiskStatsResponse> getRiskStats(GetRiskStatsRequest request);
 
     /**
      * @param request the request parameters of GetScanNum  GetScanNumRequest
@@ -432,6 +498,36 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetUserBuyStatusResponse
      */
     CompletableFuture<GetUserBuyStatusResponse> getUserBuyStatus(GetUserBuyStatusRequest request);
+
+    /**
+     * @param request the request parameters of InitAiAppScan  InitAiAppScanRequest
+     * @return InitAiAppScanResponse
+     */
+    CompletableFuture<InitAiAppScanResponse> initAiAppScan(InitAiAppScanRequest request);
+
+    /**
+     * @param request the request parameters of ListAiAppByPage  ListAiAppByPageRequest
+     * @return ListAiAppByPageResponse
+     */
+    CompletableFuture<ListAiAppByPageResponse> listAiAppByPage(ListAiAppByPageRequest request);
+
+    /**
+     * @param request the request parameters of ListAiAppRiskEvent  ListAiAppRiskEventRequest
+     * @return ListAiAppRiskEventResponse
+     */
+    CompletableFuture<ListAiAppRiskEventResponse> listAiAppRiskEvent(ListAiAppRiskEventRequest request);
+
+    /**
+     * @param request the request parameters of ListAiAppRiskEventByPage  ListAiAppRiskEventByPageRequest
+     * @return ListAiAppRiskEventByPageResponse
+     */
+    CompletableFuture<ListAiAppRiskEventByPageResponse> listAiAppRiskEventByPage(ListAiAppRiskEventByPageRequest request);
+
+    /**
+     * @param request the request parameters of ListAiAppWarningByPage  ListAiAppWarningByPageRequest
+     * @return ListAiAppWarningByPageResponse
+     */
+    CompletableFuture<ListAiAppWarningByPageResponse> listAiAppWarningByPage(ListAiAppWarningByPageRequest request);
 
     /**
      * @param request the request parameters of ListAnswerLib  ListAnswerLibRequest
@@ -574,6 +670,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryCallbackByPageResponse> queryCallbackByPage(QueryCallbackByPageRequest request);
 
     /**
+     * @param request the request parameters of QueryLabelConfig  QueryLabelConfigRequest
+     * @return QueryLabelConfigResponse
+     */
+    CompletableFuture<QueryLabelConfigResponse> queryLabelConfig(QueryLabelConfigRequest request);
+
+    /**
      * @param request the request parameters of RecoverAppConfigHistory  RecoverAppConfigHistoryRequest
      * @return RecoverAppConfigHistoryResponse
      */
@@ -586,10 +688,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopOnlineTestResponse> stopOnlineTest(StopOnlineTestRequest request);
 
     /**
+     * @param request the request parameters of UpdateAiAppScanStatus  UpdateAiAppScanStatusRequest
+     * @return UpdateAiAppScanStatusResponse
+     */
+    CompletableFuture<UpdateAiAppScanStatusResponse> updateAiAppScanStatus(UpdateAiAppScanStatusRequest request);
+
+    /**
      * @param request the request parameters of UpdateBackupConfig  UpdateBackupConfigRequest
      * @return UpdateBackupConfigResponse
      */
     CompletableFuture<UpdateBackupConfigResponse> updateBackupConfig(UpdateBackupConfigRequest request);
+
+    /**
+     * @param request the request parameters of UpdateEventStatus  UpdateEventStatusRequest
+     * @return UpdateEventStatusResponse
+     */
+    CompletableFuture<UpdateEventStatusResponse> updateEventStatus(UpdateEventStatusRequest request);
 
     /**
      * @param request the request parameters of UpdateImageLib  UpdateImageLibRequest
@@ -608,6 +722,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateKeywordLibResponse
      */
     CompletableFuture<UpdateKeywordLibResponse> updateKeywordLib(UpdateKeywordLibRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMetaLog  UpdateMetaLogRequest
+     * @return UpdateMetaLogResponse
+     */
+    CompletableFuture<UpdateMetaLogResponse> updateMetaLog(UpdateMetaLogRequest request);
 
     /**
      * @param request the request parameters of UpdateOssCheckResultsBatchFeedback  UpdateOssCheckResultsBatchFeedbackRequest
