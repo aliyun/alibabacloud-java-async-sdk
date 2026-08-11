@@ -44,6 +44,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateClientUserResponse> createClientUser(CreateClientUserRequest request);
 
     /**
+     * @param request the request parameters of CreateDomainMeta  CreateDomainMetaRequest
+     * @return CreateDomainMetaResponse
+     */
+    CompletableFuture<CreateDomainMetaResponse> createDomainMeta(CreateDomainMetaRequest request);
+
+    /**
      * @param request the request parameters of CreateDynamicRoute  CreateDynamicRouteRequest
      * @return CreateDynamicRouteResponse
      */
@@ -144,6 +150,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteClientUserResponse
      */
     CompletableFuture<DeleteClientUserResponse> deleteClientUser(DeleteClientUserRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDomainMeta  DeleteDomainMetaRequest
+     * @return DeleteDomainMetaResponse
+     */
+    CompletableFuture<DeleteDomainMetaResponse> deleteDomainMeta(DeleteDomainMetaRequest request);
 
     /**
      * @param request the request parameters of DeleteDynamicRoute  DeleteDynamicRouteRequest
@@ -291,6 +303,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetIdpConfigResponse> getIdpConfig(GetIdpConfigRequest request);
 
     /**
+     * @param request the request parameters of GetNacPortalSmsPhoneWhitelist  GetNacPortalSmsPhoneWhitelistRequest
+     * @return GetNacPortalSmsPhoneWhitelistResponse
+     */
+    CompletableFuture<GetNacPortalSmsPhoneWhitelistResponse> getNacPortalSmsPhoneWhitelist(GetNacPortalSmsPhoneWhitelistRequest request);
+
+    /**
      * @param request the request parameters of GetPADiagnosisTask  GetPADiagnosisTaskRequest
      * @return GetPADiagnosisTaskResponse
      */
@@ -397,6 +415,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListConnectorsResponse
      */
     CompletableFuture<ListConnectorsResponse> listConnectors(ListConnectorsRequest request);
+
+    /**
+     * @param request the request parameters of ListDomainMetas  ListDomainMetasRequest
+     * @return ListDomainMetasResponse
+     */
+    CompletableFuture<ListDomainMetasResponse> listDomainMetas(ListDomainMetasRequest request);
 
     /**
      * @param request the request parameters of ListDynamicDisposalProcesses  ListDynamicDisposalProcessesRequest
@@ -664,6 +688,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateClientUserStatusResponse> updateClientUserStatus(UpdateClientUserStatusRequest request);
 
     /**
+     * @param request the request parameters of UpdateDomainMeta  UpdateDomainMetaRequest
+     * @return UpdateDomainMetaResponse
+     */
+    CompletableFuture<UpdateDomainMetaResponse> updateDomainMeta(UpdateDomainMetaRequest request);
+
+    /**
      * @param request the request parameters of UpdateDynamicRoute  UpdateDynamicRouteRequest
      * @return UpdateDynamicRouteResponse
      */
@@ -680,6 +710,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateIdpDepartmentResponse
      */
     CompletableFuture<UpdateIdpDepartmentResponse> updateIdpDepartment(UpdateIdpDepartmentRequest request);
+
+    /**
+     * @param request the request parameters of UpdateNacPortalSmsPhoneWhitelist  UpdateNacPortalSmsPhoneWhitelistRequest
+     * @return UpdateNacPortalSmsPhoneWhitelistResponse
+     */
+    CompletableFuture<UpdateNacPortalSmsPhoneWhitelistResponse> updateNacPortalSmsPhoneWhitelist(UpdateNacPortalSmsPhoneWhitelistRequest request);
 
     /**
      * @param request the request parameters of UpdateNacUserCertStatus  UpdateNacUserCertStatusRequest
