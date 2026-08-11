@@ -157,9 +157,9 @@ public class DataHotelsValue extends TeaModel {
      *
      * <p>DataHotelsValue</p>
      */
-    public static class LowestSellingPrice extends TeaModel {
+    public static class LowestPrice extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Amount")
-        private Double amount;
+        private String amount;
 
         @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
@@ -167,7 +167,7 @@ public class DataHotelsValue extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TracerId")
         private String tracerId;
 
-        private LowestSellingPrice(Builder builder) {
+        private LowestPrice(Builder builder) {
             this.amount = builder.amount;
             this.currency = builder.currency;
             this.tracerId = builder.tracerId;
@@ -177,14 +177,14 @@ public class DataHotelsValue extends TeaModel {
             return new Builder();
         }
 
-        public static LowestSellingPrice create() {
+        public static LowestPrice create() {
             return builder().build();
         }
 
         /**
          * @return amount
          */
-        public Double getAmount() {
+        public String getAmount() {
             return this.amount;
         }
 
@@ -203,14 +203,14 @@ public class DataHotelsValue extends TeaModel {
         }
 
         public static final class Builder {
-            private Double amount; 
+            private String amount; 
             private String currency; 
             private String tracerId; 
 
             private Builder() {
             } 
 
-            private Builder(LowestSellingPrice model) {
+            private Builder(LowestPrice model) {
                 this.amount = model.amount;
                 this.currency = model.currency;
                 this.tracerId = model.tracerId;
@@ -219,7 +219,7 @@ public class DataHotelsValue extends TeaModel {
             /**
              * Amount.
              */
-            public Builder amount(Double amount) {
+            public Builder amount(String amount) {
                 this.amount = amount;
                 return this;
             }
@@ -233,18 +233,15 @@ public class DataHotelsValue extends TeaModel {
             }
 
             /**
-             * <p>traceId</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TraceId</p>
+             * TracerId.
              */
             public Builder tracerId(String tracerId) {
                 this.tracerId = tracerId;
                 return this;
             }
 
-            public LowestSellingPrice build() {
-                return new LowestSellingPrice(this);
+            public LowestPrice build() {
+                return new LowestPrice(this);
             } 
 
         } 
@@ -258,10 +255,10 @@ public class DataHotelsValue extends TeaModel {
      */
     public static class Penalties extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Start")
-        private Long start;
+        private String start;
 
         @com.aliyun.core.annotation.NameInMap("End")
-        private Long end;
+        private String end;
 
         @com.aliyun.core.annotation.NameInMap("PenaltyType")
         private String penaltyType;
@@ -295,14 +292,14 @@ public class DataHotelsValue extends TeaModel {
         /**
          * @return start
          */
-        public Long getStart() {
+        public String getStart() {
             return this.start;
         }
 
         /**
          * @return end
          */
-        public Long getEnd() {
+        public String getEnd() {
             return this.end;
         }
 
@@ -335,8 +332,8 @@ public class DataHotelsValue extends TeaModel {
         }
 
         public static final class Builder {
-            private Long start; 
-            private Long end; 
+            private String start; 
+            private String end; 
             private String penaltyType; 
             private String penaltyValue; 
             private String currency; 
@@ -357,7 +354,7 @@ public class DataHotelsValue extends TeaModel {
             /**
              * Start.
              */
-            public Builder start(Long start) {
+            public Builder start(String start) {
                 this.start = start;
                 return this;
             }
@@ -365,7 +362,7 @@ public class DataHotelsValue extends TeaModel {
             /**
              * End.
              */
-            public Builder end(Long end) {
+            public Builder end(String end) {
                 this.end = end;
                 return this;
             }
@@ -517,9 +514,9 @@ public class DataHotelsValue extends TeaModel {
      *
      * <p>DataHotelsValue</p>
      */
-    public static class SellingTotalPrice extends TeaModel {
+    public static class TotalPrice extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Amount")
-        private Double amount;
+        private String amount;
 
         @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
@@ -527,7 +524,7 @@ public class DataHotelsValue extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TracerId")
         private String tracerId;
 
-        private SellingTotalPrice(Builder builder) {
+        private TotalPrice(Builder builder) {
             this.amount = builder.amount;
             this.currency = builder.currency;
             this.tracerId = builder.tracerId;
@@ -537,14 +534,14 @@ public class DataHotelsValue extends TeaModel {
             return new Builder();
         }
 
-        public static SellingTotalPrice create() {
+        public static TotalPrice create() {
             return builder().build();
         }
 
         /**
          * @return amount
          */
-        public Double getAmount() {
+        public String getAmount() {
             return this.amount;
         }
 
@@ -563,14 +560,14 @@ public class DataHotelsValue extends TeaModel {
         }
 
         public static final class Builder {
-            private Double amount; 
+            private String amount; 
             private String currency; 
             private String tracerId; 
 
             private Builder() {
             } 
 
-            private Builder(SellingTotalPrice model) {
+            private Builder(TotalPrice model) {
                 this.amount = model.amount;
                 this.currency = model.currency;
                 this.tracerId = model.tracerId;
@@ -579,7 +576,7 @@ public class DataHotelsValue extends TeaModel {
             /**
              * Amount.
              */
-            public Builder amount(Double amount) {
+            public Builder amount(String amount) {
                 this.amount = amount;
                 return this;
             }
@@ -603,8 +600,8 @@ public class DataHotelsValue extends TeaModel {
                 return this;
             }
 
-            public SellingTotalPrice build() {
-                return new SellingTotalPrice(this);
+            public TotalPrice build() {
+                return new TotalPrice(this);
             } 
 
         } 
@@ -618,7 +615,7 @@ public class DataHotelsValue extends TeaModel {
      */
     public static class Price extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Amount")
-        private Double amount;
+        private String amount;
 
         @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
@@ -643,7 +640,7 @@ public class DataHotelsValue extends TeaModel {
         /**
          * @return amount
          */
-        public Double getAmount() {
+        public String getAmount() {
             return this.amount;
         }
 
@@ -662,7 +659,7 @@ public class DataHotelsValue extends TeaModel {
         }
 
         public static final class Builder {
-            private Double amount; 
+            private String amount; 
             private String currency; 
             private String tracerId; 
 
@@ -678,7 +675,7 @@ public class DataHotelsValue extends TeaModel {
             /**
              * Amount.
              */
-            public Builder amount(Double amount) {
+            public Builder amount(String amount) {
                 this.amount = amount;
                 return this;
             }
@@ -692,7 +689,7 @@ public class DataHotelsValue extends TeaModel {
             }
 
             /**
-             * <p>traceId</p>
+             * <p>TraceId</p>
              * 
              * <strong>example:</strong>
              * <p>TraceId</p>
@@ -715,7 +712,7 @@ public class DataHotelsValue extends TeaModel {
      *
      * <p>DataHotelsValue</p>
      */
-    public static class SellingDailyPrices extends TeaModel {
+    public static class DailyPrices extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Date")
         private String date;
 
@@ -725,7 +722,7 @@ public class DataHotelsValue extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TracerId")
         private String tracerId;
 
-        private SellingDailyPrices(Builder builder) {
+        private DailyPrices(Builder builder) {
             this.date = builder.date;
             this.price = builder.price;
             this.tracerId = builder.tracerId;
@@ -735,7 +732,7 @@ public class DataHotelsValue extends TeaModel {
             return new Builder();
         }
 
-        public static SellingDailyPrices create() {
+        public static DailyPrices create() {
             return builder().build();
         }
 
@@ -768,7 +765,7 @@ public class DataHotelsValue extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(SellingDailyPrices model) {
+            private Builder(DailyPrices model) {
                 this.date = model.date;
                 this.price = model.price;
                 this.tracerId = model.tracerId;
@@ -801,8 +798,8 @@ public class DataHotelsValue extends TeaModel {
                 return this;
             }
 
-            public SellingDailyPrices build() {
-                return new SellingDailyPrices(this);
+            public DailyPrices build() {
+                return new DailyPrices(this);
             } 
 
         } 
@@ -830,11 +827,11 @@ public class DataHotelsValue extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CancelPolicy")
         private CancelPolicy cancelPolicy;
 
-        @com.aliyun.core.annotation.NameInMap("SellingTotalPrice")
-        private SellingTotalPrice sellingTotalPrice;
+        @com.aliyun.core.annotation.NameInMap("TotalPrice")
+        private TotalPrice totalPrice;
 
-        @com.aliyun.core.annotation.NameInMap("SellingDailyPrices")
-        private java.util.List<SellingDailyPrices> sellingDailyPrices;
+        @com.aliyun.core.annotation.NameInMap("DailyPrices")
+        private java.util.List<DailyPrices> dailyPrices;
 
         @com.aliyun.core.annotation.NameInMap("AvailableRooms")
         private Integer availableRooms;
@@ -851,8 +848,8 @@ public class DataHotelsValue extends TeaModel {
             this.mealType = builder.mealType;
             this.mealCount = builder.mealCount;
             this.cancelPolicy = builder.cancelPolicy;
-            this.sellingTotalPrice = builder.sellingTotalPrice;
-            this.sellingDailyPrices = builder.sellingDailyPrices;
+            this.totalPrice = builder.totalPrice;
+            this.dailyPrices = builder.dailyPrices;
             this.availableRooms = builder.availableRooms;
             this.maxOccupancy = builder.maxOccupancy;
             this.confirmType = builder.confirmType;
@@ -902,17 +899,17 @@ public class DataHotelsValue extends TeaModel {
         }
 
         /**
-         * @return sellingTotalPrice
+         * @return totalPrice
          */
-        public SellingTotalPrice getSellingTotalPrice() {
-            return this.sellingTotalPrice;
+        public TotalPrice getTotalPrice() {
+            return this.totalPrice;
         }
 
         /**
-         * @return sellingDailyPrices
+         * @return dailyPrices
          */
-        public java.util.List<SellingDailyPrices> getSellingDailyPrices() {
-            return this.sellingDailyPrices;
+        public java.util.List<DailyPrices> getDailyPrices() {
+            return this.dailyPrices;
         }
 
         /**
@@ -942,8 +939,8 @@ public class DataHotelsValue extends TeaModel {
             private String mealType; 
             private Integer mealCount; 
             private CancelPolicy cancelPolicy; 
-            private SellingTotalPrice sellingTotalPrice; 
-            private java.util.List<SellingDailyPrices> sellingDailyPrices; 
+            private TotalPrice totalPrice; 
+            private java.util.List<DailyPrices> dailyPrices; 
             private Integer availableRooms; 
             private Integer maxOccupancy; 
             private String confirmType; 
@@ -957,8 +954,8 @@ public class DataHotelsValue extends TeaModel {
                 this.mealType = model.mealType;
                 this.mealCount = model.mealCount;
                 this.cancelPolicy = model.cancelPolicy;
-                this.sellingTotalPrice = model.sellingTotalPrice;
-                this.sellingDailyPrices = model.sellingDailyPrices;
+                this.totalPrice = model.totalPrice;
+                this.dailyPrices = model.dailyPrices;
                 this.availableRooms = model.availableRooms;
                 this.maxOccupancy = model.maxOccupancy;
                 this.confirmType = model.confirmType;
@@ -1005,18 +1002,18 @@ public class DataHotelsValue extends TeaModel {
             }
 
             /**
-             * SellingTotalPrice.
+             * TotalPrice.
              */
-            public Builder sellingTotalPrice(SellingTotalPrice sellingTotalPrice) {
-                this.sellingTotalPrice = sellingTotalPrice;
+            public Builder totalPrice(TotalPrice totalPrice) {
+                this.totalPrice = totalPrice;
                 return this;
             }
 
             /**
-             * SellingDailyPrices.
+             * DailyPrices.
              */
-            public Builder sellingDailyPrices(java.util.List<SellingDailyPrices> sellingDailyPrices) {
-                this.sellingDailyPrices = sellingDailyPrices;
+            public Builder dailyPrices(java.util.List<DailyPrices> dailyPrices) {
+                this.dailyPrices = dailyPrices;
                 return this;
             }
 
@@ -1061,15 +1058,15 @@ public class DataHotelsValue extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StandardRoomId")
         private String standardRoomId;
 
-        @com.aliyun.core.annotation.NameInMap("LowestSellingPrice")
-        private LowestSellingPrice lowestSellingPrice;
+        @com.aliyun.core.annotation.NameInMap("LowestPrice")
+        private LowestPrice lowestPrice;
 
         @com.aliyun.core.annotation.NameInMap("Offers")
         private java.util.List<RoomsOffers> offers;
 
         private Rooms(Builder builder) {
             this.standardRoomId = builder.standardRoomId;
-            this.lowestSellingPrice = builder.lowestSellingPrice;
+            this.lowestPrice = builder.lowestPrice;
             this.offers = builder.offers;
         }
 
@@ -1089,10 +1086,10 @@ public class DataHotelsValue extends TeaModel {
         }
 
         /**
-         * @return lowestSellingPrice
+         * @return lowestPrice
          */
-        public LowestSellingPrice getLowestSellingPrice() {
-            return this.lowestSellingPrice;
+        public LowestPrice getLowestPrice() {
+            return this.lowestPrice;
         }
 
         /**
@@ -1104,7 +1101,7 @@ public class DataHotelsValue extends TeaModel {
 
         public static final class Builder {
             private String standardRoomId; 
-            private LowestSellingPrice lowestSellingPrice; 
+            private LowestPrice lowestPrice; 
             private java.util.List<RoomsOffers> offers; 
 
             private Builder() {
@@ -1112,7 +1109,7 @@ public class DataHotelsValue extends TeaModel {
 
             private Builder(Rooms model) {
                 this.standardRoomId = model.standardRoomId;
-                this.lowestSellingPrice = model.lowestSellingPrice;
+                this.lowestPrice = model.lowestPrice;
                 this.offers = model.offers;
             } 
 
@@ -1125,10 +1122,10 @@ public class DataHotelsValue extends TeaModel {
             }
 
             /**
-             * LowestSellingPrice.
+             * LowestPrice.
              */
-            public Builder lowestSellingPrice(LowestSellingPrice lowestSellingPrice) {
-                this.lowestSellingPrice = lowestSellingPrice;
+            public Builder lowestPrice(LowestPrice lowestPrice) {
+                this.lowestPrice = lowestPrice;
                 return this;
             }
 
@@ -1155,10 +1152,10 @@ public class DataHotelsValue extends TeaModel {
      */
     public static class CancelPolicyPenalties extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Start")
-        private Long start;
+        private String start;
 
         @com.aliyun.core.annotation.NameInMap("End")
-        private Long end;
+        private String end;
 
         @com.aliyun.core.annotation.NameInMap("PenaltyType")
         private String penaltyType;
@@ -1192,14 +1189,14 @@ public class DataHotelsValue extends TeaModel {
         /**
          * @return start
          */
-        public Long getStart() {
+        public String getStart() {
             return this.start;
         }
 
         /**
          * @return end
          */
-        public Long getEnd() {
+        public String getEnd() {
             return this.end;
         }
 
@@ -1232,8 +1229,8 @@ public class DataHotelsValue extends TeaModel {
         }
 
         public static final class Builder {
-            private Long start; 
-            private Long end; 
+            private String start; 
+            private String end; 
             private String penaltyType; 
             private String penaltyValue; 
             private String currency; 
@@ -1254,7 +1251,7 @@ public class DataHotelsValue extends TeaModel {
             /**
              * Start.
              */
-            public Builder start(Long start) {
+            public Builder start(String start) {
                 this.start = start;
                 return this;
             }
@@ -1262,7 +1259,7 @@ public class DataHotelsValue extends TeaModel {
             /**
              * End.
              */
-            public Builder end(Long end) {
+            public Builder end(String end) {
                 this.end = end;
                 return this;
             }
@@ -1414,9 +1411,9 @@ public class DataHotelsValue extends TeaModel {
      *
      * <p>DataHotelsValue</p>
      */
-    public static class OffersSellingTotalPrice extends TeaModel {
+    public static class OffersTotalPrice extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Amount")
-        private Double amount;
+        private String amount;
 
         @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
@@ -1424,7 +1421,7 @@ public class DataHotelsValue extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TracerId")
         private String tracerId;
 
-        private OffersSellingTotalPrice(Builder builder) {
+        private OffersTotalPrice(Builder builder) {
             this.amount = builder.amount;
             this.currency = builder.currency;
             this.tracerId = builder.tracerId;
@@ -1434,14 +1431,14 @@ public class DataHotelsValue extends TeaModel {
             return new Builder();
         }
 
-        public static OffersSellingTotalPrice create() {
+        public static OffersTotalPrice create() {
             return builder().build();
         }
 
         /**
          * @return amount
          */
-        public Double getAmount() {
+        public String getAmount() {
             return this.amount;
         }
 
@@ -1460,14 +1457,14 @@ public class DataHotelsValue extends TeaModel {
         }
 
         public static final class Builder {
-            private Double amount; 
+            private String amount; 
             private String currency; 
             private String tracerId; 
 
             private Builder() {
             } 
 
-            private Builder(OffersSellingTotalPrice model) {
+            private Builder(OffersTotalPrice model) {
                 this.amount = model.amount;
                 this.currency = model.currency;
                 this.tracerId = model.tracerId;
@@ -1476,7 +1473,7 @@ public class DataHotelsValue extends TeaModel {
             /**
              * Amount.
              */
-            public Builder amount(Double amount) {
+            public Builder amount(String amount) {
                 this.amount = amount;
                 return this;
             }
@@ -1500,8 +1497,8 @@ public class DataHotelsValue extends TeaModel {
                 return this;
             }
 
-            public OffersSellingTotalPrice build() {
-                return new OffersSellingTotalPrice(this);
+            public OffersTotalPrice build() {
+                return new OffersTotalPrice(this);
             } 
 
         } 
@@ -1513,9 +1510,9 @@ public class DataHotelsValue extends TeaModel {
      *
      * <p>DataHotelsValue</p>
      */
-    public static class SellingDailyPricesPrice extends TeaModel {
+    public static class DailyPricesPrice extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Amount")
-        private Double amount;
+        private String amount;
 
         @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
@@ -1523,7 +1520,7 @@ public class DataHotelsValue extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TracerId")
         private String tracerId;
 
-        private SellingDailyPricesPrice(Builder builder) {
+        private DailyPricesPrice(Builder builder) {
             this.amount = builder.amount;
             this.currency = builder.currency;
             this.tracerId = builder.tracerId;
@@ -1533,14 +1530,14 @@ public class DataHotelsValue extends TeaModel {
             return new Builder();
         }
 
-        public static SellingDailyPricesPrice create() {
+        public static DailyPricesPrice create() {
             return builder().build();
         }
 
         /**
          * @return amount
          */
-        public Double getAmount() {
+        public String getAmount() {
             return this.amount;
         }
 
@@ -1559,14 +1556,14 @@ public class DataHotelsValue extends TeaModel {
         }
 
         public static final class Builder {
-            private Double amount; 
+            private String amount; 
             private String currency; 
             private String tracerId; 
 
             private Builder() {
             } 
 
-            private Builder(SellingDailyPricesPrice model) {
+            private Builder(DailyPricesPrice model) {
                 this.amount = model.amount;
                 this.currency = model.currency;
                 this.tracerId = model.tracerId;
@@ -1575,7 +1572,7 @@ public class DataHotelsValue extends TeaModel {
             /**
              * Amount.
              */
-            public Builder amount(Double amount) {
+            public Builder amount(String amount) {
                 this.amount = amount;
                 return this;
             }
@@ -1599,8 +1596,8 @@ public class DataHotelsValue extends TeaModel {
                 return this;
             }
 
-            public SellingDailyPricesPrice build() {
-                return new SellingDailyPricesPrice(this);
+            public DailyPricesPrice build() {
+                return new DailyPricesPrice(this);
             } 
 
         } 
@@ -1612,17 +1609,17 @@ public class DataHotelsValue extends TeaModel {
      *
      * <p>DataHotelsValue</p>
      */
-    public static class OffersSellingDailyPrices extends TeaModel {
+    public static class OffersDailyPrices extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Date")
         private String date;
 
         @com.aliyun.core.annotation.NameInMap("Price")
-        private SellingDailyPricesPrice price;
+        private DailyPricesPrice price;
 
         @com.aliyun.core.annotation.NameInMap("TracerId")
         private String tracerId;
 
-        private OffersSellingDailyPrices(Builder builder) {
+        private OffersDailyPrices(Builder builder) {
             this.date = builder.date;
             this.price = builder.price;
             this.tracerId = builder.tracerId;
@@ -1632,7 +1629,7 @@ public class DataHotelsValue extends TeaModel {
             return new Builder();
         }
 
-        public static OffersSellingDailyPrices create() {
+        public static OffersDailyPrices create() {
             return builder().build();
         }
 
@@ -1646,7 +1643,7 @@ public class DataHotelsValue extends TeaModel {
         /**
          * @return price
          */
-        public SellingDailyPricesPrice getPrice() {
+        public DailyPricesPrice getPrice() {
             return this.price;
         }
 
@@ -1659,13 +1656,13 @@ public class DataHotelsValue extends TeaModel {
 
         public static final class Builder {
             private String date; 
-            private SellingDailyPricesPrice price; 
+            private DailyPricesPrice price; 
             private String tracerId; 
 
             private Builder() {
             } 
 
-            private Builder(OffersSellingDailyPrices model) {
+            private Builder(OffersDailyPrices model) {
                 this.date = model.date;
                 this.price = model.price;
                 this.tracerId = model.tracerId;
@@ -1682,7 +1679,7 @@ public class DataHotelsValue extends TeaModel {
             /**
              * Price.
              */
-            public Builder price(SellingDailyPricesPrice price) {
+            public Builder price(DailyPricesPrice price) {
                 this.price = price;
                 return this;
             }
@@ -1698,8 +1695,8 @@ public class DataHotelsValue extends TeaModel {
                 return this;
             }
 
-            public OffersSellingDailyPrices build() {
-                return new OffersSellingDailyPrices(this);
+            public OffersDailyPrices build() {
+                return new OffersDailyPrices(this);
             } 
 
         } 
@@ -1727,11 +1724,11 @@ public class DataHotelsValue extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CancelPolicy")
         private OffersCancelPolicy cancelPolicy;
 
-        @com.aliyun.core.annotation.NameInMap("SellingTotalPrice")
-        private OffersSellingTotalPrice sellingTotalPrice;
+        @com.aliyun.core.annotation.NameInMap("TotalPrice")
+        private OffersTotalPrice totalPrice;
 
-        @com.aliyun.core.annotation.NameInMap("SellingDailyPrices")
-        private java.util.List<OffersSellingDailyPrices> sellingDailyPrices;
+        @com.aliyun.core.annotation.NameInMap("DailyPrices")
+        private java.util.List<OffersDailyPrices> dailyPrices;
 
         @com.aliyun.core.annotation.NameInMap("AvailableRooms")
         private Integer availableRooms;
@@ -1748,8 +1745,8 @@ public class DataHotelsValue extends TeaModel {
             this.mealType = builder.mealType;
             this.mealCount = builder.mealCount;
             this.cancelPolicy = builder.cancelPolicy;
-            this.sellingTotalPrice = builder.sellingTotalPrice;
-            this.sellingDailyPrices = builder.sellingDailyPrices;
+            this.totalPrice = builder.totalPrice;
+            this.dailyPrices = builder.dailyPrices;
             this.availableRooms = builder.availableRooms;
             this.maxOccupancy = builder.maxOccupancy;
             this.confirmType = builder.confirmType;
@@ -1799,17 +1796,17 @@ public class DataHotelsValue extends TeaModel {
         }
 
         /**
-         * @return sellingTotalPrice
+         * @return totalPrice
          */
-        public OffersSellingTotalPrice getSellingTotalPrice() {
-            return this.sellingTotalPrice;
+        public OffersTotalPrice getTotalPrice() {
+            return this.totalPrice;
         }
 
         /**
-         * @return sellingDailyPrices
+         * @return dailyPrices
          */
-        public java.util.List<OffersSellingDailyPrices> getSellingDailyPrices() {
-            return this.sellingDailyPrices;
+        public java.util.List<OffersDailyPrices> getDailyPrices() {
+            return this.dailyPrices;
         }
 
         /**
@@ -1839,8 +1836,8 @@ public class DataHotelsValue extends TeaModel {
             private String mealType; 
             private Integer mealCount; 
             private OffersCancelPolicy cancelPolicy; 
-            private OffersSellingTotalPrice sellingTotalPrice; 
-            private java.util.List<OffersSellingDailyPrices> sellingDailyPrices; 
+            private OffersTotalPrice totalPrice; 
+            private java.util.List<OffersDailyPrices> dailyPrices; 
             private Integer availableRooms; 
             private Integer maxOccupancy; 
             private String confirmType; 
@@ -1854,8 +1851,8 @@ public class DataHotelsValue extends TeaModel {
                 this.mealType = model.mealType;
                 this.mealCount = model.mealCount;
                 this.cancelPolicy = model.cancelPolicy;
-                this.sellingTotalPrice = model.sellingTotalPrice;
-                this.sellingDailyPrices = model.sellingDailyPrices;
+                this.totalPrice = model.totalPrice;
+                this.dailyPrices = model.dailyPrices;
                 this.availableRooms = model.availableRooms;
                 this.maxOccupancy = model.maxOccupancy;
                 this.confirmType = model.confirmType;
@@ -1902,18 +1899,18 @@ public class DataHotelsValue extends TeaModel {
             }
 
             /**
-             * SellingTotalPrice.
+             * TotalPrice.
              */
-            public Builder sellingTotalPrice(OffersSellingTotalPrice sellingTotalPrice) {
-                this.sellingTotalPrice = sellingTotalPrice;
+            public Builder totalPrice(OffersTotalPrice totalPrice) {
+                this.totalPrice = totalPrice;
                 return this;
             }
 
             /**
-             * SellingDailyPrices.
+             * DailyPrices.
              */
-            public Builder sellingDailyPrices(java.util.List<OffersSellingDailyPrices> sellingDailyPrices) {
-                this.sellingDailyPrices = sellingDailyPrices;
+            public Builder dailyPrices(java.util.List<OffersDailyPrices> dailyPrices) {
+                this.dailyPrices = dailyPrices;
                 return this;
             }
 

@@ -186,7 +186,7 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
         private String currency;
 
         @com.aliyun.core.annotation.NameInMap("End")
-        private Long end;
+        private String end;
 
         @com.aliyun.core.annotation.NameInMap("PenaltyType")
         private String penaltyType;
@@ -195,7 +195,7 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
         private String penaltyValue;
 
         @com.aliyun.core.annotation.NameInMap("Start")
-        private Long start;
+        private String start;
 
         @com.aliyun.core.annotation.NameInMap("TracerId")
         private String tracerId;
@@ -227,7 +227,7 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
         /**
          * @return end
          */
-        public Long getEnd() {
+        public String getEnd() {
             return this.end;
         }
 
@@ -248,7 +248,7 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
         /**
          * @return start
          */
-        public Long getStart() {
+        public String getStart() {
             return this.start;
         }
 
@@ -261,10 +261,10 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String currency; 
-            private Long end; 
+            private String end; 
             private String penaltyType; 
             private String penaltyValue; 
-            private Long start; 
+            private String start; 
             private String tracerId; 
 
             private Builder() {
@@ -290,7 +290,7 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
             /**
              * End.
              */
-            public Builder end(Long end) {
+            public Builder end(String end) {
                 this.end = end;
                 return this;
             }
@@ -314,7 +314,7 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
             /**
              * Start.
              */
-            public Builder start(Long start) {
+            public Builder start(String start) {
                 this.start = start;
                 return this;
             }
@@ -442,19 +442,19 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
      *
      * <p>GlobalHotelValidatePriceResponseBody</p>
      */
-    public static class NightlyPrices extends TeaModel {
+    public static class Price extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Amount")
         private String amount;
 
-        @com.aliyun.core.annotation.NameInMap("Date")
-        private String date;
+        @com.aliyun.core.annotation.NameInMap("Currency")
+        private String currency;
 
         @com.aliyun.core.annotation.NameInMap("TracerId")
         private String tracerId;
 
-        private NightlyPrices(Builder builder) {
+        private Price(Builder builder) {
             this.amount = builder.amount;
-            this.date = builder.date;
+            this.currency = builder.currency;
             this.tracerId = builder.tracerId;
         }
 
@@ -462,7 +462,7 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static NightlyPrices create() {
+        public static Price create() {
             return builder().build();
         }
 
@@ -474,10 +474,10 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
         }
 
         /**
-         * @return date
+         * @return currency
          */
-        public String getDate() {
-            return this.date;
+        public String getCurrency() {
+            return this.currency;
         }
 
         /**
@@ -489,15 +489,15 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String amount; 
-            private String date; 
+            private String currency; 
             private String tracerId; 
 
             private Builder() {
             } 
 
-            private Builder(NightlyPrices model) {
+            private Builder(Price model) {
                 this.amount = model.amount;
-                this.date = model.date;
+                this.currency = model.currency;
                 this.tracerId = model.tracerId;
             } 
 
@@ -510,10 +510,10 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Date.
+             * Currency.
              */
-            public Builder date(String date) {
-                this.date = date;
+            public Builder currency(String currency) {
+                this.currency = currency;
                 return this;
             }
 
@@ -528,8 +528,8 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
                 return this;
             }
 
-            public NightlyPrices build() {
-                return new NightlyPrices(this);
+            public Price build() {
+                return new Price(this);
             } 
 
         } 
@@ -541,23 +541,19 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
      *
      * <p>GlobalHotelValidatePriceResponseBody</p>
      */
-    public static class Pricing extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Currency")
-        private String currency;
+    public static class DailyPrices extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Date")
+        private String date;
 
-        @com.aliyun.core.annotation.NameInMap("NightlyPrices")
-        private java.util.List<NightlyPrices> nightlyPrices;
-
-        @com.aliyun.core.annotation.NameInMap("TotalAmount")
-        private String totalAmount;
+        @com.aliyun.core.annotation.NameInMap("Price")
+        private Price price;
 
         @com.aliyun.core.annotation.NameInMap("TracerId")
         private String tracerId;
 
-        private Pricing(Builder builder) {
-            this.currency = builder.currency;
-            this.nightlyPrices = builder.nightlyPrices;
-            this.totalAmount = builder.totalAmount;
+        private DailyPrices(Builder builder) {
+            this.date = builder.date;
+            this.price = builder.price;
             this.tracerId = builder.tracerId;
         }
 
@@ -565,29 +561,22 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Pricing create() {
+        public static DailyPrices create() {
             return builder().build();
         }
 
         /**
-         * @return currency
+         * @return date
          */
-        public String getCurrency() {
-            return this.currency;
+        public String getDate() {
+            return this.date;
         }
 
         /**
-         * @return nightlyPrices
+         * @return price
          */
-        public java.util.List<NightlyPrices> getNightlyPrices() {
-            return this.nightlyPrices;
-        }
-
-        /**
-         * @return totalAmount
-         */
-        public String getTotalAmount() {
-            return this.totalAmount;
+        public Price getPrice() {
+            return this.price;
         }
 
         /**
@@ -598,42 +587,32 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String currency; 
-            private java.util.List<NightlyPrices> nightlyPrices; 
-            private String totalAmount; 
+            private String date; 
+            private Price price; 
             private String tracerId; 
 
             private Builder() {
             } 
 
-            private Builder(Pricing model) {
-                this.currency = model.currency;
-                this.nightlyPrices = model.nightlyPrices;
-                this.totalAmount = model.totalAmount;
+            private Builder(DailyPrices model) {
+                this.date = model.date;
+                this.price = model.price;
                 this.tracerId = model.tracerId;
             } 
 
             /**
-             * Currency.
+             * Date.
              */
-            public Builder currency(String currency) {
-                this.currency = currency;
+            public Builder date(String date) {
+                this.date = date;
                 return this;
             }
 
             /**
-             * NightlyPrices.
+             * Price.
              */
-            public Builder nightlyPrices(java.util.List<NightlyPrices> nightlyPrices) {
-                this.nightlyPrices = nightlyPrices;
-                return this;
-            }
-
-            /**
-             * TotalAmount.
-             */
-            public Builder totalAmount(String totalAmount) {
-                this.totalAmount = totalAmount;
+            public Builder price(Price price) {
+                this.price = price;
                 return this;
             }
 
@@ -648,8 +627,107 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
                 return this;
             }
 
-            public Pricing build() {
-                return new Pricing(this);
+            public DailyPrices build() {
+                return new DailyPrices(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GlobalHotelValidatePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GlobalHotelValidatePriceResponseBody</p>
+     */
+    public static class TotalPrice extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Amount")
+        private String amount;
+
+        @com.aliyun.core.annotation.NameInMap("Currency")
+        private String currency;
+
+        @com.aliyun.core.annotation.NameInMap("TracerId")
+        private String tracerId;
+
+        private TotalPrice(Builder builder) {
+            this.amount = builder.amount;
+            this.currency = builder.currency;
+            this.tracerId = builder.tracerId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TotalPrice create() {
+            return builder().build();
+        }
+
+        /**
+         * @return amount
+         */
+        public String getAmount() {
+            return this.amount;
+        }
+
+        /**
+         * @return currency
+         */
+        public String getCurrency() {
+            return this.currency;
+        }
+
+        /**
+         * @return tracerId
+         */
+        public String getTracerId() {
+            return this.tracerId;
+        }
+
+        public static final class Builder {
+            private String amount; 
+            private String currency; 
+            private String tracerId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TotalPrice model) {
+                this.amount = model.amount;
+                this.currency = model.currency;
+                this.tracerId = model.tracerId;
+            } 
+
+            /**
+             * Amount.
+             */
+            public Builder amount(String amount) {
+                this.amount = amount;
+                return this;
+            }
+
+            /**
+             * Currency.
+             */
+            public Builder currency(String currency) {
+                this.currency = currency;
+                return this;
+            }
+
+            /**
+             * <p>TracerId</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TracerId</p>
+             */
+            public Builder tracerId(String tracerId) {
+                this.tracerId = tracerId;
+                return this;
+            }
+
+            public TotalPrice build() {
+                return new TotalPrice(this);
             } 
 
         } 
@@ -665,19 +743,23 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CancellationPolicies")
         private java.util.List<CancellationPolicies> cancellationPolicies;
 
+        @com.aliyun.core.annotation.NameInMap("DailyPrices")
+        private java.util.List<DailyPrices> dailyPrices;
+
         @com.aliyun.core.annotation.NameInMap("ItemOfferId")
         private String itemOfferId;
 
-        @com.aliyun.core.annotation.NameInMap("Pricing")
-        private Pricing pricing;
+        @com.aliyun.core.annotation.NameInMap("TotalPrice")
+        private TotalPrice totalPrice;
 
         @com.aliyun.core.annotation.NameInMap("TracerId")
         private String tracerId;
 
         private Data(Builder builder) {
             this.cancellationPolicies = builder.cancellationPolicies;
+            this.dailyPrices = builder.dailyPrices;
             this.itemOfferId = builder.itemOfferId;
-            this.pricing = builder.pricing;
+            this.totalPrice = builder.totalPrice;
             this.tracerId = builder.tracerId;
         }
 
@@ -697,6 +779,13 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
         }
 
         /**
+         * @return dailyPrices
+         */
+        public java.util.List<DailyPrices> getDailyPrices() {
+            return this.dailyPrices;
+        }
+
+        /**
          * @return itemOfferId
          */
         public String getItemOfferId() {
@@ -704,10 +793,10 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
         }
 
         /**
-         * @return pricing
+         * @return totalPrice
          */
-        public Pricing getPricing() {
-            return this.pricing;
+        public TotalPrice getTotalPrice() {
+            return this.totalPrice;
         }
 
         /**
@@ -719,8 +808,9 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<CancellationPolicies> cancellationPolicies; 
+            private java.util.List<DailyPrices> dailyPrices; 
             private String itemOfferId; 
-            private Pricing pricing; 
+            private TotalPrice totalPrice; 
             private String tracerId; 
 
             private Builder() {
@@ -728,8 +818,9 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.cancellationPolicies = model.cancellationPolicies;
+                this.dailyPrices = model.dailyPrices;
                 this.itemOfferId = model.itemOfferId;
-                this.pricing = model.pricing;
+                this.totalPrice = model.totalPrice;
                 this.tracerId = model.tracerId;
             } 
 
@@ -742,6 +833,14 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
             }
 
             /**
+             * DailyPrices.
+             */
+            public Builder dailyPrices(java.util.List<DailyPrices> dailyPrices) {
+                this.dailyPrices = dailyPrices;
+                return this;
+            }
+
+            /**
              * ItemOfferId.
              */
             public Builder itemOfferId(String itemOfferId) {
@@ -750,10 +849,10 @@ public class GlobalHotelValidatePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Pricing.
+             * TotalPrice.
              */
-            public Builder pricing(Pricing pricing) {
-                this.pricing = pricing;
+            public Builder totalPrice(TotalPrice totalPrice) {
+                this.totalPrice = totalPrice;
                 return this;
             }
 

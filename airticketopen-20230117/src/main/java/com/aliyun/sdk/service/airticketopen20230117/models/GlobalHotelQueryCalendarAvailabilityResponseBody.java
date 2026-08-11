@@ -181,106 +181,7 @@ public class GlobalHotelQueryCalendarAvailabilityResponseBody extends TeaModel {
      *
      * <p>GlobalHotelQueryCalendarAvailabilityResponseBody</p>
      */
-    public static class FailedHotels extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("ErrorCode")
-        private String errorCode;
-
-        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
-        private String errorMessage;
-
-        @com.aliyun.core.annotation.NameInMap("StandardHotelId")
-        private String standardHotelId;
-
-        private FailedHotels(Builder builder) {
-            this.errorCode = builder.errorCode;
-            this.errorMessage = builder.errorMessage;
-            this.standardHotelId = builder.standardHotelId;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static FailedHotels create() {
-            return builder().build();
-        }
-
-        /**
-         * @return errorCode
-         */
-        public String getErrorCode() {
-            return this.errorCode;
-        }
-
-        /**
-         * @return errorMessage
-         */
-        public String getErrorMessage() {
-            return this.errorMessage;
-        }
-
-        /**
-         * @return standardHotelId
-         */
-        public String getStandardHotelId() {
-            return this.standardHotelId;
-        }
-
-        public static final class Builder {
-            private String errorCode; 
-            private String errorMessage; 
-            private String standardHotelId; 
-
-            private Builder() {
-            } 
-
-            private Builder(FailedHotels model) {
-                this.errorCode = model.errorCode;
-                this.errorMessage = model.errorMessage;
-                this.standardHotelId = model.standardHotelId;
-            } 
-
-            /**
-             * ErrorCode.
-             */
-            public Builder errorCode(String errorCode) {
-                this.errorCode = errorCode;
-                return this;
-            }
-
-            /**
-             * ErrorMessage.
-             */
-            public Builder errorMessage(String errorMessage) {
-                this.errorMessage = errorMessage;
-                return this;
-            }
-
-            /**
-             * StandardHotelId.
-             */
-            public Builder standardHotelId(String standardHotelId) {
-                this.standardHotelId = standardHotelId;
-                return this;
-            }
-
-            public FailedHotels build() {
-                return new FailedHotels(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link GlobalHotelQueryCalendarAvailabilityResponseBody} extends {@link TeaModel}
-     *
-     * <p>GlobalHotelQueryCalendarAvailabilityResponseBody</p>
-     */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("FailedHotels")
-        private java.util.List<FailedHotels> failedHotels;
-
         @com.aliyun.core.annotation.NameInMap("Hotels")
         private java.util.Map<String, java.util.List<DataHotelsValue>> hotels;
 
@@ -288,7 +189,6 @@ public class GlobalHotelQueryCalendarAvailabilityResponseBody extends TeaModel {
         private String tracerId;
 
         private Data(Builder builder) {
-            this.failedHotels = builder.failedHotels;
             this.hotels = builder.hotels;
             this.tracerId = builder.tracerId;
         }
@@ -299,13 +199,6 @@ public class GlobalHotelQueryCalendarAvailabilityResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
-        }
-
-        /**
-         * @return failedHotels
-         */
-        public java.util.List<FailedHotels> getFailedHotels() {
-            return this.failedHotels;
         }
 
         /**
@@ -323,7 +216,6 @@ public class GlobalHotelQueryCalendarAvailabilityResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List<FailedHotels> failedHotels; 
             private java.util.Map<String, java.util.List<DataHotelsValue>> hotels; 
             private String tracerId; 
 
@@ -331,18 +223,9 @@ public class GlobalHotelQueryCalendarAvailabilityResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
-                this.failedHotels = model.failedHotels;
                 this.hotels = model.hotels;
                 this.tracerId = model.tracerId;
             } 
-
-            /**
-             * FailedHotels.
-             */
-            public Builder failedHotels(java.util.List<FailedHotels> failedHotels) {
-                this.failedHotels = failedHotels;
-                return this;
-            }
 
             /**
              * Hotels.

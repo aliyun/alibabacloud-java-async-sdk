@@ -380,8 +380,8 @@ public class GlobalHotelCancelOrRefundResponseBody extends TeaModel {
      * <p>GlobalHotelCancelOrRefundResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("RefundOrderId")
-        private String refundOrderId;
+        @com.aliyun.core.annotation.NameInMap("RefundOrderNo")
+        private String refundOrderNo;
 
         @com.aliyun.core.annotation.NameInMap("TotalPenaltyAmount")
         private TotalPenaltyAmount totalPenaltyAmount;
@@ -393,7 +393,7 @@ public class GlobalHotelCancelOrRefundResponseBody extends TeaModel {
         private String tracerId;
 
         private Data(Builder builder) {
-            this.refundOrderId = builder.refundOrderId;
+            this.refundOrderNo = builder.refundOrderNo;
             this.totalPenaltyAmount = builder.totalPenaltyAmount;
             this.totalRefundAmount = builder.totalRefundAmount;
             this.tracerId = builder.tracerId;
@@ -408,10 +408,10 @@ public class GlobalHotelCancelOrRefundResponseBody extends TeaModel {
         }
 
         /**
-         * @return refundOrderId
+         * @return refundOrderNo
          */
-        public String getRefundOrderId() {
-            return this.refundOrderId;
+        public String getRefundOrderNo() {
+            return this.refundOrderNo;
         }
 
         /**
@@ -436,7 +436,7 @@ public class GlobalHotelCancelOrRefundResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String refundOrderId; 
+            private String refundOrderNo; 
             private TotalPenaltyAmount totalPenaltyAmount; 
             private TotalRefundAmount totalRefundAmount; 
             private String tracerId; 
@@ -445,17 +445,17 @@ public class GlobalHotelCancelOrRefundResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
-                this.refundOrderId = model.refundOrderId;
+                this.refundOrderNo = model.refundOrderNo;
                 this.totalPenaltyAmount = model.totalPenaltyAmount;
                 this.totalRefundAmount = model.totalRefundAmount;
                 this.tracerId = model.tracerId;
             } 
 
             /**
-             * RefundOrderId.
+             * RefundOrderNo.
              */
-            public Builder refundOrderId(String refundOrderId) {
-                this.refundOrderId = refundOrderId;
+            public Builder refundOrderNo(String refundOrderNo) {
+                this.refundOrderNo = refundOrderNo;
                 return this;
             }
 

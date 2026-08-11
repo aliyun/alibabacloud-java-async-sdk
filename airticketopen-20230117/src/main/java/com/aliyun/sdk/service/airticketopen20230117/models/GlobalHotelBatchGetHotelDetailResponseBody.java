@@ -1002,7 +1002,7 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         private String roomNameCn;
 
         @com.aliyun.core.annotation.NameInMap("RoomSize")
-        private Double roomSize;
+        private String roomSize;
 
         @com.aliyun.core.annotation.NameInMap("RoomSizeUnit")
         private String roomSizeUnit;
@@ -1067,7 +1067,7 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         /**
          * @return roomSize
          */
-        public Double getRoomSize() {
+        public String getRoomSize() {
             return this.roomSize;
         }
 
@@ -1104,7 +1104,7 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             private java.util.List<RoomTypesPictures> pictures; 
             private String roomName; 
             private String roomNameCn; 
-            private Double roomSize; 
+            private String roomSize; 
             private String roomSizeUnit; 
             private String standardRoomId; 
             private String windowType; 
@@ -1160,7 +1160,7 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             /**
              * RoomSize.
              */
-            public Builder roomSize(Double roomSize) {
+            public Builder roomSize(String roomSize) {
                 this.roomSize = roomSize;
                 return this;
             }

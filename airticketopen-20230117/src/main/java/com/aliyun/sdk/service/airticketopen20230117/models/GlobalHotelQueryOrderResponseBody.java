@@ -186,7 +186,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         private String currency;
 
         @com.aliyun.core.annotation.NameInMap("End")
-        private Long end;
+        private String end;
 
         @com.aliyun.core.annotation.NameInMap("PenaltyType")
         private String penaltyType;
@@ -195,7 +195,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         private String penaltyValue;
 
         @com.aliyun.core.annotation.NameInMap("Start")
-        private Long start;
+        private String start;
 
         @com.aliyun.core.annotation.NameInMap("TracerId")
         private String tracerId;
@@ -227,7 +227,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         /**
          * @return end
          */
-        public Long getEnd() {
+        public String getEnd() {
             return this.end;
         }
 
@@ -248,7 +248,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         /**
          * @return start
          */
-        public Long getStart() {
+        public String getStart() {
             return this.start;
         }
 
@@ -261,10 +261,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
 
         public static final class Builder {
             private String currency; 
-            private Long end; 
+            private String end; 
             private String penaltyType; 
             private String penaltyValue; 
-            private Long start; 
+            private String start; 
             private String tracerId; 
 
             private Builder() {
@@ -290,7 +290,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             /**
              * End.
              */
-            public Builder end(Long end) {
+            public Builder end(String end) {
                 this.end = end;
                 return this;
             }
@@ -314,7 +314,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             /**
              * Start.
              */
-            public Builder start(Long start) {
+            public Builder start(String start) {
                 this.start = start;
                 return this;
             }
@@ -442,118 +442,20 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
      *
      * <p>GlobalHotelQueryOrderResponseBody</p>
      */
-    public static class Currency extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("CurrencyCode")
-        private String currencyCode;
-
-        @com.aliyun.core.annotation.NameInMap("DefaultFractionDigits")
-        private Integer defaultFractionDigits;
-
-        @com.aliyun.core.annotation.NameInMap("NumericCode")
-        private Integer numericCode;
-
-        private Currency(Builder builder) {
-            this.currencyCode = builder.currencyCode;
-            this.defaultFractionDigits = builder.defaultFractionDigits;
-            this.numericCode = builder.numericCode;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Currency create() {
-            return builder().build();
-        }
-
-        /**
-         * @return currencyCode
-         */
-        public String getCurrencyCode() {
-            return this.currencyCode;
-        }
-
-        /**
-         * @return defaultFractionDigits
-         */
-        public Integer getDefaultFractionDigits() {
-            return this.defaultFractionDigits;
-        }
-
-        /**
-         * @return numericCode
-         */
-        public Integer getNumericCode() {
-            return this.numericCode;
-        }
-
-        public static final class Builder {
-            private String currencyCode; 
-            private Integer defaultFractionDigits; 
-            private Integer numericCode; 
-
-            private Builder() {
-            } 
-
-            private Builder(Currency model) {
-                this.currencyCode = model.currencyCode;
-                this.defaultFractionDigits = model.defaultFractionDigits;
-                this.numericCode = model.numericCode;
-            } 
-
-            /**
-             * CurrencyCode.
-             */
-            public Builder currencyCode(String currencyCode) {
-                this.currencyCode = currencyCode;
-                return this;
-            }
-
-            /**
-             * <p>DefaultFractionDigits</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
-             */
-            public Builder defaultFractionDigits(Integer defaultFractionDigits) {
-                this.defaultFractionDigits = defaultFractionDigits;
-                return this;
-            }
-
-            /**
-             * <p>NumericCode</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
-             */
-            public Builder numericCode(Integer numericCode) {
-                this.numericCode = numericCode;
-                return this;
-            }
-
-            public Currency build() {
-                return new Currency(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link GlobalHotelQueryOrderResponseBody} extends {@link TeaModel}
-     *
-     * <p>GlobalHotelQueryOrderResponseBody</p>
-     */
     public static class Price extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Cent")
-        private Long cent;
+        @com.aliyun.core.annotation.NameInMap("Amount")
+        private String amount;
 
         @com.aliyun.core.annotation.NameInMap("Currency")
-        private Currency currency;
+        private String currency;
+
+        @com.aliyun.core.annotation.NameInMap("TracerId")
+        private String tracerId;
 
         private Price(Builder builder) {
-            this.cent = builder.cent;
+            this.amount = builder.amount;
             this.currency = builder.currency;
+            this.tracerId = builder.tracerId;
         }
 
         public static Builder builder() {
@@ -565,47 +467,64 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         }
 
         /**
-         * @return cent
+         * @return amount
          */
-        public Long getCent() {
-            return this.cent;
+        public String getAmount() {
+            return this.amount;
         }
 
         /**
          * @return currency
          */
-        public Currency getCurrency() {
+        public String getCurrency() {
             return this.currency;
         }
 
+        /**
+         * @return tracerId
+         */
+        public String getTracerId() {
+            return this.tracerId;
+        }
+
         public static final class Builder {
-            private Long cent; 
-            private Currency currency; 
+            private String amount; 
+            private String currency; 
+            private String tracerId; 
 
             private Builder() {
             } 
 
             private Builder(Price model) {
-                this.cent = model.cent;
+                this.amount = model.amount;
                 this.currency = model.currency;
+                this.tracerId = model.tracerId;
             } 
 
             /**
-             * <p>cent</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Amount.
              */
-            public Builder cent(Long cent) {
-                this.cent = cent;
+            public Builder amount(String amount) {
+                this.amount = amount;
                 return this;
             }
 
             /**
              * Currency.
              */
-            public Builder currency(Currency currency) {
+            public Builder currency(String currency) {
                 this.currency = currency;
+                return this;
+            }
+
+            /**
+             * <p>TracerId</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TracerId</p>
+             */
+            public Builder tracerId(String tracerId) {
+                this.tracerId = tracerId;
                 return this;
             }
 
@@ -629,9 +548,13 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Price")
         private Price price;
 
+        @com.aliyun.core.annotation.NameInMap("TracerId")
+        private String tracerId;
+
         private DailyPrices(Builder builder) {
             this.date = builder.date;
             this.price = builder.price;
+            this.tracerId = builder.tracerId;
         }
 
         public static Builder builder() {
@@ -656,9 +579,17 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             return this.price;
         }
 
+        /**
+         * @return tracerId
+         */
+        public String getTracerId() {
+            return this.tracerId;
+        }
+
         public static final class Builder {
             private String date; 
             private Price price; 
+            private String tracerId; 
 
             private Builder() {
             } 
@@ -666,6 +597,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             private Builder(DailyPrices model) {
                 this.date = model.date;
                 this.price = model.price;
+                this.tracerId = model.tracerId;
             } 
 
             /**
@@ -684,6 +616,17 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
              */
             public Builder price(Price price) {
                 this.price = price;
+                return this;
+            }
+
+            /**
+             * <p>TracerId</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TracerId</p>
+             */
+            public Builder tracerId(String tracerId) {
+                this.tracerId = tracerId;
                 return this;
             }
 
@@ -799,7 +742,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
      *
      * <p>GlobalHotelQueryOrderResponseBody</p>
      */
-    public static class SellingTotalPrice extends TeaModel {
+    public static class TotalPrice extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Amount")
         private String amount;
 
@@ -809,7 +752,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TracerId")
         private String tracerId;
 
-        private SellingTotalPrice(Builder builder) {
+        private TotalPrice(Builder builder) {
             this.amount = builder.amount;
             this.currency = builder.currency;
             this.tracerId = builder.tracerId;
@@ -819,7 +762,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static SellingTotalPrice create() {
+        public static TotalPrice create() {
             return builder().build();
         }
 
@@ -852,7 +795,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(SellingTotalPrice model) {
+            private Builder(TotalPrice model) {
                 this.amount = model.amount;
                 this.currency = model.currency;
                 this.tracerId = model.tracerId;
@@ -885,8 +828,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
                 return this;
             }
 
-            public SellingTotalPrice build() {
-                return new SellingTotalPrice(this);
+            public TotalPrice build() {
+                return new TotalPrice(this);
             } 
 
         } 
@@ -920,8 +863,8 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RoomCount")
         private Integer roomCount;
 
-        @com.aliyun.core.annotation.NameInMap("SellingTotalPrice")
-        private SellingTotalPrice sellingTotalPrice;
+        @com.aliyun.core.annotation.NameInMap("TotalPrice")
+        private TotalPrice totalPrice;
 
         private ItemInfo(Builder builder) {
             this.cancelPolicy = builder.cancelPolicy;
@@ -931,7 +874,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             this.dailyPrices = builder.dailyPrices;
             this.meal = builder.meal;
             this.roomCount = builder.roomCount;
-            this.sellingTotalPrice = builder.sellingTotalPrice;
+            this.totalPrice = builder.totalPrice;
         }
 
         public static Builder builder() {
@@ -992,10 +935,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         }
 
         /**
-         * @return sellingTotalPrice
+         * @return totalPrice
          */
-        public SellingTotalPrice getSellingTotalPrice() {
-            return this.sellingTotalPrice;
+        public TotalPrice getTotalPrice() {
+            return this.totalPrice;
         }
 
         public static final class Builder {
@@ -1006,7 +949,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             private java.util.List<DailyPrices> dailyPrices; 
             private Meal meal; 
             private Integer roomCount; 
-            private SellingTotalPrice sellingTotalPrice; 
+            private TotalPrice totalPrice; 
 
             private Builder() {
             } 
@@ -1019,7 +962,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
                 this.dailyPrices = model.dailyPrices;
                 this.meal = model.meal;
                 this.roomCount = model.roomCount;
-                this.sellingTotalPrice = model.sellingTotalPrice;
+                this.totalPrice = model.totalPrice;
             } 
 
             /**
@@ -1079,10 +1022,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * SellingTotalPrice.
+             * TotalPrice.
              */
-            public Builder sellingTotalPrice(SellingTotalPrice sellingTotalPrice) {
-                this.sellingTotalPrice = sellingTotalPrice;
+            public Builder totalPrice(TotalPrice totalPrice) {
+                this.totalPrice = totalPrice;
                 return this;
             }
 
@@ -1203,7 +1146,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         private Amount amount;
 
         @com.aliyun.core.annotation.NameInMap("GmtPaid")
-        private Long gmtPaid;
+        private String gmtPaid;
 
         @com.aliyun.core.annotation.NameInMap("PaymentMethod")
         private String paymentMethod;
@@ -1236,7 +1179,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         /**
          * @return gmtPaid
          */
-        public Long getGmtPaid() {
+        public String getGmtPaid() {
             return this.gmtPaid;
         }
 
@@ -1256,7 +1199,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
 
         public static final class Builder {
             private Amount amount; 
-            private Long gmtPaid; 
+            private String gmtPaid; 
             private String paymentMethod; 
             private String paymentTransactionId; 
 
@@ -1281,7 +1224,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             /**
              * GmtPaid.
              */
-            public Builder gmtPaid(Long gmtPaid) {
+            public Builder gmtPaid(String gmtPaid) {
                 this.gmtPaid = gmtPaid;
                 return this;
             }
@@ -1515,16 +1458,16 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
      */
     public static class RefundOrders extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
-        private Long gmtCreate;
+        private String gmtCreate;
+
+        @com.aliyun.core.annotation.NameInMap("RefundOrderNo")
+        private String refundOrderNo;
 
         @com.aliyun.core.annotation.NameInMap("RefundTransactionId")
         private String refundTransactionId;
 
         @com.aliyun.core.annotation.NameInMap("RejectReason")
         private String rejectReason;
-
-        @com.aliyun.core.annotation.NameInMap("SellRefundOrderNo")
-        private String sellRefundOrderNo;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -1537,9 +1480,9 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
 
         private RefundOrders(Builder builder) {
             this.gmtCreate = builder.gmtCreate;
+            this.refundOrderNo = builder.refundOrderNo;
             this.refundTransactionId = builder.refundTransactionId;
             this.rejectReason = builder.rejectReason;
-            this.sellRefundOrderNo = builder.sellRefundOrderNo;
             this.status = builder.status;
             this.totalPenaltyAmount = builder.totalPenaltyAmount;
             this.totalRefundAmount = builder.totalRefundAmount;
@@ -1556,8 +1499,15 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         /**
          * @return gmtCreate
          */
-        public Long getGmtCreate() {
+        public String getGmtCreate() {
             return this.gmtCreate;
+        }
+
+        /**
+         * @return refundOrderNo
+         */
+        public String getRefundOrderNo() {
+            return this.refundOrderNo;
         }
 
         /**
@@ -1572,13 +1522,6 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
          */
         public String getRejectReason() {
             return this.rejectReason;
-        }
-
-        /**
-         * @return sellRefundOrderNo
-         */
-        public String getSellRefundOrderNo() {
-            return this.sellRefundOrderNo;
         }
 
         /**
@@ -1603,10 +1546,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Long gmtCreate; 
+            private String gmtCreate; 
+            private String refundOrderNo; 
             private String refundTransactionId; 
             private String rejectReason; 
-            private String sellRefundOrderNo; 
             private String status; 
             private TotalPenaltyAmount totalPenaltyAmount; 
             private TotalRefundAmount totalRefundAmount; 
@@ -1616,9 +1559,9 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
 
             private Builder(RefundOrders model) {
                 this.gmtCreate = model.gmtCreate;
+                this.refundOrderNo = model.refundOrderNo;
                 this.refundTransactionId = model.refundTransactionId;
                 this.rejectReason = model.rejectReason;
-                this.sellRefundOrderNo = model.sellRefundOrderNo;
                 this.status = model.status;
                 this.totalPenaltyAmount = model.totalPenaltyAmount;
                 this.totalRefundAmount = model.totalRefundAmount;
@@ -1627,8 +1570,16 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             /**
              * GmtCreate.
              */
-            public Builder gmtCreate(Long gmtCreate) {
+            public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
+                return this;
+            }
+
+            /**
+             * RefundOrderNo.
+             */
+            public Builder refundOrderNo(String refundOrderNo) {
+                this.refundOrderNo = refundOrderNo;
                 return this;
             }
 
@@ -1645,14 +1596,6 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
              */
             public Builder rejectReason(String rejectReason) {
                 this.rejectReason = rejectReason;
-                return this;
-            }
-
-            /**
-             * SellRefundOrderNo.
-             */
-            public Builder sellRefundOrderNo(String sellRefundOrderNo) {
-                this.sellRefundOrderNo = sellRefundOrderNo;
                 return this;
             }
 
@@ -1917,7 +1860,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         private String externalOrderNo;
 
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
-        private Long gmtCreate;
+        private String gmtCreate;
 
         @com.aliyun.core.annotation.NameInMap("ItemInfo")
         private ItemInfo itemInfo;
@@ -1982,7 +1925,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         /**
          * @return gmtCreate
          */
-        public Long getGmtCreate() {
+        public String getGmtCreate() {
             return this.gmtCreate;
         }
 
@@ -2045,7 +1988,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         public static final class Builder {
             private String buyerId; 
             private String externalOrderNo; 
-            private Long gmtCreate; 
+            private String gmtCreate; 
             private ItemInfo itemInfo; 
             private String orderNo; 
             private Payment payment; 
@@ -2091,7 +2034,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             /**
              * GmtCreate.
              */
-            public Builder gmtCreate(Long gmtCreate) {
+            public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
                 return this;
             }
