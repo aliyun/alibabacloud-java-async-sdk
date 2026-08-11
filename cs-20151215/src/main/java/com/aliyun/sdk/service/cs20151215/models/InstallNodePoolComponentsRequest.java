@@ -343,6 +343,9 @@ public class InstallNodePoolComponentsRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("batchInterval")
         private Long batchInterval;
 
+        @com.aliyun.core.annotation.NameInMap("maxFailedNodes")
+        private Long maxFailedNodes;
+
         @com.aliyun.core.annotation.NameInMap("maxParallelism")
         private Long maxParallelism;
 
@@ -351,6 +354,7 @@ public class InstallNodePoolComponentsRequest extends Request {
 
         private RollingPolicy(Builder builder) {
             this.batchInterval = builder.batchInterval;
+            this.maxFailedNodes = builder.maxFailedNodes;
             this.maxParallelism = builder.maxParallelism;
             this.pausePolicy = builder.pausePolicy;
         }
@@ -371,6 +375,13 @@ public class InstallNodePoolComponentsRequest extends Request {
         }
 
         /**
+         * @return maxFailedNodes
+         */
+        public Long getMaxFailedNodes() {
+            return this.maxFailedNodes;
+        }
+
+        /**
          * @return maxParallelism
          */
         public Long getMaxParallelism() {
@@ -386,6 +397,7 @@ public class InstallNodePoolComponentsRequest extends Request {
 
         public static final class Builder {
             private Long batchInterval; 
+            private Long maxFailedNodes; 
             private Long maxParallelism; 
             private String pausePolicy; 
 
@@ -394,6 +406,7 @@ public class InstallNodePoolComponentsRequest extends Request {
 
             private Builder(RollingPolicy model) {
                 this.batchInterval = model.batchInterval;
+                this.maxFailedNodes = model.maxFailedNodes;
                 this.maxParallelism = model.maxParallelism;
                 this.pausePolicy = model.pausePolicy;
             } 
@@ -406,6 +419,14 @@ public class InstallNodePoolComponentsRequest extends Request {
              */
             public Builder batchInterval(Long batchInterval) {
                 this.batchInterval = batchInterval;
+                return this;
+            }
+
+            /**
+             * maxFailedNodes.
+             */
+            public Builder maxFailedNodes(Long maxFailedNodes) {
+                this.maxFailedNodes = maxFailedNodes;
                 return this;
             }
 

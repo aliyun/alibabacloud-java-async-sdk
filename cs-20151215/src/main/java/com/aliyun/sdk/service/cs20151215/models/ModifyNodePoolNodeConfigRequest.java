@@ -304,10 +304,14 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
      * <p>ModifyNodePoolNodeConfigRequest</p>
      */
     public static class RollingPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("max_failed_nodes")
+        private Long maxFailedNodes;
+
         @com.aliyun.core.annotation.NameInMap("max_parallelism")
         private Long maxParallelism;
 
         private RollingPolicy(Builder builder) {
+            this.maxFailedNodes = builder.maxFailedNodes;
             this.maxParallelism = builder.maxParallelism;
         }
 
@@ -320,6 +324,13 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         }
 
         /**
+         * @return maxFailedNodes
+         */
+        public Long getMaxFailedNodes() {
+            return this.maxFailedNodes;
+        }
+
+        /**
          * @return maxParallelism
          */
         public Long getMaxParallelism() {
@@ -327,14 +338,24 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         }
 
         public static final class Builder {
+            private Long maxFailedNodes; 
             private Long maxParallelism; 
 
             private Builder() {
             } 
 
             private Builder(RollingPolicy model) {
+                this.maxFailedNodes = model.maxFailedNodes;
                 this.maxParallelism = model.maxParallelism;
             } 
+
+            /**
+             * max_failed_nodes.
+             */
+            public Builder maxFailedNodes(Long maxFailedNodes) {
+                this.maxFailedNodes = maxFailedNodes;
+                return this;
+            }
 
             /**
              * <p>The maximum number of unavailable nodes.</p>

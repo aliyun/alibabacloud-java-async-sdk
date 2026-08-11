@@ -2050,6 +2050,9 @@ public class ModifyClusterNodePoolRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("disk_init")
         private java.util.List<DiskInit> diskInit;
 
+        @com.aliyun.core.annotation.NameInMap("enable_high_density_mode")
+        private Boolean enableHighDensityMode;
+
         @com.aliyun.core.annotation.NameInMap("image_id")
         private String imageId;
 
@@ -2167,6 +2170,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             this.deploymentsetId = builder.deploymentsetId;
             this.desiredSize = builder.desiredSize;
             this.diskInit = builder.diskInit;
+            this.enableHighDensityMode = builder.enableHighDensityMode;
             this.imageId = builder.imageId;
             this.imageType = builder.imageType;
             this.instanceChargeType = builder.instanceChargeType;
@@ -2260,6 +2264,13 @@ public class ModifyClusterNodePoolRequest extends Request {
          */
         public java.util.List<DiskInit> getDiskInit() {
             return this.diskInit;
+        }
+
+        /**
+         * @return enableHighDensityMode
+         */
+        public Boolean getEnableHighDensityMode() {
+            return this.enableHighDensityMode;
         }
 
         /**
@@ -2522,6 +2533,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             private String deploymentsetId; 
             private Long desiredSize; 
             private java.util.List<DiskInit> diskInit; 
+            private Boolean enableHighDensityMode; 
             private String imageId; 
             private String imageType; 
             private String instanceChargeType; 
@@ -2570,6 +2582,7 @@ public class ModifyClusterNodePoolRequest extends Request {
                 this.deploymentsetId = model.deploymentsetId;
                 this.desiredSize = model.desiredSize;
                 this.diskInit = model.diskInit;
+                this.enableHighDensityMode = model.enableHighDensityMode;
                 this.imageId = model.imageId;
                 this.imageType = model.imageType;
                 this.instanceChargeType = model.instanceChargeType;
@@ -2689,6 +2702,14 @@ public class ModifyClusterNodePoolRequest extends Request {
              */
             public Builder diskInit(java.util.List<DiskInit> diskInit) {
                 this.diskInit = diskInit;
+                return this;
+            }
+
+            /**
+             * enable_high_density_mode.
+             */
+            public Builder enableHighDensityMode(Boolean enableHighDensityMode) {
+                this.enableHighDensityMode = enableHighDensityMode;
                 return this;
             }
 

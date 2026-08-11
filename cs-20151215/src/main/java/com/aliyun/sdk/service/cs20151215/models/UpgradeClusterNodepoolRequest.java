@@ -321,6 +321,9 @@ public class UpgradeClusterNodepoolRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("batch_interval")
         private Integer batchInterval;
 
+        @com.aliyun.core.annotation.NameInMap("max_failed_nodes")
+        private Integer maxFailedNodes;
+
         @com.aliyun.core.annotation.NameInMap("max_parallelism")
         private Integer maxParallelism;
 
@@ -329,6 +332,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
 
         private RollingPolicy(Builder builder) {
             this.batchInterval = builder.batchInterval;
+            this.maxFailedNodes = builder.maxFailedNodes;
             this.maxParallelism = builder.maxParallelism;
             this.pausePolicy = builder.pausePolicy;
         }
@@ -349,6 +353,13 @@ public class UpgradeClusterNodepoolRequest extends Request {
         }
 
         /**
+         * @return maxFailedNodes
+         */
+        public Integer getMaxFailedNodes() {
+            return this.maxFailedNodes;
+        }
+
+        /**
          * @return maxParallelism
          */
         public Integer getMaxParallelism() {
@@ -364,6 +375,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
 
         public static final class Builder {
             private Integer batchInterval; 
+            private Integer maxFailedNodes; 
             private Integer maxParallelism; 
             private String pausePolicy; 
 
@@ -372,6 +384,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
 
             private Builder(RollingPolicy model) {
                 this.batchInterval = model.batchInterval;
+                this.maxFailedNodes = model.maxFailedNodes;
                 this.maxParallelism = model.maxParallelism;
                 this.pausePolicy = model.pausePolicy;
             } 
@@ -384,6 +397,14 @@ public class UpgradeClusterNodepoolRequest extends Request {
              */
             public Builder batchInterval(Integer batchInterval) {
                 this.batchInterval = batchInterval;
+                return this;
+            }
+
+            /**
+             * max_failed_nodes.
+             */
+            public Builder maxFailedNodes(Integer maxFailedNodes) {
+                this.maxFailedNodes = maxFailedNodes;
                 return this;
             }
 

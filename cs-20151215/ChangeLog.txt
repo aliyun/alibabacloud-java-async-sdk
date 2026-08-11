@@ -1,3 +1,6 @@
+2026-08-11 Version: 5.0.5
+- Generated java-async 2015-12-15 for CS.
+
 2026-07-17 Version: 5.0.4
 - Generated java-async 2015-12-15 for CS.
 
