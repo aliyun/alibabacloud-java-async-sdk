@@ -184,6 +184,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupMethod")
         private String backupMethod;
 
+        @com.aliyun.core.annotation.NameInMap("BackupScheduleType")
+        private String backupScheduleType;
+
         @com.aliyun.core.annotation.NameInMap("BackupSetInfo")
         private String backupSetInfo;
 
@@ -209,6 +212,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             this.backupEndTime = builder.backupEndTime;
             this.backupId = builder.backupId;
             this.backupMethod = builder.backupMethod;
+            this.backupScheduleType = builder.backupScheduleType;
             this.backupSetInfo = builder.backupSetInfo;
             this.backupSize = builder.backupSize;
             this.backupStartTime = builder.backupStartTime;
@@ -245,6 +249,13 @@ public class DescribeBackupsResponseBody extends TeaModel {
          */
         public String getBackupMethod() {
             return this.backupMethod;
+        }
+
+        /**
+         * @return backupScheduleType
+         */
+        public String getBackupScheduleType() {
+            return this.backupScheduleType;
         }
 
         /**
@@ -300,6 +311,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             private String backupEndTime; 
             private String backupId; 
             private String backupMethod; 
+            private String backupScheduleType; 
             private String backupSetInfo; 
             private Long backupSize; 
             private String backupStartTime; 
@@ -315,6 +327,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
                 this.backupEndTime = model.backupEndTime;
                 this.backupId = model.backupId;
                 this.backupMethod = model.backupMethod;
+                this.backupScheduleType = model.backupScheduleType;
                 this.backupSetInfo = model.backupSetInfo;
                 this.backupSize = model.backupSize;
                 this.backupStartTime = model.backupStartTime;
@@ -354,6 +367,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
              */
             public Builder backupMethod(String backupMethod) {
                 this.backupMethod = backupMethod;
+                return this;
+            }
+
+            /**
+             * BackupScheduleType.
+             */
+            public Builder backupScheduleType(String backupScheduleType) {
+                this.backupScheduleType = backupScheduleType;
                 return this;
             }
 

@@ -97,6 +97,60 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
      *
      * <p>DescribeDBClusterAttributeResponseBody</p>
      */
+    public static class LangfuseInstanceIds extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("LangfuseInstanceId")
+        private java.util.List<String> langfuseInstanceId;
+
+        private LangfuseInstanceIds(Builder builder) {
+            this.langfuseInstanceId = builder.langfuseInstanceId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LangfuseInstanceIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return langfuseInstanceId
+         */
+        public java.util.List<String> getLangfuseInstanceId() {
+            return this.langfuseInstanceId;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> langfuseInstanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(LangfuseInstanceIds model) {
+                this.langfuseInstanceId = model.langfuseInstanceId;
+            } 
+
+            /**
+             * LangfuseInstanceId.
+             */
+            public Builder langfuseInstanceId(java.util.List<String> langfuseInstanceId) {
+                this.langfuseInstanceId = langfuseInstanceId;
+                return this;
+            }
+
+            public LangfuseInstanceIds build() {
+                return new LangfuseInstanceIds(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDBClusterAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterAttributeResponseBody</p>
+     */
     public static class ScaleOutStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
@@ -413,6 +467,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsExpired")
         private String isExpired;
 
+        @com.aliyun.core.annotation.NameInMap("LangfuseInstanceIds")
+        private LangfuseInstanceIds langfuseInstanceIds;
+
         @com.aliyun.core.annotation.NameInMap("LbKind")
         private String lbKind;
 
@@ -529,6 +586,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.extStorageSize = builder.extStorageSize;
             this.extStorageType = builder.extStorageType;
             this.isExpired = builder.isExpired;
+            this.langfuseInstanceIds = builder.langfuseInstanceIds;
             this.lbKind = builder.lbKind;
             this.lockMode = builder.lockMode;
             this.lockReason = builder.lockReason;
@@ -785,6 +843,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return langfuseInstanceIds
+         */
+        public LangfuseInstanceIds getLangfuseInstanceIds() {
+            return this.langfuseInstanceIds;
+        }
+
+        /**
          * @return lbKind
          */
         public String getLbKind() {
@@ -1012,6 +1077,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private Integer extStorageSize; 
             private String extStorageType; 
             private String isExpired; 
+            private LangfuseInstanceIds langfuseInstanceIds; 
             private String lbKind; 
             private String lockMode; 
             private String lockReason; 
@@ -1076,6 +1142,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
                 this.extStorageSize = model.extStorageSize;
                 this.extStorageType = model.extStorageType;
                 this.isExpired = model.isExpired;
+                this.langfuseInstanceIds = model.langfuseInstanceIds;
                 this.lbKind = model.lbKind;
                 this.lockMode = model.lockMode;
                 this.lockReason = model.lockReason;
@@ -1506,6 +1573,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              */
             public Builder isExpired(String isExpired) {
                 this.isExpired = isExpired;
+                return this;
+            }
+
+            /**
+             * LangfuseInstanceIds.
+             */
+            public Builder langfuseInstanceIds(LangfuseInstanceIds langfuseInstanceIds) {
+                this.langfuseInstanceIds = langfuseInstanceIds;
                 return this;
             }
 
