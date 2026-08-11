@@ -34,6 +34,10 @@ public class ListInfiniteCanvasesRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductionId")
+    private String productionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
@@ -41,14 +45,20 @@ public class ListInfiniteCanvasesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SortOrder")
     private String sortOrder;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private ListInfiniteCanvasesRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.keyword = builder.keyword;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
+        this.productionId = builder.productionId;
         this.sortBy = builder.sortBy;
         this.sortOrder = builder.sortOrder;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -93,6 +103,13 @@ public class ListInfiniteCanvasesRequest extends Request {
     }
 
     /**
+     * @return productionId
+     */
+    public String getProductionId() {
+        return this.productionId;
+    }
+
+    /**
      * @return sortBy
      */
     public String getSortBy() {
@@ -106,13 +123,22 @@ public class ListInfiniteCanvasesRequest extends Request {
         return this.sortOrder;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<ListInfiniteCanvasesRequest, Builder> {
         private String regionId; 
         private String keyword; 
         private Integer pageNo; 
         private Integer pageSize; 
+        private String productionId; 
         private String sortBy; 
         private String sortOrder; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -124,8 +150,10 @@ public class ListInfiniteCanvasesRequest extends Request {
             this.keyword = request.keyword;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
+            this.productionId = request.productionId;
             this.sortBy = request.sortBy;
             this.sortOrder = request.sortOrder;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -165,6 +193,15 @@ public class ListInfiniteCanvasesRequest extends Request {
         }
 
         /**
+         * ProductionId.
+         */
+        public Builder productionId(String productionId) {
+            this.putQueryParameter("ProductionId", productionId);
+            this.productionId = productionId;
+            return this;
+        }
+
+        /**
          * SortBy.
          */
         public Builder sortBy(String sortBy) {
@@ -179,6 +216,15 @@ public class ListInfiniteCanvasesRequest extends Request {
         public Builder sortOrder(String sortOrder) {
             this.putQueryParameter("SortOrder", sortOrder);
             this.sortOrder = sortOrder;
+            return this;
+        }
+
+        /**
+         * WorkspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 
