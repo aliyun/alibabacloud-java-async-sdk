@@ -334,6 +334,81 @@ public class ListCloudAccountsResponseBody extends TeaModel {
      *
      * <p>ListCloudAccountsResponseBody</p>
      */
+    public static class PrivilegeHostingError extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
+        private String errorCode;
+
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
+        private String errorMessage;
+
+        private PrivilegeHostingError(Builder builder) {
+            this.errorCode = builder.errorCode;
+            this.errorMessage = builder.errorMessage;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PrivilegeHostingError create() {
+            return builder().build();
+        }
+
+        /**
+         * @return errorCode
+         */
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        /**
+         * @return errorMessage
+         */
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public static final class Builder {
+            private String errorCode; 
+            private String errorMessage; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivilegeHostingError model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+            } 
+
+            /**
+             * <p>失败错误码</p>
+             */
+            public Builder errorCode(String errorCode) {
+                this.errorCode = errorCode;
+                return this;
+            }
+
+            /**
+             * <p>失败信息</p>
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
+                return this;
+            }
+
+            public PrivilegeHostingError build() {
+                return new PrivilegeHostingError(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListCloudAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudAccountsResponseBody</p>
+     */
     public static class CloudAccounts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CloudAccountExternalId")
         private String cloudAccountExternalId;
@@ -368,6 +443,18 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
+        @com.aliyun.core.annotation.NameInMap("PrivilegeApplicationIds")
+        private java.util.List<String> privilegeApplicationIds;
+
+        @com.aliyun.core.annotation.NameInMap("PrivilegeHostingError")
+        private PrivilegeHostingError privilegeHostingError;
+
+        @com.aliyun.core.annotation.NameInMap("PrivilegeHostingState")
+        private String privilegeHostingState;
+
+        @com.aliyun.core.annotation.NameInMap("PrivilegeStatus")
+        private String privilegeStatus;
+
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
@@ -383,6 +470,10 @@ public class ListCloudAccountsResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.description = builder.description;
             this.instanceId = builder.instanceId;
+            this.privilegeApplicationIds = builder.privilegeApplicationIds;
+            this.privilegeHostingError = builder.privilegeHostingError;
+            this.privilegeHostingState = builder.privilegeHostingState;
+            this.privilegeStatus = builder.privilegeStatus;
             this.updateTime = builder.updateTime;
         }
 
@@ -472,6 +563,34 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         }
 
         /**
+         * @return privilegeApplicationIds
+         */
+        public java.util.List<String> getPrivilegeApplicationIds() {
+            return this.privilegeApplicationIds;
+        }
+
+        /**
+         * @return privilegeHostingError
+         */
+        public PrivilegeHostingError getPrivilegeHostingError() {
+            return this.privilegeHostingError;
+        }
+
+        /**
+         * @return privilegeHostingState
+         */
+        public String getPrivilegeHostingState() {
+            return this.privilegeHostingState;
+        }
+
+        /**
+         * @return privilegeStatus
+         */
+        public String getPrivilegeStatus() {
+            return this.privilegeStatus;
+        }
+
+        /**
          * @return updateTime
          */
         public Long getUpdateTime() {
@@ -490,6 +609,10 @@ public class ListCloudAccountsResponseBody extends TeaModel {
             private Long createTime; 
             private String description; 
             private String instanceId; 
+            private java.util.List<String> privilegeApplicationIds; 
+            private PrivilegeHostingError privilegeHostingError; 
+            private String privilegeHostingState; 
+            private String privilegeStatus; 
             private Long updateTime; 
 
             private Builder() {
@@ -507,6 +630,10 @@ public class ListCloudAccountsResponseBody extends TeaModel {
                 this.createTime = model.createTime;
                 this.description = model.description;
                 this.instanceId = model.instanceId;
+                this.privilegeApplicationIds = model.privilegeApplicationIds;
+                this.privilegeHostingError = model.privilegeHostingError;
+                this.privilegeHostingState = model.privilegeHostingState;
+                this.privilegeStatus = model.privilegeStatus;
                 this.updateTime = model.updateTime;
             } 
 
@@ -619,6 +746,38 @@ public class ListCloudAccountsResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * <p>关联的特权应用ID列表</p>
+             */
+            public Builder privilegeApplicationIds(java.util.List<String> privilegeApplicationIds) {
+                this.privilegeApplicationIds = privilegeApplicationIds;
+                return this;
+            }
+
+            /**
+             * <p>特权托管或移除失败原因</p>
+             */
+            public Builder privilegeHostingError(PrivilegeHostingError privilegeHostingError) {
+                this.privilegeHostingError = privilegeHostingError;
+                return this;
+            }
+
+            /**
+             * <p>特权托管状态，即是否有特权能力</p>
+             */
+            public Builder privilegeHostingState(String privilegeHostingState) {
+                this.privilegeHostingState = privilegeHostingState;
+                return this;
+            }
+
+            /**
+             * <p>特权的开关状态，即特权能力是否可用</p>
+             */
+            public Builder privilegeStatus(String privilegeStatus) {
+                this.privilegeStatus = privilegeStatus;
                 return this;
             }
 

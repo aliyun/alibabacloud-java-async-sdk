@@ -176,6 +176,9 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthorizationRuleName")
         private String authorizationRuleName;
 
+        @com.aliyun.core.annotation.NameInMap("AuthorizationRuleScenarioLabel")
+        private String authorizationRuleScenarioLabel;
+
         @com.aliyun.core.annotation.NameInMap("AuthorizationRuleSubjectId")
         private String authorizationRuleSubjectId;
 
@@ -208,6 +211,7 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
             this.authorizationRuleCreationType = builder.authorizationRuleCreationType;
             this.authorizationRuleId = builder.authorizationRuleId;
             this.authorizationRuleName = builder.authorizationRuleName;
+            this.authorizationRuleScenarioLabel = builder.authorizationRuleScenarioLabel;
             this.authorizationRuleSubjectId = builder.authorizationRuleSubjectId;
             this.authorizationRuleSubjectScope = builder.authorizationRuleSubjectScope;
             this.authorizationRuleSubjectType = builder.authorizationRuleSubjectType;
@@ -253,6 +257,13 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
          */
         public String getAuthorizationRuleName() {
             return this.authorizationRuleName;
+        }
+
+        /**
+         * @return authorizationRuleScenarioLabel
+         */
+        public String getAuthorizationRuleScenarioLabel() {
+            return this.authorizationRuleScenarioLabel;
         }
 
         /**
@@ -323,6 +334,7 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
             private String authorizationRuleCreationType; 
             private String authorizationRuleId; 
             private String authorizationRuleName; 
+            private String authorizationRuleScenarioLabel; 
             private String authorizationRuleSubjectId; 
             private String authorizationRuleSubjectScope; 
             private String authorizationRuleSubjectType; 
@@ -341,6 +353,7 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
                 this.authorizationRuleCreationType = model.authorizationRuleCreationType;
                 this.authorizationRuleId = model.authorizationRuleId;
                 this.authorizationRuleName = model.authorizationRuleName;
+                this.authorizationRuleScenarioLabel = model.authorizationRuleScenarioLabel;
                 this.authorizationRuleSubjectId = model.authorizationRuleSubjectId;
                 this.authorizationRuleSubjectScope = model.authorizationRuleSubjectScope;
                 this.authorizationRuleSubjectType = model.authorizationRuleSubjectType;
@@ -393,6 +406,14 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
              */
             public Builder authorizationRuleName(String authorizationRuleName) {
                 this.authorizationRuleName = authorizationRuleName;
+                return this;
+            }
+
+            /**
+             * <p>授权规则场景标签。</p>
+             */
+            public Builder authorizationRuleScenarioLabel(String authorizationRuleScenarioLabel) {
+                this.authorizationRuleScenarioLabel = authorizationRuleScenarioLabel;
                 return this;
             }
 

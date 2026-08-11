@@ -31,6 +31,11 @@ public class CreateAuthorizationRuleRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String authorizationRuleName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthorizationRuleScenarioLabel")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String authorizationRuleScenarioLabel;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -56,6 +61,7 @@ public class CreateAuthorizationRuleRequest extends Request {
         this.regionId = builder.regionId;
         this.authorizationResourceScope = builder.authorizationResourceScope;
         this.authorizationRuleName = builder.authorizationRuleName;
+        this.authorizationRuleScenarioLabel = builder.authorizationRuleScenarioLabel;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.instanceId = builder.instanceId;
@@ -97,6 +103,13 @@ public class CreateAuthorizationRuleRequest extends Request {
     }
 
     /**
+     * @return authorizationRuleScenarioLabel
+     */
+    public String getAuthorizationRuleScenarioLabel() {
+        return this.authorizationRuleScenarioLabel;
+    }
+
+    /**
      * @return clientToken
      */
     public String getClientToken() {
@@ -128,6 +141,7 @@ public class CreateAuthorizationRuleRequest extends Request {
         private String regionId; 
         private String authorizationResourceScope; 
         private String authorizationRuleName; 
+        private String authorizationRuleScenarioLabel; 
         private String clientToken; 
         private String description; 
         private String instanceId; 
@@ -142,6 +156,7 @@ public class CreateAuthorizationRuleRequest extends Request {
             this.regionId = request.regionId;
             this.authorizationResourceScope = request.authorizationResourceScope;
             this.authorizationRuleName = request.authorizationRuleName;
+            this.authorizationRuleScenarioLabel = request.authorizationRuleScenarioLabel;
             this.clientToken = request.clientToken;
             this.description = request.description;
             this.instanceId = request.instanceId;
@@ -179,6 +194,18 @@ public class CreateAuthorizationRuleRequest extends Request {
         public Builder authorizationRuleName(String authorizationRuleName) {
             this.putQueryParameter("AuthorizationRuleName", authorizationRuleName);
             this.authorizationRuleName = authorizationRuleName;
+            return this;
+        }
+
+        /**
+         * <p>授权规则场景标签，长度限制最大64个字符。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>privileged_cloud_account</p>
+         */
+        public Builder authorizationRuleScenarioLabel(String authorizationRuleScenarioLabel) {
+            this.putQueryParameter("AuthorizationRuleScenarioLabel", authorizationRuleScenarioLabel);
+            this.authorizationRuleScenarioLabel = authorizationRuleScenarioLabel;
             return this;
         }
 

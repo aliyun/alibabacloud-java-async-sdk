@@ -281,6 +281,9 @@ public class GetCloudAccountRoleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CloudAccountId")
         private String cloudAccountId;
 
+        @com.aliyun.core.annotation.NameInMap("CloudAccountRoleCreationType")
+        private String cloudAccountRoleCreationType;
+
         @com.aliyun.core.annotation.NameInMap("CloudAccountRoleExternalId")
         private String cloudAccountRoleExternalId;
 
@@ -319,6 +322,7 @@ public class GetCloudAccountRoleResponseBody extends TeaModel {
 
         private CloudAccountRole(Builder builder) {
             this.cloudAccountId = builder.cloudAccountId;
+            this.cloudAccountRoleCreationType = builder.cloudAccountRoleCreationType;
             this.cloudAccountRoleExternalId = builder.cloudAccountRoleExternalId;
             this.cloudAccountRoleHealth = builder.cloudAccountRoleHealth;
             this.cloudAccountRoleHealthCheckResult = builder.cloudAccountRoleHealthCheckResult;
@@ -346,6 +350,13 @@ public class GetCloudAccountRoleResponseBody extends TeaModel {
          */
         public String getCloudAccountId() {
             return this.cloudAccountId;
+        }
+
+        /**
+         * @return cloudAccountRoleCreationType
+         */
+        public String getCloudAccountRoleCreationType() {
+            return this.cloudAccountRoleCreationType;
         }
 
         /**
@@ -434,6 +445,7 @@ public class GetCloudAccountRoleResponseBody extends TeaModel {
 
         public static final class Builder {
             private String cloudAccountId; 
+            private String cloudAccountRoleCreationType; 
             private String cloudAccountRoleExternalId; 
             private String cloudAccountRoleHealth; 
             private CloudAccountRoleHealthCheckResult cloudAccountRoleHealthCheckResult; 
@@ -452,6 +464,7 @@ public class GetCloudAccountRoleResponseBody extends TeaModel {
 
             private Builder(CloudAccountRole model) {
                 this.cloudAccountId = model.cloudAccountId;
+                this.cloudAccountRoleCreationType = model.cloudAccountRoleCreationType;
                 this.cloudAccountRoleExternalId = model.cloudAccountRoleExternalId;
                 this.cloudAccountRoleHealth = model.cloudAccountRoleHealth;
                 this.cloudAccountRoleHealthCheckResult = model.cloudAccountRoleHealthCheckResult;
@@ -474,6 +487,14 @@ public class GetCloudAccountRoleResponseBody extends TeaModel {
              */
             public Builder cloudAccountId(String cloudAccountId) {
                 this.cloudAccountId = cloudAccountId;
+                return this;
+            }
+
+            /**
+             * CloudAccountRoleCreationType.
+             */
+            public Builder cloudAccountRoleCreationType(String cloudAccountRoleCreationType) {
+                this.cloudAccountRoleCreationType = cloudAccountRoleCreationType;
                 return this;
             }
 
