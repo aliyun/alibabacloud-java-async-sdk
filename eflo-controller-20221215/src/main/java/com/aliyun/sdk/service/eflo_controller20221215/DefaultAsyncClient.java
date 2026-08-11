@@ -31,24 +31,24 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.version = "2022-12-15";
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("me-east-1", "eflo-controller.me-east-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "eflo-controller.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "eflo-controller.cn-zhangjiakou.aliyuncs.com"),
             new TeaPair("cn-wulanchabu", "eflo-controller.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "eflo-controller.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "eflo-controller.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-beijing", "eflo-controller.cn-beijing.aliyuncs.com"),
             new TeaPair("cn-shanghai", "eflo-controller.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "eflo-controller.cn-huhehaote.aliyuncs.com"),
             new TeaPair("cn-hongkong", "eflo-controller.cn-hongkong.aliyuncs.com"),
             new TeaPair("cn-heyuan", "eflo-controller.cn-heyuan.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "eflo-controller.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "eflo-controller.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "eflo-controller.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "eflo-controller.ap-northeast-1.aliyuncs.com"),
             new TeaPair("cn-guangzhou", "eflo-controller.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-beijing", "eflo-controller.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-8", "eflo-controller.ap-sourtheast-8.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "eflo-controller.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "eflo-controller.ap-southeast-3.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "eflo-controller.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "eflo-controller.ap-northeast-1.aliyuncs.com")
+            new TeaPair("ap-southeast-3", "eflo-controller.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "eflo-controller.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "eflo-controller.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "eflo-controller.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "eflo-controller.ap-southeast-8.aliyuncs.com"),
+            new TeaPair("eu-central-1", "eflo-controller.eu-central-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "eflo-controller.me-east-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "eflo-controller.cn-shanghai-finance-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -482,6 +482,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeNodeGroupRefreshTask  DescribeNodeGroupRefreshTaskRequest
+     * @return DescribeNodeGroupRefreshTaskResponse
+     */
+    @Override
+    public CompletableFuture<DescribeNodeGroupRefreshTaskResponse> describeNodeGroupRefreshTask(DescribeNodeGroupRefreshTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeNodeGroupRefreshTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeNodeGroupRefreshTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeNodeGroupRefreshTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeNodeType  DescribeNodeTypeRequest
      * @return DescribeNodeTypeResponse
      */
@@ -809,6 +827,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListNodeGroupDriftedNodes  ListNodeGroupDriftedNodesRequest
+     * @return ListNodeGroupDriftedNodesResponse
+     */
+    @Override
+    public CompletableFuture<ListNodeGroupDriftedNodesResponse> listNodeGroupDriftedNodes(ListNodeGroupDriftedNodesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListNodeGroupDriftedNodes").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListNodeGroupDriftedNodesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListNodeGroupDriftedNodesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListNodeGroupRefreshTasks  ListNodeGroupRefreshTasksRequest
+     * @return ListNodeGroupRefreshTasksResponse
+     */
+    @Override
+    public CompletableFuture<ListNodeGroupRefreshTasksResponse> listNodeGroupRefreshTasks(ListNodeGroupRefreshTasksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListNodeGroupRefreshTasks").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListNodeGroupRefreshTasksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListNodeGroupRefreshTasksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListNodeGroups  ListNodeGroupsRequest
      * @return ListNodeGroupsResponse
      */
@@ -911,6 +965,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RebootNodesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RefreshNodeGroupNodes  RefreshNodeGroupNodesRequest
+     * @return RefreshNodeGroupNodesResponse
+     */
+    @Override
+    public CompletableFuture<RefreshNodeGroupNodesResponse> refreshNodeGroupNodes(RefreshNodeGroupNodesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RefreshNodeGroupNodes").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RefreshNodeGroupNodesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RefreshNodeGroupNodesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

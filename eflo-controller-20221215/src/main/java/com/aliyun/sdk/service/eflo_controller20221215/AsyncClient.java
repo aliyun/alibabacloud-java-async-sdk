@@ -167,6 +167,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeNodeGroupResponse> describeNodeGroup(DescribeNodeGroupRequest request);
 
     /**
+     * @param request the request parameters of DescribeNodeGroupRefreshTask  DescribeNodeGroupRefreshTaskRequest
+     * @return DescribeNodeGroupRefreshTaskResponse
+     */
+    CompletableFuture<DescribeNodeGroupRefreshTaskResponse> describeNodeGroupRefreshTask(DescribeNodeGroupRefreshTaskRequest request);
+
+    /**
      * @param request the request parameters of DescribeNodeType  DescribeNodeTypeRequest
      * @return DescribeNodeTypeResponse
      */
@@ -278,6 +284,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListNetTestResultsResponse> listNetTestResults(ListNetTestResultsRequest request);
 
     /**
+     * @param request the request parameters of ListNodeGroupDriftedNodes  ListNodeGroupDriftedNodesRequest
+     * @return ListNodeGroupDriftedNodesResponse
+     */
+    CompletableFuture<ListNodeGroupDriftedNodesResponse> listNodeGroupDriftedNodes(ListNodeGroupDriftedNodesRequest request);
+
+    /**
+     * @param request the request parameters of ListNodeGroupRefreshTasks  ListNodeGroupRefreshTasksRequest
+     * @return ListNodeGroupRefreshTasksResponse
+     */
+    CompletableFuture<ListNodeGroupRefreshTasksResponse> listNodeGroupRefreshTasks(ListNodeGroupRefreshTasksRequest request);
+
+    /**
      * @param request the request parameters of ListNodeGroups  ListNodeGroupsRequest
      * @return ListNodeGroupsResponse
      */
@@ -312,6 +330,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RebootNodesResponse
      */
     CompletableFuture<RebootNodesResponse> rebootNodes(RebootNodesRequest request);
+
+    /**
+     * @param request the request parameters of RefreshNodeGroupNodes  RefreshNodeGroupNodesRequest
+     * @return RefreshNodeGroupNodesResponse
+     */
+    CompletableFuture<RefreshNodeGroupNodesResponse> refreshNodeGroupNodes(RefreshNodeGroupNodesRequest request);
 
     /**
      * @param request the request parameters of ReimageNodes  ReimageNodesRequest
