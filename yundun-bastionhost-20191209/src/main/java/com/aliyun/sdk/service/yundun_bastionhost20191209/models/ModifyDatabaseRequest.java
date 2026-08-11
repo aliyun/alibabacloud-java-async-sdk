@@ -56,6 +56,10 @@ public class ModifyDatabaseRequest extends Request {
     private String networkDomainId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -74,6 +78,7 @@ public class ModifyDatabaseRequest extends Request {
         this.databasePublicAddress = builder.databasePublicAddress;
         this.instanceId = builder.instanceId;
         this.networkDomainId = builder.networkDomainId;
+        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
         this.sourceInstanceId = builder.sourceInstanceId;
     }
@@ -155,6 +160,13 @@ public class ModifyDatabaseRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -178,6 +190,7 @@ public class ModifyDatabaseRequest extends Request {
         private String databasePublicAddress; 
         private String instanceId; 
         private String networkDomainId; 
+        private Long projectId; 
         private String regionId; 
         private String sourceInstanceId; 
 
@@ -196,6 +209,7 @@ public class ModifyDatabaseRequest extends Request {
             this.databasePublicAddress = request.databasePublicAddress;
             this.instanceId = request.instanceId;
             this.networkDomainId = request.networkDomainId;
+            this.projectId = request.projectId;
             this.regionId = request.regionId;
             this.sourceInstanceId = request.sourceInstanceId;
         } 
@@ -317,6 +331,15 @@ public class ModifyDatabaseRequest extends Request {
         public Builder networkDomainId(String networkDomainId) {
             this.putQueryParameter("NetworkDomainId", networkDomainId);
             this.networkDomainId = networkDomainId;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

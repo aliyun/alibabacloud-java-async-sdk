@@ -65,6 +65,10 @@ public class CreateDatabaseRequest extends Request {
     private String polarDBEndpointType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -94,6 +98,7 @@ public class CreateDatabaseRequest extends Request {
         this.instanceMemberId = builder.instanceMemberId;
         this.networkDomainId = builder.networkDomainId;
         this.polarDBEndpointType = builder.polarDBEndpointType;
+        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
         this.source = builder.source;
         this.sourceInstanceId = builder.sourceInstanceId;
@@ -191,6 +196,13 @@ public class CreateDatabaseRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -230,6 +242,7 @@ public class CreateDatabaseRequest extends Request {
         private Long instanceMemberId; 
         private String networkDomainId; 
         private String polarDBEndpointType; 
+        private Long projectId; 
         private String regionId; 
         private String source; 
         private String sourceInstanceId; 
@@ -252,6 +265,7 @@ public class CreateDatabaseRequest extends Request {
             this.instanceMemberId = request.instanceMemberId;
             this.networkDomainId = request.networkDomainId;
             this.polarDBEndpointType = request.polarDBEndpointType;
+            this.projectId = request.projectId;
             this.regionId = request.regionId;
             this.source = request.source;
             this.sourceInstanceId = request.sourceInstanceId;
@@ -413,6 +427,15 @@ public class CreateDatabaseRequest extends Request {
         public Builder polarDBEndpointType(String polarDBEndpointType) {
             this.putQueryParameter("PolarDBEndpointType", polarDBEndpointType);
             this.polarDBEndpointType = polarDBEndpointType;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

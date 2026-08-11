@@ -28,6 +28,10 @@ public class AcceptApproveCommandRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -35,6 +39,7 @@ public class AcceptApproveCommandRequest extends Request {
         super(builder);
         this.commandId = builder.commandId;
         this.instanceId = builder.instanceId;
+        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
     }
 
@@ -66,6 +71,13 @@ public class AcceptApproveCommandRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -75,6 +87,7 @@ public class AcceptApproveCommandRequest extends Request {
     public static final class Builder extends Request.Builder<AcceptApproveCommandRequest, Builder> {
         private String commandId; 
         private String instanceId; 
+        private Long projectId; 
         private String regionId; 
 
         private Builder() {
@@ -85,6 +98,7 @@ public class AcceptApproveCommandRequest extends Request {
             super(request);
             this.commandId = request.commandId;
             this.instanceId = request.instanceId;
+            this.projectId = request.projectId;
             this.regionId = request.regionId;
         } 
 
@@ -117,6 +131,15 @@ public class AcceptApproveCommandRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

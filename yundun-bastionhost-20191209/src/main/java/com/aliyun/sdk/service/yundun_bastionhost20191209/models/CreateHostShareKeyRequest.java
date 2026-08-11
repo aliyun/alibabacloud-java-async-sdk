@@ -37,6 +37,10 @@ public class CreateHostShareKeyRequest extends Request {
     private String privateKey;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -46,6 +50,7 @@ public class CreateHostShareKeyRequest extends Request {
         this.instanceId = builder.instanceId;
         this.passPhrase = builder.passPhrase;
         this.privateKey = builder.privateKey;
+        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
     }
 
@@ -91,6 +96,13 @@ public class CreateHostShareKeyRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -102,6 +114,7 @@ public class CreateHostShareKeyRequest extends Request {
         private String instanceId; 
         private String passPhrase; 
         private String privateKey; 
+        private Long projectId; 
         private String regionId; 
 
         private Builder() {
@@ -114,6 +127,7 @@ public class CreateHostShareKeyRequest extends Request {
             this.instanceId = request.instanceId;
             this.passPhrase = request.passPhrase;
             this.privateKey = request.privateKey;
+            this.projectId = request.projectId;
             this.regionId = request.regionId;
         } 
 
@@ -171,6 +185,15 @@ public class CreateHostShareKeyRequest extends Request {
         public Builder privateKey(String privateKey) {
             this.putQueryParameter("PrivateKey", privateKey);
             this.privateKey = privateKey;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

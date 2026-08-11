@@ -33,6 +33,10 @@ public class SetPolicyAccessTimeRangeConfigRequest extends Request {
     private String policyId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -41,6 +45,7 @@ public class SetPolicyAccessTimeRangeConfigRequest extends Request {
         this.accessTimeRangeConfig = builder.accessTimeRangeConfig;
         this.instanceId = builder.instanceId;
         this.policyId = builder.policyId;
+        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
     }
 
@@ -79,6 +84,13 @@ public class SetPolicyAccessTimeRangeConfigRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -89,6 +101,7 @@ public class SetPolicyAccessTimeRangeConfigRequest extends Request {
         private AccessTimeRangeConfig accessTimeRangeConfig; 
         private String instanceId; 
         private String policyId; 
+        private Long projectId; 
         private String regionId; 
 
         private Builder() {
@@ -100,6 +113,7 @@ public class SetPolicyAccessTimeRangeConfigRequest extends Request {
             this.accessTimeRangeConfig = request.accessTimeRangeConfig;
             this.instanceId = request.instanceId;
             this.policyId = request.policyId;
+            this.projectId = request.projectId;
             this.regionId = request.regionId;
         } 
 
@@ -143,6 +157,15 @@ public class SetPolicyAccessTimeRangeConfigRequest extends Request {
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
             this.policyId = policyId;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

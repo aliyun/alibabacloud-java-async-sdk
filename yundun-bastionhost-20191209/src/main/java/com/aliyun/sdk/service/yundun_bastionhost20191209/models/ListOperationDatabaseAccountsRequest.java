@@ -31,6 +31,10 @@ public class ListOperationDatabaseAccountsRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationProjectId")
+    private String operationProjectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
@@ -47,6 +51,7 @@ public class ListOperationDatabaseAccountsRequest extends Request {
         this.databaseAccountName = builder.databaseAccountName;
         this.databaseId = builder.databaseId;
         this.instanceId = builder.instanceId;
+        this.operationProjectId = builder.operationProjectId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
@@ -87,6 +92,13 @@ public class ListOperationDatabaseAccountsRequest extends Request {
     }
 
     /**
+     * @return operationProjectId
+     */
+    public String getOperationProjectId() {
+        return this.operationProjectId;
+    }
+
+    /**
      * @return pageNumber
      */
     public String getPageNumber() {
@@ -111,6 +123,7 @@ public class ListOperationDatabaseAccountsRequest extends Request {
         private String databaseAccountName; 
         private String databaseId; 
         private String instanceId; 
+        private String operationProjectId; 
         private String pageNumber; 
         private String pageSize; 
         private String regionId; 
@@ -124,6 +137,7 @@ public class ListOperationDatabaseAccountsRequest extends Request {
             this.databaseAccountName = request.databaseAccountName;
             this.databaseId = request.databaseId;
             this.instanceId = request.instanceId;
+            this.operationProjectId = request.operationProjectId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
@@ -169,6 +183,15 @@ public class ListOperationDatabaseAccountsRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * OperationProjectId.
+         */
+        public Builder operationProjectId(String operationProjectId) {
+            this.putQueryParameter("OperationProjectId", operationProjectId);
+            this.operationProjectId = operationProjectId;
             return this;
         }
 

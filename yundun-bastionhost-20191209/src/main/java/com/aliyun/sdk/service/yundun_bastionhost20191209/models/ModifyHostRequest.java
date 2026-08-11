@@ -56,6 +56,10 @@ public class ModifyHostRequest extends Request {
     private String prefKex;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -70,6 +74,7 @@ public class ModifyHostRequest extends Request {
         this.networkDomainId = builder.networkDomainId;
         this.OSType = builder.OSType;
         this.prefKex = builder.prefKex;
+        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
     }
 
@@ -150,6 +155,13 @@ public class ModifyHostRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -166,6 +178,7 @@ public class ModifyHostRequest extends Request {
         private String networkDomainId; 
         private String OSType; 
         private String prefKex; 
+        private Long projectId; 
         private String regionId; 
 
         private Builder() {
@@ -183,6 +196,7 @@ public class ModifyHostRequest extends Request {
             this.networkDomainId = request.networkDomainId;
             this.OSType = request.OSType;
             this.prefKex = request.prefKex;
+            this.projectId = request.projectId;
             this.regionId = request.regionId;
         } 
 
@@ -312,6 +326,15 @@ public class ModifyHostRequest extends Request {
         public Builder prefKex(String prefKex) {
             this.putQueryParameter("PrefKex", prefKex);
             this.prefKex = prefKex;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

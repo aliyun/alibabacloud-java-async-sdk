@@ -19,7 +19,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListHostAccountsForHostShareKeyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HostShareKeyId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String hostShareKeyId;
 
     @com.aliyun.core.annotation.Query
@@ -36,6 +35,10 @@ public class ListHostAccountsForHostShareKeyRequest extends Request {
     private String pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -45,6 +48,7 @@ public class ListHostAccountsForHostShareKeyRequest extends Request {
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
     }
 
@@ -90,6 +94,13 @@ public class ListHostAccountsForHostShareKeyRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -101,6 +112,7 @@ public class ListHostAccountsForHostShareKeyRequest extends Request {
         private String instanceId; 
         private String pageNumber; 
         private String pageSize; 
+        private Long projectId; 
         private String regionId; 
 
         private Builder() {
@@ -113,6 +125,7 @@ public class ListHostAccountsForHostShareKeyRequest extends Request {
             this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.projectId = request.projectId;
             this.regionId = request.regionId;
         } 
 
@@ -121,7 +134,6 @@ public class ListHostAccountsForHostShareKeyRequest extends Request {
          * <blockquote>
          * <p> You can call the <a href="https://help.aliyun.com/document_detail/462973.html">ListHostShareKeys</a> operation to query the shared key ID.</p>
          * </blockquote>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1124</p>
@@ -169,6 +181,15 @@ public class ListHostAccountsForHostShareKeyRequest extends Request {
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

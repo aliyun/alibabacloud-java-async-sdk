@@ -143,6 +143,9 @@ public class ListOperationHostsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OSType")
         private String OSType;
 
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
+        private String projectName;
+
         @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
@@ -160,6 +163,7 @@ public class ListOperationHostsResponseBody extends TeaModel {
             this.hostPrivateAddress = builder.hostPrivateAddress;
             this.hostPublicAddress = builder.hostPublicAddress;
             this.OSType = builder.OSType;
+            this.projectName = builder.projectName;
             this.source = builder.source;
             this.sourceInstanceId = builder.sourceInstanceId;
             this.sourceInstanceState = builder.sourceInstanceState;
@@ -223,6 +227,13 @@ public class ListOperationHostsResponseBody extends TeaModel {
         }
 
         /**
+         * @return projectName
+         */
+        public String getProjectName() {
+            return this.projectName;
+        }
+
+        /**
          * @return source
          */
         public String getSource() {
@@ -251,6 +262,7 @@ public class ListOperationHostsResponseBody extends TeaModel {
             private String hostPrivateAddress; 
             private String hostPublicAddress; 
             private String OSType; 
+            private String projectName; 
             private String source; 
             private String sourceInstanceId; 
             private String sourceInstanceState; 
@@ -266,6 +278,7 @@ public class ListOperationHostsResponseBody extends TeaModel {
                 this.hostPrivateAddress = model.hostPrivateAddress;
                 this.hostPublicAddress = model.hostPublicAddress;
                 this.OSType = model.OSType;
+                this.projectName = model.projectName;
                 this.source = model.source;
                 this.sourceInstanceId = model.sourceInstanceId;
                 this.sourceInstanceState = model.sourceInstanceState;
@@ -353,6 +366,14 @@ public class ListOperationHostsResponseBody extends TeaModel {
              */
             public Builder OSType(String OSType) {
                 this.OSType = OSType;
+                return this;
+            }
+
+            /**
+             * ProjectName.
+             */
+            public Builder projectName(String projectName) {
+                this.projectName = projectName;
                 return this;
             }
 

@@ -50,6 +50,10 @@ public class CreateOperationTicketRequest extends Request {
     private Boolean isOneTimeEffect;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProtocolName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String protocolName;
@@ -67,6 +71,7 @@ public class CreateOperationTicketRequest extends Request {
         this.effectStartTime = builder.effectStartTime;
         this.instanceId = builder.instanceId;
         this.isOneTimeEffect = builder.isOneTimeEffect;
+        this.projectId = builder.projectId;
         this.protocolName = builder.protocolName;
         this.regionId = builder.regionId;
     }
@@ -134,6 +139,13 @@ public class CreateOperationTicketRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return protocolName
      */
     public String getProtocolName() {
@@ -155,6 +167,7 @@ public class CreateOperationTicketRequest extends Request {
         private Long effectStartTime; 
         private String instanceId; 
         private Boolean isOneTimeEffect; 
+        private Long projectId; 
         private String protocolName; 
         private String regionId; 
 
@@ -171,6 +184,7 @@ public class CreateOperationTicketRequest extends Request {
             this.effectStartTime = request.effectStartTime;
             this.instanceId = request.instanceId;
             this.isOneTimeEffect = request.isOneTimeEffect;
+            this.projectId = request.projectId;
             this.protocolName = request.protocolName;
             this.regionId = request.regionId;
         } 
@@ -244,6 +258,15 @@ public class CreateOperationTicketRequest extends Request {
         public Builder isOneTimeEffect(Boolean isOneTimeEffect) {
             this.putQueryParameter("IsOneTimeEffect", isOneTimeEffect);
             this.isOneTimeEffect = isOneTimeEffect;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

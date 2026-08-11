@@ -46,9 +46,28 @@ public class ModifyInstanceADAuthServerRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsDefault")
+    private String isDefault;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IsSSL")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String isSSL;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsSyncEmailAttr")
+    private String isSyncEmailAttr;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsSyncMobileAttr")
+    private String isSyncMobileAttr;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsSyncNameAttr")
+    private String isSyncNameAttr;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsSyncOuAsUserGroup")
+    private String isSyncOuAsUserGroup;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MobileMapping")
@@ -77,8 +96,20 @@ public class ModifyInstanceADAuthServerRequest extends Request {
     private String server;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerName")
+    private String serverName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StandbyServer")
     private String standbyServer;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SyncInterval")
+    private String syncInterval;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserSourceId")
+    private String userSourceId;
 
     private ModifyInstanceADAuthServerRequest(Builder builder) {
         super(builder);
@@ -88,14 +119,22 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         this.emailMapping = builder.emailMapping;
         this.filter = builder.filter;
         this.instanceId = builder.instanceId;
+        this.isDefault = builder.isDefault;
         this.isSSL = builder.isSSL;
+        this.isSyncEmailAttr = builder.isSyncEmailAttr;
+        this.isSyncMobileAttr = builder.isSyncMobileAttr;
+        this.isSyncNameAttr = builder.isSyncNameAttr;
+        this.isSyncOuAsUserGroup = builder.isSyncOuAsUserGroup;
         this.mobileMapping = builder.mobileMapping;
         this.nameMapping = builder.nameMapping;
         this.password = builder.password;
         this.port = builder.port;
         this.regionId = builder.regionId;
         this.server = builder.server;
+        this.serverName = builder.serverName;
         this.standbyServer = builder.standbyServer;
+        this.syncInterval = builder.syncInterval;
+        this.userSourceId = builder.userSourceId;
     }
 
     public static Builder builder() {
@@ -154,10 +193,45 @@ public class ModifyInstanceADAuthServerRequest extends Request {
     }
 
     /**
+     * @return isDefault
+     */
+    public String getIsDefault() {
+        return this.isDefault;
+    }
+
+    /**
      * @return isSSL
      */
     public String getIsSSL() {
         return this.isSSL;
+    }
+
+    /**
+     * @return isSyncEmailAttr
+     */
+    public String getIsSyncEmailAttr() {
+        return this.isSyncEmailAttr;
+    }
+
+    /**
+     * @return isSyncMobileAttr
+     */
+    public String getIsSyncMobileAttr() {
+        return this.isSyncMobileAttr;
+    }
+
+    /**
+     * @return isSyncNameAttr
+     */
+    public String getIsSyncNameAttr() {
+        return this.isSyncNameAttr;
+    }
+
+    /**
+     * @return isSyncOuAsUserGroup
+     */
+    public String getIsSyncOuAsUserGroup() {
+        return this.isSyncOuAsUserGroup;
     }
 
     /**
@@ -203,10 +277,31 @@ public class ModifyInstanceADAuthServerRequest extends Request {
     }
 
     /**
+     * @return serverName
+     */
+    public String getServerName() {
+        return this.serverName;
+    }
+
+    /**
      * @return standbyServer
      */
     public String getStandbyServer() {
         return this.standbyServer;
+    }
+
+    /**
+     * @return syncInterval
+     */
+    public String getSyncInterval() {
+        return this.syncInterval;
+    }
+
+    /**
+     * @return userSourceId
+     */
+    public String getUserSourceId() {
+        return this.userSourceId;
     }
 
     public static final class Builder extends Request.Builder<ModifyInstanceADAuthServerRequest, Builder> {
@@ -216,14 +311,22 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         private String emailMapping; 
         private String filter; 
         private String instanceId; 
+        private String isDefault; 
         private String isSSL; 
+        private String isSyncEmailAttr; 
+        private String isSyncMobileAttr; 
+        private String isSyncNameAttr; 
+        private String isSyncOuAsUserGroup; 
         private String mobileMapping; 
         private String nameMapping; 
         private String password; 
         private String port; 
         private String regionId; 
         private String server; 
+        private String serverName; 
         private String standbyServer; 
+        private String syncInterval; 
+        private String userSourceId; 
 
         private Builder() {
             super();
@@ -237,14 +340,22 @@ public class ModifyInstanceADAuthServerRequest extends Request {
             this.emailMapping = request.emailMapping;
             this.filter = request.filter;
             this.instanceId = request.instanceId;
+            this.isDefault = request.isDefault;
             this.isSSL = request.isSSL;
+            this.isSyncEmailAttr = request.isSyncEmailAttr;
+            this.isSyncMobileAttr = request.isSyncMobileAttr;
+            this.isSyncNameAttr = request.isSyncNameAttr;
+            this.isSyncOuAsUserGroup = request.isSyncOuAsUserGroup;
             this.mobileMapping = request.mobileMapping;
             this.nameMapping = request.nameMapping;
             this.password = request.password;
             this.port = request.port;
             this.regionId = request.regionId;
             this.server = request.server;
+            this.serverName = request.serverName;
             this.standbyServer = request.standbyServer;
+            this.syncInterval = request.syncInterval;
+            this.userSourceId = request.userSourceId;
         } 
 
         /**
@@ -327,12 +438,20 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
+         * IsDefault.
+         */
+        public Builder isDefault(String isDefault) {
+            this.putQueryParameter("IsDefault", isDefault);
+            this.isDefault = isDefault;
+            return this;
+        }
+
+        /**
          * <p>Specifies whether SSL is supported. Valid values:</p>
          * <ul>
          * <li><strong>true</strong></li>
          * <li><strong>false</strong></li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -340,6 +459,42 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         public Builder isSSL(String isSSL) {
             this.putQueryParameter("IsSSL", isSSL);
             this.isSSL = isSSL;
+            return this;
+        }
+
+        /**
+         * IsSyncEmailAttr.
+         */
+        public Builder isSyncEmailAttr(String isSyncEmailAttr) {
+            this.putQueryParameter("IsSyncEmailAttr", isSyncEmailAttr);
+            this.isSyncEmailAttr = isSyncEmailAttr;
+            return this;
+        }
+
+        /**
+         * IsSyncMobileAttr.
+         */
+        public Builder isSyncMobileAttr(String isSyncMobileAttr) {
+            this.putQueryParameter("IsSyncMobileAttr", isSyncMobileAttr);
+            this.isSyncMobileAttr = isSyncMobileAttr;
+            return this;
+        }
+
+        /**
+         * IsSyncNameAttr.
+         */
+        public Builder isSyncNameAttr(String isSyncNameAttr) {
+            this.putQueryParameter("IsSyncNameAttr", isSyncNameAttr);
+            this.isSyncNameAttr = isSyncNameAttr;
+            return this;
+        }
+
+        /**
+         * IsSyncOuAsUserGroup.
+         */
+        public Builder isSyncOuAsUserGroup(String isSyncOuAsUserGroup) {
+            this.putQueryParameter("IsSyncOuAsUserGroup", isSyncOuAsUserGroup);
+            this.isSyncOuAsUserGroup = isSyncOuAsUserGroup;
             return this;
         }
 
@@ -421,6 +576,15 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         }
 
         /**
+         * ServerName.
+         */
+        public Builder serverName(String serverName) {
+            this.putQueryParameter("ServerName", serverName);
+            this.serverName = serverName;
+            return this;
+        }
+
+        /**
          * <p>The address of the secondary AD server.</p>
          * 
          * <strong>example:</strong>
@@ -429,6 +593,24 @@ public class ModifyInstanceADAuthServerRequest extends Request {
         public Builder standbyServer(String standbyServer) {
             this.putQueryParameter("StandbyServer", standbyServer);
             this.standbyServer = standbyServer;
+            return this;
+        }
+
+        /**
+         * SyncInterval.
+         */
+        public Builder syncInterval(String syncInterval) {
+            this.putQueryParameter("SyncInterval", syncInterval);
+            this.syncInterval = syncInterval;
+            return this;
+        }
+
+        /**
+         * UserSourceId.
+         */
+        public Builder userSourceId(String userSourceId) {
+            this.putQueryParameter("UserSourceId", userSourceId);
+            this.userSourceId = userSourceId;
             return this;
         }
 

@@ -149,6 +149,12 @@ public class ListDatabasesForUserResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetworkDomainId")
         private String networkDomainId;
 
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
+        private String projectId;
+
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
+        private String projectName;
+
         @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
@@ -165,6 +171,8 @@ public class ListDatabasesForUserResponseBody extends TeaModel {
             this.databasePublicAddress = builder.databasePublicAddress;
             this.databaseType = builder.databaseType;
             this.networkDomainId = builder.networkDomainId;
+            this.projectId = builder.projectId;
+            this.projectName = builder.projectName;
             this.source = builder.source;
             this.sourceInstanceId = builder.sourceInstanceId;
         }
@@ -241,6 +249,20 @@ public class ListDatabasesForUserResponseBody extends TeaModel {
         }
 
         /**
+         * @return projectId
+         */
+        public String getProjectId() {
+            return this.projectId;
+        }
+
+        /**
+         * @return projectName
+         */
+        public String getProjectName() {
+            return this.projectName;
+        }
+
+        /**
          * @return source
          */
         public String getSource() {
@@ -264,6 +286,8 @@ public class ListDatabasesForUserResponseBody extends TeaModel {
             private String databasePublicAddress; 
             private String databaseType; 
             private String networkDomainId; 
+            private String projectId; 
+            private String projectName; 
             private String source; 
             private String sourceInstanceId; 
 
@@ -280,6 +304,8 @@ public class ListDatabasesForUserResponseBody extends TeaModel {
                 this.databasePublicAddress = model.databasePublicAddress;
                 this.databaseType = model.databaseType;
                 this.networkDomainId = model.networkDomainId;
+                this.projectId = model.projectId;
+                this.projectName = model.projectName;
                 this.source = model.source;
                 this.sourceInstanceId = model.sourceInstanceId;
             } 
@@ -390,6 +416,22 @@ public class ListDatabasesForUserResponseBody extends TeaModel {
              */
             public Builder networkDomainId(String networkDomainId) {
                 this.networkDomainId = networkDomainId;
+                return this;
+            }
+
+            /**
+             * ProjectId.
+             */
+            public Builder projectId(String projectId) {
+                this.projectId = projectId;
+                return this;
+            }
+
+            /**
+             * ProjectName.
+             */
+            public Builder projectName(String projectName) {
+                this.projectName = projectName;
                 return this;
             }
 

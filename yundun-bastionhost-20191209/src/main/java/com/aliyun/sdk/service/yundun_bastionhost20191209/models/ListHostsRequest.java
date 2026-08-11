@@ -47,6 +47,10 @@ public class ListHostsRequest extends Request {
     private String pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private String projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -71,6 +75,7 @@ public class ListHostsRequest extends Request {
         this.OSType = builder.OSType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
         this.source = builder.source;
         this.sourceInstanceId = builder.sourceInstanceId;
@@ -140,6 +145,13 @@ public class ListHostsRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public String getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -175,6 +187,7 @@ public class ListHostsRequest extends Request {
         private String OSType; 
         private String pageNumber; 
         private String pageSize; 
+        private String projectId; 
         private String regionId; 
         private String source; 
         private String sourceInstanceId; 
@@ -193,6 +206,7 @@ public class ListHostsRequest extends Request {
             this.OSType = request.OSType;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.projectId = request.projectId;
             this.regionId = request.regionId;
             this.source = request.source;
             this.sourceInstanceId = request.sourceInstanceId;
@@ -294,6 +308,15 @@ public class ListHostsRequest extends Request {
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(String projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

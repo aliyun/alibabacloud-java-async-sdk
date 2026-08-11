@@ -116,8 +116,26 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HasPassword")
         private Boolean hasPassword;
 
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
+        private Boolean isDefault;
+
         @com.aliyun.core.annotation.NameInMap("IsSSL")
         private Boolean isSSL;
+
+        @com.aliyun.core.annotation.NameInMap("IsSyncEmailAttr")
+        private Boolean isSyncEmailAttr;
+
+        @com.aliyun.core.annotation.NameInMap("IsSyncMobileAttr")
+        private Boolean isSyncMobileAttr;
+
+        @com.aliyun.core.annotation.NameInMap("IsSyncNameAttr")
+        private Boolean isSyncNameAttr;
+
+        @com.aliyun.core.annotation.NameInMap("IsSyncOuAsUserGroup")
+        private Boolean isSyncOuAsUserGroup;
+
+        @com.aliyun.core.annotation.NameInMap("LatestSyncTime")
+        private Long latestSyncTime;
 
         @com.aliyun.core.annotation.NameInMap("MobileMapping")
         private String mobileMapping;
@@ -131,8 +149,17 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Server")
         private String server;
 
+        @com.aliyun.core.annotation.NameInMap("ServerName")
+        private String serverName;
+
         @com.aliyun.core.annotation.NameInMap("StandbyServer")
         private String standbyServer;
+
+        @com.aliyun.core.annotation.NameInMap("SyncInterval")
+        private Long syncInterval;
+
+        @com.aliyun.core.annotation.NameInMap("UserSourceId")
+        private String userSourceId;
 
         private Ad(Builder builder) {
             this.account = builder.account;
@@ -141,12 +168,21 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
             this.emailMapping = builder.emailMapping;
             this.filter = builder.filter;
             this.hasPassword = builder.hasPassword;
+            this.isDefault = builder.isDefault;
             this.isSSL = builder.isSSL;
+            this.isSyncEmailAttr = builder.isSyncEmailAttr;
+            this.isSyncMobileAttr = builder.isSyncMobileAttr;
+            this.isSyncNameAttr = builder.isSyncNameAttr;
+            this.isSyncOuAsUserGroup = builder.isSyncOuAsUserGroup;
+            this.latestSyncTime = builder.latestSyncTime;
             this.mobileMapping = builder.mobileMapping;
             this.nameMapping = builder.nameMapping;
             this.port = builder.port;
             this.server = builder.server;
+            this.serverName = builder.serverName;
             this.standbyServer = builder.standbyServer;
+            this.syncInterval = builder.syncInterval;
+            this.userSourceId = builder.userSourceId;
         }
 
         public static Builder builder() {
@@ -200,10 +236,52 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
         }
 
         /**
+         * @return isDefault
+         */
+        public Boolean getIsDefault() {
+            return this.isDefault;
+        }
+
+        /**
          * @return isSSL
          */
         public Boolean getIsSSL() {
             return this.isSSL;
+        }
+
+        /**
+         * @return isSyncEmailAttr
+         */
+        public Boolean getIsSyncEmailAttr() {
+            return this.isSyncEmailAttr;
+        }
+
+        /**
+         * @return isSyncMobileAttr
+         */
+        public Boolean getIsSyncMobileAttr() {
+            return this.isSyncMobileAttr;
+        }
+
+        /**
+         * @return isSyncNameAttr
+         */
+        public Boolean getIsSyncNameAttr() {
+            return this.isSyncNameAttr;
+        }
+
+        /**
+         * @return isSyncOuAsUserGroup
+         */
+        public Boolean getIsSyncOuAsUserGroup() {
+            return this.isSyncOuAsUserGroup;
+        }
+
+        /**
+         * @return latestSyncTime
+         */
+        public Long getLatestSyncTime() {
+            return this.latestSyncTime;
         }
 
         /**
@@ -235,10 +313,31 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
         }
 
         /**
+         * @return serverName
+         */
+        public String getServerName() {
+            return this.serverName;
+        }
+
+        /**
          * @return standbyServer
          */
         public String getStandbyServer() {
             return this.standbyServer;
+        }
+
+        /**
+         * @return syncInterval
+         */
+        public Long getSyncInterval() {
+            return this.syncInterval;
+        }
+
+        /**
+         * @return userSourceId
+         */
+        public String getUserSourceId() {
+            return this.userSourceId;
         }
 
         public static final class Builder {
@@ -248,12 +347,21 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
             private String emailMapping; 
             private String filter; 
             private Boolean hasPassword; 
+            private Boolean isDefault; 
             private Boolean isSSL; 
+            private Boolean isSyncEmailAttr; 
+            private Boolean isSyncMobileAttr; 
+            private Boolean isSyncNameAttr; 
+            private Boolean isSyncOuAsUserGroup; 
+            private Long latestSyncTime; 
             private String mobileMapping; 
             private String nameMapping; 
             private Long port; 
             private String server; 
+            private String serverName; 
             private String standbyServer; 
+            private Long syncInterval; 
+            private String userSourceId; 
 
             private Builder() {
             } 
@@ -265,12 +373,21 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
                 this.emailMapping = model.emailMapping;
                 this.filter = model.filter;
                 this.hasPassword = model.hasPassword;
+                this.isDefault = model.isDefault;
                 this.isSSL = model.isSSL;
+                this.isSyncEmailAttr = model.isSyncEmailAttr;
+                this.isSyncMobileAttr = model.isSyncMobileAttr;
+                this.isSyncNameAttr = model.isSyncNameAttr;
+                this.isSyncOuAsUserGroup = model.isSyncOuAsUserGroup;
+                this.latestSyncTime = model.latestSyncTime;
                 this.mobileMapping = model.mobileMapping;
                 this.nameMapping = model.nameMapping;
                 this.port = model.port;
                 this.server = model.server;
+                this.serverName = model.serverName;
                 this.standbyServer = model.standbyServer;
+                this.syncInterval = model.syncInterval;
+                this.userSourceId = model.userSourceId;
             } 
 
             /**
@@ -344,6 +461,14 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
             }
 
             /**
+             * IsDefault.
+             */
+            public Builder isDefault(Boolean isDefault) {
+                this.isDefault = isDefault;
+                return this;
+            }
+
+            /**
              * <p>Indicates whether SSL is supported. Valid values:</p>
              * <ul>
              * <li><strong>true</strong></li>
@@ -355,6 +480,46 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
              */
             public Builder isSSL(Boolean isSSL) {
                 this.isSSL = isSSL;
+                return this;
+            }
+
+            /**
+             * IsSyncEmailAttr.
+             */
+            public Builder isSyncEmailAttr(Boolean isSyncEmailAttr) {
+                this.isSyncEmailAttr = isSyncEmailAttr;
+                return this;
+            }
+
+            /**
+             * IsSyncMobileAttr.
+             */
+            public Builder isSyncMobileAttr(Boolean isSyncMobileAttr) {
+                this.isSyncMobileAttr = isSyncMobileAttr;
+                return this;
+            }
+
+            /**
+             * IsSyncNameAttr.
+             */
+            public Builder isSyncNameAttr(Boolean isSyncNameAttr) {
+                this.isSyncNameAttr = isSyncNameAttr;
+                return this;
+            }
+
+            /**
+             * IsSyncOuAsUserGroup.
+             */
+            public Builder isSyncOuAsUserGroup(Boolean isSyncOuAsUserGroup) {
+                this.isSyncOuAsUserGroup = isSyncOuAsUserGroup;
+                return this;
+            }
+
+            /**
+             * LatestSyncTime.
+             */
+            public Builder latestSyncTime(Long latestSyncTime) {
+                this.latestSyncTime = latestSyncTime;
                 return this;
             }
 
@@ -403,6 +568,14 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
             }
 
             /**
+             * ServerName.
+             */
+            public Builder serverName(String serverName) {
+                this.serverName = serverName;
+                return this;
+            }
+
+            /**
              * <p>The address of the secondary AD server.</p>
              * 
              * <strong>example:</strong>
@@ -410,6 +583,22 @@ public class GetInstanceADAuthServerResponseBody extends TeaModel {
              */
             public Builder standbyServer(String standbyServer) {
                 this.standbyServer = standbyServer;
+                return this;
+            }
+
+            /**
+             * SyncInterval.
+             */
+            public Builder syncInterval(Long syncInterval) {
+                this.syncInterval = syncInterval;
+                return this;
+            }
+
+            /**
+             * UserSourceId.
+             */
+            public Builder userSourceId(String userSourceId) {
+                this.userSourceId = userSourceId;
                 return this;
             }
 

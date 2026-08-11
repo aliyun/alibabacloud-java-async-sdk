@@ -39,6 +39,10 @@ public class ListHostGroupsForUserGroupRequest extends Request {
     private String pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -54,6 +58,7 @@ public class ListHostGroupsForUserGroupRequest extends Request {
         this.mode = builder.mode;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
         this.userGroupId = builder.userGroupId;
     }
@@ -107,6 +112,13 @@ public class ListHostGroupsForUserGroupRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -126,6 +138,7 @@ public class ListHostGroupsForUserGroupRequest extends Request {
         private String mode; 
         private String pageNumber; 
         private String pageSize; 
+        private Long projectId; 
         private String regionId; 
         private String userGroupId; 
 
@@ -140,6 +153,7 @@ public class ListHostGroupsForUserGroupRequest extends Request {
             this.mode = request.mode;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.projectId = request.projectId;
             this.regionId = request.regionId;
             this.userGroupId = request.userGroupId;
         } 
@@ -212,6 +226,15 @@ public class ListHostGroupsForUserGroupRequest extends Request {
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

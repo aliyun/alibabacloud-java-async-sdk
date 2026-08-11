@@ -35,6 +35,10 @@ public class ListPoliciesRequest extends Request {
     private String policyName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -44,6 +48,7 @@ public class ListPoliciesRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.policyName = builder.policyName;
+        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
     }
 
@@ -89,6 +94,13 @@ public class ListPoliciesRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -100,6 +112,7 @@ public class ListPoliciesRequest extends Request {
         private String pageNumber; 
         private String pageSize; 
         private String policyName; 
+        private Long projectId; 
         private String regionId; 
 
         private Builder() {
@@ -112,6 +125,7 @@ public class ListPoliciesRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.policyName = request.policyName;
+            this.projectId = request.projectId;
             this.regionId = request.regionId;
         } 
 
@@ -167,6 +181,15 @@ public class ListPoliciesRequest extends Request {
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
             this.policyName = policyName;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

@@ -26,10 +26,15 @@ public class GetInstanceADAuthServerRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserSourceId")
+    private String userSourceId;
+
     private GetInstanceADAuthServerRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.userSourceId = builder.userSourceId;
     }
 
     public static Builder builder() {
@@ -59,9 +64,17 @@ public class GetInstanceADAuthServerRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return userSourceId
+     */
+    public String getUserSourceId() {
+        return this.userSourceId;
+    }
+
     public static final class Builder extends Request.Builder<GetInstanceADAuthServerRequest, Builder> {
         private String instanceId; 
         private String regionId; 
+        private String userSourceId; 
 
         private Builder() {
             super();
@@ -71,6 +84,7 @@ public class GetInstanceADAuthServerRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
+            this.userSourceId = request.userSourceId;
         } 
 
         /**
@@ -101,6 +115,15 @@ public class GetInstanceADAuthServerRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * UserSourceId.
+         */
+        public Builder userSourceId(String userSourceId) {
+            this.putQueryParameter("UserSourceId", userSourceId);
+            this.userSourceId = userSourceId;
             return this;
         }
 

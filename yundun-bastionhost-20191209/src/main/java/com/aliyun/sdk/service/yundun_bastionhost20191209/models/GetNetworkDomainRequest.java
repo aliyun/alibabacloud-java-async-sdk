@@ -32,6 +32,10 @@ public class GetNetworkDomainRequest extends Request {
     private String networkDomainId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -40,6 +44,7 @@ public class GetNetworkDomainRequest extends Request {
         this.checkProxyState = builder.checkProxyState;
         this.instanceId = builder.instanceId;
         this.networkDomainId = builder.networkDomainId;
+        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
     }
 
@@ -78,6 +83,13 @@ public class GetNetworkDomainRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -88,6 +100,7 @@ public class GetNetworkDomainRequest extends Request {
         private String checkProxyState; 
         private String instanceId; 
         private String networkDomainId; 
+        private Long projectId; 
         private String regionId; 
 
         private Builder() {
@@ -99,6 +112,7 @@ public class GetNetworkDomainRequest extends Request {
             this.checkProxyState = request.checkProxyState;
             this.instanceId = request.instanceId;
             this.networkDomainId = request.networkDomainId;
+            this.projectId = request.projectId;
             this.regionId = request.regionId;
         } 
 
@@ -140,6 +154,15 @@ public class GetNetworkDomainRequest extends Request {
         public Builder networkDomainId(String networkDomainId) {
             this.putQueryParameter("NetworkDomainId", networkDomainId);
             this.networkDomainId = networkDomainId;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

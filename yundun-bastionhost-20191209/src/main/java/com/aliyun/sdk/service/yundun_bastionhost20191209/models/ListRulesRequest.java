@@ -31,6 +31,10 @@ public class ListRulesRequest extends Request {
     private String pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -47,6 +51,7 @@ public class ListRulesRequest extends Request {
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
         this.ruleName = builder.ruleName;
         this.ruleState = builder.ruleState;
@@ -87,6 +92,13 @@ public class ListRulesRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -111,6 +123,7 @@ public class ListRulesRequest extends Request {
         private String instanceId; 
         private String pageNumber; 
         private String pageSize; 
+        private Long projectId; 
         private String regionId; 
         private String ruleName; 
         private String ruleState; 
@@ -124,6 +137,7 @@ public class ListRulesRequest extends Request {
             this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.projectId = request.projectId;
             this.regionId = request.regionId;
             this.ruleName = request.ruleName;
             this.ruleState = request.ruleState;
@@ -169,6 +183,15 @@ public class ListRulesRequest extends Request {
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

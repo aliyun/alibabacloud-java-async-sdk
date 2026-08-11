@@ -47,6 +47,10 @@ public class CreateRuleRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -72,6 +76,7 @@ public class CreateRuleRequest extends Request {
         this.hostGroups = builder.hostGroups;
         this.hosts = builder.hosts;
         this.instanceId = builder.instanceId;
+        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
         this.ruleName = builder.ruleName;
         this.userGroupIds = builder.userGroupIds;
@@ -141,6 +146,13 @@ public class CreateRuleRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -176,6 +188,7 @@ public class CreateRuleRequest extends Request {
         private java.util.List<HostGroups> hostGroups; 
         private java.util.List<Hosts> hosts; 
         private String instanceId; 
+        private Long projectId; 
         private String regionId; 
         private String ruleName; 
         private java.util.List<String> userGroupIds; 
@@ -194,6 +207,7 @@ public class CreateRuleRequest extends Request {
             this.hostGroups = request.hostGroups;
             this.hosts = request.hosts;
             this.instanceId = request.instanceId;
+            this.projectId = request.projectId;
             this.regionId = request.regionId;
             this.ruleName = request.ruleName;
             this.userGroupIds = request.userGroupIds;
@@ -276,6 +290,15 @@ public class CreateRuleRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

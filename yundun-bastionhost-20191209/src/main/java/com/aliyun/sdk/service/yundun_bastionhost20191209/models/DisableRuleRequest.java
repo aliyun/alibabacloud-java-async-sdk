@@ -23,6 +23,10 @@ public class DisableRuleRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -34,6 +38,7 @@ public class DisableRuleRequest extends Request {
     private DisableRuleRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
         this.ruleId = builder.ruleId;
     }
@@ -59,6 +64,13 @@ public class DisableRuleRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -74,6 +86,7 @@ public class DisableRuleRequest extends Request {
 
     public static final class Builder extends Request.Builder<DisableRuleRequest, Builder> {
         private String instanceId; 
+        private Long projectId; 
         private String regionId; 
         private String ruleId; 
 
@@ -84,6 +97,7 @@ public class DisableRuleRequest extends Request {
         private Builder(DisableRuleRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.projectId = request.projectId;
             this.regionId = request.regionId;
             this.ruleId = request.ruleId;
         } 
@@ -101,6 +115,15 @@ public class DisableRuleRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

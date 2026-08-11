@@ -33,6 +33,10 @@ public class ModifyHostsActiveAddressTypeRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -41,6 +45,7 @@ public class ModifyHostsActiveAddressTypeRequest extends Request {
         this.activeAddressType = builder.activeAddressType;
         this.hostIds = builder.hostIds;
         this.instanceId = builder.instanceId;
+        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
     }
 
@@ -79,6 +84,13 @@ public class ModifyHostsActiveAddressTypeRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -89,6 +101,7 @@ public class ModifyHostsActiveAddressTypeRequest extends Request {
         private String activeAddressType; 
         private String hostIds; 
         private String instanceId; 
+        private Long projectId; 
         private String regionId; 
 
         private Builder() {
@@ -100,6 +113,7 @@ public class ModifyHostsActiveAddressTypeRequest extends Request {
             this.activeAddressType = request.activeAddressType;
             this.hostIds = request.hostIds;
             this.instanceId = request.instanceId;
+            this.projectId = request.projectId;
             this.regionId = request.regionId;
         } 
 
@@ -149,6 +163,15 @@ public class ModifyHostsActiveAddressTypeRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

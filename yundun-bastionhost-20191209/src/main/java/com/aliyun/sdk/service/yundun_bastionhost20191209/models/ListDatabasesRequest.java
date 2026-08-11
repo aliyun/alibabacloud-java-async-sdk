@@ -43,6 +43,10 @@ public class ListDatabasesRequest extends Request {
     private String pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -58,6 +62,7 @@ public class ListDatabasesRequest extends Request {
         this.networkDomainId = builder.networkDomainId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
         this.source = builder.source;
     }
@@ -118,6 +123,13 @@ public class ListDatabasesRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -138,6 +150,7 @@ public class ListDatabasesRequest extends Request {
         private String networkDomainId; 
         private String pageNumber; 
         private String pageSize; 
+        private Long projectId; 
         private String regionId; 
         private String source; 
 
@@ -153,6 +166,7 @@ public class ListDatabasesRequest extends Request {
             this.networkDomainId = request.networkDomainId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.projectId = request.projectId;
             this.regionId = request.regionId;
             this.source = request.source;
         } 
@@ -243,6 +257,15 @@ public class ListDatabasesRequest extends Request {
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

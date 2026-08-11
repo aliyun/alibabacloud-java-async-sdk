@@ -62,6 +62,10 @@ public class CreateHostRequest extends Request {
     private String OSType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -86,6 +90,7 @@ public class CreateHostRequest extends Request {
         this.instanceRegionId = builder.instanceRegionId;
         this.networkDomainId = builder.networkDomainId;
         this.OSType = builder.OSType;
+        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
         this.source = builder.source;
         this.sourceInstanceId = builder.sourceInstanceId;
@@ -175,6 +180,13 @@ public class CreateHostRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -206,6 +218,7 @@ public class CreateHostRequest extends Request {
         private String instanceRegionId; 
         private String networkDomainId; 
         private String OSType; 
+        private Long projectId; 
         private String regionId; 
         private String source; 
         private String sourceInstanceId; 
@@ -226,6 +239,7 @@ public class CreateHostRequest extends Request {
             this.instanceRegionId = request.instanceRegionId;
             this.networkDomainId = request.networkDomainId;
             this.OSType = request.OSType;
+            this.projectId = request.projectId;
             this.regionId = request.regionId;
             this.source = request.source;
             this.sourceInstanceId = request.sourceInstanceId;
@@ -372,6 +386,15 @@ public class CreateHostRequest extends Request {
         public Builder OSType(String OSType) {
             this.putQueryParameter("OSType", OSType);
             this.OSType = OSType;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

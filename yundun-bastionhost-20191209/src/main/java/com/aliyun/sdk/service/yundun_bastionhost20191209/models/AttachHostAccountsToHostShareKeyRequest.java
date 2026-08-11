@@ -31,6 +31,10 @@ public class AttachHostAccountsToHostShareKeyRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -39,6 +43,7 @@ public class AttachHostAccountsToHostShareKeyRequest extends Request {
         this.hostAccountIds = builder.hostAccountIds;
         this.hostShareKeyId = builder.hostShareKeyId;
         this.instanceId = builder.instanceId;
+        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
     }
 
@@ -77,6 +82,13 @@ public class AttachHostAccountsToHostShareKeyRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -87,6 +99,7 @@ public class AttachHostAccountsToHostShareKeyRequest extends Request {
         private String hostAccountIds; 
         private String hostShareKeyId; 
         private String instanceId; 
+        private Long projectId; 
         private String regionId; 
 
         private Builder() {
@@ -98,6 +111,7 @@ public class AttachHostAccountsToHostShareKeyRequest extends Request {
             this.hostAccountIds = request.hostAccountIds;
             this.hostShareKeyId = request.hostShareKeyId;
             this.instanceId = request.instanceId;
+            this.projectId = request.projectId;
             this.regionId = request.regionId;
         } 
 
@@ -141,6 +155,15 @@ public class AttachHostAccountsToHostShareKeyRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

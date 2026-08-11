@@ -36,6 +36,10 @@ public class ModifyHostGroupRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -45,6 +49,7 @@ public class ModifyHostGroupRequest extends Request {
         this.hostGroupId = builder.hostGroupId;
         this.hostGroupName = builder.hostGroupName;
         this.instanceId = builder.instanceId;
+        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
     }
 
@@ -90,6 +95,13 @@ public class ModifyHostGroupRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -101,6 +113,7 @@ public class ModifyHostGroupRequest extends Request {
         private String hostGroupId; 
         private String hostGroupName; 
         private String instanceId; 
+        private Long projectId; 
         private String regionId; 
 
         private Builder() {
@@ -113,6 +126,7 @@ public class ModifyHostGroupRequest extends Request {
             this.hostGroupId = request.hostGroupId;
             this.hostGroupName = request.hostGroupName;
             this.instanceId = request.instanceId;
+            this.projectId = request.projectId;
             this.regionId = request.regionId;
         } 
 
@@ -169,6 +183,15 @@ public class ModifyHostGroupRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

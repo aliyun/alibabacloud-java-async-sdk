@@ -35,6 +35,10 @@ public class ListOperationHostsRequest extends Request {
     private String OSType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationProjectId")
+    private String operationProjectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
@@ -64,6 +68,7 @@ public class ListOperationHostsRequest extends Request {
         this.hostName = builder.hostName;
         this.instanceId = builder.instanceId;
         this.OSType = builder.OSType;
+        this.operationProjectId = builder.operationProjectId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
@@ -114,6 +119,13 @@ public class ListOperationHostsRequest extends Request {
     }
 
     /**
+     * @return operationProjectId
+     */
+    public String getOperationProjectId() {
+        return this.operationProjectId;
+    }
+
+    /**
      * @return pageNumber
      */
     public String getPageNumber() {
@@ -160,6 +172,7 @@ public class ListOperationHostsRequest extends Request {
         private String hostName; 
         private String instanceId; 
         private String OSType; 
+        private String operationProjectId; 
         private String pageNumber; 
         private String pageSize; 
         private String regionId; 
@@ -177,6 +190,7 @@ public class ListOperationHostsRequest extends Request {
             this.hostName = request.hostName;
             this.instanceId = request.instanceId;
             this.OSType = request.OSType;
+            this.operationProjectId = request.operationProjectId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
@@ -238,6 +252,15 @@ public class ListOperationHostsRequest extends Request {
         public Builder OSType(String OSType) {
             this.putQueryParameter("OSType", OSType);
             this.OSType = OSType;
+            return this;
+        }
+
+        /**
+         * OperationProjectId.
+         */
+        public Builder operationProjectId(String operationProjectId) {
+            this.putQueryParameter("OperationProjectId", operationProjectId);
+            this.operationProjectId = operationProjectId;
             return this;
         }
 

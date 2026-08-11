@@ -314,8 +314,12 @@ public class GetRuleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HostAccountId")
         private String hostAccountId;
 
+        @com.aliyun.core.annotation.NameInMap("HostAccountName")
+        private String hostAccountName;
+
         private HostAccounts(Builder builder) {
             this.hostAccountId = builder.hostAccountId;
+            this.hostAccountName = builder.hostAccountName;
         }
 
         public static Builder builder() {
@@ -333,14 +337,23 @@ public class GetRuleResponseBody extends TeaModel {
             return this.hostAccountId;
         }
 
+        /**
+         * @return hostAccountName
+         */
+        public String getHostAccountName() {
+            return this.hostAccountName;
+        }
+
         public static final class Builder {
             private String hostAccountId; 
+            private String hostAccountName; 
 
             private Builder() {
             } 
 
             private Builder(HostAccounts model) {
                 this.hostAccountId = model.hostAccountId;
+                this.hostAccountName = model.hostAccountName;
             } 
 
             /**
@@ -351,6 +364,14 @@ public class GetRuleResponseBody extends TeaModel {
              */
             public Builder hostAccountId(String hostAccountId) {
                 this.hostAccountId = hostAccountId;
+                return this;
+            }
+
+            /**
+             * HostAccountName.
+             */
+            public Builder hostAccountName(String hostAccountName) {
+                this.hostAccountName = hostAccountName;
                 return this;
             }
 

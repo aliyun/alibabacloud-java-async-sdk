@@ -19,7 +19,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class MoveHostsToNetworkDomainRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HostIds")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> hostIds;
 
     @com.aliyun.core.annotation.Query
@@ -33,6 +32,10 @@ public class MoveHostsToNetworkDomainRequest extends Request {
     private String networkDomainId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -41,6 +44,7 @@ public class MoveHostsToNetworkDomainRequest extends Request {
         this.hostIds = builder.hostIds;
         this.instanceId = builder.instanceId;
         this.networkDomainId = builder.networkDomainId;
+        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
     }
 
@@ -79,6 +83,13 @@ public class MoveHostsToNetworkDomainRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -89,6 +100,7 @@ public class MoveHostsToNetworkDomainRequest extends Request {
         private java.util.List<String> hostIds; 
         private String instanceId; 
         private String networkDomainId; 
+        private Long projectId; 
         private String regionId; 
 
         private Builder() {
@@ -100,12 +112,12 @@ public class MoveHostsToNetworkDomainRequest extends Request {
             this.hostIds = request.hostIds;
             this.instanceId = request.instanceId;
             this.networkDomainId = request.networkDomainId;
+            this.projectId = request.projectId;
             this.regionId = request.regionId;
         } 
 
         /**
          * <p>The IDs of the hosts that you want to add to the network domain.</p>
-         * <p>This parameter is required.</p>
          */
         public Builder hostIds(java.util.List<String> hostIds) {
             this.putQueryParameter("HostIds", hostIds);
@@ -142,6 +154,15 @@ public class MoveHostsToNetworkDomainRequest extends Request {
         public Builder networkDomainId(String networkDomainId) {
             this.putQueryParameter("NetworkDomainId", networkDomainId);
             this.networkDomainId = networkDomainId;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

@@ -28,6 +28,10 @@ public class DetachHostAccountsFromUserGroupRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -40,6 +44,7 @@ public class DetachHostAccountsFromUserGroupRequest extends Request {
         super(builder);
         this.hosts = builder.hosts;
         this.instanceId = builder.instanceId;
+        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
         this.userGroupId = builder.userGroupId;
     }
@@ -72,6 +77,13 @@ public class DetachHostAccountsFromUserGroupRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -88,6 +100,7 @@ public class DetachHostAccountsFromUserGroupRequest extends Request {
     public static final class Builder extends Request.Builder<DetachHostAccountsFromUserGroupRequest, Builder> {
         private String hosts; 
         private String instanceId; 
+        private Long projectId; 
         private String regionId; 
         private String userGroupId; 
 
@@ -99,6 +112,7 @@ public class DetachHostAccountsFromUserGroupRequest extends Request {
             super(request);
             this.hosts = request.hosts;
             this.instanceId = request.instanceId;
+            this.projectId = request.projectId;
             this.regionId = request.regionId;
             this.userGroupId = request.userGroupId;
         } 
@@ -133,6 +147,15 @@ public class DetachHostAccountsFromUserGroupRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

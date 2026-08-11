@@ -19,7 +19,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyHostShareKeyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HostShareKeyId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String hostShareKeyId;
 
     @com.aliyun.core.annotation.Query
@@ -40,6 +39,10 @@ public class ModifyHostShareKeyRequest extends Request {
     private String privateKey;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -50,6 +53,7 @@ public class ModifyHostShareKeyRequest extends Request {
         this.instanceId = builder.instanceId;
         this.passPhrase = builder.passPhrase;
         this.privateKey = builder.privateKey;
+        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
     }
 
@@ -102,6 +106,13 @@ public class ModifyHostShareKeyRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -114,6 +125,7 @@ public class ModifyHostShareKeyRequest extends Request {
         private String instanceId; 
         private String passPhrase; 
         private String privateKey; 
+        private Long projectId; 
         private String regionId; 
 
         private Builder() {
@@ -127,12 +139,12 @@ public class ModifyHostShareKeyRequest extends Request {
             this.instanceId = request.instanceId;
             this.passPhrase = request.passPhrase;
             this.privateKey = request.privateKey;
+            this.projectId = request.projectId;
             this.regionId = request.regionId;
         } 
 
         /**
          * <p>The ID of the shared key whose information you want to modify.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>10247</p>
@@ -195,6 +207,15 @@ public class ModifyHostShareKeyRequest extends Request {
         public Builder privateKey(String privateKey) {
             this.putQueryParameter("PrivateKey", privateKey);
             this.privateKey = privateKey;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

@@ -37,6 +37,10 @@ public class CreateNetworkDomainRequest extends Request {
     private String networkDomainType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Proxies")
     private java.util.List<Proxies> proxies;
 
@@ -50,6 +54,7 @@ public class CreateNetworkDomainRequest extends Request {
         this.instanceId = builder.instanceId;
         this.networkDomainName = builder.networkDomainName;
         this.networkDomainType = builder.networkDomainType;
+        this.projectId = builder.projectId;
         this.proxies = builder.proxies;
         this.regionId = builder.regionId;
     }
@@ -96,6 +101,13 @@ public class CreateNetworkDomainRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return proxies
      */
     public java.util.List<Proxies> getProxies() {
@@ -114,6 +126,7 @@ public class CreateNetworkDomainRequest extends Request {
         private String instanceId; 
         private String networkDomainName; 
         private String networkDomainType; 
+        private Long projectId; 
         private java.util.List<Proxies> proxies; 
         private String regionId; 
 
@@ -127,6 +140,7 @@ public class CreateNetworkDomainRequest extends Request {
             this.instanceId = request.instanceId;
             this.networkDomainName = request.networkDomainName;
             this.networkDomainType = request.networkDomainType;
+            this.projectId = request.projectId;
             this.proxies = request.proxies;
             this.regionId = request.regionId;
         } 
@@ -183,6 +197,15 @@ public class CreateNetworkDomainRequest extends Request {
         public Builder networkDomainType(String networkDomainType) {
             this.putQueryParameter("NetworkDomainType", networkDomainType);
             this.networkDomainType = networkDomainType;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

@@ -143,6 +143,12 @@ public class ListHostsForUserResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OSType")
         private String OSType;
 
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
+        private String projectId;
+
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
+        private String projectName;
+
         private Hosts(Builder builder) {
             this.activeAddressType = builder.activeAddressType;
             this.comment = builder.comment;
@@ -151,6 +157,8 @@ public class ListHostsForUserResponseBody extends TeaModel {
             this.hostPrivateAddress = builder.hostPrivateAddress;
             this.hostPublicAddress = builder.hostPublicAddress;
             this.OSType = builder.OSType;
+            this.projectId = builder.projectId;
+            this.projectName = builder.projectName;
         }
 
         public static Builder builder() {
@@ -210,6 +218,20 @@ public class ListHostsForUserResponseBody extends TeaModel {
             return this.OSType;
         }
 
+        /**
+         * @return projectId
+         */
+        public String getProjectId() {
+            return this.projectId;
+        }
+
+        /**
+         * @return projectName
+         */
+        public String getProjectName() {
+            return this.projectName;
+        }
+
         public static final class Builder {
             private String activeAddressType; 
             private String comment; 
@@ -218,6 +240,8 @@ public class ListHostsForUserResponseBody extends TeaModel {
             private String hostPrivateAddress; 
             private String hostPublicAddress; 
             private String OSType; 
+            private String projectId; 
+            private String projectName; 
 
             private Builder() {
             } 
@@ -230,6 +254,8 @@ public class ListHostsForUserResponseBody extends TeaModel {
                 this.hostPrivateAddress = model.hostPrivateAddress;
                 this.hostPublicAddress = model.hostPublicAddress;
                 this.OSType = model.OSType;
+                this.projectId = model.projectId;
+                this.projectName = model.projectName;
             } 
 
             /**
@@ -314,6 +340,22 @@ public class ListHostsForUserResponseBody extends TeaModel {
              */
             public Builder OSType(String OSType) {
                 this.OSType = OSType;
+                return this;
+            }
+
+            /**
+             * ProjectId.
+             */
+            public Builder projectId(String projectId) {
+                this.projectId = projectId;
+                return this;
+            }
+
+            /**
+             * ProjectName.
+             */
+            public Builder projectName(String projectName) {
+                this.projectName = projectName;
                 return this;
             }
 

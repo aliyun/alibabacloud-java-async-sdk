@@ -45,6 +45,10 @@ public class CreateDatabaseAccountRequest extends Request {
     private String password;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -56,6 +60,7 @@ public class CreateDatabaseAccountRequest extends Request {
         this.instanceId = builder.instanceId;
         this.loginAttribute = builder.loginAttribute;
         this.password = builder.password;
+        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
     }
 
@@ -115,6 +120,13 @@ public class CreateDatabaseAccountRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -128,6 +140,7 @@ public class CreateDatabaseAccountRequest extends Request {
         private String instanceId; 
         private String loginAttribute; 
         private String password; 
+        private Long projectId; 
         private String regionId; 
 
         private Builder() {
@@ -142,6 +155,7 @@ public class CreateDatabaseAccountRequest extends Request {
             this.instanceId = request.instanceId;
             this.loginAttribute = request.loginAttribute;
             this.password = request.password;
+            this.projectId = request.projectId;
             this.regionId = request.regionId;
         } 
 
@@ -227,6 +241,15 @@ public class CreateDatabaseAccountRequest extends Request {
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
             this.password = password;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

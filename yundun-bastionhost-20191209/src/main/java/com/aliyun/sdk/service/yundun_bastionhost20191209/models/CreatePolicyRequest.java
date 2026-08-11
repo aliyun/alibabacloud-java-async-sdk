@@ -36,6 +36,10 @@ public class CreatePolicyRequest extends Request {
     private String priority;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -45,6 +49,7 @@ public class CreatePolicyRequest extends Request {
         this.instanceId = builder.instanceId;
         this.policyName = builder.policyName;
         this.priority = builder.priority;
+        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
     }
 
@@ -90,6 +95,13 @@ public class CreatePolicyRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -101,6 +113,7 @@ public class CreatePolicyRequest extends Request {
         private String instanceId; 
         private String policyName; 
         private String priority; 
+        private Long projectId; 
         private String regionId; 
 
         private Builder() {
@@ -113,6 +126,7 @@ public class CreatePolicyRequest extends Request {
             this.instanceId = request.instanceId;
             this.policyName = request.policyName;
             this.priority = request.priority;
+            this.projectId = request.projectId;
             this.regionId = request.regionId;
         } 
 
@@ -170,6 +184,15 @@ public class CreatePolicyRequest extends Request {
         public Builder priority(String priority) {
             this.putQueryParameter("Priority", priority);
             this.priority = priority;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

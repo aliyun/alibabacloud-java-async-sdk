@@ -27,6 +27,10 @@ public class RenewAssetOperationTokenRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Token")
+    private String token;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TokenId")
     private String tokenId;
 
@@ -34,6 +38,7 @@ public class RenewAssetOperationTokenRequest extends Request {
         super(builder);
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.token = builder.token;
         this.tokenId = builder.tokenId;
     }
 
@@ -65,6 +70,13 @@ public class RenewAssetOperationTokenRequest extends Request {
     }
 
     /**
+     * @return token
+     */
+    public String getToken() {
+        return this.token;
+    }
+
+    /**
      * @return tokenId
      */
     public String getTokenId() {
@@ -74,6 +86,7 @@ public class RenewAssetOperationTokenRequest extends Request {
     public static final class Builder extends Request.Builder<RenewAssetOperationTokenRequest, Builder> {
         private String instanceId; 
         private String regionId; 
+        private String token; 
         private String tokenId; 
 
         private Builder() {
@@ -84,6 +97,7 @@ public class RenewAssetOperationTokenRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
+            this.token = request.token;
             this.tokenId = request.tokenId;
         } 
 
@@ -115,6 +129,15 @@ public class RenewAssetOperationTokenRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Token.
+         */
+        public Builder token(String token) {
+            this.putQueryParameter("Token", token);
+            this.token = token;
             return this;
         }
 

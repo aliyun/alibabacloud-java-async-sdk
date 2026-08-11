@@ -19,7 +19,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class MoveDatabasesToNetworkDomainRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DatabaseIds")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> databaseIds;
 
     @com.aliyun.core.annotation.Query
@@ -33,6 +32,10 @@ public class MoveDatabasesToNetworkDomainRequest extends Request {
     private String networkDomainId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -41,6 +44,7 @@ public class MoveDatabasesToNetworkDomainRequest extends Request {
         this.databaseIds = builder.databaseIds;
         this.instanceId = builder.instanceId;
         this.networkDomainId = builder.networkDomainId;
+        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
     }
 
@@ -79,6 +83,13 @@ public class MoveDatabasesToNetworkDomainRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -89,6 +100,7 @@ public class MoveDatabasesToNetworkDomainRequest extends Request {
         private java.util.List<String> databaseIds; 
         private String instanceId; 
         private String networkDomainId; 
+        private Long projectId; 
         private String regionId; 
 
         private Builder() {
@@ -100,12 +112,12 @@ public class MoveDatabasesToNetworkDomainRequest extends Request {
             this.databaseIds = request.databaseIds;
             this.instanceId = request.instanceId;
             this.networkDomainId = request.networkDomainId;
+            this.projectId = request.projectId;
             this.regionId = request.regionId;
         } 
 
         /**
          * <p>The IDs of the databases that you want to add to the network domain.</p>
-         * <p>This parameter is required.</p>
          */
         public Builder databaseIds(java.util.List<String> databaseIds) {
             this.putQueryParameter("DatabaseIds", databaseIds);
@@ -142,6 +154,15 @@ public class MoveDatabasesToNetworkDomainRequest extends Request {
         public Builder networkDomainId(String networkDomainId) {
             this.putQueryParameter("NetworkDomainId", networkDomainId);
             this.networkDomainId = networkDomainId;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

@@ -52,6 +52,10 @@ public class ModifyHostAccountRequest extends Request {
     private String privilegeType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -69,6 +73,7 @@ public class ModifyHostAccountRequest extends Request {
         this.password = builder.password;
         this.privateKey = builder.privateKey;
         this.privilegeType = builder.privilegeType;
+        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
         this.rotationMode = builder.rotationMode;
     }
@@ -143,6 +148,13 @@ public class ModifyHostAccountRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -165,6 +177,7 @@ public class ModifyHostAccountRequest extends Request {
         private String password; 
         private String privateKey; 
         private String privilegeType; 
+        private Long projectId; 
         private String regionId; 
         private String rotationMode; 
 
@@ -182,6 +195,7 @@ public class ModifyHostAccountRequest extends Request {
             this.password = request.password;
             this.privateKey = request.privateKey;
             this.privilegeType = request.privilegeType;
+            this.projectId = request.projectId;
             this.regionId = request.regionId;
             this.rotationMode = request.rotationMode;
         } 
@@ -293,6 +307,15 @@ public class ModifyHostAccountRequest extends Request {
         public Builder privilegeType(String privilegeType) {
             this.putQueryParameter("PrivilegeType", privilegeType);
             this.privilegeType = privilegeType;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 

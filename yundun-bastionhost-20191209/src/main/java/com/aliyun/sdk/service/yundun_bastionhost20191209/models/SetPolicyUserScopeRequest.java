@@ -28,6 +28,10 @@ public class SetPolicyUserScopeRequest extends Request {
     private String policyId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private Long projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -48,6 +52,7 @@ public class SetPolicyUserScopeRequest extends Request {
         super(builder);
         this.instanceId = builder.instanceId;
         this.policyId = builder.policyId;
+        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
         this.scopeType = builder.scopeType;
         this.userGroupIds = builder.userGroupIds;
@@ -82,6 +87,13 @@ public class SetPolicyUserScopeRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -112,6 +124,7 @@ public class SetPolicyUserScopeRequest extends Request {
     public static final class Builder extends Request.Builder<SetPolicyUserScopeRequest, Builder> {
         private String instanceId; 
         private String policyId; 
+        private Long projectId; 
         private String regionId; 
         private String scopeType; 
         private java.util.List<String> userGroupIds; 
@@ -125,6 +138,7 @@ public class SetPolicyUserScopeRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.policyId = request.policyId;
+            this.projectId = request.projectId;
             this.regionId = request.regionId;
             this.scopeType = request.scopeType;
             this.userGroupIds = request.userGroupIds;
@@ -160,6 +174,15 @@ public class SetPolicyUserScopeRequest extends Request {
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
             this.policyId = policyId;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(Long projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 
