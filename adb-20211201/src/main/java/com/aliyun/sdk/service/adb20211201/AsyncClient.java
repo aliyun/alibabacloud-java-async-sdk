@@ -113,6 +113,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckSampleDataSetResponse> checkSampleDataSet(CheckSampleDataSetRequest request);
 
     /**
+     * @param request the request parameters of CloseLogSyncToSLS  CloseLogSyncToSLSRequest
+     * @return CloseLogSyncToSLSResponse
+     */
+    CompletableFuture<CloseLogSyncToSLSResponse> closeLogSyncToSLS(CloseLogSyncToSLSRequest request);
+
+    /**
      * @param request the request parameters of ConfigureResultExport  ConfigureResultExportRequest
      * @return ConfigureResultExportResponse
      */
@@ -1341,6 +1347,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetLakeStorageResponse> getLakeStorage(GetLakeStorageRequest request);
 
     /**
+     * @param request the request parameters of GetLogSyncToSLS  GetLogSyncToSLSRequest
+     * @return GetLogSyncToSLSResponse
+     */
+    CompletableFuture<GetLogSyncToSLSResponse> getLogSyncToSLS(GetLogSyncToSLSRequest request);
+
+    /**
      * @param request the request parameters of GetSemanticView  GetSemanticViewRequest
      * @return GetSemanticViewResponse
      */
@@ -1967,6 +1979,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyUserEniVswitchOptionsResponse
      */
     CompletableFuture<ModifyUserEniVswitchOptionsResponse> modifyUserEniVswitchOptions(ModifyUserEniVswitchOptionsRequest request);
+
+    /**
+     * @param request the request parameters of OpenLogSyncToSLS  OpenLogSyncToSLSRequest
+     * @return OpenLogSyncToSLSResponse
+     */
+    CompletableFuture<OpenLogSyncToSLSResponse> openLogSyncToSLS(OpenLogSyncToSLSRequest request);
 
     /**
      * <b>description</b> :

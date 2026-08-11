@@ -75,21 +75,21 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("eu-west-1-oxs", "adb.ap-northeast-1.aliyuncs.com"),
             new TeaPair("me-east-1", "adb.ap-northeast-1.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "adb.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("na-south-1", "adb.na-south-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "adb.me-central-1.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "adb.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "adb.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "adb.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "adb.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "adb.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "adb.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "adb.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "adb.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "adb.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "adb.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "adb.ap-southeast-7.aliyuncs.com"),
             new TeaPair("eu-west-1", "adb.eu-west-1.aliyuncs.com"),
             new TeaPair("eu-central-1", "adb.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "adb.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "adb.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "adb.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "adb.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "adb.cn-chengdu.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "adb.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "adb.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "adb.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "adb.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "adb.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "adb.ap-northeast-1.aliyuncs.com")
+            new TeaPair("na-south-1", "adb.na-south-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "adb.me-central-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -331,6 +331,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CheckSampleDataSetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CloseLogSyncToSLS  CloseLogSyncToSLSRequest
+     * @return CloseLogSyncToSLSResponse
+     */
+    @Override
+    public CompletableFuture<CloseLogSyncToSLSResponse> closeLogSyncToSLS(CloseLogSyncToSLSRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CloseLogSyncToSLS").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CloseLogSyncToSLSResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CloseLogSyncToSLSResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3353,6 +3371,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetLogSyncToSLS  GetLogSyncToSLSRequest
+     * @return GetLogSyncToSLSResponse
+     */
+    @Override
+    public CompletableFuture<GetLogSyncToSLSResponse> getLogSyncToSLS(GetLogSyncToSLSRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetLogSyncToSLS").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetLogSyncToSLSResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetLogSyncToSLSResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetSemanticView  GetSemanticViewRequest
      * @return GetSemanticViewResponse
      */
@@ -4755,6 +4791,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyUserEniVswitchOptionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of OpenLogSyncToSLS  OpenLogSyncToSLSRequest
+     * @return OpenLogSyncToSLSResponse
+     */
+    @Override
+    public CompletableFuture<OpenLogSyncToSLSResponse> openLogSyncToSLS(OpenLogSyncToSLSRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("OpenLogSyncToSLS").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(OpenLogSyncToSLSResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<OpenLogSyncToSLSResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
