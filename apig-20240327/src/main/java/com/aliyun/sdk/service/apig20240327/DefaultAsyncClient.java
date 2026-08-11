@@ -31,31 +31,31 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.version = "2024-03-27";
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("ap-southeast-2", "apig.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "apig.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "apig.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "apig.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "apig.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "apig.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "apig.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "apig.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "apig.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "apig.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "apig.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "apig.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "apig.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "apig.cn-hongkong.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "apig.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "apig.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "apig.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "apig.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "apig.cn-hangzhou.aliyuncs.com"),
             new TeaPair("us-west-1", "apig.us-west-1.aliyuncs.com"),
             new TeaPair("us-east-1", "apig.us-east-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "apig.me-east-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "apig.me-central-1.aliyuncs.com"),
-            new TeaPair("eu-west-1", "apig.eu-west-1.aliyuncs.com"),
             new TeaPair("eu-central-1", "apig.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "apig.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "apig.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "apig.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "apig.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "apig.cn-qingdao.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "apig.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-heyuan", "apig.cn-heyuan.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "apig.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "apig.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "apig.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-beijing", "apig.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "apig.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "apig.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "apig.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "apig.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "apig.ap-southeast-2.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "apig.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "apig.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "apig.ap-northeast-1.aliyuncs.com")
+            new TeaPair("eu-west-1", "apig.eu-west-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "apig.me-east-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "apig.me-central-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -132,6 +132,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<BatchDeleteConsumerAuthorizationRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of BatchExportHttpApis  BatchExportHttpApisRequest
+     * @return BatchExportHttpApisResponse
+     */
+    @Override
+    public CompletableFuture<BatchExportHttpApisResponse> batchExportHttpApis(BatchExportHttpApisRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("BatchExportHttpApis").setMethod(HttpMethod.POST).setPathRegex("/v1/http-apis/batch-export").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchExportHttpApisResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchExportHttpApisResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of BatchImportHttpApis  BatchImportHttpApisRequest
+     * @return BatchImportHttpApisResponse
+     */
+    @Override
+    public CompletableFuture<BatchImportHttpApisResponse> batchImportHttpApis(BatchImportHttpApisRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("BatchImportHttpApis").setMethod(HttpMethod.POST).setPathRegex("/v1/http-apis/batch-import").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchImportHttpApisResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchImportHttpApisResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1082,6 +1118,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetBatchExportTask  GetBatchExportTaskRequest
+     * @return GetBatchExportTaskResponse
+     */
+    @Override
+    public CompletableFuture<GetBatchExportTaskResponse> getBatchExportTask(GetBatchExportTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetBatchExportTask").setMethod(HttpMethod.GET).setPathRegex("/v1/http-api-batch-export-tasks/{taskId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetBatchExportTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetBatchExportTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetBatchImportTask  GetBatchImportTaskRequest
+     * @return GetBatchImportTaskResponse
+     */
+    @Override
+    public CompletableFuture<GetBatchImportTaskResponse> getBatchImportTask(GetBatchImportTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetBatchImportTask").setMethod(HttpMethod.GET).setPathRegex("/v1/http-api-batch-import-tasks/{taskId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetBatchImportTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetBatchImportTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetConsumer  GetConsumerRequest
      * @return GetConsumerResponse
      */
@@ -1569,6 +1641,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListAiModelProvidersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListBatchExportTasks  ListBatchExportTasksRequest
+     * @return ListBatchExportTasksResponse
+     */
+    @Override
+    public CompletableFuture<ListBatchExportTasksResponse> listBatchExportTasks(ListBatchExportTasksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListBatchExportTasks").setMethod(HttpMethod.GET).setPathRegex("/v1/http-api-batch-export-tasks").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListBatchExportTasksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListBatchExportTasksResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

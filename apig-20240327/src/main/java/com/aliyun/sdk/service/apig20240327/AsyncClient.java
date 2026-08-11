@@ -44,6 +44,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchDeleteConsumerAuthorizationRuleResponse> batchDeleteConsumerAuthorizationRule(BatchDeleteConsumerAuthorizationRuleRequest request);
 
     /**
+     * @param request the request parameters of BatchExportHttpApis  BatchExportHttpApisRequest
+     * @return BatchExportHttpApisResponse
+     */
+    CompletableFuture<BatchExportHttpApisResponse> batchExportHttpApis(BatchExportHttpApisRequest request);
+
+    /**
+     * @param request the request parameters of BatchImportHttpApis  BatchImportHttpApisRequest
+     * @return BatchImportHttpApisResponse
+     */
+    CompletableFuture<BatchImportHttpApisResponse> batchImportHttpApis(BatchImportHttpApisRequest request);
+
+    /**
      * @param request the request parameters of BatchRemoveConsumerGroupConsumers  BatchRemoveConsumerGroupConsumersRequest
      * @return BatchRemoveConsumerGroupConsumersResponse
      */
@@ -364,6 +376,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAiModelProviderResponse> getAiModelProvider(GetAiModelProviderRequest request);
 
     /**
+     * @param request the request parameters of GetBatchExportTask  GetBatchExportTaskRequest
+     * @return GetBatchExportTaskResponse
+     */
+    CompletableFuture<GetBatchExportTaskResponse> getBatchExportTask(GetBatchExportTaskRequest request);
+
+    /**
+     * @param request the request parameters of GetBatchImportTask  GetBatchImportTaskRequest
+     * @return GetBatchImportTaskResponse
+     */
+    CompletableFuture<GetBatchImportTaskResponse> getBatchImportTask(GetBatchImportTaskRequest request);
+
+    /**
      * @param request the request parameters of GetConsumer  GetConsumerRequest
      * @return GetConsumerResponse
      */
@@ -531,6 +555,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAiModelProvidersResponse
      */
     CompletableFuture<ListAiModelProvidersResponse> listAiModelProviders(ListAiModelProvidersRequest request);
+
+    /**
+     * @param request the request parameters of ListBatchExportTasks  ListBatchExportTasksRequest
+     * @return ListBatchExportTasksResponse
+     */
+    CompletableFuture<ListBatchExportTasksResponse> listBatchExportTasks(ListBatchExportTasksRequest request);
 
     /**
      * @param request the request parameters of ListConsumerAuthorizationRules  ListConsumerAuthorizationRulesRequest
