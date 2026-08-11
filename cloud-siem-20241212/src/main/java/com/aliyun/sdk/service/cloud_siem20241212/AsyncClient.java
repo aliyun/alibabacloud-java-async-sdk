@@ -278,6 +278,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetUserConfigResponse> getUserConfig(GetUserConfigRequest request);
 
     /**
+     * @param request the request parameters of ListAlertAggregations  ListAlertAggregationsRequest
+     * @return ListAlertAggregationsResponse
+     */
+    CompletableFuture<ListAlertAggregationsResponse> listAlertAggregations(ListAlertAggregationsRequest request);
+
+    /**
      * @param request the request parameters of ListAlerts  ListAlertsRequest
      * @return ListAlertsResponse
      */
