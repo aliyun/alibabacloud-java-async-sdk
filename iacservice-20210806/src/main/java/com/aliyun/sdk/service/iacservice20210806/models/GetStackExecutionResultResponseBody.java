@@ -260,6 +260,9 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("deployments")
         private java.util.List<Deployments> deployments;
 
+        @com.aliyun.core.annotation.NameInMap("errorCode")
+        private String errorCode;
+
         @com.aliyun.core.annotation.NameInMap("message")
         private String message;
 
@@ -274,6 +277,7 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
 
         private StackResults(Builder builder) {
             this.deployments = builder.deployments;
+            this.errorCode = builder.errorCode;
             this.message = builder.message;
             this.stackId = builder.stackId;
             this.stackName = builder.stackName;
@@ -293,6 +297,13 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
          */
         public java.util.List<Deployments> getDeployments() {
             return this.deployments;
+        }
+
+        /**
+         * @return errorCode
+         */
+        public String getErrorCode() {
+            return this.errorCode;
         }
 
         /**
@@ -325,6 +336,7 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Deployments> deployments; 
+            private String errorCode; 
             private String message; 
             private String stackId; 
             private String stackName; 
@@ -335,6 +347,7 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
 
             private Builder(StackResults model) {
                 this.deployments = model.deployments;
+                this.errorCode = model.errorCode;
                 this.message = model.message;
                 this.stackId = model.stackId;
                 this.stackName = model.stackName;
@@ -346,6 +359,14 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
              */
             public Builder deployments(java.util.List<Deployments> deployments) {
                 this.deployments = deployments;
+                return this;
+            }
+
+            /**
+             * errorCode.
+             */
+            public Builder errorCode(String errorCode) {
+                this.errorCode = errorCode;
                 return this;
             }
 

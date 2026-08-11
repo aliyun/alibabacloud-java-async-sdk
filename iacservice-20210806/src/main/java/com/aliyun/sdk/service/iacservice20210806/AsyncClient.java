@@ -254,6 +254,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDetectConfigResponse> getDetectConfig(GetDetectConfigRequest request);
 
     /**
+     * @param request the request parameters of GetEncryptionConfig  GetEncryptionConfigRequest
+     * @return GetEncryptionConfigResponse
+     */
+    CompletableFuture<GetEncryptionConfigResponse> getEncryptionConfig(GetEncryptionConfigRequest request);
+
+    /**
      * @param request the request parameters of GetExecuteState  GetExecuteStateRequest
      * @return GetExecuteStateResponse
      */
@@ -528,6 +534,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RemoveSharedAccountsResponse
      */
     CompletableFuture<RemoveSharedAccountsResponse> removeSharedAccounts(RemoveSharedAccountsRequest request);
+
+    /**
+     * @param request the request parameters of SetEncryptionConfig  SetEncryptionConfigRequest
+     * @return SetEncryptionConfigResponse
+     */
+    CompletableFuture<SetEncryptionConfigResponse> setEncryptionConfig(SetEncryptionConfigRequest request);
 
     /**
      * @param request the request parameters of TriggerStackExecution  TriggerStackExecutionRequest

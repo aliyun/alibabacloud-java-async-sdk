@@ -41,6 +41,10 @@ public class TriggerStackExecutionRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("codeVersionId")
     private String codeVersionId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sourceTriggerId")
+    private String sourceTriggerId;
+
     private TriggerStackExecutionRequest(Builder builder) {
         super(builder);
         this.action = builder.action;
@@ -48,6 +52,7 @@ public class TriggerStackExecutionRequest extends Request {
         this.clientToken = builder.clientToken;
         this.codePackagePath = builder.codePackagePath;
         this.codeVersionId = builder.codeVersionId;
+        this.sourceTriggerId = builder.sourceTriggerId;
     }
 
     public static Builder builder() {
@@ -98,12 +103,20 @@ public class TriggerStackExecutionRequest extends Request {
         return this.codeVersionId;
     }
 
+    /**
+     * @return sourceTriggerId
+     */
+    public String getSourceTriggerId() {
+        return this.sourceTriggerId;
+    }
+
     public static final class Builder extends Request.Builder<TriggerStackExecutionRequest, Builder> {
         private String action; 
         private java.util.List<String> changedFolders; 
         private String clientToken; 
         private String codePackagePath; 
         private String codeVersionId; 
+        private String sourceTriggerId; 
 
         private Builder() {
             super();
@@ -116,6 +129,7 @@ public class TriggerStackExecutionRequest extends Request {
             this.clientToken = request.clientToken;
             this.codePackagePath = request.codePackagePath;
             this.codeVersionId = request.codeVersionId;
+            this.sourceTriggerId = request.sourceTriggerId;
         } 
 
         /**
@@ -169,6 +183,15 @@ public class TriggerStackExecutionRequest extends Request {
         public Builder codeVersionId(String codeVersionId) {
             this.putBodyParameter("codeVersionId", codeVersionId);
             this.codeVersionId = codeVersionId;
+            return this;
+        }
+
+        /**
+         * sourceTriggerId.
+         */
+        public Builder sourceTriggerId(String sourceTriggerId) {
+            this.putBodyParameter("sourceTriggerId", sourceTriggerId);
+            this.sourceTriggerId = sourceTriggerId;
             return this;
         }
 

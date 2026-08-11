@@ -745,6 +745,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetEncryptionConfig  GetEncryptionConfigRequest
+     * @return GetEncryptionConfigResponse
+     */
+    @Override
+    public CompletableFuture<GetEncryptionConfigResponse> getEncryptionConfig(GetEncryptionConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetEncryptionConfig").setMethod(HttpMethod.GET).setPathRegex("/encryption/config").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetEncryptionConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetEncryptionConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetExecuteState  GetExecuteStateRequest
      * @return GetExecuteStateResponse
      */
@@ -1567,6 +1585,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RemoveSharedAccountsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SetEncryptionConfig  SetEncryptionConfigRequest
+     * @return SetEncryptionConfigResponse
+     */
+    @Override
+    public CompletableFuture<SetEncryptionConfigResponse> setEncryptionConfig(SetEncryptionConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SetEncryptionConfig").setMethod(HttpMethod.PUT).setPathRegex("/encryption/config").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetEncryptionConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SetEncryptionConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
