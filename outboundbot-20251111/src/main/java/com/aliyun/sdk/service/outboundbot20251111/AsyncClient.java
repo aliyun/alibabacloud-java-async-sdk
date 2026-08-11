@@ -224,6 +224,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateScriptResponse> updateScript(UpdateScriptRequest request);
 
     /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of UpdateScriptVersion  UpdateScriptVersionRequest
+     * @return UpdateScriptVersionResponse
+     */
+    CompletableFuture<UpdateScriptVersionResponse> updateScriptVersion(UpdateScriptVersionRequest request);
+
+    /**
      * @param request the request parameters of UpdateSubscription  UpdateSubscriptionRequest
      * @return UpdateSubscriptionResponse
      */
