@@ -31,10 +31,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.version = "2026-02-10";
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("eu-central-1", "modelstudio.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "modelstudio.cn-hongkong.aliyuncs.com"),
             new TeaPair("cn-beijing", "modelstudio.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "modelstudio.ap-southeast-1.aliyuncs.com")
+            new TeaPair("cn-hongkong", "modelstudio.cn-hongkong.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "modelstudio.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "modelstudio.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "modelstudio.us-east-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "modelstudio.eu-central-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -405,6 +407,71 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListModelLimits  ListModelLimitsRequest
+     * @return ListModelLimitsResponse
+     */
+    @Override
+    public CompletableFuture<ListModelLimitsResponse> listModelLimits(ListModelLimitsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListModelLimits").setMethod(HttpMethod.GET).setPathRegex("/modelstudio/models/limits").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListModelLimitsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListModelLimitsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>通过 <code>workspaceId</code> 指定要查询的业务空间（必填，不可为空）。</li>
+     * <li>采用 Token 分页：<code>nextToken</code> 为字符串型 offset，首页不传；<code>maxResults</code> 默认 20，超过上限报 <code>InvalidParameter.maxResults</code>。</li>
+     * <li><code>authorizationScope</code> 控制查询维度：<code>AUTHORIZED</code>=已授权指定 action 的模型，<code>AUTHORIZABLE</code>=全量可授权目录。</li>
+     * <li><code>modelAction</code> 指定授权 action 维度，当前仅支持 <code>INFERENCE</code>，为空默认 <code>INFERENCE</code>。</li>
+     * <li><code>filter</code> 支持按 <code>name</code>（模糊匹配 model+name）或 <code>model</code>（精确匹配单个模型）过滤。</li>
+     * <li>返回 <code>TokenBasedPage</code>，含每个模型的授权态（inference/fineTune/deploy）与限流信息。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListModelPermissions  ListModelPermissionsRequest
+     * @return ListModelPermissionsResponse
+     */
+    @Override
+    public CompletableFuture<ListModelPermissionsResponse> listModelPermissions(ListModelPermissionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListModelPermissions").setMethod(HttpMethod.GET).setPathRegex("/modelstudio/models/permissions").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListModelPermissionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListModelPermissionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListModels  ListModelsRequest
+     * @return ListModelsResponse
+     */
+    @Override
+    public CompletableFuture<ListModelsResponse> listModels(ListModelsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListModels").setMethod(HttpMethod.GET).setPathRegex("/modelstudio/models").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListModelsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListModelsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListOrganizationMembers  ListOrganizationMembersRequest
      * @return ListOrganizationMembersResponse
      */
@@ -561,6 +628,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateApiKeyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateModelLimits  UpdateModelLimitsRequest
+     * @return UpdateModelLimitsResponse
+     */
+    @Override
+    public CompletableFuture<UpdateModelLimitsResponse> updateModelLimits(UpdateModelLimitsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateModelLimits").setMethod(HttpMethod.POST).setPathRegex("/modelstudio/models/limits").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateModelLimitsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateModelLimitsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateModelPermissions  UpdateModelPermissionsRequest
+     * @return UpdateModelPermissionsResponse
+     */
+    @Override
+    public CompletableFuture<UpdateModelPermissionsResponse> updateModelPermissions(UpdateModelPermissionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateModelPermissions").setMethod(HttpMethod.POST).setPathRegex("/modelstudio/models/permissions").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateModelPermissionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateModelPermissionsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

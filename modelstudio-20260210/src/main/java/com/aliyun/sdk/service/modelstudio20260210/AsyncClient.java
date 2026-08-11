@@ -140,6 +140,35 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListApiKeysResponse> listApiKeys(ListApiKeysRequest request);
 
     /**
+     * @param request the request parameters of ListModelLimits  ListModelLimitsRequest
+     * @return ListModelLimitsResponse
+     */
+    CompletableFuture<ListModelLimitsResponse> listModelLimits(ListModelLimitsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>通过 <code>workspaceId</code> 指定要查询的业务空间（必填，不可为空）。</li>
+     * <li>采用 Token 分页：<code>nextToken</code> 为字符串型 offset，首页不传；<code>maxResults</code> 默认 20，超过上限报 <code>InvalidParameter.maxResults</code>。</li>
+     * <li><code>authorizationScope</code> 控制查询维度：<code>AUTHORIZED</code>=已授权指定 action 的模型，<code>AUTHORIZABLE</code>=全量可授权目录。</li>
+     * <li><code>modelAction</code> 指定授权 action 维度，当前仅支持 <code>INFERENCE</code>，为空默认 <code>INFERENCE</code>。</li>
+     * <li><code>filter</code> 支持按 <code>name</code>（模糊匹配 model+name）或 <code>model</code>（精确匹配单个模型）过滤。</li>
+     * <li>返回 <code>TokenBasedPage</code>，含每个模型的授权态（inference/fineTune/deploy）与限流信息。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListModelPermissions  ListModelPermissionsRequest
+     * @return ListModelPermissionsResponse
+     */
+    CompletableFuture<ListModelPermissionsResponse> listModelPermissions(ListModelPermissionsRequest request);
+
+    /**
+     * @param request the request parameters of ListModels  ListModelsRequest
+     * @return ListModelsResponse
+     */
+    CompletableFuture<ListModelsResponse> listModels(ListModelsRequest request);
+
+    /**
      * @param request the request parameters of ListOrganizationMembers  ListOrganizationMembersRequest
      * @return ListOrganizationMembersResponse
      */
@@ -192,6 +221,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateApiKeyResponse
      */
     CompletableFuture<UpdateApiKeyResponse> updateApiKey(UpdateApiKeyRequest request);
+
+    /**
+     * @param request the request parameters of UpdateModelLimits  UpdateModelLimitsRequest
+     * @return UpdateModelLimitsResponse
+     */
+    CompletableFuture<UpdateModelLimitsResponse> updateModelLimits(UpdateModelLimitsRequest request);
+
+    /**
+     * @param request the request parameters of UpdateModelPermissions  UpdateModelPermissionsRequest
+     * @return UpdateModelPermissionsResponse
+     */
+    CompletableFuture<UpdateModelPermissionsResponse> updateModelPermissions(UpdateModelPermissionsRequest request);
 
     /**
      * @param request the request parameters of UpdateOrganization  UpdateOrganizationRequest
