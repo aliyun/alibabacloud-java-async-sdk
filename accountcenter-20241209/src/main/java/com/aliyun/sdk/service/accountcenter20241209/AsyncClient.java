@@ -164,10 +164,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnterpriseContactQueryPageListResponse> enterpriseContactQueryPageList(EnterpriseContactQueryPageListRequest request);
 
     /**
+     * @param request the request parameters of EnterpriseOrgCreateNode  EnterpriseOrgCreateNodeRequest
+     * @return EnterpriseOrgCreateNodeResponse
+     */
+    CompletableFuture<EnterpriseOrgCreateNodeResponse> enterpriseOrgCreateNode(EnterpriseOrgCreateNodeRequest request);
+
+    /**
+     * @param request the request parameters of EnterpriseOrgDeleteNode  EnterpriseOrgDeleteNodeRequest
+     * @return EnterpriseOrgDeleteNodeResponse
+     */
+    CompletableFuture<EnterpriseOrgDeleteNodeResponse> enterpriseOrgDeleteNode(EnterpriseOrgDeleteNodeRequest request);
+
+    /**
      * @param request the request parameters of EnterpriseOrgQueryLoadTree  EnterpriseOrgQueryLoadTreeRequest
      * @return EnterpriseOrgQueryLoadTreeResponse
      */
     CompletableFuture<EnterpriseOrgQueryLoadTreeResponse> enterpriseOrgQueryLoadTree(EnterpriseOrgQueryLoadTreeRequest request);
+
+    /**
+     * @param request the request parameters of EnterpriseOrgRenameNode  EnterpriseOrgRenameNodeRequest
+     * @return EnterpriseOrgRenameNodeResponse
+     */
+    CompletableFuture<EnterpriseOrgRenameNodeResponse> enterpriseOrgRenameNode(EnterpriseOrgRenameNodeRequest request);
 
     /**
      * @param request the request parameters of EnterpriseRegisterAccount  EnterpriseRegisterAccountRequest

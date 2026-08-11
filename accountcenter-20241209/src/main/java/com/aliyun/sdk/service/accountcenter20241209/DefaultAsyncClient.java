@@ -29,8 +29,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "AccountCenter";
         this.version = "2024-12-09";
-        this.endpointRule = "";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("ap-southeast-1", "accountcenter-intl.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "accountcenter.cn-hangzhou.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -472,6 +475,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of EnterpriseOrgCreateNode  EnterpriseOrgCreateNodeRequest
+     * @return EnterpriseOrgCreateNodeResponse
+     */
+    @Override
+    public CompletableFuture<EnterpriseOrgCreateNodeResponse> enterpriseOrgCreateNode(EnterpriseOrgCreateNodeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnterpriseOrgCreateNode").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnterpriseOrgCreateNodeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnterpriseOrgCreateNodeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnterpriseOrgDeleteNode  EnterpriseOrgDeleteNodeRequest
+     * @return EnterpriseOrgDeleteNodeResponse
+     */
+    @Override
+    public CompletableFuture<EnterpriseOrgDeleteNodeResponse> enterpriseOrgDeleteNode(EnterpriseOrgDeleteNodeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnterpriseOrgDeleteNode").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnterpriseOrgDeleteNodeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnterpriseOrgDeleteNodeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of EnterpriseOrgQueryLoadTree  EnterpriseOrgQueryLoadTreeRequest
      * @return EnterpriseOrgQueryLoadTreeResponse
      */
@@ -484,6 +523,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<EnterpriseOrgQueryLoadTreeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnterpriseOrgRenameNode  EnterpriseOrgRenameNodeRequest
+     * @return EnterpriseOrgRenameNodeResponse
+     */
+    @Override
+    public CompletableFuture<EnterpriseOrgRenameNodeResponse> enterpriseOrgRenameNode(EnterpriseOrgRenameNodeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnterpriseOrgRenameNode").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnterpriseOrgRenameNodeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnterpriseOrgRenameNodeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
