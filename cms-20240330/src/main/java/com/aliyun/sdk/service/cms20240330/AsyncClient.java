@@ -83,6 +83,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateContextStoreAPIKeyResponse> createContextStoreAPIKey(CreateContextStoreAPIKeyRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>在指定工作空间中创建一条数据流水线。</p>
+     * 
+     * @param request the request parameters of CreateDataPipeline  CreateDataPipelineRequest
+     * @return CreateDataPipelineResponse
+     */
+    CompletableFuture<CreateDataPipelineResponse> createDataPipeline(CreateDataPipelineRequest request);
+
+    /**
      * @param request the request parameters of CreateDataset  CreateDatasetRequest
      * @return CreateDatasetResponse
      */
@@ -243,6 +252,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteContextsResponse
      */
     CompletableFuture<DeleteContextsResponse> deleteContexts(DeleteContextsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>删除指定工作空间中的一条数据流水线。</p>
+     * 
+     * @param request the request parameters of DeleteDataPipeline  DeleteDataPipelineRequest
+     * @return DeleteDataPipelineResponse
+     */
+    CompletableFuture<DeleteDataPipelineResponse> deleteDataPipeline(DeleteDataPipelineRequest request);
 
     /**
      * @param request the request parameters of DeleteDataset  DeleteDatasetRequest
@@ -467,6 +485,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetContextStoreResponse> getContextStore(GetContextStoreRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>查询指定工作空间中一条数据流水线的配置与运行状态。</p>
+     * 
+     * @param request the request parameters of GetDataPipeline  GetDataPipelineRequest
+     * @return GetDataPipelineResponse
+     */
+    CompletableFuture<GetDataPipelineResponse> getDataPipeline(GetDataPipelineRequest request);
+
+    /**
      * @param request the request parameters of GetDataset  GetDatasetRequest
      * @return GetDatasetResponse
      */
@@ -686,6 +713,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListContextStoresResponse> listContextStores(ListContextStoresRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>分页查询指定工作空间中的数据流水线。</p>
+     * 
+     * @param request the request parameters of ListDataPipelines  ListDataPipelinesRequest
+     * @return ListDataPipelinesResponse
+     */
+    CompletableFuture<ListDataPipelinesResponse> listDataPipelines(ListDataPipelinesRequest request);
+
+    /**
      * @param request the request parameters of ListDatasets  ListDatasetsRequest
      * @return ListDatasetsResponse
      */
@@ -855,6 +891,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<OpenCmsServiceResponse> openCmsService(OpenCmsServiceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>编译候选配置，并查询指定时间窗口内按 Dataset 分组的只读样例。</p>
+     * 
+     * @param request the request parameters of PreviewDataPipeline  PreviewDataPipelineRequest
+     * @return PreviewDataPipelineResponse
+     */
+    CompletableFuture<PreviewDataPipelineResponse> previewDataPipeline(PreviewDataPipelineRequest request);
+
+    /**
      * @param request the request parameters of PutWorkspace  PutWorkspaceRequest
      * @return PutWorkspaceResponse
      */
@@ -931,6 +976,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateContextStoreResponse
      */
     CompletableFuture<UpdateContextStoreResponse> updateContextStore(UpdateContextStoreRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>使用完整候选配置修改指定的数据流水线。</p>
+     * 
+     * @param request the request parameters of UpdateDataPipeline  UpdateDataPipelineRequest
+     * @return UpdateDataPipelineResponse
+     */
+    CompletableFuture<UpdateDataPipelineResponse> updateDataPipeline(UpdateDataPipelineRequest request);
 
     /**
      * @param request the request parameters of UpdateDataset  UpdateDatasetRequest

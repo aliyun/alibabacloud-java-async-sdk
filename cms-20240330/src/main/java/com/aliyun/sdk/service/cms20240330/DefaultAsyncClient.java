@@ -31,48 +31,48 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.version = "2024-03-30";
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("us-west-1", "metrics.us-west-1.aliyuncs.com"),
-            new TeaPair("us-southeast-1", "metrics.us-southeast-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "metrics.us-east-1.aliyuncs.com"),
-            new TeaPair("na-south-1", "metrics.na-south-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "metrics.me-east-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "metrics.me-central-1.aliyuncs.com"),
-            new TeaPair("eu-west-2", "metrics.eu-west-2.aliyuncs.com"),
-            new TeaPair("eu-west-1", "metrics.eu-west-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "metrics.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhongwei", "metrics.cn-zhongwei.aliyuncs.com"),
+            new TeaPair("cn-beijing", "metrics.cn-beijing.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-jva", "metrics.cn-zhengzhou-jva.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "metrics.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu-gic-1", "metrics.cn-wulanchabu-gic-1.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "metrics.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-wuhan-lr", "metrics.cn-wuhan-lr.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "metrics.cn-shenzhen-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "metrics.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "metrics.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "metrics.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "metrics.cn-qingdao.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "metrics.cn-north-2-gov-1.aliyuncs.com"),
-            new TeaPair("cn-nanjing", "metrics.cn-nanjing.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "metrics.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "metrics.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-heyuan-acdr-1", "metrics.cn-heyuan-acdr-1.aliyuncs.com"),
             new TeaPair("cn-heyuan", "metrics.cn-heyuan.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "metrics.cn-hangzhou-finance.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "metrics.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "metrics.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "metrics.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "metrics.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "metrics.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "metrics.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "metrics.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "metrics.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "metrics.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "metrics.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "metrics.ap-southeast-8.aliyuncs.com"),
+            new TeaPair("cn-zhongwei", "metrics.cn-zhongwei.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "metrics.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "metrics.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-wuhan-lr", "metrics.cn-wuhan-lr.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "metrics.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "metrics.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "metrics.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-nanjing", "metrics.cn-nanjing.aliyuncs.com"),
             new TeaPair("cn-fuzhou", "metrics.cn-fuzhou.aliyuncs.com"),
             new TeaPair("cn-chengdu", "metrics.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-1", "metrics.cn-beijing-finance-1.aliyuncs.com"),
-            new TeaPair("cn-beijing", "metrics.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-8", "metrics.ap-southeast-8.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "metrics.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "metrics.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "metrics.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "metrics.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "metrics.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "metrics.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "metrics.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "metrics.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("us-southeast-1", "metrics.us-southeast-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "metrics.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-west-2", "metrics.eu-west-2.aliyuncs.com"),
+            new TeaPair("eu-central-1", "metrics.eu-central-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "metrics.us-east-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "metrics.us-west-1.aliyuncs.com"),
+            new TeaPair("na-south-1", "metrics.na-south-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "metrics.me-east-1.aliyuncs.com"),
             new TeaPair("ap-south-1", "metrics.ap-south-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "metrics.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "metrics.ap-northeast-1.aliyuncs.com")
+            new TeaPair("me-central-1", "metrics.me-central-1.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "metrics.cn-hangzhou-finance.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "metrics.cn-shenzhen-finance-1.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "metrics.cn-beijing-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "metrics.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu-gic-1", "metrics.cn-wulanchabu-gic-1.aliyuncs.com"),
+            new TeaPair("cn-heyuan-acdr-1", "metrics.cn-heyuan-acdr-1.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "metrics.cn-north-2-gov-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -260,6 +260,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateContextStoreAPIKeyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>在指定工作空间中创建一条数据流水线。</p>
+     * 
+     * @param request the request parameters of CreateDataPipeline  CreateDataPipelineRequest
+     * @return CreateDataPipelineResponse
+     */
+    @Override
+    public CompletableFuture<CreateDataPipelineResponse> createDataPipeline(CreateDataPipelineRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateDataPipeline").setMethod(HttpMethod.POST).setPathRegex("/workspace/{workspace}/datapipeline").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDataPipelineResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateDataPipelineResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -722,6 +743,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteContextsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>删除指定工作空间中的一条数据流水线。</p>
+     * 
+     * @param request the request parameters of DeleteDataPipeline  DeleteDataPipelineRequest
+     * @return DeleteDataPipelineResponse
+     */
+    @Override
+    public CompletableFuture<DeleteDataPipelineResponse> deleteDataPipeline(DeleteDataPipelineRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteDataPipeline").setMethod(HttpMethod.DELETE).setPathRegex("/workspace/{workspace}/datapipeline/{pipelineName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteDataPipelineResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteDataPipelineResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1370,6 +1412,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>查询指定工作空间中一条数据流水线的配置与运行状态。</p>
+     * 
+     * @param request the request parameters of GetDataPipeline  GetDataPipelineRequest
+     * @return GetDataPipelineResponse
+     */
+    @Override
+    public CompletableFuture<GetDataPipelineResponse> getDataPipeline(GetDataPipelineRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDataPipeline").setMethod(HttpMethod.GET).setPathRegex("/workspace/{workspace}/datapipeline/{pipelineName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDataPipelineResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDataPipelineResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetDataset  GetDatasetRequest
      * @return GetDatasetResponse
      */
@@ -1997,6 +2060,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>分页查询指定工作空间中的数据流水线。</p>
+     * 
+     * @param request the request parameters of ListDataPipelines  ListDataPipelinesRequest
+     * @return ListDataPipelinesResponse
+     */
+    @Override
+    public CompletableFuture<ListDataPipelinesResponse> listDataPipelines(ListDataPipelinesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListDataPipelines").setMethod(HttpMethod.GET).setPathRegex("/workspace/{workspace}/datapipeline").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDataPipelinesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDataPipelinesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListDatasets  ListDatasetsRequest
      * @return ListDatasetsResponse
      */
@@ -2454,6 +2538,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>编译候选配置，并查询指定时间窗口内按 Dataset 分组的只读样例。</p>
+     * 
+     * @param request the request parameters of PreviewDataPipeline  PreviewDataPipelineRequest
+     * @return PreviewDataPipelineResponse
+     */
+    @Override
+    public CompletableFuture<PreviewDataPipelineResponse> previewDataPipeline(PreviewDataPipelineRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PreviewDataPipeline").setMethod(HttpMethod.POST).setPathRegex("/workspace/{workspace}/datapipeline/preview").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PreviewDataPipelineResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PreviewDataPipelineResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of PutWorkspace  PutWorkspaceRequest
      * @return PutWorkspaceResponse
      */
@@ -2682,6 +2787,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateContextStoreResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>使用完整候选配置修改指定的数据流水线。</p>
+     * 
+     * @param request the request parameters of UpdateDataPipeline  UpdateDataPipelineRequest
+     * @return UpdateDataPipelineResponse
+     */
+    @Override
+    public CompletableFuture<UpdateDataPipelineResponse> updateDataPipeline(UpdateDataPipelineRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateDataPipeline").setMethod(HttpMethod.PUT).setPathRegex("/workspace/{workspace}/datapipeline/{pipelineName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateDataPipelineResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateDataPipelineResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
