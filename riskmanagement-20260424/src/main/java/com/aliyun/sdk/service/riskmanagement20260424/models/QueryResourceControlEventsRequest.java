@@ -34,6 +34,10 @@ public class QueryResourceControlEventsRequest extends Request {
     private String businessCode;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessCodes")
+    private java.util.List<String> businessCodes;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CaseCodesPrefix")
     private java.util.List<String> caseCodesPrefix;
 
@@ -123,6 +127,7 @@ public class QueryResourceControlEventsRequest extends Request {
         this.actionCodes = builder.actionCodes;
         this.aliyunLang = builder.aliyunLang;
         this.businessCode = builder.businessCode;
+        this.businessCodes = builder.businessCodes;
         this.caseCodesPrefix = builder.caseCodesPrefix;
         this.current = builder.current;
         this.domain = builder.domain;
@@ -185,6 +190,13 @@ public class QueryResourceControlEventsRequest extends Request {
      */
     public String getBusinessCode() {
         return this.businessCode;
+    }
+
+    /**
+     * @return businessCodes
+     */
+    public java.util.List<String> getBusinessCodes() {
+        return this.businessCodes;
     }
 
     /**
@@ -339,6 +351,7 @@ public class QueryResourceControlEventsRequest extends Request {
         private java.util.List<String> actionCodes; 
         private String aliyunLang; 
         private String businessCode; 
+        private java.util.List<String> businessCodes; 
         private java.util.List<String> caseCodesPrefix; 
         private Integer current; 
         private String domain; 
@@ -371,6 +384,7 @@ public class QueryResourceControlEventsRequest extends Request {
             this.actionCodes = request.actionCodes;
             this.aliyunLang = request.aliyunLang;
             this.businessCode = request.businessCode;
+            this.businessCodes = request.businessCodes;
             this.caseCodesPrefix = request.caseCodesPrefix;
             this.current = request.current;
             this.domain = request.domain;
@@ -428,6 +442,16 @@ public class QueryResourceControlEventsRequest extends Request {
         public Builder businessCode(String businessCode) {
             this.putQueryParameter("BusinessCode", businessCode);
             this.businessCode = businessCode;
+            return this;
+        }
+
+        /**
+         * BusinessCodes.
+         */
+        public Builder businessCodes(java.util.List<String> businessCodes) {
+            String businessCodesShrink = shrink(businessCodes, "BusinessCodes", "json");
+            this.putQueryParameter("BusinessCodes", businessCodesShrink);
+            this.businessCodes = businessCodes;
             return this;
         }
 
