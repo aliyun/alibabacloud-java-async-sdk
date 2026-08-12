@@ -44,6 +44,9 @@ public class GetEngineConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
+    @com.aliyun.core.annotation.NameInMap("Type")
+    private String type;
+
     private GetEngineConfigResponseBody(Builder builder) {
         this.configValue = builder.configValue;
         this.description = builder.description;
@@ -54,6 +57,7 @@ public class GetEngineConfigResponseBody extends TeaModel {
         this.name = builder.name;
         this.requestId = builder.requestId;
         this.status = builder.status;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -131,6 +135,13 @@ public class GetEngineConfigResponseBody extends TeaModel {
         return this.status;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder {
         private String configValue; 
         private String description; 
@@ -141,6 +152,7 @@ public class GetEngineConfigResponseBody extends TeaModel {
         private String name; 
         private String requestId; 
         private String status; 
+        private String type; 
 
         private Builder() {
         } 
@@ -155,6 +167,7 @@ public class GetEngineConfigResponseBody extends TeaModel {
             this.name = model.name;
             this.requestId = model.requestId;
             this.status = model.status;
+            this.type = model.type;
         } 
 
         /**
@@ -226,6 +239,14 @@ public class GetEngineConfigResponseBody extends TeaModel {
          */
         public Builder status(String status) {
             this.status = status;
+            return this;
+        }
+
+        /**
+         * Type.
+         */
+        public Builder type(String type) {
+            this.type = type;
             return this;
         }
 

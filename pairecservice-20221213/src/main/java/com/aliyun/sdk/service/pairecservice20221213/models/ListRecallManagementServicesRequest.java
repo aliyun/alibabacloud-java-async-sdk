@@ -30,6 +30,10 @@ public class ListRecallManagementServicesRequest extends Request {
     private Integer maxResults;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    private String name;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
@@ -54,6 +58,7 @@ public class ListRecallManagementServicesRequest extends Request {
         this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.maxResults = builder.maxResults;
+        this.name = builder.name;
         this.nextToken = builder.nextToken;
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
@@ -96,6 +101,13 @@ public class ListRecallManagementServicesRequest extends Request {
     }
 
     /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
      * @return nextToken
      */
     public String getNextToken() {
@@ -134,6 +146,7 @@ public class ListRecallManagementServicesRequest extends Request {
         private String regionId; 
         private String instanceId; 
         private Integer maxResults; 
+        private String name; 
         private String nextToken; 
         private String order; 
         private Long pageNumber; 
@@ -149,6 +162,7 @@ public class ListRecallManagementServicesRequest extends Request {
             this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.maxResults = request.maxResults;
+            this.name = request.name;
             this.nextToken = request.nextToken;
             this.order = request.order;
             this.pageNumber = request.pageNumber;
@@ -180,6 +194,15 @@ public class ListRecallManagementServicesRequest extends Request {
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
             this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
             return this;
         }
 

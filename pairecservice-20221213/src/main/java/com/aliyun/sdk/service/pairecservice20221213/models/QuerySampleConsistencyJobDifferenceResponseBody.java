@@ -218,11 +218,17 @@ public class QuerySampleConsistencyJobDifferenceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ItemId")
         private String itemId;
 
+        @com.aliyun.core.annotation.NameInMap("ReplyTableFeatureRawValue")
+        private String replyTableFeatureRawValue;
+
         @com.aliyun.core.annotation.NameInMap("ReplyTableFeatureValue")
         private Double replyTableFeatureValue;
 
         @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
+
+        @com.aliyun.core.annotation.NameInMap("SampleTableFeatureRawValue")
+        private String sampleTableFeatureRawValue;
 
         @com.aliyun.core.annotation.NameInMap("SampleTableFeatureValue")
         private Double sampleTableFeatureValue;
@@ -233,8 +239,10 @@ public class QuerySampleConsistencyJobDifferenceResponseBody extends TeaModel {
         private NumberFeatureDifferences(Builder builder) {
             this.diffValue = builder.diffValue;
             this.itemId = builder.itemId;
+            this.replyTableFeatureRawValue = builder.replyTableFeatureRawValue;
             this.replyTableFeatureValue = builder.replyTableFeatureValue;
             this.requestId = builder.requestId;
+            this.sampleTableFeatureRawValue = builder.sampleTableFeatureRawValue;
             this.sampleTableFeatureValue = builder.sampleTableFeatureValue;
             this.userId = builder.userId;
         }
@@ -262,6 +270,13 @@ public class QuerySampleConsistencyJobDifferenceResponseBody extends TeaModel {
         }
 
         /**
+         * @return replyTableFeatureRawValue
+         */
+        public String getReplyTableFeatureRawValue() {
+            return this.replyTableFeatureRawValue;
+        }
+
+        /**
          * @return replyTableFeatureValue
          */
         public Double getReplyTableFeatureValue() {
@@ -273,6 +288,13 @@ public class QuerySampleConsistencyJobDifferenceResponseBody extends TeaModel {
          */
         public String getRequestId() {
             return this.requestId;
+        }
+
+        /**
+         * @return sampleTableFeatureRawValue
+         */
+        public String getSampleTableFeatureRawValue() {
+            return this.sampleTableFeatureRawValue;
         }
 
         /**
@@ -292,8 +314,10 @@ public class QuerySampleConsistencyJobDifferenceResponseBody extends TeaModel {
         public static final class Builder {
             private Double diffValue; 
             private String itemId; 
+            private String replyTableFeatureRawValue; 
             private Double replyTableFeatureValue; 
             private String requestId; 
+            private String sampleTableFeatureRawValue; 
             private Double sampleTableFeatureValue; 
             private String userId; 
 
@@ -303,8 +327,10 @@ public class QuerySampleConsistencyJobDifferenceResponseBody extends TeaModel {
             private Builder(NumberFeatureDifferences model) {
                 this.diffValue = model.diffValue;
                 this.itemId = model.itemId;
+                this.replyTableFeatureRawValue = model.replyTableFeatureRawValue;
                 this.replyTableFeatureValue = model.replyTableFeatureValue;
                 this.requestId = model.requestId;
+                this.sampleTableFeatureRawValue = model.sampleTableFeatureRawValue;
                 this.sampleTableFeatureValue = model.sampleTableFeatureValue;
                 this.userId = model.userId;
             } 
@@ -326,6 +352,14 @@ public class QuerySampleConsistencyJobDifferenceResponseBody extends TeaModel {
             }
 
             /**
+             * ReplyTableFeatureRawValue.
+             */
+            public Builder replyTableFeatureRawValue(String replyTableFeatureRawValue) {
+                this.replyTableFeatureRawValue = replyTableFeatureRawValue;
+                return this;
+            }
+
+            /**
              * ReplyTableFeatureValue.
              */
             public Builder replyTableFeatureValue(Double replyTableFeatureValue) {
@@ -338,6 +372,14 @@ public class QuerySampleConsistencyJobDifferenceResponseBody extends TeaModel {
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
+                return this;
+            }
+
+            /**
+             * SampleTableFeatureRawValue.
+             */
+            public Builder sampleTableFeatureRawValue(String sampleTableFeatureRawValue) {
+                this.sampleTableFeatureRawValue = sampleTableFeatureRawValue;
                 return this;
             }
 

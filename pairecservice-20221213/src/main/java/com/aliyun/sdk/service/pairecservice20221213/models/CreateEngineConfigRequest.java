@@ -41,6 +41,10 @@ public class CreateEngineConfigRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
+    private String type;
+
     private CreateEngineConfigRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -49,6 +53,7 @@ public class CreateEngineConfigRequest extends Request {
         this.environment = builder.environment;
         this.instanceId = builder.instanceId;
         this.name = builder.name;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -106,6 +111,13 @@ public class CreateEngineConfigRequest extends Request {
         return this.name;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder extends Request.Builder<CreateEngineConfigRequest, Builder> {
         private String regionId; 
         private String configValue; 
@@ -113,6 +125,7 @@ public class CreateEngineConfigRequest extends Request {
         private String environment; 
         private String instanceId; 
         private String name; 
+        private String type; 
 
         private Builder() {
             super();
@@ -126,6 +139,7 @@ public class CreateEngineConfigRequest extends Request {
             this.environment = request.environment;
             this.instanceId = request.instanceId;
             this.name = request.name;
+            this.type = request.type;
         } 
 
         /**
@@ -179,6 +193,15 @@ public class CreateEngineConfigRequest extends Request {
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * Type.
+         */
+        public Builder type(String type) {
+            this.putBodyParameter("Type", type);
+            this.type = type;
             return this;
         }
 

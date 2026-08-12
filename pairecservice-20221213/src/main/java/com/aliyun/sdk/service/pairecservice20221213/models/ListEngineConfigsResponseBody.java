@@ -143,6 +143,9 @@ public class ListEngineConfigsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
         @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
@@ -156,6 +159,7 @@ public class ListEngineConfigsResponseBody extends TeaModel {
             this.gmtReleasedTime = builder.gmtReleasedTime;
             this.name = builder.name;
             this.status = builder.status;
+            this.type = builder.type;
             this.version = builder.version;
         }
 
@@ -231,6 +235,13 @@ public class ListEngineConfigsResponseBody extends TeaModel {
         }
 
         /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
          * @return version
          */
         public String getVersion() {
@@ -247,6 +258,7 @@ public class ListEngineConfigsResponseBody extends TeaModel {
             private String gmtReleasedTime; 
             private String name; 
             private String status; 
+            private String type; 
             private String version; 
 
             private Builder() {
@@ -262,6 +274,7 @@ public class ListEngineConfigsResponseBody extends TeaModel {
                 this.gmtReleasedTime = model.gmtReleasedTime;
                 this.name = model.name;
                 this.status = model.status;
+                this.type = model.type;
                 this.version = model.version;
             } 
 
@@ -334,6 +347,14 @@ public class ListEngineConfigsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 

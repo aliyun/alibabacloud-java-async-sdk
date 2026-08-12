@@ -45,6 +45,10 @@ public class UpdateEngineConfigRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
+    private String type;
+
     private UpdateEngineConfigRequest(Builder builder) {
         super(builder);
         this.engineConfigId = builder.engineConfigId;
@@ -54,6 +58,7 @@ public class UpdateEngineConfigRequest extends Request {
         this.environment = builder.environment;
         this.instanceId = builder.instanceId;
         this.name = builder.name;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -118,6 +123,13 @@ public class UpdateEngineConfigRequest extends Request {
         return this.name;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder extends Request.Builder<UpdateEngineConfigRequest, Builder> {
         private String engineConfigId; 
         private String regionId; 
@@ -126,6 +138,7 @@ public class UpdateEngineConfigRequest extends Request {
         private String environment; 
         private String instanceId; 
         private String name; 
+        private String type; 
 
         private Builder() {
             super();
@@ -140,6 +153,7 @@ public class UpdateEngineConfigRequest extends Request {
             this.environment = request.environment;
             this.instanceId = request.instanceId;
             this.name = request.name;
+            this.type = request.type;
         } 
 
         /**
@@ -202,6 +216,15 @@ public class UpdateEngineConfigRequest extends Request {
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * Type.
+         */
+        public Builder type(String type) {
+            this.putBodyParameter("Type", type);
+            this.type = type;
             return this;
         }
 
