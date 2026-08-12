@@ -60,6 +60,10 @@ public class CreateInstanceV1Request extends Request {
     private Integer duration;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableAiFunction")
+    private Boolean enableAiFunction;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EnableMultiAz")
     private Boolean enableMultiAz;
 
@@ -166,6 +170,7 @@ public class CreateInstanceV1Request extends Request {
         this.dlfCatalogName = builder.dlfCatalogName;
         this.dlfCatalogType = builder.dlfCatalogType;
         this.duration = builder.duration;
+        this.enableAiFunction = builder.enableAiFunction;
         this.enableMultiAz = builder.enableMultiAz;
         this.encrypted = builder.encrypted;
         this.frontendNodeGroups = builder.frontendNodeGroups;
@@ -271,6 +276,13 @@ public class CreateInstanceV1Request extends Request {
      */
     public Integer getDuration() {
         return this.duration;
+    }
+
+    /**
+     * @return enableAiFunction
+     */
+    public Boolean getEnableAiFunction() {
+        return this.enableAiFunction;
     }
 
     /**
@@ -438,6 +450,7 @@ public class CreateInstanceV1Request extends Request {
         private String dlfCatalogName; 
         private String dlfCatalogType; 
         private Integer duration; 
+        private Boolean enableAiFunction; 
         private Boolean enableMultiAz; 
         private Boolean encrypted; 
         private java.util.List<FrontendNodeGroups> frontendNodeGroups; 
@@ -477,6 +490,7 @@ public class CreateInstanceV1Request extends Request {
             this.dlfCatalogName = request.dlfCatalogName;
             this.dlfCatalogType = request.dlfCatalogType;
             this.duration = request.duration;
+            this.enableAiFunction = request.enableAiFunction;
             this.enableMultiAz = request.enableMultiAz;
             this.encrypted = request.encrypted;
             this.frontendNodeGroups = request.frontendNodeGroups;
@@ -592,6 +606,15 @@ public class CreateInstanceV1Request extends Request {
         public Builder duration(Integer duration) {
             this.putBodyParameter("Duration", duration);
             this.duration = duration;
+            return this;
+        }
+
+        /**
+         * EnableAiFunction.
+         */
+        public Builder enableAiFunction(Boolean enableAiFunction) {
+            this.putBodyParameter("EnableAiFunction", enableAiFunction);
+            this.enableAiFunction = enableAiFunction;
             return this;
         }
 
