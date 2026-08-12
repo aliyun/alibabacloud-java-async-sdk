@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Backend</p>
  */
 public class Backend extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("enableSystemModels")
+    private Boolean enableSystemModels;
+
     @com.aliyun.core.annotation.NameInMap("scene")
     private String scene;
 
@@ -24,6 +27,7 @@ public class Backend extends TeaModel {
     private java.util.List<Services> services;
 
     private Backend(Builder builder) {
+        this.enableSystemModels = builder.enableSystemModels;
         this.scene = builder.scene;
         this.services = builder.services;
     }
@@ -41,6 +45,13 @@ public class Backend extends TeaModel {
     }
 
     /**
+     * @return enableSystemModels
+     */
+    public Boolean getEnableSystemModels() {
+        return this.enableSystemModels;
+    }
+
+    /**
      * @return scene
      */
     public String getScene() {
@@ -55,6 +66,7 @@ public class Backend extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean enableSystemModels; 
         private String scene; 
         private java.util.List<Services> services; 
 
@@ -62,9 +74,18 @@ public class Backend extends TeaModel {
         } 
 
         private Builder(Backend model) {
+            this.enableSystemModels = model.enableSystemModels;
             this.scene = model.scene;
             this.services = model.services;
         } 
+
+        /**
+         * enableSystemModels.
+         */
+        public Builder enableSystemModels(Boolean enableSystemModels) {
+            this.enableSystemModels = enableSystemModels;
+            return this;
+        }
 
         /**
          * scene.
@@ -95,6 +116,9 @@ public class Backend extends TeaModel {
      * <p>Backend</p>
      */
     public static class Services extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("modelName")
+        private String modelName;
+
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
@@ -114,6 +138,7 @@ public class Backend extends TeaModel {
         private Integer weight;
 
         private Services(Builder builder) {
+            this.modelName = builder.modelName;
             this.name = builder.name;
             this.port = builder.port;
             this.protocol = builder.protocol;
@@ -128,6 +153,13 @@ public class Backend extends TeaModel {
 
         public static Services create() {
             return builder().build();
+        }
+
+        /**
+         * @return modelName
+         */
+        public String getModelName() {
+            return this.modelName;
         }
 
         /**
@@ -173,6 +205,7 @@ public class Backend extends TeaModel {
         }
 
         public static final class Builder {
+            private String modelName; 
             private String name; 
             private Integer port; 
             private String protocol; 
@@ -184,6 +217,7 @@ public class Backend extends TeaModel {
             } 
 
             private Builder(Services model) {
+                this.modelName = model.modelName;
                 this.name = model.name;
                 this.port = model.port;
                 this.protocol = model.protocol;
@@ -191,6 +225,14 @@ public class Backend extends TeaModel {
                 this.version = model.version;
                 this.weight = model.weight;
             } 
+
+            /**
+             * modelName.
+             */
+            public Builder modelName(String modelName) {
+                this.modelName = modelName;
+                return this;
+            }
 
             /**
              * name.

@@ -32,6 +32,9 @@ public class HttpApiDeployConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("customDomainInfos")
     private java.util.List<CustomDomainInfos> customDomainInfos;
 
+    @com.aliyun.core.annotation.NameInMap("enableSystemModels")
+    private Boolean enableSystemModels;
+
     @com.aliyun.core.annotation.NameInMap("envDomainIds")
     private java.util.List<String> envDomainIds;
 
@@ -71,6 +74,7 @@ public class HttpApiDeployConfig extends TeaModel {
         this.builtinRouteNames = builder.builtinRouteNames;
         this.customDomainIds = builder.customDomainIds;
         this.customDomainInfos = builder.customDomainInfos;
+        this.enableSystemModels = builder.enableSystemModels;
         this.envDomainIds = builder.envDomainIds;
         this.envDomainInfos = builder.envDomainInfos;
         this.environmentId = builder.environmentId;
@@ -129,6 +133,13 @@ public class HttpApiDeployConfig extends TeaModel {
      */
     public java.util.List<CustomDomainInfos> getCustomDomainInfos() {
         return this.customDomainInfos;
+    }
+
+    /**
+     * @return enableSystemModels
+     */
+    public Boolean getEnableSystemModels() {
+        return this.enableSystemModels;
     }
 
     /**
@@ -214,6 +225,7 @@ public class HttpApiDeployConfig extends TeaModel {
         private java.util.List<String> builtinRouteNames; 
         private java.util.List<String> customDomainIds; 
         private java.util.List<CustomDomainInfos> customDomainInfos; 
+        private Boolean enableSystemModels; 
         private java.util.List<String> envDomainIds; 
         private java.util.List<EnvDomainInfos> envDomainInfos; 
         private String environmentId; 
@@ -235,6 +247,7 @@ public class HttpApiDeployConfig extends TeaModel {
             this.builtinRouteNames = model.builtinRouteNames;
             this.customDomainIds = model.customDomainIds;
             this.customDomainInfos = model.customDomainInfos;
+            this.enableSystemModels = model.enableSystemModels;
             this.envDomainIds = model.envDomainIds;
             this.envDomainInfos = model.envDomainInfos;
             this.environmentId = model.environmentId;
@@ -285,6 +298,14 @@ public class HttpApiDeployConfig extends TeaModel {
          */
         public Builder customDomainInfos(java.util.List<CustomDomainInfos> customDomainInfos) {
             this.customDomainInfos = customDomainInfos;
+            return this;
+        }
+
+        /**
+         * enableSystemModels.
+         */
+        public Builder enableSystemModels(Boolean enableSystemModels) {
+            this.enableSystemModels = enableSystemModels;
             return this;
         }
 

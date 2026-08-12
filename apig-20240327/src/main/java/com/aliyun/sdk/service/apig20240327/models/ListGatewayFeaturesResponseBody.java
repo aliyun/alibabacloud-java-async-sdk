@@ -145,6 +145,60 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
      *
      * <p>ListGatewayFeaturesResponseBody</p>
      */
+    public static class Constraints extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("bodyMaxSizeLimit")
+        private Integer bodyMaxSizeLimit;
+
+        private Constraints(Builder builder) {
+            this.bodyMaxSizeLimit = builder.bodyMaxSizeLimit;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Constraints create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bodyMaxSizeLimit
+         */
+        public Integer getBodyMaxSizeLimit() {
+            return this.bodyMaxSizeLimit;
+        }
+
+        public static final class Builder {
+            private Integer bodyMaxSizeLimit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Constraints model) {
+                this.bodyMaxSizeLimit = model.bodyMaxSizeLimit;
+            } 
+
+            /**
+             * bodyMaxSizeLimit.
+             */
+            public Builder bodyMaxSizeLimit(Integer bodyMaxSizeLimit) {
+                this.bodyMaxSizeLimit = bodyMaxSizeLimit;
+                return this;
+            }
+
+            public Constraints build() {
+                return new Constraints(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListGatewayFeaturesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewayFeaturesResponseBody</p>
+     */
     public static class ValueOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
@@ -630,6 +684,9 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
      * <p>ListGatewayFeaturesResponseBody</p>
      */
     public static class Items extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("constraints")
+        private Constraints constraints;
+
         @com.aliyun.core.annotation.NameInMap("definition")
         private Definition definition;
 
@@ -637,6 +694,7 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
         private String value;
 
         private Items(Builder builder) {
+            this.constraints = builder.constraints;
             this.definition = builder.definition;
             this.value = builder.value;
         }
@@ -647,6 +705,13 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
 
         public static Items create() {
             return builder().build();
+        }
+
+        /**
+         * @return constraints
+         */
+        public Constraints getConstraints() {
+            return this.constraints;
         }
 
         /**
@@ -664,6 +729,7 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Constraints constraints; 
             private Definition definition; 
             private String value; 
 
@@ -671,9 +737,18 @@ public class ListGatewayFeaturesResponseBody extends TeaModel {
             } 
 
             private Builder(Items model) {
+                this.constraints = model.constraints;
                 this.definition = model.definition;
                 this.value = model.value;
             } 
+
+            /**
+             * constraints.
+             */
+            public Builder constraints(Constraints constraints) {
+                this.constraints = constraints;
+                return this;
+            }
 
             /**
              * <p>The parameter definition.</p>

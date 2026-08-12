@@ -27,6 +27,7 @@ public class CreateHttpApiRouteRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("deployConfigs")
+    @Deprecated
     private java.util.List<HttpApiDeployConfig> deployConfigs;
 
     @com.aliyun.core.annotation.Body
@@ -300,6 +301,9 @@ public class CreateHttpApiRouteRequest extends Request {
      * <p>CreateHttpApiRouteRequest</p>
      */
     public static class Services extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("modelName")
+        private String modelName;
+
         @com.aliyun.core.annotation.NameInMap("port")
         private Integer port;
 
@@ -316,6 +320,7 @@ public class CreateHttpApiRouteRequest extends Request {
         private Integer weight;
 
         private Services(Builder builder) {
+            this.modelName = builder.modelName;
             this.port = builder.port;
             this.protocol = builder.protocol;
             this.serviceId = builder.serviceId;
@@ -329,6 +334,13 @@ public class CreateHttpApiRouteRequest extends Request {
 
         public static Services create() {
             return builder().build();
+        }
+
+        /**
+         * @return modelName
+         */
+        public String getModelName() {
+            return this.modelName;
         }
 
         /**
@@ -367,6 +379,7 @@ public class CreateHttpApiRouteRequest extends Request {
         }
 
         public static final class Builder {
+            private String modelName; 
             private Integer port; 
             private String protocol; 
             private String serviceId; 
@@ -377,12 +390,21 @@ public class CreateHttpApiRouteRequest extends Request {
             } 
 
             private Builder(Services model) {
+                this.modelName = model.modelName;
                 this.port = model.port;
                 this.protocol = model.protocol;
                 this.serviceId = model.serviceId;
                 this.version = model.version;
                 this.weight = model.weight;
             } 
+
+            /**
+             * modelName.
+             */
+            public Builder modelName(String modelName) {
+                this.modelName = modelName;
+                return this;
+            }
 
             /**
              * <p>The service port (omit for dynamic ports).</p>
