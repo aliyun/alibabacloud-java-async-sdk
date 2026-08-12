@@ -161,8 +161,20 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BotBehavior")
         private String botBehavior;
 
+        @com.aliyun.core.annotation.NameInMap("DefaultAction")
+        private String defaultAction;
+
+        @com.aliyun.core.annotation.NameInMap("DefaultConfig")
+        private String defaultConfig;
+
+        @com.aliyun.core.annotation.NameInMap("DefaultStatus")
+        private Integer defaultStatus;
+
         @com.aliyun.core.annotation.NameInMap("LabelKey")
         private String labelKey;
+
+        @com.aliyun.core.annotation.NameInMap("LabelStatus")
+        private String labelStatus;
 
         @com.aliyun.core.annotation.NameInMap("LabelType")
         private String labelType;
@@ -172,7 +184,11 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
 
         private RuleLabels(Builder builder) {
             this.botBehavior = builder.botBehavior;
+            this.defaultAction = builder.defaultAction;
+            this.defaultConfig = builder.defaultConfig;
+            this.defaultStatus = builder.defaultStatus;
             this.labelKey = builder.labelKey;
+            this.labelStatus = builder.labelStatus;
             this.labelType = builder.labelType;
             this.subScene = builder.subScene;
         }
@@ -193,10 +209,38 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
         }
 
         /**
+         * @return defaultAction
+         */
+        public String getDefaultAction() {
+            return this.defaultAction;
+        }
+
+        /**
+         * @return defaultConfig
+         */
+        public String getDefaultConfig() {
+            return this.defaultConfig;
+        }
+
+        /**
+         * @return defaultStatus
+         */
+        public Integer getDefaultStatus() {
+            return this.defaultStatus;
+        }
+
+        /**
          * @return labelKey
          */
         public String getLabelKey() {
             return this.labelKey;
+        }
+
+        /**
+         * @return labelStatus
+         */
+        public String getLabelStatus() {
+            return this.labelStatus;
         }
 
         /**
@@ -215,7 +259,11 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String botBehavior; 
+            private String defaultAction; 
+            private String defaultConfig; 
+            private Integer defaultStatus; 
             private String labelKey; 
+            private String labelStatus; 
             private String labelType; 
             private String subScene; 
 
@@ -224,7 +272,11 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
 
             private Builder(RuleLabels model) {
                 this.botBehavior = model.botBehavior;
+                this.defaultAction = model.defaultAction;
+                this.defaultConfig = model.defaultConfig;
+                this.defaultStatus = model.defaultStatus;
                 this.labelKey = model.labelKey;
+                this.labelStatus = model.labelStatus;
                 this.labelType = model.labelType;
                 this.subScene = model.subScene;
             } 
@@ -238,10 +290,42 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
             }
 
             /**
+             * DefaultAction.
+             */
+            public Builder defaultAction(String defaultAction) {
+                this.defaultAction = defaultAction;
+                return this;
+            }
+
+            /**
+             * DefaultConfig.
+             */
+            public Builder defaultConfig(String defaultConfig) {
+                this.defaultConfig = defaultConfig;
+                return this;
+            }
+
+            /**
+             * DefaultStatus.
+             */
+            public Builder defaultStatus(Integer defaultStatus) {
+                this.defaultStatus = defaultStatus;
+                return this;
+            }
+
+            /**
              * LabelKey.
              */
             public Builder labelKey(String labelKey) {
                 this.labelKey = labelKey;
+                return this;
+            }
+
+            /**
+             * LabelStatus.
+             */
+            public Builder labelStatus(String labelStatus) {
+                this.labelStatus = labelStatus;
                 return this;
             }
 

@@ -24,6 +24,7 @@ public class DescribeHybridCloudProcessMonitorResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
+    @Deprecated
     private Integer totalCount;
 
     private DescribeHybridCloudProcessMonitorResponseBody(Builder builder) {

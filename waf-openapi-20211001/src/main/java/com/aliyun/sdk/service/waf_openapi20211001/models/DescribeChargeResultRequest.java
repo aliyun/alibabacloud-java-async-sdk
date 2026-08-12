@@ -27,6 +27,10 @@ public class DescribeChargeResultRequest extends Request {
     private java.util.List<ChargeModules> chargeModules;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChargeUnit")
+    private String chargeUnit;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PayType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String payType;
@@ -43,6 +47,7 @@ public class DescribeChargeResultRequest extends Request {
         super(builder);
         this.chargeCycle = builder.chargeCycle;
         this.chargeModules = builder.chargeModules;
+        this.chargeUnit = builder.chargeUnit;
         this.payType = builder.payType;
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
@@ -76,6 +81,13 @@ public class DescribeChargeResultRequest extends Request {
     }
 
     /**
+     * @return chargeUnit
+     */
+    public String getChargeUnit() {
+        return this.chargeUnit;
+    }
+
+    /**
      * @return payType
      */
     public String getPayType() {
@@ -99,6 +111,7 @@ public class DescribeChargeResultRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeChargeResultRequest, Builder> {
         private String chargeCycle; 
         private java.util.List<ChargeModules> chargeModules; 
+        private String chargeUnit; 
         private String payType; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
@@ -111,6 +124,7 @@ public class DescribeChargeResultRequest extends Request {
             super(request);
             this.chargeCycle = request.chargeCycle;
             this.chargeModules = request.chargeModules;
+            this.chargeUnit = request.chargeUnit;
             this.payType = request.payType;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
@@ -131,6 +145,15 @@ public class DescribeChargeResultRequest extends Request {
         public Builder chargeModules(java.util.List<ChargeModules> chargeModules) {
             this.putQueryParameter("ChargeModules", chargeModules);
             this.chargeModules = chargeModules;
+            return this;
+        }
+
+        /**
+         * ChargeUnit.
+         */
+        public Builder chargeUnit(String chargeUnit) {
+            this.putQueryParameter("ChargeUnit", chargeUnit);
+            this.chargeUnit = chargeUnit;
             return this;
         }
 

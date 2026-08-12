@@ -331,11 +331,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AclRuleMaxIpCount")
         private Long aclRuleMaxIpCount;
 
+        @com.aliyun.core.annotation.NameInMap("AgenticApisec")
+        private Boolean agenticApisec;
+
         @com.aliyun.core.annotation.NameInMap("AntiScan")
         private Boolean antiScan;
 
         @com.aliyun.core.annotation.NameInMap("AntiScanTemplateMaxCount")
         private Long antiScanTemplateMaxCount;
+
+        @com.aliyun.core.annotation.NameInMap("Apisec")
+        private Boolean apisec;
 
         @com.aliyun.core.annotation.NameInMap("BackendMaxCount")
         private Long backendMaxCount;
@@ -433,6 +439,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HttpsPorts")
         private String httpsPorts;
 
+        @com.aliyun.core.annotation.NameInMap("HybridCloud")
+        private Boolean hybridCloud;
+
+        @com.aliyun.core.annotation.NameInMap("HybridCloudNodeExtend")
+        private Integer hybridCloudNodeExtend;
+
         @com.aliyun.core.annotation.NameInMap("IpBlacklist")
         private Boolean ipBlacklist;
 
@@ -459,6 +471,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("QpsBillingCap")
         private Integer qpsBillingCap;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceDirectory")
+        private Boolean resourceDirectory;
 
         @com.aliyun.core.annotation.NameInMap("Tamperproof")
         private Boolean tamperproof;
@@ -495,8 +510,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         private Details(Builder builder) {
             this.aclRuleMaxIpCount = builder.aclRuleMaxIpCount;
+            this.agenticApisec = builder.agenticApisec;
             this.antiScan = builder.antiScan;
             this.antiScanTemplateMaxCount = builder.antiScanTemplateMaxCount;
+            this.apisec = builder.apisec;
             this.backendMaxCount = builder.backendMaxCount;
             this.baseWafGroup = builder.baseWafGroup;
             this.baseWafGroupRuleInTemplateMaxCount = builder.baseWafGroupRuleInTemplateMaxCount;
@@ -529,6 +546,8 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.gslb = builder.gslb;
             this.httpPorts = builder.httpPorts;
             this.httpsPorts = builder.httpsPorts;
+            this.hybridCloud = builder.hybridCloud;
+            this.hybridCloudNodeExtend = builder.hybridCloudNodeExtend;
             this.ipBlacklist = builder.ipBlacklist;
             this.ipBlacklistIpInRuleMaxCount = builder.ipBlacklistIpInRuleMaxCount;
             this.ipBlacklistRuleInTemplateMaxCount = builder.ipBlacklistRuleInTemplateMaxCount;
@@ -538,6 +557,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.majorProtection = builder.majorProtection;
             this.majorProtectionTemplateMaxCount = builder.majorProtectionTemplateMaxCount;
             this.qpsBillingCap = builder.qpsBillingCap;
+            this.resourceDirectory = builder.resourceDirectory;
             this.tamperproof = builder.tamperproof;
             this.tamperproofRuleInTemplateMaxCount = builder.tamperproofRuleInTemplateMaxCount;
             this.tamperproofTemplateMaxCount = builder.tamperproofTemplateMaxCount;
@@ -567,6 +587,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return agenticApisec
+         */
+        public Boolean getAgenticApisec() {
+            return this.agenticApisec;
+        }
+
+        /**
          * @return antiScan
          */
         public Boolean getAntiScan() {
@@ -578,6 +605,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
          */
         public Long getAntiScanTemplateMaxCount() {
             return this.antiScanTemplateMaxCount;
+        }
+
+        /**
+         * @return apisec
+         */
+        public Boolean getApisec() {
+            return this.apisec;
         }
 
         /**
@@ -805,6 +839,20 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return hybridCloud
+         */
+        public Boolean getHybridCloud() {
+            return this.hybridCloud;
+        }
+
+        /**
+         * @return hybridCloudNodeExtend
+         */
+        public Integer getHybridCloudNodeExtend() {
+            return this.hybridCloudNodeExtend;
+        }
+
+        /**
          * @return ipBlacklist
          */
         public Boolean getIpBlacklist() {
@@ -865,6 +913,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
          */
         public Integer getQpsBillingCap() {
             return this.qpsBillingCap;
+        }
+
+        /**
+         * @return resourceDirectory
+         */
+        public Boolean getResourceDirectory() {
+            return this.resourceDirectory;
         }
 
         /**
@@ -946,8 +1001,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long aclRuleMaxIpCount; 
+            private Boolean agenticApisec; 
             private Boolean antiScan; 
             private Long antiScanTemplateMaxCount; 
+            private Boolean apisec; 
             private Long backendMaxCount; 
             private Boolean baseWafGroup; 
             private Long baseWafGroupRuleInTemplateMaxCount; 
@@ -980,6 +1037,8 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Boolean gslb; 
             private String httpPorts; 
             private String httpsPorts; 
+            private Boolean hybridCloud; 
+            private Integer hybridCloudNodeExtend; 
             private Boolean ipBlacklist; 
             private Long ipBlacklistIpInRuleMaxCount; 
             private Long ipBlacklistRuleInTemplateMaxCount; 
@@ -989,6 +1048,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Boolean majorProtection; 
             private Long majorProtectionTemplateMaxCount; 
             private Integer qpsBillingCap; 
+            private Boolean resourceDirectory; 
             private Boolean tamperproof; 
             private Long tamperproofRuleInTemplateMaxCount; 
             private Long tamperproofTemplateMaxCount; 
@@ -1006,8 +1066,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
             private Builder(Details model) {
                 this.aclRuleMaxIpCount = model.aclRuleMaxIpCount;
+                this.agenticApisec = model.agenticApisec;
                 this.antiScan = model.antiScan;
                 this.antiScanTemplateMaxCount = model.antiScanTemplateMaxCount;
+                this.apisec = model.apisec;
                 this.backendMaxCount = model.backendMaxCount;
                 this.baseWafGroup = model.baseWafGroup;
                 this.baseWafGroupRuleInTemplateMaxCount = model.baseWafGroupRuleInTemplateMaxCount;
@@ -1040,6 +1102,8 @@ public class DescribeInstanceResponseBody extends TeaModel {
                 this.gslb = model.gslb;
                 this.httpPorts = model.httpPorts;
                 this.httpsPorts = model.httpsPorts;
+                this.hybridCloud = model.hybridCloud;
+                this.hybridCloudNodeExtend = model.hybridCloudNodeExtend;
                 this.ipBlacklist = model.ipBlacklist;
                 this.ipBlacklistIpInRuleMaxCount = model.ipBlacklistIpInRuleMaxCount;
                 this.ipBlacklistRuleInTemplateMaxCount = model.ipBlacklistRuleInTemplateMaxCount;
@@ -1049,6 +1113,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
                 this.majorProtection = model.majorProtection;
                 this.majorProtectionTemplateMaxCount = model.majorProtectionTemplateMaxCount;
                 this.qpsBillingCap = model.qpsBillingCap;
+                this.resourceDirectory = model.resourceDirectory;
                 this.tamperproof = model.tamperproof;
                 this.tamperproofRuleInTemplateMaxCount = model.tamperproofRuleInTemplateMaxCount;
                 this.tamperproofTemplateMaxCount = model.tamperproofTemplateMaxCount;
@@ -1070,6 +1135,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
              */
             public Builder aclRuleMaxIpCount(Long aclRuleMaxIpCount) {
                 this.aclRuleMaxIpCount = aclRuleMaxIpCount;
+                return this;
+            }
+
+            /**
+             * AgenticApisec.
+             */
+            public Builder agenticApisec(Boolean agenticApisec) {
+                this.agenticApisec = agenticApisec;
                 return this;
             }
 
@@ -1096,6 +1169,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
              */
             public Builder antiScanTemplateMaxCount(Long antiScanTemplateMaxCount) {
                 this.antiScanTemplateMaxCount = antiScanTemplateMaxCount;
+                return this;
+            }
+
+            /**
+             * Apisec.
+             */
+            public Builder apisec(Boolean apisec) {
+                this.apisec = apisec;
                 return this;
             }
 
@@ -1479,6 +1560,22 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
+             * HybridCloud.
+             */
+            public Builder hybridCloud(Boolean hybridCloud) {
+                this.hybridCloud = hybridCloud;
+                return this;
+            }
+
+            /**
+             * HybridCloudNodeExtend.
+             */
+            public Builder hybridCloudNodeExtend(Integer hybridCloudNodeExtend) {
+                this.hybridCloudNodeExtend = hybridCloudNodeExtend;
+                return this;
+            }
+
+            /**
              * <p>Indicates whether the IP address blacklist module is supported. Valid values:</p>
              * <ul>
              * <li><strong>true:</strong> The IP address blacklist module is supported.</li>
@@ -1587,6 +1684,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
              */
             public Builder qpsBillingCap(Integer qpsBillingCap) {
                 this.qpsBillingCap = qpsBillingCap;
+                return this;
+            }
+
+            /**
+             * ResourceDirectory.
+             */
+            public Builder resourceDirectory(Boolean resourceDirectory) {
+                this.resourceDirectory = resourceDirectory;
                 return this;
             }
 

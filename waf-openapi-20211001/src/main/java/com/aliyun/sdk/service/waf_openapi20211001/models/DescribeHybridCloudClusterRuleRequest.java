@@ -19,6 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeHybridCloudClusterRuleRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @Deprecated
     private Long clusterId;
 
     @com.aliyun.core.annotation.Query
@@ -40,6 +41,7 @@ public class DescribeHybridCloudClusterRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleType")
+    @Deprecated
     private String ruleType;
 
     private DescribeHybridCloudClusterRuleRequest(Builder builder) {

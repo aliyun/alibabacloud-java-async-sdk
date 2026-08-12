@@ -26,7 +26,12 @@ public class DescribeHybridCloudGroupsRequest extends Request {
     private String clusterProxyType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupDisplayName")
+    private String groupDisplayName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupName")
+    @Deprecated
     private Integer groupName;
 
     @com.aliyun.core.annotation.Query
@@ -58,6 +63,7 @@ public class DescribeHybridCloudGroupsRequest extends Request {
         super(builder);
         this.clusterId = builder.clusterId;
         this.clusterProxyType = builder.clusterProxyType;
+        this.groupDisplayName = builder.groupDisplayName;
         this.groupName = builder.groupName;
         this.groupType = builder.groupType;
         this.instanceId = builder.instanceId;
@@ -92,6 +98,13 @@ public class DescribeHybridCloudGroupsRequest extends Request {
      */
     public String getClusterProxyType() {
         return this.clusterProxyType;
+    }
+
+    /**
+     * @return groupDisplayName
+     */
+    public String getGroupDisplayName() {
+        return this.groupDisplayName;
     }
 
     /**
@@ -146,6 +159,7 @@ public class DescribeHybridCloudGroupsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeHybridCloudGroupsRequest, Builder> {
         private Long clusterId; 
         private String clusterProxyType; 
+        private String groupDisplayName; 
         private Integer groupName; 
         private String groupType; 
         private String instanceId; 
@@ -162,6 +176,7 @@ public class DescribeHybridCloudGroupsRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.clusterProxyType = request.clusterProxyType;
+            this.groupDisplayName = request.groupDisplayName;
             this.groupName = request.groupName;
             this.groupType = request.groupType;
             this.instanceId = request.instanceId;
@@ -196,6 +211,15 @@ public class DescribeHybridCloudGroupsRequest extends Request {
         public Builder clusterProxyType(String clusterProxyType) {
             this.putQueryParameter("ClusterProxyType", clusterProxyType);
             this.clusterProxyType = clusterProxyType;
+            return this;
+        }
+
+        /**
+         * GroupDisplayName.
+         */
+        public Builder groupDisplayName(String groupDisplayName) {
+            this.putQueryParameter("GroupDisplayName", groupDisplayName);
+            this.groupDisplayName = groupDisplayName;
             return this;
         }
 

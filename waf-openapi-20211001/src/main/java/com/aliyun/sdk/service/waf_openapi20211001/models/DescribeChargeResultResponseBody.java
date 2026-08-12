@@ -23,12 +23,16 @@ public class DescribeChargeResultResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("TotalCredit")
+    private Double totalCredit;
+
     @com.aliyun.core.annotation.NameInMap("TotalSeCu")
     private Double totalSeCu;
 
     private DescribeChargeResultResponseBody(Builder builder) {
         this.moduleDetails = builder.moduleDetails;
         this.requestId = builder.requestId;
+        this.totalCredit = builder.totalCredit;
         this.totalSeCu = builder.totalSeCu;
     }
 
@@ -59,6 +63,13 @@ public class DescribeChargeResultResponseBody extends TeaModel {
     }
 
     /**
+     * @return totalCredit
+     */
+    public Double getTotalCredit() {
+        return this.totalCredit;
+    }
+
+    /**
      * @return totalSeCu
      */
     public Double getTotalSeCu() {
@@ -68,6 +79,7 @@ public class DescribeChargeResultResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ModuleDetails> moduleDetails; 
         private String requestId; 
+        private Double totalCredit; 
         private Double totalSeCu; 
 
         private Builder() {
@@ -76,6 +88,7 @@ public class DescribeChargeResultResponseBody extends TeaModel {
         private Builder(DescribeChargeResultResponseBody model) {
             this.moduleDetails = model.moduleDetails;
             this.requestId = model.requestId;
+            this.totalCredit = model.totalCredit;
             this.totalSeCu = model.totalSeCu;
         } 
 
@@ -92,6 +105,14 @@ public class DescribeChargeResultResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCredit.
+         */
+        public Builder totalCredit(Double totalCredit) {
+            this.totalCredit = totalCredit;
             return this;
         }
 
@@ -116,6 +137,9 @@ public class DescribeChargeResultResponseBody extends TeaModel {
      * <p>DescribeChargeResultResponseBody</p>
      */
     public static class ModuleDetails extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Credit")
+        private Double credit;
+
         @com.aliyun.core.annotation.NameInMap("ModuleCode")
         private String moduleCode;
 
@@ -123,6 +147,7 @@ public class DescribeChargeResultResponseBody extends TeaModel {
         private Double seCu;
 
         private ModuleDetails(Builder builder) {
+            this.credit = builder.credit;
             this.moduleCode = builder.moduleCode;
             this.seCu = builder.seCu;
         }
@@ -133,6 +158,13 @@ public class DescribeChargeResultResponseBody extends TeaModel {
 
         public static ModuleDetails create() {
             return builder().build();
+        }
+
+        /**
+         * @return credit
+         */
+        public Double getCredit() {
+            return this.credit;
         }
 
         /**
@@ -150,6 +182,7 @@ public class DescribeChargeResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Double credit; 
             private String moduleCode; 
             private Double seCu; 
 
@@ -157,9 +190,18 @@ public class DescribeChargeResultResponseBody extends TeaModel {
             } 
 
             private Builder(ModuleDetails model) {
+                this.credit = model.credit;
                 this.moduleCode = model.moduleCode;
                 this.seCu = model.seCu;
             } 
+
+            /**
+             * Credit.
+             */
+            public Builder credit(Double credit) {
+                this.credit = credit;
+                return this;
+            }
 
             /**
              * ModuleCode.

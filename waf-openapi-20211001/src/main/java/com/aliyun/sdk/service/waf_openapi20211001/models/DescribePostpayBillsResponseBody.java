@@ -140,11 +140,20 @@ public class DescribePostpayBillsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChargeData")
         private String chargeData;
 
+        @com.aliyun.core.annotation.NameInMap("Credit")
+        private Double credit;
+
+        @com.aliyun.core.annotation.NameInMap("CreditChargeData")
+        private String creditChargeData;
+
         @com.aliyun.core.annotation.NameInMap("Cu")
         private String cu;
 
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
+
+        @com.aliyun.core.annotation.NameInMap("FunctionCredit")
+        private Double functionCredit;
 
         @com.aliyun.core.annotation.NameInMap("FunctionCu")
         private String functionCu;
@@ -152,15 +161,22 @@ public class DescribePostpayBillsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
+        @com.aliyun.core.annotation.NameInMap("TrafficCredit")
+        private Double trafficCredit;
+
         @com.aliyun.core.annotation.NameInMap("TrafficCu")
         private String trafficCu;
 
         private BillDetail(Builder builder) {
             this.chargeData = builder.chargeData;
+            this.credit = builder.credit;
+            this.creditChargeData = builder.creditChargeData;
             this.cu = builder.cu;
             this.endTime = builder.endTime;
+            this.functionCredit = builder.functionCredit;
             this.functionCu = builder.functionCu;
             this.startTime = builder.startTime;
+            this.trafficCredit = builder.trafficCredit;
             this.trafficCu = builder.trafficCu;
         }
 
@@ -180,6 +196,20 @@ public class DescribePostpayBillsResponseBody extends TeaModel {
         }
 
         /**
+         * @return credit
+         */
+        public Double getCredit() {
+            return this.credit;
+        }
+
+        /**
+         * @return creditChargeData
+         */
+        public String getCreditChargeData() {
+            return this.creditChargeData;
+        }
+
+        /**
          * @return cu
          */
         public String getCu() {
@@ -191,6 +221,13 @@ public class DescribePostpayBillsResponseBody extends TeaModel {
          */
         public Long getEndTime() {
             return this.endTime;
+        }
+
+        /**
+         * @return functionCredit
+         */
+        public Double getFunctionCredit() {
+            return this.functionCredit;
         }
 
         /**
@@ -208,6 +245,13 @@ public class DescribePostpayBillsResponseBody extends TeaModel {
         }
 
         /**
+         * @return trafficCredit
+         */
+        public Double getTrafficCredit() {
+            return this.trafficCredit;
+        }
+
+        /**
          * @return trafficCu
          */
         public String getTrafficCu() {
@@ -216,10 +260,14 @@ public class DescribePostpayBillsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String chargeData; 
+            private Double credit; 
+            private String creditChargeData; 
             private String cu; 
             private Long endTime; 
+            private Double functionCredit; 
             private String functionCu; 
             private Long startTime; 
+            private Double trafficCredit; 
             private String trafficCu; 
 
             private Builder() {
@@ -227,10 +275,14 @@ public class DescribePostpayBillsResponseBody extends TeaModel {
 
             private Builder(BillDetail model) {
                 this.chargeData = model.chargeData;
+                this.credit = model.credit;
+                this.creditChargeData = model.creditChargeData;
                 this.cu = model.cu;
                 this.endTime = model.endTime;
+                this.functionCredit = model.functionCredit;
                 this.functionCu = model.functionCu;
                 this.startTime = model.startTime;
+                this.trafficCredit = model.trafficCredit;
                 this.trafficCu = model.trafficCu;
             } 
 
@@ -239,6 +291,22 @@ public class DescribePostpayBillsResponseBody extends TeaModel {
              */
             public Builder chargeData(String chargeData) {
                 this.chargeData = chargeData;
+                return this;
+            }
+
+            /**
+             * Credit.
+             */
+            public Builder credit(Double credit) {
+                this.credit = credit;
+                return this;
+            }
+
+            /**
+             * CreditChargeData.
+             */
+            public Builder creditChargeData(String creditChargeData) {
+                this.creditChargeData = creditChargeData;
                 return this;
             }
 
@@ -259,6 +327,14 @@ public class DescribePostpayBillsResponseBody extends TeaModel {
             }
 
             /**
+             * FunctionCredit.
+             */
+            public Builder functionCredit(Double functionCredit) {
+                this.functionCredit = functionCredit;
+                return this;
+            }
+
+            /**
              * FunctionCu.
              */
             public Builder functionCu(String functionCu) {
@@ -271,6 +347,14 @@ public class DescribePostpayBillsResponseBody extends TeaModel {
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * TrafficCredit.
+             */
+            public Builder trafficCredit(Double trafficCredit) {
+                this.trafficCredit = trafficCredit;
                 return this;
             }
 
