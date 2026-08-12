@@ -561,6 +561,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRegistrationPoliciesForUserGroupResponse> listRegistrationPoliciesForUserGroup(ListRegistrationPoliciesForUserGroupRequest request);
 
     /**
+     * @param request the request parameters of ListRiskItems  ListRiskItemsRequest
+     * @return ListRiskItemsResponse
+     */
+    CompletableFuture<ListRiskItemsResponse> listRiskItems(ListRiskItemsRequest request);
+
+    /**
      * @param request the request parameters of ListSoftwareForUserDevice  ListSoftwareForUserDeviceRequest
      * @return ListSoftwareForUserDeviceResponse
      */
@@ -740,6 +746,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateRegistrationPolicyResponse
      */
     CompletableFuture<UpdateRegistrationPolicyResponse> updateRegistrationPolicy(UpdateRegistrationPolicyRequest request);
+
+    /**
+     * @param request the request parameters of UpdateRiskStatus  UpdateRiskStatusRequest
+     * @return UpdateRiskStatusResponse
+     */
+    CompletableFuture<UpdateRiskStatusResponse> updateRiskStatus(UpdateRiskStatusRequest request);
 
     /**
      * @param request the request parameters of UpdateUninstallApplicationsStatus  UpdateUninstallApplicationsStatusRequest
