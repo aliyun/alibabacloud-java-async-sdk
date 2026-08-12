@@ -2609,6 +2609,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Storage")
         private Storage storage;
 
+        @com.aliyun.core.annotation.NameInMap("SupportDisasterRecoveryDrill")
+        private Boolean supportDisasterRecoveryDrill;
+
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
 
@@ -2661,6 +2664,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.resourceId = builder.resourceId;
             this.resourceSpec = builder.resourceSpec;
             this.storage = builder.storage;
+            this.supportDisasterRecoveryDrill = builder.supportDisasterRecoveryDrill;
             this.tags = builder.tags;
             this.uid = builder.uid;
             this.vSwitchIds = builder.vSwitchIds;
@@ -2889,6 +2893,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return supportDisasterRecoveryDrill
+         */
+        public Boolean getSupportDisasterRecoveryDrill() {
+            return this.supportDisasterRecoveryDrill;
+        }
+
+        /**
          * @return tags
          */
         public java.util.List<Tags> getTags() {
@@ -2968,6 +2979,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String resourceId; 
             private ResourceSpec resourceSpec; 
             private Storage storage; 
+            private Boolean supportDisasterRecoveryDrill; 
             private java.util.List<Tags> tags; 
             private String uid; 
             private java.util.List<String> vSwitchIds; 
@@ -3010,6 +3022,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
                 this.resourceId = model.resourceId;
                 this.resourceSpec = model.resourceSpec;
                 this.storage = model.storage;
+                this.supportDisasterRecoveryDrill = model.supportDisasterRecoveryDrill;
                 this.tags = model.tags;
                 this.uid = model.uid;
                 this.vSwitchIds = model.vSwitchIds;
@@ -3256,6 +3269,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder storage(Storage storage) {
                 this.storage = storage;
+                return this;
+            }
+
+            /**
+             * SupportDisasterRecoveryDrill.
+             */
+            public Builder supportDisasterRecoveryDrill(Boolean supportDisasterRecoveryDrill) {
+                this.supportDisasterRecoveryDrill = supportDisasterRecoveryDrill;
                 return this;
             }
 

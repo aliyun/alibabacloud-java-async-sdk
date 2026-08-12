@@ -29,6 +29,9 @@ public class FlussInstance extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DiskSize")
     private Long diskSize;
 
+    @com.aliyun.core.annotation.NameInMap("Ha")
+    private Boolean ha;
+
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
@@ -56,6 +59,12 @@ public class FlussInstance extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("TabletServerType")
     private String tabletServerType;
 
+    @com.aliyun.core.annotation.NameInMap("TieringPostCu")
+    private Long tieringPostCu;
+
+    @com.aliyun.core.annotation.NameInMap("TieringPreCu")
+    private Long tieringPreCu;
+
     @com.aliyun.core.annotation.NameInMap("Uid")
     private String uid;
 
@@ -70,6 +79,7 @@ public class FlussInstance extends TeaModel {
         this.clusterStatus = builder.clusterStatus;
         this.consoleUrl = builder.consoleUrl;
         this.diskSize = builder.diskSize;
+        this.ha = builder.ha;
         this.instanceId = builder.instanceId;
         this.instanceName = builder.instanceName;
         this.orderState = builder.orderState;
@@ -79,6 +89,8 @@ public class FlussInstance extends TeaModel {
         this.tabletServerModel = builder.tabletServerModel;
         this.tabletServerNum = builder.tabletServerNum;
         this.tabletServerType = builder.tabletServerType;
+        this.tieringPostCu = builder.tieringPostCu;
+        this.tieringPreCu = builder.tieringPreCu;
         this.uid = builder.uid;
         this.vSwitches = builder.vSwitches;
         this.vpcId = builder.vpcId;
@@ -122,6 +134,13 @@ public class FlussInstance extends TeaModel {
      */
     public Long getDiskSize() {
         return this.diskSize;
+    }
+
+    /**
+     * @return ha
+     */
+    public Boolean getHa() {
+        return this.ha;
     }
 
     /**
@@ -188,6 +207,20 @@ public class FlussInstance extends TeaModel {
     }
 
     /**
+     * @return tieringPostCu
+     */
+    public Long getTieringPostCu() {
+        return this.tieringPostCu;
+    }
+
+    /**
+     * @return tieringPreCu
+     */
+    public Long getTieringPreCu() {
+        return this.tieringPreCu;
+    }
+
+    /**
      * @return uid
      */
     public String getUid() {
@@ -213,6 +246,7 @@ public class FlussInstance extends TeaModel {
         private String clusterStatus; 
         private String consoleUrl; 
         private Long diskSize; 
+        private Boolean ha; 
         private String instanceId; 
         private String instanceName; 
         private String orderState; 
@@ -222,6 +256,8 @@ public class FlussInstance extends TeaModel {
         private String tabletServerModel; 
         private Long tabletServerNum; 
         private String tabletServerType; 
+        private Long tieringPostCu; 
+        private Long tieringPreCu; 
         private String uid; 
         private java.util.List<FlussVswitch> vSwitches; 
         private String vpcId; 
@@ -234,6 +270,7 @@ public class FlussInstance extends TeaModel {
             this.clusterStatus = model.clusterStatus;
             this.consoleUrl = model.consoleUrl;
             this.diskSize = model.diskSize;
+            this.ha = model.ha;
             this.instanceId = model.instanceId;
             this.instanceName = model.instanceName;
             this.orderState = model.orderState;
@@ -243,6 +280,8 @@ public class FlussInstance extends TeaModel {
             this.tabletServerModel = model.tabletServerModel;
             this.tabletServerNum = model.tabletServerNum;
             this.tabletServerType = model.tabletServerType;
+            this.tieringPostCu = model.tieringPostCu;
+            this.tieringPreCu = model.tieringPreCu;
             this.uid = model.uid;
             this.vSwitches = model.vSwitches;
             this.vpcId = model.vpcId;
@@ -277,6 +316,14 @@ public class FlussInstance extends TeaModel {
          */
         public Builder diskSize(Long diskSize) {
             this.diskSize = diskSize;
+            return this;
+        }
+
+        /**
+         * Ha.
+         */
+        public Builder ha(Boolean ha) {
+            this.ha = ha;
             return this;
         }
 
@@ -349,6 +396,22 @@ public class FlussInstance extends TeaModel {
          */
         public Builder tabletServerType(String tabletServerType) {
             this.tabletServerType = tabletServerType;
+            return this;
+        }
+
+        /**
+         * TieringPostCu.
+         */
+        public Builder tieringPostCu(Long tieringPostCu) {
+            this.tieringPostCu = tieringPostCu;
+            return this;
+        }
+
+        /**
+         * TieringPreCu.
+         */
+        public Builder tieringPreCu(Long tieringPreCu) {
+            this.tieringPreCu = tieringPreCu;
             return this;
         }
 

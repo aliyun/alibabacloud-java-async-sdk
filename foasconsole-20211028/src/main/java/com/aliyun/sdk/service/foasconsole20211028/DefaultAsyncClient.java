@@ -29,8 +29,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "foasconsole";
         this.version = "2021-10-28";
-        this.endpointRule = "central";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("cn-qingdao", "foasconsole.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "foasconsole.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "foasconsole.cn-beijing.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "foasconsole.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "foasconsole.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "foasconsole.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "foasconsole.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "foasconsole.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "foasconsole.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "foasconsole.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "foasconsole.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "foasconsole.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("us-east-1", "foasconsole.us-east-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "foasconsole.eu-west-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "foasconsole.us-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "foasconsole.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "foasconsole.cn-shenzhen-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "foasconsole.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "foasconsole.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
