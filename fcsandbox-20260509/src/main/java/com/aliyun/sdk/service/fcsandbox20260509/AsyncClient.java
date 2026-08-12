@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateTeamResponse> createTeam(CreateTeamRequest request);
 
     /**
+     * @param request the request parameters of CreateVolume  CreateVolumeRequest
+     * @return CreateVolumeResponse
+     */
+    CompletableFuture<CreateVolumeResponse> createVolume(CreateVolumeRequest request);
+
+    /**
      * @param request the request parameters of DeleteApiKey  DeleteApiKeyRequest
      * @return DeleteApiKeyResponse
      */
@@ -48,6 +54,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteTeamResponse
      */
     CompletableFuture<DeleteTeamResponse> deleteTeam(DeleteTeamRequest request);
+
+    /**
+     * @param request the request parameters of DeleteVolume  DeleteVolumeRequest
+     * @return DeleteVolumeResponse
+     */
+    CompletableFuture<DeleteVolumeResponse> deleteVolume(DeleteVolumeRequest request);
 
     /**
      * @param request the request parameters of DescribeApiKey  DescribeApiKeyRequest
@@ -68,6 +80,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTeamResponse> getTeam(GetTeamRequest request);
 
     /**
+     * @param request the request parameters of GetVolume  GetVolumeRequest
+     * @return GetVolumeResponse
+     */
+    CompletableFuture<GetVolumeResponse> getVolume(GetVolumeRequest request);
+
+    /**
      * @param request the request parameters of ListApiKeys  ListApiKeysRequest
      * @return ListApiKeysResponse
      */
@@ -84,6 +102,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListTeamsResponse
      */
     CompletableFuture<ListTeamsResponse> listTeams(ListTeamsRequest request);
+
+    /**
+     * @param request the request parameters of ListVolumes  ListVolumesRequest
+     * @return ListVolumesResponse
+     */
+    CompletableFuture<ListVolumesResponse> listVolumes(ListVolumesRequest request);
 
     /**
      * @param request the request parameters of ResetApiKey  ResetApiKeyRequest
@@ -108,5 +132,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateTeamResponse
      */
     CompletableFuture<UpdateTeamResponse> updateTeam(UpdateTeamRequest request);
+
+    /**
+     * @param request the request parameters of UpdateVolume  UpdateVolumeRequest
+     * @return UpdateVolumeResponse
+     */
+    CompletableFuture<UpdateVolumeResponse> updateVolume(UpdateVolumeRequest request);
 
 }
