@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDisposeAndPlaybookRequest</p>
  */
 public class DescribeDisposeAndPlaybookRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AvailableOnly")
+    private Boolean availableOnly;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
@@ -28,6 +32,10 @@ public class DescribeDisposeAndPlaybookRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EntityUuid")
     private String entityUuid;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntityUuidList")
+    private String entityUuidList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("IncidentUuid")
@@ -51,9 +59,11 @@ public class DescribeDisposeAndPlaybookRequest extends Request {
 
     private DescribeDisposeAndPlaybookRequest(Builder builder) {
         super(builder);
+        this.availableOnly = builder.availableOnly;
         this.currentPage = builder.currentPage;
         this.entityType = builder.entityType;
         this.entityUuid = builder.entityUuid;
+        this.entityUuidList = builder.entityUuidList;
         this.incidentUuid = builder.incidentUuid;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
@@ -75,6 +85,13 @@ public class DescribeDisposeAndPlaybookRequest extends Request {
     }
 
     /**
+     * @return availableOnly
+     */
+    public Boolean getAvailableOnly() {
+        return this.availableOnly;
+    }
+
+    /**
      * @return currentPage
      */
     public Integer getCurrentPage() {
@@ -93,6 +110,13 @@ public class DescribeDisposeAndPlaybookRequest extends Request {
      */
     public String getEntityUuid() {
         return this.entityUuid;
+    }
+
+    /**
+     * @return entityUuidList
+     */
+    public String getEntityUuidList() {
+        return this.entityUuidList;
     }
 
     /**
@@ -131,9 +155,11 @@ public class DescribeDisposeAndPlaybookRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDisposeAndPlaybookRequest, Builder> {
+        private Boolean availableOnly; 
         private Integer currentPage; 
         private String entityType; 
         private String entityUuid; 
+        private String entityUuidList; 
         private String incidentUuid; 
         private Integer pageSize; 
         private String regionId; 
@@ -146,15 +172,26 @@ public class DescribeDisposeAndPlaybookRequest extends Request {
 
         private Builder(DescribeDisposeAndPlaybookRequest request) {
             super(request);
+            this.availableOnly = request.availableOnly;
             this.currentPage = request.currentPage;
             this.entityType = request.entityType;
             this.entityUuid = request.entityUuid;
+            this.entityUuidList = request.entityUuidList;
             this.incidentUuid = request.incidentUuid;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
             this.roleFor = request.roleFor;
             this.roleType = request.roleType;
         } 
+
+        /**
+         * AvailableOnly.
+         */
+        public Builder availableOnly(Boolean availableOnly) {
+            this.putQueryParameter("AvailableOnly", availableOnly);
+            this.availableOnly = availableOnly;
+            return this;
+        }
 
         /**
          * <p>The page number. Pages start from page 1.</p>
@@ -191,6 +228,15 @@ public class DescribeDisposeAndPlaybookRequest extends Request {
         public Builder entityUuid(String entityUuid) {
             this.putBodyParameter("EntityUuid", entityUuid);
             this.entityUuid = entityUuid;
+            return this;
+        }
+
+        /**
+         * EntityUuidList.
+         */
+        public Builder entityUuidList(String entityUuidList) {
+            this.putQueryParameter("EntityUuidList", entityUuidList);
+            this.entityUuidList = entityUuidList;
             return this;
         }
 

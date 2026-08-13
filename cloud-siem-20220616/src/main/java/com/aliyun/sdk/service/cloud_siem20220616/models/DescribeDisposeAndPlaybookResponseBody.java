@@ -632,6 +632,9 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EntityType")
         private String entityType;
 
+        @com.aliyun.core.annotation.NameInMap("EntityUuid")
+        private String entityUuid;
+
         @com.aliyun.core.annotation.NameInMap("OpcodeMap")
         private java.util.Map<String, String> opcodeMap;
 
@@ -650,6 +653,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             this.entityId = builder.entityId;
             this.entityInfo = builder.entityInfo;
             this.entityType = builder.entityType;
+            this.entityUuid = builder.entityUuid;
             this.opcodeMap = builder.opcodeMap;
             this.opcodeSet = builder.opcodeSet;
             this.playbookList = builder.playbookList;
@@ -700,6 +704,13 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         }
 
         /**
+         * @return entityUuid
+         */
+        public String getEntityUuid() {
+            return this.entityUuid;
+        }
+
+        /**
          * @return opcodeMap
          */
         public java.util.Map<String, String> getOpcodeMap() {
@@ -733,6 +744,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             private Long entityId; 
             private java.util.Map<String, ?> entityInfo; 
             private String entityType; 
+            private String entityUuid; 
             private java.util.Map<String, String> opcodeMap; 
             private java.util.List<String> opcodeSet; 
             private java.util.List<PlaybookList> playbookList; 
@@ -747,6 +759,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
                 this.entityId = model.entityId;
                 this.entityInfo = model.entityInfo;
                 this.entityType = model.entityType;
+                this.entityUuid = model.entityUuid;
                 this.opcodeMap = model.opcodeMap;
                 this.opcodeSet = model.opcodeSet;
                 this.playbookList = model.playbookList;
@@ -806,6 +819,14 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             }
 
             /**
+             * EntityUuid.
+             */
+            public Builder entityUuid(String entityUuid) {
+                this.entityUuid = entityUuid;
+                return this;
+            }
+
+            /**
              * <p>The key-value pairs each of which consists of opcode and oplevel.</p>
              * 
              * <strong>example:</strong>
@@ -860,6 +881,9 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
      * <p>DescribeDisposeAndPlaybookResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Available")
+        private Boolean available;
+
         @com.aliyun.core.annotation.NameInMap("PageInfo")
         private PageInfo pageInfo;
 
@@ -867,6 +891,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         private java.util.List<ResponseData> responseData;
 
         private Data(Builder builder) {
+            this.available = builder.available;
             this.pageInfo = builder.pageInfo;
             this.responseData = builder.responseData;
         }
@@ -877,6 +902,13 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return available
+         */
+        public Boolean getAvailable() {
+            return this.available;
         }
 
         /**
@@ -894,6 +926,7 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean available; 
             private PageInfo pageInfo; 
             private java.util.List<ResponseData> responseData; 
 
@@ -901,9 +934,18 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.available = model.available;
                 this.pageInfo = model.pageInfo;
                 this.responseData = model.responseData;
             } 
+
+            /**
+             * Available.
+             */
+            public Builder available(Boolean available) {
+                this.available = available;
+                return this;
+            }
 
             /**
              * <p>The pagination information.</p>

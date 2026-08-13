@@ -642,6 +642,9 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EntityType")
         private String entityType;
 
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
+        private String errorCode;
+
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
@@ -698,6 +701,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             this.entity = builder.entity;
             this.entityId = builder.entityId;
             this.entityType = builder.entityType;
+            this.errorCode = builder.errorCode;
             this.errorMessage = builder.errorMessage;
             this.finishTime = builder.finishTime;
             this.gmtCreate = builder.gmtCreate;
@@ -771,6 +775,13 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
          */
         public String getEntityType() {
             return this.entityType;
+        }
+
+        /**
+         * @return errorCode
+         */
+        public String getErrorCode() {
+            return this.errorCode;
         }
 
         /**
@@ -893,6 +904,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
             private java.util.List<?> entity; 
             private Long entityId; 
             private String entityType; 
+            private String errorCode; 
             private String errorMessage; 
             private String finishTime; 
             private String gmtCreate; 
@@ -921,6 +933,7 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
                 this.entity = model.entity;
                 this.entityId = model.entityId;
                 this.entityType = model.entityType;
+                this.errorCode = model.errorCode;
                 this.errorMessage = model.errorMessage;
                 this.finishTime = model.finishTime;
                 this.gmtCreate = model.gmtCreate;
@@ -1019,6 +1032,14 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;
+                return this;
+            }
+
+            /**
+             * ErrorCode.
+             */
+            public Builder errorCode(String errorCode) {
+                this.errorCode = errorCode;
                 return this;
             }
 
