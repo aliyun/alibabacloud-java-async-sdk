@@ -257,6 +257,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopTensorboardResponse> stopTensorboard(StopTensorboardRequest request);
 
     /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
+    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
+    CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
+
+    /**
      * @param request the request parameters of UpdateJob  UpdateJobRequest
      * @return UpdateJobResponse
      */

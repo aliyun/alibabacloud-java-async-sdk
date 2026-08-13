@@ -74,24 +74,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("eu-west-1-oxs", "pai-dlc.aliyuncs.com"),
             new TeaPair("me-east-1", "pai-dlc.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "pai-dlc.aliyuncs.com"),
-            new TeaPair("us-west-1", "pai-dlc.us-west-1.aliyuncs.com"),
-            new TeaPair("us-southeast-1", "pai-dlc.us-southeast-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "pai-dlc.us-east-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "pai-dlc.eu-central-1.aliyuncs.com"),
             new TeaPair("cn-wulanchabu", "pai-dlc.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "pai-dlc.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "pai-dlc.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-beijing", "pai-dlc.cn-beijing.aliyuncs.com"),
             new TeaPair("cn-shanghai", "pai-dlc.cn-shanghai.aliyuncs.com"),
             new TeaPair("cn-hongkong", "pai-dlc.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "pai-dlc.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "pai-dlc.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "pai-dlc.ap-northeast-1.aliyuncs.com"),
             new TeaPair("cn-guangzhou", "pai-dlc.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-beijing", "pai-dlc.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-8", "pai-dlc.ap-southeast-8.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "pai-dlc.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "pai-dlc.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "pai-dlc.ap-southeast-3.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "pai-dlc.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "pai-dlc.ap-northeast-1.aliyuncs.com")
+            new TeaPair("ap-southeast-3", "pai-dlc.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "pai-dlc.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "pai-dlc.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "pai-dlc.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "pai-dlc.ap-southeast-8.aliyuncs.com"),
+            new TeaPair("us-east-1", "pai-dlc.us-east-1.aliyuncs.com"),
+            new TeaPair("us-southeast-1", "pai-dlc.us-southeast-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "pai-dlc.us-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "pai-dlc.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "pai-dlc.cn-shanghai-finance-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -789,6 +789,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<StopTensorboardResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
+    @Override
+    public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TagResources").setMethod(HttpMethod.POST).setPathRegex("/api/v1/tags").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TagResourcesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TagResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
+    @Override
+    public CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UntagResources").setMethod(HttpMethod.DELETE).setPathRegex("/api/v1/tags").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UntagResourcesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UntagResourcesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
