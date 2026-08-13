@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateSecurityProxyRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallServiceMode")
+    private String firewallServiceMode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallServiceZones")
+    private java.util.List<String> firewallServiceZones;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FirewallSwitch")
     private String firewallSwitch;
 
@@ -72,6 +80,8 @@ public class CreateSecurityProxyRequest extends Request {
 
     private CreateSecurityProxyRequest(Builder builder) {
         super(builder);
+        this.firewallServiceMode = builder.firewallServiceMode;
+        this.firewallServiceZones = builder.firewallServiceZones;
         this.firewallSwitch = builder.firewallSwitch;
         this.fwVswitchZoneId = builder.fwVswitchZoneId;
         this.lang = builder.lang;
@@ -97,6 +107,20 @@ public class CreateSecurityProxyRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return firewallServiceMode
+     */
+    public String getFirewallServiceMode() {
+        return this.firewallServiceMode;
+    }
+
+    /**
+     * @return firewallServiceZones
+     */
+    public java.util.List<String> getFirewallServiceZones() {
+        return this.firewallServiceZones;
     }
 
     /**
@@ -184,6 +208,8 @@ public class CreateSecurityProxyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateSecurityProxyRequest, Builder> {
+        private String firewallServiceMode; 
+        private java.util.List<String> firewallServiceZones; 
         private String firewallSwitch; 
         private String fwVswitchZoneId; 
         private String lang; 
@@ -203,6 +229,8 @@ public class CreateSecurityProxyRequest extends Request {
 
         private Builder(CreateSecurityProxyRequest request) {
             super(request);
+            this.firewallServiceMode = request.firewallServiceMode;
+            this.firewallServiceZones = request.firewallServiceZones;
             this.firewallSwitch = request.firewallSwitch;
             this.fwVswitchZoneId = request.fwVswitchZoneId;
             this.lang = request.lang;
@@ -216,6 +244,24 @@ public class CreateSecurityProxyRequest extends Request {
             this.vswitchCidr = request.vswitchCidr;
             this.vswitchId = request.vswitchId;
         } 
+
+        /**
+         * FirewallServiceMode.
+         */
+        public Builder firewallServiceMode(String firewallServiceMode) {
+            this.putQueryParameter("FirewallServiceMode", firewallServiceMode);
+            this.firewallServiceMode = firewallServiceMode;
+            return this;
+        }
+
+        /**
+         * FirewallServiceZones.
+         */
+        public Builder firewallServiceZones(java.util.List<String> firewallServiceZones) {
+            this.putQueryParameter("FirewallServiceZones", firewallServiceZones);
+            this.firewallServiceZones = firewallServiceZones;
+            return this;
+        }
 
         /**
          * <p>The status of the NAT firewall. Valid values:</p>

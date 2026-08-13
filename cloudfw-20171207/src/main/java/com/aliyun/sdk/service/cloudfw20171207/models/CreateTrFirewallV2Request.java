@@ -22,6 +22,10 @@ public class CreateTrFirewallV2Request extends Request {
     private String cenId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallAttachmentZone")
+    private String firewallAttachmentZone;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FirewallDescription")
     private String firewallDescription;
 
@@ -30,7 +34,16 @@ public class CreateTrFirewallV2Request extends Request {
     private String firewallName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallServiceMode")
+    private String firewallServiceMode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallServiceZones")
+    private java.util.List<String> firewallServiceZones;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FirewallSubnetCidr")
+    @Deprecated
     private String firewallSubnetCidr;
 
     @com.aliyun.core.annotation.Query
@@ -59,6 +72,7 @@ public class CreateTrFirewallV2Request extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TrAttachmentMasterCidr")
+    @Deprecated
     private String trAttachmentMasterCidr;
 
     @com.aliyun.core.annotation.Query
@@ -67,11 +81,16 @@ public class CreateTrFirewallV2Request extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TrAttachmentSlaveCidr")
+    @Deprecated
     private String trAttachmentSlaveCidr;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TrAttachmentSlaveZone")
     private String trAttachmentSlaveZone;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrAttachmentZones")
+    private java.util.List<String> trAttachmentZones;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TransitRouterId")
@@ -80,8 +99,11 @@ public class CreateTrFirewallV2Request extends Request {
     private CreateTrFirewallV2Request(Builder builder) {
         super(builder);
         this.cenId = builder.cenId;
+        this.firewallAttachmentZone = builder.firewallAttachmentZone;
         this.firewallDescription = builder.firewallDescription;
         this.firewallName = builder.firewallName;
+        this.firewallServiceMode = builder.firewallServiceMode;
+        this.firewallServiceZones = builder.firewallServiceZones;
         this.firewallSubnetCidr = builder.firewallSubnetCidr;
         this.firewallVpcCidr = builder.firewallVpcCidr;
         this.firewallVpcId = builder.firewallVpcId;
@@ -93,6 +115,7 @@ public class CreateTrFirewallV2Request extends Request {
         this.trAttachmentMasterZone = builder.trAttachmentMasterZone;
         this.trAttachmentSlaveCidr = builder.trAttachmentSlaveCidr;
         this.trAttachmentSlaveZone = builder.trAttachmentSlaveZone;
+        this.trAttachmentZones = builder.trAttachmentZones;
         this.transitRouterId = builder.transitRouterId;
     }
 
@@ -117,6 +140,13 @@ public class CreateTrFirewallV2Request extends Request {
     }
 
     /**
+     * @return firewallAttachmentZone
+     */
+    public String getFirewallAttachmentZone() {
+        return this.firewallAttachmentZone;
+    }
+
+    /**
      * @return firewallDescription
      */
     public String getFirewallDescription() {
@@ -128,6 +158,20 @@ public class CreateTrFirewallV2Request extends Request {
      */
     public String getFirewallName() {
         return this.firewallName;
+    }
+
+    /**
+     * @return firewallServiceMode
+     */
+    public String getFirewallServiceMode() {
+        return this.firewallServiceMode;
+    }
+
+    /**
+     * @return firewallServiceZones
+     */
+    public java.util.List<String> getFirewallServiceZones() {
+        return this.firewallServiceZones;
     }
 
     /**
@@ -208,6 +252,13 @@ public class CreateTrFirewallV2Request extends Request {
     }
 
     /**
+     * @return trAttachmentZones
+     */
+    public java.util.List<String> getTrAttachmentZones() {
+        return this.trAttachmentZones;
+    }
+
+    /**
      * @return transitRouterId
      */
     public String getTransitRouterId() {
@@ -216,8 +267,11 @@ public class CreateTrFirewallV2Request extends Request {
 
     public static final class Builder extends Request.Builder<CreateTrFirewallV2Request, Builder> {
         private String cenId; 
+        private String firewallAttachmentZone; 
         private String firewallDescription; 
         private String firewallName; 
+        private String firewallServiceMode; 
+        private java.util.List<String> firewallServiceZones; 
         private String firewallSubnetCidr; 
         private String firewallVpcCidr; 
         private String firewallVpcId; 
@@ -229,6 +283,7 @@ public class CreateTrFirewallV2Request extends Request {
         private String trAttachmentMasterZone; 
         private String trAttachmentSlaveCidr; 
         private String trAttachmentSlaveZone; 
+        private java.util.List<String> trAttachmentZones; 
         private String transitRouterId; 
 
         private Builder() {
@@ -238,8 +293,11 @@ public class CreateTrFirewallV2Request extends Request {
         private Builder(CreateTrFirewallV2Request request) {
             super(request);
             this.cenId = request.cenId;
+            this.firewallAttachmentZone = request.firewallAttachmentZone;
             this.firewallDescription = request.firewallDescription;
             this.firewallName = request.firewallName;
+            this.firewallServiceMode = request.firewallServiceMode;
+            this.firewallServiceZones = request.firewallServiceZones;
             this.firewallSubnetCidr = request.firewallSubnetCidr;
             this.firewallVpcCidr = request.firewallVpcCidr;
             this.firewallVpcId = request.firewallVpcId;
@@ -251,6 +309,7 @@ public class CreateTrFirewallV2Request extends Request {
             this.trAttachmentMasterZone = request.trAttachmentMasterZone;
             this.trAttachmentSlaveCidr = request.trAttachmentSlaveCidr;
             this.trAttachmentSlaveZone = request.trAttachmentSlaveZone;
+            this.trAttachmentZones = request.trAttachmentZones;
             this.transitRouterId = request.transitRouterId;
         } 
 
@@ -263,6 +322,15 @@ public class CreateTrFirewallV2Request extends Request {
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
             this.cenId = cenId;
+            return this;
+        }
+
+        /**
+         * FirewallAttachmentZone.
+         */
+        public Builder firewallAttachmentZone(String firewallAttachmentZone) {
+            this.putQueryParameter("FirewallAttachmentZone", firewallAttachmentZone);
+            this.firewallAttachmentZone = firewallAttachmentZone;
             return this;
         }
 
@@ -287,6 +355,24 @@ public class CreateTrFirewallV2Request extends Request {
         public Builder firewallName(String firewallName) {
             this.putQueryParameter("FirewallName", firewallName);
             this.firewallName = firewallName;
+            return this;
+        }
+
+        /**
+         * FirewallServiceMode.
+         */
+        public Builder firewallServiceMode(String firewallServiceMode) {
+            this.putQueryParameter("FirewallServiceMode", firewallServiceMode);
+            this.firewallServiceMode = firewallServiceMode;
+            return this;
+        }
+
+        /**
+         * FirewallServiceZones.
+         */
+        public Builder firewallServiceZones(java.util.List<String> firewallServiceZones) {
+            this.putQueryParameter("FirewallServiceZones", firewallServiceZones);
+            this.firewallServiceZones = firewallServiceZones;
             return this;
         }
 
@@ -427,6 +513,15 @@ public class CreateTrFirewallV2Request extends Request {
         public Builder trAttachmentSlaveZone(String trAttachmentSlaveZone) {
             this.putQueryParameter("TrAttachmentSlaveZone", trAttachmentSlaveZone);
             this.trAttachmentSlaveZone = trAttachmentSlaveZone;
+            return this;
+        }
+
+        /**
+         * TrAttachmentZones.
+         */
+        public Builder trAttachmentZones(java.util.List<String> trAttachmentZones) {
+            this.putQueryParameter("TrAttachmentZones", trAttachmentZones);
+            this.trAttachmentZones = trAttachmentZones;
             return this;
         }
 

@@ -36,6 +36,11 @@ public class ModifyControlPolicyRequest extends Request {
     private java.util.List<String> applicationNameList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
@@ -66,6 +71,10 @@ public class ModifyControlPolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DomainResolveType")
     private String domainResolveType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
@@ -117,6 +126,7 @@ public class ModifyControlPolicyRequest extends Request {
         this.aclUuid = builder.aclUuid;
         this.applicationName = builder.applicationName;
         this.applicationNameList = builder.applicationNameList;
+        this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.destPort = builder.destPort;
         this.destPortGroup = builder.destPortGroup;
@@ -125,6 +135,7 @@ public class ModifyControlPolicyRequest extends Request {
         this.destinationType = builder.destinationType;
         this.direction = builder.direction;
         this.domainResolveType = builder.domainResolveType;
+        this.dryRun = builder.dryRun;
         this.endTime = builder.endTime;
         this.lang = builder.lang;
         this.proto = builder.proto;
@@ -177,6 +188,13 @@ public class ModifyControlPolicyRequest extends Request {
      */
     public java.util.List<String> getApplicationNameList() {
         return this.applicationNameList;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -233,6 +251,13 @@ public class ModifyControlPolicyRequest extends Request {
      */
     public String getDomainResolveType() {
         return this.domainResolveType;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -317,6 +342,7 @@ public class ModifyControlPolicyRequest extends Request {
         private String aclUuid; 
         private String applicationName; 
         private java.util.List<String> applicationNameList; 
+        private String clientToken; 
         private String description; 
         private String destPort; 
         private String destPortGroup; 
@@ -325,6 +351,7 @@ public class ModifyControlPolicyRequest extends Request {
         private String destinationType; 
         private String direction; 
         private String domainResolveType; 
+        private Boolean dryRun; 
         private Long endTime; 
         private String lang; 
         private String proto; 
@@ -347,6 +374,7 @@ public class ModifyControlPolicyRequest extends Request {
             this.aclUuid = request.aclUuid;
             this.applicationName = request.applicationName;
             this.applicationNameList = request.applicationNameList;
+            this.clientToken = request.clientToken;
             this.description = request.description;
             this.destPort = request.destPort;
             this.destPortGroup = request.destPortGroup;
@@ -355,6 +383,7 @@ public class ModifyControlPolicyRequest extends Request {
             this.destinationType = request.destinationType;
             this.direction = request.direction;
             this.domainResolveType = request.domainResolveType;
+            this.dryRun = request.dryRun;
             this.endTime = request.endTime;
             this.lang = request.lang;
             this.proto = request.proto;
@@ -444,6 +473,15 @@ public class ModifyControlPolicyRequest extends Request {
         public Builder applicationNameList(java.util.List<String> applicationNameList) {
             this.putQueryParameter("ApplicationNameList", applicationNameList);
             this.applicationNameList = applicationNameList;
+            return this;
+        }
+
+        /**
+         * <p>保证请求幂等性的客户端令牌。由客户端生成，需保证在不同请求间唯一；数据类型 String，大小写敏感，格式为 [0-9a-zA-Z-_]{1,64}，建议使用 UUID。服务端在有效期内（600 秒）保证幂等：相同 ClientToken 且相同业务参数的重复请求返回与首次一致的结果；相同 ClientToken 但业务参数不同时返回 HTTP 400 及 IdempotentParameterMismatch 错误码。</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
@@ -565,6 +603,15 @@ public class ModifyControlPolicyRequest extends Request {
         public Builder domainResolveType(String domainResolveType) {
             this.putQueryParameter("DomainResolveType", domainResolveType);
             this.domainResolveType = domainResolveType;
+            return this;
+        }
+
+        /**
+         * <p>是否只预检此次请求。取值 true 时仅执行参数合法性、身份权限、资源存在性、配额限制与依赖关系等执行前校验，不创建/更新/删除真实资源、不触发真实异步任务、不产生计费/通知/回调等下游副作用；预检成功时响应中 DryRun=true，与真实调用响应可区分；预检失败返回可机器识别的错误码。取值 false（默认）表示正常发起请求并执行变更操作。</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

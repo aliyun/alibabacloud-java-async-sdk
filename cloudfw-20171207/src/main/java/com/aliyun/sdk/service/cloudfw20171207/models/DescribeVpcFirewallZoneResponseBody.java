@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVpcFirewallZoneResponseBody</p>
  */
 public class DescribeVpcFirewallZoneResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("FirewallServiceMode")
+    private String firewallServiceMode;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -24,6 +27,7 @@ public class DescribeVpcFirewallZoneResponseBody extends TeaModel {
     private java.util.List<java.util.List<ZoneList>> zoneList;
 
     private DescribeVpcFirewallZoneResponseBody(Builder builder) {
+        this.firewallServiceMode = builder.firewallServiceMode;
         this.requestId = builder.requestId;
         this.zoneList = builder.zoneList;
     }
@@ -41,6 +45,13 @@ public class DescribeVpcFirewallZoneResponseBody extends TeaModel {
     }
 
     /**
+     * @return firewallServiceMode
+     */
+    public String getFirewallServiceMode() {
+        return this.firewallServiceMode;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -55,6 +66,7 @@ public class DescribeVpcFirewallZoneResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String firewallServiceMode; 
         private String requestId; 
         private java.util.List<java.util.List<ZoneList>> zoneList; 
 
@@ -62,9 +74,18 @@ public class DescribeVpcFirewallZoneResponseBody extends TeaModel {
         } 
 
         private Builder(DescribeVpcFirewallZoneResponseBody model) {
+            this.firewallServiceMode = model.firewallServiceMode;
             this.requestId = model.requestId;
             this.zoneList = model.zoneList;
         } 
+
+        /**
+         * FirewallServiceMode.
+         */
+        public Builder firewallServiceMode(String firewallServiceMode) {
+            this.firewallServiceMode = firewallServiceMode;
+            return this;
+        }
 
         /**
          * RequestId.

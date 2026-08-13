@@ -20,6 +20,9 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CenId")
     private String cenId;
 
+    @com.aliyun.core.annotation.NameInMap("FirewallAttachmentZone")
+    private String firewallAttachmentZone;
+
     @com.aliyun.core.annotation.NameInMap("FirewallDescription")
     private String firewallDescription;
 
@@ -37,6 +40,12 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("FirewallName")
     private String firewallName;
+
+    @com.aliyun.core.annotation.NameInMap("FirewallServiceMode")
+    private String firewallServiceMode;
+
+    @com.aliyun.core.annotation.NameInMap("FirewallServiceZones")
+    private java.util.List<String> firewallServiceZones;
 
     @com.aliyun.core.annotation.NameInMap("FirewallStatus")
     private String firewallStatus;
@@ -63,28 +72,38 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     private String trAttachmentId;
 
     @com.aliyun.core.annotation.NameInMap("TrAttachmentMasterCidr")
+    @Deprecated
     private String trAttachmentMasterCidr;
 
     @com.aliyun.core.annotation.NameInMap("TrAttachmentMasterZone")
+    @Deprecated
     private String trAttachmentMasterZone;
 
     @com.aliyun.core.annotation.NameInMap("TrAttachmentSlaveCidr")
+    @Deprecated
     private String trAttachmentSlaveCidr;
 
     @com.aliyun.core.annotation.NameInMap("TrAttachmentSlaveZone")
+    @Deprecated
     private String trAttachmentSlaveZone;
+
+    @com.aliyun.core.annotation.NameInMap("TrAttachmentZones")
+    private java.util.List<TrAttachmentZones> trAttachmentZones;
 
     @com.aliyun.core.annotation.NameInMap("TransitRouterId")
     private String transitRouterId;
 
     private DescribeTrFirewallsV2DetailResponseBody(Builder builder) {
         this.cenId = builder.cenId;
+        this.firewallAttachmentZone = builder.firewallAttachmentZone;
         this.firewallDescription = builder.firewallDescription;
         this.firewallEniId = builder.firewallEniId;
         this.firewallEniVpcId = builder.firewallEniVpcId;
         this.firewallEniVswitchId = builder.firewallEniVswitchId;
         this.firewallId = builder.firewallId;
         this.firewallName = builder.firewallName;
+        this.firewallServiceMode = builder.firewallServiceMode;
+        this.firewallServiceZones = builder.firewallServiceZones;
         this.firewallStatus = builder.firewallStatus;
         this.firewallSubnetCidr = builder.firewallSubnetCidr;
         this.firewallSwitchStatus = builder.firewallSwitchStatus;
@@ -97,6 +116,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         this.trAttachmentMasterZone = builder.trAttachmentMasterZone;
         this.trAttachmentSlaveCidr = builder.trAttachmentSlaveCidr;
         this.trAttachmentSlaveZone = builder.trAttachmentSlaveZone;
+        this.trAttachmentZones = builder.trAttachmentZones;
         this.transitRouterId = builder.transitRouterId;
     }
 
@@ -117,6 +137,13 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
      */
     public String getCenId() {
         return this.cenId;
+    }
+
+    /**
+     * @return firewallAttachmentZone
+     */
+    public String getFirewallAttachmentZone() {
+        return this.firewallAttachmentZone;
     }
 
     /**
@@ -159,6 +186,20 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
      */
     public String getFirewallName() {
         return this.firewallName;
+    }
+
+    /**
+     * @return firewallServiceMode
+     */
+    public String getFirewallServiceMode() {
+        return this.firewallServiceMode;
+    }
+
+    /**
+     * @return firewallServiceZones
+     */
+    public java.util.List<String> getFirewallServiceZones() {
+        return this.firewallServiceZones;
     }
 
     /**
@@ -246,6 +287,13 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     }
 
     /**
+     * @return trAttachmentZones
+     */
+    public java.util.List<TrAttachmentZones> getTrAttachmentZones() {
+        return this.trAttachmentZones;
+    }
+
+    /**
      * @return transitRouterId
      */
     public String getTransitRouterId() {
@@ -254,12 +302,15 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
 
     public static final class Builder {
         private String cenId; 
+        private String firewallAttachmentZone; 
         private String firewallDescription; 
         private String firewallEniId; 
         private String firewallEniVpcId; 
         private String firewallEniVswitchId; 
         private String firewallId; 
         private String firewallName; 
+        private String firewallServiceMode; 
+        private java.util.List<String> firewallServiceZones; 
         private String firewallStatus; 
         private String firewallSubnetCidr; 
         private String firewallSwitchStatus; 
@@ -272,6 +323,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         private String trAttachmentMasterZone; 
         private String trAttachmentSlaveCidr; 
         private String trAttachmentSlaveZone; 
+        private java.util.List<TrAttachmentZones> trAttachmentZones; 
         private String transitRouterId; 
 
         private Builder() {
@@ -279,12 +331,15 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
 
         private Builder(DescribeTrFirewallsV2DetailResponseBody model) {
             this.cenId = model.cenId;
+            this.firewallAttachmentZone = model.firewallAttachmentZone;
             this.firewallDescription = model.firewallDescription;
             this.firewallEniId = model.firewallEniId;
             this.firewallEniVpcId = model.firewallEniVpcId;
             this.firewallEniVswitchId = model.firewallEniVswitchId;
             this.firewallId = model.firewallId;
             this.firewallName = model.firewallName;
+            this.firewallServiceMode = model.firewallServiceMode;
+            this.firewallServiceZones = model.firewallServiceZones;
             this.firewallStatus = model.firewallStatus;
             this.firewallSubnetCidr = model.firewallSubnetCidr;
             this.firewallSwitchStatus = model.firewallSwitchStatus;
@@ -297,6 +352,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
             this.trAttachmentMasterZone = model.trAttachmentMasterZone;
             this.trAttachmentSlaveCidr = model.trAttachmentSlaveCidr;
             this.trAttachmentSlaveZone = model.trAttachmentSlaveZone;
+            this.trAttachmentZones = model.trAttachmentZones;
             this.transitRouterId = model.transitRouterId;
         } 
 
@@ -308,6 +364,14 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
          */
         public Builder cenId(String cenId) {
             this.cenId = cenId;
+            return this;
+        }
+
+        /**
+         * FirewallAttachmentZone.
+         */
+        public Builder firewallAttachmentZone(String firewallAttachmentZone) {
+            this.firewallAttachmentZone = firewallAttachmentZone;
             return this;
         }
 
@@ -374,6 +438,22 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
          */
         public Builder firewallName(String firewallName) {
             this.firewallName = firewallName;
+            return this;
+        }
+
+        /**
+         * FirewallServiceMode.
+         */
+        public Builder firewallServiceMode(String firewallServiceMode) {
+            this.firewallServiceMode = firewallServiceMode;
+            return this;
+        }
+
+        /**
+         * FirewallServiceZones.
+         */
+        public Builder firewallServiceZones(java.util.List<String> firewallServiceZones) {
+            this.firewallServiceZones = firewallServiceZones;
             return this;
         }
 
@@ -528,6 +608,14 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         }
 
         /**
+         * TrAttachmentZones.
+         */
+        public Builder trAttachmentZones(java.util.List<TrAttachmentZones> trAttachmentZones) {
+            this.trAttachmentZones = trAttachmentZones;
+            return this;
+        }
+
+        /**
          * <p>The ID of the transit router.</p>
          * 
          * <strong>example:</strong>
@@ -544,4 +632,79 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTrFirewallsV2DetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTrFirewallsV2DetailResponseBody</p>
+     */
+    public static class TrAttachmentZones extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("VSwitchCidr")
+        private String vSwitchCidr;
+
+        @com.aliyun.core.annotation.NameInMap("VSwitchZoneId")
+        private String vSwitchZoneId;
+
+        private TrAttachmentZones(Builder builder) {
+            this.vSwitchCidr = builder.vSwitchCidr;
+            this.vSwitchZoneId = builder.vSwitchZoneId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TrAttachmentZones create() {
+            return builder().build();
+        }
+
+        /**
+         * @return vSwitchCidr
+         */
+        public String getVSwitchCidr() {
+            return this.vSwitchCidr;
+        }
+
+        /**
+         * @return vSwitchZoneId
+         */
+        public String getVSwitchZoneId() {
+            return this.vSwitchZoneId;
+        }
+
+        public static final class Builder {
+            private String vSwitchCidr; 
+            private String vSwitchZoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrAttachmentZones model) {
+                this.vSwitchCidr = model.vSwitchCidr;
+                this.vSwitchZoneId = model.vSwitchZoneId;
+            } 
+
+            /**
+             * VSwitchCidr.
+             */
+            public Builder vSwitchCidr(String vSwitchCidr) {
+                this.vSwitchCidr = vSwitchCidr;
+                return this;
+            }
+
+            /**
+             * VSwitchZoneId.
+             */
+            public Builder vSwitchZoneId(String vSwitchZoneId) {
+                this.vSwitchZoneId = vSwitchZoneId;
+                return this;
+            }
+
+            public TrAttachmentZones build() {
+                return new TrAttachmentZones(this);
+            } 
+
+        } 
+
+    }
 }

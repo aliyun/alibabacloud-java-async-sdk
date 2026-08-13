@@ -223,7 +223,14 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowConfiguration")
         private Integer allowConfiguration;
 
+        @com.aliyun.core.annotation.NameInMap("FirewallServiceMode")
+        private String firewallServiceMode;
+
+        @com.aliyun.core.annotation.NameInMap("FirewallServiceZones")
+        private java.util.List<String> firewallServiceZones;
+
         @com.aliyun.core.annotation.NameInMap("StandbyZoneId")
+        @Deprecated
         private String standbyZoneId;
 
         @com.aliyun.core.annotation.NameInMap("VpcCidr")
@@ -242,10 +249,13 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         private String vswitchZoneId;
 
         @com.aliyun.core.annotation.NameInMap("ZoneId")
+        @Deprecated
         private String zoneId;
 
         private FirewallVpc(Builder builder) {
             this.allowConfiguration = builder.allowConfiguration;
+            this.firewallServiceMode = builder.firewallServiceMode;
+            this.firewallServiceZones = builder.firewallServiceZones;
             this.standbyZoneId = builder.standbyZoneId;
             this.vpcCidr = builder.vpcCidr;
             this.vpcId = builder.vpcId;
@@ -268,6 +278,20 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
          */
         public Integer getAllowConfiguration() {
             return this.allowConfiguration;
+        }
+
+        /**
+         * @return firewallServiceMode
+         */
+        public String getFirewallServiceMode() {
+            return this.firewallServiceMode;
+        }
+
+        /**
+         * @return firewallServiceZones
+         */
+        public java.util.List<String> getFirewallServiceZones() {
+            return this.firewallServiceZones;
         }
 
         /**
@@ -321,6 +345,8 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer allowConfiguration; 
+            private String firewallServiceMode; 
+            private java.util.List<String> firewallServiceZones; 
             private String standbyZoneId; 
             private String vpcCidr; 
             private String vpcId; 
@@ -334,6 +360,8 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
 
             private Builder(FirewallVpc model) {
                 this.allowConfiguration = model.allowConfiguration;
+                this.firewallServiceMode = model.firewallServiceMode;
+                this.firewallServiceZones = model.firewallServiceZones;
                 this.standbyZoneId = model.standbyZoneId;
                 this.vpcCidr = model.vpcCidr;
                 this.vpcId = model.vpcId;
@@ -355,6 +383,22 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
              */
             public Builder allowConfiguration(Integer allowConfiguration) {
                 this.allowConfiguration = allowConfiguration;
+                return this;
+            }
+
+            /**
+             * FirewallServiceMode.
+             */
+            public Builder firewallServiceMode(String firewallServiceMode) {
+                this.firewallServiceMode = firewallServiceMode;
+                return this;
+            }
+
+            /**
+             * FirewallServiceZones.
+             */
+            public Builder firewallServiceZones(java.util.List<String> firewallServiceZones) {
+                this.firewallServiceZones = firewallServiceZones;
                 return this;
             }
 
@@ -458,10 +502,14 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EniVSwitchId")
         private String eniVSwitchId;
 
+        @com.aliyun.core.annotation.NameInMap("EniZoneId")
+        private String eniZoneId;
+
         private EniList(Builder builder) {
             this.eniId = builder.eniId;
             this.eniPrivateIpAddress = builder.eniPrivateIpAddress;
             this.eniVSwitchId = builder.eniVSwitchId;
+            this.eniZoneId = builder.eniZoneId;
         }
 
         public static Builder builder() {
@@ -493,10 +541,18 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
             return this.eniVSwitchId;
         }
 
+        /**
+         * @return eniZoneId
+         */
+        public String getEniZoneId() {
+            return this.eniZoneId;
+        }
+
         public static final class Builder {
             private String eniId; 
             private String eniPrivateIpAddress; 
             private String eniVSwitchId; 
+            private String eniZoneId; 
 
             private Builder() {
             } 
@@ -505,6 +561,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
                 this.eniId = model.eniId;
                 this.eniPrivateIpAddress = model.eniPrivateIpAddress;
                 this.eniVSwitchId = model.eniVSwitchId;
+                this.eniZoneId = model.eniZoneId;
             } 
 
             /**
@@ -537,6 +594,14 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
              */
             public Builder eniVSwitchId(String eniVSwitchId) {
                 this.eniVSwitchId = eniVSwitchId;
+                return this;
+            }
+
+            /**
+             * EniZoneId.
+             */
+            public Builder eniZoneId(String eniZoneId) {
+                this.eniZoneId = eniZoneId;
                 return this;
             }
 

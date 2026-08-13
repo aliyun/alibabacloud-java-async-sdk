@@ -32,6 +32,10 @@ public class CreateVpcFirewallCenConfigureRequest extends Request {
     private String firewallVSwitchCidrBlock;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallVSwitchZoneId")
+    private String firewallVSwitchZoneId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FirewallVpcCidrBlock")
     private String firewallVpcCidrBlock;
 
@@ -75,6 +79,7 @@ public class CreateVpcFirewallCenConfigureRequest extends Request {
         this.cenId = builder.cenId;
         this.firewallSwitch = builder.firewallSwitch;
         this.firewallVSwitchCidrBlock = builder.firewallVSwitchCidrBlock;
+        this.firewallVSwitchZoneId = builder.firewallVSwitchZoneId;
         this.firewallVpcCidrBlock = builder.firewallVpcCidrBlock;
         this.firewallVpcStandbyZoneId = builder.firewallVpcStandbyZoneId;
         this.firewallVpcZoneId = builder.firewallVpcZoneId;
@@ -118,6 +123,13 @@ public class CreateVpcFirewallCenConfigureRequest extends Request {
      */
     public String getFirewallVSwitchCidrBlock() {
         return this.firewallVSwitchCidrBlock;
+    }
+
+    /**
+     * @return firewallVSwitchZoneId
+     */
+    public String getFirewallVSwitchZoneId() {
+        return this.firewallVSwitchZoneId;
     }
 
     /**
@@ -187,6 +199,7 @@ public class CreateVpcFirewallCenConfigureRequest extends Request {
         private String cenId; 
         private String firewallSwitch; 
         private String firewallVSwitchCidrBlock; 
+        private String firewallVSwitchZoneId; 
         private String firewallVpcCidrBlock; 
         private String firewallVpcStandbyZoneId; 
         private String firewallVpcZoneId; 
@@ -206,6 +219,7 @@ public class CreateVpcFirewallCenConfigureRequest extends Request {
             this.cenId = request.cenId;
             this.firewallSwitch = request.firewallSwitch;
             this.firewallVSwitchCidrBlock = request.firewallVSwitchCidrBlock;
+            this.firewallVSwitchZoneId = request.firewallVSwitchZoneId;
             this.firewallVpcCidrBlock = request.firewallVpcCidrBlock;
             this.firewallVpcStandbyZoneId = request.firewallVpcStandbyZoneId;
             this.firewallVpcZoneId = request.firewallVpcZoneId;
@@ -257,6 +271,15 @@ public class CreateVpcFirewallCenConfigureRequest extends Request {
         public Builder firewallVSwitchCidrBlock(String firewallVSwitchCidrBlock) {
             this.putQueryParameter("FirewallVSwitchCidrBlock", firewallVSwitchCidrBlock);
             this.firewallVSwitchCidrBlock = firewallVSwitchCidrBlock;
+            return this;
+        }
+
+        /**
+         * FirewallVSwitchZoneId.
+         */
+        public Builder firewallVSwitchZoneId(String firewallVSwitchZoneId) {
+            this.putQueryParameter("FirewallVSwitchZoneId", firewallVSwitchZoneId);
+            this.firewallVSwitchZoneId = firewallVSwitchZoneId;
             return this;
         }
 

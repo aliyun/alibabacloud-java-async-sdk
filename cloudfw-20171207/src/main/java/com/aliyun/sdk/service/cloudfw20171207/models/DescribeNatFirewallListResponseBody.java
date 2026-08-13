@@ -257,6 +257,12 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorDetail")
         private String errorDetail;
 
+        @com.aliyun.core.annotation.NameInMap("FirewallServiceMode")
+        private String firewallServiceMode;
+
+        @com.aliyun.core.annotation.NameInMap("FirewallServiceZones")
+        private java.util.List<String> firewallServiceZones;
+
         @com.aliyun.core.annotation.NameInMap("MemberUid")
         private Long memberUid;
 
@@ -302,6 +308,8 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
         private NatFirewallList(Builder builder) {
             this.aliUid = builder.aliUid;
             this.errorDetail = builder.errorDetail;
+            this.firewallServiceMode = builder.firewallServiceMode;
+            this.firewallServiceZones = builder.firewallServiceZones;
             this.memberUid = builder.memberUid;
             this.natGatewayId = builder.natGatewayId;
             this.natGatewayName = builder.natGatewayName;
@@ -338,6 +346,20 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
          */
         public String getErrorDetail() {
             return this.errorDetail;
+        }
+
+        /**
+         * @return firewallServiceMode
+         */
+        public String getFirewallServiceMode() {
+            return this.firewallServiceMode;
+        }
+
+        /**
+         * @return firewallServiceZones
+         */
+        public java.util.List<String> getFirewallServiceZones() {
+            return this.firewallServiceZones;
         }
 
         /**
@@ -441,6 +463,8 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
         public static final class Builder {
             private Long aliUid; 
             private String errorDetail; 
+            private String firewallServiceMode; 
+            private java.util.List<String> firewallServiceZones; 
             private Long memberUid; 
             private String natGatewayId; 
             private String natGatewayName; 
@@ -462,6 +486,8 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
             private Builder(NatFirewallList model) {
                 this.aliUid = model.aliUid;
                 this.errorDetail = model.errorDetail;
+                this.firewallServiceMode = model.firewallServiceMode;
+                this.firewallServiceZones = model.firewallServiceZones;
                 this.memberUid = model.memberUid;
                 this.natGatewayId = model.natGatewayId;
                 this.natGatewayName = model.natGatewayName;
@@ -500,6 +526,22 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
              */
             public Builder errorDetail(String errorDetail) {
                 this.errorDetail = errorDetail;
+                return this;
+            }
+
+            /**
+             * FirewallServiceMode.
+             */
+            public Builder firewallServiceMode(String firewallServiceMode) {
+                this.firewallServiceMode = firewallServiceMode;
+                return this;
+            }
+
+            /**
+             * FirewallServiceZones.
+             */
+            public Builder firewallServiceZones(java.util.List<String> firewallServiceZones) {
+                this.firewallServiceZones = firewallServiceZones;
                 return this;
             }
 
