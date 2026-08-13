@@ -20,6 +20,42 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of AbortCampaign  AbortCampaignRequest
+     * @return AbortCampaignResponse
+     */
+    CompletableFuture<AbortCampaignResponse> abortCampaign(AbortCampaignRequest request);
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of AbortCases  AbortCasesRequest
+     * @return AbortCasesResponse
+     */
+    CompletableFuture<AbortCasesResponse> abortCases(AbortCasesRequest request);
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of AppendCases  AppendCasesRequest
+     * @return AppendCasesResponse
+     */
+    CompletableFuture<AppendCasesResponse> appendCases(AppendCasesRequest request);
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of CreateCampaign  CreateCampaignRequest
+     * @return CreateCampaignResponse
+     */
+    CompletableFuture<CreateCampaignResponse> createCampaign(CreateCampaignRequest request);
+
+    /**
      * @param request the request parameters of CreateCloneVoice  CreateCloneVoiceRequest
      * @return CreateCloneVoiceResponse
      */
@@ -104,6 +140,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableSubscriptionResponse> disableSubscription(DisableSubscriptionRequest request);
 
     /**
+     * @param request the request parameters of GetCampaign  GetCampaignRequest
+     * @return GetCampaignResponse
+     */
+    CompletableFuture<GetCampaignResponse> getCampaign(GetCampaignRequest request);
+
+    /**
      * @param request the request parameters of GetInstance  GetInstanceRequest
      * @return GetInstanceResponse
      */
@@ -120,6 +162,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetSubscriptionResponse
      */
     CompletableFuture<GetSubscriptionResponse> getSubscription(GetSubscriptionRequest request);
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of ListCampaigns  ListCampaignsRequest
+     * @return ListCampaignsResponse
+     */
+    CompletableFuture<ListCampaignsResponse> listCampaigns(ListCampaignsRequest request);
 
     /**
      * @param request the request parameters of ListCloneVoiceModels  ListCloneVoiceModelsRequest
@@ -194,10 +245,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListVoiceAccessProfilesResponse> listVoiceAccessProfiles(ListVoiceAccessProfilesRequest request);
 
     /**
+     * @param request the request parameters of PauseCampaign  PauseCampaignRequest
+     * @return PauseCampaignResponse
+     */
+    CompletableFuture<PauseCampaignResponse> pauseCampaign(PauseCampaignRequest request);
+
+    /**
      * @param request the request parameters of PublishScript  PublishScriptRequest
      * @return PublishScriptResponse
      */
     CompletableFuture<PublishScriptResponse> publishScript(PublishScriptRequest request);
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of ResumeCampaign  ResumeCampaignRequest
+     * @return ResumeCampaignResponse
+     */
+    CompletableFuture<ResumeCampaignResponse> resumeCampaign(ResumeCampaignRequest request);
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of SubmitCampaign  SubmitCampaignRequest
+     * @return SubmitCampaignResponse
+     */
+    CompletableFuture<SubmitCampaignResponse> submitCampaign(SubmitCampaignRequest request);
 
     /**
      * @param request the request parameters of UpdateCloneVoice  UpdateCloneVoiceRequest

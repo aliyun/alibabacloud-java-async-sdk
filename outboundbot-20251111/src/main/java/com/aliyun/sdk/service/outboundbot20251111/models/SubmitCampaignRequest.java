@@ -1,0 +1,110 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.outboundbot20251111.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link SubmitCampaignRequest} extends {@link RequestModel}
+ *
+ * <p>SubmitCampaignRequest</p>
+ */
+public class SubmitCampaignRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CampaignId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String campaignId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String instanceId;
+
+    private SubmitCampaignRequest(Builder builder) {
+        super(builder);
+        this.campaignId = builder.campaignId;
+        this.instanceId = builder.instanceId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static SubmitCampaignRequest create() {
+        return builder().build();
+    }
+
+@Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return campaignId
+     */
+    public String getCampaignId() {
+        return this.campaignId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public static final class Builder extends Request.Builder<SubmitCampaignRequest, Builder> {
+        private String campaignId; 
+        private String instanceId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(SubmitCampaignRequest request) {
+            super(request);
+            this.campaignId = request.campaignId;
+            this.instanceId = request.instanceId;
+        } 
+
+        /**
+         * <p>活动ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f295a472-35ee-442a-9013-b13862505a1a</p>
+         */
+        public Builder campaignId(String campaignId) {
+            this.putQueryParameter("CampaignId", campaignId);
+            this.campaignId = campaignId;
+            return this;
+        }
+
+        /**
+         * <p>外呼实例ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b3dbfb82-1ae6-4e73-b717-f494727d2af3</p>
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        @Override
+        public SubmitCampaignRequest build() {
+            return new SubmitCampaignRequest(this);
+        } 
+
+    } 
+
+}
