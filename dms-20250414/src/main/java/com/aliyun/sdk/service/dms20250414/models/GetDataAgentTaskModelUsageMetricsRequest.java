@@ -30,6 +30,10 @@ public class GetDataAgentTaskModelUsageMetricsRequest extends Request {
     private String endTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayLevel")
+    private String payLevel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -38,6 +42,7 @@ public class GetDataAgentTaskModelUsageMetricsRequest extends Request {
         this.beginTime = builder.beginTime;
         this.DMSUnit = builder.DMSUnit;
         this.endTime = builder.endTime;
+        this.payLevel = builder.payLevel;
         this.regionId = builder.regionId;
     }
 
@@ -76,6 +81,13 @@ public class GetDataAgentTaskModelUsageMetricsRequest extends Request {
     }
 
     /**
+     * @return payLevel
+     */
+    public String getPayLevel() {
+        return this.payLevel;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -86,6 +98,7 @@ public class GetDataAgentTaskModelUsageMetricsRequest extends Request {
         private String beginTime; 
         private String DMSUnit; 
         private String endTime; 
+        private String payLevel; 
         private String regionId; 
 
         private Builder() {
@@ -97,6 +110,7 @@ public class GetDataAgentTaskModelUsageMetricsRequest extends Request {
             this.beginTime = request.beginTime;
             this.DMSUnit = request.DMSUnit;
             this.endTime = request.endTime;
+            this.payLevel = request.payLevel;
             this.regionId = request.regionId;
         } 
 
@@ -124,6 +138,15 @@ public class GetDataAgentTaskModelUsageMetricsRequest extends Request {
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * PayLevel.
+         */
+        public Builder payLevel(String payLevel) {
+            this.putQueryParameter("PayLevel", payLevel);
+            this.payLevel = payLevel;
             return this;
         }
 

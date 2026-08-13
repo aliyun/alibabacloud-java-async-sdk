@@ -569,6 +569,9 @@ public class CreateCustomAgentRequest extends Request {
      * <p>CreateCustomAgentRequest</p>
      */
     public static class ExecutionConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ForbiddenAppendDataSource")
+        private Boolean forbiddenAppendDataSource;
+
         @com.aliyun.core.annotation.NameInMap("SkipAskHuman")
         private Boolean skipAskHuman;
 
@@ -582,6 +585,7 @@ public class CreateCustomAgentRequest extends Request {
         private Boolean skipWebReportConfirm;
 
         private ExecutionConfig(Builder builder) {
+            this.forbiddenAppendDataSource = builder.forbiddenAppendDataSource;
             this.skipAskHuman = builder.skipAskHuman;
             this.skipPlan = builder.skipPlan;
             this.skipSqlConfirm = builder.skipSqlConfirm;
@@ -594,6 +598,13 @@ public class CreateCustomAgentRequest extends Request {
 
         public static ExecutionConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return forbiddenAppendDataSource
+         */
+        public Boolean getForbiddenAppendDataSource() {
+            return this.forbiddenAppendDataSource;
         }
 
         /**
@@ -625,6 +636,7 @@ public class CreateCustomAgentRequest extends Request {
         }
 
         public static final class Builder {
+            private Boolean forbiddenAppendDataSource; 
             private Boolean skipAskHuman; 
             private Boolean skipPlan; 
             private Boolean skipSqlConfirm; 
@@ -634,11 +646,20 @@ public class CreateCustomAgentRequest extends Request {
             } 
 
             private Builder(ExecutionConfig model) {
+                this.forbiddenAppendDataSource = model.forbiddenAppendDataSource;
                 this.skipAskHuman = model.skipAskHuman;
                 this.skipPlan = model.skipPlan;
                 this.skipSqlConfirm = model.skipSqlConfirm;
                 this.skipWebReportConfirm = model.skipWebReportConfirm;
             } 
+
+            /**
+             * ForbiddenAppendDataSource.
+             */
+            public Builder forbiddenAppendDataSource(Boolean forbiddenAppendDataSource) {
+                this.forbiddenAppendDataSource = forbiddenAppendDataSource;
+                return this;
+            }
 
             /**
              * SkipAskHuman.

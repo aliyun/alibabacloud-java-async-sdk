@@ -158,6 +158,18 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
      * <p>GetDataAgentTaskModelUsageResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccelerationRatio")
+        private Double accelerationRatio;
+
+        @com.aliyun.core.annotation.NameInMap("RateLimitedSessionCount")
+        private Long rateLimitedSessionCount;
+
+        @com.aliyun.core.annotation.NameInMap("TotalLlmWaitDuration")
+        private Double totalLlmWaitDuration;
+
+        @com.aliyun.core.annotation.NameInMap("TotalSessionCount")
+        private Long totalSessionCount;
+
         @com.aliyun.core.annotation.NameInMap("peakTpm")
         private Long peakTpm;
 
@@ -171,6 +183,10 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
         private Long usedModels;
 
         private Data(Builder builder) {
+            this.accelerationRatio = builder.accelerationRatio;
+            this.rateLimitedSessionCount = builder.rateLimitedSessionCount;
+            this.totalLlmWaitDuration = builder.totalLlmWaitDuration;
+            this.totalSessionCount = builder.totalSessionCount;
             this.peakTpm = builder.peakTpm;
             this.totalCallCount = builder.totalCallCount;
             this.totalTokenConsumed = builder.totalTokenConsumed;
@@ -183,6 +199,34 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return accelerationRatio
+         */
+        public Double getAccelerationRatio() {
+            return this.accelerationRatio;
+        }
+
+        /**
+         * @return rateLimitedSessionCount
+         */
+        public Long getRateLimitedSessionCount() {
+            return this.rateLimitedSessionCount;
+        }
+
+        /**
+         * @return totalLlmWaitDuration
+         */
+        public Double getTotalLlmWaitDuration() {
+            return this.totalLlmWaitDuration;
+        }
+
+        /**
+         * @return totalSessionCount
+         */
+        public Long getTotalSessionCount() {
+            return this.totalSessionCount;
         }
 
         /**
@@ -214,6 +258,10 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Double accelerationRatio; 
+            private Long rateLimitedSessionCount; 
+            private Double totalLlmWaitDuration; 
+            private Long totalSessionCount; 
             private Long peakTpm; 
             private Long totalCallCount; 
             private Long totalTokenConsumed; 
@@ -223,11 +271,47 @@ public class GetDataAgentTaskModelUsageResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.accelerationRatio = model.accelerationRatio;
+                this.rateLimitedSessionCount = model.rateLimitedSessionCount;
+                this.totalLlmWaitDuration = model.totalLlmWaitDuration;
+                this.totalSessionCount = model.totalSessionCount;
                 this.peakTpm = model.peakTpm;
                 this.totalCallCount = model.totalCallCount;
                 this.totalTokenConsumed = model.totalTokenConsumed;
                 this.usedModels = model.usedModels;
             } 
+
+            /**
+             * AccelerationRatio.
+             */
+            public Builder accelerationRatio(Double accelerationRatio) {
+                this.accelerationRatio = accelerationRatio;
+                return this;
+            }
+
+            /**
+             * RateLimitedSessionCount.
+             */
+            public Builder rateLimitedSessionCount(Long rateLimitedSessionCount) {
+                this.rateLimitedSessionCount = rateLimitedSessionCount;
+                return this;
+            }
+
+            /**
+             * TotalLlmWaitDuration.
+             */
+            public Builder totalLlmWaitDuration(Double totalLlmWaitDuration) {
+                this.totalLlmWaitDuration = totalLlmWaitDuration;
+                return this;
+            }
+
+            /**
+             * TotalSessionCount.
+             */
+            public Builder totalSessionCount(Long totalSessionCount) {
+                this.totalSessionCount = totalSessionCount;
+                return this;
+            }
 
             /**
              * peakTpm.
