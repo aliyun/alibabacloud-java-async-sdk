@@ -23,6 +23,9 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AppKey")
     private String appKey;
 
+    @com.aliyun.core.annotation.NameInMap("BackgroundMusicName")
+    private String backgroundMusicName;
+
     @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
@@ -56,6 +59,7 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
     private DescribeTTSConfigResponseBody(Builder builder) {
         this.aliCustomizedVoice = builder.aliCustomizedVoice;
         this.appKey = builder.appKey;
+        this.backgroundMusicName = builder.backgroundMusicName;
         this.engine = builder.engine;
         this.engineXunfei = builder.engineXunfei;
         this.extParams = builder.extParams;
@@ -92,6 +96,13 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
      */
     public String getAppKey() {
         return this.appKey;
+    }
+
+    /**
+     * @return backgroundMusicName
+     */
+    public String getBackgroundMusicName() {
+        return this.backgroundMusicName;
     }
 
     /**
@@ -167,6 +178,7 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
     public static final class Builder {
         private String aliCustomizedVoice; 
         private String appKey; 
+        private String backgroundMusicName; 
         private String engine; 
         private String engineXunfei; 
         private String extParams; 
@@ -184,6 +196,7 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         private Builder(DescribeTTSConfigResponseBody model) {
             this.aliCustomizedVoice = model.aliCustomizedVoice;
             this.appKey = model.appKey;
+            this.backgroundMusicName = model.backgroundMusicName;
             this.engine = model.engine;
             this.engineXunfei = model.engineXunfei;
             this.extParams = model.extParams;
@@ -209,6 +222,14 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
          */
         public Builder appKey(String appKey) {
             this.appKey = appKey;
+            return this;
+        }
+
+        /**
+         * BackgroundMusicName.
+         */
+        public Builder backgroundMusicName(String backgroundMusicName) {
+            this.backgroundMusicName = backgroundMusicName;
             return this;
         }
 

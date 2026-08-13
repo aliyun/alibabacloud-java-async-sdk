@@ -31,8 +31,8 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.version = "2018-06-12";
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("cn-shanghai", "voicenavigator.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "voicenavigator.cn-hangzhou.aliyuncs.com")
+            new TeaPair("cn-hangzhou", "voicenavigator.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "voicenavigator.cn-shanghai.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -356,7 +356,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<DescribeTTSConfigResponse> describeTTSConfig(DescribeTTSConfigRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeTTSConfig").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeTTSConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeTTSConfigResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {

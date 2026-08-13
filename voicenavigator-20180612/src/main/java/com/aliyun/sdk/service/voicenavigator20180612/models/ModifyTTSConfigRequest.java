@@ -26,6 +26,10 @@ public class ModifyTTSConfigRequest extends Request {
     private String appKey;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackgroundMusicName")
+    private String backgroundMusicName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
@@ -70,6 +74,7 @@ public class ModifyTTSConfigRequest extends Request {
         super(builder);
         this.aliCustomizedVoice = builder.aliCustomizedVoice;
         this.appKey = builder.appKey;
+        this.backgroundMusicName = builder.backgroundMusicName;
         this.engine = builder.engine;
         this.engineXunfei = builder.engineXunfei;
         this.extParams = builder.extParams;
@@ -107,6 +112,13 @@ public class ModifyTTSConfigRequest extends Request {
      */
     public String getAppKey() {
         return this.appKey;
+    }
+
+    /**
+     * @return backgroundMusicName
+     */
+    public String getBackgroundMusicName() {
+        return this.backgroundMusicName;
     }
 
     /**
@@ -182,6 +194,7 @@ public class ModifyTTSConfigRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyTTSConfigRequest, Builder> {
         private String aliCustomizedVoice; 
         private String appKey; 
+        private String backgroundMusicName; 
         private String engine; 
         private String engineXunfei; 
         private String extParams; 
@@ -201,6 +214,7 @@ public class ModifyTTSConfigRequest extends Request {
             super(request);
             this.aliCustomizedVoice = request.aliCustomizedVoice;
             this.appKey = request.appKey;
+            this.backgroundMusicName = request.backgroundMusicName;
             this.engine = request.engine;
             this.engineXunfei = request.engineXunfei;
             this.extParams = request.extParams;
@@ -228,6 +242,15 @@ public class ModifyTTSConfigRequest extends Request {
         public Builder appKey(String appKey) {
             this.putQueryParameter("AppKey", appKey);
             this.appKey = appKey;
+            return this;
+        }
+
+        /**
+         * BackgroundMusicName.
+         */
+        public Builder backgroundMusicName(String backgroundMusicName) {
+            this.putQueryParameter("BackgroundMusicName", backgroundMusicName);
+            this.backgroundMusicName = backgroundMusicName;
             return this;
         }
 
