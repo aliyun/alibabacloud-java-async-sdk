@@ -39,6 +39,10 @@ public class CreateSupabaseProjectRequest extends Request {
     private String engineVersion;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lightweight")
+    private Boolean lightweight;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
@@ -99,6 +103,7 @@ public class CreateSupabaseProjectRequest extends Request {
         this.clientToken = builder.clientToken;
         this.diskPerformanceLevel = builder.diskPerformanceLevel;
         this.engineVersion = builder.engineVersion;
+        this.lightweight = builder.lightweight;
         this.payType = builder.payType;
         this.period = builder.period;
         this.projectName = builder.projectName;
@@ -159,6 +164,13 @@ public class CreateSupabaseProjectRequest extends Request {
      */
     public String getEngineVersion() {
         return this.engineVersion;
+    }
+
+    /**
+     * @return lightweight
+     */
+    public Boolean getLightweight() {
+        return this.lightweight;
     }
 
     /**
@@ -251,6 +263,7 @@ public class CreateSupabaseProjectRequest extends Request {
         private String clientToken; 
         private String diskPerformanceLevel; 
         private String engineVersion; 
+        private Boolean lightweight; 
         private String payType; 
         private String period; 
         private String projectName; 
@@ -275,6 +288,7 @@ public class CreateSupabaseProjectRequest extends Request {
             this.clientToken = request.clientToken;
             this.diskPerformanceLevel = request.diskPerformanceLevel;
             this.engineVersion = request.engineVersion;
+            this.lightweight = request.lightweight;
             this.payType = request.payType;
             this.period = request.period;
             this.projectName = request.projectName;
@@ -350,6 +364,15 @@ public class CreateSupabaseProjectRequest extends Request {
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
             this.engineVersion = engineVersion;
+            return this;
+        }
+
+        /**
+         * Lightweight.
+         */
+        public Builder lightweight(Boolean lightweight) {
+            this.putQueryParameter("Lightweight", lightweight);
+            this.lightweight = lightweight;
             return this;
         }
 

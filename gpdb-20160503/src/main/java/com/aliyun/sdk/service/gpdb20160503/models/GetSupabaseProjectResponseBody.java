@@ -47,6 +47,9 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceVersion")
     private String instanceVersion;
 
+    @com.aliyun.core.annotation.NameInMap("Lightweight")
+    private String lightweight;
+
     @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
@@ -106,6 +109,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         this.engineVersion = builder.engineVersion;
         this.eni = builder.eni;
         this.instanceVersion = builder.instanceVersion;
+        this.lightweight = builder.lightweight;
         this.payType = builder.payType;
         this.privateConnectUrl = builder.privateConnectUrl;
         this.projectDescription = builder.projectDescription;
@@ -204,6 +208,13 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
      */
     public String getInstanceVersion() {
         return this.instanceVersion;
+    }
+
+    /**
+     * @return lightweight
+     */
+    public String getLightweight() {
+        return this.lightweight;
     }
 
     /**
@@ -329,6 +340,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
         private String engineVersion; 
         private String eni; 
         private String instanceVersion; 
+        private String lightweight; 
         private String payType; 
         private String privateConnectUrl; 
         private String projectDescription; 
@@ -360,6 +372,7 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
             this.engineVersion = model.engineVersion;
             this.eni = model.eni;
             this.instanceVersion = model.instanceVersion;
+            this.lightweight = model.lightweight;
             this.payType = model.payType;
             this.privateConnectUrl = model.privateConnectUrl;
             this.projectDescription = model.projectDescription;
@@ -477,6 +490,14 @@ public class GetSupabaseProjectResponseBody extends TeaModel {
          */
         public Builder instanceVersion(String instanceVersion) {
             this.instanceVersion = instanceVersion;
+            return this;
+        }
+
+        /**
+         * Lightweight.
+         */
+        public Builder lightweight(String lightweight) {
+            this.lightweight = lightweight;
             return this;
         }
 
