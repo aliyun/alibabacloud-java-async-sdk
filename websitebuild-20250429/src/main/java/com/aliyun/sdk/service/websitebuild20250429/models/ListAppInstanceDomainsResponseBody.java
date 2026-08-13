@@ -1446,11 +1446,17 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("DeployType")
+        private String deployType;
+
         @com.aliyun.core.annotation.NameInMap("DnsConflict")
         private DnsConflict dnsConflict;
 
         @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
+
+        @com.aliyun.core.annotation.NameInMap("DomainType")
+        private String domainType;
 
         @com.aliyun.core.annotation.NameInMap("Migration")
         private Migration migration;
@@ -1473,8 +1479,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.certificate = builder.certificate;
             this.createTime = builder.createTime;
+            this.deployType = builder.deployType;
             this.dnsConflict = builder.dnsConflict;
             this.domainName = builder.domainName;
+            this.domainType = builder.domainType;
             this.migration = builder.migration;
             this.overallStatus = builder.overallStatus;
             this.ownership = builder.ownership;
@@ -1506,6 +1514,13 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
+         * @return deployType
+         */
+        public String getDeployType() {
+            return this.deployType;
+        }
+
+        /**
          * @return dnsConflict
          */
         public DnsConflict getDnsConflict() {
@@ -1517,6 +1532,13 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
          */
         public String getDomainName() {
             return this.domainName;
+        }
+
+        /**
+         * @return domainType
+         */
+        public String getDomainType() {
+            return this.domainType;
         }
 
         /**
@@ -1564,8 +1586,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public static final class Builder {
             private Certificate certificate; 
             private String createTime; 
+            private String deployType; 
             private DnsConflict dnsConflict; 
             private String domainName; 
+            private String domainType; 
             private Migration migration; 
             private String overallStatus; 
             private Ownership ownership; 
@@ -1579,8 +1603,10 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.certificate = model.certificate;
                 this.createTime = model.createTime;
+                this.deployType = model.deployType;
                 this.dnsConflict = model.dnsConflict;
                 this.domainName = model.domainName;
+                this.domainType = model.domainType;
                 this.migration = model.migration;
                 this.overallStatus = model.overallStatus;
                 this.ownership = model.ownership;
@@ -1609,6 +1635,14 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
+             * DeployType.
+             */
+            public Builder deployType(String deployType) {
+                this.deployType = deployType;
+                return this;
+            }
+
+            /**
              * DnsConflict.
              */
             public Builder dnsConflict(DnsConflict dnsConflict) {
@@ -1624,6 +1658,14 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
+                return this;
+            }
+
+            /**
+             * DomainType.
+             */
+            public Builder domainType(String domainType) {
+                this.domainType = domainType;
                 return this;
             }
 

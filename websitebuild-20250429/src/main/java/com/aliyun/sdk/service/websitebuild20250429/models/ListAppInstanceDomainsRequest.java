@@ -30,6 +30,10 @@ public class ListAppInstanceDomainsRequest extends Request {
     private String domainKeyword;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainType")
+    private String domainType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -58,6 +62,7 @@ public class ListAppInstanceDomainsRequest extends Request {
         this.regionId = builder.regionId;
         this.bizId = builder.bizId;
         this.domainKeyword = builder.domainKeyword;
+        this.domainType = builder.domainType;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.orderColumn = builder.orderColumn;
@@ -98,6 +103,13 @@ public class ListAppInstanceDomainsRequest extends Request {
      */
     public String getDomainKeyword() {
         return this.domainKeyword;
+    }
+
+    /**
+     * @return domainType
+     */
+    public String getDomainType() {
+        return this.domainType;
     }
 
     /**
@@ -146,6 +158,7 @@ public class ListAppInstanceDomainsRequest extends Request {
         private String regionId; 
         private String bizId; 
         private String domainKeyword; 
+        private String domainType; 
         private Integer maxResults; 
         private String nextToken; 
         private String orderColumn; 
@@ -162,6 +175,7 @@ public class ListAppInstanceDomainsRequest extends Request {
             this.regionId = request.regionId;
             this.bizId = request.bizId;
             this.domainKeyword = request.domainKeyword;
+            this.domainType = request.domainType;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.orderColumn = request.orderColumn;
@@ -197,6 +211,15 @@ public class ListAppInstanceDomainsRequest extends Request {
         public Builder domainKeyword(String domainKeyword) {
             this.putQueryParameter("DomainKeyword", domainKeyword);
             this.domainKeyword = domainKeyword;
+            return this;
+        }
+
+        /**
+         * DomainType.
+         */
+        public Builder domainType(String domainType) {
+            this.putQueryParameter("DomainType", domainType);
+            this.domainType = domainType;
             return this;
         }
 

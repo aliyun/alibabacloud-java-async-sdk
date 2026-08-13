@@ -65,6 +65,9 @@ public class AppInstanceProfile extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SeoSite")
     private String seoSite;
 
+    @com.aliyun.core.annotation.NameInMap("ShareRenderWatermark")
+    private String shareRenderWatermark;
+
     @com.aliyun.core.annotation.NameInMap("SiteVersion")
     private String siteVersion;
 
@@ -97,6 +100,7 @@ public class AppInstanceProfile extends TeaModel {
         this.payTime = builder.payTime;
         this.previewUrl = builder.previewUrl;
         this.seoSite = builder.seoSite;
+        this.shareRenderWatermark = builder.shareRenderWatermark;
         this.siteVersion = builder.siteVersion;
         this.siteVersionText = builder.siteVersionText;
         this.source = builder.source;
@@ -229,6 +233,13 @@ public class AppInstanceProfile extends TeaModel {
     }
 
     /**
+     * @return shareRenderWatermark
+     */
+    public String getShareRenderWatermark() {
+        return this.shareRenderWatermark;
+    }
+
+    /**
      * @return siteVersion
      */
     public String getSiteVersion() {
@@ -280,6 +291,7 @@ public class AppInstanceProfile extends TeaModel {
         private String payTime; 
         private String previewUrl; 
         private String seoSite; 
+        private String shareRenderWatermark; 
         private String siteVersion; 
         private String siteVersionText; 
         private String source; 
@@ -306,6 +318,7 @@ public class AppInstanceProfile extends TeaModel {
             this.payTime = model.payTime;
             this.previewUrl = model.previewUrl;
             this.seoSite = model.seoSite;
+            this.shareRenderWatermark = model.shareRenderWatermark;
             this.siteVersion = model.siteVersion;
             this.siteVersionText = model.siteVersionText;
             this.source = model.source;
@@ -438,6 +451,14 @@ public class AppInstanceProfile extends TeaModel {
          */
         public Builder seoSite(String seoSite) {
             this.seoSite = seoSite;
+            return this;
+        }
+
+        /**
+         * ShareRenderWatermark.
+         */
+        public Builder shareRenderWatermark(String shareRenderWatermark) {
+            this.shareRenderWatermark = shareRenderWatermark;
             return this;
         }
 

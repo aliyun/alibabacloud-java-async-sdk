@@ -30,6 +30,10 @@ public class BindAppDomainRequest extends Request {
     private String domainName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainType")
+    private String domainType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Extend")
     private String extend;
 
@@ -42,6 +46,7 @@ public class BindAppDomainRequest extends Request {
         this.regionId = builder.regionId;
         this.bizId = builder.bizId;
         this.domainName = builder.domainName;
+        this.domainType = builder.domainType;
         this.extend = builder.extend;
         this.operateType = builder.operateType;
     }
@@ -81,6 +86,13 @@ public class BindAppDomainRequest extends Request {
     }
 
     /**
+     * @return domainType
+     */
+    public String getDomainType() {
+        return this.domainType;
+    }
+
+    /**
      * @return extend
      */
     public String getExtend() {
@@ -98,6 +110,7 @@ public class BindAppDomainRequest extends Request {
         private String regionId; 
         private String bizId; 
         private String domainName; 
+        private String domainType; 
         private String extend; 
         private String operateType; 
 
@@ -110,6 +123,7 @@ public class BindAppDomainRequest extends Request {
             this.regionId = request.regionId;
             this.bizId = request.bizId;
             this.domainName = request.domainName;
+            this.domainType = request.domainType;
             this.extend = request.extend;
             this.operateType = request.operateType;
         } 
@@ -144,6 +158,15 @@ public class BindAppDomainRequest extends Request {
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
             this.domainName = domainName;
+            return this;
+        }
+
+        /**
+         * DomainType.
+         */
+        public Builder domainType(String domainType) {
+            this.putQueryParameter("DomainType", domainType);
+            this.domainType = domainType;
             return this;
         }
 

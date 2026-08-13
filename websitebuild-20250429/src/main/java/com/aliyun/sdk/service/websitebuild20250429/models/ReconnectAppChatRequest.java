@@ -33,12 +33,17 @@ public class ReconnectAppChatRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("LastEventId")
     private Integer lastEventId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LatestMessageCreateTime")
+    private String latestMessageCreateTime;
+
     private ReconnectAppChatRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.chatId = builder.chatId;
         this.conversationId = builder.conversationId;
         this.lastEventId = builder.lastEventId;
+        this.latestMessageCreateTime = builder.latestMessageCreateTime;
     }
 
     public static Builder builder() {
@@ -82,11 +87,19 @@ public class ReconnectAppChatRequest extends Request {
         return this.lastEventId;
     }
 
+    /**
+     * @return latestMessageCreateTime
+     */
+    public String getLatestMessageCreateTime() {
+        return this.latestMessageCreateTime;
+    }
+
     public static final class Builder extends Request.Builder<ReconnectAppChatRequest, Builder> {
         private String regionId; 
         private String chatId; 
         private String conversationId; 
         private Integer lastEventId; 
+        private String latestMessageCreateTime; 
 
         private Builder() {
             super();
@@ -98,6 +111,7 @@ public class ReconnectAppChatRequest extends Request {
             this.chatId = request.chatId;
             this.conversationId = request.conversationId;
             this.lastEventId = request.lastEventId;
+            this.latestMessageCreateTime = request.latestMessageCreateTime;
         } 
 
         /**
@@ -133,6 +147,15 @@ public class ReconnectAppChatRequest extends Request {
         public Builder lastEventId(Integer lastEventId) {
             this.putBodyParameter("LastEventId", lastEventId);
             this.lastEventId = lastEventId;
+            return this;
+        }
+
+        /**
+         * LatestMessageCreateTime.
+         */
+        public Builder latestMessageCreateTime(String latestMessageCreateTime) {
+            this.putBodyParameter("LatestMessageCreateTime", latestMessageCreateTime);
+            this.latestMessageCreateTime = latestMessageCreateTime;
             return this;
         }
 
