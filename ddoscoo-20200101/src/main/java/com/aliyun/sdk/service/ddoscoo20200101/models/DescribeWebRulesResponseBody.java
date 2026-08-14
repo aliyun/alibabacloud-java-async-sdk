@@ -482,6 +482,10 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserCertName")
         private String userCertName;
 
+        @com.aliyun.core.annotation.NameInMap("WafProtectionEnable")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private Boolean wafProtectionEnable;
+
         @com.aliyun.core.annotation.NameInMap("WhiteList")
         private java.util.List<String> whiteList;
 
@@ -512,6 +516,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             this.sslProtocols = builder.sslProtocols;
             this.tls13CustomCiphers = builder.tls13CustomCiphers;
             this.userCertName = builder.userCertName;
+            this.wafProtectionEnable = builder.wafProtectionEnable;
             this.whiteList = builder.whiteList;
         }
 
@@ -706,6 +711,13 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return wafProtectionEnable
+         */
+        public Boolean getWafProtectionEnable() {
+            return this.wafProtectionEnable;
+        }
+
+        /**
          * @return whiteList
          */
         public java.util.List<String> getWhiteList() {
@@ -739,6 +751,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             private String sslProtocols; 
             private java.util.List<String> tls13CustomCiphers; 
             private String userCertName; 
+            private Boolean wafProtectionEnable; 
             private java.util.List<String> whiteList; 
 
             private Builder() {
@@ -771,6 +784,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
                 this.sslProtocols = model.sslProtocols;
                 this.tls13CustomCiphers = model.tls13CustomCiphers;
                 this.userCertName = model.userCertName;
+                this.wafProtectionEnable = model.wafProtectionEnable;
                 this.whiteList = model.whiteList;
             } 
 
@@ -1102,6 +1116,14 @@ public class DescribeWebRulesResponseBody extends TeaModel {
              */
             public Builder userCertName(String userCertName) {
                 this.userCertName = userCertName;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder wafProtectionEnable(Boolean wafProtectionEnable) {
+                this.wafProtectionEnable = wafProtectionEnable;
                 return this;
             }
 

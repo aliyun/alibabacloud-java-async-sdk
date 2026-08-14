@@ -131,6 +131,9 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
+        @com.aliyun.core.annotation.NameInMap("IpMode")
+        private String ipMode;
+
         @com.aliyun.core.annotation.NameInMap("IsAutoCreate")
         private Boolean isAutoCreate;
 
@@ -156,6 +159,7 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
             this.backendPort = builder.backendPort;
             this.frontendPort = builder.frontendPort;
             this.instanceId = builder.instanceId;
+            this.ipMode = builder.ipMode;
             this.isAutoCreate = builder.isAutoCreate;
             this.payloadRuleEnable = builder.payloadRuleEnable;
             this.protocol = builder.protocol;
@@ -192,6 +196,13 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
          */
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        /**
+         * @return ipMode
+         */
+        public String getIpMode() {
+            return this.ipMode;
         }
 
         /**
@@ -247,6 +258,7 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
             private Integer backendPort; 
             private Integer frontendPort; 
             private String instanceId; 
+            private String ipMode; 
             private Boolean isAutoCreate; 
             private Long payloadRuleEnable; 
             private String protocol; 
@@ -262,6 +274,7 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
                 this.backendPort = model.backendPort;
                 this.frontendPort = model.frontendPort;
                 this.instanceId = model.instanceId;
+                this.ipMode = model.ipMode;
                 this.isAutoCreate = model.isAutoCreate;
                 this.payloadRuleEnable = model.payloadRuleEnable;
                 this.protocol = model.protocol;
@@ -301,6 +314,14 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * IpMode.
+             */
+            public Builder ipMode(String ipMode) {
+                this.ipMode = ipMode;
                 return this;
             }
 

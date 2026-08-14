@@ -23,10 +23,12 @@ public class DescribeWebAccessLogDispatchStatusRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer pageNumber;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 500, minimum = 1)
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query

@@ -22,6 +22,10 @@ public class CreateNetworkRulesRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpMode")
+    private String ipMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkRules")
     @com.aliyun.core.annotation.Validation(required = true)
     private String networkRules;
@@ -29,6 +33,7 @@ public class CreateNetworkRulesRequest extends Request {
     private CreateNetworkRulesRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.ipMode = builder.ipMode;
         this.networkRules = builder.networkRules;
     }
 
@@ -53,6 +58,13 @@ public class CreateNetworkRulesRequest extends Request {
     }
 
     /**
+     * @return ipMode
+     */
+    public String getIpMode() {
+        return this.ipMode;
+    }
+
+    /**
      * @return networkRules
      */
     public String getNetworkRules() {
@@ -61,6 +73,7 @@ public class CreateNetworkRulesRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateNetworkRulesRequest, Builder> {
         private String regionId; 
+        private String ipMode; 
         private String networkRules; 
 
         private Builder() {
@@ -70,6 +83,7 @@ public class CreateNetworkRulesRequest extends Request {
         private Builder(CreateNetworkRulesRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.ipMode = request.ipMode;
             this.networkRules = request.networkRules;
         } 
 
@@ -79,6 +93,15 @@ public class CreateNetworkRulesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * IpMode.
+         */
+        public Builder ipMode(String ipMode) {
+            this.putQueryParameter("IpMode", ipMode);
+            this.ipMode = ipMode;
             return this;
         }
 

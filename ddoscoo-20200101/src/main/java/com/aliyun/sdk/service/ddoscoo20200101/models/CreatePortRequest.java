@@ -41,6 +41,10 @@ public class CreatePortRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpMode")
+    private String ipMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProxyEnable")
     private Long proxyEnable;
 
@@ -56,6 +60,7 @@ public class CreatePortRequest extends Request {
         this.frontendPort = builder.frontendPort;
         this.frontendProtocol = builder.frontendProtocol;
         this.instanceId = builder.instanceId;
+        this.ipMode = builder.ipMode;
         this.proxyEnable = builder.proxyEnable;
         this.realServers = builder.realServers;
     }
@@ -109,6 +114,13 @@ public class CreatePortRequest extends Request {
     }
 
     /**
+     * @return ipMode
+     */
+    public String getIpMode() {
+        return this.ipMode;
+    }
+
+    /**
      * @return proxyEnable
      */
     public Long getProxyEnable() {
@@ -128,6 +140,7 @@ public class CreatePortRequest extends Request {
         private String frontendPort; 
         private String frontendProtocol; 
         private String instanceId; 
+        private String ipMode; 
         private Long proxyEnable; 
         private java.util.List<String> realServers; 
 
@@ -142,6 +155,7 @@ public class CreatePortRequest extends Request {
             this.frontendPort = request.frontendPort;
             this.frontendProtocol = request.frontendProtocol;
             this.instanceId = request.instanceId;
+            this.ipMode = request.ipMode;
             this.proxyEnable = request.proxyEnable;
             this.realServers = request.realServers;
         } 
@@ -210,6 +224,15 @@ public class CreatePortRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * IpMode.
+         */
+        public Builder ipMode(String ipMode) {
+            this.putQueryParameter("IpMode", ipMode);
+            this.ipMode = ipMode;
             return this;
         }
 

@@ -134,6 +134,9 @@ public class DescribePortResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
+        @com.aliyun.core.annotation.NameInMap("IpMode")
+        private String ipMode;
+
         @com.aliyun.core.annotation.NameInMap("IsAutoCreate")
         private Boolean isAutoCreate;
 
@@ -145,6 +148,7 @@ public class DescribePortResponseBody extends TeaModel {
             this.frontendPort = builder.frontendPort;
             this.frontendProtocol = builder.frontendProtocol;
             this.instanceId = builder.instanceId;
+            this.ipMode = builder.ipMode;
             this.isAutoCreate = builder.isAutoCreate;
             this.realServers = builder.realServers;
         }
@@ -186,6 +190,13 @@ public class DescribePortResponseBody extends TeaModel {
         }
 
         /**
+         * @return ipMode
+         */
+        public String getIpMode() {
+            return this.ipMode;
+        }
+
+        /**
          * @return isAutoCreate
          */
         public Boolean getIsAutoCreate() {
@@ -204,6 +215,7 @@ public class DescribePortResponseBody extends TeaModel {
             private Integer frontendPort; 
             private String frontendProtocol; 
             private String instanceId; 
+            private String ipMode; 
             private Boolean isAutoCreate; 
             private java.util.List<String> realServers; 
 
@@ -215,6 +227,7 @@ public class DescribePortResponseBody extends TeaModel {
                 this.frontendPort = model.frontendPort;
                 this.frontendProtocol = model.frontendProtocol;
                 this.instanceId = model.instanceId;
+                this.ipMode = model.ipMode;
                 this.isAutoCreate = model.isAutoCreate;
                 this.realServers = model.realServers;
             } 
@@ -264,6 +277,14 @@ public class DescribePortResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * IpMode.
+             */
+            public Builder ipMode(String ipMode) {
+                this.ipMode = ipMode;
                 return this;
             }
 
