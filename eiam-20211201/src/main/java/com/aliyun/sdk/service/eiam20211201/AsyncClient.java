@@ -842,6 +842,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExecIdentityProviderMetadataUrlResolutionResponse> execIdentityProviderMetadataUrlResolution(ExecIdentityProviderMetadataUrlResolutionRequest request);
 
     /**
+     * @param request the request parameters of ExecuteInstanceFailover  ExecuteInstanceFailoverRequest
+     * @return ExecuteInstanceFailoverResponse
+     */
+    CompletableFuture<ExecuteInstanceFailoverResponse> executeInstanceFailover(ExecuteInstanceFailoverRequest request);
+
+    /**
      * @param request the request parameters of GenerateDownloadUrlForSynchronizationJob  GenerateDownloadUrlForSynchronizationJobRequest
      * @return GenerateDownloadUrlForSynchronizationJobResponse
      */
