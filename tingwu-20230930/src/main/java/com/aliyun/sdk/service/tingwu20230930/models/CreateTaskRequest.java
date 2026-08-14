@@ -1752,6 +1752,9 @@ public class CreateTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DiarizationEnabled")
         private Boolean diarizationEnabled;
 
+        @com.aliyun.core.annotation.NameInMap("DisfluencyEnabled")
+        private Boolean disfluencyEnabled;
+
         @com.aliyun.core.annotation.NameInMap("Model")
         private String model;
 
@@ -1772,6 +1775,7 @@ public class CreateTaskRequest extends Request {
             this.audioEventDetectionEnabled = builder.audioEventDetectionEnabled;
             this.diarization = builder.diarization;
             this.diarizationEnabled = builder.diarizationEnabled;
+            this.disfluencyEnabled = builder.disfluencyEnabled;
             this.model = builder.model;
             this.outputLevel = builder.outputLevel;
             this.phraseId = builder.phraseId;
@@ -1816,6 +1820,13 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
+         * @return disfluencyEnabled
+         */
+        public Boolean getDisfluencyEnabled() {
+            return this.disfluencyEnabled;
+        }
+
+        /**
          * @return model
          */
         public String getModel() {
@@ -1855,6 +1866,7 @@ public class CreateTaskRequest extends Request {
             private Boolean audioEventDetectionEnabled; 
             private Diarization diarization; 
             private Boolean diarizationEnabled; 
+            private Boolean disfluencyEnabled; 
             private String model; 
             private Integer outputLevel; 
             private String phraseId; 
@@ -1869,6 +1881,7 @@ public class CreateTaskRequest extends Request {
                 this.audioEventDetectionEnabled = model.audioEventDetectionEnabled;
                 this.diarization = model.diarization;
                 this.diarizationEnabled = model.diarizationEnabled;
+                this.disfluencyEnabled = model.disfluencyEnabled;
                 this.model = model.model;
                 this.outputLevel = model.outputLevel;
                 this.phraseId = model.phraseId;
@@ -1905,6 +1918,14 @@ public class CreateTaskRequest extends Request {
              */
             public Builder diarizationEnabled(Boolean diarizationEnabled) {
                 this.diarizationEnabled = diarizationEnabled;
+                return this;
+            }
+
+            /**
+             * DisfluencyEnabled.
+             */
+            public Builder disfluencyEnabled(Boolean disfluencyEnabled) {
+                this.disfluencyEnabled = disfluencyEnabled;
                 return this;
             }
 
@@ -1971,10 +1992,14 @@ public class CreateTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("TargetLanguages")
         private java.util.List<String> targetLanguages;
 
+        @com.aliyun.core.annotation.NameInMap("TranslateLlmSceneEnabled")
+        private Boolean translateLlmSceneEnabled;
+
         private Translation(Builder builder) {
             this.additionalStreamOutputLevel = builder.additionalStreamOutputLevel;
             this.outputLevel = builder.outputLevel;
             this.targetLanguages = builder.targetLanguages;
+            this.translateLlmSceneEnabled = builder.translateLlmSceneEnabled;
         }
 
         public static Builder builder() {
@@ -2006,10 +2031,18 @@ public class CreateTaskRequest extends Request {
             return this.targetLanguages;
         }
 
+        /**
+         * @return translateLlmSceneEnabled
+         */
+        public Boolean getTranslateLlmSceneEnabled() {
+            return this.translateLlmSceneEnabled;
+        }
+
         public static final class Builder {
             private Integer additionalStreamOutputLevel; 
             private Integer outputLevel; 
             private java.util.List<String> targetLanguages; 
+            private Boolean translateLlmSceneEnabled; 
 
             private Builder() {
             } 
@@ -2018,6 +2051,7 @@ public class CreateTaskRequest extends Request {
                 this.additionalStreamOutputLevel = model.additionalStreamOutputLevel;
                 this.outputLevel = model.outputLevel;
                 this.targetLanguages = model.targetLanguages;
+                this.translateLlmSceneEnabled = model.translateLlmSceneEnabled;
             } 
 
             /**
@@ -2041,6 +2075,14 @@ public class CreateTaskRequest extends Request {
              */
             public Builder targetLanguages(java.util.List<String> targetLanguages) {
                 this.targetLanguages = targetLanguages;
+                return this;
+            }
+
+            /**
+             * TranslateLlmSceneEnabled.
+             */
+            public Builder translateLlmSceneEnabled(Boolean translateLlmSceneEnabled) {
+                this.translateLlmSceneEnabled = translateLlmSceneEnabled;
                 return this;
             }
 
