@@ -65,6 +65,10 @@ public class DescribeAuditLogRecordsRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcessId")
+    private String processId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProxyUser")
     private String proxyUser;
 
@@ -114,6 +118,7 @@ public class DescribeAuditLogRecordsRequest extends Request {
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.processId = builder.processId;
         this.proxyUser = builder.proxyUser;
         this.queryKeyword = builder.queryKeyword;
         this.regionId = builder.regionId;
@@ -216,6 +221,13 @@ public class DescribeAuditLogRecordsRequest extends Request {
     }
 
     /**
+     * @return processId
+     */
+    public String getProcessId() {
+        return this.processId;
+    }
+
+    /**
      * @return proxyUser
      */
     public String getProxyUser() {
@@ -290,6 +302,7 @@ public class DescribeAuditLogRecordsRequest extends Request {
         private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String processId; 
         private String proxyUser; 
         private String queryKeyword; 
         private String regionId; 
@@ -317,6 +330,7 @@ public class DescribeAuditLogRecordsRequest extends Request {
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.processId = request.processId;
             this.proxyUser = request.proxyUser;
             this.queryKeyword = request.queryKeyword;
             this.regionId = request.regionId;
@@ -493,6 +507,15 @@ public class DescribeAuditLogRecordsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ProcessId.
+         */
+        public Builder processId(String processId) {
+            this.putQueryParameter("ProcessId", processId);
+            this.processId = processId;
             return this;
         }
 
