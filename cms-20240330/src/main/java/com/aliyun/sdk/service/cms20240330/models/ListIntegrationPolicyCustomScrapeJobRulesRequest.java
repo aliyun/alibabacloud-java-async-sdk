@@ -27,6 +27,10 @@ public class ListIntegrationPolicyCustomScrapeJobRulesRequest extends Request {
     private String addonReleaseName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("collectorReleaseName")
+    private String collectorReleaseName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("encryptYaml")
     private Boolean encryptYaml;
 
@@ -38,6 +42,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesRequest extends Request {
         super(builder);
         this.policyId = builder.policyId;
         this.addonReleaseName = builder.addonReleaseName;
+        this.collectorReleaseName = builder.collectorReleaseName;
         this.encryptYaml = builder.encryptYaml;
         this.namespace = builder.namespace;
     }
@@ -70,6 +75,13 @@ public class ListIntegrationPolicyCustomScrapeJobRulesRequest extends Request {
     }
 
     /**
+     * @return collectorReleaseName
+     */
+    public String getCollectorReleaseName() {
+        return this.collectorReleaseName;
+    }
+
+    /**
      * @return encryptYaml
      */
     public Boolean getEncryptYaml() {
@@ -86,6 +98,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesRequest extends Request {
     public static final class Builder extends Request.Builder<ListIntegrationPolicyCustomScrapeJobRulesRequest, Builder> {
         private String policyId; 
         private String addonReleaseName; 
+        private String collectorReleaseName; 
         private Boolean encryptYaml; 
         private String namespace; 
 
@@ -97,6 +110,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesRequest extends Request {
             super(request);
             this.policyId = request.policyId;
             this.addonReleaseName = request.addonReleaseName;
+            this.collectorReleaseName = request.collectorReleaseName;
             this.encryptYaml = request.encryptYaml;
             this.namespace = request.namespace;
         } 
@@ -123,6 +137,15 @@ public class ListIntegrationPolicyCustomScrapeJobRulesRequest extends Request {
         public Builder addonReleaseName(String addonReleaseName) {
             this.putQueryParameter("addonReleaseName", addonReleaseName);
             this.addonReleaseName = addonReleaseName;
+            return this;
+        }
+
+        /**
+         * collectorReleaseName.
+         */
+        public Builder collectorReleaseName(String collectorReleaseName) {
+            this.putQueryParameter("collectorReleaseName", collectorReleaseName);
+            this.collectorReleaseName = collectorReleaseName;
             return this;
         }
 

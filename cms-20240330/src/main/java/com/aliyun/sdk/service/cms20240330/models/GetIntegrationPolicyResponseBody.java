@@ -1325,6 +1325,9 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
      * <p>GetIntegrationPolicyResponseBody</p>
      */
     public static class Policy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("addonNames")
+        private java.util.List<String> addonNames;
+
         @com.aliyun.core.annotation.NameInMap("bindResource")
         private BindResource bindResource;
 
@@ -1362,6 +1365,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
         private String workspace;
 
         private Policy(Builder builder) {
+            this.addonNames = builder.addonNames;
             this.bindResource = builder.bindResource;
             this.csUmodelStatus = builder.csUmodelStatus;
             this.entityGroup = builder.entityGroup;
@@ -1382,6 +1386,13 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
 
         public static Policy create() {
             return builder().build();
+        }
+
+        /**
+         * @return addonNames
+         */
+        public java.util.List<String> getAddonNames() {
+            return this.addonNames;
         }
 
         /**
@@ -1469,6 +1480,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<String> addonNames; 
             private BindResource bindResource; 
             private Boolean csUmodelStatus; 
             private EntityGroup entityGroup; 
@@ -1486,6 +1498,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
             } 
 
             private Builder(Policy model) {
+                this.addonNames = model.addonNames;
                 this.bindResource = model.bindResource;
                 this.csUmodelStatus = model.csUmodelStatus;
                 this.entityGroup = model.entityGroup;
@@ -1499,6 +1512,14 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
                 this.userId = model.userId;
                 this.workspace = model.workspace;
             } 
+
+            /**
+             * addonNames.
+             */
+            public Builder addonNames(java.util.List<String> addonNames) {
+                this.addonNames = addonNames;
+                return this;
+            }
 
             /**
              * <p>Bound resource information.</p>
