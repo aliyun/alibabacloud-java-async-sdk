@@ -1605,6 +1605,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StructureInitialization")
         private Boolean structureInitialization;
 
+        @com.aliyun.core.annotation.NameInMap("TimeWindowCheck")
+        private Boolean timeWindowCheck;
+
         private MigrationMode(Builder builder) {
             this.dataInitialization = builder.dataInitialization;
             this.dataSynchronization = builder.dataSynchronization;
@@ -1612,6 +1615,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             this.incDataCheck = builder.incDataCheck;
             this.structureDataCheck = builder.structureDataCheck;
             this.structureInitialization = builder.structureInitialization;
+            this.timeWindowCheck = builder.timeWindowCheck;
         }
 
         public static Builder builder() {
@@ -1664,6 +1668,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.structureInitialization;
         }
 
+        /**
+         * @return timeWindowCheck
+         */
+        public Boolean getTimeWindowCheck() {
+            return this.timeWindowCheck;
+        }
+
         public static final class Builder {
             private Boolean dataInitialization; 
             private Boolean dataSynchronization; 
@@ -1671,6 +1682,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private Boolean incDataCheck; 
             private Boolean structureDataCheck; 
             private Boolean structureInitialization; 
+            private Boolean timeWindowCheck; 
 
             private Builder() {
             } 
@@ -1682,6 +1694,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
                 this.incDataCheck = model.incDataCheck;
                 this.structureDataCheck = model.structureDataCheck;
                 this.structureInitialization = model.structureInitialization;
+                this.timeWindowCheck = model.timeWindowCheck;
             } 
 
             /**
@@ -1764,6 +1777,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
              */
             public Builder structureInitialization(Boolean structureInitialization) {
                 this.structureInitialization = structureInitialization;
+                return this;
+            }
+
+            /**
+             * TimeWindowCheck.
+             */
+            public Builder timeWindowCheck(Boolean timeWindowCheck) {
+                this.timeWindowCheck = timeWindowCheck;
                 return this;
             }
 
@@ -3503,6 +3524,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StructureInitialization")
         private Boolean structureInitialization;
 
+        @com.aliyun.core.annotation.NameInMap("TimeWindowCheck")
+        private Boolean timeWindowCheck;
+
         private ReverseJobMigrationMode(Builder builder) {
             this.dataInitialization = builder.dataInitialization;
             this.dataSynchronization = builder.dataSynchronization;
@@ -3510,6 +3534,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             this.incDataCheck = builder.incDataCheck;
             this.structureDataCheck = builder.structureDataCheck;
             this.structureInitialization = builder.structureInitialization;
+            this.timeWindowCheck = builder.timeWindowCheck;
         }
 
         public static Builder builder() {
@@ -3562,6 +3587,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.structureInitialization;
         }
 
+        /**
+         * @return timeWindowCheck
+         */
+        public Boolean getTimeWindowCheck() {
+            return this.timeWindowCheck;
+        }
+
         public static final class Builder {
             private Boolean dataInitialization; 
             private Boolean dataSynchronization; 
@@ -3569,6 +3601,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private Boolean incDataCheck; 
             private Boolean structureDataCheck; 
             private Boolean structureInitialization; 
+            private Boolean timeWindowCheck; 
 
             private Builder() {
             } 
@@ -3580,6 +3613,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
                 this.incDataCheck = model.incDataCheck;
                 this.structureDataCheck = model.structureDataCheck;
                 this.structureInitialization = model.structureInitialization;
+                this.timeWindowCheck = model.timeWindowCheck;
             } 
 
             /**
@@ -3662,6 +3696,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
              */
             public Builder structureInitialization(Boolean structureInitialization) {
                 this.structureInitialization = structureInitialization;
+                return this;
+            }
+
+            /**
+             * TimeWindowCheck.
+             */
+            public Builder timeWindowCheck(Boolean timeWindowCheck) {
+                this.timeWindowCheck = timeWindowCheck;
                 return this;
             }
 
@@ -6034,6 +6076,141 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
      *
      * <p>DescribeDtsJobsResponseBody</p>
      */
+    public static class TimeWindowDataCheckStatus extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
+        private String errorMessage;
+
+        @com.aliyun.core.annotation.NameInMap("Percent")
+        private String percent;
+
+        @com.aliyun.core.annotation.NameInMap("Progress")
+        private String progress;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        private TimeWindowDataCheckStatus(Builder builder) {
+            this.errorMessage = builder.errorMessage;
+            this.percent = builder.percent;
+            this.progress = builder.progress;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TimeWindowDataCheckStatus create() {
+            return builder().build();
+        }
+
+        /**
+         * @return errorMessage
+         */
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        /**
+         * @return percent
+         */
+        public String getPercent() {
+            return this.percent;
+        }
+
+        /**
+         * @return progress
+         */
+        public String getProgress() {
+            return this.progress;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String errorMessage; 
+            private String percent; 
+            private String progress; 
+            private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(TimeWindowDataCheckStatus model) {
+                this.errorMessage = model.errorMessage;
+                this.percent = model.percent;
+                this.progress = model.progress;
+                this.status = model.status;
+            } 
+
+            /**
+             * <p>The error message returned if schema migration or initial schema synchronization failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DTS-1020042 Execute sql error sql: ERROR: type &quot;geometry&quot; does not exist;</p>
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
+                return this;
+            }
+
+            /**
+             * <p>The progress of schema migration or initial schema synchronization. Unit: percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
+             */
+            public Builder percent(String percent) {
+                this.percent = percent;
+                return this;
+            }
+
+            /**
+             * <p>The number of tables that have been migrated or synchronized during schema migration or initial schema synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder progress(String progress) {
+                this.progress = progress;
+                return this;
+            }
+
+            /**
+             * <p>The state of schema migration or initial schema synchronization. Valid values:</p>
+             * <ul>
+             * <li><strong>NotStarted</strong>: The task is not started. </li>
+             * <li><strong>Migrating</strong>: The task is in progress. </li>
+             * <li><strong>Failed</strong>: The task failed. </li>
+             * <li><strong>Finished</strong>: The task is complete.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Finished</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public TimeWindowDataCheckStatus build() {
+                return new TimeWindowDataCheckStatus(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDtsJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDtsJobsResponseBody</p>
+     */
     public static class DtsJobList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
@@ -6203,6 +6380,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagList")
         private java.util.List<TagList> tagList;
 
+        @com.aliyun.core.annotation.NameInMap("TimeWindowDataCheckStatus")
+        private TimeWindowDataCheckStatus timeWindowDataCheckStatus;
+
         private DtsJobList(Builder builder) {
             this.appName = builder.appName;
             this.beginTimestamp = builder.beginTimestamp;
@@ -6260,6 +6440,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             this.structureDataCheckStatus = builder.structureDataCheckStatus;
             this.structureInitializationStatus = builder.structureInitializationStatus;
             this.tagList = builder.tagList;
+            this.timeWindowDataCheckStatus = builder.timeWindowDataCheckStatus;
         }
 
         public static Builder builder() {
@@ -6662,6 +6843,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.tagList;
         }
 
+        /**
+         * @return timeWindowDataCheckStatus
+         */
+        public TimeWindowDataCheckStatus getTimeWindowDataCheckStatus() {
+            return this.timeWindowDataCheckStatus;
+        }
+
         public static final class Builder {
             private String appName; 
             private String beginTimestamp; 
@@ -6719,6 +6907,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private DtsJobListStructureDataCheckStatus structureDataCheckStatus; 
             private DtsJobListStructureInitializationStatus structureInitializationStatus; 
             private java.util.List<TagList> tagList; 
+            private TimeWindowDataCheckStatus timeWindowDataCheckStatus; 
 
             private Builder() {
             } 
@@ -6780,6 +6969,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
                 this.structureDataCheckStatus = model.structureDataCheckStatus;
                 this.structureInitializationStatus = model.structureInitializationStatus;
                 this.tagList = model.tagList;
+                this.timeWindowDataCheckStatus = model.timeWindowDataCheckStatus;
             } 
 
             /**
@@ -7380,6 +7570,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
              */
             public Builder tagList(java.util.List<TagList> tagList) {
                 this.tagList = tagList;
+                return this;
+            }
+
+            /**
+             * TimeWindowDataCheckStatus.
+             */
+            public Builder timeWindowDataCheckStatus(TimeWindowDataCheckStatus timeWindowDataCheckStatus) {
+                this.timeWindowDataCheckStatus = timeWindowDataCheckStatus;
                 return this;
             }
 

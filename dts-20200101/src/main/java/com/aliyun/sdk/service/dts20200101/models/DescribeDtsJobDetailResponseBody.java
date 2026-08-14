@@ -68,6 +68,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DbObject")
     private String dbObject;
 
+    @com.aliyun.core.annotation.NameInMap("DbObjectOssUrl")
+    private String dbObjectOssUrl;
+
+    @com.aliyun.core.annotation.NameInMap("DbObjectOssUrlExpireTime")
+    private String dbObjectOssUrlExpireTime;
+
+    @com.aliyun.core.annotation.NameInMap("DbObjectSize")
+    private Long dbObjectSize;
+
     @com.aliyun.core.annotation.NameInMap("DedicatedClusterId")
     private String dedicatedClusterId;
 
@@ -218,6 +227,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         this.dataSynchronizationStatus = builder.dataSynchronizationStatus;
         this.databaseCount = builder.databaseCount;
         this.dbObject = builder.dbObject;
+        this.dbObjectOssUrl = builder.dbObjectOssUrl;
+        this.dbObjectOssUrlExpireTime = builder.dbObjectOssUrlExpireTime;
+        this.dbObjectSize = builder.dbObjectSize;
         this.dedicatedClusterId = builder.dedicatedClusterId;
         this.delay = builder.delay;
         this.demoJob = builder.demoJob;
@@ -393,6 +405,27 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
      */
     public String getDbObject() {
         return this.dbObject;
+    }
+
+    /**
+     * @return dbObjectOssUrl
+     */
+    public String getDbObjectOssUrl() {
+        return this.dbObjectOssUrl;
+    }
+
+    /**
+     * @return dbObjectOssUrlExpireTime
+     */
+    public String getDbObjectOssUrlExpireTime() {
+        return this.dbObjectOssUrlExpireTime;
+    }
+
+    /**
+     * @return dbObjectSize
+     */
+    public Long getDbObjectSize() {
+        return this.dbObjectSize;
     }
 
     /**
@@ -721,6 +754,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         private DataSynchronizationStatus dataSynchronizationStatus; 
         private Integer databaseCount; 
         private String dbObject; 
+        private String dbObjectOssUrl; 
+        private String dbObjectOssUrlExpireTime; 
+        private Long dbObjectSize; 
         private String dedicatedClusterId; 
         private Long delay; 
         private Boolean demoJob; 
@@ -787,6 +823,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             this.dataSynchronizationStatus = model.dataSynchronizationStatus;
             this.databaseCount = model.databaseCount;
             this.dbObject = model.dbObject;
+            this.dbObjectOssUrl = model.dbObjectOssUrl;
+            this.dbObjectOssUrlExpireTime = model.dbObjectOssUrlExpireTime;
+            this.dbObjectSize = model.dbObjectSize;
             this.dedicatedClusterId = model.dedicatedClusterId;
             this.delay = model.delay;
             this.demoJob = model.demoJob;
@@ -1008,6 +1047,30 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
          */
         public Builder dbObject(String dbObject) {
             this.dbObject = dbObject;
+            return this;
+        }
+
+        /**
+         * DbObjectOssUrl.
+         */
+        public Builder dbObjectOssUrl(String dbObjectOssUrl) {
+            this.dbObjectOssUrl = dbObjectOssUrl;
+            return this;
+        }
+
+        /**
+         * DbObjectOssUrlExpireTime.
+         */
+        public Builder dbObjectOssUrlExpireTime(String dbObjectOssUrlExpireTime) {
+            this.dbObjectOssUrlExpireTime = dbObjectOssUrlExpireTime;
+            return this;
+        }
+
+        /**
+         * DbObjectSize.
+         */
+        public Builder dbObjectSize(Long dbObjectSize) {
+            this.dbObjectSize = dbObjectSize;
             return this;
         }
 
@@ -7208,6 +7271,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DbObject")
         private String dbObject;
 
+        @com.aliyun.core.annotation.NameInMap("DbObjectOssUrl")
+        private String dbObjectOssUrl;
+
+        @com.aliyun.core.annotation.NameInMap("DbObjectOssUrlExpireTime")
+        private String dbObjectOssUrlExpireTime;
+
+        @com.aliyun.core.annotation.NameInMap("DbObjectSize")
+        private Long dbObjectSize;
+
         @com.aliyun.core.annotation.NameInMap("Delay")
         private Long delay;
 
@@ -7325,6 +7397,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             this.dataSynchronizationStatus = builder.dataSynchronizationStatus;
             this.databaseCount = builder.databaseCount;
             this.dbObject = builder.dbObject;
+            this.dbObjectOssUrl = builder.dbObjectOssUrl;
+            this.dbObjectOssUrlExpireTime = builder.dbObjectOssUrlExpireTime;
+            this.dbObjectSize = builder.dbObjectSize;
             this.delay = builder.delay;
             this.destNetType = builder.destNetType;
             this.destinationEndpoint = builder.destinationEndpoint;
@@ -7445,6 +7520,27 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
          */
         public String getDbObject() {
             return this.dbObject;
+        }
+
+        /**
+         * @return dbObjectOssUrl
+         */
+        public String getDbObjectOssUrl() {
+            return this.dbObjectOssUrl;
+        }
+
+        /**
+         * @return dbObjectOssUrlExpireTime
+         */
+        public String getDbObjectOssUrlExpireTime() {
+            return this.dbObjectOssUrlExpireTime;
+        }
+
+        /**
+         * @return dbObjectSize
+         */
+        public Long getDbObjectSize() {
+            return this.dbObjectSize;
         }
 
         /**
@@ -7704,6 +7800,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private ReverseJobDataSynchronizationStatus dataSynchronizationStatus; 
             private Integer databaseCount; 
             private String dbObject; 
+            private String dbObjectOssUrl; 
+            private String dbObjectOssUrlExpireTime; 
+            private Long dbObjectSize; 
             private Long delay; 
             private String destNetType; 
             private ReverseJobDestinationEndpoint destinationEndpoint; 
@@ -7755,6 +7854,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
                 this.dataSynchronizationStatus = model.dataSynchronizationStatus;
                 this.databaseCount = model.databaseCount;
                 this.dbObject = model.dbObject;
+                this.dbObjectOssUrl = model.dbObjectOssUrl;
+                this.dbObjectOssUrlExpireTime = model.dbObjectOssUrlExpireTime;
+                this.dbObjectSize = model.dbObjectSize;
                 this.delay = model.delay;
                 this.destNetType = model.destNetType;
                 this.destinationEndpoint = model.destinationEndpoint;
@@ -7907,6 +8009,30 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
              */
             public Builder dbObject(String dbObject) {
                 this.dbObject = dbObject;
+                return this;
+            }
+
+            /**
+             * DbObjectOssUrl.
+             */
+            public Builder dbObjectOssUrl(String dbObjectOssUrl) {
+                this.dbObjectOssUrl = dbObjectOssUrl;
+                return this;
+            }
+
+            /**
+             * DbObjectOssUrlExpireTime.
+             */
+            public Builder dbObjectOssUrlExpireTime(String dbObjectOssUrlExpireTime) {
+                this.dbObjectOssUrlExpireTime = dbObjectOssUrlExpireTime;
+                return this;
+            }
+
+            /**
+             * DbObjectSize.
+             */
+            public Builder dbObjectSize(Long dbObjectSize) {
+                this.dbObjectSize = dbObjectSize;
                 return this;
             }
 
@@ -9421,6 +9547,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DbObject")
         private String dbObject;
 
+        @com.aliyun.core.annotation.NameInMap("DbObjectOssUrl")
+        private String dbObjectOssUrl;
+
+        @com.aliyun.core.annotation.NameInMap("DbObjectOssUrlExpireTime")
+        private String dbObjectOssUrlExpireTime;
+
+        @com.aliyun.core.annotation.NameInMap("DbObjectSize")
+        private Long dbObjectSize;
+
         @com.aliyun.core.annotation.NameInMap("Delay")
         private Long delay;
 
@@ -9541,6 +9676,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             this.dataSynchronizationStatus = builder.dataSynchronizationStatus;
             this.databaseCount = builder.databaseCount;
             this.dbObject = builder.dbObject;
+            this.dbObjectOssUrl = builder.dbObjectOssUrl;
+            this.dbObjectOssUrlExpireTime = builder.dbObjectOssUrlExpireTime;
+            this.dbObjectSize = builder.dbObjectSize;
             this.delay = builder.delay;
             this.destNetType = builder.destNetType;
             this.destinationEndpoint = builder.destinationEndpoint;
@@ -9662,6 +9800,27 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
          */
         public String getDbObject() {
             return this.dbObject;
+        }
+
+        /**
+         * @return dbObjectOssUrl
+         */
+        public String getDbObjectOssUrl() {
+            return this.dbObjectOssUrl;
+        }
+
+        /**
+         * @return dbObjectOssUrlExpireTime
+         */
+        public String getDbObjectOssUrlExpireTime() {
+            return this.dbObjectOssUrlExpireTime;
+        }
+
+        /**
+         * @return dbObjectSize
+         */
+        public Long getDbObjectSize() {
+            return this.dbObjectSize;
         }
 
         /**
@@ -9928,6 +10087,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private SubDistributedJobDataSynchronizationStatus dataSynchronizationStatus; 
             private Integer databaseCount; 
             private String dbObject; 
+            private String dbObjectOssUrl; 
+            private String dbObjectOssUrlExpireTime; 
+            private Long dbObjectSize; 
             private Long delay; 
             private String destNetType; 
             private SubDistributedJobDestinationEndpoint destinationEndpoint; 
@@ -9980,6 +10142,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
                 this.dataSynchronizationStatus = model.dataSynchronizationStatus;
                 this.databaseCount = model.databaseCount;
                 this.dbObject = model.dbObject;
+                this.dbObjectOssUrl = model.dbObjectOssUrl;
+                this.dbObjectOssUrlExpireTime = model.dbObjectOssUrlExpireTime;
+                this.dbObjectSize = model.dbObjectSize;
                 this.delay = model.delay;
                 this.destNetType = model.destNetType;
                 this.destinationEndpoint = model.destinationEndpoint;
@@ -10133,6 +10298,30 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
              */
             public Builder dbObject(String dbObject) {
                 this.dbObject = dbObject;
+                return this;
+            }
+
+            /**
+             * DbObjectOssUrl.
+             */
+            public Builder dbObjectOssUrl(String dbObjectOssUrl) {
+                this.dbObjectOssUrl = dbObjectOssUrl;
+                return this;
+            }
+
+            /**
+             * DbObjectOssUrlExpireTime.
+             */
+            public Builder dbObjectOssUrlExpireTime(String dbObjectOssUrlExpireTime) {
+                this.dbObjectOssUrlExpireTime = dbObjectOssUrlExpireTime;
+                return this;
+            }
+
+            /**
+             * DbObjectSize.
+             */
+            public Builder dbObjectSize(Long dbObjectSize) {
+                this.dbObjectSize = dbObjectSize;
                 return this;
             }
 
@@ -14808,6 +14997,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DbObject")
         private String dbObject;
 
+        @com.aliyun.core.annotation.NameInMap("DbObjectOssUrl")
+        private String dbObjectOssUrl;
+
+        @com.aliyun.core.annotation.NameInMap("DbObjectOssUrlExpireTime")
+        private String dbObjectOssUrlExpireTime;
+
+        @com.aliyun.core.annotation.NameInMap("DbObjectSize")
+        private Long dbObjectSize;
+
         @com.aliyun.core.annotation.NameInMap("Delay")
         private Long delay;
 
@@ -14919,6 +15117,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             this.dataSynchronizationStatus = builder.dataSynchronizationStatus;
             this.databaseCount = builder.databaseCount;
             this.dbObject = builder.dbObject;
+            this.dbObjectOssUrl = builder.dbObjectOssUrl;
+            this.dbObjectOssUrlExpireTime = builder.dbObjectOssUrlExpireTime;
+            this.dbObjectSize = builder.dbObjectSize;
             this.delay = builder.delay;
             this.destNetType = builder.destNetType;
             this.destinationEndpoint = builder.destinationEndpoint;
@@ -15037,6 +15238,27 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
          */
         public String getDbObject() {
             return this.dbObject;
+        }
+
+        /**
+         * @return dbObjectOssUrl
+         */
+        public String getDbObjectOssUrl() {
+            return this.dbObjectOssUrl;
+        }
+
+        /**
+         * @return dbObjectOssUrlExpireTime
+         */
+        public String getDbObjectOssUrlExpireTime() {
+            return this.dbObjectOssUrlExpireTime;
+        }
+
+        /**
+         * @return dbObjectSize
+         */
+        public Long getDbObjectSize() {
+            return this.dbObjectSize;
         }
 
         /**
@@ -15282,6 +15504,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private SubSyncJobReverseJobDataSynchronizationStatus dataSynchronizationStatus; 
             private Integer databaseCount; 
             private String dbObject; 
+            private String dbObjectOssUrl; 
+            private String dbObjectOssUrlExpireTime; 
+            private Long dbObjectSize; 
             private Long delay; 
             private String destNetType; 
             private SubSyncJobReverseJobDestinationEndpoint destinationEndpoint; 
@@ -15331,6 +15556,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
                 this.dataSynchronizationStatus = model.dataSynchronizationStatus;
                 this.databaseCount = model.databaseCount;
                 this.dbObject = model.dbObject;
+                this.dbObjectOssUrl = model.dbObjectOssUrl;
+                this.dbObjectOssUrlExpireTime = model.dbObjectOssUrlExpireTime;
+                this.dbObjectSize = model.dbObjectSize;
                 this.delay = model.delay;
                 this.destNetType = model.destNetType;
                 this.destinationEndpoint = model.destinationEndpoint;
@@ -15481,6 +15709,30 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
              */
             public Builder dbObject(String dbObject) {
                 this.dbObject = dbObject;
+                return this;
+            }
+
+            /**
+             * DbObjectOssUrl.
+             */
+            public Builder dbObjectOssUrl(String dbObjectOssUrl) {
+                this.dbObjectOssUrl = dbObjectOssUrl;
+                return this;
+            }
+
+            /**
+             * DbObjectOssUrlExpireTime.
+             */
+            public Builder dbObjectOssUrlExpireTime(String dbObjectOssUrlExpireTime) {
+                this.dbObjectOssUrlExpireTime = dbObjectOssUrlExpireTime;
+                return this;
+            }
+
+            /**
+             * DbObjectSize.
+             */
+            public Builder dbObjectSize(Long dbObjectSize) {
+                this.dbObjectSize = dbObjectSize;
                 return this;
             }
 
@@ -16967,6 +17219,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DbObject")
         private String dbObject;
 
+        @com.aliyun.core.annotation.NameInMap("DbObjectOssUrl")
+        private String dbObjectOssUrl;
+
+        @com.aliyun.core.annotation.NameInMap("DbObjectOssUrlExpireTime")
+        private String dbObjectOssUrlExpireTime;
+
+        @com.aliyun.core.annotation.NameInMap("DbObjectSize")
+        private Long dbObjectSize;
+
         @com.aliyun.core.annotation.NameInMap("Delay")
         private Long delay;
 
@@ -17087,6 +17348,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             this.dataSynchronizationStatus = builder.dataSynchronizationStatus;
             this.databaseCount = builder.databaseCount;
             this.dbObject = builder.dbObject;
+            this.dbObjectOssUrl = builder.dbObjectOssUrl;
+            this.dbObjectOssUrlExpireTime = builder.dbObjectOssUrlExpireTime;
+            this.dbObjectSize = builder.dbObjectSize;
             this.delay = builder.delay;
             this.destNetType = builder.destNetType;
             this.destinationEndpoint = builder.destinationEndpoint;
@@ -17208,6 +17472,27 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
          */
         public String getDbObject() {
             return this.dbObject;
+        }
+
+        /**
+         * @return dbObjectOssUrl
+         */
+        public String getDbObjectOssUrl() {
+            return this.dbObjectOssUrl;
+        }
+
+        /**
+         * @return dbObjectOssUrlExpireTime
+         */
+        public String getDbObjectOssUrlExpireTime() {
+            return this.dbObjectOssUrlExpireTime;
+        }
+
+        /**
+         * @return dbObjectSize
+         */
+        public Long getDbObjectSize() {
+            return this.dbObjectSize;
         }
 
         /**
@@ -17474,6 +17759,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private SubSyncJobDataSynchronizationStatus dataSynchronizationStatus; 
             private Integer databaseCount; 
             private String dbObject; 
+            private String dbObjectOssUrl; 
+            private String dbObjectOssUrlExpireTime; 
+            private Long dbObjectSize; 
             private Long delay; 
             private String destNetType; 
             private SubSyncJobDestinationEndpoint destinationEndpoint; 
@@ -17526,6 +17814,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
                 this.dataSynchronizationStatus = model.dataSynchronizationStatus;
                 this.databaseCount = model.databaseCount;
                 this.dbObject = model.dbObject;
+                this.dbObjectOssUrl = model.dbObjectOssUrl;
+                this.dbObjectOssUrlExpireTime = model.dbObjectOssUrlExpireTime;
+                this.dbObjectSize = model.dbObjectSize;
                 this.delay = model.delay;
                 this.destNetType = model.destNetType;
                 this.destinationEndpoint = model.destinationEndpoint;
@@ -17679,6 +17970,30 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
              */
             public Builder dbObject(String dbObject) {
                 this.dbObject = dbObject;
+                return this;
+            }
+
+            /**
+             * DbObjectOssUrl.
+             */
+            public Builder dbObjectOssUrl(String dbObjectOssUrl) {
+                this.dbObjectOssUrl = dbObjectOssUrl;
+                return this;
+            }
+
+            /**
+             * DbObjectOssUrlExpireTime.
+             */
+            public Builder dbObjectOssUrlExpireTime(String dbObjectOssUrlExpireTime) {
+                this.dbObjectOssUrlExpireTime = dbObjectOssUrlExpireTime;
+                return this;
+            }
+
+            /**
+             * DbObjectSize.
+             */
+            public Builder dbObjectSize(Long dbObjectSize) {
+                this.dbObjectSize = dbObjectSize;
                 return this;
             }
 

@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDtsJobDetailRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbObjectOutputType")
+    private String dbObjectOutputType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DtsInstanceID")
     private String dtsInstanceID;
 
@@ -47,6 +51,7 @@ public class DescribeDtsJobDetailRequest extends Request {
 
     private DescribeDtsJobDetailRequest(Builder builder) {
         super(builder);
+        this.dbObjectOutputType = builder.dbObjectOutputType;
         this.dtsInstanceID = builder.dtsInstanceID;
         this.dtsJobId = builder.dtsJobId;
         this.regionId = builder.regionId;
@@ -67,6 +72,13 @@ public class DescribeDtsJobDetailRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return dbObjectOutputType
+     */
+    public String getDbObjectOutputType() {
+        return this.dbObjectOutputType;
     }
 
     /**
@@ -119,6 +131,7 @@ public class DescribeDtsJobDetailRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDtsJobDetailRequest, Builder> {
+        private String dbObjectOutputType; 
         private String dtsInstanceID; 
         private String dtsJobId; 
         private String regionId; 
@@ -133,6 +146,7 @@ public class DescribeDtsJobDetailRequest extends Request {
 
         private Builder(DescribeDtsJobDetailRequest request) {
             super(request);
+            this.dbObjectOutputType = request.dbObjectOutputType;
             this.dtsInstanceID = request.dtsInstanceID;
             this.dtsJobId = request.dtsJobId;
             this.regionId = request.regionId;
@@ -141,6 +155,15 @@ public class DescribeDtsJobDetailRequest extends Request {
             this.synchronizationDirection = request.synchronizationDirection;
             this.zeroEtlJob = request.zeroEtlJob;
         } 
+
+        /**
+         * DbObjectOutputType.
+         */
+        public Builder dbObjectOutputType(String dbObjectOutputType) {
+            this.putQueryParameter("DbObjectOutputType", dbObjectOutputType);
+            this.dbObjectOutputType = dbObjectOutputType;
+            return this;
+        }
 
         /**
          * <p>The ID of the data migration, data synchronization, or change tracking instance.</p>
