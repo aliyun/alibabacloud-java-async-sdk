@@ -131,7 +131,106 @@ public class VideoGenerationRequest extends Request {
      *
      * <p>VideoGenerationRequest</p>
      */
+    public static class AssetBindings extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AssetIndex")
+        private Integer assetIndex;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("Slot")
+        private String slot;
+
+        private AssetBindings(Builder builder) {
+            this.assetIndex = builder.assetIndex;
+            this.description = builder.description;
+            this.slot = builder.slot;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AssetBindings create() {
+            return builder().build();
+        }
+
+        /**
+         * @return assetIndex
+         */
+        public Integer getAssetIndex() {
+            return this.assetIndex;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return slot
+         */
+        public String getSlot() {
+            return this.slot;
+        }
+
+        public static final class Builder {
+            private Integer assetIndex; 
+            private String description; 
+            private String slot; 
+
+            private Builder() {
+            } 
+
+            private Builder(AssetBindings model) {
+                this.assetIndex = model.assetIndex;
+                this.description = model.description;
+                this.slot = model.slot;
+            } 
+
+            /**
+             * AssetIndex.
+             */
+            public Builder assetIndex(Integer assetIndex) {
+                this.assetIndex = assetIndex;
+                return this;
+            }
+
+            /**
+             * <p>素材的自然语言描述</p>
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * <p>可选值：look_reference（外观参考）、scene_reference（场景参考）</p>
+             */
+            public Builder slot(String slot) {
+                this.slot = slot;
+                return this;
+            }
+
+            public AssetBindings build() {
+                return new AssetBindings(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link VideoGenerationRequest} extends {@link TeaModel}
+     *
+     * <p>VideoGenerationRequest</p>
+     */
     public static class Input extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AssetBindings")
+        private java.util.List<AssetBindings> assetBindings;
+
         @com.aliyun.core.annotation.NameInMap("Extra")
         private java.util.Map<String, ?> extra;
 
@@ -144,6 +243,7 @@ public class VideoGenerationRequest extends Request {
         private String title;
 
         private Input(Builder builder) {
+            this.assetBindings = builder.assetBindings;
             this.extra = builder.extra;
             this.images = builder.images;
             this.title = builder.title;
@@ -155,6 +255,13 @@ public class VideoGenerationRequest extends Request {
 
         public static Input create() {
             return builder().build();
+        }
+
+        /**
+         * @return assetBindings
+         */
+        public java.util.List<AssetBindings> getAssetBindings() {
+            return this.assetBindings;
         }
 
         /**
@@ -179,6 +286,7 @@ public class VideoGenerationRequest extends Request {
         }
 
         public static final class Builder {
+            private java.util.List<AssetBindings> assetBindings; 
             private java.util.Map<String, ?> extra; 
             private java.util.List<String> images; 
             private String title; 
@@ -187,10 +295,19 @@ public class VideoGenerationRequest extends Request {
             } 
 
             private Builder(Input model) {
+                this.assetBindings = model.assetBindings;
                 this.extra = model.extra;
                 this.images = model.images;
                 this.title = model.title;
             } 
+
+            /**
+             * <p>按素材索引指定图片的用途及描述</p>
+             */
+            public Builder assetBindings(java.util.List<AssetBindings> assetBindings) {
+                this.assetBindings = assetBindings;
+                return this;
+            }
 
             /**
              * Extra.
@@ -239,9 +356,13 @@ public class VideoGenerationRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Goal")
         private String goal;
 
+        @com.aliyun.core.annotation.NameInMap("Script")
+        private String script;
+
         private Intent(Builder builder) {
             this.channel = builder.channel;
             this.goal = builder.goal;
+            this.script = builder.script;
         }
 
         public static Builder builder() {
@@ -266,9 +387,17 @@ public class VideoGenerationRequest extends Request {
             return this.goal;
         }
 
+        /**
+         * @return script
+         */
+        public String getScript() {
+            return this.script;
+        }
+
         public static final class Builder {
             private String channel; 
             private String goal; 
+            private String script; 
 
             private Builder() {
             } 
@@ -276,6 +405,7 @@ public class VideoGenerationRequest extends Request {
             private Builder(Intent model) {
                 this.channel = model.channel;
                 this.goal = model.goal;
+                this.script = model.script;
             } 
 
             /**
@@ -287,10 +417,23 @@ public class VideoGenerationRequest extends Request {
             }
 
             /**
-             * Goal.
+             * <p>camera_motion（运镜模式，按固定360运镜逻辑生成）、scripted_video（带脚本模式）、auto_video（不带脚本模式，由系统自动规划脚本）</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder goal(String goal) {
                 this.goal = goal;
+                return this;
+            }
+
+            /**
+             * <p>goal 为 scripted_video 时必须提供</p>
+             */
+            public Builder script(String script) {
+                this.script = script;
                 return this;
             }
 

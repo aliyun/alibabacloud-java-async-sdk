@@ -44,6 +44,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CategoryMatchResponse> categoryMatch(CategoryMatchRequest request);
 
     /**
+     * @param request the request parameters of DiduiAreaDeduction  DiduiAreaDeductionRequest
+     * @return DiduiAreaDeductionResponse
+     */
+    CompletableFuture<DiduiAreaDeductionResponse> diduiAreaDeduction(DiduiAreaDeductionRequest request);
+
+    /**
      * @param request the request parameters of DocumentTranslate  DocumentTranslateRequest
      * @return DocumentTranslateResponse
      */
@@ -126,6 +132,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return PrepaidTextTranslateResponse
      */
     CompletableFuture<PrepaidTextTranslateResponse> prepaidTextTranslate(PrepaidTextTranslateRequest request);
+
+    /**
+     * @param request the request parameters of ProductHotspotDetection  ProductHotspotDetectionRequest
+     * @return ProductHotspotDetectionResponse
+     */
+    CompletableFuture<ProductHotspotDetectionResponse> productHotspotDetection(ProductHotspotDetectionRequest request);
 
     /**
      * @param request the request parameters of QueryAsyncTaskResult  QueryAsyncTaskResultRequest

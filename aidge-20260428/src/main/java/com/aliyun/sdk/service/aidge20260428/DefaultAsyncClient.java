@@ -114,6 +114,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DiduiAreaDeduction  DiduiAreaDeductionRequest
+     * @return DiduiAreaDeductionResponse
+     */
+    @Override
+    public CompletableFuture<DiduiAreaDeductionResponse> diduiAreaDeduction(DiduiAreaDeductionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DiduiAreaDeduction").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DiduiAreaDeductionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DiduiAreaDeductionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DocumentTranslate  DocumentTranslateRequest
      * @return DocumentTranslateResponse
      */
@@ -360,6 +378,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<PrepaidTextTranslateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ProductHotspotDetection  ProductHotspotDetectionRequest
+     * @return ProductHotspotDetectionResponse
+     */
+    @Override
+    public CompletableFuture<ProductHotspotDetectionResponse> productHotspotDetection(ProductHotspotDetectionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ProductHotspotDetection").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ProductHotspotDetectionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ProductHotspotDetectionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
