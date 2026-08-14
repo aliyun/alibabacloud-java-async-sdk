@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class InstallAgentWithTypeRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("agentId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String agentId;
@@ -43,6 +47,7 @@ public class InstallAgentWithTypeRequest extends Request {
 
     private InstallAgentWithTypeRequest(Builder builder) {
         super(builder);
+        this.tag = builder.tag;
         this.agentId = builder.agentId;
         this.agentVersion = builder.agentVersion;
         this.configId = builder.configId;
@@ -61,6 +66,13 @@ public class InstallAgentWithTypeRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
     }
 
     /**
@@ -99,6 +111,7 @@ public class InstallAgentWithTypeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<InstallAgentWithTypeRequest, Builder> {
+        private java.util.List<Tag> tag; 
         private String agentId; 
         private String agentVersion; 
         private String configId; 
@@ -111,12 +124,22 @@ public class InstallAgentWithTypeRequest extends Request {
 
         private Builder(InstallAgentWithTypeRequest request) {
             super(request);
+            this.tag = request.tag;
             this.agentId = request.agentId;
             this.agentVersion = request.agentVersion;
             this.configId = request.configId;
             this.instanceType = request.instanceType;
             this.instances = request.instances;
         } 
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            this.putBodyParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
@@ -179,6 +202,81 @@ public class InstallAgentWithTypeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link InstallAgentWithTypeRequest} extends {@link TeaModel}
+     *
+     * <p>InstallAgentWithTypeRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link InstallAgentWithTypeRequest} extends {@link TeaModel}
