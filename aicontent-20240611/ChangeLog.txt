@@ -1,3 +1,6 @@
+2026-08-14 Version: 7.0.13
+- Generated java-async 20240611 for AiContent.
+
 2026-08-04 Version: 7.0.12
 - Generated java-async 20240611 for AiContent.
 

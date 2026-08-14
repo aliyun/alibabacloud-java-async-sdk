@@ -29,11 +29,16 @@ public class ModelRouterQueryUserListRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("phone")
+    private String phone;
+
     private ModelRouterQueryUserListRequest(Builder builder) {
         super(builder);
         this.keyword = builder.keyword;
         this.pageIndex = builder.pageIndex;
         this.pageSize = builder.pageSize;
+        this.phone = builder.phone;
     }
 
     public static Builder builder() {
@@ -70,10 +75,18 @@ public class ModelRouterQueryUserListRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return phone
+     */
+    public String getPhone() {
+        return this.phone;
+    }
+
     public static final class Builder extends Request.Builder<ModelRouterQueryUserListRequest, Builder> {
         private String keyword; 
         private Integer pageIndex; 
         private Integer pageSize; 
+        private String phone; 
 
         private Builder() {
             super();
@@ -84,6 +97,7 @@ public class ModelRouterQueryUserListRequest extends Request {
             this.keyword = request.keyword;
             this.pageIndex = request.pageIndex;
             this.pageSize = request.pageSize;
+            this.phone = request.phone;
         } 
 
         /**
@@ -110,6 +124,15 @@ public class ModelRouterQueryUserListRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * phone.
+         */
+        public Builder phone(String phone) {
+            this.putQueryParameter("phone", phone);
+            this.phone = phone;
             return this;
         }
 
