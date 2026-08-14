@@ -23,6 +23,10 @@ public class CreateMailAddressRequest extends Request {
     private String accountName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddressType")
+    private String addressType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
@@ -46,6 +50,7 @@ public class CreateMailAddressRequest extends Request {
     private CreateMailAddressRequest(Builder builder) {
         super(builder);
         this.accountName = builder.accountName;
+        this.addressType = builder.addressType;
         this.ownerId = builder.ownerId;
         this.replyAddress = builder.replyAddress;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -71,6 +76,13 @@ public class CreateMailAddressRequest extends Request {
      */
     public String getAccountName() {
         return this.accountName;
+    }
+
+    /**
+     * @return addressType
+     */
+    public String getAddressType() {
+        return this.addressType;
     }
 
     /**
@@ -110,6 +122,7 @@ public class CreateMailAddressRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateMailAddressRequest, Builder> {
         private String accountName; 
+        private String addressType; 
         private Long ownerId; 
         private String replyAddress; 
         private String resourceOwnerAccount; 
@@ -123,6 +136,7 @@ public class CreateMailAddressRequest extends Request {
         private Builder(CreateMailAddressRequest request) {
             super(request);
             this.accountName = request.accountName;
+            this.addressType = request.addressType;
             this.ownerId = request.ownerId;
             this.replyAddress = request.replyAddress;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -140,6 +154,15 @@ public class CreateMailAddressRequest extends Request {
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
             this.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * AddressType.
+         */
+        public Builder addressType(String addressType) {
+            this.putQueryParameter("AddressType", addressType);
+            this.addressType = addressType;
             return this;
         }
 

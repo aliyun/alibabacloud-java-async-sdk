@@ -176,6 +176,9 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountStatus")
         private String accountStatus;
 
+        @com.aliyun.core.annotation.NameInMap("AddressType")
+        private String addressType;
+
         @com.aliyun.core.annotation.NameInMap("ConfigSetId")
         private String configSetId;
 
@@ -197,6 +200,9 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MailAddressId")
         private String mailAddressId;
 
+        @com.aliyun.core.annotation.NameInMap("MailAddressVerificationStatus")
+        private String mailAddressVerificationStatus;
+
         @com.aliyun.core.annotation.NameInMap("MonthCount")
         private String monthCount;
 
@@ -209,12 +215,16 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReplyStatus")
         private String replyStatus;
 
+        @com.aliyun.core.annotation.NameInMap("SenderAddress")
+        private String senderAddress;
+
         @com.aliyun.core.annotation.NameInMap("Sendtype")
         private String sendtype;
 
         private MailAddress(Builder builder) {
             this.accountName = builder.accountName;
             this.accountStatus = builder.accountStatus;
+            this.addressType = builder.addressType;
             this.configSetId = builder.configSetId;
             this.configSetName = builder.configSetName;
             this.createTime = builder.createTime;
@@ -222,10 +232,12 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
             this.dailyReqCount = builder.dailyReqCount;
             this.domainStatus = builder.domainStatus;
             this.mailAddressId = builder.mailAddressId;
+            this.mailAddressVerificationStatus = builder.mailAddressVerificationStatus;
             this.monthCount = builder.monthCount;
             this.monthReqCount = builder.monthReqCount;
             this.replyAddress = builder.replyAddress;
             this.replyStatus = builder.replyStatus;
+            this.senderAddress = builder.senderAddress;
             this.sendtype = builder.sendtype;
         }
 
@@ -249,6 +261,13 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
          */
         public String getAccountStatus() {
             return this.accountStatus;
+        }
+
+        /**
+         * @return addressType
+         */
+        public String getAddressType() {
+            return this.addressType;
         }
 
         /**
@@ -301,6 +320,13 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         }
 
         /**
+         * @return mailAddressVerificationStatus
+         */
+        public String getMailAddressVerificationStatus() {
+            return this.mailAddressVerificationStatus;
+        }
+
+        /**
          * @return monthCount
          */
         public String getMonthCount() {
@@ -329,6 +355,13 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         }
 
         /**
+         * @return senderAddress
+         */
+        public String getSenderAddress() {
+            return this.senderAddress;
+        }
+
+        /**
          * @return sendtype
          */
         public String getSendtype() {
@@ -338,6 +371,7 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         public static final class Builder {
             private String accountName; 
             private String accountStatus; 
+            private String addressType; 
             private String configSetId; 
             private String configSetName; 
             private String createTime; 
@@ -345,10 +379,12 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
             private String dailyReqCount; 
             private String domainStatus; 
             private String mailAddressId; 
+            private String mailAddressVerificationStatus; 
             private String monthCount; 
             private String monthReqCount; 
             private String replyAddress; 
             private String replyStatus; 
+            private String senderAddress; 
             private String sendtype; 
 
             private Builder() {
@@ -357,6 +393,7 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
             private Builder(MailAddress model) {
                 this.accountName = model.accountName;
                 this.accountStatus = model.accountStatus;
+                this.addressType = model.addressType;
                 this.configSetId = model.configSetId;
                 this.configSetName = model.configSetName;
                 this.createTime = model.createTime;
@@ -364,10 +401,12 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
                 this.dailyReqCount = model.dailyReqCount;
                 this.domainStatus = model.domainStatus;
                 this.mailAddressId = model.mailAddressId;
+                this.mailAddressVerificationStatus = model.mailAddressVerificationStatus;
                 this.monthCount = model.monthCount;
                 this.monthReqCount = model.monthReqCount;
                 this.replyAddress = model.replyAddress;
                 this.replyStatus = model.replyStatus;
+                this.senderAddress = model.senderAddress;
                 this.sendtype = model.sendtype;
             } 
 
@@ -390,6 +429,14 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
+                return this;
+            }
+
+            /**
+             * AddressType.
+             */
+            public Builder addressType(String addressType) {
+                this.addressType = addressType;
                 return this;
             }
 
@@ -465,6 +512,14 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
             }
 
             /**
+             * MailAddressVerificationStatus.
+             */
+            public Builder mailAddressVerificationStatus(String mailAddressVerificationStatus) {
+                this.mailAddressVerificationStatus = mailAddressVerificationStatus;
+                return this;
+            }
+
+            /**
              * <p>Monthly quota limit</p>
              * 
              * <strong>example:</strong>
@@ -505,6 +560,14 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
              */
             public Builder replyStatus(String replyStatus) {
                 this.replyStatus = replyStatus;
+                return this;
+            }
+
+            /**
+             * SenderAddress.
+             */
+            public Builder senderAddress(String senderAddress) {
+                this.senderAddress = senderAddress;
                 return this;
             }
 
