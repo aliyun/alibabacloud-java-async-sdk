@@ -26,6 +26,10 @@ public class UpdateLindormInstanceAttributeRequest extends Request {
     private Boolean deletionProtection;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DispositionType")
+    private String dispositionType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceAlias")
     private String instanceAlias;
 
@@ -44,6 +48,10 @@ public class UpdateLindormInstanceAttributeRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlannedCompletionDate")
+    private String plannedCompletionDate;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -60,10 +68,12 @@ public class UpdateLindormInstanceAttributeRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.deletionProtection = builder.deletionProtection;
+        this.dispositionType = builder.dispositionType;
         this.instanceAlias = builder.instanceAlias;
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.plannedCompletionDate = builder.plannedCompletionDate;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
@@ -97,6 +107,13 @@ public class UpdateLindormInstanceAttributeRequest extends Request {
     }
 
     /**
+     * @return dispositionType
+     */
+    public String getDispositionType() {
+        return this.dispositionType;
+    }
+
+    /**
      * @return instanceAlias
      */
     public String getInstanceAlias() {
@@ -125,6 +142,13 @@ public class UpdateLindormInstanceAttributeRequest extends Request {
     }
 
     /**
+     * @return plannedCompletionDate
+     */
+    public String getPlannedCompletionDate() {
+        return this.plannedCompletionDate;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -148,10 +172,12 @@ public class UpdateLindormInstanceAttributeRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateLindormInstanceAttributeRequest, Builder> {
         private String regionId; 
         private Boolean deletionProtection; 
+        private String dispositionType; 
         private String instanceAlias; 
         private String instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String plannedCompletionDate; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
@@ -164,10 +190,12 @@ public class UpdateLindormInstanceAttributeRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.deletionProtection = request.deletionProtection;
+            this.dispositionType = request.dispositionType;
             this.instanceAlias = request.instanceAlias;
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.plannedCompletionDate = request.plannedCompletionDate;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
@@ -188,6 +216,15 @@ public class UpdateLindormInstanceAttributeRequest extends Request {
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putQueryParameter("DeletionProtection", deletionProtection);
             this.deletionProtection = deletionProtection;
+            return this;
+        }
+
+        /**
+         * DispositionType.
+         */
+        public Builder dispositionType(String dispositionType) {
+            this.putQueryParameter("DispositionType", dispositionType);
+            this.dispositionType = dispositionType;
             return this;
         }
 
@@ -227,6 +264,15 @@ public class UpdateLindormInstanceAttributeRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PlannedCompletionDate.
+         */
+        public Builder plannedCompletionDate(String plannedCompletionDate) {
+            this.putQueryParameter("PlannedCompletionDate", plannedCompletionDate);
+            this.plannedCompletionDate = plannedCompletionDate;
             return this;
         }
 

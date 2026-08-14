@@ -31,28 +31,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.version = "2020-06-15";
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("us-west-1", "hitsdb.us-west-1.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "hitsdb.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "hitsdb.cn-beijing.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "hitsdb.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "hitsdb.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "hitsdb.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "hitsdb.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "hitsdb.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "hitsdb.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "hitsdb.cn-chengdu.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "hitsdb.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "hitsdb.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "hitsdb.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "hitsdb.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "hitsdb.cn-hangzhou.aliyuncs.com"),
             new TeaPair("us-east-1", "hitsdb.us-east-1.aliyuncs.com"),
             new TeaPair("eu-west-1", "hitsdb.eu-west-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "hitsdb.us-west-1.aliyuncs.com"),
             new TeaPair("eu-central-1", "hitsdb.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "hitsdb.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "hitsdb.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "hitsdb.cn-shenzhen-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "hitsdb.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "hitsdb.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "hitsdb.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "hitsdb.cn-qingdao.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "hitsdb.cn-north-2-gov-1.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "hitsdb.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "hitsdb.cn-hongkong.aliyuncs.com"),
             new TeaPair("cn-hangzhou-finance", "hitsdb.cn-hangzhou-finance.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "hitsdb.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "hitsdb.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-beijing", "hitsdb.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "hitsdb.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "hitsdb.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "hitsdb.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "hitsdb.ap-northeast-1.aliyuncs.com")
+            new TeaPair("cn-shenzhen-finance-1", "hitsdb.cn-shenzhen-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "hitsdb.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "hitsdb.cn-north-2-gov-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }

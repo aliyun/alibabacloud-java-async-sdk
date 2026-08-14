@@ -20,6 +20,9 @@ public class CheckLdpsColumnarIndexStatusResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
+    @com.aliyun.core.annotation.NameInMap("Mode")
+    private String mode;
+
     @com.aliyun.core.annotation.NameInMap("Opened")
     private Boolean opened;
 
@@ -28,6 +31,7 @@ public class CheckLdpsColumnarIndexStatusResponseBody extends TeaModel {
 
     private CheckLdpsColumnarIndexStatusResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
+        this.mode = builder.mode;
         this.opened = builder.opened;
         this.requestId = builder.requestId;
     }
@@ -52,6 +56,13 @@ public class CheckLdpsColumnarIndexStatusResponseBody extends TeaModel {
     }
 
     /**
+     * @return mode
+     */
+    public String getMode() {
+        return this.mode;
+    }
+
+    /**
      * @return opened
      */
     public Boolean getOpened() {
@@ -67,6 +78,7 @@ public class CheckLdpsColumnarIndexStatusResponseBody extends TeaModel {
 
     public static final class Builder {
         private String accessDeniedDetail; 
+        private String mode; 
         private Boolean opened; 
         private String requestId; 
 
@@ -75,6 +87,7 @@ public class CheckLdpsColumnarIndexStatusResponseBody extends TeaModel {
 
         private Builder(CheckLdpsColumnarIndexStatusResponseBody model) {
             this.accessDeniedDetail = model.accessDeniedDetail;
+            this.mode = model.mode;
             this.opened = model.opened;
             this.requestId = model.requestId;
         } 
@@ -84,6 +97,14 @@ public class CheckLdpsColumnarIndexStatusResponseBody extends TeaModel {
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * <p>Columnar index mode. Valid values: LAKE and OLAP.</p>
+         */
+        public Builder mode(String mode) {
+            this.mode = mode;
             return this;
         }
 

@@ -110,6 +110,9 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ServiceType")
     private String serviceType;
 
+    @com.aliyun.core.annotation.NameInMap("SingleZoneRiskAlert")
+    private SingleZoneRiskAlert singleZoneRiskAlert;
+
     @com.aliyun.core.annotation.NameInMap("StandbyVSwitchId")
     private String standbyVSwitchId;
 
@@ -166,6 +169,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.resourceGroupId = builder.resourceGroupId;
         this.serviceType = builder.serviceType;
+        this.singleZoneRiskAlert = builder.singleZoneRiskAlert;
         this.standbyVSwitchId = builder.standbyVSwitchId;
         this.standbyZoneId = builder.standbyZoneId;
         this.storageUsage = builder.storageUsage;
@@ -406,6 +410,13 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return singleZoneRiskAlert
+     */
+    public SingleZoneRiskAlert getSingleZoneRiskAlert() {
+        return this.singleZoneRiskAlert;
+    }
+
+    /**
      * @return standbyVSwitchId
      */
     public String getStandbyVSwitchId() {
@@ -493,6 +504,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         private String requestId; 
         private String resourceGroupId; 
         private String serviceType; 
+        private SingleZoneRiskAlert singleZoneRiskAlert; 
         private String standbyVSwitchId; 
         private String standbyZoneId; 
         private StorageUsage storageUsage; 
@@ -537,6 +549,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
             this.requestId = model.requestId;
             this.resourceGroupId = model.resourceGroupId;
             this.serviceType = model.serviceType;
+            this.singleZoneRiskAlert = model.singleZoneRiskAlert;
             this.standbyVSwitchId = model.standbyVSwitchId;
             this.standbyZoneId = model.standbyZoneId;
             this.storageUsage = model.storageUsage;
@@ -792,6 +805,14 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
          */
         public Builder serviceType(String serviceType) {
             this.serviceType = serviceType;
+            return this;
+        }
+
+        /**
+         * SingleZoneRiskAlert.
+         */
+        public Builder singleZoneRiskAlert(SingleZoneRiskAlert singleZoneRiskAlert) {
+            this.singleZoneRiskAlert = singleZoneRiskAlert;
             return this;
         }
 
@@ -1463,6 +1484,123 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
 
             public EngineList build() {
                 return new EngineList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetLindormV2InstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLindormV2InstanceResponseBody</p>
+     */
+    public static class SingleZoneRiskAlert extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConfirmDate")
+        private String confirmDate;
+
+        @com.aliyun.core.annotation.NameInMap("DispositionType")
+        private String dispositionType;
+
+        @com.aliyun.core.annotation.NameInMap("NeedAlert")
+        private String needAlert;
+
+        @com.aliyun.core.annotation.NameInMap("PlannedCompletionDate")
+        private String plannedCompletionDate;
+
+        private SingleZoneRiskAlert(Builder builder) {
+            this.confirmDate = builder.confirmDate;
+            this.dispositionType = builder.dispositionType;
+            this.needAlert = builder.needAlert;
+            this.plannedCompletionDate = builder.plannedCompletionDate;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SingleZoneRiskAlert create() {
+            return builder().build();
+        }
+
+        /**
+         * @return confirmDate
+         */
+        public String getConfirmDate() {
+            return this.confirmDate;
+        }
+
+        /**
+         * @return dispositionType
+         */
+        public String getDispositionType() {
+            return this.dispositionType;
+        }
+
+        /**
+         * @return needAlert
+         */
+        public String getNeedAlert() {
+            return this.needAlert;
+        }
+
+        /**
+         * @return plannedCompletionDate
+         */
+        public String getPlannedCompletionDate() {
+            return this.plannedCompletionDate;
+        }
+
+        public static final class Builder {
+            private String confirmDate; 
+            private String dispositionType; 
+            private String needAlert; 
+            private String plannedCompletionDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(SingleZoneRiskAlert model) {
+                this.confirmDate = model.confirmDate;
+                this.dispositionType = model.dispositionType;
+                this.needAlert = model.needAlert;
+                this.plannedCompletionDate = model.plannedCompletionDate;
+            } 
+
+            /**
+             * ConfirmDate.
+             */
+            public Builder confirmDate(String confirmDate) {
+                this.confirmDate = confirmDate;
+                return this;
+            }
+
+            /**
+             * DispositionType.
+             */
+            public Builder dispositionType(String dispositionType) {
+                this.dispositionType = dispositionType;
+                return this;
+            }
+
+            /**
+             * NeedAlert.
+             */
+            public Builder needAlert(String needAlert) {
+                this.needAlert = needAlert;
+                return this;
+            }
+
+            /**
+             * PlannedCompletionDate.
+             */
+            public Builder plannedCompletionDate(String plannedCompletionDate) {
+                this.plannedCompletionDate = plannedCompletionDate;
+                return this;
+            }
+
+            public SingleZoneRiskAlert build() {
+                return new SingleZoneRiskAlert(this);
             } 
 
         } 
