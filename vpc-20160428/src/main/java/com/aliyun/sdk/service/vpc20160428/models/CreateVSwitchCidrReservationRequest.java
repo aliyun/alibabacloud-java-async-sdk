@@ -26,6 +26,10 @@ public class CreateVSwitchCidrReservationRequest extends Request {
     private Boolean dryRun;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpPrefixNumber")
+    private Integer ipPrefixNumber;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpVersion")
     private String ipVersion;
 
@@ -83,6 +87,7 @@ public class CreateVSwitchCidrReservationRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
+        this.ipPrefixNumber = builder.ipPrefixNumber;
         this.ipVersion = builder.ipVersion;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -123,6 +128,13 @@ public class CreateVSwitchCidrReservationRequest extends Request {
      */
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    /**
+     * @return ipPrefixNumber
+     */
+    public Integer getIpPrefixNumber() {
+        return this.ipPrefixNumber;
     }
 
     /**
@@ -219,6 +231,7 @@ public class CreateVSwitchCidrReservationRequest extends Request {
     public static final class Builder extends Request.Builder<CreateVSwitchCidrReservationRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
+        private Integer ipPrefixNumber; 
         private String ipVersion; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -241,6 +254,7 @@ public class CreateVSwitchCidrReservationRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
+            this.ipPrefixNumber = request.ipPrefixNumber;
             this.ipVersion = request.ipVersion;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -285,6 +299,15 @@ public class CreateVSwitchCidrReservationRequest extends Request {
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
             this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * IpPrefixNumber.
+         */
+        public Builder ipPrefixNumber(Integer ipPrefixNumber) {
+            this.putQueryParameter("IpPrefixNumber", ipPrefixNumber);
+            this.ipPrefixNumber = ipPrefixNumber;
             return this;
         }
 
