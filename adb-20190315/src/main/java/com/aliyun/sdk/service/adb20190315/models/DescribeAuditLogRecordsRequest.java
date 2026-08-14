@@ -61,6 +61,10 @@ public class DescribeAuditLogRecordsRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcessId")
+    private String processId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("QueryKeyword")
     private String queryKeyword;
 
@@ -105,6 +109,7 @@ public class DescribeAuditLogRecordsRequest extends Request {
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.processId = builder.processId;
         this.queryKeyword = builder.queryKeyword;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -199,6 +204,13 @@ public class DescribeAuditLogRecordsRequest extends Request {
     }
 
     /**
+     * @return processId
+     */
+    public String getProcessId() {
+        return this.processId;
+    }
+
+    /**
      * @return queryKeyword
      */
     public String getQueryKeyword() {
@@ -265,6 +277,7 @@ public class DescribeAuditLogRecordsRequest extends Request {
         private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String processId; 
         private String queryKeyword; 
         private String regionId; 
         private String resourceOwnerAccount; 
@@ -290,6 +303,7 @@ public class DescribeAuditLogRecordsRequest extends Request {
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.processId = request.processId;
             this.queryKeyword = request.queryKeyword;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -453,6 +467,15 @@ public class DescribeAuditLogRecordsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ProcessId.
+         */
+        public Builder processId(String processId) {
+            this.putQueryParameter("ProcessId", processId);
+            this.processId = processId;
             return this;
         }
 
