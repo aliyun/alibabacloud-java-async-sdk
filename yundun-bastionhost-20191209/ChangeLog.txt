@@ -1,3 +1,6 @@
+2026-08-14 Version: 1.0.20
+- Generated java-async 2019-12-09 for Yundun-bastionhost.
+
 2026-08-11 Version: 1.0.19
 - Generated java-async 2019-12-09 for Yundun-bastionhost.
 

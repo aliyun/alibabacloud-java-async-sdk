@@ -126,6 +126,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AttachHostGroupAccountsToUserGroupResponse> attachHostGroupAccountsToUserGroup(AttachHostGroupAccountsToUserGroupRequest request);
 
     /**
+     * @param request the request parameters of AttachMembersToProject  AttachMembersToProjectRequest
+     * @return AttachMembersToProjectResponse
+     */
+    CompletableFuture<AttachMembersToProjectResponse> attachMembersToProject(AttachMembersToProjectRequest request);
+
+    /**
+     * @param request the request parameters of AttachProjectManagersToProjectAuthorization  AttachProjectManagersToProjectAuthorizationRequest
+     * @return AttachProjectManagersToProjectAuthorizationResponse
+     */
+    CompletableFuture<AttachProjectManagersToProjectAuthorizationResponse> attachProjectManagersToProjectAuthorization(AttachProjectManagersToProjectAuthorizationRequest request);
+
+    /**
+     * @param request the request parameters of AttachProjectsToProjectAuthorization  AttachProjectsToProjectAuthorizationRequest
+     * @return AttachProjectsToProjectAuthorizationResponse
+     */
+    CompletableFuture<AttachProjectsToProjectAuthorizationResponse> attachProjectsToProjectAuthorization(AttachProjectsToProjectAuthorizationRequest request);
+
+    /**
+     * @param request the request parameters of AttachProjectsToReviewRule  AttachProjectsToReviewRuleRequest
+     * @return AttachProjectsToReviewRuleResponse
+     */
+    CompletableFuture<AttachProjectsToReviewRuleResponse> attachProjectsToReviewRule(AttachProjectsToReviewRuleRequest request);
+
+    /**
+     * @param request the request parameters of AttachReviewersToReviewRule  AttachReviewersToReviewRuleRequest
+     * @return AttachReviewersToReviewRuleResponse
+     */
+    CompletableFuture<AttachReviewersToReviewRuleResponse> attachReviewersToReviewRule(AttachReviewersToReviewRuleRequest request);
+
+    /**
      * @param request the request parameters of ConfigInstanceSecurityGroups  ConfigInstanceSecurityGroupsRequest
      * @return ConfigInstanceSecurityGroupsResponse
      */
@@ -202,6 +232,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreatePolicyResponse
      */
     CompletableFuture<CreatePolicyResponse> createPolicy(CreatePolicyRequest request);
+
+    /**
+     * @param request the request parameters of CreateProject  CreateProjectRequest
+     * @return CreateProjectResponse
+     */
+    CompletableFuture<CreateProjectResponse> createProject(CreateProjectRequest request);
+
+    /**
+     * @param request the request parameters of CreateProjectAuthorization  CreateProjectAuthorizationRequest
+     * @return CreateProjectAuthorizationResponse
+     */
+    CompletableFuture<CreateProjectAuthorizationResponse> createProjectAuthorization(CreateProjectAuthorizationRequest request);
+
+    /**
+     * @param request the request parameters of CreateProjectNotifyReceiver  CreateProjectNotifyReceiverRequest
+     * @return CreateProjectNotifyReceiverResponse
+     */
+    CompletableFuture<CreateProjectNotifyReceiverResponse> createProjectNotifyReceiver(CreateProjectNotifyReceiverRequest request);
+
+    /**
+     * @param request the request parameters of CreateReviewRule  CreateReviewRuleRequest
+     * @return CreateReviewRuleResponse
+     */
+    CompletableFuture<CreateReviewRuleResponse> createReviewRule(CreateReviewRuleRequest request);
 
     /**
      * @param request the request parameters of CreateRule  CreateRuleRequest
@@ -301,6 +355,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeletePolicyResponse> deletePolicy(DeletePolicyRequest request);
 
     /**
+     * @param request the request parameters of DeleteProjectAuthorizations  DeleteProjectAuthorizationsRequest
+     * @return DeleteProjectAuthorizationsResponse
+     */
+    CompletableFuture<DeleteProjectAuthorizationsResponse> deleteProjectAuthorizations(DeleteProjectAuthorizationsRequest request);
+
+    /**
+     * @param request the request parameters of DeleteProjectNotifyReceivers  DeleteProjectNotifyReceiversRequest
+     * @return DeleteProjectNotifyReceiversResponse
+     */
+    CompletableFuture<DeleteProjectNotifyReceiversResponse> deleteProjectNotifyReceivers(DeleteProjectNotifyReceiversRequest request);
+
+    /**
+     * @param request the request parameters of DeleteProjects  DeleteProjectsRequest
+     * @return DeleteProjectsResponse
+     */
+    CompletableFuture<DeleteProjectsResponse> deleteProjects(DeleteProjectsRequest request);
+
+    /**
+     * @param request the request parameters of DeleteReviewRules  DeleteReviewRulesRequest
+     * @return DeleteReviewRulesResponse
+     */
+    CompletableFuture<DeleteReviewRulesResponse> deleteReviewRules(DeleteReviewRulesRequest request);
+
+    /**
      * @param request the request parameters of DeleteRule  DeleteRuleRequest
      * @return DeleteRuleResponse
      */
@@ -392,6 +470,36 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DetachHostGroupAccountsFromUserGroupResponse
      */
     CompletableFuture<DetachHostGroupAccountsFromUserGroupResponse> detachHostGroupAccountsFromUserGroup(DetachHostGroupAccountsFromUserGroupRequest request);
+
+    /**
+     * @param request the request parameters of DetachMembersFromProject  DetachMembersFromProjectRequest
+     * @return DetachMembersFromProjectResponse
+     */
+    CompletableFuture<DetachMembersFromProjectResponse> detachMembersFromProject(DetachMembersFromProjectRequest request);
+
+    /**
+     * @param request the request parameters of DetachProjectManagersFromProjectAuthorization  DetachProjectManagersFromProjectAuthorizationRequest
+     * @return DetachProjectManagersFromProjectAuthorizationResponse
+     */
+    CompletableFuture<DetachProjectManagersFromProjectAuthorizationResponse> detachProjectManagersFromProjectAuthorization(DetachProjectManagersFromProjectAuthorizationRequest request);
+
+    /**
+     * @param request the request parameters of DetachProjectsFromProjectAuthorization  DetachProjectsFromProjectAuthorizationRequest
+     * @return DetachProjectsFromProjectAuthorizationResponse
+     */
+    CompletableFuture<DetachProjectsFromProjectAuthorizationResponse> detachProjectsFromProjectAuthorization(DetachProjectsFromProjectAuthorizationRequest request);
+
+    /**
+     * @param request the request parameters of DetachProjectsFromReviewRule  DetachProjectsFromReviewRuleRequest
+     * @return DetachProjectsFromReviewRuleResponse
+     */
+    CompletableFuture<DetachProjectsFromReviewRuleResponse> detachProjectsFromReviewRule(DetachProjectsFromReviewRuleRequest request);
+
+    /**
+     * @param request the request parameters of DetachReviewersFromReviewRule  DetachReviewersFromReviewRuleRequest
+     * @return DetachReviewersFromReviewRuleResponse
+     */
+    CompletableFuture<DetachReviewersFromReviewRuleResponse> detachReviewersFromReviewRule(DetachReviewersFromReviewRuleRequest request);
 
     /**
      * @param request the request parameters of DisableInstancePublicAccess  DisableInstancePublicAccessRequest
@@ -529,6 +637,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetPolicyUserScopeResponse
      */
     CompletableFuture<GetPolicyUserScopeResponse> getPolicyUserScope(GetPolicyUserScopeRequest request);
+
+    /**
+     * @param request the request parameters of GetProject  GetProjectRequest
+     * @return GetProjectResponse
+     */
+    CompletableFuture<GetProjectResponse> getProject(GetProjectRequest request);
+
+    /**
+     * @param request the request parameters of GetProjectAuthorization  GetProjectAuthorizationRequest
+     * @return GetProjectAuthorizationResponse
+     */
+    CompletableFuture<GetProjectAuthorizationResponse> getProjectAuthorization(GetProjectAuthorizationRequest request);
+
+    /**
+     * @param request the request parameters of GetReviewRule  GetReviewRuleRequest
+     * @return GetReviewRuleResponse
+     */
+    CompletableFuture<GetReviewRuleResponse> getReviewRule(GetReviewRuleRequest request);
 
     /**
      * @param request the request parameters of GetRule  GetRuleRequest
@@ -691,6 +817,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListInstanceRdMembersResponse> listInstanceRdMembers(ListInstanceRdMembersRequest request);
 
     /**
+     * @param request the request parameters of ListMembersNotForProject  ListMembersNotForProjectRequest
+     * @return ListMembersNotForProjectResponse
+     */
+    CompletableFuture<ListMembersNotForProjectResponse> listMembersNotForProject(ListMembersNotForProjectRequest request);
+
+    /**
      * @param request the request parameters of ListNetworkDomains  ListNetworkDomainsRequest
      * @return ListNetworkDomainsResponse
      */
@@ -737,6 +869,48 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPoliciesResponse> listPolicies(ListPoliciesRequest request);
 
     /**
+     * @param request the request parameters of ListProjectAuthorizations  ListProjectAuthorizationsRequest
+     * @return ListProjectAuthorizationsResponse
+     */
+    CompletableFuture<ListProjectAuthorizationsResponse> listProjectAuthorizations(ListProjectAuthorizationsRequest request);
+
+    /**
+     * @param request the request parameters of ListProjectNotifyReceivers  ListProjectNotifyReceiversRequest
+     * @return ListProjectNotifyReceiversResponse
+     */
+    CompletableFuture<ListProjectNotifyReceiversResponse> listProjectNotifyReceivers(ListProjectNotifyReceiversRequest request);
+
+    /**
+     * @param request the request parameters of ListProjects  ListProjectsRequest
+     * @return ListProjectsResponse
+     */
+    CompletableFuture<ListProjectsResponse> listProjects(ListProjectsRequest request);
+
+    /**
+     * @param request the request parameters of ListProjectsForProjectAuthorizationPrincipal  ListProjectsForProjectAuthorizationPrincipalRequest
+     * @return ListProjectsForProjectAuthorizationPrincipalResponse
+     */
+    CompletableFuture<ListProjectsForProjectAuthorizationPrincipalResponse> listProjectsForProjectAuthorizationPrincipal(ListProjectsForProjectAuthorizationPrincipalRequest request);
+
+    /**
+     * @param request the request parameters of ListProjectsNotForProjectAuthorization  ListProjectsNotForProjectAuthorizationRequest
+     * @return ListProjectsNotForProjectAuthorizationResponse
+     */
+    CompletableFuture<ListProjectsNotForProjectAuthorizationResponse> listProjectsNotForProjectAuthorization(ListProjectsNotForProjectAuthorizationRequest request);
+
+    /**
+     * @param request the request parameters of ListProjectsNotForReviewRule  ListProjectsNotForReviewRuleRequest
+     * @return ListProjectsNotForReviewRuleResponse
+     */
+    CompletableFuture<ListProjectsNotForReviewRuleResponse> listProjectsNotForReviewRule(ListProjectsNotForReviewRuleRequest request);
+
+    /**
+     * @param request the request parameters of ListReviewRules  ListReviewRulesRequest
+     * @return ListReviewRulesResponse
+     */
+    CompletableFuture<ListReviewRulesResponse> listReviewRules(ListReviewRulesRequest request);
+
+    /**
      * @param request the request parameters of ListRules  ListRulesRequest
      * @return ListRulesResponse
      */
@@ -765,6 +939,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListUserGroupsResponse
      */
     CompletableFuture<ListUserGroupsResponse> listUserGroups(ListUserGroupsRequest request);
+
+    /**
+     * @param request the request parameters of ListUserGroupsForUser  ListUserGroupsForUserRequest
+     * @return ListUserGroupsForUserResponse
+     */
+    CompletableFuture<ListUserGroupsForUserResponse> listUserGroupsForUser(ListUserGroupsForUserRequest request);
 
     /**
      * @param request the request parameters of ListUserPublicKeys  ListUserPublicKeysRequest
@@ -801,6 +981,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyDatabaseAccountResponse
      */
     CompletableFuture<ModifyDatabaseAccountResponse> modifyDatabaseAccount(ModifyDatabaseAccountRequest request);
+
+    /**
+     * @param request the request parameters of ModifyDatabasesProject  ModifyDatabasesProjectRequest
+     * @return ModifyDatabasesProjectResponse
+     */
+    CompletableFuture<ModifyDatabasesProjectResponse> modifyDatabasesProject(ModifyDatabasesProjectRequest request);
 
     /**
      * <b>description</b> :
@@ -854,6 +1040,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyHostsPortResponse> modifyHostsPort(ModifyHostsPortRequest request);
 
     /**
+     * @param request the request parameters of ModifyHostsProject  ModifyHostsProjectRequest
+     * @return ModifyHostsProjectResponse
+     */
+    CompletableFuture<ModifyHostsProjectResponse> modifyHostsProject(ModifyHostsProjectRequest request);
+
+    /**
      * @param request the request parameters of ModifyInstanceADAuthServer  ModifyInstanceADAuthServerRequest
      * @return ModifyInstanceADAuthServerResponse
      */
@@ -888,6 +1080,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyPolicyResponse
      */
     CompletableFuture<ModifyPolicyResponse> modifyPolicy(ModifyPolicyRequest request);
+
+    /**
+     * @param request the request parameters of ModifyProject  ModifyProjectRequest
+     * @return ModifyProjectResponse
+     */
+    CompletableFuture<ModifyProjectResponse> modifyProject(ModifyProjectRequest request);
+
+    /**
+     * @param request the request parameters of ModifyProjectAuthorization  ModifyProjectAuthorizationRequest
+     * @return ModifyProjectAuthorizationResponse
+     */
+    CompletableFuture<ModifyProjectAuthorizationResponse> modifyProjectAuthorization(ModifyProjectAuthorizationRequest request);
+
+    /**
+     * @param request the request parameters of ModifyProjectNotifyReceiver  ModifyProjectNotifyReceiverRequest
+     * @return ModifyProjectNotifyReceiverResponse
+     */
+    CompletableFuture<ModifyProjectNotifyReceiverResponse> modifyProjectNotifyReceiver(ModifyProjectNotifyReceiverRequest request);
+
+    /**
+     * @param request the request parameters of ModifyReviewRule  ModifyReviewRuleRequest
+     * @return ModifyReviewRuleResponse
+     */
+    CompletableFuture<ModifyReviewRuleResponse> modifyReviewRule(ModifyReviewRuleRequest request);
 
     /**
      * @param request the request parameters of ModifyRule  ModifyRuleRequest
