@@ -56,6 +56,10 @@ public class AddImageRequest extends Request {
     private String sourceType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    private String userId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
@@ -70,6 +74,7 @@ public class AddImageRequest extends Request {
         this.size = builder.size;
         this.sourceId = builder.sourceId;
         this.sourceType = builder.sourceType;
+        this.userId = builder.userId;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -150,6 +155,13 @@ public class AddImageRequest extends Request {
     }
 
     /**
+     * @return userId
+     */
+    public String getUserId() {
+        return this.userId;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -166,6 +178,7 @@ public class AddImageRequest extends Request {
         private Long size; 
         private String sourceId; 
         private String sourceType; 
+        private String userId; 
         private String workspaceId; 
 
         private Builder() {
@@ -183,6 +196,7 @@ public class AddImageRequest extends Request {
             this.size = request.size;
             this.sourceId = request.sourceId;
             this.sourceType = request.sourceType;
+            this.userId = request.userId;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -310,6 +324,15 @@ public class AddImageRequest extends Request {
         public Builder sourceType(String sourceType) {
             this.putBodyParameter("SourceType", sourceType);
             this.sourceType = sourceType;
+            return this;
+        }
+
+        /**
+         * UserId.
+         */
+        public Builder userId(String userId) {
+            this.putBodyParameter("UserId", userId);
+            this.userId = userId;
             return this;
         }
 

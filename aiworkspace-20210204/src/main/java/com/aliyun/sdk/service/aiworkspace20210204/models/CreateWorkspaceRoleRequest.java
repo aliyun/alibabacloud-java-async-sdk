@@ -34,12 +34,17 @@ public class CreateWorkspaceRoleRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RoleType")
     private String roleType;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    private String userId;
+
     private CreateWorkspaceRoleRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
         this.modulePermissions = builder.modulePermissions;
         this.roleName = builder.roleName;
         this.roleType = builder.roleType;
+        this.userId = builder.userId;
     }
 
     public static Builder builder() {
@@ -83,11 +88,19 @@ public class CreateWorkspaceRoleRequest extends Request {
         return this.roleType;
     }
 
+    /**
+     * @return userId
+     */
+    public String getUserId() {
+        return this.userId;
+    }
+
     public static final class Builder extends Request.Builder<CreateWorkspaceRoleRequest, Builder> {
         private String workspaceId; 
         private java.util.List<ModulePermissions> modulePermissions; 
         private String roleName; 
         private String roleType; 
+        private String userId; 
 
         private Builder() {
             super();
@@ -99,6 +112,7 @@ public class CreateWorkspaceRoleRequest extends Request {
             this.modulePermissions = request.modulePermissions;
             this.roleName = request.roleName;
             this.roleType = request.roleType;
+            this.userId = request.userId;
         } 
 
         /**
@@ -137,6 +151,15 @@ public class CreateWorkspaceRoleRequest extends Request {
         public Builder roleType(String roleType) {
             this.putBodyParameter("RoleType", roleType);
             this.roleType = roleType;
+            return this;
+        }
+
+        /**
+         * UserId.
+         */
+        public Builder userId(String userId) {
+            this.putBodyParameter("UserId", userId);
+            this.userId = userId;
             return this;
         }
 

@@ -71,14 +71,8 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("eu-west-1-oxs", "aiworkspace.aliyuncs.com"),
             new TeaPair("me-east-1", "aiworkspace.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "aiworkspace.aliyuncs.com"),
-            new TeaPair("us-west-1", "aiworkspace.us-west-1.aliyuncs.com"),
-            new TeaPair("us-southeast-1", "aiworkspace.us-southeast-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "aiworkspace.us-east-1.aliyuncs.com"),
-            new TeaPair("na-south-1", "aiworkspace.na-south-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "aiworkspace.eu-central-1.aliyuncs.com"),
             new TeaPair("cn-wulanchabu", "aiworkspace.cn-wulanchabu.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "aiworkspace.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "aiworkspace.cn-shanghai-finance-1.aliyuncs.com"),
             new TeaPair("cn-shanghai", "aiworkspace.cn-shanghai.aliyuncs.com"),
             new TeaPair("cn-hongkong", "aiworkspace.cn-hongkong.aliyuncs.com"),
             new TeaPair("cn-heyuan", "aiworkspace.cn-heyuan.aliyuncs.com"),
@@ -89,9 +83,15 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("ap-southeast-7", "aiworkspace.ap-southeast-7.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "aiworkspace.ap-southeast-3.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "aiworkspace.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-south-1", "aiworkspace.ap-south-1.aliyuncs.com"),
             new TeaPair("ap-northeast-2", "aiworkspace.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "aiworkspace.ap-northeast-1.aliyuncs.com")
+            new TeaPair("ap-northeast-1", "aiworkspace.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "aiworkspace.eu-central-1.aliyuncs.com"),
+            new TeaPair("na-south-1", "aiworkspace.na-south-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "aiworkspace.us-east-1.aliyuncs.com"),
+            new TeaPair("us-southeast-1", "aiworkspace.us-southeast-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "aiworkspace.us-west-1.aliyuncs.com"),
+            new TeaPair("ap-south-1", "aiworkspace.ap-south-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "aiworkspace.cn-shanghai-finance-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
