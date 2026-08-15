@@ -26,6 +26,10 @@ public class RenewMobileAgentPackageRequest extends Request {
     private Boolean autoRenew;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MobileAgentPackageIds")
     private java.util.List<String> mobileAgentPackageIds;
 
@@ -49,6 +53,7 @@ public class RenewMobileAgentPackageRequest extends Request {
         super(builder);
         this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
+        this.clientToken = builder.clientToken;
         this.mobileAgentPackageIds = builder.mobileAgentPackageIds;
         this.paidCallbackUrl = builder.paidCallbackUrl;
         this.period = builder.period;
@@ -81,6 +86,13 @@ public class RenewMobileAgentPackageRequest extends Request {
      */
     public Boolean getAutoRenew() {
         return this.autoRenew;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -121,6 +133,7 @@ public class RenewMobileAgentPackageRequest extends Request {
     public static final class Builder extends Request.Builder<RenewMobileAgentPackageRequest, Builder> {
         private Boolean autoPay; 
         private Boolean autoRenew; 
+        private String clientToken; 
         private java.util.List<String> mobileAgentPackageIds; 
         private String paidCallbackUrl; 
         private Integer period; 
@@ -135,6 +148,7 @@ public class RenewMobileAgentPackageRequest extends Request {
             super(request);
             this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
+            this.clientToken = request.clientToken;
             this.mobileAgentPackageIds = request.mobileAgentPackageIds;
             this.paidCallbackUrl = request.paidCallbackUrl;
             this.period = request.period;
@@ -157,6 +171,15 @@ public class RenewMobileAgentPackageRequest extends Request {
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
             this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 

@@ -549,6 +549,9 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BizTags")
         private java.util.List<BizTags> bizTags;
 
+        @com.aliyun.core.annotation.NameInMap("Channel")
+        private String channel;
+
         @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
@@ -584,6 +587,9 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
+
+        @com.aliyun.core.annotation.NameInMap("PackageId")
+        private String packageId;
 
         @com.aliyun.core.annotation.NameInMap("PhoneCount")
         private Integer phoneCount;
@@ -623,6 +629,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             this.bandwidthPackageStatus = builder.bandwidthPackageStatus;
             this.bandwidthPackageType = builder.bandwidthPackageType;
             this.bizTags = builder.bizTags;
+            this.channel = builder.channel;
             this.chargeType = builder.chargeType;
             this.cpu = builder.cpu;
             this.gmtCreate = builder.gmtCreate;
@@ -635,6 +642,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             this.networkType = builder.networkType;
             this.nodeId = builder.nodeId;
             this.nodeName = builder.nodeName;
+            this.packageId = builder.packageId;
             this.phoneCount = builder.phoneCount;
             this.phoneDataInfo = builder.phoneDataInfo;
             this.regionId = builder.regionId;
@@ -682,6 +690,13 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
          */
         public java.util.List<BizTags> getBizTags() {
             return this.bizTags;
+        }
+
+        /**
+         * @return channel
+         */
+        public String getChannel() {
+            return this.channel;
         }
 
         /**
@@ -769,6 +784,13 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         }
 
         /**
+         * @return packageId
+         */
+        public String getPackageId() {
+            return this.packageId;
+        }
+
+        /**
          * @return phoneCount
          */
         public Integer getPhoneCount() {
@@ -850,6 +872,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             private String bandwidthPackageStatus; 
             private String bandwidthPackageType; 
             private java.util.List<BizTags> bizTags; 
+            private String channel; 
             private String chargeType; 
             private String cpu; 
             private String gmtCreate; 
@@ -862,6 +885,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             private String networkType; 
             private String nodeId; 
             private String nodeName; 
+            private String packageId; 
             private Integer phoneCount; 
             private PhoneDataInfo phoneDataInfo; 
             private String regionId; 
@@ -882,6 +906,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
                 this.bandwidthPackageStatus = model.bandwidthPackageStatus;
                 this.bandwidthPackageType = model.bandwidthPackageType;
                 this.bizTags = model.bizTags;
+                this.channel = model.channel;
                 this.chargeType = model.chargeType;
                 this.cpu = model.cpu;
                 this.gmtCreate = model.gmtCreate;
@@ -894,6 +919,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
                 this.networkType = model.networkType;
                 this.nodeId = model.nodeId;
                 this.nodeName = model.nodeName;
+                this.packageId = model.packageId;
                 this.phoneCount = model.phoneCount;
                 this.phoneDataInfo = model.phoneDataInfo;
                 this.regionId = model.regionId;
@@ -936,6 +962,14 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
              */
             public Builder bizTags(java.util.List<BizTags> bizTags) {
                 this.bizTags = bizTags;
+                return this;
+            }
+
+            /**
+             * Channel.
+             */
+            public Builder channel(String channel) {
+                this.channel = channel;
                 return this;
             }
 
@@ -1059,6 +1093,14 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
+                return this;
+            }
+
+            /**
+             * PackageId.
+             */
+            public Builder packageId(String packageId) {
+                this.packageId = packageId;
                 return this;
             }
 
