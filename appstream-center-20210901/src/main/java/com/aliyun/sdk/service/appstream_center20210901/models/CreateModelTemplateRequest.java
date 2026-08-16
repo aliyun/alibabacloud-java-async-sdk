@@ -40,6 +40,10 @@ public class CreateModelTemplateRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RefScope")
+    private String refScope;
+
     private CreateModelTemplateRequest(Builder builder) {
         super(builder);
         this.agentPlatform = builder.agentPlatform;
@@ -47,6 +51,7 @@ public class CreateModelTemplateRequest extends Request {
         this.bizType = builder.bizType;
         this.description = builder.description;
         this.name = builder.name;
+        this.refScope = builder.refScope;
     }
 
     public static Builder builder() {
@@ -97,12 +102,20 @@ public class CreateModelTemplateRequest extends Request {
         return this.name;
     }
 
+    /**
+     * @return refScope
+     */
+    public String getRefScope() {
+        return this.refScope;
+    }
+
     public static final class Builder extends Request.Builder<CreateModelTemplateRequest, Builder> {
         private String agentPlatform; 
         private String agentProvider; 
         private Integer bizType; 
         private String description; 
         private String name; 
+        private String refScope; 
 
         private Builder() {
             super();
@@ -115,6 +128,7 @@ public class CreateModelTemplateRequest extends Request {
             this.bizType = request.bizType;
             this.description = request.description;
             this.name = request.name;
+            this.refScope = request.refScope;
         } 
 
         /**
@@ -168,6 +182,15 @@ public class CreateModelTemplateRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * RefScope.
+         */
+        public Builder refScope(String refScope) {
+            this.putQueryParameter("RefScope", refScope);
+            this.refScope = refScope;
             return this;
         }
 

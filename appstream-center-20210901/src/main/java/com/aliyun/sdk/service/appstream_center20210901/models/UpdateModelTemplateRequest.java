@@ -34,12 +34,17 @@ public class UpdateModelTemplateRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RefScope")
+    private String refScope;
+
     private UpdateModelTemplateRequest(Builder builder) {
         super(builder);
         this.config = builder.config;
         this.description = builder.description;
         this.modelTemplateId = builder.modelTemplateId;
         this.name = builder.name;
+        this.refScope = builder.refScope;
     }
 
     public static Builder builder() {
@@ -83,11 +88,19 @@ public class UpdateModelTemplateRequest extends Request {
         return this.name;
     }
 
+    /**
+     * @return refScope
+     */
+    public String getRefScope() {
+        return this.refScope;
+    }
+
     public static final class Builder extends Request.Builder<UpdateModelTemplateRequest, Builder> {
         private String config; 
         private String description; 
         private String modelTemplateId; 
         private String name; 
+        private String refScope; 
 
         private Builder() {
             super();
@@ -99,6 +112,7 @@ public class UpdateModelTemplateRequest extends Request {
             this.description = request.description;
             this.modelTemplateId = request.modelTemplateId;
             this.name = request.name;
+            this.refScope = request.refScope;
         } 
 
         /**
@@ -137,6 +151,15 @@ public class UpdateModelTemplateRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * RefScope.
+         */
+        public Builder refScope(String refScope) {
+            this.putQueryParameter("RefScope", refScope);
+            this.refScope = refScope;
             return this;
         }
 

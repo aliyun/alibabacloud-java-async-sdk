@@ -173,11 +173,23 @@ public class ListModelTemplatesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HasModel")
         private Boolean hasModel;
 
+        @com.aliyun.core.annotation.NameInMap("ModelCount")
+        private Integer modelCount;
+
         @com.aliyun.core.annotation.NameInMap("ModelTemplateId")
         private String modelTemplateId;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
+
+        @com.aliyun.core.annotation.NameInMap("RefScope")
+        private String refScope;
+
+        @com.aliyun.core.annotation.NameInMap("UserCount")
+        private Integer userCount;
+
+        @com.aliyun.core.annotation.NameInMap("UserGroupCount")
+        private Integer userGroupCount;
 
         private Data(Builder builder) {
             this.agentPlatform = builder.agentPlatform;
@@ -185,8 +197,12 @@ public class ListModelTemplatesResponseBody extends TeaModel {
             this.config = builder.config;
             this.description = builder.description;
             this.hasModel = builder.hasModel;
+            this.modelCount = builder.modelCount;
             this.modelTemplateId = builder.modelTemplateId;
             this.name = builder.name;
+            this.refScope = builder.refScope;
+            this.userCount = builder.userCount;
+            this.userGroupCount = builder.userGroupCount;
         }
 
         public static Builder builder() {
@@ -233,6 +249,13 @@ public class ListModelTemplatesResponseBody extends TeaModel {
         }
 
         /**
+         * @return modelCount
+         */
+        public Integer getModelCount() {
+            return this.modelCount;
+        }
+
+        /**
          * @return modelTemplateId
          */
         public String getModelTemplateId() {
@@ -246,14 +269,39 @@ public class ListModelTemplatesResponseBody extends TeaModel {
             return this.name;
         }
 
+        /**
+         * @return refScope
+         */
+        public String getRefScope() {
+            return this.refScope;
+        }
+
+        /**
+         * @return userCount
+         */
+        public Integer getUserCount() {
+            return this.userCount;
+        }
+
+        /**
+         * @return userGroupCount
+         */
+        public Integer getUserGroupCount() {
+            return this.userGroupCount;
+        }
+
         public static final class Builder {
             private String agentPlatform; 
             private String agentProvider; 
             private String config; 
             private String description; 
             private Boolean hasModel; 
+            private Integer modelCount; 
             private String modelTemplateId; 
             private String name; 
+            private String refScope; 
+            private Integer userCount; 
+            private Integer userGroupCount; 
 
             private Builder() {
             } 
@@ -264,8 +312,12 @@ public class ListModelTemplatesResponseBody extends TeaModel {
                 this.config = model.config;
                 this.description = model.description;
                 this.hasModel = model.hasModel;
+                this.modelCount = model.modelCount;
                 this.modelTemplateId = model.modelTemplateId;
                 this.name = model.name;
+                this.refScope = model.refScope;
+                this.userCount = model.userCount;
+                this.userGroupCount = model.userGroupCount;
             } 
 
             /**
@@ -309,6 +361,14 @@ public class ListModelTemplatesResponseBody extends TeaModel {
             }
 
             /**
+             * ModelCount.
+             */
+            public Builder modelCount(Integer modelCount) {
+                this.modelCount = modelCount;
+                return this;
+            }
+
+            /**
              * ModelTemplateId.
              */
             public Builder modelTemplateId(String modelTemplateId) {
@@ -321,6 +381,30 @@ public class ListModelTemplatesResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * RefScope.
+             */
+            public Builder refScope(String refScope) {
+                this.refScope = refScope;
+                return this;
+            }
+
+            /**
+             * UserCount.
+             */
+            public Builder userCount(Integer userCount) {
+                this.userCount = userCount;
+                return this;
+            }
+
+            /**
+             * UserGroupCount.
+             */
+            public Builder userGroupCount(Integer userGroupCount) {
+                this.userGroupCount = userGroupCount;
                 return this;
             }
 

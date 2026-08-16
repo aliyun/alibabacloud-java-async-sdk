@@ -94,6 +94,81 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
      *
      * <p>GetRuntimeModelConfigResponseBody</p>
      */
+    public static class CreditMultiplier extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Max")
+        private Float max;
+
+        @com.aliyun.core.annotation.NameInMap("Min")
+        private Float min;
+
+        private CreditMultiplier(Builder builder) {
+            this.max = builder.max;
+            this.min = builder.min;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CreditMultiplier create() {
+            return builder().build();
+        }
+
+        /**
+         * @return max
+         */
+        public Float getMax() {
+            return this.max;
+        }
+
+        /**
+         * @return min
+         */
+        public Float getMin() {
+            return this.min;
+        }
+
+        public static final class Builder {
+            private Float max; 
+            private Float min; 
+
+            private Builder() {
+            } 
+
+            private Builder(CreditMultiplier model) {
+                this.max = model.max;
+                this.min = model.min;
+            } 
+
+            /**
+             * Max.
+             */
+            public Builder max(Float max) {
+                this.max = max;
+                return this;
+            }
+
+            /**
+             * Min.
+             */
+            public Builder min(Float min) {
+                this.min = min;
+                return this;
+            }
+
+            public CreditMultiplier build() {
+                return new CreditMultiplier(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetRuntimeModelConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRuntimeModelConfigResponseBody</p>
+     */
     public static class InferenceMetadata extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RequestModality")
         private java.util.List<String> requestModality;
@@ -170,6 +245,9 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
      * <p>GetRuntimeModelConfigResponseBody</p>
      */
     public static class LlmInfoList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CreditMultiplier")
+        private CreditMultiplier creditMultiplier;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
@@ -192,6 +270,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
         private String riskType;
 
         private LlmInfoList(Builder builder) {
+            this.creditMultiplier = builder.creditMultiplier;
             this.description = builder.description;
             this.features = builder.features;
             this.inferenceMetadata = builder.inferenceMetadata;
@@ -207,6 +286,13 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
 
         public static LlmInfoList create() {
             return builder().build();
+        }
+
+        /**
+         * @return creditMultiplier
+         */
+        public CreditMultiplier getCreditMultiplier() {
+            return this.creditMultiplier;
         }
 
         /**
@@ -259,6 +345,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private CreditMultiplier creditMultiplier; 
             private String description; 
             private java.util.List<String> features; 
             private InferenceMetadata inferenceMetadata; 
@@ -271,6 +358,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
             } 
 
             private Builder(LlmInfoList model) {
+                this.creditMultiplier = model.creditMultiplier;
                 this.description = model.description;
                 this.features = model.features;
                 this.inferenceMetadata = model.inferenceMetadata;
@@ -279,6 +367,14 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
                 this.publishedTime = model.publishedTime;
                 this.riskType = model.riskType;
             } 
+
+            /**
+             * CreditMultiplier.
+             */
+            public Builder creditMultiplier(CreditMultiplier creditMultiplier) {
+                this.creditMultiplier = creditMultiplier;
+                return this;
+            }
 
             /**
              * Description.

@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListLlmTemplatesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizType")
+    private Integer bizType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LlmCode")
     private String llmCode;
 
@@ -41,14 +45,20 @@ public class ListLlmTemplatesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ProviderTemplateId")
     private String providerTemplateId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SmartModel")
+    private Boolean smartModel;
+
     private ListLlmTemplatesRequest(Builder builder) {
         super(builder);
+        this.bizType = builder.bizType;
         this.llmCode = builder.llmCode;
         this.llmTemplateIds = builder.llmTemplateIds;
         this.modelTemplateId = builder.modelTemplateId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.providerTemplateId = builder.providerTemplateId;
+        this.smartModel = builder.smartModel;
     }
 
     public static Builder builder() {
@@ -62,6 +72,13 @@ public class ListLlmTemplatesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bizType
+     */
+    public Integer getBizType() {
+        return this.bizType;
     }
 
     /**
@@ -106,13 +123,22 @@ public class ListLlmTemplatesRequest extends Request {
         return this.providerTemplateId;
     }
 
+    /**
+     * @return smartModel
+     */
+    public Boolean getSmartModel() {
+        return this.smartModel;
+    }
+
     public static final class Builder extends Request.Builder<ListLlmTemplatesRequest, Builder> {
+        private Integer bizType; 
         private String llmCode; 
         private java.util.List<String> llmTemplateIds; 
         private String modelTemplateId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String providerTemplateId; 
+        private Boolean smartModel; 
 
         private Builder() {
             super();
@@ -120,13 +146,24 @@ public class ListLlmTemplatesRequest extends Request {
 
         private Builder(ListLlmTemplatesRequest request) {
             super(request);
+            this.bizType = request.bizType;
             this.llmCode = request.llmCode;
             this.llmTemplateIds = request.llmTemplateIds;
             this.modelTemplateId = request.modelTemplateId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.providerTemplateId = request.providerTemplateId;
+            this.smartModel = request.smartModel;
         } 
+
+        /**
+         * BizType.
+         */
+        public Builder bizType(Integer bizType) {
+            this.putQueryParameter("BizType", bizType);
+            this.bizType = bizType;
+            return this;
+        }
 
         /**
          * LlmCode.
@@ -180,6 +217,15 @@ public class ListLlmTemplatesRequest extends Request {
         public Builder providerTemplateId(String providerTemplateId) {
             this.putQueryParameter("ProviderTemplateId", providerTemplateId);
             this.providerTemplateId = providerTemplateId;
+            return this;
+        }
+
+        /**
+         * SmartModel.
+         */
+        public Builder smartModel(Boolean smartModel) {
+            this.putQueryParameter("SmartModel", smartModel);
+            this.smartModel = smartModel;
             return this;
         }
 

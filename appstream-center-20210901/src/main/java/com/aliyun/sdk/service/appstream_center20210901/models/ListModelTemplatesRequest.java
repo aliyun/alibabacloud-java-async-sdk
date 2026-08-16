@@ -47,12 +47,24 @@ public class ListModelTemplatesRequest extends Request {
     private java.util.List<String> modelTemplateIdList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    private String name;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RefScope")
+    private String refScope;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
+    private String source;
 
     private ListModelTemplatesRequest(Builder builder) {
         super(builder);
@@ -63,8 +75,11 @@ public class ListModelTemplatesRequest extends Request {
         this.bizType = builder.bizType;
         this.hasModel = builder.hasModel;
         this.modelTemplateIdList = builder.modelTemplateIdList;
+        this.name = builder.name;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.refScope = builder.refScope;
+        this.source = builder.source;
     }
 
     public static Builder builder() {
@@ -130,6 +145,13 @@ public class ListModelTemplatesRequest extends Request {
     }
 
     /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -143,6 +165,20 @@ public class ListModelTemplatesRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return refScope
+     */
+    public String getRefScope() {
+        return this.refScope;
+    }
+
+    /**
+     * @return source
+     */
+    public String getSource() {
+        return this.source;
+    }
+
     public static final class Builder extends Request.Builder<ListModelTemplatesRequest, Builder> {
         private String agentPlatform; 
         private java.util.List<String> agentPlatformList; 
@@ -151,8 +187,11 @@ public class ListModelTemplatesRequest extends Request {
         private Integer bizType; 
         private Boolean hasModel; 
         private java.util.List<String> modelTemplateIdList; 
+        private String name; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String refScope; 
+        private String source; 
 
         private Builder() {
             super();
@@ -167,8 +206,11 @@ public class ListModelTemplatesRequest extends Request {
             this.bizType = request.bizType;
             this.hasModel = request.hasModel;
             this.modelTemplateIdList = request.modelTemplateIdList;
+            this.name = request.name;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.refScope = request.refScope;
+            this.source = request.source;
         } 
 
         /**
@@ -239,6 +281,15 @@ public class ListModelTemplatesRequest extends Request {
         }
 
         /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
          * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
@@ -253,6 +304,24 @@ public class ListModelTemplatesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RefScope.
+         */
+        public Builder refScope(String refScope) {
+            this.putQueryParameter("RefScope", refScope);
+            this.refScope = refScope;
+            return this;
+        }
+
+        /**
+         * Source.
+         */
+        public Builder source(String source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 

@@ -757,6 +757,156 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
      *
      * <p>ModifyBrowserInstanceGroupRequest</p>
      */
+    public static class AuthorizeAccessPolicyRules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CidrIp")
+        private String cidrIp;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        private AuthorizeAccessPolicyRules(Builder builder) {
+            this.cidrIp = builder.cidrIp;
+            this.description = builder.description;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AuthorizeAccessPolicyRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cidrIp
+         */
+        public String getCidrIp() {
+            return this.cidrIp;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        public static final class Builder {
+            private String cidrIp; 
+            private String description; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthorizeAccessPolicyRules model) {
+                this.cidrIp = model.cidrIp;
+                this.description = model.description;
+            } 
+
+            /**
+             * CidrIp.
+             */
+            public Builder cidrIp(String cidrIp) {
+                this.cidrIp = cidrIp;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            public AuthorizeAccessPolicyRules build() {
+                return new AuthorizeAccessPolicyRules(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyBrowserInstanceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyBrowserInstanceGroupRequest</p>
+     */
+    public static class ClientTypes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ClientType")
+        private String clientType;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        private ClientTypes(Builder builder) {
+            this.clientType = builder.clientType;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ClientTypes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return clientType
+         */
+        public String getClientType() {
+            return this.clientType;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String clientType; 
+            private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClientTypes model) {
+                this.clientType = model.clientType;
+                this.status = model.status;
+            } 
+
+            /**
+             * ClientType.
+             */
+            public Builder clientType(String clientType) {
+                this.clientType = clientType;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public ClientTypes build() {
+                return new ClientTypes(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyBrowserInstanceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyBrowserInstanceGroupRequest</p>
+     */
     public static class ClipboardPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Clipboard")
         private String clipboard;
@@ -1363,6 +1513,15 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
      * <p>ModifyBrowserInstanceGroupRequest</p>
      */
     public static class Policy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppContentProtection")
+        private String appContentProtection;
+
+        @com.aliyun.core.annotation.NameInMap("AuthorizeAccessPolicyRules")
+        private java.util.List<AuthorizeAccessPolicyRules> authorizeAccessPolicyRules;
+
+        @com.aliyun.core.annotation.NameInMap("ClientTypes")
+        private java.util.List<ClientTypes> clientTypes;
+
         @com.aliyun.core.annotation.NameInMap("ClipboardPolicy")
         private ClipboardPolicy clipboardPolicy;
 
@@ -1397,6 +1556,9 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
         private WatermarkPolicy watermarkPolicy;
 
         private Policy(Builder builder) {
+            this.appContentProtection = builder.appContentProtection;
+            this.authorizeAccessPolicyRules = builder.authorizeAccessPolicyRules;
+            this.clientTypes = builder.clientTypes;
             this.clipboardPolicy = builder.clipboardPolicy;
             this.disconnectKeepSession = builder.disconnectKeepSession;
             this.disconnectKeepSessionTime = builder.disconnectKeepSessionTime;
@@ -1416,6 +1578,27 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
 
         public static Policy create() {
             return builder().build();
+        }
+
+        /**
+         * @return appContentProtection
+         */
+        public String getAppContentProtection() {
+            return this.appContentProtection;
+        }
+
+        /**
+         * @return authorizeAccessPolicyRules
+         */
+        public java.util.List<AuthorizeAccessPolicyRules> getAuthorizeAccessPolicyRules() {
+            return this.authorizeAccessPolicyRules;
+        }
+
+        /**
+         * @return clientTypes
+         */
+        public java.util.List<ClientTypes> getClientTypes() {
+            return this.clientTypes;
         }
 
         /**
@@ -1496,6 +1679,9 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
         }
 
         public static final class Builder {
+            private String appContentProtection; 
+            private java.util.List<AuthorizeAccessPolicyRules> authorizeAccessPolicyRules; 
+            private java.util.List<ClientTypes> clientTypes; 
             private ClipboardPolicy clipboardPolicy; 
             private String disconnectKeepSession; 
             private Integer disconnectKeepSessionTime; 
@@ -1512,6 +1698,9 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             } 
 
             private Builder(Policy model) {
+                this.appContentProtection = model.appContentProtection;
+                this.authorizeAccessPolicyRules = model.authorizeAccessPolicyRules;
+                this.clientTypes = model.clientTypes;
                 this.clipboardPolicy = model.clipboardPolicy;
                 this.disconnectKeepSession = model.disconnectKeepSession;
                 this.disconnectKeepSessionTime = model.disconnectKeepSessionTime;
@@ -1524,6 +1713,30 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
                 this.videoPolicy = model.videoPolicy;
                 this.watermarkPolicy = model.watermarkPolicy;
             } 
+
+            /**
+             * AppContentProtection.
+             */
+            public Builder appContentProtection(String appContentProtection) {
+                this.appContentProtection = appContentProtection;
+                return this;
+            }
+
+            /**
+             * AuthorizeAccessPolicyRules.
+             */
+            public Builder authorizeAccessPolicyRules(java.util.List<AuthorizeAccessPolicyRules> authorizeAccessPolicyRules) {
+                this.authorizeAccessPolicyRules = authorizeAccessPolicyRules;
+                return this;
+            }
+
+            /**
+             * ClientTypes.
+             */
+            public Builder clientTypes(java.util.List<ClientTypes> clientTypes) {
+                this.clientTypes = clientTypes;
+                return this;
+            }
 
             /**
              * <p>The settings related to clipboard control.</p>
