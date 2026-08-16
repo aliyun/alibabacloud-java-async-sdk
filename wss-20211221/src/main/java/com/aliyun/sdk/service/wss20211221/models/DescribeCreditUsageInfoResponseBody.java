@@ -169,7 +169,85 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
      *
      * <p>DescribeCreditUsageInfoResponseBody</p>
      */
+    public static class RemainCreditInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DeductingAmount")
+        private Integer deductingAmount;
+
+        @com.aliyun.core.annotation.NameInMap("PendingAmount")
+        private Integer pendingAmount;
+
+        private RemainCreditInfo(Builder builder) {
+            this.deductingAmount = builder.deductingAmount;
+            this.pendingAmount = builder.pendingAmount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RemainCreditInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return deductingAmount
+         */
+        public Integer getDeductingAmount() {
+            return this.deductingAmount;
+        }
+
+        /**
+         * @return pendingAmount
+         */
+        public Integer getPendingAmount() {
+            return this.pendingAmount;
+        }
+
+        public static final class Builder {
+            private Integer deductingAmount; 
+            private Integer pendingAmount; 
+
+            private Builder() {
+            } 
+
+            private Builder(RemainCreditInfo model) {
+                this.deductingAmount = model.deductingAmount;
+                this.pendingAmount = model.pendingAmount;
+            } 
+
+            /**
+             * DeductingAmount.
+             */
+            public Builder deductingAmount(Integer deductingAmount) {
+                this.deductingAmount = deductingAmount;
+                return this;
+            }
+
+            /**
+             * PendingAmount.
+             */
+            public Builder pendingAmount(Integer pendingAmount) {
+                this.pendingAmount = pendingAmount;
+                return this;
+            }
+
+            public RemainCreditInfo build() {
+                return new RemainCreditInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeCreditUsageInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCreditUsageInfoResponseBody</p>
+     */
     public static class UsageInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AvailableAmount")
+        private Integer availableAmount;
+
         @com.aliyun.core.annotation.NameInMap("ContactGroupNames")
         private java.util.List<String> contactGroupNames;
 
@@ -203,6 +281,9 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RemainCredit")
         private Long remainCredit;
 
+        @com.aliyun.core.annotation.NameInMap("RemainCreditInfo")
+        private RemainCreditInfo remainCreditInfo;
+
         @com.aliyun.core.annotation.NameInMap("TodayUsed")
         private String todayUsed;
 
@@ -222,6 +303,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         private Long weekUsedCredit;
 
         private UsageInfo(Builder builder) {
+            this.availableAmount = builder.availableAmount;
             this.contactGroupNames = builder.contactGroupNames;
             this.creditTrendList = builder.creditTrendList;
             this.currentInstanceId = builder.currentInstanceId;
@@ -233,6 +315,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             this.periodTotalCredit = builder.periodTotalCredit;
             this.periodUsedCredit = builder.periodUsedCredit;
             this.remainCredit = builder.remainCredit;
+            this.remainCreditInfo = builder.remainCreditInfo;
             this.todayUsed = builder.todayUsed;
             this.totalCredit = builder.totalCredit;
             this.totalUsed = builder.totalUsed;
@@ -247,6 +330,13 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
 
         public static UsageInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return availableAmount
+         */
+        public Integer getAvailableAmount() {
+            return this.availableAmount;
         }
 
         /**
@@ -327,6 +417,13 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return remainCreditInfo
+         */
+        public RemainCreditInfo getRemainCreditInfo() {
+            return this.remainCreditInfo;
+        }
+
+        /**
          * @return todayUsed
          */
         public String getTodayUsed() {
@@ -369,6 +466,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer availableAmount; 
             private java.util.List<String> contactGroupNames; 
             private java.util.List<CreditTrendList> creditTrendList; 
             private String currentInstanceId; 
@@ -380,6 +478,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             private Long periodTotalCredit; 
             private Long periodUsedCredit; 
             private Long remainCredit; 
+            private RemainCreditInfo remainCreditInfo; 
             private String todayUsed; 
             private Long totalCredit; 
             private String totalUsed; 
@@ -391,6 +490,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             } 
 
             private Builder(UsageInfo model) {
+                this.availableAmount = model.availableAmount;
                 this.contactGroupNames = model.contactGroupNames;
                 this.creditTrendList = model.creditTrendList;
                 this.currentInstanceId = model.currentInstanceId;
@@ -402,6 +502,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
                 this.periodTotalCredit = model.periodTotalCredit;
                 this.periodUsedCredit = model.periodUsedCredit;
                 this.remainCredit = model.remainCredit;
+                this.remainCreditInfo = model.remainCreditInfo;
                 this.todayUsed = model.todayUsed;
                 this.totalCredit = model.totalCredit;
                 this.totalUsed = model.totalUsed;
@@ -409,6 +510,14 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
                 this.warnPercent = model.warnPercent;
                 this.weekUsedCredit = model.weekUsedCredit;
             } 
+
+            /**
+             * AvailableAmount.
+             */
+            public Builder availableAmount(Integer availableAmount) {
+                this.availableAmount = availableAmount;
+                return this;
+            }
 
             /**
              * ContactGroupNames.
@@ -495,6 +604,14 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
              */
             public Builder remainCredit(Long remainCredit) {
                 this.remainCredit = remainCredit;
+                return this;
+            }
+
+            /**
+             * RemainCreditInfo.
+             */
+            public Builder remainCreditInfo(RemainCreditInfo remainCreditInfo) {
+                this.remainCreditInfo = remainCreditInfo;
                 return this;
             }
 

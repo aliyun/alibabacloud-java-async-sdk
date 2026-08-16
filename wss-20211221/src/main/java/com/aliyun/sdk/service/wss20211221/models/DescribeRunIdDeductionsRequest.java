@@ -22,6 +22,10 @@ public class DescribeRunIdDeductionsRequest extends Request {
     private String agentType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentTypes")
+    private java.util.List<String> agentTypes;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AliUid")
     private Long aliUid;
 
@@ -36,6 +40,14 @@ public class DescribeRunIdDeductionsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupByFields")
+    private java.util.List<String> groupByFields;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupResourceTypes")
+    private java.util.List<String> groupResourceTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupSeparator")
@@ -81,13 +93,20 @@ public class DescribeRunIdDeductionsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WyId")
+    private String wyId;
+
     private DescribeRunIdDeductionsRequest(Builder builder) {
         super(builder);
         this.agentType = builder.agentType;
+        this.agentTypes = builder.agentTypes;
         this.aliUid = builder.aliUid;
         this.bizType = builder.bizType;
         this.deductionTypes = builder.deductionTypes;
         this.endTime = builder.endTime;
+        this.groupByFields = builder.groupByFields;
+        this.groupResourceTypes = builder.groupResourceTypes;
         this.groupSeparator = builder.groupSeparator;
         this.instanceIdType = builder.instanceIdType;
         this.instanceIds = builder.instanceIds;
@@ -99,6 +118,7 @@ public class DescribeRunIdDeductionsRequest extends Request {
         this.resourceType = builder.resourceType;
         this.resourceTypes = builder.resourceTypes;
         this.startTime = builder.startTime;
+        this.wyId = builder.wyId;
     }
 
     public static Builder builder() {
@@ -119,6 +139,13 @@ public class DescribeRunIdDeductionsRequest extends Request {
      */
     public String getAgentType() {
         return this.agentType;
+    }
+
+    /**
+     * @return agentTypes
+     */
+    public java.util.List<String> getAgentTypes() {
+        return this.agentTypes;
     }
 
     /**
@@ -147,6 +174,20 @@ public class DescribeRunIdDeductionsRequest extends Request {
      */
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return groupByFields
+     */
+    public java.util.List<String> getGroupByFields() {
+        return this.groupByFields;
+    }
+
+    /**
+     * @return groupResourceTypes
+     */
+    public java.util.List<String> getGroupResourceTypes() {
+        return this.groupResourceTypes;
     }
 
     /**
@@ -226,12 +267,22 @@ public class DescribeRunIdDeductionsRequest extends Request {
         return this.startTime;
     }
 
+    /**
+     * @return wyId
+     */
+    public String getWyId() {
+        return this.wyId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeRunIdDeductionsRequest, Builder> {
         private String agentType; 
+        private java.util.List<String> agentTypes; 
         private Long aliUid; 
         private String bizType; 
         private java.util.List<String> deductionTypes; 
         private Long endTime; 
+        private java.util.List<String> groupByFields; 
+        private java.util.List<String> groupResourceTypes; 
         private Boolean groupSeparator; 
         private String instanceIdType; 
         private java.util.List<String> instanceIds; 
@@ -243,6 +294,7 @@ public class DescribeRunIdDeductionsRequest extends Request {
         private String resourceType; 
         private java.util.List<String> resourceTypes; 
         private Long startTime; 
+        private String wyId; 
 
         private Builder() {
             super();
@@ -251,10 +303,13 @@ public class DescribeRunIdDeductionsRequest extends Request {
         private Builder(DescribeRunIdDeductionsRequest request) {
             super(request);
             this.agentType = request.agentType;
+            this.agentTypes = request.agentTypes;
             this.aliUid = request.aliUid;
             this.bizType = request.bizType;
             this.deductionTypes = request.deductionTypes;
             this.endTime = request.endTime;
+            this.groupByFields = request.groupByFields;
+            this.groupResourceTypes = request.groupResourceTypes;
             this.groupSeparator = request.groupSeparator;
             this.instanceIdType = request.instanceIdType;
             this.instanceIds = request.instanceIds;
@@ -266,6 +321,7 @@ public class DescribeRunIdDeductionsRequest extends Request {
             this.resourceType = request.resourceType;
             this.resourceTypes = request.resourceTypes;
             this.startTime = request.startTime;
+            this.wyId = request.wyId;
         } 
 
         /**
@@ -274,6 +330,15 @@ public class DescribeRunIdDeductionsRequest extends Request {
         public Builder agentType(String agentType) {
             this.putQueryParameter("AgentType", agentType);
             this.agentType = agentType;
+            return this;
+        }
+
+        /**
+         * AgentTypes.
+         */
+        public Builder agentTypes(java.util.List<String> agentTypes) {
+            this.putQueryParameter("AgentTypes", agentTypes);
+            this.agentTypes = agentTypes;
             return this;
         }
 
@@ -310,6 +375,24 @@ public class DescribeRunIdDeductionsRequest extends Request {
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * GroupByFields.
+         */
+        public Builder groupByFields(java.util.List<String> groupByFields) {
+            this.putQueryParameter("GroupByFields", groupByFields);
+            this.groupByFields = groupByFields;
+            return this;
+        }
+
+        /**
+         * GroupResourceTypes.
+         */
+        public Builder groupResourceTypes(java.util.List<String> groupResourceTypes) {
+            this.putQueryParameter("GroupResourceTypes", groupResourceTypes);
+            this.groupResourceTypes = groupResourceTypes;
             return this;
         }
 
@@ -409,6 +492,15 @@ public class DescribeRunIdDeductionsRequest extends Request {
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * WyId.
+         */
+        public Builder wyId(String wyId) {
+            this.putQueryParameter("WyId", wyId);
+            this.wyId = wyId;
             return this;
         }
 

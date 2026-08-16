@@ -257,6 +257,9 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
+        @com.aliyun.core.annotation.NameInMap("Model")
+        private String model;
+
         @com.aliyun.core.annotation.NameInMap("PackageId")
         private String packageId;
 
@@ -286,6 +289,7 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
             this.endTime = builder.endTime;
             this.groupResourceType = builder.groupResourceType;
             this.instanceId = builder.instanceId;
+            this.model = builder.model;
             this.packageId = builder.packageId;
             this.resourceId = builder.resourceId;
             this.resourceType = builder.resourceType;
@@ -330,6 +334,13 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
          */
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        /**
+         * @return model
+         */
+        public String getModel() {
+            return this.model;
         }
 
         /**
@@ -393,6 +404,7 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
             private String endTime; 
             private String groupResourceType; 
             private String instanceId; 
+            private String model; 
             private String packageId; 
             private String resourceId; 
             private String resourceType; 
@@ -410,6 +422,7 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
                 this.endTime = model.endTime;
                 this.groupResourceType = model.groupResourceType;
                 this.instanceId = model.instanceId;
+                this.model = model.model;
                 this.packageId = model.packageId;
                 this.resourceId = model.resourceId;
                 this.resourceType = model.resourceType;
@@ -449,6 +462,14 @@ public class DescribeRunIdDeductionsResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * Model.
+             */
+            public Builder model(String model) {
+                this.model = model;
                 return this;
             }
 
