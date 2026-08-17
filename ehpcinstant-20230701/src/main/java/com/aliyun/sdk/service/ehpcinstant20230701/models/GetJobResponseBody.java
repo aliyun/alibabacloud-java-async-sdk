@@ -431,6 +431,9 @@ public class GetJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Pool")
         private String pool;
 
+        @com.aliyun.core.annotation.NameInMap("Priority")
+        private Integer priority;
+
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
 
@@ -439,6 +442,7 @@ public class GetJobResponseBody extends TeaModel {
             this.level = builder.level;
             this.network = builder.network;
             this.pool = builder.pool;
+            this.priority = builder.priority;
             this.tags = builder.tags;
         }
 
@@ -479,6 +483,13 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return priority
+         */
+        public Integer getPriority() {
+            return this.priority;
+        }
+
+        /**
          * @return tags
          */
         public java.util.List<Tags> getTags() {
@@ -490,6 +501,7 @@ public class GetJobResponseBody extends TeaModel {
             private String level; 
             private Network network; 
             private String pool; 
+            private Integer priority; 
             private java.util.List<Tags> tags; 
 
             private Builder() {
@@ -500,6 +512,7 @@ public class GetJobResponseBody extends TeaModel {
                 this.level = model.level;
                 this.network = model.network;
                 this.pool = model.pool;
+                this.priority = model.priority;
                 this.tags = model.tags;
             } 
 
@@ -543,6 +556,14 @@ public class GetJobResponseBody extends TeaModel {
              */
             public Builder pool(String pool) {
                 this.pool = pool;
+                return this;
+            }
+
+            /**
+             * Priority.
+             */
+            public Builder priority(Integer priority) {
+                this.priority = priority;
                 return this;
             }
 

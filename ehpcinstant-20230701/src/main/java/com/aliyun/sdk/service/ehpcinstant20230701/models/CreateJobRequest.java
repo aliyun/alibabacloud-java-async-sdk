@@ -39,6 +39,10 @@ public class CreateJobRequest extends Request {
     private String jobScheduler;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobTemplateId")
+    private String jobTemplateId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityPolicy")
     private SecurityPolicy securityPolicy;
 
@@ -54,6 +58,7 @@ public class CreateJobRequest extends Request {
         this.jobDescription = builder.jobDescription;
         this.jobName = builder.jobName;
         this.jobScheduler = builder.jobScheduler;
+        this.jobTemplateId = builder.jobTemplateId;
         this.securityPolicy = builder.securityPolicy;
         this.tasks = builder.tasks;
     }
@@ -107,6 +112,13 @@ public class CreateJobRequest extends Request {
     }
 
     /**
+     * @return jobTemplateId
+     */
+    public String getJobTemplateId() {
+        return this.jobTemplateId;
+    }
+
+    /**
      * @return securityPolicy
      */
     public SecurityPolicy getSecurityPolicy() {
@@ -126,6 +138,7 @@ public class CreateJobRequest extends Request {
         private String jobDescription; 
         private String jobName; 
         private String jobScheduler; 
+        private String jobTemplateId; 
         private SecurityPolicy securityPolicy; 
         private java.util.List<Tasks> tasks; 
 
@@ -140,6 +153,7 @@ public class CreateJobRequest extends Request {
             this.jobDescription = request.jobDescription;
             this.jobName = request.jobName;
             this.jobScheduler = request.jobScheduler;
+            this.jobTemplateId = request.jobTemplateId;
             this.securityPolicy = request.securityPolicy;
             this.tasks = request.tasks;
         } 
@@ -203,6 +217,15 @@ public class CreateJobRequest extends Request {
         public Builder jobScheduler(String jobScheduler) {
             this.putQueryParameter("JobScheduler", jobScheduler);
             this.jobScheduler = jobScheduler;
+            return this;
+        }
+
+        /**
+         * JobTemplateId.
+         */
+        public Builder jobTemplateId(String jobTemplateId) {
+            this.putQueryParameter("JobTemplateId", jobTemplateId);
+            this.jobTemplateId = jobTemplateId;
             return this;
         }
 
@@ -1732,9 +1755,93 @@ public class CreateJobRequest extends Request {
      *
      * <p>CreateJobRequest</p>
      */
+    public static class VmEnvironmentVars extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private VmEnvironmentVars(Builder builder) {
+            this.name = builder.name;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VmEnvironmentVars create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(VmEnvironmentVars model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The name of the environment variable for the container. It can be 1 to 128 characters in length. Format requirement: [0-9a-zA-Z], and underscores, cannot start with a number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PATH</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>The value of the environment variable for the container. The value must be 0 to 256 bits in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/local/bin</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public VmEnvironmentVars build() {
+                return new VmEnvironmentVars(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateJobRequest</p>
+     */
     public static class Vm extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
+
+        @com.aliyun.core.annotation.NameInMap("EnvironmentVars")
+        private java.util.List<VmEnvironmentVars> environmentVars;
 
         @com.aliyun.core.annotation.NameInMap("Image")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -1751,6 +1858,7 @@ public class CreateJobRequest extends Request {
 
         private Vm(Builder builder) {
             this.appId = builder.appId;
+            this.environmentVars = builder.environmentVars;
             this.image = builder.image;
             this.password = builder.password;
             this.prologScript = builder.prologScript;
@@ -1770,6 +1878,13 @@ public class CreateJobRequest extends Request {
          */
         public String getAppId() {
             return this.appId;
+        }
+
+        /**
+         * @return environmentVars
+         */
+        public java.util.List<VmEnvironmentVars> getEnvironmentVars() {
+            return this.environmentVars;
         }
 
         /**
@@ -1802,6 +1917,7 @@ public class CreateJobRequest extends Request {
 
         public static final class Builder {
             private String appId; 
+            private java.util.List<VmEnvironmentVars> environmentVars; 
             private String image; 
             private String password; 
             private String prologScript; 
@@ -1812,6 +1928,7 @@ public class CreateJobRequest extends Request {
 
             private Builder(Vm model) {
                 this.appId = model.appId;
+                this.environmentVars = model.environmentVars;
                 this.image = model.image;
                 this.password = model.password;
                 this.prologScript = model.prologScript;
@@ -1826,6 +1943,14 @@ public class CreateJobRequest extends Request {
              */
             public Builder appId(String appId) {
                 this.appId = appId;
+                return this;
+            }
+
+            /**
+             * <p>The environment variables of the container. A maximum of 20 groups.</p>
+             */
+            public Builder environmentVars(java.util.List<VmEnvironmentVars> environmentVars) {
+                this.environmentVars = environmentVars;
                 return this;
             }
 
