@@ -34,12 +34,27 @@ public class ImageRemoveRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ObjectRemoveElements")
     private java.util.List<Integer> objectRemoveElements;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Position")
+    private String position;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserImage")
+    private java.util.List<String> userImage;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserText")
+    private java.util.List<String> userText;
+
     private ImageRemoveRequest(Builder builder) {
         super(builder);
         this.imageUrl = builder.imageUrl;
         this.mask = builder.mask;
         this.nonObjectRemoveElements = builder.nonObjectRemoveElements;
         this.objectRemoveElements = builder.objectRemoveElements;
+        this.position = builder.position;
+        this.userImage = builder.userImage;
+        this.userText = builder.userText;
     }
 
     public static Builder builder() {
@@ -83,11 +98,35 @@ public class ImageRemoveRequest extends Request {
         return this.objectRemoveElements;
     }
 
+    /**
+     * @return position
+     */
+    public String getPosition() {
+        return this.position;
+    }
+
+    /**
+     * @return userImage
+     */
+    public java.util.List<String> getUserImage() {
+        return this.userImage;
+    }
+
+    /**
+     * @return userText
+     */
+    public java.util.List<String> getUserText() {
+        return this.userText;
+    }
+
     public static final class Builder extends Request.Builder<ImageRemoveRequest, Builder> {
         private String imageUrl; 
         private String mask; 
         private java.util.List<Integer> nonObjectRemoveElements; 
         private java.util.List<Integer> objectRemoveElements; 
+        private String position; 
+        private java.util.List<String> userImage; 
+        private java.util.List<String> userText; 
 
         private Builder() {
             super();
@@ -99,6 +138,9 @@ public class ImageRemoveRequest extends Request {
             this.mask = request.mask;
             this.nonObjectRemoveElements = request.nonObjectRemoveElements;
             this.objectRemoveElements = request.objectRemoveElements;
+            this.position = request.position;
+            this.userImage = request.userImage;
+            this.userText = request.userText;
         } 
 
         /**
@@ -139,6 +181,35 @@ public class ImageRemoveRequest extends Request {
             String objectRemoveElementsShrink = shrink(objectRemoveElements, "ObjectRemoveElements", "json");
             this.putQueryParameter("ObjectRemoveElements", objectRemoveElementsShrink);
             this.objectRemoveElements = objectRemoveElements;
+            return this;
+        }
+
+        /**
+         * Position.
+         */
+        public Builder position(String position) {
+            this.putQueryParameter("Position", position);
+            this.position = position;
+            return this;
+        }
+
+        /**
+         * UserImage.
+         */
+        public Builder userImage(java.util.List<String> userImage) {
+            String userImageShrink = shrink(userImage, "UserImage", "json");
+            this.putQueryParameter("UserImage", userImageShrink);
+            this.userImage = userImage;
+            return this;
+        }
+
+        /**
+         * UserText.
+         */
+        public Builder userText(java.util.List<String> userText) {
+            String userTextShrink = shrink(userText, "UserText", "json");
+            this.putQueryParameter("UserText", userTextShrink);
+            this.userText = userText;
             return this;
         }
 
