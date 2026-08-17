@@ -30,6 +30,10 @@ public class CreateClientCertificateRequest extends Request {
     private String aliasName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AsynchronousFlag")
+    private Boolean asynchronousFlag;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BeforeTime")
     private Long beforeTime;
 
@@ -110,6 +114,7 @@ public class CreateClientCertificateRequest extends Request {
         this.afterTime = builder.afterTime;
         this.algorithm = builder.algorithm;
         this.aliasName = builder.aliasName;
+        this.asynchronousFlag = builder.asynchronousFlag;
         this.beforeTime = builder.beforeTime;
         this.clientToken = builder.clientToken;
         this.commonName = builder.commonName;
@@ -163,6 +168,13 @@ public class CreateClientCertificateRequest extends Request {
      */
     public String getAliasName() {
         return this.aliasName;
+    }
+
+    /**
+     * @return asynchronousFlag
+     */
+    public Boolean getAsynchronousFlag() {
+        return this.asynchronousFlag;
     }
 
     /**
@@ -302,6 +314,7 @@ public class CreateClientCertificateRequest extends Request {
         private Long afterTime; 
         private String algorithm; 
         private String aliasName; 
+        private Boolean asynchronousFlag; 
         private Long beforeTime; 
         private String clientToken; 
         private String commonName; 
@@ -331,6 +344,7 @@ public class CreateClientCertificateRequest extends Request {
             this.afterTime = request.afterTime;
             this.algorithm = request.algorithm;
             this.aliasName = request.aliasName;
+            this.asynchronousFlag = request.asynchronousFlag;
             this.beforeTime = request.beforeTime;
             this.clientToken = request.clientToken;
             this.commonName = request.commonName;
@@ -398,6 +412,15 @@ public class CreateClientCertificateRequest extends Request {
         public Builder aliasName(String aliasName) {
             this.putQueryParameter("AliasName", aliasName);
             this.aliasName = aliasName;
+            return this;
+        }
+
+        /**
+         * AsynchronousFlag.
+         */
+        public Builder asynchronousFlag(Boolean asynchronousFlag) {
+            this.putQueryParameter("AsynchronousFlag", asynchronousFlag);
+            this.asynchronousFlag = asynchronousFlag;
             return this;
         }
 

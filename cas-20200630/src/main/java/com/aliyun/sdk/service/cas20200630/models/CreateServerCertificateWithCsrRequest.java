@@ -26,6 +26,10 @@ public class CreateServerCertificateWithCsrRequest extends Request {
     private String algorithm;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AsynchronousFlag")
+    private Boolean asynchronousFlag;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BeforeTime")
     private Long beforeTime;
 
@@ -103,6 +107,7 @@ public class CreateServerCertificateWithCsrRequest extends Request {
         super(builder);
         this.afterTime = builder.afterTime;
         this.algorithm = builder.algorithm;
+        this.asynchronousFlag = builder.asynchronousFlag;
         this.beforeTime = builder.beforeTime;
         this.commonName = builder.commonName;
         this.country = builder.country;
@@ -148,6 +153,13 @@ public class CreateServerCertificateWithCsrRequest extends Request {
      */
     public String getAlgorithm() {
         return this.algorithm;
+    }
+
+    /**
+     * @return asynchronousFlag
+     */
+    public Boolean getAsynchronousFlag() {
+        return this.asynchronousFlag;
     }
 
     /**
@@ -279,6 +291,7 @@ public class CreateServerCertificateWithCsrRequest extends Request {
     public static final class Builder extends Request.Builder<CreateServerCertificateWithCsrRequest, Builder> {
         private Long afterTime; 
         private String algorithm; 
+        private Boolean asynchronousFlag; 
         private Long beforeTime; 
         private String commonName; 
         private String country; 
@@ -306,6 +319,7 @@ public class CreateServerCertificateWithCsrRequest extends Request {
             super(request);
             this.afterTime = request.afterTime;
             this.algorithm = request.algorithm;
+            this.asynchronousFlag = request.asynchronousFlag;
             this.beforeTime = request.beforeTime;
             this.commonName = request.commonName;
             this.country = request.country;
@@ -363,6 +377,15 @@ public class CreateServerCertificateWithCsrRequest extends Request {
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
             this.algorithm = algorithm;
+            return this;
+        }
+
+        /**
+         * AsynchronousFlag.
+         */
+        public Builder asynchronousFlag(Boolean asynchronousFlag) {
+            this.putQueryParameter("AsynchronousFlag", asynchronousFlag);
+            this.asynchronousFlag = asynchronousFlag;
             return this;
         }
 

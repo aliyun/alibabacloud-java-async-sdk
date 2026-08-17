@@ -82,13 +82,13 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("rus-west-1-pop", "cas.aliyuncs.com"),
             new TeaPair("us-east-1", "cas.aliyuncs.com"),
             new TeaPair("us-west-1", "cas.aliyuncs.com"),
-            new TeaPair("me-east-1", "cas.me-east-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "cas.me-central-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "cas.eu-central-1.aliyuncs.com"),
             new TeaPair("ap-southeast-2", "cas.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "cas.ap-northeast-1.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "cas.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "cas.eu-central-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "cas.me-central-1.aliyuncs.com"),
             new TeaPair("ap-south-1", "cas.ap-south-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "cas.ap-northeast-1.aliyuncs.com")
+            new TeaPair("me-east-1", "cas.me-east-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
