@@ -18,6 +18,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateAlertDestinationRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("app_id")
+    private String appId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("app_secret")
+    private String appSecret;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("group_id")
+    private java.util.List<String> groupId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("imbot")
+    private Boolean imbot;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
@@ -35,6 +51,10 @@ public class CreateAlertDestinationRequest extends Request {
 
     private CreateAlertDestinationRequest(Builder builder) {
         super(builder);
+        this.appId = builder.appId;
+        this.appSecret = builder.appSecret;
+        this.groupId = builder.groupId;
+        this.imbot = builder.imbot;
         this.name = builder.name;
         this.params = builder.params;
         this.source = builder.source;
@@ -52,6 +72,34 @@ public class CreateAlertDestinationRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appId
+     */
+    public String getAppId() {
+        return this.appId;
+    }
+
+    /**
+     * @return appSecret
+     */
+    public String getAppSecret() {
+        return this.appSecret;
+    }
+
+    /**
+     * @return groupId
+     */
+    public java.util.List<String> getGroupId() {
+        return this.groupId;
+    }
+
+    /**
+     * @return imbot
+     */
+    public Boolean getImbot() {
+        return this.imbot;
     }
 
     /**
@@ -83,6 +131,10 @@ public class CreateAlertDestinationRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateAlertDestinationRequest, Builder> {
+        private String appId; 
+        private String appSecret; 
+        private java.util.List<String> groupId; 
+        private Boolean imbot; 
         private String name; 
         private Params params; 
         private String source; 
@@ -94,11 +146,51 @@ public class CreateAlertDestinationRequest extends Request {
 
         private Builder(CreateAlertDestinationRequest request) {
             super(request);
+            this.appId = request.appId;
+            this.appSecret = request.appSecret;
+            this.groupId = request.groupId;
+            this.imbot = request.imbot;
             this.name = request.name;
             this.params = request.params;
             this.source = request.source;
             this.target = request.target;
         } 
+
+        /**
+         * app_id.
+         */
+        public Builder appId(String appId) {
+            this.putBodyParameter("app_id", appId);
+            this.appId = appId;
+            return this;
+        }
+
+        /**
+         * app_secret.
+         */
+        public Builder appSecret(String appSecret) {
+            this.putBodyParameter("app_secret", appSecret);
+            this.appSecret = appSecret;
+            return this;
+        }
+
+        /**
+         * group_id.
+         */
+        public Builder groupId(java.util.List<String> groupId) {
+            this.putBodyParameter("group_id", groupId);
+            this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * imbot.
+         */
+        public Builder imbot(Boolean imbot) {
+            this.putBodyParameter("imbot", imbot);
+            this.imbot = imbot;
+            return this;
+        }
 
         /**
          * name.
