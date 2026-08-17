@@ -34,8 +34,16 @@ public class ReadOutboundTaskCallListRequest extends Request {
     private Long callStartTimeEnd;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CallerUacAccountId")
+    private String callerUacAccountId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Current")
     private Integer current;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CurrentWorkspaceId")
+    private String currentWorkspaceId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CustomerNameOrPhone")
@@ -75,7 +83,9 @@ public class ReadOutboundTaskCallListRequest extends Request {
         this.callEndTimeEnd = builder.callEndTimeEnd;
         this.callStartTimeBegin = builder.callStartTimeBegin;
         this.callStartTimeEnd = builder.callStartTimeEnd;
+        this.callerUacAccountId = builder.callerUacAccountId;
         this.current = builder.current;
+        this.currentWorkspaceId = builder.currentWorkspaceId;
         this.customerNameOrPhone = builder.customerNameOrPhone;
         this.displayStatusList = builder.displayStatusList;
         this.labelTags = builder.labelTags;
@@ -128,10 +138,24 @@ public class ReadOutboundTaskCallListRequest extends Request {
     }
 
     /**
+     * @return callerUacAccountId
+     */
+    public String getCallerUacAccountId() {
+        return this.callerUacAccountId;
+    }
+
+    /**
      * @return current
      */
     public Integer getCurrent() {
         return this.current;
+    }
+
+    /**
+     * @return currentWorkspaceId
+     */
+    public String getCurrentWorkspaceId() {
+        return this.currentWorkspaceId;
     }
 
     /**
@@ -195,7 +219,9 @@ public class ReadOutboundTaskCallListRequest extends Request {
         private Long callEndTimeEnd; 
         private Long callStartTimeBegin; 
         private Long callStartTimeEnd; 
+        private String callerUacAccountId; 
         private Integer current; 
+        private String currentWorkspaceId; 
         private String customerNameOrPhone; 
         private java.util.List<String> displayStatusList; 
         private java.util.List<String> labelTags; 
@@ -215,7 +241,9 @@ public class ReadOutboundTaskCallListRequest extends Request {
             this.callEndTimeEnd = request.callEndTimeEnd;
             this.callStartTimeBegin = request.callStartTimeBegin;
             this.callStartTimeEnd = request.callStartTimeEnd;
+            this.callerUacAccountId = request.callerUacAccountId;
             this.current = request.current;
+            this.currentWorkspaceId = request.currentWorkspaceId;
             this.customerNameOrPhone = request.customerNameOrPhone;
             this.displayStatusList = request.displayStatusList;
             this.labelTags = request.labelTags;
@@ -263,11 +291,29 @@ public class ReadOutboundTaskCallListRequest extends Request {
         }
 
         /**
+         * CallerUacAccountId.
+         */
+        public Builder callerUacAccountId(String callerUacAccountId) {
+            this.putBodyParameter("CallerUacAccountId", callerUacAccountId);
+            this.callerUacAccountId = callerUacAccountId;
+            return this;
+        }
+
+        /**
          * Current.
          */
         public Builder current(Integer current) {
             this.putBodyParameter("Current", current);
             this.current = current;
+            return this;
+        }
+
+        /**
+         * CurrentWorkspaceId.
+         */
+        public Builder currentWorkspaceId(String currentWorkspaceId) {
+            this.putBodyParameter("CurrentWorkspaceId", currentWorkspaceId);
+            this.currentWorkspaceId = currentWorkspaceId;
             return this;
         }
 

@@ -22,6 +22,14 @@ public class CreateCallOutboundInstantRequest extends Request {
     private String calledNumber;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CallerUacAccountId")
+    private String callerUacAccountId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CurrentWorkspaceId")
+    private String currentWorkspaceId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CustomerName")
     private String customerName;
 
@@ -40,6 +48,8 @@ public class CreateCallOutboundInstantRequest extends Request {
     private CreateCallOutboundInstantRequest(Builder builder) {
         super(builder);
         this.calledNumber = builder.calledNumber;
+        this.callerUacAccountId = builder.callerUacAccountId;
+        this.currentWorkspaceId = builder.currentWorkspaceId;
         this.customerName = builder.customerName;
         this.encryptCall = builder.encryptCall;
         this.promptVariables = builder.promptVariables;
@@ -64,6 +74,20 @@ public class CreateCallOutboundInstantRequest extends Request {
      */
     public String getCalledNumber() {
         return this.calledNumber;
+    }
+
+    /**
+     * @return callerUacAccountId
+     */
+    public String getCallerUacAccountId() {
+        return this.callerUacAccountId;
+    }
+
+    /**
+     * @return currentWorkspaceId
+     */
+    public String getCurrentWorkspaceId() {
+        return this.currentWorkspaceId;
     }
 
     /**
@@ -96,6 +120,8 @@ public class CreateCallOutboundInstantRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateCallOutboundInstantRequest, Builder> {
         private String calledNumber; 
+        private String callerUacAccountId; 
+        private String currentWorkspaceId; 
         private String customerName; 
         private Boolean encryptCall; 
         private String promptVariables; 
@@ -108,6 +134,8 @@ public class CreateCallOutboundInstantRequest extends Request {
         private Builder(CreateCallOutboundInstantRequest request) {
             super(request);
             this.calledNumber = request.calledNumber;
+            this.callerUacAccountId = request.callerUacAccountId;
+            this.currentWorkspaceId = request.currentWorkspaceId;
             this.customerName = request.customerName;
             this.encryptCall = request.encryptCall;
             this.promptVariables = request.promptVariables;
@@ -120,6 +148,24 @@ public class CreateCallOutboundInstantRequest extends Request {
         public Builder calledNumber(String calledNumber) {
             this.putBodyParameter("CalledNumber", calledNumber);
             this.calledNumber = calledNumber;
+            return this;
+        }
+
+        /**
+         * CallerUacAccountId.
+         */
+        public Builder callerUacAccountId(String callerUacAccountId) {
+            this.putBodyParameter("CallerUacAccountId", callerUacAccountId);
+            this.callerUacAccountId = callerUacAccountId;
+            return this;
+        }
+
+        /**
+         * CurrentWorkspaceId.
+         */
+        public Builder currentWorkspaceId(String currentWorkspaceId) {
+            this.putBodyParameter("CurrentWorkspaceId", currentWorkspaceId);
+            this.currentWorkspaceId = currentWorkspaceId;
             return this;
         }
 
