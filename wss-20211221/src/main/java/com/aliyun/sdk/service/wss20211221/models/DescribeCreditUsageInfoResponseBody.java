@@ -254,6 +254,9 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreditTrendList")
         private java.util.List<CreditTrendList> creditTrendList;
 
+        @com.aliyun.core.annotation.NameInMap("CurrentInstanceExpiredTime")
+        private String currentInstanceExpiredTime;
+
         @com.aliyun.core.annotation.NameInMap("CurrentInstanceId")
         private String currentInstanceId;
 
@@ -306,6 +309,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             this.availableAmount = builder.availableAmount;
             this.contactGroupNames = builder.contactGroupNames;
             this.creditTrendList = builder.creditTrendList;
+            this.currentInstanceExpiredTime = builder.currentInstanceExpiredTime;
             this.currentInstanceId = builder.currentInstanceId;
             this.currentRemainCredit = builder.currentRemainCredit;
             this.currentTotalCredit = builder.currentTotalCredit;
@@ -351,6 +355,13 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
          */
         public java.util.List<CreditTrendList> getCreditTrendList() {
             return this.creditTrendList;
+        }
+
+        /**
+         * @return currentInstanceExpiredTime
+         */
+        public String getCurrentInstanceExpiredTime() {
+            return this.currentInstanceExpiredTime;
         }
 
         /**
@@ -469,6 +480,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
             private Integer availableAmount; 
             private java.util.List<String> contactGroupNames; 
             private java.util.List<CreditTrendList> creditTrendList; 
+            private String currentInstanceExpiredTime; 
             private String currentInstanceId; 
             private Long currentRemainCredit; 
             private Long currentTotalCredit; 
@@ -493,6 +505,7 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
                 this.availableAmount = model.availableAmount;
                 this.contactGroupNames = model.contactGroupNames;
                 this.creditTrendList = model.creditTrendList;
+                this.currentInstanceExpiredTime = model.currentInstanceExpiredTime;
                 this.currentInstanceId = model.currentInstanceId;
                 this.currentRemainCredit = model.currentRemainCredit;
                 this.currentTotalCredit = model.currentTotalCredit;
@@ -532,6 +545,14 @@ public class DescribeCreditUsageInfoResponseBody extends TeaModel {
              */
             public Builder creditTrendList(java.util.List<CreditTrendList> creditTrendList) {
                 this.creditTrendList = creditTrendList;
+                return this;
+            }
+
+            /**
+             * CurrentInstanceExpiredTime.
+             */
+            public Builder currentInstanceExpiredTime(String currentInstanceExpiredTime) {
+                this.currentInstanceExpiredTime = currentInstanceExpiredTime;
                 return this;
             }
 
