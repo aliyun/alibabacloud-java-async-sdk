@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of CloseFlinkAiService  CloseFlinkAiServiceRequest
+     * @return CloseFlinkAiServiceResponse
+     */
+    CompletableFuture<CloseFlinkAiServiceResponse> closeFlinkAiService(CloseFlinkAiServiceRequest request);
+
+    /**
      * @param request the request parameters of ConvertHybridInstance  ConvertHybridInstanceRequest
      * @return ConvertHybridInstanceResponse
      */
@@ -86,10 +92,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSupportedZonesResponse> describeSupportedZones(DescribeSupportedZonesRequest request);
 
     /**
+     * @param request the request parameters of GetFlinkAiService  GetFlinkAiServiceRequest
+     * @return GetFlinkAiServiceResponse
+     */
+    CompletableFuture<GetFlinkAiServiceResponse> getFlinkAiService(GetFlinkAiServiceRequest request);
+
+    /**
+     * @param request the request parameters of GetFlinkAiServiceFreeQuota  GetFlinkAiServiceFreeQuotaRequest
+     * @return GetFlinkAiServiceFreeQuotaResponse
+     */
+    CompletableFuture<GetFlinkAiServiceFreeQuotaResponse> getFlinkAiServiceFreeQuota(GetFlinkAiServiceFreeQuotaRequest request);
+
+    /**
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of ModifyAiServiceProtection  ModifyAiServiceProtectionRequest
+     * @return ModifyAiServiceProtectionResponse
+     */
+    CompletableFuture<ModifyAiServiceProtectionResponse> modifyAiServiceProtection(ModifyAiServiceProtectionRequest request);
 
     /**
      * @param request the request parameters of ModifyElasticResourceSpec  ModifyElasticResourceSpecRequest
@@ -129,6 +153,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     @Deprecated
     CompletableFuture<ModifyPrepayNamespaceSpecResponse> modifyPrepayNamespaceSpec(ModifyPrepayNamespaceSpecRequest request);
+
+    /**
+     * @param request the request parameters of OpenFlinkAiService  OpenFlinkAiServiceRequest
+     * @return OpenFlinkAiServiceResponse
+     */
+    CompletableFuture<OpenFlinkAiServiceResponse> openFlinkAiService(OpenFlinkAiServiceRequest request);
 
     /**
      * @param request the request parameters of QueryConvertInstancePrice  QueryConvertInstancePriceRequest
