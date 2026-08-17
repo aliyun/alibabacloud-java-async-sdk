@@ -1,3 +1,6 @@
+2026-08-17 Version: 1.0.5
+- Generated java-async 2025-11-11 for OutboundBot.
+
 2026-08-13 Version: 1.0.4
 - Generated java-async 2025-11-11 for OutboundBot.
 

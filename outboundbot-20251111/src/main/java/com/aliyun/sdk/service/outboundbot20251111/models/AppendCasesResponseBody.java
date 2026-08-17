@@ -20,6 +20,9 @@ public class AppendCasesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
+
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
@@ -37,6 +40,7 @@ public class AppendCasesResponseBody extends TeaModel {
 
     private AppendCasesResponseBody(Builder builder) {
         this.code = builder.code;
+        this.data = builder.data;
         this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
         this.params = builder.params;
@@ -61,6 +65,13 @@ public class AppendCasesResponseBody extends TeaModel {
      */
     public String getCode() {
         return this.code;
+    }
+
+    /**
+     * @return data
+     */
+    public java.util.List<Data> getData() {
+        return this.data;
     }
 
     /**
@@ -100,6 +111,7 @@ public class AppendCasesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String message; 
         private java.util.List<String> params; 
@@ -111,6 +123,7 @@ public class AppendCasesResponseBody extends TeaModel {
 
         private Builder(AppendCasesResponseBody model) {
             this.code = model.code;
+            this.data = model.data;
             this.httpStatusCode = model.httpStatusCode;
             this.message = model.message;
             this.params = model.params;
@@ -126,6 +139,14 @@ public class AppendCasesResponseBody extends TeaModel {
          */
         public Builder code(String code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * Data.
+         */
+        public Builder data(java.util.List<Data> data) {
+            this.data = data;
             return this;
         }
 
@@ -187,4 +208,79 @@ public class AppendCasesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AppendCasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>AppendCasesResponseBody</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+        private String phoneNumber;
+
+        @com.aliyun.core.annotation.NameInMap("ReferenceId")
+        private String referenceId;
+
+        private Data(Builder builder) {
+            this.phoneNumber = builder.phoneNumber;
+            this.referenceId = builder.referenceId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return phoneNumber
+         */
+        public String getPhoneNumber() {
+            return this.phoneNumber;
+        }
+
+        /**
+         * @return referenceId
+         */
+        public String getReferenceId() {
+            return this.referenceId;
+        }
+
+        public static final class Builder {
+            private String phoneNumber; 
+            private String referenceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.phoneNumber = model.phoneNumber;
+                this.referenceId = model.referenceId;
+            } 
+
+            /**
+             * PhoneNumber.
+             */
+            public Builder phoneNumber(String phoneNumber) {
+                this.phoneNumber = phoneNumber;
+                return this;
+            }
+
+            /**
+             * ReferenceId.
+             */
+            public Builder referenceId(String referenceId) {
+                this.referenceId = referenceId;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
 }
