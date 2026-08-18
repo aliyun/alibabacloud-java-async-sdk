@@ -82,8 +82,13 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("rus-west-1-pop", "cas.aliyuncs.com"),
             new TeaPair("us-east-1", "cas.aliyuncs.com"),
             new TeaPair("us-west-1", "cas.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "cas.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "cas.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "cas.ap-southeast-1.aliyuncs.com"),
             new TeaPair("eu-central-1", "cas.eu-central-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "cas.ap-southeast-1.aliyuncs.com")
+            new TeaPair("me-central-1", "cas.me-central-1.aliyuncs.com"),
+            new TeaPair("ap-south-1", "cas.ap-south-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "cas.me-east-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -820,6 +825,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetCertificatePackageCount  GetCertificatePackageCountRequest
+     * @return GetCertificatePackageCountResponse
+     */
+    @Override
+    public CompletableFuture<GetCertificatePackageCountResponse> getCertificatePackageCount(GetCertificatePackageCountRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetCertificatePackageCount").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCertificatePackageCountResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetCertificatePackageCountResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetCompany  GetCompanyRequest
      * @return GetCompanyResponse
      */
@@ -1221,6 +1244,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListInstancesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListTrusteeOrder  ListTrusteeOrderRequest
+     * @return ListTrusteeOrderResponse
+     */
+    @Override
+    public CompletableFuture<ListTrusteeOrderResponse> listTrusteeOrder(ListTrusteeOrderRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListTrusteeOrder").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListTrusteeOrderResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListTrusteeOrderResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

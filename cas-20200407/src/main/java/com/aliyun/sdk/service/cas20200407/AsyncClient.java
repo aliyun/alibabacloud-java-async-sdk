@@ -302,6 +302,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCertificateDetailResponse> getCertificateDetail(GetCertificateDetailRequest request);
 
     /**
+     * @param request the request parameters of GetCertificatePackageCount  GetCertificatePackageCountRequest
+     * @return GetCertificatePackageCountResponse
+     */
+    CompletableFuture<GetCertificatePackageCountResponse> getCertificatePackageCount(GetCertificatePackageCountRequest request);
+
+    /**
      * @param request the request parameters of GetCompany  GetCompanyRequest
      * @return GetCompanyResponse
      */
@@ -443,6 +449,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListInstancesResponse
      */
     CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
+
+    /**
+     * @param request the request parameters of ListTrusteeOrder  ListTrusteeOrderRequest
+     * @return ListTrusteeOrderResponse
+     */
+    CompletableFuture<ListTrusteeOrderResponse> listTrusteeOrder(ListTrusteeOrderRequest request);
 
     /**
      * <b>description</b> :
