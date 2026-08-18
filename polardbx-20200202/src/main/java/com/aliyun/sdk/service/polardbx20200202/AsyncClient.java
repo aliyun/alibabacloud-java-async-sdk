@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AllocateColdDataVolumeResponse> allocateColdDataVolume(AllocateColdDataVolumeRequest request);
 
     /**
+     * @param request the request parameters of AllocateContextDBPublicConnection  AllocateContextDBPublicConnectionRequest
+     * @return AllocateContextDBPublicConnectionResponse
+     */
+    CompletableFuture<AllocateContextDBPublicConnectionResponse> allocateContextDBPublicConnection(AllocateContextDBPublicConnectionRequest request);
+
+    /**
      * @param request the request parameters of AllocateInstancePublicConnection  AllocateInstancePublicConnectionRequest
      * @return AllocateInstancePublicConnectionResponse
      */
@@ -104,6 +110,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateBackupResponse> createBackup(CreateBackupRequest request);
 
     /**
+     * @param request the request parameters of CreateContextDB  CreateContextDBRequest
+     * @return CreateContextDBResponse
+     */
+    CompletableFuture<CreateContextDBResponse> createContextDB(CreateContextDBRequest request);
+
+    /**
      * @param request the request parameters of CreateCustomEndpoint  CreateCustomEndpointRequest
      * @return CreateCustomEndpointResponse
      */
@@ -162,6 +174,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreatePolardbxSupabaseInstanceResponse
      */
     CompletableFuture<CreatePolardbxSupabaseInstanceResponse> createPolardbxSupabaseInstance(CreatePolardbxSupabaseInstanceRequest request);
+
+    /**
+     * @param request the request parameters of CreatePxfuse  CreatePxfuseRequest
+     * @return CreatePxfuseResponse
+     */
+    CompletableFuture<CreatePxfuseResponse> createPxfuse(CreatePxfuseRequest request);
 
     /**
      * @param request the request parameters of CreateRplInspectionTask  CreateRplInspectionTaskRequest
@@ -230,6 +248,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAccountResponse> deleteAccount(DeleteAccountRequest request);
 
     /**
+     * @param request the request parameters of DeleteContextDB  DeleteContextDBRequest
+     * @return DeleteContextDBResponse
+     */
+    CompletableFuture<DeleteContextDBResponse> deleteContextDB(DeleteContextDBRequest request);
+
+    /**
      * @param request the request parameters of DeleteCustomEndpoint  DeleteCustomEndpointRequest
      * @return DeleteCustomEndpointResponse
      */
@@ -273,6 +297,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeletePolardbxSupabaseInstanceResponse
      */
     CompletableFuture<DeletePolardbxSupabaseInstanceResponse> deletePolardbxSupabaseInstance(DeletePolardbxSupabaseInstanceRequest request);
+
+    /**
+     * @param request the request parameters of DeletePxfuse  DeletePxfuseRequest
+     * @return DeletePxfuseResponse
+     */
+    CompletableFuture<DeletePxfuseResponse> deletePxfuse(DeletePxfuseRequest request);
 
     /**
      * @param request the request parameters of DeleteServiceAccount  DeleteServiceAccountRequest
@@ -411,6 +441,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeComponentPropetiesResponse
      */
     CompletableFuture<DescribeComponentPropetiesResponse> describeComponentPropeties(DescribeComponentPropetiesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeContextDBConfig  DescribeContextDBConfigRequest
+     * @return DescribeContextDBConfigResponse
+     */
+    CompletableFuture<DescribeContextDBConfigResponse> describeContextDBConfig(DescribeContextDBConfigRequest request);
+
+    /**
+     * @param request the request parameters of DescribeContextDBInfo  DescribeContextDBInfoRequest
+     * @return DescribeContextDBInfoResponse
+     */
+    CompletableFuture<DescribeContextDBInfoResponse> describeContextDBInfo(DescribeContextDBInfoRequest request);
+
+    /**
+     * @param request the request parameters of DescribeContextDBSecurityIps  DescribeContextDBSecurityIpsRequest
+     * @return DescribeContextDBSecurityIpsResponse
+     */
+    CompletableFuture<DescribeContextDBSecurityIpsResponse> describeContextDBSecurityIps(DescribeContextDBSecurityIpsRequest request);
 
     /**
      * @param request the request parameters of DescribeCustomEndpointList  DescribeCustomEndpointListRequest
@@ -567,6 +615,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribePolarxDataNodesResponse
      */
     CompletableFuture<DescribePolarxDataNodesResponse> describePolarxDataNodes(DescribePolarxDataNodesRequest request);
+
+    /**
+     * @param request the request parameters of DescribePxfuseInfo  DescribePxfuseInfoRequest
+     * @return DescribePxfuseInfoResponse
+     */
+    CompletableFuture<DescribePxfuseInfoResponse> describePxfuseInfo(DescribePxfuseInfoRequest request);
+
+    /**
+     * @param request the request parameters of DescribePxfuseSecurityIps  DescribePxfuseSecurityIpsRequest
+     * @return DescribePxfuseSecurityIpsResponse
+     */
+    CompletableFuture<DescribePxfuseSecurityIpsResponse> describePxfuseSecurityIps(DescribePxfuseSecurityIpsRequest request);
 
     /**
      * @param request the request parameters of DescribeRdsVpcs  DescribeRdsVpcsRequest
@@ -782,6 +842,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyColumnarClassResponse> modifyColumnarClass(ModifyColumnarClassRequest request);
 
     /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of ModifyContextDBSecurityIps  ModifyContextDBSecurityIpsRequest
+     * @return ModifyContextDBSecurityIpsResponse
+     */
+    CompletableFuture<ModifyContextDBSecurityIpsResponse> modifyContextDBSecurityIps(ModifyContextDBSecurityIpsRequest request);
+
+    /**
      * @param request the request parameters of ModifyCustomEndpoint  ModifyCustomEndpointRequest
      * @return ModifyCustomEndpointResponse
      */
@@ -863,6 +932,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyParameterResponse> modifyParameter(ModifyParameterRequest request);
 
     /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of ModifyPxfuseSecurityIps  ModifyPxfuseSecurityIpsRequest
+     * @return ModifyPxfuseSecurityIpsResponse
+     */
+    CompletableFuture<ModifyPxfuseSecurityIpsResponse> modifyPxfuseSecurityIps(ModifyPxfuseSecurityIpsRequest request);
+
+    /**
      * @param request the request parameters of ModifySecurityIps  ModifySecurityIpsRequest
      * @return ModifySecurityIpsResponse
      */
@@ -903,6 +981,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ReleaseColdDataVolumeResponse
      */
     CompletableFuture<ReleaseColdDataVolumeResponse> releaseColdDataVolume(ReleaseColdDataVolumeRequest request);
+
+    /**
+     * @param request the request parameters of ReleaseContextDBPublicConnection  ReleaseContextDBPublicConnectionRequest
+     * @return ReleaseContextDBPublicConnectionResponse
+     */
+    CompletableFuture<ReleaseContextDBPublicConnectionResponse> releaseContextDBPublicConnection(ReleaseContextDBPublicConnectionRequest request);
 
     /**
      * @param request the request parameters of ReleaseInstancePublicConnection  ReleaseInstancePublicConnectionRequest

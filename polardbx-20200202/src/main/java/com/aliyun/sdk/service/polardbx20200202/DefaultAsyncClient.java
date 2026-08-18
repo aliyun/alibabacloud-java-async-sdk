@@ -76,18 +76,18 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("eu-west-1-oxs", "polardbx.aliyuncs.com"),
             new TeaPair("me-east-1", "polardbx.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "polardbx.aliyuncs.com"),
-            new TeaPair("us-west-1", "polardbx.us-west-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "polardbx.us-east-1.aliyuncs.com"),
+            new TeaPair("cn-beijing", "polardbx.cn-beijing.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "polardbx.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "polardbx.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "polardbx.cn-hongkong.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou", "polardbx.cn-zhangjiakou.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "polardbx.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "polardbx.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "polardbx.cn-qingdao.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "polardbx.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "polardbx.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "polardbx.cn-hangzhou.aliyuncs.com"),
             new TeaPair("cn-chengdu", "polardbx.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-beijing", "polardbx.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "polardbx.ap-southeast-1.aliyuncs.com")
+            new TeaPair("ap-southeast-1", "polardbx.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "polardbx.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "polardbx.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("us-east-1", "polardbx.us-east-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "polardbx.us-west-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -128,6 +128,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<AllocateColdDataVolumeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of AllocateContextDBPublicConnection  AllocateContextDBPublicConnectionRequest
+     * @return AllocateContextDBPublicConnectionResponse
+     */
+    @Override
+    public CompletableFuture<AllocateContextDBPublicConnectionResponse> allocateContextDBPublicConnection(AllocateContextDBPublicConnectionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AllocateContextDBPublicConnection").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AllocateContextDBPublicConnectionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AllocateContextDBPublicConnectionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -350,6 +368,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateContextDB  CreateContextDBRequest
+     * @return CreateContextDBResponse
+     */
+    @Override
+    public CompletableFuture<CreateContextDBResponse> createContextDB(CreateContextDBRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateContextDB").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateContextDBResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateContextDBResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateCustomEndpoint  CreateCustomEndpointRequest
      * @return CreateCustomEndpointResponse
      */
@@ -512,6 +548,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreatePolardbxSupabaseInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreatePxfuse  CreatePxfuseRequest
+     * @return CreatePxfuseResponse
+     */
+    @Override
+    public CompletableFuture<CreatePxfuseResponse> createPxfuse(CreatePxfuseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreatePxfuse").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreatePxfuseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreatePxfuseResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -704,6 +758,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteContextDB  DeleteContextDBRequest
+     * @return DeleteContextDBResponse
+     */
+    @Override
+    public CompletableFuture<DeleteContextDBResponse> deleteContextDB(DeleteContextDBRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteContextDB").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteContextDBResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteContextDBResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteCustomEndpoint  DeleteCustomEndpointRequest
      * @return DeleteCustomEndpointResponse
      */
@@ -827,6 +899,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeletePolardbxSupabaseInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeletePxfuse  DeletePxfuseRequest
+     * @return DeletePxfuseResponse
+     */
+    @Override
+    public CompletableFuture<DeletePxfuseResponse> deletePxfuse(DeletePxfuseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeletePxfuse").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeletePxfuseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeletePxfuseResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1229,6 +1319,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeComponentPropetiesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeContextDBConfig  DescribeContextDBConfigRequest
+     * @return DescribeContextDBConfigResponse
+     */
+    @Override
+    public CompletableFuture<DescribeContextDBConfigResponse> describeContextDBConfig(DescribeContextDBConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeContextDBConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeContextDBConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeContextDBConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeContextDBInfo  DescribeContextDBInfoRequest
+     * @return DescribeContextDBInfoResponse
+     */
+    @Override
+    public CompletableFuture<DescribeContextDBInfoResponse> describeContextDBInfo(DescribeContextDBInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeContextDBInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeContextDBInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeContextDBInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeContextDBSecurityIps  DescribeContextDBSecurityIpsRequest
+     * @return DescribeContextDBSecurityIpsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeContextDBSecurityIpsResponse> describeContextDBSecurityIps(DescribeContextDBSecurityIpsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeContextDBSecurityIps").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeContextDBSecurityIpsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeContextDBSecurityIpsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1697,6 +1841,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribePolarxDataNodesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribePxfuseInfo  DescribePxfuseInfoRequest
+     * @return DescribePxfuseInfoResponse
+     */
+    @Override
+    public CompletableFuture<DescribePxfuseInfoResponse> describePxfuseInfo(DescribePxfuseInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePxfuseInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePxfuseInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribePxfuseInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribePxfuseSecurityIps  DescribePxfuseSecurityIpsRequest
+     * @return DescribePxfuseSecurityIpsResponse
+     */
+    @Override
+    public CompletableFuture<DescribePxfuseSecurityIpsResponse> describePxfuseSecurityIps(DescribePxfuseSecurityIpsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePxfuseSecurityIps").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePxfuseSecurityIpsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribePxfuseSecurityIpsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2324,6 +2504,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of ModifyContextDBSecurityIps  ModifyContextDBSecurityIpsRequest
+     * @return ModifyContextDBSecurityIpsResponse
+     */
+    @Override
+    public CompletableFuture<ModifyContextDBSecurityIpsResponse> modifyContextDBSecurityIps(ModifyContextDBSecurityIpsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyContextDBSecurityIps").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyContextDBSecurityIpsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyContextDBSecurityIpsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ModifyCustomEndpoint  ModifyCustomEndpointRequest
      * @return ModifyCustomEndpointResponse
      */
@@ -2549,6 +2750,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of ModifyPxfuseSecurityIps  ModifyPxfuseSecurityIpsRequest
+     * @return ModifyPxfuseSecurityIpsResponse
+     */
+    @Override
+    public CompletableFuture<ModifyPxfuseSecurityIpsResponse> modifyPxfuseSecurityIps(ModifyPxfuseSecurityIpsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyPxfuseSecurityIps").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyPxfuseSecurityIpsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyPxfuseSecurityIpsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ModifySecurityIps  ModifySecurityIpsRequest
      * @return ModifySecurityIpsResponse
      */
@@ -2657,6 +2879,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ReleaseColdDataVolumeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ReleaseContextDBPublicConnection  ReleaseContextDBPublicConnectionRequest
+     * @return ReleaseContextDBPublicConnectionResponse
+     */
+    @Override
+    public CompletableFuture<ReleaseContextDBPublicConnectionResponse> releaseContextDBPublicConnection(ReleaseContextDBPublicConnectionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ReleaseContextDBPublicConnection").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ReleaseContextDBPublicConnectionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ReleaseContextDBPublicConnectionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
