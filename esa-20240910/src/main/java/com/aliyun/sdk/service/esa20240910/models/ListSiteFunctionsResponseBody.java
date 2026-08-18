@@ -4045,6 +4045,165 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
      *
      * <p>ListSiteFunctionsResponseBody</p>
      */
+    public static class MarkdownForAgent extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConfigId")
+        private Long configId;
+
+        @com.aliyun.core.annotation.NameInMap("Enable")
+        private String enable;
+
+        @com.aliyun.core.annotation.NameInMap("Rule")
+        private String rule;
+
+        @com.aliyun.core.annotation.NameInMap("RuleEnable")
+        private String ruleEnable;
+
+        @com.aliyun.core.annotation.NameInMap("RuleName")
+        private String ruleName;
+
+        @com.aliyun.core.annotation.NameInMap("Sequence")
+        private String sequence;
+
+        private MarkdownForAgent(Builder builder) {
+            this.configId = builder.configId;
+            this.enable = builder.enable;
+            this.rule = builder.rule;
+            this.ruleEnable = builder.ruleEnable;
+            this.ruleName = builder.ruleName;
+            this.sequence = builder.sequence;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MarkdownForAgent create() {
+            return builder().build();
+        }
+
+        /**
+         * @return configId
+         */
+        public Long getConfigId() {
+            return this.configId;
+        }
+
+        /**
+         * @return enable
+         */
+        public String getEnable() {
+            return this.enable;
+        }
+
+        /**
+         * @return rule
+         */
+        public String getRule() {
+            return this.rule;
+        }
+
+        /**
+         * @return ruleEnable
+         */
+        public String getRuleEnable() {
+            return this.ruleEnable;
+        }
+
+        /**
+         * @return ruleName
+         */
+        public String getRuleName() {
+            return this.ruleName;
+        }
+
+        /**
+         * @return sequence
+         */
+        public String getSequence() {
+            return this.sequence;
+        }
+
+        public static final class Builder {
+            private Long configId; 
+            private String enable; 
+            private String rule; 
+            private String ruleEnable; 
+            private String ruleName; 
+            private String sequence; 
+
+            private Builder() {
+            } 
+
+            private Builder(MarkdownForAgent model) {
+                this.configId = model.configId;
+                this.enable = model.enable;
+                this.rule = model.rule;
+                this.ruleEnable = model.ruleEnable;
+                this.ruleName = model.ruleName;
+                this.sequence = model.sequence;
+            } 
+
+            /**
+             * ConfigId.
+             */
+            public Builder configId(Long configId) {
+                this.configId = configId;
+                return this;
+            }
+
+            /**
+             * Enable.
+             */
+            public Builder enable(String enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            /**
+             * Rule.
+             */
+            public Builder rule(String rule) {
+                this.rule = rule;
+                return this;
+            }
+
+            /**
+             * RuleEnable.
+             */
+            public Builder ruleEnable(String ruleEnable) {
+                this.ruleEnable = ruleEnable;
+                return this;
+            }
+
+            /**
+             * RuleName.
+             */
+            public Builder ruleName(String ruleName) {
+                this.ruleName = ruleName;
+                return this;
+            }
+
+            /**
+             * Sequence.
+             */
+            public Builder sequence(String sequence) {
+                this.sequence = sequence;
+                return this;
+            }
+
+            public MarkdownForAgent build() {
+                return new MarkdownForAgent(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListSiteFunctionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSiteFunctionsResponseBody</p>
+     */
     public static class NetworkOptimization extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigId")
         private Long configId;
@@ -5804,6 +5963,9 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ManagedTransforms")
         private java.util.List<ManagedTransforms> managedTransforms;
 
+        @com.aliyun.core.annotation.NameInMap("MarkdownForAgent")
+        private java.util.List<MarkdownForAgent> markdownForAgent;
+
         @com.aliyun.core.annotation.NameInMap("NetworkOptimization")
         private java.util.List<NetworkOptimization> networkOptimization;
 
@@ -5850,6 +6012,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
             this.imageTransform = builder.imageTransform;
             this.ipv6 = builder.ipv6;
             this.managedTransforms = builder.managedTransforms;
+            this.markdownForAgent = builder.markdownForAgent;
             this.networkOptimization = builder.networkOptimization;
             this.originRules = builder.originRules;
             this.redirectRules = builder.redirectRules;
@@ -5996,6 +6159,13 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return markdownForAgent
+         */
+        public java.util.List<MarkdownForAgent> getMarkdownForAgent() {
+            return this.markdownForAgent;
+        }
+
+        /**
          * @return networkOptimization
          */
         public java.util.List<NetworkOptimization> getNetworkOptimization() {
@@ -6077,6 +6247,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
             private java.util.List<ImageTransform> imageTransform; 
             private java.util.List<Ipv6> ipv6; 
             private java.util.List<ManagedTransforms> managedTransforms; 
+            private java.util.List<MarkdownForAgent> markdownForAgent; 
             private java.util.List<NetworkOptimization> networkOptimization; 
             private java.util.List<OriginRules> originRules; 
             private java.util.List<RedirectRules> redirectRules; 
@@ -6109,6 +6280,7 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
                 this.imageTransform = model.imageTransform;
                 this.ipv6 = model.ipv6;
                 this.managedTransforms = model.managedTransforms;
+                this.markdownForAgent = model.markdownForAgent;
                 this.networkOptimization = model.networkOptimization;
                 this.originRules = model.originRules;
                 this.redirectRules = model.redirectRules;
@@ -6261,6 +6433,14 @@ public class ListSiteFunctionsResponseBody extends TeaModel {
              */
             public Builder managedTransforms(java.util.List<ManagedTransforms> managedTransforms) {
                 this.managedTransforms = managedTransforms;
+                return this;
+            }
+
+            /**
+             * MarkdownForAgent.
+             */
+            public Builder markdownForAgent(java.util.List<MarkdownForAgent> markdownForAgent) {
+                this.markdownForAgent = markdownForAgent;
                 return this;
             }
 

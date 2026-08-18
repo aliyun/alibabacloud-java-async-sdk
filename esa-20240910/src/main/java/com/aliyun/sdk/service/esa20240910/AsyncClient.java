@@ -750,6 +750,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteRoutineCodeVersionResponse> deleteRoutineCodeVersion(DeleteRoutineCodeVersionRequest request);
 
     /**
+     * @param request the request parameters of DeleteRoutineEnvironmentVariables  DeleteRoutineEnvironmentVariablesRequest
+     * @return DeleteRoutineEnvironmentVariablesResponse
+     */
+    CompletableFuture<DeleteRoutineEnvironmentVariablesResponse> deleteRoutineEnvironmentVariables(DeleteRoutineEnvironmentVariablesRequest request);
+
+    /**
      * @param request the request parameters of DeleteRoutineRelatedRecord  DeleteRoutineRelatedRecordRequest
      * @return DeleteRoutineRelatedRecordResponse
      */
@@ -2177,6 +2183,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRoutineCodeVersionsResponse> listRoutineCodeVersions(ListRoutineCodeVersionsRequest request);
 
     /**
+     * @param request the request parameters of ListRoutineEnvironmentVariables  ListRoutineEnvironmentVariablesRequest
+     * @return ListRoutineEnvironmentVariablesResponse
+     */
+    CompletableFuture<ListRoutineEnvironmentVariablesResponse> listRoutineEnvironmentVariables(ListRoutineEnvironmentVariablesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to query the routes associated with a function. You can specify paged query parameters to obtain the specified number of routes or specify a keyword for fuzzy search to filter specific routes.</p>
      * 
@@ -2562,6 +2574,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SetOriginClientCertificateHostnamesResponse
      */
     CompletableFuture<SetOriginClientCertificateHostnamesResponse> setOriginClientCertificateHostnames(SetOriginClientCertificateHostnamesRequest request);
+
+    /**
+     * @param request the request parameters of SetRoutineEnvironmentVariables  SetRoutineEnvironmentVariablesRequest
+     * @return SetRoutineEnvironmentVariablesResponse
+     */
+    CompletableFuture<SetRoutineEnvironmentVariablesResponse> setRoutineEnvironmentVariables(SetRoutineEnvironmentVariablesRequest request);
 
     /**
      * @param request the request parameters of StartScheduledPreloadExecution  StartScheduledPreloadExecutionRequest

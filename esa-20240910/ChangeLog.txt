@@ -1,3 +1,6 @@
+2026-08-18 Version: 3.0.19
+- Generated java-async 2024-09-10 for ESA.
+
 2026-08-05 Version: 3.0.18
 - Generated java-async 2024-09-10 for ESA.
 

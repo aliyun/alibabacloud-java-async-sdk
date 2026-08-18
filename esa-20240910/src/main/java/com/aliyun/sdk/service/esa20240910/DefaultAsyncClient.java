@@ -31,8 +31,8 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.version = "2024-09-10";
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("cn-hangzhou", "esa.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "esa.ap-southeast-1.aliyuncs.com")
+            new TeaPair("ap-southeast-1", "esa.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "esa.cn-hangzhou.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -2099,6 +2099,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteRoutineCodeVersionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteRoutineEnvironmentVariables  DeleteRoutineEnvironmentVariablesRequest
+     * @return DeleteRoutineEnvironmentVariablesResponse
+     */
+    @Override
+    public CompletableFuture<DeleteRoutineEnvironmentVariablesResponse> deleteRoutineEnvironmentVariables(DeleteRoutineEnvironmentVariablesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteRoutineEnvironmentVariables").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteRoutineEnvironmentVariablesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteRoutineEnvironmentVariablesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -6160,6 +6178,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListRoutineEnvironmentVariables  ListRoutineEnvironmentVariablesRequest
+     * @return ListRoutineEnvironmentVariablesResponse
+     */
+    @Override
+    public CompletableFuture<ListRoutineEnvironmentVariablesResponse> listRoutineEnvironmentVariables(ListRoutineEnvironmentVariablesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListRoutineEnvironmentVariables").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListRoutineEnvironmentVariablesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListRoutineEnvironmentVariablesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to query the routes associated with a function. You can specify paged query parameters to obtain the specified number of routes or specify a keyword for fuzzy search to filter specific routes.</p>
      * 
@@ -7273,6 +7309,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SetOriginClientCertificateHostnamesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SetRoutineEnvironmentVariables  SetRoutineEnvironmentVariablesRequest
+     * @return SetRoutineEnvironmentVariablesResponse
+     */
+    @Override
+    public CompletableFuture<SetRoutineEnvironmentVariablesResponse> setRoutineEnvironmentVariables(SetRoutineEnvironmentVariablesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetRoutineEnvironmentVariables").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetRoutineEnvironmentVariablesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SetRoutineEnvironmentVariablesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
