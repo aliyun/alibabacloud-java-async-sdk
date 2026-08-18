@@ -30,6 +30,10 @@ public class CreateImageByInstanceRequest extends Request {
     private Integer bizType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CopyProfile")
+    private Boolean copyProfile;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
@@ -66,6 +70,7 @@ public class CreateImageByInstanceRequest extends Request {
         this.regionId = builder.regionId;
         this.autoCleanUserdata = builder.autoCleanUserdata;
         this.bizType = builder.bizType;
+        this.copyProfile = builder.copyProfile;
         this.description = builder.description;
         this.diskType = builder.diskType;
         this.imageName = builder.imageName;
@@ -108,6 +113,13 @@ public class CreateImageByInstanceRequest extends Request {
      */
     public Integer getBizType() {
         return this.bizType;
+    }
+
+    /**
+     * @return copyProfile
+     */
+    public Boolean getCopyProfile() {
+        return this.copyProfile;
     }
 
     /**
@@ -170,6 +182,7 @@ public class CreateImageByInstanceRequest extends Request {
         private String regionId; 
         private Boolean autoCleanUserdata; 
         private Integer bizType; 
+        private Boolean copyProfile; 
         private String description; 
         private String diskType; 
         private String imageName; 
@@ -188,6 +201,7 @@ public class CreateImageByInstanceRequest extends Request {
             this.regionId = request.regionId;
             this.autoCleanUserdata = request.autoCleanUserdata;
             this.bizType = request.bizType;
+            this.copyProfile = request.copyProfile;
             this.description = request.description;
             this.diskType = request.diskType;
             this.imageName = request.imageName;
@@ -233,6 +247,15 @@ public class CreateImageByInstanceRequest extends Request {
         public Builder bizType(Integer bizType) {
             this.putBodyParameter("BizType", bizType);
             this.bizType = bizType;
+            return this;
+        }
+
+        /**
+         * CopyProfile.
+         */
+        public Builder copyProfile(Boolean copyProfile) {
+            this.putBodyParameter("CopyProfile", copyProfile);
+            this.copyProfile = copyProfile;
             return this;
         }
 
