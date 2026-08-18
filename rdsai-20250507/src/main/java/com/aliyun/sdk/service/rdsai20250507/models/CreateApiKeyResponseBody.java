@@ -155,6 +155,9 @@ public class CreateApiKeyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LimitType")
         private String limitType;
 
+        @com.aliyun.core.annotation.NameInMap("RoleArn")
+        private String roleArn;
+
         @com.aliyun.core.annotation.NameInMap("TokenQuota")
         private Long tokenQuota;
 
@@ -164,6 +167,7 @@ public class CreateApiKeyResponseBody extends TeaModel {
             this.keyName = builder.keyName;
             this.limitRate = builder.limitRate;
             this.limitType = builder.limitType;
+            this.roleArn = builder.roleArn;
             this.tokenQuota = builder.tokenQuota;
         }
 
@@ -211,6 +215,13 @@ public class CreateApiKeyResponseBody extends TeaModel {
         }
 
         /**
+         * @return roleArn
+         */
+        public String getRoleArn() {
+            return this.roleArn;
+        }
+
+        /**
          * @return tokenQuota
          */
         public Long getTokenQuota() {
@@ -223,6 +234,7 @@ public class CreateApiKeyResponseBody extends TeaModel {
             private String keyName; 
             private Float limitRate; 
             private String limitType; 
+            private String roleArn; 
             private Long tokenQuota; 
 
             private Builder() {
@@ -234,6 +246,7 @@ public class CreateApiKeyResponseBody extends TeaModel {
                 this.keyName = model.keyName;
                 this.limitRate = model.limitRate;
                 this.limitType = model.limitType;
+                this.roleArn = model.roleArn;
                 this.tokenQuota = model.tokenQuota;
             } 
 
@@ -277,6 +290,14 @@ public class CreateApiKeyResponseBody extends TeaModel {
              */
             public Builder limitType(String limitType) {
                 this.limitType = limitType;
+                return this;
+            }
+
+            /**
+             * RoleArn.
+             */
+            public Builder roleArn(String roleArn) {
+                this.roleArn = roleArn;
                 return this;
             }
 

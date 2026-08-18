@@ -43,6 +43,14 @@ public class CreateApiKeyRequest extends Request {
     private Integer quantity;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleArn")
+    private String roleArn;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleName")
+    private String roleName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TokenQuota")
     private Long tokenQuota;
 
@@ -54,6 +62,8 @@ public class CreateApiKeyRequest extends Request {
         this.limitRate = builder.limitRate;
         this.limitType = builder.limitType;
         this.quantity = builder.quantity;
+        this.roleArn = builder.roleArn;
+        this.roleName = builder.roleName;
         this.tokenQuota = builder.tokenQuota;
     }
 
@@ -113,6 +123,20 @@ public class CreateApiKeyRequest extends Request {
     }
 
     /**
+     * @return roleArn
+     */
+    public String getRoleArn() {
+        return this.roleArn;
+    }
+
+    /**
+     * @return roleName
+     */
+    public String getRoleName() {
+        return this.roleName;
+    }
+
+    /**
      * @return tokenQuota
      */
     public Long getTokenQuota() {
@@ -126,6 +150,8 @@ public class CreateApiKeyRequest extends Request {
         private Double limitRate; 
         private String limitType; 
         private Integer quantity; 
+        private String roleArn; 
+        private String roleName; 
         private Long tokenQuota; 
 
         private Builder() {
@@ -140,6 +166,8 @@ public class CreateApiKeyRequest extends Request {
             this.limitRate = request.limitRate;
             this.limitType = request.limitType;
             this.quantity = request.quantity;
+            this.roleArn = request.roleArn;
+            this.roleName = request.roleName;
             this.tokenQuota = request.tokenQuota;
         } 
 
@@ -194,6 +222,24 @@ public class CreateApiKeyRequest extends Request {
         public Builder quantity(Integer quantity) {
             this.putQueryParameter("Quantity", quantity);
             this.quantity = quantity;
+            return this;
+        }
+
+        /**
+         * RoleArn.
+         */
+        public Builder roleArn(String roleArn) {
+            this.putQueryParameter("RoleArn", roleArn);
+            this.roleArn = roleArn;
+            return this;
+        }
+
+        /**
+         * RoleName.
+         */
+        public Builder roleName(String roleName) {
+            this.putQueryParameter("RoleName", roleName);
+            this.roleName = roleName;
             return this;
         }
 

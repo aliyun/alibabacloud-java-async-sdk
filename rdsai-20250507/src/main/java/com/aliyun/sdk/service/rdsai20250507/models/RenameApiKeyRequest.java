@@ -31,11 +31,21 @@ public class RenameApiKeyRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String keyName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleArn")
+    private String roleArn;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleName")
+    private String roleName;
+
     private RenameApiKeyRequest(Builder builder) {
         super(builder);
         this.apiKey = builder.apiKey;
         this.instanceId = builder.instanceId;
         this.keyName = builder.keyName;
+        this.roleArn = builder.roleArn;
+        this.roleName = builder.roleName;
     }
 
     public static Builder builder() {
@@ -72,10 +82,26 @@ public class RenameApiKeyRequest extends Request {
         return this.keyName;
     }
 
+    /**
+     * @return roleArn
+     */
+    public String getRoleArn() {
+        return this.roleArn;
+    }
+
+    /**
+     * @return roleName
+     */
+    public String getRoleName() {
+        return this.roleName;
+    }
+
     public static final class Builder extends Request.Builder<RenameApiKeyRequest, Builder> {
         private String apiKey; 
         private String instanceId; 
         private String keyName; 
+        private String roleArn; 
+        private String roleName; 
 
         private Builder() {
             super();
@@ -86,6 +112,8 @@ public class RenameApiKeyRequest extends Request {
             this.apiKey = request.apiKey;
             this.instanceId = request.instanceId;
             this.keyName = request.keyName;
+            this.roleArn = request.roleArn;
+            this.roleName = request.roleName;
         } 
 
         /**
@@ -119,6 +147,24 @@ public class RenameApiKeyRequest extends Request {
         public Builder keyName(String keyName) {
             this.putQueryParameter("KeyName", keyName);
             this.keyName = keyName;
+            return this;
+        }
+
+        /**
+         * RoleArn.
+         */
+        public Builder roleArn(String roleArn) {
+            this.putQueryParameter("RoleArn", roleArn);
+            this.roleArn = roleArn;
+            return this;
+        }
+
+        /**
+         * RoleName.
+         */
+        public Builder roleName(String roleName) {
+            this.putQueryParameter("RoleName", roleName);
+            this.roleName = roleName;
             return this;
         }
 

@@ -158,6 +158,9 @@ public class ListApiKeysResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LimitType")
         private String limitType;
 
+        @com.aliyun.core.annotation.NameInMap("RoleArn")
+        private String roleArn;
+
         @com.aliyun.core.annotation.NameInMap("ThresholdPercent")
         private Integer thresholdPercent;
 
@@ -171,6 +174,7 @@ public class ListApiKeysResponseBody extends TeaModel {
             this.keyName = builder.keyName;
             this.limitRate = builder.limitRate;
             this.limitType = builder.limitType;
+            this.roleArn = builder.roleArn;
             this.thresholdPercent = builder.thresholdPercent;
             this.tokenQuota = builder.tokenQuota;
         }
@@ -226,6 +230,13 @@ public class ListApiKeysResponseBody extends TeaModel {
         }
 
         /**
+         * @return roleArn
+         */
+        public String getRoleArn() {
+            return this.roleArn;
+        }
+
+        /**
          * @return thresholdPercent
          */
         public Integer getThresholdPercent() {
@@ -246,6 +257,7 @@ public class ListApiKeysResponseBody extends TeaModel {
             private String keyName; 
             private Float limitRate; 
             private String limitType; 
+            private String roleArn; 
             private Integer thresholdPercent; 
             private Long tokenQuota; 
 
@@ -259,6 +271,7 @@ public class ListApiKeysResponseBody extends TeaModel {
                 this.keyName = model.keyName;
                 this.limitRate = model.limitRate;
                 this.limitType = model.limitType;
+                this.roleArn = model.roleArn;
                 this.thresholdPercent = model.thresholdPercent;
                 this.tokenQuota = model.tokenQuota;
             } 
@@ -311,6 +324,14 @@ public class ListApiKeysResponseBody extends TeaModel {
              */
             public Builder limitType(String limitType) {
                 this.limitType = limitType;
+                return this;
+            }
+
+            /**
+             * RoleArn.
+             */
+            public Builder roleArn(String roleArn) {
+                this.roleArn = roleArn;
                 return this;
             }
 
