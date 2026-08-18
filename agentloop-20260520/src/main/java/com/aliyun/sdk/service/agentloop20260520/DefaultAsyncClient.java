@@ -31,15 +31,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.version = "2026-05-20";
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("cn-zhangjiakou", "agentloop.cn-zhangjiakou.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "agentloop.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "agentloop.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "agentloop.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "agentloop.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "agentloop.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "agentloop.cn-chengdu.aliyuncs.com"),
             new TeaPair("cn-beijing", "agentloop.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "agentloop.ap-southeast-1.aliyuncs.com")
+            new TeaPair("cn-shanghai", "agentloop.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "agentloop.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "agentloop.cn-hongkong.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "agentloop.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "agentloop.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "agentloop.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "agentloop.cn-chengdu.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }

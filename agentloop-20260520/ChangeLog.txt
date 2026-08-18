@@ -1,3 +1,6 @@
+2026-08-18 Version: 2.0.6
+- Generated java-async 2026-05-20 for AgentLoop.
+
 2026-07-30 Version: 2.0.5
 - Generated java-async 2026-05-20 for AgentLoop.
 

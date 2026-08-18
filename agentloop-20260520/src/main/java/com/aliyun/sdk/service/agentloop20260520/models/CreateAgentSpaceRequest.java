@@ -35,6 +35,10 @@ public class CreateAgentSpaceRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("mseNamespaceId")
+    private String mseNamespaceId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("trajectoryStoreEnabled")
     private Boolean trajectoryStoreEnabled;
 
@@ -48,6 +52,7 @@ public class CreateAgentSpaceRequest extends Request {
         this.agentSpace = builder.agentSpace;
         this.cmsWorkspace = builder.cmsWorkspace;
         this.description = builder.description;
+        this.mseNamespaceId = builder.mseNamespaceId;
         this.trajectoryStoreEnabled = builder.trajectoryStoreEnabled;
         this.clientToken = builder.clientToken;
     }
@@ -94,6 +99,13 @@ public class CreateAgentSpaceRequest extends Request {
     }
 
     /**
+     * @return mseNamespaceId
+     */
+    public String getMseNamespaceId() {
+        return this.mseNamespaceId;
+    }
+
+    /**
      * @return trajectoryStoreEnabled
      */
     public Boolean getTrajectoryStoreEnabled() {
@@ -112,6 +124,7 @@ public class CreateAgentSpaceRequest extends Request {
         private String agentSpace; 
         private String cmsWorkspace; 
         private String description; 
+        private String mseNamespaceId; 
         private Boolean trajectoryStoreEnabled; 
         private String clientToken; 
 
@@ -125,6 +138,7 @@ public class CreateAgentSpaceRequest extends Request {
             this.agentSpace = request.agentSpace;
             this.cmsWorkspace = request.cmsWorkspace;
             this.description = request.description;
+            this.mseNamespaceId = request.mseNamespaceId;
             this.trajectoryStoreEnabled = request.trajectoryStoreEnabled;
             this.clientToken = request.clientToken;
         } 
@@ -165,6 +179,15 @@ public class CreateAgentSpaceRequest extends Request {
         public Builder description(String description) {
             this.putBodyParameter("description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * mseNamespaceId.
+         */
+        public Builder mseNamespaceId(String mseNamespaceId) {
+            this.putBodyParameter("mseNamespaceId", mseNamespaceId);
+            this.mseNamespaceId = mseNamespaceId;
             return this;
         }
 

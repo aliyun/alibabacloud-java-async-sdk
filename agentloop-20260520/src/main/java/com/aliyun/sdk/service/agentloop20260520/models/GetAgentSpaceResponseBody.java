@@ -269,6 +269,9 @@ public class GetAgentSpaceResponseBody extends TeaModel {
      * <p>GetAgentSpaceResponseBody</p>
      */
     public static class MseNamespace extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("bindType")
+        private String bindType;
+
         @com.aliyun.core.annotation.NameInMap("namespaceId")
         private String namespaceId;
 
@@ -276,6 +279,7 @@ public class GetAgentSpaceResponseBody extends TeaModel {
         private String namespaceName;
 
         private MseNamespace(Builder builder) {
+            this.bindType = builder.bindType;
             this.namespaceId = builder.namespaceId;
             this.namespaceName = builder.namespaceName;
         }
@@ -286,6 +290,13 @@ public class GetAgentSpaceResponseBody extends TeaModel {
 
         public static MseNamespace create() {
             return builder().build();
+        }
+
+        /**
+         * @return bindType
+         */
+        public String getBindType() {
+            return this.bindType;
         }
 
         /**
@@ -303,6 +314,7 @@ public class GetAgentSpaceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String bindType; 
             private String namespaceId; 
             private String namespaceName; 
 
@@ -310,9 +322,18 @@ public class GetAgentSpaceResponseBody extends TeaModel {
             } 
 
             private Builder(MseNamespace model) {
+                this.bindType = model.bindType;
                 this.namespaceId = model.namespaceId;
                 this.namespaceName = model.namespaceName;
             } 
+
+            /**
+             * bindType.
+             */
+            public Builder bindType(String bindType) {
+                this.bindType = bindType;
+                return this;
+            }
 
             /**
              * namespaceId.
