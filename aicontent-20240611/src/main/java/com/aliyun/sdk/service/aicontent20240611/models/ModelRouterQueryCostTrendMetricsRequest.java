@@ -26,6 +26,10 @@ public class ModelRouterQueryCostTrendMetricsRequest extends Request {
     private Long clientId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clientIds")
+    private String clientIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("endTime")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
@@ -59,6 +63,7 @@ public class ModelRouterQueryCostTrendMetricsRequest extends Request {
         super(builder);
         this.apiKeyId = builder.apiKeyId;
         this.clientId = builder.clientId;
+        this.clientIds = builder.clientIds;
         this.endTime = builder.endTime;
         this.granularity = builder.granularity;
         this.maxResults = builder.maxResults;
@@ -93,6 +98,13 @@ public class ModelRouterQueryCostTrendMetricsRequest extends Request {
      */
     public Long getClientId() {
         return this.clientId;
+    }
+
+    /**
+     * @return clientIds
+     */
+    public String getClientIds() {
+        return this.clientIds;
     }
 
     /**
@@ -147,6 +159,7 @@ public class ModelRouterQueryCostTrendMetricsRequest extends Request {
     public static final class Builder extends Request.Builder<ModelRouterQueryCostTrendMetricsRequest, Builder> {
         private Long apiKeyId; 
         private Long clientId; 
+        private String clientIds; 
         private Long endTime; 
         private String granularity; 
         private Integer maxResults; 
@@ -163,6 +176,7 @@ public class ModelRouterQueryCostTrendMetricsRequest extends Request {
             super(request);
             this.apiKeyId = request.apiKeyId;
             this.clientId = request.clientId;
+            this.clientIds = request.clientIds;
             this.endTime = request.endTime;
             this.granularity = request.granularity;
             this.maxResults = request.maxResults;
@@ -187,6 +201,15 @@ public class ModelRouterQueryCostTrendMetricsRequest extends Request {
         public Builder clientId(Long clientId) {
             this.putQueryParameter("clientId", clientId);
             this.clientId = clientId;
+            return this;
+        }
+
+        /**
+         * clientIds.
+         */
+        public Builder clientIds(String clientIds) {
+            this.putQueryParameter("clientIds", clientIds);
+            this.clientIds = clientIds;
             return this;
         }
 

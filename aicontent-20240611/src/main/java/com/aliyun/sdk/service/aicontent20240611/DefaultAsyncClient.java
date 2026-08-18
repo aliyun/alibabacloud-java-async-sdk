@@ -1317,6 +1317,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModelRouterGetBillingBillSummary  ModelRouterGetBillingBillSummaryRequest
+     * @return ModelRouterGetBillingBillSummaryResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterGetBillingBillSummaryResponse> modelRouterGetBillingBillSummary(ModelRouterGetBillingBillSummaryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterGetBillingBillSummary").setMethod(HttpMethod.GET).setPathRegex("/api/v1/modelRouter/open/billing/bills/summary").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterGetBillingBillSummaryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterGetBillingBillSummaryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ModelRouterGetClientBalance  ModelRouterGetClientBalanceRequest
      * @return ModelRouterGetClientBalanceResponse
      */

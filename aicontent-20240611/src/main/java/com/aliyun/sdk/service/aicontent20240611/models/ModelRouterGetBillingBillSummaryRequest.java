@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ModelRouterQueryObservationMetricsRequest} extends {@link RequestModel}
+ * {@link ModelRouterGetBillingBillSummaryRequest} extends {@link RequestModel}
  *
- * <p>ModelRouterQueryObservationMetricsRequest</p>
+ * <p>ModelRouterGetBillingBillSummaryRequest</p>
  */
-public class ModelRouterQueryObservationMetricsRequest extends Request {
+public class ModelRouterGetBillingBillSummaryRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("apiKeyId")
     private Long apiKeyId;
@@ -31,11 +31,8 @@ public class ModelRouterQueryObservationMetricsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("endTime")
-    private String endTime;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("groupBy")
-    private String groupBy;
+    @com.aliyun.core.annotation.Validation(required = true)
+    private Long endTime;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("maxResults")
@@ -50,62 +47,37 @@ public class ModelRouterQueryObservationMetricsRequest extends Request {
     private Long modelId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("needTotalCount")
-    private Boolean needTotalCount;
+    @com.aliyun.core.annotation.NameInMap("modelTypes")
+    private String modelTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("orderBy")
-    private String orderBy;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("orderDirection")
-    private String orderDirection;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("pageIndex")
-    private Integer pageIndex;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("pageSize")
-    private Integer pageSize;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("startTime")
-    private String startTime;
+    @com.aliyun.core.annotation.Validation(required = true)
+    private Long startTime;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("timeRange")
-    private String timeRange;
-
-    private ModelRouterQueryObservationMetricsRequest(Builder builder) {
+    private ModelRouterGetBillingBillSummaryRequest(Builder builder) {
         super(builder);
         this.apiKeyId = builder.apiKeyId;
         this.clientId = builder.clientId;
         this.clientIds = builder.clientIds;
         this.endTime = builder.endTime;
-        this.groupBy = builder.groupBy;
         this.maxResults = builder.maxResults;
         this.memberUserIds = builder.memberUserIds;
         this.modelId = builder.modelId;
-        this.needTotalCount = builder.needTotalCount;
+        this.modelTypes = builder.modelTypes;
         this.nextToken = builder.nextToken;
-        this.orderBy = builder.orderBy;
-        this.orderDirection = builder.orderDirection;
-        this.pageIndex = builder.pageIndex;
-        this.pageSize = builder.pageSize;
         this.startTime = builder.startTime;
-        this.timeRange = builder.timeRange;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ModelRouterQueryObservationMetricsRequest create() {
+    public static ModelRouterGetBillingBillSummaryRequest create() {
         return builder().build();
     }
 
@@ -138,15 +110,8 @@ public class ModelRouterQueryObservationMetricsRequest extends Request {
     /**
      * @return endTime
      */
-    public String getEndTime() {
+    public Long getEndTime() {
         return this.endTime;
-    }
-
-    /**
-     * @return groupBy
-     */
-    public String getGroupBy() {
-        return this.groupBy;
     }
 
     /**
@@ -171,10 +136,10 @@ public class ModelRouterQueryObservationMetricsRequest extends Request {
     }
 
     /**
-     * @return needTotalCount
+     * @return modelTypes
      */
-    public Boolean getNeedTotalCount() {
-        return this.needTotalCount;
+    public String getModelTypes() {
+        return this.modelTypes;
     }
 
     /**
@@ -185,87 +150,40 @@ public class ModelRouterQueryObservationMetricsRequest extends Request {
     }
 
     /**
-     * @return orderBy
-     */
-    public String getOrderBy() {
-        return this.orderBy;
-    }
-
-    /**
-     * @return orderDirection
-     */
-    public String getOrderDirection() {
-        return this.orderDirection;
-    }
-
-    /**
-     * @return pageIndex
-     */
-    public Integer getPageIndex() {
-        return this.pageIndex;
-    }
-
-    /**
-     * @return pageSize
-     */
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
-    /**
      * @return startTime
      */
-    public String getStartTime() {
+    public Long getStartTime() {
         return this.startTime;
     }
 
-    /**
-     * @return timeRange
-     */
-    public String getTimeRange() {
-        return this.timeRange;
-    }
-
-    public static final class Builder extends Request.Builder<ModelRouterQueryObservationMetricsRequest, Builder> {
+    public static final class Builder extends Request.Builder<ModelRouterGetBillingBillSummaryRequest, Builder> {
         private Long apiKeyId; 
         private Long clientId; 
         private String clientIds; 
-        private String endTime; 
-        private String groupBy; 
+        private Long endTime; 
         private Integer maxResults; 
         private String memberUserIds; 
         private Long modelId; 
-        private Boolean needTotalCount; 
+        private String modelTypes; 
         private String nextToken; 
-        private String orderBy; 
-        private String orderDirection; 
-        private Integer pageIndex; 
-        private Integer pageSize; 
-        private String startTime; 
-        private String timeRange; 
+        private Long startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModelRouterQueryObservationMetricsRequest request) {
+        private Builder(ModelRouterGetBillingBillSummaryRequest request) {
             super(request);
             this.apiKeyId = request.apiKeyId;
             this.clientId = request.clientId;
             this.clientIds = request.clientIds;
             this.endTime = request.endTime;
-            this.groupBy = request.groupBy;
             this.maxResults = request.maxResults;
             this.memberUserIds = request.memberUserIds;
             this.modelId = request.modelId;
-            this.needTotalCount = request.needTotalCount;
+            this.modelTypes = request.modelTypes;
             this.nextToken = request.nextToken;
-            this.orderBy = request.orderBy;
-            this.orderDirection = request.orderDirection;
-            this.pageIndex = request.pageIndex;
-            this.pageSize = request.pageSize;
             this.startTime = request.startTime;
-            this.timeRange = request.timeRange;
         } 
 
         /**
@@ -296,20 +214,14 @@ public class ModelRouterQueryObservationMetricsRequest extends Request {
         }
 
         /**
-         * endTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700086400</p>
          */
-        public Builder endTime(String endTime) {
+        public Builder endTime(Long endTime) {
             this.putQueryParameter("endTime", endTime);
             this.endTime = endTime;
-            return this;
-        }
-
-        /**
-         * groupBy.
-         */
-        public Builder groupBy(String groupBy) {
-            this.putQueryParameter("groupBy", groupBy);
-            this.groupBy = groupBy;
             return this;
         }
 
@@ -341,11 +253,11 @@ public class ModelRouterQueryObservationMetricsRequest extends Request {
         }
 
         /**
-         * needTotalCount.
+         * modelTypes.
          */
-        public Builder needTotalCount(Boolean needTotalCount) {
-            this.putQueryParameter("needTotalCount", needTotalCount);
-            this.needTotalCount = needTotalCount;
+        public Builder modelTypes(String modelTypes) {
+            this.putQueryParameter("modelTypes", modelTypes);
+            this.modelTypes = modelTypes;
             return this;
         }
 
@@ -359,62 +271,20 @@ public class ModelRouterQueryObservationMetricsRequest extends Request {
         }
 
         /**
-         * orderBy.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700000000</p>
          */
-        public Builder orderBy(String orderBy) {
-            this.putQueryParameter("orderBy", orderBy);
-            this.orderBy = orderBy;
-            return this;
-        }
-
-        /**
-         * orderDirection.
-         */
-        public Builder orderDirection(String orderDirection) {
-            this.putQueryParameter("orderDirection", orderDirection);
-            this.orderDirection = orderDirection;
-            return this;
-        }
-
-        /**
-         * pageIndex.
-         */
-        public Builder pageIndex(Integer pageIndex) {
-            this.putQueryParameter("pageIndex", pageIndex);
-            this.pageIndex = pageIndex;
-            return this;
-        }
-
-        /**
-         * pageSize.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("pageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * startTime.
-         */
-        public Builder startTime(String startTime) {
+        public Builder startTime(Long startTime) {
             this.putQueryParameter("startTime", startTime);
             this.startTime = startTime;
             return this;
         }
 
-        /**
-         * timeRange.
-         */
-        public Builder timeRange(String timeRange) {
-            this.putQueryParameter("timeRange", timeRange);
-            this.timeRange = timeRange;
-            return this;
-        }
-
         @Override
-        public ModelRouterQueryObservationMetricsRequest build() {
-            return new ModelRouterQueryObservationMetricsRequest(this);
+        public ModelRouterGetBillingBillSummaryRequest build() {
+            return new ModelRouterGetBillingBillSummaryRequest(this);
         } 
 
     } 

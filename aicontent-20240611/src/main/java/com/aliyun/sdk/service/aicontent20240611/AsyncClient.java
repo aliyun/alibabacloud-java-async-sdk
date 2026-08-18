@@ -434,6 +434,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModelRouterExportMemberBalanceOrdersResponse> modelRouterExportMemberBalanceOrders(ModelRouterExportMemberBalanceOrdersRequest request);
 
     /**
+     * @param request the request parameters of ModelRouterGetBillingBillSummary  ModelRouterGetBillingBillSummaryRequest
+     * @return ModelRouterGetBillingBillSummaryResponse
+     */
+    CompletableFuture<ModelRouterGetBillingBillSummaryResponse> modelRouterGetBillingBillSummary(ModelRouterGetBillingBillSummaryRequest request);
+
+    /**
      * @param request the request parameters of ModelRouterGetClientBalance  ModelRouterGetClientBalanceRequest
      * @return ModelRouterGetClientBalanceResponse
      */
