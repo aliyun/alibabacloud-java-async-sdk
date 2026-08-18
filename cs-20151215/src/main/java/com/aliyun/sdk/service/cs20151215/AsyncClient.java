@@ -154,6 +154,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateKubernetesTriggerResponse> createKubernetesTrigger(CreateKubernetesTriggerRequest request);
 
     /**
+     * @param request the request parameters of CreateNodePoolComponentInstances  CreateNodePoolComponentInstancesRequest
+     * @return CreateNodePoolComponentInstancesResponse
+     */
+    CompletableFuture<CreateNodePoolComponentInstancesResponse> createNodePoolComponentInstances(CreateNodePoolComponentInstancesRequest request);
+
+    /**
      * @param request the request parameters of CreateTemplate  CreateTemplateRequest
      * @return CreateTemplateResponse
      */
@@ -233,6 +239,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     @Deprecated
     CompletableFuture<DeleteKubernetesTriggerResponse> deleteKubernetesTrigger(DeleteKubernetesTriggerRequest request);
+
+    /**
+     * @param request the request parameters of DeleteNodePoolComponentInstance  DeleteNodePoolComponentInstanceRequest
+     * @return DeleteNodePoolComponentInstanceResponse
+     */
+    CompletableFuture<DeleteNodePoolComponentInstanceResponse> deleteNodePoolComponentInstance(DeleteNodePoolComponentInstanceRequest request);
 
     /**
      * @param request the request parameters of DeletePolicyInstance  DeletePolicyInstanceRequest
@@ -687,6 +699,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListClusterKubeconfigStatesResponse> listClusterKubeconfigStates(ListClusterKubeconfigStatesRequest request);
 
     /**
+     * @param request the request parameters of ListNodePoolComponentInstances  ListNodePoolComponentInstancesRequest
+     * @return ListNodePoolComponentInstancesResponse
+     */
+    CompletableFuture<ListNodePoolComponentInstancesResponse> listNodePoolComponentInstances(ListNodePoolComponentInstancesRequest request);
+
+    /**
+     * @param request the request parameters of ListNodePoolComponents  ListNodePoolComponentsRequest
+     * @return ListNodePoolComponentsResponse
+     */
+    CompletableFuture<ListNodePoolComponentsResponse> listNodePoolComponents(ListNodePoolComponentsRequest request);
+
+    /**
      * @param request the request parameters of ListOperationPlans  ListOperationPlansRequest
      * @return ListOperationPlansResponse
      */
@@ -995,6 +1019,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateNodePoolComponentResponse
      */
     CompletableFuture<UpdateNodePoolComponentResponse> updateNodePoolComponent(UpdateNodePoolComponentRequest request);
+
+    /**
+     * @param request the request parameters of UpdateNodePoolComponentInstance  UpdateNodePoolComponentInstanceRequest
+     * @return UpdateNodePoolComponentInstanceResponse
+     */
+    CompletableFuture<UpdateNodePoolComponentInstanceResponse> updateNodePoolComponentInstance(UpdateNodePoolComponentInstanceRequest request);
 
     /**
      * @param request the request parameters of UpdateResourcesDeleteProtection  UpdateResourcesDeleteProtectionRequest

@@ -449,6 +449,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateNodePoolComponentInstances  CreateNodePoolComponentInstancesRequest
+     * @return CreateNodePoolComponentInstancesResponse
+     */
+    @Override
+    public CompletableFuture<CreateNodePoolComponentInstancesResponse> createNodePoolComponentInstances(CreateNodePoolComponentInstancesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateNodePoolComponentInstances").setMethod(HttpMethod.POST).setPathRegex("/clusters/{cluster_id}/nodepools/{nodepool_id}/component_instances").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateNodePoolComponentInstancesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateNodePoolComponentInstancesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateTemplate  CreateTemplateRequest
      * @return CreateTemplateResponse
      */
@@ -644,6 +662,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteKubernetesTriggerResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteNodePoolComponentInstance  DeleteNodePoolComponentInstanceRequest
+     * @return DeleteNodePoolComponentInstanceResponse
+     */
+    @Override
+    public CompletableFuture<DeleteNodePoolComponentInstanceResponse> deleteNodePoolComponentInstance(DeleteNodePoolComponentInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteNodePoolComponentInstance").setMethod(HttpMethod.DELETE).setPathRegex("/clusters/{cluster_id}/nodepools/{nodepool_id}/component_instances/{name}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteNodePoolComponentInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteNodePoolComponentInstanceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1906,6 +1942,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListNodePoolComponentInstances  ListNodePoolComponentInstancesRequest
+     * @return ListNodePoolComponentInstancesResponse
+     */
+    @Override
+    public CompletableFuture<ListNodePoolComponentInstancesResponse> listNodePoolComponentInstances(ListNodePoolComponentInstancesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListNodePoolComponentInstances").setMethod(HttpMethod.GET).setPathRegex("/clusters/{cluster_id}/nodepools/{nodepool_id}/component_instances").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListNodePoolComponentInstancesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListNodePoolComponentInstancesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListNodePoolComponents  ListNodePoolComponentsRequest
+     * @return ListNodePoolComponentsResponse
+     */
+    @Override
+    public CompletableFuture<ListNodePoolComponentsResponse> listNodePoolComponents(ListNodePoolComponentsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListNodePoolComponents").setMethod(HttpMethod.GET).setPathRegex("/clusters/{cluster_id}/nodepool_components").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListNodePoolComponentsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListNodePoolComponentsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListOperationPlans  ListOperationPlansRequest
      * @return ListOperationPlansResponse
      */
@@ -2714,6 +2786,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateNodePoolComponentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateNodePoolComponentInstance  UpdateNodePoolComponentInstanceRequest
+     * @return UpdateNodePoolComponentInstanceResponse
+     */
+    @Override
+    public CompletableFuture<UpdateNodePoolComponentInstanceResponse> updateNodePoolComponentInstance(UpdateNodePoolComponentInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateNodePoolComponentInstance").setMethod(HttpMethod.PUT).setPathRegex("/clusters/{cluster_id}/nodepools/{nodepool_id}/component_instances/{name}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateNodePoolComponentInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateNodePoolComponentInstanceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
