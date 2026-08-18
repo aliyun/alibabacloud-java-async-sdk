@@ -377,6 +377,9 @@ public class ListApprovalsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatorUsername")
         private String creatorUsername;
 
+        @com.aliyun.core.annotation.NameInMap("EffectStatus")
+        private String effectStatus;
+
         @com.aliyun.core.annotation.NameInMap("EndTimestamp")
         private Long endTimestamp;
 
@@ -392,6 +395,9 @@ public class ListApprovalsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
+        @com.aliyun.core.annotation.NameInMap("ReportType")
+        private String reportType;
+
         @com.aliyun.core.annotation.NameInMap("SchemaContent")
         private String schemaContent;
 
@@ -404,6 +410,9 @@ public class ListApprovalsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("ValidityType")
+        private String validityType;
+
         private Approvals(Builder builder) {
             this.approvalDetail = builder.approvalDetail;
             this.approvalId = builder.approvalId;
@@ -414,15 +423,18 @@ public class ListApprovalsResponseBody extends TeaModel {
             this.creatorDevTag = builder.creatorDevTag;
             this.creatorUserId = builder.creatorUserId;
             this.creatorUsername = builder.creatorUsername;
+            this.effectStatus = builder.effectStatus;
             this.endTimestamp = builder.endTimestamp;
             this.policyType = builder.policyType;
             this.processId = builder.processId;
             this.processName = builder.processName;
             this.reason = builder.reason;
+            this.reportType = builder.reportType;
             this.schemaContent = builder.schemaContent;
             this.schemaId = builder.schemaId;
             this.schemaName = builder.schemaName;
             this.status = builder.status;
+            this.validityType = builder.validityType;
         }
 
         public static Builder builder() {
@@ -497,6 +509,13 @@ public class ListApprovalsResponseBody extends TeaModel {
         }
 
         /**
+         * @return effectStatus
+         */
+        public String getEffectStatus() {
+            return this.effectStatus;
+        }
+
+        /**
          * @return endTimestamp
          */
         public Long getEndTimestamp() {
@@ -532,6 +551,13 @@ public class ListApprovalsResponseBody extends TeaModel {
         }
 
         /**
+         * @return reportType
+         */
+        public String getReportType() {
+            return this.reportType;
+        }
+
+        /**
          * @return schemaContent
          */
         public String getSchemaContent() {
@@ -559,6 +585,13 @@ public class ListApprovalsResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return validityType
+         */
+        public String getValidityType() {
+            return this.validityType;
+        }
+
         public static final class Builder {
             private String approvalDetail; 
             private String approvalId; 
@@ -569,15 +602,18 @@ public class ListApprovalsResponseBody extends TeaModel {
             private String creatorDevTag; 
             private String creatorUserId; 
             private String creatorUsername; 
+            private String effectStatus; 
             private Long endTimestamp; 
             private String policyType; 
             private String processId; 
             private String processName; 
             private String reason; 
+            private String reportType; 
             private String schemaContent; 
             private String schemaId; 
             private String schemaName; 
             private String status; 
+            private String validityType; 
 
             private Builder() {
             } 
@@ -592,15 +628,18 @@ public class ListApprovalsResponseBody extends TeaModel {
                 this.creatorDevTag = model.creatorDevTag;
                 this.creatorUserId = model.creatorUserId;
                 this.creatorUsername = model.creatorUsername;
+                this.effectStatus = model.effectStatus;
                 this.endTimestamp = model.endTimestamp;
                 this.policyType = model.policyType;
                 this.processId = model.processId;
                 this.processName = model.processName;
                 this.reason = model.reason;
+                this.reportType = model.reportType;
                 this.schemaContent = model.schemaContent;
                 this.schemaId = model.schemaId;
                 this.schemaName = model.schemaName;
                 this.status = model.status;
+                this.validityType = model.validityType;
             } 
 
             /**
@@ -676,6 +715,14 @@ public class ListApprovalsResponseBody extends TeaModel {
             }
 
             /**
+             * EffectStatus.
+             */
+            public Builder effectStatus(String effectStatus) {
+                this.effectStatus = effectStatus;
+                return this;
+            }
+
+            /**
              * EndTimestamp.
              */
             public Builder endTimestamp(Long endTimestamp) {
@@ -716,6 +763,14 @@ public class ListApprovalsResponseBody extends TeaModel {
             }
 
             /**
+             * ReportType.
+             */
+            public Builder reportType(String reportType) {
+                this.reportType = reportType;
+                return this;
+            }
+
+            /**
              * SchemaContent.
              */
             public Builder schemaContent(String schemaContent) {
@@ -744,6 +799,14 @@ public class ListApprovalsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * ValidityType.
+             */
+            public Builder validityType(String validityType) {
+                this.validityType = validityType;
                 return this;
             }
 

@@ -51,6 +51,10 @@ public class ListApprovalsRequest extends Request {
     private Long currentPage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectStatuses")
+    private java.util.List<String> effectStatuses;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OperatorUserId")
     private String operatorUserId;
 
@@ -76,6 +80,10 @@ public class ListApprovalsRequest extends Request {
     private String processName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReportTypes")
+    private java.util.List<String> reportTypes;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SchemaId")
     private String schemaId;
 
@@ -97,12 +105,14 @@ public class ListApprovalsRequest extends Request {
         this.creatorUserId = builder.creatorUserId;
         this.creatorUsername = builder.creatorUsername;
         this.currentPage = builder.currentPage;
+        this.effectStatuses = builder.effectStatuses;
         this.operatorUserId = builder.operatorUserId;
         this.operatorUsername = builder.operatorUsername;
         this.pageSize = builder.pageSize;
         this.policyType = builder.policyType;
         this.processId = builder.processId;
         this.processName = builder.processName;
+        this.reportTypes = builder.reportTypes;
         this.schemaId = builder.schemaId;
         this.schemaName = builder.schemaName;
         this.statuses = builder.statuses;
@@ -178,6 +188,13 @@ public class ListApprovalsRequest extends Request {
     }
 
     /**
+     * @return effectStatuses
+     */
+    public java.util.List<String> getEffectStatuses() {
+        return this.effectStatuses;
+    }
+
+    /**
      * @return operatorUserId
      */
     public String getOperatorUserId() {
@@ -220,6 +237,13 @@ public class ListApprovalsRequest extends Request {
     }
 
     /**
+     * @return reportTypes
+     */
+    public java.util.List<String> getReportTypes() {
+        return this.reportTypes;
+    }
+
+    /**
      * @return schemaId
      */
     public String getSchemaId() {
@@ -249,12 +273,14 @@ public class ListApprovalsRequest extends Request {
         private String creatorUserId; 
         private String creatorUsername; 
         private Long currentPage; 
+        private java.util.List<String> effectStatuses; 
         private String operatorUserId; 
         private String operatorUsername; 
         private Long pageSize; 
         private String policyType; 
         private String processId; 
         private String processName; 
+        private java.util.List<String> reportTypes; 
         private String schemaId; 
         private String schemaName; 
         private java.util.List<String> statuses; 
@@ -273,12 +299,14 @@ public class ListApprovalsRequest extends Request {
             this.creatorUserId = request.creatorUserId;
             this.creatorUsername = request.creatorUsername;
             this.currentPage = request.currentPage;
+            this.effectStatuses = request.effectStatuses;
             this.operatorUserId = request.operatorUserId;
             this.operatorUsername = request.operatorUsername;
             this.pageSize = request.pageSize;
             this.policyType = request.policyType;
             this.processId = request.processId;
             this.processName = request.processName;
+            this.reportTypes = request.reportTypes;
             this.schemaId = request.schemaId;
             this.schemaName = request.schemaName;
             this.statuses = request.statuses;
@@ -360,6 +388,15 @@ public class ListApprovalsRequest extends Request {
         }
 
         /**
+         * EffectStatuses.
+         */
+        public Builder effectStatuses(java.util.List<String> effectStatuses) {
+            this.putQueryParameter("EffectStatuses", effectStatuses);
+            this.effectStatuses = effectStatuses;
+            return this;
+        }
+
+        /**
          * OperatorUserId.
          */
         public Builder operatorUserId(String operatorUserId) {
@@ -413,6 +450,15 @@ public class ListApprovalsRequest extends Request {
         public Builder processName(String processName) {
             this.putQueryParameter("ProcessName", processName);
             this.processName = processName;
+            return this;
+        }
+
+        /**
+         * ReportTypes.
+         */
+        public Builder reportTypes(java.util.List<String> reportTypes) {
+            this.putQueryParameter("ReportTypes", reportTypes);
+            this.reportTypes = reportTypes;
             return this;
         }
 

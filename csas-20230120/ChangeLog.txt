@@ -1,3 +1,6 @@
+2026-08-18 Version: 1.0.60
+- Generated java-async 2023-01-20 for csas.
+
 2026-08-17 Version: 1.0.59
 - Generated java-async 2023-01-20 for csas.
 

@@ -328,6 +328,219 @@ public class GetApprovalResponseBody extends TeaModel {
      *
      * <p>GetApprovalResponseBody</p>
      */
+    public static class TargetUser extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("UserId")
+        private String userId;
+
+        @com.aliyun.core.annotation.NameInMap("Username")
+        private String username;
+
+        private TargetUser(Builder builder) {
+            this.userId = builder.userId;
+            this.username = builder.username;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TargetUser create() {
+            return builder().build();
+        }
+
+        /**
+         * @return userId
+         */
+        public String getUserId() {
+            return this.userId;
+        }
+
+        /**
+         * @return username
+         */
+        public String getUsername() {
+            return this.username;
+        }
+
+        public static final class Builder {
+            private String userId; 
+            private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(TargetUser model) {
+                this.userId = model.userId;
+                this.username = model.username;
+            } 
+
+            /**
+             * UserId.
+             */
+            public Builder userId(String userId) {
+                this.userId = userId;
+                return this;
+            }
+
+            /**
+             * Username.
+             */
+            public Builder username(String username) {
+                this.username = username;
+                return this;
+            }
+
+            public TargetUser build() {
+                return new TargetUser(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetApprovalResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApprovalResponseBody</p>
+     */
+    public static class BackendReportDetail extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AssociatedPolicyName")
+        private String associatedPolicyName;
+
+        @com.aliyun.core.annotation.NameInMap("AssociatedPolicyType")
+        private String associatedPolicyType;
+
+        @com.aliyun.core.annotation.NameInMap("Remark")
+        private String remark;
+
+        @com.aliyun.core.annotation.NameInMap("ReportObject")
+        private Object reportObject;
+
+        @com.aliyun.core.annotation.NameInMap("TargetUser")
+        private TargetUser targetUser;
+
+        private BackendReportDetail(Builder builder) {
+            this.associatedPolicyName = builder.associatedPolicyName;
+            this.associatedPolicyType = builder.associatedPolicyType;
+            this.remark = builder.remark;
+            this.reportObject = builder.reportObject;
+            this.targetUser = builder.targetUser;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BackendReportDetail create() {
+            return builder().build();
+        }
+
+        /**
+         * @return associatedPolicyName
+         */
+        public String getAssociatedPolicyName() {
+            return this.associatedPolicyName;
+        }
+
+        /**
+         * @return associatedPolicyType
+         */
+        public String getAssociatedPolicyType() {
+            return this.associatedPolicyType;
+        }
+
+        /**
+         * @return remark
+         */
+        public String getRemark() {
+            return this.remark;
+        }
+
+        /**
+         * @return reportObject
+         */
+        public Object getReportObject() {
+            return this.reportObject;
+        }
+
+        /**
+         * @return targetUser
+         */
+        public TargetUser getTargetUser() {
+            return this.targetUser;
+        }
+
+        public static final class Builder {
+            private String associatedPolicyName; 
+            private String associatedPolicyType; 
+            private String remark; 
+            private Object reportObject; 
+            private TargetUser targetUser; 
+
+            private Builder() {
+            } 
+
+            private Builder(BackendReportDetail model) {
+                this.associatedPolicyName = model.associatedPolicyName;
+                this.associatedPolicyType = model.associatedPolicyType;
+                this.remark = model.remark;
+                this.reportObject = model.reportObject;
+                this.targetUser = model.targetUser;
+            } 
+
+            /**
+             * AssociatedPolicyName.
+             */
+            public Builder associatedPolicyName(String associatedPolicyName) {
+                this.associatedPolicyName = associatedPolicyName;
+                return this;
+            }
+
+            /**
+             * AssociatedPolicyType.
+             */
+            public Builder associatedPolicyType(String associatedPolicyType) {
+                this.associatedPolicyType = associatedPolicyType;
+                return this;
+            }
+
+            /**
+             * Remark.
+             */
+            public Builder remark(String remark) {
+                this.remark = remark;
+                return this;
+            }
+
+            /**
+             * ReportObject.
+             */
+            public Builder reportObject(Object reportObject) {
+                this.reportObject = reportObject;
+                return this;
+            }
+
+            /**
+             * TargetUser.
+             */
+            public Builder targetUser(TargetUser targetUser) {
+                this.targetUser = targetUser;
+                return this;
+            }
+
+            public BackendReportDetail build() {
+                return new BackendReportDetail(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetApprovalResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApprovalResponseBody</p>
+     */
     public static class Approval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApprovalDetail")
         private String approvalDetail;
@@ -338,8 +551,17 @@ public class GetApprovalResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApprovalProgresses")
         private java.util.List<ApprovalProgresses> approvalProgresses;
 
+        @com.aliyun.core.annotation.NameInMap("ApprovalType")
+        private Integer approvalType;
+
+        @com.aliyun.core.annotation.NameInMap("BackendReportDetail")
+        private BackendReportDetail backendReportDetail;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
+
+        @com.aliyun.core.annotation.NameInMap("CreateTimeUnix")
+        private Long createTimeUnix;
 
         @com.aliyun.core.annotation.NameInMap("CreatorDepartment")
         private String creatorDepartment;
@@ -352,6 +574,9 @@ public class GetApprovalResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("CreatorUsername")
         private String creatorUsername;
+
+        @com.aliyun.core.annotation.NameInMap("EffectStatus")
+        private String effectStatus;
 
         @com.aliyun.core.annotation.NameInMap("EndTimestamp")
         private Long endTimestamp;
@@ -368,6 +593,9 @@ public class GetApprovalResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
+        @com.aliyun.core.annotation.NameInMap("ReportType")
+        private String reportType;
+
         @com.aliyun.core.annotation.NameInMap("SchemaContent")
         private String schemaContent;
 
@@ -380,24 +608,33 @@ public class GetApprovalResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("ValidityType")
+        private String validityType;
+
         private Approval(Builder builder) {
             this.approvalDetail = builder.approvalDetail;
             this.approvalId = builder.approvalId;
             this.approvalProgresses = builder.approvalProgresses;
+            this.approvalType = builder.approvalType;
+            this.backendReportDetail = builder.backendReportDetail;
             this.createTime = builder.createTime;
+            this.createTimeUnix = builder.createTimeUnix;
             this.creatorDepartment = builder.creatorDepartment;
             this.creatorDevTag = builder.creatorDevTag;
             this.creatorUserId = builder.creatorUserId;
             this.creatorUsername = builder.creatorUsername;
+            this.effectStatus = builder.effectStatus;
             this.endTimestamp = builder.endTimestamp;
             this.policyType = builder.policyType;
             this.processId = builder.processId;
             this.processName = builder.processName;
             this.reason = builder.reason;
+            this.reportType = builder.reportType;
             this.schemaContent = builder.schemaContent;
             this.schemaId = builder.schemaId;
             this.schemaName = builder.schemaName;
             this.status = builder.status;
+            this.validityType = builder.validityType;
         }
 
         public static Builder builder() {
@@ -430,10 +667,31 @@ public class GetApprovalResponseBody extends TeaModel {
         }
 
         /**
+         * @return approvalType
+         */
+        public Integer getApprovalType() {
+            return this.approvalType;
+        }
+
+        /**
+         * @return backendReportDetail
+         */
+        public BackendReportDetail getBackendReportDetail() {
+            return this.backendReportDetail;
+        }
+
+        /**
          * @return createTime
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return createTimeUnix
+         */
+        public Long getCreateTimeUnix() {
+            return this.createTimeUnix;
         }
 
         /**
@@ -462,6 +720,13 @@ public class GetApprovalResponseBody extends TeaModel {
          */
         public String getCreatorUsername() {
             return this.creatorUsername;
+        }
+
+        /**
+         * @return effectStatus
+         */
+        public String getEffectStatus() {
+            return this.effectStatus;
         }
 
         /**
@@ -500,6 +765,13 @@ public class GetApprovalResponseBody extends TeaModel {
         }
 
         /**
+         * @return reportType
+         */
+        public String getReportType() {
+            return this.reportType;
+        }
+
+        /**
          * @return schemaContent
          */
         public String getSchemaContent() {
@@ -527,24 +799,37 @@ public class GetApprovalResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return validityType
+         */
+        public String getValidityType() {
+            return this.validityType;
+        }
+
         public static final class Builder {
             private String approvalDetail; 
             private String approvalId; 
             private java.util.List<ApprovalProgresses> approvalProgresses; 
+            private Integer approvalType; 
+            private BackendReportDetail backendReportDetail; 
             private String createTime; 
+            private Long createTimeUnix; 
             private String creatorDepartment; 
             private String creatorDevTag; 
             private String creatorUserId; 
             private String creatorUsername; 
+            private String effectStatus; 
             private Long endTimestamp; 
             private String policyType; 
             private String processId; 
             private String processName; 
             private String reason; 
+            private String reportType; 
             private String schemaContent; 
             private String schemaId; 
             private String schemaName; 
             private String status; 
+            private String validityType; 
 
             private Builder() {
             } 
@@ -553,20 +838,26 @@ public class GetApprovalResponseBody extends TeaModel {
                 this.approvalDetail = model.approvalDetail;
                 this.approvalId = model.approvalId;
                 this.approvalProgresses = model.approvalProgresses;
+                this.approvalType = model.approvalType;
+                this.backendReportDetail = model.backendReportDetail;
                 this.createTime = model.createTime;
+                this.createTimeUnix = model.createTimeUnix;
                 this.creatorDepartment = model.creatorDepartment;
                 this.creatorDevTag = model.creatorDevTag;
                 this.creatorUserId = model.creatorUserId;
                 this.creatorUsername = model.creatorUsername;
+                this.effectStatus = model.effectStatus;
                 this.endTimestamp = model.endTimestamp;
                 this.policyType = model.policyType;
                 this.processId = model.processId;
                 this.processName = model.processName;
                 this.reason = model.reason;
+                this.reportType = model.reportType;
                 this.schemaContent = model.schemaContent;
                 this.schemaId = model.schemaId;
                 this.schemaName = model.schemaName;
                 this.status = model.status;
+                this.validityType = model.validityType;
             } 
 
             /**
@@ -594,10 +885,34 @@ public class GetApprovalResponseBody extends TeaModel {
             }
 
             /**
+             * ApprovalType.
+             */
+            public Builder approvalType(Integer approvalType) {
+                this.approvalType = approvalType;
+                return this;
+            }
+
+            /**
+             * BackendReportDetail.
+             */
+            public Builder backendReportDetail(BackendReportDetail backendReportDetail) {
+                this.backendReportDetail = backendReportDetail;
+                return this;
+            }
+
+            /**
              * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * CreateTimeUnix.
+             */
+            public Builder createTimeUnix(Long createTimeUnix) {
+                this.createTimeUnix = createTimeUnix;
                 return this;
             }
 
@@ -630,6 +945,14 @@ public class GetApprovalResponseBody extends TeaModel {
              */
             public Builder creatorUsername(String creatorUsername) {
                 this.creatorUsername = creatorUsername;
+                return this;
+            }
+
+            /**
+             * EffectStatus.
+             */
+            public Builder effectStatus(String effectStatus) {
+                this.effectStatus = effectStatus;
                 return this;
             }
 
@@ -674,6 +997,14 @@ public class GetApprovalResponseBody extends TeaModel {
             }
 
             /**
+             * ReportType.
+             */
+            public Builder reportType(String reportType) {
+                this.reportType = reportType;
+                return this;
+            }
+
+            /**
              * SchemaContent.
              */
             public Builder schemaContent(String schemaContent) {
@@ -702,6 +1033,14 @@ public class GetApprovalResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * ValidityType.
+             */
+            public Builder validityType(String validityType) {
+                this.validityType = validityType;
                 return this;
             }
 

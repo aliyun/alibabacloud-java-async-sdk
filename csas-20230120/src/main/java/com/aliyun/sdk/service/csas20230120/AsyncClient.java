@@ -32,6 +32,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AttachPolicy2ApprovalProcessResponse> attachPolicy2ApprovalProcess(AttachPolicy2ApprovalProcessRequest request);
 
     /**
+     * @param request the request parameters of BatchCreateDomainItems  BatchCreateDomainItemsRequest
+     * @return BatchCreateDomainItemsResponse
+     */
+    CompletableFuture<BatchCreateDomainItemsResponse> batchCreateDomainItems(BatchCreateDomainItemsRequest request);
+
+    /**
+     * @param request the request parameters of BatchDeleteDomainItems  BatchDeleteDomainItemsRequest
+     * @return BatchDeleteDomainItemsResponse
+     */
+    CompletableFuture<BatchDeleteDomainItemsResponse> batchDeleteDomainItems(BatchDeleteDomainItemsRequest request);
+
+    /**
      * @param request the request parameters of CreateApprovalProcess  CreateApprovalProcessRequest
      * @return CreateApprovalProcessResponse
      */
