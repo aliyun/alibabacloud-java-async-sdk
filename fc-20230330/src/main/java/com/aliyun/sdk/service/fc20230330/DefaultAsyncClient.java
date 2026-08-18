@@ -184,6 +184,33 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该 API 用于从指定的微沙箱会话中创建一个用户快照。</li>
+     * <li>可选参数 <code>qualifier</code> 用于标识创建源会话时使用的有效别名或具体函数版本。如果省略，默认为 <code>LATEST</code>。</li>
+     * <li>必须提供 <code>sessionId</code> 参数，以指定要从中创建快照的客户端会话 ID。</li>
+     * <li>描述信息 <code>description</code> 是可选的，但若提供，则不能包含控制字符，并且长度限制为 256 个 UTF-8 字节。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateSnapshot  CreateSnapshotRequest
+     * @return CreateSnapshotResponse
+     */
+    @Override
+    public CompletableFuture<CreateSnapshotResponse> createSnapshot(CreateSnapshotRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateSnapshot").setMethod(HttpMethod.POST).setPathRegex("/2023-03-30/functions/{functionName}/snapshots").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateSnapshotResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateSnapshotResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateTrigger  CreateTriggerRequest
      * @return CreateTriggerResponse
      */
@@ -394,6 +421,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteSessionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteSnapshot  DeleteSnapshotRequest
+     * @return DeleteSnapshotResponse
+     */
+    @Override
+    public CompletableFuture<DeleteSnapshotResponse> deleteSnapshot(DeleteSnapshotRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteSnapshot").setMethod(HttpMethod.DELETE).setPathRegex("/2023-03-30/functions/{functionName}/snapshots/{snapshotId}").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteSnapshotResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteSnapshotResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -709,6 +754,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetSnapshot  GetSnapshotRequest
+     * @return GetSnapshotResponse
+     */
+    @Override
+    public CompletableFuture<GetSnapshotResponse> getSnapshot(GetSnapshotRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetSnapshot").setMethod(HttpMethod.GET).setPathRegex("/2023-03-30/functions/{functionName}/snapshots/{snapshotId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetSnapshotResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetSnapshotResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetTrigger  GetTriggerRequest
      * @return GetTriggerResponse
      */
@@ -1005,6 +1068,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListSessionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListSnapshots  ListSnapshotsRequest
+     * @return ListSnapshotsResponse
+     */
+    @Override
+    public CompletableFuture<ListSnapshotsResponse> listSnapshots(ListSnapshotsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListSnapshots").setMethod(HttpMethod.GET).setPathRegex("/2023-03-30/snapshots").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListSnapshotsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListSnapshotsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
