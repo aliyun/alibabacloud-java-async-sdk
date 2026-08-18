@@ -263,6 +263,9 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AntiPunishTime")
         private String antiPunishTime;
 
+        @com.aliyun.core.annotation.NameInMap("CallApi")
+        private String callApi;
+
         @com.aliyun.core.annotation.NameInMap("DateExtras")
         private DateExtras dateExtras;
 
@@ -277,6 +280,15 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("EventReason")
         private String eventReason;
+
+        @com.aliyun.core.annotation.NameInMap("EventType")
+        private String eventType;
+
+        @com.aliyun.core.annotation.NameInMap("ExceptionCallTime")
+        private String exceptionCallTime;
+
+        @com.aliyun.core.annotation.NameInMap("ExceptionIp")
+        private String exceptionIp;
 
         @com.aliyun.core.annotation.NameInMap("PunishTime")
         private String punishTime;
@@ -306,11 +318,15 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             this.actionCode = builder.actionCode;
             this.actionName = builder.actionName;
             this.antiPunishTime = builder.antiPunishTime;
+            this.callApi = builder.callApi;
             this.dateExtras = builder.dateExtras;
             this.eventId = builder.eventId;
             this.eventImpact = builder.eventImpact;
             this.eventName = builder.eventName;
             this.eventReason = builder.eventReason;
+            this.eventType = builder.eventType;
+            this.exceptionCallTime = builder.exceptionCallTime;
+            this.exceptionIp = builder.exceptionIp;
             this.punishTime = builder.punishTime;
             this.reinforcement = builder.reinforcement;
             this.resourceId = builder.resourceId;
@@ -351,6 +367,13 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         }
 
         /**
+         * @return callApi
+         */
+        public String getCallApi() {
+            return this.callApi;
+        }
+
+        /**
          * @return dateExtras
          */
         public DateExtras getDateExtras() {
@@ -383,6 +406,27 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
          */
         public String getEventReason() {
             return this.eventReason;
+        }
+
+        /**
+         * @return eventType
+         */
+        public String getEventType() {
+            return this.eventType;
+        }
+
+        /**
+         * @return exceptionCallTime
+         */
+        public String getExceptionCallTime() {
+            return this.exceptionCallTime;
+        }
+
+        /**
+         * @return exceptionIp
+         */
+        public String getExceptionIp() {
+            return this.exceptionIp;
         }
 
         /**
@@ -445,11 +489,15 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             private String actionCode; 
             private String actionName; 
             private String antiPunishTime; 
+            private String callApi; 
             private DateExtras dateExtras; 
             private String eventId; 
             private String eventImpact; 
             private String eventName; 
             private String eventReason; 
+            private String eventType; 
+            private String exceptionCallTime; 
+            private String exceptionIp; 
             private String punishTime; 
             private String reinforcement; 
             private String resourceId; 
@@ -466,11 +514,15 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
                 this.actionCode = model.actionCode;
                 this.actionName = model.actionName;
                 this.antiPunishTime = model.antiPunishTime;
+                this.callApi = model.callApi;
                 this.dateExtras = model.dateExtras;
                 this.eventId = model.eventId;
                 this.eventImpact = model.eventImpact;
                 this.eventName = model.eventName;
                 this.eventReason = model.eventReason;
+                this.eventType = model.eventType;
+                this.exceptionCallTime = model.exceptionCallTime;
+                this.exceptionIp = model.exceptionIp;
                 this.punishTime = model.punishTime;
                 this.reinforcement = model.reinforcement;
                 this.resourceId = model.resourceId;
@@ -502,6 +554,14 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
              */
             public Builder antiPunishTime(String antiPunishTime) {
                 this.antiPunishTime = antiPunishTime;
+                return this;
+            }
+
+            /**
+             * CallApi.
+             */
+            public Builder callApi(String callApi) {
+                this.callApi = callApi;
                 return this;
             }
 
@@ -542,6 +602,30 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
              */
             public Builder eventReason(String eventReason) {
                 this.eventReason = eventReason;
+                return this;
+            }
+
+            /**
+             * EventType.
+             */
+            public Builder eventType(String eventType) {
+                this.eventType = eventType;
+                return this;
+            }
+
+            /**
+             * ExceptionCallTime.
+             */
+            public Builder exceptionCallTime(String exceptionCallTime) {
+                this.exceptionCallTime = exceptionCallTime;
+                return this;
+            }
+
+            /**
+             * ExceptionIp.
+             */
+            public Builder exceptionIp(String exceptionIp) {
+                this.exceptionIp = exceptionIp;
                 return this;
             }
 
