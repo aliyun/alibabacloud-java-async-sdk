@@ -54,6 +54,9 @@ public class CreateSessionInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("sessionTTLInSeconds")
     private Long sessionTTLInSeconds;
 
+    @com.aliyun.core.annotation.NameInMap("snapshotId")
+    private String snapshotId;
+
     private CreateSessionInput(Builder builder) {
         this.allowInternetAccess = builder.allowInternetAccess;
         this.disableSessionIdReuse = builder.disableSessionIdReuse;
@@ -67,6 +70,7 @@ public class CreateSessionInput extends TeaModel {
         this.sessionId = builder.sessionId;
         this.sessionIdleTimeoutInSeconds = builder.sessionIdleTimeoutInSeconds;
         this.sessionTTLInSeconds = builder.sessionTTLInSeconds;
+        this.snapshotId = builder.snapshotId;
     }
 
     public static Builder builder() {
@@ -165,6 +169,13 @@ public class CreateSessionInput extends TeaModel {
         return this.sessionTTLInSeconds;
     }
 
+    /**
+     * @return snapshotId
+     */
+    public String getSnapshotId() {
+        return this.snapshotId;
+    }
+
     public static final class Builder {
         private Boolean allowInternetAccess; 
         private Boolean disableSessionIdReuse; 
@@ -178,6 +189,7 @@ public class CreateSessionInput extends TeaModel {
         private String sessionId; 
         private Long sessionIdleTimeoutInSeconds; 
         private Long sessionTTLInSeconds; 
+        private String snapshotId; 
 
         private Builder() {
         } 
@@ -195,6 +207,7 @@ public class CreateSessionInput extends TeaModel {
             this.sessionId = model.sessionId;
             this.sessionIdleTimeoutInSeconds = model.sessionIdleTimeoutInSeconds;
             this.sessionTTLInSeconds = model.sessionTTLInSeconds;
+            this.snapshotId = model.snapshotId;
         } 
 
         /**
@@ -290,6 +303,14 @@ public class CreateSessionInput extends TeaModel {
          */
         public Builder sessionTTLInSeconds(Long sessionTTLInSeconds) {
             this.sessionTTLInSeconds = sessionTTLInSeconds;
+            return this;
+        }
+
+        /**
+         * snapshotId.
+         */
+        public Builder snapshotId(String snapshotId) {
+            this.snapshotId = snapshotId;
             return this;
         }
 
