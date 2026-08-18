@@ -59,6 +59,10 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PolicyDocument")
     private String policyDocument;
 
+    @com.aliyun.core.annotation.NameInMap("ProtectedEnabled")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private Boolean protectedEnabled;
+
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -104,6 +108,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         this.endpointType = builder.endpointType;
         this.payer = builder.payer;
         this.policyDocument = builder.policyDocument;
+        this.protectedEnabled = builder.protectedEnabled;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -227,6 +232,13 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return protectedEnabled
+     */
+    public Boolean getProtectedEnabled() {
+        return this.protectedEnabled;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -311,6 +323,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
         private String endpointType; 
         private String payer; 
         private String policyDocument; 
+        private Boolean protectedEnabled; 
         private String regionId; 
         private String requestId; 
         private String resourceGroupId; 
@@ -340,6 +353,7 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
             this.endpointType = model.endpointType;
             this.payer = model.payer;
             this.policyDocument = model.policyDocument;
+            this.protectedEnabled = model.protectedEnabled;
             this.regionId = model.regionId;
             this.requestId = model.requestId;
             this.resourceGroupId = model.resourceGroupId;
@@ -524,6 +538,14 @@ public class GetVpcEndpointAttributeResponseBody extends TeaModel {
          */
         public Builder policyDocument(String policyDocument) {
             this.policyDocument = policyDocument;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        public Builder protectedEnabled(Boolean protectedEnabled) {
+            this.protectedEnabled = protectedEnabled;
             return this;
         }
 

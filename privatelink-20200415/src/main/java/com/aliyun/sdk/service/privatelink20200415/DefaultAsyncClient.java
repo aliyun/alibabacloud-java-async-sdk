@@ -30,7 +30,51 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "Privatelink";
         this.version = "2020-04-15";
         this.endpointRule = "regional";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("cn-beijing", "privatelink.cn-beijing.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-jva", "privatelink.cn-zhengzhou-jva.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "privatelink.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "privatelink.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "privatelink.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "privatelink.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "privatelink.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "privatelink.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "privatelink.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "privatelink.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "privatelink.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "privatelink.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "privatelink.ap-southeast-8.aliyuncs.com"),
+            new TeaPair("cn-zhongwei", "privatelink.cn-zhongwei.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "privatelink.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "privatelink.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-wuhan-lr", "privatelink.cn-wuhan-lr.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "privatelink.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "privatelink.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "privatelink.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-nanjing", "privatelink.cn-nanjing.aliyuncs.com"),
+            new TeaPair("cn-fuzhou", "privatelink.cn-fuzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "privatelink.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "privatelink.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "privatelink.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "privatelink.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("us-southeast-1", "privatelink.us-southeast-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "privatelink.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-west-2", "privatelink.eu-west-2.aliyuncs.com"),
+            new TeaPair("eu-central-1", "privatelink.eu-central-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "privatelink.us-east-1.aliyuncs.com"),
+            new TeaPair("sa-east-1", "privatelink.sa-east-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "privatelink.us-west-1.aliyuncs.com"),
+            new TeaPair("na-south-1", "privatelink.na-south-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "privatelink.me-east-1.aliyuncs.com"),
+            new TeaPair("ap-south-1", "privatelink.ap-south-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "privatelink.me-central-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "privatelink.cn-shenzhen-finance-1.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "privatelink.cn-beijing-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "privatelink.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu-gic-1", "privatelink.cn-wulanchabu-gic-1.aliyuncs.com"),
+            new TeaPair("cn-heyuan-acdr-1", "privatelink.cn-heyuan-acdr-1.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "privatelink.cn-north-2-gov-1.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 

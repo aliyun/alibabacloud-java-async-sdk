@@ -294,6 +294,9 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PolicyDocument")
         private String policyDocument;
 
+        @com.aliyun.core.annotation.NameInMap("ProtectedEnabled")
+        private Boolean protectedEnabled;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
@@ -335,6 +338,7 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
             this.endpointStatus = builder.endpointStatus;
             this.endpointType = builder.endpointType;
             this.policyDocument = builder.policyDocument;
+            this.protectedEnabled = builder.protectedEnabled;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
             this.resourceOwner = builder.resourceOwner;
@@ -446,6 +450,13 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
         }
 
         /**
+         * @return protectedEnabled
+         */
+        public Boolean getProtectedEnabled() {
+            return this.protectedEnabled;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -522,6 +533,7 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
             private String endpointStatus; 
             private String endpointType; 
             private String policyDocument; 
+            private Boolean protectedEnabled; 
             private String regionId; 
             private String resourceGroupId; 
             private Boolean resourceOwner; 
@@ -549,6 +561,7 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
                 this.endpointStatus = model.endpointStatus;
                 this.endpointType = model.endpointType;
                 this.policyDocument = model.policyDocument;
+                this.protectedEnabled = model.protectedEnabled;
                 this.regionId = model.regionId;
                 this.resourceGroupId = model.resourceGroupId;
                 this.resourceOwner = model.resourceOwner;
@@ -724,6 +737,14 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
              */
             public Builder policyDocument(String policyDocument) {
                 this.policyDocument = policyDocument;
+                return this;
+            }
+
+            /**
+             * ProtectedEnabled.
+             */
+            public Builder protectedEnabled(Boolean protectedEnabled) {
+                this.protectedEnabled = protectedEnabled;
                 return this;
             }
 
