@@ -1392,6 +1392,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetSkillResponse> getSkill(GetSkillRequest request);
 
     /**
+     * @param request the request parameters of GetSnapshot  GetSnapshotRequest
+     * @return GetSnapshotResponse
+     */
+    CompletableFuture<GetSnapshotResponse> getSnapshot(GetSnapshotRequest request);
+
+    /**
      * @param request the request parameters of GetTable  GetTableRequest
      * @return GetTableResponse
      */
@@ -2038,6 +2044,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListSkillsResponse
      */
     CompletableFuture<ListSkillsResponse> listSkills(ListSkillsRequest request);
+
+    /**
+     * @param request the request parameters of ListSnapshots  ListSnapshotsRequest
+     * @return ListSnapshotsResponse
+     */
+    CompletableFuture<ListSnapshotsResponse> listSnapshots(ListSnapshotsRequest request);
 
     /**
      * @param request the request parameters of ListTables  ListTablesRequest

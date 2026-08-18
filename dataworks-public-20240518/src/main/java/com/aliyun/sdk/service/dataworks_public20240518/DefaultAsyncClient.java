@@ -89,8 +89,8 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("rus-west-1-pop", "dataworks.aliyuncs.com"),
             new TeaPair("us-east-1", "dataworks.us-east-1.aliyuncs.com"),
             new TeaPair("us-west-1", "dataworks.us-west-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "dataworks.me-central-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "dataworks.ap-northeast-2.aliyuncs.com")
+            new TeaPair("ap-northeast-2", "dataworks.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("me-central-1", "dataworks.me-central-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -3585,6 +3585,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetSnapshot  GetSnapshotRequest
+     * @return GetSnapshotResponse
+     */
+    @Override
+    public CompletableFuture<GetSnapshotResponse> getSnapshot(GetSnapshotRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetSnapshot").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetSnapshotResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetSnapshotResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetTable  GetTableRequest
      * @return GetTableResponse
      */
@@ -5295,6 +5313,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListSkillsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListSnapshots  ListSnapshotsRequest
+     * @return ListSnapshotsResponse
+     */
+    @Override
+    public CompletableFuture<ListSnapshotsResponse> listSnapshots(ListSnapshotsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListSnapshots").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListSnapshotsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListSnapshotsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
