@@ -1803,6 +1803,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetWatermarkResponse> getWatermark(GetWatermarkRequest request);
 
     /**
+     * @param request the request parameters of GetWorkflowTask  GetWorkflowTaskRequest
+     * @return GetWorkflowTaskResponse
+     */
+    CompletableFuture<GetWorkflowTaskResponse> getWorkflowTask(GetWorkflowTaskRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  Regions that support this operation: <strong>China (Beijing)</strong> and <strong>China (Shanghai)</strong>.</p>
      * <ul>

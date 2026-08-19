@@ -74,7 +74,18 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("eu-west-1-oxs", "vod.aliyuncs.com"),
             new TeaPair("me-east-1", "vod.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "vod.aliyuncs.com"),
-            new TeaPair("us-east-1", "vod.aliyuncs.com")
+            new TeaPair("us-east-1", "vod.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "vod.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-beijing", "vod.cn-beijing.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "vod.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "vod.cn-hongkong.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "vod.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "vod.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "vod.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("us-west-1", "vod.us-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "vod.eu-central-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "vod.me-central-1.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "vod.cn-north-2-gov-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -3362,6 +3373,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetWatermarkResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetWorkflowTask  GetWorkflowTaskRequest
+     * @return GetWorkflowTaskResponse
+     */
+    @Override
+    public CompletableFuture<GetWorkflowTaskResponse> getWorkflowTask(GetWorkflowTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetWorkflowTask").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetWorkflowTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetWorkflowTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
