@@ -42,6 +42,10 @@ public class CreateAuthorizationResourceRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Condition")
+    private Condition condition;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
@@ -53,6 +57,7 @@ public class CreateAuthorizationResourceRequest extends Request {
         this.authorizationResourceEntityType = builder.authorizationResourceEntityType;
         this.authorizationRuleId = builder.authorizationRuleId;
         this.clientToken = builder.clientToken;
+        this.condition = builder.condition;
         this.instanceId = builder.instanceId;
     }
 
@@ -105,6 +110,13 @@ public class CreateAuthorizationResourceRequest extends Request {
     }
 
     /**
+     * @return condition
+     */
+    public Condition getCondition() {
+        return this.condition;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -117,6 +129,7 @@ public class CreateAuthorizationResourceRequest extends Request {
         private String authorizationResourceEntityType; 
         private String authorizationRuleId; 
         private String clientToken; 
+        private Condition condition; 
         private String instanceId; 
 
         private Builder() {
@@ -130,6 +143,7 @@ public class CreateAuthorizationResourceRequest extends Request {
             this.authorizationResourceEntityType = request.authorizationResourceEntityType;
             this.authorizationRuleId = request.authorizationRuleId;
             this.clientToken = request.clientToken;
+            this.condition = request.condition;
             this.instanceId = request.instanceId;
         } 
 
@@ -194,6 +208,15 @@ public class CreateAuthorizationResourceRequest extends Request {
         }
 
         /**
+         * Condition.
+         */
+        public Builder condition(Condition condition) {
+            this.putQueryParameter("Condition", condition);
+            this.condition = condition;
+            return this;
+        }
+
+        /**
          * <p>IDaaS EIAM实例的ID。</p>
          * <p>This parameter is required.</p>
          * 
@@ -213,4 +236,112 @@ public class CreateAuthorizationResourceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAuthorizationResourceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAuthorizationResourceRequest</p>
+     */
+    public static class CredentialCondition extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AllowSameNameIdentity")
+        private Boolean allowSameNameIdentity;
+
+        private CredentialCondition(Builder builder) {
+            this.allowSameNameIdentity = builder.allowSameNameIdentity;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CredentialCondition create() {
+            return builder().build();
+        }
+
+        /**
+         * @return allowSameNameIdentity
+         */
+        public Boolean getAllowSameNameIdentity() {
+            return this.allowSameNameIdentity;
+        }
+
+        public static final class Builder {
+            private Boolean allowSameNameIdentity; 
+
+            private Builder() {
+            } 
+
+            private Builder(CredentialCondition model) {
+                this.allowSameNameIdentity = model.allowSameNameIdentity;
+            } 
+
+            /**
+             * AllowSameNameIdentity.
+             */
+            public Builder allowSameNameIdentity(Boolean allowSameNameIdentity) {
+                this.allowSameNameIdentity = allowSameNameIdentity;
+                return this;
+            }
+
+            public CredentialCondition build() {
+                return new CredentialCondition(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateAuthorizationResourceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAuthorizationResourceRequest</p>
+     */
+    public static class Condition extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CredentialCondition")
+        private CredentialCondition credentialCondition;
+
+        private Condition(Builder builder) {
+            this.credentialCondition = builder.credentialCondition;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Condition create() {
+            return builder().build();
+        }
+
+        /**
+         * @return credentialCondition
+         */
+        public CredentialCondition getCredentialCondition() {
+            return this.credentialCondition;
+        }
+
+        public static final class Builder {
+            private CredentialCondition credentialCondition; 
+
+            private Builder() {
+            } 
+
+            private Builder(Condition model) {
+                this.credentialCondition = model.credentialCondition;
+            } 
+
+            /**
+             * CredentialCondition.
+             */
+            public Builder credentialCondition(CredentialCondition credentialCondition) {
+                this.credentialCondition = credentialCondition;
+                return this;
+            }
+
+            public Condition build() {
+                return new Condition(this);
+            } 
+
+        } 
+
+    }
 }

@@ -163,6 +163,114 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
      *
      * <p>ListAuthorizationResourcesResponseBody</p>
      */
+    public static class CredentialCondition extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AllowSameNameIdentity")
+        private Boolean allowSameNameIdentity;
+
+        private CredentialCondition(Builder builder) {
+            this.allowSameNameIdentity = builder.allowSameNameIdentity;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CredentialCondition create() {
+            return builder().build();
+        }
+
+        /**
+         * @return allowSameNameIdentity
+         */
+        public Boolean getAllowSameNameIdentity() {
+            return this.allowSameNameIdentity;
+        }
+
+        public static final class Builder {
+            private Boolean allowSameNameIdentity; 
+
+            private Builder() {
+            } 
+
+            private Builder(CredentialCondition model) {
+                this.allowSameNameIdentity = model.allowSameNameIdentity;
+            } 
+
+            /**
+             * AllowSameNameIdentity.
+             */
+            public Builder allowSameNameIdentity(Boolean allowSameNameIdentity) {
+                this.allowSameNameIdentity = allowSameNameIdentity;
+                return this;
+            }
+
+            public CredentialCondition build() {
+                return new CredentialCondition(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListAuthorizationResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAuthorizationResourcesResponseBody</p>
+     */
+    public static class Condition extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CredentialCondition")
+        private CredentialCondition credentialCondition;
+
+        private Condition(Builder builder) {
+            this.credentialCondition = builder.credentialCondition;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Condition create() {
+            return builder().build();
+        }
+
+        /**
+         * @return credentialCondition
+         */
+        public CredentialCondition getCredentialCondition() {
+            return this.credentialCondition;
+        }
+
+        public static final class Builder {
+            private CredentialCondition credentialCondition; 
+
+            private Builder() {
+            } 
+
+            private Builder(Condition model) {
+                this.credentialCondition = model.credentialCondition;
+            } 
+
+            /**
+             * CredentialCondition.
+             */
+            public Builder credentialCondition(CredentialCondition credentialCondition) {
+                this.credentialCondition = credentialCondition;
+                return this;
+            }
+
+            public Condition build() {
+                return new Condition(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListAuthorizationResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAuthorizationResourcesResponseBody</p>
+     */
     public static class AuthorizationResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthorizationResourceEntityId")
         private String authorizationResourceEntityId;
@@ -179,8 +287,17 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CloudAccountId")
         private String cloudAccountId;
 
+        @com.aliyun.core.annotation.NameInMap("Condition")
+        private Condition condition;
+
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        private Long createTime;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
+
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
+        private Long updateTime;
 
         private AuthorizationResources(Builder builder) {
             this.authorizationResourceEntityId = builder.authorizationResourceEntityId;
@@ -188,7 +305,10 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
             this.authorizationResourceId = builder.authorizationResourceId;
             this.authorizationRuleId = builder.authorizationRuleId;
             this.cloudAccountId = builder.cloudAccountId;
+            this.condition = builder.condition;
+            this.createTime = builder.createTime;
             this.instanceId = builder.instanceId;
+            this.updateTime = builder.updateTime;
         }
 
         public static Builder builder() {
@@ -235,10 +355,31 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
         }
 
         /**
+         * @return condition
+         */
+        public Condition getCondition() {
+            return this.condition;
+        }
+
+        /**
+         * @return createTime
+         */
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
          * @return instanceId
          */
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        /**
+         * @return updateTime
+         */
+        public Long getUpdateTime() {
+            return this.updateTime;
         }
 
         public static final class Builder {
@@ -247,7 +388,10 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
             private String authorizationResourceId; 
             private String authorizationRuleId; 
             private String cloudAccountId; 
+            private Condition condition; 
+            private Long createTime; 
             private String instanceId; 
+            private Long updateTime; 
 
             private Builder() {
             } 
@@ -258,7 +402,10 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
                 this.authorizationResourceId = model.authorizationResourceId;
                 this.authorizationRuleId = model.authorizationRuleId;
                 this.cloudAccountId = model.cloudAccountId;
+                this.condition = model.condition;
+                this.createTime = model.createTime;
                 this.instanceId = model.instanceId;
+                this.updateTime = model.updateTime;
             } 
 
             /**
@@ -317,6 +464,22 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
             }
 
             /**
+             * Condition.
+             */
+            public Builder condition(Condition condition) {
+                this.condition = condition;
+                return this;
+            }
+
+            /**
+             * CreateTime.
+             */
+            public Builder createTime(Long createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
              * <p>实例ID</p>
              * 
              * <strong>example:</strong>
@@ -324,6 +487,14 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * UpdateTime.
+             */
+            public Builder updateTime(Long updateTime) {
+                this.updateTime = updateTime;
                 return this;
             }
 
