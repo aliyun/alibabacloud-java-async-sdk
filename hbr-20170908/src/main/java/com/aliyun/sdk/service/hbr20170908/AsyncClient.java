@@ -216,9 +216,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateVaultReplicationResponse> createVaultReplication(CreateVaultReplicationRequest request);
 
     /**
-     * @param request the request parameters of DeleteAirEcsInstance  DeleteAirEcsInstanceRequest
+     * @deprecated OpenAPI DeleteAirEcsInstance is deprecated  * @param request  the request parameters of DeleteAirEcsInstance  DeleteAirEcsInstanceRequest
      * @return DeleteAirEcsInstanceResponse
      */
+    @Deprecated
     CompletableFuture<DeleteAirEcsInstanceResponse> deleteAirEcsInstance(DeleteAirEcsInstanceRequest request);
 
     /**

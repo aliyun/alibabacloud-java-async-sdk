@@ -248,6 +248,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
      */
     public static class DataSourceFilters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataSourceIds")
+        @Deprecated
         private java.util.List<String> dataSourceIds;
 
         @com.aliyun.core.annotation.NameInMap("SourceType")

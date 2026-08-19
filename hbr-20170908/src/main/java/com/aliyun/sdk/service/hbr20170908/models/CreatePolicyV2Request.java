@@ -170,6 +170,7 @@ public class CreatePolicyV2Request extends Request {
      */
     public static class DataSourceFilters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataSourceIds")
+        @Deprecated
         private java.util.List<String> dataSourceIds;
 
         @com.aliyun.core.annotation.NameInMap("SourceType")
@@ -474,6 +475,9 @@ public class CreatePolicyV2Request extends Request {
      * <p>CreatePolicyV2Request</p>
      */
     public static class Rules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ArchiveDays")
+        private Long archiveDays;
+
         @com.aliyun.core.annotation.NameInMap("BackupType")
         private String backupType;
 
@@ -509,6 +513,7 @@ public class CreatePolicyV2Request extends Request {
         private String vaultId;
 
         private Rules(Builder builder) {
+            this.archiveDays = builder.archiveDays;
             this.backupType = builder.backupType;
             this.dataSourceFilters = builder.dataSourceFilters;
             this.immutable = builder.immutable;
@@ -528,6 +533,13 @@ public class CreatePolicyV2Request extends Request {
 
         public static Rules create() {
             return builder().build();
+        }
+
+        /**
+         * @return archiveDays
+         */
+        public Long getArchiveDays() {
+            return this.archiveDays;
         }
 
         /**
@@ -608,6 +620,7 @@ public class CreatePolicyV2Request extends Request {
         }
 
         public static final class Builder {
+            private Long archiveDays; 
             private String backupType; 
             private java.util.List<DataSourceFilters> dataSourceFilters; 
             private Boolean immutable; 
@@ -624,6 +637,7 @@ public class CreatePolicyV2Request extends Request {
             } 
 
             private Builder(Rules model) {
+                this.archiveDays = model.archiveDays;
                 this.backupType = model.backupType;
                 this.dataSourceFilters = model.dataSourceFilters;
                 this.immutable = model.immutable;
@@ -636,6 +650,14 @@ public class CreatePolicyV2Request extends Request {
                 this.tagFilters = model.tagFilters;
                 this.vaultId = model.vaultId;
             } 
+
+            /**
+             * ArchiveDays.
+             */
+            public Builder archiveDays(Long archiveDays) {
+                this.archiveDays = archiveDays;
+                return this;
+            }
 
             /**
              * <p>This parameter is required only if the <strong>RuleType</strong> parameter is set to <strong>BACKUP</strong>. This parameter specifies the backup type. Valid value: <strong>COMPLETE</strong>, which indicates full backup.</p>
