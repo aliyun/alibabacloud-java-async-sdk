@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyDBInstanceClassRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlignStoragePrimaryAzone")
+    private Boolean alignStoragePrimaryAzone;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -52,6 +56,10 @@ public class ModifyDBInstanceClassRequest extends Request {
     private String specifiedDNSpecMapJson;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageType")
+    private String storageType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SwitchTime")
     private String switchTime;
 
@@ -65,6 +73,7 @@ public class ModifyDBInstanceClassRequest extends Request {
 
     private ModifyDBInstanceClassRequest(Builder builder) {
         super(builder);
+        this.alignStoragePrimaryAzone = builder.alignStoragePrimaryAzone;
         this.clientToken = builder.clientToken;
         this.cnClass = builder.cnClass;
         this.DBInstanceName = builder.DBInstanceName;
@@ -73,6 +82,7 @@ public class ModifyDBInstanceClassRequest extends Request {
         this.regionId = builder.regionId;
         this.specifiedDNScale = builder.specifiedDNScale;
         this.specifiedDNSpecMapJson = builder.specifiedDNSpecMapJson;
+        this.storageType = builder.storageType;
         this.switchTime = builder.switchTime;
         this.switchTimeMode = builder.switchTimeMode;
         this.targetDBInstanceClass = builder.targetDBInstanceClass;
@@ -89,6 +99,13 @@ public class ModifyDBInstanceClassRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return alignStoragePrimaryAzone
+     */
+    public Boolean getAlignStoragePrimaryAzone() {
+        return this.alignStoragePrimaryAzone;
     }
 
     /**
@@ -148,6 +165,13 @@ public class ModifyDBInstanceClassRequest extends Request {
     }
 
     /**
+     * @return storageType
+     */
+    public String getStorageType() {
+        return this.storageType;
+    }
+
+    /**
      * @return switchTime
      */
     public String getSwitchTime() {
@@ -169,6 +193,7 @@ public class ModifyDBInstanceClassRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDBInstanceClassRequest, Builder> {
+        private Boolean alignStoragePrimaryAzone; 
         private String clientToken; 
         private String cnClass; 
         private String DBInstanceName; 
@@ -177,6 +202,7 @@ public class ModifyDBInstanceClassRequest extends Request {
         private String regionId; 
         private Boolean specifiedDNScale; 
         private String specifiedDNSpecMapJson; 
+        private String storageType; 
         private String switchTime; 
         private String switchTimeMode; 
         private String targetDBInstanceClass; 
@@ -187,6 +213,7 @@ public class ModifyDBInstanceClassRequest extends Request {
 
         private Builder(ModifyDBInstanceClassRequest request) {
             super(request);
+            this.alignStoragePrimaryAzone = request.alignStoragePrimaryAzone;
             this.clientToken = request.clientToken;
             this.cnClass = request.cnClass;
             this.DBInstanceName = request.DBInstanceName;
@@ -195,10 +222,20 @@ public class ModifyDBInstanceClassRequest extends Request {
             this.regionId = request.regionId;
             this.specifiedDNScale = request.specifiedDNScale;
             this.specifiedDNSpecMapJson = request.specifiedDNSpecMapJson;
+            this.storageType = request.storageType;
             this.switchTime = request.switchTime;
             this.switchTimeMode = request.switchTimeMode;
             this.targetDBInstanceClass = request.targetDBInstanceClass;
         } 
+
+        /**
+         * AlignStoragePrimaryAzone.
+         */
+        public Builder alignStoragePrimaryAzone(Boolean alignStoragePrimaryAzone) {
+            this.putQueryParameter("AlignStoragePrimaryAzone", alignStoragePrimaryAzone);
+            this.alignStoragePrimaryAzone = alignStoragePrimaryAzone;
+            return this;
+        }
 
         /**
          * ClientToken.
@@ -275,6 +312,15 @@ public class ModifyDBInstanceClassRequest extends Request {
         public Builder specifiedDNSpecMapJson(String specifiedDNSpecMapJson) {
             this.putQueryParameter("SpecifiedDNSpecMapJson", specifiedDNSpecMapJson);
             this.specifiedDNSpecMapJson = specifiedDNSpecMapJson;
+            return this;
+        }
+
+        /**
+         * <p>本地盘迁云盘时传cloud_auto；不传表示不变更存储类型</p>
+         */
+        public Builder storageType(String storageType) {
+            this.putQueryParameter("StorageType", storageType);
+            this.storageType = storageType;
             return this;
         }
 

@@ -23,9 +23,13 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    private Integer taskId;
+
     private ModifyDBInstanceClassResponseBody(Builder builder) {
         this.orderId = builder.orderId;
         this.requestId = builder.requestId;
+        this.taskId = builder.taskId;
     }
 
     public static Builder builder() {
@@ -54,9 +58,17 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return taskId
+     */
+    public Integer getTaskId() {
+        return this.taskId;
+    }
+
     public static final class Builder {
         private String orderId; 
         private String requestId; 
+        private Integer taskId; 
 
         private Builder() {
         } 
@@ -64,6 +76,7 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
         private Builder(ModifyDBInstanceClassResponseBody model) {
             this.orderId = model.orderId;
             this.requestId = model.requestId;
+            this.taskId = model.taskId;
         } 
 
         /**
@@ -79,6 +92,14 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TaskId.
+         */
+        public Builder taskId(Integer taskId) {
+            this.taskId = taskId;
             return this;
         }
 
