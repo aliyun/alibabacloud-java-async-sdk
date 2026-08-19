@@ -197,6 +197,9 @@ public class DescribeOrgsResponseBody extends TeaModel {
      * <p>DescribeOrgsResponseBody</p>
      */
     public static class Orgs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccessType")
+        private String accessType;
+
         @com.aliyun.core.annotation.NameInMap("OrgId")
         private String orgId;
 
@@ -213,6 +216,7 @@ public class DescribeOrgsResponseBody extends TeaModel {
         private java.util.List<ResourcePolicyList> resourcePolicyList;
 
         private Orgs(Builder builder) {
+            this.accessType = builder.accessType;
             this.orgId = builder.orgId;
             this.orgName = builder.orgName;
             this.orgNamePath = builder.orgNamePath;
@@ -226,6 +230,13 @@ public class DescribeOrgsResponseBody extends TeaModel {
 
         public static Orgs create() {
             return builder().build();
+        }
+
+        /**
+         * @return accessType
+         */
+        public String getAccessType() {
+            return this.accessType;
         }
 
         /**
@@ -264,6 +275,7 @@ public class DescribeOrgsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String accessType; 
             private String orgId; 
             private String orgName; 
             private String orgNamePath; 
@@ -274,12 +286,21 @@ public class DescribeOrgsResponseBody extends TeaModel {
             } 
 
             private Builder(Orgs model) {
+                this.accessType = model.accessType;
                 this.orgId = model.orgId;
                 this.orgName = model.orgName;
                 this.orgNamePath = model.orgNamePath;
                 this.parentOrgId = model.parentOrgId;
                 this.resourcePolicyList = model.resourcePolicyList;
             } 
+
+            /**
+             * AccessType.
+             */
+            public Builder accessType(String accessType) {
+                this.accessType = accessType;
+                return this;
+            }
 
             /**
              * <p>The organization ID.</p>

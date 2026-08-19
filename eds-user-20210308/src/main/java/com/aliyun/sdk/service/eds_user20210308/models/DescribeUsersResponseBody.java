@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUsersResponseBody</p>
  */
 public class DescribeUsersResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Count")
+    private Integer count;
+
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
@@ -27,6 +30,7 @@ public class DescribeUsersResponseBody extends TeaModel {
     private java.util.List<Users> users;
 
     private DescribeUsersResponseBody(Builder builder) {
+        this.count = builder.count;
         this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.users = builder.users;
@@ -42,6 +46,13 @@ public class DescribeUsersResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return count
+     */
+    public Integer getCount() {
+        return this.count;
     }
 
     /**
@@ -66,6 +77,7 @@ public class DescribeUsersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Integer count; 
         private String nextToken; 
         private String requestId; 
         private java.util.List<Users> users; 
@@ -74,10 +86,19 @@ public class DescribeUsersResponseBody extends TeaModel {
         } 
 
         private Builder(DescribeUsersResponseBody model) {
+            this.count = model.count;
             this.nextToken = model.nextToken;
             this.requestId = model.requestId;
             this.users = model.users;
         } 
+
+        /**
+         * Count.
+         */
+        public Builder count(Integer count) {
+            this.count = count;
+            return this;
+        }
 
         /**
          * <p>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</p>

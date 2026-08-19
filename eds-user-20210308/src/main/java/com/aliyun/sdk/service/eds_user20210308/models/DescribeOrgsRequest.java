@@ -26,6 +26,10 @@ public class DescribeOrgsRequest extends Request {
     private java.util.List<String> includeOrgIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsQueryAllSubOrgs")
+    private Boolean isQueryAllSubOrgs;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     @com.aliyun.core.annotation.Validation(maximum = 500, minimum = 1)
     private Long maxResults;
@@ -50,6 +54,7 @@ public class DescribeOrgsRequest extends Request {
         super(builder);
         this.businessChannel = builder.businessChannel;
         this.includeOrgIds = builder.includeOrgIds;
+        this.isQueryAllSubOrgs = builder.isQueryAllSubOrgs;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.orgName = builder.orgName;
@@ -82,6 +87,13 @@ public class DescribeOrgsRequest extends Request {
      */
     public java.util.List<String> getIncludeOrgIds() {
         return this.includeOrgIds;
+    }
+
+    /**
+     * @return isQueryAllSubOrgs
+     */
+    public Boolean getIsQueryAllSubOrgs() {
+        return this.isQueryAllSubOrgs;
     }
 
     /**
@@ -122,6 +134,7 @@ public class DescribeOrgsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeOrgsRequest, Builder> {
         private String businessChannel; 
         private java.util.List<String> includeOrgIds; 
+        private Boolean isQueryAllSubOrgs; 
         private Long maxResults; 
         private String nextToken; 
         private String orgName; 
@@ -136,6 +149,7 @@ public class DescribeOrgsRequest extends Request {
             super(request);
             this.businessChannel = request.businessChannel;
             this.includeOrgIds = request.includeOrgIds;
+            this.isQueryAllSubOrgs = request.isQueryAllSubOrgs;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.orgName = request.orgName;
@@ -158,6 +172,15 @@ public class DescribeOrgsRequest extends Request {
         public Builder includeOrgIds(java.util.List<String> includeOrgIds) {
             this.putQueryParameter("IncludeOrgIds", includeOrgIds);
             this.includeOrgIds = includeOrgIds;
+            return this;
+        }
+
+        /**
+         * IsQueryAllSubOrgs.
+         */
+        public Builder isQueryAllSubOrgs(Boolean isQueryAllSubOrgs) {
+            this.putQueryParameter("IsQueryAllSubOrgs", isQueryAllSubOrgs);
+            this.isQueryAllSubOrgs = isQueryAllSubOrgs;
             return this;
         }
 
