@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddDeviceGroupMatchDevices  AddDeviceGroupMatchDevicesRequest
+     * @return AddDeviceGroupMatchDevicesResponse
+     */
+    CompletableFuture<AddDeviceGroupMatchDevicesResponse> addDeviceGroupMatchDevices(AddDeviceGroupMatchDevicesRequest request);
+
+    /**
      * @param request the request parameters of AttachApplication2Connector  AttachApplication2ConnectorRequest
      * @return AttachApplication2ConnectorResponse
      */
@@ -44,6 +50,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchDeleteDomainItemsResponse> batchDeleteDomainItems(BatchDeleteDomainItemsRequest request);
 
     /**
+     * @param request the request parameters of BatchDeletePrivateAccessApplication  BatchDeletePrivateAccessApplicationRequest
+     * @return BatchDeletePrivateAccessApplicationResponse
+     */
+    CompletableFuture<BatchDeletePrivateAccessApplicationResponse> batchDeletePrivateAccessApplication(BatchDeletePrivateAccessApplicationRequest request);
+
+    /**
+     * @param request the request parameters of BatchDeletePrivateAccessPolicy  BatchDeletePrivateAccessPolicyRequest
+     * @return BatchDeletePrivateAccessPolicyResponse
+     */
+    CompletableFuture<BatchDeletePrivateAccessPolicyResponse> batchDeletePrivateAccessPolicy(BatchDeletePrivateAccessPolicyRequest request);
+
+    /**
      * @param request the request parameters of CreateApprovalProcess  CreateApprovalProcessRequest
      * @return CreateApprovalProcessResponse
      */
@@ -54,6 +72,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateClientUserResponse
      */
     CompletableFuture<CreateClientUserResponse> createClientUser(CreateClientUserRequest request);
+
+    /**
+     * @param request the request parameters of CreateConnector  CreateConnectorRequest
+     * @return CreateConnectorResponse
+     */
+    CompletableFuture<CreateConnectorResponse> createConnector(CreateConnectorRequest request);
+
+    /**
+     * @param request the request parameters of CreateDeviceGroup  CreateDeviceGroupRequest
+     * @return CreateDeviceGroupResponse
+     */
+    CompletableFuture<CreateDeviceGroupResponse> createDeviceGroup(CreateDeviceGroupRequest request);
 
     /**
      * @param request the request parameters of CreateDomainMeta  CreateDomainMetaRequest
@@ -78,6 +108,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateEnterpriseAccelerateTargetResponse
      */
     CompletableFuture<CreateEnterpriseAccelerateTargetResponse> createEnterpriseAccelerateTarget(CreateEnterpriseAccelerateTargetRequest request);
+
+    /**
+     * @param request the request parameters of CreateForwardStrategy  CreateForwardStrategyRequest
+     * @return CreateForwardStrategyResponse
+     */
+    CompletableFuture<CreateForwardStrategyResponse> createForwardStrategy(CreateForwardStrategyRequest request);
 
     /**
      * @param request the request parameters of CreateIdpDepartment  CreateIdpDepartmentRequest
@@ -164,6 +200,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteClientUserResponse> deleteClientUser(DeleteClientUserRequest request);
 
     /**
+     * @param request the request parameters of DeleteConnector  DeleteConnectorRequest
+     * @return DeleteConnectorResponse
+     */
+    CompletableFuture<DeleteConnectorResponse> deleteConnector(DeleteConnectorRequest request);
+
+    /**
+     * @param request the request parameters of DeleteConnectorClient  DeleteConnectorClientRequest
+     * @return DeleteConnectorClientResponse
+     */
+    CompletableFuture<DeleteConnectorClientResponse> deleteConnectorClient(DeleteConnectorClientRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDeviceGroups  DeleteDeviceGroupsRequest
+     * @return DeleteDeviceGroupsResponse
+     */
+    CompletableFuture<DeleteDeviceGroupsResponse> deleteDeviceGroups(DeleteDeviceGroupsRequest request);
+
+    /**
      * @param request the request parameters of DeleteDomainMeta  DeleteDomainMetaRequest
      * @return DeleteDomainMetaResponse
      */
@@ -186,6 +240,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteEnterpriseAccelerateTargetResponse
      */
     CompletableFuture<DeleteEnterpriseAccelerateTargetResponse> deleteEnterpriseAccelerateTarget(DeleteEnterpriseAccelerateTargetRequest request);
+
+    /**
+     * @param request the request parameters of DeleteForwardStrategy  DeleteForwardStrategyRequest
+     * @return DeleteForwardStrategyResponse
+     */
+    CompletableFuture<DeleteForwardStrategyResponse> deleteForwardStrategy(DeleteForwardStrategyRequest request);
 
     /**
      * @param request the request parameters of DeleteIdpDepartment  DeleteIdpDepartmentRequest
@@ -303,10 +363,40 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetClientUserResponse> getClientUser(GetClientUserRequest request);
 
     /**
+     * @param request the request parameters of GetConnector  GetConnectorRequest
+     * @return GetConnectorResponse
+     */
+    CompletableFuture<GetConnectorResponse> getConnector(GetConnectorRequest request);
+
+    /**
+     * @param request the request parameters of GetConnectorClient  GetConnectorClientRequest
+     * @return GetConnectorClientResponse
+     */
+    CompletableFuture<GetConnectorClientResponse> getConnectorClient(GetConnectorClientRequest request);
+
+    /**
+     * @param request the request parameters of GetDeviceGroup  GetDeviceGroupRequest
+     * @return GetDeviceGroupResponse
+     */
+    CompletableFuture<GetDeviceGroupResponse> getDeviceGroup(GetDeviceGroupRequest request);
+
+    /**
+     * @param request the request parameters of GetDeviceOnlineHeatmap  GetDeviceOnlineHeatmapRequest
+     * @return GetDeviceOnlineHeatmapResponse
+     */
+    CompletableFuture<GetDeviceOnlineHeatmapResponse> getDeviceOnlineHeatmap(GetDeviceOnlineHeatmapRequest request);
+
+    /**
      * @param request the request parameters of GetDynamicRoute  GetDynamicRouteRequest
      * @return GetDynamicRouteResponse
      */
     CompletableFuture<GetDynamicRouteResponse> getDynamicRoute(GetDynamicRouteRequest request);
+
+    /**
+     * @param request the request parameters of GetForwardStrategy  GetForwardStrategyRequest
+     * @return GetForwardStrategyResponse
+     */
+    CompletableFuture<GetForwardStrategyResponse> getForwardStrategy(GetForwardStrategyRequest request);
 
     /**
      * @param request the request parameters of GetIdpConfig  GetIdpConfigRequest
@@ -349,6 +439,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetUserDeviceResponse
      */
     CompletableFuture<GetUserDeviceResponse> getUserDevice(GetUserDeviceRequest request);
+
+    /**
+     * @param request the request parameters of GetUserDeviceWorkloadTrend  GetUserDeviceWorkloadTrendRequest
+     * @return GetUserDeviceWorkloadTrendResponse
+     */
+    CompletableFuture<GetUserDeviceWorkloadTrendResponse> getUserDeviceWorkloadTrend(GetUserDeviceWorkloadTrendRequest request);
 
     /**
      * @param request the request parameters of GetUserGroup  GetUserGroupRequest
@@ -427,6 +523,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListConnectorsResponse
      */
     CompletableFuture<ListConnectorsResponse> listConnectors(ListConnectorsRequest request);
+
+    /**
+     * @param request the request parameters of ListDeviceGroups  ListDeviceGroupsRequest
+     * @return ListDeviceGroupsResponse
+     */
+    CompletableFuture<ListDeviceGroupsResponse> listDeviceGroups(ListDeviceGroupsRequest request);
 
     /**
      * @param request the request parameters of ListDomainItems  ListDomainItemsRequest
@@ -535,6 +637,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListPopTrafficStatisticsResponse
      */
     CompletableFuture<ListPopTrafficStatisticsResponse> listPopTrafficStatistics(ListPopTrafficStatisticsRequest request);
+
+    /**
+     * @param request the request parameters of ListPrivateAccessApplicationL7Switches  ListPrivateAccessApplicationL7SwitchesRequest
+     * @return ListPrivateAccessApplicationL7SwitchesResponse
+     */
+    CompletableFuture<ListPrivateAccessApplicationL7SwitchesResponse> listPrivateAccessApplicationL7Switches(ListPrivateAccessApplicationL7SwitchesRequest request);
 
     /**
      * @param request the request parameters of ListPrivateAccessApplications  ListPrivateAccessApplicationsRequest
@@ -663,6 +771,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyEnterpriseAcceleratePolicyResponse> modifyEnterpriseAcceleratePolicy(ModifyEnterpriseAcceleratePolicyRequest request);
 
     /**
+     * @param request the request parameters of ModifyForwardStrategy  ModifyForwardStrategyRequest
+     * @return ModifyForwardStrategyResponse
+     */
+    CompletableFuture<ModifyForwardStrategyResponse> modifyForwardStrategy(ModifyForwardStrategyRequest request);
+
+    /**
+     * @param request the request parameters of ModifyForwardStrategyBindingItems  ModifyForwardStrategyBindingItemsRequest
+     * @return ModifyForwardStrategyBindingItemsResponse
+     */
+    CompletableFuture<ModifyForwardStrategyBindingItemsResponse> modifyForwardStrategyBindingItems(ModifyForwardStrategyBindingItemsRequest request);
+
+    /**
+     * @param request the request parameters of RemoveDeviceGroupMatchDevices  RemoveDeviceGroupMatchDevicesRequest
+     * @return RemoveDeviceGroupMatchDevicesResponse
+     */
+    CompletableFuture<RemoveDeviceGroupMatchDevicesResponse> removeDeviceGroupMatchDevices(RemoveDeviceGroupMatchDevicesRequest request);
+
+    /**
      * @param request the request parameters of RevokeUserDeviceSession  RevokeUserDeviceSessionRequest
      * @return RevokeUserDeviceSessionResponse
      */
@@ -712,6 +838,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateClientUserStatusResponse> updateClientUserStatus(UpdateClientUserStatusRequest request);
 
     /**
+     * @param request the request parameters of UpdateConnector  UpdateConnectorRequest
+     * @return UpdateConnectorResponse
+     */
+    CompletableFuture<UpdateConnectorResponse> updateConnector(UpdateConnectorRequest request);
+
+    /**
+     * @param request the request parameters of UpdateConnectorClient  UpdateConnectorClientRequest
+     * @return UpdateConnectorClientResponse
+     */
+    CompletableFuture<UpdateConnectorClientResponse> updateConnectorClient(UpdateConnectorClientRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDeviceGroup  UpdateDeviceGroupRequest
+     * @return UpdateDeviceGroupResponse
+     */
+    CompletableFuture<UpdateDeviceGroupResponse> updateDeviceGroup(UpdateDeviceGroupRequest request);
+
+    /**
      * @param request the request parameters of UpdateDomainMeta  UpdateDomainMetaRequest
      * @return UpdateDomainMetaResponse
      */
@@ -752,6 +896,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdatePrivateAccessApplicationResponse
      */
     CompletableFuture<UpdatePrivateAccessApplicationResponse> updatePrivateAccessApplication(UpdatePrivateAccessApplicationRequest request);
+
+    /**
+     * @param request the request parameters of UpdatePrivateAccessApplicationL7Switch  UpdatePrivateAccessApplicationL7SwitchRequest
+     * @return UpdatePrivateAccessApplicationL7SwitchResponse
+     */
+    CompletableFuture<UpdatePrivateAccessApplicationL7SwitchResponse> updatePrivateAccessApplicationL7Switch(UpdatePrivateAccessApplicationL7SwitchRequest request);
 
     /**
      * @param request the request parameters of UpdatePrivateAccessPolicy  UpdatePrivateAccessPolicyRequest
