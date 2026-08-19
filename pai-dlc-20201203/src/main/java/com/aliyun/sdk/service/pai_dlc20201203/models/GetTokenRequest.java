@@ -29,11 +29,16 @@ public class GetTokenRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TargetType")
     private String targetType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TokenSettings")
+    private TokenSettings tokenSettings;
+
     private GetTokenRequest(Builder builder) {
         super(builder);
         this.expireTime = builder.expireTime;
         this.targetId = builder.targetId;
         this.targetType = builder.targetType;
+        this.tokenSettings = builder.tokenSettings;
     }
 
     public static Builder builder() {
@@ -70,10 +75,18 @@ public class GetTokenRequest extends Request {
         return this.targetType;
     }
 
+    /**
+     * @return tokenSettings
+     */
+    public TokenSettings getTokenSettings() {
+        return this.tokenSettings;
+    }
+
     public static final class Builder extends Request.Builder<GetTokenRequest, Builder> {
         private Long expireTime; 
         private String targetId; 
         private String targetType; 
+        private TokenSettings tokenSettings; 
 
         private Builder() {
             super();
@@ -84,6 +97,7 @@ public class GetTokenRequest extends Request {
             this.expireTime = request.expireTime;
             this.targetId = request.targetId;
             this.targetType = request.targetType;
+            this.tokenSettings = request.tokenSettings;
         } 
 
         /**
@@ -119,6 +133,15 @@ public class GetTokenRequest extends Request {
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);
             this.targetType = targetType;
+            return this;
+        }
+
+        /**
+         * TokenSettings.
+         */
+        public Builder tokenSettings(TokenSettings tokenSettings) {
+            this.putQueryParameter("TokenSettings", tokenSettings);
+            this.tokenSettings = tokenSettings;
             return this;
         }
 
