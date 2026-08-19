@@ -1372,6 +1372,81 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
      *
      * <p>ModifyBrowserInstanceGroupRequest</p>
      */
+    public static class RevokeAccessPolicyRules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CidrIp")
+        private String cidrIp;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        private RevokeAccessPolicyRules(Builder builder) {
+            this.cidrIp = builder.cidrIp;
+            this.description = builder.description;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RevokeAccessPolicyRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cidrIp
+         */
+        public String getCidrIp() {
+            return this.cidrIp;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        public static final class Builder {
+            private String cidrIp; 
+            private String description; 
+
+            private Builder() {
+            } 
+
+            private Builder(RevokeAccessPolicyRules model) {
+                this.cidrIp = model.cidrIp;
+                this.description = model.description;
+            } 
+
+            /**
+             * CidrIp.
+             */
+            public Builder cidrIp(String cidrIp) {
+                this.cidrIp = cidrIp;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            public RevokeAccessPolicyRules build() {
+                return new RevokeAccessPolicyRules(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyBrowserInstanceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyBrowserInstanceGroupRequest</p>
+     */
     public static class VideoPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FrameRate")
         private Integer frameRate;
@@ -1549,6 +1624,9 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("PolicyVersion")
         private String policyVersion;
 
+        @com.aliyun.core.annotation.NameInMap("RevokeAccessPolicyRules")
+        private java.util.List<RevokeAccessPolicyRules> revokeAccessPolicyRules;
+
         @com.aliyun.core.annotation.NameInMap("VideoPolicy")
         private VideoPolicy videoPolicy;
 
@@ -1568,6 +1646,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             this.noOperationDisconnectTime = builder.noOperationDisconnectTime;
             this.policyId = builder.policyId;
             this.policyVersion = builder.policyVersion;
+            this.revokeAccessPolicyRules = builder.revokeAccessPolicyRules;
             this.videoPolicy = builder.videoPolicy;
             this.watermarkPolicy = builder.watermarkPolicy;
         }
@@ -1665,6 +1744,13 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
         }
 
         /**
+         * @return revokeAccessPolicyRules
+         */
+        public java.util.List<RevokeAccessPolicyRules> getRevokeAccessPolicyRules() {
+            return this.revokeAccessPolicyRules;
+        }
+
+        /**
          * @return videoPolicy
          */
         public VideoPolicy getVideoPolicy() {
@@ -1691,6 +1777,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
             private Integer noOperationDisconnectTime; 
             private String policyId; 
             private String policyVersion; 
+            private java.util.List<RevokeAccessPolicyRules> revokeAccessPolicyRules; 
             private VideoPolicy videoPolicy; 
             private WatermarkPolicy watermarkPolicy; 
 
@@ -1710,6 +1797,7 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
                 this.noOperationDisconnectTime = model.noOperationDisconnectTime;
                 this.policyId = model.policyId;
                 this.policyVersion = model.policyVersion;
+                this.revokeAccessPolicyRules = model.revokeAccessPolicyRules;
                 this.videoPolicy = model.videoPolicy;
                 this.watermarkPolicy = model.watermarkPolicy;
             } 
@@ -1831,6 +1919,14 @@ public class ModifyBrowserInstanceGroupRequest extends Request {
              */
             public Builder policyVersion(String policyVersion) {
                 this.policyVersion = policyVersion;
+                return this;
+            }
+
+            /**
+             * RevokeAccessPolicyRules.
+             */
+            public Builder revokeAccessPolicyRules(java.util.List<RevokeAccessPolicyRules> revokeAccessPolicyRules) {
+                this.revokeAccessPolicyRules = revokeAccessPolicyRules;
                 return this;
             }
 
