@@ -23,6 +23,10 @@ public class DeleteExecutorGroupRequest extends Request {
     private String clusterId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeleteJobs")
+    private Boolean deleteJobs;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Id")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer id;
@@ -34,6 +38,7 @@ public class DeleteExecutorGroupRequest extends Request {
     private DeleteExecutorGroupRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.deleteJobs = builder.deleteJobs;
         this.id = builder.id;
         this.name = builder.name;
     }
@@ -59,6 +64,13 @@ public class DeleteExecutorGroupRequest extends Request {
     }
 
     /**
+     * @return deleteJobs
+     */
+    public Boolean getDeleteJobs() {
+        return this.deleteJobs;
+    }
+
+    /**
      * @return id
      */
     public Integer getId() {
@@ -74,6 +86,7 @@ public class DeleteExecutorGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteExecutorGroupRequest, Builder> {
         private String clusterId; 
+        private Boolean deleteJobs; 
         private Integer id; 
         private String name; 
 
@@ -84,6 +97,7 @@ public class DeleteExecutorGroupRequest extends Request {
         private Builder(DeleteExecutorGroupRequest request) {
             super(request);
             this.clusterId = request.clusterId;
+            this.deleteJobs = request.deleteJobs;
             this.id = request.id;
             this.name = request.name;
         } 
@@ -97,6 +111,15 @@ public class DeleteExecutorGroupRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * DeleteJobs.
+         */
+        public Builder deleteJobs(Boolean deleteJobs) {
+            this.putBodyParameter("DeleteJobs", deleteJobs);
+            this.deleteJobs = deleteJobs;
             return this;
         }
 
