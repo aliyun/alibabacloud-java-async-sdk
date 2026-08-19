@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ModelRouterGetBillingBillSummaryRequest} extends {@link RequestModel}
+ * {@link ModelRouterQueryBillingDetailsRequest} extends {@link RequestModel}
  *
- * <p>ModelRouterGetBillingBillSummaryRequest</p>
+ * <p>ModelRouterQueryBillingDetailsRequest</p>
  */
-public class ModelRouterGetBillingBillSummaryRequest extends Request {
+public class ModelRouterQueryBillingDetailsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("apiKeyId")
     private Long apiKeyId;
@@ -35,12 +35,8 @@ public class ModelRouterGetBillingBillSummaryRequest extends Request {
     private Long endTime;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("maxResults")
-    private Integer maxResults;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("memberUserIds")
-    private String memberUserIds;
+    @com.aliyun.core.annotation.NameInMap("modelCodes")
+    private String modelCodes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("modelId")
@@ -51,25 +47,34 @@ public class ModelRouterGetBillingBillSummaryRequest extends Request {
     private String modelTypes;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("nextToken")
-    private String nextToken;
+    @com.aliyun.core.annotation.NameInMap("page")
+    private Integer page;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSize")
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("requestId")
+    private String requestId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("startTime")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
-    private ModelRouterGetBillingBillSummaryRequest(Builder builder) {
+    private ModelRouterQueryBillingDetailsRequest(Builder builder) {
         super(builder);
         this.apiKeyId = builder.apiKeyId;
         this.clientId = builder.clientId;
         this.clientIds = builder.clientIds;
         this.endTime = builder.endTime;
-        this.maxResults = builder.maxResults;
-        this.memberUserIds = builder.memberUserIds;
+        this.modelCodes = builder.modelCodes;
         this.modelId = builder.modelId;
         this.modelTypes = builder.modelTypes;
-        this.nextToken = builder.nextToken;
+        this.page = builder.page;
+        this.pageSize = builder.pageSize;
+        this.requestId = builder.requestId;
         this.startTime = builder.startTime;
     }
 
@@ -77,7 +82,7 @@ public class ModelRouterGetBillingBillSummaryRequest extends Request {
         return new Builder();
     }
 
-    public static ModelRouterGetBillingBillSummaryRequest create() {
+    public static ModelRouterQueryBillingDetailsRequest create() {
         return builder().build();
     }
 
@@ -115,17 +120,10 @@ public class ModelRouterGetBillingBillSummaryRequest extends Request {
     }
 
     /**
-     * @return maxResults
+     * @return modelCodes
      */
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    /**
-     * @return memberUserIds
-     */
-    public String getMemberUserIds() {
-        return this.memberUserIds;
+    public String getModelCodes() {
+        return this.modelCodes;
     }
 
     /**
@@ -143,10 +141,24 @@ public class ModelRouterGetBillingBillSummaryRequest extends Request {
     }
 
     /**
-     * @return nextToken
+     * @return page
      */
-    public String getNextToken() {
-        return this.nextToken;
+    public Integer getPage() {
+        return this.page;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
     }
 
     /**
@@ -156,33 +168,35 @@ public class ModelRouterGetBillingBillSummaryRequest extends Request {
         return this.startTime;
     }
 
-    public static final class Builder extends Request.Builder<ModelRouterGetBillingBillSummaryRequest, Builder> {
+    public static final class Builder extends Request.Builder<ModelRouterQueryBillingDetailsRequest, Builder> {
         private Long apiKeyId; 
         private Long clientId; 
         private String clientIds; 
         private Long endTime; 
-        private Integer maxResults; 
-        private String memberUserIds; 
+        private String modelCodes; 
         private Long modelId; 
         private String modelTypes; 
-        private String nextToken; 
+        private Integer page; 
+        private Integer pageSize; 
+        private String requestId; 
         private Long startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModelRouterGetBillingBillSummaryRequest request) {
+        private Builder(ModelRouterQueryBillingDetailsRequest request) {
             super(request);
             this.apiKeyId = request.apiKeyId;
             this.clientId = request.clientId;
             this.clientIds = request.clientIds;
             this.endTime = request.endTime;
-            this.maxResults = request.maxResults;
-            this.memberUserIds = request.memberUserIds;
+            this.modelCodes = request.modelCodes;
             this.modelId = request.modelId;
             this.modelTypes = request.modelTypes;
-            this.nextToken = request.nextToken;
+            this.page = request.page;
+            this.pageSize = request.pageSize;
+            this.requestId = request.requestId;
             this.startTime = request.startTime;
         } 
 
@@ -226,20 +240,11 @@ public class ModelRouterGetBillingBillSummaryRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * modelCodes.
          */
-        public Builder maxResults(Integer maxResults) {
-            this.putQueryParameter("maxResults", maxResults);
-            this.maxResults = maxResults;
-            return this;
-        }
-
-        /**
-         * memberUserIds.
-         */
-        public Builder memberUserIds(String memberUserIds) {
-            this.putQueryParameter("memberUserIds", memberUserIds);
-            this.memberUserIds = memberUserIds;
+        public Builder modelCodes(String modelCodes) {
+            this.putQueryParameter("modelCodes", modelCodes);
+            this.modelCodes = modelCodes;
             return this;
         }
 
@@ -262,14 +267,29 @@ public class ModelRouterGetBillingBillSummaryRequest extends Request {
         }
 
         /**
-         * <p>nextToken</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xxxx-xxx-xxxxx</p>
+         * page.
          */
-        public Builder nextToken(String nextToken) {
-            this.putQueryParameter("nextToken", nextToken);
-            this.nextToken = nextToken;
+        public Builder page(Integer page) {
+            this.putQueryParameter("page", page);
+            this.page = page;
+            return this;
+        }
+
+        /**
+         * pageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("pageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * requestId.
+         */
+        public Builder requestId(String requestId) {
+            this.putQueryParameter("requestId", requestId);
+            this.requestId = requestId;
             return this;
         }
 
@@ -286,8 +306,8 @@ public class ModelRouterGetBillingBillSummaryRequest extends Request {
         }
 
         @Override
-        public ModelRouterGetBillingBillSummaryRequest build() {
-            return new ModelRouterGetBillingBillSummaryRequest(this);
+        public ModelRouterQueryBillingDetailsRequest build() {
+            return new ModelRouterQueryBillingDetailsRequest(this);
         } 
 
     } 
