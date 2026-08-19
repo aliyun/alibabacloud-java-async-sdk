@@ -860,6 +860,9 @@ public class PushTask extends TeaModel {
      * <p>PushTask</p>
      */
     public static class Vivo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AddBadge")
+        private Boolean addBadge;
+
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
@@ -873,6 +876,7 @@ public class PushTask extends TeaModel {
         private String receiptId;
 
         private Vivo(Builder builder) {
+            this.addBadge = builder.addBadge;
             this.category = builder.category;
             this.importance = builder.importance;
             this.liveMessage = builder.liveMessage;
@@ -885,6 +889,13 @@ public class PushTask extends TeaModel {
 
         public static Vivo create() {
             return builder().build();
+        }
+
+        /**
+         * @return addBadge
+         */
+        public Boolean getAddBadge() {
+            return this.addBadge;
         }
 
         /**
@@ -916,6 +927,7 @@ public class PushTask extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean addBadge; 
             private String category; 
             private Integer importance; 
             private String liveMessage; 
@@ -925,11 +937,20 @@ public class PushTask extends TeaModel {
             } 
 
             private Builder(Vivo model) {
+                this.addBadge = model.addBadge;
                 this.category = model.category;
                 this.importance = model.importance;
                 this.liveMessage = model.liveMessage;
                 this.receiptId = model.receiptId;
             } 
+
+            /**
+             * AddBadge.
+             */
+            public Builder addBadge(Boolean addBadge) {
+                this.addBadge = addBadge;
+                return this;
+            }
 
             /**
              * Category.
