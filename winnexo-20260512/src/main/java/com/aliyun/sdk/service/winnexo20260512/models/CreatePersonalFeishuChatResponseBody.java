@@ -12,11 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreatePersonalDingtalkMeetingResponseBody} extends {@link TeaModel}
+ * {@link CreatePersonalFeishuChatResponseBody} extends {@link TeaModel}
  *
- * <p>CreatePersonalDingtalkMeetingResponseBody</p>
+ * <p>CreatePersonalFeishuChatResponseBody</p>
  */
-public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
+public class CreatePersonalFeishuChatResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("chatId")
+    private String chatId;
+
     @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
@@ -44,7 +47,8 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
-    private CreatePersonalDingtalkMeetingResponseBody(Builder builder) {
+    private CreatePersonalFeishuChatResponseBody(Builder builder) {
+        this.chatId = builder.chatId;
         this.code = builder.code;
         this.directoryId = builder.directoryId;
         this.gmtCreate = builder.gmtCreate;
@@ -60,12 +64,19 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreatePersonalDingtalkMeetingResponseBody create() {
+    public static CreatePersonalFeishuChatResponseBody create() {
         return builder().build();
     }
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return chatId
+     */
+    public String getChatId() {
+        return this.chatId;
     }
 
     /**
@@ -132,6 +143,7 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String chatId; 
         private String code; 
         private String directoryId; 
         private String gmtCreate; 
@@ -145,7 +157,8 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(CreatePersonalDingtalkMeetingResponseBody model) {
+        private Builder(CreatePersonalFeishuChatResponseBody model) {
+            this.chatId = model.chatId;
             this.code = model.code;
             this.directoryId = model.directoryId;
             this.gmtCreate = model.gmtCreate;
@@ -158,7 +171,18 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>飞书群聊 ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oc_abc123</p>
+         */
+        public Builder chatId(String chatId) {
+            this.chatId = chatId;
+            return this;
+        }
+
+        /**
+         * <p>业务状态码：成功为 200，失败为后端错误码</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -169,10 +193,10 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>绑定的目录 ID</p>
+         * <p>请求指定的目标个人目录 ID；默认根目录场景为空</p>
          * 
          * <strong>example:</strong>
-         * <p>exampleDirectoryId</p>
+         * <p>dir_personal_1</p>
          */
         public Builder directoryId(String directoryId) {
             this.directoryId = directoryId;
@@ -180,10 +204,10 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>兼容字段，固定返回空值</p>
+         * <p>创建时间 ISO8601</p>
          * 
          * <strong>example:</strong>
-         * <p>2025-11-14T02:18:27Z</p>
+         * <p>2026-08-18T10:30:00+08:00</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -194,7 +218,7 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
          * <p>错误描述，成功时为空</p>
          * 
          * <strong>example:</strong>
-         * <p>ok</p>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -202,10 +226,10 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>文件名</p>
+         * <p>资源名称；成功拉取群信息后为飞书群名</p>
          * 
          * <strong>example:</strong>
-         * <p>oklabs_tongyici</p>
+         * <p>产品研发群</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -213,10 +237,10 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>请求追踪 ID</p>
          * 
          * <strong>example:</strong>
-         * <p>B49109FE-5BB1-593C-915D-F5A99D9F5435</p>
+         * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -224,10 +248,10 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资源 scope，固定为 PERSONAL</p>
+         * <p>资源范围，固定为 PERSONAL</p>
          * 
          * <strong>example:</strong>
-         * <p>user_info projects pull_requests hook gists emails</p>
+         * <p>PERSONAL</p>
          */
         public Builder scope(String scope) {
             this.scope = scope;
@@ -235,10 +259,10 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>兼容字段，固定返回空字符串</p>
+         * <p>新建 Source ID</p>
          * 
          * <strong>example:</strong>
-         * <p>2000398</p>
+         * <p>src_feishu_1</p>
          */
         public Builder sourceId(String sourceId) {
             this.sourceId = sourceId;
@@ -246,18 +270,18 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>固定返回 DEPRECATED</p>
+         * <p>资源状态</p>
          * 
          * <strong>example:</strong>
-         * <p>updated</p>
+         * <p>RUNNING</p>
          */
         public Builder status(String status) {
             this.status = status;
             return this;
         }
 
-        public CreatePersonalDingtalkMeetingResponseBody build() {
-            return new CreatePersonalDingtalkMeetingResponseBody(this);
+        public CreatePersonalFeishuChatResponseBody build() {
+            return new CreatePersonalFeishuChatResponseBody(this);
         } 
 
     } 

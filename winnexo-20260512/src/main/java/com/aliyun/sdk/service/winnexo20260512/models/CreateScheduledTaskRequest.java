@@ -58,6 +58,14 @@ public class CreateScheduledTaskRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("triggerConfig")
     private TriggerConfig triggerConfig;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("visibility")
+    private String visibility;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("visibleMemberUserIds")
+    private java.util.List<String> visibleMemberUserIds;
+
     private CreateScheduledTaskRequest(Builder builder) {
         super(builder);
         this.collaborationGroupId = builder.collaborationGroupId;
@@ -70,6 +78,8 @@ public class CreateScheduledTaskRequest extends Request {
         this.taskDetail = builder.taskDetail;
         this.tenantId = builder.tenantId;
         this.triggerConfig = builder.triggerConfig;
+        this.visibility = builder.visibility;
+        this.visibleMemberUserIds = builder.visibleMemberUserIds;
     }
 
     public static Builder builder() {
@@ -155,6 +165,20 @@ public class CreateScheduledTaskRequest extends Request {
         return this.triggerConfig;
     }
 
+    /**
+     * @return visibility
+     */
+    public String getVisibility() {
+        return this.visibility;
+    }
+
+    /**
+     * @return visibleMemberUserIds
+     */
+    public java.util.List<String> getVisibleMemberUserIds() {
+        return this.visibleMemberUserIds;
+    }
+
     public static final class Builder extends Request.Builder<CreateScheduledTaskRequest, Builder> {
         private String collaborationGroupId; 
         private java.util.List<Description> description; 
@@ -166,6 +190,8 @@ public class CreateScheduledTaskRequest extends Request {
         private TaskDetail taskDetail; 
         private String tenantId; 
         private TriggerConfig triggerConfig; 
+        private String visibility; 
+        private java.util.List<String> visibleMemberUserIds; 
 
         private Builder() {
             super();
@@ -183,6 +209,8 @@ public class CreateScheduledTaskRequest extends Request {
             this.taskDetail = request.taskDetail;
             this.tenantId = request.tenantId;
             this.triggerConfig = request.triggerConfig;
+            this.visibility = request.visibility;
+            this.visibleMemberUserIds = request.visibleMemberUserIds;
         } 
 
         /**
@@ -296,6 +324,31 @@ public class CreateScheduledTaskRequest extends Request {
             String triggerConfigShrink = shrink(triggerConfig, "triggerConfig", "json");
             this.putBodyParameter("triggerConfig", triggerConfigShrink);
             this.triggerConfig = triggerConfig;
+            return this;
+        }
+
+        /**
+         * <p>群任务可见范围：PRIVATE(仅创建人与群主可见)/COLLABORATIVE(指定协作成员可见)/PUBLIC(群内全员可见)；群任务不传时默认 PRIVATE，个人任务忽略该字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
+         */
+        public Builder visibility(String visibility) {
+            this.putBodyParameter("visibility", visibility);
+            this.visibility = visibility;
+            return this;
+        }
+
+        /**
+         * <p>协作成员用户 ID 列表（仅 visibility=COLLABORATIVE 生效，其余档位忽略，最多 1000 个）；任务创建人与群创建人无需传入（由鉴权层覆盖）；个人任务忽略该字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>string_value</p>
+         */
+        public Builder visibleMemberUserIds(java.util.List<String> visibleMemberUserIds) {
+            String visibleMemberUserIdsShrink = shrink(visibleMemberUserIds, "visibleMemberUserIds", "json");
+            this.putBodyParameter("visibleMemberUserIds", visibleMemberUserIdsShrink);
+            this.visibleMemberUserIds = visibleMemberUserIds;
             return this;
         }
 
@@ -1150,7 +1203,7 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>LLM 润色后的任务理解描述</p>
+             * <p>【已废弃】任务理解描述；任务理解功能已下线，服务端接收后忽略该字段，仅为存量调用方入参兼容保留</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>

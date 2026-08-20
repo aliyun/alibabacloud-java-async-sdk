@@ -36,7 +36,6 @@ public class GetScheduledTaskUnderstandDetailRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("userInput")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String userInput;
 
     private GetScheduledTaskUnderstandDetailRequest(Builder builder) {
@@ -165,8 +164,7 @@ public class GetScheduledTaskUnderstandDetailRequest extends Request {
         }
 
         /**
-         * <p>自然语言任务描述</p>
-         * <p>This parameter is required.</p>
+         * <p>【接口已下线】自然语言任务描述；后端不再消费该入参，已取消必填约束</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>

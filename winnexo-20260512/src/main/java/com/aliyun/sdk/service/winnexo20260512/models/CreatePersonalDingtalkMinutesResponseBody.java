@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreatePersonalDingtalkMeetingResponseBody} extends {@link TeaModel}
+ * {@link CreatePersonalDingtalkMinutesResponseBody} extends {@link TeaModel}
  *
- * <p>CreatePersonalDingtalkMeetingResponseBody</p>
+ * <p>CreatePersonalDingtalkMinutesResponseBody</p>
  */
-public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
+public class CreatePersonalDingtalkMinutesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
@@ -44,7 +44,7 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
-    private CreatePersonalDingtalkMeetingResponseBody(Builder builder) {
+    private CreatePersonalDingtalkMinutesResponseBody(Builder builder) {
         this.code = builder.code;
         this.directoryId = builder.directoryId;
         this.gmtCreate = builder.gmtCreate;
@@ -60,7 +60,7 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreatePersonalDingtalkMeetingResponseBody create() {
+    public static CreatePersonalDingtalkMinutesResponseBody create() {
         return builder().build();
     }
 
@@ -145,7 +145,7 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(CreatePersonalDingtalkMeetingResponseBody model) {
+        private Builder(CreatePersonalDingtalkMinutesResponseBody model) {
             this.code = model.code;
             this.directoryId = model.directoryId;
             this.gmtCreate = model.gmtCreate;
@@ -180,10 +180,10 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>兼容字段，固定返回空值</p>
+         * <p>创建时间 ISO8601</p>
          * 
          * <strong>example:</strong>
-         * <p>2025-11-14T02:18:27Z</p>
+         * <p>2025-11-12T03:08:56Z</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -194,7 +194,7 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
          * <p>错误描述，成功时为空</p>
          * 
          * <strong>example:</strong>
-         * <p>ok</p>
+         * <p>The current zone list is illegal.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -202,10 +202,10 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>文件名</p>
+         * <p>资源显示名称</p>
          * 
          * <strong>example:</strong>
-         * <p>oklabs_tongyici</p>
+         * <p>示例名称</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -213,10 +213,10 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>请求追踪 ID</p>
          * 
          * <strong>example:</strong>
-         * <p>B49109FE-5BB1-593C-915D-F5A99D9F5435</p>
+         * <p>72D1EC35-B174-5595-891F-2F0B3BFBE56F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -227,7 +227,7 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
          * <p>资源 scope，固定为 PERSONAL</p>
          * 
          * <strong>example:</strong>
-         * <p>user_info projects pull_requests hook gists emails</p>
+         * <p>read:user,read:repo,write:repo,read:org,read:group</p>
          */
         public Builder scope(String scope) {
             this.scope = scope;
@@ -235,10 +235,10 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>兼容字段，固定返回空字符串</p>
+         * <p>新建资源 ID</p>
          * 
          * <strong>example:</strong>
-         * <p>2000398</p>
+         * <p>exampleSourceId</p>
          */
         public Builder sourceId(String sourceId) {
             this.sourceId = sourceId;
@@ -246,18 +246,18 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>固定返回 DEPRECATED</p>
+         * <p>资源状态</p>
          * 
          * <strong>example:</strong>
-         * <p>updated</p>
+         * <p>200</p>
          */
         public Builder status(String status) {
             this.status = status;
             return this;
         }
 
-        public CreatePersonalDingtalkMeetingResponseBody build() {
-            return new CreatePersonalDingtalkMeetingResponseBody(this);
+        public CreatePersonalDingtalkMinutesResponseBody build() {
+            return new CreatePersonalDingtalkMinutesResponseBody(this);
         } 
 
     } 

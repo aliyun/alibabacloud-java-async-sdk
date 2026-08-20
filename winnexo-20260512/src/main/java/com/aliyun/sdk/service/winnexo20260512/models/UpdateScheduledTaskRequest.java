@@ -58,6 +58,14 @@ public class UpdateScheduledTaskRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("triggerConfig")
     private TriggerConfig triggerConfig;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("visibility")
+    private String visibility;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("visibleMemberUserIds")
+    private java.util.List<String> visibleMemberUserIds;
+
     private UpdateScheduledTaskRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
@@ -70,6 +78,8 @@ public class UpdateScheduledTaskRequest extends Request {
         this.taskId = builder.taskId;
         this.tenantId = builder.tenantId;
         this.triggerConfig = builder.triggerConfig;
+        this.visibility = builder.visibility;
+        this.visibleMemberUserIds = builder.visibleMemberUserIds;
     }
 
     public static Builder builder() {
@@ -155,6 +165,20 @@ public class UpdateScheduledTaskRequest extends Request {
         return this.triggerConfig;
     }
 
+    /**
+     * @return visibility
+     */
+    public String getVisibility() {
+        return this.visibility;
+    }
+
+    /**
+     * @return visibleMemberUserIds
+     */
+    public java.util.List<String> getVisibleMemberUserIds() {
+        return this.visibleMemberUserIds;
+    }
+
     public static final class Builder extends Request.Builder<UpdateScheduledTaskRequest, Builder> {
         private java.util.List<Description> description; 
         private java.util.List<String> digitalEmployeeName; 
@@ -166,6 +190,8 @@ public class UpdateScheduledTaskRequest extends Request {
         private String taskId; 
         private String tenantId; 
         private TriggerConfig triggerConfig; 
+        private String visibility; 
+        private java.util.List<String> visibleMemberUserIds; 
 
         private Builder() {
             super();
@@ -183,6 +209,8 @@ public class UpdateScheduledTaskRequest extends Request {
             this.taskId = request.taskId;
             this.tenantId = request.tenantId;
             this.triggerConfig = request.triggerConfig;
+            this.visibility = request.visibility;
+            this.visibleMemberUserIds = request.visibleMemberUserIds;
         } 
 
         /**
@@ -296,6 +324,31 @@ public class UpdateScheduledTaskRequest extends Request {
             String triggerConfigShrink = shrink(triggerConfig, "triggerConfig", "json");
             this.putBodyParameter("triggerConfig", triggerConfigShrink);
             this.triggerConfig = triggerConfig;
+            return this;
+        }
+
+        /**
+         * <p>群任务可见范围调整：PRIVATE(仅创建人与群主可见)/COLLABORATIVE(指定协作成员可见)/PUBLIC(群内全员可见)；不传表示不更新档位，个人任务忽略该字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COLLABORATIVE</p>
+         */
+        public Builder visibility(String visibility) {
+            this.putBodyParameter("visibility", visibility);
+            this.visibility = visibility;
+            return this;
+        }
+
+        /**
+         * <p>协作成员全量替换列表（仅 visibility=COLLABORATIVE 生效，从协作档改走时名单清空，最多 1000 个）；不传表示不更新成员；任务创建人与群创建人无需传入（由鉴权层覆盖）；个人任务忽略该字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>string_value</p>
+         */
+        public Builder visibleMemberUserIds(java.util.List<String> visibleMemberUserIds) {
+            String visibleMemberUserIdsShrink = shrink(visibleMemberUserIds, "visibleMemberUserIds", "json");
+            this.putBodyParameter("visibleMemberUserIds", visibleMemberUserIdsShrink);
+            this.visibleMemberUserIds = visibleMemberUserIds;
             return this;
         }
 
@@ -1068,7 +1121,6 @@ public class UpdateScheduledTaskRequest extends Request {
         private java.util.List<RelatedSkills> relatedSkills;
 
         @com.aliyun.core.annotation.NameInMap("taskUnderstand")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String taskUnderstand;
 
         private TaskDetail(Builder builder) {
@@ -1155,8 +1207,7 @@ public class UpdateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>LLM 润色后的任务理解描述</p>
-             * <p>This parameter is required.</p>
+             * <p>【已废弃】任务理解描述；任务理解功能已下线，服务端接收后忽略该字段（更新时会清空存量 task_detail），仅为存量调用方入参兼容保留；已取消必填约束，新接入无需传入</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>

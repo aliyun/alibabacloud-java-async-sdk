@@ -30,7 +30,7 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "WinNexo";
         this.version = "2026-05-12";
-        this.endpointRule = "";
+        this.endpointRule = "regional";
         this.endpointMap = new java.util.HashMap<>();
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -97,6 +97,34 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateCustomOrgResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>将指定阿里钉群聊接入调用方已加入的群组知识库。</li>
+     * <li>资源类型固定为 ALI_DING，作用范围固定为 GROUP，归属用户从网关鉴权身份解析。</li>
+     * <li>groupId、chatId 与 historyStartTime 为必填项。</li>
+     * <li>updateFrequency 可通过 preset 或五段 cron 配置后续同步频率。</li>
+     * <li>服务端校验调用方群成员身份、目标群组目录权限及 chatId 作用域内唯一性。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateGroupAliDingChat  CreateGroupAliDingChatRequest
+     * @return CreateGroupAliDingChatResponse
+     */
+    @Override
+    public CompletableFuture<CreateGroupAliDingChatResponse> createGroupAliDingChat(CreateGroupAliDingChatRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateGroupAliDingChat").setMethod(HttpMethod.POST).setPathRegex("/openapi/createGroupAliDingChat").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateGroupAliDingChatResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateGroupAliDingChatResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -223,6 +251,34 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>请求说明</h2>
      * <ul>
+     * <li>将指定阿里钉群聊接入当前用户的个人知识库。</li>
+     * <li>资源类型固定为 ALI_DING，作用范围固定为 PERSONAL，归属用户从网关鉴权身份解析。</li>
+     * <li>historyStartTime 为必填项，支持 YYYY-MM-DD 或 YYYY-MM-DD HH:MM:SS。</li>
+     * <li>updateFrequency 可通过 preset 或五段 cron 配置后续同步频率。</li>
+     * <li>chatId 在目标个人作用域内不可重复。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreatePersonalAliDingChat  CreatePersonalAliDingChatRequest
+     * @return CreatePersonalAliDingChatResponse
+     */
+    @Override
+    public CompletableFuture<CreatePersonalAliDingChatResponse> createPersonalAliDingChat(CreatePersonalAliDingChatRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreatePersonalAliDingChat").setMethod(HttpMethod.POST).setPathRegex("/openapi/createPersonalAliDingChat").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreatePersonalAliDingChatResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreatePersonalAliDingChatResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
      * <li>该API用于将阿里钉会议相关资料（如音视频、闪记链接等）上传至指定数字员工的“我的资源”中。</li>
      * <li><code>source_type</code> 固定为 <code>ALI_DING_MEETING</code>，且作用范围 <code>scope</code> 固定为 <code>PERSONAL</code>。</li>
      * <li>必须提供公开的音视频OSS地址 (<code>ossUrl</code>) 和原始的闪记链接 (<code>shanjiUrl</code>)。</li>
@@ -309,19 +365,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>该接口用于将钉钉会议作为资源上传到指定数字员工的“我的资源”中。</li>
-     * <li><code>source_type</code> 固定为 <code>DINGTALK_MEETING</code>，<code>scope</code> 固定为 <code>PERSONAL</code>。</li>
-     * <li>如果不提供 <code>credentialId</code>，则使用系统默认配置。</li>
-     * <li>当未指定 <code>directoryId</code> 时，资源将自动绑定到当前数字员工的默认根目录下；若指定，则必须是调用者在该数字员工下的已有个人目录。</li>
-     * <li>可选参数 <code>description</code> 和 <code>notes</code> 分别用于描述资源和记录会议笔记，其中 <code>notes</code> 会参与辅助分析。</li>
-     * </ul>
+     * @deprecated OpenAPI CreatePersonalDingtalkMeeting is deprecated  * @description ## 请求说明
+     * - 该 API 已废弃，请改用 `CreatePersonalDingtalkMinutes`。
+     * - 为兼容存量 SDK，本接口保留最初发布的参数名称与必填性，不增加 `shanjiUrl`。
+     * - 调用成功后仅返回废弃提示，不校验目录、不计费，也不会创建或修改任何资源。
      * 
      * @param request the request parameters of CreatePersonalDingtalkMeeting  CreatePersonalDingtalkMeetingRequest
      * @return CreatePersonalDingtalkMeetingResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<CreatePersonalDingtalkMeetingResponse> createPersonalDingtalkMeeting(CreatePersonalDingtalkMeetingRequest request) {
         try {
@@ -331,6 +383,35 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreatePersonalDingtalkMeetingResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该 API 通过普通钉钉闪记链接创建会议资源，采集方式固定为个人 OAuth 对应的 DWS。</li>
+     * <li><code>source_type</code> 固定为 <code>DINGTALK_MEETING</code>，且作用范围 <code>scope</code> 固定为 <code>PERSONAL</code>。</li>
+     * <li>必须提供普通钉钉闪记链接或 taskUuid（<code>shanjiUrl</code>）。</li>
+     * <li>可选地指定目标个人目录 ID（<code>directoryId</code>）；未指定时使用当前数字员工默认根目录。</li>
+     * <li>支持添加资源描述（<code>description</code>）和会议笔记（<code>notes</code>）。</li>
+     * <li>此操作支持 AK、BearerToken 和 APP 三种认证方式之一。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreatePersonalDingtalkMinutes  CreatePersonalDingtalkMinutesRequest
+     * @return CreatePersonalDingtalkMinutesResponse
+     */
+    @Override
+    public CompletableFuture<CreatePersonalDingtalkMinutesResponse> createPersonalDingtalkMinutes(CreatePersonalDingtalkMinutesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreatePersonalDingtalkMinutes").setMethod(HttpMethod.POST).setPathRegex("/openapi/createPersonalDingtalkMinutes").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreatePersonalDingtalkMinutesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreatePersonalDingtalkMinutesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -358,6 +439,36 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreatePersonalDirectoryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该 API 使用当前 OpenAPI 身份对应用户已托管的飞书应用连接，通过项目内置 CLI 拉取指定群聊的名称和历史消息，并创建到该用户的个人知识库。</p>
+     * <ul>
+     * <li><code>chatId</code>：飞书群聊 ID，必须以 <code>oc_</code> 开头。</li>
+     * <li><code>directoryId</code>（可选）：目标个人目录 ID；省略时使用当前用户默认个人根目录。</li>
+     * <li><code>historyStartTime</code>（可选）：历史消息起始时间，支持 <code>YYYY-MM-DD</code> 或 <code>YYYY-MM-DD HH:MM:SS</code>。</li>
+     * <li><code>updateFrequency</code>（可选）：Source 级定时同步配置，支持预设频率或五段 cron。</li>
+     * <li><code>description</code>、<code>operatingObjectName</code>、<code>notes</code>、<code>sourceTags</code>：可选的 Source 元数据。
+     * 安全约束：Source Type 固定为 FEISHU，知识范围固定为 PERSONAL；飞书连接器用户由 POP 可信身份确定，不接受调用方传入凭证或用户 ID。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreatePersonalFeishuChat  CreatePersonalFeishuChatRequest
+     * @return CreatePersonalFeishuChatResponse
+     */
+    @Override
+    public CompletableFuture<CreatePersonalFeishuChatResponse> createPersonalFeishuChat(CreatePersonalFeishuChatRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreatePersonalFeishuChat").setMethod(HttpMethod.POST).setPathRegex("/openapi/createPersonalFeishuChat").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreatePersonalFeishuChatResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreatePersonalFeishuChatResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -821,9 +932,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @deprecated OpenAPI GetScheduledTaskUnderstandDetail is deprecated  * @description **本接口已下线**：任务理解能力已整体下线，后端不再提供任何业务逻辑，任何调用均返回 Code=OperationDenied.ApiOffline（httpStatusCode=410）。保留 operation 而非下线，是为了让存量 SDK 调用拿到明确的下线错误码，而不是与「路径写错」无法区分的 404。请迁移到 CreateScheduledTask，直接以 segments 传入任务描述。
+     * 
      * @param request the request parameters of GetScheduledTaskUnderstandDetail  GetScheduledTaskUnderstandDetailRequest
      * @return GetScheduledTaskUnderstandDetailResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<GetScheduledTaskUnderstandDetailResponse> getScheduledTaskUnderstandDetail(GetScheduledTaskUnderstandDetailRequest request) {
         try {
@@ -1828,6 +1942,35 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<QuerySyncResultResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>基于会话最近 N 条消息与智能体绑定的 skill，调用 LLM 生成 0~3 项下一步推荐（继续追问或推荐执行的技能）。</p>
+     * <ul>
+     * <li><code>sessionId</code>：会话 ID，必填；仅允许当前鉴权用户有权限的会话。</li>
+     * <li><code>recentMessageCount</code>：组装上下文的最近消息条数，范围 1-30，默认 10（约 5 轮 user+assistant 对话回合）。</li>
+     * <li><code>customPrompt</code>：自定义推荐指令（不超过 10000 字符），作为自定义指令注入默认推荐模板（位于输出格式约束之前），输出仍受模板的 JSON 格式与类型约束。</li>
+     * <li><code>outputType</code>：输出类型过滤。followUpOnly=仅追问类推荐（默认），skillOnly=仅技能推荐，both=同时生成两类。
+     * 与内部端点不同，OpenAPI 调用不受用户个人设置中下一步推荐开关的限制，始终执行推荐生成。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of RecommendNextActions  RecommendNextActionsRequest
+     * @return RecommendNextActionsResponse
+     */
+    @Override
+    public CompletableFuture<RecommendNextActionsResponse> recommendNextActions(RecommendNextActionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RecommendNextActions").setMethod(HttpMethod.POST).setPathRegex("/openapi/recommendNextActions").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RecommendNextActionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RecommendNextActionsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -80,6 +80,9 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("triggerType")
     private String triggerType;
 
+    @com.aliyun.core.annotation.NameInMap("visibility")
+    private String visibility;
+
     private GetScheduledTaskExecutionDetailResponseBody(Builder builder) {
         this.code = builder.code;
         this.completedAt = builder.completedAt;
@@ -102,6 +105,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         this.title = builder.title;
         this.triggerInfo = builder.triggerInfo;
         this.triggerType = builder.triggerType;
+        this.visibility = builder.visibility;
     }
 
     public static Builder builder() {
@@ -263,6 +267,13 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         return this.triggerType;
     }
 
+    /**
+     * @return visibility
+     */
+    public String getVisibility() {
+        return this.visibility;
+    }
+
     public static final class Builder {
         private String code; 
         private String completedAt; 
@@ -285,6 +296,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         private String title; 
         private TriggerInfo triggerInfo; 
         private String triggerType; 
+        private String visibility; 
 
         private Builder() {
         } 
@@ -311,6 +323,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
             this.title = model.title;
             this.triggerInfo = model.triggerInfo;
             this.triggerType = model.triggerType;
+            this.visibility = model.visibility;
         } 
 
         /**
@@ -529,6 +542,17 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
          */
         public Builder triggerType(String triggerType) {
             this.triggerType = triggerType;
+            return this;
+        }
+
+        /**
+         * <p>执行记录可见范围（恒等于所属任务可见范围）：PRIVATE/COLLABORATIVE/PUBLIC；个人任务执行为空</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COLLABORATIVE</p>
+         */
+        public Builder visibility(String visibility) {
+            this.visibility = visibility;
             return this;
         }
 

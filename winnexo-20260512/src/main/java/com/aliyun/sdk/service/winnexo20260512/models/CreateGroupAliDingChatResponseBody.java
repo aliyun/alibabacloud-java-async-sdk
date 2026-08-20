@@ -12,11 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreatePersonalDingtalkMeetingResponseBody} extends {@link TeaModel}
+ * {@link CreateGroupAliDingChatResponseBody} extends {@link TeaModel}
  *
- * <p>CreatePersonalDingtalkMeetingResponseBody</p>
+ * <p>CreateGroupAliDingChatResponseBody</p>
  */
-public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
+public class CreateGroupAliDingChatResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("chatId")
+    private String chatId;
+
     @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
@@ -25,6 +28,9 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("gmtCreate")
     private String gmtCreate;
+
+    @com.aliyun.core.annotation.NameInMap("groupId")
+    private String groupId;
 
     @com.aliyun.core.annotation.NameInMap("message")
     private String message;
@@ -44,10 +50,12 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
-    private CreatePersonalDingtalkMeetingResponseBody(Builder builder) {
+    private CreateGroupAliDingChatResponseBody(Builder builder) {
+        this.chatId = builder.chatId;
         this.code = builder.code;
         this.directoryId = builder.directoryId;
         this.gmtCreate = builder.gmtCreate;
+        this.groupId = builder.groupId;
         this.message = builder.message;
         this.name = builder.name;
         this.requestId = builder.requestId;
@@ -60,12 +68,19 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreatePersonalDingtalkMeetingResponseBody create() {
+    public static CreateGroupAliDingChatResponseBody create() {
         return builder().build();
     }
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return chatId
+     */
+    public String getChatId() {
+        return this.chatId;
     }
 
     /**
@@ -87,6 +102,13 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
      */
     public String getGmtCreate() {
         return this.gmtCreate;
+    }
+
+    /**
+     * @return groupId
+     */
+    public String getGroupId() {
+        return this.groupId;
     }
 
     /**
@@ -132,9 +154,11 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String chatId; 
         private String code; 
         private String directoryId; 
         private String gmtCreate; 
+        private String groupId; 
         private String message; 
         private String name; 
         private String requestId; 
@@ -145,10 +169,12 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(CreatePersonalDingtalkMeetingResponseBody model) {
+        private Builder(CreateGroupAliDingChatResponseBody model) {
+            this.chatId = model.chatId;
             this.code = model.code;
             this.directoryId = model.directoryId;
             this.gmtCreate = model.gmtCreate;
+            this.groupId = model.groupId;
             this.message = model.message;
             this.name = model.name;
             this.requestId = model.requestId;
@@ -158,7 +184,18 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>阿里钉群聊 ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cidxxxxxxxx</p>
+         */
+        public Builder chatId(String chatId) {
+            this.chatId = chatId;
+            return this;
+        }
+
+        /**
+         * <p>业务状态码：成功为 200，失败为后端错误码</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -169,7 +206,7 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>绑定的目录 ID</p>
+         * <p>请求指定的目标目录 ID</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -180,13 +217,24 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>兼容字段，固定返回空值</p>
+         * <p>创建时间 ISO8601</p>
          * 
          * <strong>example:</strong>
-         * <p>2025-11-14T02:18:27Z</p>
+         * <p>2026-08-18T10:00:00Z</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
+            return this;
+        }
+
+        /**
+         * <p>目标群组 ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exampleGroupId</p>
+         */
+        public Builder groupId(String groupId) {
+            this.groupId = groupId;
             return this;
         }
 
@@ -202,10 +250,10 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>文件名</p>
+         * <p>Source 名称</p>
          * 
          * <strong>example:</strong>
-         * <p>oklabs_tongyici</p>
+         * <p>客户项目群</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -213,10 +261,10 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>请求追踪 ID</p>
          * 
          * <strong>example:</strong>
-         * <p>B49109FE-5BB1-593C-915D-F5A99D9F5435</p>
+         * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -224,10 +272,10 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资源 scope，固定为 PERSONAL</p>
+         * <p>资源范围，固定为 GROUP</p>
          * 
          * <strong>example:</strong>
-         * <p>user_info projects pull_requests hook gists emails</p>
+         * <p>GROUP</p>
          */
         public Builder scope(String scope) {
             this.scope = scope;
@@ -235,10 +283,10 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>兼容字段，固定返回空字符串</p>
+         * <p>新建 Source ID</p>
          * 
          * <strong>example:</strong>
-         * <p>2000398</p>
+         * <p>exampleSourceId</p>
          */
         public Builder sourceId(String sourceId) {
             this.sourceId = sourceId;
@@ -246,18 +294,18 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>固定返回 DEPRECATED</p>
+         * <p>Source 状态</p>
          * 
          * <strong>example:</strong>
-         * <p>updated</p>
+         * <p>PENDING</p>
          */
         public Builder status(String status) {
             this.status = status;
             return this;
         }
 
-        public CreatePersonalDingtalkMeetingResponseBody build() {
-            return new CreatePersonalDingtalkMeetingResponseBody(this);
+        public CreateGroupAliDingChatResponseBody build() {
+            return new CreateGroupAliDingChatResponseBody(this);
         } 
 
     } 

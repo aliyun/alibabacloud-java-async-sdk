@@ -290,14 +290,38 @@ public class ListScheduledTasksResponseBody extends TeaModel {
      * <p>ListScheduledTasksResponseBody</p>
      */
     public static class Items extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("abnormalReason")
+        private String abnormalReason;
+
+        @com.aliyun.core.annotation.NameInMap("canDelete")
+        private Boolean canDelete;
+
+        @com.aliyun.core.annotation.NameInMap("canEdit")
+        private Boolean canEdit;
+
+        @com.aliyun.core.annotation.NameInMap("canExecute")
+        private Boolean canExecute;
+
+        @com.aliyun.core.annotation.NameInMap("canToggle")
+        private Boolean canToggle;
+
+        @com.aliyun.core.annotation.NameInMap("collaborationGroupId")
+        private String collaborationGroupId;
+
         @com.aliyun.core.annotation.NameInMap("creator")
         private String creator;
+
+        @com.aliyun.core.annotation.NameInMap("creatorName")
+        private String creatorName;
 
         @com.aliyun.core.annotation.NameInMap("cronExpression")
         private String cronExpression;
 
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
+
+        @com.aliyun.core.annotation.NameInMap("digitalEmployeeName")
+        private java.util.List<String> digitalEmployeeName;
 
         @com.aliyun.core.annotation.NameInMap("executionCount")
         private Long executionCount;
@@ -311,8 +335,14 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("isOpen")
         private Boolean isOpen;
 
+        @com.aliyun.core.annotation.NameInMap("model")
+        private String model;
+
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
+
+        @com.aliyun.core.annotation.NameInMap("status")
+        private String status;
 
         @com.aliyun.core.annotation.NameInMap("taskId")
         private String taskId;
@@ -320,17 +350,35 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("triggerType")
         private String triggerType;
 
+        @com.aliyun.core.annotation.NameInMap("visibility")
+        private String visibility;
+
+        @com.aliyun.core.annotation.NameInMap("visibleMemberUserIds")
+        private java.util.List<String> visibleMemberUserIds;
+
         private Items(Builder builder) {
+            this.abnormalReason = builder.abnormalReason;
+            this.canDelete = builder.canDelete;
+            this.canEdit = builder.canEdit;
+            this.canExecute = builder.canExecute;
+            this.canToggle = builder.canToggle;
+            this.collaborationGroupId = builder.collaborationGroupId;
             this.creator = builder.creator;
+            this.creatorName = builder.creatorName;
             this.cronExpression = builder.cronExpression;
             this.description = builder.description;
+            this.digitalEmployeeName = builder.digitalEmployeeName;
             this.executionCount = builder.executionCount;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.isOpen = builder.isOpen;
+            this.model = builder.model;
             this.name = builder.name;
+            this.status = builder.status;
             this.taskId = builder.taskId;
             this.triggerType = builder.triggerType;
+            this.visibility = builder.visibility;
+            this.visibleMemberUserIds = builder.visibleMemberUserIds;
         }
 
         public static Builder builder() {
@@ -342,10 +390,59 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return abnormalReason
+         */
+        public String getAbnormalReason() {
+            return this.abnormalReason;
+        }
+
+        /**
+         * @return canDelete
+         */
+        public Boolean getCanDelete() {
+            return this.canDelete;
+        }
+
+        /**
+         * @return canEdit
+         */
+        public Boolean getCanEdit() {
+            return this.canEdit;
+        }
+
+        /**
+         * @return canExecute
+         */
+        public Boolean getCanExecute() {
+            return this.canExecute;
+        }
+
+        /**
+         * @return canToggle
+         */
+        public Boolean getCanToggle() {
+            return this.canToggle;
+        }
+
+        /**
+         * @return collaborationGroupId
+         */
+        public String getCollaborationGroupId() {
+            return this.collaborationGroupId;
+        }
+
+        /**
          * @return creator
          */
         public String getCreator() {
             return this.creator;
+        }
+
+        /**
+         * @return creatorName
+         */
+        public String getCreatorName() {
+            return this.creatorName;
         }
 
         /**
@@ -360,6 +457,13 @@ public class ListScheduledTasksResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return digitalEmployeeName
+         */
+        public java.util.List<String> getDigitalEmployeeName() {
+            return this.digitalEmployeeName;
         }
 
         /**
@@ -391,10 +495,24 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return model
+         */
+        public String getModel() {
+            return this.model;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
             return this.name;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
         }
 
         /**
@@ -411,33 +529,137 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             return this.triggerType;
         }
 
+        /**
+         * @return visibility
+         */
+        public String getVisibility() {
+            return this.visibility;
+        }
+
+        /**
+         * @return visibleMemberUserIds
+         */
+        public java.util.List<String> getVisibleMemberUserIds() {
+            return this.visibleMemberUserIds;
+        }
+
         public static final class Builder {
+            private String abnormalReason; 
+            private Boolean canDelete; 
+            private Boolean canEdit; 
+            private Boolean canExecute; 
+            private Boolean canToggle; 
+            private String collaborationGroupId; 
             private String creator; 
+            private String creatorName; 
             private String cronExpression; 
             private String description; 
+            private java.util.List<String> digitalEmployeeName; 
             private Long executionCount; 
             private String gmtCreate; 
             private String gmtModified; 
             private Boolean isOpen; 
+            private String model; 
             private String name; 
+            private String status; 
             private String taskId; 
             private String triggerType; 
+            private String visibility; 
+            private java.util.List<String> visibleMemberUserIds; 
 
             private Builder() {
             } 
 
             private Builder(Items model) {
+                this.abnormalReason = model.abnormalReason;
+                this.canDelete = model.canDelete;
+                this.canEdit = model.canEdit;
+                this.canExecute = model.canExecute;
+                this.canToggle = model.canToggle;
+                this.collaborationGroupId = model.collaborationGroupId;
                 this.creator = model.creator;
+                this.creatorName = model.creatorName;
                 this.cronExpression = model.cronExpression;
                 this.description = model.description;
+                this.digitalEmployeeName = model.digitalEmployeeName;
                 this.executionCount = model.executionCount;
                 this.gmtCreate = model.gmtCreate;
                 this.gmtModified = model.gmtModified;
                 this.isOpen = model.isOpen;
+                this.model = model.model;
                 this.name = model.name;
+                this.status = model.status;
                 this.taskId = model.taskId;
                 this.triggerType = model.triggerType;
+                this.visibility = model.visibility;
+                this.visibleMemberUserIds = model.visibleMemberUserIds;
             } 
+
+            /**
+             * <p>异常原因；仅 status=abnormal 时有值</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string_value</p>
+             */
+            public Builder abnormalReason(String abnormalReason) {
+                this.abnormalReason = abnormalReason;
+                return this;
+            }
+
+            /**
+             * <p>当前调用者是否可删除（仅任务创建人与群主）；个人任务恒 true</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder canDelete(Boolean canDelete) {
+                this.canDelete = canDelete;
+                return this;
+            }
+
+            /**
+             * <p>当前调用者是否可编辑（仅任务创建人与群主）；个人任务恒 true</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder canEdit(Boolean canEdit) {
+                this.canEdit = canEdit;
+                return this;
+            }
+
+            /**
+             * <p>当前调用者是否可立即执行（可见即可操作；异常任务 false）；个人任务恒 true</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder canExecute(Boolean canExecute) {
+                this.canExecute = canExecute;
+                return this;
+            }
+
+            /**
+             * <p>当前调用者是否可启停（仅任务创建人与群主；异常任务 false）；个人任务恒 true</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder canToggle(Boolean canToggle) {
+                this.canToggle = canToggle;
+                return this;
+            }
+
+            /**
+             * <p>所属协作群组 ID；为空表示个人任务</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exampleCollaborationGroupId</p>
+             */
+            public Builder collaborationGroupId(String collaborationGroupId) {
+                this.collaborationGroupId = collaborationGroupId;
+                return this;
+            }
 
             /**
              * <p>创建人</p>
@@ -447,6 +669,17 @@ public class ListScheduledTasksResponseBody extends TeaModel {
              */
             public Builder creator(String creator) {
                 this.creator = creator;
+                return this;
+            }
+
+            /**
+             * <p>创建人显示名：租户显示名优先，回退用户名</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string_value</p>
+             */
+            public Builder creatorName(String creatorName) {
+                this.creatorName = creatorName;
                 return this;
             }
 
@@ -469,6 +702,17 @@ public class ListScheduledTasksResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * <p>数字员工名称列表</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string_value</p>
+             */
+            public Builder digitalEmployeeName(java.util.List<String> digitalEmployeeName) {
+                this.digitalEmployeeName = digitalEmployeeName;
                 return this;
             }
 
@@ -517,6 +761,17 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
+             * <p>执行模型档位：flagship(旗舰)/standard(标准)/quick(轻量)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
+             */
+            public Builder model(String model) {
+                this.model = model;
+                return this;
+            }
+
+            /**
              * <p>文件名</p>
              * 
              * <strong>example:</strong>
@@ -524,6 +779,17 @@ public class ListScheduledTasksResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>任务状态：active(正常)/disabled(已停用)/abnormal(异常，如引用资源失效)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 
@@ -546,6 +812,28 @@ public class ListScheduledTasksResponseBody extends TeaModel {
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;
+                return this;
+            }
+
+            /**
+             * <p>群任务可见范围：PRIVATE/COLLABORATIVE/PUBLIC；个人任务为空</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIVATE</p>
+             */
+            public Builder visibility(String visibility) {
+                this.visibility = visibility;
+                return this;
+            }
+
+            /**
+             * <p>协作成员名单（不含任务创建人与群创建人，二者由鉴权层覆盖）；仅群任务返回，PRIVATE/PUBLIC 档返回空列表</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string_value</p>
+             */
+            public Builder visibleMemberUserIds(java.util.List<String> visibleMemberUserIds) {
+                this.visibleMemberUserIds = visibleMemberUserIds;
                 return this;
             }
 

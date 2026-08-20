@@ -22,6 +22,10 @@ public class ListScheduledTasksRequest extends Request {
     private String collaborationGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("creatorOnly")
+    private Boolean creatorOnly;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("keyword")
     private String keyword;
 
@@ -45,15 +49,21 @@ public class ListScheduledTasksRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("tenantId")
     private String tenantId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("visibilities")
+    private java.util.List<String> visibilities;
+
     private ListScheduledTasksRequest(Builder builder) {
         super(builder);
         this.collaborationGroupId = builder.collaborationGroupId;
+        this.creatorOnly = builder.creatorOnly;
         this.keyword = builder.keyword;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.page = builder.page;
         this.pageSize = builder.pageSize;
         this.tenantId = builder.tenantId;
+        this.visibilities = builder.visibilities;
     }
 
     public static Builder builder() {
@@ -74,6 +84,13 @@ public class ListScheduledTasksRequest extends Request {
      */
     public String getCollaborationGroupId() {
         return this.collaborationGroupId;
+    }
+
+    /**
+     * @return creatorOnly
+     */
+    public Boolean getCreatorOnly() {
+        return this.creatorOnly;
     }
 
     /**
@@ -118,14 +135,23 @@ public class ListScheduledTasksRequest extends Request {
         return this.tenantId;
     }
 
+    /**
+     * @return visibilities
+     */
+    public java.util.List<String> getVisibilities() {
+        return this.visibilities;
+    }
+
     public static final class Builder extends Request.Builder<ListScheduledTasksRequest, Builder> {
         private String collaborationGroupId; 
+        private Boolean creatorOnly; 
         private String keyword; 
         private Integer maxResults; 
         private String nextToken; 
         private Long page; 
         private Long pageSize; 
         private String tenantId; 
+        private java.util.List<String> visibilities; 
 
         private Builder() {
             super();
@@ -134,12 +160,14 @@ public class ListScheduledTasksRequest extends Request {
         private Builder(ListScheduledTasksRequest request) {
             super(request);
             this.collaborationGroupId = request.collaborationGroupId;
+            this.creatorOnly = request.creatorOnly;
             this.keyword = request.keyword;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.page = request.page;
             this.pageSize = request.pageSize;
             this.tenantId = request.tenantId;
+            this.visibilities = request.visibilities;
         } 
 
         /**
@@ -151,6 +179,18 @@ public class ListScheduledTasksRequest extends Request {
         public Builder collaborationGroupId(String collaborationGroupId) {
             this.putQueryParameter("collaborationGroupId", collaborationGroupId);
             this.collaborationGroupId = collaborationGroupId;
+            return this;
+        }
+
+        /**
+         * <p>只看自己创建的任务；仅群维度生效（个人维度恒为自己的任务），不传表示不过滤</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder creatorOnly(Boolean creatorOnly) {
+            this.putQueryParameter("creatorOnly", creatorOnly);
+            this.creatorOnly = creatorOnly;
             return this;
         }
 
@@ -223,6 +263,19 @@ public class ListScheduledTasksRequest extends Request {
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("tenantId", tenantId);
             this.tenantId = tenantId;
+            return this;
+        }
+
+        /**
+         * <p>按可见范围多选筛选：PRIVATE(仅创建人与群主可见)/COLLABORATIVE(指定协作成员可见)/PUBLIC(群内全员可见)；不传或空列表表示不筛；仅群维度（传 collaborationGroupId）生效，个人维度忽略</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
+         */
+        public Builder visibilities(java.util.List<String> visibilities) {
+            String visibilitiesShrink = shrink(visibilities, "visibilities", "json");
+            this.putQueryParameter("visibilities", visibilitiesShrink);
+            this.visibilities = visibilities;
             return this;
         }
 

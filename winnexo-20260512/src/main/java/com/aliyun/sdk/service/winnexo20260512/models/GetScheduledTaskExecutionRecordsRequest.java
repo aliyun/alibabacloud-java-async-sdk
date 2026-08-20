@@ -22,6 +22,10 @@ public class GetScheduledTaskExecutionRecordsRequest extends Request {
     private String collaborationGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("initiatorUserId")
+    private String initiatorUserId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("page")
     private Integer page;
 
@@ -30,14 +34,25 @@ public class GetScheduledTaskExecutionRecordsRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("status")
+    private String status;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("taskId")
+    private String taskId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("tenantId")
     private String tenantId;
 
     private GetScheduledTaskExecutionRecordsRequest(Builder builder) {
         super(builder);
         this.collaborationGroupId = builder.collaborationGroupId;
+        this.initiatorUserId = builder.initiatorUserId;
         this.page = builder.page;
         this.pageSize = builder.pageSize;
+        this.status = builder.status;
+        this.taskId = builder.taskId;
         this.tenantId = builder.tenantId;
     }
 
@@ -62,6 +77,13 @@ public class GetScheduledTaskExecutionRecordsRequest extends Request {
     }
 
     /**
+     * @return initiatorUserId
+     */
+    public String getInitiatorUserId() {
+        return this.initiatorUserId;
+    }
+
+    /**
      * @return page
      */
     public Integer getPage() {
@@ -76,6 +98,20 @@ public class GetScheduledTaskExecutionRecordsRequest extends Request {
     }
 
     /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
+     * @return taskId
+     */
+    public String getTaskId() {
+        return this.taskId;
+    }
+
+    /**
      * @return tenantId
      */
     public String getTenantId() {
@@ -84,8 +120,11 @@ public class GetScheduledTaskExecutionRecordsRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetScheduledTaskExecutionRecordsRequest, Builder> {
         private String collaborationGroupId; 
+        private String initiatorUserId; 
         private Integer page; 
         private Integer pageSize; 
+        private String status; 
+        private String taskId; 
         private String tenantId; 
 
         private Builder() {
@@ -95,8 +134,11 @@ public class GetScheduledTaskExecutionRecordsRequest extends Request {
         private Builder(GetScheduledTaskExecutionRecordsRequest request) {
             super(request);
             this.collaborationGroupId = request.collaborationGroupId;
+            this.initiatorUserId = request.initiatorUserId;
             this.page = request.page;
             this.pageSize = request.pageSize;
+            this.status = request.status;
+            this.taskId = request.taskId;
             this.tenantId = request.tenantId;
         } 
 
@@ -109,6 +151,18 @@ public class GetScheduledTaskExecutionRecordsRequest extends Request {
         public Builder collaborationGroupId(String collaborationGroupId) {
             this.putQueryParameter("collaborationGroupId", collaborationGroupId);
             this.collaborationGroupId = collaborationGroupId;
+            return this;
+        }
+
+        /**
+         * <p>按发起人筛选（平台用户 ID）；口径 = 记录的执行人（手动执行 = 触发人，自动执行 = 任务创建人）；只看自己发起的传当前用户 ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
+        public Builder initiatorUserId(String initiatorUserId) {
+            this.putQueryParameter("initiatorUserId", initiatorUserId);
+            this.initiatorUserId = initiatorUserId;
             return this;
         }
 
@@ -133,6 +187,30 @@ public class GetScheduledTaskExecutionRecordsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * <p>执行状态筛选（小写）：pending(排队中)/running(执行中)/success(成功)/failed(失败)/timeout(超时)/cancelled(已终止)；不传表示不筛；传入时不再生成未来计划项</p>
+         * 
+         * <strong>example:</strong>
+         * <p>failed</p>
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("status", status);
+            this.status = status;
+            return this;
+        }
+
+        /**
+         * <p>按单个任务预筛选；不传时返回全部可见任务的执行记录</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exampleTaskId</p>
+         */
+        public Builder taskId(String taskId) {
+            this.putQueryParameter("taskId", taskId);
+            this.taskId = taskId;
             return this;
         }
 

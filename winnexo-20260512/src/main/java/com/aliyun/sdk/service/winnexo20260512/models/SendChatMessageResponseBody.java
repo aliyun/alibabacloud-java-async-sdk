@@ -18,22 +18,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SendChatMessageResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("code")
+    @Deprecated
     private String code;
+
+    @com.aliyun.core.annotation.NameInMap("content")
+    private String content;
 
     @com.aliyun.core.annotation.NameInMap("data")
     private Object data;
 
     @com.aliyun.core.annotation.NameInMap("message")
+    @Deprecated
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
+    @Deprecated
     private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("type")
+    private String type;
 
     private SendChatMessageResponseBody(Builder builder) {
         this.code = builder.code;
+        this.content = builder.content;
         this.data = builder.data;
         this.message = builder.message;
         this.requestId = builder.requestId;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -53,6 +64,13 @@ public class SendChatMessageResponseBody extends TeaModel {
      */
     public String getCode() {
         return this.code;
+    }
+
+    /**
+     * @return content
+     */
+    public String getContent() {
+        return this.content;
     }
 
     /**
@@ -76,27 +94,35 @@ public class SendChatMessageResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder {
         private String code; 
+        private String content; 
         private Object data; 
         private String message; 
         private String requestId; 
+        private String type; 
 
         private Builder() {
         } 
 
         private Builder(SendChatMessageResponseBody model) {
             this.code = model.code;
+            this.content = model.content;
             this.data = model.data;
             this.message = model.message;
             this.requestId = model.requestId;
+            this.type = model.type;
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
+         * code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -104,10 +130,15 @@ public class SendChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>响应数据负载</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{}</p>
+         * content.
+         */
+        public Builder content(String content) {
+            this.content = content;
+            return this;
+        }
+
+        /**
+         * data.
          */
         public Builder data(Object data) {
             this.data = data;
@@ -115,10 +146,7 @@ public class SendChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
-         * 
-         * <strong>example:</strong>
-         * <p>successful</p>
+         * message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -126,13 +154,18 @@ public class SendChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
-         * 
-         * <strong>example:</strong>
-         * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * type.
+         */
+        public Builder type(String type) {
+            this.type = type;
             return this;
         }
 

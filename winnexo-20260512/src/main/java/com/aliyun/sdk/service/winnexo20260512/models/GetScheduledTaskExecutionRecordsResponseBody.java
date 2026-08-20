@@ -20,8 +20,17 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
+    @com.aliyun.core.annotation.NameInMap("hasMore")
+    private Boolean hasMore;
+
     @com.aliyun.core.annotation.NameInMap("message")
     private String message;
+
+    @com.aliyun.core.annotation.NameInMap("page")
+    private Integer page;
+
+    @com.aliyun.core.annotation.NameInMap("pageSize")
+    private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -29,11 +38,18 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("tasks")
     private java.util.List<Tasks> tasks;
 
+    @com.aliyun.core.annotation.NameInMap("total")
+    private Long total;
+
     private GetScheduledTaskExecutionRecordsResponseBody(Builder builder) {
         this.code = builder.code;
+        this.hasMore = builder.hasMore;
         this.message = builder.message;
+        this.page = builder.page;
+        this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
         this.tasks = builder.tasks;
+        this.total = builder.total;
     }
 
     public static Builder builder() {
@@ -56,10 +72,31 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
     }
 
     /**
+     * @return hasMore
+     */
+    public Boolean getHasMore() {
+        return this.hasMore;
+    }
+
+    /**
      * @return message
      */
     public String getMessage() {
         return this.message;
+    }
+
+    /**
+     * @return page
+     */
+    public Integer getPage() {
+        return this.page;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     /**
@@ -76,20 +113,35 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         return this.tasks;
     }
 
+    /**
+     * @return total
+     */
+    public Long getTotal() {
+        return this.total;
+    }
+
     public static final class Builder {
         private String code; 
+        private Boolean hasMore; 
         private String message; 
+        private Integer page; 
+        private Integer pageSize; 
         private String requestId; 
         private java.util.List<Tasks> tasks; 
+        private Long total; 
 
         private Builder() {
         } 
 
         private Builder(GetScheduledTaskExecutionRecordsResponseBody model) {
             this.code = model.code;
+            this.hasMore = model.hasMore;
             this.message = model.message;
+            this.page = model.page;
+            this.pageSize = model.pageSize;
             this.requestId = model.requestId;
             this.tasks = model.tasks;
+            this.total = model.total;
         } 
 
         /**
@@ -104,6 +156,17 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * <p>是否有更多数据</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder hasMore(Boolean hasMore) {
+            this.hasMore = hasMore;
+            return this;
+        }
+
+        /**
          * <p>错误描述，成功时为空</p>
          * 
          * <strong>example:</strong>
@@ -111,6 +174,28 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * <p>当前页码</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder page(Integer page) {
+            this.page = page;
+            return this;
+        }
+
+        /**
+         * <p>每页任务数</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
@@ -130,6 +215,17 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
+            return this;
+        }
+
+        /**
+         * <p>任务总数</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder total(Long total) {
+            this.total = total;
             return this;
         }
 
@@ -158,6 +254,9 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("executionId")
         private String executionId;
 
+        @com.aliyun.core.annotation.NameInMap("isExpired")
+        private Boolean isExpired;
+
         @com.aliyun.core.annotation.NameInMap("outputContent")
         private String outputContent;
 
@@ -172,6 +271,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             this.displayName = builder.displayName;
             this.errorMessage = builder.errorMessage;
             this.executionId = builder.executionId;
+            this.isExpired = builder.isExpired;
             this.outputContent = builder.outputContent;
             this.scheduledTime = builder.scheduledTime;
             this.status = builder.status;
@@ -214,6 +314,13 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return isExpired
+         */
+        public Boolean getIsExpired() {
+            return this.isExpired;
+        }
+
+        /**
          * @return outputContent
          */
         public String getOutputContent() {
@@ -239,6 +346,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             private String displayName; 
             private String errorMessage; 
             private String executionId; 
+            private Boolean isExpired; 
             private String outputContent; 
             private String scheduledTime; 
             private String status; 
@@ -251,6 +359,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
                 this.displayName = model.displayName;
                 this.errorMessage = model.errorMessage;
                 this.executionId = model.executionId;
+                this.isExpired = model.isExpired;
                 this.outputContent = model.outputContent;
                 this.scheduledTime = model.scheduledTime;
                 this.status = model.status;
@@ -301,6 +410,17 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>该条执行记录是否已过期归档</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder isExpired(Boolean isExpired) {
+                this.isExpired = isExpired;
+                return this;
+            }
+
+            /**
              * <p>执行输出内容（仅历史记录）</p>
              * 
              * <strong>example:</strong>
@@ -323,7 +443,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>状态：PENDING/RUNNING/SUCCESS/FAILED/SCHEDULED</p>
+             * <p>历史记录状态（小写）：pending/running/success/failed/timeout/cancelled；未来计划项为 SCHEDULED（大写）</p>
              * 
              * <strong>example:</strong>
              * <p>READY</p>
@@ -347,6 +467,9 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
      * <p>GetScheduledTaskExecutionRecordsResponseBody</p>
      */
     public static class Tasks extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("collaborationGroupId")
+        private String collaborationGroupId;
+
         @com.aliyun.core.annotation.NameInMap("cronExpression")
         private String cronExpression;
 
@@ -355,6 +478,9 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("isOpen")
         private Boolean isOpen;
+
+        @com.aliyun.core.annotation.NameInMap("model")
+        private String model;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -372,9 +498,11 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         private String triggerType;
 
         private Tasks(Builder builder) {
+            this.collaborationGroupId = builder.collaborationGroupId;
             this.cronExpression = builder.cronExpression;
             this.description = builder.description;
             this.isOpen = builder.isOpen;
+            this.model = builder.model;
             this.name = builder.name;
             this.taskId = builder.taskId;
             this.timeline = builder.timeline;
@@ -388,6 +516,13 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
 
         public static Tasks create() {
             return builder().build();
+        }
+
+        /**
+         * @return collaborationGroupId
+         */
+        public String getCollaborationGroupId() {
+            return this.collaborationGroupId;
         }
 
         /**
@@ -409,6 +544,13 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
          */
         public Boolean getIsOpen() {
             return this.isOpen;
+        }
+
+        /**
+         * @return model
+         */
+        public String getModel() {
+            return this.model;
         }
 
         /**
@@ -447,9 +589,11 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String collaborationGroupId; 
             private String cronExpression; 
             private String description; 
             private Boolean isOpen; 
+            private String model; 
             private String name; 
             private String taskId; 
             private java.util.List<Timeline> timeline; 
@@ -460,15 +604,28 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             } 
 
             private Builder(Tasks model) {
+                this.collaborationGroupId = model.collaborationGroupId;
                 this.cronExpression = model.cronExpression;
                 this.description = model.description;
                 this.isOpen = model.isOpen;
+                this.model = model.model;
                 this.name = model.name;
                 this.taskId = model.taskId;
                 this.timeline = model.timeline;
                 this.timezone = model.timezone;
                 this.triggerType = model.triggerType;
             } 
+
+            /**
+             * <p>所属协作群组 ID；为空表示个人任务</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exampleCollaborationGroupId</p>
+             */
+            public Builder collaborationGroupId(String collaborationGroupId) {
+                this.collaborationGroupId = collaborationGroupId;
+                return this;
+            }
 
             /**
              * <p>Cron 表达式</p>
@@ -500,6 +657,17 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
              */
             public Builder isOpen(Boolean isOpen) {
                 this.isOpen = isOpen;
+                return this;
+            }
+
+            /**
+             * <p>执行模型档位：flagship(旗舰)/standard(标准)/quick(轻量)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
+             */
+            public Builder model(String model) {
+                this.model = model;
                 return this;
             }
 
