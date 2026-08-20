@@ -21,6 +21,9 @@ public class UploadInfo extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String accessId;
 
+    @com.aliyun.core.annotation.NameInMap("accessUrl")
+    private String accessUrl;
+
     @com.aliyun.core.annotation.NameInMap("host")
     @com.aliyun.core.annotation.Validation(required = true)
     private String host;
@@ -42,6 +45,7 @@ public class UploadInfo extends TeaModel {
 
     private UploadInfo(Builder builder) {
         this.accessId = builder.accessId;
+        this.accessUrl = builder.accessUrl;
         this.host = builder.host;
         this.key = builder.key;
         this.policy = builder.policy;
@@ -66,6 +70,13 @@ public class UploadInfo extends TeaModel {
      */
     public String getAccessId() {
         return this.accessId;
+    }
+
+    /**
+     * @return accessUrl
+     */
+    public String getAccessUrl() {
+        return this.accessUrl;
     }
 
     /**
@@ -105,6 +116,7 @@ public class UploadInfo extends TeaModel {
 
     public static final class Builder {
         private String accessId; 
+        private String accessUrl; 
         private String host; 
         private String key; 
         private String policy; 
@@ -116,6 +128,7 @@ public class UploadInfo extends TeaModel {
 
         private Builder(UploadInfo model) {
             this.accessId = model.accessId;
+            this.accessUrl = model.accessUrl;
             this.host = model.host;
             this.key = model.key;
             this.policy = model.policy;
@@ -131,6 +144,14 @@ public class UploadInfo extends TeaModel {
          */
         public Builder accessId(String accessId) {
             this.accessId = accessId;
+            return this;
+        }
+
+        /**
+         * accessUrl.
+         */
+        public Builder accessUrl(String accessUrl) {
+            this.accessUrl = accessUrl;
             return this;
         }
 
