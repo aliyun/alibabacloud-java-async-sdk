@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeChargeModuleRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChargeUnit")
+    private String chargeUnit;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PayType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String payType;
@@ -32,6 +36,7 @@ public class DescribeChargeModuleRequest extends Request {
 
     private DescribeChargeModuleRequest(Builder builder) {
         super(builder);
+        this.chargeUnit = builder.chargeUnit;
         this.payType = builder.payType;
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
@@ -48,6 +53,13 @@ public class DescribeChargeModuleRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return chargeUnit
+     */
+    public String getChargeUnit() {
+        return this.chargeUnit;
     }
 
     /**
@@ -72,6 +84,7 @@ public class DescribeChargeModuleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeChargeModuleRequest, Builder> {
+        private String chargeUnit; 
         private String payType; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
@@ -82,10 +95,20 @@ public class DescribeChargeModuleRequest extends Request {
 
         private Builder(DescribeChargeModuleRequest request) {
             super(request);
+            this.chargeUnit = request.chargeUnit;
             this.payType = request.payType;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
         } 
+
+        /**
+         * ChargeUnit.
+         */
+        public Builder chargeUnit(String chargeUnit) {
+            this.putQueryParameter("ChargeUnit", chargeUnit);
+            this.chargeUnit = chargeUnit;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>

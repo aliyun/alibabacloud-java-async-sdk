@@ -101,6 +101,9 @@ public class DescribeChargeModuleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChargeModeDetails")
         private java.util.List<String> chargeModeDetails;
 
+        @com.aliyun.core.annotation.NameInMap("ChargeUnit")
+        private String chargeUnit;
+
         @com.aliyun.core.annotation.NameInMap("ModuleCode")
         private String moduleCode;
 
@@ -116,6 +119,7 @@ public class DescribeChargeModuleResponseBody extends TeaModel {
         private ChargeModules(Builder builder) {
             this.chargeMode = builder.chargeMode;
             this.chargeModeDetails = builder.chargeModeDetails;
+            this.chargeUnit = builder.chargeUnit;
             this.moduleCode = builder.moduleCode;
             this.periodType = builder.periodType;
             this.usageType = builder.usageType;
@@ -142,6 +146,13 @@ public class DescribeChargeModuleResponseBody extends TeaModel {
          */
         public java.util.List<String> getChargeModeDetails() {
             return this.chargeModeDetails;
+        }
+
+        /**
+         * @return chargeUnit
+         */
+        public String getChargeUnit() {
+            return this.chargeUnit;
         }
 
         /**
@@ -175,6 +186,7 @@ public class DescribeChargeModuleResponseBody extends TeaModel {
         public static final class Builder {
             private String chargeMode; 
             private java.util.List<String> chargeModeDetails; 
+            private String chargeUnit; 
             private String moduleCode; 
             private String periodType; 
             private String usageType; 
@@ -186,6 +198,7 @@ public class DescribeChargeModuleResponseBody extends TeaModel {
             private Builder(ChargeModules model) {
                 this.chargeMode = model.chargeMode;
                 this.chargeModeDetails = model.chargeModeDetails;
+                this.chargeUnit = model.chargeUnit;
                 this.moduleCode = model.moduleCode;
                 this.periodType = model.periodType;
                 this.usageType = model.usageType;
@@ -205,6 +218,14 @@ public class DescribeChargeModuleResponseBody extends TeaModel {
              */
             public Builder chargeModeDetails(java.util.List<String> chargeModeDetails) {
                 this.chargeModeDetails = chargeModeDetails;
+                return this;
+            }
+
+            /**
+             * ChargeUnit.
+             */
+            public Builder chargeUnit(String chargeUnit) {
+                this.chargeUnit = chargeUnit;
                 return this;
             }
 
