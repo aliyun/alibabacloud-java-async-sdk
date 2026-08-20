@@ -22,12 +22,20 @@ public class CreateCallOutboundInstantRequest extends Request {
     private String calledNumber;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CallerNumber")
+    private String callerNumber;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CallerUacAccountId")
     private String callerUacAccountId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CurrentWorkspaceId")
     private String currentWorkspaceId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustomerLineCode")
+    private String customerLineCode;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CustomerName")
@@ -48,8 +56,10 @@ public class CreateCallOutboundInstantRequest extends Request {
     private CreateCallOutboundInstantRequest(Builder builder) {
         super(builder);
         this.calledNumber = builder.calledNumber;
+        this.callerNumber = builder.callerNumber;
         this.callerUacAccountId = builder.callerUacAccountId;
         this.currentWorkspaceId = builder.currentWorkspaceId;
+        this.customerLineCode = builder.customerLineCode;
         this.customerName = builder.customerName;
         this.encryptCall = builder.encryptCall;
         this.promptVariables = builder.promptVariables;
@@ -77,6 +87,13 @@ public class CreateCallOutboundInstantRequest extends Request {
     }
 
     /**
+     * @return callerNumber
+     */
+    public String getCallerNumber() {
+        return this.callerNumber;
+    }
+
+    /**
      * @return callerUacAccountId
      */
     public String getCallerUacAccountId() {
@@ -88,6 +105,13 @@ public class CreateCallOutboundInstantRequest extends Request {
      */
     public String getCurrentWorkspaceId() {
         return this.currentWorkspaceId;
+    }
+
+    /**
+     * @return customerLineCode
+     */
+    public String getCustomerLineCode() {
+        return this.customerLineCode;
     }
 
     /**
@@ -120,8 +144,10 @@ public class CreateCallOutboundInstantRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateCallOutboundInstantRequest, Builder> {
         private String calledNumber; 
+        private String callerNumber; 
         private String callerUacAccountId; 
         private String currentWorkspaceId; 
+        private String customerLineCode; 
         private String customerName; 
         private Boolean encryptCall; 
         private String promptVariables; 
@@ -134,8 +160,10 @@ public class CreateCallOutboundInstantRequest extends Request {
         private Builder(CreateCallOutboundInstantRequest request) {
             super(request);
             this.calledNumber = request.calledNumber;
+            this.callerNumber = request.callerNumber;
             this.callerUacAccountId = request.callerUacAccountId;
             this.currentWorkspaceId = request.currentWorkspaceId;
+            this.customerLineCode = request.customerLineCode;
             this.customerName = request.customerName;
             this.encryptCall = request.encryptCall;
             this.promptVariables = request.promptVariables;
@@ -148,6 +176,15 @@ public class CreateCallOutboundInstantRequest extends Request {
         public Builder calledNumber(String calledNumber) {
             this.putBodyParameter("CalledNumber", calledNumber);
             this.calledNumber = calledNumber;
+            return this;
+        }
+
+        /**
+         * CallerNumber.
+         */
+        public Builder callerNumber(String callerNumber) {
+            this.putBodyParameter("CallerNumber", callerNumber);
+            this.callerNumber = callerNumber;
             return this;
         }
 
@@ -166,6 +203,15 @@ public class CreateCallOutboundInstantRequest extends Request {
         public Builder currentWorkspaceId(String currentWorkspaceId) {
             this.putBodyParameter("CurrentWorkspaceId", currentWorkspaceId);
             this.currentWorkspaceId = currentWorkspaceId;
+            return this;
+        }
+
+        /**
+         * CustomerLineCode.
+         */
+        public Builder customerLineCode(String customerLineCode) {
+            this.putBodyParameter("CustomerLineCode", customerLineCode);
+            this.customerLineCode = customerLineCode;
             return this;
         }
 
