@@ -193,6 +193,84 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StandardSearchResponse> standardSearch(StandardSearchRequest request);
 
     /**
+     * @param request the request parameters of TicketApplyRefund  TicketApplyRefundRequest
+     * @return TicketApplyRefundResponse
+     */
+    CompletableFuture<TicketApplyRefundResponse> ticketApplyRefund(TicketApplyRefundRequest request);
+
+    /**
+     * @param request the request parameters of TicketCancelOrder  TicketCancelOrderRequest
+     * @return TicketCancelOrderResponse
+     */
+    CompletableFuture<TicketCancelOrderResponse> ticketCancelOrder(TicketCancelOrderRequest request);
+
+    /**
+     * @param request the request parameters of TicketCheckRefund  TicketCheckRefundRequest
+     * @return TicketCheckRefundResponse
+     */
+    CompletableFuture<TicketCheckRefundResponse> ticketCheckRefund(TicketCheckRefundRequest request);
+
+    /**
+     * @param request the request parameters of TicketCreateOrder  TicketCreateOrderRequest
+     * @return TicketCreateOrderResponse
+     */
+    CompletableFuture<TicketCreateOrderResponse> ticketCreateOrder(TicketCreateOrderRequest request);
+
+    /**
+     * @param request the request parameters of TicketPageQueryProduct  TicketPageQueryProductRequest
+     * @return TicketPageQueryProductResponse
+     */
+    CompletableFuture<TicketPageQueryProductResponse> ticketPageQueryProduct(TicketPageQueryProductRequest request);
+
+    /**
+     * @param request the request parameters of TicketPageQueryScenic  TicketPageQueryScenicRequest
+     * @return TicketPageQueryScenicResponse
+     */
+    CompletableFuture<TicketPageQueryScenicResponse> ticketPageQueryScenic(TicketPageQueryScenicRequest request);
+
+    /**
+     * @param request the request parameters of TicketPayOrder  TicketPayOrderRequest
+     * @return TicketPayOrderResponse
+     */
+    CompletableFuture<TicketPayOrderResponse> ticketPayOrder(TicketPayOrderRequest request);
+
+    /**
+     * @param request the request parameters of TicketQueryOrder  TicketQueryOrderRequest
+     * @return TicketQueryOrderResponse
+     */
+    CompletableFuture<TicketQueryOrderResponse> ticketQueryOrder(TicketQueryOrderRequest request);
+
+    /**
+     * @param request the request parameters of TicketQueryPriceStock  TicketQueryPriceStockRequest
+     * @return TicketQueryPriceStockResponse
+     */
+    CompletableFuture<TicketQueryPriceStockResponse> ticketQueryPriceStock(TicketQueryPriceStockRequest request);
+
+    /**
+     * @param request the request parameters of TicketQueryProduct  TicketQueryProductRequest
+     * @return TicketQueryProductResponse
+     */
+    CompletableFuture<TicketQueryProductResponse> ticketQueryProduct(TicketQueryProductRequest request);
+
+    /**
+     * @param request the request parameters of TicketQueryRefundOrder  TicketQueryRefundOrderRequest
+     * @return TicketQueryRefundOrderResponse
+     */
+    CompletableFuture<TicketQueryRefundOrderResponse> ticketQueryRefundOrder(TicketQueryRefundOrderRequest request);
+
+    /**
+     * @param request the request parameters of TicketQueryScenic  TicketQueryScenicRequest
+     * @return TicketQueryScenicResponse
+     */
+    CompletableFuture<TicketQueryScenicResponse> ticketQueryScenic(TicketQueryScenicRequest request);
+
+    /**
+     * @param request the request parameters of TicketQueryShelf  TicketQueryShelfRequest
+     * @return TicketQueryShelfResponse
+     */
+    CompletableFuture<TicketQueryShelfResponse> ticketQueryShelf(TicketQueryShelfRequest request);
+
+    /**
      * @param request the request parameters of Ticketing  TicketingRequest
      * @return TicketingResponse
      */

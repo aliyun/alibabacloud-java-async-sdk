@@ -501,6 +501,240 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of TicketApplyRefund  TicketApplyRefundRequest
+     * @return TicketApplyRefundResponse
+     */
+    @Override
+    public CompletableFuture<TicketApplyRefundResponse> ticketApplyRefund(TicketApplyRefundRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TicketApplyRefund").setMethod(HttpMethod.POST).setPathRegex("/TicketApplyRefund").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TicketApplyRefundResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TicketApplyRefundResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TicketCancelOrder  TicketCancelOrderRequest
+     * @return TicketCancelOrderResponse
+     */
+    @Override
+    public CompletableFuture<TicketCancelOrderResponse> ticketCancelOrder(TicketCancelOrderRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TicketCancelOrder").setMethod(HttpMethod.POST).setPathRegex("/TicketCancelOrder").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TicketCancelOrderResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TicketCancelOrderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TicketCheckRefund  TicketCheckRefundRequest
+     * @return TicketCheckRefundResponse
+     */
+    @Override
+    public CompletableFuture<TicketCheckRefundResponse> ticketCheckRefund(TicketCheckRefundRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TicketCheckRefund").setMethod(HttpMethod.POST).setPathRegex("/TicketCheckRefund").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TicketCheckRefundResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TicketCheckRefundResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TicketCreateOrder  TicketCreateOrderRequest
+     * @return TicketCreateOrderResponse
+     */
+    @Override
+    public CompletableFuture<TicketCreateOrderResponse> ticketCreateOrder(TicketCreateOrderRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TicketCreateOrder").setMethod(HttpMethod.POST).setPathRegex("/TicketCreateOrder").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TicketCreateOrderResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TicketCreateOrderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TicketPageQueryProduct  TicketPageQueryProductRequest
+     * @return TicketPageQueryProductResponse
+     */
+    @Override
+    public CompletableFuture<TicketPageQueryProductResponse> ticketPageQueryProduct(TicketPageQueryProductRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TicketPageQueryProduct").setMethod(HttpMethod.POST).setPathRegex("/TicketPageQueryProduct").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TicketPageQueryProductResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TicketPageQueryProductResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TicketPageQueryScenic  TicketPageQueryScenicRequest
+     * @return TicketPageQueryScenicResponse
+     */
+    @Override
+    public CompletableFuture<TicketPageQueryScenicResponse> ticketPageQueryScenic(TicketPageQueryScenicRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TicketPageQueryScenic").setMethod(HttpMethod.POST).setPathRegex("/TicketPageQueryScenic").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TicketPageQueryScenicResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TicketPageQueryScenicResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TicketPayOrder  TicketPayOrderRequest
+     * @return TicketPayOrderResponse
+     */
+    @Override
+    public CompletableFuture<TicketPayOrderResponse> ticketPayOrder(TicketPayOrderRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TicketPayOrder").setMethod(HttpMethod.POST).setPathRegex("/TicketPayOrder").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TicketPayOrderResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TicketPayOrderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TicketQueryOrder  TicketQueryOrderRequest
+     * @return TicketQueryOrderResponse
+     */
+    @Override
+    public CompletableFuture<TicketQueryOrderResponse> ticketQueryOrder(TicketQueryOrderRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TicketQueryOrder").setMethod(HttpMethod.POST).setPathRegex("/TicketQueryOrder").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TicketQueryOrderResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TicketQueryOrderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TicketQueryPriceStock  TicketQueryPriceStockRequest
+     * @return TicketQueryPriceStockResponse
+     */
+    @Override
+    public CompletableFuture<TicketQueryPriceStockResponse> ticketQueryPriceStock(TicketQueryPriceStockRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TicketQueryPriceStock").setMethod(HttpMethod.POST).setPathRegex("/TicketQueryPriceStock").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TicketQueryPriceStockResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TicketQueryPriceStockResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TicketQueryProduct  TicketQueryProductRequest
+     * @return TicketQueryProductResponse
+     */
+    @Override
+    public CompletableFuture<TicketQueryProductResponse> ticketQueryProduct(TicketQueryProductRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TicketQueryProduct").setMethod(HttpMethod.POST).setPathRegex("/TicketQueryProduct").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TicketQueryProductResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TicketQueryProductResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TicketQueryRefundOrder  TicketQueryRefundOrderRequest
+     * @return TicketQueryRefundOrderResponse
+     */
+    @Override
+    public CompletableFuture<TicketQueryRefundOrderResponse> ticketQueryRefundOrder(TicketQueryRefundOrderRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TicketQueryRefundOrder").setMethod(HttpMethod.POST).setPathRegex("/TicketQueryRefundOrder").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TicketQueryRefundOrderResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TicketQueryRefundOrderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TicketQueryScenic  TicketQueryScenicRequest
+     * @return TicketQueryScenicResponse
+     */
+    @Override
+    public CompletableFuture<TicketQueryScenicResponse> ticketQueryScenic(TicketQueryScenicRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TicketQueryScenic").setMethod(HttpMethod.POST).setPathRegex("/TicketQueryScenic").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TicketQueryScenicResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TicketQueryScenicResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TicketQueryShelf  TicketQueryShelfRequest
+     * @return TicketQueryShelfResponse
+     */
+    @Override
+    public CompletableFuture<TicketQueryShelfResponse> ticketQueryShelf(TicketQueryShelfRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TicketQueryShelf").setMethod(HttpMethod.POST).setPathRegex("/TicketQueryShelf").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TicketQueryShelfResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TicketQueryShelfResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of Ticketing  TicketingRequest
      * @return TicketingResponse
      */
