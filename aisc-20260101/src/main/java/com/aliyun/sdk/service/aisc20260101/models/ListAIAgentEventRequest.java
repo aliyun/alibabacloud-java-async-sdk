@@ -54,6 +54,14 @@ public class ListAIAgentEventRequest extends Request {
     private String lang;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
+    private String order;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
+    private String orderBy;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
@@ -92,6 +100,8 @@ public class ListAIAgentEventRequest extends Request {
         this.infraName = builder.infraName;
         this.infraRegionId = builder.infraRegionId;
         this.lang = builder.lang;
+        this.order = builder.order;
+        this.orderBy = builder.orderBy;
         this.pageSize = builder.pageSize;
         this.riskLevel = builder.riskLevel;
         this.riskName = builder.riskName;
@@ -178,6 +188,20 @@ public class ListAIAgentEventRequest extends Request {
     }
 
     /**
+     * @return order
+     */
+    public String getOrder() {
+        return this.order;
+    }
+
+    /**
+     * @return orderBy
+     */
+    public String getOrderBy() {
+        return this.orderBy;
+    }
+
+    /**
      * @return pageSize
      */
     public Integer getPageSize() {
@@ -236,6 +260,8 @@ public class ListAIAgentEventRequest extends Request {
         private String infraName; 
         private String infraRegionId; 
         private String lang; 
+        private String order; 
+        private String orderBy; 
         private Integer pageSize; 
         private String riskLevel; 
         private String riskName; 
@@ -259,6 +285,8 @@ public class ListAIAgentEventRequest extends Request {
             this.infraName = request.infraName;
             this.infraRegionId = request.infraRegionId;
             this.lang = request.lang;
+            this.order = request.order;
+            this.orderBy = request.orderBy;
             this.pageSize = request.pageSize;
             this.riskLevel = request.riskLevel;
             this.riskName = request.riskName;
@@ -346,6 +374,24 @@ public class ListAIAgentEventRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * <p>Sort direction</p>
+         */
+        public Builder order(String order) {
+            this.putQueryParameter("Order", order);
+            this.order = order;
+            return this;
+        }
+
+        /**
+         * <p>Sort field, currently supports CheckTime</p>
+         */
+        public Builder orderBy(String orderBy) {
+            this.putQueryParameter("OrderBy", orderBy);
+            this.orderBy = orderBy;
             return this;
         }
 

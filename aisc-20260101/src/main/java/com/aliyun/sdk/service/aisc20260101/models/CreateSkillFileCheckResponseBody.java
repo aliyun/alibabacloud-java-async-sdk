@@ -332,7 +332,7 @@ public class CreateSkillFileCheckResponseBody extends TeaModel {
             }
 
             /**
-             * UploadResults.
+             * <p>逐文件接收结果</p>
              */
             public Builder uploadResults(java.util.List<UploadResults> uploadResults) {
                 this.uploadResults = uploadResults;
