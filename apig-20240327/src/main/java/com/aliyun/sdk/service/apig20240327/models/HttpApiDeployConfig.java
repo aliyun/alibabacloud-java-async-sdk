@@ -59,6 +59,9 @@ public class HttpApiDeployConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("policyConfigs")
     private java.util.List<HttpApiPolicyConfigs> policyConfigs;
 
+    @com.aliyun.core.annotation.NameInMap("restApiRouteMode")
+    private String restApiRouteMode;
+
     @com.aliyun.core.annotation.NameInMap("routeBackend")
     private Backend routeBackend;
 
@@ -83,6 +86,7 @@ public class HttpApiDeployConfig extends TeaModel {
         this.gatewayType = builder.gatewayType;
         this.mock = builder.mock;
         this.policyConfigs = builder.policyConfigs;
+        this.restApiRouteMode = builder.restApiRouteMode;
         this.routeBackend = builder.routeBackend;
         this.serviceConfigs = builder.serviceConfigs;
         this.subDomains = builder.subDomains;
@@ -199,6 +203,13 @@ public class HttpApiDeployConfig extends TeaModel {
     }
 
     /**
+     * @return restApiRouteMode
+     */
+    public String getRestApiRouteMode() {
+        return this.restApiRouteMode;
+    }
+
+    /**
      * @return routeBackend
      */
     public Backend getRouteBackend() {
@@ -234,6 +245,7 @@ public class HttpApiDeployConfig extends TeaModel {
         private String gatewayType; 
         private HttpApiMockContract mock; 
         private java.util.List<HttpApiPolicyConfigs> policyConfigs; 
+        private String restApiRouteMode; 
         private Backend routeBackend; 
         private java.util.List<ServiceConfigs> serviceConfigs; 
         private java.util.List<SubDomains> subDomains; 
@@ -256,6 +268,7 @@ public class HttpApiDeployConfig extends TeaModel {
             this.gatewayType = model.gatewayType;
             this.mock = model.mock;
             this.policyConfigs = model.policyConfigs;
+            this.restApiRouteMode = model.restApiRouteMode;
             this.routeBackend = model.routeBackend;
             this.serviceConfigs = model.serviceConfigs;
             this.subDomains = model.subDomains;
@@ -370,6 +383,14 @@ public class HttpApiDeployConfig extends TeaModel {
          */
         public Builder policyConfigs(java.util.List<HttpApiPolicyConfigs> policyConfigs) {
             this.policyConfigs = policyConfigs;
+            return this;
+        }
+
+        /**
+         * restApiRouteMode.
+         */
+        public Builder restApiRouteMode(String restApiRouteMode) {
+            this.restApiRouteMode = restApiRouteMode;
             return this;
         }
 

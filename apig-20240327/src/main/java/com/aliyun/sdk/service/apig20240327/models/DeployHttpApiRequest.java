@@ -633,6 +633,9 @@ public class DeployHttpApiRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("enableRouteCompression")
+        private Boolean enableRouteCompression;
+
         @com.aliyun.core.annotation.NameInMap("environment")
         private Environment environment;
 
@@ -651,6 +654,7 @@ public class DeployHttpApiRequest extends Request {
 
         private RestApiConfig(Builder builder) {
             this.description = builder.description;
+            this.enableRouteCompression = builder.enableRouteCompression;
             this.environment = builder.environment;
             this.gatewayId = builder.gatewayId;
             this.operationDeployments = builder.operationDeployments;
@@ -671,6 +675,13 @@ public class DeployHttpApiRequest extends Request {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return enableRouteCompression
+         */
+        public Boolean getEnableRouteCompression() {
+            return this.enableRouteCompression;
         }
 
         /**
@@ -710,6 +721,7 @@ public class DeployHttpApiRequest extends Request {
 
         public static final class Builder {
             private String description; 
+            private Boolean enableRouteCompression; 
             private Environment environment; 
             private String gatewayId; 
             private java.util.List<OperationDeployments> operationDeployments; 
@@ -721,6 +733,7 @@ public class DeployHttpApiRequest extends Request {
 
             private Builder(RestApiConfig model) {
                 this.description = model.description;
+                this.enableRouteCompression = model.enableRouteCompression;
                 this.environment = model.environment;
                 this.gatewayId = model.gatewayId;
                 this.operationDeployments = model.operationDeployments;
@@ -736,6 +749,14 @@ public class DeployHttpApiRequest extends Request {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * enableRouteCompression.
+             */
+            public Builder enableRouteCompression(Boolean enableRouteCompression) {
+                this.enableRouteCompression = enableRouteCompression;
                 return this;
             }
 
