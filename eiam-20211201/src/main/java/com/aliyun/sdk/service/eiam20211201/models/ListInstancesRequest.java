@@ -34,6 +34,10 @@ public class ListInstancesRequest extends Request {
     private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ManagedServiceCode")
+    private String managedServiceCode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
@@ -55,6 +59,7 @@ public class ListInstancesRequest extends Request {
         this.crossRegionReplication = builder.crossRegionReplication;
         this.edition = builder.edition;
         this.instanceIds = builder.instanceIds;
+        this.managedServiceCode = builder.managedServiceCode;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.serviceManaged = builder.serviceManaged;
@@ -103,6 +108,13 @@ public class ListInstancesRequest extends Request {
     }
 
     /**
+     * @return managedServiceCode
+     */
+    public String getManagedServiceCode() {
+        return this.managedServiceCode;
+    }
+
+    /**
      * @return pageNumber
      */
     public Long getPageNumber() {
@@ -135,6 +147,7 @@ public class ListInstancesRequest extends Request {
         private String crossRegionReplication; 
         private String edition; 
         private java.util.List<String> instanceIds; 
+        private String managedServiceCode; 
         private Long pageNumber; 
         private Long pageSize; 
         private Boolean serviceManaged; 
@@ -150,6 +163,7 @@ public class ListInstancesRequest extends Request {
             this.crossRegionReplication = request.crossRegionReplication;
             this.edition = request.edition;
             this.instanceIds = request.instanceIds;
+            this.managedServiceCode = request.managedServiceCode;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.serviceManaged = request.serviceManaged;
@@ -189,6 +203,15 @@ public class ListInstancesRequest extends Request {
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
+            return this;
+        }
+
+        /**
+         * ManagedServiceCode.
+         */
+        public Builder managedServiceCode(String managedServiceCode) {
+            this.putQueryParameter("ManagedServiceCode", managedServiceCode);
+            this.managedServiceCode = managedServiceCode;
             return this;
         }
 

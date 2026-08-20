@@ -22,12 +22,18 @@ public class CreateInstanceRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
     private CreateInstanceRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.clientToken = builder.clientToken;
         this.description = builder.description;
     }
 
@@ -52,6 +58,13 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
@@ -60,6 +73,7 @@ public class CreateInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateInstanceRequest, Builder> {
         private String regionId; 
+        private String clientToken; 
         private String description; 
 
         private Builder() {
@@ -69,6 +83,7 @@ public class CreateInstanceRequest extends Request {
         private Builder(CreateInstanceRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.clientToken = request.clientToken;
             this.description = request.description;
         } 
 
@@ -78,6 +93,18 @@ public class CreateInstanceRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。重试时传入相同值可取回首次调用的完整响应，避免重复创建实例。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client-token-example</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
