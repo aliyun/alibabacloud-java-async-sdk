@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class WebSearchRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentName")
+    private String agentName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -41,6 +45,7 @@ public class WebSearchRequest extends Request {
 
     private WebSearchRequest(Builder builder) {
         super(builder);
+        this.agentName = builder.agentName;
         this.maxResults = builder.maxResults;
         this.query = builder.query;
         this.regionId = builder.regionId;
@@ -59,6 +64,13 @@ public class WebSearchRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentName
+     */
+    public String getAgentName() {
+        return this.agentName;
     }
 
     /**
@@ -97,6 +109,7 @@ public class WebSearchRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<WebSearchRequest, Builder> {
+        private String agentName; 
         private Integer maxResults; 
         private String query; 
         private String regionId; 
@@ -109,12 +122,22 @@ public class WebSearchRequest extends Request {
 
         private Builder(WebSearchRequest request) {
             super(request);
+            this.agentName = request.agentName;
             this.maxResults = request.maxResults;
             this.query = request.query;
             this.regionId = request.regionId;
             this.urlScopeDomains = request.urlScopeDomains;
             this.urlScopeMode = request.urlScopeMode;
         } 
+
+        /**
+         * AgentName.
+         */
+        public Builder agentName(String agentName) {
+            this.putQueryParameter("AgentName", agentName);
+            this.agentName = agentName;
+            return this;
+        }
 
         /**
          * MaxResults.

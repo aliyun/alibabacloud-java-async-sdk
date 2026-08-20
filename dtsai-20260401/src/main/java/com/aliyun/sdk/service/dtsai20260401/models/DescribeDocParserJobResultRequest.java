@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDocParserJobResultRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentName")
+    private String agentName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("JobId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
@@ -27,10 +31,16 @@ public class DescribeDocParserJobResultRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResultType")
+    private String resultType;
+
     private DescribeDocParserJobResultRequest(Builder builder) {
         super(builder);
+        this.agentName = builder.agentName;
         this.jobId = builder.jobId;
         this.regionId = builder.regionId;
+        this.resultType = builder.resultType;
     }
 
     public static Builder builder() {
@@ -47,6 +57,13 @@ public class DescribeDocParserJobResultRequest extends Request {
     }
 
     /**
+     * @return agentName
+     */
+    public String getAgentName() {
+        return this.agentName;
+    }
+
+    /**
      * @return jobId
      */
     public String getJobId() {
@@ -60,9 +77,18 @@ public class DescribeDocParserJobResultRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return resultType
+     */
+    public String getResultType() {
+        return this.resultType;
+    }
+
     public static final class Builder extends Request.Builder<DescribeDocParserJobResultRequest, Builder> {
+        private String agentName; 
         private String jobId; 
         private String regionId; 
+        private String resultType; 
 
         private Builder() {
             super();
@@ -70,9 +96,20 @@ public class DescribeDocParserJobResultRequest extends Request {
 
         private Builder(DescribeDocParserJobResultRequest request) {
             super(request);
+            this.agentName = request.agentName;
             this.jobId = request.jobId;
             this.regionId = request.regionId;
+            this.resultType = request.resultType;
         } 
+
+        /**
+         * AgentName.
+         */
+        public Builder agentName(String agentName) {
+            this.putQueryParameter("AgentName", agentName);
+            this.agentName = agentName;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
@@ -95,6 +132,15 @@ public class DescribeDocParserJobResultRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResultType.
+         */
+        public Builder resultType(String resultType) {
+            this.putQueryParameter("ResultType", resultType);
+            this.resultType = resultType;
             return this;
         }
 

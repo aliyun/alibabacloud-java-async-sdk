@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class WebFetchRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentName")
+    private String agentName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OutputFormat")
     private String outputFormat;
 
@@ -33,6 +37,7 @@ public class WebFetchRequest extends Request {
 
     private WebFetchRequest(Builder builder) {
         super(builder);
+        this.agentName = builder.agentName;
         this.outputFormat = builder.outputFormat;
         this.regionId = builder.regionId;
         this.url = builder.url;
@@ -49,6 +54,13 @@ public class WebFetchRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentName
+     */
+    public String getAgentName() {
+        return this.agentName;
     }
 
     /**
@@ -73,6 +85,7 @@ public class WebFetchRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<WebFetchRequest, Builder> {
+        private String agentName; 
         private String outputFormat; 
         private String regionId; 
         private String url; 
@@ -83,10 +96,20 @@ public class WebFetchRequest extends Request {
 
         private Builder(WebFetchRequest request) {
             super(request);
+            this.agentName = request.agentName;
             this.outputFormat = request.outputFormat;
             this.regionId = request.regionId;
             this.url = request.url;
         } 
+
+        /**
+         * AgentName.
+         */
+        public Builder agentName(String agentName) {
+            this.putQueryParameter("AgentName", agentName);
+            this.agentName = agentName;
+            return this;
+        }
 
         /**
          * OutputFormat.

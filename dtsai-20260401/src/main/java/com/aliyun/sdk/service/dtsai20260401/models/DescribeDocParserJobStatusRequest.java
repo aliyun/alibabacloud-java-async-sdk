@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDocParserJobStatusRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentName")
+    private String agentName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("JobId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
@@ -29,6 +33,7 @@ public class DescribeDocParserJobStatusRequest extends Request {
 
     private DescribeDocParserJobStatusRequest(Builder builder) {
         super(builder);
+        this.agentName = builder.agentName;
         this.jobId = builder.jobId;
         this.regionId = builder.regionId;
     }
@@ -47,6 +52,13 @@ public class DescribeDocParserJobStatusRequest extends Request {
     }
 
     /**
+     * @return agentName
+     */
+    public String getAgentName() {
+        return this.agentName;
+    }
+
+    /**
      * @return jobId
      */
     public String getJobId() {
@@ -61,6 +73,7 @@ public class DescribeDocParserJobStatusRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDocParserJobStatusRequest, Builder> {
+        private String agentName; 
         private String jobId; 
         private String regionId; 
 
@@ -70,9 +83,19 @@ public class DescribeDocParserJobStatusRequest extends Request {
 
         private Builder(DescribeDocParserJobStatusRequest request) {
             super(request);
+            this.agentName = request.agentName;
             this.jobId = request.jobId;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * AgentName.
+         */
+        public Builder agentName(String agentName) {
+            this.putQueryParameter("AgentName", agentName);
+            this.agentName = agentName;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
