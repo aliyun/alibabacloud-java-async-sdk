@@ -74,6 +74,10 @@ public class CreateDomainRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("tlsMin")
     private String tlsMin;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dryRun")
+    private Boolean dryRun;
+
     private CreateDomainRequest(Builder builder) {
         super(builder);
         this.caCertIdentifier = builder.caCertIdentifier;
@@ -90,6 +94,7 @@ public class CreateDomainRequest extends Request {
         this.tlsCipherSuitesConfig = builder.tlsCipherSuitesConfig;
         this.tlsMax = builder.tlsMax;
         this.tlsMin = builder.tlsMin;
+        this.dryRun = builder.dryRun;
     }
 
     public static Builder builder() {
@@ -203,6 +208,13 @@ public class CreateDomainRequest extends Request {
         return this.tlsMin;
     }
 
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
     public static final class Builder extends Request.Builder<CreateDomainRequest, Builder> {
         private String caCertIdentifier; 
         private String certIdentifier; 
@@ -218,6 +230,7 @@ public class CreateDomainRequest extends Request {
         private TlsCipherSuitesConfig tlsCipherSuitesConfig; 
         private String tlsMax; 
         private String tlsMin; 
+        private Boolean dryRun; 
 
         private Builder() {
             super();
@@ -239,6 +252,7 @@ public class CreateDomainRequest extends Request {
             this.tlsCipherSuitesConfig = request.tlsCipherSuitesConfig;
             this.tlsMax = request.tlsMax;
             this.tlsMin = request.tlsMin;
+            this.dryRun = request.dryRun;
         } 
 
         /**
@@ -417,6 +431,15 @@ public class CreateDomainRequest extends Request {
         public Builder tlsMin(String tlsMin) {
             this.putBodyParameter("tlsMin", tlsMin);
             this.tlsMin = tlsMin;
+            return this;
+        }
+
+        /**
+         * dryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("dryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

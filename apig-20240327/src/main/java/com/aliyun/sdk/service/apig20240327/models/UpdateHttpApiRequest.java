@@ -75,6 +75,10 @@ public class UpdateHttpApiRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("versionConfig")
     private HttpApiVersionConfig versionConfig;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dryRun")
+    private Boolean dryRun;
+
     private UpdateHttpApiRequest(Builder builder) {
         super(builder);
         this.httpApiId = builder.httpApiId;
@@ -91,6 +95,7 @@ public class UpdateHttpApiRequest extends Request {
         this.protocols = builder.protocols;
         this.removeBasePathOnForward = builder.removeBasePathOnForward;
         this.versionConfig = builder.versionConfig;
+        this.dryRun = builder.dryRun;
     }
 
     public static Builder builder() {
@@ -204,6 +209,13 @@ public class UpdateHttpApiRequest extends Request {
         return this.versionConfig;
     }
 
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
     public static final class Builder extends Request.Builder<UpdateHttpApiRequest, Builder> {
         private String httpApiId; 
         private java.util.List<String> agentProtocols; 
@@ -219,6 +231,7 @@ public class UpdateHttpApiRequest extends Request {
         private java.util.List<String> protocols; 
         private Boolean removeBasePathOnForward; 
         private HttpApiVersionConfig versionConfig; 
+        private Boolean dryRun; 
 
         private Builder() {
             super();
@@ -240,6 +253,7 @@ public class UpdateHttpApiRequest extends Request {
             this.protocols = request.protocols;
             this.removeBasePathOnForward = request.removeBasePathOnForward;
             this.versionConfig = request.versionConfig;
+            this.dryRun = request.dryRun;
         } 
 
         /**
@@ -388,6 +402,15 @@ public class UpdateHttpApiRequest extends Request {
         public Builder versionConfig(HttpApiVersionConfig versionConfig) {
             this.putBodyParameter("versionConfig", versionConfig);
             this.versionConfig = versionConfig;
+            return this;
+        }
+
+        /**
+         * dryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("dryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

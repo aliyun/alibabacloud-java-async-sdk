@@ -33,6 +33,7 @@ public class HttpApiPolicyConfigs extends TeaModel {
     private AiStatisticsConfig aiStatisticsConfig;
 
     @com.aliyun.core.annotation.NameInMap("aiTokenRateLimitConfig")
+    @Deprecated
     private AiTokenRateLimitConfig aiTokenRateLimitConfig;
 
     @com.aliyun.core.annotation.NameInMap("aiToolSelectionConfig")
@@ -40,6 +41,9 @@ public class HttpApiPolicyConfigs extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("enable")
     private Boolean enable;
+
+    @com.aliyun.core.annotation.NameInMap("policyReference")
+    private HttpApiPolicyReference policyReference;
 
     @com.aliyun.core.annotation.NameInMap("semanticRouterConfig")
     private SemanticRouterConfig semanticRouterConfig;
@@ -56,6 +60,7 @@ public class HttpApiPolicyConfigs extends TeaModel {
         this.aiTokenRateLimitConfig = builder.aiTokenRateLimitConfig;
         this.aiToolSelectionConfig = builder.aiToolSelectionConfig;
         this.enable = builder.enable;
+        this.policyReference = builder.policyReference;
         this.semanticRouterConfig = builder.semanticRouterConfig;
         this.type = builder.type;
     }
@@ -129,6 +134,13 @@ public class HttpApiPolicyConfigs extends TeaModel {
     }
 
     /**
+     * @return policyReference
+     */
+    public HttpApiPolicyReference getPolicyReference() {
+        return this.policyReference;
+    }
+
+    /**
      * @return semanticRouterConfig
      */
     public SemanticRouterConfig getSemanticRouterConfig() {
@@ -151,6 +163,7 @@ public class HttpApiPolicyConfigs extends TeaModel {
         private AiTokenRateLimitConfig aiTokenRateLimitConfig; 
         private AiToolSelectionConfig aiToolSelectionConfig; 
         private Boolean enable; 
+        private HttpApiPolicyReference policyReference; 
         private SemanticRouterConfig semanticRouterConfig; 
         private String type; 
 
@@ -166,6 +179,7 @@ public class HttpApiPolicyConfigs extends TeaModel {
             this.aiTokenRateLimitConfig = model.aiTokenRateLimitConfig;
             this.aiToolSelectionConfig = model.aiToolSelectionConfig;
             this.enable = model.enable;
+            this.policyReference = model.policyReference;
             this.semanticRouterConfig = model.semanticRouterConfig;
             this.type = model.type;
         } 
@@ -231,6 +245,14 @@ public class HttpApiPolicyConfigs extends TeaModel {
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
+            return this;
+        }
+
+        /**
+         * policyReference.
+         */
+        public Builder policyReference(HttpApiPolicyReference policyReference) {
+            this.policyReference = policyReference;
             return this;
         }
 

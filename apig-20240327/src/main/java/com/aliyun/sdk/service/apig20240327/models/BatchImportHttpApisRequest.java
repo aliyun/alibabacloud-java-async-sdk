@@ -39,6 +39,10 @@ public class BatchImportHttpApisRequest extends Request {
     private String resourceGroupId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("specContentBase64")
+    private String specContentBase64;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("specFileUrl")
     private String specFileUrl;
 
@@ -61,6 +65,7 @@ public class BatchImportHttpApisRequest extends Request {
         this.dryRun = builder.dryRun;
         this.gatewayId = builder.gatewayId;
         this.resourceGroupId = builder.resourceGroupId;
+        this.specContentBase64 = builder.specContentBase64;
         this.specFileUrl = builder.specFileUrl;
         this.specOssConfig = builder.specOssConfig;
         this.strategy = builder.strategy;
@@ -116,6 +121,13 @@ public class BatchImportHttpApisRequest extends Request {
     }
 
     /**
+     * @return specContentBase64
+     */
+    public String getSpecContentBase64() {
+        return this.specContentBase64;
+    }
+
+    /**
      * @return specFileUrl
      */
     public String getSpecFileUrl() {
@@ -149,6 +161,7 @@ public class BatchImportHttpApisRequest extends Request {
         private Boolean dryRun; 
         private String gatewayId; 
         private String resourceGroupId; 
+        private String specContentBase64; 
         private String specFileUrl; 
         private SpecOssConfig specOssConfig; 
         private String strategy; 
@@ -165,6 +178,7 @@ public class BatchImportHttpApisRequest extends Request {
             this.dryRun = request.dryRun;
             this.gatewayId = request.gatewayId;
             this.resourceGroupId = request.resourceGroupId;
+            this.specContentBase64 = request.specContentBase64;
             this.specFileUrl = request.specFileUrl;
             this.specOssConfig = request.specOssConfig;
             this.strategy = request.strategy;
@@ -216,6 +230,15 @@ public class BatchImportHttpApisRequest extends Request {
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * specContentBase64.
+         */
+        public Builder specContentBase64(String specContentBase64) {
+            this.putBodyParameter("specContentBase64", specContentBase64);
+            this.specContentBase64 = specContentBase64;
             return this;
         }
 
@@ -342,6 +365,7 @@ public class BatchImportHttpApisRequest extends Request {
             }
 
             /**
+             * <p>OSS Object Key。</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

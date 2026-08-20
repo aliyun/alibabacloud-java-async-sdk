@@ -22,9 +22,14 @@ public class DeleteHttpApiRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String httpApiId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dryRun")
+    private Boolean dryRun;
+
     private DeleteHttpApiRequest(Builder builder) {
         super(builder);
         this.httpApiId = builder.httpApiId;
+        this.dryRun = builder.dryRun;
     }
 
     public static Builder builder() {
@@ -47,8 +52,16 @@ public class DeleteHttpApiRequest extends Request {
         return this.httpApiId;
     }
 
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
     public static final class Builder extends Request.Builder<DeleteHttpApiRequest, Builder> {
         private String httpApiId; 
+        private Boolean dryRun; 
 
         private Builder() {
             super();
@@ -57,6 +70,7 @@ public class DeleteHttpApiRequest extends Request {
         private Builder(DeleteHttpApiRequest request) {
             super(request);
             this.httpApiId = request.httpApiId;
+            this.dryRun = request.dryRun;
         } 
 
         /**
@@ -69,6 +83,15 @@ public class DeleteHttpApiRequest extends Request {
         public Builder httpApiId(String httpApiId) {
             this.putPathParameter("httpApiId", httpApiId);
             this.httpApiId = httpApiId;
+            return this;
+        }
+
+        /**
+         * dryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("dryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

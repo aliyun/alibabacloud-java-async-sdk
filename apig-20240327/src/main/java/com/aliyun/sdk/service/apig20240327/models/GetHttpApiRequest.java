@@ -22,9 +22,14 @@ public class GetHttpApiRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String httpApiId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("expandPolicyConfigs")
+    private Boolean expandPolicyConfigs;
+
     private GetHttpApiRequest(Builder builder) {
         super(builder);
         this.httpApiId = builder.httpApiId;
+        this.expandPolicyConfigs = builder.expandPolicyConfigs;
     }
 
     public static Builder builder() {
@@ -47,8 +52,16 @@ public class GetHttpApiRequest extends Request {
         return this.httpApiId;
     }
 
+    /**
+     * @return expandPolicyConfigs
+     */
+    public Boolean getExpandPolicyConfigs() {
+        return this.expandPolicyConfigs;
+    }
+
     public static final class Builder extends Request.Builder<GetHttpApiRequest, Builder> {
         private String httpApiId; 
+        private Boolean expandPolicyConfigs; 
 
         private Builder() {
             super();
@@ -57,6 +70,7 @@ public class GetHttpApiRequest extends Request {
         private Builder(GetHttpApiRequest request) {
             super(request);
             this.httpApiId = request.httpApiId;
+            this.expandPolicyConfigs = request.expandPolicyConfigs;
         } 
 
         /**
@@ -69,6 +83,15 @@ public class GetHttpApiRequest extends Request {
         public Builder httpApiId(String httpApiId) {
             this.putPathParameter("httpApiId", httpApiId);
             this.httpApiId = httpApiId;
+            return this;
+        }
+
+        /**
+         * expandPolicyConfigs.
+         */
+        public Builder expandPolicyConfigs(Boolean expandPolicyConfigs) {
+            this.putQueryParameter("expandPolicyConfigs", expandPolicyConfigs);
+            this.expandPolicyConfigs = expandPolicyConfigs;
             return this;
         }
 
