@@ -17,21 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Snapshot</p>
  */
 public class Snapshot extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("artifactDiskTotalSizeInB")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private Long artifactDiskTotalSizeInB;
-
     @com.aliyun.core.annotation.NameInMap("artifactDiskUsedSizeInB")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long artifactDiskUsedSizeInB;
-
-    @com.aliyun.core.annotation.NameInMap("artifactMemCacheSizeInB")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private Long artifactMemCacheSizeInB;
-
-    @com.aliyun.core.annotation.NameInMap("artifactMemTotalSizeInB")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private Long artifactMemTotalSizeInB;
 
     @com.aliyun.core.annotation.NameInMap("artifactMemUsedSizeInB")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -109,10 +97,7 @@ public class Snapshot extends TeaModel {
     private String status;
 
     private Snapshot(Builder builder) {
-        this.artifactDiskTotalSizeInB = builder.artifactDiskTotalSizeInB;
         this.artifactDiskUsedSizeInB = builder.artifactDiskUsedSizeInB;
-        this.artifactMemCacheSizeInB = builder.artifactMemCacheSizeInB;
-        this.artifactMemTotalSizeInB = builder.artifactMemTotalSizeInB;
         this.artifactMemUsedSizeInB = builder.artifactMemUsedSizeInB;
         this.cpu = builder.cpu;
         this.createdTime = builder.createdTime;
@@ -147,31 +132,10 @@ public class Snapshot extends TeaModel {
     }
 
     /**
-     * @return artifactDiskTotalSizeInB
-     */
-    public Long getArtifactDiskTotalSizeInB() {
-        return this.artifactDiskTotalSizeInB;
-    }
-
-    /**
      * @return artifactDiskUsedSizeInB
      */
     public Long getArtifactDiskUsedSizeInB() {
         return this.artifactDiskUsedSizeInB;
-    }
-
-    /**
-     * @return artifactMemCacheSizeInB
-     */
-    public Long getArtifactMemCacheSizeInB() {
-        return this.artifactMemCacheSizeInB;
-    }
-
-    /**
-     * @return artifactMemTotalSizeInB
-     */
-    public Long getArtifactMemTotalSizeInB() {
-        return this.artifactMemTotalSizeInB;
     }
 
     /**
@@ -308,10 +272,7 @@ public class Snapshot extends TeaModel {
     }
 
     public static final class Builder {
-        private Long artifactDiskTotalSizeInB; 
         private Long artifactDiskUsedSizeInB; 
-        private Long artifactMemCacheSizeInB; 
-        private Long artifactMemTotalSizeInB; 
         private Long artifactMemUsedSizeInB; 
         private Long cpu; 
         private String createdTime; 
@@ -336,10 +297,7 @@ public class Snapshot extends TeaModel {
         } 
 
         private Builder(Snapshot model) {
-            this.artifactDiskTotalSizeInB = model.artifactDiskTotalSizeInB;
             this.artifactDiskUsedSizeInB = model.artifactDiskUsedSizeInB;
-            this.artifactMemCacheSizeInB = model.artifactMemCacheSizeInB;
-            this.artifactMemTotalSizeInB = model.artifactMemTotalSizeInB;
             this.artifactMemUsedSizeInB = model.artifactMemUsedSizeInB;
             this.cpu = model.cpu;
             this.createdTime = model.createdTime;
@@ -365,43 +323,10 @@ public class Snapshot extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>10737418240</p>
-         */
-        public Builder artifactDiskTotalSizeInB(Long artifactDiskTotalSizeInB) {
-            this.artifactDiskTotalSizeInB = artifactDiskTotalSizeInB;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
          * <p>2147483648</p>
          */
         public Builder artifactDiskUsedSizeInB(Long artifactDiskUsedSizeInB) {
             this.artifactDiskUsedSizeInB = artifactDiskUsedSizeInB;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>268435456</p>
-         */
-        public Builder artifactMemCacheSizeInB(Long artifactMemCacheSizeInB) {
-            this.artifactMemCacheSizeInB = artifactMemCacheSizeInB;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3221225472</p>
-         */
-        public Builder artifactMemTotalSizeInB(Long artifactMemTotalSizeInB) {
-            this.artifactMemTotalSizeInB = artifactMemTotalSizeInB;
             return this;
         }
 

@@ -29,11 +29,15 @@ public class CreateSessionNetworkConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("maskRequestHost")
     private String maskRequestHost;
 
+    @com.aliyun.core.annotation.NameInMap("rules")
+    private java.util.Map<String, java.util.List<SessionNetworkRule>> rules;
+
     private CreateSessionNetworkConfig(Builder builder) {
         this.allowOut = builder.allowOut;
         this.allowPublicTraffic = builder.allowPublicTraffic;
         this.denyOut = builder.denyOut;
         this.maskRequestHost = builder.maskRequestHost;
+        this.rules = builder.rules;
     }
 
     public static Builder builder() {
@@ -76,11 +80,19 @@ public class CreateSessionNetworkConfig extends TeaModel {
         return this.maskRequestHost;
     }
 
+    /**
+     * @return rules
+     */
+    public java.util.Map<String, java.util.List<SessionNetworkRule>> getRules() {
+        return this.rules;
+    }
+
     public static final class Builder {
         private java.util.List<String> allowOut; 
         private Boolean allowPublicTraffic; 
         private java.util.List<String> denyOut; 
         private String maskRequestHost; 
+        private java.util.Map<String, java.util.List<SessionNetworkRule>> rules; 
 
         private Builder() {
         } 
@@ -90,6 +102,7 @@ public class CreateSessionNetworkConfig extends TeaModel {
             this.allowPublicTraffic = model.allowPublicTraffic;
             this.denyOut = model.denyOut;
             this.maskRequestHost = model.maskRequestHost;
+            this.rules = model.rules;
         } 
 
         /**
@@ -121,6 +134,14 @@ public class CreateSessionNetworkConfig extends TeaModel {
          */
         public Builder maskRequestHost(String maskRequestHost) {
             this.maskRequestHost = maskRequestHost;
+            return this;
+        }
+
+        /**
+         * rules.
+         */
+        public Builder rules(java.util.Map<String, java.util.List<SessionNetworkRule>> rules) {
+            this.rules = rules;
             return this;
         }
 

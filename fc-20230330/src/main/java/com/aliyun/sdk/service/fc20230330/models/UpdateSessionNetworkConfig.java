@@ -23,9 +23,13 @@ public class UpdateSessionNetworkConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("denyOut")
     private java.util.List<String> denyOut;
 
+    @com.aliyun.core.annotation.NameInMap("rules")
+    private java.util.Map<String, java.util.List<SessionNetworkRule>> rules;
+
     private UpdateSessionNetworkConfig(Builder builder) {
         this.allowOut = builder.allowOut;
         this.denyOut = builder.denyOut;
+        this.rules = builder.rules;
     }
 
     public static Builder builder() {
@@ -54,9 +58,17 @@ public class UpdateSessionNetworkConfig extends TeaModel {
         return this.denyOut;
     }
 
+    /**
+     * @return rules
+     */
+    public java.util.Map<String, java.util.List<SessionNetworkRule>> getRules() {
+        return this.rules;
+    }
+
     public static final class Builder {
         private java.util.List<String> allowOut; 
         private java.util.List<String> denyOut; 
+        private java.util.Map<String, java.util.List<SessionNetworkRule>> rules; 
 
         private Builder() {
         } 
@@ -64,6 +76,7 @@ public class UpdateSessionNetworkConfig extends TeaModel {
         private Builder(UpdateSessionNetworkConfig model) {
             this.allowOut = model.allowOut;
             this.denyOut = model.denyOut;
+            this.rules = model.rules;
         } 
 
         /**
@@ -79,6 +92,14 @@ public class UpdateSessionNetworkConfig extends TeaModel {
          */
         public Builder denyOut(java.util.List<String> denyOut) {
             this.denyOut = denyOut;
+            return this;
+        }
+
+        /**
+         * rules.
+         */
+        public Builder rules(java.util.Map<String, java.util.List<SessionNetworkRule>> rules) {
+            this.rules = rules;
             return this;
         }
 
