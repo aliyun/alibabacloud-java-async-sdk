@@ -247,6 +247,9 @@ public class ListJobsRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("JobTemplateId")
         private String jobTemplateId;
 
+        @com.aliyun.core.annotation.NameInMap("PoolName")
+        private String poolName;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -264,6 +267,7 @@ public class ListJobsRequest extends Request {
             this.jobIds = builder.jobIds;
             this.jobName = builder.jobName;
             this.jobTemplateId = builder.jobTemplateId;
+            this.poolName = builder.poolName;
             this.status = builder.status;
             this.tag = builder.tag;
             this.timeCreatedAfter = builder.timeCreatedAfter;
@@ -307,6 +311,13 @@ public class ListJobsRequest extends Request {
         }
 
         /**
+         * @return poolName
+         */
+        public String getPoolName() {
+            return this.poolName;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -339,6 +350,7 @@ public class ListJobsRequest extends Request {
             private java.util.List<String> jobIds; 
             private String jobName; 
             private String jobTemplateId; 
+            private String poolName; 
             private String status; 
             private java.util.List<Tag> tag; 
             private Integer timeCreatedAfter; 
@@ -352,6 +364,7 @@ public class ListJobsRequest extends Request {
                 this.jobIds = model.jobIds;
                 this.jobName = model.jobName;
                 this.jobTemplateId = model.jobTemplateId;
+                this.poolName = model.poolName;
                 this.status = model.status;
                 this.tag = model.tag;
                 this.timeCreatedAfter = model.timeCreatedAfter;
@@ -393,6 +406,14 @@ public class ListJobsRequest extends Request {
              */
             public Builder jobTemplateId(String jobTemplateId) {
                 this.jobTemplateId = jobTemplateId;
+                return this;
+            }
+
+            /**
+             * PoolName.
+             */
+            public Builder poolName(String poolName) {
+                this.poolName = poolName;
                 return this;
             }
 

@@ -207,6 +207,9 @@ public class ListPoolsRequest extends Request {
 
             /**
              * <p>Queries the list of resource pool names.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;MyPool&quot;]</p>
              */
             public Builder poolName(java.util.List<String> poolName) {
                 this.poolName = poolName;
@@ -215,6 +218,9 @@ public class ListPoolsRequest extends Request {
 
             /**
              * <p>Queries resource pool status list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;Working&quot;]</p>
              */
             public Builder status(java.util.List<String> status) {
                 this.status = status;

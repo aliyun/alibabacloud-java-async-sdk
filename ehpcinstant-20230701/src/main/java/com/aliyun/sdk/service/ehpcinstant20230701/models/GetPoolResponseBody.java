@@ -97,9 +97,87 @@ public class GetPoolResponseBody extends TeaModel {
      *
      * <p>GetPoolResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetPoolResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPoolResponseBody</p>
+     */
     public static class PoolInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
+
+        @com.aliyun.core.annotation.NameInMap("Creator")
+        private String creator;
 
         @com.aliyun.core.annotation.NameInMap("ExecutorUsage")
         private Integer executorUsage;
@@ -125,11 +203,15 @@ public class GetPoolResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private PoolInfo(Builder builder) {
             this.createTime = builder.createTime;
+            this.creator = builder.creator;
             this.executorUsage = builder.executorUsage;
             this.isDefault = builder.isDefault;
             this.maxExecutorNum = builder.maxExecutorNum;
@@ -138,6 +220,7 @@ public class GetPoolResponseBody extends TeaModel {
             this.reason = builder.reason;
             this.schedulingPolicyId = builder.schedulingPolicyId;
             this.status = builder.status;
+            this.tags = builder.tags;
             this.updateTime = builder.updateTime;
         }
 
@@ -154,6 +237,13 @@ public class GetPoolResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return creator
+         */
+        public String getCreator() {
+            return this.creator;
         }
 
         /**
@@ -213,6 +303,13 @@ public class GetPoolResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return updateTime
          */
         public String getUpdateTime() {
@@ -221,6 +318,7 @@ public class GetPoolResponseBody extends TeaModel {
 
         public static final class Builder {
             private String createTime; 
+            private String creator; 
             private Integer executorUsage; 
             private Boolean isDefault; 
             private Integer maxExecutorNum; 
@@ -229,6 +327,7 @@ public class GetPoolResponseBody extends TeaModel {
             private String reason; 
             private String schedulingPolicyId; 
             private String status; 
+            private java.util.List<Tags> tags; 
             private String updateTime; 
 
             private Builder() {
@@ -236,6 +335,7 @@ public class GetPoolResponseBody extends TeaModel {
 
             private Builder(PoolInfo model) {
                 this.createTime = model.createTime;
+                this.creator = model.creator;
                 this.executorUsage = model.executorUsage;
                 this.isDefault = model.isDefault;
                 this.maxExecutorNum = model.maxExecutorNum;
@@ -244,6 +344,7 @@ public class GetPoolResponseBody extends TeaModel {
                 this.reason = model.reason;
                 this.schedulingPolicyId = model.schedulingPolicyId;
                 this.status = model.status;
+                this.tags = model.tags;
                 this.updateTime = model.updateTime;
             } 
 
@@ -255,6 +356,14 @@ public class GetPoolResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * Creator.
+             */
+            public Builder creator(String creator) {
+                this.creator = creator;
                 return this;
             }
 
@@ -353,6 +462,14 @@ public class GetPoolResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

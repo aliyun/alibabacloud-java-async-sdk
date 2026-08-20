@@ -149,6 +149,9 @@ public class ListExecutorsRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("JobTemplateId")
         private String jobTemplateId;
 
+        @com.aliyun.core.annotation.NameInMap("PoolName")
+        private String poolName;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private java.util.List<String> status;
 
@@ -170,6 +173,7 @@ public class ListExecutorsRequest extends Request {
             this.ipAddresses = builder.ipAddresses;
             this.jobName = builder.jobName;
             this.jobTemplateId = builder.jobTemplateId;
+            this.poolName = builder.poolName;
             this.status = builder.status;
             this.timeCreatedAfter = builder.timeCreatedAfter;
             this.timeCreatedBefore = builder.timeCreatedBefore;
@@ -221,6 +225,13 @@ public class ListExecutorsRequest extends Request {
         }
 
         /**
+         * @return poolName
+         */
+        public String getPoolName() {
+            return this.poolName;
+        }
+
+        /**
          * @return status
          */
         public java.util.List<String> getStatus() {
@@ -261,6 +272,7 @@ public class ListExecutorsRequest extends Request {
             private java.util.List<String> ipAddresses; 
             private String jobName; 
             private String jobTemplateId; 
+            private String poolName; 
             private java.util.List<String> status; 
             private Integer timeCreatedAfter; 
             private Integer timeCreatedBefore; 
@@ -276,6 +288,7 @@ public class ListExecutorsRequest extends Request {
                 this.ipAddresses = model.ipAddresses;
                 this.jobName = model.jobName;
                 this.jobTemplateId = model.jobTemplateId;
+                this.poolName = model.poolName;
                 this.status = model.status;
                 this.timeCreatedAfter = model.timeCreatedAfter;
                 this.timeCreatedBefore = model.timeCreatedBefore;
@@ -326,6 +339,14 @@ public class ListExecutorsRequest extends Request {
              */
             public Builder jobTemplateId(String jobTemplateId) {
                 this.jobTemplateId = jobTemplateId;
+                return this;
+            }
+
+            /**
+             * PoolName.
+             */
+            public Builder poolName(String poolName) {
+                this.poolName = poolName;
                 return this;
             }
 

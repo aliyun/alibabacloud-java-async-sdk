@@ -169,6 +169,81 @@ public class ListPoolsResponseBody extends TeaModel {
      *
      * <p>ListPoolsResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListPoolsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPoolsResponseBody</p>
+     */
     public static class PoolList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -191,6 +266,9 @@ public class ListPoolsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
@@ -202,6 +280,7 @@ public class ListPoolsResponseBody extends TeaModel {
             this.priority = builder.priority;
             this.schedulingPolicyId = builder.schedulingPolicyId;
             this.status = builder.status;
+            this.tags = builder.tags;
             this.updateTime = builder.updateTime;
         }
 
@@ -263,6 +342,13 @@ public class ListPoolsResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return updateTime
          */
         public String getUpdateTime() {
@@ -277,6 +363,7 @@ public class ListPoolsResponseBody extends TeaModel {
             private Integer priority; 
             private String schedulingPolicyId; 
             private String status; 
+            private java.util.List<Tags> tags; 
             private String updateTime; 
 
             private Builder() {
@@ -290,6 +377,7 @@ public class ListPoolsResponseBody extends TeaModel {
                 this.priority = model.priority;
                 this.schedulingPolicyId = model.schedulingPolicyId;
                 this.status = model.status;
+                this.tags = model.tags;
                 this.updateTime = model.updateTime;
             } 
 
@@ -377,6 +465,14 @@ public class ListPoolsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 
