@@ -49,6 +49,10 @@ public class DescribeParameterTemplatesRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParameterCategory")
+    private String parameterCategory;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
@@ -73,6 +77,7 @@ public class DescribeParameterTemplatesRequest extends Request {
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.parameterCategory = builder.parameterCategory;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -142,6 +147,13 @@ public class DescribeParameterTemplatesRequest extends Request {
     }
 
     /**
+     * @return parameterCategory
+     */
+    public String getParameterCategory() {
+        return this.parameterCategory;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -177,6 +189,7 @@ public class DescribeParameterTemplatesRequest extends Request {
         private String instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String parameterCategory; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -195,6 +208,7 @@ public class DescribeParameterTemplatesRequest extends Request {
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.parameterCategory = request.parameterCategory;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -280,6 +294,15 @@ public class DescribeParameterTemplatesRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * ParameterCategory.
+         */
+        public Builder parameterCategory(String parameterCategory) {
+            this.putQueryParameter("ParameterCategory", parameterCategory);
+            this.parameterCategory = parameterCategory;
             return this;
         }
 

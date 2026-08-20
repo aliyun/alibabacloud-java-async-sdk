@@ -68,40 +68,38 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-zhengzhou-nebula-1", "r-kvstore.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "r-kvstore.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "r-kvstore.aliyuncs.com"),
-            new TeaPair("us-west-1", "r-kvstore.us-west-1.aliyuncs.com"),
-            new TeaPair("us-southeast-1", "r-kvstore.us-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-jva", "r-kvstore.cn-zhengzhou-jva.aliyuncs.com"),
+            new TeaPair("cn-wuhan-lr", "r-kvstore.cn-wuhan-lr.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "r-kvstore.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "r-kvstore.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "r-kvstore.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-nanjing", "r-kvstore.cn-nanjing.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "r-kvstore.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "r-kvstore.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("cn-fuzhou", "r-kvstore.cn-fuzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "r-kvstore.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "r-kvstore.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "r-kvstore.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "r-kvstore.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "r-kvstore.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "r-kvstore.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "r-kvstore.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "r-kvstore.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "r-kvstore.ap-southeast-7.aliyuncs.com"),
             new TeaPair("us-east-1", "r-kvstore.us-east-1.aliyuncs.com"),
+            new TeaPair("us-southeast-1", "r-kvstore.us-southeast-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "r-kvstore.eu-west-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "r-kvstore.us-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "r-kvstore.eu-central-1.aliyuncs.com"),
             new TeaPair("na-south-1", "r-kvstore.na-south-1.aliyuncs.com"),
             new TeaPair("me-east-1", "r-kvstore.me-east-1.aliyuncs.com"),
             new TeaPair("me-central-1", "r-kvstore.me-central-1.aliyuncs.com"),
-            new TeaPair("eu-west-2", "r-kvstore.eu-west-2.aliyuncs.com"),
-            new TeaPair("eu-west-1", "r-kvstore.eu-west-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "r-kvstore.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhongwei", "r-kvstore.cn-zhongwei.aliyuncs.com"),
-            new TeaPair("cn-zhengzhou-jva", "r-kvstore.cn-zhengzhou-jva.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "r-kvstore.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu-gic-1", "r-kvstore.cn-wulanchabu-gic-1.aliyuncs.com"),
-            new TeaPair("cn-wuhan-lr", "r-kvstore.cn-wuhan-lr.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "r-kvstore.cn-shenzhen-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "r-kvstore.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "r-kvstore.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "r-kvstore.cn-north-2-gov-1.aliyuncs.com"),
-            new TeaPair("cn-nanjing", "r-kvstore.cn-nanjing.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "r-kvstore.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "r-kvstore.cn-hongkong.aliyuncs.com"),
+            new TeaPair("ap-south-1", "r-kvstore.ap-south-1.aliyuncs.com"),
             new TeaPair("cn-heyuan-acdr-1", "r-kvstore.cn-heyuan-acdr-1.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "r-kvstore.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-fuzhou", "r-kvstore.cn-fuzhou.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "r-kvstore.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "r-kvstore.cn-shenzhen-finance-1.aliyuncs.com"),
             new TeaPair("cn-beijing-finance-1", "r-kvstore.cn-beijing-finance-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-8", "r-kvstore.ap-southeast-8.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "r-kvstore.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "r-kvstore.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "r-kvstore.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "r-kvstore.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "r-kvstore.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "r-kvstore.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "r-kvstore.ap-northeast-1.aliyuncs.com")
+            new TeaPair("cn-shanghai-finance-1", "r-kvstore.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu-gic-1", "r-kvstore.cn-wulanchabu-gic-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -2423,6 +2421,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyAccountDescriptionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyAccountParameter  ModifyAccountParameterRequest
+     * @return ModifyAccountParameterResponse
+     */
+    @Override
+    public CompletableFuture<ModifyAccountParameterResponse> modifyAccountParameter(ModifyAccountParameterRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyAccountParameter").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyAccountParameterResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyAccountParameterResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

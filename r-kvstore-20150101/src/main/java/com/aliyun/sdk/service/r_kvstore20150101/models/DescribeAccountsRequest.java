@@ -39,12 +39,25 @@ public class DescribeAccountsRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 5)
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchAccountName")
+    private String searchAccountName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityToken")
@@ -57,8 +70,11 @@ public class DescribeAccountsRequest extends Request {
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.searchAccountName = builder.searchAccountName;
         this.securityToken = builder.securityToken;
     }
 
@@ -111,6 +127,20 @@ public class DescribeAccountsRequest extends Request {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -122,6 +152,13 @@ public class DescribeAccountsRequest extends Request {
      */
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    /**
+     * @return searchAccountName
+     */
+    public String getSearchAccountName() {
+        return this.searchAccountName;
     }
 
     /**
@@ -137,8 +174,11 @@ public class DescribeAccountsRequest extends Request {
         private String instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String searchAccountName; 
         private String securityToken; 
 
         private Builder() {
@@ -152,8 +192,11 @@ public class DescribeAccountsRequest extends Request {
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.searchAccountName = request.searchAccountName;
             this.securityToken = request.securityToken;
         } 
 
@@ -210,6 +253,24 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -224,6 +285,15 @@ public class DescribeAccountsRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SearchAccountName.
+         */
+        public Builder searchAccountName(String searchAccountName) {
+            this.putQueryParameter("SearchAccountName", searchAccountName);
+            this.searchAccountName = searchAccountName;
             return this;
         }
 

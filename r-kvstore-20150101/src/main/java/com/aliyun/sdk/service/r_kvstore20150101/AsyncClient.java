@@ -993,6 +993,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyAccountDescriptionResponse> modifyAccountDescription(ModifyAccountDescriptionRequest request);
 
     /**
+     * @param request the request parameters of ModifyAccountParameter  ModifyAccountParameterRequest
+     * @return ModifyAccountParameterResponse
+     */
+    CompletableFuture<ModifyAccountParameterResponse> modifyAccountParameter(ModifyAccountParameterRequest request);
+
+    /**
      * @param request the request parameters of ModifyAccountPassword  ModifyAccountPasswordRequest
      * @return ModifyAccountPasswordResponse
      */

@@ -57,6 +57,10 @@ public class CreateAccountRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parameters")
+    private String parameters;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -83,6 +87,7 @@ public class CreateAccountRequest extends Request {
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.parameters = builder.parameters;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
@@ -166,6 +171,13 @@ public class CreateAccountRequest extends Request {
     }
 
     /**
+     * @return parameters
+     */
+    public String getParameters() {
+        return this.parameters;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -203,6 +215,7 @@ public class CreateAccountRequest extends Request {
         private String instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String parameters; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
@@ -223,6 +236,7 @@ public class CreateAccountRequest extends Request {
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.parameters = request.parameters;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
@@ -342,6 +356,15 @@ public class CreateAccountRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * Parameters.
+         */
+        public Builder parameters(String parameters) {
+            this.putQueryParameter("Parameters", parameters);
+            this.parameters = parameters;
             return this;
         }
 

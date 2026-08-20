@@ -20,12 +20,24 @@ public class DescribeAccountsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Accounts")
     private Accounts accounts;
 
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Integer pageSize;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
+    private Integer totalCount;
+
     private DescribeAccountsResponseBody(Builder builder) {
         this.accounts = builder.accounts;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -48,22 +60,49 @@ public class DescribeAccountsResponseBody extends TeaModel {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
         private Accounts accounts; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String requestId; 
+        private Integer totalCount; 
 
         private Builder() {
         } 
 
         private Builder(DescribeAccountsResponseBody model) {
             this.accounts = model.accounts;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
             this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
         } 
 
         /**
@@ -75,6 +114,22 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
          * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
@@ -82,6 +137,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -231,6 +294,9 @@ public class DescribeAccountsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
+        @com.aliyun.core.annotation.NameInMap("Parameters")
+        private String parameters;
+
         private Account(Builder builder) {
             this.accountDescription = builder.accountDescription;
             this.accountName = builder.accountName;
@@ -238,6 +304,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             this.accountType = builder.accountType;
             this.databasePrivileges = builder.databasePrivileges;
             this.instanceId = builder.instanceId;
+            this.parameters = builder.parameters;
         }
 
         public static Builder builder() {
@@ -290,6 +357,13 @@ public class DescribeAccountsResponseBody extends TeaModel {
             return this.instanceId;
         }
 
+        /**
+         * @return parameters
+         */
+        public String getParameters() {
+            return this.parameters;
+        }
+
         public static final class Builder {
             private String accountDescription; 
             private String accountName; 
@@ -297,6 +371,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             private String accountType; 
             private DatabasePrivileges databasePrivileges; 
             private String instanceId; 
+            private String parameters; 
 
             private Builder() {
             } 
@@ -308,6 +383,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
                 this.accountType = model.accountType;
                 this.databasePrivileges = model.databasePrivileges;
                 this.instanceId = model.instanceId;
+                this.parameters = model.parameters;
             } 
 
             /**
@@ -378,6 +454,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * Parameters.
+             */
+            public Builder parameters(String parameters) {
+                this.parameters = parameters;
                 return this;
             }
 
