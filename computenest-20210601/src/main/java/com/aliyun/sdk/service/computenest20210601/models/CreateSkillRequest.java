@@ -26,6 +26,10 @@ public class CreateSkillRequest extends Request {
     private String ossUrl;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequiredConnections")
+    private java.util.List<String> requiredConnections;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SkillDescription")
     private String skillDescription;
 
@@ -59,6 +63,7 @@ public class CreateSkillRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.ossUrl = builder.ossUrl;
+        this.requiredConnections = builder.requiredConnections;
         this.skillDescription = builder.skillDescription;
         this.skillDisplayName = builder.skillDisplayName;
         this.skillLabels = builder.skillLabels;
@@ -93,6 +98,13 @@ public class CreateSkillRequest extends Request {
      */
     public String getOssUrl() {
         return this.ossUrl;
+    }
+
+    /**
+     * @return requiredConnections
+     */
+    public java.util.List<String> getRequiredConnections() {
+        return this.requiredConnections;
     }
 
     /**
@@ -147,6 +159,7 @@ public class CreateSkillRequest extends Request {
     public static final class Builder extends Request.Builder<CreateSkillRequest, Builder> {
         private String clientToken; 
         private String ossUrl; 
+        private java.util.List<String> requiredConnections; 
         private String skillDescription; 
         private String skillDisplayName; 
         private java.util.List<String> skillLabels; 
@@ -163,6 +176,7 @@ public class CreateSkillRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.ossUrl = request.ossUrl;
+            this.requiredConnections = request.requiredConnections;
             this.skillDescription = request.skillDescription;
             this.skillDisplayName = request.skillDisplayName;
             this.skillLabels = request.skillLabels;
@@ -187,6 +201,15 @@ public class CreateSkillRequest extends Request {
         public Builder ossUrl(String ossUrl) {
             this.putQueryParameter("OssUrl", ossUrl);
             this.ossUrl = ossUrl;
+            return this;
+        }
+
+        /**
+         * RequiredConnections.
+         */
+        public Builder requiredConnections(java.util.List<String> requiredConnections) {
+            this.putQueryParameter("RequiredConnections", requiredConnections);
+            this.requiredConnections = requiredConnections;
             return this;
         }
 

@@ -26,6 +26,12 @@ public class GetSkillResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("RequiredConnections")
+    private java.util.List<String> requiredConnections;
+
+    @com.aliyun.core.annotation.NameInMap("SecurityScanStatus")
+    private String securityScanStatus;
+
     @com.aliyun.core.annotation.NameInMap("SkillDescription")
     private String skillDescription;
 
@@ -51,6 +57,8 @@ public class GetSkillResponseBody extends TeaModel {
         this.createTime = builder.createTime;
         this.locales = builder.locales;
         this.requestId = builder.requestId;
+        this.requiredConnections = builder.requiredConnections;
+        this.securityScanStatus = builder.securityScanStatus;
         this.skillDescription = builder.skillDescription;
         this.skillDisplayName = builder.skillDisplayName;
         this.skillId = builder.skillId;
@@ -91,6 +99,20 @@ public class GetSkillResponseBody extends TeaModel {
      */
     public String getRequestId() {
         return this.requestId;
+    }
+
+    /**
+     * @return requiredConnections
+     */
+    public java.util.List<String> getRequiredConnections() {
+        return this.requiredConnections;
+    }
+
+    /**
+     * @return securityScanStatus
+     */
+    public String getSecurityScanStatus() {
+        return this.securityScanStatus;
     }
 
     /**
@@ -146,6 +168,8 @@ public class GetSkillResponseBody extends TeaModel {
         private String createTime; 
         private java.util.List<Locales> locales; 
         private String requestId; 
+        private java.util.List<String> requiredConnections; 
+        private String securityScanStatus; 
         private String skillDescription; 
         private String skillDisplayName; 
         private String skillId; 
@@ -161,6 +185,8 @@ public class GetSkillResponseBody extends TeaModel {
             this.createTime = model.createTime;
             this.locales = model.locales;
             this.requestId = model.requestId;
+            this.requiredConnections = model.requiredConnections;
+            this.securityScanStatus = model.securityScanStatus;
             this.skillDescription = model.skillDescription;
             this.skillDisplayName = model.skillDisplayName;
             this.skillId = model.skillId;
@@ -194,6 +220,22 @@ public class GetSkillResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * RequiredConnections.
+         */
+        public Builder requiredConnections(java.util.List<String> requiredConnections) {
+            this.requiredConnections = requiredConnections;
+            return this;
+        }
+
+        /**
+         * SecurityScanStatus.
+         */
+        public Builder securityScanStatus(String securityScanStatus) {
+            this.securityScanStatus = securityScanStatus;
             return this;
         }
 

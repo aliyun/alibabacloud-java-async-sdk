@@ -266,6 +266,12 @@ public class ListPublicSkillsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Locales")
         private java.util.List<Locales> locales;
 
+        @com.aliyun.core.annotation.NameInMap("RequiredConnections")
+        private java.util.List<String> requiredConnections;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityScanStatus")
+        private String securityScanStatus;
+
         @com.aliyun.core.annotation.NameInMap("SkillDescription")
         private String skillDescription;
 
@@ -291,6 +297,8 @@ public class ListPublicSkillsResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.downloadUrl = builder.downloadUrl;
             this.locales = builder.locales;
+            this.requiredConnections = builder.requiredConnections;
+            this.securityScanStatus = builder.securityScanStatus;
             this.skillDescription = builder.skillDescription;
             this.skillDisplayName = builder.skillDisplayName;
             this.skillId = builder.skillId;
@@ -327,6 +335,20 @@ public class ListPublicSkillsResponseBody extends TeaModel {
          */
         public java.util.List<Locales> getLocales() {
             return this.locales;
+        }
+
+        /**
+         * @return requiredConnections
+         */
+        public java.util.List<String> getRequiredConnections() {
+            return this.requiredConnections;
+        }
+
+        /**
+         * @return securityScanStatus
+         */
+        public String getSecurityScanStatus() {
+            return this.securityScanStatus;
         }
 
         /**
@@ -382,6 +404,8 @@ public class ListPublicSkillsResponseBody extends TeaModel {
             private String createTime; 
             private String downloadUrl; 
             private java.util.List<Locales> locales; 
+            private java.util.List<String> requiredConnections; 
+            private String securityScanStatus; 
             private String skillDescription; 
             private String skillDisplayName; 
             private String skillId; 
@@ -397,6 +421,8 @@ public class ListPublicSkillsResponseBody extends TeaModel {
                 this.createTime = model.createTime;
                 this.downloadUrl = model.downloadUrl;
                 this.locales = model.locales;
+                this.requiredConnections = model.requiredConnections;
+                this.securityScanStatus = model.securityScanStatus;
                 this.skillDescription = model.skillDescription;
                 this.skillDisplayName = model.skillDisplayName;
                 this.skillId = model.skillId;
@@ -427,6 +453,22 @@ public class ListPublicSkillsResponseBody extends TeaModel {
              */
             public Builder locales(java.util.List<Locales> locales) {
                 this.locales = locales;
+                return this;
+            }
+
+            /**
+             * RequiredConnections.
+             */
+            public Builder requiredConnections(java.util.List<String> requiredConnections) {
+                this.requiredConnections = requiredConnections;
+                return this;
+            }
+
+            /**
+             * SecurityScanStatus.
+             */
+            public Builder securityScanStatus(String securityScanStatus) {
+                this.securityScanStatus = securityScanStatus;
                 return this;
             }
 
