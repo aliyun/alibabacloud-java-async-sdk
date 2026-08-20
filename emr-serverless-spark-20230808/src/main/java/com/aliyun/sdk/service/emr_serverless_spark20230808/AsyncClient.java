@@ -146,6 +146,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteRayClusterResponse> deleteRayCluster(DeleteRayClusterRequest request);
 
     /**
+     * @param request the request parameters of DeleteWorkspaceQueue  DeleteWorkspaceQueueRequest
+     * @return DeleteWorkspaceQueueResponse
+     */
+    CompletableFuture<DeleteWorkspaceQueueResponse> deleteWorkspaceQueue(DeleteWorkspaceQueueRequest request);
+
+    /**
      * @param request the request parameters of EditWorkspaceQueue  EditWorkspaceQueueRequest
      * @return EditWorkspaceQueueResponse
      */

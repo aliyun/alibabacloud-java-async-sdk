@@ -26,6 +26,10 @@ public class EditWorkspaceQueueRequest extends Request {
     private java.util.List<String> gpuSpec;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    private String instanceId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("resourceSpec")
     private ResourceSpec resourceSpec;
 
@@ -45,6 +49,7 @@ public class EditWorkspaceQueueRequest extends Request {
         super(builder);
         this.environments = builder.environments;
         this.gpuSpec = builder.gpuSpec;
+        this.instanceId = builder.instanceId;
         this.resourceSpec = builder.resourceSpec;
         this.workspaceId = builder.workspaceId;
         this.workspaceQueueName = builder.workspaceQueueName;
@@ -79,6 +84,13 @@ public class EditWorkspaceQueueRequest extends Request {
     }
 
     /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
      * @return resourceSpec
      */
     public ResourceSpec getResourceSpec() {
@@ -109,6 +121,7 @@ public class EditWorkspaceQueueRequest extends Request {
     public static final class Builder extends Request.Builder<EditWorkspaceQueueRequest, Builder> {
         private java.util.List<String> environments; 
         private java.util.List<String> gpuSpec; 
+        private String instanceId; 
         private ResourceSpec resourceSpec; 
         private String workspaceId; 
         private String workspaceQueueName; 
@@ -122,6 +135,7 @@ public class EditWorkspaceQueueRequest extends Request {
             super(request);
             this.environments = request.environments;
             this.gpuSpec = request.gpuSpec;
+            this.instanceId = request.instanceId;
             this.resourceSpec = request.resourceSpec;
             this.workspaceId = request.workspaceId;
             this.workspaceQueueName = request.workspaceQueueName;
@@ -143,6 +157,15 @@ public class EditWorkspaceQueueRequest extends Request {
         public Builder gpuSpec(java.util.List<String> gpuSpec) {
             this.putBodyParameter("gpuSpec", gpuSpec);
             this.gpuSpec = gpuSpec;
+            return this;
+        }
+
+        /**
+         * instanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putBodyParameter("instanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 
@@ -202,12 +225,17 @@ public class EditWorkspaceQueueRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("gpu")
         private Integer gpu;
 
+        @com.aliyun.core.annotation.NameInMap("gpuMachineNum")
+        @com.aliyun.core.annotation.Validation(maximum = 8)
+        private Integer gpuMachineNum;
+
         @com.aliyun.core.annotation.NameInMap("maxCu")
         private Long maxCu;
 
         private ResourceSpec(Builder builder) {
             this.cu = builder.cu;
             this.gpu = builder.gpu;
+            this.gpuMachineNum = builder.gpuMachineNum;
             this.maxCu = builder.maxCu;
         }
 
@@ -234,6 +262,13 @@ public class EditWorkspaceQueueRequest extends Request {
         }
 
         /**
+         * @return gpuMachineNum
+         */
+        public Integer getGpuMachineNum() {
+            return this.gpuMachineNum;
+        }
+
+        /**
          * @return maxCu
          */
         public Long getMaxCu() {
@@ -243,6 +278,7 @@ public class EditWorkspaceQueueRequest extends Request {
         public static final class Builder {
             private Long cu; 
             private Integer gpu; 
+            private Integer gpuMachineNum; 
             private Long maxCu; 
 
             private Builder() {
@@ -251,6 +287,7 @@ public class EditWorkspaceQueueRequest extends Request {
             private Builder(ResourceSpec model) {
                 this.cu = model.cu;
                 this.gpu = model.gpu;
+                this.gpuMachineNum = model.gpuMachineNum;
                 this.maxCu = model.maxCu;
             } 
 
@@ -267,6 +304,14 @@ public class EditWorkspaceQueueRequest extends Request {
              */
             public Builder gpu(Integer gpu) {
                 this.gpu = gpu;
+                return this;
+            }
+
+            /**
+             * gpuMachineNum.
+             */
+            public Builder gpuMachineNum(Integer gpuMachineNum) {
+                this.gpuMachineNum = gpuMachineNum;
                 return this;
             }
 

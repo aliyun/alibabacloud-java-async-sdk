@@ -35,6 +35,10 @@ public class ListJobRunsRequest extends Request {
     private EndTime endTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("groupByState")
+    private Boolean groupByState;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("isWorkflow")
     private String isWorkflow;
 
@@ -92,6 +96,7 @@ public class ListJobRunsRequest extends Request {
         this.applicationConfigs = builder.applicationConfigs;
         this.creator = builder.creator;
         this.endTime = builder.endTime;
+        this.groupByState = builder.groupByState;
         this.isWorkflow = builder.isWorkflow;
         this.jobRunDeploymentId = builder.jobRunDeploymentId;
         this.jobRunId = builder.jobRunId;
@@ -146,6 +151,13 @@ public class ListJobRunsRequest extends Request {
      */
     public EndTime getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return groupByState
+     */
+    public Boolean getGroupByState() {
+        return this.groupByState;
     }
 
     /**
@@ -244,6 +256,7 @@ public class ListJobRunsRequest extends Request {
         private String applicationConfigs; 
         private String creator; 
         private EndTime endTime; 
+        private Boolean groupByState; 
         private String isWorkflow; 
         private String jobRunDeploymentId; 
         private String jobRunId; 
@@ -268,6 +281,7 @@ public class ListJobRunsRequest extends Request {
             this.applicationConfigs = request.applicationConfigs;
             this.creator = request.creator;
             this.endTime = request.endTime;
+            this.groupByState = request.groupByState;
             this.isWorkflow = request.isWorkflow;
             this.jobRunDeploymentId = request.jobRunDeploymentId;
             this.jobRunId = request.jobRunId;
@@ -324,6 +338,15 @@ public class ListJobRunsRequest extends Request {
             String endTimeShrink = shrink(endTime, "endTime", "json");
             this.putQueryParameter("endTime", endTimeShrink);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * groupByState.
+         */
+        public Builder groupByState(Boolean groupByState) {
+            this.putQueryParameter("groupByState", groupByState);
+            this.groupByState = groupByState;
             return this;
         }
 

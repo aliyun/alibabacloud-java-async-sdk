@@ -30,6 +30,10 @@ public class UpdateWorkspaceRequest extends Request {
     private java.util.List<String> gpuSpec;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("gpuSubscription")
+    private GpuSubscription gpuSubscription;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ipWhiteList")
     private java.util.List<String> ipWhiteList;
 
@@ -58,6 +62,7 @@ public class UpdateWorkspaceRequest extends Request {
         this.cu = builder.cu;
         this.gpu = builder.gpu;
         this.gpuSpec = builder.gpuSpec;
+        this.gpuSubscription = builder.gpuSubscription;
         this.ipWhiteList = builder.ipWhiteList;
         this.resourceGroupId = builder.resourceGroupId;
         this.subscription = builder.subscription;
@@ -98,6 +103,13 @@ public class UpdateWorkspaceRequest extends Request {
      */
     public java.util.List<String> getGpuSpec() {
         return this.gpuSpec;
+    }
+
+    /**
+     * @return gpuSubscription
+     */
+    public GpuSubscription getGpuSubscription() {
+        return this.gpuSubscription;
     }
 
     /**
@@ -146,6 +158,7 @@ public class UpdateWorkspaceRequest extends Request {
         private Integer cu; 
         private Integer gpu; 
         private java.util.List<String> gpuSpec; 
+        private GpuSubscription gpuSubscription; 
         private java.util.List<String> ipWhiteList; 
         private String resourceGroupId; 
         private Subscription subscription; 
@@ -162,6 +175,7 @@ public class UpdateWorkspaceRequest extends Request {
             this.cu = request.cu;
             this.gpu = request.gpu;
             this.gpuSpec = request.gpuSpec;
+            this.gpuSubscription = request.gpuSubscription;
             this.ipWhiteList = request.ipWhiteList;
             this.resourceGroupId = request.resourceGroupId;
             this.subscription = request.subscription;
@@ -194,6 +208,15 @@ public class UpdateWorkspaceRequest extends Request {
         public Builder gpuSpec(java.util.List<String> gpuSpec) {
             this.putBodyParameter("gpuSpec", gpuSpec);
             this.gpuSpec = gpuSpec;
+            return this;
+        }
+
+        /**
+         * gpuSubscription.
+         */
+        public Builder gpuSubscription(GpuSubscription gpuSubscription) {
+            this.putBodyParameter("gpuSubscription", gpuSubscription);
+            this.gpuSubscription = gpuSubscription;
             return this;
         }
 
@@ -258,6 +281,186 @@ public class UpdateWorkspaceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateWorkspaceRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateWorkspaceRequest</p>
+     */
+    public static class GpuSubscription extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("autoRenew")
+        private Boolean autoRenew;
+
+        @com.aliyun.core.annotation.NameInMap("duration")
+        private Integer duration;
+
+        @com.aliyun.core.annotation.NameInMap("gpuMachineNum")
+        private Integer gpuMachineNum;
+
+        @com.aliyun.core.annotation.NameInMap("instanceId")
+        private String instanceId;
+
+        @com.aliyun.core.annotation.NameInMap("instanceTypeId")
+        private String instanceTypeId;
+
+        @com.aliyun.core.annotation.NameInMap("operation")
+        private String operation;
+
+        @com.aliyun.core.annotation.NameInMap("paymentDurationUnit")
+        private String paymentDurationUnit;
+
+        private GpuSubscription(Builder builder) {
+            this.autoRenew = builder.autoRenew;
+            this.duration = builder.duration;
+            this.gpuMachineNum = builder.gpuMachineNum;
+            this.instanceId = builder.instanceId;
+            this.instanceTypeId = builder.instanceTypeId;
+            this.operation = builder.operation;
+            this.paymentDurationUnit = builder.paymentDurationUnit;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GpuSubscription create() {
+            return builder().build();
+        }
+
+        /**
+         * @return autoRenew
+         */
+        public Boolean getAutoRenew() {
+            return this.autoRenew;
+        }
+
+        /**
+         * @return duration
+         */
+        public Integer getDuration() {
+            return this.duration;
+        }
+
+        /**
+         * @return gpuMachineNum
+         */
+        public Integer getGpuMachineNum() {
+            return this.gpuMachineNum;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
+         * @return instanceTypeId
+         */
+        public String getInstanceTypeId() {
+            return this.instanceTypeId;
+        }
+
+        /**
+         * @return operation
+         */
+        public String getOperation() {
+            return this.operation;
+        }
+
+        /**
+         * @return paymentDurationUnit
+         */
+        public String getPaymentDurationUnit() {
+            return this.paymentDurationUnit;
+        }
+
+        public static final class Builder {
+            private Boolean autoRenew; 
+            private Integer duration; 
+            private Integer gpuMachineNum; 
+            private String instanceId; 
+            private String instanceTypeId; 
+            private String operation; 
+            private String paymentDurationUnit; 
+
+            private Builder() {
+            } 
+
+            private Builder(GpuSubscription model) {
+                this.autoRenew = model.autoRenew;
+                this.duration = model.duration;
+                this.gpuMachineNum = model.gpuMachineNum;
+                this.instanceId = model.instanceId;
+                this.instanceTypeId = model.instanceTypeId;
+                this.operation = model.operation;
+                this.paymentDurationUnit = model.paymentDurationUnit;
+            } 
+
+            /**
+             * autoRenew.
+             */
+            public Builder autoRenew(Boolean autoRenew) {
+                this.autoRenew = autoRenew;
+                return this;
+            }
+
+            /**
+             * duration.
+             */
+            public Builder duration(Integer duration) {
+                this.duration = duration;
+                return this;
+            }
+
+            /**
+             * gpuMachineNum.
+             */
+            public Builder gpuMachineNum(Integer gpuMachineNum) {
+                this.gpuMachineNum = gpuMachineNum;
+                return this;
+            }
+
+            /**
+             * instanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * instanceTypeId.
+             */
+            public Builder instanceTypeId(String instanceTypeId) {
+                this.instanceTypeId = instanceTypeId;
+                return this;
+            }
+
+            /**
+             * operation.
+             */
+            public Builder operation(String operation) {
+                this.operation = operation;
+                return this;
+            }
+
+            /**
+             * paymentDurationUnit.
+             */
+            public Builder paymentDurationUnit(String paymentDurationUnit) {
+                this.paymentDurationUnit = paymentDurationUnit;
+                return this;
+            }
+
+            public GpuSubscription build() {
+                return new GpuSubscription(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link UpdateWorkspaceRequest} extends {@link TeaModel}

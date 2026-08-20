@@ -424,6 +424,378 @@ public class ListWorkspacesResponseBody extends TeaModel {
      *
      * <p>ListWorkspacesResponseBody</p>
      */
+    public static class PrePaidQuotaGpu extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("autoRenewal")
+        private Boolean autoRenewal;
+
+        @com.aliyun.core.annotation.NameInMap("cpuCoreCount")
+        private String cpuCoreCount;
+
+        @com.aliyun.core.annotation.NameInMap("createTime")
+        private Long createTime;
+
+        @com.aliyun.core.annotation.NameInMap("expireTime")
+        private Long expireTime;
+
+        @com.aliyun.core.annotation.NameInMap("gpuAmount")
+        private Integer gpuAmount;
+
+        @com.aliyun.core.annotation.NameInMap("gpuMachineNum")
+        private Integer gpuMachineNum;
+
+        @com.aliyun.core.annotation.NameInMap("gpuMemorySize")
+        private Long gpuMemorySize;
+
+        @com.aliyun.core.annotation.NameInMap("gpuNum")
+        private Integer gpuNum;
+
+        @com.aliyun.core.annotation.NameInMap("gpuSpec")
+        private String gpuSpec;
+
+        @com.aliyun.core.annotation.NameInMap("instanceId")
+        private String instanceId;
+
+        @com.aliyun.core.annotation.NameInMap("instanceTypeFamily")
+        private String instanceTypeFamily;
+
+        @com.aliyun.core.annotation.NameInMap("instanceTypeId")
+        private String instanceTypeId;
+
+        @com.aliyun.core.annotation.NameInMap("memorySize")
+        private String memorySize;
+
+        @com.aliyun.core.annotation.NameInMap("orderId")
+        private String orderId;
+
+        @com.aliyun.core.annotation.NameInMap("paymentStatus")
+        private String paymentStatus;
+
+        private PrePaidQuotaGpu(Builder builder) {
+            this.autoRenewal = builder.autoRenewal;
+            this.cpuCoreCount = builder.cpuCoreCount;
+            this.createTime = builder.createTime;
+            this.expireTime = builder.expireTime;
+            this.gpuAmount = builder.gpuAmount;
+            this.gpuMachineNum = builder.gpuMachineNum;
+            this.gpuMemorySize = builder.gpuMemorySize;
+            this.gpuNum = builder.gpuNum;
+            this.gpuSpec = builder.gpuSpec;
+            this.instanceId = builder.instanceId;
+            this.instanceTypeFamily = builder.instanceTypeFamily;
+            this.instanceTypeId = builder.instanceTypeId;
+            this.memorySize = builder.memorySize;
+            this.orderId = builder.orderId;
+            this.paymentStatus = builder.paymentStatus;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PrePaidQuotaGpu create() {
+            return builder().build();
+        }
+
+        /**
+         * @return autoRenewal
+         */
+        public Boolean getAutoRenewal() {
+            return this.autoRenewal;
+        }
+
+        /**
+         * @return cpuCoreCount
+         */
+        public String getCpuCoreCount() {
+            return this.cpuCoreCount;
+        }
+
+        /**
+         * @return createTime
+         */
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
+         * @return expireTime
+         */
+        public Long getExpireTime() {
+            return this.expireTime;
+        }
+
+        /**
+         * @return gpuAmount
+         */
+        public Integer getGpuAmount() {
+            return this.gpuAmount;
+        }
+
+        /**
+         * @return gpuMachineNum
+         */
+        public Integer getGpuMachineNum() {
+            return this.gpuMachineNum;
+        }
+
+        /**
+         * @return gpuMemorySize
+         */
+        public Long getGpuMemorySize() {
+            return this.gpuMemorySize;
+        }
+
+        /**
+         * @return gpuNum
+         */
+        public Integer getGpuNum() {
+            return this.gpuNum;
+        }
+
+        /**
+         * @return gpuSpec
+         */
+        public String getGpuSpec() {
+            return this.gpuSpec;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
+         * @return instanceTypeFamily
+         */
+        public String getInstanceTypeFamily() {
+            return this.instanceTypeFamily;
+        }
+
+        /**
+         * @return instanceTypeId
+         */
+        public String getInstanceTypeId() {
+            return this.instanceTypeId;
+        }
+
+        /**
+         * @return memorySize
+         */
+        public String getMemorySize() {
+            return this.memorySize;
+        }
+
+        /**
+         * @return orderId
+         */
+        public String getOrderId() {
+            return this.orderId;
+        }
+
+        /**
+         * @return paymentStatus
+         */
+        public String getPaymentStatus() {
+            return this.paymentStatus;
+        }
+
+        public static final class Builder {
+            private Boolean autoRenewal; 
+            private String cpuCoreCount; 
+            private Long createTime; 
+            private Long expireTime; 
+            private Integer gpuAmount; 
+            private Integer gpuMachineNum; 
+            private Long gpuMemorySize; 
+            private Integer gpuNum; 
+            private String gpuSpec; 
+            private String instanceId; 
+            private String instanceTypeFamily; 
+            private String instanceTypeId; 
+            private String memorySize; 
+            private String orderId; 
+            private String paymentStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrePaidQuotaGpu model) {
+                this.autoRenewal = model.autoRenewal;
+                this.cpuCoreCount = model.cpuCoreCount;
+                this.createTime = model.createTime;
+                this.expireTime = model.expireTime;
+                this.gpuAmount = model.gpuAmount;
+                this.gpuMachineNum = model.gpuMachineNum;
+                this.gpuMemorySize = model.gpuMemorySize;
+                this.gpuNum = model.gpuNum;
+                this.gpuSpec = model.gpuSpec;
+                this.instanceId = model.instanceId;
+                this.instanceTypeFamily = model.instanceTypeFamily;
+                this.instanceTypeId = model.instanceTypeId;
+                this.memorySize = model.memorySize;
+                this.orderId = model.orderId;
+                this.paymentStatus = model.paymentStatus;
+            } 
+
+            /**
+             * <p>Indicates whether auto-renewal is enabled for the subscription quota.</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder autoRenewal(Boolean autoRenewal) {
+                this.autoRenewal = autoRenewal;
+                return this;
+            }
+
+            /**
+             * cpuCoreCount.
+             */
+            public Builder cpuCoreCount(String cpuCoreCount) {
+                this.cpuCoreCount = cpuCoreCount;
+                return this;
+            }
+
+            /**
+             * <p>The creation time of the subscription quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1745683200000</p>
+             */
+            public Builder createTime(Long createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * <p>The expiration time of the subscription quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1740537153000</p>
+             */
+            public Builder expireTime(Long expireTime) {
+                this.expireTime = expireTime;
+                return this;
+            }
+
+            /**
+             * gpuAmount.
+             */
+            public Builder gpuAmount(Integer gpuAmount) {
+                this.gpuAmount = gpuAmount;
+                return this;
+            }
+
+            /**
+             * gpuMachineNum.
+             */
+            public Builder gpuMachineNum(Integer gpuMachineNum) {
+                this.gpuMachineNum = gpuMachineNum;
+                return this;
+            }
+
+            /**
+             * gpuMemorySize.
+             */
+            public Builder gpuMemorySize(Long gpuMemorySize) {
+                this.gpuMemorySize = gpuMemorySize;
+                return this;
+            }
+
+            /**
+             * gpuNum.
+             */
+            public Builder gpuNum(Integer gpuNum) {
+                this.gpuNum = gpuNum;
+                return this;
+            }
+
+            /**
+             * gpuSpec.
+             */
+            public Builder gpuSpec(String gpuSpec) {
+                this.gpuSpec = gpuSpec;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the instance that is generated when you purchase the subscription quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-abc12345</p>
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * instanceTypeFamily.
+             */
+            public Builder instanceTypeFamily(String instanceTypeFamily) {
+                this.instanceTypeFamily = instanceTypeFamily;
+                return this;
+            }
+
+            /**
+             * instanceTypeId.
+             */
+            public Builder instanceTypeId(String instanceTypeId) {
+                this.instanceTypeId = instanceTypeId;
+                return this;
+            }
+
+            /**
+             * memorySize.
+             */
+            public Builder memorySize(String memorySize) {
+                this.memorySize = memorySize;
+                return this;
+            }
+
+            /**
+             * orderId.
+             */
+            public Builder orderId(String orderId) {
+                this.orderId = orderId;
+                return this;
+            }
+
+            /**
+             * <p>The status of the subscription quota. Valid values:</p>
+             * <ul>
+             * <li>NORMAL</li>
+             * <li>WAIT_FOR_EXPIRE</li>
+             * <li>EXPIRED</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
+             */
+            public Builder paymentStatus(String paymentStatus) {
+                this.paymentStatus = paymentStatus;
+                return this;
+            }
+
+            public PrePaidQuotaGpu build() {
+                return new PrePaidQuotaGpu(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListWorkspacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkspacesResponseBody</p>
+     */
     public static class StateChangeReason extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
@@ -626,6 +998,9 @@ public class ListWorkspacesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("prePaidQuota")
         private PrePaidQuota prePaidQuota;
 
+        @com.aliyun.core.annotation.NameInMap("prePaidQuotaGpu")
+        private java.util.List<PrePaidQuotaGpu> prePaidQuotaGpu;
+
         @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
@@ -672,6 +1047,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             this.paymentStatus = builder.paymentStatus;
             this.paymentType = builder.paymentType;
             this.prePaidQuota = builder.prePaidQuota;
+            this.prePaidQuotaGpu = builder.prePaidQuotaGpu;
             this.regionId = builder.regionId;
             this.releaseType = builder.releaseType;
             this.resourceGroupId = builder.resourceGroupId;
@@ -798,6 +1174,13 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
+         * @return prePaidQuotaGpu
+         */
+        public java.util.List<PrePaidQuotaGpu> getPrePaidQuotaGpu() {
+            return this.prePaidQuotaGpu;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -883,6 +1266,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             private String paymentStatus; 
             private String paymentType; 
             private PrePaidQuota prePaidQuota; 
+            private java.util.List<PrePaidQuotaGpu> prePaidQuotaGpu; 
             private String regionId; 
             private String releaseType; 
             private String resourceGroupId; 
@@ -913,6 +1297,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
                 this.paymentStatus = model.paymentStatus;
                 this.paymentType = model.paymentType;
                 this.prePaidQuota = model.prePaidQuota;
+                this.prePaidQuotaGpu = model.prePaidQuotaGpu;
                 this.regionId = model.regionId;
                 this.releaseType = model.releaseType;
                 this.resourceGroupId = model.resourceGroupId;
@@ -1082,6 +1467,14 @@ public class ListWorkspacesResponseBody extends TeaModel {
              */
             public Builder prePaidQuota(PrePaidQuota prePaidQuota) {
                 this.prePaidQuota = prePaidQuota;
+                return this;
+            }
+
+            /**
+             * prePaidQuotaGpu.
+             */
+            public Builder prePaidQuotaGpu(java.util.List<PrePaidQuotaGpu> prePaidQuotaGpu) {
+                this.prePaidQuotaGpu = prePaidQuotaGpu;
                 return this;
             }
 

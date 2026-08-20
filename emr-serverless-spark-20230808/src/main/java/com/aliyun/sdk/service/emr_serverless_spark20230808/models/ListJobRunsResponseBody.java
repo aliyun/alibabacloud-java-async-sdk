@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListJobRunsResponseBody</p>
  */
 public class ListJobRunsResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("aggregations")
+    private java.util.Map<String, String> aggregations;
+
     @com.aliyun.core.annotation.NameInMap("jobRuns")
     private java.util.List<JobRuns> jobRuns;
 
@@ -33,6 +36,7 @@ public class ListJobRunsResponseBody extends TeaModel {
     private Integer totalCount;
 
     private ListJobRunsResponseBody(Builder builder) {
+        this.aggregations = builder.aggregations;
         this.jobRuns = builder.jobRuns;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -50,6 +54,13 @@ public class ListJobRunsResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return aggregations
+     */
+    public java.util.Map<String, String> getAggregations() {
+        return this.aggregations;
     }
 
     /**
@@ -88,6 +99,7 @@ public class ListJobRunsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.Map<String, String> aggregations; 
         private java.util.List<JobRuns> jobRuns; 
         private Integer maxResults; 
         private String nextToken; 
@@ -98,12 +110,21 @@ public class ListJobRunsResponseBody extends TeaModel {
         } 
 
         private Builder(ListJobRunsResponseBody model) {
+            this.aggregations = model.aggregations;
             this.jobRuns = model.jobRuns;
             this.maxResults = model.maxResults;
             this.nextToken = model.nextToken;
             this.requestId = model.requestId;
             this.totalCount = model.totalCount;
         } 
+
+        /**
+         * aggregations.
+         */
+        public Builder aggregations(java.util.Map<String, String> aggregations) {
+            this.aggregations = aggregations;
+            return this;
+        }
 
         /**
          * <p>The Spark jobs.</p>

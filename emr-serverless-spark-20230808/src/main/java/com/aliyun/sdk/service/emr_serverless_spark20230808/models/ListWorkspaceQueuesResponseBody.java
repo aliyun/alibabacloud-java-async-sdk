@@ -335,8 +335,14 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("environments")
         private java.util.List<String> environments;
 
+        @com.aliyun.core.annotation.NameInMap("gpuMachineNum")
+        private Integer gpuMachineNum;
+
         @com.aliyun.core.annotation.NameInMap("gpuSpec")
         private java.util.List<String> gpuSpec;
+
+        @com.aliyun.core.annotation.NameInMap("instanceId")
+        private String instanceId;
 
         @com.aliyun.core.annotation.NameInMap("maxResource")
         private String maxResource;
@@ -382,7 +388,9 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.creator = builder.creator;
             this.environments = builder.environments;
+            this.gpuMachineNum = builder.gpuMachineNum;
             this.gpuSpec = builder.gpuSpec;
+            this.instanceId = builder.instanceId;
             this.maxResource = builder.maxResource;
             this.minResource = builder.minResource;
             this.paymentType = builder.paymentType;
@@ -435,10 +443,24 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         }
 
         /**
+         * @return gpuMachineNum
+         */
+        public Integer getGpuMachineNum() {
+            return this.gpuMachineNum;
+        }
+
+        /**
          * @return gpuSpec
          */
         public java.util.List<String> getGpuSpec() {
             return this.gpuSpec;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         /**
@@ -537,7 +559,9 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             private Long createTime; 
             private String creator; 
             private java.util.List<String> environments; 
+            private Integer gpuMachineNum; 
             private java.util.List<String> gpuSpec; 
+            private String instanceId; 
             private String maxResource; 
             private String minResource; 
             private String paymentType; 
@@ -560,7 +584,9 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
                 this.createTime = model.createTime;
                 this.creator = model.creator;
                 this.environments = model.environments;
+                this.gpuMachineNum = model.gpuMachineNum;
                 this.gpuSpec = model.gpuSpec;
+                this.instanceId = model.instanceId;
                 this.maxResource = model.maxResource;
                 this.minResource = model.minResource;
                 this.paymentType = model.paymentType;
@@ -615,10 +641,26 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
+             * gpuMachineNum.
+             */
+            public Builder gpuMachineNum(Integer gpuMachineNum) {
+                this.gpuMachineNum = gpuMachineNum;
+                return this;
+            }
+
+            /**
              * gpuSpec.
              */
             public Builder gpuSpec(java.util.List<String> gpuSpec) {
                 this.gpuSpec = gpuSpec;
+                return this;
+            }
+
+            /**
+             * instanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
                 return this;
             }
 
