@@ -179,6 +179,9 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProviderType")
         private String providerType;
 
+        @com.aliyun.core.annotation.NameInMap("WuyingProviderKey")
+        private String wuyingProviderKey;
+
         private Data(Builder builder) {
             this.config = builder.config;
             this.description = builder.description;
@@ -187,6 +190,7 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
             this.providerName = builder.providerName;
             this.providerTemplateId = builder.providerTemplateId;
             this.providerType = builder.providerType;
+            this.wuyingProviderKey = builder.wuyingProviderKey;
         }
 
         public static Builder builder() {
@@ -246,6 +250,13 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
             return this.providerType;
         }
 
+        /**
+         * @return wuyingProviderKey
+         */
+        public String getWuyingProviderKey() {
+            return this.wuyingProviderKey;
+        }
+
         public static final class Builder {
             private String config; 
             private String description; 
@@ -254,6 +265,7 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
             private String providerName; 
             private String providerTemplateId; 
             private String providerType; 
+            private String wuyingProviderKey; 
 
             private Builder() {
             } 
@@ -266,6 +278,7 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
                 this.providerName = model.providerName;
                 this.providerTemplateId = model.providerTemplateId;
                 this.providerType = model.providerType;
+                this.wuyingProviderKey = model.wuyingProviderKey;
             } 
 
             /**
@@ -321,6 +334,14 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
              */
             public Builder providerType(String providerType) {
                 this.providerType = providerType;
+                return this;
+            }
+
+            /**
+             * WuyingProviderKey.
+             */
+            public Builder wuyingProviderKey(String wuyingProviderKey) {
+                this.wuyingProviderKey = wuyingProviderKey;
                 return this;
             }
 
