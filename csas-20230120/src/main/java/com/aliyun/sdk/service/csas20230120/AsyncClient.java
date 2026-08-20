@@ -152,6 +152,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePrivateAccessTagResponse> createPrivateAccessTag(CreatePrivateAccessTagRequest request);
 
     /**
+     * @param request the request parameters of CreateProhibitedPolicy  CreateProhibitedPolicyRequest
+     * @return CreateProhibitedPolicyResponse
+     */
+    CompletableFuture<CreateProhibitedPolicyResponse> createProhibitedPolicy(CreateProhibitedPolicyRequest request);
+
+    /**
+     * @param request the request parameters of CreateProhibitedSoftware  CreateProhibitedSoftwareRequest
+     * @return CreateProhibitedSoftwareResponse
+     */
+    CompletableFuture<CreateProhibitedSoftwareResponse> createProhibitedSoftware(CreateProhibitedSoftwareRequest request);
+
+    /**
+     * @param request the request parameters of CreateProhibitedTag  CreateProhibitedTagRequest
+     * @return CreateProhibitedTagResponse
+     */
+    CompletableFuture<CreateProhibitedTagResponse> createProhibitedTag(CreateProhibitedTagRequest request);
+
+    /**
      * @param request the request parameters of CreateRegistrationPolicy  CreateRegistrationPolicyRequest
      * @return CreateRegistrationPolicyResponse
      */
@@ -276,6 +294,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeletePrivateAccessTagResponse
      */
     CompletableFuture<DeletePrivateAccessTagResponse> deletePrivateAccessTag(DeletePrivateAccessTagRequest request);
+
+    /**
+     * @param request the request parameters of DeleteProhibitedPolicies  DeleteProhibitedPoliciesRequest
+     * @return DeleteProhibitedPoliciesResponse
+     */
+    CompletableFuture<DeleteProhibitedPoliciesResponse> deleteProhibitedPolicies(DeleteProhibitedPoliciesRequest request);
+
+    /**
+     * @param request the request parameters of DeleteProhibitedSoftware  DeleteProhibitedSoftwareRequest
+     * @return DeleteProhibitedSoftwareResponse
+     */
+    CompletableFuture<DeleteProhibitedSoftwareResponse> deleteProhibitedSoftware(DeleteProhibitedSoftwareRequest request);
+
+    /**
+     * @param request the request parameters of DeleteProhibitedTags  DeleteProhibitedTagsRequest
+     * @return DeleteProhibitedTagsResponse
+     */
+    CompletableFuture<DeleteProhibitedTagsResponse> deleteProhibitedTags(DeleteProhibitedTagsRequest request);
 
     /**
      * @param request the request parameters of DeleteRegistrationPolicies  DeleteRegistrationPoliciesRequest
@@ -427,6 +463,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetPrivateAccessPolicyResponse
      */
     CompletableFuture<GetPrivateAccessPolicyResponse> getPrivateAccessPolicy(GetPrivateAccessPolicyRequest request);
+
+    /**
+     * @param request the request parameters of GetProhibitedPolicy  GetProhibitedPolicyRequest
+     * @return GetProhibitedPolicyResponse
+     */
+    CompletableFuture<GetProhibitedPolicyResponse> getProhibitedPolicy(GetProhibitedPolicyRequest request);
+
+    /**
+     * @param request the request parameters of GetProhibitedSoftware  GetProhibitedSoftwareRequest
+     * @return GetProhibitedSoftwareResponse
+     */
+    CompletableFuture<GetProhibitedSoftwareResponse> getProhibitedSoftware(GetProhibitedSoftwareRequest request);
 
     /**
      * @param request the request parameters of GetRegistrationPolicy  GetRegistrationPolicyRequest
@@ -675,6 +723,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPrivateAccessTagsForDynamicRouteResponse> listPrivateAccessTagsForDynamicRoute(ListPrivateAccessTagsForDynamicRouteRequest request);
 
     /**
+     * @param request the request parameters of ListProhibitedPolicies  ListProhibitedPoliciesRequest
+     * @return ListProhibitedPoliciesResponse
+     */
+    CompletableFuture<ListProhibitedPoliciesResponse> listProhibitedPolicies(ListProhibitedPoliciesRequest request);
+
+    /**
+     * @param request the request parameters of ListProhibitedSoftware  ListProhibitedSoftwareRequest
+     * @return ListProhibitedSoftwareResponse
+     */
+    CompletableFuture<ListProhibitedSoftwareResponse> listProhibitedSoftware(ListProhibitedSoftwareRequest request);
+
+    /**
+     * @param request the request parameters of ListProhibitedTags  ListProhibitedTagsRequest
+     * @return ListProhibitedTagsResponse
+     */
+    CompletableFuture<ListProhibitedTagsResponse> listProhibitedTags(ListProhibitedTagsRequest request);
+
+    /**
      * @param request the request parameters of ListRegistrationPolicies  ListRegistrationPoliciesRequest
      * @return ListRegistrationPoliciesResponse
      */
@@ -908,6 +974,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdatePrivateAccessPolicyResponse
      */
     CompletableFuture<UpdatePrivateAccessPolicyResponse> updatePrivateAccessPolicy(UpdatePrivateAccessPolicyRequest request);
+
+    /**
+     * @param request the request parameters of UpdateProhibitedPolicy  UpdateProhibitedPolicyRequest
+     * @return UpdateProhibitedPolicyResponse
+     */
+    CompletableFuture<UpdateProhibitedPolicyResponse> updateProhibitedPolicy(UpdateProhibitedPolicyRequest request);
+
+    /**
+     * @param request the request parameters of UpdateProhibitedSoftware  UpdateProhibitedSoftwareRequest
+     * @return UpdateProhibitedSoftwareResponse
+     */
+    CompletableFuture<UpdateProhibitedSoftwareResponse> updateProhibitedSoftware(UpdateProhibitedSoftwareRequest request);
+
+    /**
+     * @param request the request parameters of UpdateProhibitedTag  UpdateProhibitedTagRequest
+     * @return UpdateProhibitedTagResponse
+     */
+    CompletableFuture<UpdateProhibitedTagResponse> updateProhibitedTag(UpdateProhibitedTagRequest request);
 
     /**
      * @param request the request parameters of UpdateRegistrationPolicy  UpdateRegistrationPolicyRequest
