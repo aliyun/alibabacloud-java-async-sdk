@@ -560,10 +560,26 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
      * <p>DescribeInvoiceForIsvResponseBody</p>
      */
     public static class ReceiptUserInfoDto extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BankAccount")
+        private String bankAccount;
+
+        @com.aliyun.core.annotation.NameInMap("BankName")
+        private String bankName;
+
+        @com.aliyun.core.annotation.NameInMap("RegAddress")
+        private String regAddress;
+
+        @com.aliyun.core.annotation.NameInMap("RegPhone")
+        private String regPhone;
+
         @com.aliyun.core.annotation.NameInMap("TaxNumber")
         private String taxNumber;
 
         private ReceiptUserInfoDto(Builder builder) {
+            this.bankAccount = builder.bankAccount;
+            this.bankName = builder.bankName;
+            this.regAddress = builder.regAddress;
+            this.regPhone = builder.regPhone;
             this.taxNumber = builder.taxNumber;
         }
 
@@ -576,6 +592,34 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
         }
 
         /**
+         * @return bankAccount
+         */
+        public String getBankAccount() {
+            return this.bankAccount;
+        }
+
+        /**
+         * @return bankName
+         */
+        public String getBankName() {
+            return this.bankName;
+        }
+
+        /**
+         * @return regAddress
+         */
+        public String getRegAddress() {
+            return this.regAddress;
+        }
+
+        /**
+         * @return regPhone
+         */
+        public String getRegPhone() {
+            return this.regPhone;
+        }
+
+        /**
          * @return taxNumber
          */
         public String getTaxNumber() {
@@ -583,14 +627,54 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String bankAccount; 
+            private String bankName; 
+            private String regAddress; 
+            private String regPhone; 
             private String taxNumber; 
 
             private Builder() {
             } 
 
             private Builder(ReceiptUserInfoDto model) {
+                this.bankAccount = model.bankAccount;
+                this.bankName = model.bankName;
+                this.regAddress = model.regAddress;
+                this.regPhone = model.regPhone;
                 this.taxNumber = model.taxNumber;
             } 
+
+            /**
+             * BankAccount.
+             */
+            public Builder bankAccount(String bankAccount) {
+                this.bankAccount = bankAccount;
+                return this;
+            }
+
+            /**
+             * BankName.
+             */
+            public Builder bankName(String bankName) {
+                this.bankName = bankName;
+                return this;
+            }
+
+            /**
+             * RegAddress.
+             */
+            public Builder regAddress(String regAddress) {
+                this.regAddress = regAddress;
+                return this;
+            }
+
+            /**
+             * RegPhone.
+             */
+            public Builder regPhone(String regPhone) {
+                this.regPhone = regPhone;
+                return this;
+            }
 
             /**
              * TaxNumber.

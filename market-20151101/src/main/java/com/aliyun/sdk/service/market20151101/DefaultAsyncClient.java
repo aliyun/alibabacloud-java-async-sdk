@@ -53,7 +53,8 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-hangzhou-finance", "market.aliyuncs.com"),
             new TeaPair("cn-shenzhen-finance-1", "market.aliyuncs.com"),
             new TeaPair("cn-shanghai-finance-1", "market.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "market.aliyuncs.com")
+            new TeaPair("cn-north-2-gov-1", "market.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "market.ap-southeast-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }

@@ -1,3 +1,6 @@
+2026-08-20 Version: 2.0.6
+- Generated java-async 2015-11-01 for Market.
+
 2026-05-22 Version: 2.0.5
 - Generated java-async 2015-11-01 for Market.
 
