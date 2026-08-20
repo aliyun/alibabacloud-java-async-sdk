@@ -31,21 +31,21 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.version = "2026-06-03";
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("cn-shenzhen", "paimodelgallery.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "paimodelgallery.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "paimodelgallery.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "paimodelgallery.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "paimodelgallery.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "paimodelgallery.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "paimodelgallery.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "paimodelgallery.cn-hongkong.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "paimodelgallery.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "paimodelgallery.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "paimodelgallery.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "paimodelgallery.cn-hangzhou.aliyuncs.com"),
             new TeaPair("us-west-1", "paimodelgallery.us-west-1.aliyuncs.com"),
             new TeaPair("us-east-1", "paimodelgallery.us-east-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "paimodelgallery.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "paimodelgallery.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "paimodelgallery.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "paimodelgallery.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "paimodelgallery.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "paimodelgallery.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "paimodelgallery.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-beijing", "paimodelgallery.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "paimodelgallery.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "paimodelgallery.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "paimodelgallery.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "paimodelgallery.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "paimodelgallery.ap-northeast-1.aliyuncs.com")
+            new TeaPair("eu-central-1", "paimodelgallery.eu-central-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -53,6 +53,60 @@ public final class DefaultAsyncClient implements AsyncClient {
     @Override
     public void close() {
         this.handler.close();
+    }
+
+    /**
+     * @param request the request parameters of GetModelDeploymentResources  GetModelDeploymentResourcesRequest
+     * @return GetModelDeploymentResourcesResponse
+     */
+    @Override
+    public CompletableFuture<GetModelDeploymentResourcesResponse> getModelDeploymentResources(GetModelDeploymentResourcesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetModelDeploymentResources").setMethod(HttpMethod.GET).setPathRegex("/api/v2/modelgallery/models/{ModelId}/deployment-resources").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetModelDeploymentResourcesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetModelDeploymentResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetModelDeploymentSpec  GetModelDeploymentSpecRequest
+     * @return GetModelDeploymentSpecResponse
+     */
+    @Override
+    public CompletableFuture<GetModelDeploymentSpecResponse> getModelDeploymentSpec(GetModelDeploymentSpecRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetModelDeploymentSpec").setMethod(HttpMethod.GET).setPathRegex("/api/v2/modelgallery/models/{ModelId}/deployment-spec").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetModelDeploymentSpecResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetModelDeploymentSpecResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListModelDeploymentProfiles  ListModelDeploymentProfilesRequest
+     * @return ListModelDeploymentProfilesResponse
+     */
+    @Override
+    public CompletableFuture<ListModelDeploymentProfilesResponse> listModelDeploymentProfiles(ListModelDeploymentProfilesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListModelDeploymentProfiles").setMethod(HttpMethod.GET).setPathRegex("/api/v2/modelgallery/models/{ModelId}/deployment-profiles").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListModelDeploymentProfilesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListModelDeploymentProfilesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
     }
 
     /**

@@ -20,6 +20,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of GetModelDeploymentResources  GetModelDeploymentResourcesRequest
+     * @return GetModelDeploymentResourcesResponse
+     */
+    CompletableFuture<GetModelDeploymentResourcesResponse> getModelDeploymentResources(GetModelDeploymentResourcesRequest request);
+
+    /**
+     * @param request the request parameters of GetModelDeploymentSpec  GetModelDeploymentSpecRequest
+     * @return GetModelDeploymentSpecResponse
+     */
+    CompletableFuture<GetModelDeploymentSpecResponse> getModelDeploymentSpec(GetModelDeploymentSpecRequest request);
+
+    /**
+     * @param request the request parameters of ListModelDeploymentProfiles  ListModelDeploymentProfilesRequest
+     * @return ListModelDeploymentProfilesResponse
+     */
+    CompletableFuture<ListModelDeploymentProfilesResponse> listModelDeploymentProfiles(ListModelDeploymentProfilesRequest request);
+
+    /**
      * @param request the request parameters of ListModelGalleryModels  ListModelGalleryModelsRequest
      * @return ListModelGalleryModelsResponse
      */
