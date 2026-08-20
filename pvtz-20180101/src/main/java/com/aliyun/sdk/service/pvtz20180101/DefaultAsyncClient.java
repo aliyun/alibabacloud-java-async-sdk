@@ -29,8 +29,23 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "pvtz";
         this.version = "2018-01-01";
-        this.endpointRule = "central";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("ap-northeast-1", "pvtz.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "pvtz.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "pvtz.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "pvtz.aliyuncs.com"),
+            new TeaPair("eu-west-1", "pvtz.aliyuncs.com"),
+            new TeaPair("us-east-1", "pvtz.aliyuncs.com"),
+            new TeaPair("us-west-1", "pvtz.aliyuncs.com"),
+            new TeaPair("ap-south-1", "pvtz.aliyuncs.com"),
+            new TeaPair("me-east-1", "pvtz.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "pvtz.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "pvtz.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "pvtz.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "pvtz.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "pvtz.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -897,6 +912,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of SetZoneLbaStatus  SetZoneLbaStatusRequest
+     * @return SetZoneLbaStatusResponse
+     */
+    @Override
+    public CompletableFuture<SetZoneLbaStatusResponse> setZoneLbaStatus(SetZoneLbaStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetZoneLbaStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetZoneLbaStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SetZoneLbaStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of SetZoneRecordStatus  SetZoneRecordStatusRequest
      * @return SetZoneRecordStatusResponse
      */
@@ -1065,6 +1098,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateZoneRecordResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateZoneRecordWeight  UpdateZoneRecordWeightRequest
+     * @return UpdateZoneRecordWeightResponse
+     */
+    @Override
+    public CompletableFuture<UpdateZoneRecordWeightResponse> updateZoneRecordWeight(UpdateZoneRecordWeightRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateZoneRecordWeight").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateZoneRecordWeightResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateZoneRecordWeightResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -337,6 +337,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetProxyPatternResponse> setProxyPattern(SetProxyPatternRequest request);
 
     /**
+     * @param request the request parameters of SetZoneLbaStatus  SetZoneLbaStatusRequest
+     * @return SetZoneLbaStatusResponse
+     */
+    CompletableFuture<SetZoneLbaStatusResponse> setZoneLbaStatus(SetZoneLbaStatusRequest request);
+
+    /**
      * @param request the request parameters of SetZoneRecordStatus  SetZoneRecordStatusRequest
      * @return SetZoneRecordStatusResponse
      */
@@ -401,6 +407,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateZoneRecordResponse
      */
     CompletableFuture<UpdateZoneRecordResponse> updateZoneRecord(UpdateZoneRecordRequest request);
+
+    /**
+     * @param request the request parameters of UpdateZoneRecordWeight  UpdateZoneRecordWeightRequest
+     * @return UpdateZoneRecordWeightResponse
+     */
+    CompletableFuture<UpdateZoneRecordWeightResponse> updateZoneRecordWeight(UpdateZoneRecordWeightRequest request);
 
     /**
      * @param request the request parameters of UpdateZoneRemark  UpdateZoneRemarkRequest
