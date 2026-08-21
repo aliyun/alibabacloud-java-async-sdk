@@ -75,6 +75,11 @@ public class CreateDomainRequest extends Request {
     private String tlsMin;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("dryRun")
     private Boolean dryRun;
 
@@ -94,6 +99,7 @@ public class CreateDomainRequest extends Request {
         this.tlsCipherSuitesConfig = builder.tlsCipherSuitesConfig;
         this.tlsMax = builder.tlsMax;
         this.tlsMin = builder.tlsMin;
+        this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
     }
 
@@ -209,6 +215,13 @@ public class CreateDomainRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return dryRun
      */
     public Boolean getDryRun() {
@@ -230,6 +243,7 @@ public class CreateDomainRequest extends Request {
         private TlsCipherSuitesConfig tlsCipherSuitesConfig; 
         private String tlsMax; 
         private String tlsMin; 
+        private String clientToken; 
         private Boolean dryRun; 
 
         private Builder() {
@@ -252,6 +266,7 @@ public class CreateDomainRequest extends Request {
             this.tlsCipherSuitesConfig = request.tlsCipherSuitesConfig;
             this.tlsMax = request.tlsMax;
             this.tlsMin = request.tlsMin;
+            this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
         } 
 
@@ -431,6 +446,15 @@ public class CreateDomainRequest extends Request {
         public Builder tlsMin(String tlsMin) {
             this.putBodyParameter("tlsMin", tlsMin);
             this.tlsMin = tlsMin;
+            return this;
+        }
+
+        /**
+         * clientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("clientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
