@@ -12,47 +12,55 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListInstancesEcsInfoListRequest} extends {@link RequestModel}
+ * {@link ListInstanceInfoRequest} extends {@link RequestModel}
  *
- * <p>ListInstancesEcsInfoListRequest</p>
+ * <p>ListInstanceInfoRequest</p>
  */
-public class ListInstancesEcsInfoListRequest extends Request {
+public class ListInstanceInfoRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
     private String xDebugId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("info_type")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("infoType")
     private String infoType;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("instance_id")
-    private String instanceId;
+    @com.aliyun.core.annotation.NameInMap("instanceType")
+    private String instanceType;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("managed_type")
+    @com.aliyun.core.annotation.NameInMap("managedType")
     private String managedType;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("plugin_id")
+    @com.aliyun.core.annotation.NameInMap("maxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("nextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pluginId")
     private String pluginId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("region")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String region;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
     private String xSysomInvokeSource;
 
-    private ListInstancesEcsInfoListRequest(Builder builder) {
+    private ListInstanceInfoRequest(Builder builder) {
         super(builder);
         this.xDebugId = builder.xDebugId;
         this.infoType = builder.infoType;
-        this.instanceId = builder.instanceId;
+        this.instanceType = builder.instanceType;
         this.managedType = builder.managedType;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.pluginId = builder.pluginId;
         this.region = builder.region;
         this.xSysomInvokeSource = builder.xSysomInvokeSource;
@@ -62,7 +70,7 @@ public class ListInstancesEcsInfoListRequest extends Request {
         return new Builder();
     }
 
-    public static ListInstancesEcsInfoListRequest create() {
+    public static ListInstanceInfoRequest create() {
         return builder().build();
     }
 
@@ -86,10 +94,10 @@ public class ListInstancesEcsInfoListRequest extends Request {
     }
 
     /**
-     * @return instanceId
+     * @return instanceType
      */
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     /**
@@ -97,6 +105,20 @@ public class ListInstancesEcsInfoListRequest extends Request {
      */
     public String getManagedType() {
         return this.managedType;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -120,11 +142,13 @@ public class ListInstancesEcsInfoListRequest extends Request {
         return this.xSysomInvokeSource;
     }
 
-    public static final class Builder extends Request.Builder<ListInstancesEcsInfoListRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListInstanceInfoRequest, Builder> {
         private String xDebugId; 
         private String infoType; 
-        private String instanceId; 
+        private String instanceType; 
         private String managedType; 
+        private Integer maxResults; 
+        private String nextToken; 
         private String pluginId; 
         private String region; 
         private String xSysomInvokeSource; 
@@ -133,12 +157,14 @@ public class ListInstancesEcsInfoListRequest extends Request {
             super();
         } 
 
-        private Builder(ListInstancesEcsInfoListRequest request) {
+        private Builder(ListInstanceInfoRequest request) {
             super(request);
             this.xDebugId = request.xDebugId;
             this.infoType = request.infoType;
-            this.instanceId = request.instanceId;
+            this.instanceType = request.instanceType;
             this.managedType = request.managedType;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
             this.pluginId = request.pluginId;
             this.region = request.region;
             this.xSysomInvokeSource = request.xSysomInvokeSource;
@@ -154,49 +180,61 @@ public class ListInstancesEcsInfoListRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ip</p>
+         * infoType.
          */
         public Builder infoType(String infoType) {
-            this.putQueryParameter("info_type", infoType);
+            this.putQueryParameter("infoType", infoType);
             this.infoType = infoType;
             return this;
         }
 
         /**
-         * instance_id.
+         * instanceType.
          */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("instance_id", instanceId);
-            this.instanceId = instanceId;
+        public Builder instanceType(String instanceType) {
+            this.putQueryParameter("instanceType", instanceType);
+            this.instanceType = instanceType;
             return this;
         }
 
         /**
-         * managed_type.
+         * managedType.
          */
         public Builder managedType(String managedType) {
-            this.putQueryParameter("managed_type", managedType);
+            this.putQueryParameter("managedType", managedType);
             this.managedType = managedType;
             return this;
         }
 
         /**
-         * plugin_id.
+         * maxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("maxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * nextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("nextToken", nextToken);
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * pluginId.
          */
         public Builder pluginId(String pluginId) {
-            this.putQueryParameter("plugin_id", pluginId);
+            this.putQueryParameter("pluginId", pluginId);
             this.pluginId = pluginId;
             return this;
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shenzhen</p>
+         * region.
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);
@@ -214,8 +252,8 @@ public class ListInstancesEcsInfoListRequest extends Request {
         }
 
         @Override
-        public ListInstancesEcsInfoListRequest build() {
-            return new ListInstancesEcsInfoListRequest(this);
+        public ListInstanceInfoRequest build() {
+            return new ListInstanceInfoRequest(this);
         } 
 
     } 

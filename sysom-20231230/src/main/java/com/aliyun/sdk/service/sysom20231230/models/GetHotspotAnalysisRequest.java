@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetHotspotAnalysisRequest</p>
  */
 public class GetHotspotAnalysisRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
+    private String xDebugId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("appType")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -45,14 +49,20 @@ public class GetHotspotAnalysisRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("table")
     private String table;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
+    private String xSysomInvokeSource;
+
     private GetHotspotAnalysisRequest(Builder builder) {
         super(builder);
+        this.xDebugId = builder.xDebugId;
         this.appType = builder.appType;
         this.begEnd = builder.begEnd;
         this.begStart = builder.begStart;
         this.instance = builder.instance;
         this.pid = builder.pid;
         this.table = builder.table;
+        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -66,6 +76,13 @@ public class GetHotspotAnalysisRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return xDebugId
+     */
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     /**
@@ -110,13 +127,22 @@ public class GetHotspotAnalysisRequest extends Request {
         return this.table;
     }
 
+    /**
+     * @return xSysomInvokeSource
+     */
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
+    }
+
     public static final class Builder extends Request.Builder<GetHotspotAnalysisRequest, Builder> {
+        private String xDebugId; 
         private String appType; 
         private Long begEnd; 
         private Long begStart; 
         private String instance; 
         private Long pid; 
         private String table; 
+        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -124,13 +150,24 @@ public class GetHotspotAnalysisRequest extends Request {
 
         private Builder(GetHotspotAnalysisRequest request) {
             super(request);
+            this.xDebugId = request.xDebugId;
             this.appType = request.appType;
             this.begEnd = request.begEnd;
             this.begStart = request.begStart;
             this.instance = request.instance;
             this.pid = request.pid;
             this.table = request.table;
+            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
+
+        /**
+         * X-Debug-Id.
+         */
+        public Builder xDebugId(String xDebugId) {
+            this.putQueryParameter("X-Debug-Id", xDebugId);
+            this.xDebugId = xDebugId;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
@@ -195,6 +232,15 @@ public class GetHotspotAnalysisRequest extends Request {
         public Builder table(String table) {
             this.putBodyParameter("table", table);
             this.table = table;
+            return this;
+        }
+
+        /**
+         * x-sysom-invoke-source.
+         */
+        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
+            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
+            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 

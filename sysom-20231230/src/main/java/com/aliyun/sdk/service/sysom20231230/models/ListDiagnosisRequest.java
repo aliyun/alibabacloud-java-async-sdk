@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDiagnosisRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
+    private String xDebugId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("current")
     private Long current;
 
@@ -37,13 +41,19 @@ public class ListDiagnosisRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
+    private String xSysomInvokeSource;
+
     private ListDiagnosisRequest(Builder builder) {
         super(builder);
+        this.xDebugId = builder.xDebugId;
         this.current = builder.current;
         this.pageSize = builder.pageSize;
         this.params = builder.params;
         this.serviceName = builder.serviceName;
         this.status = builder.status;
+        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -57,6 +67,13 @@ public class ListDiagnosisRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return xDebugId
+     */
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     /**
@@ -94,12 +111,21 @@ public class ListDiagnosisRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return xSysomInvokeSource
+     */
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
+    }
+
     public static final class Builder extends Request.Builder<ListDiagnosisRequest, Builder> {
+        private String xDebugId; 
         private Long current; 
         private Long pageSize; 
         private String params; 
         private String serviceName; 
         private String status; 
+        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -107,12 +133,23 @@ public class ListDiagnosisRequest extends Request {
 
         private Builder(ListDiagnosisRequest request) {
             super(request);
+            this.xDebugId = request.xDebugId;
             this.current = request.current;
             this.pageSize = request.pageSize;
             this.params = request.params;
             this.serviceName = request.serviceName;
             this.status = request.status;
+            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
+
+        /**
+         * X-Debug-Id.
+         */
+        public Builder xDebugId(String xDebugId) {
+            this.putQueryParameter("X-Debug-Id", xDebugId);
+            this.xDebugId = xDebugId;
+            return this;
+        }
 
         /**
          * current.
@@ -156,6 +193,15 @@ public class ListDiagnosisRequest extends Request {
         public Builder status(String status) {
             this.putQueryParameter("status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * x-sysom-invoke-source.
+         */
+        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
+            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
+            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 

@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UninstallAgentWithTypeRequest</p>
  */
 public class UninstallAgentWithTypeRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
+    private String xDebugId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("agentId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -36,12 +40,18 @@ public class UninstallAgentWithTypeRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<Instances> instances;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
+    private String xSysomInvokeSource;
+
     private UninstallAgentWithTypeRequest(Builder builder) {
         super(builder);
+        this.xDebugId = builder.xDebugId;
         this.agentId = builder.agentId;
         this.agentVersion = builder.agentVersion;
         this.instanceType = builder.instanceType;
         this.instances = builder.instances;
+        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -55,6 +65,13 @@ public class UninstallAgentWithTypeRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return xDebugId
+     */
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     /**
@@ -85,11 +102,20 @@ public class UninstallAgentWithTypeRequest extends Request {
         return this.instances;
     }
 
+    /**
+     * @return xSysomInvokeSource
+     */
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
+    }
+
     public static final class Builder extends Request.Builder<UninstallAgentWithTypeRequest, Builder> {
+        private String xDebugId; 
         private String agentId; 
         private String agentVersion; 
         private String instanceType; 
         private java.util.List<Instances> instances; 
+        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -97,11 +123,22 @@ public class UninstallAgentWithTypeRequest extends Request {
 
         private Builder(UninstallAgentWithTypeRequest request) {
             super(request);
+            this.xDebugId = request.xDebugId;
             this.agentId = request.agentId;
             this.agentVersion = request.agentVersion;
             this.instanceType = request.instanceType;
             this.instances = request.instances;
+            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
+
+        /**
+         * X-Debug-Id.
+         */
+        public Builder xDebugId(String xDebugId) {
+            this.putQueryParameter("X-Debug-Id", xDebugId);
+            this.xDebugId = xDebugId;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
@@ -142,6 +179,15 @@ public class UninstallAgentWithTypeRequest extends Request {
         public Builder instances(java.util.List<Instances> instances) {
             this.putBodyParameter("instances", instances);
             this.instances = instances;
+            return this;
+        }
+
+        /**
+         * x-sysom-invoke-source.
+         */
+        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
+            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
+            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 

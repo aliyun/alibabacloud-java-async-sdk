@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InstallAgentForClusterRequest</p>
  */
 public class InstallAgentForClusterRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
+    private String xDebugId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("agent_id")
     private String agentId;
@@ -37,13 +41,19 @@ public class InstallAgentForClusterRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("grayscale_config")
     private String grayscaleConfig;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
+    private String xSysomInvokeSource;
+
     private InstallAgentForClusterRequest(Builder builder) {
         super(builder);
+        this.xDebugId = builder.xDebugId;
         this.agentId = builder.agentId;
         this.agentVersion = builder.agentVersion;
         this.clusterId = builder.clusterId;
         this.configId = builder.configId;
         this.grayscaleConfig = builder.grayscaleConfig;
+        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -57,6 +67,13 @@ public class InstallAgentForClusterRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return xDebugId
+     */
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     /**
@@ -94,12 +111,21 @@ public class InstallAgentForClusterRequest extends Request {
         return this.grayscaleConfig;
     }
 
+    /**
+     * @return xSysomInvokeSource
+     */
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
+    }
+
     public static final class Builder extends Request.Builder<InstallAgentForClusterRequest, Builder> {
+        private String xDebugId; 
         private String agentId; 
         private String agentVersion; 
         private String clusterId; 
         private String configId; 
         private String grayscaleConfig; 
+        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -107,12 +133,23 @@ public class InstallAgentForClusterRequest extends Request {
 
         private Builder(InstallAgentForClusterRequest request) {
             super(request);
+            this.xDebugId = request.xDebugId;
             this.agentId = request.agentId;
             this.agentVersion = request.agentVersion;
             this.clusterId = request.clusterId;
             this.configId = request.configId;
             this.grayscaleConfig = request.grayscaleConfig;
+            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
+
+        /**
+         * X-Debug-Id.
+         */
+        public Builder xDebugId(String xDebugId) {
+            this.putQueryParameter("X-Debug-Id", xDebugId);
+            this.xDebugId = xDebugId;
+            return this;
+        }
 
         /**
          * agent_id.
@@ -156,6 +193,15 @@ public class InstallAgentForClusterRequest extends Request {
         public Builder grayscaleConfig(String grayscaleConfig) {
             this.putBodyParameter("grayscale_config", grayscaleConfig);
             this.grayscaleConfig = grayscaleConfig;
+            return this;
+        }
+
+        /**
+         * x-sysom-invoke-source.
+         */
+        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
+            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
+            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 

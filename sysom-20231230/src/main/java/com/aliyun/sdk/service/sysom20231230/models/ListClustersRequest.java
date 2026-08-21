@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListClustersRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
+    private String xDebugId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("cluster_id")
     private String clusterId;
 
@@ -45,8 +49,13 @@ public class ListClustersRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("pageSize")
     private Long pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
+    private String xSysomInvokeSource;
+
     private ListClustersRequest(Builder builder) {
         super(builder);
+        this.xDebugId = builder.xDebugId;
         this.clusterId = builder.clusterId;
         this.clusterStatus = builder.clusterStatus;
         this.clusterType = builder.clusterType;
@@ -54,6 +63,7 @@ public class ListClustersRequest extends Request {
         this.id = builder.id;
         this.name = builder.name;
         this.pageSize = builder.pageSize;
+        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -67,6 +77,13 @@ public class ListClustersRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return xDebugId
+     */
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     /**
@@ -118,7 +135,15 @@ public class ListClustersRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return xSysomInvokeSource
+     */
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
+    }
+
     public static final class Builder extends Request.Builder<ListClustersRequest, Builder> {
+        private String xDebugId; 
         private String clusterId; 
         private String clusterStatus; 
         private String clusterType; 
@@ -126,6 +151,7 @@ public class ListClustersRequest extends Request {
         private String id; 
         private String name; 
         private Long pageSize; 
+        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -133,6 +159,7 @@ public class ListClustersRequest extends Request {
 
         private Builder(ListClustersRequest request) {
             super(request);
+            this.xDebugId = request.xDebugId;
             this.clusterId = request.clusterId;
             this.clusterStatus = request.clusterStatus;
             this.clusterType = request.clusterType;
@@ -140,7 +167,17 @@ public class ListClustersRequest extends Request {
             this.id = request.id;
             this.name = request.name;
             this.pageSize = request.pageSize;
+            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
+
+        /**
+         * X-Debug-Id.
+         */
+        public Builder xDebugId(String xDebugId) {
+            this.putQueryParameter("X-Debug-Id", xDebugId);
+            this.xDebugId = xDebugId;
+            return this;
+        }
 
         /**
          * cluster_id.
@@ -202,6 +239,15 @@ public class ListClustersRequest extends Request {
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("pageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * x-sysom-invoke-source.
+         */
+        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
+            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
+            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 

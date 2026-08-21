@@ -140,6 +140,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAlertStrategyResponse> getAlertStrategy(GetAlertStrategyRequest request);
 
     /**
+     * @param request the request parameters of GetConfigByName  GetConfigByNameRequest
+     * @return GetConfigByNameResponse
+     */
+    CompletableFuture<GetConfigByNameResponse> getConfigByName(GetConfigByNameRequest request);
+
+    /**
      * @param request the request parameters of GetCopilotHistory  GetCopilotHistoryRequest
      * @return GetCopilotHistoryResponse
      */
@@ -348,6 +354,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListInstanceHealthResponse
      */
     CompletableFuture<ListInstanceHealthResponse> listInstanceHealth(ListInstanceHealthRequest request);
+
+    /**
+     * @param request the request parameters of ListInstanceInfo  ListInstanceInfoRequest
+     * @return ListInstanceInfoResponse
+     */
+    CompletableFuture<ListInstanceInfoResponse> listInstanceInfo(ListInstanceInfoRequest request);
 
     /**
      * @param request the request parameters of ListInstanceStatus  ListInstanceStatusRequest

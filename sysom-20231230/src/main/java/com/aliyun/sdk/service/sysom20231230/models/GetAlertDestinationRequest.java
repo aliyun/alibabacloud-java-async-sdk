@@ -18,12 +18,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetAlertDestinationRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
+    private String xDebugId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("id")
     private Integer id;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
+    private String xSysomInvokeSource;
+
     private GetAlertDestinationRequest(Builder builder) {
         super(builder);
+        this.xDebugId = builder.xDebugId;
         this.id = builder.id;
+        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -40,14 +50,30 @@ public class GetAlertDestinationRequest extends Request {
     }
 
     /**
+     * @return xDebugId
+     */
+    public String getXDebugId() {
+        return this.xDebugId;
+    }
+
+    /**
      * @return id
      */
     public Integer getId() {
         return this.id;
     }
 
+    /**
+     * @return xSysomInvokeSource
+     */
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
+    }
+
     public static final class Builder extends Request.Builder<GetAlertDestinationRequest, Builder> {
+        private String xDebugId; 
         private Integer id; 
+        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -55,8 +81,19 @@ public class GetAlertDestinationRequest extends Request {
 
         private Builder(GetAlertDestinationRequest request) {
             super(request);
+            this.xDebugId = request.xDebugId;
             this.id = request.id;
+            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
+
+        /**
+         * X-Debug-Id.
+         */
+        public Builder xDebugId(String xDebugId) {
+            this.putQueryParameter("X-Debug-Id", xDebugId);
+            this.xDebugId = xDebugId;
+            return this;
+        }
 
         /**
          * id.
@@ -64,6 +101,15 @@ public class GetAlertDestinationRequest extends Request {
         public Builder id(Integer id) {
             this.putQueryParameter("id", id);
             this.id = id;
+            return this;
+        }
+
+        /**
+         * x-sysom-invoke-source.
+         */
+        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
+            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
+            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 

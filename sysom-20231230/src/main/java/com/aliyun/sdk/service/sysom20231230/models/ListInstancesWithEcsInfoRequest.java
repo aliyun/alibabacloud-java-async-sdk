@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListInstancesWithEcsInfoRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
+    private String xDebugId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("current")
     private Integer current;
 
@@ -78,8 +82,13 @@ public class ListInstancesWithEcsInfoRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("resource_group_name")
     private String resourceGroupName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
+    private String xSysomInvokeSource;
+
     private ListInstancesWithEcsInfoRequest(Builder builder) {
         super(builder);
+        this.xDebugId = builder.xDebugId;
         this.current = builder.current;
         this.healthStatus = builder.healthStatus;
         this.instanceId = builder.instanceId;
@@ -95,6 +104,7 @@ public class ListInstancesWithEcsInfoRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceGroupIdName = builder.resourceGroupIdName;
         this.resourceGroupName = builder.resourceGroupName;
+        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -108,6 +118,13 @@ public class ListInstancesWithEcsInfoRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return xDebugId
+     */
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     /**
@@ -215,7 +232,15 @@ public class ListInstancesWithEcsInfoRequest extends Request {
         return this.resourceGroupName;
     }
 
+    /**
+     * @return xSysomInvokeSource
+     */
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
+    }
+
     public static final class Builder extends Request.Builder<ListInstancesWithEcsInfoRequest, Builder> {
+        private String xDebugId; 
         private Integer current; 
         private String healthStatus; 
         private String instanceId; 
@@ -231,6 +256,7 @@ public class ListInstancesWithEcsInfoRequest extends Request {
         private String resourceGroupId; 
         private String resourceGroupIdName; 
         private String resourceGroupName; 
+        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -238,6 +264,7 @@ public class ListInstancesWithEcsInfoRequest extends Request {
 
         private Builder(ListInstancesWithEcsInfoRequest request) {
             super(request);
+            this.xDebugId = request.xDebugId;
             this.current = request.current;
             this.healthStatus = request.healthStatus;
             this.instanceId = request.instanceId;
@@ -253,7 +280,17 @@ public class ListInstancesWithEcsInfoRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceGroupIdName = request.resourceGroupIdName;
             this.resourceGroupName = request.resourceGroupName;
+            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
+
+        /**
+         * X-Debug-Id.
+         */
+        public Builder xDebugId(String xDebugId) {
+            this.putQueryParameter("X-Debug-Id", xDebugId);
+            this.xDebugId = xDebugId;
+            return this;
+        }
 
         /**
          * current.
@@ -391,6 +428,15 @@ public class ListInstancesWithEcsInfoRequest extends Request {
         public Builder resourceGroupName(String resourceGroupName) {
             this.putQueryParameter("resource_group_name", resourceGroupName);
             this.resourceGroupName = resourceGroupName;
+            return this;
+        }
+
+        /**
+         * x-sysom-invoke-source.
+         */
+        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
+            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
+            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 

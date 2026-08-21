@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
+    private String xDebugId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("cluster_id")
     private String clusterId;
 
@@ -41,14 +45,20 @@ public class ListInstancesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
+    private String xSysomInvokeSource;
+
     private ListInstancesRequest(Builder builder) {
         super(builder);
+        this.xDebugId = builder.xDebugId;
         this.clusterId = builder.clusterId;
         this.current = builder.current;
         this.instance = builder.instance;
         this.pageSize = builder.pageSize;
         this.region = builder.region;
         this.status = builder.status;
+        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -62,6 +72,13 @@ public class ListInstancesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return xDebugId
+     */
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     /**
@@ -106,13 +123,22 @@ public class ListInstancesRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return xSysomInvokeSource
+     */
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
+    }
+
     public static final class Builder extends Request.Builder<ListInstancesRequest, Builder> {
+        private String xDebugId; 
         private String clusterId; 
         private Long current; 
         private String instance; 
         private Long pageSize; 
         private String region; 
         private String status; 
+        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -120,13 +146,24 @@ public class ListInstancesRequest extends Request {
 
         private Builder(ListInstancesRequest request) {
             super(request);
+            this.xDebugId = request.xDebugId;
             this.clusterId = request.clusterId;
             this.current = request.current;
             this.instance = request.instance;
             this.pageSize = request.pageSize;
             this.region = request.region;
             this.status = request.status;
+            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
+
+        /**
+         * X-Debug-Id.
+         */
+        public Builder xDebugId(String xDebugId) {
+            this.putQueryParameter("X-Debug-Id", xDebugId);
+            this.xDebugId = xDebugId;
+            return this;
+        }
 
         /**
          * cluster_id.
@@ -179,6 +216,15 @@ public class ListInstancesRequest extends Request {
         public Builder status(String status) {
             this.putQueryParameter("status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * x-sysom-invoke-source.
+         */
+        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
+            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
+            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 

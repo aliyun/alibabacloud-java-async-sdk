@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpgradeAgentForClusterRequest</p>
  */
 public class UpgradeAgentForClusterRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
+    private String xDebugId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("agent_id")
     private String agentId;
@@ -29,11 +33,17 @@ public class UpgradeAgentForClusterRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("cluster_id")
     private String clusterId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
+    private String xSysomInvokeSource;
+
     private UpgradeAgentForClusterRequest(Builder builder) {
         super(builder);
+        this.xDebugId = builder.xDebugId;
         this.agentId = builder.agentId;
         this.agentVersion = builder.agentVersion;
         this.clusterId = builder.clusterId;
+        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -47,6 +57,13 @@ public class UpgradeAgentForClusterRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return xDebugId
+     */
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     /**
@@ -70,10 +87,19 @@ public class UpgradeAgentForClusterRequest extends Request {
         return this.clusterId;
     }
 
+    /**
+     * @return xSysomInvokeSource
+     */
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
+    }
+
     public static final class Builder extends Request.Builder<UpgradeAgentForClusterRequest, Builder> {
+        private String xDebugId; 
         private String agentId; 
         private String agentVersion; 
         private String clusterId; 
+        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -81,10 +107,21 @@ public class UpgradeAgentForClusterRequest extends Request {
 
         private Builder(UpgradeAgentForClusterRequest request) {
             super(request);
+            this.xDebugId = request.xDebugId;
             this.agentId = request.agentId;
             this.agentVersion = request.agentVersion;
             this.clusterId = request.clusterId;
+            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
+
+        /**
+         * X-Debug-Id.
+         */
+        public Builder xDebugId(String xDebugId) {
+            this.putQueryParameter("X-Debug-Id", xDebugId);
+            this.xDebugId = xDebugId;
+            return this;
+        }
 
         /**
          * agent_id.
@@ -110,6 +147,15 @@ public class UpgradeAgentForClusterRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("cluster_id", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * x-sysom-invoke-source.
+         */
+        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
+            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
+            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 

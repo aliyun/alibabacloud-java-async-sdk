@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAgentInstallRecordsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
+    private String xDebugId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("current")
     private Long current;
 
@@ -45,8 +49,13 @@ public class ListAgentInstallRecordsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
+    private String xSysomInvokeSource;
+
     private ListAgentInstallRecordsRequest(Builder builder) {
         super(builder);
+        this.xDebugId = builder.xDebugId;
         this.current = builder.current;
         this.instanceId = builder.instanceId;
         this.pageSize = builder.pageSize;
@@ -54,6 +63,7 @@ public class ListAgentInstallRecordsRequest extends Request {
         this.pluginVersion = builder.pluginVersion;
         this.region = builder.region;
         this.status = builder.status;
+        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -67,6 +77,13 @@ public class ListAgentInstallRecordsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return xDebugId
+     */
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     /**
@@ -118,7 +135,15 @@ public class ListAgentInstallRecordsRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return xSysomInvokeSource
+     */
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
+    }
+
     public static final class Builder extends Request.Builder<ListAgentInstallRecordsRequest, Builder> {
+        private String xDebugId; 
         private Long current; 
         private String instanceId; 
         private Long pageSize; 
@@ -126,6 +151,7 @@ public class ListAgentInstallRecordsRequest extends Request {
         private String pluginVersion; 
         private String region; 
         private String status; 
+        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -133,6 +159,7 @@ public class ListAgentInstallRecordsRequest extends Request {
 
         private Builder(ListAgentInstallRecordsRequest request) {
             super(request);
+            this.xDebugId = request.xDebugId;
             this.current = request.current;
             this.instanceId = request.instanceId;
             this.pageSize = request.pageSize;
@@ -140,7 +167,17 @@ public class ListAgentInstallRecordsRequest extends Request {
             this.pluginVersion = request.pluginVersion;
             this.region = request.region;
             this.status = request.status;
+            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
+
+        /**
+         * X-Debug-Id.
+         */
+        public Builder xDebugId(String xDebugId) {
+            this.putQueryParameter("X-Debug-Id", xDebugId);
+            this.xDebugId = xDebugId;
+            return this;
+        }
 
         /**
          * current.
@@ -202,6 +239,15 @@ public class ListAgentInstallRecordsRequest extends Request {
         public Builder status(String status) {
             this.putQueryParameter("status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * x-sysom-invoke-source.
+         */
+        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
+            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
+            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 

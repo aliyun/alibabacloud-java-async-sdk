@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AuthDiagnosisRequest</p>
  */
 public class AuthDiagnosisRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
+    private String xDebugId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("autoCreateRole")
     private Boolean autoCreateRole;
@@ -29,11 +33,17 @@ public class AuthDiagnosisRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("instances")
     private java.util.List<Instances> instances;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
+    private String xSysomInvokeSource;
+
     private AuthDiagnosisRequest(Builder builder) {
         super(builder);
+        this.xDebugId = builder.xDebugId;
         this.autoCreateRole = builder.autoCreateRole;
         this.autoInstallAgent = builder.autoInstallAgent;
         this.instances = builder.instances;
+        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -47,6 +57,13 @@ public class AuthDiagnosisRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return xDebugId
+     */
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     /**
@@ -70,10 +87,19 @@ public class AuthDiagnosisRequest extends Request {
         return this.instances;
     }
 
+    /**
+     * @return xSysomInvokeSource
+     */
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
+    }
+
     public static final class Builder extends Request.Builder<AuthDiagnosisRequest, Builder> {
+        private String xDebugId; 
         private Boolean autoCreateRole; 
         private Boolean autoInstallAgent; 
         private java.util.List<Instances> instances; 
+        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -81,10 +107,21 @@ public class AuthDiagnosisRequest extends Request {
 
         private Builder(AuthDiagnosisRequest request) {
             super(request);
+            this.xDebugId = request.xDebugId;
             this.autoCreateRole = request.autoCreateRole;
             this.autoInstallAgent = request.autoInstallAgent;
             this.instances = request.instances;
+            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
+
+        /**
+         * X-Debug-Id.
+         */
+        public Builder xDebugId(String xDebugId) {
+            this.putQueryParameter("X-Debug-Id", xDebugId);
+            this.xDebugId = xDebugId;
+            return this;
+        }
 
         /**
          * autoCreateRole.
@@ -110,6 +147,15 @@ public class AuthDiagnosisRequest extends Request {
         public Builder instances(java.util.List<Instances> instances) {
             this.putBodyParameter("instances", instances);
             this.instances = instances;
+            return this;
+        }
+
+        /**
+         * x-sysom-invoke-source.
+         */
+        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
+            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
+            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 

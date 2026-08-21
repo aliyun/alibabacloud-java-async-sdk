@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InvokeDiagnosisRequest</p>
  */
 public class InvokeDiagnosisRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
+    private String xDebugId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("channel")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -32,11 +36,17 @@ public class InvokeDiagnosisRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String serviceName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
+    private String xSysomInvokeSource;
+
     private InvokeDiagnosisRequest(Builder builder) {
         super(builder);
+        this.xDebugId = builder.xDebugId;
         this.channel = builder.channel;
         this.params = builder.params;
         this.serviceName = builder.serviceName;
+        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -50,6 +60,13 @@ public class InvokeDiagnosisRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return xDebugId
+     */
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     /**
@@ -73,10 +90,19 @@ public class InvokeDiagnosisRequest extends Request {
         return this.serviceName;
     }
 
+    /**
+     * @return xSysomInvokeSource
+     */
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
+    }
+
     public static final class Builder extends Request.Builder<InvokeDiagnosisRequest, Builder> {
+        private String xDebugId; 
         private String channel; 
         private String params; 
         private String serviceName; 
+        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -84,10 +110,21 @@ public class InvokeDiagnosisRequest extends Request {
 
         private Builder(InvokeDiagnosisRequest request) {
             super(request);
+            this.xDebugId = request.xDebugId;
             this.channel = request.channel;
             this.params = request.params;
             this.serviceName = request.serviceName;
+            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
+
+        /**
+         * X-Debug-Id.
+         */
+        public Builder xDebugId(String xDebugId) {
+            this.putQueryParameter("X-Debug-Id", xDebugId);
+            this.xDebugId = xDebugId;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
@@ -126,6 +163,15 @@ public class InvokeDiagnosisRequest extends Request {
         public Builder serviceName(String serviceName) {
             this.putBodyParameter("service_name", serviceName);
             this.serviceName = serviceName;
+            return this;
+        }
+
+        /**
+         * x-sysom-invoke-source.
+         */
+        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
+            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
+            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 

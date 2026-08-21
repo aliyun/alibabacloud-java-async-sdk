@@ -17,6 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateAlertEnabledRequest</p>
  */
 public class UpdateAlertEnabledRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
+    private String xDebugId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("enabled")
     private Boolean enabled;
@@ -25,10 +29,16 @@ public class UpdateAlertEnabledRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("id")
     private Long id;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
+    private String xSysomInvokeSource;
+
     private UpdateAlertEnabledRequest(Builder builder) {
         super(builder);
+        this.xDebugId = builder.xDebugId;
         this.enabled = builder.enabled;
         this.id = builder.id;
+        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -45,6 +55,13 @@ public class UpdateAlertEnabledRequest extends Request {
     }
 
     /**
+     * @return xDebugId
+     */
+    public String getXDebugId() {
+        return this.xDebugId;
+    }
+
+    /**
      * @return enabled
      */
     public Boolean getEnabled() {
@@ -58,9 +75,18 @@ public class UpdateAlertEnabledRequest extends Request {
         return this.id;
     }
 
+    /**
+     * @return xSysomInvokeSource
+     */
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
+    }
+
     public static final class Builder extends Request.Builder<UpdateAlertEnabledRequest, Builder> {
+        private String xDebugId; 
         private Boolean enabled; 
         private Long id; 
+        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -68,9 +94,20 @@ public class UpdateAlertEnabledRequest extends Request {
 
         private Builder(UpdateAlertEnabledRequest request) {
             super(request);
+            this.xDebugId = request.xDebugId;
             this.enabled = request.enabled;
             this.id = request.id;
+            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
+
+        /**
+         * X-Debug-Id.
+         */
+        public Builder xDebugId(String xDebugId) {
+            this.putQueryParameter("X-Debug-Id", xDebugId);
+            this.xDebugId = xDebugId;
+            return this;
+        }
 
         /**
          * enabled.
@@ -87,6 +124,15 @@ public class UpdateAlertEnabledRequest extends Request {
         public Builder id(Long id) {
             this.putBodyParameter("id", id);
             this.id = id;
+            return this;
+        }
+
+        /**
+         * x-sysom-invoke-source.
+         */
+        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
+            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
+            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 

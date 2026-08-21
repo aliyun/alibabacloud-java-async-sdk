@@ -18,12 +18,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetInspectionReportRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
+    private String xDebugId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("reportId")
     private String reportId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
+    private String xSysomInvokeSource;
+
     private GetInspectionReportRequest(Builder builder) {
         super(builder);
+        this.xDebugId = builder.xDebugId;
         this.reportId = builder.reportId;
+        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -40,14 +50,30 @@ public class GetInspectionReportRequest extends Request {
     }
 
     /**
+     * @return xDebugId
+     */
+    public String getXDebugId() {
+        return this.xDebugId;
+    }
+
+    /**
      * @return reportId
      */
     public String getReportId() {
         return this.reportId;
     }
 
+    /**
+     * @return xSysomInvokeSource
+     */
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
+    }
+
     public static final class Builder extends Request.Builder<GetInspectionReportRequest, Builder> {
+        private String xDebugId; 
         private String reportId; 
+        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -55,8 +81,19 @@ public class GetInspectionReportRequest extends Request {
 
         private Builder(GetInspectionReportRequest request) {
             super(request);
+            this.xDebugId = request.xDebugId;
             this.reportId = request.reportId;
+            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
+
+        /**
+         * X-Debug-Id.
+         */
+        public Builder xDebugId(String xDebugId) {
+            this.putQueryParameter("X-Debug-Id", xDebugId);
+            this.xDebugId = xDebugId;
+            return this;
+        }
 
         /**
          * reportId.
@@ -64,6 +101,15 @@ public class GetInspectionReportRequest extends Request {
         public Builder reportId(String reportId) {
             this.putQueryParameter("reportId", reportId);
             this.reportId = reportId;
+            return this;
+        }
+
+        /**
+         * x-sysom-invoke-source.
+         */
+        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
+            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
+            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 

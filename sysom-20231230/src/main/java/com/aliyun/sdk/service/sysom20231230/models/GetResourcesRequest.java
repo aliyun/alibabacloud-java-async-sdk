@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetResourcesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("X-Debug-Id")
+    private String xDebugId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("cluster")
     private String cluster;
 
@@ -29,11 +33,17 @@ public class GetResourcesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("x-sysom-invoke-source")
+    private String xSysomInvokeSource;
+
     private GetResourcesRequest(Builder builder) {
         super(builder);
+        this.xDebugId = builder.xDebugId;
         this.cluster = builder.cluster;
         this.instance = builder.instance;
         this.type = builder.type;
+        this.xSysomInvokeSource = builder.xSysomInvokeSource;
     }
 
     public static Builder builder() {
@@ -47,6 +57,13 @@ public class GetResourcesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return xDebugId
+     */
+    public String getXDebugId() {
+        return this.xDebugId;
     }
 
     /**
@@ -70,10 +87,19 @@ public class GetResourcesRequest extends Request {
         return this.type;
     }
 
+    /**
+     * @return xSysomInvokeSource
+     */
+    public String getXSysomInvokeSource() {
+        return this.xSysomInvokeSource;
+    }
+
     public static final class Builder extends Request.Builder<GetResourcesRequest, Builder> {
+        private String xDebugId; 
         private String cluster; 
         private String instance; 
         private String type; 
+        private String xSysomInvokeSource; 
 
         private Builder() {
             super();
@@ -81,10 +107,21 @@ public class GetResourcesRequest extends Request {
 
         private Builder(GetResourcesRequest request) {
             super(request);
+            this.xDebugId = request.xDebugId;
             this.cluster = request.cluster;
             this.instance = request.instance;
             this.type = request.type;
+            this.xSysomInvokeSource = request.xSysomInvokeSource;
         } 
+
+        /**
+         * X-Debug-Id.
+         */
+        public Builder xDebugId(String xDebugId) {
+            this.putQueryParameter("X-Debug-Id", xDebugId);
+            this.xDebugId = xDebugId;
+            return this;
+        }
 
         /**
          * cluster.
@@ -110,6 +147,15 @@ public class GetResourcesRequest extends Request {
         public Builder type(String type) {
             this.putQueryParameter("type", type);
             this.type = type;
+            return this;
+        }
+
+        /**
+         * x-sysom-invoke-source.
+         */
+        public Builder xSysomInvokeSource(String xSysomInvokeSource) {
+            this.putQueryParameter("x-sysom-invoke-source", xSysomInvokeSource);
+            this.xSysomInvokeSource = xSysomInvokeSource;
             return this;
         }
 
