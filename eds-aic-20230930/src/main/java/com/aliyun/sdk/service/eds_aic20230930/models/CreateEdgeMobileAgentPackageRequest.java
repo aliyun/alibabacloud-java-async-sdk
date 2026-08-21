@@ -36,6 +36,7 @@ public class CreateEdgeMobileAgentPackageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DeviceClass")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deviceClass;
 
     @com.aliyun.core.annotation.Query
@@ -214,7 +215,10 @@ public class CreateEdgeMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * DeviceClass.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BOX</p>
          */
         public Builder deviceClass(String deviceClass) {
             this.putQueryParameter("DeviceClass", deviceClass);
