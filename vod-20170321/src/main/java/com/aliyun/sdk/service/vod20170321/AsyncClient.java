@@ -1593,6 +1593,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetJobDetailResponse> getJobDetail(GetJobDetailRequest request);
 
     /**
+     * @param request the request parameters of GetMediaAiAnalysis  GetMediaAiAnalysisRequest
+     * @return GetMediaAiAnalysisResponse
+     */
+    CompletableFuture<GetMediaAiAnalysisResponse> getMediaAiAnalysis(GetMediaAiAnalysisRequest request);
+
+    /**
      * <b>description</b> :
      * <p>If notifications for the <a href="https://help.aliyun.com/document_detail/89576.html">CreateAuditComplete</a> event are configured, event notifications are sent to the callback URL after automated review is complete. You can call this operation to query the details of audio review results.</p>
      * 
