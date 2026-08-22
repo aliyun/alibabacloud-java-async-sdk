@@ -180,12 +180,32 @@ public class DescribeAlertTypeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertType")
         private String alertType;
 
+        @com.aliyun.core.annotation.NameInMap("AlertTypeCategory")
+        private String alertTypeCategory;
+
+        @com.aliyun.core.annotation.NameInMap("AlertTypeCategoryMds")
+        private String alertTypeCategoryMds;
+
+        @com.aliyun.core.annotation.NameInMap("AlertTypeCategoryOrder")
+        private Integer alertTypeCategoryOrder;
+
         @com.aliyun.core.annotation.NameInMap("AlertTypeMds")
         private String alertTypeMds;
 
+        @com.aliyun.core.annotation.NameInMap("AlertTypeNameEn")
+        private String alertTypeNameEn;
+
+        @com.aliyun.core.annotation.NameInMap("AlertTypeNameZh")
+        private String alertTypeNameZh;
+
         private Data(Builder builder) {
             this.alertType = builder.alertType;
+            this.alertTypeCategory = builder.alertTypeCategory;
+            this.alertTypeCategoryMds = builder.alertTypeCategoryMds;
+            this.alertTypeCategoryOrder = builder.alertTypeCategoryOrder;
             this.alertTypeMds = builder.alertTypeMds;
+            this.alertTypeNameEn = builder.alertTypeNameEn;
+            this.alertTypeNameZh = builder.alertTypeNameZh;
         }
 
         public static Builder builder() {
@@ -204,22 +224,67 @@ public class DescribeAlertTypeResponseBody extends TeaModel {
         }
 
         /**
+         * @return alertTypeCategory
+         */
+        public String getAlertTypeCategory() {
+            return this.alertTypeCategory;
+        }
+
+        /**
+         * @return alertTypeCategoryMds
+         */
+        public String getAlertTypeCategoryMds() {
+            return this.alertTypeCategoryMds;
+        }
+
+        /**
+         * @return alertTypeCategoryOrder
+         */
+        public Integer getAlertTypeCategoryOrder() {
+            return this.alertTypeCategoryOrder;
+        }
+
+        /**
          * @return alertTypeMds
          */
         public String getAlertTypeMds() {
             return this.alertTypeMds;
         }
 
+        /**
+         * @return alertTypeNameEn
+         */
+        public String getAlertTypeNameEn() {
+            return this.alertTypeNameEn;
+        }
+
+        /**
+         * @return alertTypeNameZh
+         */
+        public String getAlertTypeNameZh() {
+            return this.alertTypeNameZh;
+        }
+
         public static final class Builder {
             private String alertType; 
+            private String alertTypeCategory; 
+            private String alertTypeCategoryMds; 
+            private Integer alertTypeCategoryOrder; 
             private String alertTypeMds; 
+            private String alertTypeNameEn; 
+            private String alertTypeNameZh; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
                 this.alertType = model.alertType;
+                this.alertTypeCategory = model.alertTypeCategory;
+                this.alertTypeCategoryMds = model.alertTypeCategoryMds;
+                this.alertTypeCategoryOrder = model.alertTypeCategoryOrder;
                 this.alertTypeMds = model.alertTypeMds;
+                this.alertTypeNameEn = model.alertTypeNameEn;
+                this.alertTypeNameZh = model.alertTypeNameZh;
             } 
 
             /**
@@ -234,6 +299,30 @@ public class DescribeAlertTypeResponseBody extends TeaModel {
             }
 
             /**
+             * AlertTypeCategory.
+             */
+            public Builder alertTypeCategory(String alertTypeCategory) {
+                this.alertTypeCategory = alertTypeCategory;
+                return this;
+            }
+
+            /**
+             * AlertTypeCategoryMds.
+             */
+            public Builder alertTypeCategoryMds(String alertTypeCategoryMds) {
+                this.alertTypeCategoryMds = alertTypeCategoryMds;
+                return this;
+            }
+
+            /**
+             * AlertTypeCategoryOrder.
+             */
+            public Builder alertTypeCategoryOrder(Integer alertTypeCategoryOrder) {
+                this.alertTypeCategoryOrder = alertTypeCategoryOrder;
+                return this;
+            }
+
+            /**
              * <p>The internal code of the risk type.</p>
              * 
              * <strong>example:</strong>
@@ -241,6 +330,22 @@ public class DescribeAlertTypeResponseBody extends TeaModel {
              */
             public Builder alertTypeMds(String alertTypeMds) {
                 this.alertTypeMds = alertTypeMds;
+                return this;
+            }
+
+            /**
+             * AlertTypeNameEn.
+             */
+            public Builder alertTypeNameEn(String alertTypeNameEn) {
+                this.alertTypeNameEn = alertTypeNameEn;
+                return this;
+            }
+
+            /**
+             * AlertTypeNameZh.
+             */
+            public Builder alertTypeNameZh(String alertTypeNameZh) {
+                this.alertTypeNameZh = alertTypeNameZh;
                 return this;
             }
 
