@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AllocateColdDataVolumeResponse> allocateColdDataVolume(AllocateColdDataVolumeRequest request);
 
     /**
+     * @param request the request parameters of AllocateContext0PublicConnection  AllocateContext0PublicConnectionRequest
+     * @return AllocateContext0PublicConnectionResponse
+     */
+    CompletableFuture<AllocateContext0PublicConnectionResponse> allocateContext0PublicConnection(AllocateContext0PublicConnectionRequest request);
+
+    /**
      * @param request the request parameters of AllocateContextDBPublicConnection  AllocateContextDBPublicConnectionRequest
      * @return AllocateContextDBPublicConnectionResponse
      */
@@ -110,6 +116,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateBackupResponse> createBackup(CreateBackupRequest request);
 
     /**
+     * @param request the request parameters of CreateContext0  CreateContext0Request
+     * @return CreateContext0Response
+     */
+    CompletableFuture<CreateContext0Response> createContext0(CreateContext0Request request);
+
+    /**
      * @param request the request parameters of CreateContextDB  CreateContextDBRequest
      * @return CreateContextDBResponse
      */
@@ -165,6 +177,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateMem0Response
      */
     CompletableFuture<CreateMem0Response> createMem0(CreateMem0Request request);
+
+    /**
+     * @param request the request parameters of CreateOpenSearch  CreateOpenSearchRequest
+     * @return CreateOpenSearchResponse
+     */
+    CompletableFuture<CreateOpenSearchResponse> createOpenSearch(CreateOpenSearchRequest request);
+
+    /**
+     * @param request the request parameters of CreateOpenSearchAccount  CreateOpenSearchAccountRequest
+     * @return CreateOpenSearchAccountResponse
+     */
+    CompletableFuture<CreateOpenSearchAccountResponse> createOpenSearchAccount(CreateOpenSearchAccountRequest request);
+
+    /**
+     * @param request the request parameters of CreateOpenSearchWhitelistGroup  CreateOpenSearchWhitelistGroupRequest
+     * @return CreateOpenSearchWhitelistGroupResponse
+     */
+    CompletableFuture<CreateOpenSearchWhitelistGroupResponse> createOpenSearchWhitelistGroup(CreateOpenSearchWhitelistGroupRequest request);
 
     /**
      * <b>description</b> :
@@ -248,6 +278,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAccountResponse> deleteAccount(DeleteAccountRequest request);
 
     /**
+     * @param request the request parameters of DeleteContext0  DeleteContext0Request
+     * @return DeleteContext0Response
+     */
+    CompletableFuture<DeleteContext0Response> deleteContext0(DeleteContext0Request request);
+
+    /**
      * @param request the request parameters of DeleteContextDB  DeleteContextDBRequest
      * @return DeleteContextDBResponse
      */
@@ -288,6 +324,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteMem0Response
      */
     CompletableFuture<DeleteMem0Response> deleteMem0(DeleteMem0Request request);
+
+    /**
+     * @param request the request parameters of DeleteOpenSearch  DeleteOpenSearchRequest
+     * @return DeleteOpenSearchResponse
+     */
+    CompletableFuture<DeleteOpenSearchResponse> deleteOpenSearch(DeleteOpenSearchRequest request);
+
+    /**
+     * @param request the request parameters of DeleteOpenSearchAccount  DeleteOpenSearchAccountRequest
+     * @return DeleteOpenSearchAccountResponse
+     */
+    CompletableFuture<DeleteOpenSearchAccountResponse> deleteOpenSearchAccount(DeleteOpenSearchAccountRequest request);
+
+    /**
+     * @param request the request parameters of DeleteOpenSearchWhitelistGroup  DeleteOpenSearchWhitelistGroupRequest
+     * @return DeleteOpenSearchWhitelistGroupResponse
+     */
+    CompletableFuture<DeleteOpenSearchWhitelistGroupResponse> deleteOpenSearchWhitelistGroup(DeleteOpenSearchWhitelistGroupRequest request);
 
     /**
      * <b>description</b> :
@@ -443,6 +497,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeComponentPropetiesResponse> describeComponentPropeties(DescribeComponentPropetiesRequest request);
 
     /**
+     * @param request the request parameters of DescribeContext0Config  DescribeContext0ConfigRequest
+     * @return DescribeContext0ConfigResponse
+     */
+    CompletableFuture<DescribeContext0ConfigResponse> describeContext0Config(DescribeContext0ConfigRequest request);
+
+    /**
+     * @param request the request parameters of DescribeContext0Info  DescribeContext0InfoRequest
+     * @return DescribeContext0InfoResponse
+     */
+    CompletableFuture<DescribeContext0InfoResponse> describeContext0Info(DescribeContext0InfoRequest request);
+
+    /**
+     * @param request the request parameters of DescribeContext0SecurityIps  DescribeContext0SecurityIpsRequest
+     * @return DescribeContext0SecurityIpsResponse
+     */
+    CompletableFuture<DescribeContext0SecurityIpsResponse> describeContext0SecurityIps(DescribeContext0SecurityIpsRequest request);
+
+    /**
      * @param request the request parameters of DescribeContextDBConfig  DescribeContextDBConfigRequest
      * @return DescribeContextDBConfigResponse
      */
@@ -591,6 +663,54 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeOpenBackupSetResponse
      */
     CompletableFuture<DescribeOpenBackupSetResponse> describeOpenBackupSet(DescribeOpenBackupSetRequest request);
+
+    /**
+     * @param request the request parameters of DescribeOpenSearchAccountInfo  DescribeOpenSearchAccountInfoRequest
+     * @return DescribeOpenSearchAccountInfoResponse
+     */
+    CompletableFuture<DescribeOpenSearchAccountInfoResponse> describeOpenSearchAccountInfo(DescribeOpenSearchAccountInfoRequest request);
+
+    /**
+     * @param request the request parameters of DescribeOpenSearchConnectionInfo  DescribeOpenSearchConnectionInfoRequest
+     * @return DescribeOpenSearchConnectionInfoResponse
+     */
+    CompletableFuture<DescribeOpenSearchConnectionInfoResponse> describeOpenSearchConnectionInfo(DescribeOpenSearchConnectionInfoRequest request);
+
+    /**
+     * @param request the request parameters of DescribeOpenSearchInfo  DescribeOpenSearchInfoRequest
+     * @return DescribeOpenSearchInfoResponse
+     */
+    CompletableFuture<DescribeOpenSearchInfoResponse> describeOpenSearchInfo(DescribeOpenSearchInfoRequest request);
+
+    /**
+     * @param request the request parameters of DescribeOpenSearchInstances  DescribeOpenSearchInstancesRequest
+     * @return DescribeOpenSearchInstancesResponse
+     */
+    CompletableFuture<DescribeOpenSearchInstancesResponse> describeOpenSearchInstances(DescribeOpenSearchInstancesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeOpenSearchNodes  DescribeOpenSearchNodesRequest
+     * @return DescribeOpenSearchNodesResponse
+     */
+    CompletableFuture<DescribeOpenSearchNodesResponse> describeOpenSearchNodes(DescribeOpenSearchNodesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeOpenSearchResourceUsage  DescribeOpenSearchResourceUsageRequest
+     * @return DescribeOpenSearchResourceUsageResponse
+     */
+    CompletableFuture<DescribeOpenSearchResourceUsageResponse> describeOpenSearchResourceUsage(DescribeOpenSearchResourceUsageRequest request);
+
+    /**
+     * @param request the request parameters of DescribeOpenSearchTopology  DescribeOpenSearchTopologyRequest
+     * @return DescribeOpenSearchTopologyResponse
+     */
+    CompletableFuture<DescribeOpenSearchTopologyResponse> describeOpenSearchTopology(DescribeOpenSearchTopologyRequest request);
+
+    /**
+     * @param request the request parameters of DescribeOpenSearchWhitelists  DescribeOpenSearchWhitelistsRequest
+     * @return DescribeOpenSearchWhitelistsResponse
+     */
+    CompletableFuture<DescribeOpenSearchWhitelistsResponse> describeOpenSearchWhitelists(DescribeOpenSearchWhitelistsRequest request);
 
     /**
      * @param request the request parameters of DescribeParameterGroups  DescribeParameterGroupsRequest
@@ -758,6 +878,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeUserEncryptionKeyListResponse> describeUserEncryptionKeyList(DescribeUserEncryptionKeyListRequest request);
 
     /**
+     * @param request the request parameters of DisableOpenSearchPublicEndpoint  DisableOpenSearchPublicEndpointRequest
+     * @return DisableOpenSearchPublicEndpointResponse
+     */
+    CompletableFuture<DisableOpenSearchPublicEndpointResponse> disableOpenSearchPublicEndpoint(DisableOpenSearchPublicEndpointRequest request);
+
+    /**
      * @param request the request parameters of DisableRightsSeparation  DisableRightsSeparationRequest
      * @return DisableRightsSeparationResponse
      */
@@ -768,6 +894,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DisableSqlAuditResponse
      */
     CompletableFuture<DisableSqlAuditResponse> disableSqlAudit(DisableSqlAuditRequest request);
+
+    /**
+     * @param request the request parameters of EnableOpenSearchPublicEndpoint  EnableOpenSearchPublicEndpointRequest
+     * @return EnableOpenSearchPublicEndpointResponse
+     */
+    CompletableFuture<EnableOpenSearchPublicEndpointResponse> enableOpenSearchPublicEndpoint(EnableOpenSearchPublicEndpointRequest request);
 
     /**
      * @param request the request parameters of EnableRightsSeparation  EnableRightsSeparationRequest
@@ -840,6 +972,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyColumnarClassResponse
      */
     CompletableFuture<ModifyColumnarClassResponse> modifyColumnarClass(ModifyColumnarClassRequest request);
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of ModifyContext0SecurityIps  ModifyContext0SecurityIpsRequest
+     * @return ModifyContext0SecurityIpsResponse
+     */
+    CompletableFuture<ModifyContext0SecurityIpsResponse> modifyContext0SecurityIps(ModifyContext0SecurityIpsRequest request);
 
     /**
      * <b>description</b> :
@@ -926,6 +1067,33 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyMem0SecurityIpsResponse> modifyMem0SecurityIps(ModifyMem0SecurityIpsRequest request);
 
     /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of ModifyOpenSearchAccessProtocol  ModifyOpenSearchAccessProtocolRequest
+     * @return ModifyOpenSearchAccessProtocolResponse
+     */
+    CompletableFuture<ModifyOpenSearchAccessProtocolResponse> modifyOpenSearchAccessProtocol(ModifyOpenSearchAccessProtocolRequest request);
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of ModifyOpenSearchClass  ModifyOpenSearchClassRequest
+     * @return ModifyOpenSearchClassResponse
+     */
+    CompletableFuture<ModifyOpenSearchClassResponse> modifyOpenSearchClass(ModifyOpenSearchClassRequest request);
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of ModifyOpenSearchWhitelistGroup  ModifyOpenSearchWhitelistGroupRequest
+     * @return ModifyOpenSearchWhitelistGroupResponse
+     */
+    CompletableFuture<ModifyOpenSearchWhitelistGroupResponse> modifyOpenSearchWhitelistGroup(ModifyOpenSearchWhitelistGroupRequest request);
+
+    /**
      * @param request the request parameters of ModifyParameter  ModifyParameterRequest
      * @return ModifyParameterResponse
      */
@@ -983,6 +1151,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ReleaseColdDataVolumeResponse> releaseColdDataVolume(ReleaseColdDataVolumeRequest request);
 
     /**
+     * @param request the request parameters of ReleaseContext0PublicConnection  ReleaseContext0PublicConnectionRequest
+     * @return ReleaseContext0PublicConnectionResponse
+     */
+    CompletableFuture<ReleaseContext0PublicConnectionResponse> releaseContext0PublicConnection(ReleaseContext0PublicConnectionRequest request);
+
+    /**
      * @param request the request parameters of ReleaseContextDBPublicConnection  ReleaseContextDBPublicConnectionRequest
      * @return ReleaseContextDBPublicConnectionResponse
      */
@@ -1025,6 +1199,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ResetMem0AccountPasswordResponse> resetMem0AccountPassword(ResetMem0AccountPasswordRequest request);
 
     /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of ResetOpenSearchPassword  ResetOpenSearchPasswordRequest
+     * @return ResetOpenSearchPasswordResponse
+     */
+    CompletableFuture<ResetOpenSearchPasswordResponse> resetOpenSearchPassword(ResetOpenSearchPasswordRequest request);
+
+    /**
      * @param request the request parameters of RestartDBInstance  RestartDBInstanceRequest
      * @return RestartDBInstanceResponse
      */
@@ -1035,6 +1218,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RestartDataImportTaskResponse
      */
     CompletableFuture<RestartDataImportTaskResponse> restartDataImportTask(RestartDataImportTaskRequest request);
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of RestartOpenSearch  RestartOpenSearchRequest
+     * @return RestartOpenSearchResponse
+     */
+    CompletableFuture<RestartOpenSearchResponse> restartOpenSearch(RestartOpenSearchRequest request);
 
     /**
      * <b>description</b> :
@@ -1053,6 +1245,21 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RestoreDBInstanceResponse
      */
     CompletableFuture<RestoreDBInstanceResponse> restoreDBInstance(RestoreDBInstanceRequest request);
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of ScaleInOpenSearch  ScaleInOpenSearchRequest
+     * @return ScaleInOpenSearchResponse
+     */
+    CompletableFuture<ScaleInOpenSearchResponse> scaleInOpenSearch(ScaleInOpenSearchRequest request);
+
+    /**
+     * @param request the request parameters of ScaleOutOpenSearch  ScaleOutOpenSearchRequest
+     * @return ScaleOutOpenSearchResponse
+     */
+    CompletableFuture<ScaleOutOpenSearchResponse> scaleOutOpenSearch(ScaleOutOpenSearchRequest request);
 
     /**
      * @param request the request parameters of SkipCurrentStep  SkipCurrentStepRequest
