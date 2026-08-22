@@ -113,6 +113,9 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetworkAccessEndpointQuota")
         private Long networkAccessEndpointQuota;
 
+        @com.aliyun.core.annotation.NameInMap("PamLicenseStatus")
+        private String pamLicenseStatus;
+
         @com.aliyun.core.annotation.NameInMap("PrepaidActiveUserNumber")
         private Long prepaidActiveUserNumber;
 
@@ -125,6 +128,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
             this.m2mApplicationQuota = builder.m2mApplicationQuota;
             this.mimApplicationLicenseStatus = builder.mimApplicationLicenseStatus;
             this.networkAccessEndpointQuota = builder.networkAccessEndpointQuota;
+            this.pamLicenseStatus = builder.pamLicenseStatus;
             this.prepaidActiveUserNumber = builder.prepaidActiveUserNumber;
             this.userQuota = builder.userQuota;
         }
@@ -173,6 +177,13 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         }
 
         /**
+         * @return pamLicenseStatus
+         */
+        public String getPamLicenseStatus() {
+            return this.pamLicenseStatus;
+        }
+
+        /**
          * @return prepaidActiveUserNumber
          */
         public Long getPrepaidActiveUserNumber() {
@@ -192,6 +203,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
             private Long m2mApplicationQuota; 
             private String mimApplicationLicenseStatus; 
             private Long networkAccessEndpointQuota; 
+            private String pamLicenseStatus; 
             private Long prepaidActiveUserNumber; 
             private Long userQuota; 
 
@@ -204,6 +216,7 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
                 this.m2mApplicationQuota = model.m2mApplicationQuota;
                 this.mimApplicationLicenseStatus = model.mimApplicationLicenseStatus;
                 this.networkAccessEndpointQuota = model.networkAccessEndpointQuota;
+                this.pamLicenseStatus = model.pamLicenseStatus;
                 this.prepaidActiveUserNumber = model.prepaidActiveUserNumber;
                 this.userQuota = model.userQuota;
             } 
@@ -245,6 +258,14 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
              */
             public Builder networkAccessEndpointQuota(Long networkAccessEndpointQuota) {
                 this.networkAccessEndpointQuota = networkAccessEndpointQuota;
+                return this;
+            }
+
+            /**
+             * <p>PAM 特权管理 License 状态，enabled-已开通，disabled-未开通</p>
+             */
+            public Builder pamLicenseStatus(String pamLicenseStatus) {
+                this.pamLicenseStatus = pamLicenseStatus;
                 return this;
             }
 
