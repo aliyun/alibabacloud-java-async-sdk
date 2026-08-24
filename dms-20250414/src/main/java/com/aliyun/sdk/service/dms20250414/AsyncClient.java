@@ -134,6 +134,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDataLakeTableResponse> createDataLakeTable(CreateDataLakeTableRequest request);
 
     /**
+     * @param request the request parameters of CreateOneMetaSqlTemplate  CreateOneMetaSqlTemplateRequest
+     * @return CreateOneMetaSqlTemplateResponse
+     */
+    CompletableFuture<CreateOneMetaSqlTemplateResponse> createOneMetaSqlTemplate(CreateOneMetaSqlTemplateRequest request);
+
+    /**
      * @param request the request parameters of DeleteAirflow  DeleteAirflowRequest
      * @return DeleteAirflowResponse
      */
@@ -222,6 +228,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteFileUploadResponse
      */
     CompletableFuture<DeleteFileUploadResponse> deleteFileUpload(DeleteFileUploadRequest request);
+
+    /**
+     * @param request the request parameters of DeleteOneMetaOssieModel  DeleteOneMetaOssieModelRequest
+     * @return DeleteOneMetaOssieModelResponse
+     */
+    CompletableFuture<DeleteOneMetaOssieModelResponse> deleteOneMetaOssieModel(DeleteOneMetaOssieModelRequest request);
+
+    /**
+     * @param request the request parameters of DeleteOneMetaSqlTemplate  DeleteOneMetaSqlTemplateRequest
+     * @return DeleteOneMetaSqlTemplateResponse
+     */
+    CompletableFuture<DeleteOneMetaSqlTemplateResponse> deleteOneMetaSqlTemplate(DeleteOneMetaSqlTemplateRequest request);
 
     /**
      * @param request the request parameters of DeleteWorkspaceCode  DeleteWorkspaceCodeRequest
@@ -376,6 +394,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetNotebookTaskStatusResponse> getNotebookTaskStatus(GetNotebookTaskStatusRequest request);
 
     /**
+     * @param request the request parameters of GetOneMetaOssieModel  GetOneMetaOssieModelRequest
+     * @return GetOneMetaOssieModelResponse
+     */
+    CompletableFuture<GetOneMetaOssieModelResponse> getOneMetaOssieModel(GetOneMetaOssieModelRequest request);
+
+    /**
      * @param request the request parameters of GetSqlConsoleOperationLog  GetSqlConsoleOperationLogRequest
      * @return GetSqlConsoleOperationLogResponse
      */
@@ -398,6 +422,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetWorkspaceQuotaResponse
      */
     CompletableFuture<GetWorkspaceQuotaResponse> getWorkspaceQuota(GetWorkspaceQuotaRequest request);
+
+    /**
+     * @param request the request parameters of ImportOneMetaOssieModel  ImportOneMetaOssieModelRequest
+     * @return ImportOneMetaOssieModelResponse
+     */
+    CompletableFuture<ImportOneMetaOssieModelResponse> importOneMetaOssieModel(ImportOneMetaOssieModelRequest request);
 
     /**
      * @param request the request parameters of InitWorkspaceSystemMcpServer  InitWorkspaceSystemMcpServerRequest
@@ -574,6 +604,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListKnowledgeBasesResponse> listKnowledgeBases(ListKnowledgeBasesRequest request);
 
     /**
+     * @param request the request parameters of ListOneMetaOssieModels  ListOneMetaOssieModelsRequest
+     * @return ListOneMetaOssieModelsResponse
+     */
+    CompletableFuture<ListOneMetaOssieModelsResponse> listOneMetaOssieModels(ListOneMetaOssieModelsRequest request);
+
+    /**
+     * @param request the request parameters of ListOneMetaSqlTemplates  ListOneMetaSqlTemplatesRequest
+     * @return ListOneMetaSqlTemplatesResponse
+     */
+    CompletableFuture<ListOneMetaSqlTemplatesResponse> listOneMetaSqlTemplates(ListOneMetaSqlTemplatesRequest request);
+
+    /**
      * @param request the request parameters of ListWorkspaceCode  ListWorkspaceCodeRequest
      * @return ListWorkspaceCodeResponse
      */
@@ -722,6 +764,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateKnowledgeBaseResponse
      */
     CompletableFuture<UpdateKnowledgeBaseResponse> updateKnowledgeBase(UpdateKnowledgeBaseRequest request);
+
+    /**
+     * @param request the request parameters of UpdateOneMetaOssieModel  UpdateOneMetaOssieModelRequest
+     * @return UpdateOneMetaOssieModelResponse
+     */
+    CompletableFuture<UpdateOneMetaOssieModelResponse> updateOneMetaOssieModel(UpdateOneMetaOssieModelRequest request);
+
+    /**
+     * @param request the request parameters of UpdateOneMetaSqlTemplate  UpdateOneMetaSqlTemplateRequest
+     * @return UpdateOneMetaSqlTemplateResponse
+     */
+    CompletableFuture<UpdateOneMetaSqlTemplateResponse> updateOneMetaSqlTemplate(UpdateOneMetaSqlTemplateRequest request);
 
     /**
      * @param request the request parameters of UploadDocument  UploadDocumentRequest
