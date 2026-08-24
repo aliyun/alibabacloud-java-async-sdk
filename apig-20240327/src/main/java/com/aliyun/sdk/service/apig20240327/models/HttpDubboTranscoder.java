@@ -26,14 +26,14 @@ public class HttpDubboTranscoder extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("dubboServiceVersion")
     private String dubboServiceVersion;
 
-    @com.aliyun.core.annotation.NameInMap("mothedMapList")
-    private java.util.List<MothedMapList> mothedMapList;
+    @com.aliyun.core.annotation.NameInMap("methodMapList")
+    private java.util.List<MethodMapList> methodMapList;
 
     private HttpDubboTranscoder(Builder builder) {
         this.dubboServiceGroup = builder.dubboServiceGroup;
         this.dubboServiceName = builder.dubboServiceName;
         this.dubboServiceVersion = builder.dubboServiceVersion;
-        this.mothedMapList = builder.mothedMapList;
+        this.methodMapList = builder.methodMapList;
     }
 
     public static Builder builder() {
@@ -70,17 +70,17 @@ public class HttpDubboTranscoder extends TeaModel {
     }
 
     /**
-     * @return mothedMapList
+     * @return methodMapList
      */
-    public java.util.List<MothedMapList> getMothedMapList() {
-        return this.mothedMapList;
+    public java.util.List<MethodMapList> getMethodMapList() {
+        return this.methodMapList;
     }
 
     public static final class Builder {
         private String dubboServiceGroup; 
         private String dubboServiceName; 
         private String dubboServiceVersion; 
-        private java.util.List<MothedMapList> mothedMapList; 
+        private java.util.List<MethodMapList> methodMapList; 
 
         private Builder() {
         } 
@@ -89,7 +89,7 @@ public class HttpDubboTranscoder extends TeaModel {
             this.dubboServiceGroup = model.dubboServiceGroup;
             this.dubboServiceName = model.dubboServiceName;
             this.dubboServiceVersion = model.dubboServiceVersion;
-            this.mothedMapList = model.mothedMapList;
+            this.methodMapList = model.methodMapList;
         } 
 
         /**
@@ -117,10 +117,10 @@ public class HttpDubboTranscoder extends TeaModel {
         }
 
         /**
-         * mothedMapList.
+         * methodMapList.
          */
-        public Builder mothedMapList(java.util.List<MothedMapList> mothedMapList) {
-            this.mothedMapList = mothedMapList;
+        public Builder methodMapList(java.util.List<MethodMapList> methodMapList) {
+            this.methodMapList = methodMapList;
             return this;
         }
 
@@ -232,15 +232,15 @@ public class HttpDubboTranscoder extends TeaModel {
      *
      * <p>HttpDubboTranscoder</p>
      */
-    public static class MothedMapList extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("dubboMothedName")
-        private String dubboMothedName;
+    public static class MethodMapList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("dubboMethodName")
+        private String dubboMethodName;
 
-        @com.aliyun.core.annotation.NameInMap("httpMothed")
-        private String httpMothed;
+        @com.aliyun.core.annotation.NameInMap("httpMethod")
+        private String httpMethod;
 
-        @com.aliyun.core.annotation.NameInMap("mothedpath")
-        private String mothedpath;
+        @com.aliyun.core.annotation.NameInMap("methodPath")
+        private String methodPath;
 
         @com.aliyun.core.annotation.NameInMap("paramMapsList")
         private java.util.List<ParamMapsList> paramMapsList;
@@ -251,10 +251,10 @@ public class HttpDubboTranscoder extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("passThroughList")
         private java.util.List<String> passThroughList;
 
-        private MothedMapList(Builder builder) {
-            this.dubboMothedName = builder.dubboMothedName;
-            this.httpMothed = builder.httpMothed;
-            this.mothedpath = builder.mothedpath;
+        private MethodMapList(Builder builder) {
+            this.dubboMethodName = builder.dubboMethodName;
+            this.httpMethod = builder.httpMethod;
+            this.methodPath = builder.methodPath;
             this.paramMapsList = builder.paramMapsList;
             this.passThroughAllHeaders = builder.passThroughAllHeaders;
             this.passThroughList = builder.passThroughList;
@@ -264,29 +264,29 @@ public class HttpDubboTranscoder extends TeaModel {
             return new Builder();
         }
 
-        public static MothedMapList create() {
+        public static MethodMapList create() {
             return builder().build();
         }
 
         /**
-         * @return dubboMothedName
+         * @return dubboMethodName
          */
-        public String getDubboMothedName() {
-            return this.dubboMothedName;
+        public String getDubboMethodName() {
+            return this.dubboMethodName;
         }
 
         /**
-         * @return httpMothed
+         * @return httpMethod
          */
-        public String getHttpMothed() {
-            return this.httpMothed;
+        public String getHttpMethod() {
+            return this.httpMethod;
         }
 
         /**
-         * @return mothedpath
+         * @return methodPath
          */
-        public String getMothedpath() {
-            return this.mothedpath;
+        public String getMethodPath() {
+            return this.methodPath;
         }
 
         /**
@@ -311,9 +311,9 @@ public class HttpDubboTranscoder extends TeaModel {
         }
 
         public static final class Builder {
-            private String dubboMothedName; 
-            private String httpMothed; 
-            private String mothedpath; 
+            private String dubboMethodName; 
+            private String httpMethod; 
+            private String methodPath; 
             private java.util.List<ParamMapsList> paramMapsList; 
             private String passThroughAllHeaders; 
             private java.util.List<String> passThroughList; 
@@ -321,36 +321,36 @@ public class HttpDubboTranscoder extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(MothedMapList model) {
-                this.dubboMothedName = model.dubboMothedName;
-                this.httpMothed = model.httpMothed;
-                this.mothedpath = model.mothedpath;
+            private Builder(MethodMapList model) {
+                this.dubboMethodName = model.dubboMethodName;
+                this.httpMethod = model.httpMethod;
+                this.methodPath = model.methodPath;
                 this.paramMapsList = model.paramMapsList;
                 this.passThroughAllHeaders = model.passThroughAllHeaders;
                 this.passThroughList = model.passThroughList;
             } 
 
             /**
-             * dubboMothedName.
+             * dubboMethodName.
              */
-            public Builder dubboMothedName(String dubboMothedName) {
-                this.dubboMothedName = dubboMothedName;
+            public Builder dubboMethodName(String dubboMethodName) {
+                this.dubboMethodName = dubboMethodName;
                 return this;
             }
 
             /**
-             * httpMothed.
+             * httpMethod.
              */
-            public Builder httpMothed(String httpMothed) {
-                this.httpMothed = httpMothed;
+            public Builder httpMethod(String httpMethod) {
+                this.httpMethod = httpMethod;
                 return this;
             }
 
             /**
-             * mothedpath.
+             * methodPath.
              */
-            public Builder mothedpath(String mothedpath) {
-                this.mothedpath = mothedpath;
+            public Builder methodPath(String methodPath) {
+                this.methodPath = methodPath;
                 return this;
             }
 
@@ -378,8 +378,8 @@ public class HttpDubboTranscoder extends TeaModel {
                 return this;
             }
 
-            public MothedMapList build() {
-                return new MothedMapList(this);
+            public MethodMapList build() {
+                return new MethodMapList(this);
             } 
 
         } 

@@ -116,11 +116,20 @@ public class Backend extends TeaModel {
      * <p>Backend</p>
      */
     public static class Services extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("groupName")
+        private String groupName;
+
+        @com.aliyun.core.annotation.NameInMap("httpDubboTranscoder")
+        private HttpDubboTranscoder httpDubboTranscoder;
+
         @com.aliyun.core.annotation.NameInMap("modelName")
         private String modelName;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
+
+        @com.aliyun.core.annotation.NameInMap("namespace")
+        private String namespace;
 
         @com.aliyun.core.annotation.NameInMap("port")
         private Integer port;
@@ -131,6 +140,9 @@ public class Backend extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("serviceId")
         private String serviceId;
 
+        @com.aliyun.core.annotation.NameInMap("sourceType")
+        private String sourceType;
+
         @com.aliyun.core.annotation.NameInMap("version")
         private String version;
 
@@ -138,11 +150,15 @@ public class Backend extends TeaModel {
         private Integer weight;
 
         private Services(Builder builder) {
+            this.groupName = builder.groupName;
+            this.httpDubboTranscoder = builder.httpDubboTranscoder;
             this.modelName = builder.modelName;
             this.name = builder.name;
+            this.namespace = builder.namespace;
             this.port = builder.port;
             this.protocol = builder.protocol;
             this.serviceId = builder.serviceId;
+            this.sourceType = builder.sourceType;
             this.version = builder.version;
             this.weight = builder.weight;
         }
@@ -153,6 +169,20 @@ public class Backend extends TeaModel {
 
         public static Services create() {
             return builder().build();
+        }
+
+        /**
+         * @return groupName
+         */
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        /**
+         * @return httpDubboTranscoder
+         */
+        public HttpDubboTranscoder getHttpDubboTranscoder() {
+            return this.httpDubboTranscoder;
         }
 
         /**
@@ -167,6 +197,13 @@ public class Backend extends TeaModel {
          */
         public String getName() {
             return this.name;
+        }
+
+        /**
+         * @return namespace
+         */
+        public String getNamespace() {
+            return this.namespace;
         }
 
         /**
@@ -191,6 +228,13 @@ public class Backend extends TeaModel {
         }
 
         /**
+         * @return sourceType
+         */
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
+        /**
          * @return version
          */
         public String getVersion() {
@@ -205,11 +249,15 @@ public class Backend extends TeaModel {
         }
 
         public static final class Builder {
+            private String groupName; 
+            private HttpDubboTranscoder httpDubboTranscoder; 
             private String modelName; 
             private String name; 
+            private String namespace; 
             private Integer port; 
             private String protocol; 
             private String serviceId; 
+            private String sourceType; 
             private String version; 
             private Integer weight; 
 
@@ -217,14 +265,34 @@ public class Backend extends TeaModel {
             } 
 
             private Builder(Services model) {
+                this.groupName = model.groupName;
+                this.httpDubboTranscoder = model.httpDubboTranscoder;
                 this.modelName = model.modelName;
                 this.name = model.name;
+                this.namespace = model.namespace;
                 this.port = model.port;
                 this.protocol = model.protocol;
                 this.serviceId = model.serviceId;
+                this.sourceType = model.sourceType;
                 this.version = model.version;
                 this.weight = model.weight;
             } 
+
+            /**
+             * groupName.
+             */
+            public Builder groupName(String groupName) {
+                this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * httpDubboTranscoder.
+             */
+            public Builder httpDubboTranscoder(HttpDubboTranscoder httpDubboTranscoder) {
+                this.httpDubboTranscoder = httpDubboTranscoder;
+                return this;
+            }
 
             /**
              * modelName.
@@ -239,6 +307,14 @@ public class Backend extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * namespace.
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
                 return this;
             }
 
@@ -263,6 +339,14 @@ public class Backend extends TeaModel {
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
+                return this;
+            }
+
+            /**
+             * sourceType.
+             */
+            public Builder sourceType(String sourceType) {
+                this.sourceType = sourceType;
                 return this;
             }
 

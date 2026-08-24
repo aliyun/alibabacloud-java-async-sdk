@@ -301,8 +301,17 @@ public class CreateHttpApiRouteRequest extends Request {
      * <p>CreateHttpApiRouteRequest</p>
      */
     public static class Services extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("groupName")
+        private String groupName;
+
+        @com.aliyun.core.annotation.NameInMap("httpDubboTranscoder")
+        private HttpDubboTranscoder httpDubboTranscoder;
+
         @com.aliyun.core.annotation.NameInMap("modelName")
         private String modelName;
+
+        @com.aliyun.core.annotation.NameInMap("namespace")
+        private String namespace;
 
         @com.aliyun.core.annotation.NameInMap("port")
         private Integer port;
@@ -313,6 +322,9 @@ public class CreateHttpApiRouteRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("serviceId")
         private String serviceId;
 
+        @com.aliyun.core.annotation.NameInMap("sourceType")
+        private String sourceType;
+
         @com.aliyun.core.annotation.NameInMap("version")
         private String version;
 
@@ -320,10 +332,14 @@ public class CreateHttpApiRouteRequest extends Request {
         private Integer weight;
 
         private Services(Builder builder) {
+            this.groupName = builder.groupName;
+            this.httpDubboTranscoder = builder.httpDubboTranscoder;
             this.modelName = builder.modelName;
+            this.namespace = builder.namespace;
             this.port = builder.port;
             this.protocol = builder.protocol;
             this.serviceId = builder.serviceId;
+            this.sourceType = builder.sourceType;
             this.version = builder.version;
             this.weight = builder.weight;
         }
@@ -337,10 +353,31 @@ public class CreateHttpApiRouteRequest extends Request {
         }
 
         /**
+         * @return groupName
+         */
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        /**
+         * @return httpDubboTranscoder
+         */
+        public HttpDubboTranscoder getHttpDubboTranscoder() {
+            return this.httpDubboTranscoder;
+        }
+
+        /**
          * @return modelName
          */
         public String getModelName() {
             return this.modelName;
+        }
+
+        /**
+         * @return namespace
+         */
+        public String getNamespace() {
+            return this.namespace;
         }
 
         /**
@@ -365,6 +402,13 @@ public class CreateHttpApiRouteRequest extends Request {
         }
 
         /**
+         * @return sourceType
+         */
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
+        /**
          * @return version
          */
         public String getVersion() {
@@ -379,10 +423,14 @@ public class CreateHttpApiRouteRequest extends Request {
         }
 
         public static final class Builder {
+            private String groupName; 
+            private HttpDubboTranscoder httpDubboTranscoder; 
             private String modelName; 
+            private String namespace; 
             private Integer port; 
             private String protocol; 
             private String serviceId; 
+            private String sourceType; 
             private String version; 
             private Integer weight; 
 
@@ -390,19 +438,47 @@ public class CreateHttpApiRouteRequest extends Request {
             } 
 
             private Builder(Services model) {
+                this.groupName = model.groupName;
+                this.httpDubboTranscoder = model.httpDubboTranscoder;
                 this.modelName = model.modelName;
+                this.namespace = model.namespace;
                 this.port = model.port;
                 this.protocol = model.protocol;
                 this.serviceId = model.serviceId;
+                this.sourceType = model.sourceType;
                 this.version = model.version;
                 this.weight = model.weight;
             } 
+
+            /**
+             * groupName.
+             */
+            public Builder groupName(String groupName) {
+                this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * httpDubboTranscoder.
+             */
+            public Builder httpDubboTranscoder(HttpDubboTranscoder httpDubboTranscoder) {
+                this.httpDubboTranscoder = httpDubboTranscoder;
+                return this;
+            }
 
             /**
              * modelName.
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
+                return this;
+            }
+
+            /**
+             * namespace.
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
                 return this;
             }
 
@@ -440,6 +516,14 @@ public class CreateHttpApiRouteRequest extends Request {
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
+                return this;
+            }
+
+            /**
+             * sourceType.
+             */
+            public Builder sourceType(String sourceType) {
+                this.sourceType = sourceType;
                 return this;
             }
 
