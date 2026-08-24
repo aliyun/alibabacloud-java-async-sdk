@@ -4587,6 +4587,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RunInstancesResponse> runInstances(RunInstancesRequest request);
 
     /**
+     * @param request the request parameters of SendDiagnosticInterrupt  SendDiagnosticInterruptRequest
+     * @return SendDiagnosticInterruptResponse
+     */
+    CompletableFuture<SendDiagnosticInterruptResponse> sendDiagnosticInterrupt(SendDiagnosticInterruptRequest request);
+
+    /**
      * <b>description</b> :
      * <h2><a href="#"></a>Usage notes</h2>
      * <ul>
