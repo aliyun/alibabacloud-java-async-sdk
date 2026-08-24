@@ -49,6 +49,10 @@ public class AddDocumentsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("dingTalkConfiguration")
     private DingTalkConfiguration dingTalkConfiguration;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("parentId")
+    private String parentId;
+
     private AddDocumentsRequest(Builder builder) {
         super(builder);
         this.datasetId = builder.datasetId;
@@ -59,6 +63,7 @@ public class AddDocumentsRequest extends Request {
         this.metaFields = builder.metaFields;
         this.strategyId = builder.strategyId;
         this.dingTalkConfiguration = builder.dingTalkConfiguration;
+        this.parentId = builder.parentId;
     }
 
     public static Builder builder() {
@@ -130,6 +135,13 @@ public class AddDocumentsRequest extends Request {
         return this.dingTalkConfiguration;
     }
 
+    /**
+     * @return parentId
+     */
+    public String getParentId() {
+        return this.parentId;
+    }
+
     public static final class Builder extends Request.Builder<AddDocumentsRequest, Builder> {
         private String datasetId; 
         private Dedup dedup; 
@@ -139,6 +151,7 @@ public class AddDocumentsRequest extends Request {
         private Object metaFields; 
         private String strategyId; 
         private DingTalkConfiguration dingTalkConfiguration; 
+        private String parentId; 
 
         private Builder() {
             super();
@@ -154,6 +167,7 @@ public class AddDocumentsRequest extends Request {
             this.metaFields = request.metaFields;
             this.strategyId = request.strategyId;
             this.dingTalkConfiguration = request.dingTalkConfiguration;
+            this.parentId = request.parentId;
         } 
 
         /**
@@ -231,6 +245,18 @@ public class AddDocumentsRequest extends Request {
         public Builder dingTalkConfiguration(DingTalkConfiguration dingTalkConfiguration) {
             this.putBodyParameter("dingTalkConfiguration", dingTalkConfiguration);
             this.dingTalkConfiguration = dingTalkConfiguration;
+            return this;
+        }
+
+        /**
+         * <p>Defaults to root when omitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
+         */
+        public Builder parentId(String parentId) {
+            this.putBodyParameter("parentId", parentId);
+            this.parentId = parentId;
             return this;
         }
 

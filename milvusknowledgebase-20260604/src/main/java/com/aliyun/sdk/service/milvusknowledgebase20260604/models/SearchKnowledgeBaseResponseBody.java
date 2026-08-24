@@ -602,6 +602,9 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("parentChunkId")
         private String parentChunkId;
 
+        @com.aliyun.core.annotation.NameInMap("scalarFields")
+        private Object scalarFields;
+
         @com.aliyun.core.annotation.NameInMap("score")
         private Float score;
 
@@ -621,6 +624,7 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
             this.knowledgeBaseId = builder.knowledgeBaseId;
             this.locations = builder.locations;
             this.parentChunkId = builder.parentChunkId;
+            this.scalarFields = builder.scalarFields;
             this.score = builder.score;
             this.scoreDetails = builder.scoreDetails;
             this.tags = builder.tags;
@@ -698,6 +702,13 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
+         * @return scalarFields
+         */
+        public Object getScalarFields() {
+            return this.scalarFields;
+        }
+
+        /**
          * @return score
          */
         public Float getScore() {
@@ -728,6 +739,7 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
             private String knowledgeBaseId; 
             private java.util.List<Locations> locations; 
             private String parentChunkId; 
+            private Object scalarFields; 
             private Float score; 
             private ScoreDetails scoreDetails; 
             private java.util.List<String> tags; 
@@ -745,6 +757,7 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
                 this.knowledgeBaseId = model.knowledgeBaseId;
                 this.locations = model.locations;
                 this.parentChunkId = model.parentChunkId;
+                this.scalarFields = model.scalarFields;
                 this.score = model.score;
                 this.scoreDetails = model.scoreDetails;
                 this.tags = model.tags;
@@ -825,6 +838,14 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
              */
             public Builder parentChunkId(String parentChunkId) {
                 this.parentChunkId = parentChunkId;
+                return this;
+            }
+
+            /**
+             * scalarFields.
+             */
+            public Builder scalarFields(Object scalarFields) {
+                this.scalarFields = scalarFields;
                 return this;
             }
 

@@ -1,3 +1,6 @@
+2026-08-24 Version: 1.0.1
+- Generated java-async 2026-06-04 for MilvusKnowledgeBase.
+
 2026-08-06 Version: 1.0.0
 - Generated java-async 2026-06-04 for MilvusKnowledgeBase.
 
