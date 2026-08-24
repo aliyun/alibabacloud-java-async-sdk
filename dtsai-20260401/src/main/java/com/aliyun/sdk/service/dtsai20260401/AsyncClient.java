@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AuthorizeFileUpload  AuthorizeFileUploadRequest
+     * @return AuthorizeFileUploadResponse
+     */
+    CompletableFuture<AuthorizeFileUploadResponse> authorizeFileUpload(AuthorizeFileUploadRequest request);
+
+    /**
      * @param request the request parameters of DescribeDocParserJobResult  DescribeDocParserJobResultRequest
      * @return DescribeDocParserJobResultResponse
      */
