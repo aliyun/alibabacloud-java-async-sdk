@@ -157,6 +157,102 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
      *
      * <p>DescribeFrInstancesResponseBody</p>
      */
+    public static class AutoPurchase extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AlreadyAutoPurchase")
+        private Boolean alreadyAutoPurchase;
+
+        @com.aliyun.core.annotation.NameInMap("SettingAutoPurchase")
+        private Boolean settingAutoPurchase;
+
+        @com.aliyun.core.annotation.NameInMap("SupportAutoPurchase")
+        private Boolean supportAutoPurchase;
+
+        private AutoPurchase(Builder builder) {
+            this.alreadyAutoPurchase = builder.alreadyAutoPurchase;
+            this.settingAutoPurchase = builder.settingAutoPurchase;
+            this.supportAutoPurchase = builder.supportAutoPurchase;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AutoPurchase create() {
+            return builder().build();
+        }
+
+        /**
+         * @return alreadyAutoPurchase
+         */
+        public Boolean getAlreadyAutoPurchase() {
+            return this.alreadyAutoPurchase;
+        }
+
+        /**
+         * @return settingAutoPurchase
+         */
+        public Boolean getSettingAutoPurchase() {
+            return this.settingAutoPurchase;
+        }
+
+        /**
+         * @return supportAutoPurchase
+         */
+        public Boolean getSupportAutoPurchase() {
+            return this.supportAutoPurchase;
+        }
+
+        public static final class Builder {
+            private Boolean alreadyAutoPurchase; 
+            private Boolean settingAutoPurchase; 
+            private Boolean supportAutoPurchase; 
+
+            private Builder() {
+            } 
+
+            private Builder(AutoPurchase model) {
+                this.alreadyAutoPurchase = model.alreadyAutoPurchase;
+                this.settingAutoPurchase = model.settingAutoPurchase;
+                this.supportAutoPurchase = model.supportAutoPurchase;
+            } 
+
+            /**
+             * AlreadyAutoPurchase.
+             */
+            public Builder alreadyAutoPurchase(Boolean alreadyAutoPurchase) {
+                this.alreadyAutoPurchase = alreadyAutoPurchase;
+                return this;
+            }
+
+            /**
+             * SettingAutoPurchase.
+             */
+            public Builder settingAutoPurchase(Boolean settingAutoPurchase) {
+                this.settingAutoPurchase = settingAutoPurchase;
+                return this;
+            }
+
+            /**
+             * SupportAutoPurchase.
+             */
+            public Builder supportAutoPurchase(Boolean supportAutoPurchase) {
+                this.supportAutoPurchase = supportAutoPurchase;
+                return this;
+            }
+
+            public AutoPurchase build() {
+                return new AutoPurchase(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeFrInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFrInstancesResponseBody</p>
+     */
     public static class CapacityType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -689,6 +785,9 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
+        @com.aliyun.core.annotation.NameInMap("AutoPurchase")
+        private AutoPurchase autoPurchase;
+
         @com.aliyun.core.annotation.NameInMap("CapacitiyTypeName")
         private String capacitiyTypeName;
 
@@ -730,6 +829,9 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("DeductRegions")
         private java.util.List<DeductRegions> deductRegions;
+
+        @com.aliyun.core.annotation.NameInMap("EnableDeductRule")
+        private Boolean enableDeductRule;
 
         @com.aliyun.core.annotation.NameInMap("EnableExchange")
         private Boolean enableExchange;
@@ -821,6 +923,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.accountId = builder.accountId;
             this.accountName = builder.accountName;
+            this.autoPurchase = builder.autoPurchase;
             this.capacitiyTypeName = builder.capacitiyTypeName;
             this.capacityType = builder.capacityType;
             this.capacityTypeCode = builder.capacityTypeCode;
@@ -835,6 +938,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             this.cycleTypeCode = builder.cycleTypeCode;
             this.cycleTypeName = builder.cycleTypeName;
             this.deductRegions = builder.deductRegions;
+            this.enableDeductRule = builder.enableDeductRule;
             this.enableExchange = builder.enableExchange;
             this.enableRenew = builder.enableRenew;
             this.enableUpgrade = builder.enableUpgrade;
@@ -886,6 +990,13 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
          */
         public String getAccountName() {
             return this.accountName;
+        }
+
+        /**
+         * @return autoPurchase
+         */
+        public AutoPurchase getAutoPurchase() {
+            return this.autoPurchase;
         }
 
         /**
@@ -984,6 +1095,13 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
          */
         public java.util.List<DeductRegions> getDeductRegions() {
             return this.deductRegions;
+        }
+
+        /**
+         * @return enableDeductRule
+         */
+        public Boolean getEnableDeductRule() {
+            return this.enableDeductRule;
         }
 
         /**
@@ -1192,6 +1310,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private Long accountId; 
             private String accountName; 
+            private AutoPurchase autoPurchase; 
             private String capacitiyTypeName; 
             private CapacityType capacityType; 
             private String capacityTypeCode; 
@@ -1206,6 +1325,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             private String cycleTypeCode; 
             private String cycleTypeName; 
             private java.util.List<DeductRegions> deductRegions; 
+            private Boolean enableDeductRule; 
             private Boolean enableExchange; 
             private Boolean enableRenew; 
             private Boolean enableUpgrade; 
@@ -1242,6 +1362,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.accountId = model.accountId;
                 this.accountName = model.accountName;
+                this.autoPurchase = model.autoPurchase;
                 this.capacitiyTypeName = model.capacitiyTypeName;
                 this.capacityType = model.capacityType;
                 this.capacityTypeCode = model.capacityTypeCode;
@@ -1256,6 +1377,7 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
                 this.cycleTypeCode = model.cycleTypeCode;
                 this.cycleTypeName = model.cycleTypeName;
                 this.deductRegions = model.deductRegions;
+                this.enableDeductRule = model.enableDeductRule;
                 this.enableExchange = model.enableExchange;
                 this.enableRenew = model.enableRenew;
                 this.enableUpgrade = model.enableUpgrade;
@@ -1300,6 +1422,14 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
+                return this;
+            }
+
+            /**
+             * AutoPurchase.
+             */
+            public Builder autoPurchase(AutoPurchase autoPurchase) {
+                this.autoPurchase = autoPurchase;
                 return this;
             }
 
@@ -1412,6 +1542,14 @@ public class DescribeFrInstancesResponseBody extends TeaModel {
              */
             public Builder deductRegions(java.util.List<DeductRegions> deductRegions) {
                 this.deductRegions = deductRegions;
+                return this;
+            }
+
+            /**
+             * EnableDeductRule.
+             */
+            public Builder enableDeductRule(Boolean enableDeductRule) {
+                this.enableDeductRule = enableDeductRule;
                 return this;
             }
 

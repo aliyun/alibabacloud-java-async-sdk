@@ -63,6 +63,10 @@ public class CreateReportDefinitionRequest extends Request {
     private String reportType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SelectedFields")
+    private java.util.List<String> selectedFields;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SendWithAttach")
     private String sendWithAttach;
 
@@ -83,6 +87,7 @@ public class CreateReportDefinitionRequest extends Request {
         this.ossBucketPath = builder.ossBucketPath;
         this.reportSourceType = builder.reportSourceType;
         this.reportType = builder.reportType;
+        this.selectedFields = builder.selectedFields;
         this.sendWithAttach = builder.sendWithAttach;
         this.splitFileOnUserId = builder.splitFileOnUserId;
     }
@@ -178,6 +183,13 @@ public class CreateReportDefinitionRequest extends Request {
     }
 
     /**
+     * @return selectedFields
+     */
+    public java.util.List<String> getSelectedFields() {
+        return this.selectedFields;
+    }
+
+    /**
      * @return sendWithAttach
      */
     public String getSendWithAttach() {
@@ -203,6 +215,7 @@ public class CreateReportDefinitionRequest extends Request {
         private String ossBucketPath; 
         private String reportSourceType; 
         private String reportType; 
+        private java.util.List<String> selectedFields; 
         private String sendWithAttach; 
         private String splitFileOnUserId; 
 
@@ -223,6 +236,7 @@ public class CreateReportDefinitionRequest extends Request {
             this.ossBucketPath = request.ossBucketPath;
             this.reportSourceType = request.reportSourceType;
             this.reportType = request.reportType;
+            this.selectedFields = request.selectedFields;
             this.sendWithAttach = request.sendWithAttach;
             this.splitFileOnUserId = request.splitFileOnUserId;
         } 
@@ -326,6 +340,16 @@ public class CreateReportDefinitionRequest extends Request {
         public Builder reportType(String reportType) {
             this.putQueryParameter("ReportType", reportType);
             this.reportType = reportType;
+            return this;
+        }
+
+        /**
+         * SelectedFields.
+         */
+        public Builder selectedFields(java.util.List<String> selectedFields) {
+            String selectedFieldsShrink = shrink(selectedFields, "SelectedFields", "json");
+            this.putQueryParameter("SelectedFields", selectedFieldsShrink);
+            this.selectedFields = selectedFields;
             return this;
         }
 

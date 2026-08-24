@@ -140,6 +140,9 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReportType")
         private String reportType;
 
+        @com.aliyun.core.annotation.NameInMap("SelectedFields")
+        private java.util.List<String> selectedFields;
+
         @com.aliyun.core.annotation.NameInMap("SubscribeCreateTime")
         private String subscribeCreateTime;
 
@@ -152,6 +155,7 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
             this.reportSourceType = builder.reportSourceType;
             this.reportTaskId = builder.reportTaskId;
             this.reportType = builder.reportType;
+            this.selectedFields = builder.selectedFields;
             this.subscribeCreateTime = builder.subscribeCreateTime;
         }
 
@@ -220,6 +224,13 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return selectedFields
+         */
+        public java.util.List<String> getSelectedFields() {
+            return this.selectedFields;
+        }
+
+        /**
          * @return subscribeCreateTime
          */
         public String getSubscribeCreateTime() {
@@ -235,6 +246,7 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
             private String reportSourceType; 
             private Long reportTaskId; 
             private String reportType; 
+            private java.util.List<String> selectedFields; 
             private String subscribeCreateTime; 
 
             private Builder() {
@@ -249,6 +261,7 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
                 this.reportSourceType = model.reportSourceType;
                 this.reportTaskId = model.reportTaskId;
                 this.reportType = model.reportType;
+                this.selectedFields = model.selectedFields;
                 this.subscribeCreateTime = model.subscribeCreateTime;
             } 
 
@@ -313,6 +326,14 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
              */
             public Builder reportType(String reportType) {
                 this.reportType = reportType;
+                return this;
+            }
+
+            /**
+             * SelectedFields.
+             */
+            public Builder selectedFields(java.util.List<String> selectedFields) {
+                this.selectedFields = selectedFields;
                 return this;
             }
 
