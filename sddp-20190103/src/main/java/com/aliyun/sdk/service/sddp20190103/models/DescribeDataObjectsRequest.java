@@ -50,6 +50,10 @@ public class DescribeDataObjectsRequest extends Request {
     private String engineType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FacetType")
+    private String facetType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FeatureType")
     private Integer featureType;
 
@@ -64,6 +68,10 @@ public class DescribeDataObjectsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsRevision")
+    private Integer isRevision;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
@@ -160,10 +168,12 @@ public class DescribeDataObjectsRequest extends Request {
         this.dbName = builder.dbName;
         this.domainId = builder.domainId;
         this.engineType = builder.engineType;
+        this.facetType = builder.facetType;
         this.featureType = builder.featureType;
         this.fileCategoryCode = builder.fileCategoryCode;
         this.fileType = builder.fileType;
         this.instanceId = builder.instanceId;
+        this.isRevision = builder.isRevision;
         this.lang = builder.lang;
         this.logStore = builder.logStore;
         this.logStoreFlag = builder.logStoreFlag;
@@ -257,6 +267,13 @@ public class DescribeDataObjectsRequest extends Request {
     }
 
     /**
+     * @return facetType
+     */
+    public String getFacetType() {
+        return this.facetType;
+    }
+
+    /**
      * @return featureType
      */
     public Integer getFeatureType() {
@@ -282,6 +299,13 @@ public class DescribeDataObjectsRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return isRevision
+     */
+    public Integer getIsRevision() {
+        return this.isRevision;
     }
 
     /**
@@ -440,10 +464,12 @@ public class DescribeDataObjectsRequest extends Request {
         private String dbName; 
         private Long domainId; 
         private String engineType; 
+        private String facetType; 
         private Integer featureType; 
         private Long fileCategoryCode; 
         private Long fileType; 
         private String instanceId; 
+        private Integer isRevision; 
         private String lang; 
         private String logStore; 
         private Integer logStoreFlag; 
@@ -480,10 +506,12 @@ public class DescribeDataObjectsRequest extends Request {
             this.dbName = request.dbName;
             this.domainId = request.domainId;
             this.engineType = request.engineType;
+            this.facetType = request.facetType;
             this.featureType = request.featureType;
             this.fileCategoryCode = request.fileCategoryCode;
             this.fileType = request.fileType;
             this.instanceId = request.instanceId;
+            this.isRevision = request.isRevision;
             this.lang = request.lang;
             this.logStore = request.logStore;
             this.logStoreFlag = request.logStoreFlag;
@@ -586,6 +614,15 @@ public class DescribeDataObjectsRequest extends Request {
         }
 
         /**
+         * FacetType.
+         */
+        public Builder facetType(String facetType) {
+            this.putQueryParameter("FacetType", facetType);
+            this.facetType = facetType;
+            return this;
+        }
+
+        /**
          * <p>This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
@@ -633,6 +670,15 @@ public class DescribeDataObjectsRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * IsRevision.
+         */
+        public Builder isRevision(Integer isRevision) {
+            this.putQueryParameter("IsRevision", isRevision);
+            this.isRevision = isRevision;
             return this;
         }
 

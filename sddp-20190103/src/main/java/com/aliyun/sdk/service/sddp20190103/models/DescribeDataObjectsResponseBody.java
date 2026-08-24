@@ -32,6 +32,9 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("HasPrevious")
     private Boolean hasPrevious;
 
+    @com.aliyun.core.annotation.NameInMap("HitValues")
+    private java.util.List<String> hitValues;
+
     @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List<Items> items;
 
@@ -59,6 +62,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         this.errorMessage = builder.errorMessage;
         this.hasNext = builder.hasNext;
         this.hasPrevious = builder.hasPrevious;
+        this.hitValues = builder.hitValues;
         this.items = builder.items;
         this.nextCursor = builder.nextCursor;
         this.pageSize = builder.pageSize;
@@ -116,6 +120,13 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
     }
 
     /**
+     * @return hitValues
+     */
+    public java.util.List<String> getHitValues() {
+        return this.hitValues;
+    }
+
+    /**
      * @return items
      */
     public java.util.List<Items> getItems() {
@@ -170,6 +181,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         private String errorMessage; 
         private Boolean hasNext; 
         private Boolean hasPrevious; 
+        private java.util.List<String> hitValues; 
         private java.util.List<Items> items; 
         private String nextCursor; 
         private Integer pageSize; 
@@ -187,6 +199,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
             this.errorMessage = model.errorMessage;
             this.hasNext = model.hasNext;
             this.hasPrevious = model.hasPrevious;
+            this.hitValues = model.hitValues;
             this.items = model.items;
             this.nextCursor = model.nextCursor;
             this.pageSize = model.pageSize;
@@ -236,6 +249,14 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
          */
         public Builder hasPrevious(Boolean hasPrevious) {
             this.hasPrevious = hasPrevious;
+            return this;
+        }
+
+        /**
+         * HitValues.
+         */
+        public Builder hitValues(java.util.List<String> hitValues) {
+            this.hitValues = hitValues;
             return this;
         }
 
