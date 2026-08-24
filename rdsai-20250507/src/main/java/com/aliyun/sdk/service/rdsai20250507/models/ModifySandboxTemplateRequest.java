@@ -26,6 +26,10 @@ public class ModifySandboxTemplateRequest extends Request {
     private String defaultMemory;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Image")
+    private String image;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceName;
@@ -39,6 +43,10 @@ public class ModifySandboxTemplateRequest extends Request {
     private Long replicas;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.Map<String, String> tags;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String templateId;
@@ -47,9 +55,11 @@ public class ModifySandboxTemplateRequest extends Request {
         super(builder);
         this.defaultCpu = builder.defaultCpu;
         this.defaultMemory = builder.defaultMemory;
+        this.image = builder.image;
         this.instanceName = builder.instanceName;
         this.regionId = builder.regionId;
         this.replicas = builder.replicas;
+        this.tags = builder.tags;
         this.templateId = builder.templateId;
     }
 
@@ -81,6 +91,13 @@ public class ModifySandboxTemplateRequest extends Request {
     }
 
     /**
+     * @return image
+     */
+    public String getImage() {
+        return this.image;
+    }
+
+    /**
      * @return instanceName
      */
     public String getInstanceName() {
@@ -102,6 +119,13 @@ public class ModifySandboxTemplateRequest extends Request {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.Map<String, String> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return templateId
      */
     public String getTemplateId() {
@@ -111,9 +135,11 @@ public class ModifySandboxTemplateRequest extends Request {
     public static final class Builder extends Request.Builder<ModifySandboxTemplateRequest, Builder> {
         private String defaultCpu; 
         private String defaultMemory; 
+        private String image; 
         private String instanceName; 
         private String regionId; 
         private Long replicas; 
+        private java.util.Map<String, String> tags; 
         private String templateId; 
 
         private Builder() {
@@ -124,9 +150,11 @@ public class ModifySandboxTemplateRequest extends Request {
             super(request);
             this.defaultCpu = request.defaultCpu;
             this.defaultMemory = request.defaultMemory;
+            this.image = request.image;
             this.instanceName = request.instanceName;
             this.regionId = request.regionId;
             this.replicas = request.replicas;
+            this.tags = request.tags;
             this.templateId = request.templateId;
         } 
 
@@ -145,6 +173,15 @@ public class ModifySandboxTemplateRequest extends Request {
         public Builder defaultMemory(String defaultMemory) {
             this.putQueryParameter("DefaultMemory", defaultMemory);
             this.defaultMemory = defaultMemory;
+            return this;
+        }
+
+        /**
+         * Image.
+         */
+        public Builder image(String image) {
+            this.putQueryParameter("Image", image);
+            this.image = image;
             return this;
         }
 
@@ -175,6 +212,16 @@ public class ModifySandboxTemplateRequest extends Request {
         public Builder replicas(Long replicas) {
             this.putQueryParameter("Replicas", replicas);
             this.replicas = replicas;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.Map<String, String> tags) {
+            String tagsShrink = shrink(tags, "Tags", "json");
+            this.putQueryParameter("Tags", tagsShrink);
+            this.tags = tags;
             return this;
         }
 

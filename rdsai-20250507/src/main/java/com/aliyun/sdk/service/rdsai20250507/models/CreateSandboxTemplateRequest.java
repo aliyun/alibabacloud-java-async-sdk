@@ -30,6 +30,10 @@ public class CreateSandboxTemplateRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Image")
+    private String image;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceName;
@@ -43,6 +47,10 @@ public class CreateSandboxTemplateRequest extends Request {
     private Long replicas;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.Map<String, String> tags;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String templateName;
@@ -52,9 +60,11 @@ public class CreateSandboxTemplateRequest extends Request {
         this.defaultCpu = builder.defaultCpu;
         this.defaultMemory = builder.defaultMemory;
         this.description = builder.description;
+        this.image = builder.image;
         this.instanceName = builder.instanceName;
         this.regionId = builder.regionId;
         this.replicas = builder.replicas;
+        this.tags = builder.tags;
         this.templateName = builder.templateName;
     }
 
@@ -93,6 +103,13 @@ public class CreateSandboxTemplateRequest extends Request {
     }
 
     /**
+     * @return image
+     */
+    public String getImage() {
+        return this.image;
+    }
+
+    /**
      * @return instanceName
      */
     public String getInstanceName() {
@@ -114,6 +131,13 @@ public class CreateSandboxTemplateRequest extends Request {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.Map<String, String> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return templateName
      */
     public String getTemplateName() {
@@ -124,9 +148,11 @@ public class CreateSandboxTemplateRequest extends Request {
         private String defaultCpu; 
         private String defaultMemory; 
         private String description; 
+        private String image; 
         private String instanceName; 
         private String regionId; 
         private Long replicas; 
+        private java.util.Map<String, String> tags; 
         private String templateName; 
 
         private Builder() {
@@ -138,9 +164,11 @@ public class CreateSandboxTemplateRequest extends Request {
             this.defaultCpu = request.defaultCpu;
             this.defaultMemory = request.defaultMemory;
             this.description = request.description;
+            this.image = request.image;
             this.instanceName = request.instanceName;
             this.regionId = request.regionId;
             this.replicas = request.replicas;
+            this.tags = request.tags;
             this.templateName = request.templateName;
         } 
 
@@ -172,6 +200,15 @@ public class CreateSandboxTemplateRequest extends Request {
         }
 
         /**
+         * Image.
+         */
+        public Builder image(String image) {
+            this.putQueryParameter("Image", image);
+            this.image = image;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,6 +235,16 @@ public class CreateSandboxTemplateRequest extends Request {
         public Builder replicas(Long replicas) {
             this.putQueryParameter("Replicas", replicas);
             this.replicas = replicas;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.Map<String, String> tags) {
+            String tagsShrink = shrink(tags, "Tags", "json");
+            this.putQueryParameter("Tags", tagsShrink);
+            this.tags = tags;
             return this;
         }
 

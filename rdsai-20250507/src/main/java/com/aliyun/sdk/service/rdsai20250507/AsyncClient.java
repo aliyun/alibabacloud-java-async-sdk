@@ -347,6 +347,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAvailableLLMModelsResponse> getAvailableLLMModels(GetAvailableLLMModelsRequest request);
 
     /**
+     * @param request the request parameters of GetChatModel  GetChatModelRequest
+     * @return GetChatModelResponse
+     */
+    CompletableFuture<GetChatModelResponse> getChatModel(GetChatModelRequest request);
+
+    /**
      * @param request the request parameters of GetConversations  GetConversationsRequest
      * @return GetConversationsResponse
      */

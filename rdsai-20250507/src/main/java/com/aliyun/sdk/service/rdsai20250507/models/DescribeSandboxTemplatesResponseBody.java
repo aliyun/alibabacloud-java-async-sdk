@@ -218,11 +218,17 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableVpcAccess")
         private String enableVpcAccess;
 
+        @com.aliyun.core.annotation.NameInMap("Image")
+        private String image;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Replicas")
         private Long replicas;
+
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.Map<String, String> tags;
 
         @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
@@ -233,8 +239,10 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
             this.defaultMemory = builder.defaultMemory;
             this.description = builder.description;
             this.enableVpcAccess = builder.enableVpcAccess;
+            this.image = builder.image;
             this.name = builder.name;
             this.replicas = builder.replicas;
+            this.tags = builder.tags;
             this.templateId = builder.templateId;
         }
 
@@ -282,6 +290,13 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
         }
 
         /**
+         * @return image
+         */
+        public String getImage() {
+            return this.image;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -293,6 +308,13 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
          */
         public Long getReplicas() {
             return this.replicas;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.Map<String, String> getTags() {
+            return this.tags;
         }
 
         /**
@@ -308,8 +330,10 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
             private String defaultMemory; 
             private String description; 
             private String enableVpcAccess; 
+            private String image; 
             private String name; 
             private Long replicas; 
+            private java.util.Map<String, String> tags; 
             private String templateId; 
 
             private Builder() {
@@ -321,8 +345,10 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
                 this.defaultMemory = model.defaultMemory;
                 this.description = model.description;
                 this.enableVpcAccess = model.enableVpcAccess;
+                this.image = model.image;
                 this.name = model.name;
                 this.replicas = model.replicas;
+                this.tags = model.tags;
                 this.templateId = model.templateId;
             } 
 
@@ -367,6 +393,14 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
             }
 
             /**
+             * Image.
+             */
+            public Builder image(String image) {
+                this.image = image;
+                return this;
+            }
+
+            /**
              * Name.
              */
             public Builder name(String name) {
@@ -379,6 +413,14 @@ public class DescribeSandboxTemplatesResponseBody extends TeaModel {
              */
             public Builder replicas(Long replicas) {
                 this.replicas = replicas;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.Map<String, String> tags) {
+                this.tags = tags;
                 return this;
             }
 
