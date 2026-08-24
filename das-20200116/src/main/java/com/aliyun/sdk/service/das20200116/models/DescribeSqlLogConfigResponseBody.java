@@ -231,6 +231,9 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportMigration")
         private Boolean supportMigration;
 
+        @com.aliyun.core.annotation.NameInMap("SupportSecurityAudit")
+        private Boolean supportSecurityAudit;
+
         @com.aliyun.core.annotation.NameInMap("SupportVersion")
         private String supportVersion;
 
@@ -256,6 +259,7 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
             this.sqlLogState = builder.sqlLogState;
             this.sqlLogVisibleTime = builder.sqlLogVisibleTime;
             this.supportMigration = builder.supportMigration;
+            this.supportSecurityAudit = builder.supportSecurityAudit;
             this.supportVersion = builder.supportVersion;
             this.version = builder.version;
         }
@@ -395,6 +399,13 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return supportSecurityAudit
+         */
+        public Boolean getSupportSecurityAudit() {
+            return this.supportSecurityAudit;
+        }
+
+        /**
          * @return supportVersion
          */
         public String getSupportVersion() {
@@ -427,6 +438,7 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
             private String sqlLogState; 
             private Long sqlLogVisibleTime; 
             private Boolean supportMigration; 
+            private Boolean supportSecurityAudit; 
             private String supportVersion; 
             private String version; 
 
@@ -452,6 +464,7 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
                 this.sqlLogState = model.sqlLogState;
                 this.sqlLogVisibleTime = model.sqlLogVisibleTime;
                 this.supportMigration = model.supportMigration;
+                this.supportSecurityAudit = model.supportSecurityAudit;
                 this.supportVersion = model.supportVersion;
                 this.version = model.version;
             } 
@@ -678,6 +691,14 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
              */
             public Builder supportMigration(Boolean supportMigration) {
                 this.supportMigration = supportMigration;
+                return this;
+            }
+
+            /**
+             * SupportSecurityAudit.
+             */
+            public Builder supportSecurityAudit(Boolean supportSecurityAudit) {
+                this.supportSecurityAudit = supportSecurityAudit;
                 return this;
             }
 
