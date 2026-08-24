@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddDeviceGroupMatchDevicesResponse> addDeviceGroupMatchDevices(AddDeviceGroupMatchDevicesRequest request);
 
     /**
+     * @param request the request parameters of AddVirusScanAdditionalLists  AddVirusScanAdditionalListsRequest
+     * @return AddVirusScanAdditionalListsResponse
+     */
+    CompletableFuture<AddVirusScanAdditionalListsResponse> addVirusScanAdditionalLists(AddVirusScanAdditionalListsRequest request);
+
+    /**
      * @param request the request parameters of AttachApplication2Connector  AttachApplication2ConnectorRequest
      * @return AttachApplication2ConnectorResponse
      */
@@ -60,6 +66,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return BatchDeletePrivateAccessPolicyResponse
      */
     CompletableFuture<BatchDeletePrivateAccessPolicyResponse> batchDeletePrivateAccessPolicy(BatchDeletePrivateAccessPolicyRequest request);
+
+    /**
+     * @param request the request parameters of CancelVirusScanTasks  CancelVirusScanTasksRequest
+     * @return CancelVirusScanTasksResponse
+     */
+    CompletableFuture<CancelVirusScanTasksResponse> cancelVirusScanTasks(CancelVirusScanTasksRequest request);
+
+    /**
+     * @param request the request parameters of CancelVulScanTasks  CancelVulScanTasksRequest
+     * @return CancelVulScanTasksResponse
+     */
+    CompletableFuture<CancelVulScanTasksResponse> cancelVulScanTasks(CancelVulScanTasksRequest request);
 
     /**
      * @param request the request parameters of CreateApprovalProcess  CreateApprovalProcessRequest
@@ -182,6 +200,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateUserGroupResponse> createUserGroup(CreateUserGroupRequest request);
 
     /**
+     * @param request the request parameters of CreateVirusScanScheduledStrategy  CreateVirusScanScheduledStrategyRequest
+     * @return CreateVirusScanScheduledStrategyResponse
+     */
+    CompletableFuture<CreateVirusScanScheduledStrategyResponse> createVirusScanScheduledStrategy(CreateVirusScanScheduledStrategyRequest request);
+
+    /**
+     * @param request the request parameters of CreateVirusScanTask  CreateVirusScanTaskRequest
+     * @return CreateVirusScanTaskResponse
+     */
+    CompletableFuture<CreateVirusScanTaskResponse> createVirusScanTask(CreateVirusScanTaskRequest request);
+
+    /**
+     * @param request the request parameters of CreateVulScanScheduledStrategy  CreateVulScanScheduledStrategyRequest
+     * @return CreateVulScanScheduledStrategyResponse
+     */
+    CompletableFuture<CreateVulScanScheduledStrategyResponse> createVulScanScheduledStrategy(CreateVulScanScheduledStrategyRequest request);
+
+    /**
+     * @param request the request parameters of CreateVulScanTask  CreateVulScanTaskRequest
+     * @return CreateVulScanTaskResponse
+     */
+    CompletableFuture<CreateVulScanTaskResponse> createVulScanTask(CreateVulScanTaskRequest request);
+
+    /**
+     * @param request the request parameters of CreateVulnerabilityFixTask  CreateVulnerabilityFixTaskRequest
+     * @return CreateVulnerabilityFixTaskResponse
+     */
+    CompletableFuture<CreateVulnerabilityFixTaskResponse> createVulnerabilityFixTask(CreateVulnerabilityFixTaskRequest request);
+
+    /**
      * @param request the request parameters of CreateWmBaseImage  CreateWmBaseImageRequest
      * @return CreateWmBaseImageResponse
      */
@@ -234,6 +282,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDeviceGroupsResponse
      */
     CompletableFuture<DeleteDeviceGroupsResponse> deleteDeviceGroups(DeleteDeviceGroupsRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDevicesVulnerability  DeleteDevicesVulnerabilityRequest
+     * @return DeleteDevicesVulnerabilityResponse
+     */
+    CompletableFuture<DeleteDevicesVulnerabilityResponse> deleteDevicesVulnerability(DeleteDevicesVulnerabilityRequest request);
 
     /**
      * @param request the request parameters of DeleteDomainMeta  DeleteDomainMetaRequest
@@ -332,6 +386,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteUserGroupResponse> deleteUserGroup(DeleteUserGroupRequest request);
 
     /**
+     * @param request the request parameters of DeleteVirusFile  DeleteVirusFileRequest
+     * @return DeleteVirusFileResponse
+     */
+    CompletableFuture<DeleteVirusFileResponse> deleteVirusFile(DeleteVirusFileRequest request);
+
+    /**
+     * @param request the request parameters of DeleteVirusScanScheduledStrategies  DeleteVirusScanScheduledStrategiesRequest
+     * @return DeleteVirusScanScheduledStrategiesResponse
+     */
+    CompletableFuture<DeleteVirusScanScheduledStrategiesResponse> deleteVirusScanScheduledStrategies(DeleteVirusScanScheduledStrategiesRequest request);
+
+    /**
+     * @param request the request parameters of DeleteVulScanScheduledStrategy  DeleteVulScanScheduledStrategyRequest
+     * @return DeleteVulScanScheduledStrategyResponse
+     */
+    CompletableFuture<DeleteVulScanScheduledStrategyResponse> deleteVulScanScheduledStrategy(DeleteVulScanScheduledStrategyRequest request);
+
+    /**
      * @deprecated OpenAPI DetachApplication2Connector is deprecated, please use csas::2023-01-20::ModifyForwardStrategy instead.  * @param request  the request parameters of DetachApplication2Connector  DetachApplication2ConnectorRequest
      * @return DetachApplication2ConnectorResponse
      */
@@ -367,6 +439,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetActiveIdpConfigResponse
      */
     CompletableFuture<GetActiveIdpConfigResponse> getActiveIdpConfig(GetActiveIdpConfigRequest request);
+
+    /**
+     * @param request the request parameters of GetAntiVirusRealTimeDefenceStrategy  GetAntiVirusRealTimeDefenceStrategyRequest
+     * @return GetAntiVirusRealTimeDefenceStrategyResponse
+     */
+    CompletableFuture<GetAntiVirusRealTimeDefenceStrategyResponse> getAntiVirusRealTimeDefenceStrategy(GetAntiVirusRealTimeDefenceStrategyRequest request);
 
     /**
      * @param request the request parameters of GetApproval  GetApprovalRequest
@@ -501,6 +579,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetUserGroupResponse> getUserGroup(GetUserGroupRequest request);
 
     /**
+     * @param request the request parameters of GetVirusScanGlobalConfig  GetVirusScanGlobalConfigRequest
+     * @return GetVirusScanGlobalConfigResponse
+     */
+    CompletableFuture<GetVirusScanGlobalConfigResponse> getVirusScanGlobalConfig(GetVirusScanGlobalConfigRequest request);
+
+    /**
+     * @param request the request parameters of GetVirusScanScheduledStrategy  GetVirusScanScheduledStrategyRequest
+     * @return GetVirusScanScheduledStrategyResponse
+     */
+    CompletableFuture<GetVirusScanScheduledStrategyResponse> getVirusScanScheduledStrategy(GetVirusScanScheduledStrategyRequest request);
+
+    /**
+     * @param request the request parameters of GetVulScanGlobalConfig  GetVulScanGlobalConfigRequest
+     * @return GetVulScanGlobalConfigResponse
+     */
+    CompletableFuture<GetVulScanGlobalConfigResponse> getVulScanGlobalConfig(GetVulScanGlobalConfigRequest request);
+
+    /**
+     * @param request the request parameters of GetVulScanScheduledStrategy  GetVulScanScheduledStrategyRequest
+     * @return GetVulScanScheduledStrategyResponse
+     */
+    CompletableFuture<GetVulScanScheduledStrategyResponse> getVulScanScheduledStrategy(GetVulScanScheduledStrategyRequest request);
+
+    /**
+     * @param request the request parameters of GetVulnerability  GetVulnerabilityRequest
+     * @return GetVulnerabilityResponse
+     */
+    CompletableFuture<GetVulnerabilityResponse> getVulnerability(GetVulnerabilityRequest request);
+
+    /**
      * @param request the request parameters of GetWmEmbedTask  GetWmEmbedTaskRequest
      * @return GetWmEmbedTaskResponse
      */
@@ -577,6 +685,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListDeviceGroupsResponse
      */
     CompletableFuture<ListDeviceGroupsResponse> listDeviceGroups(ListDeviceGroupsRequest request);
+
+    /**
+     * @param request the request parameters of ListDevicesForVulnerability  ListDevicesForVulnerabilityRequest
+     * @return ListDevicesForVulnerabilityResponse
+     */
+    CompletableFuture<ListDevicesForVulnerabilityResponse> listDevicesForVulnerability(ListDevicesForVulnerabilityRequest request);
 
     /**
      * @param request the request parameters of ListDomainItems  ListDomainItemsRequest
@@ -825,6 +939,60 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListUsersResponse> listUsers(ListUsersRequest request);
 
     /**
+     * @param request the request parameters of ListVirusFileStatuses  ListVirusFileStatusesRequest
+     * @return ListVirusFileStatusesResponse
+     */
+    CompletableFuture<ListVirusFileStatusesResponse> listVirusFileStatuses(ListVirusFileStatusesRequest request);
+
+    /**
+     * @param request the request parameters of ListVirusScanAdditionalLists  ListVirusScanAdditionalListsRequest
+     * @return ListVirusScanAdditionalListsResponse
+     */
+    CompletableFuture<ListVirusScanAdditionalListsResponse> listVirusScanAdditionalLists(ListVirusScanAdditionalListsRequest request);
+
+    /**
+     * @param request the request parameters of ListVirusScanScheduledStrategies  ListVirusScanScheduledStrategiesRequest
+     * @return ListVirusScanScheduledStrategiesResponse
+     */
+    CompletableFuture<ListVirusScanScheduledStrategiesResponse> listVirusScanScheduledStrategies(ListVirusScanScheduledStrategiesRequest request);
+
+    /**
+     * @param request the request parameters of ListVirusScanTaskStatuses  ListVirusScanTaskStatusesRequest
+     * @return ListVirusScanTaskStatusesResponse
+     */
+    CompletableFuture<ListVirusScanTaskStatusesResponse> listVirusScanTaskStatuses(ListVirusScanTaskStatusesRequest request);
+
+    /**
+     * @param request the request parameters of ListVirusScanTaskSummary  ListVirusScanTaskSummaryRequest
+     * @return ListVirusScanTaskSummaryResponse
+     */
+    CompletableFuture<ListVirusScanTaskSummaryResponse> listVirusScanTaskSummary(ListVirusScanTaskSummaryRequest request);
+
+    /**
+     * @param request the request parameters of ListVirusScanTasks  ListVirusScanTasksRequest
+     * @return ListVirusScanTasksResponse
+     */
+    CompletableFuture<ListVirusScanTasksResponse> listVirusScanTasks(ListVirusScanTasksRequest request);
+
+    /**
+     * @param request the request parameters of ListVulScanScheduledStrategies  ListVulScanScheduledStrategiesRequest
+     * @return ListVulScanScheduledStrategiesResponse
+     */
+    CompletableFuture<ListVulScanScheduledStrategiesResponse> listVulScanScheduledStrategies(ListVulScanScheduledStrategiesRequest request);
+
+    /**
+     * @param request the request parameters of ListVulScanTasks  ListVulScanTasksRequest
+     * @return ListVulScanTasksResponse
+     */
+    CompletableFuture<ListVulScanTasksResponse> listVulScanTasks(ListVulScanTasksRequest request);
+
+    /**
+     * @param request the request parameters of ListVulnerabilities  ListVulnerabilitiesRequest
+     * @return ListVulnerabilitiesResponse
+     */
+    CompletableFuture<ListVulnerabilitiesResponse> listVulnerabilities(ListVulnerabilitiesRequest request);
+
+    /**
      * @param request the request parameters of LookupWmInfoMapping  LookupWmInfoMappingRequest
      * @return LookupWmInfoMappingResponse
      */
@@ -855,6 +1023,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RemoveDeviceGroupMatchDevicesResponse> removeDeviceGroupMatchDevices(RemoveDeviceGroupMatchDevicesRequest request);
 
     /**
+     * @param request the request parameters of RemoveVirusScanAdditionalLists  RemoveVirusScanAdditionalListsRequest
+     * @return RemoveVirusScanAdditionalListsResponse
+     */
+    CompletableFuture<RemoveVirusScanAdditionalListsResponse> removeVirusScanAdditionalLists(RemoveVirusScanAdditionalListsRequest request);
+
+    /**
      * @param request the request parameters of RevokeUserDeviceSession  RevokeUserDeviceSessionRequest
      * @return RevokeUserDeviceSessionResponse
      */
@@ -866,6 +1040,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     @Deprecated
     CompletableFuture<RevokeUserSessionResponse> revokeUserSession(RevokeUserSessionRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAntiVirusRealTimeDefenceStrategy  UpdateAntiVirusRealTimeDefenceStrategyRequest
+     * @return UpdateAntiVirusRealTimeDefenceStrategyResponse
+     */
+    CompletableFuture<UpdateAntiVirusRealTimeDefenceStrategyResponse> updateAntiVirusRealTimeDefenceStrategy(UpdateAntiVirusRealTimeDefenceStrategyRequest request);
 
     /**
      * @param request the request parameters of UpdateApprovalProcess  UpdateApprovalProcessRequest
@@ -1034,5 +1214,35 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateUsersStatusResponse
      */
     CompletableFuture<UpdateUsersStatusResponse> updateUsersStatus(UpdateUsersStatusRequest request);
+
+    /**
+     * @param request the request parameters of UpdateVirusFileStatus  UpdateVirusFileStatusRequest
+     * @return UpdateVirusFileStatusResponse
+     */
+    CompletableFuture<UpdateVirusFileStatusResponse> updateVirusFileStatus(UpdateVirusFileStatusRequest request);
+
+    /**
+     * @param request the request parameters of UpdateVirusScanGlobalConfig  UpdateVirusScanGlobalConfigRequest
+     * @return UpdateVirusScanGlobalConfigResponse
+     */
+    CompletableFuture<UpdateVirusScanGlobalConfigResponse> updateVirusScanGlobalConfig(UpdateVirusScanGlobalConfigRequest request);
+
+    /**
+     * @param request the request parameters of UpdateVirusScanScheduledStrategy  UpdateVirusScanScheduledStrategyRequest
+     * @return UpdateVirusScanScheduledStrategyResponse
+     */
+    CompletableFuture<UpdateVirusScanScheduledStrategyResponse> updateVirusScanScheduledStrategy(UpdateVirusScanScheduledStrategyRequest request);
+
+    /**
+     * @param request the request parameters of UpdateVulScanGlobalConfig  UpdateVulScanGlobalConfigRequest
+     * @return UpdateVulScanGlobalConfigResponse
+     */
+    CompletableFuture<UpdateVulScanGlobalConfigResponse> updateVulScanGlobalConfig(UpdateVulScanGlobalConfigRequest request);
+
+    /**
+     * @param request the request parameters of UpdateVulScanScheduledStrategy  UpdateVulScanScheduledStrategyRequest
+     * @return UpdateVulScanScheduledStrategyResponse
+     */
+    CompletableFuture<UpdateVulScanScheduledStrategyResponse> updateVulScanScheduledStrategy(UpdateVulScanScheduledStrategyRequest request);
 
 }
