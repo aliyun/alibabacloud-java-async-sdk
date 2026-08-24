@@ -41,6 +41,10 @@ public class ConfigSetUpdateRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ValidationOption")
+    private ValidationOption validationOption;
+
     private ConfigSetUpdateRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -49,6 +53,7 @@ public class ConfigSetUpdateRequest extends Request {
         this.ipPoolId = builder.ipPoolId;
         this.isPublicChannelBackoff = builder.isPublicChannelBackoff;
         this.name = builder.name;
+        this.validationOption = builder.validationOption;
     }
 
     public static Builder builder() {
@@ -106,6 +111,13 @@ public class ConfigSetUpdateRequest extends Request {
         return this.name;
     }
 
+    /**
+     * @return validationOption
+     */
+    public ValidationOption getValidationOption() {
+        return this.validationOption;
+    }
+
     public static final class Builder extends Request.Builder<ConfigSetUpdateRequest, Builder> {
         private String regionId; 
         private String description; 
@@ -113,6 +125,7 @@ public class ConfigSetUpdateRequest extends Request {
         private String ipPoolId; 
         private Boolean isPublicChannelBackoff; 
         private String name; 
+        private ValidationOption validationOption; 
 
         private Builder() {
             super();
@@ -126,6 +139,7 @@ public class ConfigSetUpdateRequest extends Request {
             this.ipPoolId = request.ipPoolId;
             this.isPublicChannelBackoff = request.isPublicChannelBackoff;
             this.name = request.name;
+            this.validationOption = request.validationOption;
         } 
 
         /**
@@ -182,6 +196,16 @@ public class ConfigSetUpdateRequest extends Request {
             return this;
         }
 
+        /**
+         * ValidationOption.
+         */
+        public Builder validationOption(ValidationOption validationOption) {
+            String validationOptionShrink = shrink(validationOption, "ValidationOption", "json");
+            this.putQueryParameter("ValidationOption", validationOptionShrink);
+            this.validationOption = validationOption;
+            return this;
+        }
+
         @Override
         public ConfigSetUpdateRequest build() {
             return new ConfigSetUpdateRequest(this);
@@ -189,4 +213,100 @@ public class ConfigSetUpdateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ConfigSetUpdateRequest} extends {@link TeaModel}
+     *
+     * <p>ConfigSetUpdateRequest</p>
+     */
+    public static class ValidationOption extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("ForbiddenStatusList")
+        private java.util.List<String> forbiddenStatusList;
+
+        @com.aliyun.core.annotation.NameInMap("ForbiddenSubStatusList")
+        private java.util.List<String> forbiddenSubStatusList;
+
+        private ValidationOption(Builder builder) {
+            this.enabled = builder.enabled;
+            this.forbiddenStatusList = builder.forbiddenStatusList;
+            this.forbiddenSubStatusList = builder.forbiddenSubStatusList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ValidationOption create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return forbiddenStatusList
+         */
+        public java.util.List<String> getForbiddenStatusList() {
+            return this.forbiddenStatusList;
+        }
+
+        /**
+         * @return forbiddenSubStatusList
+         */
+        public java.util.List<String> getForbiddenSubStatusList() {
+            return this.forbiddenSubStatusList;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+            private java.util.List<String> forbiddenStatusList; 
+            private java.util.List<String> forbiddenSubStatusList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ValidationOption model) {
+                this.enabled = model.enabled;
+                this.forbiddenStatusList = model.forbiddenStatusList;
+                this.forbiddenSubStatusList = model.forbiddenSubStatusList;
+            } 
+
+            /**
+             * Enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * ForbiddenStatusList.
+             */
+            public Builder forbiddenStatusList(java.util.List<String> forbiddenStatusList) {
+                this.forbiddenStatusList = forbiddenStatusList;
+                return this;
+            }
+
+            /**
+             * ForbiddenSubStatusList.
+             */
+            public Builder forbiddenSubStatusList(java.util.List<String> forbiddenSubStatusList) {
+                this.forbiddenSubStatusList = forbiddenSubStatusList;
+                return this;
+            }
+
+            public ValidationOption build() {
+                return new ValidationOption(this);
+            } 
+
+        } 
+
+    }
 }
