@@ -31,8 +31,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.version = "2024-07-30";
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("me-east-1", "ehpc.me-east-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "ehpc.eu-central-1.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou", "ehpc.cn-zhangjiakou.aliyuncs.com"),
             new TeaPair("cn-wulanchabu", "ehpc.cn-wulanchabu.aliyuncs.com"),
             new TeaPair("cn-wuhan-lr", "ehpc.cn-wuhan-lr.aliyuncs.com"),
@@ -48,7 +46,9 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-beijing", "ehpc.cn-beijing.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "ehpc.ap-southeast-5.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "ehpc.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "ehpc.ap-northeast-1.aliyuncs.com")
+            new TeaPair("ap-northeast-1", "ehpc.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "ehpc.eu-central-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "ehpc.me-east-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -481,6 +481,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetQueueResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetUser  GetUserRequest
+     * @return GetUserResponse
+     */
+    @Override
+    public CompletableFuture<GetUserResponse> getUser(GetUserRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetUser").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetUserResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetUserResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

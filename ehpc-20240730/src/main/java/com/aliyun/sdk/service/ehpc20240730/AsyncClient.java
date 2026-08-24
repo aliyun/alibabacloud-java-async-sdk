@@ -196,6 +196,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetQueueResponse> getQueue(GetQueueRequest request);
 
     /**
+     * @param request the request parameters of GetUser  GetUserRequest
+     * @return GetUserResponse
+     */
+    CompletableFuture<GetUserResponse> getUser(GetUserRequest request);
+
+    /**
      * <b>description</b> :
      * <h2><a href="#"></a>Usage notes</h2>
      * <p>Take note of the following items when you call this operation:</p>
