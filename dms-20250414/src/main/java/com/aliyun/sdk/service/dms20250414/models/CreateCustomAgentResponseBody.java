@@ -830,6 +830,9 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TextReportConfig")
         private String textReportConfig;
 
+        @com.aliyun.core.annotation.NameInMap("UserSpecifiedSkillList")
+        private java.util.List<String> userSpecifiedSkillList;
+
         @com.aliyun.core.annotation.NameInMap("WebReportConfig")
         private String webReportConfig;
 
@@ -868,6 +871,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
             this.scheduleTaskConfig = builder.scheduleTaskConfig;
             this.status = builder.status;
             this.textReportConfig = builder.textReportConfig;
+            this.userSpecifiedSkillList = builder.userSpecifiedSkillList;
             this.webReportConfig = builder.webReportConfig;
             this.webReportTheme = builder.webReportTheme;
             this.workspaceId = builder.workspaceId;
@@ -1078,6 +1082,13 @@ public class CreateCustomAgentResponseBody extends TeaModel {
         }
 
         /**
+         * @return userSpecifiedSkillList
+         */
+        public java.util.List<String> getUserSpecifiedSkillList() {
+            return this.userSpecifiedSkillList;
+        }
+
+        /**
          * @return webReportConfig
          */
         public String getWebReportConfig() {
@@ -1127,6 +1138,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
             private ScheduleTaskConfig scheduleTaskConfig; 
             private String status; 
             private String textReportConfig; 
+            private java.util.List<String> userSpecifiedSkillList; 
             private String webReportConfig; 
             private String webReportTheme; 
             private String workspaceId; 
@@ -1163,6 +1175,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
                 this.scheduleTaskConfig = model.scheduleTaskConfig;
                 this.status = model.status;
                 this.textReportConfig = model.textReportConfig;
+                this.userSpecifiedSkillList = model.userSpecifiedSkillList;
                 this.webReportConfig = model.webReportConfig;
                 this.webReportTheme = model.webReportTheme;
                 this.workspaceId = model.workspaceId;
@@ -1389,6 +1402,14 @@ public class CreateCustomAgentResponseBody extends TeaModel {
              */
             public Builder textReportConfig(String textReportConfig) {
                 this.textReportConfig = textReportConfig;
+                return this;
+            }
+
+            /**
+             * UserSpecifiedSkillList.
+             */
+            public Builder userSpecifiedSkillList(java.util.List<String> userSpecifiedSkillList) {
+                this.userSpecifiedSkillList = userSpecifiedSkillList;
                 return this;
             }
 

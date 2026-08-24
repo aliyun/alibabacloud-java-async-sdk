@@ -75,6 +75,10 @@ public class ModifyCustomAgentRequest extends Request {
     private String textReportConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserSpecifiedSkillList")
+    private java.util.List<String> userSpecifiedSkillList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WebReportConfig")
     private String webReportConfig;
 
@@ -102,6 +106,7 @@ public class ModifyCustomAgentRequest extends Request {
         this.relatedSessionId = builder.relatedSessionId;
         this.scheduleTaskConfig = builder.scheduleTaskConfig;
         this.textReportConfig = builder.textReportConfig;
+        this.userSpecifiedSkillList = builder.userSpecifiedSkillList;
         this.webReportConfig = builder.webReportConfig;
         this.webReportTheme = builder.webReportTheme;
         this.workspaceId = builder.workspaceId;
@@ -219,6 +224,13 @@ public class ModifyCustomAgentRequest extends Request {
     }
 
     /**
+     * @return userSpecifiedSkillList
+     */
+    public java.util.List<String> getUserSpecifiedSkillList() {
+        return this.userSpecifiedSkillList;
+    }
+
+    /**
      * @return webReportConfig
      */
     public String getWebReportConfig() {
@@ -254,6 +266,7 @@ public class ModifyCustomAgentRequest extends Request {
         private String relatedSessionId; 
         private ScheduleTaskConfig scheduleTaskConfig; 
         private String textReportConfig; 
+        private java.util.List<String> userSpecifiedSkillList; 
         private String webReportConfig; 
         private String webReportTheme; 
         private String workspaceId; 
@@ -278,6 +291,7 @@ public class ModifyCustomAgentRequest extends Request {
             this.relatedSessionId = request.relatedSessionId;
             this.scheduleTaskConfig = request.scheduleTaskConfig;
             this.textReportConfig = request.textReportConfig;
+            this.userSpecifiedSkillList = request.userSpecifiedSkillList;
             this.webReportConfig = request.webReportConfig;
             this.webReportTheme = request.webReportTheme;
             this.workspaceId = request.workspaceId;
@@ -414,6 +428,16 @@ public class ModifyCustomAgentRequest extends Request {
         public Builder textReportConfig(String textReportConfig) {
             this.putQueryParameter("TextReportConfig", textReportConfig);
             this.textReportConfig = textReportConfig;
+            return this;
+        }
+
+        /**
+         * UserSpecifiedSkillList.
+         */
+        public Builder userSpecifiedSkillList(java.util.List<String> userSpecifiedSkillList) {
+            String userSpecifiedSkillListShrink = shrink(userSpecifiedSkillList, "UserSpecifiedSkillList", "json");
+            this.putQueryParameter("UserSpecifiedSkillList", userSpecifiedSkillListShrink);
+            this.userSpecifiedSkillList = userSpecifiedSkillList;
             return this;
         }
 

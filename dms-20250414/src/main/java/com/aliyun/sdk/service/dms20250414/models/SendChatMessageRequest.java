@@ -1320,6 +1320,9 @@ public class SendChatMessageRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("SkipWebReportConfirm")
         private Boolean skipWebReportConfirm;
 
+        @com.aliyun.core.annotation.NameInMap("UserSpecifiedSkillList")
+        private java.util.List<String> userSpecifiedSkillList;
+
         private SessionConfig(Builder builder) {
             this.customAgentId = builder.customAgentId;
             this.customAgentStage = builder.customAgentStage;
@@ -1334,6 +1337,7 @@ public class SendChatMessageRequest extends Request {
             this.skipPlan = builder.skipPlan;
             this.skipSqlConfirm = builder.skipSqlConfirm;
             this.skipWebReportConfirm = builder.skipWebReportConfirm;
+            this.userSpecifiedSkillList = builder.userSpecifiedSkillList;
         }
 
         public static Builder builder() {
@@ -1435,6 +1439,13 @@ public class SendChatMessageRequest extends Request {
             return this.skipWebReportConfirm;
         }
 
+        /**
+         * @return userSpecifiedSkillList
+         */
+        public java.util.List<String> getUserSpecifiedSkillList() {
+            return this.userSpecifiedSkillList;
+        }
+
         public static final class Builder {
             private String customAgentId; 
             private String customAgentStage; 
@@ -1449,6 +1460,7 @@ public class SendChatMessageRequest extends Request {
             private Boolean skipPlan; 
             private Boolean skipSqlConfirm; 
             private Boolean skipWebReportConfirm; 
+            private java.util.List<String> userSpecifiedSkillList; 
 
             private Builder() {
             } 
@@ -1467,6 +1479,7 @@ public class SendChatMessageRequest extends Request {
                 this.skipPlan = model.skipPlan;
                 this.skipSqlConfirm = model.skipSqlConfirm;
                 this.skipWebReportConfirm = model.skipWebReportConfirm;
+                this.userSpecifiedSkillList = model.userSpecifiedSkillList;
             } 
 
             /**
@@ -1570,6 +1583,14 @@ public class SendChatMessageRequest extends Request {
              */
             public Builder skipWebReportConfirm(Boolean skipWebReportConfirm) {
                 this.skipWebReportConfirm = skipWebReportConfirm;
+                return this;
+            }
+
+            /**
+             * UserSpecifiedSkillList.
+             */
+            public Builder userSpecifiedSkillList(java.util.List<String> userSpecifiedSkillList) {
+                this.userSpecifiedSkillList = userSpecifiedSkillList;
                 return this;
             }
 

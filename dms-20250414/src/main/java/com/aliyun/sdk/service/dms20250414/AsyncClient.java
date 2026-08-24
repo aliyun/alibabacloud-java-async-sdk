@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddDataAgentMemory  AddDataAgentMemoryRequest
+     * @return AddDataAgentMemoryResponse
+     */
+    CompletableFuture<AddDataAgentMemoryResponse> addDataAgentMemory(AddDataAgentMemoryRequest request);
+
+    /**
      * @param request the request parameters of AddUserToDataAgentWorkspace  AddUserToDataAgentWorkspaceRequest
      * @return AddUserToDataAgentWorkspaceResponse
      */
