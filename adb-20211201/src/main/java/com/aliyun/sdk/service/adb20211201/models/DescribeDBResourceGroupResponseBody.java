@@ -710,9 +710,13 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StorageId")
         private Long storageId;
 
+        @com.aliyun.core.annotation.NameInMap("StorageName")
+        private String storageName;
+
         private StorageMounts(Builder builder) {
             this.mountPath = builder.mountPath;
             this.storageId = builder.storageId;
+            this.storageName = builder.storageName;
         }
 
         public static Builder builder() {
@@ -737,9 +741,17 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             return this.storageId;
         }
 
+        /**
+         * @return storageName
+         */
+        public String getStorageName() {
+            return this.storageName;
+        }
+
         public static final class Builder {
             private String mountPath; 
             private Long storageId; 
+            private String storageName; 
 
             private Builder() {
             } 
@@ -747,6 +759,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             private Builder(StorageMounts model) {
                 this.mountPath = model.mountPath;
                 this.storageId = model.storageId;
+                this.storageName = model.storageName;
             } 
 
             /**
@@ -762,6 +775,14 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
              */
             public Builder storageId(Long storageId) {
                 this.storageId = storageId;
+                return this;
+            }
+
+            /**
+             * StorageName.
+             */
+            public Builder storageName(String storageName) {
+                this.storageName = storageName;
                 return this;
             }
 

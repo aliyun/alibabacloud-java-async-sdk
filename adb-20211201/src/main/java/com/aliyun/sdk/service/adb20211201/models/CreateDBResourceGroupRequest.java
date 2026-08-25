@@ -1094,6 +1094,102 @@ public class CreateDBResourceGroupRequest extends Request {
      *
      * <p>CreateDBResourceGroupRequest</p>
      */
+    public static class StorageMounts extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MountPath")
+        private String mountPath;
+
+        @com.aliyun.core.annotation.NameInMap("StorageId")
+        private Long storageId;
+
+        @com.aliyun.core.annotation.NameInMap("StorageName")
+        private String storageName;
+
+        private StorageMounts(Builder builder) {
+            this.mountPath = builder.mountPath;
+            this.storageId = builder.storageId;
+            this.storageName = builder.storageName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StorageMounts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mountPath
+         */
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        /**
+         * @return storageId
+         */
+        public Long getStorageId() {
+            return this.storageId;
+        }
+
+        /**
+         * @return storageName
+         */
+        public String getStorageName() {
+            return this.storageName;
+        }
+
+        public static final class Builder {
+            private String mountPath; 
+            private Long storageId; 
+            private String storageName; 
+
+            private Builder() {
+            } 
+
+            private Builder(StorageMounts model) {
+                this.mountPath = model.mountPath;
+                this.storageId = model.storageId;
+                this.storageName = model.storageName;
+            } 
+
+            /**
+             * MountPath.
+             */
+            public Builder mountPath(String mountPath) {
+                this.mountPath = mountPath;
+                return this;
+            }
+
+            /**
+             * StorageId.
+             */
+            public Builder storageId(Long storageId) {
+                this.storageId = storageId;
+                return this;
+            }
+
+            /**
+             * StorageName.
+             */
+            public Builder storageName(String storageName) {
+                this.storageName = storageName;
+                return this;
+            }
+
+            public StorageMounts build() {
+                return new StorageMounts(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDBResourceGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDBResourceGroupRequest</p>
+     */
     public static class WorkerGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllocateUnit")
         private String allocateUnit;
@@ -1302,6 +1398,9 @@ public class CreateDBResourceGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("HeadSpecType")
         private String headSpecType;
 
+        @com.aliyun.core.annotation.NameInMap("StorageMounts")
+        private java.util.List<StorageMounts> storageMounts;
+
         @com.aliyun.core.annotation.NameInMap("UserDefinedRequirements")
         private String userDefinedRequirements;
 
@@ -1315,6 +1414,7 @@ public class CreateDBResourceGroupRequest extends Request {
             this.headDiskCapacity = builder.headDiskCapacity;
             this.headSpec = builder.headSpec;
             this.headSpecType = builder.headSpecType;
+            this.storageMounts = builder.storageMounts;
             this.userDefinedRequirements = builder.userDefinedRequirements;
             this.workerGroups = builder.workerGroups;
         }
@@ -1370,6 +1470,13 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
+         * @return storageMounts
+         */
+        public java.util.List<StorageMounts> getStorageMounts() {
+            return this.storageMounts;
+        }
+
+        /**
          * @return userDefinedRequirements
          */
         public String getUserDefinedRequirements() {
@@ -1390,6 +1497,7 @@ public class CreateDBResourceGroupRequest extends Request {
             private String headDiskCapacity; 
             private String headSpec; 
             private String headSpecType; 
+            private java.util.List<StorageMounts> storageMounts; 
             private String userDefinedRequirements; 
             private java.util.List<WorkerGroups> workerGroups; 
 
@@ -1403,6 +1511,7 @@ public class CreateDBResourceGroupRequest extends Request {
                 this.headDiskCapacity = model.headDiskCapacity;
                 this.headSpec = model.headSpec;
                 this.headSpecType = model.headSpecType;
+                this.storageMounts = model.storageMounts;
                 this.userDefinedRequirements = model.userDefinedRequirements;
                 this.workerGroups = model.workerGroups;
             } 
@@ -1452,6 +1561,14 @@ public class CreateDBResourceGroupRequest extends Request {
              */
             public Builder headSpecType(String headSpecType) {
                 this.headSpecType = headSpecType;
+                return this;
+            }
+
+            /**
+             * StorageMounts.
+             */
+            public Builder storageMounts(java.util.List<StorageMounts> storageMounts) {
+                this.storageMounts = storageMounts;
                 return this;
             }
 
