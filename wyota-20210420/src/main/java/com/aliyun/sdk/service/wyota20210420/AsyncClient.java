@@ -56,16 +56,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeClientsResponse> describeClients(DescribeClientsRequest request);
 
     /**
+     * @param request the request parameters of GetCustomResourceStats  GetCustomResourceStatsRequest
+     * @return GetCustomResourceStatsResponse
+     */
+    CompletableFuture<GetCustomResourceStatsResponse> getCustomResourceStats(GetCustomResourceStatsRequest request);
+
+    /**
      * @param request the request parameters of GetOrCreateInvitationCode  GetOrCreateInvitationCodeRequest
      * @return GetOrCreateInvitationCodeResponse
      */
     CompletableFuture<GetOrCreateInvitationCodeResponse> getOrCreateInvitationCode(GetOrCreateInvitationCodeRequest request);
 
     /**
+     * @param request the request parameters of GetTerminalCount  GetTerminalCountRequest
+     * @return GetTerminalCountResponse
+     */
+    CompletableFuture<GetTerminalCountResponse> getTerminalCount(GetTerminalCountRequest request);
+
+    /**
      * @param request the request parameters of ListTerminal  ListTerminalRequest
      * @return ListTerminalResponse
      */
     CompletableFuture<ListTerminalResponse> listTerminal(ListTerminalRequest request);
+
+    /**
+     * @param request the request parameters of ListVersionDistribution  ListVersionDistributionRequest
+     * @return ListVersionDistributionResponse
+     */
+    CompletableFuture<ListVersionDistributionResponse> listVersionDistribution(ListVersionDistributionRequest request);
 
     /**
      * @param request the request parameters of SendOpsMessageToTerminals  SendOpsMessageToTerminalsRequest

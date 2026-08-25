@@ -26,6 +26,10 @@ public class SendOpsMessageToTerminalsRequest extends Request {
     private String msg;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OpDomain")
+    private String opDomain;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("OpsAction")
     private String opsAction;
 
@@ -41,6 +45,7 @@ public class SendOpsMessageToTerminalsRequest extends Request {
         super(builder);
         this.delay = builder.delay;
         this.msg = builder.msg;
+        this.opDomain = builder.opDomain;
         this.opsAction = builder.opsAction;
         this.uuids = builder.uuids;
         this.waitForAck = builder.waitForAck;
@@ -74,6 +79,13 @@ public class SendOpsMessageToTerminalsRequest extends Request {
     }
 
     /**
+     * @return opDomain
+     */
+    public String getOpDomain() {
+        return this.opDomain;
+    }
+
+    /**
      * @return opsAction
      */
     public String getOpsAction() {
@@ -97,6 +109,7 @@ public class SendOpsMessageToTerminalsRequest extends Request {
     public static final class Builder extends Request.Builder<SendOpsMessageToTerminalsRequest, Builder> {
         private Boolean delay; 
         private String msg; 
+        private String opDomain; 
         private String opsAction; 
         private java.util.List<String> uuids; 
         private Boolean waitForAck; 
@@ -109,6 +122,7 @@ public class SendOpsMessageToTerminalsRequest extends Request {
             super(request);
             this.delay = request.delay;
             this.msg = request.msg;
+            this.opDomain = request.opDomain;
             this.opsAction = request.opsAction;
             this.uuids = request.uuids;
             this.waitForAck = request.waitForAck;
@@ -129,6 +143,15 @@ public class SendOpsMessageToTerminalsRequest extends Request {
         public Builder msg(String msg) {
             this.putBodyParameter("Msg", msg);
             this.msg = msg;
+            return this;
+        }
+
+        /**
+         * OpDomain.
+         */
+        public Builder opDomain(String opDomain) {
+            this.putBodyParameter("OpDomain", opDomain);
+            this.opDomain = opDomain;
             return this;
         }
 
