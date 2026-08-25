@@ -565,6 +565,519 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
      *
      * <p>GetAgentTaskResultResponseBody</p>
      */
+    public static class Children extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Remarks")
+        private String remarks;
+
+        @com.aliyun.core.annotation.NameInMap("TagName")
+        private String tagName;
+
+        private Children(Builder builder) {
+            this.remarks = builder.remarks;
+            this.tagName = builder.tagName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Children create() {
+            return builder().build();
+        }
+
+        /**
+         * @return remarks
+         */
+        public String getRemarks() {
+            return this.remarks;
+        }
+
+        /**
+         * @return tagName
+         */
+        public String getTagName() {
+            return this.tagName;
+        }
+
+        public static final class Builder {
+            private String remarks; 
+            private String tagName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Children model) {
+                this.remarks = model.remarks;
+                this.tagName = model.tagName;
+            } 
+
+            /**
+             * Remarks.
+             */
+            public Builder remarks(String remarks) {
+                this.remarks = remarks;
+                return this;
+            }
+
+            /**
+             * TagName.
+             */
+            public Builder tagName(String tagName) {
+                this.tagName = tagName;
+                return this;
+            }
+
+            public Children build() {
+                return new Children(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAgentTaskResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAgentTaskResultResponseBody</p>
+     */
+    public static class ChildrenChildren extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Children")
+        private java.util.List<Children> children;
+
+        @com.aliyun.core.annotation.NameInMap("Remarks")
+        private String remarks;
+
+        @com.aliyun.core.annotation.NameInMap("TagName")
+        private String tagName;
+
+        private ChildrenChildren(Builder builder) {
+            this.children = builder.children;
+            this.remarks = builder.remarks;
+            this.tagName = builder.tagName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ChildrenChildren create() {
+            return builder().build();
+        }
+
+        /**
+         * @return children
+         */
+        public java.util.List<Children> getChildren() {
+            return this.children;
+        }
+
+        /**
+         * @return remarks
+         */
+        public String getRemarks() {
+            return this.remarks;
+        }
+
+        /**
+         * @return tagName
+         */
+        public String getTagName() {
+            return this.tagName;
+        }
+
+        public static final class Builder {
+            private java.util.List<Children> children; 
+            private String remarks; 
+            private String tagName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChildrenChildren model) {
+                this.children = model.children;
+                this.remarks = model.remarks;
+                this.tagName = model.tagName;
+            } 
+
+            /**
+             * Children.
+             */
+            public Builder children(java.util.List<Children> children) {
+                this.children = children;
+                return this;
+            }
+
+            /**
+             * Remarks.
+             */
+            public Builder remarks(String remarks) {
+                this.remarks = remarks;
+                return this;
+            }
+
+            /**
+             * TagName.
+             */
+            public Builder tagName(String tagName) {
+                this.tagName = tagName;
+                return this;
+            }
+
+            public ChildrenChildren build() {
+                return new ChildrenChildren(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAgentTaskResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAgentTaskResultResponseBody</p>
+     */
+    public static class TagListChildrenChildren extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Children")
+        private java.util.List<ChildrenChildren> children;
+
+        @com.aliyun.core.annotation.NameInMap("Remarks")
+        private String remarks;
+
+        @com.aliyun.core.annotation.NameInMap("TagName")
+        private String tagName;
+
+        private TagListChildrenChildren(Builder builder) {
+            this.children = builder.children;
+            this.remarks = builder.remarks;
+            this.tagName = builder.tagName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TagListChildrenChildren create() {
+            return builder().build();
+        }
+
+        /**
+         * @return children
+         */
+        public java.util.List<ChildrenChildren> getChildren() {
+            return this.children;
+        }
+
+        /**
+         * @return remarks
+         */
+        public String getRemarks() {
+            return this.remarks;
+        }
+
+        /**
+         * @return tagName
+         */
+        public String getTagName() {
+            return this.tagName;
+        }
+
+        public static final class Builder {
+            private java.util.List<ChildrenChildren> children; 
+            private String remarks; 
+            private String tagName; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagListChildrenChildren model) {
+                this.children = model.children;
+                this.remarks = model.remarks;
+                this.tagName = model.tagName;
+            } 
+
+            /**
+             * Children.
+             */
+            public Builder children(java.util.List<ChildrenChildren> children) {
+                this.children = children;
+                return this;
+            }
+
+            /**
+             * Remarks.
+             */
+            public Builder remarks(String remarks) {
+                this.remarks = remarks;
+                return this;
+            }
+
+            /**
+             * TagName.
+             */
+            public Builder tagName(String tagName) {
+                this.tagName = tagName;
+                return this;
+            }
+
+            public TagListChildrenChildren build() {
+                return new TagListChildrenChildren(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAgentTaskResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAgentTaskResultResponseBody</p>
+     */
+    public static class TagListChildren extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Children")
+        private java.util.List<TagListChildrenChildren> children;
+
+        @com.aliyun.core.annotation.NameInMap("Remarks")
+        private String remarks;
+
+        @com.aliyun.core.annotation.NameInMap("TagName")
+        private String tagName;
+
+        private TagListChildren(Builder builder) {
+            this.children = builder.children;
+            this.remarks = builder.remarks;
+            this.tagName = builder.tagName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TagListChildren create() {
+            return builder().build();
+        }
+
+        /**
+         * @return children
+         */
+        public java.util.List<TagListChildrenChildren> getChildren() {
+            return this.children;
+        }
+
+        /**
+         * @return remarks
+         */
+        public String getRemarks() {
+            return this.remarks;
+        }
+
+        /**
+         * @return tagName
+         */
+        public String getTagName() {
+            return this.tagName;
+        }
+
+        public static final class Builder {
+            private java.util.List<TagListChildrenChildren> children; 
+            private String remarks; 
+            private String tagName; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagListChildren model) {
+                this.children = model.children;
+                this.remarks = model.remarks;
+                this.tagName = model.tagName;
+            } 
+
+            /**
+             * Children.
+             */
+            public Builder children(java.util.List<TagListChildrenChildren> children) {
+                this.children = children;
+                return this;
+            }
+
+            /**
+             * Remarks.
+             */
+            public Builder remarks(String remarks) {
+                this.remarks = remarks;
+                return this;
+            }
+
+            /**
+             * TagName.
+             */
+            public Builder tagName(String tagName) {
+                this.tagName = tagName;
+                return this;
+            }
+
+            public TagListChildren build() {
+                return new TagListChildren(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAgentTaskResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAgentTaskResultResponseBody</p>
+     */
+    public static class TagList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Children")
+        private java.util.List<TagListChildren> children;
+
+        @com.aliyun.core.annotation.NameInMap("Remarks")
+        private String remarks;
+
+        @com.aliyun.core.annotation.NameInMap("TagName")
+        private String tagName;
+
+        private TagList(Builder builder) {
+            this.children = builder.children;
+            this.remarks = builder.remarks;
+            this.tagName = builder.tagName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TagList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return children
+         */
+        public java.util.List<TagListChildren> getChildren() {
+            return this.children;
+        }
+
+        /**
+         * @return remarks
+         */
+        public String getRemarks() {
+            return this.remarks;
+        }
+
+        /**
+         * @return tagName
+         */
+        public String getTagName() {
+            return this.tagName;
+        }
+
+        public static final class Builder {
+            private java.util.List<TagListChildren> children; 
+            private String remarks; 
+            private String tagName; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagList model) {
+                this.children = model.children;
+                this.remarks = model.remarks;
+                this.tagName = model.tagName;
+            } 
+
+            /**
+             * Children.
+             */
+            public Builder children(java.util.List<TagListChildren> children) {
+                this.children = children;
+                return this;
+            }
+
+            /**
+             * Remarks.
+             */
+            public Builder remarks(String remarks) {
+                this.remarks = remarks;
+                return this;
+            }
+
+            /**
+             * TagName.
+             */
+            public Builder tagName(String tagName) {
+                this.tagName = tagName;
+                return this;
+            }
+
+            public TagList build() {
+                return new TagList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAgentTaskResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAgentTaskResultResponseBody</p>
+     */
+    public static class MultiLevelTagResponse extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagList")
+        private java.util.List<TagList> tagList;
+
+        private MultiLevelTagResponse(Builder builder) {
+            this.tagList = builder.tagList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MultiLevelTagResponse create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagList
+         */
+        public java.util.List<TagList> getTagList() {
+            return this.tagList;
+        }
+
+        public static final class Builder {
+            private java.util.List<TagList> tagList; 
+
+            private Builder() {
+            } 
+
+            private Builder(MultiLevelTagResponse model) {
+                this.tagList = model.tagList;
+            } 
+
+            /**
+             * TagList.
+             */
+            public Builder tagList(java.util.List<TagList> tagList) {
+                this.tagList = tagList;
+                return this;
+            }
+
+            public MultiLevelTagResponse build() {
+                return new MultiLevelTagResponse(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAgentTaskResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAgentTaskResultResponseBody</p>
+     */
     public static class ServiceInspectionVoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dimension")
         private String dimension;
@@ -1445,6 +1958,9 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FieldResponse")
         private FieldResponse fieldResponse;
 
+        @com.aliyun.core.annotation.NameInMap("MultiLevelTagResponse")
+        private MultiLevelTagResponse multiLevelTagResponse;
+
         @com.aliyun.core.annotation.NameInMap("ServiceInspectionResponse")
         private ServiceInspectionResponse serviceInspectionResponse;
 
@@ -1457,6 +1973,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         private DataResponse(Builder builder) {
             this.customerPromptResponse = builder.customerPromptResponse;
             this.fieldResponse = builder.fieldResponse;
+            this.multiLevelTagResponse = builder.multiLevelTagResponse;
             this.serviceInspectionResponse = builder.serviceInspectionResponse;
             this.tagCategoryResponse = builder.tagCategoryResponse;
             this.voiceprintResponse = builder.voiceprintResponse;
@@ -1485,6 +2002,13 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return multiLevelTagResponse
+         */
+        public MultiLevelTagResponse getMultiLevelTagResponse() {
+            return this.multiLevelTagResponse;
+        }
+
+        /**
          * @return serviceInspectionResponse
          */
         public ServiceInspectionResponse getServiceInspectionResponse() {
@@ -1508,6 +2032,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         public static final class Builder {
             private CustomerPromptResponse customerPromptResponse; 
             private FieldResponse fieldResponse; 
+            private MultiLevelTagResponse multiLevelTagResponse; 
             private ServiceInspectionResponse serviceInspectionResponse; 
             private TagCategoryResponse tagCategoryResponse; 
             private VoiceprintResponse voiceprintResponse; 
@@ -1518,6 +2043,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             private Builder(DataResponse model) {
                 this.customerPromptResponse = model.customerPromptResponse;
                 this.fieldResponse = model.fieldResponse;
+                this.multiLevelTagResponse = model.multiLevelTagResponse;
                 this.serviceInspectionResponse = model.serviceInspectionResponse;
                 this.tagCategoryResponse = model.tagCategoryResponse;
                 this.voiceprintResponse = model.voiceprintResponse;
@@ -1536,6 +2062,14 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
              */
             public Builder fieldResponse(FieldResponse fieldResponse) {
                 this.fieldResponse = fieldResponse;
+                return this;
+            }
+
+            /**
+             * MultiLevelTagResponse.
+             */
+            public Builder multiLevelTagResponse(MultiLevelTagResponse multiLevelTagResponse) {
+                this.multiLevelTagResponse = multiLevelTagResponse;
                 return this;
             }
 
