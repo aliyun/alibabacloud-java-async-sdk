@@ -210,6 +210,9 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("OriginTargetId")
+        private String originTargetId;
+
         @com.aliyun.core.annotation.NameInMap("RAMPolicyNames")
         private java.util.List<String> RAMPolicyNames;
 
@@ -244,6 +247,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
             this.accessConfigurationId = builder.accessConfigurationId;
             this.accessConfigurationName = builder.accessConfigurationName;
             this.createTime = builder.createTime;
+            this.originTargetId = builder.originTargetId;
             this.RAMPolicyNames = builder.RAMPolicyNames;
             this.RAMRoleName = builder.RAMRoleName;
             this.SAMLProviderName = builder.SAMLProviderName;
@@ -283,6 +287,13 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return originTargetId
+         */
+        public String getOriginTargetId() {
+            return this.originTargetId;
         }
 
         /**
@@ -359,6 +370,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
             private String accessConfigurationId; 
             private String accessConfigurationName; 
             private String createTime; 
+            private String originTargetId; 
             private java.util.List<String> RAMPolicyNames; 
             private String RAMRoleName; 
             private String SAMLProviderName; 
@@ -377,6 +389,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
                 this.accessConfigurationId = model.accessConfigurationId;
                 this.accessConfigurationName = model.accessConfigurationName;
                 this.createTime = model.createTime;
+                this.originTargetId = model.originTargetId;
                 this.RAMPolicyNames = model.RAMPolicyNames;
                 this.RAMRoleName = model.RAMRoleName;
                 this.SAMLProviderName = model.SAMLProviderName;
@@ -419,6 +432,14 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * OriginTargetId.
+             */
+            public Builder originTargetId(String originTargetId) {
+                this.originTargetId = originTargetId;
                 return this;
             }
 

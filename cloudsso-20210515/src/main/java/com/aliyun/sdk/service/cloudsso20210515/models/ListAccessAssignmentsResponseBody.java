@@ -210,6 +210,9 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("OriginTargetId")
+        private String originTargetId;
+
         @com.aliyun.core.annotation.NameInMap("PrincipalId")
         private String principalId;
 
@@ -238,6 +241,7 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             this.accessConfigurationId = builder.accessConfigurationId;
             this.accessConfigurationName = builder.accessConfigurationName;
             this.createTime = builder.createTime;
+            this.originTargetId = builder.originTargetId;
             this.principalId = builder.principalId;
             this.principalName = builder.principalName;
             this.principalType = builder.principalType;
@@ -275,6 +279,13 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return originTargetId
+         */
+        public String getOriginTargetId() {
+            return this.originTargetId;
         }
 
         /**
@@ -337,6 +348,7 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             private String accessConfigurationId; 
             private String accessConfigurationName; 
             private String createTime; 
+            private String originTargetId; 
             private String principalId; 
             private String principalName; 
             private String principalType; 
@@ -353,6 +365,7 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
                 this.accessConfigurationId = model.accessConfigurationId;
                 this.accessConfigurationName = model.accessConfigurationName;
                 this.createTime = model.createTime;
+                this.originTargetId = model.originTargetId;
                 this.principalId = model.principalId;
                 this.principalName = model.principalName;
                 this.principalType = model.principalType;
@@ -393,6 +406,14 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * OriginTargetId.
+             */
+            public Builder originTargetId(String originTargetId) {
+                this.originTargetId = originTargetId;
                 return this;
             }
 

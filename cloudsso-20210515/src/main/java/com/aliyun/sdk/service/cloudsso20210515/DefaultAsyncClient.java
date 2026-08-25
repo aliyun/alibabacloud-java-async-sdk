@@ -31,12 +31,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.version = "2021-05-15";
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("us-west-1", "cloudsso.us-west-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "cloudsso.eu-central-1.aliyuncs.com"),
             new TeaPair("cn-shanghai", "cloudsso.cn-shanghai.aliyuncs.com"),
             new TeaPair("cn-hongkong", "cloudsso.cn-hongkong.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "cloudsso.ap-northeast-2.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "cloudsso.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "cloudsso.ap-northeast-2.aliyuncs.com")
+            new TeaPair("us-west-1", "cloudsso.us-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "cloudsso.eu-central-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }

@@ -104,6 +104,9 @@ public class DeleteAccessAssignmentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessConfigurationName")
         private String accessConfigurationName;
 
+        @com.aliyun.core.annotation.NameInMap("OriginTargetId")
+        private String originTargetId;
+
         @com.aliyun.core.annotation.NameInMap("PrincipalId")
         private String principalId;
 
@@ -140,6 +143,7 @@ public class DeleteAccessAssignmentResponseBody extends TeaModel {
         private Task(Builder builder) {
             this.accessConfigurationId = builder.accessConfigurationId;
             this.accessConfigurationName = builder.accessConfigurationName;
+            this.originTargetId = builder.originTargetId;
             this.principalId = builder.principalId;
             this.principalName = builder.principalName;
             this.principalType = builder.principalType;
@@ -173,6 +177,13 @@ public class DeleteAccessAssignmentResponseBody extends TeaModel {
          */
         public String getAccessConfigurationName() {
             return this.accessConfigurationName;
+        }
+
+        /**
+         * @return originTargetId
+         */
+        public String getOriginTargetId() {
+            return this.originTargetId;
         }
 
         /**
@@ -255,6 +266,7 @@ public class DeleteAccessAssignmentResponseBody extends TeaModel {
         public static final class Builder {
             private String accessConfigurationId; 
             private String accessConfigurationName; 
+            private String originTargetId; 
             private String principalId; 
             private String principalName; 
             private String principalType; 
@@ -273,6 +285,7 @@ public class DeleteAccessAssignmentResponseBody extends TeaModel {
             private Builder(Task model) {
                 this.accessConfigurationId = model.accessConfigurationId;
                 this.accessConfigurationName = model.accessConfigurationName;
+                this.originTargetId = model.originTargetId;
                 this.principalId = model.principalId;
                 this.principalName = model.principalName;
                 this.principalType = model.principalType;
@@ -305,6 +318,14 @@ public class DeleteAccessAssignmentResponseBody extends TeaModel {
              */
             public Builder accessConfigurationName(String accessConfigurationName) {
                 this.accessConfigurationName = accessConfigurationName;
+                return this;
+            }
+
+            /**
+             * OriginTargetId.
+             */
+            public Builder originTargetId(String originTargetId) {
+                this.originTargetId = originTargetId;
                 return this;
             }
 

@@ -26,6 +26,10 @@ public class ProvisionAccessConfigurationRequest extends Request {
     private String directoryId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OriginTargetId")
+    private String originTargetId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetId")
     private String targetId;
 
@@ -37,6 +41,7 @@ public class ProvisionAccessConfigurationRequest extends Request {
         super(builder);
         this.accessConfigurationId = builder.accessConfigurationId;
         this.directoryId = builder.directoryId;
+        this.originTargetId = builder.originTargetId;
         this.targetId = builder.targetId;
         this.targetType = builder.targetType;
     }
@@ -69,6 +74,13 @@ public class ProvisionAccessConfigurationRequest extends Request {
     }
 
     /**
+     * @return originTargetId
+     */
+    public String getOriginTargetId() {
+        return this.originTargetId;
+    }
+
+    /**
      * @return targetId
      */
     public String getTargetId() {
@@ -85,6 +97,7 @@ public class ProvisionAccessConfigurationRequest extends Request {
     public static final class Builder extends Request.Builder<ProvisionAccessConfigurationRequest, Builder> {
         private String accessConfigurationId; 
         private String directoryId; 
+        private String originTargetId; 
         private String targetId; 
         private String targetType; 
 
@@ -96,6 +109,7 @@ public class ProvisionAccessConfigurationRequest extends Request {
             super(request);
             this.accessConfigurationId = request.accessConfigurationId;
             this.directoryId = request.directoryId;
+            this.originTargetId = request.originTargetId;
             this.targetId = request.targetId;
             this.targetType = request.targetType;
         } 
@@ -121,6 +135,15 @@ public class ProvisionAccessConfigurationRequest extends Request {
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
             this.directoryId = directoryId;
+            return this;
+        }
+
+        /**
+         * OriginTargetId.
+         */
+        public Builder originTargetId(String originTargetId) {
+            this.putQueryParameter("OriginTargetId", originTargetId);
+            this.originTargetId = originTargetId;
             return this;
         }
 

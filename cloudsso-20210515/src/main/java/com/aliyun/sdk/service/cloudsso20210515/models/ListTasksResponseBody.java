@@ -213,6 +213,9 @@ public class ListTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailureReason")
         private String failureReason;
 
+        @com.aliyun.core.annotation.NameInMap("OriginTargetId")
+        private String originTargetId;
+
         @com.aliyun.core.annotation.NameInMap("PrincipalId")
         private String principalId;
 
@@ -254,6 +257,7 @@ public class ListTasksResponseBody extends TeaModel {
             this.accessConfigurationName = builder.accessConfigurationName;
             this.endTime = builder.endTime;
             this.failureReason = builder.failureReason;
+            this.originTargetId = builder.originTargetId;
             this.principalId = builder.principalId;
             this.principalName = builder.principalName;
             this.principalType = builder.principalType;
@@ -302,6 +306,13 @@ public class ListTasksResponseBody extends TeaModel {
          */
         public String getFailureReason() {
             return this.failureReason;
+        }
+
+        /**
+         * @return originTargetId
+         */
+        public String getOriginTargetId() {
+            return this.originTargetId;
         }
 
         /**
@@ -393,6 +404,7 @@ public class ListTasksResponseBody extends TeaModel {
             private String accessConfigurationName; 
             private String endTime; 
             private String failureReason; 
+            private String originTargetId; 
             private String principalId; 
             private String principalName; 
             private String principalType; 
@@ -414,6 +426,7 @@ public class ListTasksResponseBody extends TeaModel {
                 this.accessConfigurationName = model.accessConfigurationName;
                 this.endTime = model.endTime;
                 this.failureReason = model.failureReason;
+                this.originTargetId = model.originTargetId;
                 this.principalId = model.principalId;
                 this.principalName = model.principalName;
                 this.principalType = model.principalType;
@@ -472,6 +485,14 @@ public class ListTasksResponseBody extends TeaModel {
              */
             public Builder failureReason(String failureReason) {
                 this.failureReason = failureReason;
+                return this;
+            }
+
+            /**
+             * OriginTargetId.
+             */
+            public Builder originTargetId(String originTargetId) {
+                this.originTargetId = originTargetId;
                 return this;
             }
 

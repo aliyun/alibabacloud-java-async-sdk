@@ -104,6 +104,9 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessConfigurationName")
         private String accessConfigurationName;
 
+        @com.aliyun.core.annotation.NameInMap("OriginTargetId")
+        private String originTargetId;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -131,6 +134,7 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
         private Tasks(Builder builder) {
             this.accessConfigurationId = builder.accessConfigurationId;
             this.accessConfigurationName = builder.accessConfigurationName;
+            this.originTargetId = builder.originTargetId;
             this.status = builder.status;
             this.targetId = builder.targetId;
             this.targetName = builder.targetName;
@@ -161,6 +165,13 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
          */
         public String getAccessConfigurationName() {
             return this.accessConfigurationName;
+        }
+
+        /**
+         * @return originTargetId
+         */
+        public String getOriginTargetId() {
+            return this.originTargetId;
         }
 
         /**
@@ -222,6 +233,7 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
         public static final class Builder {
             private String accessConfigurationId; 
             private String accessConfigurationName; 
+            private String originTargetId; 
             private String status; 
             private String targetId; 
             private String targetName; 
@@ -237,6 +249,7 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
             private Builder(Tasks model) {
                 this.accessConfigurationId = model.accessConfigurationId;
                 this.accessConfigurationName = model.accessConfigurationName;
+                this.originTargetId = model.originTargetId;
                 this.status = model.status;
                 this.targetId = model.targetId;
                 this.targetName = model.targetName;
@@ -266,6 +279,14 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
              */
             public Builder accessConfigurationName(String accessConfigurationName) {
                 this.accessConfigurationName = accessConfigurationName;
+                return this;
+            }
+
+            /**
+             * OriginTargetId.
+             */
+            public Builder originTargetId(String originTargetId) {
+                this.originTargetId = originTargetId;
                 return this;
             }
 

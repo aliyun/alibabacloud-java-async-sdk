@@ -34,6 +34,10 @@ public class ListAccessAssignmentsRequest extends Request {
     private String nextToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OriginTargetId")
+    private String originTargetId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PrincipalId")
     private String principalId;
 
@@ -55,6 +59,7 @@ public class ListAccessAssignmentsRequest extends Request {
         this.directoryId = builder.directoryId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.originTargetId = builder.originTargetId;
         this.principalId = builder.principalId;
         this.principalType = builder.principalType;
         this.targetId = builder.targetId;
@@ -103,6 +108,13 @@ public class ListAccessAssignmentsRequest extends Request {
     }
 
     /**
+     * @return originTargetId
+     */
+    public String getOriginTargetId() {
+        return this.originTargetId;
+    }
+
+    /**
      * @return principalId
      */
     public String getPrincipalId() {
@@ -135,6 +147,7 @@ public class ListAccessAssignmentsRequest extends Request {
         private String directoryId; 
         private Integer maxResults; 
         private String nextToken; 
+        private String originTargetId; 
         private String principalId; 
         private String principalType; 
         private String targetId; 
@@ -150,6 +163,7 @@ public class ListAccessAssignmentsRequest extends Request {
             this.directoryId = request.directoryId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.originTargetId = request.originTargetId;
             this.principalId = request.principalId;
             this.principalType = request.principalType;
             this.targetId = request.targetId;
@@ -204,6 +218,15 @@ public class ListAccessAssignmentsRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * OriginTargetId.
+         */
+        public Builder originTargetId(String originTargetId) {
+            this.putQueryParameter("OriginTargetId", originTargetId);
+            this.originTargetId = originTargetId;
             return this;
         }
 
