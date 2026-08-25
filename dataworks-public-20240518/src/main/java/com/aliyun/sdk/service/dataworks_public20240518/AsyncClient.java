@@ -98,10 +98,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchUpdateTasksResponse> batchUpdateTasks(BatchUpdateTasksRequest request);
 
     /**
+     * @param request the request parameters of BuildImage  BuildImageRequest
+     * @return BuildImageResponse
+     */
+    CompletableFuture<BuildImageResponse> buildImage(BuildImageRequest request);
+
+    /**
      * @param request the request parameters of CancelAgentSession  CancelAgentSessionRequest
      * @return CancelAgentSessionResponse
      */
     CompletableFuture<CancelAgentSessionResponse> cancelAgentSession(CancelAgentSessionRequest request);
+
+    /**
+     * @param request the request parameters of CancelImageTest  CancelImageTestRequest
+     * @return CancelImageTestResponse
+     */
+    CompletableFuture<CancelImageTestResponse> cancelImageTest(CancelImageTestRequest request);
 
     /**
      * <b>description</b> :
@@ -334,6 +346,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateIdentifyCredentialResponse
      */
     CompletableFuture<CreateIdentifyCredentialResponse> createIdentifyCredential(CreateIdentifyCredentialRequest request);
+
+    /**
+     * @param request the request parameters of CreateImage  CreateImageRequest
+     * @return CreateImageResponse
+     */
+    CompletableFuture<CreateImageResponse> createImage(CreateImageRequest request);
 
     /**
      * @param request the request parameters of CreateLineageRelationship  CreateLineageRelationshipRequest
@@ -818,6 +836,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteSemanticJobResponse> deleteSemanticJob(DeleteSemanticJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>删除指定的个人开发环境（ServerIDE）实例。</p>
+     * 
+     * @param request the request parameters of DeleteServerIdeInstance  DeleteServerIdeInstanceRequest
+     * @return DeleteServerIdeInstanceResponse
+     */
+    CompletableFuture<DeleteServerIdeInstanceResponse> deleteServerIdeInstance(DeleteServerIdeInstanceRequest request);
+
+    /**
      * @param request the request parameters of DeleteSkill  DeleteSkillRequest
      * @return DeleteSkillResponse
      */
@@ -866,6 +893,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DetachDataQualityRulesFromEvaluationTaskResponse> detachDataQualityRulesFromEvaluationTask(DetachDataQualityRulesFromEvaluationTaskRequest request);
 
     /**
+     * @param request the request parameters of DisableImage  DisableImageRequest
+     * @return DisableImageResponse
+     */
+    CompletableFuture<DisableImageResponse> disableImage(DisableImageRequest request);
+
+    /**
      * @param request the request parameters of DisableProcessDefinition  DisableProcessDefinitionRequest
      * @return DisableProcessDefinitionResponse
      */
@@ -897,6 +930,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DownloadSemanticResultsResponse
      */
     CompletableFuture<DownloadSemanticResultsResponse> downloadSemanticResults(DownloadSemanticResultsRequest request);
+
+    /**
+     * @param request the request parameters of EnableImage  EnableImageRequest
+     * @return EnableImageResponse
+     */
+    CompletableFuture<EnableImageResponse> enableImage(EnableImageRequest request);
 
     /**
      * @param request the request parameters of EnableProcessDefinition  EnableProcessDefinitionRequest
@@ -1212,6 +1251,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetImageResponse> getImage(GetImageRequest request);
 
     /**
+     * @param request the request parameters of GetImageTestResult  GetImageTestResultRequest
+     * @return GetImageTestResultResponse
+     */
+    CompletableFuture<GetImageTestResultResponse> getImageTestResult(GetImageTestResultRequest request);
+
+    /**
      * @param request the request parameters of GetJobStatus  GetJobStatusRequest
      * @return GetJobStatusResponse
      */
@@ -1384,6 +1429,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetSemanticJobLogResponse
      */
     CompletableFuture<GetSemanticJobLogResponse> getSemanticJobLog(GetSemanticJobLogRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>查询指定个人开发环境（ServerIDE）实例的详细信息。</p>
+     * 
+     * @param request the request parameters of GetServerIdeInstance  GetServerIdeInstanceRequest
+     * @return GetServerIdeInstanceResponse
+     */
+    CompletableFuture<GetServerIdeInstanceResponse> getServerIdeInstance(GetServerIdeInstanceRequest request);
 
     /**
      * @param request the request parameters of GetSkill  GetSkillRequest
@@ -1830,6 +1884,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListImageAssociatedProjectsResponse> listImageAssociatedProjects(ListImageAssociatedProjectsRequest request);
 
     /**
+     * @param request the request parameters of ListImageTestResults  ListImageTestResultsRequest
+     * @return ListImageTestResultsResponse
+     */
+    CompletableFuture<ListImageTestResultsResponse> listImageTestResults(ListImageTestResultsRequest request);
+
+    /**
      * @param request the request parameters of ListImageVersions  ListImageVersionsRequest
      * @return ListImageVersionsResponse
      */
@@ -2040,6 +2100,33 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListSemanticJobsResponse> listSemanticJobs(ListSemanticJobsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>查询创建个人开发环境（ServerIDE）时可选的 ECS 规格列表。</p>
+     * 
+     * @param request the request parameters of ListServerIdeEcsSpecs  ListServerIdeEcsSpecsRequest
+     * @return ListServerIdeEcsSpecsResponse
+     */
+    CompletableFuture<ListServerIdeEcsSpecsResponse> listServerIdeEcsSpecs(ListServerIdeEcsSpecsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>分页查询创建个人开发环境（ServerIDE）时可选的镜像列表。</p>
+     * 
+     * @param request the request parameters of ListServerIdeImages  ListServerIdeImagesRequest
+     * @return ListServerIdeImagesResponse
+     */
+    CompletableFuture<ListServerIdeImagesResponse> listServerIdeImages(ListServerIdeImagesRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>分页查询个人开发环境（ServerIDE）实例列表，支持按工作空间、资源组、关键字、归属用户等条件过滤。</p>
+     * 
+     * @param request the request parameters of ListServerIdeInstances  ListServerIdeInstancesRequest
+     * @return ListServerIdeInstancesResponse
+     */
+    CompletableFuture<ListServerIdeInstancesResponse> listServerIdeInstances(ListServerIdeInstancesRequest request);
+
+    /**
      * @param request the request parameters of ListSkills  ListSkillsRequest
      * @return ListSkillsResponse
      */
@@ -2178,6 +2265,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     ResponseIterable<PromptAgentSessionResponseBody> promptAgentSessionWithResponseIterable(PromptAgentSessionRequest request);
 
     /**
+     * @param request the request parameters of PublishImage  PublishImageRequest
+     * @return PublishImageResponse
+     */
+    CompletableFuture<PublishImageResponse> publishImage(PublishImageRequest request);
+
+    /**
      * @param request the request parameters of RemoveEntityFromMetaCollection  RemoveEntityFromMetaCollectionRequest
      * @return RemoveEntityFromMetaCollectionResponse
      */
@@ -2250,6 +2343,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RevokeMemberProjectRolesResponse> revokeMemberProjectRoles(RevokeMemberProjectRolesRequest request);
 
     /**
+     * @param request the request parameters of RollbackImage  RollbackImageRequest
+     * @return RollbackImageResponse
+     */
+    CompletableFuture<RollbackImageResponse> rollbackImage(RollbackImageRequest request);
+
+    /**
      * @param request the request parameters of RollbackParameter  RollbackParameterRequest
      * @return RollbackParameterResponse
      */
@@ -2260,6 +2359,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RunCrawlerResponse
      */
     CompletableFuture<RunCrawlerResponse> runCrawler(RunCrawlerRequest request);
+
+    /**
+     * @param request the request parameters of RunImageTest  RunImageTestRequest
+     * @return RunImageTestResponse
+     */
+    CompletableFuture<RunImageTestResponse> runImageTest(RunImageTestRequest request);
 
     /**
      * @param request the request parameters of RunSemanticJob  RunSemanticJobRequest
@@ -2284,6 +2389,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StartDIJobResponse
      */
     CompletableFuture<StartDIJobResponse> startDIJob(StartDIJobRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>启动指定的个人开发环境（ServerIDE）实例。</p>
+     * 
+     * @param request the request parameters of StartServerIdeInstance  StartServerIdeInstanceRequest
+     * @return StartServerIdeInstanceResponse
+     */
+    CompletableFuture<StartServerIdeInstanceResponse> startServerIdeInstance(StartServerIdeInstanceRequest request);
 
     /**
      * <b>description</b> :
@@ -2314,6 +2428,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StopProcessInstanceResponse
      */
     CompletableFuture<StopProcessInstanceResponse> stopProcessInstance(StopProcessInstanceRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>停止指定的个人开发环境（ServerIDE）实例。</p>
+     * 
+     * @param request the request parameters of StopServerIdeInstance  StopServerIdeInstanceRequest
+     * @return StopServerIdeInstanceResponse
+     */
+    CompletableFuture<StopServerIdeInstanceResponse> stopServerIdeInstance(StopServerIdeInstanceRequest request);
 
     /**
      * <b>description</b> :
@@ -2556,6 +2679,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateIDEEventResultResponse
      */
     CompletableFuture<UpdateIDEEventResultResponse> updateIDEEventResult(UpdateIDEEventResultRequest request);
+
+    /**
+     * @param request the request parameters of UpdateImage  UpdateImageRequest
+     * @return UpdateImageResponse
+     */
+    CompletableFuture<UpdateImageResponse> updateImage(UpdateImageRequest request);
 
     /**
      * @param request the request parameters of UpdateMcpServer  UpdateMcpServerRequest
