@@ -20,17 +20,32 @@ public class ChatResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ActivityType")
     private String activityType;
 
+    @com.aliyun.core.annotation.NameInMap("AgentId")
+    private String agentId;
+
     @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
     @com.aliyun.core.annotation.NameInMap("Delta")
     private String delta;
 
+    @com.aliyun.core.annotation.NameInMap("Kind")
+    private String kind;
+
+    @com.aliyun.core.annotation.NameInMap("Label")
+    private String label;
+
     @com.aliyun.core.annotation.NameInMap("MessageId")
     private String messageId;
 
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
+
+    @com.aliyun.core.annotation.NameInMap("OriginatingToolCallId")
+    private String originatingToolCallId;
+
+    @com.aliyun.core.annotation.NameInMap("ParentAgentId")
+    private String parentAgentId;
 
     @com.aliyun.core.annotation.NameInMap("ParentMessageId")
     private String parentMessageId;
@@ -44,11 +59,20 @@ public class ChatResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("StepName")
     private String stepName;
 
+    @com.aliyun.core.annotation.NameInMap("StepStatus")
+    private String stepStatus;
+
     @com.aliyun.core.annotation.NameInMap("TaskTrackerId")
     private String taskTrackerId;
 
     @com.aliyun.core.annotation.NameInMap("ThreadId")
     private String threadId;
+
+    @com.aliyun.core.annotation.NameInMap("Timestamp")
+    private Long timestamp;
+
+    @com.aliyun.core.annotation.NameInMap("ToolCallError")
+    private String toolCallError;
 
     @com.aliyun.core.annotation.NameInMap("ToolCallId")
     private String toolCallId;
@@ -64,16 +88,24 @@ public class ChatResponseBody extends TeaModel {
 
     private ChatResponseBody(Builder builder) {
         this.activityType = builder.activityType;
+        this.agentId = builder.agentId;
         this.content = builder.content;
         this.delta = builder.delta;
+        this.kind = builder.kind;
+        this.label = builder.label;
         this.messageId = builder.messageId;
         this.name = builder.name;
+        this.originatingToolCallId = builder.originatingToolCallId;
+        this.parentAgentId = builder.parentAgentId;
         this.parentMessageId = builder.parentMessageId;
         this.role = builder.role;
         this.runId = builder.runId;
         this.stepName = builder.stepName;
+        this.stepStatus = builder.stepStatus;
         this.taskTrackerId = builder.taskTrackerId;
         this.threadId = builder.threadId;
+        this.timestamp = builder.timestamp;
+        this.toolCallError = builder.toolCallError;
         this.toolCallId = builder.toolCallId;
         this.toolCallName = builder.toolCallName;
         this.type = builder.type;
@@ -100,6 +132,13 @@ public class ChatResponseBody extends TeaModel {
     }
 
     /**
+     * @return agentId
+     */
+    public String getAgentId() {
+        return this.agentId;
+    }
+
+    /**
      * @return content
      */
     public String getContent() {
@@ -114,6 +153,20 @@ public class ChatResponseBody extends TeaModel {
     }
 
     /**
+     * @return kind
+     */
+    public String getKind() {
+        return this.kind;
+    }
+
+    /**
+     * @return label
+     */
+    public String getLabel() {
+        return this.label;
+    }
+
+    /**
      * @return messageId
      */
     public String getMessageId() {
@@ -125,6 +178,20 @@ public class ChatResponseBody extends TeaModel {
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return originatingToolCallId
+     */
+    public String getOriginatingToolCallId() {
+        return this.originatingToolCallId;
+    }
+
+    /**
+     * @return parentAgentId
+     */
+    public String getParentAgentId() {
+        return this.parentAgentId;
     }
 
     /**
@@ -156,6 +223,13 @@ public class ChatResponseBody extends TeaModel {
     }
 
     /**
+     * @return stepStatus
+     */
+    public String getStepStatus() {
+        return this.stepStatus;
+    }
+
+    /**
      * @return taskTrackerId
      */
     public String getTaskTrackerId() {
@@ -167,6 +241,20 @@ public class ChatResponseBody extends TeaModel {
      */
     public String getThreadId() {
         return this.threadId;
+    }
+
+    /**
+     * @return timestamp
+     */
+    public Long getTimestamp() {
+        return this.timestamp;
+    }
+
+    /**
+     * @return toolCallError
+     */
+    public String getToolCallError() {
+        return this.toolCallError;
     }
 
     /**
@@ -199,16 +287,24 @@ public class ChatResponseBody extends TeaModel {
 
     public static final class Builder {
         private String activityType; 
+        private String agentId; 
         private String content; 
         private String delta; 
+        private String kind; 
+        private String label; 
         private String messageId; 
         private String name; 
+        private String originatingToolCallId; 
+        private String parentAgentId; 
         private String parentMessageId; 
         private String role; 
         private String runId; 
         private String stepName; 
+        private String stepStatus; 
         private String taskTrackerId; 
         private String threadId; 
+        private Long timestamp; 
+        private String toolCallError; 
         private String toolCallId; 
         private String toolCallName; 
         private String type; 
@@ -219,16 +315,24 @@ public class ChatResponseBody extends TeaModel {
 
         private Builder(ChatResponseBody model) {
             this.activityType = model.activityType;
+            this.agentId = model.agentId;
             this.content = model.content;
             this.delta = model.delta;
+            this.kind = model.kind;
+            this.label = model.label;
             this.messageId = model.messageId;
             this.name = model.name;
+            this.originatingToolCallId = model.originatingToolCallId;
+            this.parentAgentId = model.parentAgentId;
             this.parentMessageId = model.parentMessageId;
             this.role = model.role;
             this.runId = model.runId;
             this.stepName = model.stepName;
+            this.stepStatus = model.stepStatus;
             this.taskTrackerId = model.taskTrackerId;
             this.threadId = model.threadId;
+            this.timestamp = model.timestamp;
+            this.toolCallError = model.toolCallError;
             this.toolCallId = model.toolCallId;
             this.toolCallName = model.toolCallName;
             this.type = model.type;
@@ -240,6 +344,14 @@ public class ChatResponseBody extends TeaModel {
          */
         public Builder activityType(String activityType) {
             this.activityType = activityType;
+            return this;
+        }
+
+        /**
+         * AgentId.
+         */
+        public Builder agentId(String agentId) {
+            this.agentId = agentId;
             return this;
         }
 
@@ -260,6 +372,22 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
+         * Kind.
+         */
+        public Builder kind(String kind) {
+            this.kind = kind;
+            return this;
+        }
+
+        /**
+         * Label.
+         */
+        public Builder label(String label) {
+            this.label = label;
+            return this;
+        }
+
+        /**
          * MessageId.
          */
         public Builder messageId(String messageId) {
@@ -272,6 +400,22 @@ public class ChatResponseBody extends TeaModel {
          */
         public Builder name(String name) {
             this.name = name;
+            return this;
+        }
+
+        /**
+         * OriginatingToolCallId.
+         */
+        public Builder originatingToolCallId(String originatingToolCallId) {
+            this.originatingToolCallId = originatingToolCallId;
+            return this;
+        }
+
+        /**
+         * ParentAgentId.
+         */
+        public Builder parentAgentId(String parentAgentId) {
+            this.parentAgentId = parentAgentId;
             return this;
         }
 
@@ -308,6 +452,14 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
+         * StepStatus.
+         */
+        public Builder stepStatus(String stepStatus) {
+            this.stepStatus = stepStatus;
+            return this;
+        }
+
+        /**
          * TaskTrackerId.
          */
         public Builder taskTrackerId(String taskTrackerId) {
@@ -320,6 +472,22 @@ public class ChatResponseBody extends TeaModel {
          */
         public Builder threadId(String threadId) {
             this.threadId = threadId;
+            return this;
+        }
+
+        /**
+         * Timestamp.
+         */
+        public Builder timestamp(Long timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+
+        /**
+         * ToolCallError.
+         */
+        public Builder toolCallError(String toolCallError) {
+            this.toolCallError = toolCallError;
             return this;
         }
 
