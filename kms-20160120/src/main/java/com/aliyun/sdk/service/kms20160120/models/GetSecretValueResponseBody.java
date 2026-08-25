@@ -20,6 +20,9 @@ public class GetSecretValueResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AutomaticRotation")
     private String automaticRotation;
 
+    @com.aliyun.core.annotation.NameInMap("CiphertextForRecipient")
+    private String ciphertextForRecipient;
+
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
@@ -58,6 +61,7 @@ public class GetSecretValueResponseBody extends TeaModel {
 
     private GetSecretValueResponseBody(Builder builder) {
         this.automaticRotation = builder.automaticRotation;
+        this.ciphertextForRecipient = builder.ciphertextForRecipient;
         this.createTime = builder.createTime;
         this.extendedConfig = builder.extendedConfig;
         this.lastRotationDate = builder.lastRotationDate;
@@ -89,6 +93,13 @@ public class GetSecretValueResponseBody extends TeaModel {
      */
     public String getAutomaticRotation() {
         return this.automaticRotation;
+    }
+
+    /**
+     * @return ciphertextForRecipient
+     */
+    public String getCiphertextForRecipient() {
+        return this.ciphertextForRecipient;
     }
 
     /**
@@ -177,6 +188,7 @@ public class GetSecretValueResponseBody extends TeaModel {
 
     public static final class Builder {
         private String automaticRotation; 
+        private String ciphertextForRecipient; 
         private String createTime; 
         private String extendedConfig; 
         private String lastRotationDate; 
@@ -195,6 +207,7 @@ public class GetSecretValueResponseBody extends TeaModel {
 
         private Builder(GetSecretValueResponseBody model) {
             this.automaticRotation = model.automaticRotation;
+            this.ciphertextForRecipient = model.ciphertextForRecipient;
             this.createTime = model.createTime;
             this.extendedConfig = model.extendedConfig;
             this.lastRotationDate = model.lastRotationDate;
@@ -225,6 +238,14 @@ public class GetSecretValueResponseBody extends TeaModel {
          */
         public Builder automaticRotation(String automaticRotation) {
             this.automaticRotation = automaticRotation;
+            return this;
+        }
+
+        /**
+         * CiphertextForRecipient.
+         */
+        public Builder ciphertextForRecipient(String ciphertextForRecipient) {
+            this.ciphertextForRecipient = ciphertextForRecipient;
             return this;
         }
 

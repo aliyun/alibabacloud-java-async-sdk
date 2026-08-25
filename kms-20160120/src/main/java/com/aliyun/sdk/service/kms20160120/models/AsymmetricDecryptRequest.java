@@ -41,6 +41,10 @@ public class AsymmetricDecryptRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String keyVersionId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Recipient")
+    private String recipient;
+
     private AsymmetricDecryptRequest(Builder builder) {
         super(builder);
         this.algorithm = builder.algorithm;
@@ -48,6 +52,7 @@ public class AsymmetricDecryptRequest extends Request {
         this.dryRun = builder.dryRun;
         this.keyId = builder.keyId;
         this.keyVersionId = builder.keyVersionId;
+        this.recipient = builder.recipient;
     }
 
     public static Builder builder() {
@@ -98,12 +103,20 @@ public class AsymmetricDecryptRequest extends Request {
         return this.keyVersionId;
     }
 
+    /**
+     * @return recipient
+     */
+    public String getRecipient() {
+        return this.recipient;
+    }
+
     public static final class Builder extends Request.Builder<AsymmetricDecryptRequest, Builder> {
         private String algorithm; 
         private String ciphertextBlob; 
         private String dryRun; 
         private String keyId; 
         private String keyVersionId; 
+        private String recipient; 
 
         private Builder() {
             super();
@@ -116,6 +129,7 @@ public class AsymmetricDecryptRequest extends Request {
             this.dryRun = request.dryRun;
             this.keyId = request.keyId;
             this.keyVersionId = request.keyVersionId;
+            this.recipient = request.recipient;
         } 
 
         /**
@@ -185,6 +199,15 @@ public class AsymmetricDecryptRequest extends Request {
         public Builder keyVersionId(String keyVersionId) {
             this.putQueryParameter("KeyVersionId", keyVersionId);
             this.keyVersionId = keyVersionId;
+            return this;
+        }
+
+        /**
+         * Recipient.
+         */
+        public Builder recipient(String recipient) {
+            this.putBodyParameter("Recipient", recipient);
+            this.recipient = recipient;
             return this;
         }
 

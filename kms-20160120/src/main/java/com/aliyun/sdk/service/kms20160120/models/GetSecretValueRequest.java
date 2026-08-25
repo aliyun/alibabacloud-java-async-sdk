@@ -25,6 +25,10 @@ public class GetSecretValueRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("FetchExtendedConfig")
     private Boolean fetchExtendedConfig;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Recipient")
+    private String recipient;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecretName")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -42,6 +46,7 @@ public class GetSecretValueRequest extends Request {
         super(builder);
         this.dryRun = builder.dryRun;
         this.fetchExtendedConfig = builder.fetchExtendedConfig;
+        this.recipient = builder.recipient;
         this.secretName = builder.secretName;
         this.versionId = builder.versionId;
         this.versionStage = builder.versionStage;
@@ -75,6 +80,13 @@ public class GetSecretValueRequest extends Request {
     }
 
     /**
+     * @return recipient
+     */
+    public String getRecipient() {
+        return this.recipient;
+    }
+
+    /**
      * @return secretName
      */
     public String getSecretName() {
@@ -98,6 +110,7 @@ public class GetSecretValueRequest extends Request {
     public static final class Builder extends Request.Builder<GetSecretValueRequest, Builder> {
         private String dryRun; 
         private Boolean fetchExtendedConfig; 
+        private String recipient; 
         private String secretName; 
         private String versionId; 
         private String versionStage; 
@@ -110,6 +123,7 @@ public class GetSecretValueRequest extends Request {
             super(request);
             this.dryRun = request.dryRun;
             this.fetchExtendedConfig = request.fetchExtendedConfig;
+            this.recipient = request.recipient;
             this.secretName = request.secretName;
             this.versionId = request.versionId;
             this.versionStage = request.versionStage;
@@ -140,6 +154,15 @@ public class GetSecretValueRequest extends Request {
         public Builder fetchExtendedConfig(Boolean fetchExtendedConfig) {
             this.putQueryParameter("FetchExtendedConfig", fetchExtendedConfig);
             this.fetchExtendedConfig = fetchExtendedConfig;
+            return this;
+        }
+
+        /**
+         * Recipient.
+         */
+        public Builder recipient(String recipient) {
+            this.putBodyParameter("Recipient", recipient);
+            this.recipient = recipient;
             return this;
         }
 

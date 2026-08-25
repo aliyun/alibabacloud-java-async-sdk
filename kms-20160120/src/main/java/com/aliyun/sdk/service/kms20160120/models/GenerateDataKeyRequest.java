@@ -39,7 +39,7 @@ public class GenerateDataKeyRequest extends Request {
     @com.aliyun.core.annotation.Validation(maximum = 1024)
     private Integer numberOfBytes;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Recipient")
     private String recipient;
 
@@ -208,7 +208,7 @@ public class GenerateDataKeyRequest extends Request {
          * Recipient.
          */
         public Builder recipient(String recipient) {
-            this.putQueryParameter("Recipient", recipient);
+            this.putBodyParameter("Recipient", recipient);
             this.recipient = recipient;
             return this;
         }

@@ -30,7 +30,7 @@ public class DecryptRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("EncryptionContext")
     private java.util.Map<String, ?> encryptionContext;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Recipient")
     private String recipient;
 
@@ -149,7 +149,7 @@ public class DecryptRequest extends Request {
          * Recipient.
          */
         public Builder recipient(String recipient) {
-            this.putQueryParameter("Recipient", recipient);
+            this.putBodyParameter("Recipient", recipient);
             this.recipient = recipient;
             return this;
         }

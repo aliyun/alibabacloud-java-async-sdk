@@ -555,6 +555,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GenerateMacResponse> generateMac(GenerateMacRequest request);
 
     /**
+     * @param request the request parameters of GetChallenge  GetChallengeRequest
+     * @return GetChallengeResponse
+     */
+    CompletableFuture<GetChallengeResponse> getChallenge(GetChallengeRequest request);
+
+    /**
      * @param request the request parameters of GetClientKey  GetClientKeyRequest
      * @return GetClientKeyResponse
      */

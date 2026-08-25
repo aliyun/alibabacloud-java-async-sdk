@@ -31,40 +31,40 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.version = "2016-01-20";
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("us-west-1", "kms.us-west-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "kms.us-east-1.aliyuncs.com"),
-            new TeaPair("na-south-1", "kms.na-south-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "kms.me-east-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "kms.me-central-1.aliyuncs.com"),
-            new TeaPair("eu-west-1", "kms.eu-west-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "kms.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhengzhou-jva", "kms.cn-zhengzhou-jva.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "kms.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "kms.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-wuhan-lr", "kms.cn-wuhan-lr.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "kms.cn-shenzhen-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "kms.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "kms.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "kms.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "kms.cn-qingdao.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "kms.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "kms.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-heyuan-acdr-1", "kms.cn-heyuan-acdr-1.aliyuncs.com"),
-            new TeaPair("cn-heyuan", "kms.cn-heyuan.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "kms.cn-hangzhou-finance.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "kms.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "kms.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-fuzhou", "kms.cn-fuzhou.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "kms.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-1", "kms.cn-beijing-finance-1.aliyuncs.com"),
-            new TeaPair("cn-beijing", "kms.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "kms.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "kms.ap-northeast-2.aliyuncs.com"),
             new TeaPair("ap-southeast-7", "kms.ap-southeast-7.aliyuncs.com"),
             new TeaPair("ap-southeast-6", "kms.ap-southeast-6.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "kms.ap-southeast-5.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "kms.ap-southeast-3.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "kms.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "kms.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "kms.ap-northeast-1.aliyuncs.com")
+            new TeaPair("cn-hongkong", "kms.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "kms.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "kms.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "kms.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "kms.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-beijing", "kms.cn-beijing.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "kms.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "kms.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "kms.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "kms.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "kms.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "kms.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-fuzhou", "kms.cn-fuzhou.aliyuncs.com"),
+            new TeaPair("cn-wuhan-lr", "kms.cn-wuhan-lr.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-jva", "kms.cn-zhengzhou-jva.aliyuncs.com"),
+            new TeaPair("na-south-1", "kms.na-south-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "kms.eu-central-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "kms.eu-west-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "kms.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "kms.us-east-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "kms.me-central-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "kms.me-east-1.aliyuncs.com"),
+            new TeaPair("cn-heyuan-acdr-1", "kms.cn-heyuan-acdr-1.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "kms.cn-hangzhou-finance.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "kms.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "kms.cn-shenzhen-finance-1.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "kms.cn-beijing-finance-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -131,7 +131,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<AsymmetricDecryptResponse> asymmetricDecrypt(AsymmetricDecryptRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AsymmetricDecrypt").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AsymmetricDecrypt").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AsymmetricDecryptResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -568,7 +568,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<DecryptResponse> decrypt(DecryptRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("Decrypt").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("Decrypt").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DecryptResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1021,7 +1021,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<GenerateDataKeyResponse> generateDataKey(GenerateDataKeyRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GenerateDataKey").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GenerateDataKey").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GenerateDataKeyResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1072,6 +1072,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GenerateMacResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetChallenge  GetChallengeRequest
+     * @return GetChallengeResponse
+     */
+    @Override
+    public CompletableFuture<GetChallengeResponse> getChallenge(GetChallengeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetChallenge").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetChallengeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetChallengeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1318,7 +1336,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<GetSecretValueResponse> getSecretValue(GetSecretValueRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetSecretValue").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetSecretValue").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetSecretValueResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
