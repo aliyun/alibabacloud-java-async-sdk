@@ -214,6 +214,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDebugAppInstanceResponse> getDebugAppInstance(GetDebugAppInstanceRequest request);
 
     /**
+     * @param request the request parameters of GetFileUploadInfo  GetFileUploadInfoRequest
+     * @return GetFileUploadInfoResponse
+     */
+    CompletableFuture<GetFileUploadInfoResponse> getFileUploadInfo(GetFileUploadInfoRequest request);
+
+    /**
      * @param request the request parameters of GetModelProviderTemplate  GetModelProviderTemplateRequest
      * @return GetModelProviderTemplateResponse
      */
