@@ -29,6 +29,9 @@ public class E2BTeam extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("plan")
     private String plan;
 
+    @com.aliyun.core.annotation.NameInMap("readOnly")
+    private Boolean readOnly;
+
     @com.aliyun.core.annotation.NameInMap("resourceGroupID")
     private String resourceGroupID;
 
@@ -49,6 +52,7 @@ public class E2BTeam extends TeaModel {
         this.createdTime = builder.createdTime;
         this.description = builder.description;
         this.plan = builder.plan;
+        this.readOnly = builder.readOnly;
         this.resourceGroupID = builder.resourceGroupID;
         this.status = builder.status;
         this.teamID = builder.teamID;
@@ -97,6 +101,13 @@ public class E2BTeam extends TeaModel {
     }
 
     /**
+     * @return readOnly
+     */
+    public Boolean getReadOnly() {
+        return this.readOnly;
+    }
+
+    /**
      * @return resourceGroupID
      */
     public String getResourceGroupID() {
@@ -136,6 +147,7 @@ public class E2BTeam extends TeaModel {
         private String createdTime; 
         private String description; 
         private String plan; 
+        private Boolean readOnly; 
         private String resourceGroupID; 
         private String status; 
         private String teamID; 
@@ -150,6 +162,7 @@ public class E2BTeam extends TeaModel {
             this.createdTime = model.createdTime;
             this.description = model.description;
             this.plan = model.plan;
+            this.readOnly = model.readOnly;
             this.resourceGroupID = model.resourceGroupID;
             this.status = model.status;
             this.teamID = model.teamID;
@@ -186,6 +199,14 @@ public class E2BTeam extends TeaModel {
          */
         public Builder plan(String plan) {
             this.plan = plan;
+            return this;
+        }
+
+        /**
+         * readOnly.
+         */
+        public Builder readOnly(Boolean readOnly) {
+            this.readOnly = readOnly;
             return this;
         }
 
