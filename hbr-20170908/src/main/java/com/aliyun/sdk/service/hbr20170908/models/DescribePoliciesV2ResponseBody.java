@@ -246,7 +246,109 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
      *
      * <p>DescribePoliciesV2ResponseBody</p>
      */
+    public static class Accounts extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CrossAccountRoleName")
+        private String crossAccountRoleName;
+
+        @com.aliyun.core.annotation.NameInMap("CrossAccountType")
+        private String crossAccountType;
+
+        @com.aliyun.core.annotation.NameInMap("CrossAccountUserId")
+        private Long crossAccountUserId;
+
+        private Accounts(Builder builder) {
+            this.crossAccountRoleName = builder.crossAccountRoleName;
+            this.crossAccountType = builder.crossAccountType;
+            this.crossAccountUserId = builder.crossAccountUserId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Accounts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return crossAccountRoleName
+         */
+        public String getCrossAccountRoleName() {
+            return this.crossAccountRoleName;
+        }
+
+        /**
+         * @return crossAccountType
+         */
+        public String getCrossAccountType() {
+            return this.crossAccountType;
+        }
+
+        /**
+         * @return crossAccountUserId
+         */
+        public Long getCrossAccountUserId() {
+            return this.crossAccountUserId;
+        }
+
+        public static final class Builder {
+            private String crossAccountRoleName; 
+            private String crossAccountType; 
+            private Long crossAccountUserId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Accounts model) {
+                this.crossAccountRoleName = model.crossAccountRoleName;
+                this.crossAccountType = model.crossAccountType;
+                this.crossAccountUserId = model.crossAccountUserId;
+            } 
+
+            /**
+             * CrossAccountRoleName.
+             */
+            public Builder crossAccountRoleName(String crossAccountRoleName) {
+                this.crossAccountRoleName = crossAccountRoleName;
+                return this;
+            }
+
+            /**
+             * CrossAccountType.
+             */
+            public Builder crossAccountType(String crossAccountType) {
+                this.crossAccountType = crossAccountType;
+                return this;
+            }
+
+            /**
+             * CrossAccountUserId.
+             */
+            public Builder crossAccountUserId(Long crossAccountUserId) {
+                this.crossAccountUserId = crossAccountUserId;
+                return this;
+            }
+
+            public Accounts build() {
+                return new Accounts(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribePoliciesV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePoliciesV2ResponseBody</p>
+     */
     public static class DataSourceFilters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccountScope")
+        private String accountScope;
+
+        @com.aliyun.core.annotation.NameInMap("Accounts")
+        private java.util.List<Accounts> accounts;
+
         @com.aliyun.core.annotation.NameInMap("DataSourceIds")
         @Deprecated
         private java.util.List<String> dataSourceIds;
@@ -255,6 +357,8 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         private String sourceType;
 
         private DataSourceFilters(Builder builder) {
+            this.accountScope = builder.accountScope;
+            this.accounts = builder.accounts;
             this.dataSourceIds = builder.dataSourceIds;
             this.sourceType = builder.sourceType;
         }
@@ -265,6 +369,20 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
 
         public static DataSourceFilters create() {
             return builder().build();
+        }
+
+        /**
+         * @return accountScope
+         */
+        public String getAccountScope() {
+            return this.accountScope;
+        }
+
+        /**
+         * @return accounts
+         */
+        public java.util.List<Accounts> getAccounts() {
+            return this.accounts;
         }
 
         /**
@@ -282,6 +400,8 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String accountScope; 
+            private java.util.List<Accounts> accounts; 
             private java.util.List<String> dataSourceIds; 
             private String sourceType; 
 
@@ -289,9 +409,27 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
             } 
 
             private Builder(DataSourceFilters model) {
+                this.accountScope = model.accountScope;
+                this.accounts = model.accounts;
                 this.dataSourceIds = model.dataSourceIds;
                 this.sourceType = model.sourceType;
             } 
+
+            /**
+             * AccountScope.
+             */
+            public Builder accountScope(String accountScope) {
+                this.accountScope = accountScope;
+                return this;
+            }
+
+            /**
+             * Accounts.
+             */
+            public Builder accounts(java.util.List<Accounts> accounts) {
+                this.accounts = accounts;
+                return this;
+            }
 
             /**
              * <p>Deprecated.</p>
