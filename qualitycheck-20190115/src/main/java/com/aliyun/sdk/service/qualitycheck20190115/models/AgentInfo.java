@@ -820,6 +820,156 @@ public class AgentInfo extends TeaModel {
      *
      * <p>AgentInfo</p>
      */
+    public static class TagTreeLevels extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Prompt")
+        private String prompt;
+
+        @com.aliyun.core.annotation.NameInMap("TagTreeIds")
+        private java.util.List<Long> tagTreeIds;
+
+        private TagTreeLevels(Builder builder) {
+            this.prompt = builder.prompt;
+            this.tagTreeIds = builder.tagTreeIds;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TagTreeLevels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return prompt
+         */
+        public String getPrompt() {
+            return this.prompt;
+        }
+
+        /**
+         * @return tagTreeIds
+         */
+        public java.util.List<Long> getTagTreeIds() {
+            return this.tagTreeIds;
+        }
+
+        public static final class Builder {
+            private String prompt; 
+            private java.util.List<Long> tagTreeIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagTreeLevels model) {
+                this.prompt = model.prompt;
+                this.tagTreeIds = model.tagTreeIds;
+            } 
+
+            /**
+             * Prompt.
+             */
+            public Builder prompt(String prompt) {
+                this.prompt = prompt;
+                return this;
+            }
+
+            /**
+             * TagTreeIds.
+             */
+            public Builder tagTreeIds(java.util.List<Long> tagTreeIds) {
+                this.tagTreeIds = tagTreeIds;
+                return this;
+            }
+
+            public TagTreeLevels build() {
+                return new TagTreeLevels(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AgentInfo} extends {@link TeaModel}
+     *
+     * <p>AgentInfo</p>
+     */
+    public static class TagTreeLevelParam extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagIds")
+        private java.util.List<Long> tagIds;
+
+        @com.aliyun.core.annotation.NameInMap("TagTreeLevels")
+        private java.util.List<TagTreeLevels> tagTreeLevels;
+
+        private TagTreeLevelParam(Builder builder) {
+            this.tagIds = builder.tagIds;
+            this.tagTreeLevels = builder.tagTreeLevels;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TagTreeLevelParam create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagIds
+         */
+        public java.util.List<Long> getTagIds() {
+            return this.tagIds;
+        }
+
+        /**
+         * @return tagTreeLevels
+         */
+        public java.util.List<TagTreeLevels> getTagTreeLevels() {
+            return this.tagTreeLevels;
+        }
+
+        public static final class Builder {
+            private java.util.List<Long> tagIds; 
+            private java.util.List<TagTreeLevels> tagTreeLevels; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagTreeLevelParam model) {
+                this.tagIds = model.tagIds;
+                this.tagTreeLevels = model.tagTreeLevels;
+            } 
+
+            /**
+             * TagIds.
+             */
+            public Builder tagIds(java.util.List<Long> tagIds) {
+                this.tagIds = tagIds;
+                return this;
+            }
+
+            /**
+             * TagTreeLevels.
+             */
+            public Builder tagTreeLevels(java.util.List<TagTreeLevels> tagTreeLevels) {
+                this.tagTreeLevels = tagTreeLevels;
+                return this;
+            }
+
+            public TagTreeLevelParam build() {
+                return new TagTreeLevelParam(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AgentInfo} extends {@link TeaModel}
+     *
+     * <p>AgentInfo</p>
+     */
     public static class InstructionTypeParam extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomPromptParam")
         private CustomPromptParam customPromptParam;
@@ -833,11 +983,15 @@ public class AgentInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagCategoryParam")
         private TagCategoryParam tagCategoryParam;
 
+        @com.aliyun.core.annotation.NameInMap("TagTreeLevelParam")
+        private TagTreeLevelParam tagTreeLevelParam;
+
         private InstructionTypeParam(Builder builder) {
             this.customPromptParam = builder.customPromptParam;
             this.fieldsParam = builder.fieldsParam;
             this.serviceInspectionParam = builder.serviceInspectionParam;
             this.tagCategoryParam = builder.tagCategoryParam;
+            this.tagTreeLevelParam = builder.tagTreeLevelParam;
         }
 
         public static Builder builder() {
@@ -876,11 +1030,19 @@ public class AgentInfo extends TeaModel {
             return this.tagCategoryParam;
         }
 
+        /**
+         * @return tagTreeLevelParam
+         */
+        public TagTreeLevelParam getTagTreeLevelParam() {
+            return this.tagTreeLevelParam;
+        }
+
         public static final class Builder {
             private CustomPromptParam customPromptParam; 
             private FieldsParam fieldsParam; 
             private ServiceInspectionParam serviceInspectionParam; 
             private TagCategoryParam tagCategoryParam; 
+            private TagTreeLevelParam tagTreeLevelParam; 
 
             private Builder() {
             } 
@@ -890,6 +1052,7 @@ public class AgentInfo extends TeaModel {
                 this.fieldsParam = model.fieldsParam;
                 this.serviceInspectionParam = model.serviceInspectionParam;
                 this.tagCategoryParam = model.tagCategoryParam;
+                this.tagTreeLevelParam = model.tagTreeLevelParam;
             } 
 
             /**
@@ -921,6 +1084,14 @@ public class AgentInfo extends TeaModel {
              */
             public Builder tagCategoryParam(TagCategoryParam tagCategoryParam) {
                 this.tagCategoryParam = tagCategoryParam;
+                return this;
+            }
+
+            /**
+             * TagTreeLevelParam.
+             */
+            public Builder tagTreeLevelParam(TagTreeLevelParam tagTreeLevelParam) {
+                this.tagTreeLevelParam = tagTreeLevelParam;
                 return this;
             }
 

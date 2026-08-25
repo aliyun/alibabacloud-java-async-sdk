@@ -1438,7 +1438,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
      *
      * <p>GetAgentTaskResultResponseBody</p>
      */
-    public static class Response extends TeaModel {
+    public static class DataResponse extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomerPromptResponse")
         private CustomerPromptResponse customerPromptResponse;
 
@@ -1454,7 +1454,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VoiceprintResponse")
         private VoiceprintResponse voiceprintResponse;
 
-        private Response(Builder builder) {
+        private DataResponse(Builder builder) {
             this.customerPromptResponse = builder.customerPromptResponse;
             this.fieldResponse = builder.fieldResponse;
             this.serviceInspectionResponse = builder.serviceInspectionResponse;
@@ -1466,7 +1466,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Response create() {
+        public static DataResponse create() {
             return builder().build();
         }
 
@@ -1515,7 +1515,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(Response model) {
+            private Builder(DataResponse model) {
                 this.customerPromptResponse = model.customerPromptResponse;
                 this.fieldResponse = model.fieldResponse;
                 this.serviceInspectionResponse = model.serviceInspectionResponse;
@@ -1563,8 +1563,8 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
                 return this;
             }
 
-            public Response build() {
-                return new Response(this);
+            public DataResponse build() {
+                return new DataResponse(this);
             } 
 
         } 
@@ -1725,7 +1725,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         private String llmRequestId;
 
         @com.aliyun.core.annotation.NameInMap("Response")
-        private Response response;
+        private DataResponse response;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -1782,7 +1782,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         /**
          * @return response
          */
-        public Response getResponse() {
+        public DataResponse getResponse() {
             return this.response;
         }
 
@@ -1818,7 +1818,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             private java.util.List<Dialogues> dialogues; 
             private String errorMessage; 
             private String llmRequestId; 
-            private Response response; 
+            private DataResponse response; 
             private String status; 
             private String taskId; 
             private Usage usage; 
@@ -1865,7 +1865,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
             /**
              * Response.
              */
-            public Builder response(Response response) {
+            public Builder response(DataResponse response) {
                 this.response = response;
                 return this;
             }
