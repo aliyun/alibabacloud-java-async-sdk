@@ -830,6 +830,9 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("jobId")
         private String jobId;
 
+        @com.aliyun.core.annotation.NameInMap("logOutputPath")
+        private String logOutputPath;
+
         @com.aliyun.core.annotation.NameInMap("outputs")
         private java.util.List<Outputs> outputs;
 
@@ -856,6 +859,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             this.executeType = builder.executeType;
             this.failedReason = builder.failedReason;
             this.jobId = builder.jobId;
+            this.logOutputPath = builder.logOutputPath;
             this.outputs = builder.outputs;
             this.parameters = builder.parameters;
             this.planOutputs = builder.planOutputs;
@@ -942,6 +946,13 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         }
 
         /**
+         * @return logOutputPath
+         */
+        public String getLogOutputPath() {
+            return this.logOutputPath;
+        }
+
+        /**
          * @return outputs
          */
         public java.util.List<Outputs> getOutputs() {
@@ -987,6 +998,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             private String executeType; 
             private String failedReason; 
             private String jobId; 
+            private String logOutputPath; 
             private java.util.List<Outputs> outputs; 
             private java.util.List<Parameters> parameters; 
             private java.util.List<PlanOutputs> planOutputs; 
@@ -1007,6 +1019,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
                 this.executeType = model.executeType;
                 this.failedReason = model.failedReason;
                 this.jobId = model.jobId;
+                this.logOutputPath = model.logOutputPath;
                 this.outputs = model.outputs;
                 this.parameters = model.parameters;
                 this.planOutputs = model.planOutputs;
@@ -1091,6 +1104,14 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
+                return this;
+            }
+
+            /**
+             * logOutputPath.
+             */
+            public Builder logOutputPath(String logOutputPath) {
+                this.logOutputPath = logOutputPath;
                 return this;
             }
 

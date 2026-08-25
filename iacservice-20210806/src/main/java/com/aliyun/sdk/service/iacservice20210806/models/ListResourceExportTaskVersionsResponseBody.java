@@ -524,6 +524,9 @@ public class ListResourceExportTaskVersionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("includeRules")
         private java.util.List<IncludeRules> includeRules;
 
+        @com.aliyun.core.annotation.NameInMap("managedTaskId")
+        private String managedTaskId;
+
         @com.aliyun.core.annotation.NameInMap("modules")
         private java.util.List<Modules> modules;
 
@@ -545,6 +548,7 @@ public class ListResourceExportTaskVersionsResponseBody extends TeaModel {
             this.exportVersion = builder.exportVersion;
             this.failedReason = builder.failedReason;
             this.includeRules = builder.includeRules;
+            this.managedTaskId = builder.managedTaskId;
             this.modules = builder.modules;
             this.name = builder.name;
             this.status = builder.status;
@@ -616,6 +620,13 @@ public class ListResourceExportTaskVersionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return managedTaskId
+         */
+        public String getManagedTaskId() {
+            return this.managedTaskId;
+        }
+
+        /**
          * @return modules
          */
         public java.util.List<Modules> getModules() {
@@ -652,6 +663,7 @@ public class ListResourceExportTaskVersionsResponseBody extends TeaModel {
             private String exportVersion; 
             private String failedReason; 
             private java.util.List<IncludeRules> includeRules; 
+            private String managedTaskId; 
             private java.util.List<Modules> modules; 
             private String name; 
             private String status; 
@@ -669,6 +681,7 @@ public class ListResourceExportTaskVersionsResponseBody extends TeaModel {
                 this.exportVersion = model.exportVersion;
                 this.failedReason = model.failedReason;
                 this.includeRules = model.includeRules;
+                this.managedTaskId = model.managedTaskId;
                 this.modules = model.modules;
                 this.name = model.name;
                 this.status = model.status;
@@ -736,6 +749,14 @@ public class ListResourceExportTaskVersionsResponseBody extends TeaModel {
              */
             public Builder includeRules(java.util.List<IncludeRules> includeRules) {
                 this.includeRules = includeRules;
+                return this;
+            }
+
+            /**
+             * managedTaskId.
+             */
+            public Builder managedTaskId(String managedTaskId) {
+                this.managedTaskId = managedTaskId;
                 return this;
             }
 

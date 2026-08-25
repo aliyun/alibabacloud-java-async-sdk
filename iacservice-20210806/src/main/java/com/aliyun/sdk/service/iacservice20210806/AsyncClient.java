@@ -122,6 +122,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateTaskResponse> createTask(CreateTaskRequest request);
 
     /**
+     * @param request the request parameters of CreateTaskFromResourceImport  CreateTaskFromResourceImportRequest
+     * @return CreateTaskFromResourceImportResponse
+     */
+    CompletableFuture<CreateTaskFromResourceImportResponse> createTaskFromResourceImport(CreateTaskFromResourceImportRequest request);
+
+    /**
      * @param request the request parameters of DeleteDetectConfig  DeleteDetectConfigRequest
      * @return DeleteDetectConfigResponse
      */
