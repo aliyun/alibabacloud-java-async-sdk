@@ -553,6 +553,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateSoftwarelibDistributeTask  CreateSoftwarelibDistributeTaskRequest
+     * @return CreateSoftwarelibDistributeTaskResponse
+     */
+    @Override
+    public CompletableFuture<CreateSoftwarelibDistributeTaskResponse> createSoftwarelibDistributeTask(CreateSoftwarelibDistributeTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateSoftwarelibDistributeTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateSoftwarelibDistributeTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateSoftwarelibDistributeTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateSoftwarelibVersion  CreateSoftwarelibVersionRequest
+     * @return CreateSoftwarelibVersionResponse
+     */
+    @Override
+    public CompletableFuture<CreateSoftwarelibVersionResponse> createSoftwarelibVersion(CreateSoftwarelibVersionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateSoftwarelibVersion").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateSoftwarelibVersionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateSoftwarelibVersionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateUserGroup  CreateUserGroupRequest
      * @return CreateUserGroupResponse
      */
@@ -2300,6 +2336,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListOperationAuditLogs  ListOperationAuditLogsRequest
+     * @return ListOperationAuditLogsResponse
+     */
+    @Override
+    public CompletableFuture<ListOperationAuditLogsResponse> listOperationAuditLogs(ListOperationAuditLogsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListOperationAuditLogs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListOperationAuditLogsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListOperationAuditLogsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListPolicesForPrivateAccessApplication  ListPolicesForPrivateAccessApplicationRequest
      * @return ListPolicesForPrivateAccessApplicationResponse
      */
@@ -2600,6 +2654,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListSoftwareForUserDeviceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListSoftwarelibSoftware  ListSoftwarelibSoftwareRequest
+     * @return ListSoftwarelibSoftwareResponse
+     */
+    @Override
+    public CompletableFuture<ListSoftwarelibSoftwareResponse> listSoftwarelibSoftware(ListSoftwarelibSoftwareRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListSoftwarelibSoftware").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListSoftwarelibSoftwareResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListSoftwarelibSoftwareResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

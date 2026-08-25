@@ -194,6 +194,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRegistrationPolicyResponse> createRegistrationPolicy(CreateRegistrationPolicyRequest request);
 
     /**
+     * @param request the request parameters of CreateSoftwarelibDistributeTask  CreateSoftwarelibDistributeTaskRequest
+     * @return CreateSoftwarelibDistributeTaskResponse
+     */
+    CompletableFuture<CreateSoftwarelibDistributeTaskResponse> createSoftwarelibDistributeTask(CreateSoftwarelibDistributeTaskRequest request);
+
+    /**
+     * @param request the request parameters of CreateSoftwarelibVersion  CreateSoftwarelibVersionRequest
+     * @return CreateSoftwarelibVersionResponse
+     */
+    CompletableFuture<CreateSoftwarelibVersionResponse> createSoftwarelibVersion(CreateSoftwarelibVersionRequest request);
+
+    /**
      * @param request the request parameters of CreateUserGroup  CreateUserGroupRequest
      * @return CreateUserGroupResponse
      */
@@ -777,6 +789,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListNacUserCertResponse> listNacUserCert(ListNacUserCertRequest request);
 
     /**
+     * @param request the request parameters of ListOperationAuditLogs  ListOperationAuditLogsRequest
+     * @return ListOperationAuditLogsResponse
+     */
+    CompletableFuture<ListOperationAuditLogsResponse> listOperationAuditLogs(ListOperationAuditLogsRequest request);
+
+    /**
      * @param request the request parameters of ListPolicesForPrivateAccessApplication  ListPolicesForPrivateAccessApplicationRequest
      * @return ListPolicesForPrivateAccessApplicationResponse
      */
@@ -877,6 +895,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListSoftwareForUserDeviceResponse
      */
     CompletableFuture<ListSoftwareForUserDeviceResponse> listSoftwareForUserDevice(ListSoftwareForUserDeviceRequest request);
+
+    /**
+     * @param request the request parameters of ListSoftwarelibSoftware  ListSoftwarelibSoftwareRequest
+     * @return ListSoftwarelibSoftwareResponse
+     */
+    CompletableFuture<ListSoftwarelibSoftwareResponse> listSoftwarelibSoftware(ListSoftwarelibSoftwareRequest request);
 
     /**
      * @param request the request parameters of ListTagsForPrivateAccessApplication  ListTagsForPrivateAccessApplicationRequest
