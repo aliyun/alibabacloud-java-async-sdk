@@ -656,6 +656,12 @@ public class FindGuestTicketRecordResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EquityDates")
         private String equityDates;
 
+        @com.aliyun.core.annotation.NameInMap("FaceFeature")
+        private String faceFeature;
+
+        @com.aliyun.core.annotation.NameInMap("FaceFeatureWriteTime")
+        private String faceFeatureWriteTime;
+
         @com.aliyun.core.annotation.NameInMap("HealthCommitmentStatus")
         private Integer healthCommitmentStatus;
 
@@ -687,6 +693,8 @@ public class FindGuestTicketRecordResponseBody extends TeaModel {
             this.channelLevelInfo = builder.channelLevelInfo;
             this.companyName = builder.companyName;
             this.equityDates = builder.equityDates;
+            this.faceFeature = builder.faceFeature;
+            this.faceFeatureWriteTime = builder.faceFeatureWriteTime;
             this.healthCommitmentStatus = builder.healthCommitmentStatus;
             this.idNumber = builder.idNumber;
             this.idType = builder.idType;
@@ -725,6 +733,20 @@ public class FindGuestTicketRecordResponseBody extends TeaModel {
          */
         public String getEquityDates() {
             return this.equityDates;
+        }
+
+        /**
+         * @return faceFeature
+         */
+        public String getFaceFeature() {
+            return this.faceFeature;
+        }
+
+        /**
+         * @return faceFeatureWriteTime
+         */
+        public String getFaceFeatureWriteTime() {
+            return this.faceFeatureWriteTime;
         }
 
         /**
@@ -794,6 +816,8 @@ public class FindGuestTicketRecordResponseBody extends TeaModel {
             private ChannelLevelInfo channelLevelInfo; 
             private String companyName; 
             private String equityDates; 
+            private String faceFeature; 
+            private String faceFeatureWriteTime; 
             private Integer healthCommitmentStatus; 
             private String idNumber; 
             private String idType; 
@@ -811,6 +835,8 @@ public class FindGuestTicketRecordResponseBody extends TeaModel {
                 this.channelLevelInfo = model.channelLevelInfo;
                 this.companyName = model.companyName;
                 this.equityDates = model.equityDates;
+                this.faceFeature = model.faceFeature;
+                this.faceFeatureWriteTime = model.faceFeatureWriteTime;
                 this.healthCommitmentStatus = model.healthCommitmentStatus;
                 this.idNumber = model.idNumber;
                 this.idType = model.idType;
@@ -843,6 +869,22 @@ public class FindGuestTicketRecordResponseBody extends TeaModel {
              */
             public Builder equityDates(String equityDates) {
                 this.equityDates = equityDates;
+                return this;
+            }
+
+            /**
+             * FaceFeature.
+             */
+            public Builder faceFeature(String faceFeature) {
+                this.faceFeature = faceFeature;
+                return this;
+            }
+
+            /**
+             * FaceFeatureWriteTime.
+             */
+            public Builder faceFeatureWriteTime(String faceFeatureWriteTime) {
+                this.faceFeatureWriteTime = faceFeatureWriteTime;
                 return this;
             }
 
