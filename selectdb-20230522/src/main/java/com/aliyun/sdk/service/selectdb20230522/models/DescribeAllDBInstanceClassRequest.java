@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAllDBInstanceClassRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    private String DBInstanceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -28,6 +32,7 @@ public class DescribeAllDBInstanceClassRequest extends Request {
 
     private DescribeAllDBInstanceClassRequest(Builder builder) {
         super(builder);
+        this.DBInstanceId = builder.DBInstanceId;
         this.regionId = builder.regionId;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -46,6 +51,13 @@ public class DescribeAllDBInstanceClassRequest extends Request {
     }
 
     /**
+     * @return DBInstanceId
+     */
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -60,6 +72,7 @@ public class DescribeAllDBInstanceClassRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeAllDBInstanceClassRequest, Builder> {
+        private String DBInstanceId; 
         private String regionId; 
         private Long resourceOwnerId; 
 
@@ -69,9 +82,19 @@ public class DescribeAllDBInstanceClassRequest extends Request {
 
         private Builder(DescribeAllDBInstanceClassRequest request) {
             super(request);
+            this.DBInstanceId = request.DBInstanceId;
             this.regionId = request.regionId;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * DBInstanceId.
+         */
+        public Builder DBInstanceId(String DBInstanceId) {
+            this.putQueryParameter("DBInstanceId", DBInstanceId);
+            this.DBInstanceId = DBInstanceId;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
