@@ -1931,12 +1931,91 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
      *
      * <p>DescribeClusterNodePoolDetailResponseBody</p>
      */
+    public static class Envs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private Envs(Builder builder) {
+            this.name = builder.name;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Envs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Envs model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Envs build() {
+                return new Envs(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeClusterNodePoolDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterNodePoolDetailResponseBody</p>
+     */
     public static class Config extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("custom_config")
         private java.util.Map<String, ?> customConfig;
 
+        @com.aliyun.core.annotation.NameInMap("envs")
+        private java.util.List<Envs> envs;
+
         private Config(Builder builder) {
             this.customConfig = builder.customConfig;
+            this.envs = builder.envs;
         }
 
         public static Builder builder() {
@@ -1954,14 +2033,23 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             return this.customConfig;
         }
 
+        /**
+         * @return envs
+         */
+        public java.util.List<Envs> getEnvs() {
+            return this.envs;
+        }
+
         public static final class Builder {
             private java.util.Map<String, ?> customConfig; 
+            private java.util.List<Envs> envs; 
 
             private Builder() {
             } 
 
             private Builder(Config model) {
                 this.customConfig = model.customConfig;
+                this.envs = model.envs;
             } 
 
             /**
@@ -1969,6 +2057,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
              */
             public Builder customConfig(java.util.Map<String, ?> customConfig) {
                 this.customConfig = customConfig;
+                return this;
+            }
+
+            /**
+             * envs.
+             */
+            public Builder envs(java.util.List<Envs> envs) {
+                this.envs = envs;
                 return this;
             }
 
