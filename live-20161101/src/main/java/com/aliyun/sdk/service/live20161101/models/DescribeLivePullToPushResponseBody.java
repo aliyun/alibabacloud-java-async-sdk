@@ -347,6 +347,9 @@ public class DescribeLivePullToPushResponseBody extends TeaModel {
      * <p>DescribeLivePullToPushResponseBody</p>
      */
     public static class TaskInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AuthKey")
+        private String authKey;
+
         @com.aliyun.core.annotation.NameInMap("CallbackURL")
         private String callbackURL;
 
@@ -359,11 +362,17 @@ public class DescribeLivePullToPushResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileIndex")
         private Integer fileIndex;
 
+        @com.aliyun.core.annotation.NameInMap("NotifyItemSwitch")
+        private String notifyItemSwitch;
+
         @com.aliyun.core.annotation.NameInMap("Offset")
         private Integer offset;
 
         @com.aliyun.core.annotation.NameInMap("RepeatNumber")
         private Integer repeatNumber;
+
+        @com.aliyun.core.annotation.NameInMap("ReqAuth")
+        private String reqAuth;
 
         @com.aliyun.core.annotation.NameInMap("RetryCount")
         private Integer retryCount;
@@ -390,12 +399,15 @@ public class DescribeLivePullToPushResponseBody extends TeaModel {
         private String taskName;
 
         private TaskInfo(Builder builder) {
+            this.authKey = builder.authKey;
             this.callbackURL = builder.callbackURL;
             this.dstUrl = builder.dstUrl;
             this.endTime = builder.endTime;
             this.fileIndex = builder.fileIndex;
+            this.notifyItemSwitch = builder.notifyItemSwitch;
             this.offset = builder.offset;
             this.repeatNumber = builder.repeatNumber;
+            this.reqAuth = builder.reqAuth;
             this.retryCount = builder.retryCount;
             this.retryInterval = builder.retryInterval;
             this.sourceProtocol = builder.sourceProtocol;
@@ -412,6 +424,13 @@ public class DescribeLivePullToPushResponseBody extends TeaModel {
 
         public static TaskInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return authKey
+         */
+        public String getAuthKey() {
+            return this.authKey;
         }
 
         /**
@@ -443,6 +462,13 @@ public class DescribeLivePullToPushResponseBody extends TeaModel {
         }
 
         /**
+         * @return notifyItemSwitch
+         */
+        public String getNotifyItemSwitch() {
+            return this.notifyItemSwitch;
+        }
+
+        /**
          * @return offset
          */
         public Integer getOffset() {
@@ -454,6 +480,13 @@ public class DescribeLivePullToPushResponseBody extends TeaModel {
          */
         public Integer getRepeatNumber() {
             return this.repeatNumber;
+        }
+
+        /**
+         * @return reqAuth
+         */
+        public String getReqAuth() {
+            return this.reqAuth;
         }
 
         /**
@@ -513,12 +546,15 @@ public class DescribeLivePullToPushResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String authKey; 
             private String callbackURL; 
             private String dstUrl; 
             private String endTime; 
             private Integer fileIndex; 
+            private String notifyItemSwitch; 
             private Integer offset; 
             private Integer repeatNumber; 
+            private String reqAuth; 
             private Integer retryCount; 
             private Integer retryInterval; 
             private String sourceProtocol; 
@@ -532,12 +568,15 @@ public class DescribeLivePullToPushResponseBody extends TeaModel {
             } 
 
             private Builder(TaskInfo model) {
+                this.authKey = model.authKey;
                 this.callbackURL = model.callbackURL;
                 this.dstUrl = model.dstUrl;
                 this.endTime = model.endTime;
                 this.fileIndex = model.fileIndex;
+                this.notifyItemSwitch = model.notifyItemSwitch;
                 this.offset = model.offset;
                 this.repeatNumber = model.repeatNumber;
+                this.reqAuth = model.reqAuth;
                 this.retryCount = model.retryCount;
                 this.retryInterval = model.retryInterval;
                 this.sourceProtocol = model.sourceProtocol;
@@ -547,6 +586,14 @@ public class DescribeLivePullToPushResponseBody extends TeaModel {
                 this.taskId = model.taskId;
                 this.taskName = model.taskName;
             } 
+
+            /**
+             * AuthKey.
+             */
+            public Builder authKey(String authKey) {
+                this.authKey = authKey;
+                return this;
+            }
 
             /**
              * <p>The HTTP callback URL.</p>
@@ -593,6 +640,14 @@ public class DescribeLivePullToPushResponseBody extends TeaModel {
             }
 
             /**
+             * NotifyItemSwitch.
+             */
+            public Builder notifyItemSwitch(String notifyItemSwitch) {
+                this.notifyItemSwitch = notifyItemSwitch;
+                return this;
+            }
+
+            /**
              * <p>The offset of the position where the system starts to read the video resource. Unit: seconds. Valid values: positive numbers.</p>
              * <blockquote>
              * </blockquote>
@@ -627,6 +682,14 @@ public class DescribeLivePullToPushResponseBody extends TeaModel {
              */
             public Builder repeatNumber(Integer repeatNumber) {
                 this.repeatNumber = repeatNumber;
+                return this;
+            }
+
+            /**
+             * ReqAuth.
+             */
+            public Builder reqAuth(String reqAuth) {
+                this.reqAuth = reqAuth;
                 return this;
             }
 

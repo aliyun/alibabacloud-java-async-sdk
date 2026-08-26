@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateLivePullToPushRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthKey")
+    private String authKey;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CallbackUrl")
     private String callbackUrl;
 
@@ -34,6 +38,10 @@ public class CreateLivePullToPushRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FileIndex")
     private Integer fileIndex;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NotifyItemSwitch")
+    private String notifyItemSwitch;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Offset")
@@ -55,6 +63,10 @@ public class CreateLivePullToPushRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RepeatNumber")
     private Integer repeatNumber;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReqAuth")
+    private String reqAuth;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RetryCount")
@@ -90,15 +102,18 @@ public class CreateLivePullToPushRequest extends Request {
 
     private CreateLivePullToPushRequest(Builder builder) {
         super(builder);
+        this.authKey = builder.authKey;
         this.callbackUrl = builder.callbackUrl;
         this.dstUrl = builder.dstUrl;
         this.endTime = builder.endTime;
         this.fileIndex = builder.fileIndex;
+        this.notifyItemSwitch = builder.notifyItemSwitch;
         this.offset = builder.offset;
         this.ownerId = builder.ownerId;
         this.region = builder.region;
         this.regionId = builder.regionId;
         this.repeatNumber = builder.repeatNumber;
+        this.reqAuth = builder.reqAuth;
         this.retryCount = builder.retryCount;
         this.retryInterval = builder.retryInterval;
         this.sourceProtocol = builder.sourceProtocol;
@@ -119,6 +134,13 @@ public class CreateLivePullToPushRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return authKey
+     */
+    public String getAuthKey() {
+        return this.authKey;
     }
 
     /**
@@ -147,6 +169,13 @@ public class CreateLivePullToPushRequest extends Request {
      */
     public Integer getFileIndex() {
         return this.fileIndex;
+    }
+
+    /**
+     * @return notifyItemSwitch
+     */
+    public String getNotifyItemSwitch() {
+        return this.notifyItemSwitch;
     }
 
     /**
@@ -182,6 +211,13 @@ public class CreateLivePullToPushRequest extends Request {
      */
     public Integer getRepeatNumber() {
         return this.repeatNumber;
+    }
+
+    /**
+     * @return reqAuth
+     */
+    public String getReqAuth() {
+        return this.reqAuth;
     }
 
     /**
@@ -234,15 +270,18 @@ public class CreateLivePullToPushRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateLivePullToPushRequest, Builder> {
+        private String authKey; 
         private String callbackUrl; 
         private String dstUrl; 
         private String endTime; 
         private Integer fileIndex; 
+        private String notifyItemSwitch; 
         private Integer offset; 
         private Long ownerId; 
         private String region; 
         private String regionId; 
         private Integer repeatNumber; 
+        private String reqAuth; 
         private Integer retryCount; 
         private Integer retryInterval; 
         private String sourceProtocol; 
@@ -257,15 +296,18 @@ public class CreateLivePullToPushRequest extends Request {
 
         private Builder(CreateLivePullToPushRequest request) {
             super(request);
+            this.authKey = request.authKey;
             this.callbackUrl = request.callbackUrl;
             this.dstUrl = request.dstUrl;
             this.endTime = request.endTime;
             this.fileIndex = request.fileIndex;
+            this.notifyItemSwitch = request.notifyItemSwitch;
             this.offset = request.offset;
             this.ownerId = request.ownerId;
             this.region = request.region;
             this.regionId = request.regionId;
             this.repeatNumber = request.repeatNumber;
+            this.reqAuth = request.reqAuth;
             this.retryCount = request.retryCount;
             this.retryInterval = request.retryInterval;
             this.sourceProtocol = request.sourceProtocol;
@@ -274,6 +316,15 @@ public class CreateLivePullToPushRequest extends Request {
             this.startTime = request.startTime;
             this.taskName = request.taskName;
         } 
+
+        /**
+         * AuthKey.
+         */
+        public Builder authKey(String authKey) {
+            this.putQueryParameter("AuthKey", authKey);
+            this.authKey = authKey;
+            return this;
+        }
 
         /**
          * <p>The HTTP callback URL. By default, this parameter is left empty.</p>
@@ -356,6 +407,15 @@ public class CreateLivePullToPushRequest extends Request {
         }
 
         /**
+         * NotifyItemSwitch.
+         */
+        public Builder notifyItemSwitch(String notifyItemSwitch) {
+            this.putQueryParameter("NotifyItemSwitch", notifyItemSwitch);
+            this.notifyItemSwitch = notifyItemSwitch;
+            return this;
+        }
+
+        /**
          * <p>The offset of the position where the system starts to read the video resource. Unit: seconds. Valid values: positive numbers.</p>
          * <blockquote>
          * </blockquote>
@@ -429,6 +489,15 @@ public class CreateLivePullToPushRequest extends Request {
         public Builder repeatNumber(Integer repeatNumber) {
             this.putQueryParameter("RepeatNumber", repeatNumber);
             this.repeatNumber = repeatNumber;
+            return this;
+        }
+
+        /**
+         * ReqAuth.
+         */
+        public Builder reqAuth(String reqAuth) {
+            this.putQueryParameter("ReqAuth", reqAuth);
+            this.reqAuth = reqAuth;
             return this;
         }
 
