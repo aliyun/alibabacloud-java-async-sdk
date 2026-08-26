@@ -24,7 +24,6 @@ public class InstallPolarClawPluginRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NpmPackage")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String npmPackage;
 
     @com.aliyun.core.annotation.Query
@@ -116,10 +115,7 @@ public class InstallPolarClawPluginRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>@larksuite/<a href="mailto:openclaw-lark@2026.4.7">openclaw-lark@2026.4.7</a></p>
+         * NpmPackage.
          */
         public Builder npmPackage(String npmPackage) {
             this.putQueryParameter("NpmPackage", npmPackage);

@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateModelApiRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Config")
+    private String config;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ForceModel")
     private String forceModel;
 
@@ -65,6 +69,7 @@ public class CreateModelApiRequest extends Request {
 
     private CreateModelApiRequest(Builder builder) {
         super(builder);
+        this.config = builder.config;
         this.forceModel = builder.forceModel;
         this.gwClusterId = builder.gwClusterId;
         this.modelCategory = builder.modelCategory;
@@ -88,6 +93,13 @@ public class CreateModelApiRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return config
+     */
+    public String getConfig() {
+        return this.config;
     }
 
     /**
@@ -161,6 +173,7 @@ public class CreateModelApiRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateModelApiRequest, Builder> {
+        private String config; 
         private String forceModel; 
         private String gwClusterId; 
         private String modelCategory; 
@@ -178,6 +191,7 @@ public class CreateModelApiRequest extends Request {
 
         private Builder(CreateModelApiRequest request) {
             super(request);
+            this.config = request.config;
             this.forceModel = request.forceModel;
             this.gwClusterId = request.gwClusterId;
             this.modelCategory = request.modelCategory;
@@ -189,6 +203,15 @@ public class CreateModelApiRequest extends Request {
             this.regionId = request.regionId;
             this.routeRules = request.routeRules;
         } 
+
+        /**
+         * Config.
+         */
+        public Builder config(String config) {
+            this.putQueryParameter("Config", config);
+            this.config = config;
+            return this;
+        }
 
         /**
          * ForceModel.

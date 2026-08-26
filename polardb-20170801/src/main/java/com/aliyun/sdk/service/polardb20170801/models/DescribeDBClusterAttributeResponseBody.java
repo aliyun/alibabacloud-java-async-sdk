@@ -2241,6 +2241,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBNodeStatus")
         private String DBNodeStatus;
 
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostModel")
+        private Boolean dedicatedHostModel;
+
         @com.aliyun.core.annotation.NameInMap("FailoverPriority")
         private Integer failoverPriority;
 
@@ -2315,6 +2318,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.DBNodeId = builder.DBNodeId;
             this.DBNodeRole = builder.DBNodeRole;
             this.DBNodeStatus = builder.DBNodeStatus;
+            this.dedicatedHostModel = builder.dedicatedHostModel;
             this.failoverPriority = builder.failoverPriority;
             this.hotReplicaMode = builder.hotReplicaMode;
             this.imciSwitch = builder.imciSwitch;
@@ -2407,6 +2411,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public String getDBNodeStatus() {
             return this.DBNodeStatus;
+        }
+
+        /**
+         * @return dedicatedHostModel
+         */
+        public Boolean getDedicatedHostModel() {
+            return this.dedicatedHostModel;
         }
 
         /**
@@ -2566,6 +2577,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private String DBNodeId; 
             private String DBNodeRole; 
             private String DBNodeStatus; 
+            private Boolean dedicatedHostModel; 
             private Integer failoverPriority; 
             private String hotReplicaMode; 
             private String imciSwitch; 
@@ -2601,6 +2613,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
                 this.DBNodeId = model.DBNodeId;
                 this.DBNodeRole = model.DBNodeRole;
                 this.DBNodeStatus = model.DBNodeStatus;
+                this.dedicatedHostModel = model.dedicatedHostModel;
                 this.failoverPriority = model.failoverPriority;
                 this.hotReplicaMode = model.hotReplicaMode;
                 this.imciSwitch = model.imciSwitch;
@@ -2733,6 +2746,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              */
             public Builder DBNodeStatus(String DBNodeStatus) {
                 this.DBNodeStatus = DBNodeStatus;
+                return this;
+            }
+
+            /**
+             * DedicatedHostModel.
+             */
+            public Builder dedicatedHostModel(Boolean dedicatedHostModel) {
+                this.dedicatedHostModel = dedicatedHostModel;
                 return this;
             }
 

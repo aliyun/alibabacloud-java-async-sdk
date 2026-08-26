@@ -185,6 +185,9 @@ public class DescribeModelApisResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
+        @com.aliyun.core.annotation.NameInMap("Config")
+        private String config;
+
         @com.aliyun.core.annotation.NameInMap("GmtCreated")
         private String gmtCreated;
 
@@ -214,6 +217,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
 
         private Items(Builder builder) {
             this.category = builder.category;
+            this.config = builder.config;
             this.gmtCreated = builder.gmtCreated;
             this.modelApiId = builder.modelApiId;
             this.name = builder.name;
@@ -238,6 +242,13 @@ public class DescribeModelApisResponseBody extends TeaModel {
          */
         public String getCategory() {
             return this.category;
+        }
+
+        /**
+         * @return config
+         */
+        public String getConfig() {
+            return this.config;
         }
 
         /**
@@ -305,6 +316,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
 
         public static final class Builder {
             private String category; 
+            private String config; 
             private String gmtCreated; 
             private String modelApiId; 
             private String name; 
@@ -320,6 +332,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
 
             private Builder(Items model) {
                 this.category = model.category;
+                this.config = model.config;
                 this.gmtCreated = model.gmtCreated;
                 this.modelApiId = model.modelApiId;
                 this.name = model.name;
@@ -336,6 +349,14 @@ public class DescribeModelApisResponseBody extends TeaModel {
              */
             public Builder category(String category) {
                 this.category = category;
+                return this;
+            }
+
+            /**
+             * Config.
+             */
+            public Builder config(String config) {
+                this.config = config;
                 return this;
             }
 

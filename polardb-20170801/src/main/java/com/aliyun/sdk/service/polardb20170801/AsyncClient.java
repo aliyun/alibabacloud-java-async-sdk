@@ -478,6 +478,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateGwConsumerOrderResponse> createGwConsumerOrder(CreateGwConsumerOrderRequest request);
 
     /**
+     * @param request the request parameters of CreateKnowledgeBase  CreateKnowledgeBaseRequest
+     * @return CreateKnowledgeBaseResponse
+     */
+    CompletableFuture<CreateKnowledgeBaseResponse> createKnowledgeBase(CreateKnowledgeBaseRequest request);
+
+    /**
+     * @param request the request parameters of CreateKnowledgeSpace  CreateKnowledgeSpaceRequest
+     * @return CreateKnowledgeSpaceResponse
+     */
+    CompletableFuture<CreateKnowledgeSpaceResponse> createKnowledgeSpace(CreateKnowledgeSpaceRequest request);
+
+    /**
      * @param request the request parameters of CreateLakebaseS3Account  CreateLakebaseS3AccountRequest
      * @return CreateLakebaseS3AccountResponse
      */
@@ -825,6 +837,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteGlobalSecurityIPGroupResponse
      */
     CompletableFuture<DeleteGlobalSecurityIPGroupResponse> deleteGlobalSecurityIPGroup(DeleteGlobalSecurityIPGroupRequest request);
+
+    /**
+     * @param request the request parameters of DeleteKnowledgeBase  DeleteKnowledgeBaseRequest
+     * @return DeleteKnowledgeBaseResponse
+     */
+    CompletableFuture<DeleteKnowledgeBaseResponse> deleteKnowledgeBase(DeleteKnowledgeBaseRequest request);
 
     /**
      * @param request the request parameters of DeleteLakebaseS3Account  DeleteLakebaseS3AccountRequest
@@ -1648,6 +1666,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeHistoryTasksStatResponse
      */
     CompletableFuture<DescribeHistoryTasksStatResponse> describeHistoryTasksStat(DescribeHistoryTasksStatRequest request);
+
+    /**
+     * @param request the request parameters of DescribeKnowledgeBaseAttribute  DescribeKnowledgeBaseAttributeRequest
+     * @return DescribeKnowledgeBaseAttributeResponse
+     */
+    CompletableFuture<DescribeKnowledgeBaseAttributeResponse> describeKnowledgeBaseAttribute(DescribeKnowledgeBaseAttributeRequest request);
+
+    /**
+     * @param request the request parameters of DescribeKnowledgeBases  DescribeKnowledgeBasesRequest
+     * @return DescribeKnowledgeBasesResponse
+     */
+    CompletableFuture<DescribeKnowledgeBasesResponse> describeKnowledgeBases(DescribeKnowledgeBasesRequest request);
 
     /**
      * @param request the request parameters of DescribeLakebaseS3Account  DescribeLakebaseS3AccountRequest

@@ -94,12 +94,132 @@ public class DescribeAgenticDBBranchEndpointsResponseBody extends TeaModel {
      *
      * <p>DescribeAgenticDBBranchEndpointsResponseBody</p>
      */
+    public static class AddressItems extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Address")
+        private String address;
+
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
+        private String connectionString;
+
+        @com.aliyun.core.annotation.NameInMap("NetType")
+        private String netType;
+
+        @com.aliyun.core.annotation.NameInMap("Port")
+        private Integer port;
+
+        private AddressItems(Builder builder) {
+            this.address = builder.address;
+            this.connectionString = builder.connectionString;
+            this.netType = builder.netType;
+            this.port = builder.port;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AddressItems create() {
+            return builder().build();
+        }
+
+        /**
+         * @return address
+         */
+        public String getAddress() {
+            return this.address;
+        }
+
+        /**
+         * @return connectionString
+         */
+        public String getConnectionString() {
+            return this.connectionString;
+        }
+
+        /**
+         * @return netType
+         */
+        public String getNetType() {
+            return this.netType;
+        }
+
+        /**
+         * @return port
+         */
+        public Integer getPort() {
+            return this.port;
+        }
+
+        public static final class Builder {
+            private String address; 
+            private String connectionString; 
+            private String netType; 
+            private Integer port; 
+
+            private Builder() {
+            } 
+
+            private Builder(AddressItems model) {
+                this.address = model.address;
+                this.connectionString = model.connectionString;
+                this.netType = model.netType;
+                this.port = model.port;
+            } 
+
+            /**
+             * Address.
+             */
+            public Builder address(String address) {
+                this.address = address;
+                return this;
+            }
+
+            /**
+             * ConnectionString.
+             */
+            public Builder connectionString(String connectionString) {
+                this.connectionString = connectionString;
+                return this;
+            }
+
+            /**
+             * NetType.
+             */
+            public Builder netType(String netType) {
+                this.netType = netType;
+                return this;
+            }
+
+            /**
+             * Port.
+             */
+            public Builder port(Integer port) {
+                this.port = port;
+                return this;
+            }
+
+            public AddressItems build() {
+                return new AddressItems(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAgenticDBBranchEndpointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAgenticDBBranchEndpointsResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Account")
         private String account;
 
         @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
+
+        @com.aliyun.core.annotation.NameInMap("AddressItems")
+        private java.util.List<AddressItems> addressItems;
 
         @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
@@ -122,6 +242,7 @@ public class DescribeAgenticDBBranchEndpointsResponseBody extends TeaModel {
         private Items(Builder builder) {
             this.account = builder.account;
             this.address = builder.address;
+            this.addressItems = builder.addressItems;
             this.connectionString = builder.connectionString;
             this.database = builder.database;
             this.endpointId = builder.endpointId;
@@ -150,6 +271,13 @@ public class DescribeAgenticDBBranchEndpointsResponseBody extends TeaModel {
          */
         public String getAddress() {
             return this.address;
+        }
+
+        /**
+         * @return addressItems
+         */
+        public java.util.List<AddressItems> getAddressItems() {
+            return this.addressItems;
         }
 
         /**
@@ -197,6 +325,7 @@ public class DescribeAgenticDBBranchEndpointsResponseBody extends TeaModel {
         public static final class Builder {
             private String account; 
             private String address; 
+            private java.util.List<AddressItems> addressItems; 
             private String connectionString; 
             private String database; 
             private String endpointId; 
@@ -210,6 +339,7 @@ public class DescribeAgenticDBBranchEndpointsResponseBody extends TeaModel {
             private Builder(Items model) {
                 this.account = model.account;
                 this.address = model.address;
+                this.addressItems = model.addressItems;
                 this.connectionString = model.connectionString;
                 this.database = model.database;
                 this.endpointId = model.endpointId;
@@ -231,6 +361,14 @@ public class DescribeAgenticDBBranchEndpointsResponseBody extends TeaModel {
              */
             public Builder address(String address) {
                 this.address = address;
+                return this;
+            }
+
+            /**
+             * AddressItems.
+             */
+            public Builder addressItems(java.util.List<AddressItems> addressItems) {
+                this.addressItems = addressItems;
                 return this;
             }
 

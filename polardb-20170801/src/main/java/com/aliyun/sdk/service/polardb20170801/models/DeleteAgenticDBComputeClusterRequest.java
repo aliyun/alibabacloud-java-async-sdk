@@ -18,8 +18,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteAgenticDBComputeClusterRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BranchId")
+    private String branchId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ComputeClusterId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String computeClusterId;
 
     @com.aliyun.core.annotation.Query
@@ -28,15 +31,26 @@ public class DeleteAgenticDBComputeClusterRequest extends Request {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private String projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    private String tenantId;
+
     private DeleteAgenticDBComputeClusterRequest(Builder builder) {
         super(builder);
+        this.branchId = builder.branchId;
         this.computeClusterId = builder.computeClusterId;
         this.DBClusterId = builder.DBClusterId;
+        this.projectId = builder.projectId;
         this.regionId = builder.regionId;
+        this.tenantId = builder.tenantId;
     }
 
     public static Builder builder() {
@@ -50,6 +64,13 @@ public class DeleteAgenticDBComputeClusterRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return branchId
+     */
+    public String getBranchId() {
+        return this.branchId;
     }
 
     /**
@@ -67,16 +88,33 @@ public class DeleteAgenticDBComputeClusterRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public String getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return tenantId
+     */
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
     public static final class Builder extends Request.Builder<DeleteAgenticDBComputeClusterRequest, Builder> {
+        private String branchId; 
         private String computeClusterId; 
         private String DBClusterId; 
+        private String projectId; 
         private String regionId; 
+        private String tenantId; 
 
         private Builder() {
             super();
@@ -84,16 +122,25 @@ public class DeleteAgenticDBComputeClusterRequest extends Request {
 
         private Builder(DeleteAgenticDBComputeClusterRequest request) {
             super(request);
+            this.branchId = request.branchId;
             this.computeClusterId = request.computeClusterId;
             this.DBClusterId = request.DBClusterId;
+            this.projectId = request.projectId;
             this.regionId = request.regionId;
+            this.tenantId = request.tenantId;
         } 
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>pc-g0lsayq8c5qe</p>
+         * BranchId.
+         */
+        public Builder branchId(String branchId) {
+            this.putQueryParameter("BranchId", branchId);
+            this.branchId = branchId;
+            return this;
+        }
+
+        /**
+         * ComputeClusterId.
          */
         public Builder computeClusterId(String computeClusterId) {
             this.putQueryParameter("ComputeClusterId", computeClusterId);
@@ -114,6 +161,15 @@ public class DeleteAgenticDBComputeClusterRequest extends Request {
         }
 
         /**
+         * ProjectId.
+         */
+        public Builder projectId(String projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -122,6 +178,15 @@ public class DeleteAgenticDBComputeClusterRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * TenantId.
+         */
+        public Builder tenantId(String tenantId) {
+            this.putQueryParameter("TenantId", tenantId);
+            this.tenantId = tenantId;
             return this;
         }
 

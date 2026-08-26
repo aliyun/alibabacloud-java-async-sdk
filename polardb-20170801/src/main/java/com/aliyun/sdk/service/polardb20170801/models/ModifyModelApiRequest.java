@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyModelApiRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Config")
+    private String config;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GwClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String gwClusterId;
@@ -61,6 +65,7 @@ public class ModifyModelApiRequest extends Request {
 
     private ModifyModelApiRequest(Builder builder) {
         super(builder);
+        this.config = builder.config;
         this.gwClusterId = builder.gwClusterId;
         this.modelApiId = builder.modelApiId;
         this.modelCategory = builder.modelCategory;
@@ -83,6 +88,13 @@ public class ModifyModelApiRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return config
+     */
+    public String getConfig() {
+        return this.config;
     }
 
     /**
@@ -149,6 +161,7 @@ public class ModifyModelApiRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyModelApiRequest, Builder> {
+        private String config; 
         private String gwClusterId; 
         private String modelApiId; 
         private String modelCategory; 
@@ -165,6 +178,7 @@ public class ModifyModelApiRequest extends Request {
 
         private Builder(ModifyModelApiRequest request) {
             super(request);
+            this.config = request.config;
             this.gwClusterId = request.gwClusterId;
             this.modelApiId = request.modelApiId;
             this.modelCategory = request.modelCategory;
@@ -175,6 +189,15 @@ public class ModifyModelApiRequest extends Request {
             this.regionId = request.regionId;
             this.routeRules = request.routeRules;
         } 
+
+        /**
+         * Config.
+         */
+        public Builder config(String config) {
+            this.putQueryParameter("Config", config);
+            this.config = config;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>

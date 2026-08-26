@@ -44,6 +44,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DBVersion")
     private String DBVersion;
 
+    @com.aliyun.core.annotation.NameInMap("DedicatedHostModel")
+    private Boolean dedicatedHostModel;
+
     @com.aliyun.core.annotation.NameInMap("EcsSecurityGroupId")
     private String ecsSecurityGroupId;
 
@@ -138,6 +141,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         this.DBInstanceStatusDesc = builder.DBInstanceStatusDesc;
         this.DBNodes = builder.DBNodes;
         this.DBVersion = builder.DBVersion;
+        this.dedicatedHostModel = builder.dedicatedHostModel;
         this.ecsSecurityGroupId = builder.ecsSecurityGroupId;
         this.endpointList = builder.endpointList;
         this.expireTime = builder.expireTime;
@@ -241,6 +245,13 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
      */
     public String getDBVersion() {
         return this.DBVersion;
+    }
+
+    /**
+     * @return dedicatedHostModel
+     */
+    public Boolean getDedicatedHostModel() {
+        return this.dedicatedHostModel;
     }
 
     /**
@@ -449,6 +460,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         private String DBInstanceStatusDesc; 
         private java.util.List<DBNodes> DBNodes; 
         private String DBVersion; 
+        private Boolean dedicatedHostModel; 
         private String ecsSecurityGroupId; 
         private java.util.List<EndpointList> endpointList; 
         private String expireTime; 
@@ -491,6 +503,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
             this.DBInstanceStatusDesc = model.DBInstanceStatusDesc;
             this.DBNodes = model.DBNodes;
             this.DBVersion = model.DBVersion;
+            this.dedicatedHostModel = model.dedicatedHostModel;
             this.ecsSecurityGroupId = model.ecsSecurityGroupId;
             this.endpointList = model.endpointList;
             this.expireTime = model.expireTime;
@@ -590,6 +603,14 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
          */
         public Builder DBVersion(String DBVersion) {
             this.DBVersion = DBVersion;
+            return this;
+        }
+
+        /**
+         * DedicatedHostModel.
+         */
+        public Builder dedicatedHostModel(Boolean dedicatedHostModel) {
+            this.dedicatedHostModel = dedicatedHostModel;
             return this;
         }
 
