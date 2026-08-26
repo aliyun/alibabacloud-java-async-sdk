@@ -22,9 +22,14 @@ public class DeleteUserCertificateRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long certId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
     private DeleteUserCertificateRequest(Builder builder) {
         super(builder);
         this.certId = builder.certId;
+        this.clientToken = builder.clientToken;
     }
 
     public static Builder builder() {
@@ -47,8 +52,16 @@ public class DeleteUserCertificateRequest extends Request {
         return this.certId;
     }
 
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
     public static final class Builder extends Request.Builder<DeleteUserCertificateRequest, Builder> {
         private Long certId; 
+        private String clientToken; 
 
         private Builder() {
             super();
@@ -57,6 +70,7 @@ public class DeleteUserCertificateRequest extends Request {
         private Builder(DeleteUserCertificateRequest request) {
             super(request);
             this.certId = request.certId;
+            this.clientToken = request.clientToken;
         } 
 
         /**
@@ -72,6 +86,15 @@ public class DeleteUserCertificateRequest extends Request {
         public Builder certId(Long certId) {
             this.putQueryParameter("CertId", certId);
             this.certId = certId;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 

@@ -18,12 +18,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private DeleteInstanceRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.instanceId = builder.instanceId;
     }
 
@@ -41,6 +46,13 @@ public class DeleteInstanceRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -48,6 +60,7 @@ public class DeleteInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteInstanceRequest, Builder> {
+        private String clientToken; 
         private String instanceId; 
 
         private Builder() {
@@ -56,8 +69,18 @@ public class DeleteInstanceRequest extends Request {
 
         private Builder(DeleteInstanceRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.instanceId = request.instanceId;
         } 
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>

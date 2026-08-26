@@ -22,6 +22,10 @@ public class UploadUserCertificateRequest extends Request {
     private String cert;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EncryptCert")
     private String encryptCert;
 
@@ -57,6 +61,7 @@ public class UploadUserCertificateRequest extends Request {
     private UploadUserCertificateRequest(Builder builder) {
         super(builder);
         this.cert = builder.cert;
+        this.clientToken = builder.clientToken;
         this.encryptCert = builder.encryptCert;
         this.encryptPrivateKey = builder.encryptPrivateKey;
         this.key = builder.key;
@@ -85,6 +90,13 @@ public class UploadUserCertificateRequest extends Request {
      */
     public String getCert() {
         return this.cert;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -145,6 +157,7 @@ public class UploadUserCertificateRequest extends Request {
 
     public static final class Builder extends Request.Builder<UploadUserCertificateRequest, Builder> {
         private String cert; 
+        private String clientToken; 
         private String encryptCert; 
         private String encryptPrivateKey; 
         private String key; 
@@ -161,6 +174,7 @@ public class UploadUserCertificateRequest extends Request {
         private Builder(UploadUserCertificateRequest request) {
             super(request);
             this.cert = request.cert;
+            this.clientToken = request.clientToken;
             this.encryptCert = request.encryptCert;
             this.encryptPrivateKey = request.encryptPrivateKey;
             this.key = request.key;
@@ -180,6 +194,15 @@ public class UploadUserCertificateRequest extends Request {
         public Builder cert(String cert) {
             this.putQueryParameter("Cert", cert);
             this.cert = cert;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 

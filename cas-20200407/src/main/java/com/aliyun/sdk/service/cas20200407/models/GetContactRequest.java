@@ -19,6 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetContactRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ContactId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long contactId;
 
     private GetContactRequest(Builder builder) {
@@ -59,7 +60,10 @@ public class GetContactRequest extends Request {
         } 
 
         /**
-         * ContactId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1397591</p>
          */
         public Builder contactId(Long contactId) {
             this.putQueryParameter("ContactId", contactId);
