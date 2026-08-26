@@ -26,6 +26,9 @@ public class DatasetVersion extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DataSourceType")
     private String dataSourceType;
 
+    @com.aliyun.core.annotation.NameInMap("DatasetTaskRamRole")
+    private String datasetTaskRamRole;
+
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
@@ -59,6 +62,9 @@ public class DatasetVersion extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Uri")
     private String uri;
 
+    @com.aliyun.core.annotation.NameInMap("UserMetricsEndpoints")
+    private java.util.List<UserMetricsEndpoint> userMetricsEndpoints;
+
     @com.aliyun.core.annotation.NameInMap("VersionName")
     private String versionName;
 
@@ -66,6 +72,7 @@ public class DatasetVersion extends TeaModel {
         this.dataCount = builder.dataCount;
         this.dataSize = builder.dataSize;
         this.dataSourceType = builder.dataSourceType;
+        this.datasetTaskRamRole = builder.datasetTaskRamRole;
         this.description = builder.description;
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
@@ -77,6 +84,7 @@ public class DatasetVersion extends TeaModel {
         this.sourceId = builder.sourceId;
         this.sourceType = builder.sourceType;
         this.uri = builder.uri;
+        this.userMetricsEndpoints = builder.userMetricsEndpoints;
         this.versionName = builder.versionName;
     }
 
@@ -111,6 +119,13 @@ public class DatasetVersion extends TeaModel {
      */
     public String getDataSourceType() {
         return this.dataSourceType;
+    }
+
+    /**
+     * @return datasetTaskRamRole
+     */
+    public String getDatasetTaskRamRole() {
+        return this.datasetTaskRamRole;
     }
 
     /**
@@ -191,6 +206,13 @@ public class DatasetVersion extends TeaModel {
     }
 
     /**
+     * @return userMetricsEndpoints
+     */
+    public java.util.List<UserMetricsEndpoint> getUserMetricsEndpoints() {
+        return this.userMetricsEndpoints;
+    }
+
+    /**
      * @return versionName
      */
     public String getVersionName() {
@@ -201,6 +223,7 @@ public class DatasetVersion extends TeaModel {
         private Long dataCount; 
         private Long dataSize; 
         private String dataSourceType; 
+        private String datasetTaskRamRole; 
         private String description; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
@@ -212,6 +235,7 @@ public class DatasetVersion extends TeaModel {
         private String sourceId; 
         private String sourceType; 
         private String uri; 
+        private java.util.List<UserMetricsEndpoint> userMetricsEndpoints; 
         private String versionName; 
 
         private Builder() {
@@ -221,6 +245,7 @@ public class DatasetVersion extends TeaModel {
             this.dataCount = model.dataCount;
             this.dataSize = model.dataSize;
             this.dataSourceType = model.dataSourceType;
+            this.datasetTaskRamRole = model.datasetTaskRamRole;
             this.description = model.description;
             this.gmtCreateTime = model.gmtCreateTime;
             this.gmtModifiedTime = model.gmtModifiedTime;
@@ -232,6 +257,7 @@ public class DatasetVersion extends TeaModel {
             this.sourceId = model.sourceId;
             this.sourceType = model.sourceType;
             this.uri = model.uri;
+            this.userMetricsEndpoints = model.userMetricsEndpoints;
             this.versionName = model.versionName;
         } 
 
@@ -256,6 +282,14 @@ public class DatasetVersion extends TeaModel {
          */
         public Builder dataSourceType(String dataSourceType) {
             this.dataSourceType = dataSourceType;
+            return this;
+        }
+
+        /**
+         * DatasetTaskRamRole.
+         */
+        public Builder datasetTaskRamRole(String datasetTaskRamRole) {
+            this.datasetTaskRamRole = datasetTaskRamRole;
             return this;
         }
 
@@ -344,6 +378,14 @@ public class DatasetVersion extends TeaModel {
          */
         public Builder uri(String uri) {
             this.uri = uri;
+            return this;
+        }
+
+        /**
+         * UserMetricsEndpoints.
+         */
+        public Builder userMetricsEndpoints(java.util.List<UserMetricsEndpoint> userMetricsEndpoints) {
+            this.userMetricsEndpoints = userMetricsEndpoints;
             return this;
         }
 

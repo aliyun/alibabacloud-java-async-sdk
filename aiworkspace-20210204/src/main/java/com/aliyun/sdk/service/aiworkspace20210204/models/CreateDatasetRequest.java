@@ -45,6 +45,10 @@ public class CreateDatasetRequest extends Request {
     private String dataType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DatasetTaskRamRole")
+    private String datasetTaskRamRole;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
@@ -112,6 +116,10 @@ public class CreateDatasetRequest extends Request {
     private String userId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserMetricsEndpoints")
+    private java.util.List<UserMetricsEndpoint> userMetricsEndpoints;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VersionDescription")
     private String versionDescription;
 
@@ -131,6 +139,7 @@ public class CreateDatasetRequest extends Request {
         this.dataSize = builder.dataSize;
         this.dataSourceType = builder.dataSourceType;
         this.dataType = builder.dataType;
+        this.datasetTaskRamRole = builder.datasetTaskRamRole;
         this.description = builder.description;
         this.edition = builder.edition;
         this.importInfo = builder.importInfo;
@@ -147,6 +156,7 @@ public class CreateDatasetRequest extends Request {
         this.sourceType = builder.sourceType;
         this.uri = builder.uri;
         this.userId = builder.userId;
+        this.userMetricsEndpoints = builder.userMetricsEndpoints;
         this.versionDescription = builder.versionDescription;
         this.versionLabels = builder.versionLabels;
         this.workspaceId = builder.workspaceId;
@@ -205,6 +215,13 @@ public class CreateDatasetRequest extends Request {
      */
     public String getDataType() {
         return this.dataType;
+    }
+
+    /**
+     * @return datasetTaskRamRole
+     */
+    public String getDatasetTaskRamRole() {
+        return this.datasetTaskRamRole;
     }
 
     /**
@@ -320,6 +337,13 @@ public class CreateDatasetRequest extends Request {
     }
 
     /**
+     * @return userMetricsEndpoints
+     */
+    public java.util.List<UserMetricsEndpoint> getUserMetricsEndpoints() {
+        return this.userMetricsEndpoints;
+    }
+
+    /**
      * @return versionDescription
      */
     public String getVersionDescription() {
@@ -347,6 +371,7 @@ public class CreateDatasetRequest extends Request {
         private Long dataSize; 
         private String dataSourceType; 
         private String dataType; 
+        private String datasetTaskRamRole; 
         private String description; 
         private String edition; 
         private String importInfo; 
@@ -363,6 +388,7 @@ public class CreateDatasetRequest extends Request {
         private String sourceType; 
         private String uri; 
         private String userId; 
+        private java.util.List<UserMetricsEndpoint> userMetricsEndpoints; 
         private String versionDescription; 
         private java.util.List<Label> versionLabels; 
         private String workspaceId; 
@@ -379,6 +405,7 @@ public class CreateDatasetRequest extends Request {
             this.dataSize = request.dataSize;
             this.dataSourceType = request.dataSourceType;
             this.dataType = request.dataType;
+            this.datasetTaskRamRole = request.datasetTaskRamRole;
             this.description = request.description;
             this.edition = request.edition;
             this.importInfo = request.importInfo;
@@ -395,6 +422,7 @@ public class CreateDatasetRequest extends Request {
             this.sourceType = request.sourceType;
             this.uri = request.uri;
             this.userId = request.userId;
+            this.userMetricsEndpoints = request.userMetricsEndpoints;
             this.versionDescription = request.versionDescription;
             this.versionLabels = request.versionLabels;
             this.workspaceId = request.workspaceId;
@@ -482,6 +510,15 @@ public class CreateDatasetRequest extends Request {
         public Builder dataType(String dataType) {
             this.putBodyParameter("DataType", dataType);
             this.dataType = dataType;
+            return this;
+        }
+
+        /**
+         * DatasetTaskRamRole.
+         */
+        public Builder datasetTaskRamRole(String datasetTaskRamRole) {
+            this.putBodyParameter("DatasetTaskRamRole", datasetTaskRamRole);
+            this.datasetTaskRamRole = datasetTaskRamRole;
             return this;
         }
 
@@ -714,6 +751,15 @@ public class CreateDatasetRequest extends Request {
         public Builder userId(String userId) {
             this.putBodyParameter("UserId", userId);
             this.userId = userId;
+            return this;
+        }
+
+        /**
+         * UserMetricsEndpoints.
+         */
+        public Builder userMetricsEndpoints(java.util.List<UserMetricsEndpoint> userMetricsEndpoints) {
+            this.putBodyParameter("UserMetricsEndpoints", userMetricsEndpoints);
+            this.userMetricsEndpoints = userMetricsEndpoints;
             return this;
         }
 

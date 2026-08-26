@@ -36,6 +36,10 @@ public class UpdateDatasetVersionRequest extends Request {
     private Long dataSize;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DatasetTaskRamRole")
+    private String datasetTaskRamRole;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
@@ -43,14 +47,20 @@ public class UpdateDatasetVersionRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Options")
     private String options;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserMetricsEndpoints")
+    private java.util.List<UserMetricsEndpoint> userMetricsEndpoints;
+
     private UpdateDatasetVersionRequest(Builder builder) {
         super(builder);
         this.datasetId = builder.datasetId;
         this.versionName = builder.versionName;
         this.dataCount = builder.dataCount;
         this.dataSize = builder.dataSize;
+        this.datasetTaskRamRole = builder.datasetTaskRamRole;
         this.description = builder.description;
         this.options = builder.options;
+        this.userMetricsEndpoints = builder.userMetricsEndpoints;
     }
 
     public static Builder builder() {
@@ -95,6 +105,13 @@ public class UpdateDatasetVersionRequest extends Request {
     }
 
     /**
+     * @return datasetTaskRamRole
+     */
+    public String getDatasetTaskRamRole() {
+        return this.datasetTaskRamRole;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
@@ -108,13 +125,22 @@ public class UpdateDatasetVersionRequest extends Request {
         return this.options;
     }
 
+    /**
+     * @return userMetricsEndpoints
+     */
+    public java.util.List<UserMetricsEndpoint> getUserMetricsEndpoints() {
+        return this.userMetricsEndpoints;
+    }
+
     public static final class Builder extends Request.Builder<UpdateDatasetVersionRequest, Builder> {
         private String datasetId; 
         private String versionName; 
         private Long dataCount; 
         private Long dataSize; 
+        private String datasetTaskRamRole; 
         private String description; 
         private String options; 
+        private java.util.List<UserMetricsEndpoint> userMetricsEndpoints; 
 
         private Builder() {
             super();
@@ -126,8 +152,10 @@ public class UpdateDatasetVersionRequest extends Request {
             this.versionName = request.versionName;
             this.dataCount = request.dataCount;
             this.dataSize = request.dataSize;
+            this.datasetTaskRamRole = request.datasetTaskRamRole;
             this.description = request.description;
             this.options = request.options;
+            this.userMetricsEndpoints = request.userMetricsEndpoints;
         } 
 
         /**
@@ -173,6 +201,15 @@ public class UpdateDatasetVersionRequest extends Request {
         }
 
         /**
+         * DatasetTaskRamRole.
+         */
+        public Builder datasetTaskRamRole(String datasetTaskRamRole) {
+            this.putBodyParameter("DatasetTaskRamRole", datasetTaskRamRole);
+            this.datasetTaskRamRole = datasetTaskRamRole;
+            return this;
+        }
+
+        /**
          * Description.
          */
         public Builder description(String description) {
@@ -187,6 +224,15 @@ public class UpdateDatasetVersionRequest extends Request {
         public Builder options(String options) {
             this.putBodyParameter("Options", options);
             this.options = options;
+            return this;
+        }
+
+        /**
+         * UserMetricsEndpoints.
+         */
+        public Builder userMetricsEndpoints(java.util.List<UserMetricsEndpoint> userMetricsEndpoints) {
+            this.putBodyParameter("UserMetricsEndpoints", userMetricsEndpoints);
+            this.userMetricsEndpoints = userMetricsEndpoints;
             return this;
         }
 
