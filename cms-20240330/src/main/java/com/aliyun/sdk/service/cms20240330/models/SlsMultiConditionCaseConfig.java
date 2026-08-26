@@ -17,30 +17,52 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SlsMultiConditionCaseConfig</p>
  */
 public class SlsMultiConditionCaseConfig extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("condition")
+    private String condition;
+
+    @com.aliyun.core.annotation.NameInMap("countCondition")
+    private String countCondition;
+
     @com.aliyun.core.annotation.NameInMap("countOperator")
+    @Deprecated
     private String countOperator;
 
     @com.aliyun.core.annotation.NameInMap("countThreshold")
+    @Deprecated
     private Long countThreshold;
 
     @com.aliyun.core.annotation.NameInMap("matchField")
+    @Deprecated
     private String matchField;
 
     @com.aliyun.core.annotation.NameInMap("matchOperator")
+    @Deprecated
     private String matchOperator;
 
     @com.aliyun.core.annotation.NameInMap("matchValue")
+    @Deprecated
     private String matchValue;
+
+    @com.aliyun.core.annotation.NameInMap("operator")
+    private String operator;
+
+    @com.aliyun.core.annotation.NameInMap("rawCondition")
+    @Deprecated
+    private String rawCondition;
 
     @com.aliyun.core.annotation.NameInMap("severity")
     private String severity;
 
     private SlsMultiConditionCaseConfig(Builder builder) {
+        this.condition = builder.condition;
+        this.countCondition = builder.countCondition;
         this.countOperator = builder.countOperator;
         this.countThreshold = builder.countThreshold;
         this.matchField = builder.matchField;
         this.matchOperator = builder.matchOperator;
         this.matchValue = builder.matchValue;
+        this.operator = builder.operator;
+        this.rawCondition = builder.rawCondition;
         this.severity = builder.severity;
     }
 
@@ -54,6 +76,20 @@ public class SlsMultiConditionCaseConfig extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return condition
+     */
+    public String getCondition() {
+        return this.condition;
+    }
+
+    /**
+     * @return countCondition
+     */
+    public String getCountCondition() {
+        return this.countCondition;
     }
 
     /**
@@ -92,6 +128,20 @@ public class SlsMultiConditionCaseConfig extends TeaModel {
     }
 
     /**
+     * @return operator
+     */
+    public String getOperator() {
+        return this.operator;
+    }
+
+    /**
+     * @return rawCondition
+     */
+    public String getRawCondition() {
+        return this.rawCondition;
+    }
+
+    /**
      * @return severity
      */
     public String getSeverity() {
@@ -99,24 +149,48 @@ public class SlsMultiConditionCaseConfig extends TeaModel {
     }
 
     public static final class Builder {
+        private String condition; 
+        private String countCondition; 
         private String countOperator; 
         private Long countThreshold; 
         private String matchField; 
         private String matchOperator; 
         private String matchValue; 
+        private String operator; 
+        private String rawCondition; 
         private String severity; 
 
         private Builder() {
         } 
 
         private Builder(SlsMultiConditionCaseConfig model) {
+            this.condition = model.condition;
+            this.countCondition = model.countCondition;
             this.countOperator = model.countOperator;
             this.countThreshold = model.countThreshold;
             this.matchField = model.matchField;
             this.matchOperator = model.matchOperator;
             this.matchValue = model.matchValue;
+            this.operator = model.operator;
+            this.rawCondition = model.rawCondition;
             this.severity = model.severity;
         } 
+
+        /**
+         * condition.
+         */
+        public Builder condition(String condition) {
+            this.condition = condition;
+            return this;
+        }
+
+        /**
+         * countCondition.
+         */
+        public Builder countCondition(String countCondition) {
+            this.countCondition = countCondition;
+            return this;
+        }
 
         /**
          * countOperator.
@@ -155,6 +229,22 @@ public class SlsMultiConditionCaseConfig extends TeaModel {
          */
         public Builder matchValue(String matchValue) {
             this.matchValue = matchValue;
+            return this;
+        }
+
+        /**
+         * operator.
+         */
+        public Builder operator(String operator) {
+            this.operator = operator;
+            return this;
+        }
+
+        /**
+         * rawCondition.
+         */
+        public Builder rawCondition(String rawCondition) {
+            this.rawCondition = rawCondition;
             return this;
         }
 

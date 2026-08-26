@@ -20,13 +20,21 @@ public class Triggers extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("comparisonOperator")
     private String comparisonOperator;
 
+    @com.aliyun.core.annotation.NameInMap("condition")
+    private String condition;
+
     @com.aliyun.core.annotation.NameInMap("conditions")
     private java.util.List<TriggerConditions> conditions;
 
+    @com.aliyun.core.annotation.NameInMap("countCondition")
+    private String countCondition;
+
     @com.aliyun.core.annotation.NameInMap("countOperator")
+    @Deprecated
     private String countOperator;
 
     @com.aliyun.core.annotation.NameInMap("countThreshold")
+    @Deprecated
     private Long countThreshold;
 
     @com.aliyun.core.annotation.NameInMap("durationSecs")
@@ -39,12 +47,15 @@ public class Triggers extends TeaModel {
     private String logicOperator;
 
     @com.aliyun.core.annotation.NameInMap("matchField")
+    @Deprecated
     private String matchField;
 
     @com.aliyun.core.annotation.NameInMap("matchOperator")
+    @Deprecated
     private String matchOperator;
 
     @com.aliyun.core.annotation.NameInMap("matchValue")
+    @Deprecated
     private String matchValue;
 
     @com.aliyun.core.annotation.NameInMap("max")
@@ -82,7 +93,9 @@ public class Triggers extends TeaModel {
 
     private Triggers(Builder builder) {
         this.comparisonOperator = builder.comparisonOperator;
+        this.condition = builder.condition;
         this.conditions = builder.conditions;
+        this.countCondition = builder.countCondition;
         this.countOperator = builder.countOperator;
         this.countThreshold = builder.countThreshold;
         this.durationSecs = builder.durationSecs;
@@ -124,10 +137,24 @@ public class Triggers extends TeaModel {
     }
 
     /**
+     * @return condition
+     */
+    public String getCondition() {
+        return this.condition;
+    }
+
+    /**
      * @return conditions
      */
     public java.util.List<TriggerConditions> getConditions() {
         return this.conditions;
+    }
+
+    /**
+     * @return countCondition
+     */
+    public String getCountCondition() {
+        return this.countCondition;
     }
 
     /**
@@ -265,7 +292,9 @@ public class Triggers extends TeaModel {
 
     public static final class Builder {
         private String comparisonOperator; 
+        private String condition; 
         private java.util.List<TriggerConditions> conditions; 
+        private String countCondition; 
         private String countOperator; 
         private Long countThreshold; 
         private Integer durationSecs; 
@@ -291,7 +320,9 @@ public class Triggers extends TeaModel {
 
         private Builder(Triggers model) {
             this.comparisonOperator = model.comparisonOperator;
+            this.condition = model.condition;
             this.conditions = model.conditions;
+            this.countCondition = model.countCondition;
             this.countOperator = model.countOperator;
             this.countThreshold = model.countThreshold;
             this.durationSecs = model.durationSecs;
@@ -322,10 +353,26 @@ public class Triggers extends TeaModel {
         }
 
         /**
+         * condition.
+         */
+        public Builder condition(String condition) {
+            this.condition = condition;
+            return this;
+        }
+
+        /**
          * conditions.
          */
         public Builder conditions(java.util.List<TriggerConditions> conditions) {
             this.conditions = conditions;
+            return this;
+        }
+
+        /**
+         * countCondition.
+         */
+        public Builder countCondition(String countCondition) {
+            this.countCondition = countCondition;
             return this;
         }
 

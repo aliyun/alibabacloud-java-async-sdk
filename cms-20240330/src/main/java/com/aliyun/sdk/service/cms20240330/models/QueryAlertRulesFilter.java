@@ -32,6 +32,9 @@ public class QueryAlertRulesFilter extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("labels")
     private LabelsFilter labels;
 
+    @com.aliyun.core.annotation.NameInMap("migrationStatus")
+    private MigrationStatusFilter migrationStatus;
+
     @com.aliyun.core.annotation.NameInMap("notificationChannels")
     private NotificationChannelsFilter notificationChannels;
 
@@ -73,6 +76,7 @@ public class QueryAlertRulesFilter extends TeaModel {
         this.displayName = builder.displayName;
         this.enabled = builder.enabled;
         this.labels = builder.labels;
+        this.migrationStatus = builder.migrationStatus;
         this.notificationChannels = builder.notificationChannels;
         this.notifyStrategyId = builder.notifyStrategyId;
         this.observeResourceConfig = builder.observeResourceConfig;
@@ -131,6 +135,13 @@ public class QueryAlertRulesFilter extends TeaModel {
      */
     public LabelsFilter getLabels() {
         return this.labels;
+    }
+
+    /**
+     * @return migrationStatus
+     */
+    public MigrationStatusFilter getMigrationStatus() {
+        return this.migrationStatus;
     }
 
     /**
@@ -216,6 +227,7 @@ public class QueryAlertRulesFilter extends TeaModel {
         private DisplayNameFilter displayName; 
         private EnabledFilter enabled; 
         private LabelsFilter labels; 
+        private MigrationStatusFilter migrationStatus; 
         private NotificationChannelsFilter notificationChannels; 
         private NotifyStrategyIdFilter notifyStrategyId; 
         private ObserveResourceConfigFilter observeResourceConfig; 
@@ -237,6 +249,7 @@ public class QueryAlertRulesFilter extends TeaModel {
             this.displayName = model.displayName;
             this.enabled = model.enabled;
             this.labels = model.labels;
+            this.migrationStatus = model.migrationStatus;
             this.notificationChannels = model.notificationChannels;
             this.notifyStrategyId = model.notifyStrategyId;
             this.observeResourceConfig = model.observeResourceConfig;
@@ -287,6 +300,14 @@ public class QueryAlertRulesFilter extends TeaModel {
          */
         public Builder labels(LabelsFilter labels) {
             this.labels = labels;
+            return this;
+        }
+
+        /**
+         * migrationStatus.
+         */
+        public Builder migrationStatus(MigrationStatusFilter migrationStatus) {
+            this.migrationStatus = migrationStatus;
             return this;
         }
 

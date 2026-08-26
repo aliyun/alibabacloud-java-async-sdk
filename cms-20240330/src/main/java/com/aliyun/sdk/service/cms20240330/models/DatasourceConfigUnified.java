@@ -26,6 +26,9 @@ public class DatasourceConfigUnified extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("legacyType")
     private String legacyType;
 
+    @com.aliyun.core.annotation.NameInMap("namespace")
+    private String namespace;
+
     @com.aliyun.core.annotation.NameInMap("productCategory")
     private String productCategory;
 
@@ -38,6 +41,9 @@ public class DatasourceConfigUnified extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("stores")
     private java.util.List<Stores> stores;
 
+    @com.aliyun.core.annotation.NameInMap("tenantId")
+    private String tenantId;
+
     @com.aliyun.core.annotation.NameInMap("type")
     @com.aliyun.core.annotation.Validation(required = true)
     private String type;
@@ -46,10 +52,12 @@ public class DatasourceConfigUnified extends TeaModel {
         this.instanceId = builder.instanceId;
         this.legacyRaw = builder.legacyRaw;
         this.legacyType = builder.legacyType;
+        this.namespace = builder.namespace;
         this.productCategory = builder.productCategory;
         this.project = builder.project;
         this.regionId = builder.regionId;
         this.stores = builder.stores;
+        this.tenantId = builder.tenantId;
         this.type = builder.type;
     }
 
@@ -87,6 +95,13 @@ public class DatasourceConfigUnified extends TeaModel {
     }
 
     /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    /**
      * @return productCategory
      */
     public String getProductCategory() {
@@ -115,6 +130,13 @@ public class DatasourceConfigUnified extends TeaModel {
     }
 
     /**
+     * @return tenantId
+     */
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -125,10 +147,12 @@ public class DatasourceConfigUnified extends TeaModel {
         private String instanceId; 
         private String legacyRaw; 
         private String legacyType; 
+        private String namespace; 
         private String productCategory; 
         private String project; 
         private String regionId; 
         private java.util.List<Stores> stores; 
+        private String tenantId; 
         private String type; 
 
         private Builder() {
@@ -138,10 +162,12 @@ public class DatasourceConfigUnified extends TeaModel {
             this.instanceId = model.instanceId;
             this.legacyRaw = model.legacyRaw;
             this.legacyType = model.legacyType;
+            this.namespace = model.namespace;
             this.productCategory = model.productCategory;
             this.project = model.project;
             this.regionId = model.regionId;
             this.stores = model.stores;
+            this.tenantId = model.tenantId;
             this.type = model.type;
         } 
 
@@ -166,6 +192,14 @@ public class DatasourceConfigUnified extends TeaModel {
          */
         public Builder legacyType(String legacyType) {
             this.legacyType = legacyType;
+            return this;
+        }
+
+        /**
+         * namespace.
+         */
+        public Builder namespace(String namespace) {
+            this.namespace = namespace;
             return this;
         }
 
@@ -202,7 +236,18 @@ public class DatasourceConfigUnified extends TeaModel {
         }
 
         /**
+         * tenantId.
+         */
+        public Builder tenantId(String tenantId) {
+            this.tenantId = tenantId;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROMETHEUS</p>
          */
         public Builder type(String type) {
             this.type = type;

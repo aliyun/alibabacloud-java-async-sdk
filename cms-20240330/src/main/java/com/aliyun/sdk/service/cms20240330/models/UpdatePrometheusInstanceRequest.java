@@ -63,6 +63,10 @@ public class UpdatePrometheusInstanceRequest extends Request {
     private Integer storageDuration;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("storeConfig")
+    private PrometheusInstanceStoreConfig storeConfig;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("workspace")
     private String workspace;
 
@@ -79,6 +83,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         this.prometheusInstanceName = builder.prometheusInstanceName;
         this.status = builder.status;
         this.storageDuration = builder.storageDuration;
+        this.storeConfig = builder.storeConfig;
         this.workspace = builder.workspace;
     }
 
@@ -173,6 +178,13 @@ public class UpdatePrometheusInstanceRequest extends Request {
     }
 
     /**
+     * @return storeConfig
+     */
+    public PrometheusInstanceStoreConfig getStoreConfig() {
+        return this.storeConfig;
+    }
+
+    /**
      * @return workspace
      */
     public String getWorkspace() {
@@ -191,6 +203,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         private String prometheusInstanceName; 
         private String status; 
         private Integer storageDuration; 
+        private PrometheusInstanceStoreConfig storeConfig; 
         private String workspace; 
 
         private Builder() {
@@ -210,6 +223,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
             this.prometheusInstanceName = request.prometheusInstanceName;
             this.status = request.status;
             this.storageDuration = request.storageDuration;
+            this.storeConfig = request.storeConfig;
             this.workspace = request.workspace;
         } 
 
@@ -367,6 +381,15 @@ public class UpdatePrometheusInstanceRequest extends Request {
         public Builder storageDuration(Integer storageDuration) {
             this.putBodyParameter("storageDuration", storageDuration);
             this.storageDuration = storageDuration;
+            return this;
+        }
+
+        /**
+         * storeConfig.
+         */
+        public Builder storeConfig(PrometheusInstanceStoreConfig storeConfig) {
+            this.putBodyParameter("storeConfig", storeConfig);
+            this.storeConfig = storeConfig;
             return this;
         }
 

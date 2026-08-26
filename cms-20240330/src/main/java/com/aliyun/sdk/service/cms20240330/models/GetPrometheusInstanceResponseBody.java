@@ -287,6 +287,9 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("storageDuration")
         private Integer storageDuration;
 
+        @com.aliyun.core.annotation.NameInMap("storeConfig")
+        private PrometheusInstanceStoreConfig storeConfig;
+
         @com.aliyun.core.annotation.NameInMap("supportAuthTypes")
         private java.util.List<String> supportAuthTypes;
 
@@ -339,6 +342,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             this.resourceType = builder.resourceType;
             this.status = builder.status;
             this.storageDuration = builder.storageDuration;
+            this.storeConfig = builder.storeConfig;
             this.supportAuthTypes = builder.supportAuthTypes;
             this.tags = builder.tags;
             this.userId = builder.userId;
@@ -607,6 +611,13 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return storeConfig
+         */
+        public PrometheusInstanceStoreConfig getStoreConfig() {
+            return this.storeConfig;
+        }
+
+        /**
          * @return supportAuthTypes
          */
         public java.util.List<String> getSupportAuthTypes() {
@@ -678,6 +689,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             private String resourceType; 
             private String status; 
             private Integer storageDuration; 
+            private PrometheusInstanceStoreConfig storeConfig; 
             private java.util.List<String> supportAuthTypes; 
             private java.util.List<Tags> tags; 
             private String userId; 
@@ -724,6 +736,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
                 this.resourceType = model.resourceType;
                 this.status = model.status;
                 this.storageDuration = model.storageDuration;
+                this.storeConfig = model.storeConfig;
                 this.supportAuthTypes = model.supportAuthTypes;
                 this.tags = model.tags;
                 this.userId = model.userId;
@@ -1130,6 +1143,14 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
              */
             public Builder storageDuration(Integer storageDuration) {
                 this.storageDuration = storageDuration;
+                return this;
+            }
+
+            /**
+             * storeConfig.
+             */
+            public Builder storeConfig(PrometheusInstanceStoreConfig storeConfig) {
+                this.storeConfig = storeConfig;
                 return this;
             }
 
