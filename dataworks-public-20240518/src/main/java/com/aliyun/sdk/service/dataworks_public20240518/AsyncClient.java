@@ -476,6 +476,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSemanticJobResponse> createSemanticJob(CreateSemanticJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>创建个人开发环境（ServerIDE）实例。指定 DataWorks 工作空间、资源组、镜像与规格后创建一个个人开发环境实例，返回实例 ID。</p>
+     * 
+     * @param request the request parameters of CreateServerIdeInstance  CreateServerIdeInstanceRequest
+     * @return CreateServerIdeInstanceResponse
+     */
+    CompletableFuture<CreateServerIdeInstanceResponse> createServerIdeInstance(CreateServerIdeInstanceRequest request);
+
+    /**
      * @param request the request parameters of CreateSkill  CreateSkillRequest
      * @return CreateSkillResponse
      */
@@ -2763,6 +2772,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateSecurityStrategyResponse
      */
     CompletableFuture<UpdateSecurityStrategyResponse> updateSecurityStrategy(UpdateSecurityStrategyRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>更新指定个人开发环境（ServerIDE）实例的配置，如规格 CU、镜像、实例名称、专有网络、数据集、凭证配置等。</p>
+     * 
+     * @param request the request parameters of UpdateServerIdeInstance  UpdateServerIdeInstanceRequest
+     * @return UpdateServerIdeInstanceResponse
+     */
+    CompletableFuture<UpdateServerIdeInstanceResponse> updateServerIdeInstance(UpdateServerIdeInstanceRequest request);
 
     /**
      * @param request the request parameters of UpdateSkill  UpdateSkillRequest

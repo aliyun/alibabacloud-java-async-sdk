@@ -1253,6 +1253,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>创建个人开发环境（ServerIDE）实例。指定 DataWorks 工作空间、资源组、镜像与规格后创建一个个人开发环境实例，返回实例 ID。</p>
+     * 
+     * @param request the request parameters of CreateServerIdeInstance  CreateServerIdeInstanceRequest
+     * @return CreateServerIdeInstanceResponse
+     */
+    @Override
+    public CompletableFuture<CreateServerIdeInstanceResponse> createServerIdeInstance(CreateServerIdeInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateServerIdeInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateServerIdeInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateServerIdeInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateSkill  CreateSkillRequest
      * @return CreateSkillResponse
      */
@@ -7224,6 +7245,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateSecurityStrategyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>更新指定个人开发环境（ServerIDE）实例的配置，如规格 CU、镜像、实例名称、专有网络、数据集、凭证配置等。</p>
+     * 
+     * @param request the request parameters of UpdateServerIdeInstance  UpdateServerIdeInstanceRequest
+     * @return UpdateServerIdeInstanceResponse
+     */
+    @Override
+    public CompletableFuture<UpdateServerIdeInstanceResponse> updateServerIdeInstance(UpdateServerIdeInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateServerIdeInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateServerIdeInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateServerIdeInstanceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
