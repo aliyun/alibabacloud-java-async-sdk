@@ -891,6 +891,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRiskItemsResponse> listRiskItems(ListRiskItemsRequest request);
 
     /**
+     * @param request the request parameters of ListSaseUserTags  ListSaseUserTagsRequest
+     * @return ListSaseUserTagsResponse
+     */
+    CompletableFuture<ListSaseUserTagsResponse> listSaseUserTags(ListSaseUserTagsRequest request);
+
+    /**
      * @param request the request parameters of ListSoftwareForUserDevice  ListSoftwareForUserDeviceRequest
      * @return ListSoftwareForUserDeviceResponse
      */

@@ -512,6 +512,9 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OfficialDownloadUrl")
         private String officialDownloadUrl;
 
+        @com.aliyun.core.annotation.NameInMap("RunAsAccount")
+        private String runAsAccount;
+
         @com.aliyun.core.annotation.NameInMap("SoftwareId")
         private String softwareId;
 
@@ -549,6 +552,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             this.macIntelVersion = builder.macIntelVersion;
             this.matchMode = builder.matchMode;
             this.officialDownloadUrl = builder.officialDownloadUrl;
+            this.runAsAccount = builder.runAsAccount;
             this.softwareId = builder.softwareId;
             this.softwareName = builder.softwareName;
             this.sourceRemoved = builder.sourceRemoved;
@@ -672,6 +676,13 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
         }
 
         /**
+         * @return runAsAccount
+         */
+        public String getRunAsAccount() {
+            return this.runAsAccount;
+        }
+
+        /**
          * @return softwareId
          */
         public String getSoftwareId() {
@@ -736,6 +747,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             private String macIntelVersion; 
             private String matchMode; 
             private String officialDownloadUrl; 
+            private String runAsAccount; 
             private String softwareId; 
             private String softwareName; 
             private Boolean sourceRemoved; 
@@ -763,6 +775,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
                 this.macIntelVersion = model.macIntelVersion;
                 this.matchMode = model.matchMode;
                 this.officialDownloadUrl = model.officialDownloadUrl;
+                this.runAsAccount = model.runAsAccount;
                 this.softwareId = model.softwareId;
                 this.softwareName = model.softwareName;
                 this.sourceRemoved = model.sourceRemoved;
@@ -889,6 +902,14 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
              */
             public Builder officialDownloadUrl(String officialDownloadUrl) {
                 this.officialDownloadUrl = officialDownloadUrl;
+                return this;
+            }
+
+            /**
+             * RunAsAccount.
+             */
+            public Builder runAsAccount(String runAsAccount) {
+                this.runAsAccount = runAsAccount;
                 return this;
             }
 
