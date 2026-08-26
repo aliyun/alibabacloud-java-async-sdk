@@ -46,6 +46,14 @@ public class ListAppTemplatesRequest extends Request {
     private String nextToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderColumn")
+    private String orderColumn;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderType")
+    private String orderType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
@@ -70,6 +78,8 @@ public class ListAppTemplatesRequest extends Request {
         this.keyword = builder.keyword;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.orderColumn = builder.orderColumn;
+        this.orderType = builder.orderType;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.productVersion = builder.productVersion;
@@ -139,6 +149,20 @@ public class ListAppTemplatesRequest extends Request {
     }
 
     /**
+     * @return orderColumn
+     */
+    public String getOrderColumn() {
+        return this.orderColumn;
+    }
+
+    /**
+     * @return orderType
+     */
+    public String getOrderType() {
+        return this.orderType;
+    }
+
+    /**
      * @return pageNum
      */
     public Integer getPageNum() {
@@ -174,6 +198,8 @@ public class ListAppTemplatesRequest extends Request {
         private String keyword; 
         private Integer maxResults; 
         private String nextToken; 
+        private String orderColumn; 
+        private String orderType; 
         private Integer pageNum; 
         private Integer pageSize; 
         private String productVersion; 
@@ -192,6 +218,8 @@ public class ListAppTemplatesRequest extends Request {
             this.keyword = request.keyword;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.orderColumn = request.orderColumn;
+            this.orderType = request.orderType;
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
             this.productVersion = request.productVersion;
@@ -258,6 +286,24 @@ public class ListAppTemplatesRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * OrderColumn.
+         */
+        public Builder orderColumn(String orderColumn) {
+            this.putQueryParameter("OrderColumn", orderColumn);
+            this.orderColumn = orderColumn;
+            return this;
+        }
+
+        /**
+         * OrderType.
+         */
+        public Builder orderType(String orderType) {
+            this.putQueryParameter("OrderType", orderType);
+            this.orderType = orderType;
             return this;
         }
 

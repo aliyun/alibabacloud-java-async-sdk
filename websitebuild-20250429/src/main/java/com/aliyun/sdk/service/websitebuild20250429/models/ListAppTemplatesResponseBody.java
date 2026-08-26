@@ -362,6 +362,9 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IndustryName")
         private String industryName;
 
+        @com.aliyun.core.annotation.NameInMap("IsRecommended")
+        private Boolean isRecommended;
+
         @com.aliyun.core.annotation.NameInMap("LastModifier")
         private String lastModifier;
 
@@ -416,6 +419,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             this.id = builder.id;
             this.industry = builder.industry;
             this.industryName = builder.industryName;
+            this.isRecommended = builder.isRecommended;
             this.lastModifier = builder.lastModifier;
             this.likeCount = builder.likeCount;
             this.liked = builder.liked;
@@ -515,6 +519,13 @@ public class ListAppTemplatesResponseBody extends TeaModel {
          */
         public String getIndustryName() {
             return this.industryName;
+        }
+
+        /**
+         * @return isRecommended
+         */
+        public Boolean getIsRecommended() {
+            return this.isRecommended;
         }
 
         /**
@@ -627,6 +638,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             private Long id; 
             private String industry; 
             private String industryName; 
+            private Boolean isRecommended; 
             private String lastModifier; 
             private Integer likeCount; 
             private Boolean liked; 
@@ -657,6 +669,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
                 this.id = model.id;
                 this.industry = model.industry;
                 this.industryName = model.industryName;
+                this.isRecommended = model.isRecommended;
                 this.lastModifier = model.lastModifier;
                 this.likeCount = model.likeCount;
                 this.liked = model.liked;
@@ -764,6 +777,14 @@ public class ListAppTemplatesResponseBody extends TeaModel {
              */
             public Builder industryName(String industryName) {
                 this.industryName = industryName;
+                return this;
+            }
+
+            /**
+             * IsRecommended.
+             */
+            public Builder isRecommended(Boolean isRecommended) {
+                this.isRecommended = isRecommended;
                 return this;
             }
 
@@ -926,6 +947,9 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IndustryName")
         private String industryName;
 
+        @com.aliyun.core.annotation.NameInMap("IsRecommended")
+        private Boolean isRecommended;
+
         @com.aliyun.core.annotation.NameInMap("LastModifier")
         private String lastModifier;
 
@@ -980,6 +1004,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             this.id = builder.id;
             this.industry = builder.industry;
             this.industryName = builder.industryName;
+            this.isRecommended = builder.isRecommended;
             this.lastModifier = builder.lastModifier;
             this.likeCount = builder.likeCount;
             this.liked = builder.liked;
@@ -1079,6 +1104,13 @@ public class ListAppTemplatesResponseBody extends TeaModel {
          */
         public String getIndustryName() {
             return this.industryName;
+        }
+
+        /**
+         * @return isRecommended
+         */
+        public Boolean getIsRecommended() {
+            return this.isRecommended;
         }
 
         /**
@@ -1191,6 +1223,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
             private Long id; 
             private String industry; 
             private String industryName; 
+            private Boolean isRecommended; 
             private String lastModifier; 
             private Integer likeCount; 
             private Boolean liked; 
@@ -1221,6 +1254,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
                 this.id = model.id;
                 this.industry = model.industry;
                 this.industryName = model.industryName;
+                this.isRecommended = model.isRecommended;
                 this.lastModifier = model.lastModifier;
                 this.likeCount = model.likeCount;
                 this.liked = model.liked;
@@ -1322,6 +1356,14 @@ public class ListAppTemplatesResponseBody extends TeaModel {
              */
             public Builder industryName(String industryName) {
                 this.industryName = industryName;
+                return this;
+            }
+
+            /**
+             * IsRecommended.
+             */
+            public Builder isRecommended(Boolean isRecommended) {
+                this.isRecommended = isRecommended;
                 return this;
             }
 
