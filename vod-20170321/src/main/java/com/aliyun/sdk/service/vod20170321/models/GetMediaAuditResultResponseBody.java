@@ -1153,6 +1153,404 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
      *
      * <p>GetMediaAuditResultResponseBody</p>
      */
+    public static class GreenEnhancedResultCounterList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Count")
+        private Integer count;
+
+        @com.aliyun.core.annotation.NameInMap("Label")
+        private String label;
+
+        private GreenEnhancedResultCounterList(Builder builder) {
+            this.count = builder.count;
+            this.label = builder.label;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GreenEnhancedResultCounterList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return count
+         */
+        public Integer getCount() {
+            return this.count;
+        }
+
+        /**
+         * @return label
+         */
+        public String getLabel() {
+            return this.label;
+        }
+
+        public static final class Builder {
+            private Integer count; 
+            private String label; 
+
+            private Builder() {
+            } 
+
+            private Builder(GreenEnhancedResultCounterList model) {
+                this.count = model.count;
+                this.label = model.label;
+            } 
+
+            /**
+             * <p>The number of frames.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
+             */
+            public Builder count(Integer count) {
+                this.count = count;
+                return this;
+            }
+
+            /**
+             * <p>The category of the review result. Valid values:</p>
+             * <ul>
+             * <li><strong>ad</strong></li>
+             * <li><strong>normal</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ad</p>
+             */
+            public Builder label(String label) {
+                this.label = label;
+                return this;
+            }
+
+            public GreenEnhancedResultCounterList build() {
+                return new GreenEnhancedResultCounterList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetMediaAuditResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditResultResponseBody</p>
+     */
+    public static class GreenEnhancedResultTopList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Label")
+        private String label;
+
+        @com.aliyun.core.annotation.NameInMap("Score")
+        private String score;
+
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
+        private String timestamp;
+
+        @com.aliyun.core.annotation.NameInMap("Url")
+        private String url;
+
+        private GreenEnhancedResultTopList(Builder builder) {
+            this.label = builder.label;
+            this.score = builder.score;
+            this.timestamp = builder.timestamp;
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GreenEnhancedResultTopList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return label
+         */
+        public String getLabel() {
+            return this.label;
+        }
+
+        /**
+         * @return score
+         */
+        public String getScore() {
+            return this.score;
+        }
+
+        /**
+         * @return timestamp
+         */
+        public String getTimestamp() {
+            return this.timestamp;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private String label; 
+            private String score; 
+            private String timestamp; 
+            private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(GreenEnhancedResultTopList model) {
+                this.label = model.label;
+                this.score = model.score;
+                this.timestamp = model.timestamp;
+                this.url = model.url;
+            } 
+
+            /**
+             * <p>The category of the review result. Valid values:</p>
+             * <ul>
+             * <li><strong>ad</strong></li>
+             * <li><strong>normal</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ad</p>
+             */
+            public Builder label(String label) {
+                this.label = label;
+                return this;
+            }
+
+            /**
+             * <p>The score of the image of the category that is indicated by Label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
+             */
+            public Builder score(String score) {
+                this.score = score;
+                return this;
+            }
+
+            /**
+             * <p>The position in the video. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder timestamp(String timestamp) {
+                this.timestamp = timestamp;
+                return this;
+            }
+
+            /**
+             * <p>The URL of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://temp-testbucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg">http://temp-testbucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg</a></p>
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public GreenEnhancedResultTopList build() {
+                return new GreenEnhancedResultTopList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetMediaAuditResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditResultResponseBody</p>
+     */
+    public static class GreenEnhancedResult extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AverageScore")
+        private String averageScore;
+
+        @com.aliyun.core.annotation.NameInMap("CounterList")
+        private java.util.List<GreenEnhancedResultCounterList> counterList;
+
+        @com.aliyun.core.annotation.NameInMap("Label")
+        private String label;
+
+        @com.aliyun.core.annotation.NameInMap("MaxScore")
+        private String maxScore;
+
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
+        private String suggestion;
+
+        @com.aliyun.core.annotation.NameInMap("TopList")
+        private java.util.List<GreenEnhancedResultTopList> topList;
+
+        private GreenEnhancedResult(Builder builder) {
+            this.averageScore = builder.averageScore;
+            this.counterList = builder.counterList;
+            this.label = builder.label;
+            this.maxScore = builder.maxScore;
+            this.suggestion = builder.suggestion;
+            this.topList = builder.topList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GreenEnhancedResult create() {
+            return builder().build();
+        }
+
+        /**
+         * @return averageScore
+         */
+        public String getAverageScore() {
+            return this.averageScore;
+        }
+
+        /**
+         * @return counterList
+         */
+        public java.util.List<GreenEnhancedResultCounterList> getCounterList() {
+            return this.counterList;
+        }
+
+        /**
+         * @return label
+         */
+        public String getLabel() {
+            return this.label;
+        }
+
+        /**
+         * @return maxScore
+         */
+        public String getMaxScore() {
+            return this.maxScore;
+        }
+
+        /**
+         * @return suggestion
+         */
+        public String getSuggestion() {
+            return this.suggestion;
+        }
+
+        /**
+         * @return topList
+         */
+        public java.util.List<GreenEnhancedResultTopList> getTopList() {
+            return this.topList;
+        }
+
+        public static final class Builder {
+            private String averageScore; 
+            private java.util.List<GreenEnhancedResultCounterList> counterList; 
+            private String label; 
+            private String maxScore; 
+            private String suggestion; 
+            private java.util.List<GreenEnhancedResultTopList> topList; 
+
+            private Builder() {
+            } 
+
+            private Builder(GreenEnhancedResult model) {
+                this.averageScore = model.averageScore;
+                this.counterList = model.counterList;
+                this.label = model.label;
+                this.maxScore = model.maxScore;
+                this.suggestion = model.suggestion;
+                this.topList = model.topList;
+            } 
+
+            /**
+             * <p>The average score of the review results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
+             */
+            public Builder averageScore(String averageScore) {
+                this.averageScore = averageScore;
+                return this;
+            }
+
+            /**
+             * <p>The statistics about tag frames.</p>
+             */
+            public Builder counterList(java.util.List<GreenEnhancedResultCounterList> counterList) {
+                this.counterList = counterList;
+                return this;
+            }
+
+            /**
+             * <p>The category of the review result. Valid values:</p>
+             * <ul>
+             * <li><strong>ad</strong></li>
+             * <li><strong>normal</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ad</p>
+             */
+            public Builder label(String label) {
+                this.label = label;
+                return this;
+            }
+
+            /**
+             * <p>The highest review score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
+             */
+            public Builder maxScore(String maxScore) {
+                this.maxScore = maxScore;
+                return this;
+            }
+
+            /**
+             * <p>The recommendation for review results. Valid values:</p>
+             * <ul>
+             * <li><strong>block</strong></li>
+             * <li><strong>review</strong></li>
+             * <li><strong>pass</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>block</p>
+             */
+            public Builder suggestion(String suggestion) {
+                this.suggestion = suggestion;
+                return this;
+            }
+
+            /**
+             * <p>The information about the image with the highest score of the category that is indicated by Label.</p>
+             */
+            public Builder topList(java.util.List<GreenEnhancedResultTopList> topList) {
+                this.topList = topList;
+                return this;
+            }
+
+            public GreenEnhancedResult build() {
+                return new GreenEnhancedResult(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetMediaAuditResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMediaAuditResultResponseBody</p>
+     */
     public static class LiveResultCounterList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -2783,6 +3181,9 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdResult")
         private AdResult adResult;
 
+        @com.aliyun.core.annotation.NameInMap("GreenEnhancedResult")
+        private GreenEnhancedResult greenEnhancedResult;
+
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
@@ -2803,6 +3204,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
         private VideoResult(Builder builder) {
             this.adResult = builder.adResult;
+            this.greenEnhancedResult = builder.greenEnhancedResult;
             this.label = builder.label;
             this.liveResult = builder.liveResult;
             this.logoResult = builder.logoResult;
@@ -2824,6 +3226,13 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
          */
         public AdResult getAdResult() {
             return this.adResult;
+        }
+
+        /**
+         * @return greenEnhancedResult
+         */
+        public GreenEnhancedResult getGreenEnhancedResult() {
+            return this.greenEnhancedResult;
         }
 
         /**
@@ -2870,6 +3279,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private AdResult adResult; 
+            private GreenEnhancedResult greenEnhancedResult; 
             private String label; 
             private LiveResult liveResult; 
             private LogoResult logoResult; 
@@ -2882,6 +3292,7 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
             private Builder(VideoResult model) {
                 this.adResult = model.adResult;
+                this.greenEnhancedResult = model.greenEnhancedResult;
                 this.label = model.label;
                 this.liveResult = model.liveResult;
                 this.logoResult = model.logoResult;
@@ -2895,6 +3306,14 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
              */
             public Builder adResult(AdResult adResult) {
                 this.adResult = adResult;
+                return this;
+            }
+
+            /**
+             * GreenEnhancedResult.
+             */
+            public Builder greenEnhancedResult(GreenEnhancedResult greenEnhancedResult) {
+                this.greenEnhancedResult = greenEnhancedResult;
                 return this;
             }
 

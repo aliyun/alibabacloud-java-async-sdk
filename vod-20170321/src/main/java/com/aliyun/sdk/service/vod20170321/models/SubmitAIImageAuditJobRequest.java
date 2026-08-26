@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SubmitAIImageAuditJobRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CensorProvider")
+    private String censorProvider;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageService")
+    private String imageService;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MediaAuditConfiguration")
     private String mediaAuditConfiguration;
 
@@ -43,18 +51,25 @@ public class SubmitAIImageAuditJobRequest extends Request {
     private String resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceParameters")
+    private String serviceParameters;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String templateId;
 
     private SubmitAIImageAuditJobRequest(Builder builder) {
         super(builder);
+        this.censorProvider = builder.censorProvider;
+        this.imageService = builder.imageService;
         this.mediaAuditConfiguration = builder.mediaAuditConfiguration;
         this.mediaId = builder.mediaId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.serviceParameters = builder.serviceParameters;
         this.templateId = builder.templateId;
     }
 
@@ -69,6 +84,20 @@ public class SubmitAIImageAuditJobRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return censorProvider
+     */
+    public String getCensorProvider() {
+        return this.censorProvider;
+    }
+
+    /**
+     * @return imageService
+     */
+    public String getImageService() {
+        return this.imageService;
     }
 
     /**
@@ -114,6 +143,13 @@ public class SubmitAIImageAuditJobRequest extends Request {
     }
 
     /**
+     * @return serviceParameters
+     */
+    public String getServiceParameters() {
+        return this.serviceParameters;
+    }
+
+    /**
      * @return templateId
      */
     public String getTemplateId() {
@@ -121,12 +157,15 @@ public class SubmitAIImageAuditJobRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SubmitAIImageAuditJobRequest, Builder> {
+        private String censorProvider; 
+        private String imageService; 
         private String mediaAuditConfiguration; 
         private String mediaId; 
         private String ownerAccount; 
         private String ownerId; 
         private String resourceOwnerAccount; 
         private String resourceOwnerId; 
+        private String serviceParameters; 
         private String templateId; 
 
         private Builder() {
@@ -135,14 +174,35 @@ public class SubmitAIImageAuditJobRequest extends Request {
 
         private Builder(SubmitAIImageAuditJobRequest request) {
             super(request);
+            this.censorProvider = request.censorProvider;
+            this.imageService = request.imageService;
             this.mediaAuditConfiguration = request.mediaAuditConfiguration;
             this.mediaId = request.mediaId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.serviceParameters = request.serviceParameters;
             this.templateId = request.templateId;
         } 
+
+        /**
+         * CensorProvider.
+         */
+        public Builder censorProvider(String censorProvider) {
+            this.putQueryParameter("CensorProvider", censorProvider);
+            this.censorProvider = censorProvider;
+            return this;
+        }
+
+        /**
+         * ImageService.
+         */
+        public Builder imageService(String imageService) {
+            this.putQueryParameter("ImageService", imageService);
+            this.imageService = imageService;
+            return this;
+        }
 
         /**
          * <p>The configuration information about the review job.</p>
@@ -213,6 +273,15 @@ public class SubmitAIImageAuditJobRequest extends Request {
         public Builder resourceOwnerId(String resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * ServiceParameters.
+         */
+        public Builder serviceParameters(String serviceParameters) {
+            this.putQueryParameter("ServiceParameters", serviceParameters);
+            this.serviceParameters = serviceParameters;
             return this;
         }
 

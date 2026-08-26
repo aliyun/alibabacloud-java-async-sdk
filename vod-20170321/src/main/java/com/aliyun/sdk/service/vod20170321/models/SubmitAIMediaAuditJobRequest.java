@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SubmitAIMediaAuditJobRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CensorProvider")
+    private String censorProvider;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MediaAuditConfiguration")
     private String mediaAuditConfiguration;
 
@@ -31,6 +35,10 @@ public class SubmitAIMediaAuditJobRequest extends Request {
     private String mediaType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceParameters")
+    private String serviceParameters;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
@@ -38,13 +46,25 @@ public class SubmitAIMediaAuditJobRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VideoService")
+    private String videoService;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VoiceService")
+    private String voiceService;
+
     private SubmitAIMediaAuditJobRequest(Builder builder) {
         super(builder);
+        this.censorProvider = builder.censorProvider;
         this.mediaAuditConfiguration = builder.mediaAuditConfiguration;
         this.mediaId = builder.mediaId;
         this.mediaType = builder.mediaType;
+        this.serviceParameters = builder.serviceParameters;
         this.templateId = builder.templateId;
         this.userData = builder.userData;
+        this.videoService = builder.videoService;
+        this.voiceService = builder.voiceService;
     }
 
     public static Builder builder() {
@@ -58,6 +78,13 @@ public class SubmitAIMediaAuditJobRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return censorProvider
+     */
+    public String getCensorProvider() {
+        return this.censorProvider;
     }
 
     /**
@@ -82,6 +109,13 @@ public class SubmitAIMediaAuditJobRequest extends Request {
     }
 
     /**
+     * @return serviceParameters
+     */
+    public String getServiceParameters() {
+        return this.serviceParameters;
+    }
+
+    /**
      * @return templateId
      */
     public String getTemplateId() {
@@ -95,12 +129,30 @@ public class SubmitAIMediaAuditJobRequest extends Request {
         return this.userData;
     }
 
+    /**
+     * @return videoService
+     */
+    public String getVideoService() {
+        return this.videoService;
+    }
+
+    /**
+     * @return voiceService
+     */
+    public String getVoiceService() {
+        return this.voiceService;
+    }
+
     public static final class Builder extends Request.Builder<SubmitAIMediaAuditJobRequest, Builder> {
+        private String censorProvider; 
         private String mediaAuditConfiguration; 
         private String mediaId; 
         private String mediaType; 
+        private String serviceParameters; 
         private String templateId; 
         private String userData; 
+        private String videoService; 
+        private String voiceService; 
 
         private Builder() {
             super();
@@ -108,12 +160,25 @@ public class SubmitAIMediaAuditJobRequest extends Request {
 
         private Builder(SubmitAIMediaAuditJobRequest request) {
             super(request);
+            this.censorProvider = request.censorProvider;
             this.mediaAuditConfiguration = request.mediaAuditConfiguration;
             this.mediaId = request.mediaId;
             this.mediaType = request.mediaType;
+            this.serviceParameters = request.serviceParameters;
             this.templateId = request.templateId;
             this.userData = request.userData;
+            this.videoService = request.videoService;
+            this.voiceService = request.voiceService;
         } 
+
+        /**
+         * CensorProvider.
+         */
+        public Builder censorProvider(String censorProvider) {
+            this.putQueryParameter("CensorProvider", censorProvider);
+            this.censorProvider = censorProvider;
+            return this;
+        }
 
         /**
          * <p>The configuration information about the review job.</p>
@@ -158,6 +223,15 @@ public class SubmitAIMediaAuditJobRequest extends Request {
         }
 
         /**
+         * ServiceParameters.
+         */
+        public Builder serviceParameters(String serviceParameters) {
+            this.putQueryParameter("ServiceParameters", serviceParameters);
+            this.serviceParameters = serviceParameters;
+            return this;
+        }
+
+        /**
          * <p>The ID of the AI template. You can use one of the following methods to obtain the ID of the AI template:</p>
          * <ul>
          * <li>Obtain the value of TemplateId from the response to the <a href="https://help.aliyun.com/document_detail/102930.html">AddAITemplate</a> operation that you call to create an AI template.</li>
@@ -188,6 +262,24 @@ public class SubmitAIMediaAuditJobRequest extends Request {
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
             this.userData = userData;
+            return this;
+        }
+
+        /**
+         * VideoService.
+         */
+        public Builder videoService(String videoService) {
+            this.putQueryParameter("VideoService", videoService);
+            this.videoService = videoService;
+            return this;
+        }
+
+        /**
+         * VoiceService.
+         */
+        public Builder voiceService(String voiceService) {
+            this.putQueryParameter("VoiceService", voiceService);
+            this.voiceService = voiceService;
             return this;
         }
 
