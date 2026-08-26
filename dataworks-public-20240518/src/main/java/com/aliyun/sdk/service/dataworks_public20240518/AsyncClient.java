@@ -721,6 +721,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteFunctionResponse> deleteFunction(DeleteFunctionRequest request);
 
     /**
+     * @param request the request parameters of DeleteImage  DeleteImageRequest
+     * @return DeleteImageResponse
+     */
+    CompletableFuture<DeleteImageResponse> deleteImage(DeleteImageRequest request);
+
+    /**
      * @param request the request parameters of DeleteLineageRelationship  DeleteLineageRelationshipRequest
      * @return DeleteLineageRelationshipResponse
      */
