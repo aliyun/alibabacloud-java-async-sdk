@@ -104,6 +104,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDataAgentSessionResponse> createDataAgentSession(CreateDataAgentSessionRequest request);
 
     /**
+     * @param request the request parameters of CreateDataAgentTheme  CreateDataAgentThemeRequest
+     * @return CreateDataAgentThemeResponse
+     */
+    CompletableFuture<CreateDataAgentThemeResponse> createDataAgentTheme(CreateDataAgentThemeRequest request);
+
+    /**
      * @param request the request parameters of CreateDataAgentWorkspace  CreateDataAgentWorkspaceRequest
      * @return CreateDataAgentWorkspaceResponse
      */
@@ -266,6 +272,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDataAgentSessionResponse> describeDataAgentSession(DescribeDataAgentSessionRequest request);
 
     /**
+     * @param request the request parameters of DescribeDataAgentTheme  DescribeDataAgentThemeRequest
+     * @return DescribeDataAgentThemeResponse
+     */
+    CompletableFuture<DescribeDataAgentThemeResponse> describeDataAgentTheme(DescribeDataAgentThemeRequest request);
+
+    /**
      * @param request the request parameters of DescribeDocument  DescribeDocumentRequest
      * @return DescribeDocumentResponse
      */
@@ -338,6 +350,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetDataAgentTaskModelUsageMetricsResponse
      */
     CompletableFuture<GetDataAgentTaskModelUsageMetricsResponse> getDataAgentTaskModelUsageMetrics(GetDataAgentTaskModelUsageMetricsRequest request);
+
+    /**
+     * @param request the request parameters of GetDataAgentThemeUploadSignature  GetDataAgentThemeUploadSignatureRequest
+     * @return GetDataAgentThemeUploadSignatureResponse
+     */
+    CompletableFuture<GetDataAgentThemeUploadSignatureResponse> getDataAgentThemeUploadSignature(GetDataAgentThemeUploadSignatureRequest request);
 
     /**
      * @param request the request parameters of GetDataAgentWorkspaceInfo  GetDataAgentWorkspaceInfoRequest
@@ -496,6 +514,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDataAgentSessionResponse> listDataAgentSession(ListDataAgentSessionRequest request);
 
     /**
+     * @param request the request parameters of ListDataAgentTheme  ListDataAgentThemeRequest
+     * @return ListDataAgentThemeResponse
+     */
+    CompletableFuture<ListDataAgentThemeResponse> listDataAgentTheme(ListDataAgentThemeRequest request);
+
+    /**
      * @param request the request parameters of ListDataAgentWorkspace  ListDataAgentWorkspaceRequest
      * @return ListDataAgentWorkspaceResponse
      */
@@ -632,6 +656,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyDataAgentMcpResponse
      */
     CompletableFuture<ModifyDataAgentMcpResponse> modifyDataAgentMcp(ModifyDataAgentMcpRequest request);
+
+    /**
+     * @param request the request parameters of ModifyDataAgentTheme  ModifyDataAgentThemeRequest
+     * @return ModifyDataAgentThemeResponse
+     */
+    CompletableFuture<ModifyDataAgentThemeResponse> modifyDataAgentTheme(ModifyDataAgentThemeRequest request);
 
     /**
      * @param request the request parameters of OperateCustomAgent  OperateCustomAgentRequest

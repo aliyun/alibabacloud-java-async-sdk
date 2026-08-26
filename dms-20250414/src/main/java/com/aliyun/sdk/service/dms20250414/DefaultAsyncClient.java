@@ -302,6 +302,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateDataAgentTheme  CreateDataAgentThemeRequest
+     * @return CreateDataAgentThemeResponse
+     */
+    @Override
+    public CompletableFuture<CreateDataAgentThemeResponse> createDataAgentTheme(CreateDataAgentThemeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateDataAgentTheme").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDataAgentThemeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateDataAgentThemeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateDataAgentWorkspace  CreateDataAgentWorkspaceRequest
      * @return CreateDataAgentWorkspaceResponse
      */
@@ -788,6 +806,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeDataAgentTheme  DescribeDataAgentThemeRequest
+     * @return DescribeDataAgentThemeResponse
+     */
+    @Override
+    public CompletableFuture<DescribeDataAgentThemeResponse> describeDataAgentTheme(DescribeDataAgentThemeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDataAgentTheme").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDataAgentThemeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDataAgentThemeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeDocument  DescribeDocumentRequest
      * @return DescribeDocumentResponse
      */
@@ -1008,6 +1044,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetDataAgentTaskModelUsageMetricsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDataAgentThemeUploadSignature  GetDataAgentThemeUploadSignatureRequest
+     * @return GetDataAgentThemeUploadSignatureResponse
+     */
+    @Override
+    public CompletableFuture<GetDataAgentThemeUploadSignatureResponse> getDataAgentThemeUploadSignature(GetDataAgentThemeUploadSignatureRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetDataAgentThemeUploadSignature").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDataAgentThemeUploadSignatureResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDataAgentThemeUploadSignatureResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1482,6 +1536,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListDataAgentTheme  ListDataAgentThemeRequest
+     * @return ListDataAgentThemeResponse
+     */
+    @Override
+    public CompletableFuture<ListDataAgentThemeResponse> listDataAgentTheme(ListDataAgentThemeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListDataAgentTheme").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDataAgentThemeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDataAgentThemeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListDataAgentWorkspace  ListDataAgentWorkspaceRequest
      * @return ListDataAgentWorkspaceResponse
      */
@@ -1890,6 +1962,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyDataAgentMcpResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyDataAgentTheme  ModifyDataAgentThemeRequest
+     * @return ModifyDataAgentThemeResponse
+     */
+    @Override
+    public CompletableFuture<ModifyDataAgentThemeResponse> modifyDataAgentTheme(ModifyDataAgentThemeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyDataAgentTheme").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyDataAgentThemeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyDataAgentThemeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
