@@ -94,6 +94,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateManagedAgent  CreateManagedAgentRequest
+     * @return CreateManagedAgentResponse
+     */
+    @Override
+    public CompletableFuture<CreateManagedAgentResponse> createManagedAgent(CreateManagedAgentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateManagedAgent").setMethod(HttpMethod.POST).setPathRegex("/workspaces/{workspaceId}/managed-agents").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateManagedAgentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateManagedAgentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateModel  CreateModelRequest
      * @return CreateModelResponse
      */
@@ -166,6 +184,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明\n创建 AgentCore 工作空间控制面记录。服务端在同一事务内完成 <code>Initializing</code> 到 <code>Initialized</code> 的状态转换。网络配置通过 <code>Enabled</code> 指定是否开启 VPC 网络，开启时必须提供 <code>VpcId</code> 和至少一个 <code>VSwitchIds</code>。\n</h2>
+     * 
+     * @param request the request parameters of CreateWorkspace  CreateWorkspaceRequest
+     * @return CreateWorkspaceResponse
+     */
+    @Override
+    public CompletableFuture<CreateWorkspaceResponse> createWorkspace(CreateWorkspaceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateWorkspace").setMethod(HttpMethod.POST).setPathRegex("/workspaces").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateWorkspaceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateWorkspaceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DebugModel  DebugModelRequest
      * @return DebugModelResponse
      */
@@ -214,6 +253,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteIdentityProviderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteManagedAgent  DeleteManagedAgentRequest
+     * @return DeleteManagedAgentResponse
+     */
+    @Override
+    public CompletableFuture<DeleteManagedAgentResponse> deleteManagedAgent(DeleteManagedAgentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteManagedAgent").setMethod(HttpMethod.DELETE).setPathRegex("/workspaces/{workspaceId}/managed-agents/{agentId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteManagedAgentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteManagedAgentResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -292,6 +349,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明\n删除指定工作空间控制面记录。服务端在同一事务内完成 <code>Deleting</code> 到 <code>Deleted</code> 的状态转换。重复删除处于 <code>Deleting</code> 或 <code>Deleted</code> 状态的工作空间时，服务端按幂等语义处理。\n</h2>
+     * 
+     * @param request the request parameters of DeleteWorkspace  DeleteWorkspaceRequest
+     * @return DeleteWorkspaceResponse
+     */
+    @Override
+    public CompletableFuture<DeleteWorkspaceResponse> deleteWorkspace(DeleteWorkspaceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteWorkspace").setMethod(HttpMethod.DELETE).setPathRegex("/workspaces/{workspaceId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteWorkspaceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteWorkspaceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetCredential  GetCredentialRequest
      * @return GetCredentialResponse
      */
@@ -322,6 +400,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetIdentityProviderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetManagedAgent  GetManagedAgentRequest
+     * @return GetManagedAgentResponse
+     */
+    @Override
+    public CompletableFuture<GetManagedAgentResponse> getManagedAgent(GetManagedAgentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetManagedAgent").setMethod(HttpMethod.GET).setPathRegex("/workspaces/{workspaceId}/managed-agents/{agentId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetManagedAgentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetManagedAgentResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -400,6 +496,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明\n根据工作空间 ID 查询工作空间详情，包括生命周期状态、CMS Workspace、AIRegistry Namespace 和当前网络策略。\n</h2>
+     * 
+     * @param request the request parameters of GetWorkspace  GetWorkspaceRequest
+     * @return GetWorkspaceResponse
+     */
+    @Override
+    public CompletableFuture<GetWorkspaceResponse> getWorkspace(GetWorkspaceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetWorkspace").setMethod(HttpMethod.GET).setPathRegex("/workspaces/{workspaceId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetWorkspaceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetWorkspaceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListCredentials  ListCredentialsRequest
      * @return ListCredentialsResponse
      */
@@ -430,6 +547,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListIdentityProvidersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListManagedAgents  ListManagedAgentsRequest
+     * @return ListManagedAgentsResponse
+     */
+    @Override
+    public CompletableFuture<ListManagedAgentsResponse> listManagedAgents(ListManagedAgentsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListManagedAgents").setMethod(HttpMethod.GET).setPathRegex("/workspaces/{workspaceId}/managed-agents").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListManagedAgentsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListManagedAgentsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -544,6 +679,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明\n分页查询当前租户下的工作空间。列表默认不返回状态为 <code>Deleted</code> 的软删除记录，结果按创建顺序由服务端稳定排序。通过 <code>nextToken</code> 获取下一页，通过 <code>skip</code> 跳过指定数量的工作空间，通过 <code>maxResults</code> 指定单页最大记录数，通过 <code>nameLike</code> 按工作空间名称模糊过滤。未指定 <code>maxResults</code> 或取值为 0 时，服务端默认返回 20 条。\n</h2>
+     * 
+     * @param request the request parameters of ListWorkspaces  ListWorkspacesRequest
+     * @return ListWorkspacesResponse
+     */
+    @Override
+    public CompletableFuture<ListWorkspacesResponse> listWorkspaces(ListWorkspacesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListWorkspaces").setMethod(HttpMethod.GET).setPathRegex("/workspaces").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListWorkspacesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListWorkspacesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ResetUserPassword  ResetUserPasswordRequest
      * @return ResetUserPasswordResponse
      */
@@ -592,6 +748,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateIdentityProviderResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateManagedAgent  UpdateManagedAgentRequest
+     * @return UpdateManagedAgentResponse
+     */
+    @Override
+    public CompletableFuture<UpdateManagedAgentResponse> updateManagedAgent(UpdateManagedAgentRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateManagedAgent").setMethod(HttpMethod.PATCH).setPathRegex("/workspaces/{workspaceId}/managed-agents/{agentId}").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateManagedAgentResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateManagedAgentResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -664,6 +838,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateUserResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明\n更新工作空间名称或网络配置。只有状态为 <code>Initialized</code> 的工作空间允许更新。<code>Status</code>、<code>TenantId</code> 和 <code>RegionId</code> 由服务端维护，不允许通过本接口修改。网络配置通过 <code>Enabled</code> 指定是否开启 VPC 网络，开启时必须同时提供 <code>VpcId</code> 和至少一个 <code>VSwitchIds</code>。\n</h2>
+     * 
+     * @param request the request parameters of UpdateWorkspace  UpdateWorkspaceRequest
+     * @return UpdateWorkspaceResponse
+     */
+    @Override
+    public CompletableFuture<UpdateWorkspaceResponse> updateWorkspace(UpdateWorkspaceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateWorkspace").setMethod(HttpMethod.PUT).setPathRegex("/workspaces/{workspaceId}").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateWorkspaceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateWorkspaceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -38,6 +38,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateIdentityProviderResponse> createIdentityProvider(CreateIdentityProviderRequest request);
 
     /**
+     * @param request the request parameters of CreateManagedAgent  CreateManagedAgentRequest
+     * @return CreateManagedAgentResponse
+     */
+    CompletableFuture<CreateManagedAgentResponse> createManagedAgent(CreateManagedAgentRequest request);
+
+    /**
      * @param request the request parameters of CreateModel  CreateModelRequest
      * @return CreateModelResponse
      */
@@ -62,6 +68,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateUserResponse> createUser(CreateUserRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明\n创建 AgentCore 工作空间控制面记录。服务端在同一事务内完成 <code>Initializing</code> 到 <code>Initialized</code> 的状态转换。网络配置通过 <code>Enabled</code> 指定是否开启 VPC 网络，开启时必须提供 <code>VpcId</code> 和至少一个 <code>VSwitchIds</code>。\n</h2>
+     * 
+     * @param request the request parameters of CreateWorkspace  CreateWorkspaceRequest
+     * @return CreateWorkspaceResponse
+     */
+    CompletableFuture<CreateWorkspaceResponse> createWorkspace(CreateWorkspaceRequest request);
+
+    /**
      * @param request the request parameters of DebugModel  DebugModelRequest
      * @return DebugModelResponse
      */
@@ -78,6 +93,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteIdentityProviderResponse
      */
     CompletableFuture<DeleteIdentityProviderResponse> deleteIdentityProvider(DeleteIdentityProviderRequest request);
+
+    /**
+     * @param request the request parameters of DeleteManagedAgent  DeleteManagedAgentRequest
+     * @return DeleteManagedAgentResponse
+     */
+    CompletableFuture<DeleteManagedAgentResponse> deleteManagedAgent(DeleteManagedAgentRequest request);
 
     /**
      * @param request the request parameters of DeleteModel  DeleteModelRequest
@@ -104,6 +125,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteUserResponse> deleteUser(DeleteUserRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明\n删除指定工作空间控制面记录。服务端在同一事务内完成 <code>Deleting</code> 到 <code>Deleted</code> 的状态转换。重复删除处于 <code>Deleting</code> 或 <code>Deleted</code> 状态的工作空间时，服务端按幂等语义处理。\n</h2>
+     * 
+     * @param request the request parameters of DeleteWorkspace  DeleteWorkspaceRequest
+     * @return DeleteWorkspaceResponse
+     */
+    CompletableFuture<DeleteWorkspaceResponse> deleteWorkspace(DeleteWorkspaceRequest request);
+
+    /**
      * @param request the request parameters of GetCredential  GetCredentialRequest
      * @return GetCredentialResponse
      */
@@ -114,6 +144,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetIdentityProviderResponse
      */
     CompletableFuture<GetIdentityProviderResponse> getIdentityProvider(GetIdentityProviderRequest request);
+
+    /**
+     * @param request the request parameters of GetManagedAgent  GetManagedAgentRequest
+     * @return GetManagedAgentResponse
+     */
+    CompletableFuture<GetManagedAgentResponse> getManagedAgent(GetManagedAgentRequest request);
 
     /**
      * @param request the request parameters of GetModel  GetModelRequest
@@ -140,6 +176,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetUserResponse> getUser(GetUserRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明\n根据工作空间 ID 查询工作空间详情，包括生命周期状态、CMS Workspace、AIRegistry Namespace 和当前网络策略。\n</h2>
+     * 
+     * @param request the request parameters of GetWorkspace  GetWorkspaceRequest
+     * @return GetWorkspaceResponse
+     */
+    CompletableFuture<GetWorkspaceResponse> getWorkspace(GetWorkspaceRequest request);
+
+    /**
      * @param request the request parameters of ListCredentials  ListCredentialsRequest
      * @return ListCredentialsResponse
      */
@@ -150,6 +195,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListIdentityProvidersResponse
      */
     CompletableFuture<ListIdentityProvidersResponse> listIdentityProviders(ListIdentityProvidersRequest request);
+
+    /**
+     * @param request the request parameters of ListManagedAgents  ListManagedAgentsRequest
+     * @return ListManagedAgentsResponse
+     */
+    CompletableFuture<ListManagedAgentsResponse> listManagedAgents(ListManagedAgentsRequest request);
 
     /**
      * @param request the request parameters of ListModelConnections  ListModelConnectionsRequest
@@ -188,6 +239,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListUsersResponse> listUsers(ListUsersRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明\n分页查询当前租户下的工作空间。列表默认不返回状态为 <code>Deleted</code> 的软删除记录，结果按创建顺序由服务端稳定排序。通过 <code>nextToken</code> 获取下一页，通过 <code>skip</code> 跳过指定数量的工作空间，通过 <code>maxResults</code> 指定单页最大记录数，通过 <code>nameLike</code> 按工作空间名称模糊过滤。未指定 <code>maxResults</code> 或取值为 0 时，服务端默认返回 20 条。\n</h2>
+     * 
+     * @param request the request parameters of ListWorkspaces  ListWorkspacesRequest
+     * @return ListWorkspacesResponse
+     */
+    CompletableFuture<ListWorkspacesResponse> listWorkspaces(ListWorkspacesRequest request);
+
+    /**
      * @param request the request parameters of ResetUserPassword  ResetUserPasswordRequest
      * @return ResetUserPasswordResponse
      */
@@ -204,6 +264,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateIdentityProviderResponse
      */
     CompletableFuture<UpdateIdentityProviderResponse> updateIdentityProvider(UpdateIdentityProviderRequest request);
+
+    /**
+     * @param request the request parameters of UpdateManagedAgent  UpdateManagedAgentRequest
+     * @return UpdateManagedAgentResponse
+     */
+    CompletableFuture<UpdateManagedAgentResponse> updateManagedAgent(UpdateManagedAgentRequest request);
 
     /**
      * @param request the request parameters of UpdateModel  UpdateModelRequest
@@ -228,5 +294,14 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateUserResponse
      */
     CompletableFuture<UpdateUserResponse> updateUser(UpdateUserRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明\n更新工作空间名称或网络配置。只有状态为 <code>Initialized</code> 的工作空间允许更新。<code>Status</code>、<code>TenantId</code> 和 <code>RegionId</code> 由服务端维护，不允许通过本接口修改。网络配置通过 <code>Enabled</code> 指定是否开启 VPC 网络，开启时必须同时提供 <code>VpcId</code> 和至少一个 <code>VSwitchIds</code>。\n</h2>
+     * 
+     * @param request the request parameters of UpdateWorkspace  UpdateWorkspaceRequest
+     * @return UpdateWorkspaceResponse
+     */
+    CompletableFuture<UpdateWorkspaceResponse> updateWorkspace(UpdateWorkspaceRequest request);
 
 }
