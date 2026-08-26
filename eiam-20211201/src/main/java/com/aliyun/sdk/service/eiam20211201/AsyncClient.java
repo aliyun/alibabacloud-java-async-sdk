@@ -308,6 +308,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateResourceServerScopeResponse> createResourceServerScope(CreateResourceServerScopeRequest request);
 
     /**
+     * @param request the request parameters of CreateTrustedOrigin  CreateTrustedOriginRequest
+     * @return CreateTrustedOriginResponse
+     */
+    CompletableFuture<CreateTrustedOriginResponse> createTrustedOrigin(CreateTrustedOriginRequest request);
+
+    /**
      * @param request the request parameters of CreateUser  CreateUserRequest
      * @return CreateUserResponse
      */
@@ -483,6 +489,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteResourceServerScopeResponse
      */
     CompletableFuture<DeleteResourceServerScopeResponse> deleteResourceServerScope(DeleteResourceServerScopeRequest request);
+
+    /**
+     * @param request the request parameters of DeleteTrustedOrigin  DeleteTrustedOriginRequest
+     * @return DeleteTrustedOriginResponse
+     */
+    CompletableFuture<DeleteTrustedOriginResponse> deleteTrustedOrigin(DeleteTrustedOriginRequest request);
 
     /**
      * @param request the request parameters of DeleteUser  DeleteUserRequest
@@ -665,6 +677,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableResourceServerCustomSubjectResponse> disableResourceServerCustomSubject(DisableResourceServerCustomSubjectRequest request);
 
     /**
+     * @param request the request parameters of DisableTrustedOrigin  DisableTrustedOriginRequest
+     * @return DisableTrustedOriginResponse
+     */
+    CompletableFuture<DisableTrustedOriginResponse> disableTrustedOrigin(DisableTrustedOriginRequest request);
+
+    /**
      * @param request the request parameters of DisableUser  DisableUserRequest
      * @return DisableUserResponse
      */
@@ -828,6 +846,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return EnableResourceServerCustomSubjectResponse
      */
     CompletableFuture<EnableResourceServerCustomSubjectResponse> enableResourceServerCustomSubject(EnableResourceServerCustomSubjectRequest request);
+
+    /**
+     * @param request the request parameters of EnableTrustedOrigin  EnableTrustedOriginRequest
+     * @return EnableTrustedOriginResponse
+     */
+    CompletableFuture<EnableTrustedOriginResponse> enableTrustedOrigin(EnableTrustedOriginRequest request);
 
     /**
      * @param request the request parameters of EnableUser  EnableUserRequest
@@ -1188,6 +1212,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetSynchronizationJobResponse
      */
     CompletableFuture<GetSynchronizationJobResponse> getSynchronizationJob(GetSynchronizationJobRequest request);
+
+    /**
+     * @param request the request parameters of GetTrustedOrigin  GetTrustedOriginRequest
+     * @return GetTrustedOriginResponse
+     */
+    CompletableFuture<GetTrustedOriginResponse> getTrustedOrigin(GetTrustedOriginRequest request);
 
     /**
      * @param request the request parameters of GetUser  GetUserRequest
@@ -1569,6 +1599,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListSynchronizationJobsResponse
      */
     CompletableFuture<ListSynchronizationJobsResponse> listSynchronizationJobs(ListSynchronizationJobsRequest request);
+
+    /**
+     * @param request the request parameters of ListTrustedOrigins  ListTrustedOriginsRequest
+     * @return ListTrustedOriginsResponse
+     */
+    CompletableFuture<ListTrustedOriginsResponse> listTrustedOrigins(ListTrustedOriginsRequest request);
 
     /**
      * @param request the request parameters of ListUserAuthnSourceMappings  ListUserAuthnSourceMappingsRequest
@@ -2148,6 +2184,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateResourceServerScopeResponse
      */
     CompletableFuture<UpdateResourceServerScopeResponse> updateResourceServerScope(UpdateResourceServerScopeRequest request);
+
+    /**
+     * @param request the request parameters of UpdateTrustedOrigin  UpdateTrustedOriginRequest
+     * @return UpdateTrustedOriginResponse
+     */
+    CompletableFuture<UpdateTrustedOriginResponse> updateTrustedOrigin(UpdateTrustedOriginRequest request);
 
     /**
      * @param request the request parameters of UpdateUser  UpdateUserRequest
