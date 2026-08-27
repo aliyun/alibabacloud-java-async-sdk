@@ -26,8 +26,20 @@ public class CreateChatFlowRequest extends Request {
     private java.util.Map<String, ?> bizExtend;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateFromFlowCode")
+    private String createFromFlowCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateFromFlowVersion")
+    private String createFromFlowVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FlowTriggerType")
     private String flowTriggerType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LifeCycleExtendData")
+    private java.util.Map<String, String> lifeCycleExtendData;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
@@ -53,7 +65,10 @@ public class CreateChatFlowRequest extends Request {
         super(builder);
         this.bizCode = builder.bizCode;
         this.bizExtend = builder.bizExtend;
+        this.createFromFlowCode = builder.createFromFlowCode;
+        this.createFromFlowVersion = builder.createFromFlowVersion;
         this.flowTriggerType = builder.flowTriggerType;
+        this.lifeCycleExtendData = builder.lifeCycleExtendData;
         this.ownerId = builder.ownerId;
         this.remark = builder.remark;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -89,10 +104,31 @@ public class CreateChatFlowRequest extends Request {
     }
 
     /**
+     * @return createFromFlowCode
+     */
+    public String getCreateFromFlowCode() {
+        return this.createFromFlowCode;
+    }
+
+    /**
+     * @return createFromFlowVersion
+     */
+    public String getCreateFromFlowVersion() {
+        return this.createFromFlowVersion;
+    }
+
+    /**
      * @return flowTriggerType
      */
     public String getFlowTriggerType() {
         return this.flowTriggerType;
+    }
+
+    /**
+     * @return lifeCycleExtendData
+     */
+    public java.util.Map<String, String> getLifeCycleExtendData() {
+        return this.lifeCycleExtendData;
     }
 
     /**
@@ -133,7 +169,10 @@ public class CreateChatFlowRequest extends Request {
     public static final class Builder extends Request.Builder<CreateChatFlowRequest, Builder> {
         private String bizCode; 
         private java.util.Map<String, ?> bizExtend; 
+        private String createFromFlowCode; 
+        private String createFromFlowVersion; 
         private String flowTriggerType; 
+        private java.util.Map<String, String> lifeCycleExtendData; 
         private Long ownerId; 
         private String remark; 
         private String resourceOwnerAccount; 
@@ -148,7 +187,10 @@ public class CreateChatFlowRequest extends Request {
             super(request);
             this.bizCode = request.bizCode;
             this.bizExtend = request.bizExtend;
+            this.createFromFlowCode = request.createFromFlowCode;
+            this.createFromFlowVersion = request.createFromFlowVersion;
             this.flowTriggerType = request.flowTriggerType;
+            this.lifeCycleExtendData = request.lifeCycleExtendData;
             this.ownerId = request.ownerId;
             this.remark = request.remark;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -182,6 +224,24 @@ public class CreateChatFlowRequest extends Request {
         }
 
         /**
+         * CreateFromFlowCode.
+         */
+        public Builder createFromFlowCode(String createFromFlowCode) {
+            this.putQueryParameter("CreateFromFlowCode", createFromFlowCode);
+            this.createFromFlowCode = createFromFlowCode;
+            return this;
+        }
+
+        /**
+         * CreateFromFlowVersion.
+         */
+        public Builder createFromFlowVersion(String createFromFlowVersion) {
+            this.putQueryParameter("CreateFromFlowVersion", createFromFlowVersion);
+            this.createFromFlowVersion = createFromFlowVersion;
+            return this;
+        }
+
+        /**
          * <p>Flow trigger type</p>
          * 
          * <strong>example:</strong>
@@ -190,6 +250,16 @@ public class CreateChatFlowRequest extends Request {
         public Builder flowTriggerType(String flowTriggerType) {
             this.putQueryParameter("FlowTriggerType", flowTriggerType);
             this.flowTriggerType = flowTriggerType;
+            return this;
+        }
+
+        /**
+         * LifeCycleExtendData.
+         */
+        public Builder lifeCycleExtendData(java.util.Map<String, String> lifeCycleExtendData) {
+            String lifeCycleExtendDataShrink = shrink(lifeCycleExtendData, "LifeCycleExtendData", "json");
+            this.putQueryParameter("LifeCycleExtendData", lifeCycleExtendDataShrink);
+            this.lifeCycleExtendData = lifeCycleExtendData;
             return this;
         }
 

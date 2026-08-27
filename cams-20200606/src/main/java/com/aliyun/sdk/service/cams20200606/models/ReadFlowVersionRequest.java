@@ -26,6 +26,10 @@ public class ReadFlowVersionRequest extends Request {
     private java.util.Map<String, ?> bizExtend;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DraftVersion")
+    private String draftVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FlowCode")
     private String flowCode;
 
@@ -53,6 +57,7 @@ public class ReadFlowVersionRequest extends Request {
         super(builder);
         this.bizCode = builder.bizCode;
         this.bizExtend = builder.bizExtend;
+        this.draftVersion = builder.draftVersion;
         this.flowCode = builder.flowCode;
         this.flowVersion = builder.flowVersion;
         this.ownerId = builder.ownerId;
@@ -86,6 +91,13 @@ public class ReadFlowVersionRequest extends Request {
      */
     public java.util.Map<String, ?> getBizExtend() {
         return this.bizExtend;
+    }
+
+    /**
+     * @return draftVersion
+     */
+    public String getDraftVersion() {
+        return this.draftVersion;
     }
 
     /**
@@ -133,6 +145,7 @@ public class ReadFlowVersionRequest extends Request {
     public static final class Builder extends Request.Builder<ReadFlowVersionRequest, Builder> {
         private String bizCode; 
         private java.util.Map<String, ?> bizExtend; 
+        private String draftVersion; 
         private String flowCode; 
         private String flowVersion; 
         private Long ownerId; 
@@ -148,6 +161,7 @@ public class ReadFlowVersionRequest extends Request {
             super(request);
             this.bizCode = request.bizCode;
             this.bizExtend = request.bizExtend;
+            this.draftVersion = request.draftVersion;
             this.flowCode = request.flowCode;
             this.flowVersion = request.flowVersion;
             this.ownerId = request.ownerId;
@@ -178,6 +192,15 @@ public class ReadFlowVersionRequest extends Request {
             String bizExtendShrink = shrink(bizExtend, "BizExtend", "json");
             this.putQueryParameter("BizExtend", bizExtendShrink);
             this.bizExtend = bizExtend;
+            return this;
+        }
+
+        /**
+         * DraftVersion.
+         */
+        public Builder draftVersion(String draftVersion) {
+            this.putQueryParameter("DraftVersion", draftVersion);
+            this.draftVersion = draftVersion;
             return this;
         }
 

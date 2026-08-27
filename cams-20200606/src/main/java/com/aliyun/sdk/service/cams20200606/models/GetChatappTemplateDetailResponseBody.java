@@ -32,12 +32,16 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("Success")
+    private Boolean success;
+
     private GetChatappTemplateDetailResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
         this.requestId = builder.requestId;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
@@ -87,12 +91,20 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static final class Builder {
         private String accessDeniedDetail; 
         private String code; 
         private Data data; 
         private String message; 
         private String requestId; 
+        private Boolean success; 
 
         private Builder() {
         } 
@@ -103,6 +115,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             this.data = model.data;
             this.message = model.message;
             this.requestId = model.requestId;
+            this.success = model.success;
         } 
 
         /**
@@ -161,6 +174,14 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
             return this;
         }
 
@@ -1187,7 +1208,6 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         private java.util.List<Cards> cards;
 
         @com.aliyun.core.annotation.NameInMap("CodeExpirationMinutes")
-        @com.aliyun.core.annotation.Validation(maximum = 90, minimum = 1)
         private Integer codeExpirationMinutes;
 
         @com.aliyun.core.annotation.NameInMap("Duration")
@@ -1711,11 +1731,13 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         private String language;
 
         @com.aliyun.core.annotation.NameInMap("MessageSendTtlSeconds")
-        @com.aliyun.core.annotation.Validation(maximum = 600, minimum = 60)
         private Integer messageSendTtlSeconds;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
+
+        @com.aliyun.core.annotation.NameInMap("ProductSetId")
+        private String productSetId;
 
         @com.aliyun.core.annotation.NameInMap("QualityScore")
         private String qualityScore;
@@ -1739,6 +1761,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             this.language = builder.language;
             this.messageSendTtlSeconds = builder.messageSendTtlSeconds;
             this.name = builder.name;
+            this.productSetId = builder.productSetId;
             this.qualityScore = builder.qualityScore;
             this.reason = builder.reason;
             this.templateCode = builder.templateCode;
@@ -1817,6 +1840,13 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return productSetId
+         */
+        public String getProductSetId() {
+            return this.productSetId;
+        }
+
+        /**
          * @return qualityScore
          */
         public String getQualityScore() {
@@ -1854,6 +1884,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             private String language; 
             private Integer messageSendTtlSeconds; 
             private String name; 
+            private String productSetId; 
             private String qualityScore; 
             private String reason; 
             private String templateCode; 
@@ -1872,6 +1903,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
                 this.language = model.language;
                 this.messageSendTtlSeconds = model.messageSendTtlSeconds;
                 this.name = model.name;
+                this.productSetId = model.productSetId;
                 this.qualityScore = model.qualityScore;
                 this.reason = model.reason;
                 this.templateCode = model.templateCode;
@@ -1988,6 +2020,14 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * ProductSetId.
+             */
+            public Builder productSetId(String productSetId) {
+                this.productSetId = productSetId;
                 return this;
             }
 

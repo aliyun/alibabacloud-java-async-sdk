@@ -26,6 +26,14 @@ public class ListChatFlowRequest extends Request {
     private java.util.Map<String, ?> bizExtend;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FlowCode")
+    private String flowCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FlowStatus")
+    private String flowStatus;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FlowTriggerType")
     private String flowTriggerType;
 
@@ -46,6 +54,10 @@ public class ListChatFlowRequest extends Request {
     private Long pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+    private String phoneNumber;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -61,19 +73,27 @@ public class ListChatFlowRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Title")
+    private String title;
+
     private ListChatFlowRequest(Builder builder) {
         super(builder);
         this.bizCode = builder.bizCode;
         this.bizExtend = builder.bizExtend;
+        this.flowCode = builder.flowCode;
+        this.flowStatus = builder.flowStatus;
         this.flowTriggerType = builder.flowTriggerType;
         this.keyword = builder.keyword;
         this.ownerId = builder.ownerId;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
+        this.phoneNumber = builder.phoneNumber;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.returnWithOnlineVersion = builder.returnWithOnlineVersion;
         this.status = builder.status;
+        this.title = builder.title;
     }
 
     public static Builder builder() {
@@ -101,6 +121,20 @@ public class ListChatFlowRequest extends Request {
      */
     public java.util.Map<String, ?> getBizExtend() {
         return this.bizExtend;
+    }
+
+    /**
+     * @return flowCode
+     */
+    public String getFlowCode() {
+        return this.flowCode;
+    }
+
+    /**
+     * @return flowStatus
+     */
+    public String getFlowStatus() {
+        return this.flowStatus;
     }
 
     /**
@@ -139,6 +173,13 @@ public class ListChatFlowRequest extends Request {
     }
 
     /**
+     * @return phoneNumber
+     */
+    public String getPhoneNumber() {
+        return this.phoneNumber;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -166,18 +207,29 @@ public class ListChatFlowRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return title
+     */
+    public String getTitle() {
+        return this.title;
+    }
+
     public static final class Builder extends Request.Builder<ListChatFlowRequest, Builder> {
         private String bizCode; 
         private java.util.Map<String, ?> bizExtend; 
+        private String flowCode; 
+        private String flowStatus; 
         private String flowTriggerType; 
         private String keyword; 
         private Long ownerId; 
         private Long pageNo; 
         private Long pageSize; 
+        private String phoneNumber; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private Boolean returnWithOnlineVersion; 
         private String status; 
+        private String title; 
 
         private Builder() {
             super();
@@ -187,15 +239,19 @@ public class ListChatFlowRequest extends Request {
             super(request);
             this.bizCode = request.bizCode;
             this.bizExtend = request.bizExtend;
+            this.flowCode = request.flowCode;
+            this.flowStatus = request.flowStatus;
             this.flowTriggerType = request.flowTriggerType;
             this.keyword = request.keyword;
             this.ownerId = request.ownerId;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
+            this.phoneNumber = request.phoneNumber;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.returnWithOnlineVersion = request.returnWithOnlineVersion;
             this.status = request.status;
+            this.title = request.title;
         } 
 
         /**
@@ -220,6 +276,24 @@ public class ListChatFlowRequest extends Request {
             String bizExtendShrink = shrink(bizExtend, "BizExtend", "json");
             this.putQueryParameter("BizExtend", bizExtendShrink);
             this.bizExtend = bizExtend;
+            return this;
+        }
+
+        /**
+         * FlowCode.
+         */
+        public Builder flowCode(String flowCode) {
+            this.putQueryParameter("FlowCode", flowCode);
+            this.flowCode = flowCode;
+            return this;
+        }
+
+        /**
+         * FlowStatus.
+         */
+        public Builder flowStatus(String flowStatus) {
+            this.putQueryParameter("FlowStatus", flowStatus);
+            this.flowStatus = flowStatus;
             return this;
         }
 
@@ -288,6 +362,15 @@ public class ListChatFlowRequest extends Request {
         }
 
         /**
+         * PhoneNumber.
+         */
+        public Builder phoneNumber(String phoneNumber) {
+            this.putQueryParameter("PhoneNumber", phoneNumber);
+            this.phoneNumber = phoneNumber;
+            return this;
+        }
+
+        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -326,6 +409,15 @@ public class ListChatFlowRequest extends Request {
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * Title.
+         */
+        public Builder title(String title) {
+            this.putQueryParameter("Title", title);
+            this.title = title;
             return this;
         }
 

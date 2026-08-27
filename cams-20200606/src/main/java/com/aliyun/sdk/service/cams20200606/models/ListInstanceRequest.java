@@ -22,6 +22,10 @@ public class ListInstanceRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BindId")
+    private String bindId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ChannelType")
     private String channelType;
 
@@ -36,6 +40,10 @@ public class ListInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsBind")
+    private Boolean isBind;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageIndex")
@@ -56,10 +64,12 @@ public class ListInstanceRequest extends Request {
     private ListInstanceRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.bindId = builder.bindId;
         this.channelType = builder.channelType;
         this.filterStr = builder.filterStr;
         this.instanceId = builder.instanceId;
         this.instanceName = builder.instanceName;
+        this.isBind = builder.isBind;
         this.pageIndex = builder.pageIndex;
         this.pageSize = builder.pageSize;
         this.resourceGroupId = builder.resourceGroupId;
@@ -84,6 +94,13 @@ public class ListInstanceRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return bindId
+     */
+    public String getBindId() {
+        return this.bindId;
     }
 
     /**
@@ -112,6 +129,13 @@ public class ListInstanceRequest extends Request {
      */
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    /**
+     * @return isBind
+     */
+    public Boolean getIsBind() {
+        return this.isBind;
     }
 
     /**
@@ -144,10 +168,12 @@ public class ListInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListInstanceRequest, Builder> {
         private String regionId; 
+        private String bindId; 
         private String channelType; 
         private String filterStr; 
         private String instanceId; 
         private String instanceName; 
+        private Boolean isBind; 
         private Long pageIndex; 
         private Long pageSize; 
         private String resourceGroupId; 
@@ -160,10 +186,12 @@ public class ListInstanceRequest extends Request {
         private Builder(ListInstanceRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.bindId = request.bindId;
             this.channelType = request.channelType;
             this.filterStr = request.filterStr;
             this.instanceId = request.instanceId;
             this.instanceName = request.instanceName;
+            this.isBind = request.isBind;
             this.pageIndex = request.pageIndex;
             this.pageSize = request.pageSize;
             this.resourceGroupId = request.resourceGroupId;
@@ -176,6 +204,15 @@ public class ListInstanceRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * BindId.
+         */
+        public Builder bindId(String bindId) {
+            this.putQueryParameter("BindId", bindId);
+            this.bindId = bindId;
             return this;
         }
 
@@ -212,6 +249,15 @@ public class ListInstanceRequest extends Request {
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
             this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * IsBind.
+         */
+        public Builder isBind(Boolean isBind) {
+            this.putQueryParameter("IsBind", isBind);
+            this.isBind = isBind;
             return this;
         }
 

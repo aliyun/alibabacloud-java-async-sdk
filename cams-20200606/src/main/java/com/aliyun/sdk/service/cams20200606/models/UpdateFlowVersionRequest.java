@@ -53,6 +53,10 @@ public class UpdateFlowVersionRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    private String type;
+
     private UpdateFlowVersionRequest(Builder builder) {
         super(builder);
         this.bizCode = builder.bizCode;
@@ -64,6 +68,7 @@ public class UpdateFlowVersionRequest extends Request {
         this.remark = builder.remark;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -142,6 +147,13 @@ public class UpdateFlowVersionRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder extends Request.Builder<UpdateFlowVersionRequest, Builder> {
         private String bizCode; 
         private java.util.Map<String, ?> bizExtend; 
@@ -152,6 +164,7 @@ public class UpdateFlowVersionRequest extends Request {
         private String remark; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String type; 
 
         private Builder() {
             super();
@@ -168,6 +181,7 @@ public class UpdateFlowVersionRequest extends Request {
             this.remark = request.remark;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.type = request.type;
         } 
 
         /**
@@ -267,6 +281,15 @@ public class UpdateFlowVersionRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * Type.
+         */
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
             return this;
         }
 

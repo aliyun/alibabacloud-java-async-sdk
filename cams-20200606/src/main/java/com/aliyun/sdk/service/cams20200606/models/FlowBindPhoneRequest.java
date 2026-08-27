@@ -19,7 +19,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class FlowBindPhoneRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ChannelCode")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String channelCode;
 
     @com.aliyun.core.annotation.Query
@@ -35,6 +34,10 @@ public class FlowBindPhoneRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FlowVersion")
     private String flowVersion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MultiWabaPhoneNumbers")
+    private java.util.List<MultiWabaPhoneNumbers> multiWabaPhoneNumbers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
@@ -54,7 +57,6 @@ public class FlowBindPhoneRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WabaId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String wabaId;
 
     private FlowBindPhoneRequest(Builder builder) {
@@ -63,6 +65,7 @@ public class FlowBindPhoneRequest extends Request {
         this.channelType = builder.channelType;
         this.flowCode = builder.flowCode;
         this.flowVersion = builder.flowVersion;
+        this.multiWabaPhoneNumbers = builder.multiWabaPhoneNumbers;
         this.ownerId = builder.ownerId;
         this.phoneNumbers = builder.phoneNumbers;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -112,6 +115,13 @@ public class FlowBindPhoneRequest extends Request {
     }
 
     /**
+     * @return multiWabaPhoneNumbers
+     */
+    public java.util.List<MultiWabaPhoneNumbers> getMultiWabaPhoneNumbers() {
+        return this.multiWabaPhoneNumbers;
+    }
+
+    /**
      * @return ownerId
      */
     public Long getOwnerId() {
@@ -151,6 +161,7 @@ public class FlowBindPhoneRequest extends Request {
         private String channelType; 
         private String flowCode; 
         private String flowVersion; 
+        private java.util.List<MultiWabaPhoneNumbers> multiWabaPhoneNumbers; 
         private Long ownerId; 
         private java.util.List<String> phoneNumbers; 
         private String resourceOwnerAccount; 
@@ -167,6 +178,7 @@ public class FlowBindPhoneRequest extends Request {
             this.channelType = request.channelType;
             this.flowCode = request.flowCode;
             this.flowVersion = request.flowVersion;
+            this.multiWabaPhoneNumbers = request.multiWabaPhoneNumbers;
             this.ownerId = request.ownerId;
             this.phoneNumbers = request.phoneNumbers;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -176,7 +188,6 @@ public class FlowBindPhoneRequest extends Request {
 
         /**
          * <p>Message channel Code</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>示例值示例值示例值</p>
@@ -226,6 +237,16 @@ public class FlowBindPhoneRequest extends Request {
         }
 
         /**
+         * MultiWabaPhoneNumbers.
+         */
+        public Builder multiWabaPhoneNumbers(java.util.List<MultiWabaPhoneNumbers> multiWabaPhoneNumbers) {
+            String multiWabaPhoneNumbersShrink = shrink(multiWabaPhoneNumbers, "MultiWabaPhoneNumbers", "json");
+            this.putQueryParameter("MultiWabaPhoneNumbers", multiWabaPhoneNumbersShrink);
+            this.multiWabaPhoneNumbers = multiWabaPhoneNumbers;
+            return this;
+        }
+
+        /**
          * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
@@ -264,7 +285,6 @@ public class FlowBindPhoneRequest extends Request {
 
         /**
          * <p>WABA account ID, or PageId for other channel types, etc.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>示例值</p>
@@ -282,4 +302,106 @@ public class FlowBindPhoneRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link FlowBindPhoneRequest} extends {@link TeaModel}
+     *
+     * <p>FlowBindPhoneRequest</p>
+     */
+    public static class MultiWabaPhoneNumbers extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ChannelCode")
+        private String channelCode;
+
+        @com.aliyun.core.annotation.NameInMap("PhoneNumbers")
+        private java.util.List<String> phoneNumbers;
+
+        @com.aliyun.core.annotation.NameInMap("WabaId")
+        private String wabaId;
+
+        private MultiWabaPhoneNumbers(Builder builder) {
+            this.channelCode = builder.channelCode;
+            this.phoneNumbers = builder.phoneNumbers;
+            this.wabaId = builder.wabaId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MultiWabaPhoneNumbers create() {
+            return builder().build();
+        }
+
+        /**
+         * @return channelCode
+         */
+        public String getChannelCode() {
+            return this.channelCode;
+        }
+
+        /**
+         * @return phoneNumbers
+         */
+        public java.util.List<String> getPhoneNumbers() {
+            return this.phoneNumbers;
+        }
+
+        /**
+         * @return wabaId
+         */
+        public String getWabaId() {
+            return this.wabaId;
+        }
+
+        public static final class Builder {
+            private String channelCode; 
+            private java.util.List<String> phoneNumbers; 
+            private String wabaId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MultiWabaPhoneNumbers model) {
+                this.channelCode = model.channelCode;
+                this.phoneNumbers = model.phoneNumbers;
+                this.wabaId = model.wabaId;
+            } 
+
+            /**
+             * <p>Message channel Code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值示例值示例值</p>
+             */
+            public Builder channelCode(String channelCode) {
+                this.channelCode = channelCode;
+                return this;
+            }
+
+            /**
+             * <p>Phone numbers or PageIds under the channel instance, etc.</p>
+             */
+            public Builder phoneNumbers(java.util.List<String> phoneNumbers) {
+                this.phoneNumbers = phoneNumbers;
+                return this;
+            }
+
+            /**
+             * <p>WABA account ID, or PageId for other channel types, etc.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例值</p>
+             */
+            public Builder wabaId(String wabaId) {
+                this.wabaId = wabaId;
+                return this;
+            }
+
+            public MultiWabaPhoneNumbers build() {
+                return new MultiWabaPhoneNumbers(this);
+            } 
+
+        } 
+
+    }
 }

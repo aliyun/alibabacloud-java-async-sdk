@@ -32,12 +32,16 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("Success")
+    private Boolean success;
+
     private ModifyChatappTemplateResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
         this.requestId = builder.requestId;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
@@ -87,12 +91,20 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static final class Builder {
         private String accessDeniedDetail; 
         private String code; 
         private Data data; 
         private String message; 
         private String requestId; 
+        private Boolean success; 
 
         private Builder() {
         } 
@@ -103,6 +115,7 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
             this.data = model.data;
             this.message = model.message;
             this.requestId = model.requestId;
+            this.success = model.success;
         } 
 
         /**
@@ -158,6 +171,14 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
             return this;
         }
 

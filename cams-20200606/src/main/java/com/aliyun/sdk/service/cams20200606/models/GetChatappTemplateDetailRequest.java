@@ -28,6 +28,7 @@ public class GetChatappTemplateDetailRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IsvCode")
+    @Deprecated
     private String isvCode;
 
     @com.aliyun.core.annotation.Query
