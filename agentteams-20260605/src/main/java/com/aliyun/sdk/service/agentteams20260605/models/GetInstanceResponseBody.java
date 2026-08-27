@@ -233,6 +233,9 @@ public class GetInstanceResponseBody extends TeaModel {
      * <p>GetInstanceResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AiRegistryNamespaceId")
+        private String aiRegistryNamespaceId;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -273,6 +276,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private java.util.List<Zones> zones;
 
         private Data(Builder builder) {
+            this.aiRegistryNamespaceId = builder.aiRegistryNamespaceId;
             this.createTime = builder.createTime;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
@@ -294,6 +298,13 @@ public class GetInstanceResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return aiRegistryNamespaceId
+         */
+        public String getAiRegistryNamespaceId() {
+            return this.aiRegistryNamespaceId;
         }
 
         /**
@@ -388,6 +399,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String aiRegistryNamespaceId; 
             private String createTime; 
             private String instanceId; 
             private String instanceName; 
@@ -406,6 +418,7 @@ public class GetInstanceResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.aiRegistryNamespaceId = model.aiRegistryNamespaceId;
                 this.createTime = model.createTime;
                 this.instanceId = model.instanceId;
                 this.instanceName = model.instanceName;
@@ -420,6 +433,14 @@ public class GetInstanceResponseBody extends TeaModel {
                 this.vpcId = model.vpcId;
                 this.zones = model.zones;
             } 
+
+            /**
+             * AiRegistryNamespaceId.
+             */
+            public Builder aiRegistryNamespaceId(String aiRegistryNamespaceId) {
+                this.aiRegistryNamespaceId = aiRegistryNamespaceId;
+                return this;
+            }
 
             /**
              * CreateTime.
