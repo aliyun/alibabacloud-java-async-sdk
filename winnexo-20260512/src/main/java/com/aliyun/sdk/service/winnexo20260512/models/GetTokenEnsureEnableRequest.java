@@ -12,27 +12,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetUserRequest} extends {@link RequestModel}
+ * {@link GetTokenEnsureEnableRequest} extends {@link RequestModel}
  *
- * <p>GetUserRequest</p>
+ * <p>GetTokenEnsureEnableRequest</p>
  */
-public class GetUserRequest extends Request {
+public class GetTokenEnsureEnableRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("tenantId")
     private String tenantId;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("wnAccountId")
-    private String wnAccountId;
-
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("wnUserId")
     private String wnUserId;
 
-    private GetUserRequest(Builder builder) {
+    private GetTokenEnsureEnableRequest(Builder builder) {
         super(builder);
         this.tenantId = builder.tenantId;
-        this.wnAccountId = builder.wnAccountId;
         this.wnUserId = builder.wnUserId;
     }
 
@@ -40,7 +35,7 @@ public class GetUserRequest extends Request {
         return new Builder();
     }
 
-    public static GetUserRequest create() {
+    public static GetTokenEnsureEnableRequest create() {
         return builder().build();
     }
 
@@ -57,32 +52,23 @@ public class GetUserRequest extends Request {
     }
 
     /**
-     * @return wnAccountId
-     */
-    public String getWnAccountId() {
-        return this.wnAccountId;
-    }
-
-    /**
      * @return wnUserId
      */
     public String getWnUserId() {
         return this.wnUserId;
     }
 
-    public static final class Builder extends Request.Builder<GetUserRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetTokenEnsureEnableRequest, Builder> {
         private String tenantId; 
-        private String wnAccountId; 
         private String wnUserId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetUserRequest request) {
+        private Builder(GetTokenEnsureEnableRequest request) {
             super(request);
             this.tenantId = request.tenantId;
-            this.wnAccountId = request.wnAccountId;
             this.wnUserId = request.wnUserId;
         } 
 
@@ -99,32 +85,20 @@ public class GetUserRequest extends Request {
         }
 
         /**
-         * <p>平台账号ID（与 wnUserId 二选一，支持 WINNEXO/BUC/SSO）</p>
-         * 
-         * <strong>example:</strong>
-         * <p>exampleAccountId</p>
-         */
-        public Builder wnAccountId(String wnAccountId) {
-            this.putQueryParameter("wnAccountId", wnAccountId);
-            this.wnAccountId = wnAccountId;
-            return this;
-        }
-
-        /**
-         * <p>平台用户ID（与 accountId 二选一）</p>
+         * <p>目标用户 ID（WINNEXO 平台用户ID，空则操作自身，管理员可传入他人 ID 代操作）</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         public Builder wnUserId(String wnUserId) {
-            this.putQueryParameter("wnUserId", wnUserId);
+            this.putBodyParameter("wnUserId", wnUserId);
             this.wnUserId = wnUserId;
             return this;
         }
 
         @Override
-        public GetUserRequest build() {
-            return new GetUserRequest(this);
+        public GetTokenEnsureEnableRequest build() {
+            return new GetTokenEnsureEnableRequest(this);
         } 
 
     } 

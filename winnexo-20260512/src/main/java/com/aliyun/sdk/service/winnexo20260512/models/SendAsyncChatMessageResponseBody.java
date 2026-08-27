@@ -35,6 +35,9 @@ public class SendAsyncChatMessageResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("sessionId")
     private String sessionId;
 
+    @com.aliyun.core.annotation.NameInMap("userMessageId")
+    private String userMessageId;
+
     private SendAsyncChatMessageResponseBody(Builder builder) {
         this.code = builder.code;
         this.message = builder.message;
@@ -42,6 +45,7 @@ public class SendAsyncChatMessageResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.sessionCreated = builder.sessionCreated;
         this.sessionId = builder.sessionId;
+        this.userMessageId = builder.userMessageId;
     }
 
     public static Builder builder() {
@@ -98,6 +102,13 @@ public class SendAsyncChatMessageResponseBody extends TeaModel {
         return this.sessionId;
     }
 
+    /**
+     * @return userMessageId
+     */
+    public String getUserMessageId() {
+        return this.userMessageId;
+    }
+
     public static final class Builder {
         private String code; 
         private String message; 
@@ -105,6 +116,7 @@ public class SendAsyncChatMessageResponseBody extends TeaModel {
         private String requestId; 
         private Boolean sessionCreated; 
         private String sessionId; 
+        private String userMessageId; 
 
         private Builder() {
         } 
@@ -116,6 +128,7 @@ public class SendAsyncChatMessageResponseBody extends TeaModel {
             this.requestId = model.requestId;
             this.sessionCreated = model.sessionCreated;
             this.sessionId = model.sessionId;
+            this.userMessageId = model.userMessageId;
         } 
 
         /**
@@ -181,6 +194,17 @@ public class SendAsyncChatMessageResponseBody extends TeaModel {
          */
         public Builder sessionId(String sessionId) {
             this.sessionId = sessionId;
+            return this;
+        }
+
+        /**
+         * <p>用户消息ID；用于与本轮助手消息建立配对关系</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60756cc6-8c53-4d1f-8db8-b8c09b81a5cb</p>
+         */
+        public Builder userMessageId(String userMessageId) {
+            this.userMessageId = userMessageId;
             return this;
         }
 

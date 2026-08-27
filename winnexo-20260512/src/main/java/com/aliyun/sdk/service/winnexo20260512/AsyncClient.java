@@ -20,10 +20,35 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * <b>description</b> :
+     * <p>WinNexo 用户管理 OpenAPI：批量添加用户组成员。租户身份来自鉴权上下文。</p>
+     * 
+     * @param request the request parameters of AddUserGroupMembers  AddUserGroupMembersRequest
+     * @return AddUserGroupMembersResponse
+     */
+    CompletableFuture<AddUserGroupMembersResponse> addUserGroupMembers(AddUserGroupMembersRequest request);
+
+    /**
      * @param request the request parameters of CheckHealth  CheckHealthRequest
      * @return CheckHealthResponse
      */
     CompletableFuture<CheckHealthResponse> checkHealth(CheckHealthRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>创建一条平台公告。调用身份必须映射到系统运维租户中的真实平台用户，并拥有公告管理权限。</p>
+     * <ul>
+     * <li><code>priority</code>：公告重要性，支持 URGENT、IMPORTANT、GENERAL。</li>
+     * <li><code>targetTenantIds</code> / <code>targetRoleCodes</code>：仅在对应目标模式为 SPECIFIED 时使用，按 JSON array 传递。</li>
+     * <li><code>effectiveStart</code> / <code>effectiveEnd</code>：带时区的 ISO8601 时间。</li>
+     * <li><code>publishNow</code>：为 true 时创建后立即发布，否则保存为草稿。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateAnnouncement  CreateAnnouncementRequest
+     * @return CreateAnnouncementResponse
+     */
+    CompletableFuture<CreateAnnouncementResponse> createAnnouncement(CreateAnnouncementRequest request);
 
     /**
      * @param request the request parameters of CreateConversation  CreateConversationRequest
@@ -65,6 +90,31 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <h2>请求说明</h2>
      * <ul>
+     * <li>将指定普通钉钉群聊接入调用方已加入的群组知识库。</li>
+     * <li>资源类型固定为 DINGTALK，作用范围固定为 GROUP，归属用户从网关鉴权身份解析。</li>
+     * <li>groupId、chatId 与 historyStartTime 为必填项。</li>
+     * <li>updateFrequency 可通过 preset 或五段 cron 配置后续同步频率。</li>
+     * <li>服务端校验调用方群成员身份和目标群组目录权限；同一群聊可创建为不同 Source。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateGroupDingtalkChat  CreateGroupDingtalkChatRequest
+     * @return CreateGroupDingtalkChatResponse
+     */
+    CompletableFuture<CreateGroupDingtalkChatResponse> createGroupDingtalkChat(CreateGroupDingtalkChatRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明\n\n固定 <code>ONLINE_DOC + FEISHU + GROUP</code>。<code>groupId</code> 必填，<code>directoryId</code> 省略时使用该群知识库根目录；群成员与目录写权限由后端校验。</h2>
+     * 
+     * @param request the request parameters of CreateGroupFeishuDoc  CreateGroupFeishuDocRequest
+     * @return CreateGroupFeishuDocResponse
+     */
+    CompletableFuture<CreateGroupFeishuDocResponse> createGroupFeishuDoc(CreateGroupFeishuDocRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
      * <li>该接口用于将阿里钉在线文档添加到指定的企业知识库中。</li>
      * <li>调用者必须具备<code>DEVELOPMENT_KB_MANAGE</code>功能权限。</li>
      * <li><code>source_type</code>固定为<code>ONLINE_DOC</code>，<code>platform</code>固定为<code>ALI_DING</code>，<code>scope</code>固定为<code>TENANT</code>。</li>
@@ -94,6 +144,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateKnowledgeBaseDirectoryResponse
      */
     CompletableFuture<CreateKnowledgeBaseDirectoryResponse> createKnowledgeBaseDirectory(CreateKnowledgeBaseDirectoryRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明\n\n固定 <code>ONLINE_DOC + FEISHU + TENANT</code>。<code>directoryId</code> 必填，调用者必须具备企业知识库功能权限及目标知识库管理权限。</h2>
+     * 
+     * @param request the request parameters of CreateKnowledgeBaseFeishuDoc  CreateKnowledgeBaseFeishuDocRequest
+     * @return CreateKnowledgeBaseFeishuDocResponse
+     */
+    CompletableFuture<CreateKnowledgeBaseFeishuDocResponse> createKnowledgeBaseFeishuDoc(CreateKnowledgeBaseFeishuDocRequest request);
 
     /**
      * <b>description</b> :
@@ -200,6 +259,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePersonalAlidingKnowledgeBaseResponse> createPersonalAlidingKnowledgeBase(CreatePersonalAlidingKnowledgeBaseRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>将指定普通钉钉群聊接入当前用户的个人知识库。</li>
+     * <li>资源类型固定为 DINGTALK，作用范围固定为 PERSONAL，归属用户从网关鉴权身份解析。</li>
+     * <li>historyStartTime 为必填项，支持 YYYY-MM-DD 或 YYYY-MM-DD HH:MM:SS。</li>
+     * <li>updateFrequency 可通过 preset 或五段 cron 配置后续同步频率。</li>
+     * <li>同一群聊可创建为不同 Source，各 Source 按 sourceId 隔离。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreatePersonalDingtalkChat  CreatePersonalDingtalkChatRequest
+     * @return CreatePersonalDingtalkChatResponse
+     */
+    CompletableFuture<CreatePersonalDingtalkChatResponse> createPersonalDingtalkChat(CreatePersonalDingtalkChatRequest request);
+
+    /**
      * @deprecated OpenAPI CreatePersonalDingtalkMeeting is deprecated  * @description ## 请求说明
      * - 该 API 已废弃，请改用 `CreatePersonalDingtalkMinutes`。
      * - 为兼容存量 SDK，本接口保留最初发布的参数名称与必填性，不增加 `shanjiUrl`。
@@ -260,6 +335,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreatePersonalFeishuChatResponse
      */
     CompletableFuture<CreatePersonalFeishuChatResponse> createPersonalFeishuChat(CreatePersonalFeishuChatRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明\n\n固定 <code>ONLINE_DOC + FEISHU + PERSONAL</code>，飞书连接器用户由可信 OpenAPI 身份确定。<code>directoryId</code> 省略时使用当前用户默认个人根目录。</h2>
+     * 
+     * @param request the request parameters of CreatePersonalFeishuDoc  CreatePersonalFeishuDocRequest
+     * @return CreatePersonalFeishuDocResponse
+     */
+    CompletableFuture<CreatePersonalFeishuDocResponse> createPersonalFeishuDoc(CreatePersonalFeishuDocRequest request);
 
     /**
      * <b>description</b> :
@@ -373,6 +457,33 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateUserResponse
      */
     CompletableFuture<CreateUserResponse> createUser(CreateUserRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>WinNexo 用户管理 OpenAPI：创建用户组。租户身份来自鉴权上下文。</p>
+     * 
+     * @param request the request parameters of CreateUserGroup  CreateUserGroupRequest
+     * @return CreateUserGroupResponse
+     */
+    CompletableFuture<CreateUserGroupResponse> createUserGroup(CreateUserGroupRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>OpenAPI 创建用户并设置初始角色和用户组。
+     *     业务编排：
+     *     1. 解析 roleCodes → role_ids（系统角色枚举校验）
+     *     2. 判断用户是否已存在（用于返回 isNewUser 标记）
+     *     3. 校验 userGroupIds 的租户归属并完成创建/加入（密码由调用方强制传入 RSA 密文）
+     *     4. 返回创建结果（含 isNewUser 标记）
+     *     错误码：
+     *     - ERR.User.DeactivatedInTenant: 用户在租户中已停用，请使用 updateUser 恢复
+     *     - ERR.User.AlreadyInTenant: 用户已是租户活跃成员
+     *     - ERR.User.DisplayNameDuplicateInTenant: 租户内显示名重复</p>
+     * 
+     * @param request the request parameters of CreateUserWithGroups  CreateUserWithGroupsRequest
+     * @return CreateUserWithGroupsResponse
+     */
+    CompletableFuture<CreateUserWithGroupsResponse> createUserWithGroups(CreateUserWithGroupsRequest request);
 
     /**
      * @param request the request parameters of DeleteChatSession  DeleteChatSessionRequest
@@ -503,6 +614,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetScheduledTaskExecutionRecordsResponse> getScheduledTaskExecutionRecords(GetScheduledTaskExecutionRecordsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>查询当前用户可用于定时任务推送的渠道与方式。</p>
+     * 
+     * @param request the request parameters of GetScheduledTaskPushOptions  GetScheduledTaskPushOptionsRequest
+     * @return GetScheduledTaskPushOptionsResponse
+     */
+    CompletableFuture<GetScheduledTaskPushOptionsResponse> getScheduledTaskPushOptions(GetScheduledTaskPushOptionsRequest request);
+
+    /**
      * @deprecated OpenAPI GetScheduledTaskUnderstandDetail is deprecated  * @description **本接口已下线**：任务理解能力已整体下线，后端不再提供任何业务逻辑，任何调用均返回 Code=OperationDenied.ApiOffline（httpStatusCode=410）。保留 operation 而非下线，是为了让存量 SDK 调用拿到明确的下线错误码，而不是与「路径写错」无法区分的 404。请迁移到 CreateScheduledTask，直接以 segments 传入任务描述。
      * 
      * @param request the request parameters of GetScheduledTaskUnderstandDetail  GetScheduledTaskUnderstandDetailRequest
@@ -576,6 +696,24 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>获取用户的 INSTANCE Token，并确保其处于生效状态（幂等）。
+     *     业务逻辑：
+     *     1. 从 identity 取 user_id（强制 caller_type=user）
+     *     2. 构造 AuthContext，委托 UserTokenAuthorizedService 完成权限校验
+     *     3. 调用 ensure_active_token：
+     *        - 已有 ACTIVE → 原样返回该 Token 明文（不重置、不换密钥）
+     *        - 有 INACTIVE → 自动重新启用并返回明文
+     *        - 都没有（或仅有已失效的 RESET 记录）→ 新建并返回明文
+     *     与 EnableToken 的差异：EnableToken 在已有 ACTIVE Token 时只回脱敏值，
+     *     本接口保证在不破坏已有 Token 的前提下一定返回可用的明文凭证。</p>
+     * 
+     * @param request the request parameters of GetTokenEnsureEnable  GetTokenEnsureEnableRequest
+     * @return GetTokenEnsureEnableResponse
+     */
+    CompletableFuture<GetTokenEnsureEnableResponse> getTokenEnsureEnable(GetTokenEnsureEnableRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>查询用户的 INSTANCE Token 状态。
      *     业务逻辑：
      *     1. 从 identity 取 user_id（强制 caller_type=user）
@@ -593,13 +731,13 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>OpenAPI 查询用户详情。
      *     业务编排：
-     *     1. 按 wnUserId 或 accountId 定位用户
-     *     2. 查询用户在当前租户的映射信息（状态、加入时间、最后登录）
+     *     1. 按 wnUserId 或平台 accountId 定位 WINNEXO/BUC/SSO 用户
+     *     2. 校验用户是当前租户正式成员（排除 RECEIVER）并查询映射信息（状态、加入时间、最后登录）
      *     3. 查询用户在当前租户的角色列表
      *     4. 查询用户在当前租户的用户组列表
      *     5. 组装响应
      *     错误码：
-     *     - ERR.User.NotFound: 用户不存在
+     *     - ERR.User.NotFound: 用户不存在或不是正式成员
      *     - ERR.User.NotInTenant: 用户不在当前租户下</p>
      * 
      * @param request the request parameters of GetUser  GetUserRequest
@@ -621,6 +759,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetUserCreditUsageResponse
      */
     CompletableFuture<GetUserCreditUsageResponse> getUserCreditUsage(GetUserCreditUsageRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>WinNexo 用户管理 OpenAPI：查询用户组详情。租户身份来自鉴权上下文。</p>
+     * 
+     * @param request the request parameters of GetUserGroup  GetUserGroupRequest
+     * @return GetUserGroupResponse
+     */
+    CompletableFuture<GetUserGroupResponse> getUserGroup(GetUserGroupRequest request);
 
     /**
      * <b>description</b> :
@@ -653,6 +800,16 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GrantAgentUsersResponse
      */
     CompletableFuture<GrantAgentUsersResponse> grantAgentUsers(GrantAgentUsersRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>分页查询当前数据库时间窗口内生效的已发布平台公告。调用身份必须是系统运维租户中拥有公告查看权限的真实用户。</p>
+     * 
+     * @param request the request parameters of ListActiveAnnouncements  ListActiveAnnouncementsRequest
+     * @return ListActiveAnnouncementsResponse
+     */
+    CompletableFuture<ListActiveAnnouncementsResponse> listActiveAnnouncements(ListActiveAnnouncementsRequest request);
 
     /**
      * <b>description</b> :
@@ -887,6 +1044,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>WinNexo 用户管理 OpenAPI：查询当前租户用户组树。租户身份来自鉴权上下文。</p>
+     * 
+     * @param request the request parameters of ListUserGroups  ListUserGroupsRequest
+     * @return ListUserGroupsResponse
+     */
+    CompletableFuture<ListUserGroupsResponse> listUserGroups(ListUserGroupsRequest request);
+
+    /**
+     * <b>description</b> :
      * <h2>请求说明</h2>
      * <ul>
      * <li>本接口按企业知识库前台口径返回指定目录的子目录和 READY 资源。</li>
@@ -918,7 +1084,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <p>OpenAPI 分页查询租户成员列表。
      *     业务编排：
      *     1. 解析筛选条件（roleCodes → role_ids）
-     *     2. 调用 UserTenantMappingRepository.query_paged_tenant_members 分页查询
+     *     2. 调用 UserTenantMappingRepository.query_paged_tenant_members 分页查询当前租户所有来源的正式成员（WINNEXO/BUC/SSO）
      *     3. 将结果中的 role_id 转为 roleCode 并组装响应
      *     错误码：
      *     - 非法 roleCode 参数时抛出错误</p>
@@ -1002,6 +1168,17 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return MoveResourceResponse
      */
     CompletableFuture<MoveResourceResponse> moveResource(MoveResourceRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>按公告 ID 幂等下线平台公告。首次将 PUBLISHED 公告下线时返回 <code>changed=true</code>；公告已经下线或过期时返回 <code>changed=false</code>。
+     * 调用身份必须属于系统运维租户并拥有公告管理权限。</p>
+     * 
+     * @param request the request parameters of OfflineAnnouncement  OfflineAnnouncementRequest
+     * @return OfflineAnnouncementResponse
+     */
+    CompletableFuture<OfflineAnnouncementResponse> offlineAnnouncement(OfflineAnnouncementRequest request);
 
     /**
      * <b>description</b> :
@@ -1108,6 +1285,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RemoveUserResponse
      */
     CompletableFuture<RemoveUserResponse> removeUser(RemoveUserRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>WinNexo 用户管理 OpenAPI：批量移除用户组成员。租户身份来自鉴权上下文。</p>
+     * 
+     * @param request the request parameters of RemoveUserGroupMembers  RemoveUserGroupMembersRequest
+     * @return RemoveUserGroupMembersResponse
+     */
+    CompletableFuture<RemoveUserGroupMembersResponse> removeUserGroupMembers(RemoveUserGroupMembersRequest request);
 
     /**
      * <b>description</b> :
@@ -1309,6 +1495,40 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RunSkillResponse
      */
     CompletableFuture<RunSkillResponse> runSkill(RunSkillRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>将指定群产出保存到同一协作群的资料目录。</li>
+     * <li>支持 <code>link</code>（保持产出关联）与 <code>copy</code>（创建独立快照）两种模式。</li>
+     * <li>调用方必须是平台用户且为目标群成员；可归档当前调用方可见的群产出，包括其他成员创建的产出。</li>
+     * <li><code>directoryId</code> 不传时使用目标群的默认资料目录。</li>
+     * <li>单批最多处理 50 条产出；保存前会统一校验全部条目，任一条目不存在、不可见或无权操作时整批失败。</li>
+     * <li>通过统一校验后逐条保存，响应结果与 <code>itemIds</code> 保持同序，单条保存失败不影响其他条目。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of SaveGroupOutputFileToGroupResource  SaveGroupOutputFileToGroupResourceRequest
+     * @return SaveGroupOutputFileToGroupResourceResponse
+     */
+    CompletableFuture<SaveGroupOutputFileToGroupResourceResponse> saveGroupOutputFileToGroupResource(SaveGroupOutputFileToGroupResourceRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>将指定群产出保存到当前操作人的个人知识库。</li>
+     * <li>支持 <code>link</code>（保持产出关联）与 <code>copy</code>（创建独立快照）两种模式。</li>
+     * <li>调用方必须是已关联平台用户的目标群成员；普通成员仅可归档本人创建的产出，群管理员可归档其可见的其他成员产出，个人归属始终取自网关鉴权身份。</li>
+     * <li><code>directoryId</code> 不传时使用当前操作人的默认个人目录。</li>
+     * <li>单批最多处理 50 条产出；保存前会统一校验全部条目，任一条目不存在、不可见或无权操作时整批失败。</li>
+     * <li>通过统一校验后逐条保存，响应结果与 <code>itemIds</code> 保持同序，单条保存失败不影响其他条目。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of SaveGroupOutputFileToPersonalResource  SaveGroupOutputFileToPersonalResourceRequest
+     * @return SaveGroupOutputFileToPersonalResourceResponse
+     */
+    CompletableFuture<SaveGroupOutputFileToPersonalResourceResponse> saveGroupOutputFileToPersonalResource(SaveGroupOutputFileToPersonalResourceRequest request);
 
     /**
      * <b>description</b> :
@@ -1539,6 +1759,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateUserResponse
      */
     CompletableFuture<UpdateUserResponse> updateUser(UpdateUserRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>WinNexo 用户管理 OpenAPI：更新用户组。租户身份来自鉴权上下文。</p>
+     * 
+     * @param request the request parameters of UpdateUserGroup  UpdateUserGroupRequest
+     * @return UpdateUserGroupResponse
+     */
+    CompletableFuture<UpdateUserGroupResponse> updateUserGroup(UpdateUserGroupRequest request);
 
     /**
      * <b>description</b> :

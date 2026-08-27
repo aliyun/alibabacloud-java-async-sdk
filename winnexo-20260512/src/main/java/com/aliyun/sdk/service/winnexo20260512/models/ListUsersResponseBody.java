@@ -329,7 +329,7 @@ public class ListUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>WINNEXO 登录账号</p>
+             * <p>平台账号ID</p>
              * 
              * <strong>example:</strong>
              * <p>exampleAccountId</p>

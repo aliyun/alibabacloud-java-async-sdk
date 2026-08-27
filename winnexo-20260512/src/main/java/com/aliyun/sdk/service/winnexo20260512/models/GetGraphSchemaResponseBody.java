@@ -30,6 +30,9 @@ public class GetGraphSchemaResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("schemaId")
+    private String schemaId;
+
     @com.aliyun.core.annotation.NameInMap("schemaVersion")
     @com.aliyun.core.annotation.Validation(required = true)
     private String schemaVersion;
@@ -43,6 +46,7 @@ public class GetGraphSchemaResponseBody extends TeaModel {
         this.graphName = builder.graphName;
         this.message = builder.message;
         this.requestId = builder.requestId;
+        this.schemaId = builder.schemaId;
         this.schemaVersion = builder.schemaVersion;
         this.yamlEdit = builder.yamlEdit;
     }
@@ -88,6 +92,13 @@ public class GetGraphSchemaResponseBody extends TeaModel {
     }
 
     /**
+     * @return schemaId
+     */
+    public String getSchemaId() {
+        return this.schemaId;
+    }
+
+    /**
      * @return schemaVersion
      */
     public String getSchemaVersion() {
@@ -106,6 +117,7 @@ public class GetGraphSchemaResponseBody extends TeaModel {
         private String graphName; 
         private String message; 
         private String requestId; 
+        private String schemaId; 
         private String schemaVersion; 
         private String yamlEdit; 
 
@@ -117,6 +129,7 @@ public class GetGraphSchemaResponseBody extends TeaModel {
             this.graphName = model.graphName;
             this.message = model.message;
             this.requestId = model.requestId;
+            this.schemaId = model.schemaId;
             this.schemaVersion = model.schemaVersion;
             this.yamlEdit = model.yamlEdit;
         } 
@@ -163,6 +176,17 @@ public class GetGraphSchemaResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * <p>graph 对应的 active QueryAgent 注册 schema ID；尚未注册时为 null</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schema_123456</p>
+         */
+        public Builder schemaId(String schemaId) {
+            this.schemaId = schemaId;
             return this;
         }
 

@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetUserResponseBody} extends {@link TeaModel}
+ * {@link CreateUserWithGroupsResponseBody} extends {@link TeaModel}
  *
- * <p>GetUserResponseBody</p>
+ * <p>CreateUserWithGroupsResponseBody</p>
  */
-public class GetUserResponseBody extends TeaModel {
+public class CreateUserWithGroupsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("accountId")
     private String accountId;
 
@@ -26,14 +26,8 @@ public class GetUserResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("displayName")
     private String displayName;
 
-    @com.aliyun.core.annotation.NameInMap("gmtCreate")
-    private String gmtCreate;
-
-    @com.aliyun.core.annotation.NameInMap("isActive")
-    private Boolean isActive;
-
-    @com.aliyun.core.annotation.NameInMap("lastLoginTime")
-    private String lastLoginTime;
+    @com.aliyun.core.annotation.NameInMap("isNewUser")
+    private Boolean isNewUser;
 
     @com.aliyun.core.annotation.NameInMap("message")
     private String message;
@@ -41,26 +35,16 @@ public class GetUserResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @com.aliyun.core.annotation.NameInMap("roleCodes")
-    private java.util.List<String> roleCodes;
-
-    @com.aliyun.core.annotation.NameInMap("userGroupIds")
-    private java.util.List<String> userGroupIds;
-
     @com.aliyun.core.annotation.NameInMap("wnUserId")
     private String wnUserId;
 
-    private GetUserResponseBody(Builder builder) {
+    private CreateUserWithGroupsResponseBody(Builder builder) {
         this.accountId = builder.accountId;
         this.code = builder.code;
         this.displayName = builder.displayName;
-        this.gmtCreate = builder.gmtCreate;
-        this.isActive = builder.isActive;
-        this.lastLoginTime = builder.lastLoginTime;
+        this.isNewUser = builder.isNewUser;
         this.message = builder.message;
         this.requestId = builder.requestId;
-        this.roleCodes = builder.roleCodes;
-        this.userGroupIds = builder.userGroupIds;
         this.wnUserId = builder.wnUserId;
     }
 
@@ -68,7 +52,7 @@ public class GetUserResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetUserResponseBody create() {
+    public static CreateUserWithGroupsResponseBody create() {
         return builder().build();
     }
 
@@ -98,24 +82,10 @@ public class GetUserResponseBody extends TeaModel {
     }
 
     /**
-     * @return gmtCreate
+     * @return isNewUser
      */
-    public String getGmtCreate() {
-        return this.gmtCreate;
-    }
-
-    /**
-     * @return isActive
-     */
-    public Boolean getIsActive() {
-        return this.isActive;
-    }
-
-    /**
-     * @return lastLoginTime
-     */
-    public String getLastLoginTime() {
-        return this.lastLoginTime;
+    public Boolean getIsNewUser() {
+        return this.isNewUser;
     }
 
     /**
@@ -133,20 +103,6 @@ public class GetUserResponseBody extends TeaModel {
     }
 
     /**
-     * @return roleCodes
-     */
-    public java.util.List<String> getRoleCodes() {
-        return this.roleCodes;
-    }
-
-    /**
-     * @return userGroupIds
-     */
-    public java.util.List<String> getUserGroupIds() {
-        return this.userGroupIds;
-    }
-
-    /**
      * @return wnUserId
      */
     public String getWnUserId() {
@@ -157,37 +113,29 @@ public class GetUserResponseBody extends TeaModel {
         private String accountId; 
         private String code; 
         private String displayName; 
-        private String gmtCreate; 
-        private Boolean isActive; 
-        private String lastLoginTime; 
+        private Boolean isNewUser; 
         private String message; 
         private String requestId; 
-        private java.util.List<String> roleCodes; 
-        private java.util.List<String> userGroupIds; 
         private String wnUserId; 
 
         private Builder() {
         } 
 
-        private Builder(GetUserResponseBody model) {
+        private Builder(CreateUserWithGroupsResponseBody model) {
             this.accountId = model.accountId;
             this.code = model.code;
             this.displayName = model.displayName;
-            this.gmtCreate = model.gmtCreate;
-            this.isActive = model.isActive;
-            this.lastLoginTime = model.lastLoginTime;
+            this.isNewUser = model.isNewUser;
             this.message = model.message;
             this.requestId = model.requestId;
-            this.roleCodes = model.roleCodes;
-            this.userGroupIds = model.userGroupIds;
             this.wnUserId = model.wnUserId;
         } 
 
         /**
-         * <p>平台账号ID</p>
+         * <p>WINNEXO 登录账号</p>
          * 
          * <strong>example:</strong>
-         * <p>exampleAccountId</p>
+         * <p><a href="mailto:user123@example.com">user123@example.com</a></p>
          */
         public Builder accountId(String accountId) {
             this.accountId = accountId;
@@ -217,35 +165,13 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>加入租户时间</p>
-         * 
-         * <strong>example:</strong>
-         * <p>string_value</p>
-         */
-        public Builder gmtCreate(String gmtCreate) {
-            this.gmtCreate = gmtCreate;
-            return this;
-        }
-
-        /**
-         * <p>启用/停用状态</p>
+         * <p>是否为新创建的用户（false 表示已有用户加入租户）</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
          */
-        public Builder isActive(Boolean isActive) {
-            this.isActive = isActive;
-            return this;
-        }
-
-        /**
-         * <p>最后登录时间</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2023-10-01T12:00:00Z</p>
-         */
-        public Builder lastLoginTime(String lastLoginTime) {
-            this.lastLoginTime = lastLoginTime;
+        public Builder isNewUser(Boolean isNewUser) {
+            this.isNewUser = isNewUser;
             return this;
         }
 
@@ -272,29 +198,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>用户拥有的系统角色 code 列表</p>
-         * 
-         * <strong>example:</strong>
-         * <p>string_value</p>
-         */
-        public Builder roleCodes(java.util.List<String> roleCodes) {
-            this.roleCodes = roleCodes;
-            return this;
-        }
-
-        /**
-         * <p>用户所属用户组ID列表</p>
-         * 
-         * <strong>example:</strong>
-         * <p>string_value</p>
-         */
-        public Builder userGroupIds(java.util.List<String> userGroupIds) {
-            this.userGroupIds = userGroupIds;
-            return this;
-        }
-
-        /**
-         * <p>平台用户ID</p>
+         * <p>WINNEXO 平台用户ID</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -304,8 +208,8 @@ public class GetUserResponseBody extends TeaModel {
             return this;
         }
 
-        public GetUserResponseBody build() {
-            return new GetUserResponseBody(this);
+        public CreateUserWithGroupsResponseBody build() {
+            return new CreateUserWithGroupsResponseBody(this);
         } 
 
     } 

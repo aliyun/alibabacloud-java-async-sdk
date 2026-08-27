@@ -143,7 +143,7 @@ public class ListUsersRequest extends Request {
         } 
 
         /**
-         * <p>按 WINNEXO 登录账号精确批量查询（多选）；与其他筛选条件取交集。不传或传空列表 [] 均视为不按账号筛选（返回全部符合其他条件的成员）</p>
+         * <p>按平台账号ID精确批量查询（多选，支持 WINNEXO/BUC/SSO）；与其他筛选条件取交集。不传或传空列表 [] 均视为不按账号筛选（返回全部符合其他条件的成员）</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
