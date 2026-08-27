@@ -834,6 +834,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDBResourceManagementModeResponse> describeDBResourceManagementMode(DescribeDBResourceManagementModeRequest request);
 
     /**
+     * @param request the request parameters of DescribeDBVersion  DescribeDBVersionRequest
+     * @return DescribeDBVersionResponse
+     */
+    CompletableFuture<DescribeDBVersionResponse> describeDBVersion(DescribeDBVersionRequest request);
+
+    /**
      * @param request the request parameters of DescribeDBVersionInfos  DescribeDBVersionInfosRequest
      * @return DescribeDBVersionInfosResponse
      */
