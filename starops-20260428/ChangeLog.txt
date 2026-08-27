@@ -1,3 +1,6 @@
+2026-08-27 Version: 1.0.7
+- Generated java-async 2026-04-28 for STAROps.
+
 2026-07-27 Version: 1.0.6
 - Generated java-async 2026-04-28 for STAROps.
 

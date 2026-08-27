@@ -327,7 +327,7 @@ public class CreateDigitalEmployeeRequest extends Request {
          * <p>数字员工工具调用安全策略配置。</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;aliyun&quot;:{&quot;enable&quot;:true,&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}}</p>
+         * <p>{&quot;aliyun&quot;:{&quot;enable&quot;:true,&quot;denyPolicy&quot;:[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;],&quot;autoPassPolicy&quot;:[&quot;log:Get*&quot;,&quot;log:List*&quot;],&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}}</p>
          */
         public Builder toolPolicy(ToolPolicy toolPolicy) {
             this.putBodyParameter("toolPolicy", toolPolicy);
@@ -770,13 +770,22 @@ public class CreateDigitalEmployeeRequest extends Request {
      * <p>CreateDigitalEmployeeRequest</p>
      */
     public static class Aliyun extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("autoPassPolicy")
+        private java.util.List<String> autoPassPolicy;
+
+        @com.aliyun.core.annotation.NameInMap("denyPolicy")
+        private java.util.List<String> denyPolicy;
+
         @com.aliyun.core.annotation.NameInMap("enable")
         private Boolean enable;
 
         @com.aliyun.core.annotation.NameInMap("statements")
+        @Deprecated
         private java.util.List<Statements> statements;
 
         private Aliyun(Builder builder) {
+            this.autoPassPolicy = builder.autoPassPolicy;
+            this.denyPolicy = builder.denyPolicy;
             this.enable = builder.enable;
             this.statements = builder.statements;
         }
@@ -787,6 +796,20 @@ public class CreateDigitalEmployeeRequest extends Request {
 
         public static Aliyun create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoPassPolicy
+         */
+        public java.util.List<String> getAutoPassPolicy() {
+            return this.autoPassPolicy;
+        }
+
+        /**
+         * @return denyPolicy
+         */
+        public java.util.List<String> getDenyPolicy() {
+            return this.denyPolicy;
         }
 
         /**
@@ -804,6 +827,8 @@ public class CreateDigitalEmployeeRequest extends Request {
         }
 
         public static final class Builder {
+            private java.util.List<String> autoPassPolicy; 
+            private java.util.List<String> denyPolicy; 
             private Boolean enable; 
             private java.util.List<Statements> statements; 
 
@@ -811,12 +836,36 @@ public class CreateDigitalEmployeeRequest extends Request {
             } 
 
             private Builder(Aliyun model) {
+                this.autoPassPolicy = model.autoPassPolicy;
+                this.denyPolicy = model.denyPolicy;
                 this.enable = model.enable;
                 this.statements = model.statements;
             } 
 
             /**
-             * <p>是否启用 Aliyun MCP 工具策略。</p>
+             * <p>自动放行策略。条目为 RAM Action 字符串，格式为 product:ApiName、product:Prefix* 或 product:<em>。命中则自动放行，不走人工确认。为空或不配置时内置只读（Get</em>、List*、Describe*）自动放行；未命中一律走人工确认（HIL）。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;log:Get*&quot;,&quot;log:List*&quot;]</p>
+             */
+            public Builder autoPassPolicy(java.util.List<String> autoPassPolicy) {
+                this.autoPassPolicy = autoPassPolicy;
+                return this;
+            }
+
+            /**
+             * <p>显式拒绝策略，优先级最高。条目为 RAM Action 字符串，格式为 product:ApiName、product:Prefix* 或 product:*。为空或不配置时不主动拒绝任何操作。STAROps 命中直接拒绝；Pop 侧再做二次兜底。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;]</p>
+             */
+            public Builder denyPolicy(java.util.List<String> denyPolicy) {
+                this.denyPolicy = denyPolicy;
+                return this;
+            }
+
+            /**
+             * <p>是否启用 Aliyun MCP 工具策略。缺省为启用，仅显式设置为 false 时关闭。</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -827,7 +876,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * <p>Aliyun OpenAPI 工具策略语句列表。</p>
+             * <p>已废弃，请改用 denyPolicy 与 autoPassPolicy。过渡期仍会回读。 原说明：Aliyun OpenAPI 工具策略语句列表。</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]</p>
@@ -887,7 +936,7 @@ public class CreateDigitalEmployeeRequest extends Request {
              * <p>Aliyun MCP 工具调用安全策略配置。</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;enable&quot;:true,&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}</p>
+             * <p>{&quot;enable&quot;:true,&quot;denyPolicy&quot;:[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;],&quot;autoPassPolicy&quot;:[&quot;log:Get*&quot;,&quot;log:List*&quot;],&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}</p>
              */
             public Builder aliyun(Aliyun aliyun) {
                 this.aliyun = aliyun;
