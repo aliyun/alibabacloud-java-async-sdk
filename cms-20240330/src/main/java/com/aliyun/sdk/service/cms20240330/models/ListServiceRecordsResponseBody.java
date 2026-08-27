@@ -170,6 +170,9 @@ public class ListServiceRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("serviceId")
         private String serviceId;
 
+        @com.aliyun.core.annotation.NameInMap("serviceName")
+        private String serviceName;
+
         @com.aliyun.core.annotation.NameInMap("workspace")
         private String workspace;
 
@@ -177,6 +180,7 @@ public class ListServiceRecordsResponseBody extends TeaModel {
             this.recordContent = builder.recordContent;
             this.recordType = builder.recordType;
             this.serviceId = builder.serviceId;
+            this.serviceName = builder.serviceName;
             this.workspace = builder.workspace;
         }
 
@@ -210,6 +214,13 @@ public class ListServiceRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceName
+         */
+        public String getServiceName() {
+            return this.serviceName;
+        }
+
+        /**
          * @return workspace
          */
         public String getWorkspace() {
@@ -220,6 +231,7 @@ public class ListServiceRecordsResponseBody extends TeaModel {
             private String recordContent; 
             private String recordType; 
             private String serviceId; 
+            private String serviceName; 
             private String workspace; 
 
             private Builder() {
@@ -229,6 +241,7 @@ public class ListServiceRecordsResponseBody extends TeaModel {
                 this.recordContent = model.recordContent;
                 this.recordType = model.recordType;
                 this.serviceId = model.serviceId;
+                this.serviceName = model.serviceName;
                 this.workspace = model.workspace;
             } 
 
@@ -253,6 +266,14 @@ public class ListServiceRecordsResponseBody extends TeaModel {
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
+                return this;
+            }
+
+            /**
+             * serviceName.
+             */
+            public Builder serviceName(String serviceName) {
+                this.serviceName = serviceName;
                 return this;
             }
 

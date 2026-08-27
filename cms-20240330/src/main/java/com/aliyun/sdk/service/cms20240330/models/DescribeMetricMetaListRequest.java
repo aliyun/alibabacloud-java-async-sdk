@@ -22,6 +22,14 @@ public class DescribeMetricMetaListRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("aliyunLang")
+    private String aliyunLang;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("category")
+    private String category;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("keywords")
     private String keywords;
 
@@ -52,6 +60,8 @@ public class DescribeMetricMetaListRequest extends Request {
     private DescribeMetricMetaListRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.aliyunLang = builder.aliyunLang;
+        this.category = builder.category;
         this.keywords = builder.keywords;
         this.labels = builder.labels;
         this.metaFormat = builder.metaFormat;
@@ -79,6 +89,20 @@ public class DescribeMetricMetaListRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return aliyunLang
+     */
+    public String getAliyunLang() {
+        return this.aliyunLang;
+    }
+
+    /**
+     * @return category
+     */
+    public String getCategory() {
+        return this.category;
     }
 
     /**
@@ -132,6 +156,8 @@ public class DescribeMetricMetaListRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeMetricMetaListRequest, Builder> {
         private String regionId; 
+        private String aliyunLang; 
+        private String category; 
         private String keywords; 
         private java.util.List<Labels> labels; 
         private String metaFormat; 
@@ -147,6 +173,8 @@ public class DescribeMetricMetaListRequest extends Request {
         private Builder(DescribeMetricMetaListRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.aliyunLang = request.aliyunLang;
+            this.category = request.category;
             this.keywords = request.keywords;
             this.labels = request.labels;
             this.metaFormat = request.metaFormat;
@@ -162,6 +190,24 @@ public class DescribeMetricMetaListRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("regionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * aliyunLang.
+         */
+        public Builder aliyunLang(String aliyunLang) {
+            this.putQueryParameter("aliyunLang", aliyunLang);
+            this.aliyunLang = aliyunLang;
+            return this;
+        }
+
+        /**
+         * category.
+         */
+        public Builder category(String category) {
+            this.putQueryParameter("category", category);
+            this.category = category;
             return this;
         }
 
