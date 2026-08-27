@@ -220,6 +220,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAppPluginResponse> deleteAppPlugin(DeleteAppPluginRequest request);
 
     /**
+     * @param request the request parameters of DeleteAppSceneRecipient  DeleteAppSceneRecipientRequest
+     * @return DeleteAppSceneRecipientResponse
+     */
+    CompletableFuture<DeleteAppSceneRecipientResponse> deleteAppSceneRecipient(DeleteAppSceneRecipientRequest request);
+
+    /**
      * @param request the request parameters of DeleteAppSupabaseSecrets  DeleteAppSupabaseSecretsRequest
      * @return DeleteAppSupabaseSecretsResponse
      */

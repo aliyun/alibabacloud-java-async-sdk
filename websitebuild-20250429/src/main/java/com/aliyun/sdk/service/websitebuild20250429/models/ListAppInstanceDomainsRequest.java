@@ -57,6 +57,10 @@ public class ListAppInstanceDomainsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StatusQueryMode")
+    private String statusQueryMode;
+
     private ListAppInstanceDomainsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -69,6 +73,7 @@ public class ListAppInstanceDomainsRequest extends Request {
         this.orderType = builder.orderType;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
+        this.statusQueryMode = builder.statusQueryMode;
     }
 
     public static Builder builder() {
@@ -154,6 +159,13 @@ public class ListAppInstanceDomainsRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return statusQueryMode
+     */
+    public String getStatusQueryMode() {
+        return this.statusQueryMode;
+    }
+
     public static final class Builder extends Request.Builder<ListAppInstanceDomainsRequest, Builder> {
         private String regionId; 
         private String bizId; 
@@ -165,6 +177,7 @@ public class ListAppInstanceDomainsRequest extends Request {
         private String orderType; 
         private Integer pageNum; 
         private Integer pageSize; 
+        private String statusQueryMode; 
 
         private Builder() {
             super();
@@ -182,6 +195,7 @@ public class ListAppInstanceDomainsRequest extends Request {
             this.orderType = request.orderType;
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
+            this.statusQueryMode = request.statusQueryMode;
         } 
 
         /**
@@ -293,6 +307,15 @@ public class ListAppInstanceDomainsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * StatusQueryMode.
+         */
+        public Builder statusQueryMode(String statusQueryMode) {
+            this.putQueryParameter("StatusQueryMode", statusQueryMode);
+            this.statusQueryMode = statusQueryMode;
             return this;
         }
 

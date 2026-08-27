@@ -1458,8 +1458,14 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainType")
         private String domainType;
 
+        @com.aliyun.core.annotation.NameInMap("IcpFilingStatus")
+        private String icpFilingStatus;
+
         @com.aliyun.core.annotation.NameInMap("Migration")
         private Migration migration;
+
+        @com.aliyun.core.annotation.NameInMap("Offline")
+        private Boolean offline;
 
         @com.aliyun.core.annotation.NameInMap("OverallStatus")
         private String overallStatus;
@@ -1483,7 +1489,9 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             this.dnsConflict = builder.dnsConflict;
             this.domainName = builder.domainName;
             this.domainType = builder.domainType;
+            this.icpFilingStatus = builder.icpFilingStatus;
             this.migration = builder.migration;
+            this.offline = builder.offline;
             this.overallStatus = builder.overallStatus;
             this.ownership = builder.ownership;
             this.qualification = builder.qualification;
@@ -1542,10 +1550,24 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
+         * @return icpFilingStatus
+         */
+        public String getIcpFilingStatus() {
+            return this.icpFilingStatus;
+        }
+
+        /**
          * @return migration
          */
         public Migration getMigration() {
             return this.migration;
+        }
+
+        /**
+         * @return offline
+         */
+        public Boolean getOffline() {
+            return this.offline;
         }
 
         /**
@@ -1590,7 +1612,9 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             private DnsConflict dnsConflict; 
             private String domainName; 
             private String domainType; 
+            private String icpFilingStatus; 
             private Migration migration; 
+            private Boolean offline; 
             private String overallStatus; 
             private Ownership ownership; 
             private Qualification qualification; 
@@ -1607,7 +1631,9 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
                 this.dnsConflict = model.dnsConflict;
                 this.domainName = model.domainName;
                 this.domainType = model.domainType;
+                this.icpFilingStatus = model.icpFilingStatus;
                 this.migration = model.migration;
+                this.offline = model.offline;
                 this.overallStatus = model.overallStatus;
                 this.ownership = model.ownership;
                 this.qualification = model.qualification;
@@ -1670,10 +1696,26 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
+             * IcpFilingStatus.
+             */
+            public Builder icpFilingStatus(String icpFilingStatus) {
+                this.icpFilingStatus = icpFilingStatus;
+                return this;
+            }
+
+            /**
              * Migration.
              */
             public Builder migration(Migration migration) {
                 this.migration = migration;
+                return this;
+            }
+
+            /**
+             * Offline.
+             */
+            public Builder offline(Boolean offline) {
+                this.offline = offline;
                 return this;
             }
 
@@ -2805,14 +2847,26 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("DeployType")
+        private String deployType;
+
         @com.aliyun.core.annotation.NameInMap("DnsConflict")
         private NextDnsConflict dnsConflict;
 
         @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
+        @com.aliyun.core.annotation.NameInMap("DomainType")
+        private String domainType;
+
+        @com.aliyun.core.annotation.NameInMap("IcpFilingStatus")
+        private String icpFilingStatus;
+
         @com.aliyun.core.annotation.NameInMap("Migration")
         private NextMigration migration;
+
+        @com.aliyun.core.annotation.NameInMap("Offline")
+        private Boolean offline;
 
         @com.aliyun.core.annotation.NameInMap("OverallStatus")
         private String overallStatus;
@@ -2832,9 +2886,13 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         private Next(Builder builder) {
             this.certificate = builder.certificate;
             this.createTime = builder.createTime;
+            this.deployType = builder.deployType;
             this.dnsConflict = builder.dnsConflict;
             this.domainName = builder.domainName;
+            this.domainType = builder.domainType;
+            this.icpFilingStatus = builder.icpFilingStatus;
             this.migration = builder.migration;
+            this.offline = builder.offline;
             this.overallStatus = builder.overallStatus;
             this.ownership = builder.ownership;
             this.qualification = builder.qualification;
@@ -2865,6 +2923,13 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
+         * @return deployType
+         */
+        public String getDeployType() {
+            return this.deployType;
+        }
+
+        /**
          * @return dnsConflict
          */
         public NextDnsConflict getDnsConflict() {
@@ -2879,10 +2944,31 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
+         * @return domainType
+         */
+        public String getDomainType() {
+            return this.domainType;
+        }
+
+        /**
+         * @return icpFilingStatus
+         */
+        public String getIcpFilingStatus() {
+            return this.icpFilingStatus;
+        }
+
+        /**
          * @return migration
          */
         public NextMigration getMigration() {
             return this.migration;
+        }
+
+        /**
+         * @return offline
+         */
+        public Boolean getOffline() {
+            return this.offline;
         }
 
         /**
@@ -2923,9 +3009,13 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public static final class Builder {
             private NextCertificate certificate; 
             private String createTime; 
+            private String deployType; 
             private NextDnsConflict dnsConflict; 
             private String domainName; 
+            private String domainType; 
+            private String icpFilingStatus; 
             private NextMigration migration; 
+            private Boolean offline; 
             private String overallStatus; 
             private NextOwnership ownership; 
             private NextQualification qualification; 
@@ -2938,9 +3028,13 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             private Builder(Next model) {
                 this.certificate = model.certificate;
                 this.createTime = model.createTime;
+                this.deployType = model.deployType;
                 this.dnsConflict = model.dnsConflict;
                 this.domainName = model.domainName;
+                this.domainType = model.domainType;
+                this.icpFilingStatus = model.icpFilingStatus;
                 this.migration = model.migration;
+                this.offline = model.offline;
                 this.overallStatus = model.overallStatus;
                 this.ownership = model.ownership;
                 this.qualification = model.qualification;
@@ -2968,6 +3062,14 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
+             * DeployType.
+             */
+            public Builder deployType(String deployType) {
+                this.deployType = deployType;
+                return this;
+            }
+
+            /**
              * DnsConflict.
              */
             public Builder dnsConflict(NextDnsConflict dnsConflict) {
@@ -2987,10 +3089,34 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
             }
 
             /**
+             * DomainType.
+             */
+            public Builder domainType(String domainType) {
+                this.domainType = domainType;
+                return this;
+            }
+
+            /**
+             * IcpFilingStatus.
+             */
+            public Builder icpFilingStatus(String icpFilingStatus) {
+                this.icpFilingStatus = icpFilingStatus;
+                return this;
+            }
+
+            /**
              * Migration.
              */
             public Builder migration(NextMigration migration) {
                 this.migration = migration;
+                return this;
+            }
+
+            /**
+             * Offline.
+             */
+            public Builder offline(Boolean offline) {
+                this.offline = offline;
                 return this;
             }
 
