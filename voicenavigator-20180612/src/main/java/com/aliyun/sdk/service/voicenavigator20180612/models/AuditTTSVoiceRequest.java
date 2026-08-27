@@ -39,6 +39,10 @@ public class AuditTTSVoiceRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NlsServiceType")
+    private String nlsServiceType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PitchRate")
     private String pitchRate;
 
@@ -73,6 +77,7 @@ public class AuditTTSVoiceRequest extends Request {
         this.engine = builder.engine;
         this.extParams = builder.extParams;
         this.instanceId = builder.instanceId;
+        this.nlsServiceType = builder.nlsServiceType;
         this.pitchRate = builder.pitchRate;
         this.secretKey = builder.secretKey;
         this.speechRate = builder.speechRate;
@@ -130,6 +135,13 @@ public class AuditTTSVoiceRequest extends Request {
     }
 
     /**
+     * @return nlsServiceType
+     */
+    public String getNlsServiceType() {
+        return this.nlsServiceType;
+    }
+
+    /**
      * @return pitchRate
      */
     public String getPitchRate() {
@@ -177,6 +189,7 @@ public class AuditTTSVoiceRequest extends Request {
         private String engine; 
         private String extParams; 
         private String instanceId; 
+        private String nlsServiceType; 
         private String pitchRate; 
         private String secretKey; 
         private String speechRate; 
@@ -195,6 +208,7 @@ public class AuditTTSVoiceRequest extends Request {
             this.engine = request.engine;
             this.extParams = request.extParams;
             this.instanceId = request.instanceId;
+            this.nlsServiceType = request.nlsServiceType;
             this.pitchRate = request.pitchRate;
             this.secretKey = request.secretKey;
             this.speechRate = request.speechRate;
@@ -248,6 +262,15 @@ public class AuditTTSVoiceRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * NlsServiceType.
+         */
+        public Builder nlsServiceType(String nlsServiceType) {
+            this.putQueryParameter("NlsServiceType", nlsServiceType);
+            this.nlsServiceType = nlsServiceType;
             return this;
         }
 
