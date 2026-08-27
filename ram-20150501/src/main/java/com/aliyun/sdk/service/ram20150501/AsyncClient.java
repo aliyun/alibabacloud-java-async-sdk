@@ -111,6 +111,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRoleResponse> createRole(CreateRoleRequest request);
 
     /**
+     * @param request the request parameters of CreateServiceLinkedRole  CreateServiceLinkedRoleRequest
+     * @return CreateServiceLinkedRoleResponse
+     */
+    CompletableFuture<CreateServiceLinkedRoleResponse> createServiceLinkedRole(CreateServiceLinkedRoleRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This topic provides an example on how to create a RAM user named <code>alice</code>.</p>
      * 
@@ -173,6 +179,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteRoleResponse
      */
     CompletableFuture<DeleteRoleResponse> deleteRole(DeleteRoleRequest request);
+
+    /**
+     * @param request the request parameters of DeleteServiceLinkedRole  DeleteServiceLinkedRoleRequest
+     * @return DeleteServiceLinkedRoleResponse
+     */
+    CompletableFuture<DeleteServiceLinkedRoleResponse> deleteServiceLinkedRole(DeleteServiceLinkedRoleRequest request);
 
     /**
      * <b>description</b> :
@@ -260,6 +272,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetSecurityPreferenceResponse
      */
     CompletableFuture<GetSecurityPreferenceResponse> getSecurityPreference(GetSecurityPreferenceRequest request);
+
+    /**
+     * @param request the request parameters of GetServiceLinkedRoleTemplate  GetServiceLinkedRoleTemplateRequest
+     * @return GetServiceLinkedRoleTemplateResponse
+     */
+    CompletableFuture<GetServiceLinkedRoleTemplateResponse> getServiceLinkedRoleTemplate(GetServiceLinkedRoleTemplateRequest request);
 
     /**
      * <b>description</b> :

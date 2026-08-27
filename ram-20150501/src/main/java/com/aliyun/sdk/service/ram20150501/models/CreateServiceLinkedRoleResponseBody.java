@@ -12,18 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateRoleResponseBody} extends {@link TeaModel}
+ * {@link CreateServiceLinkedRoleResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateRoleResponseBody</p>
+ * <p>CreateServiceLinkedRoleResponseBody</p>
  */
-public class UpdateRoleResponseBody extends TeaModel {
+public class CreateServiceLinkedRoleResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Role")
     private Role role;
 
-    private UpdateRoleResponseBody(Builder builder) {
+    private CreateServiceLinkedRoleResponseBody(Builder builder) {
         this.requestId = builder.requestId;
         this.role = builder.role;
     }
@@ -32,7 +32,7 @@ public class UpdateRoleResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateRoleResponseBody create() {
+    public static CreateServiceLinkedRoleResponseBody create() {
         return builder().build();
     }
 
@@ -61,16 +61,13 @@ public class UpdateRoleResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(UpdateRoleResponseBody model) {
+        private Builder(CreateServiceLinkedRoleResponseBody model) {
             this.requestId = model.requestId;
             this.role = model.role;
         } 
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,29 +75,26 @@ public class UpdateRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the RAM role.</p>
+         * Role.
          */
         public Builder role(Role role) {
             this.role = role;
             return this;
         }
 
-        public UpdateRoleResponseBody build() {
-            return new UpdateRoleResponseBody(this);
+        public CreateServiceLinkedRoleResponseBody build() {
+            return new CreateServiceLinkedRoleResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link UpdateRoleResponseBody} extends {@link TeaModel}
+     * {@link CreateServiceLinkedRoleResponseBody} extends {@link TeaModel}
      *
-     * <p>UpdateRoleResponseBody</p>
+     * <p>CreateServiceLinkedRoleResponseBody</p>
      */
     public static class Role extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("AllowConsoleLogin")
-        private Boolean allowConsoleLogin;
-
         @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
@@ -113,8 +107,8 @@ public class UpdateRoleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @com.aliyun.core.annotation.NameInMap("MaxSessionDuration")
-        private Long maxSessionDuration;
+        @com.aliyun.core.annotation.NameInMap("IsServiceLinkedRole")
+        private Boolean isServiceLinkedRole;
 
         @com.aliyun.core.annotation.NameInMap("RoleId")
         private String roleId;
@@ -122,19 +116,14 @@ public class UpdateRoleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RoleName")
         private String roleName;
 
-        @com.aliyun.core.annotation.NameInMap("UpdateDate")
-        private String updateDate;
-
         private Role(Builder builder) {
-            this.allowConsoleLogin = builder.allowConsoleLogin;
             this.arn = builder.arn;
             this.assumeRolePolicyDocument = builder.assumeRolePolicyDocument;
             this.createDate = builder.createDate;
             this.description = builder.description;
-            this.maxSessionDuration = builder.maxSessionDuration;
+            this.isServiceLinkedRole = builder.isServiceLinkedRole;
             this.roleId = builder.roleId;
             this.roleName = builder.roleName;
-            this.updateDate = builder.updateDate;
         }
 
         public static Builder builder() {
@@ -143,13 +132,6 @@ public class UpdateRoleResponseBody extends TeaModel {
 
         public static Role create() {
             return builder().build();
-        }
-
-        /**
-         * @return allowConsoleLogin
-         */
-        public Boolean getAllowConsoleLogin() {
-            return this.allowConsoleLogin;
         }
 
         /**
@@ -181,10 +163,10 @@ public class UpdateRoleResponseBody extends TeaModel {
         }
 
         /**
-         * @return maxSessionDuration
+         * @return isServiceLinkedRole
          */
-        public Long getMaxSessionDuration() {
-            return this.maxSessionDuration;
+        public Boolean getIsServiceLinkedRole() {
+            return this.isServiceLinkedRole;
         }
 
         /**
@@ -201,52 +183,30 @@ public class UpdateRoleResponseBody extends TeaModel {
             return this.roleName;
         }
 
-        /**
-         * @return updateDate
-         */
-        public String getUpdateDate() {
-            return this.updateDate;
-        }
-
         public static final class Builder {
-            private Boolean allowConsoleLogin; 
             private String arn; 
             private String assumeRolePolicyDocument; 
             private String createDate; 
             private String description; 
-            private Long maxSessionDuration; 
+            private Boolean isServiceLinkedRole; 
             private String roleId; 
             private String roleName; 
-            private String updateDate; 
 
             private Builder() {
             } 
 
             private Builder(Role model) {
-                this.allowConsoleLogin = model.allowConsoleLogin;
                 this.arn = model.arn;
                 this.assumeRolePolicyDocument = model.assumeRolePolicyDocument;
                 this.createDate = model.createDate;
                 this.description = model.description;
-                this.maxSessionDuration = model.maxSessionDuration;
+                this.isServiceLinkedRole = model.isServiceLinkedRole;
                 this.roleId = model.roleId;
                 this.roleName = model.roleName;
-                this.updateDate = model.updateDate;
             } 
 
             /**
-             * AllowConsoleLogin.
-             */
-            public Builder allowConsoleLogin(Boolean allowConsoleLogin) {
-                this.allowConsoleLogin = allowConsoleLogin;
-                return this;
-            }
-
-            /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>acs:ram::123456789012****:role/ECSAdmin</p>
+             * Arn.
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -254,10 +214,7 @@ public class UpdateRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The trust policy that specifies the trusted entity to assume the RAM role.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{ &quot;Statement&quot;: [ { &quot;Action&quot;: &quot;sts:AssumeRole&quot;, &quot;Effect&quot;: &quot;Allow&quot;, &quot;Principal&quot;: { &quot;RAM&quot;: &quot;acs:ram::123456789012****:root&quot; } } ], &quot;Version&quot;: &quot;1&quot; }</p>
+             * AssumeRolePolicyDocument.
              */
             public Builder assumeRolePolicyDocument(String assumeRolePolicyDocument) {
                 this.assumeRolePolicyDocument = assumeRolePolicyDocument;
@@ -265,10 +222,7 @@ public class UpdateRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the RAM role was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2015-01-23T12:33:18Z</p>
+             * CreateDate.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -276,10 +230,7 @@ public class UpdateRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the RAM role.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ECS administrator</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -287,21 +238,15 @@ public class UpdateRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum session time of the RAM role.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3600</p>
+             * IsServiceLinkedRole.
              */
-            public Builder maxSessionDuration(Long maxSessionDuration) {
-                this.maxSessionDuration = maxSessionDuration;
+            public Builder isServiceLinkedRole(Boolean isServiceLinkedRole) {
+                this.isServiceLinkedRole = isServiceLinkedRole;
                 return this;
             }
 
             /**
-             * <p>The ID of the RAM role.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>901234567890****</p>
+             * RoleId.
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;
@@ -309,24 +254,10 @@ public class UpdateRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the RAM role.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ECSAdmin</p>
+             * RoleName.
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
-                return this;
-            }
-
-            /**
-             * <p>The time when the description of the RAM role was changed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2015-01-23T12:33:18Z</p>
-             */
-            public Builder updateDate(String updateDate) {
-                this.updateDate = updateDate;
                 return this;
             }
 

@@ -29,8 +29,31 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "Ram";
         this.version = "2015-05-01";
-        this.endpointRule = "central";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("cn-beijing", "ram.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "ram.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "ram.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "ram.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "ram.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "ram.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "ram.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "ram.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "ram.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "ram.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "ram.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "ram.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "ram.aliyuncs.com"),
+            new TeaPair("us-east-1", "ram.aliyuncs.com"),
+            new TeaPair("eu-west-1", "ram.aliyuncs.com"),
+            new TeaPair("us-west-1", "ram.aliyuncs.com"),
+            new TeaPair("eu-central-1", "ram.aliyuncs.com"),
+            new TeaPair("me-east-1", "ram.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "ram.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "ram.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "ram.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "ram.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -287,6 +310,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateServiceLinkedRole  CreateServiceLinkedRoleRequest
+     * @return CreateServiceLinkedRoleResponse
+     */
+    @Override
+    public CompletableFuture<CreateServiceLinkedRoleResponse> createServiceLinkedRole(CreateServiceLinkedRoleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateServiceLinkedRole").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateServiceLinkedRoleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateServiceLinkedRoleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>This topic provides an example on how to create a RAM user named <code>alice</code>.</p>
      * 
@@ -453,6 +494,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteRoleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteServiceLinkedRole  DeleteServiceLinkedRoleRequest
+     * @return DeleteServiceLinkedRoleResponse
+     */
+    @Override
+    public CompletableFuture<DeleteServiceLinkedRoleResponse> deleteServiceLinkedRole(DeleteServiceLinkedRoleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteServiceLinkedRole").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteServiceLinkedRoleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteServiceLinkedRoleResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -708,6 +767,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetSecurityPreferenceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetServiceLinkedRoleTemplate  GetServiceLinkedRoleTemplateRequest
+     * @return GetServiceLinkedRoleTemplateResponse
+     */
+    @Override
+    public CompletableFuture<GetServiceLinkedRoleTemplateResponse> getServiceLinkedRoleTemplate(GetServiceLinkedRoleTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetServiceLinkedRoleTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetServiceLinkedRoleTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetServiceLinkedRoleTemplateResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

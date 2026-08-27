@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateRoleRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowConsoleLogin")
+    private Boolean allowConsoleLogin;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AssumeRolePolicyDocument")
     private String assumeRolePolicyDocument;
 
@@ -39,6 +43,7 @@ public class CreateRoleRequest extends Request {
 
     private CreateRoleRequest(Builder builder) {
         super(builder);
+        this.allowConsoleLogin = builder.allowConsoleLogin;
         this.assumeRolePolicyDocument = builder.assumeRolePolicyDocument;
         this.description = builder.description;
         this.maxSessionDuration = builder.maxSessionDuration;
@@ -57,6 +62,13 @@ public class CreateRoleRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return allowConsoleLogin
+     */
+    public Boolean getAllowConsoleLogin() {
+        return this.allowConsoleLogin;
     }
 
     /**
@@ -95,6 +107,7 @@ public class CreateRoleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateRoleRequest, Builder> {
+        private Boolean allowConsoleLogin; 
         private String assumeRolePolicyDocument; 
         private String description; 
         private Long maxSessionDuration; 
@@ -107,12 +120,22 @@ public class CreateRoleRequest extends Request {
 
         private Builder(CreateRoleRequest request) {
             super(request);
+            this.allowConsoleLogin = request.allowConsoleLogin;
             this.assumeRolePolicyDocument = request.assumeRolePolicyDocument;
             this.description = request.description;
             this.maxSessionDuration = request.maxSessionDuration;
             this.roleName = request.roleName;
             this.tag = request.tag;
         } 
+
+        /**
+         * AllowConsoleLogin.
+         */
+        public Builder allowConsoleLogin(Boolean allowConsoleLogin) {
+            this.putQueryParameter("AllowConsoleLogin", allowConsoleLogin);
+            this.allowConsoleLogin = allowConsoleLogin;
+            return this;
+        }
 
         /**
          * <p>The trust policy that specifies one or more trusted entities to assume the RAM role. The trusted entities can be Alibaba Cloud accounts, Alibaba Cloud services, or identity providers (IdPs).</p>

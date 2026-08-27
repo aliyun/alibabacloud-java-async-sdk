@@ -97,7 +97,85 @@ public class GetRoleResponseBody extends TeaModel {
      *
      * <p>GetRoleResponseBody</p>
      */
+    public static class LatestDeletionTask extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
+        private String createDate;
+
+        @com.aliyun.core.annotation.NameInMap("DeletionTaskId")
+        private String deletionTaskId;
+
+        private LatestDeletionTask(Builder builder) {
+            this.createDate = builder.createDate;
+            this.deletionTaskId = builder.deletionTaskId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LatestDeletionTask create() {
+            return builder().build();
+        }
+
+        /**
+         * @return createDate
+         */
+        public String getCreateDate() {
+            return this.createDate;
+        }
+
+        /**
+         * @return deletionTaskId
+         */
+        public String getDeletionTaskId() {
+            return this.deletionTaskId;
+        }
+
+        public static final class Builder {
+            private String createDate; 
+            private String deletionTaskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(LatestDeletionTask model) {
+                this.createDate = model.createDate;
+                this.deletionTaskId = model.deletionTaskId;
+            } 
+
+            /**
+             * CreateDate.
+             */
+            public Builder createDate(String createDate) {
+                this.createDate = createDate;
+                return this;
+            }
+
+            /**
+             * DeletionTaskId.
+             */
+            public Builder deletionTaskId(String deletionTaskId) {
+                this.deletionTaskId = deletionTaskId;
+                return this;
+            }
+
+            public LatestDeletionTask build() {
+                return new LatestDeletionTask(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetRoleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRoleResponseBody</p>
+     */
     public static class Role extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AllowConsoleLogin")
+        private Boolean allowConsoleLogin;
+
         @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
@@ -110,6 +188,12 @@ public class GetRoleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("IsServiceLinkedRole")
+        private Boolean isServiceLinkedRole;
+
+        @com.aliyun.core.annotation.NameInMap("LatestDeletionTask")
+        private LatestDeletionTask latestDeletionTask;
+
         @com.aliyun.core.annotation.NameInMap("MaxSessionDuration")
         private Long maxSessionDuration;
 
@@ -119,17 +203,24 @@ public class GetRoleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RoleName")
         private String roleName;
 
+        @com.aliyun.core.annotation.NameInMap("RolePrincipalName")
+        private String rolePrincipalName;
+
         @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
         private Role(Builder builder) {
+            this.allowConsoleLogin = builder.allowConsoleLogin;
             this.arn = builder.arn;
             this.assumeRolePolicyDocument = builder.assumeRolePolicyDocument;
             this.createDate = builder.createDate;
             this.description = builder.description;
+            this.isServiceLinkedRole = builder.isServiceLinkedRole;
+            this.latestDeletionTask = builder.latestDeletionTask;
             this.maxSessionDuration = builder.maxSessionDuration;
             this.roleId = builder.roleId;
             this.roleName = builder.roleName;
+            this.rolePrincipalName = builder.rolePrincipalName;
             this.updateDate = builder.updateDate;
         }
 
@@ -139,6 +230,13 @@ public class GetRoleResponseBody extends TeaModel {
 
         public static Role create() {
             return builder().build();
+        }
+
+        /**
+         * @return allowConsoleLogin
+         */
+        public Boolean getAllowConsoleLogin() {
+            return this.allowConsoleLogin;
         }
 
         /**
@@ -170,6 +268,20 @@ public class GetRoleResponseBody extends TeaModel {
         }
 
         /**
+         * @return isServiceLinkedRole
+         */
+        public Boolean getIsServiceLinkedRole() {
+            return this.isServiceLinkedRole;
+        }
+
+        /**
+         * @return latestDeletionTask
+         */
+        public LatestDeletionTask getLatestDeletionTask() {
+            return this.latestDeletionTask;
+        }
+
+        /**
          * @return maxSessionDuration
          */
         public Long getMaxSessionDuration() {
@@ -191,6 +303,13 @@ public class GetRoleResponseBody extends TeaModel {
         }
 
         /**
+         * @return rolePrincipalName
+         */
+        public String getRolePrincipalName() {
+            return this.rolePrincipalName;
+        }
+
+        /**
          * @return updateDate
          */
         public String getUpdateDate() {
@@ -198,28 +317,44 @@ public class GetRoleResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean allowConsoleLogin; 
             private String arn; 
             private String assumeRolePolicyDocument; 
             private String createDate; 
             private String description; 
+            private Boolean isServiceLinkedRole; 
+            private LatestDeletionTask latestDeletionTask; 
             private Long maxSessionDuration; 
             private String roleId; 
             private String roleName; 
+            private String rolePrincipalName; 
             private String updateDate; 
 
             private Builder() {
             } 
 
             private Builder(Role model) {
+                this.allowConsoleLogin = model.allowConsoleLogin;
                 this.arn = model.arn;
                 this.assumeRolePolicyDocument = model.assumeRolePolicyDocument;
                 this.createDate = model.createDate;
                 this.description = model.description;
+                this.isServiceLinkedRole = model.isServiceLinkedRole;
+                this.latestDeletionTask = model.latestDeletionTask;
                 this.maxSessionDuration = model.maxSessionDuration;
                 this.roleId = model.roleId;
                 this.roleName = model.roleName;
+                this.rolePrincipalName = model.rolePrincipalName;
                 this.updateDate = model.updateDate;
             } 
+
+            /**
+             * AllowConsoleLogin.
+             */
+            public Builder allowConsoleLogin(Boolean allowConsoleLogin) {
+                this.allowConsoleLogin = allowConsoleLogin;
+                return this;
+            }
 
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
@@ -266,6 +401,22 @@ public class GetRoleResponseBody extends TeaModel {
             }
 
             /**
+             * IsServiceLinkedRole.
+             */
+            public Builder isServiceLinkedRole(Boolean isServiceLinkedRole) {
+                this.isServiceLinkedRole = isServiceLinkedRole;
+                return this;
+            }
+
+            /**
+             * LatestDeletionTask.
+             */
+            public Builder latestDeletionTask(LatestDeletionTask latestDeletionTask) {
+                this.latestDeletionTask = latestDeletionTask;
+                return this;
+            }
+
+            /**
              * <p>The maximum session duration of the RAM role.</p>
              * 
              * <strong>example:</strong>
@@ -295,6 +446,14 @@ public class GetRoleResponseBody extends TeaModel {
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
+                return this;
+            }
+
+            /**
+             * RolePrincipalName.
+             */
+            public Builder rolePrincipalName(String rolePrincipalName) {
+                this.rolePrincipalName = rolePrincipalName;
                 return this;
             }
 

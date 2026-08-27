@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateRoleRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewAllowConsoleLogin")
+    private Boolean newAllowConsoleLogin;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NewAssumeRolePolicyDocument")
     private String newAssumeRolePolicyDocument;
 
@@ -35,6 +39,7 @@ public class UpdateRoleRequest extends Request {
 
     private UpdateRoleRequest(Builder builder) {
         super(builder);
+        this.newAllowConsoleLogin = builder.newAllowConsoleLogin;
         this.newAssumeRolePolicyDocument = builder.newAssumeRolePolicyDocument;
         this.newDescription = builder.newDescription;
         this.newMaxSessionDuration = builder.newMaxSessionDuration;
@@ -52,6 +57,13 @@ public class UpdateRoleRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return newAllowConsoleLogin
+     */
+    public Boolean getNewAllowConsoleLogin() {
+        return this.newAllowConsoleLogin;
     }
 
     /**
@@ -83,6 +95,7 @@ public class UpdateRoleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateRoleRequest, Builder> {
+        private Boolean newAllowConsoleLogin; 
         private String newAssumeRolePolicyDocument; 
         private String newDescription; 
         private Long newMaxSessionDuration; 
@@ -94,11 +107,21 @@ public class UpdateRoleRequest extends Request {
 
         private Builder(UpdateRoleRequest request) {
             super(request);
+            this.newAllowConsoleLogin = request.newAllowConsoleLogin;
             this.newAssumeRolePolicyDocument = request.newAssumeRolePolicyDocument;
             this.newDescription = request.newDescription;
             this.newMaxSessionDuration = request.newMaxSessionDuration;
             this.roleName = request.roleName;
         } 
+
+        /**
+         * NewAllowConsoleLogin.
+         */
+        public Builder newAllowConsoleLogin(Boolean newAllowConsoleLogin) {
+            this.putQueryParameter("NewAllowConsoleLogin", newAllowConsoleLogin);
+            this.newAllowConsoleLogin = newAllowConsoleLogin;
+            return this;
+        }
 
         /**
          * <p>The trust policy that specifies the trusted entity to assume the RAM role.</p>

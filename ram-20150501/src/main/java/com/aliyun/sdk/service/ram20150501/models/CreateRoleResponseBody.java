@@ -98,6 +98,9 @@ public class CreateRoleResponseBody extends TeaModel {
      * <p>CreateRoleResponseBody</p>
      */
     public static class Role extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AllowConsoleLogin")
+        private Boolean allowConsoleLogin;
+
         @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
@@ -120,6 +123,7 @@ public class CreateRoleResponseBody extends TeaModel {
         private String roleName;
 
         private Role(Builder builder) {
+            this.allowConsoleLogin = builder.allowConsoleLogin;
             this.arn = builder.arn;
             this.assumeRolePolicyDocument = builder.assumeRolePolicyDocument;
             this.createDate = builder.createDate;
@@ -135,6 +139,13 @@ public class CreateRoleResponseBody extends TeaModel {
 
         public static Role create() {
             return builder().build();
+        }
+
+        /**
+         * @return allowConsoleLogin
+         */
+        public Boolean getAllowConsoleLogin() {
+            return this.allowConsoleLogin;
         }
 
         /**
@@ -187,6 +198,7 @@ public class CreateRoleResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean allowConsoleLogin; 
             private String arn; 
             private String assumeRolePolicyDocument; 
             private String createDate; 
@@ -199,6 +211,7 @@ public class CreateRoleResponseBody extends TeaModel {
             } 
 
             private Builder(Role model) {
+                this.allowConsoleLogin = model.allowConsoleLogin;
                 this.arn = model.arn;
                 this.assumeRolePolicyDocument = model.assumeRolePolicyDocument;
                 this.createDate = model.createDate;
@@ -207,6 +220,14 @@ public class CreateRoleResponseBody extends TeaModel {
                 this.roleId = model.roleId;
                 this.roleName = model.roleName;
             } 
+
+            /**
+             * AllowConsoleLogin.
+             */
+            public Builder allowConsoleLogin(Boolean allowConsoleLogin) {
+                this.allowConsoleLogin = allowConsoleLogin;
+                return this;
+            }
 
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
