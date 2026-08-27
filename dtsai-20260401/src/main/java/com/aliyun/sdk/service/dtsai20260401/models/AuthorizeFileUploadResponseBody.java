@@ -20,6 +20,9 @@ public class AuthorizeFileUploadResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessKeyId")
     private String accessKeyId;
 
+    @com.aliyun.core.annotation.NameInMap("Authorizations")
+    private java.util.List<Authorizations> authorizations;
+
     @com.aliyun.core.annotation.NameInMap("Bucket")
     private String bucket;
 
@@ -34,6 +37,9 @@ public class AuthorizeFileUploadResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
+
+    @com.aliyun.core.annotation.NameInMap("ExpireTime")
+    private Long expireTime;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -55,11 +61,13 @@ public class AuthorizeFileUploadResponseBody extends TeaModel {
 
     private AuthorizeFileUploadResponseBody(Builder builder) {
         this.accessKeyId = builder.accessKeyId;
+        this.authorizations = builder.authorizations;
         this.bucket = builder.bucket;
         this.encodedPolicy = builder.encodedPolicy;
         this.endpoint = builder.endpoint;
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
+        this.expireTime = builder.expireTime;
         this.httpStatusCode = builder.httpStatusCode;
         this.objectKey = builder.objectKey;
         this.requestId = builder.requestId;
@@ -85,6 +93,13 @@ public class AuthorizeFileUploadResponseBody extends TeaModel {
      */
     public String getAccessKeyId() {
         return this.accessKeyId;
+    }
+
+    /**
+     * @return authorizations
+     */
+    public java.util.List<Authorizations> getAuthorizations() {
+        return this.authorizations;
     }
 
     /**
@@ -120,6 +135,13 @@ public class AuthorizeFileUploadResponseBody extends TeaModel {
      */
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    /**
+     * @return expireTime
+     */
+    public Long getExpireTime() {
+        return this.expireTime;
     }
 
     /**
@@ -166,11 +188,13 @@ public class AuthorizeFileUploadResponseBody extends TeaModel {
 
     public static final class Builder {
         private String accessKeyId; 
+        private java.util.List<Authorizations> authorizations; 
         private String bucket; 
         private String encodedPolicy; 
         private String endpoint; 
         private String errorCode; 
         private String errorMessage; 
+        private Long expireTime; 
         private Integer httpStatusCode; 
         private String objectKey; 
         private String requestId; 
@@ -183,11 +207,13 @@ public class AuthorizeFileUploadResponseBody extends TeaModel {
 
         private Builder(AuthorizeFileUploadResponseBody model) {
             this.accessKeyId = model.accessKeyId;
+            this.authorizations = model.authorizations;
             this.bucket = model.bucket;
             this.encodedPolicy = model.encodedPolicy;
             this.endpoint = model.endpoint;
             this.errorCode = model.errorCode;
             this.errorMessage = model.errorMessage;
+            this.expireTime = model.expireTime;
             this.httpStatusCode = model.httpStatusCode;
             this.objectKey = model.objectKey;
             this.requestId = model.requestId;
@@ -201,6 +227,14 @@ public class AuthorizeFileUploadResponseBody extends TeaModel {
          */
         public Builder accessKeyId(String accessKeyId) {
             this.accessKeyId = accessKeyId;
+            return this;
+        }
+
+        /**
+         * Authorizations.
+         */
+        public Builder authorizations(java.util.List<Authorizations> authorizations) {
+            this.authorizations = authorizations;
             return this;
         }
 
@@ -244,6 +278,14 @@ public class AuthorizeFileUploadResponseBody extends TeaModel {
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
+            return this;
+        }
+
+        /**
+         * ExpireTime.
+         */
+        public Builder expireTime(Long expireTime) {
+            this.expireTime = expireTime;
             return this;
         }
 
@@ -301,4 +343,100 @@ public class AuthorizeFileUploadResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AuthorizeFileUploadResponseBody} extends {@link TeaModel}
+     *
+     * <p>AuthorizeFileUploadResponseBody</p>
+     */
+    public static class Authorizations extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EncodedPolicy")
+        private String encodedPolicy;
+
+        @com.aliyun.core.annotation.NameInMap("ObjectKey")
+        private String objectKey;
+
+        @com.aliyun.core.annotation.NameInMap("Signature")
+        private String signature;
+
+        private Authorizations(Builder builder) {
+            this.encodedPolicy = builder.encodedPolicy;
+            this.objectKey = builder.objectKey;
+            this.signature = builder.signature;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Authorizations create() {
+            return builder().build();
+        }
+
+        /**
+         * @return encodedPolicy
+         */
+        public String getEncodedPolicy() {
+            return this.encodedPolicy;
+        }
+
+        /**
+         * @return objectKey
+         */
+        public String getObjectKey() {
+            return this.objectKey;
+        }
+
+        /**
+         * @return signature
+         */
+        public String getSignature() {
+            return this.signature;
+        }
+
+        public static final class Builder {
+            private String encodedPolicy; 
+            private String objectKey; 
+            private String signature; 
+
+            private Builder() {
+            } 
+
+            private Builder(Authorizations model) {
+                this.encodedPolicy = model.encodedPolicy;
+                this.objectKey = model.objectKey;
+                this.signature = model.signature;
+            } 
+
+            /**
+             * EncodedPolicy.
+             */
+            public Builder encodedPolicy(String encodedPolicy) {
+                this.encodedPolicy = encodedPolicy;
+                return this;
+            }
+
+            /**
+             * ObjectKey.
+             */
+            public Builder objectKey(String objectKey) {
+                this.objectKey = objectKey;
+                return this;
+            }
+
+            /**
+             * Signature.
+             */
+            public Builder signature(String signature) {
+                this.signature = signature;
+                return this;
+            }
+
+            public Authorizations build() {
+                return new Authorizations(this);
+            } 
+
+        } 
+
+    }
 }

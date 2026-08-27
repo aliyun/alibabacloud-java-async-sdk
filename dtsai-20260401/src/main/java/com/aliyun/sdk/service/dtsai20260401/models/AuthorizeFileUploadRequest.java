@@ -22,6 +22,10 @@ public class AuthorizeFileUploadRequest extends Request {
     private String agentName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BatchSize")
+    private String batchSize;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FileFormat")
     private String fileFormat;
 
@@ -33,6 +37,7 @@ public class AuthorizeFileUploadRequest extends Request {
     private AuthorizeFileUploadRequest(Builder builder) {
         super(builder);
         this.agentName = builder.agentName;
+        this.batchSize = builder.batchSize;
         this.fileFormat = builder.fileFormat;
         this.regionId = builder.regionId;
     }
@@ -58,6 +63,13 @@ public class AuthorizeFileUploadRequest extends Request {
     }
 
     /**
+     * @return batchSize
+     */
+    public String getBatchSize() {
+        return this.batchSize;
+    }
+
+    /**
      * @return fileFormat
      */
     public String getFileFormat() {
@@ -73,6 +85,7 @@ public class AuthorizeFileUploadRequest extends Request {
 
     public static final class Builder extends Request.Builder<AuthorizeFileUploadRequest, Builder> {
         private String agentName; 
+        private String batchSize; 
         private String fileFormat; 
         private String regionId; 
 
@@ -83,6 +96,7 @@ public class AuthorizeFileUploadRequest extends Request {
         private Builder(AuthorizeFileUploadRequest request) {
             super(request);
             this.agentName = request.agentName;
+            this.batchSize = request.batchSize;
             this.fileFormat = request.fileFormat;
             this.regionId = request.regionId;
         } 
@@ -93,6 +107,15 @@ public class AuthorizeFileUploadRequest extends Request {
         public Builder agentName(String agentName) {
             this.putQueryParameter("AgentName", agentName);
             this.agentName = agentName;
+            return this;
+        }
+
+        /**
+         * BatchSize.
+         */
+        public Builder batchSize(String batchSize) {
+            this.putQueryParameter("BatchSize", batchSize);
+            this.batchSize = batchSize;
             return this;
         }
 

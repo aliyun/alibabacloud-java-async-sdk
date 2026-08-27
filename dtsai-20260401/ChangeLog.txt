@@ -1,3 +1,6 @@
+2026-08-27 Version: 1.0.5
+- Generated java-async 2026-04-01 for DtsAI.
+
 2026-08-24 Version: 1.0.4
 - Generated java-async 2026-04-01 for DtsAI.
 
