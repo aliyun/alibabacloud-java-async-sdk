@@ -30,6 +30,10 @@ public class GetDataAgentTaskModelUsageRequest extends Request {
     private Long endTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    private java.util.List<String> instanceIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PayLevel")
     private String payLevel;
 
@@ -42,6 +46,7 @@ public class GetDataAgentTaskModelUsageRequest extends Request {
         this.beginTime = builder.beginTime;
         this.DMSUnit = builder.DMSUnit;
         this.endTime = builder.endTime;
+        this.instanceIds = builder.instanceIds;
         this.payLevel = builder.payLevel;
         this.regionId = builder.regionId;
     }
@@ -81,6 +86,13 @@ public class GetDataAgentTaskModelUsageRequest extends Request {
     }
 
     /**
+     * @return instanceIds
+     */
+    public java.util.List<String> getInstanceIds() {
+        return this.instanceIds;
+    }
+
+    /**
      * @return payLevel
      */
     public String getPayLevel() {
@@ -98,6 +110,7 @@ public class GetDataAgentTaskModelUsageRequest extends Request {
         private Long beginTime; 
         private String DMSUnit; 
         private Long endTime; 
+        private java.util.List<String> instanceIds; 
         private String payLevel; 
         private String regionId; 
 
@@ -110,6 +123,7 @@ public class GetDataAgentTaskModelUsageRequest extends Request {
             this.beginTime = request.beginTime;
             this.DMSUnit = request.DMSUnit;
             this.endTime = request.endTime;
+            this.instanceIds = request.instanceIds;
             this.payLevel = request.payLevel;
             this.regionId = request.regionId;
         } 
@@ -138,6 +152,16 @@ public class GetDataAgentTaskModelUsageRequest extends Request {
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * InstanceIds.
+         */
+        public Builder instanceIds(java.util.List<String> instanceIds) {
+            String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
+            this.putQueryParameter("InstanceIds", instanceIdsShrink);
+            this.instanceIds = instanceIds;
             return this;
         }
 

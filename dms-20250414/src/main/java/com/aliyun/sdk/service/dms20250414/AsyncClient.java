@@ -104,6 +104,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDataAgentSessionResponse> createDataAgentSession(CreateDataAgentSessionRequest request);
 
     /**
+     * @param request the request parameters of CreateDataAgentSkillMeta  CreateDataAgentSkillMetaRequest
+     * @return CreateDataAgentSkillMetaResponse
+     */
+    CompletableFuture<CreateDataAgentSkillMetaResponse> createDataAgentSkillMeta(CreateDataAgentSkillMetaRequest request);
+
+    /**
      * @param request the request parameters of CreateDataAgentTheme  CreateDataAgentThemeRequest
      * @return CreateDataAgentThemeResponse
      */
@@ -186,6 +192,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDataAgentMemoryResponse
      */
     CompletableFuture<DeleteDataAgentMemoryResponse> deleteDataAgentMemory(DeleteDataAgentMemoryRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDataAgentSkillMeta  DeleteDataAgentSkillMetaRequest
+     * @return DeleteDataAgentSkillMetaResponse
+     */
+    CompletableFuture<DeleteDataAgentSkillMetaResponse> deleteDataAgentSkillMeta(DeleteDataAgentSkillMetaRequest request);
 
     /**
      * @param request the request parameters of DeleteDataAgentWorkspace  DeleteDataAgentWorkspaceRequest
@@ -300,6 +312,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeKnowledgeBaseUploadSignatureResponse
      */
     CompletableFuture<DescribeKnowledgeBaseUploadSignatureResponse> describeKnowledgeBaseUploadSignature(DescribeKnowledgeBaseUploadSignatureRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSkillFileUploadSignature  DescribeSkillFileUploadSignatureRequest
+     * @return DescribeSkillFileUploadSignatureResponse
+     */
+    CompletableFuture<DescribeSkillFileUploadSignatureResponse> describeSkillFileUploadSignature(DescribeSkillFileUploadSignatureRequest request);
 
     /**
      * @param request the request parameters of FileUploadCallback  FileUploadCallbackRequest
@@ -512,6 +530,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListDataAgentSessionResponse
      */
     CompletableFuture<ListDataAgentSessionResponse> listDataAgentSession(ListDataAgentSessionRequest request);
+
+    /**
+     * @param request the request parameters of ListDataAgentSkillMeta  ListDataAgentSkillMetaRequest
+     * @return ListDataAgentSkillMetaResponse
+     */
+    CompletableFuture<ListDataAgentSkillMetaResponse> listDataAgentSkillMeta(ListDataAgentSkillMetaRequest request);
 
     /**
      * @param request the request parameters of ListDataAgentTheme  ListDataAgentThemeRequest
