@@ -21,9 +21,14 @@ public class DescribeModelOperatorRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
+    private String region;
+
     private DescribeModelOperatorRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.region = builder.region;
     }
 
     public static Builder builder() {
@@ -46,8 +51,16 @@ public class DescribeModelOperatorRequest extends Request {
         return this.instanceId;
     }
 
+    /**
+     * @return region
+     */
+    public String getRegion() {
+        return this.region;
+    }
+
     public static final class Builder extends Request.Builder<DescribeModelOperatorRequest, Builder> {
         private String instanceId; 
+        private String region; 
 
         private Builder() {
             super();
@@ -56,6 +69,7 @@ public class DescribeModelOperatorRequest extends Request {
         private Builder(DescribeModelOperatorRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.region = request.region;
         } 
 
         /**
@@ -64,6 +78,15 @@ public class DescribeModelOperatorRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * Region.
+         */
+        public Builder region(String region) {
+            this.putQueryParameter("Region", region);
+            this.region = region;
             return this;
         }
 

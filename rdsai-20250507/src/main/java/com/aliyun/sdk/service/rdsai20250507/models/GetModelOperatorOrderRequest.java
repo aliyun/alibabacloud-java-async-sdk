@@ -17,8 +17,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetModelOperatorOrderRequest</p>
  */
 public class GetModelOperatorOrderRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
+    private String region;
+
     private GetModelOperatorOrderRequest(Builder builder) {
         super(builder);
+        this.region = builder.region;
     }
 
     public static Builder builder() {
@@ -34,7 +39,15 @@ public class GetModelOperatorOrderRequest extends Request {
         return new Builder(this);
     }
 
+    /**
+     * @return region
+     */
+    public String getRegion() {
+        return this.region;
+    }
+
     public static final class Builder extends Request.Builder<GetModelOperatorOrderRequest, Builder> {
+        private String region; 
 
         private Builder() {
             super();
@@ -42,7 +55,17 @@ public class GetModelOperatorOrderRequest extends Request {
 
         private Builder(GetModelOperatorOrderRequest request) {
             super(request);
+            this.region = request.region;
         } 
+
+        /**
+         * Region.
+         */
+        public Builder region(String region) {
+            this.putQueryParameter("Region", region);
+            this.region = region;
+            return this;
+        }
 
         @Override
         public GetModelOperatorOrderRequest build() {
