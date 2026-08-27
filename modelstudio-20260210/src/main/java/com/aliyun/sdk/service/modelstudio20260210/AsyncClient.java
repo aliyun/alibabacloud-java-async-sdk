@@ -92,6 +92,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetApiKeyResponse> getApiKey(GetApiKeyRequest request);
 
     /**
+     * @param request the request parameters of GetBillingOverview  GetBillingOverviewRequest
+     * @return GetBillingOverviewResponse
+     */
+    CompletableFuture<GetBillingOverviewResponse> getBillingOverview(GetBillingOverviewRequest request);
+
+    /**
+     * @param request the request parameters of GetBillingTrend  GetBillingTrendRequest
+     * @return GetBillingTrendResponse
+     */
+    CompletableFuture<GetBillingTrendResponse> getBillingTrend(GetBillingTrendRequest request);
+
+    /**
      * @param request the request parameters of GetOrganization  GetOrganizationRequest
      * @return GetOrganizationResponse
      */

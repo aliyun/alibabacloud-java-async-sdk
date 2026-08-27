@@ -34,7 +34,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-beijing", "modelstudio.cn-beijing.aliyuncs.com"),
             new TeaPair("cn-hongkong", "modelstudio.cn-hongkong.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "modelstudio.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "modelstudio.ap-northeast-1.aliyuncs.com"),
             new TeaPair("us-east-1", "modelstudio.us-east-1.aliyuncs.com"),
             new TeaPair("eu-central-1", "modelstudio.eu-central-1.aliyuncs.com")
         );
@@ -257,6 +256,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetApiKeyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetBillingOverview  GetBillingOverviewRequest
+     * @return GetBillingOverviewResponse
+     */
+    @Override
+    public CompletableFuture<GetBillingOverviewResponse> getBillingOverview(GetBillingOverviewRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetBillingOverview").setMethod(HttpMethod.GET).setPathRegex("/modelstudio/billing/overview").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetBillingOverviewResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetBillingOverviewResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetBillingTrend  GetBillingTrendRequest
+     * @return GetBillingTrendResponse
+     */
+    @Override
+    public CompletableFuture<GetBillingTrendResponse> getBillingTrend(GetBillingTrendRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetBillingTrend").setMethod(HttpMethod.GET).setPathRegex("/modelstudio/billing/trend").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetBillingTrendResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetBillingTrendResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
