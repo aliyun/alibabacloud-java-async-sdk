@@ -62,6 +62,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchRemoveConsumerGroupConsumersResponse> batchRemoveConsumerGroupConsumers(BatchRemoveConsumerGroupConsumersRequest request);
 
     /**
+     * @param request the request parameters of BatchUpdateHttpApiOperation  BatchUpdateHttpApiOperationRequest
+     * @return BatchUpdateHttpApiOperationResponse
+     */
+    CompletableFuture<BatchUpdateHttpApiOperationResponse> batchUpdateHttpApiOperation(BatchUpdateHttpApiOperationRequest request);
+
+    /**
      * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
      */
@@ -150,10 +156,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateHttpApiRouteResponse> createHttpApiRoute(CreateHttpApiRouteRequest request);
 
     /**
+     * @param request the request parameters of CreateHttpApiVersion  CreateHttpApiVersionRequest
+     * @return CreateHttpApiVersionResponse
+     */
+    CompletableFuture<CreateHttpApiVersionResponse> createHttpApiVersion(CreateHttpApiVersionRequest request);
+
+    /**
      * @param request the request parameters of CreateMcpServer  CreateMcpServerRequest
      * @return CreateMcpServerResponse
      */
     CompletableFuture<CreateMcpServerResponse> createMcpServer(CreateMcpServerRequest request);
+
+    /**
+     * @param request the request parameters of CreateMigrationTask  CreateMigrationTaskRequest
+     * @return CreateMigrationTaskResponse
+     */
+    CompletableFuture<CreateMigrationTaskResponse> createMigrationTask(CreateMigrationTaskRequest request);
 
     /**
      * @param request the request parameters of CreatePluginAttachment  CreatePluginAttachmentRequest
@@ -168,6 +186,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePluginClassResponse> createPluginClass(CreatePluginClassRequest request);
 
     /**
+     * @param request the request parameters of CreatePluginWorkspace  CreatePluginWorkspaceRequest
+     * @return CreatePluginWorkspaceResponse
+     */
+    CompletableFuture<CreatePluginWorkspaceResponse> createPluginWorkspace(CreatePluginWorkspaceRequest request);
+
+    /**
      * @param request the request parameters of CreatePolicy  CreatePolicyRequest
      * @return CreatePolicyResponse
      */
@@ -178,6 +202,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreatePolicyAttachmentResponse
      */
     CompletableFuture<CreatePolicyAttachmentResponse> createPolicyAttachment(CreatePolicyAttachmentRequest request);
+
+    /**
+     * @param request the request parameters of CreateRiskCheckTask  CreateRiskCheckTaskRequest
+     * @return CreateRiskCheckTaskResponse
+     */
+    CompletableFuture<CreateRiskCheckTaskResponse> createRiskCheckTask(CreateRiskCheckTaskRequest request);
 
     /**
      * @param request the request parameters of CreateSecret  CreateSecretRequest
@@ -292,6 +322,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteMcpServerResponse> deleteMcpServer(DeleteMcpServerRequest request);
 
     /**
+     * @param request the request parameters of DeleteMigrationTask  DeleteMigrationTaskRequest
+     * @return DeleteMigrationTaskResponse
+     */
+    CompletableFuture<DeleteMigrationTaskResponse> deleteMigrationTask(DeleteMigrationTaskRequest request);
+
+    /**
      * @param request the request parameters of DeletePluginAttachment  DeletePluginAttachmentRequest
      * @return DeletePluginAttachmentResponse
      */
@@ -356,6 +392,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeRegionsResponse
      */
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
+
+    /**
+     * @param request the request parameters of DetachAndDeletePolicy  DetachAndDeletePolicyRequest
+     * @return DetachAndDeletePolicyResponse
+     */
+    CompletableFuture<DetachAndDeletePolicyResponse> detachAndDeletePolicy(DetachAndDeletePolicyRequest request);
 
     /**
      * @param request the request parameters of ExportHttpApi  ExportHttpApiRequest
@@ -431,6 +473,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetGatewayResponse> getGateway(GetGatewayRequest request);
 
     /**
+     * @param request the request parameters of GetGatewayElasticPolicy  GetGatewayElasticPolicyRequest
+     * @return GetGatewayElasticPolicyResponse
+     */
+    CompletableFuture<GetGatewayElasticPolicyResponse> getGatewayElasticPolicy(GetGatewayElasticPolicyRequest request);
+
+    /**
      * @param request the request parameters of GetGatewayQuotaRule  GetGatewayQuotaRuleRequest
      * @return GetGatewayQuotaRuleResponse
      */
@@ -470,6 +518,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetMcpServerResponse> getMcpServer(GetMcpServerRequest request);
 
     /**
+     * @param request the request parameters of GetMigrationNamespacedServices  GetMigrationNamespacedServicesRequest
+     * @return GetMigrationNamespacedServicesResponse
+     */
+    CompletableFuture<GetMigrationNamespacedServicesResponse> getMigrationNamespacedServices(GetMigrationNamespacedServicesRequest request);
+
+    /**
+     * @param request the request parameters of GetMigrationTask  GetMigrationTaskRequest
+     * @return GetMigrationTaskResponse
+     */
+    CompletableFuture<GetMigrationTaskResponse> getMigrationTask(GetMigrationTaskRequest request);
+
+    /**
      * @param request the request parameters of GetPluginAttachment  GetPluginAttachmentRequest
      * @return GetPluginAttachmentResponse
      */
@@ -480,6 +540,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetPluginClassResponse
      */
     CompletableFuture<GetPluginClassResponse> getPluginClass(GetPluginClassRequest request);
+
+    /**
+     * @param request the request parameters of GetPluginWorkspace  GetPluginWorkspaceRequest
+     * @return GetPluginWorkspaceResponse
+     */
+    CompletableFuture<GetPluginWorkspaceResponse> getPluginWorkspace(GetPluginWorkspaceRequest request);
 
     /**
      * @param request the request parameters of GetPolicy  GetPolicyRequest
@@ -498,6 +564,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetResourceOverviewResponse
      */
     CompletableFuture<GetResourceOverviewResponse> getResourceOverview(GetResourceOverviewRequest request);
+
+    /**
+     * @param request the request parameters of GetRiskNotification  GetRiskNotificationRequest
+     * @return GetRiskNotificationResponse
+     */
+    CompletableFuture<GetRiskNotificationResponse> getRiskNotification(GetRiskNotificationRequest request);
 
     /**
      * <b>description</b> :
@@ -543,6 +615,14 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return InstallPluginResponse
      */
     CompletableFuture<InstallPluginResponse> installPlugin(InstallPluginRequest request);
+
+    /**
+     * @param request the request parameters of InvokeAIAgent  InvokeAIAgentRequest
+     * @return InvokeAIAgentResponse
+     */
+    CompletableFuture<InvokeAIAgentResponse> invokeAIAgent(InvokeAIAgentRequest request);
+
+    ResponseIterable<InvokeAIAgentResponseBody> invokeAIAgentWithResponseIterable(InvokeAIAgentRequest request);
 
     /**
      * @param request the request parameters of ListAiModelCards  ListAiModelCardsRequest
@@ -612,10 +692,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListExternalServicesResponse> listExternalServices(ListExternalServicesRequest request);
 
     /**
+     * @param request the request parameters of ListGatewayAuthorizableSecurityGroups  ListGatewayAuthorizableSecurityGroupsRequest
+     * @return ListGatewayAuthorizableSecurityGroupsResponse
+     */
+    CompletableFuture<ListGatewayAuthorizableSecurityGroupsResponse> listGatewayAuthorizableSecurityGroups(ListGatewayAuthorizableSecurityGroupsRequest request);
+
+    /**
+     * @param request the request parameters of ListGatewayAuthorizedSecurityGroupRules  ListGatewayAuthorizedSecurityGroupRulesRequest
+     * @return ListGatewayAuthorizedSecurityGroupRulesResponse
+     */
+    CompletableFuture<ListGatewayAuthorizedSecurityGroupRulesResponse> listGatewayAuthorizedSecurityGroupRules(ListGatewayAuthorizedSecurityGroupRulesRequest request);
+
+    /**
+     * @param request the request parameters of ListGatewayErrorAccessLogs  ListGatewayErrorAccessLogsRequest
+     * @return ListGatewayErrorAccessLogsResponse
+     */
+    CompletableFuture<ListGatewayErrorAccessLogsResponse> listGatewayErrorAccessLogs(ListGatewayErrorAccessLogsRequest request);
+
+    /**
      * @param request the request parameters of ListGatewayFeatures  ListGatewayFeaturesRequest
      * @return ListGatewayFeaturesResponse
      */
     CompletableFuture<ListGatewayFeaturesResponse> listGatewayFeatures(ListGatewayFeaturesRequest request);
+
+    /**
+     * @param request the request parameters of ListGatewayLoadBalancers  ListGatewayLoadBalancersRequest
+     * @return ListGatewayLoadBalancersResponse
+     */
+    CompletableFuture<ListGatewayLoadBalancersResponse> listGatewayLoadBalancers(ListGatewayLoadBalancersRequest request);
 
     /**
      * @param request the request parameters of ListGatewayQuotaRules  ListGatewayQuotaRulesRequest
@@ -628,6 +732,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListGatewaysResponse
      */
     CompletableFuture<ListGatewaysResponse> listGateways(ListGatewaysRequest request);
+
+    /**
+     * @param request the request parameters of ListGlobalPolicies  ListGlobalPoliciesRequest
+     * @return ListGlobalPoliciesResponse
+     */
+    CompletableFuture<ListGlobalPoliciesResponse> listGlobalPolicies(ListGlobalPoliciesRequest request);
 
     /**
      * @param request the request parameters of ListHttpApiOperations  ListHttpApiOperationsRequest
@@ -648,6 +758,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListHttpApisResponse> listHttpApis(ListHttpApisRequest request);
 
     /**
+     * @param request the request parameters of ListInstallableGateways  ListInstallableGatewaysRequest
+     * @return ListInstallableGatewaysResponse
+     */
+    CompletableFuture<ListInstallableGatewaysResponse> listInstallableGateways(ListInstallableGatewaysRequest request);
+
+    /**
+     * @param request the request parameters of ListK8sClusterSources  ListK8sClusterSourcesRequest
+     * @return ListK8sClusterSourcesResponse
+     */
+    CompletableFuture<ListK8sClusterSourcesResponse> listK8sClusterSources(ListK8sClusterSourcesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to create multiple services at a time.</p>
      * 
@@ -655,6 +777,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListMcpServersResponse
      */
     CompletableFuture<ListMcpServersResponse> listMcpServers(ListMcpServersRequest request);
+
+    /**
+     * @param request the request parameters of ListMigrationTasks  ListMigrationTasksRequest
+     * @return ListMigrationTasksResponse
+     */
+    CompletableFuture<ListMigrationTasksResponse> listMigrationTasks(ListMigrationTasksRequest request);
+
+    /**
+     * @param request the request parameters of ListMseNacosSources  ListMseNacosSourcesRequest
+     * @return ListMseNacosSourcesResponse
+     */
+    CompletableFuture<ListMseNacosSourcesResponse> listMseNacosSources(ListMseNacosSourcesRequest request);
 
     /**
      * @param request the request parameters of ListPluginAttachments  ListPluginAttachmentsRequest
@@ -670,6 +804,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListPluginClassesResponse
      */
     CompletableFuture<ListPluginClassesResponse> listPluginClasses(ListPluginClassesRequest request);
+
+    /**
+     * @param request the request parameters of ListPluginRepositories  ListPluginRepositoriesRequest
+     * @return ListPluginRepositoriesResponse
+     */
+    CompletableFuture<ListPluginRepositoriesResponse> listPluginRepositories(ListPluginRepositoriesRequest request);
 
     /**
      * @param request the request parameters of ListPlugins  ListPluginsRequest
@@ -847,6 +987,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateGatewayFeatureResponse> updateGatewayFeature(UpdateGatewayFeatureRequest request);
 
     /**
+     * @param request the request parameters of UpdateGatewayMaintenancePeriod  UpdateGatewayMaintenancePeriodRequest
+     * @return UpdateGatewayMaintenancePeriodResponse
+     */
+    CompletableFuture<UpdateGatewayMaintenancePeriodResponse> updateGatewayMaintenancePeriod(UpdateGatewayMaintenancePeriodRequest request);
+
+    /**
      * @deprecated OpenAPI UpdateGatewayName is deprecated  * @param request  the request parameters of UpdateGatewayName  UpdateGatewayNameRequest
      * @return UpdateGatewayNameResponse
      */
@@ -893,6 +1039,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateMcpServerResponse> updateMcpServer(UpdateMcpServerRequest request);
 
     /**
+     * @param request the request parameters of UpdateMigrationTask  UpdateMigrationTaskRequest
+     * @return UpdateMigrationTaskResponse
+     */
+    CompletableFuture<UpdateMigrationTaskResponse> updateMigrationTask(UpdateMigrationTaskRequest request);
+
+    /**
+     * @param request the request parameters of UpdateNetworkAccess  UpdateNetworkAccessRequest
+     * @return UpdateNetworkAccessResponse
+     */
+    CompletableFuture<UpdateNetworkAccessResponse> updateNetworkAccess(UpdateNetworkAccessRequest request);
+
+    /**
      * @param request the request parameters of UpdatePluginAttachment  UpdatePluginAttachmentRequest
      * @return UpdatePluginAttachmentResponse
      */
@@ -903,6 +1061,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdatePolicyResponse
      */
     CompletableFuture<UpdatePolicyResponse> updatePolicy(UpdatePolicyRequest request);
+
+    /**
+     * @param request the request parameters of UpdateRiskNotification  UpdateRiskNotificationRequest
+     * @return UpdateRiskNotificationResponse
+     */
+    CompletableFuture<UpdateRiskNotificationResponse> updateRiskNotification(UpdateRiskNotificationRequest request);
 
     /**
      * <b>description</b> :
@@ -930,5 +1094,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpgradeGatewayResponse
      */
     CompletableFuture<UpgradeGatewayResponse> upgradeGateway(UpgradeGatewayRequest request);
+
+    /**
+     * @param request the request parameters of VerifyMigrationTask  VerifyMigrationTaskRequest
+     * @return VerifyMigrationTaskResponse
+     */
+    CompletableFuture<VerifyMigrationTaskResponse> verifyMigrationTask(VerifyMigrationTaskRequest request);
 
 }
