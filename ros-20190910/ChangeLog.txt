@@ -1,3 +1,6 @@
+2026-08-27 Version: 1.2.61
+- Generated java-async 2019-09-10 for ROS.
+
 2026-06-08 Version: 1.2.60
 - Generated java-async 2019-09-10 for ROS.
 

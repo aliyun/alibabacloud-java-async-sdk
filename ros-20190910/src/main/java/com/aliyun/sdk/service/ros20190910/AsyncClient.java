@@ -576,6 +576,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListChangeSetsResponse> listChangeSets(ListChangeSetsRequest request);
 
     /**
+     * @param request the request parameters of ListChatMessages  ListChatMessagesRequest
+     * @return ListChatMessagesResponse
+     */
+    CompletableFuture<ListChatMessagesResponse> listChatMessages(ListChatMessagesRequest request);
+
+    /**
+     * @param request the request parameters of ListChatSessions  ListChatSessionsRequest
+     * @return ListChatSessionsResponse
+     */
+    CompletableFuture<ListChatSessionsResponse> listChatSessions(ListChatSessionsRequest request);
+
+    /**
      * @param request the request parameters of ListDiagnostics  ListDiagnosticsRequest
      * @return ListDiagnosticsResponse
      */
@@ -806,6 +818,20 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SignalResourceResponse
      */
     CompletableFuture<SignalResourceResponse> signalResource(SignalResourceRequest request);
+
+    /**
+     * @param request the request parameters of StartChat  StartChatRequest
+     * @return StartChatResponse
+     */
+    CompletableFuture<StartChatResponse> startChat(StartChatRequest request);
+
+    ResponseIterable<String> startChatWithResponseIterable(StartChatRequest request);
+
+    /**
+     * @param request the request parameters of StopChat  StopChatRequest
+     * @return StopChatResponse
+     */
+    CompletableFuture<StopChatResponse> stopChat(StopChatRequest request);
 
     /**
      * <b>description</b> :

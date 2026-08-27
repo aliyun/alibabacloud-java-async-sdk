@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.ros20190910;
 
 import com.aliyun.core.http.*;
 import com.aliyun.sdk.service.ros20190910.models.*;
+import darabonba.core.sse.SSEHttpResponseHandler;
 import darabonba.core.utils.*;
 import com.aliyun.sdk.gateway.pop.*;
 import darabonba.core.*;
@@ -29,8 +30,51 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "ROS";
         this.version = "2019-09-10";
-        this.endpointRule = "central";
-        this.endpointMap = new java.util.HashMap<>();
+        this.endpointRule = "regional";
+        this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("ap-northeast-1", "ros.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "ros.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "ros.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "ros.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "ros.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "ros.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "ros.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "ros.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "ros.aliyuncs.com"),
+            new TeaPair("cn-beijing", "ros.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "ros.aliyuncs.com"),
+            new TeaPair("cn-fuzhou", "ros.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "ros.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "ros.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "ros.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "ros.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "ros.aliyuncs.com"),
+            new TeaPair("cn-nanjing", "ros.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "ros.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "ros.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "ros.aliyuncs.com"),
+            new TeaPair("cn-wuhan-lr", "ros.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "ros.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "ros.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-jva", "ros.aliyuncs.com"),
+            new TeaPair("cn-zhongwei", "ros.aliyuncs.com"),
+            new TeaPair("eu-central-1", "ros.aliyuncs.com"),
+            new TeaPair("eu-west-1", "ros.aliyuncs.com"),
+            new TeaPair("eu-west-2", "ros.aliyuncs.com"),
+            new TeaPair("na-south-1", "ros.aliyuncs.com"),
+            new TeaPair("sa-east-1", "ros.aliyuncs.com"),
+            new TeaPair("us-east-1", "ros.aliyuncs.com"),
+            new TeaPair("us-southeast-1", "ros.aliyuncs.com"),
+            new TeaPair("us-west-1", "ros.aliyuncs.com"),
+            new TeaPair("ap-south-1", "ros.aliyuncs.com"),
+            new TeaPair("me-central-1", "ros.aliyuncs.com"),
+            new TeaPair("me-east-1", "ros.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "ros.aliyuncs.com"),
+            new TeaPair("cn-heyuan-acdr-1", "ros.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "ros.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "ros.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu-gic-1", "ros.aliyuncs.com")
+        );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -1232,6 +1276,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListChatMessages  ListChatMessagesRequest
+     * @return ListChatMessagesResponse
+     */
+    @Override
+    public CompletableFuture<ListChatMessagesResponse> listChatMessages(ListChatMessagesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListChatMessages").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListChatMessagesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListChatMessagesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListChatSessions  ListChatSessionsRequest
+     * @return ListChatSessionsResponse
+     */
+    @Override
+    public CompletableFuture<ListChatSessionsResponse> listChatSessions(ListChatSessionsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListChatSessions").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListChatSessionsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListChatSessionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListDiagnostics  ListDiagnosticsRequest
      * @return ListDiagnosticsResponse
      */
@@ -1794,6 +1874,52 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SignalResourceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of StartChat  StartChatRequest
+     * @return StartChatResponse
+     */
+    @Override
+    public CompletableFuture<StartChatResponse> startChat(StartChatRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("StartChat").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.STRING).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StartChatResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StartChatResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<String> startChatWithResponseIterable(StartChatRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("StartChat").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.STRING).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+        StartChatResponseBodyIterator iterator = StartChatResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
+     * @param request the request parameters of StopChat  StopChatRequest
+     * @return StopChatResponse
+     */
+    @Override
+    public CompletableFuture<StopChatResponse> stopChat(StopChatRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("StopChat").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopChatResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StopChatResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
