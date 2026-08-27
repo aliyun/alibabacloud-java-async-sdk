@@ -184,6 +184,9 @@ public class SubmitTranslationTaskRequest extends Request {
      * <p>SubmitTranslationTaskRequest</p>
      */
     public static class Config extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Agent")
+        private String agent;
+
         @com.aliyun.core.annotation.NameInMap("Font")
         private String font;
 
@@ -199,6 +202,7 @@ public class SubmitTranslationTaskRequest extends Request {
         private String targetLanguage;
 
         private Config(Builder builder) {
+            this.agent = builder.agent;
             this.font = builder.font;
             this.sourceLanguage = builder.sourceLanguage;
             this.style = builder.style;
@@ -211,6 +215,13 @@ public class SubmitTranslationTaskRequest extends Request {
 
         public static Config create() {
             return builder().build();
+        }
+
+        /**
+         * @return agent
+         */
+        public String getAgent() {
+            return this.agent;
         }
 
         /**
@@ -242,6 +253,7 @@ public class SubmitTranslationTaskRequest extends Request {
         }
 
         public static final class Builder {
+            private String agent; 
             private String font; 
             private String sourceLanguage; 
             private String style; 
@@ -251,11 +263,20 @@ public class SubmitTranslationTaskRequest extends Request {
             } 
 
             private Builder(Config model) {
+                this.agent = model.agent;
                 this.font = model.font;
                 this.sourceLanguage = model.sourceLanguage;
                 this.style = model.style;
                 this.targetLanguage = model.targetLanguage;
             } 
+
+            /**
+             * Agent.
+             */
+            public Builder agent(String agent) {
+                this.agent = agent;
+                return this;
+            }
 
             /**
              * Font.
