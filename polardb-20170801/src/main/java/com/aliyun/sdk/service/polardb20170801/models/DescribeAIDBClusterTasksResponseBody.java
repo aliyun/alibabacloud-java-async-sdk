@@ -26,6 +26,15 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List<Items> items;
 
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    private Long pageNumber;
+
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
+    private String pageRecordCount;
+
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private String pageSize;
+
     @com.aliyun.core.annotation.NameInMap("RelativeDBClusterId")
     private String relativeDBClusterId;
 
@@ -35,13 +44,20 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("TaskType")
     private String taskType;
 
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
+    private String totalRecordCount;
+
     private DescribeAIDBClusterTasksResponseBody(Builder builder) {
         this.engine = builder.engine;
         this.engineVersion = builder.engineVersion;
         this.items = builder.items;
+        this.pageNumber = builder.pageNumber;
+        this.pageRecordCount = builder.pageRecordCount;
+        this.pageSize = builder.pageSize;
         this.relativeDBClusterId = builder.relativeDBClusterId;
         this.requestId = builder.requestId;
         this.taskType = builder.taskType;
+        this.totalRecordCount = builder.totalRecordCount;
     }
 
     public static Builder builder() {
@@ -78,6 +94,27 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageRecordCount
+     */
+    public String getPageRecordCount() {
+        return this.pageRecordCount;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public String getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return relativeDBClusterId
      */
     public String getRelativeDBClusterId() {
@@ -98,13 +135,24 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         return this.taskType;
     }
 
+    /**
+     * @return totalRecordCount
+     */
+    public String getTotalRecordCount() {
+        return this.totalRecordCount;
+    }
+
     public static final class Builder {
         private String engine; 
         private String engineVersion; 
         private java.util.List<Items> items; 
+        private Long pageNumber; 
+        private String pageRecordCount; 
+        private String pageSize; 
         private String relativeDBClusterId; 
         private String requestId; 
         private String taskType; 
+        private String totalRecordCount; 
 
         private Builder() {
         } 
@@ -113,9 +161,13 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
             this.engine = model.engine;
             this.engineVersion = model.engineVersion;
             this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageRecordCount = model.pageRecordCount;
+            this.pageSize = model.pageSize;
             this.relativeDBClusterId = model.relativeDBClusterId;
             this.requestId = model.requestId;
             this.taskType = model.taskType;
+            this.totalRecordCount = model.totalRecordCount;
         } 
 
         /**
@@ -143,6 +195,30 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         }
 
         /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Long pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageRecordCount.
+         */
+        public Builder pageRecordCount(String pageRecordCount) {
+            this.pageRecordCount = pageRecordCount;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(String pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
          * RelativeDBClusterId.
          */
         public Builder relativeDBClusterId(String relativeDBClusterId) {
@@ -166,6 +242,14 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
          */
         public Builder taskType(String taskType) {
             this.taskType = taskType;
+            return this;
+        }
+
+        /**
+         * TotalRecordCount.
+         */
+        public Builder totalRecordCount(String totalRecordCount) {
+            this.totalRecordCount = totalRecordCount;
             return this;
         }
 

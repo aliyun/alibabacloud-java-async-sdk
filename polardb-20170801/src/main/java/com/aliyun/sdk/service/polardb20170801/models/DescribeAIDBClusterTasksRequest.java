@@ -30,6 +30,14 @@ public class DescribeAIDBClusterTasksRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    private Long pageNumber;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Long pageSize;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -50,6 +58,8 @@ public class DescribeAIDBClusterTasksRequest extends Request {
         this.kubeType = builder.kubeType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
         this.relativeDBClusterId = builder.relativeDBClusterId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -91,6 +101,20 @@ public class DescribeAIDBClusterTasksRequest extends Request {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Long getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -122,6 +146,8 @@ public class DescribeAIDBClusterTasksRequest extends Request {
         private String kubeType; 
         private String ownerAccount; 
         private Long ownerId; 
+        private Long pageNumber; 
+        private Long pageSize; 
         private String regionId; 
         private String relativeDBClusterId; 
         private String resourceOwnerAccount; 
@@ -136,6 +162,8 @@ public class DescribeAIDBClusterTasksRequest extends Request {
             this.kubeType = request.kubeType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
             this.regionId = request.regionId;
             this.relativeDBClusterId = request.relativeDBClusterId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -166,6 +194,24 @@ public class DescribeAIDBClusterTasksRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Long pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Long pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 

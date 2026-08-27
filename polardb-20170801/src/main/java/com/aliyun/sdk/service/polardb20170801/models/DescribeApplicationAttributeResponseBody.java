@@ -1588,6 +1588,123 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
      *
      * <p>DescribeApplicationAttributeResponseBody</p>
      */
+    public static class SessionStore extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccountMode")
+        private String accountMode;
+
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
+        private String DBClusterId;
+
+        @com.aliyun.core.annotation.NameInMap("DBName")
+        private String DBName;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        private SessionStore(Builder builder) {
+            this.accountMode = builder.accountMode;
+            this.DBClusterId = builder.DBClusterId;
+            this.DBName = builder.DBName;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SessionStore create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accountMode
+         */
+        public String getAccountMode() {
+            return this.accountMode;
+        }
+
+        /**
+         * @return DBClusterId
+         */
+        public String getDBClusterId() {
+            return this.DBClusterId;
+        }
+
+        /**
+         * @return DBName
+         */
+        public String getDBName() {
+            return this.DBName;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String accountMode; 
+            private String DBClusterId; 
+            private String DBName; 
+            private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(SessionStore model) {
+                this.accountMode = model.accountMode;
+                this.DBClusterId = model.DBClusterId;
+                this.DBName = model.DBName;
+                this.status = model.status;
+            } 
+
+            /**
+             * AccountMode.
+             */
+            public Builder accountMode(String accountMode) {
+                this.accountMode = accountMode;
+                return this;
+            }
+
+            /**
+             * DBClusterId.
+             */
+            public Builder DBClusterId(String DBClusterId) {
+                this.DBClusterId = DBClusterId;
+                return this;
+            }
+
+            /**
+             * DBName.
+             */
+            public Builder DBName(String DBName) {
+                this.DBName = DBName;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public SessionStore build() {
+                return new SessionStore(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeApplicationAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApplicationAttributeResponseBody</p>
+     */
     public static class MemApplicationAttribute extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
@@ -1607,6 +1724,9 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RerankerModelName")
         private String rerankerModelName;
 
+        @com.aliyun.core.annotation.NameInMap("SessionStore")
+        private SessionStore sessionStore;
+
         @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
@@ -1617,6 +1737,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             this.llmModelName = builder.llmModelName;
             this.projectName = builder.projectName;
             this.rerankerModelName = builder.rerankerModelName;
+            this.sessionStore = builder.sessionStore;
             this.userName = builder.userName;
         }
 
@@ -1671,6 +1792,13 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return sessionStore
+         */
+        public SessionStore getSessionStore() {
+            return this.sessionStore;
+        }
+
+        /**
          * @return userName
          */
         public String getUserName() {
@@ -1684,6 +1812,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             private String llmModelName; 
             private String projectName; 
             private String rerankerModelName; 
+            private SessionStore sessionStore; 
             private String userName; 
 
             private Builder() {
@@ -1696,6 +1825,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
                 this.llmModelName = model.llmModelName;
                 this.projectName = model.projectName;
                 this.rerankerModelName = model.rerankerModelName;
+                this.sessionStore = model.sessionStore;
                 this.userName = model.userName;
             } 
 
@@ -1744,6 +1874,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
              */
             public Builder rerankerModelName(String rerankerModelName) {
                 this.rerankerModelName = rerankerModelName;
+                return this;
+            }
+
+            /**
+             * SessionStore.
+             */
+            public Builder sessionStore(SessionStore sessionStore) {
+                this.sessionStore = sessionStore;
                 return this;
             }
 

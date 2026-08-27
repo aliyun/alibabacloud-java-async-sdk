@@ -62,6 +62,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GatewayId")
     private String gatewayId;
 
+    @com.aliyun.core.annotation.NameInMap("InferenceEngine")
+    private String inferenceEngine;
+
     @com.aliyun.core.annotation.NameInMap("InternalIp")
     private String internalIp;
 
@@ -147,6 +150,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         this.expireTime = builder.expireTime;
         this.expired = builder.expired;
         this.gatewayId = builder.gatewayId;
+        this.inferenceEngine = builder.inferenceEngine;
         this.internalIp = builder.internalIp;
         this.KVCacheInstanceId = builder.KVCacheInstanceId;
         this.kubeClusterId = builder.kubeClusterId;
@@ -287,6 +291,13 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
      */
     public String getGatewayId() {
         return this.gatewayId;
+    }
+
+    /**
+     * @return inferenceEngine
+     */
+    public String getInferenceEngine() {
+        return this.inferenceEngine;
     }
 
     /**
@@ -466,6 +477,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         private String expireTime; 
         private Boolean expired; 
         private String gatewayId; 
+        private String inferenceEngine; 
         private String internalIp; 
         private String KVCacheInstanceId; 
         private String kubeClusterId; 
@@ -509,6 +521,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
             this.expireTime = model.expireTime;
             this.expired = model.expired;
             this.gatewayId = model.gatewayId;
+            this.inferenceEngine = model.inferenceEngine;
             this.internalIp = model.internalIp;
             this.KVCacheInstanceId = model.KVCacheInstanceId;
             this.kubeClusterId = model.kubeClusterId;
@@ -651,6 +664,14 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
          */
         public Builder gatewayId(String gatewayId) {
             this.gatewayId = gatewayId;
+            return this;
+        }
+
+        /**
+         * InferenceEngine.
+         */
+        public Builder inferenceEngine(String inferenceEngine) {
+            this.inferenceEngine = inferenceEngine;
             return this;
         }
 
