@@ -35,6 +35,9 @@ public class DescribeAtiAgentRegisterInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AgentRegisterInfoId")
     private String agentRegisterInfoId;
 
+    @com.aliyun.core.annotation.NameInMap("AgentSubHost")
+    private String agentSubHost;
+
     @com.aliyun.core.annotation.NameInMap("AgentVersion")
     private String agentVersion;
 
@@ -43,6 +46,9 @@ public class DescribeAtiAgentRegisterInfoResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
     private Long createTimestamp;
+
+    @com.aliyun.core.annotation.NameInMap("DomainMode")
+    private String domainMode;
 
     @com.aliyun.core.annotation.NameInMap("Endpoints")
     private Endpoints endpoints;
@@ -74,6 +80,9 @@ public class DescribeAtiAgentRegisterInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("TrustCardUrl")
     private String trustCardUrl;
 
+    @com.aliyun.core.annotation.NameInMap("TrustLevel")
+    private String trustLevel;
+
     @com.aliyun.core.annotation.NameInMap("UpdateTimestamp")
     private Long updateTimestamp;
 
@@ -84,9 +93,11 @@ public class DescribeAtiAgentRegisterInfoResponseBody extends TeaModel {
         this.agentHost = builder.agentHost;
         this.agentId = builder.agentId;
         this.agentRegisterInfoId = builder.agentRegisterInfoId;
+        this.agentSubHost = builder.agentSubHost;
         this.agentVersion = builder.agentVersion;
         this.atiName = builder.atiName;
         this.createTimestamp = builder.createTimestamp;
+        this.domainMode = builder.domainMode;
         this.endpoints = builder.endpoints;
         this.identityCertSerialNumber = builder.identityCertSerialNumber;
         this.registrantId = builder.registrantId;
@@ -97,6 +108,7 @@ public class DescribeAtiAgentRegisterInfoResponseBody extends TeaModel {
         this.status = builder.status;
         this.trustCard = builder.trustCard;
         this.trustCardUrl = builder.trustCardUrl;
+        this.trustLevel = builder.trustLevel;
         this.updateTimestamp = builder.updateTimestamp;
     }
 
@@ -155,6 +167,13 @@ public class DescribeAtiAgentRegisterInfoResponseBody extends TeaModel {
     }
 
     /**
+     * @return agentSubHost
+     */
+    public String getAgentSubHost() {
+        return this.agentSubHost;
+    }
+
+    /**
      * @return agentVersion
      */
     public String getAgentVersion() {
@@ -173,6 +192,13 @@ public class DescribeAtiAgentRegisterInfoResponseBody extends TeaModel {
      */
     public Long getCreateTimestamp() {
         return this.createTimestamp;
+    }
+
+    /**
+     * @return domainMode
+     */
+    public String getDomainMode() {
+        return this.domainMode;
     }
 
     /**
@@ -246,6 +272,13 @@ public class DescribeAtiAgentRegisterInfoResponseBody extends TeaModel {
     }
 
     /**
+     * @return trustLevel
+     */
+    public String getTrustLevel() {
+        return this.trustLevel;
+    }
+
+    /**
      * @return updateTimestamp
      */
     public Long getUpdateTimestamp() {
@@ -259,9 +292,11 @@ public class DescribeAtiAgentRegisterInfoResponseBody extends TeaModel {
         private String agentHost; 
         private String agentId; 
         private String agentRegisterInfoId; 
+        private String agentSubHost; 
         private String agentVersion; 
         private String atiName; 
         private Long createTimestamp; 
+        private String domainMode; 
         private Endpoints endpoints; 
         private String identityCertSerialNumber; 
         private String registrantId; 
@@ -272,6 +307,7 @@ public class DescribeAtiAgentRegisterInfoResponseBody extends TeaModel {
         private String status; 
         private String trustCard; 
         private String trustCardUrl; 
+        private String trustLevel; 
         private Long updateTimestamp; 
 
         private Builder() {
@@ -284,9 +320,11 @@ public class DescribeAtiAgentRegisterInfoResponseBody extends TeaModel {
             this.agentHost = model.agentHost;
             this.agentId = model.agentId;
             this.agentRegisterInfoId = model.agentRegisterInfoId;
+            this.agentSubHost = model.agentSubHost;
             this.agentVersion = model.agentVersion;
             this.atiName = model.atiName;
             this.createTimestamp = model.createTimestamp;
+            this.domainMode = model.domainMode;
             this.endpoints = model.endpoints;
             this.identityCertSerialNumber = model.identityCertSerialNumber;
             this.registrantId = model.registrantId;
@@ -297,6 +335,7 @@ public class DescribeAtiAgentRegisterInfoResponseBody extends TeaModel {
             this.status = model.status;
             this.trustCard = model.trustCard;
             this.trustCardUrl = model.trustCardUrl;
+            this.trustLevel = model.trustLevel;
             this.updateTimestamp = model.updateTimestamp;
         } 
 
@@ -349,6 +388,14 @@ public class DescribeAtiAgentRegisterInfoResponseBody extends TeaModel {
         }
 
         /**
+         * AgentSubHost.
+         */
+        public Builder agentSubHost(String agentSubHost) {
+            this.agentSubHost = agentSubHost;
+            return this;
+        }
+
+        /**
          * AgentVersion.
          */
         public Builder agentVersion(String agentVersion) {
@@ -369,6 +416,14 @@ public class DescribeAtiAgentRegisterInfoResponseBody extends TeaModel {
          */
         public Builder createTimestamp(Long createTimestamp) {
             this.createTimestamp = createTimestamp;
+            return this;
+        }
+
+        /**
+         * DomainMode.
+         */
+        public Builder domainMode(String domainMode) {
+            this.domainMode = domainMode;
             return this;
         }
 
@@ -449,6 +504,14 @@ public class DescribeAtiAgentRegisterInfoResponseBody extends TeaModel {
          */
         public Builder trustCardUrl(String trustCardUrl) {
             this.trustCardUrl = trustCardUrl;
+            return this;
+        }
+
+        /**
+         * TrustLevel.
+         */
+        public Builder trustLevel(String trustLevel) {
+            this.trustLevel = trustLevel;
             return this;
         }
 

@@ -32,6 +32,10 @@ public class CreateAtiAgentRegisterInfoRequest extends Request {
     private String agentHost;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentSubHost")
+    private String agentSubHost;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AgentVersion")
     @com.aliyun.core.annotation.Validation(required = true)
     private String agentVersion;
@@ -39,6 +43,10 @@ public class CreateAtiAgentRegisterInfoRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainMode")
+    private String domainMode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Endpoints")
@@ -55,8 +63,10 @@ public class CreateAtiAgentRegisterInfoRequest extends Request {
         this.agentDescription = builder.agentDescription;
         this.agentDisplayName = builder.agentDisplayName;
         this.agentHost = builder.agentHost;
+        this.agentSubHost = builder.agentSubHost;
         this.agentVersion = builder.agentVersion;
         this.clientToken = builder.clientToken;
+        this.domainMode = builder.domainMode;
         this.endpoints = builder.endpoints;
         this.registrantId = builder.registrantId;
     }
@@ -96,6 +106,13 @@ public class CreateAtiAgentRegisterInfoRequest extends Request {
     }
 
     /**
+     * @return agentSubHost
+     */
+    public String getAgentSubHost() {
+        return this.agentSubHost;
+    }
+
+    /**
      * @return agentVersion
      */
     public String getAgentVersion() {
@@ -107,6 +124,13 @@ public class CreateAtiAgentRegisterInfoRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return domainMode
+     */
+    public String getDomainMode() {
+        return this.domainMode;
     }
 
     /**
@@ -127,8 +151,10 @@ public class CreateAtiAgentRegisterInfoRequest extends Request {
         private String agentDescription; 
         private String agentDisplayName; 
         private String agentHost; 
+        private String agentSubHost; 
         private String agentVersion; 
         private String clientToken; 
+        private String domainMode; 
         private java.util.List<Endpoints> endpoints; 
         private String registrantId; 
 
@@ -141,8 +167,10 @@ public class CreateAtiAgentRegisterInfoRequest extends Request {
             this.agentDescription = request.agentDescription;
             this.agentDisplayName = request.agentDisplayName;
             this.agentHost = request.agentHost;
+            this.agentSubHost = request.agentSubHost;
             this.agentVersion = request.agentVersion;
             this.clientToken = request.clientToken;
+            this.domainMode = request.domainMode;
             this.endpoints = request.endpoints;
             this.registrantId = request.registrantId;
         } 
@@ -178,6 +206,15 @@ public class CreateAtiAgentRegisterInfoRequest extends Request {
         }
 
         /**
+         * AgentSubHost.
+         */
+        public Builder agentSubHost(String agentSubHost) {
+            this.putQueryParameter("AgentSubHost", agentSubHost);
+            this.agentSubHost = agentSubHost;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,6 +232,15 @@ public class CreateAtiAgentRegisterInfoRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DomainMode.
+         */
+        public Builder domainMode(String domainMode) {
+            this.putQueryParameter("DomainMode", domainMode);
+            this.domainMode = domainMode;
             return this;
         }
 

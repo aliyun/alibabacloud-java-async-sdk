@@ -38,6 +38,9 @@ public class CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBody extends T
     @com.aliyun.core.annotation.NameInMap("RecordValue")
     private String recordValue;
 
+    @com.aliyun.core.annotation.NameInMap("Records")
+    private Records records;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -52,6 +55,7 @@ public class CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBody extends T
         this.recordName = builder.recordName;
         this.recordType = builder.recordType;
         this.recordValue = builder.recordValue;
+        this.records = builder.records;
         this.requestId = builder.requestId;
         this.updateTimestamp = builder.updateTimestamp;
     }
@@ -118,6 +122,13 @@ public class CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBody extends T
     }
 
     /**
+     * @return records
+     */
+    public Records getRecords() {
+        return this.records;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -139,6 +150,7 @@ public class CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBody extends T
         private String recordName; 
         private String recordType; 
         private String recordValue; 
+        private Records records; 
         private String requestId; 
         private String updateTimestamp; 
 
@@ -153,6 +165,7 @@ public class CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBody extends T
             this.recordName = model.recordName;
             this.recordType = model.recordType;
             this.recordValue = model.recordValue;
+            this.records = model.records;
             this.requestId = model.requestId;
             this.updateTimestamp = model.updateTimestamp;
         } 
@@ -210,6 +223,14 @@ public class CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBody extends T
          */
         public Builder recordValue(String recordValue) {
             this.recordValue = recordValue;
+            return this;
+        }
+
+        /**
+         * Records.
+         */
+        public Builder records(Records records) {
+            this.records = records;
             return this;
         }
 
@@ -410,6 +431,177 @@ public class CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBody extends T
 
             public AccessDeniedDetail build() {
                 return new AccessDeniedDetail(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBody</p>
+     */
+    public static class Record extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DomainScope")
+        private String domainScope;
+
+        @com.aliyun.core.annotation.NameInMap("RecordName")
+        private String recordName;
+
+        @com.aliyun.core.annotation.NameInMap("RecordType")
+        private String recordType;
+
+        @com.aliyun.core.annotation.NameInMap("RecordValue")
+        private String recordValue;
+
+        private Record(Builder builder) {
+            this.domainScope = builder.domainScope;
+            this.recordName = builder.recordName;
+            this.recordType = builder.recordType;
+            this.recordValue = builder.recordValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Record create() {
+            return builder().build();
+        }
+
+        /**
+         * @return domainScope
+         */
+        public String getDomainScope() {
+            return this.domainScope;
+        }
+
+        /**
+         * @return recordName
+         */
+        public String getRecordName() {
+            return this.recordName;
+        }
+
+        /**
+         * @return recordType
+         */
+        public String getRecordType() {
+            return this.recordType;
+        }
+
+        /**
+         * @return recordValue
+         */
+        public String getRecordValue() {
+            return this.recordValue;
+        }
+
+        public static final class Builder {
+            private String domainScope; 
+            private String recordName; 
+            private String recordType; 
+            private String recordValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Record model) {
+                this.domainScope = model.domainScope;
+                this.recordName = model.recordName;
+                this.recordType = model.recordType;
+                this.recordValue = model.recordValue;
+            } 
+
+            /**
+             * DomainScope.
+             */
+            public Builder domainScope(String domainScope) {
+                this.domainScope = domainScope;
+                return this;
+            }
+
+            /**
+             * RecordName.
+             */
+            public Builder recordName(String recordName) {
+                this.recordName = recordName;
+                return this;
+            }
+
+            /**
+             * RecordType.
+             */
+            public Builder recordType(String recordType) {
+                this.recordType = recordType;
+                return this;
+            }
+
+            /**
+             * RecordValue.
+             */
+            public Builder recordValue(String recordValue) {
+                this.recordValue = recordValue;
+                return this;
+            }
+
+            public Record build() {
+                return new Record(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBody</p>
+     */
+    public static class Records extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Record")
+        private java.util.List<Record> record;
+
+        private Records(Builder builder) {
+            this.record = builder.record;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Records create() {
+            return builder().build();
+        }
+
+        /**
+         * @return record
+         */
+        public java.util.List<Record> getRecord() {
+            return this.record;
+        }
+
+        public static final class Builder {
+            private java.util.List<Record> record; 
+
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.record = model.record;
+            } 
+
+            /**
+             * Record.
+             */
+            public Builder record(java.util.List<Record> record) {
+                this.record = record;
+                return this;
+            }
+
+            public Records build() {
+                return new Records(this);
             } 
 
         } 

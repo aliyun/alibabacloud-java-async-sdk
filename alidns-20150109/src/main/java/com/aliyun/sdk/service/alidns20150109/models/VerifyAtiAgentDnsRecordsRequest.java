@@ -26,10 +26,15 @@ public class VerifyAtiAgentDnsRecordsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrustLevel")
+    private String trustLevel;
+
     private VerifyAtiAgentDnsRecordsRequest(Builder builder) {
         super(builder);
         this.agentRegisterInfoId = builder.agentRegisterInfoId;
         this.clientToken = builder.clientToken;
+        this.trustLevel = builder.trustLevel;
     }
 
     public static Builder builder() {
@@ -59,9 +64,17 @@ public class VerifyAtiAgentDnsRecordsRequest extends Request {
         return this.clientToken;
     }
 
+    /**
+     * @return trustLevel
+     */
+    public String getTrustLevel() {
+        return this.trustLevel;
+    }
+
     public static final class Builder extends Request.Builder<VerifyAtiAgentDnsRecordsRequest, Builder> {
         private String agentRegisterInfoId; 
         private String clientToken; 
+        private String trustLevel; 
 
         private Builder() {
             super();
@@ -71,6 +84,7 @@ public class VerifyAtiAgentDnsRecordsRequest extends Request {
             super(request);
             this.agentRegisterInfoId = request.agentRegisterInfoId;
             this.clientToken = request.clientToken;
+            this.trustLevel = request.trustLevel;
         } 
 
         /**
@@ -91,6 +105,15 @@ public class VerifyAtiAgentDnsRecordsRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * TrustLevel.
+         */
+        public Builder trustLevel(String trustLevel) {
+            this.putQueryParameter("TrustLevel", trustLevel);
+            this.trustLevel = trustLevel;
             return this;
         }
 

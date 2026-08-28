@@ -37,6 +37,10 @@ public class DescribeAtiAgentRegisterInfoMarketRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrustLevel")
+    private String trustLevel;
+
     private DescribeAtiAgentRegisterInfoMarketRequest(Builder builder) {
         super(builder);
         this.agentHost = builder.agentHost;
@@ -44,6 +48,7 @@ public class DescribeAtiAgentRegisterInfoMarketRequest extends Request {
         this.clientToken = builder.clientToken;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.trustLevel = builder.trustLevel;
     }
 
     public static Builder builder() {
@@ -94,12 +99,20 @@ public class DescribeAtiAgentRegisterInfoMarketRequest extends Request {
         return this.nextToken;
     }
 
+    /**
+     * @return trustLevel
+     */
+    public String getTrustLevel() {
+        return this.trustLevel;
+    }
+
     public static final class Builder extends Request.Builder<DescribeAtiAgentRegisterInfoMarketRequest, Builder> {
         private String agentHost; 
         private String agentVersion; 
         private String clientToken; 
         private Integer maxResults; 
         private String nextToken; 
+        private String trustLevel; 
 
         private Builder() {
             super();
@@ -112,6 +125,7 @@ public class DescribeAtiAgentRegisterInfoMarketRequest extends Request {
             this.clientToken = request.clientToken;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.trustLevel = request.trustLevel;
         } 
 
         /**
@@ -156,6 +170,15 @@ public class DescribeAtiAgentRegisterInfoMarketRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * TrustLevel.
+         */
+        public Builder trustLevel(String trustLevel) {
+            this.putQueryParameter("TrustLevel", trustLevel);
+            this.trustLevel = trustLevel;
             return this;
         }
 

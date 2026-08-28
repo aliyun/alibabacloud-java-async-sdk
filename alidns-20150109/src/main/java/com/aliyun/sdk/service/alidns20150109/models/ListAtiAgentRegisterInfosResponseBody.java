@@ -557,6 +557,9 @@ public class ListAtiAgentRegisterInfosResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("TrustLevel")
+        private String trustLevel;
+
         @com.aliyun.core.annotation.NameInMap("UpdateTimestamp")
         private String updateTimestamp;
 
@@ -570,6 +573,7 @@ public class ListAtiAgentRegisterInfosResponseBody extends TeaModel {
             this.createTimestamp = builder.createTimestamp;
             this.endpoints = builder.endpoints;
             this.status = builder.status;
+            this.trustLevel = builder.trustLevel;
             this.updateTimestamp = builder.updateTimestamp;
         }
 
@@ -645,6 +649,13 @@ public class ListAtiAgentRegisterInfosResponseBody extends TeaModel {
         }
 
         /**
+         * @return trustLevel
+         */
+        public String getTrustLevel() {
+            return this.trustLevel;
+        }
+
+        /**
          * @return updateTimestamp
          */
         public String getUpdateTimestamp() {
@@ -661,6 +672,7 @@ public class ListAtiAgentRegisterInfosResponseBody extends TeaModel {
             private String createTimestamp; 
             private Endpoints endpoints; 
             private String status; 
+            private String trustLevel; 
             private String updateTimestamp; 
 
             private Builder() {
@@ -676,6 +688,7 @@ public class ListAtiAgentRegisterInfosResponseBody extends TeaModel {
                 this.createTimestamp = model.createTimestamp;
                 this.endpoints = model.endpoints;
                 this.status = model.status;
+                this.trustLevel = model.trustLevel;
                 this.updateTimestamp = model.updateTimestamp;
             } 
 
@@ -748,6 +761,14 @@ public class ListAtiAgentRegisterInfosResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * TrustLevel.
+             */
+            public Builder trustLevel(String trustLevel) {
+                this.trustLevel = trustLevel;
                 return this;
             }
 
