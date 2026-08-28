@@ -187,6 +187,9 @@ public class SubmitTranslationTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Agent")
         private String agent;
 
+        @com.aliyun.core.annotation.NameInMap("AgentId")
+        private String agentId;
+
         @com.aliyun.core.annotation.NameInMap("Font")
         private String font;
 
@@ -203,6 +206,7 @@ public class SubmitTranslationTaskRequest extends Request {
 
         private Config(Builder builder) {
             this.agent = builder.agent;
+            this.agentId = builder.agentId;
             this.font = builder.font;
             this.sourceLanguage = builder.sourceLanguage;
             this.style = builder.style;
@@ -222,6 +226,13 @@ public class SubmitTranslationTaskRequest extends Request {
          */
         public String getAgent() {
             return this.agent;
+        }
+
+        /**
+         * @return agentId
+         */
+        public String getAgentId() {
+            return this.agentId;
         }
 
         /**
@@ -254,6 +265,7 @@ public class SubmitTranslationTaskRequest extends Request {
 
         public static final class Builder {
             private String agent; 
+            private String agentId; 
             private String font; 
             private String sourceLanguage; 
             private String style; 
@@ -264,6 +276,7 @@ public class SubmitTranslationTaskRequest extends Request {
 
             private Builder(Config model) {
                 this.agent = model.agent;
+                this.agentId = model.agentId;
                 this.font = model.font;
                 this.sourceLanguage = model.sourceLanguage;
                 this.style = model.style;
@@ -275,6 +288,14 @@ public class SubmitTranslationTaskRequest extends Request {
              */
             public Builder agent(String agent) {
                 this.agent = agent;
+                return this;
+            }
+
+            /**
+             * AgentId.
+             */
+            public Builder agentId(String agentId) {
+                this.agentId = agentId;
                 return this;
             }
 
