@@ -18,12 +18,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class LanguageDetectRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scene")
+    private String scene;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceText")
     @com.aliyun.core.annotation.Validation(required = true)
     private String sourceText;
 
     private LanguageDetectRequest(Builder builder) {
         super(builder);
+        this.scene = builder.scene;
         this.sourceText = builder.sourceText;
     }
 
@@ -41,6 +46,13 @@ public class LanguageDetectRequest extends Request {
     }
 
     /**
+     * @return scene
+     */
+    public String getScene() {
+        return this.scene;
+    }
+
+    /**
      * @return sourceText
      */
     public String getSourceText() {
@@ -48,6 +60,7 @@ public class LanguageDetectRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<LanguageDetectRequest, Builder> {
+        private String scene; 
         private String sourceText; 
 
         private Builder() {
@@ -56,8 +69,21 @@ public class LanguageDetectRequest extends Request {
 
         private Builder(LanguageDetectRequest request) {
             super(request);
+            this.scene = request.scene;
             this.sourceText = request.sourceText;
         } 
+
+        /**
+         * <p>非必填；可传入 query（不区分大小写），表示走新模型；不传或传错时默认 common（通用语种检测）</p>
+         * 
+         * <strong>example:</strong>
+         * <p>query</p>
+         */
+        public Builder scene(String scene) {
+            this.putQueryParameter("Scene", scene);
+            this.scene = scene;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
