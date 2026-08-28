@@ -633,6 +633,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeDasOpsConfig  DescribeDasOpsConfigRequest
+     * @return DescribeDasOpsConfigResponse
+     */
+    @Override
+    public CompletableFuture<DescribeDasOpsConfigResponse> describeDasOpsConfig(DescribeDasOpsConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDasOpsConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDasOpsConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDasOpsConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, take note of the following items:</p>
      * <ul>
@@ -2727,6 +2745,45 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyAutoScalingConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyDasOpsConfig  ModifyDasOpsConfigRequest
+     * @return ModifyDasOpsConfigResponse
+     */
+    @Override
+    public CompletableFuture<ModifyDasOpsConfigResponse> modifyDasOpsConfig(ModifyDasOpsConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyDasOpsConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyDasOpsConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyDasOpsConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>调用ModifyForwardSqlLogConfig接口修改数据库实例审计日志的转发配置。支持将审计日志转发到日志服务（SLS）、数据安全中心（DSC）、流量预测（FLOW）或用户自建SLS（USER）。</p>
+     * 
+     * @param request the request parameters of ModifyForwardSqlLogConfig  ModifyForwardSqlLogConfigRequest
+     * @return ModifyForwardSqlLogConfigResponse
+     */
+    @Override
+    public CompletableFuture<ModifyForwardSqlLogConfigResponse> modifyForwardSqlLogConfig(ModifyForwardSqlLogConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyForwardSqlLogConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyForwardSqlLogConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyForwardSqlLogConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
