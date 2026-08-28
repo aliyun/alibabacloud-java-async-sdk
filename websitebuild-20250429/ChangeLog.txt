@@ -1,3 +1,6 @@
+2026-08-28 Version: 2.0.71
+- Generated java-async 2025-04-29 for WebsiteBuild.
+
 2026-08-27 Version: 2.0.70
 - Generated java-async 2025-04-29 for WebsiteBuild.
 

@@ -22,6 +22,10 @@ public class QueryMaterialTaskListRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizGroupId")
+    private String bizGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -56,6 +60,7 @@ public class QueryMaterialTaskListRequest extends Request {
     private QueryMaterialTaskListRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.bizGroupId = builder.bizGroupId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.orderColumn = builder.orderColumn;
@@ -84,6 +89,13 @@ public class QueryMaterialTaskListRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return bizGroupId
+     */
+    public String getBizGroupId() {
+        return this.bizGroupId;
     }
 
     /**
@@ -144,6 +156,7 @@ public class QueryMaterialTaskListRequest extends Request {
 
     public static final class Builder extends Request.Builder<QueryMaterialTaskListRequest, Builder> {
         private String regionId; 
+        private String bizGroupId; 
         private Integer maxResults; 
         private String nextToken; 
         private String orderColumn; 
@@ -160,6 +173,7 @@ public class QueryMaterialTaskListRequest extends Request {
         private Builder(QueryMaterialTaskListRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.bizGroupId = request.bizGroupId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.orderColumn = request.orderColumn;
@@ -176,6 +190,15 @@ public class QueryMaterialTaskListRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * BizGroupId.
+         */
+        public Builder bizGroupId(String bizGroupId) {
+            this.putQueryParameter("BizGroupId", bizGroupId);
+            this.bizGroupId = bizGroupId;
             return this;
         }
 

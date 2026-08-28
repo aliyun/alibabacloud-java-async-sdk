@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AppMaterialTask</p>
  */
 public class AppMaterialTask extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("BizGroupId")
+    private String bizGroupId;
+
     @com.aliyun.core.annotation.NameInMap("CompleteTime")
     private String completeTime;
 
@@ -48,6 +51,7 @@ public class AppMaterialTask extends TeaModel {
     private String taskType;
 
     private AppMaterialTask(Builder builder) {
+        this.bizGroupId = builder.bizGroupId;
         this.completeTime = builder.completeTime;
         this.completeTimeFormat = builder.completeTimeFormat;
         this.failReason = builder.failReason;
@@ -70,6 +74,13 @@ public class AppMaterialTask extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bizGroupId
+     */
+    public String getBizGroupId() {
+        return this.bizGroupId;
     }
 
     /**
@@ -143,6 +154,7 @@ public class AppMaterialTask extends TeaModel {
     }
 
     public static final class Builder {
+        private String bizGroupId; 
         private String completeTime; 
         private String completeTimeFormat; 
         private String failReason; 
@@ -158,6 +170,7 @@ public class AppMaterialTask extends TeaModel {
         } 
 
         private Builder(AppMaterialTask model) {
+            this.bizGroupId = model.bizGroupId;
             this.completeTime = model.completeTime;
             this.completeTimeFormat = model.completeTimeFormat;
             this.failReason = model.failReason;
@@ -169,6 +182,14 @@ public class AppMaterialTask extends TeaModel {
             this.taskParam = model.taskParam;
             this.taskType = model.taskType;
         } 
+
+        /**
+         * BizGroupId.
+         */
+        public Builder bizGroupId(String bizGroupId) {
+            this.bizGroupId = bizGroupId;
+            return this;
+        }
 
         /**
          * CompleteTime.

@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SubmitMaterialTaskResponseBody} extends {@link TeaModel}
+ * {@link SaveChannelDraftResponseBody} extends {@link TeaModel}
  *
- * <p>SubmitMaterialTaskResponseBody</p>
+ * <p>SaveChannelDraftResponseBody</p>
  */
-public class SubmitMaterialTaskResponseBody extends TeaModel {
+public class SaveChannelDraftResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
@@ -35,14 +35,8 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ErrorArgs")
     private java.util.List<?> errorArgs;
 
-    @com.aliyun.core.annotation.NameInMap("ErrorCode")
-    private String errorCode;
-
-    @com.aliyun.core.annotation.NameInMap("ErrorMsg")
-    private String errorMsg;
-
     @com.aliyun.core.annotation.NameInMap("Module")
-    private Module module;
+    private String module;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -53,26 +47,20 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RootErrorMsg")
     private String rootErrorMsg;
 
-    @com.aliyun.core.annotation.NameInMap("Success")
-    private Boolean success;
-
     @com.aliyun.core.annotation.NameInMap("Synchro")
     private Boolean synchro;
 
-    private SubmitMaterialTaskResponseBody(Builder builder) {
+    private SaveChannelDraftResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
         this.allowRetry = builder.allowRetry;
         this.appName = builder.appName;
         this.dynamicCode = builder.dynamicCode;
         this.dynamicMessage = builder.dynamicMessage;
         this.errorArgs = builder.errorArgs;
-        this.errorCode = builder.errorCode;
-        this.errorMsg = builder.errorMsg;
         this.module = builder.module;
         this.requestId = builder.requestId;
         this.rootErrorCode = builder.rootErrorCode;
         this.rootErrorMsg = builder.rootErrorMsg;
-        this.success = builder.success;
         this.synchro = builder.synchro;
     }
 
@@ -80,7 +68,7 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static SubmitMaterialTaskResponseBody create() {
+    public static SaveChannelDraftResponseBody create() {
         return builder().build();
     }
 
@@ -131,23 +119,9 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
     }
 
     /**
-     * @return errorCode
-     */
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    /**
-     * @return errorMsg
-     */
-    public String getErrorMsg() {
-        return this.errorMsg;
-    }
-
-    /**
      * @return module
      */
-    public Module getModule() {
+    public String getModule() {
         return this.module;
     }
 
@@ -173,13 +147,6 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
     }
 
     /**
-     * @return success
-     */
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    /**
      * @return synchro
      */
     public Boolean getSynchro() {
@@ -193,32 +160,26 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
         private String dynamicCode; 
         private String dynamicMessage; 
         private java.util.List<?> errorArgs; 
-        private String errorCode; 
-        private String errorMsg; 
-        private Module module; 
+        private String module; 
         private String requestId; 
         private String rootErrorCode; 
         private String rootErrorMsg; 
-        private Boolean success; 
         private Boolean synchro; 
 
         private Builder() {
         } 
 
-        private Builder(SubmitMaterialTaskResponseBody model) {
+        private Builder(SaveChannelDraftResponseBody model) {
             this.accessDeniedDetail = model.accessDeniedDetail;
             this.allowRetry = model.allowRetry;
             this.appName = model.appName;
             this.dynamicCode = model.dynamicCode;
             this.dynamicMessage = model.dynamicMessage;
             this.errorArgs = model.errorArgs;
-            this.errorCode = model.errorCode;
-            this.errorMsg = model.errorMsg;
             this.module = model.module;
             this.requestId = model.requestId;
             this.rootErrorCode = model.rootErrorCode;
             this.rootErrorMsg = model.rootErrorMsg;
-            this.success = model.success;
             this.synchro = model.synchro;
         } 
 
@@ -271,25 +232,9 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
-         */
-        public Builder errorCode(String errorCode) {
-            this.errorCode = errorCode;
-            return this;
-        }
-
-        /**
-         * ErrorMsg.
-         */
-        public Builder errorMsg(String errorMsg) {
-            this.errorMsg = errorMsg;
-            return this;
-        }
-
-        /**
          * Module.
          */
-        public Builder module(Module module) {
+        public Builder module(String module) {
             this.module = module;
             return this;
         }
@@ -322,14 +267,6 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
-         */
-        public Builder success(Boolean success) {
-            this.success = success;
-            return this;
-        }
-
-        /**
          * Synchro.
          */
         public Builder synchro(Boolean synchro) {
@@ -337,85 +274,10 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
             return this;
         }
 
-        public SubmitMaterialTaskResponseBody build() {
-            return new SubmitMaterialTaskResponseBody(this);
+        public SaveChannelDraftResponseBody build() {
+            return new SaveChannelDraftResponseBody(this);
         } 
 
     } 
 
-    /**
-     * 
-     * {@link SubmitMaterialTaskResponseBody} extends {@link TeaModel}
-     *
-     * <p>SubmitMaterialTaskResponseBody</p>
-     */
-    public static class Module extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("BizGroupId")
-        private String bizGroupId;
-
-        @com.aliyun.core.annotation.NameInMap("TaskId")
-        private String taskId;
-
-        private Module(Builder builder) {
-            this.bizGroupId = builder.bizGroupId;
-            this.taskId = builder.taskId;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Module create() {
-            return builder().build();
-        }
-
-        /**
-         * @return bizGroupId
-         */
-        public String getBizGroupId() {
-            return this.bizGroupId;
-        }
-
-        /**
-         * @return taskId
-         */
-        public String getTaskId() {
-            return this.taskId;
-        }
-
-        public static final class Builder {
-            private String bizGroupId; 
-            private String taskId; 
-
-            private Builder() {
-            } 
-
-            private Builder(Module model) {
-                this.bizGroupId = model.bizGroupId;
-                this.taskId = model.taskId;
-            } 
-
-            /**
-             * BizGroupId.
-             */
-            public Builder bizGroupId(String bizGroupId) {
-                this.bizGroupId = bizGroupId;
-                return this;
-            }
-
-            /**
-             * TaskId.
-             */
-            public Builder taskId(String taskId) {
-                this.taskId = taskId;
-                return this;
-            }
-
-            public Module build() {
-                return new Module(this);
-            } 
-
-        } 
-
-    }
 }

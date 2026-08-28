@@ -33,12 +33,15 @@ public class UploadMaterialFileRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FileUrl")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String fileUrl;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssKey")
+    private String ossKey;
 
     private UploadMaterialFileRequest(Builder builder) {
         super(builder);
@@ -47,6 +50,7 @@ public class UploadMaterialFileRequest extends Request {
         this.directoryId = builder.directoryId;
         this.fileUrl = builder.fileUrl;
         this.name = builder.name;
+        this.ossKey = builder.ossKey;
     }
 
     public static Builder builder() {
@@ -97,12 +101,20 @@ public class UploadMaterialFileRequest extends Request {
         return this.name;
     }
 
+    /**
+     * @return ossKey
+     */
+    public String getOssKey() {
+        return this.ossKey;
+    }
+
     public static final class Builder extends Request.Builder<UploadMaterialFileRequest, Builder> {
         private String regionId; 
         private String bizId; 
         private String directoryId; 
         private String fileUrl; 
         private String name; 
+        private String ossKey; 
 
         private Builder() {
             super();
@@ -115,6 +127,7 @@ public class UploadMaterialFileRequest extends Request {
             this.directoryId = request.directoryId;
             this.fileUrl = request.fileUrl;
             this.name = request.name;
+            this.ossKey = request.ossKey;
         } 
 
         /**
@@ -151,10 +164,7 @@ public class UploadMaterialFileRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://docmind-api-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/4a7f_209934244261306272_14fd429b731245a79f291c64acf3ac77">http://docmind-api-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/4a7f_209934244261306272_14fd429b731245a79f291c64acf3ac77</a></p>
+         * FileUrl.
          */
         public Builder fileUrl(String fileUrl) {
             this.putQueryParameter("FileUrl", fileUrl);
@@ -168,6 +178,15 @@ public class UploadMaterialFileRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * OssKey.
+         */
+        public Builder ossKey(String ossKey) {
+            this.putQueryParameter("OssKey", ossKey);
+            this.ossKey = ossKey;
             return this;
         }
 

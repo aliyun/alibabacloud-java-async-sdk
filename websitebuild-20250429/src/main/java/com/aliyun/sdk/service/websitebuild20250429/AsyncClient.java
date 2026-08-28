@@ -148,6 +148,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAppTokenServiceResponse> createAppTokenService(CreateAppTokenServiceRequest request);
 
     /**
+     * @param request the request parameters of CreateDistribution  CreateDistributionRequest
+     * @return CreateDistributionResponse
+     */
+    CompletableFuture<CreateDistributionResponse> createDistribution(CreateDistributionRequest request);
+
+    /**
      * @param request the request parameters of CreateInspiration  CreateInspirationRequest
      * @return CreateInspirationResponse
      */
@@ -925,10 +931,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RenewAppSandboxResponse> renewAppSandbox(RenewAppSandboxRequest request);
 
     /**
+     * @param request the request parameters of ReportChannelPublishResult  ReportChannelPublishResultRequest
+     * @return ReportChannelPublishResultResponse
+     */
+    CompletableFuture<ReportChannelPublishResultResponse> reportChannelPublishResult(ReportChannelPublishResultRequest request);
+
+    /**
+     * @param request the request parameters of RetryChannelPublish  RetryChannelPublishRequest
+     * @return RetryChannelPublishResponse
+     */
+    CompletableFuture<RetryChannelPublishResponse> retryChannelPublish(RetryChannelPublishRequest request);
+
+    /**
      * @param request the request parameters of RevokeRbacUserRole  RevokeRbacUserRoleRequest
      * @return RevokeRbacUserRoleResponse
      */
     CompletableFuture<RevokeRbacUserRoleResponse> revokeRbacUserRole(RevokeRbacUserRoleRequest request);
+
+    /**
+     * @param request the request parameters of RewriteChannelTitle  RewriteChannelTitleRequest
+     * @return RewriteChannelTitleResponse
+     */
+    CompletableFuture<RewriteChannelTitleResponse> rewriteChannelTitle(RewriteChannelTitleRequest request);
 
     /**
      * @param request the request parameters of RollbackAppCodeSnapshot  RollbackAppCodeSnapshotRequest
@@ -959,6 +983,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SaveAppSupabaseSecretsResponse
      */
     CompletableFuture<SaveAppSupabaseSecretsResponse> saveAppSupabaseSecrets(SaveAppSupabaseSecretsRequest request);
+
+    /**
+     * @param request the request parameters of SaveChannelDraft  SaveChannelDraftRequest
+     * @return SaveChannelDraftResponse
+     */
+    CompletableFuture<SaveChannelDraftResponse> saveChannelDraft(SaveChannelDraftRequest request);
 
     /**
      * @param request the request parameters of SearchImage  SearchImageRequest
@@ -1001,6 +1031,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SyncAppInstanceForPartnerResponse
      */
     CompletableFuture<SyncAppInstanceForPartnerResponse> syncAppInstanceForPartner(SyncAppInstanceForPartnerRequest request);
+
+    /**
+     * @param request the request parameters of TranslateChannelDraft  TranslateChannelDraftRequest
+     * @return TranslateChannelDraftResponse
+     */
+    CompletableFuture<TranslateChannelDraftResponse> translateChannelDraft(TranslateChannelDraftRequest request);
 
     /**
      * @param request the request parameters of UnbindAppDomain  UnbindAppDomainRequest

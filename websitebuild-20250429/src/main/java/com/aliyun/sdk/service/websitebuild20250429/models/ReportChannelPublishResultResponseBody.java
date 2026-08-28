@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SubmitMaterialTaskResponseBody} extends {@link TeaModel}
+ * {@link ReportChannelPublishResultResponseBody} extends {@link TeaModel}
  *
- * <p>SubmitMaterialTaskResponseBody</p>
+ * <p>ReportChannelPublishResultResponseBody</p>
  */
-public class SubmitMaterialTaskResponseBody extends TeaModel {
+public class ReportChannelPublishResultResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
@@ -35,12 +35,6 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ErrorArgs")
     private java.util.List<?> errorArgs;
 
-    @com.aliyun.core.annotation.NameInMap("ErrorCode")
-    private String errorCode;
-
-    @com.aliyun.core.annotation.NameInMap("ErrorMsg")
-    private String errorMsg;
-
     @com.aliyun.core.annotation.NameInMap("Module")
     private Module module;
 
@@ -53,26 +47,20 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RootErrorMsg")
     private String rootErrorMsg;
 
-    @com.aliyun.core.annotation.NameInMap("Success")
-    private Boolean success;
-
     @com.aliyun.core.annotation.NameInMap("Synchro")
     private Boolean synchro;
 
-    private SubmitMaterialTaskResponseBody(Builder builder) {
+    private ReportChannelPublishResultResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
         this.allowRetry = builder.allowRetry;
         this.appName = builder.appName;
         this.dynamicCode = builder.dynamicCode;
         this.dynamicMessage = builder.dynamicMessage;
         this.errorArgs = builder.errorArgs;
-        this.errorCode = builder.errorCode;
-        this.errorMsg = builder.errorMsg;
         this.module = builder.module;
         this.requestId = builder.requestId;
         this.rootErrorCode = builder.rootErrorCode;
         this.rootErrorMsg = builder.rootErrorMsg;
-        this.success = builder.success;
         this.synchro = builder.synchro;
     }
 
@@ -80,7 +68,7 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static SubmitMaterialTaskResponseBody create() {
+    public static ReportChannelPublishResultResponseBody create() {
         return builder().build();
     }
 
@@ -131,20 +119,6 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
     }
 
     /**
-     * @return errorCode
-     */
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    /**
-     * @return errorMsg
-     */
-    public String getErrorMsg() {
-        return this.errorMsg;
-    }
-
-    /**
      * @return module
      */
     public Module getModule() {
@@ -173,13 +147,6 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
     }
 
     /**
-     * @return success
-     */
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    /**
      * @return synchro
      */
     public Boolean getSynchro() {
@@ -193,32 +160,26 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
         private String dynamicCode; 
         private String dynamicMessage; 
         private java.util.List<?> errorArgs; 
-        private String errorCode; 
-        private String errorMsg; 
         private Module module; 
         private String requestId; 
         private String rootErrorCode; 
         private String rootErrorMsg; 
-        private Boolean success; 
         private Boolean synchro; 
 
         private Builder() {
         } 
 
-        private Builder(SubmitMaterialTaskResponseBody model) {
+        private Builder(ReportChannelPublishResultResponseBody model) {
             this.accessDeniedDetail = model.accessDeniedDetail;
             this.allowRetry = model.allowRetry;
             this.appName = model.appName;
             this.dynamicCode = model.dynamicCode;
             this.dynamicMessage = model.dynamicMessage;
             this.errorArgs = model.errorArgs;
-            this.errorCode = model.errorCode;
-            this.errorMsg = model.errorMsg;
             this.module = model.module;
             this.requestId = model.requestId;
             this.rootErrorCode = model.rootErrorCode;
             this.rootErrorMsg = model.rootErrorMsg;
-            this.success = model.success;
             this.synchro = model.synchro;
         } 
 
@@ -271,22 +232,6 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
-         */
-        public Builder errorCode(String errorCode) {
-            this.errorCode = errorCode;
-            return this;
-        }
-
-        /**
-         * ErrorMsg.
-         */
-        public Builder errorMsg(String errorMsg) {
-            this.errorMsg = errorMsg;
-            return this;
-        }
-
-        /**
          * Module.
          */
         public Builder module(Module module) {
@@ -322,14 +267,6 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
-         */
-        public Builder success(Boolean success) {
-            this.success = success;
-            return this;
-        }
-
-        /**
          * Synchro.
          */
         public Builder synchro(Boolean synchro) {
@@ -337,28 +274,32 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
             return this;
         }
 
-        public SubmitMaterialTaskResponseBody build() {
-            return new SubmitMaterialTaskResponseBody(this);
+        public ReportChannelPublishResultResponseBody build() {
+            return new ReportChannelPublishResultResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link SubmitMaterialTaskResponseBody} extends {@link TeaModel}
+     * {@link ReportChannelPublishResultResponseBody} extends {@link TeaModel}
      *
-     * <p>SubmitMaterialTaskResponseBody</p>
+     * <p>ReportChannelPublishResultResponseBody</p>
      */
     public static class Module extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("BizGroupId")
-        private String bizGroupId;
+        @com.aliyun.core.annotation.NameInMap("ArticleStatus")
+        private String articleStatus;
 
-        @com.aliyun.core.annotation.NameInMap("TaskId")
-        private String taskId;
+        @com.aliyun.core.annotation.NameInMap("DraftId")
+        private String draftId;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
 
         private Module(Builder builder) {
-            this.bizGroupId = builder.bizGroupId;
-            this.taskId = builder.taskId;
+            this.articleStatus = builder.articleStatus;
+            this.draftId = builder.draftId;
+            this.status = builder.status;
         }
 
         public static Builder builder() {
@@ -370,44 +311,61 @@ public class SubmitMaterialTaskResponseBody extends TeaModel {
         }
 
         /**
-         * @return bizGroupId
+         * @return articleStatus
          */
-        public String getBizGroupId() {
-            return this.bizGroupId;
+        public String getArticleStatus() {
+            return this.articleStatus;
         }
 
         /**
-         * @return taskId
+         * @return draftId
          */
-        public String getTaskId() {
-            return this.taskId;
+        public String getDraftId() {
+            return this.draftId;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
         }
 
         public static final class Builder {
-            private String bizGroupId; 
-            private String taskId; 
+            private String articleStatus; 
+            private String draftId; 
+            private String status; 
 
             private Builder() {
             } 
 
             private Builder(Module model) {
-                this.bizGroupId = model.bizGroupId;
-                this.taskId = model.taskId;
+                this.articleStatus = model.articleStatus;
+                this.draftId = model.draftId;
+                this.status = model.status;
             } 
 
             /**
-             * BizGroupId.
+             * ArticleStatus.
              */
-            public Builder bizGroupId(String bizGroupId) {
-                this.bizGroupId = bizGroupId;
+            public Builder articleStatus(String articleStatus) {
+                this.articleStatus = articleStatus;
                 return this;
             }
 
             /**
-             * TaskId.
+             * DraftId.
              */
-            public Builder taskId(String taskId) {
-                this.taskId = taskId;
+            public Builder draftId(String draftId) {
+                this.draftId = draftId;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 

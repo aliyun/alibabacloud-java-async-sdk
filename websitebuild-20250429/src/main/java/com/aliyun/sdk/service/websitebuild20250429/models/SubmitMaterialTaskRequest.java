@@ -22,6 +22,10 @@ public class SubmitMaterialTaskRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizGroupId")
+    private String bizGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskParam")
     @com.aliyun.core.annotation.Validation(required = true)
     private String taskParam;
@@ -34,6 +38,7 @@ public class SubmitMaterialTaskRequest extends Request {
     private SubmitMaterialTaskRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.bizGroupId = builder.bizGroupId;
         this.taskParam = builder.taskParam;
         this.taskType = builder.taskType;
     }
@@ -59,6 +64,13 @@ public class SubmitMaterialTaskRequest extends Request {
     }
 
     /**
+     * @return bizGroupId
+     */
+    public String getBizGroupId() {
+        return this.bizGroupId;
+    }
+
+    /**
      * @return taskParam
      */
     public String getTaskParam() {
@@ -74,6 +86,7 @@ public class SubmitMaterialTaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<SubmitMaterialTaskRequest, Builder> {
         private String regionId; 
+        private String bizGroupId; 
         private String taskParam; 
         private String taskType; 
 
@@ -84,6 +97,7 @@ public class SubmitMaterialTaskRequest extends Request {
         private Builder(SubmitMaterialTaskRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.bizGroupId = request.bizGroupId;
             this.taskParam = request.taskParam;
             this.taskType = request.taskType;
         } 
@@ -94,6 +108,15 @@ public class SubmitMaterialTaskRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * BizGroupId.
+         */
+        public Builder bizGroupId(String bizGroupId) {
+            this.putQueryParameter("BizGroupId", bizGroupId);
+            this.bizGroupId = bizGroupId;
             return this;
         }
 

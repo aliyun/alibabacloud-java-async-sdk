@@ -66,6 +66,10 @@ public class ListAppInstancesRequest extends Request {
     private String query;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryMode")
+    private String queryMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StatusList")
     private java.util.List<String> statusList;
 
@@ -83,6 +87,7 @@ public class ListAppInstancesRequest extends Request {
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.query = builder.query;
+        this.queryMode = builder.queryMode;
         this.statusList = builder.statusList;
     }
 
@@ -184,6 +189,13 @@ public class ListAppInstancesRequest extends Request {
     }
 
     /**
+     * @return queryMode
+     */
+    public String getQueryMode() {
+        return this.queryMode;
+    }
+
+    /**
      * @return statusList
      */
     public java.util.List<String> getStatusList() {
@@ -203,6 +215,7 @@ public class ListAppInstancesRequest extends Request {
         private Integer pageNum; 
         private Integer pageSize; 
         private String query; 
+        private String queryMode; 
         private java.util.List<String> statusList; 
 
         private Builder() {
@@ -223,6 +236,7 @@ public class ListAppInstancesRequest extends Request {
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
             this.query = request.query;
+            this.queryMode = request.queryMode;
             this.statusList = request.statusList;
         } 
 
@@ -366,6 +380,15 @@ public class ListAppInstancesRequest extends Request {
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
             this.query = query;
+            return this;
+        }
+
+        /**
+         * QueryMode.
+         */
+        public Builder queryMode(String queryMode) {
+            this.putQueryParameter("QueryMode", queryMode);
+            this.queryMode = queryMode;
             return this;
         }
 
