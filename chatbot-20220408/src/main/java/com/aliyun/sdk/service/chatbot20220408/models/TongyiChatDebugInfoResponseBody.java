@@ -29,11 +29,15 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("SessionId")
+    private String sessionId;
+
     private TongyiChatDebugInfoResponseBody(Builder builder) {
         this.answerInfo = builder.answerInfo;
         this.messageId = builder.messageId;
         this.pipeline = builder.pipeline;
         this.requestId = builder.requestId;
+        this.sessionId = builder.sessionId;
     }
 
     public static Builder builder() {
@@ -76,11 +80,19 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return sessionId
+     */
+    public String getSessionId() {
+        return this.sessionId;
+    }
+
     public static final class Builder {
         private AnswerInfo answerInfo; 
         private String messageId; 
         private java.util.List<Pipeline> pipeline; 
         private String requestId; 
+        private String sessionId; 
 
         private Builder() {
         } 
@@ -90,6 +102,7 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
             this.messageId = model.messageId;
             this.pipeline = model.pipeline;
             this.requestId = model.requestId;
+            this.sessionId = model.sessionId;
         } 
 
         /**
@@ -124,6 +137,14 @@ public class TongyiChatDebugInfoResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SessionId.
+         */
+        public Builder sessionId(String sessionId) {
+            this.sessionId = sessionId;
             return this;
         }
 
