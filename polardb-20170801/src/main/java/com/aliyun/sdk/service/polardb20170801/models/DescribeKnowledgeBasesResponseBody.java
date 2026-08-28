@@ -173,6 +173,9 @@ public class DescribeKnowledgeBasesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KnowledgeBaseId")
         private String knowledgeBaseId;
 
+        @com.aliyun.core.annotation.NameInMap("KnowledgeBaseType")
+        private String knowledgeBaseType;
+
         @com.aliyun.core.annotation.NameInMap("KnowledgeSpaceId")
         private String knowledgeSpaceId;
 
@@ -193,6 +196,7 @@ public class DescribeKnowledgeBasesResponseBody extends TeaModel {
             this.creationTime = builder.creationTime;
             this.description = builder.description;
             this.knowledgeBaseId = builder.knowledgeBaseId;
+            this.knowledgeBaseType = builder.knowledgeBaseType;
             this.knowledgeSpaceId = builder.knowledgeSpaceId;
             this.name = builder.name;
             this.status = builder.status;
@@ -237,6 +241,13 @@ public class DescribeKnowledgeBasesResponseBody extends TeaModel {
         }
 
         /**
+         * @return knowledgeBaseType
+         */
+        public String getKnowledgeBaseType() {
+            return this.knowledgeBaseType;
+        }
+
+        /**
          * @return knowledgeSpaceId
          */
         public String getKnowledgeSpaceId() {
@@ -276,6 +287,7 @@ public class DescribeKnowledgeBasesResponseBody extends TeaModel {
             private String creationTime; 
             private String description; 
             private String knowledgeBaseId; 
+            private String knowledgeBaseType; 
             private String knowledgeSpaceId; 
             private String name; 
             private String status; 
@@ -290,6 +302,7 @@ public class DescribeKnowledgeBasesResponseBody extends TeaModel {
                 this.creationTime = model.creationTime;
                 this.description = model.description;
                 this.knowledgeBaseId = model.knowledgeBaseId;
+                this.knowledgeBaseType = model.knowledgeBaseType;
                 this.knowledgeSpaceId = model.knowledgeSpaceId;
                 this.name = model.name;
                 this.status = model.status;
@@ -326,6 +339,14 @@ public class DescribeKnowledgeBasesResponseBody extends TeaModel {
              */
             public Builder knowledgeBaseId(String knowledgeBaseId) {
                 this.knowledgeBaseId = knowledgeBaseId;
+                return this;
+            }
+
+            /**
+             * KnowledgeBaseType.
+             */
+            public Builder knowledgeBaseType(String knowledgeBaseType) {
+                this.knowledgeBaseType = knowledgeBaseType;
                 return this;
             }
 
