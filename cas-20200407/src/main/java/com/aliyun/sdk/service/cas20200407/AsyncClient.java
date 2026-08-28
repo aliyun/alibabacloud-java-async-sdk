@@ -130,6 +130,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDeploymentJobResponse> createDeploymentJob(CreateDeploymentJobRequest request);
 
     /**
+     * @param request the request parameters of CreateRollbackTask  CreateRollbackTaskRequest
+     * @return CreateRollbackTaskResponse
+     */
+    CompletableFuture<CreateRollbackTaskResponse> createRollbackTask(CreateRollbackTaskRequest request);
+
+    /**
      * @param request the request parameters of CreateWHClientCertificate  CreateWHClientCertificateRequest
      * @return CreateWHClientCertificateResponse
      */
@@ -529,6 +535,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RevokeWHClientCertificateResponse
      */
     CompletableFuture<RevokeWHClientCertificateResponse> revokeWHClientCertificate(RevokeWHClientCertificateRequest request);
+
+    /**
+     * @param request the request parameters of ShareCertificate  ShareCertificateRequest
+     * @return ShareCertificateResponse
+     */
+    CompletableFuture<ShareCertificateResponse> shareCertificate(ShareCertificateRequest request);
 
     /**
      * <b>description</b> :
