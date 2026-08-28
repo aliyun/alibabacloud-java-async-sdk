@@ -32,24 +32,24 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.version = "2022-07-18";
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("cn-qingdao", "ververica.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "ververica.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "ververica.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "ververica.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "ververica.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "ververica.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "ververica.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "ververica.cn-hongkong.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "ververica.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "ververica.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "ververica.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "ververica.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "ververica.cn-hangzhou.aliyuncs.com"),
             new TeaPair("us-west-1", "ververica.us-west-1.aliyuncs.com"),
             new TeaPair("us-east-1", "ververica.us-east-1.aliyuncs.com"),
-            new TeaPair("eu-west-1", "ververica.eu-west-1.aliyuncs.com"),
             new TeaPair("eu-central-1", "ververica.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "ververica.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "ververica.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "ververica.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "ververica.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "ververica.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "ververica.cn-qingdao.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "ververica.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "ververica.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "ververica.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-beijing", "ververica.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "ververica.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "ververica.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "ververica.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "ververica.ap-northeast-1.aliyuncs.com")
+            new TeaPair("eu-west-1", "ververica.eu-west-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "ververica.cn-shanghai-finance-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -1093,6 +1093,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetPatrolConfig  GetPatrolConfigRequest
+     * @return GetPatrolConfigResponse
+     */
+    @Override
+    public CompletableFuture<GetPatrolConfigResponse> getPatrolConfig(GetPatrolConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetPatrolConfig").setMethod(HttpMethod.GET).setPathRegex("/autopilot/v2/namespaces/{namespace}/patrol-config").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetPatrolConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetPatrolConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetPatrolReportDetail  GetPatrolReportDetailRequest
+     * @return GetPatrolReportDetailResponse
+     */
+    @Override
+    public CompletableFuture<GetPatrolReportDetailResponse> getPatrolReportDetail(GetPatrolReportDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetPatrolReportDetail").setMethod(HttpMethod.GET).setPathRegex("/autopilot/v2/namespaces/{namespace}/patrol-reports/details").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetPatrolReportDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetPatrolReportDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetPreSignedUrlForPutObject  GetPreSignedUrlForPutObjectRequest
      * @return GetPreSignedUrlForPutObjectResponse
      */
@@ -1399,6 +1435,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListPatrolReports  ListPatrolReportsRequest
+     * @return ListPatrolReportsResponse
+     */
+    @Override
+    public CompletableFuture<ListPatrolReportsResponse> listPatrolReports(ListPatrolReportsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListPatrolReports").setMethod(HttpMethod.GET).setPathRegex("/autopilot/v2/namespaces/{namespace}/patrol-reports").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListPatrolReportsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListPatrolReportsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListSavepoints  ListSavepointsRequest
      * @return ListSavepointsResponse
      */
@@ -1688,6 +1742,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of TriggerPatrol  TriggerPatrolRequest
+     * @return TriggerPatrolResponse
+     */
+    @Override
+    public CompletableFuture<TriggerPatrolResponse> triggerPatrol(TriggerPatrolRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TriggerPatrol").setMethod(HttpMethod.POST).setPathRegex("/autopilot/v2/namespaces/{namespace}/patrol-reports/trigger").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TriggerPatrolResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TriggerPatrolResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateAutopilotPolicy  UpdateAutopilotPolicyRequest
      * @return UpdateAutopilotPolicyResponse
      */
@@ -1826,6 +1898,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateMemberResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdatePatrolConfig  UpdatePatrolConfigRequest
+     * @return UpdatePatrolConfigResponse
+     */
+    @Override
+    public CompletableFuture<UpdatePatrolConfigResponse> updatePatrolConfig(UpdatePatrolConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdatePatrolConfig").setMethod(HttpMethod.PATCH).setPathRegex("/autopilot/v2/namespaces/{namespace}/patrol-config").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdatePatrolConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdatePatrolConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

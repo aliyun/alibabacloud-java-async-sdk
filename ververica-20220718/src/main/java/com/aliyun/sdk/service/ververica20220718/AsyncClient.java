@@ -360,6 +360,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetMemberResponse> getMember(GetMemberRequest request);
 
     /**
+     * @param request the request parameters of GetPatrolConfig  GetPatrolConfigRequest
+     * @return GetPatrolConfigResponse
+     */
+    CompletableFuture<GetPatrolConfigResponse> getPatrolConfig(GetPatrolConfigRequest request);
+
+    /**
+     * @param request the request parameters of GetPatrolReportDetail  GetPatrolReportDetailRequest
+     * @return GetPatrolReportDetailResponse
+     */
+    CompletableFuture<GetPatrolReportDetailResponse> getPatrolReportDetail(GetPatrolReportDetailRequest request);
+
+    /**
      * @param request the request parameters of GetPreSignedUrlForPutObject  GetPreSignedUrlForPutObjectRequest
      * @return GetPreSignedUrlForPutObjectResponse
      */
@@ -462,6 +474,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListMembersResponse> listMembers(ListMembersRequest request);
 
     /**
+     * @param request the request parameters of ListPatrolReports  ListPatrolReportsRequest
+     * @return ListPatrolReportsResponse
+     */
+    CompletableFuture<ListPatrolReportsResponse> listPatrolReports(ListPatrolReportsRequest request);
+
+    /**
      * @param request the request parameters of ListSavepoints  ListSavepointsRequest
      * @return ListSavepointsResponse
      */
@@ -559,6 +577,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitSqlPreviewResponse> submitSqlPreview(SubmitSqlPreviewRequest request);
 
     /**
+     * @param request the request parameters of TriggerPatrol  TriggerPatrolRequest
+     * @return TriggerPatrolResponse
+     */
+    CompletableFuture<TriggerPatrolResponse> triggerPatrol(TriggerPatrolRequest request);
+
+    /**
      * @param request the request parameters of UpdateAutopilotPolicy  UpdateAutopilotPolicyRequest
      * @return UpdateAutopilotPolicyResponse
      */
@@ -605,6 +629,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateMemberResponse
      */
     CompletableFuture<UpdateMemberResponse> updateMember(UpdateMemberRequest request);
+
+    /**
+     * @param request the request parameters of UpdatePatrolConfig  UpdatePatrolConfigRequest
+     * @return UpdatePatrolConfigResponse
+     */
+    CompletableFuture<UpdatePatrolConfigResponse> updatePatrolConfig(UpdatePatrolConfigRequest request);
 
     /**
      * @param request the request parameters of UpdateScheduledPlan  UpdateScheduledPlanRequest

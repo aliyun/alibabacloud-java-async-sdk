@@ -18,6 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SqlFile extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("batchMode")
+    @Deprecated
     private String batchMode;
 
     @com.aliyun.core.annotation.NameInMap("description")
