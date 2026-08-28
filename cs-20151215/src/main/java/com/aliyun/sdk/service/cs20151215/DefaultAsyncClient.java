@@ -1942,6 +1942,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListNodePoolComponentInstanceNodes  ListNodePoolComponentInstanceNodesRequest
+     * @return ListNodePoolComponentInstanceNodesResponse
+     */
+    @Override
+    public CompletableFuture<ListNodePoolComponentInstanceNodesResponse> listNodePoolComponentInstanceNodes(ListNodePoolComponentInstanceNodesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListNodePoolComponentInstanceNodes").setMethod(HttpMethod.GET).setPathRegex("/clusters/{cluster_id}/nodepools/{nodepool_id}/component_instances/{name}/nodes").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListNodePoolComponentInstanceNodesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListNodePoolComponentInstanceNodesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListNodePoolComponentInstances  ListNodePoolComponentInstancesRequest
      * @return ListNodePoolComponentInstancesResponse
      */

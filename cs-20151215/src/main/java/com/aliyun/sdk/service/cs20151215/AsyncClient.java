@@ -699,6 +699,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListClusterKubeconfigStatesResponse> listClusterKubeconfigStates(ListClusterKubeconfigStatesRequest request);
 
     /**
+     * @param request the request parameters of ListNodePoolComponentInstanceNodes  ListNodePoolComponentInstanceNodesRequest
+     * @return ListNodePoolComponentInstanceNodesResponse
+     */
+    CompletableFuture<ListNodePoolComponentInstanceNodesResponse> listNodePoolComponentInstanceNodes(ListNodePoolComponentInstanceNodesRequest request);
+
+    /**
      * @param request the request parameters of ListNodePoolComponentInstances  ListNodePoolComponentInstancesRequest
      * @return ListNodePoolComponentInstancesResponse
      */
