@@ -22,6 +22,10 @@ public class CredentialSubmitIntlRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CheckRuleConfig")
+    private String checkRuleConfig;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CredentialOcrPictureBase64")
     private String credentialOcrPictureBase64;
 
@@ -40,6 +44,10 @@ public class CredentialSubmitIntlRequest extends Request {
     private String fraudCheck;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdQuality")
+    private String idQuality;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MerchantBizId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String merchantBizId;
@@ -48,6 +56,14 @@ public class CredentialSubmitIntlRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("OcrArea")
     @com.aliyun.core.annotation.Validation(required = true)
     private String ocrArea;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OcrTranslation")
+    private String ocrTranslation;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OcrValueStandard")
+    private String ocrValueStandard;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProductCode")
@@ -62,12 +78,16 @@ public class CredentialSubmitIntlRequest extends Request {
     private CredentialSubmitIntlRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.checkRuleConfig = builder.checkRuleConfig;
         this.credentialOcrPictureBase64 = builder.credentialOcrPictureBase64;
         this.credentialOcrPictureUrl = builder.credentialOcrPictureUrl;
         this.docType = builder.docType;
         this.fraudCheck = builder.fraudCheck;
+        this.idQuality = builder.idQuality;
         this.merchantBizId = builder.merchantBizId;
         this.ocrArea = builder.ocrArea;
+        this.ocrTranslation = builder.ocrTranslation;
+        this.ocrValueStandard = builder.ocrValueStandard;
         this.productCode = builder.productCode;
         this.sceneCode = builder.sceneCode;
     }
@@ -90,6 +110,13 @@ public class CredentialSubmitIntlRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return checkRuleConfig
+     */
+    public String getCheckRuleConfig() {
+        return this.checkRuleConfig;
     }
 
     /**
@@ -121,6 +148,13 @@ public class CredentialSubmitIntlRequest extends Request {
     }
 
     /**
+     * @return idQuality
+     */
+    public String getIdQuality() {
+        return this.idQuality;
+    }
+
+    /**
      * @return merchantBizId
      */
     public String getMerchantBizId() {
@@ -132,6 +166,20 @@ public class CredentialSubmitIntlRequest extends Request {
      */
     public String getOcrArea() {
         return this.ocrArea;
+    }
+
+    /**
+     * @return ocrTranslation
+     */
+    public String getOcrTranslation() {
+        return this.ocrTranslation;
+    }
+
+    /**
+     * @return ocrValueStandard
+     */
+    public String getOcrValueStandard() {
+        return this.ocrValueStandard;
     }
 
     /**
@@ -150,12 +198,16 @@ public class CredentialSubmitIntlRequest extends Request {
 
     public static final class Builder extends Request.Builder<CredentialSubmitIntlRequest, Builder> {
         private String regionId; 
+        private String checkRuleConfig; 
         private String credentialOcrPictureBase64; 
         private String credentialOcrPictureUrl; 
         private String docType; 
         private String fraudCheck; 
+        private String idQuality; 
         private String merchantBizId; 
         private String ocrArea; 
+        private String ocrTranslation; 
+        private String ocrValueStandard; 
         private String productCode; 
         private String sceneCode; 
 
@@ -166,12 +218,16 @@ public class CredentialSubmitIntlRequest extends Request {
         private Builder(CredentialSubmitIntlRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.checkRuleConfig = request.checkRuleConfig;
             this.credentialOcrPictureBase64 = request.credentialOcrPictureBase64;
             this.credentialOcrPictureUrl = request.credentialOcrPictureUrl;
             this.docType = request.docType;
             this.fraudCheck = request.fraudCheck;
+            this.idQuality = request.idQuality;
             this.merchantBizId = request.merchantBizId;
             this.ocrArea = request.ocrArea;
+            this.ocrTranslation = request.ocrTranslation;
+            this.ocrValueStandard = request.ocrValueStandard;
             this.productCode = request.productCode;
             this.sceneCode = request.sceneCode;
         } 
@@ -182,6 +238,15 @@ public class CredentialSubmitIntlRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * CheckRuleConfig.
+         */
+        public Builder checkRuleConfig(String checkRuleConfig) {
+            this.putBodyParameter("CheckRuleConfig", checkRuleConfig);
+            this.checkRuleConfig = checkRuleConfig;
             return this;
         }
 
@@ -243,6 +308,15 @@ public class CredentialSubmitIntlRequest extends Request {
         }
 
         /**
+         * IdQuality.
+         */
+        public Builder idQuality(String idQuality) {
+            this.putQueryParameter("IdQuality", idQuality);
+            this.idQuality = idQuality;
+            return this;
+        }
+
+        /**
          * <p>A unique business identifier defined on the merchant side, used for troubleshooting issues later. Supports a combination of letters and digits, with a maximum length of 32 characters. Ensure uniqueness.</p>
          * <p>This parameter is required.</p>
          * 
@@ -268,6 +342,24 @@ public class CredentialSubmitIntlRequest extends Request {
         public Builder ocrArea(String ocrArea) {
             this.putQueryParameter("OcrArea", ocrArea);
             this.ocrArea = ocrArea;
+            return this;
+        }
+
+        /**
+         * OcrTranslation.
+         */
+        public Builder ocrTranslation(String ocrTranslation) {
+            this.putQueryParameter("OcrTranslation", ocrTranslation);
+            this.ocrTranslation = ocrTranslation;
+            return this;
+        }
+
+        /**
+         * OcrValueStandard.
+         */
+        public Builder ocrValueStandard(String ocrValueStandard) {
+            this.putQueryParameter("OcrValueStandard", ocrValueStandard);
+            this.ocrValueStandard = ocrValueStandard;
             return this;
         }
 

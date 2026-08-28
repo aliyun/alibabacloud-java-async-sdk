@@ -58,6 +58,10 @@ public class EkycVerifyRequest extends Request {
     private String idOcrPictureUrl;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdSpoof")
+    private String idSpoof;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IdThreshold")
     private String idThreshold;
 
@@ -85,6 +89,7 @@ public class EkycVerifyRequest extends Request {
         this.faceQualityCheck = builder.faceQualityCheck;
         this.idOcrPictureBase64 = builder.idOcrPictureBase64;
         this.idOcrPictureUrl = builder.idOcrPictureUrl;
+        this.idSpoof = builder.idSpoof;
         this.idThreshold = builder.idThreshold;
         this.merchantBizId = builder.merchantBizId;
         this.merchantUserId = builder.merchantUserId;
@@ -175,6 +180,13 @@ public class EkycVerifyRequest extends Request {
     }
 
     /**
+     * @return idSpoof
+     */
+    public String getIdSpoof() {
+        return this.idSpoof;
+    }
+
+    /**
      * @return idThreshold
      */
     public String getIdThreshold() {
@@ -213,6 +225,7 @@ public class EkycVerifyRequest extends Request {
         private String faceQualityCheck; 
         private String idOcrPictureBase64; 
         private String idOcrPictureUrl; 
+        private String idSpoof; 
         private String idThreshold; 
         private String merchantBizId; 
         private String merchantUserId; 
@@ -234,6 +247,7 @@ public class EkycVerifyRequest extends Request {
             this.faceQualityCheck = request.faceQualityCheck;
             this.idOcrPictureBase64 = request.idOcrPictureBase64;
             this.idOcrPictureUrl = request.idOcrPictureUrl;
+            this.idSpoof = request.idSpoof;
             this.idThreshold = request.idThreshold;
             this.merchantBizId = request.merchantBizId;
             this.merchantUserId = request.merchantUserId;
@@ -377,6 +391,15 @@ public class EkycVerifyRequest extends Request {
         public Builder idOcrPictureUrl(String idOcrPictureUrl) {
             this.putQueryParameter("IdOcrPictureUrl", idOcrPictureUrl);
             this.idOcrPictureUrl = idOcrPictureUrl;
+            return this;
+        }
+
+        /**
+         * IdSpoof.
+         */
+        public Builder idSpoof(String idSpoof) {
+            this.putQueryParameter("IdSpoof", idSpoof);
+            this.idSpoof = idSpoof;
             return this;
         }
 
