@@ -2403,6 +2403,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListPluginWorkspace  ListPluginWorkspaceRequest
+     * @return ListPluginWorkspaceResponse
+     */
+    @Override
+    public CompletableFuture<ListPluginWorkspaceResponse> listPluginWorkspace(ListPluginWorkspaceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListPluginWorkspace").setMethod(HttpMethod.GET).setPathRegex("/v1/plugin-workspaces").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListPluginWorkspaceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListPluginWorkspaceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListPlugins  ListPluginsRequest
      * @return ListPluginsResponse
      */
@@ -2451,6 +2469,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListPolicyClassesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListRiskCheckResults  ListRiskCheckResultsRequest
+     * @return ListRiskCheckResultsResponse
+     */
+    @Override
+    public CompletableFuture<ListRiskCheckResultsResponse> listRiskCheckResults(ListRiskCheckResultsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListRiskCheckResults").setMethod(HttpMethod.GET).setPathRegex("/v1/gateways/{gatewayId}/risk-check/results").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListRiskCheckResultsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListRiskCheckResultsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2514,6 +2550,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListSources  ListSourcesRequest
+     * @return ListSourcesResponse
+     */
+    @Override
+    public CompletableFuture<ListSourcesResponse> listSources(ListSourcesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListSources").setMethod(HttpMethod.GET).setPathRegex("/v1/sources").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListSourcesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListSourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListSslCerts  ListSslCertsRequest
      * @return ListSslCertsResponse
      */
@@ -2526,6 +2580,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListSslCertsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListSyncMCPServer  ListSyncMCPServerRequest
+     * @return ListSyncMCPServerResponse
+     */
+    @Override
+    public CompletableFuture<ListSyncMCPServerResponse> listSyncMCPServer(ListSyncMCPServerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListSyncMCPServer").setMethod(HttpMethod.GET).setPathRegex("/v1/mcp-servers/sync-mcp-server/list").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListSyncMCPServerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListSyncMCPServerResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2586,6 +2658,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of RefreshPluginOAuthCode  RefreshPluginOAuthCodeRequest
+     * @return RefreshPluginOAuthCodeResponse
+     */
+    @Override
+    public CompletableFuture<RefreshPluginOAuthCodeResponse> refreshPluginOAuthCode(RefreshPluginOAuthCodeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RefreshPluginOAuthCode").setMethod(HttpMethod.POST).setPathRegex("/v1/plugin-oauth-codes").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RefreshPluginOAuthCodeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RefreshPluginOAuthCodeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of RemoveConsumerAuthorizationRule  RemoveConsumerAuthorizationRuleRequest
      * @return RemoveConsumerAuthorizationRuleResponse
      */
@@ -2634,6 +2724,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RestartGatewayResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RunPluginPipeline  RunPluginPipelineRequest
+     * @return RunPluginPipelineResponse
+     */
+    @Override
+    public CompletableFuture<RunPluginPipelineResponse> runPluginPipeline(RunPluginPipelineRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RunPluginPipeline").setMethod(HttpMethod.POST).setPathRegex("/v1/plugin-workspaces/{workspaceId}/pipeline-run").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunPluginPipelineResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunPluginPipelineResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2802,6 +2910,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateAuthorizationRule  UpdateAuthorizationRuleRequest
+     * @return UpdateAuthorizationRuleResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAuthorizationRuleResponse> updateAuthorizationRule(UpdateAuthorizationRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateAuthorizationRule").setMethod(HttpMethod.PUT).setPathRegex("/v1/authorization-rules/{consumerAuthorizationRuleId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAuthorizationRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAuthorizationRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateConsumer  UpdateConsumerRequest
      * @return UpdateConsumerResponse
      */
@@ -2896,6 +3022,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateGatewayElasticPolicy  UpdateGatewayElasticPolicyRequest
+     * @return UpdateGatewayElasticPolicyResponse
+     */
+    @Override
+    public CompletableFuture<UpdateGatewayElasticPolicyResponse> updateGatewayElasticPolicy(UpdateGatewayElasticPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateGatewayElasticPolicy").setMethod(HttpMethod.POST).setPathRegex("/v1/gateways/{gatewayId}/elastic-policy").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateGatewayElasticPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateGatewayElasticPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateGatewayFeature  UpdateGatewayFeatureRequest
      * @return UpdateGatewayFeatureResponse
      */
@@ -2908,6 +3052,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateGatewayFeatureResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateGatewayLoadBalancer  UpdateGatewayLoadBalancerRequest
+     * @return UpdateGatewayLoadBalancerResponse
+     */
+    @Override
+    public CompletableFuture<UpdateGatewayLoadBalancerResponse> updateGatewayLoadBalancer(UpdateGatewayLoadBalancerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateGatewayLoadBalancer").setMethod(HttpMethod.POST).setPathRegex("/v1/gateways/{gatewayId}/update-load-balancer").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateGatewayLoadBalancerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateGatewayLoadBalancerResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

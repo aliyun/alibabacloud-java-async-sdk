@@ -214,6 +214,102 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
      *
      * <p>GetGatewayQuotaRuleResponseBody</p>
      */
+    public static class Subjects extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("id")
+        private String id;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("subjectType")
+        private String subjectType;
+
+        private Subjects(Builder builder) {
+            this.id = builder.id;
+            this.name = builder.name;
+            this.subjectType = builder.subjectType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Subjects create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return subjectType
+         */
+        public String getSubjectType() {
+            return this.subjectType;
+        }
+
+        public static final class Builder {
+            private String id; 
+            private String name; 
+            private String subjectType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Subjects model) {
+                this.id = model.id;
+                this.name = model.name;
+                this.subjectType = model.subjectType;
+            } 
+
+            /**
+             * id.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * subjectType.
+             */
+            public Builder subjectType(String subjectType) {
+                this.subjectType = subjectType;
+                return this;
+            }
+
+            public Subjects build() {
+                return new Subjects(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetGatewayQuotaRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGatewayQuotaRuleResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("baseTimestamp")
         private Long baseTimestamp;
@@ -242,6 +338,15 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ruleStatus")
         private String ruleStatus;
 
+        @com.aliyun.core.annotation.NameInMap("subjectCount")
+        private Long subjectCount;
+
+        @com.aliyun.core.annotation.NameInMap("subjectType")
+        private String subjectType;
+
+        @com.aliyun.core.annotation.NameInMap("subjects")
+        private java.util.List<Subjects> subjects;
+
         @com.aliyun.core.annotation.NameInMap("timezone")
         private String timezone;
 
@@ -258,6 +363,9 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             this.ruleId = builder.ruleId;
             this.ruleName = builder.ruleName;
             this.ruleStatus = builder.ruleStatus;
+            this.subjectCount = builder.subjectCount;
+            this.subjectType = builder.subjectType;
+            this.subjects = builder.subjects;
             this.timezone = builder.timezone;
             this.windowAlignment = builder.windowAlignment;
         }
@@ -334,6 +442,27 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
         }
 
         /**
+         * @return subjectCount
+         */
+        public Long getSubjectCount() {
+            return this.subjectCount;
+        }
+
+        /**
+         * @return subjectType
+         */
+        public String getSubjectType() {
+            return this.subjectType;
+        }
+
+        /**
+         * @return subjects
+         */
+        public java.util.List<Subjects> getSubjects() {
+            return this.subjects;
+        }
+
+        /**
          * @return timezone
          */
         public String getTimezone() {
@@ -357,6 +486,9 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
             private String ruleId; 
             private String ruleName; 
             private String ruleStatus; 
+            private Long subjectCount; 
+            private String subjectType; 
+            private java.util.List<Subjects> subjects; 
             private String timezone; 
             private String windowAlignment; 
 
@@ -373,6 +505,9 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
                 this.ruleId = model.ruleId;
                 this.ruleName = model.ruleName;
                 this.ruleStatus = model.ruleStatus;
+                this.subjectCount = model.subjectCount;
+                this.subjectType = model.subjectType;
+                this.subjects = model.subjects;
                 this.timezone = model.timezone;
                 this.windowAlignment = model.windowAlignment;
             } 
@@ -446,6 +581,30 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
              */
             public Builder ruleStatus(String ruleStatus) {
                 this.ruleStatus = ruleStatus;
+                return this;
+            }
+
+            /**
+             * subjectCount.
+             */
+            public Builder subjectCount(Long subjectCount) {
+                this.subjectCount = subjectCount;
+                return this;
+            }
+
+            /**
+             * subjectType.
+             */
+            public Builder subjectType(String subjectType) {
+                this.subjectType = subjectType;
+                return this;
+            }
+
+            /**
+             * subjects.
+             */
+            public Builder subjects(java.util.List<Subjects> subjects) {
+                this.subjects = subjects;
                 return this;
             }
 

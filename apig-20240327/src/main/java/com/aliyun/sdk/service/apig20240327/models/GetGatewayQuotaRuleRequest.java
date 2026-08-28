@@ -39,6 +39,10 @@ public class GetGatewayQuotaRuleRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("withConsumers")
     private Boolean withConsumers;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("withSubjects")
+    private Boolean withSubjects;
+
     private GetGatewayQuotaRuleRequest(Builder builder) {
         super(builder);
         this.gatewayId = builder.gatewayId;
@@ -46,6 +50,7 @@ public class GetGatewayQuotaRuleRequest extends Request {
         this.consumerPageNumber = builder.consumerPageNumber;
         this.consumerPageSize = builder.consumerPageSize;
         this.withConsumers = builder.withConsumers;
+        this.withSubjects = builder.withSubjects;
     }
 
     public static Builder builder() {
@@ -96,12 +101,20 @@ public class GetGatewayQuotaRuleRequest extends Request {
         return this.withConsumers;
     }
 
+    /**
+     * @return withSubjects
+     */
+    public Boolean getWithSubjects() {
+        return this.withSubjects;
+    }
+
     public static final class Builder extends Request.Builder<GetGatewayQuotaRuleRequest, Builder> {
         private String gatewayId; 
         private String ruleId; 
         private String consumerPageNumber; 
         private String consumerPageSize; 
         private Boolean withConsumers; 
+        private Boolean withSubjects; 
 
         private Builder() {
             super();
@@ -114,6 +127,7 @@ public class GetGatewayQuotaRuleRequest extends Request {
             this.consumerPageNumber = request.consumerPageNumber;
             this.consumerPageSize = request.consumerPageSize;
             this.withConsumers = request.withConsumers;
+            this.withSubjects = request.withSubjects;
         } 
 
         /**
@@ -158,6 +172,15 @@ public class GetGatewayQuotaRuleRequest extends Request {
         public Builder withConsumers(Boolean withConsumers) {
             this.putQueryParameter("withConsumers", withConsumers);
             this.withConsumers = withConsumers;
+            return this;
+        }
+
+        /**
+         * withSubjects.
+         */
+        public Builder withSubjects(Boolean withSubjects) {
+            this.putQueryParameter("withSubjects", withSubjects);
+            this.withSubjects = withSubjects;
             return this;
         }
 

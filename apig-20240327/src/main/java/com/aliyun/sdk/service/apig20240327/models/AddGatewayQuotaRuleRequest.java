@@ -27,7 +27,6 @@ public class AddGatewayQuotaRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("consumerGroupIds")
-    @Deprecated
     private java.util.List<String> consumerGroupIds;
 
     @com.aliyun.core.annotation.Body
@@ -67,6 +66,10 @@ public class AddGatewayQuotaRuleRequest extends Request {
     private String ruleName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("subjectType")
+    private String subjectType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("timezone")
     private String timezone;
 
@@ -87,6 +90,7 @@ public class AddGatewayQuotaRuleRequest extends Request {
         this.quotaDimension = builder.quotaDimension;
         this.quotaLimit = builder.quotaLimit;
         this.ruleName = builder.ruleName;
+        this.subjectType = builder.subjectType;
         this.timezone = builder.timezone;
         this.windowAlignment = builder.windowAlignment;
     }
@@ -182,6 +186,13 @@ public class AddGatewayQuotaRuleRequest extends Request {
     }
 
     /**
+     * @return subjectType
+     */
+    public String getSubjectType() {
+        return this.subjectType;
+    }
+
+    /**
      * @return timezone
      */
     public String getTimezone() {
@@ -207,6 +218,7 @@ public class AddGatewayQuotaRuleRequest extends Request {
         private String quotaDimension; 
         private Long quotaLimit; 
         private String ruleName; 
+        private String subjectType; 
         private String timezone; 
         private String windowAlignment; 
 
@@ -227,6 +239,7 @@ public class AddGatewayQuotaRuleRequest extends Request {
             this.quotaDimension = request.quotaDimension;
             this.quotaLimit = request.quotaLimit;
             this.ruleName = request.ruleName;
+            this.subjectType = request.subjectType;
             this.timezone = request.timezone;
             this.windowAlignment = request.windowAlignment;
         } 
@@ -339,6 +352,15 @@ public class AddGatewayQuotaRuleRequest extends Request {
         public Builder ruleName(String ruleName) {
             this.putBodyParameter("ruleName", ruleName);
             this.ruleName = ruleName;
+            return this;
+        }
+
+        /**
+         * subjectType.
+         */
+        public Builder subjectType(String subjectType) {
+            this.putBodyParameter("subjectType", subjectType);
+            this.subjectType = subjectType;
             return this;
         }
 

@@ -143,6 +143,9 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cachedAmount")
         private Long cachedAmount;
 
+        @com.aliyun.core.annotation.NameInMap("consumer")
+        private String consumer;
+
         @com.aliyun.core.annotation.NameInMap("inputAmount")
         private Long inputAmount;
 
@@ -152,6 +155,9 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("outputAmount")
         private Long outputAmount;
 
+        @com.aliyun.core.annotation.NameInMap("requestId")
+        private String requestId;
+
         @com.aliyun.core.annotation.NameInMap("startTime")
         private String startTime;
 
@@ -160,9 +166,11 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
 
         private Items(Builder builder) {
             this.cachedAmount = builder.cachedAmount;
+            this.consumer = builder.consumer;
             this.inputAmount = builder.inputAmount;
             this.model = builder.model;
             this.outputAmount = builder.outputAmount;
+            this.requestId = builder.requestId;
             this.startTime = builder.startTime;
             this.usedAmount = builder.usedAmount;
         }
@@ -180,6 +188,13 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
          */
         public Long getCachedAmount() {
             return this.cachedAmount;
+        }
+
+        /**
+         * @return consumer
+         */
+        public String getConsumer() {
+            return this.consumer;
         }
 
         /**
@@ -204,6 +219,13 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         }
 
         /**
+         * @return requestId
+         */
+        public String getRequestId() {
+            return this.requestId;
+        }
+
+        /**
          * @return startTime
          */
         public String getStartTime() {
@@ -219,9 +241,11 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long cachedAmount; 
+            private String consumer; 
             private Long inputAmount; 
             private String model; 
             private Long outputAmount; 
+            private String requestId; 
             private String startTime; 
             private Long usedAmount; 
 
@@ -230,9 +254,11 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
 
             private Builder(Items model) {
                 this.cachedAmount = model.cachedAmount;
+                this.consumer = model.consumer;
                 this.inputAmount = model.inputAmount;
                 this.model = model.model;
                 this.outputAmount = model.outputAmount;
+                this.requestId = model.requestId;
                 this.startTime = model.startTime;
                 this.usedAmount = model.usedAmount;
             } 
@@ -242,6 +268,14 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
              */
             public Builder cachedAmount(Long cachedAmount) {
                 this.cachedAmount = cachedAmount;
+                return this;
+            }
+
+            /**
+             * consumer.
+             */
+            public Builder consumer(String consumer) {
+                this.consumer = consumer;
                 return this;
             }
 
@@ -266,6 +300,17 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
              */
             public Builder outputAmount(Long outputAmount) {
                 this.outputAmount = outputAmount;
+                return this;
+            }
+
+            /**
+             * <p>Id of the request</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890</p>
+             */
+            public Builder requestId(String requestId) {
+                this.requestId = requestId;
                 return this;
             }
 
@@ -431,6 +476,9 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("overLimit")
         private Boolean overLimit;
 
+        @com.aliyun.core.annotation.NameInMap("subjectType")
+        private String subjectType;
+
         @com.aliyun.core.annotation.NameInMap("totalQuota")
         private Long totalQuota;
 
@@ -443,6 +491,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
             this.inputAmount = builder.inputAmount;
             this.outputAmount = builder.outputAmount;
             this.overLimit = builder.overLimit;
+            this.subjectType = builder.subjectType;
             this.totalQuota = builder.totalQuota;
             this.usedAmount = builder.usedAmount;
         }
@@ -491,6 +540,13 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         }
 
         /**
+         * @return subjectType
+         */
+        public String getSubjectType() {
+            return this.subjectType;
+        }
+
+        /**
          * @return totalQuota
          */
         public Long getTotalQuota() {
@@ -510,6 +566,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
             private Long inputAmount; 
             private Long outputAmount; 
             private Boolean overLimit; 
+            private String subjectType; 
             private Long totalQuota; 
             private Long usedAmount; 
 
@@ -522,6 +579,7 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
                 this.inputAmount = model.inputAmount;
                 this.outputAmount = model.outputAmount;
                 this.overLimit = model.overLimit;
+                this.subjectType = model.subjectType;
                 this.totalQuota = model.totalQuota;
                 this.usedAmount = model.usedAmount;
             } 
@@ -563,6 +621,14 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
              */
             public Builder overLimit(Boolean overLimit) {
                 this.overLimit = overLimit;
+                return this;
+            }
+
+            /**
+             * subjectType.
+             */
+            public Builder subjectType(String subjectType) {
+                this.subjectType = subjectType;
                 return this;
             }
 

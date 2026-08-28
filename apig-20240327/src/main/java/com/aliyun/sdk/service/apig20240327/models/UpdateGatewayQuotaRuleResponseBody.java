@@ -149,11 +149,23 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("consumerName")
         private String consumerName;
 
+        @com.aliyun.core.annotation.NameInMap("subjectId")
+        private String subjectId;
+
+        @com.aliyun.core.annotation.NameInMap("subjectName")
+        private String subjectName;
+
+        @com.aliyun.core.annotation.NameInMap("subjectType")
+        private String subjectType;
+
         private Items(Builder builder) {
             this.conflictPeriodType = builder.conflictPeriodType;
             this.conflictType = builder.conflictType;
             this.consumerId = builder.consumerId;
             this.consumerName = builder.consumerName;
+            this.subjectId = builder.subjectId;
+            this.subjectName = builder.subjectName;
+            this.subjectType = builder.subjectType;
         }
 
         public static Builder builder() {
@@ -192,11 +204,35 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
             return this.consumerName;
         }
 
+        /**
+         * @return subjectId
+         */
+        public String getSubjectId() {
+            return this.subjectId;
+        }
+
+        /**
+         * @return subjectName
+         */
+        public String getSubjectName() {
+            return this.subjectName;
+        }
+
+        /**
+         * @return subjectType
+         */
+        public String getSubjectType() {
+            return this.subjectType;
+        }
+
         public static final class Builder {
             private String conflictPeriodType; 
             private String conflictType; 
             private String consumerId; 
             private String consumerName; 
+            private String subjectId; 
+            private String subjectName; 
+            private String subjectType; 
 
             private Builder() {
             } 
@@ -206,6 +242,9 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
                 this.conflictType = model.conflictType;
                 this.consumerId = model.consumerId;
                 this.consumerName = model.consumerName;
+                this.subjectId = model.subjectId;
+                this.subjectName = model.subjectName;
+                this.subjectType = model.subjectType;
             } 
 
             /**
@@ -237,6 +276,30 @@ public class UpdateGatewayQuotaRuleResponseBody extends TeaModel {
              */
             public Builder consumerName(String consumerName) {
                 this.consumerName = consumerName;
+                return this;
+            }
+
+            /**
+             * subjectId.
+             */
+            public Builder subjectId(String subjectId) {
+                this.subjectId = subjectId;
+                return this;
+            }
+
+            /**
+             * subjectName.
+             */
+            public Builder subjectName(String subjectName) {
+                this.subjectName = subjectName;
+                return this;
+            }
+
+            /**
+             * subjectType.
+             */
+            public Builder subjectType(String subjectType) {
+                this.subjectType = subjectType;
                 return this;
             }
 
