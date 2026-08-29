@@ -46,6 +46,10 @@ public class ListModelConnectionsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("providerType")
     private String providerType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("searchType")
+    private String searchType;
+
     private ListModelConnectionsRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
@@ -55,6 +59,7 @@ public class ListModelConnectionsRequest extends Request {
         this.nextToken = builder.nextToken;
         this.protocol = builder.protocol;
         this.providerType = builder.providerType;
+        this.searchType = builder.searchType;
     }
 
     public static Builder builder() {
@@ -119,6 +124,13 @@ public class ListModelConnectionsRequest extends Request {
         return this.providerType;
     }
 
+    /**
+     * @return searchType
+     */
+    public String getSearchType() {
+        return this.searchType;
+    }
+
     public static final class Builder extends Request.Builder<ListModelConnectionsRequest, Builder> {
         private String workspaceId; 
         private Boolean includeModels; 
@@ -127,6 +139,7 @@ public class ListModelConnectionsRequest extends Request {
         private String nextToken; 
         private String protocol; 
         private String providerType; 
+        private String searchType; 
 
         private Builder() {
             super();
@@ -141,6 +154,7 @@ public class ListModelConnectionsRequest extends Request {
             this.nextToken = request.nextToken;
             this.protocol = request.protocol;
             this.providerType = request.providerType;
+            this.searchType = request.searchType;
         } 
 
         /**
@@ -206,6 +220,15 @@ public class ListModelConnectionsRequest extends Request {
         public Builder providerType(String providerType) {
             this.putQueryParameter("providerType", providerType);
             this.providerType = providerType;
+            return this;
+        }
+
+        /**
+         * searchType.
+         */
+        public Builder searchType(String searchType) {
+            this.putQueryParameter("searchType", searchType);
+            this.searchType = searchType;
             return this;
         }
 

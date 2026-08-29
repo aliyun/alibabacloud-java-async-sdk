@@ -440,12 +440,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListMcpToolsResponse> listMcpTools(ListMcpToolsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>查询指定 AgentCore 工作空间中的 MCP 服务。支持通过 <code>Name</code> 按名称筛选，并通过 <code>SearchType</code> 选择精确匹配或模糊匹配；支持通过 <code>MaxResults</code> 和 <code>NextToken</code> 分页查询。</p>
+     * 
      * @param request the request parameters of ListMcps  ListMcpsRequest
      * @return ListMcpsResponse
      */
     CompletableFuture<ListMcpsResponse> listMcps(ListMcpsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>查询指定 AgentCore 工作空间中的模型连接。支持通过 <code>Name</code> 按名称筛选，并通过 <code>SearchType</code> 选择精确匹配或模糊匹配；支持按模型提供商类型和调用协议筛选，并支持分页查询。</p>
+     * 
      * @param request the request parameters of ListModelConnections  ListModelConnectionsRequest
      * @return ListModelConnectionsResponse
      */
