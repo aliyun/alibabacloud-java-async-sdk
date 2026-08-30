@@ -68,6 +68,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchDeletePrivateAccessPolicyResponse> batchDeletePrivateAccessPolicy(BatchDeletePrivateAccessPolicyRequest request);
 
     /**
+     * @param request the request parameters of BindSaseUserTag  BindSaseUserTagRequest
+     * @return BindSaseUserTagResponse
+     */
+    CompletableFuture<BindSaseUserTagResponse> bindSaseUserTag(BindSaseUserTagRequest request);
+
+    /**
      * @param request the request parameters of CancelVirusScanTasks  CancelVirusScanTasksRequest
      * @return CancelVirusScanTasksResponse
      */
@@ -192,6 +198,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateRegistrationPolicyResponse
      */
     CompletableFuture<CreateRegistrationPolicyResponse> createRegistrationPolicy(CreateRegistrationPolicyRequest request);
+
+    /**
+     * @param request the request parameters of CreateSaseUserTag  CreateSaseUserTagRequest
+     * @return CreateSaseUserTagResponse
+     */
+    CompletableFuture<CreateSaseUserTagResponse> createSaseUserTag(CreateSaseUserTagRequest request);
 
     /**
      * @param request the request parameters of CreateSoftwarelibDistributeTask  CreateSoftwarelibDistributeTaskRequest
@@ -386,6 +398,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteRegistrationPoliciesResponse> deleteRegistrationPolicies(DeleteRegistrationPoliciesRequest request);
 
     /**
+     * @param request the request parameters of DeleteSaseUserTag  DeleteSaseUserTagRequest
+     * @return DeleteSaseUserTagResponse
+     */
+    CompletableFuture<DeleteSaseUserTagResponse> deleteSaseUserTag(DeleteSaseUserTagRequest request);
+
+    /**
      * @param request the request parameters of DeleteUserDevices  DeleteUserDevicesRequest
      * @return DeleteUserDevicesResponse
      */
@@ -573,6 +591,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetRegistrationPolicyResponse> getRegistrationPolicy(GetRegistrationPolicyRequest request);
 
     /**
+     * @param request the request parameters of GetSaseUserTag  GetSaseUserTagRequest
+     * @return GetSaseUserTagResponse
+     */
+    CompletableFuture<GetSaseUserTagResponse> getSaseUserTag(GetSaseUserTagRequest request);
+
+    /**
      * @param request the request parameters of GetUserDevice  GetUserDeviceRequest
      * @return GetUserDeviceResponse
      */
@@ -703,6 +727,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListDevicesForVulnerabilityResponse
      */
     CompletableFuture<ListDevicesForVulnerabilityResponse> listDevicesForVulnerability(ListDevicesForVulnerabilityRequest request);
+
+    /**
+     * @param request the request parameters of ListDlpOutboundLogs  ListDlpOutboundLogsRequest
+     * @return ListDlpOutboundLogsResponse
+     */
+    CompletableFuture<ListDlpOutboundLogsResponse> listDlpOutboundLogs(ListDlpOutboundLogsRequest request);
+
+    /**
+     * @param request the request parameters of ListDomainAccessLogs  ListDomainAccessLogsRequest
+     * @return ListDomainAccessLogsResponse
+     */
+    CompletableFuture<ListDomainAccessLogsResponse> listDomainAccessLogs(ListDomainAccessLogsRequest request);
 
     /**
      * @param request the request parameters of ListDomainItems  ListDomainItemsRequest
@@ -1072,6 +1108,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RevokeUserSessionResponse> revokeUserSession(RevokeUserSessionRequest request);
 
     /**
+     * @param request the request parameters of UnbindSaseUserTag  UnbindSaseUserTagRequest
+     * @return UnbindSaseUserTagResponse
+     */
+    CompletableFuture<UnbindSaseUserTagResponse> unbindSaseUserTag(UnbindSaseUserTagRequest request);
+
+    /**
      * @param request the request parameters of UpdateAntiVirusRealTimeDefenceStrategy  UpdateAntiVirusRealTimeDefenceStrategyRequest
      * @return UpdateAntiVirusRealTimeDefenceStrategyResponse
      */
@@ -1214,6 +1256,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateRiskStatusResponse
      */
     CompletableFuture<UpdateRiskStatusResponse> updateRiskStatus(UpdateRiskStatusRequest request);
+
+    /**
+     * @param request the request parameters of UpdateSaseUserTag  UpdateSaseUserTagRequest
+     * @return UpdateSaseUserTagResponse
+     */
+    CompletableFuture<UpdateSaseUserTagResponse> updateSaseUserTag(UpdateSaseUserTagRequest request);
 
     /**
      * @param request the request parameters of UpdateUninstallApplicationsStatus  UpdateUninstallApplicationsStatusRequest
