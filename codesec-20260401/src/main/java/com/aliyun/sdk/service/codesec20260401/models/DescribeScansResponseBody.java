@@ -362,6 +362,9 @@ public class DescribeScansResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createdBy")
         private String createdBy;
 
+        @com.aliyun.core.annotation.NameInMap("currentPhase")
+        private String currentPhase;
+
         @com.aliyun.core.annotation.NameInMap("engineSnapshot")
         private EngineSnapshot engineSnapshot;
 
@@ -402,6 +405,7 @@ public class DescribeScansResponseBody extends TeaModel {
             this.codeBundleId = builder.codeBundleId;
             this.createdAt = builder.createdAt;
             this.createdBy = builder.createdBy;
+            this.currentPhase = builder.currentPhase;
             this.engineSnapshot = builder.engineSnapshot;
             this.finishedAt = builder.finishedAt;
             this.id = builder.id;
@@ -443,6 +447,13 @@ public class DescribeScansResponseBody extends TeaModel {
          */
         public String getCreatedBy() {
             return this.createdBy;
+        }
+
+        /**
+         * @return currentPhase
+         */
+        public String getCurrentPhase() {
+            return this.currentPhase;
         }
 
         /**
@@ -533,6 +544,7 @@ public class DescribeScansResponseBody extends TeaModel {
             private Long codeBundleId; 
             private String createdAt; 
             private String createdBy; 
+            private String currentPhase; 
             private EngineSnapshot engineSnapshot; 
             private String finishedAt; 
             private Long id; 
@@ -553,6 +565,7 @@ public class DescribeScansResponseBody extends TeaModel {
                 this.codeBundleId = model.codeBundleId;
                 this.createdAt = model.createdAt;
                 this.createdBy = model.createdBy;
+                this.currentPhase = model.currentPhase;
                 this.engineSnapshot = model.engineSnapshot;
                 this.finishedAt = model.finishedAt;
                 this.id = model.id;
@@ -591,6 +604,14 @@ public class DescribeScansResponseBody extends TeaModel {
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
+                return this;
+            }
+
+            /**
+             * currentPhase.
+             */
+            public Builder currentPhase(String currentPhase) {
+                this.currentPhase = currentPhase;
                 return this;
             }
 
