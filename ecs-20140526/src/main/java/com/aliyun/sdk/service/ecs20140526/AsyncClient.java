@@ -3554,6 +3554,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyInstanceNetworkSpecResponse> modifyInstanceNetworkSpec(ModifyInstanceNetworkSpecRequest request);
 
     /**
+     * @param request the request parameters of ModifyInstanceSecurityOptions  ModifyInstanceSecurityOptionsRequest
+     * @return ModifyInstanceSecurityOptionsResponse
+     */
+    CompletableFuture<ModifyInstanceSecurityOptionsResponse> modifyInstanceSecurityOptions(ModifyInstanceSecurityOptionsRequest request);
+
+    /**
      * <b>description</b> :
      * <p><em>Before you call this operation, familiarize yourself with the billing and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of ECS resources.</em>*
      * Before you <a href="https://help.aliyun.com/document_detail/60051.html">change the instance type of a pay-as-you-go instance</a>, call the <a href="https://help.aliyun.com/document_detail/66187.html">DescribeResourcesModification</a> operation to query compatible instance types.
