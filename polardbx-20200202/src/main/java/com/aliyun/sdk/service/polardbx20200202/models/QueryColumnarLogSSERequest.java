@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ExecuteMetaQueryRequest} extends {@link RequestModel}
+ * {@link QueryColumnarLogSSERequest} extends {@link RequestModel}
  *
- * <p>ExecuteMetaQueryRequest</p>
+ * <p>QueryColumnarLogSSERequest</p>
  */
-public class ExecuteMetaQueryRequest extends Request {
+public class QueryColumnarLogSSERequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceName")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -24,7 +24,7 @@ public class ExecuteMetaQueryRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResultRows")
-    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Validation(maximum = 10000, minimum = 1)
     private Long maxResultRows;
 
     @com.aliyun.core.annotation.Query
@@ -33,28 +33,23 @@ public class ExecuteMetaQueryRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Sql")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String sql;
+    @com.aliyun.core.annotation.NameInMap("SQL")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 65536)
+    private String SQL;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("StorageInstId")
-    private String storageInstId;
-
-    private ExecuteMetaQueryRequest(Builder builder) {
+    private QueryColumnarLogSSERequest(Builder builder) {
         super(builder);
         this.DBInstanceName = builder.DBInstanceName;
         this.maxResultRows = builder.maxResultRows;
         this.regionId = builder.regionId;
-        this.sql = builder.sql;
-        this.storageInstId = builder.storageInstId;
+        this.SQL = builder.SQL;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ExecuteMetaQueryRequest create() {
+    public static QueryColumnarLogSSERequest create() {
         return builder().build();
     }
 
@@ -85,44 +80,35 @@ public class ExecuteMetaQueryRequest extends Request {
     }
 
     /**
-     * @return sql
+     * @return SQL
      */
-    public String getSql() {
-        return this.sql;
+    public String getSQL() {
+        return this.SQL;
     }
 
-    /**
-     * @return storageInstId
-     */
-    public String getStorageInstId() {
-        return this.storageInstId;
-    }
-
-    public static final class Builder extends Request.Builder<ExecuteMetaQueryRequest, Builder> {
+    public static final class Builder extends Request.Builder<QueryColumnarLogSSERequest, Builder> {
         private String DBInstanceName; 
         private Long maxResultRows; 
         private String regionId; 
-        private String sql; 
-        private String storageInstId; 
+        private String SQL; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ExecuteMetaQueryRequest request) {
+        private Builder(QueryColumnarLogSSERequest request) {
             super(request);
             this.DBInstanceName = request.DBInstanceName;
             this.maxResultRows = request.maxResultRows;
             this.regionId = request.regionId;
-            this.sql = request.sql;
-            this.storageInstId = request.storageInstId;
+            this.SQL = request.SQL;
         } 
 
         /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>pxsp-*********</p>
+         * <p>pxc-********</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -131,7 +117,10 @@ public class ExecuteMetaQueryRequest extends Request {
         }
 
         /**
-         * <p>本次最多返回的结果行数。缺省为 100，取值范围 1~1000；最终行数还会取代码硬上限、Biz DB 上限和 SQL 最外层 LIMIT 的最小值，连续取数请在 SQL 中自行分页。</p>
+         * <p>最多返回的结果行数。不传时不设置调用方行数上限，仅受服务端内部最大 10000 行限制；显式取值范围 1~10000，连续取数请在 SQL 中自行分页。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxResultRows(Long maxResultRows) {
             this.putQueryParameter("MaxResultRows", maxResultRows);
@@ -155,26 +144,17 @@ public class ExecuteMetaQueryRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>show databases;</p>
+         * <p>select * from device where name = &quot;108001022203365239&quot;</p>
          */
-        public Builder sql(String sql) {
-            this.putQueryParameter("Sql", sql);
-            this.sql = sql;
-            return this;
-        }
-
-        /**
-         * StorageInstId.
-         */
-        public Builder storageInstId(String storageInstId) {
-            this.putQueryParameter("StorageInstId", storageInstId);
-            this.storageInstId = storageInstId;
+        public Builder SQL(String SQL) {
+            this.putQueryParameter("SQL", SQL);
+            this.SQL = SQL;
             return this;
         }
 
         @Override
-        public ExecuteMetaQueryRequest build() {
-            return new ExecuteMetaQueryRequest(this);
+        public QueryColumnarLogSSERequest build() {
+            return new QueryColumnarLogSSERequest(this);
         } 
 
     } 

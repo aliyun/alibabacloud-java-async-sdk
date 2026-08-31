@@ -1139,6 +1139,26 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PreCheckSqlFlashbackTaskResponse> preCheckSqlFlashbackTask(PreCheckSqlFlashbackTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of QueryColumnarLog  QueryColumnarLogRequest
+     * @return QueryColumnarLogResponse
+     */
+    CompletableFuture<QueryColumnarLogResponse> queryColumnarLog(QueryColumnarLogRequest request);
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of QueryColumnarLogSSE  QueryColumnarLogSSERequest
+     * @return QueryColumnarLogSSEResponse
+     */
+    CompletableFuture<QueryColumnarLogSSEResponse> queryColumnarLogSSE(QueryColumnarLogSSERequest request);
+
+    ResponseIterable<QueryColumnarLogSSEResponseBody> queryColumnarLogSSEWithResponseIterable(QueryColumnarLogSSERequest request);
+
+    /**
      * @param request the request parameters of RefreshImportMeta  RefreshImportMetaRequest
      * @return RefreshImportMetaResponse
      */

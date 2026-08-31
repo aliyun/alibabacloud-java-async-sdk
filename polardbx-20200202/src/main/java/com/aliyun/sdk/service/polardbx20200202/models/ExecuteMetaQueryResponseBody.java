@@ -305,8 +305,23 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
      * <p>ExecuteMetaQueryResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppliedOffset")
+        private Long appliedOffset;
+
+        @com.aliyun.core.annotation.NameInMap("AppliedRowLimit")
+        private Long appliedRowLimit;
+
         @com.aliyun.core.annotation.NameInMap("Columns")
         private java.util.List<String> columns;
+
+        @com.aliyun.core.annotation.NameInMap("HasMore")
+        private Boolean hasMore;
+
+        @com.aliyun.core.annotation.NameInMap("RecordsSizeBytes")
+        private Long recordsSizeBytes;
+
+        @com.aliyun.core.annotation.NameInMap("ReturnedRowCount")
+        private Long returnedRowCount;
 
         @com.aliyun.core.annotation.NameInMap("RowCount")
         private Integer rowCount;
@@ -315,7 +330,12 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
         private java.util.List<java.util.Map<String, ?>> rows;
 
         private Data(Builder builder) {
+            this.appliedOffset = builder.appliedOffset;
+            this.appliedRowLimit = builder.appliedRowLimit;
             this.columns = builder.columns;
+            this.hasMore = builder.hasMore;
+            this.recordsSizeBytes = builder.recordsSizeBytes;
+            this.returnedRowCount = builder.returnedRowCount;
             this.rowCount = builder.rowCount;
             this.rows = builder.rows;
         }
@@ -329,10 +349,45 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return appliedOffset
+         */
+        public Long getAppliedOffset() {
+            return this.appliedOffset;
+        }
+
+        /**
+         * @return appliedRowLimit
+         */
+        public Long getAppliedRowLimit() {
+            return this.appliedRowLimit;
+        }
+
+        /**
          * @return columns
          */
         public java.util.List<String> getColumns() {
             return this.columns;
+        }
+
+        /**
+         * @return hasMore
+         */
+        public Boolean getHasMore() {
+            return this.hasMore;
+        }
+
+        /**
+         * @return recordsSizeBytes
+         */
+        public Long getRecordsSizeBytes() {
+            return this.recordsSizeBytes;
+        }
+
+        /**
+         * @return returnedRowCount
+         */
+        public Long getReturnedRowCount() {
+            return this.returnedRowCount;
         }
 
         /**
@@ -350,7 +405,12 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long appliedOffset; 
+            private Long appliedRowLimit; 
             private java.util.List<String> columns; 
+            private Boolean hasMore; 
+            private Long recordsSizeBytes; 
+            private Long returnedRowCount; 
             private Integer rowCount; 
             private java.util.List<java.util.Map<String, ?>> rows; 
 
@@ -358,16 +418,61 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.appliedOffset = model.appliedOffset;
+                this.appliedRowLimit = model.appliedRowLimit;
                 this.columns = model.columns;
+                this.hasMore = model.hasMore;
+                this.recordsSizeBytes = model.recordsSizeBytes;
+                this.returnedRowCount = model.returnedRowCount;
                 this.rowCount = model.rowCount;
                 this.rows = model.rows;
             } 
+
+            /**
+             * AppliedOffset.
+             */
+            public Builder appliedOffset(Long appliedOffset) {
+                this.appliedOffset = appliedOffset;
+                return this;
+            }
+
+            /**
+             * AppliedRowLimit.
+             */
+            public Builder appliedRowLimit(Long appliedRowLimit) {
+                this.appliedRowLimit = appliedRowLimit;
+                return this;
+            }
 
             /**
              * Columns.
              */
             public Builder columns(java.util.List<String> columns) {
                 this.columns = columns;
+                return this;
+            }
+
+            /**
+             * HasMore.
+             */
+            public Builder hasMore(Boolean hasMore) {
+                this.hasMore = hasMore;
+                return this;
+            }
+
+            /**
+             * RecordsSizeBytes.
+             */
+            public Builder recordsSizeBytes(Long recordsSizeBytes) {
+                this.recordsSizeBytes = recordsSizeBytes;
+                return this;
+            }
+
+            /**
+             * ReturnedRowCount.
+             */
+            public Builder returnedRowCount(Long returnedRowCount) {
+                this.returnedRowCount = returnedRowCount;
                 return this;
             }
 
