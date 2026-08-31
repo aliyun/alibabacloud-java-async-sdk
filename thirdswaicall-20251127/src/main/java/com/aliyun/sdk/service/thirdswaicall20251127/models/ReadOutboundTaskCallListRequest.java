@@ -54,6 +54,10 @@ public class ReadOutboundTaskCallListRequest extends Request {
     private java.util.List<String> displayStatusList;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DurationRangeList")
+    private java.util.List<String> durationRangeList;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("LabelTags")
     private java.util.List<String> labelTags;
 
@@ -88,6 +92,7 @@ public class ReadOutboundTaskCallListRequest extends Request {
         this.currentWorkspaceId = builder.currentWorkspaceId;
         this.customerNameOrPhone = builder.customerNameOrPhone;
         this.displayStatusList = builder.displayStatusList;
+        this.durationRangeList = builder.durationRangeList;
         this.labelTags = builder.labelTags;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -173,6 +178,13 @@ public class ReadOutboundTaskCallListRequest extends Request {
     }
 
     /**
+     * @return durationRangeList
+     */
+    public java.util.List<String> getDurationRangeList() {
+        return this.durationRangeList;
+    }
+
+    /**
      * @return labelTags
      */
     public java.util.List<String> getLabelTags() {
@@ -224,6 +236,7 @@ public class ReadOutboundTaskCallListRequest extends Request {
         private String currentWorkspaceId; 
         private String customerNameOrPhone; 
         private java.util.List<String> displayStatusList; 
+        private java.util.List<String> durationRangeList; 
         private java.util.List<String> labelTags; 
         private Integer maxResults; 
         private String nextToken; 
@@ -246,6 +259,7 @@ public class ReadOutboundTaskCallListRequest extends Request {
             this.currentWorkspaceId = request.currentWorkspaceId;
             this.customerNameOrPhone = request.customerNameOrPhone;
             this.displayStatusList = request.displayStatusList;
+            this.durationRangeList = request.durationRangeList;
             this.labelTags = request.labelTags;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -333,6 +347,16 @@ public class ReadOutboundTaskCallListRequest extends Request {
             String displayStatusListShrink = shrink(displayStatusList, "DisplayStatusList", "json");
             this.putBodyParameter("DisplayStatusList", displayStatusListShrink);
             this.displayStatusList = displayStatusList;
+            return this;
+        }
+
+        /**
+         * DurationRangeList.
+         */
+        public Builder durationRangeList(java.util.List<String> durationRangeList) {
+            String durationRangeListShrink = shrink(durationRangeList, "DurationRangeList", "json");
+            this.putBodyParameter("DurationRangeList", durationRangeListShrink);
+            this.durationRangeList = durationRangeList;
             return this;
         }
 
