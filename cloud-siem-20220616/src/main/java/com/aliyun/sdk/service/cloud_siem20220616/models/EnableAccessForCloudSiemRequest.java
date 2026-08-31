@@ -22,6 +22,10 @@ public class EnableAccessForCloudSiemRequest extends Request {
     private Integer autoSubmit;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -36,6 +40,7 @@ public class EnableAccessForCloudSiemRequest extends Request {
     private EnableAccessForCloudSiemRequest(Builder builder) {
         super(builder);
         this.autoSubmit = builder.autoSubmit;
+        this.clientToken = builder.clientToken;
         this.regionId = builder.regionId;
         this.roleFor = builder.roleFor;
         this.roleType = builder.roleType;
@@ -62,6 +67,13 @@ public class EnableAccessForCloudSiemRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -84,6 +96,7 @@ public class EnableAccessForCloudSiemRequest extends Request {
 
     public static final class Builder extends Request.Builder<EnableAccessForCloudSiemRequest, Builder> {
         private Integer autoSubmit; 
+        private String clientToken; 
         private String regionId; 
         private Long roleFor; 
         private Integer roleType; 
@@ -95,6 +108,7 @@ public class EnableAccessForCloudSiemRequest extends Request {
         private Builder(EnableAccessForCloudSiemRequest request) {
             super(request);
             this.autoSubmit = request.autoSubmit;
+            this.clientToken = request.clientToken;
             this.regionId = request.regionId;
             this.roleFor = request.roleFor;
             this.roleType = request.roleType;
@@ -113,6 +127,18 @@ public class EnableAccessForCloudSiemRequest extends Request {
         public Builder autoSubmit(Integer autoSubmit) {
             this.putBodyParameter("AutoSubmit", autoSubmit);
             this.autoSubmit = autoSubmit;
+            return this;
+        }
+
+        /**
+         * <p>幂等令牌。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426614174000</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putBodyParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 

@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class PostEventDisposeAndWhiteruleListRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DisposeStrategyIds")
     private String disposeStrategyIds;
 
@@ -67,6 +71,7 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
 
     private PostEventDisposeAndWhiteruleListRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.disposeStrategyIds = builder.disposeStrategyIds;
         this.eventDispose = builder.eventDispose;
         this.incidentUuid = builder.incidentUuid;
@@ -92,6 +97,13 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -179,6 +191,7 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<PostEventDisposeAndWhiteruleListRequest, Builder> {
+        private String clientToken; 
         private String disposeStrategyIds; 
         private String eventDispose; 
         private String incidentUuid; 
@@ -198,6 +211,7 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
 
         private Builder(PostEventDisposeAndWhiteruleListRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.disposeStrategyIds = request.disposeStrategyIds;
             this.eventDispose = request.eventDispose;
             this.incidentUuid = request.incidentUuid;
@@ -211,6 +225,18 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
             this.status = request.status;
             this.threatLevel = request.threatLevel;
         } 
+
+        /**
+         * <p>幂等令牌。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426614174000</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putBodyParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
 
         /**
          * DisposeStrategyIds.
