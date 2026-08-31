@@ -200,6 +200,9 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
      * <p>CustomerNoteListDetailResponseBody</p>
      */
     public static class Attachment extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DownloadUrl")
+        private String downloadUrl;
+
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
@@ -216,6 +219,7 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
         private String type;
 
         private Attachment(Builder builder) {
+            this.downloadUrl = builder.downloadUrl;
             this.id = builder.id;
             this.name = builder.name;
             this.signature = builder.signature;
@@ -229,6 +233,13 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
 
         public static Attachment create() {
             return builder().build();
+        }
+
+        /**
+         * @return downloadUrl
+         */
+        public String getDownloadUrl() {
+            return this.downloadUrl;
         }
 
         /**
@@ -267,6 +278,7 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String downloadUrl; 
             private Long id; 
             private String name; 
             private String signature; 
@@ -277,12 +289,21 @@ public class CustomerNoteListDetailResponseBody extends TeaModel {
             } 
 
             private Builder(Attachment model) {
+                this.downloadUrl = model.downloadUrl;
                 this.id = model.id;
                 this.name = model.name;
                 this.signature = model.signature;
                 this.size = model.size;
                 this.type = model.type;
             } 
+
+            /**
+             * DownloadUrl.
+             */
+            public Builder downloadUrl(String downloadUrl) {
+                this.downloadUrl = downloadUrl;
+                return this;
+            }
 
             /**
              * Id.
