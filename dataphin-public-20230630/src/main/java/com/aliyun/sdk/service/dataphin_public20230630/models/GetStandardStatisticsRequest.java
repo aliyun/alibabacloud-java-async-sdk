@@ -26,6 +26,10 @@ public class GetStandardStatisticsRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long opTenantId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserId")
+    private String opUserId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("StatisticsQuery")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -35,6 +39,7 @@ public class GetStandardStatisticsRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.opTenantId = builder.opTenantId;
+        this.opUserId = builder.opUserId;
         this.statisticsQuery = builder.statisticsQuery;
     }
 
@@ -66,6 +71,13 @@ public class GetStandardStatisticsRequest extends Request {
     }
 
     /**
+     * @return opUserId
+     */
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
+    /**
      * @return statisticsQuery
      */
     public StatisticsQuery getStatisticsQuery() {
@@ -75,6 +87,7 @@ public class GetStandardStatisticsRequest extends Request {
     public static final class Builder extends Request.Builder<GetStandardStatisticsRequest, Builder> {
         private String regionId; 
         private Long opTenantId; 
+        private String opUserId; 
         private StatisticsQuery statisticsQuery; 
 
         private Builder() {
@@ -85,6 +98,7 @@ public class GetStandardStatisticsRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.opTenantId = request.opTenantId;
+            this.opUserId = request.opUserId;
             this.statisticsQuery = request.statisticsQuery;
         } 
 
@@ -106,6 +120,15 @@ public class GetStandardStatisticsRequest extends Request {
         public Builder opTenantId(Long opTenantId) {
             this.putQueryParameter("OpTenantId", opTenantId);
             this.opTenantId = opTenantId;
+            return this;
+        }
+
+        /**
+         * OpUserId.
+         */
+        public Builder opUserId(String opUserId) {
+            this.putQueryParameter("OpUserId", opUserId);
+            this.opUserId = opUserId;
             return this;
         }
 

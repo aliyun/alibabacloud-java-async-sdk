@@ -32,6 +32,10 @@ public class GetDataServiceAppsByGroupIdRequest extends Request {
     private Long opTenantId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserId")
+    private String opUserId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer projectId;
@@ -41,6 +45,7 @@ public class GetDataServiceAppsByGroupIdRequest extends Request {
         this.regionId = builder.regionId;
         this.groupId = builder.groupId;
         this.opTenantId = builder.opTenantId;
+        this.opUserId = builder.opUserId;
         this.projectId = builder.projectId;
     }
 
@@ -79,6 +84,13 @@ public class GetDataServiceAppsByGroupIdRequest extends Request {
     }
 
     /**
+     * @return opUserId
+     */
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
+    /**
      * @return projectId
      */
     public Integer getProjectId() {
@@ -89,6 +101,7 @@ public class GetDataServiceAppsByGroupIdRequest extends Request {
         private String regionId; 
         private Integer groupId; 
         private Long opTenantId; 
+        private String opUserId; 
         private Integer projectId; 
 
         private Builder() {
@@ -100,6 +113,7 @@ public class GetDataServiceAppsByGroupIdRequest extends Request {
             this.regionId = request.regionId;
             this.groupId = request.groupId;
             this.opTenantId = request.opTenantId;
+            this.opUserId = request.opUserId;
             this.projectId = request.projectId;
         } 
 
@@ -133,6 +147,15 @@ public class GetDataServiceAppsByGroupIdRequest extends Request {
         public Builder opTenantId(Long opTenantId) {
             this.putQueryParameter("OpTenantId", opTenantId);
             this.opTenantId = opTenantId;
+            return this;
+        }
+
+        /**
+         * OpUserId.
+         */
+        public Builder opUserId(String opUserId) {
+            this.putQueryParameter("OpUserId", opUserId);
+            this.opUserId = opUserId;
             return this;
         }
 

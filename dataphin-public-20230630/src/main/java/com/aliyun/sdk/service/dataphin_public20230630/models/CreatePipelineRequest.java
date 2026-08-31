@@ -36,12 +36,17 @@ public class CreatePipelineRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long opTenantId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserId")
+    private String opUserId;
+
     private CreatePipelineRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.context = builder.context;
         this.createCommand = builder.createCommand;
         this.opTenantId = builder.opTenantId;
+        this.opUserId = builder.opUserId;
     }
 
     public static Builder builder() {
@@ -85,11 +90,19 @@ public class CreatePipelineRequest extends Request {
         return this.opTenantId;
     }
 
+    /**
+     * @return opUserId
+     */
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
     public static final class Builder extends Request.Builder<CreatePipelineRequest, Builder> {
         private String regionId; 
         private Context context; 
         private CreateCommand createCommand; 
         private Long opTenantId; 
+        private String opUserId; 
 
         private Builder() {
             super();
@@ -101,6 +114,7 @@ public class CreatePipelineRequest extends Request {
             this.context = request.context;
             this.createCommand = request.createCommand;
             this.opTenantId = request.opTenantId;
+            this.opUserId = request.opUserId;
         } 
 
         /**
@@ -141,6 +155,15 @@ public class CreatePipelineRequest extends Request {
         public Builder opTenantId(Long opTenantId) {
             this.putQueryParameter("OpTenantId", opTenantId);
             this.opTenantId = opTenantId;
+            return this;
+        }
+
+        /**
+         * OpUserId.
+         */
+        public Builder opUserId(String opUserId) {
+            this.putQueryParameter("OpUserId", opUserId);
+            this.opUserId = opUserId;
             return this;
         }
 

@@ -31,11 +31,16 @@ public class ListCatalogAssetsRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long opTenantId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserId")
+    private String opUserId;
+
     private ListCatalogAssetsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.listCatalogAssetsQuery = builder.listCatalogAssetsQuery;
         this.opTenantId = builder.opTenantId;
+        this.opUserId = builder.opUserId;
     }
 
     public static Builder builder() {
@@ -72,10 +77,18 @@ public class ListCatalogAssetsRequest extends Request {
         return this.opTenantId;
     }
 
+    /**
+     * @return opUserId
+     */
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
     public static final class Builder extends Request.Builder<ListCatalogAssetsRequest, Builder> {
         private String regionId; 
         private ListCatalogAssetsQuery listCatalogAssetsQuery; 
         private Long opTenantId; 
+        private String opUserId; 
 
         private Builder() {
             super();
@@ -86,6 +99,7 @@ public class ListCatalogAssetsRequest extends Request {
             this.regionId = request.regionId;
             this.listCatalogAssetsQuery = request.listCatalogAssetsQuery;
             this.opTenantId = request.opTenantId;
+            this.opUserId = request.opUserId;
         } 
 
         /**
@@ -116,6 +130,15 @@ public class ListCatalogAssetsRequest extends Request {
         public Builder opTenantId(Long opTenantId) {
             this.putQueryParameter("OpTenantId", opTenantId);
             this.opTenantId = opTenantId;
+            return this;
+        }
+
+        /**
+         * OpUserId.
+         */
+        public Builder opUserId(String opUserId) {
+            this.putQueryParameter("OpUserId", opUserId);
+            this.opUserId = opUserId;
             return this;
         }
 
@@ -151,6 +174,9 @@ public class ListCatalogAssetsRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("QueryMode")
         private String queryMode;
 
+        @com.aliyun.core.annotation.NameInMap("ShelveDirectoryIds")
+        private java.util.List<Long> shelveDirectoryIds;
+
         private ListCatalogAssetsQuery(Builder builder) {
             this.assetType = builder.assetType;
             this.keyword = builder.keyword;
@@ -158,6 +184,7 @@ public class ListCatalogAssetsRequest extends Request {
             this.pageNum = builder.pageNum;
             this.pageSize = builder.pageSize;
             this.queryMode = builder.queryMode;
+            this.shelveDirectoryIds = builder.shelveDirectoryIds;
         }
 
         public static Builder builder() {
@@ -210,6 +237,13 @@ public class ListCatalogAssetsRequest extends Request {
             return this.queryMode;
         }
 
+        /**
+         * @return shelveDirectoryIds
+         */
+        public java.util.List<Long> getShelveDirectoryIds() {
+            return this.shelveDirectoryIds;
+        }
+
         public static final class Builder {
             private String assetType; 
             private String keyword; 
@@ -217,6 +251,7 @@ public class ListCatalogAssetsRequest extends Request {
             private Integer pageNum; 
             private Integer pageSize; 
             private String queryMode; 
+            private java.util.List<Long> shelveDirectoryIds; 
 
             private Builder() {
             } 
@@ -228,6 +263,7 @@ public class ListCatalogAssetsRequest extends Request {
                 this.pageNum = model.pageNum;
                 this.pageSize = model.pageSize;
                 this.queryMode = model.queryMode;
+                this.shelveDirectoryIds = model.shelveDirectoryIds;
             } 
 
             /**
@@ -275,6 +311,14 @@ public class ListCatalogAssetsRequest extends Request {
              */
             public Builder queryMode(String queryMode) {
                 this.queryMode = queryMode;
+                return this;
+            }
+
+            /**
+             * ShelveDirectoryIds.
+             */
+            public Builder shelveDirectoryIds(java.util.List<Long> shelveDirectoryIds) {
+                this.shelveDirectoryIds = shelveDirectoryIds;
                 return this;
             }
 

@@ -26,6 +26,10 @@ public class UpsertQualityRuleRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long opTenantId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserId")
+    private String opUserId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UpsertCommand")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -35,6 +39,7 @@ public class UpsertQualityRuleRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.opTenantId = builder.opTenantId;
+        this.opUserId = builder.opUserId;
         this.upsertCommand = builder.upsertCommand;
     }
 
@@ -66,6 +71,13 @@ public class UpsertQualityRuleRequest extends Request {
     }
 
     /**
+     * @return opUserId
+     */
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
+    /**
      * @return upsertCommand
      */
     public UpsertCommand getUpsertCommand() {
@@ -75,6 +87,7 @@ public class UpsertQualityRuleRequest extends Request {
     public static final class Builder extends Request.Builder<UpsertQualityRuleRequest, Builder> {
         private String regionId; 
         private Long opTenantId; 
+        private String opUserId; 
         private UpsertCommand upsertCommand; 
 
         private Builder() {
@@ -85,6 +98,7 @@ public class UpsertQualityRuleRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.opTenantId = request.opTenantId;
+            this.opUserId = request.opUserId;
             this.upsertCommand = request.upsertCommand;
         } 
 
@@ -106,6 +120,15 @@ public class UpsertQualityRuleRequest extends Request {
         public Builder opTenantId(Long opTenantId) {
             this.putQueryParameter("OpTenantId", opTenantId);
             this.opTenantId = opTenantId;
+            return this;
+        }
+
+        /**
+         * OpUserId.
+         */
+        public Builder opUserId(String opUserId) {
+            this.putQueryParameter("OpUserId", opUserId);
+            this.opUserId = opUserId;
             return this;
         }
 
@@ -1057,6 +1080,12 @@ public class UpsertQualityRuleRequest extends Request {
      * <p>UpsertQualityRuleRequest</p>
      */
     public static class UpsertCommand extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ArchiveMode")
+        private String archiveMode;
+
+        @com.aliyun.core.annotation.NameInMap("ArchiveStoreType")
+        private String archiveStoreType;
+
         @com.aliyun.core.annotation.NameInMap("AttributeWithValueList")
         private java.util.List<AttributeWithValueList> attributeWithValueList;
 
@@ -1100,6 +1129,8 @@ public class UpsertQualityRuleRequest extends Request {
         private Long watchId;
 
         private UpsertCommand(Builder builder) {
+            this.archiveMode = builder.archiveMode;
+            this.archiveStoreType = builder.archiveStoreType;
             this.attributeWithValueList = builder.attributeWithValueList;
             this.catalogList = builder.catalogList;
             this.description = builder.description;
@@ -1120,6 +1151,20 @@ public class UpsertQualityRuleRequest extends Request {
 
         public static UpsertCommand create() {
             return builder().build();
+        }
+
+        /**
+         * @return archiveMode
+         */
+        public String getArchiveMode() {
+            return this.archiveMode;
+        }
+
+        /**
+         * @return archiveStoreType
+         */
+        public String getArchiveStoreType() {
+            return this.archiveStoreType;
         }
 
         /**
@@ -1207,6 +1252,8 @@ public class UpsertQualityRuleRequest extends Request {
         }
 
         public static final class Builder {
+            private String archiveMode; 
+            private String archiveStoreType; 
             private java.util.List<AttributeWithValueList> attributeWithValueList; 
             private java.util.List<String> catalogList; 
             private String description; 
@@ -1224,6 +1271,8 @@ public class UpsertQualityRuleRequest extends Request {
             } 
 
             private Builder(UpsertCommand model) {
+                this.archiveMode = model.archiveMode;
+                this.archiveStoreType = model.archiveStoreType;
                 this.attributeWithValueList = model.attributeWithValueList;
                 this.catalogList = model.catalogList;
                 this.description = model.description;
@@ -1237,6 +1286,22 @@ public class UpsertQualityRuleRequest extends Request {
                 this.validateConditionList = model.validateConditionList;
                 this.watchId = model.watchId;
             } 
+
+            /**
+             * ArchiveMode.
+             */
+            public Builder archiveMode(String archiveMode) {
+                this.archiveMode = archiveMode;
+                return this;
+            }
+
+            /**
+             * ArchiveStoreType.
+             */
+            public Builder archiveStoreType(String archiveStoreType) {
+                this.archiveStoreType = archiveStoreType;
+                return this;
+            }
 
             /**
              * AttributeWithValueList.

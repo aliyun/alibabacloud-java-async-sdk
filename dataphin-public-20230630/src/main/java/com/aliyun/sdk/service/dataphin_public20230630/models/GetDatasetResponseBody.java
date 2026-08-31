@@ -256,6 +256,848 @@ public class GetDatasetResponseBody extends TeaModel {
      *
      * <p>GetDatasetResponseBody</p>
      */
+    public static class RequestParamList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DateFormat")
+        private String dateFormat;
+
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
+        private String defaultValue;
+
+        @com.aliyun.core.annotation.NameInMap("Descr")
+        private String descr;
+
+        @com.aliyun.core.annotation.NameInMap("IsUrl")
+        private Boolean isUrl;
+
+        @com.aliyun.core.annotation.NameInMap("MappingColumn")
+        private String mappingColumn;
+
+        @com.aliyun.core.annotation.NameInMap("Must")
+        private Boolean must;
+
+        @com.aliyun.core.annotation.NameInMap("Operator")
+        private String operator;
+
+        @com.aliyun.core.annotation.NameInMap("Optional")
+        private Boolean optional;
+
+        @com.aliyun.core.annotation.NameInMap("OriginalColumn")
+        private String originalColumn;
+
+        @com.aliyun.core.annotation.NameInMap("ParamName")
+        private String paramName;
+
+        @com.aliyun.core.annotation.NameInMap("ParamType")
+        private String paramType;
+
+        @com.aliyun.core.annotation.NameInMap("Sample")
+        private String sample;
+
+        @com.aliyun.core.annotation.NameInMap("SeqNum")
+        private Integer seqNum;
+
+        private RequestParamList(Builder builder) {
+            this.dateFormat = builder.dateFormat;
+            this.defaultValue = builder.defaultValue;
+            this.descr = builder.descr;
+            this.isUrl = builder.isUrl;
+            this.mappingColumn = builder.mappingColumn;
+            this.must = builder.must;
+            this.operator = builder.operator;
+            this.optional = builder.optional;
+            this.originalColumn = builder.originalColumn;
+            this.paramName = builder.paramName;
+            this.paramType = builder.paramType;
+            this.sample = builder.sample;
+            this.seqNum = builder.seqNum;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RequestParamList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dateFormat
+         */
+        public String getDateFormat() {
+            return this.dateFormat;
+        }
+
+        /**
+         * @return defaultValue
+         */
+        public String getDefaultValue() {
+            return this.defaultValue;
+        }
+
+        /**
+         * @return descr
+         */
+        public String getDescr() {
+            return this.descr;
+        }
+
+        /**
+         * @return isUrl
+         */
+        public Boolean getIsUrl() {
+            return this.isUrl;
+        }
+
+        /**
+         * @return mappingColumn
+         */
+        public String getMappingColumn() {
+            return this.mappingColumn;
+        }
+
+        /**
+         * @return must
+         */
+        public Boolean getMust() {
+            return this.must;
+        }
+
+        /**
+         * @return operator
+         */
+        public String getOperator() {
+            return this.operator;
+        }
+
+        /**
+         * @return optional
+         */
+        public Boolean getOptional() {
+            return this.optional;
+        }
+
+        /**
+         * @return originalColumn
+         */
+        public String getOriginalColumn() {
+            return this.originalColumn;
+        }
+
+        /**
+         * @return paramName
+         */
+        public String getParamName() {
+            return this.paramName;
+        }
+
+        /**
+         * @return paramType
+         */
+        public String getParamType() {
+            return this.paramType;
+        }
+
+        /**
+         * @return sample
+         */
+        public String getSample() {
+            return this.sample;
+        }
+
+        /**
+         * @return seqNum
+         */
+        public Integer getSeqNum() {
+            return this.seqNum;
+        }
+
+        public static final class Builder {
+            private String dateFormat; 
+            private String defaultValue; 
+            private String descr; 
+            private Boolean isUrl; 
+            private String mappingColumn; 
+            private Boolean must; 
+            private String operator; 
+            private Boolean optional; 
+            private String originalColumn; 
+            private String paramName; 
+            private String paramType; 
+            private String sample; 
+            private Integer seqNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(RequestParamList model) {
+                this.dateFormat = model.dateFormat;
+                this.defaultValue = model.defaultValue;
+                this.descr = model.descr;
+                this.isUrl = model.isUrl;
+                this.mappingColumn = model.mappingColumn;
+                this.must = model.must;
+                this.operator = model.operator;
+                this.optional = model.optional;
+                this.originalColumn = model.originalColumn;
+                this.paramName = model.paramName;
+                this.paramType = model.paramType;
+                this.sample = model.sample;
+                this.seqNum = model.seqNum;
+            } 
+
+            /**
+             * DateFormat.
+             */
+            public Builder dateFormat(String dateFormat) {
+                this.dateFormat = dateFormat;
+                return this;
+            }
+
+            /**
+             * DefaultValue.
+             */
+            public Builder defaultValue(String defaultValue) {
+                this.defaultValue = defaultValue;
+                return this;
+            }
+
+            /**
+             * Descr.
+             */
+            public Builder descr(String descr) {
+                this.descr = descr;
+                return this;
+            }
+
+            /**
+             * IsUrl.
+             */
+            public Builder isUrl(Boolean isUrl) {
+                this.isUrl = isUrl;
+                return this;
+            }
+
+            /**
+             * MappingColumn.
+             */
+            public Builder mappingColumn(String mappingColumn) {
+                this.mappingColumn = mappingColumn;
+                return this;
+            }
+
+            /**
+             * Must.
+             */
+            public Builder must(Boolean must) {
+                this.must = must;
+                return this;
+            }
+
+            /**
+             * Operator.
+             */
+            public Builder operator(String operator) {
+                this.operator = operator;
+                return this;
+            }
+
+            /**
+             * Optional.
+             */
+            public Builder optional(Boolean optional) {
+                this.optional = optional;
+                return this;
+            }
+
+            /**
+             * OriginalColumn.
+             */
+            public Builder originalColumn(String originalColumn) {
+                this.originalColumn = originalColumn;
+                return this;
+            }
+
+            /**
+             * ParamName.
+             */
+            public Builder paramName(String paramName) {
+                this.paramName = paramName;
+                return this;
+            }
+
+            /**
+             * ParamType.
+             */
+            public Builder paramType(String paramType) {
+                this.paramType = paramType;
+                return this;
+            }
+
+            /**
+             * Sample.
+             */
+            public Builder sample(String sample) {
+                this.sample = sample;
+                return this;
+            }
+
+            /**
+             * SeqNum.
+             */
+            public Builder seqNum(Integer seqNum) {
+                this.seqNum = seqNum;
+                return this;
+            }
+
+            public RequestParamList build() {
+                return new RequestParamList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetDatasetResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDatasetResponseBody</p>
+     */
+    public static class ResponseParamList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DateFormat")
+        private String dateFormat;
+
+        @com.aliyun.core.annotation.NameInMap("Descr")
+        private String descr;
+
+        @com.aliyun.core.annotation.NameInMap("IsUrl")
+        private Boolean isUrl;
+
+        @com.aliyun.core.annotation.NameInMap("MappingColumn")
+        private String mappingColumn;
+
+        @com.aliyun.core.annotation.NameInMap("OriginalColumn")
+        private String originalColumn;
+
+        @com.aliyun.core.annotation.NameInMap("ParamName")
+        private String paramName;
+
+        @com.aliyun.core.annotation.NameInMap("ParamType")
+        private String paramType;
+
+        @com.aliyun.core.annotation.NameInMap("Sample")
+        private String sample;
+
+        @com.aliyun.core.annotation.NameInMap("SeqNum")
+        private String seqNum;
+
+        private ResponseParamList(Builder builder) {
+            this.dateFormat = builder.dateFormat;
+            this.descr = builder.descr;
+            this.isUrl = builder.isUrl;
+            this.mappingColumn = builder.mappingColumn;
+            this.originalColumn = builder.originalColumn;
+            this.paramName = builder.paramName;
+            this.paramType = builder.paramType;
+            this.sample = builder.sample;
+            this.seqNum = builder.seqNum;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResponseParamList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dateFormat
+         */
+        public String getDateFormat() {
+            return this.dateFormat;
+        }
+
+        /**
+         * @return descr
+         */
+        public String getDescr() {
+            return this.descr;
+        }
+
+        /**
+         * @return isUrl
+         */
+        public Boolean getIsUrl() {
+            return this.isUrl;
+        }
+
+        /**
+         * @return mappingColumn
+         */
+        public String getMappingColumn() {
+            return this.mappingColumn;
+        }
+
+        /**
+         * @return originalColumn
+         */
+        public String getOriginalColumn() {
+            return this.originalColumn;
+        }
+
+        /**
+         * @return paramName
+         */
+        public String getParamName() {
+            return this.paramName;
+        }
+
+        /**
+         * @return paramType
+         */
+        public String getParamType() {
+            return this.paramType;
+        }
+
+        /**
+         * @return sample
+         */
+        public String getSample() {
+            return this.sample;
+        }
+
+        /**
+         * @return seqNum
+         */
+        public String getSeqNum() {
+            return this.seqNum;
+        }
+
+        public static final class Builder {
+            private String dateFormat; 
+            private String descr; 
+            private Boolean isUrl; 
+            private String mappingColumn; 
+            private String originalColumn; 
+            private String paramName; 
+            private String paramType; 
+            private String sample; 
+            private String seqNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResponseParamList model) {
+                this.dateFormat = model.dateFormat;
+                this.descr = model.descr;
+                this.isUrl = model.isUrl;
+                this.mappingColumn = model.mappingColumn;
+                this.originalColumn = model.originalColumn;
+                this.paramName = model.paramName;
+                this.paramType = model.paramType;
+                this.sample = model.sample;
+                this.seqNum = model.seqNum;
+            } 
+
+            /**
+             * DateFormat.
+             */
+            public Builder dateFormat(String dateFormat) {
+                this.dateFormat = dateFormat;
+                return this;
+            }
+
+            /**
+             * Descr.
+             */
+            public Builder descr(String descr) {
+                this.descr = descr;
+                return this;
+            }
+
+            /**
+             * IsUrl.
+             */
+            public Builder isUrl(Boolean isUrl) {
+                this.isUrl = isUrl;
+                return this;
+            }
+
+            /**
+             * MappingColumn.
+             */
+            public Builder mappingColumn(String mappingColumn) {
+                this.mappingColumn = mappingColumn;
+                return this;
+            }
+
+            /**
+             * OriginalColumn.
+             */
+            public Builder originalColumn(String originalColumn) {
+                this.originalColumn = originalColumn;
+                return this;
+            }
+
+            /**
+             * ParamName.
+             */
+            public Builder paramName(String paramName) {
+                this.paramName = paramName;
+                return this;
+            }
+
+            /**
+             * ParamType.
+             */
+            public Builder paramType(String paramType) {
+                this.paramType = paramType;
+                return this;
+            }
+
+            /**
+             * Sample.
+             */
+            public Builder sample(String sample) {
+                this.sample = sample;
+                return this;
+            }
+
+            /**
+             * SeqNum.
+             */
+            public Builder seqNum(String seqNum) {
+                this.seqNum = seqNum;
+                return this;
+            }
+
+            public ResponseParamList build() {
+                return new ResponseParamList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetDatasetResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDatasetResponseBody</p>
+     */
+    public static class ApiInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ApiNo")
+        private Long apiNo;
+
+        @com.aliyun.core.annotation.NameInMap("ExecTimeout")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private Integer execTimeout;
+
+        @com.aliyun.core.annotation.NameInMap("ExecuteMode")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private Integer executeMode;
+
+        @com.aliyun.core.annotation.NameInMap("OsApiGroup")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private Integer osApiGroup;
+
+        @com.aliyun.core.annotation.NameInMap("OsApiGroupName")
+        private String osApiGroupName;
+
+        @com.aliyun.core.annotation.NameInMap("OsProject")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private Integer osProject;
+
+        @com.aliyun.core.annotation.NameInMap("OsProjectName")
+        private String osProjectName;
+
+        @com.aliyun.core.annotation.NameInMap("Protocol")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private Integer protocol;
+
+        @com.aliyun.core.annotation.NameInMap("RequestMethod")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private Integer requestMethod;
+
+        @com.aliyun.core.annotation.NameInMap("RequestParamList")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<RequestParamList> requestParamList;
+
+        @com.aliyun.core.annotation.NameInMap("ResponseParamList")
+        private java.util.List<ResponseParamList> responseParamList;
+
+        @com.aliyun.core.annotation.NameInMap("Timeout")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private Integer timeout;
+
+        private ApiInfo(Builder builder) {
+            this.apiNo = builder.apiNo;
+            this.execTimeout = builder.execTimeout;
+            this.executeMode = builder.executeMode;
+            this.osApiGroup = builder.osApiGroup;
+            this.osApiGroupName = builder.osApiGroupName;
+            this.osProject = builder.osProject;
+            this.osProjectName = builder.osProjectName;
+            this.protocol = builder.protocol;
+            this.requestMethod = builder.requestMethod;
+            this.requestParamList = builder.requestParamList;
+            this.responseParamList = builder.responseParamList;
+            this.timeout = builder.timeout;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ApiInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return apiNo
+         */
+        public Long getApiNo() {
+            return this.apiNo;
+        }
+
+        /**
+         * @return execTimeout
+         */
+        public Integer getExecTimeout() {
+            return this.execTimeout;
+        }
+
+        /**
+         * @return executeMode
+         */
+        public Integer getExecuteMode() {
+            return this.executeMode;
+        }
+
+        /**
+         * @return osApiGroup
+         */
+        public Integer getOsApiGroup() {
+            return this.osApiGroup;
+        }
+
+        /**
+         * @return osApiGroupName
+         */
+        public String getOsApiGroupName() {
+            return this.osApiGroupName;
+        }
+
+        /**
+         * @return osProject
+         */
+        public Integer getOsProject() {
+            return this.osProject;
+        }
+
+        /**
+         * @return osProjectName
+         */
+        public String getOsProjectName() {
+            return this.osProjectName;
+        }
+
+        /**
+         * @return protocol
+         */
+        public Integer getProtocol() {
+            return this.protocol;
+        }
+
+        /**
+         * @return requestMethod
+         */
+        public Integer getRequestMethod() {
+            return this.requestMethod;
+        }
+
+        /**
+         * @return requestParamList
+         */
+        public java.util.List<RequestParamList> getRequestParamList() {
+            return this.requestParamList;
+        }
+
+        /**
+         * @return responseParamList
+         */
+        public java.util.List<ResponseParamList> getResponseParamList() {
+            return this.responseParamList;
+        }
+
+        /**
+         * @return timeout
+         */
+        public Integer getTimeout() {
+            return this.timeout;
+        }
+
+        public static final class Builder {
+            private Long apiNo; 
+            private Integer execTimeout; 
+            private Integer executeMode; 
+            private Integer osApiGroup; 
+            private String osApiGroupName; 
+            private Integer osProject; 
+            private String osProjectName; 
+            private Integer protocol; 
+            private Integer requestMethod; 
+            private java.util.List<RequestParamList> requestParamList; 
+            private java.util.List<ResponseParamList> responseParamList; 
+            private Integer timeout; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApiInfo model) {
+                this.apiNo = model.apiNo;
+                this.execTimeout = model.execTimeout;
+                this.executeMode = model.executeMode;
+                this.osApiGroup = model.osApiGroup;
+                this.osApiGroupName = model.osApiGroupName;
+                this.osProject = model.osProject;
+                this.osProjectName = model.osProjectName;
+                this.protocol = model.protocol;
+                this.requestMethod = model.requestMethod;
+                this.requestParamList = model.requestParamList;
+                this.responseParamList = model.responseParamList;
+                this.timeout = model.timeout;
+            } 
+
+            /**
+             * ApiNo.
+             */
+            public Builder apiNo(Long apiNo) {
+                this.apiNo = apiNo;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
+             */
+            public Builder execTimeout(Integer execTimeout) {
+                this.execTimeout = execTimeout;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder executeMode(Integer executeMode) {
+                this.executeMode = executeMode;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1011</p>
+             */
+            public Builder osApiGroup(Integer osApiGroup) {
+                this.osApiGroup = osApiGroup;
+                return this;
+            }
+
+            /**
+             * OsApiGroupName.
+             */
+            public Builder osApiGroupName(String osApiGroupName) {
+                this.osApiGroupName = osApiGroupName;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1060</p>
+             */
+            public Builder osProject(Integer osProject) {
+                this.osProject = osProject;
+                return this;
+            }
+
+            /**
+             * OsProjectName.
+             */
+            public Builder osProjectName(String osProjectName) {
+                this.osProjectName = osProjectName;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder protocol(Integer protocol) {
+                this.protocol = protocol;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder requestMethod(Integer requestMethod) {
+                this.requestMethod = requestMethod;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder requestParamList(java.util.List<RequestParamList> requestParamList) {
+                this.requestParamList = requestParamList;
+                return this;
+            }
+
+            /**
+             * ResponseParamList.
+             */
+            public Builder responseParamList(java.util.List<ResponseParamList> responseParamList) {
+                this.responseParamList = responseParamList;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
+             */
+            public Builder timeout(Integer timeout) {
+                this.timeout = timeout;
+                return this;
+            }
+
+            public ApiInfo build() {
+                return new ApiInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetDatasetResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDatasetResponseBody</p>
+     */
     public static class FileStorageConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataSourceId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -1703,6 +2545,9 @@ public class GetDatasetResponseBody extends TeaModel {
      * <p>GetDatasetResponseBody</p>
      */
     public static class VersionList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ApiInfo")
+        private ApiInfo apiInfo;
+
         @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
@@ -1725,6 +2570,7 @@ public class GetDatasetResponseBody extends TeaModel {
         private String version;
 
         private VersionList(Builder builder) {
+            this.apiInfo = builder.apiInfo;
             this.creator = builder.creator;
             this.dataVersionConfig = builder.dataVersionConfig;
             this.datasetId = builder.datasetId;
@@ -1740,6 +2586,13 @@ public class GetDatasetResponseBody extends TeaModel {
 
         public static VersionList create() {
             return builder().build();
+        }
+
+        /**
+         * @return apiInfo
+         */
+        public ApiInfo getApiInfo() {
+            return this.apiInfo;
         }
 
         /**
@@ -1792,6 +2645,7 @@ public class GetDatasetResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private ApiInfo apiInfo; 
             private String creator; 
             private DataVersionConfig dataVersionConfig; 
             private Long datasetId; 
@@ -1804,6 +2658,7 @@ public class GetDatasetResponseBody extends TeaModel {
             } 
 
             private Builder(VersionList model) {
+                this.apiInfo = model.apiInfo;
                 this.creator = model.creator;
                 this.dataVersionConfig = model.dataVersionConfig;
                 this.datasetId = model.datasetId;
@@ -1812,6 +2667,14 @@ public class GetDatasetResponseBody extends TeaModel {
                 this.id = model.id;
                 this.version = model.version;
             } 
+
+            /**
+             * ApiInfo.
+             */
+            public Builder apiInfo(ApiInfo apiInfo) {
+                this.apiInfo = apiInfo;
+                return this;
+            }
 
             /**
              * Creator.

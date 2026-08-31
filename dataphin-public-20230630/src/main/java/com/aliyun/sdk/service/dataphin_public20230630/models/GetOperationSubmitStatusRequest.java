@@ -35,12 +35,17 @@ public class GetOperationSubmitStatusRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long opTenantId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserId")
+    private String opUserId;
+
     private GetOperationSubmitStatusRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.env = builder.env;
         this.jobId = builder.jobId;
         this.opTenantId = builder.opTenantId;
+        this.opUserId = builder.opUserId;
     }
 
     public static Builder builder() {
@@ -84,11 +89,19 @@ public class GetOperationSubmitStatusRequest extends Request {
         return this.opTenantId;
     }
 
+    /**
+     * @return opUserId
+     */
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
     public static final class Builder extends Request.Builder<GetOperationSubmitStatusRequest, Builder> {
         private String regionId; 
         private String env; 
         private String jobId; 
         private Long opTenantId; 
+        private String opUserId; 
 
         private Builder() {
             super();
@@ -100,6 +113,7 @@ public class GetOperationSubmitStatusRequest extends Request {
             this.env = request.env;
             this.jobId = request.jobId;
             this.opTenantId = request.opTenantId;
+            this.opUserId = request.opUserId;
         } 
 
         /**
@@ -141,6 +155,15 @@ public class GetOperationSubmitStatusRequest extends Request {
         public Builder opTenantId(Long opTenantId) {
             this.putQueryParameter("OpTenantId", opTenantId);
             this.opTenantId = opTenantId;
+            return this;
+        }
+
+        /**
+         * OpUserId.
+         */
+        public Builder opUserId(String opUserId) {
+            this.putQueryParameter("OpUserId", opUserId);
+            this.opUserId = opUserId;
             return this;
         }
 

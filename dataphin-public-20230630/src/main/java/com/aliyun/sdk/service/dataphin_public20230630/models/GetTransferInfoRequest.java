@@ -27,6 +27,10 @@ public class GetTransferInfoRequest extends Request {
     private Long opTenantId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserId")
+    private String opUserId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProposalId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long proposalId;
@@ -35,6 +39,7 @@ public class GetTransferInfoRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.opTenantId = builder.opTenantId;
+        this.opUserId = builder.opUserId;
         this.proposalId = builder.proposalId;
     }
 
@@ -66,6 +71,13 @@ public class GetTransferInfoRequest extends Request {
     }
 
     /**
+     * @return opUserId
+     */
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
+    /**
      * @return proposalId
      */
     public Long getProposalId() {
@@ -75,6 +87,7 @@ public class GetTransferInfoRequest extends Request {
     public static final class Builder extends Request.Builder<GetTransferInfoRequest, Builder> {
         private String regionId; 
         private Long opTenantId; 
+        private String opUserId; 
         private Long proposalId; 
 
         private Builder() {
@@ -85,6 +98,7 @@ public class GetTransferInfoRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.opTenantId = request.opTenantId;
+            this.opUserId = request.opUserId;
             this.proposalId = request.proposalId;
         } 
 
@@ -106,6 +120,15 @@ public class GetTransferInfoRequest extends Request {
         public Builder opTenantId(Long opTenantId) {
             this.putQueryParameter("OpTenantId", opTenantId);
             this.opTenantId = opTenantId;
+            return this;
+        }
+
+        /**
+         * OpUserId.
+         */
+        public Builder opUserId(String opUserId) {
+            this.putQueryParameter("OpUserId", opUserId);
+            this.opUserId = opUserId;
             return this;
         }
 

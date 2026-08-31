@@ -1,0 +1,210 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.dataphin_public20230630.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link ListQualityArchiveTablesRequest} extends {@link RequestModel}
+ *
+ * <p>ListQualityArchiveTablesRequest</p>
+ */
+public class ListQualityArchiveTablesRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ListQuery")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private ListQuery listQuery;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpTenantId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private Long opTenantId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserId")
+    private String opUserId;
+
+    private ListQualityArchiveTablesRequest(Builder builder) {
+        super(builder);
+        this.regionId = builder.regionId;
+        this.listQuery = builder.listQuery;
+        this.opTenantId = builder.opTenantId;
+        this.opUserId = builder.opUserId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ListQualityArchiveTablesRequest create() {
+        return builder().build();
+    }
+
+@Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return listQuery
+     */
+    public ListQuery getListQuery() {
+        return this.listQuery;
+    }
+
+    /**
+     * @return opTenantId
+     */
+    public Long getOpTenantId() {
+        return this.opTenantId;
+    }
+
+    /**
+     * @return opUserId
+     */
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
+    public static final class Builder extends Request.Builder<ListQualityArchiveTablesRequest, Builder> {
+        private String regionId; 
+        private ListQuery listQuery; 
+        private Long opTenantId; 
+        private String opUserId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(ListQualityArchiveTablesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.listQuery = request.listQuery;
+            this.opTenantId = request.opTenantId;
+            this.opUserId = request.opUserId;
+        } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        public Builder listQuery(ListQuery listQuery) {
+            String listQueryShrink = shrink(listQuery, "ListQuery", "json");
+            this.putBodyParameter("ListQuery", listQueryShrink);
+            this.listQuery = listQuery;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
+         */
+        public Builder opTenantId(Long opTenantId) {
+            this.putQueryParameter("OpTenantId", opTenantId);
+            this.opTenantId = opTenantId;
+            return this;
+        }
+
+        /**
+         * OpUserId.
+         */
+        public Builder opUserId(String opUserId) {
+            this.putQueryParameter("OpUserId", opUserId);
+            this.opUserId = opUserId;
+            return this;
+        }
+
+        @Override
+        public ListQualityArchiveTablesRequest build() {
+            return new ListQualityArchiveTablesRequest(this);
+        } 
+
+    } 
+
+    /**
+     * 
+     * {@link ListQualityArchiveTablesRequest} extends {@link TeaModel}
+     *
+     * <p>ListQualityArchiveTablesRequest</p>
+     */
+    public static class ListQuery extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("WatchId")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private Long watchId;
+
+        private ListQuery(Builder builder) {
+            this.watchId = builder.watchId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ListQuery create() {
+            return builder().build();
+        }
+
+        /**
+         * @return watchId
+         */
+        public Long getWatchId() {
+            return this.watchId;
+        }
+
+        public static final class Builder {
+            private Long watchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ListQuery model) {
+                this.watchId = model.watchId;
+            } 
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
+             */
+            public Builder watchId(Long watchId) {
+                this.watchId = watchId;
+                return this;
+            }
+
+            public ListQuery build() {
+                return new ListQuery(this);
+            } 
+
+        } 
+
+    }
+}

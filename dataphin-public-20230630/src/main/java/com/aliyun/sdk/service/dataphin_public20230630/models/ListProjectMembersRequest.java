@@ -36,12 +36,17 @@ public class ListProjectMembersRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long opTenantId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserId")
+    private String opUserId;
+
     private ListProjectMembersRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.id = builder.id;
         this.listQuery = builder.listQuery;
         this.opTenantId = builder.opTenantId;
+        this.opUserId = builder.opUserId;
     }
 
     public static Builder builder() {
@@ -85,11 +90,19 @@ public class ListProjectMembersRequest extends Request {
         return this.opTenantId;
     }
 
+    /**
+     * @return opUserId
+     */
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
     public static final class Builder extends Request.Builder<ListProjectMembersRequest, Builder> {
         private String regionId; 
         private Long id; 
         private ListQuery listQuery; 
         private Long opTenantId; 
+        private String opUserId; 
 
         private Builder() {
             super();
@@ -101,6 +114,7 @@ public class ListProjectMembersRequest extends Request {
             this.id = request.id;
             this.listQuery = request.listQuery;
             this.opTenantId = request.opTenantId;
+            this.opUserId = request.opUserId;
         } 
 
         /**
@@ -146,6 +160,15 @@ public class ListProjectMembersRequest extends Request {
         public Builder opTenantId(Long opTenantId) {
             this.putQueryParameter("OpTenantId", opTenantId);
             this.opTenantId = opTenantId;
+            return this;
+        }
+
+        /**
+         * OpUserId.
+         */
+        public Builder opUserId(String opUserId) {
+            this.putQueryParameter("OpUserId", opUserId);
+            this.opUserId = opUserId;
             return this;
         }
 

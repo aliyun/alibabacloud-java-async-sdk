@@ -35,12 +35,17 @@ public class GetPhysicalNodeOperationLogRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long opTenantId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserId")
+    private String opUserId;
+
     private GetPhysicalNodeOperationLogRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.env = builder.env;
         this.nodeId = builder.nodeId;
         this.opTenantId = builder.opTenantId;
+        this.opUserId = builder.opUserId;
     }
 
     public static Builder builder() {
@@ -84,11 +89,19 @@ public class GetPhysicalNodeOperationLogRequest extends Request {
         return this.opTenantId;
     }
 
+    /**
+     * @return opUserId
+     */
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
     public static final class Builder extends Request.Builder<GetPhysicalNodeOperationLogRequest, Builder> {
         private String regionId; 
         private String env; 
         private String nodeId; 
         private Long opTenantId; 
+        private String opUserId; 
 
         private Builder() {
             super();
@@ -100,6 +113,7 @@ public class GetPhysicalNodeOperationLogRequest extends Request {
             this.env = request.env;
             this.nodeId = request.nodeId;
             this.opTenantId = request.opTenantId;
+            this.opUserId = request.opUserId;
         } 
 
         /**
@@ -141,6 +155,15 @@ public class GetPhysicalNodeOperationLogRequest extends Request {
         public Builder opTenantId(Long opTenantId) {
             this.putQueryParameter("OpTenantId", opTenantId);
             this.opTenantId = opTenantId;
+            return this;
+        }
+
+        /**
+         * OpUserId.
+         */
+        public Builder opUserId(String opUserId) {
+            this.putQueryParameter("OpUserId", opUserId);
+            this.opUserId = opUserId;
             return this;
         }
 

@@ -32,6 +32,10 @@ public class GetDataServiceApiDocumentRequest extends Request {
     private Long opTenantId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserId")
+    private String opUserId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VersionId")
     private String versionId;
 
@@ -40,6 +44,7 @@ public class GetDataServiceApiDocumentRequest extends Request {
         this.regionId = builder.regionId;
         this.id = builder.id;
         this.opTenantId = builder.opTenantId;
+        this.opUserId = builder.opUserId;
         this.versionId = builder.versionId;
     }
 
@@ -78,6 +83,13 @@ public class GetDataServiceApiDocumentRequest extends Request {
     }
 
     /**
+     * @return opUserId
+     */
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
+    /**
      * @return versionId
      */
     public String getVersionId() {
@@ -88,6 +100,7 @@ public class GetDataServiceApiDocumentRequest extends Request {
         private String regionId; 
         private Long id; 
         private Long opTenantId; 
+        private String opUserId; 
         private String versionId; 
 
         private Builder() {
@@ -99,6 +112,7 @@ public class GetDataServiceApiDocumentRequest extends Request {
             this.regionId = request.regionId;
             this.id = request.id;
             this.opTenantId = request.opTenantId;
+            this.opUserId = request.opUserId;
             this.versionId = request.versionId;
         } 
 
@@ -132,6 +146,15 @@ public class GetDataServiceApiDocumentRequest extends Request {
         public Builder opTenantId(Long opTenantId) {
             this.putQueryParameter("OpTenantId", opTenantId);
             this.opTenantId = opTenantId;
+            return this;
+        }
+
+        /**
+         * OpUserId.
+         */
+        public Builder opUserId(String opUserId) {
+            this.putQueryParameter("OpUserId", opUserId);
+            this.opUserId = opUserId;
             return this;
         }
 

@@ -36,12 +36,17 @@ public class DeleteDataDomainRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long opTenantId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserId")
+    private String opUserId;
+
     private DeleteDataDomainRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.bizUnitId = builder.bizUnitId;
         this.id = builder.id;
         this.opTenantId = builder.opTenantId;
+        this.opUserId = builder.opUserId;
     }
 
     public static Builder builder() {
@@ -85,11 +90,19 @@ public class DeleteDataDomainRequest extends Request {
         return this.opTenantId;
     }
 
+    /**
+     * @return opUserId
+     */
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
     public static final class Builder extends Request.Builder<DeleteDataDomainRequest, Builder> {
         private String regionId; 
         private Long bizUnitId; 
         private Long id; 
         private Long opTenantId; 
+        private String opUserId; 
 
         private Builder() {
             super();
@@ -101,6 +114,7 @@ public class DeleteDataDomainRequest extends Request {
             this.bizUnitId = request.bizUnitId;
             this.id = request.id;
             this.opTenantId = request.opTenantId;
+            this.opUserId = request.opUserId;
         } 
 
         /**
@@ -145,6 +159,15 @@ public class DeleteDataDomainRequest extends Request {
         public Builder opTenantId(Long opTenantId) {
             this.putQueryParameter("OpTenantId", opTenantId);
             this.opTenantId = opTenantId;
+            return this;
+        }
+
+        /**
+         * OpUserId.
+         */
+        public Builder opUserId(String opUserId) {
+            this.putQueryParameter("OpUserId", opUserId);
+            this.opUserId = opUserId;
             return this;
         }
 

@@ -796,32 +796,39 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
      *
      * <p>GetCatalogAssetDetailsResponseBody</p>
      */
-    public static class Directories extends TeaModel {
+    public static class DirectoryChain extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DirectoryDescription")
+        private String directoryDescription;
+
         @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private Long directoryId;
 
         @com.aliyun.core.annotation.NameInMap("DirectoryName")
         private String directoryName;
 
-        @com.aliyun.core.annotation.NameInMap("TopicId")
-        private Long topicId;
+        @com.aliyun.core.annotation.NameInMap("Level")
+        private Integer level;
 
-        @com.aliyun.core.annotation.NameInMap("TopicName")
-        private String topicName;
-
-        private Directories(Builder builder) {
+        private DirectoryChain(Builder builder) {
+            this.directoryDescription = builder.directoryDescription;
             this.directoryId = builder.directoryId;
             this.directoryName = builder.directoryName;
-            this.topicId = builder.topicId;
-            this.topicName = builder.topicName;
+            this.level = builder.level;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static Directories create() {
+        public static DirectoryChain create() {
             return builder().build();
+        }
+
+        /**
+         * @return directoryDescription
+         */
+        public String getDirectoryDescription() {
+            return this.directoryDescription;
         }
 
         /**
@@ -839,34 +846,35 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * @return topicId
+         * @return level
          */
-        public Long getTopicId() {
-            return this.topicId;
-        }
-
-        /**
-         * @return topicName
-         */
-        public String getTopicName() {
-            return this.topicName;
+        public Integer getLevel() {
+            return this.level;
         }
 
         public static final class Builder {
+            private String directoryDescription; 
             private Long directoryId; 
             private String directoryName; 
-            private Long topicId; 
-            private String topicName; 
+            private Integer level; 
 
             private Builder() {
             } 
 
-            private Builder(Directories model) {
+            private Builder(DirectoryChain model) {
+                this.directoryDescription = model.directoryDescription;
                 this.directoryId = model.directoryId;
                 this.directoryName = model.directoryName;
-                this.topicId = model.topicId;
-                this.topicName = model.topicName;
+                this.level = model.level;
             } 
+
+            /**
+             * DirectoryDescription.
+             */
+            public Builder directoryDescription(String directoryDescription) {
+                this.directoryDescription = directoryDescription;
+                return this;
+            }
 
             /**
              * DirectoryId.
@@ -881,6 +889,178 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
              */
             public Builder directoryName(String directoryName) {
                 this.directoryName = directoryName;
+                return this;
+            }
+
+            /**
+             * Level.
+             */
+            public Builder level(Integer level) {
+                this.level = level;
+                return this;
+            }
+
+            public DirectoryChain build() {
+                return new DirectoryChain(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetCatalogAssetDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCatalogAssetDetailsResponseBody</p>
+     */
+    public static class Directories extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DirectoryChain")
+        private java.util.List<DirectoryChain> directoryChain;
+
+        @com.aliyun.core.annotation.NameInMap("DirectoryDescription")
+        private String directoryDescription;
+
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
+        private Long directoryId;
+
+        @com.aliyun.core.annotation.NameInMap("DirectoryName")
+        private String directoryName;
+
+        @com.aliyun.core.annotation.NameInMap("TopicDescription")
+        private String topicDescription;
+
+        @com.aliyun.core.annotation.NameInMap("TopicId")
+        private Long topicId;
+
+        @com.aliyun.core.annotation.NameInMap("TopicName")
+        private String topicName;
+
+        private Directories(Builder builder) {
+            this.directoryChain = builder.directoryChain;
+            this.directoryDescription = builder.directoryDescription;
+            this.directoryId = builder.directoryId;
+            this.directoryName = builder.directoryName;
+            this.topicDescription = builder.topicDescription;
+            this.topicId = builder.topicId;
+            this.topicName = builder.topicName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Directories create() {
+            return builder().build();
+        }
+
+        /**
+         * @return directoryChain
+         */
+        public java.util.List<DirectoryChain> getDirectoryChain() {
+            return this.directoryChain;
+        }
+
+        /**
+         * @return directoryDescription
+         */
+        public String getDirectoryDescription() {
+            return this.directoryDescription;
+        }
+
+        /**
+         * @return directoryId
+         */
+        public Long getDirectoryId() {
+            return this.directoryId;
+        }
+
+        /**
+         * @return directoryName
+         */
+        public String getDirectoryName() {
+            return this.directoryName;
+        }
+
+        /**
+         * @return topicDescription
+         */
+        public String getTopicDescription() {
+            return this.topicDescription;
+        }
+
+        /**
+         * @return topicId
+         */
+        public Long getTopicId() {
+            return this.topicId;
+        }
+
+        /**
+         * @return topicName
+         */
+        public String getTopicName() {
+            return this.topicName;
+        }
+
+        public static final class Builder {
+            private java.util.List<DirectoryChain> directoryChain; 
+            private String directoryDescription; 
+            private Long directoryId; 
+            private String directoryName; 
+            private String topicDescription; 
+            private Long topicId; 
+            private String topicName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Directories model) {
+                this.directoryChain = model.directoryChain;
+                this.directoryDescription = model.directoryDescription;
+                this.directoryId = model.directoryId;
+                this.directoryName = model.directoryName;
+                this.topicDescription = model.topicDescription;
+                this.topicId = model.topicId;
+                this.topicName = model.topicName;
+            } 
+
+            /**
+             * DirectoryChain.
+             */
+            public Builder directoryChain(java.util.List<DirectoryChain> directoryChain) {
+                this.directoryChain = directoryChain;
+                return this;
+            }
+
+            /**
+             * DirectoryDescription.
+             */
+            public Builder directoryDescription(String directoryDescription) {
+                this.directoryDescription = directoryDescription;
+                return this;
+            }
+
+            /**
+             * DirectoryId.
+             */
+            public Builder directoryId(Long directoryId) {
+                this.directoryId = directoryId;
+                return this;
+            }
+
+            /**
+             * DirectoryName.
+             */
+            public Builder directoryName(String directoryName) {
+                this.directoryName = directoryName;
+                return this;
+            }
+
+            /**
+             * TopicDescription.
+             */
+            public Builder topicDescription(String topicDescription) {
+                this.topicDescription = topicDescription;
                 return this;
             }
 
@@ -1127,6 +1307,303 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
 
             public Owner build() {
                 return new Owner(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetCatalogAssetDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCatalogAssetDetailsResponseBody</p>
+     */
+    public static class CatalogScores extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Catalog")
+        private String catalog;
+
+        @com.aliyun.core.annotation.NameInMap("FieldRuleCount")
+        private Integer fieldRuleCount;
+
+        @com.aliyun.core.annotation.NameInMap("PassRate")
+        private Double passRate;
+
+        @com.aliyun.core.annotation.NameInMap("PassRuleCount")
+        private Integer passRuleCount;
+
+        @com.aliyun.core.annotation.NameInMap("Score")
+        private Double score;
+
+        @com.aliyun.core.annotation.NameInMap("TableRuleCount")
+        private Integer tableRuleCount;
+
+        @com.aliyun.core.annotation.NameInMap("ValidateRuleCount")
+        private Integer validateRuleCount;
+
+        private CatalogScores(Builder builder) {
+            this.catalog = builder.catalog;
+            this.fieldRuleCount = builder.fieldRuleCount;
+            this.passRate = builder.passRate;
+            this.passRuleCount = builder.passRuleCount;
+            this.score = builder.score;
+            this.tableRuleCount = builder.tableRuleCount;
+            this.validateRuleCount = builder.validateRuleCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CatalogScores create() {
+            return builder().build();
+        }
+
+        /**
+         * @return catalog
+         */
+        public String getCatalog() {
+            return this.catalog;
+        }
+
+        /**
+         * @return fieldRuleCount
+         */
+        public Integer getFieldRuleCount() {
+            return this.fieldRuleCount;
+        }
+
+        /**
+         * @return passRate
+         */
+        public Double getPassRate() {
+            return this.passRate;
+        }
+
+        /**
+         * @return passRuleCount
+         */
+        public Integer getPassRuleCount() {
+            return this.passRuleCount;
+        }
+
+        /**
+         * @return score
+         */
+        public Double getScore() {
+            return this.score;
+        }
+
+        /**
+         * @return tableRuleCount
+         */
+        public Integer getTableRuleCount() {
+            return this.tableRuleCount;
+        }
+
+        /**
+         * @return validateRuleCount
+         */
+        public Integer getValidateRuleCount() {
+            return this.validateRuleCount;
+        }
+
+        public static final class Builder {
+            private String catalog; 
+            private Integer fieldRuleCount; 
+            private Double passRate; 
+            private Integer passRuleCount; 
+            private Double score; 
+            private Integer tableRuleCount; 
+            private Integer validateRuleCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(CatalogScores model) {
+                this.catalog = model.catalog;
+                this.fieldRuleCount = model.fieldRuleCount;
+                this.passRate = model.passRate;
+                this.passRuleCount = model.passRuleCount;
+                this.score = model.score;
+                this.tableRuleCount = model.tableRuleCount;
+                this.validateRuleCount = model.validateRuleCount;
+            } 
+
+            /**
+             * Catalog.
+             */
+            public Builder catalog(String catalog) {
+                this.catalog = catalog;
+                return this;
+            }
+
+            /**
+             * FieldRuleCount.
+             */
+            public Builder fieldRuleCount(Integer fieldRuleCount) {
+                this.fieldRuleCount = fieldRuleCount;
+                return this;
+            }
+
+            /**
+             * PassRate.
+             */
+            public Builder passRate(Double passRate) {
+                this.passRate = passRate;
+                return this;
+            }
+
+            /**
+             * PassRuleCount.
+             */
+            public Builder passRuleCount(Integer passRuleCount) {
+                this.passRuleCount = passRuleCount;
+                return this;
+            }
+
+            /**
+             * Score.
+             */
+            public Builder score(Double score) {
+                this.score = score;
+                return this;
+            }
+
+            /**
+             * TableRuleCount.
+             */
+            public Builder tableRuleCount(Integer tableRuleCount) {
+                this.tableRuleCount = tableRuleCount;
+                return this;
+            }
+
+            /**
+             * ValidateRuleCount.
+             */
+            public Builder validateRuleCount(Integer validateRuleCount) {
+                this.validateRuleCount = validateRuleCount;
+                return this;
+            }
+
+            public CatalogScores build() {
+                return new CatalogScores(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetCatalogAssetDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCatalogAssetDetailsResponseBody</p>
+     */
+    public static class QualityScoreRadar extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CatalogScores")
+        private java.util.List<CatalogScores> catalogScores;
+
+        @com.aliyun.core.annotation.NameInMap("PassRuleCount")
+        private Integer passRuleCount;
+
+        @com.aliyun.core.annotation.NameInMap("TotalScore")
+        private Double totalScore;
+
+        @com.aliyun.core.annotation.NameInMap("ValidateRuleCount")
+        private Integer validateRuleCount;
+
+        private QualityScoreRadar(Builder builder) {
+            this.catalogScores = builder.catalogScores;
+            this.passRuleCount = builder.passRuleCount;
+            this.totalScore = builder.totalScore;
+            this.validateRuleCount = builder.validateRuleCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static QualityScoreRadar create() {
+            return builder().build();
+        }
+
+        /**
+         * @return catalogScores
+         */
+        public java.util.List<CatalogScores> getCatalogScores() {
+            return this.catalogScores;
+        }
+
+        /**
+         * @return passRuleCount
+         */
+        public Integer getPassRuleCount() {
+            return this.passRuleCount;
+        }
+
+        /**
+         * @return totalScore
+         */
+        public Double getTotalScore() {
+            return this.totalScore;
+        }
+
+        /**
+         * @return validateRuleCount
+         */
+        public Integer getValidateRuleCount() {
+            return this.validateRuleCount;
+        }
+
+        public static final class Builder {
+            private java.util.List<CatalogScores> catalogScores; 
+            private Integer passRuleCount; 
+            private Double totalScore; 
+            private Integer validateRuleCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(QualityScoreRadar model) {
+                this.catalogScores = model.catalogScores;
+                this.passRuleCount = model.passRuleCount;
+                this.totalScore = model.totalScore;
+                this.validateRuleCount = model.validateRuleCount;
+            } 
+
+            /**
+             * CatalogScores.
+             */
+            public Builder catalogScores(java.util.List<CatalogScores> catalogScores) {
+                this.catalogScores = catalogScores;
+                return this;
+            }
+
+            /**
+             * PassRuleCount.
+             */
+            public Builder passRuleCount(Integer passRuleCount) {
+                this.passRuleCount = passRuleCount;
+                return this;
+            }
+
+            /**
+             * TotalScore.
+             */
+            public Builder totalScore(Double totalScore) {
+                this.totalScore = totalScore;
+                return this;
+            }
+
+            /**
+             * ValidateRuleCount.
+             */
+            public Builder validateRuleCount(Integer validateRuleCount) {
+                this.validateRuleCount = validateRuleCount;
+                return this;
+            }
+
+            public QualityScoreRadar build() {
+                return new QualityScoreRadar(this);
             } 
 
         } 
@@ -1634,6 +2111,9 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
 
+        @com.aliyun.core.annotation.NameInMap("QualityScoreRadar")
+        private QualityScoreRadar qualityScoreRadar;
+
         @com.aliyun.core.annotation.NameInMap("ReadCount")
         private Long readCount;
 
@@ -1713,6 +2193,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             this.profilingReportViewScopeUserIds = builder.profilingReportViewScopeUserIds;
             this.projectId = builder.projectId;
             this.projectName = builder.projectName;
+            this.qualityScoreRadar = builder.qualityScoreRadar;
             this.readCount = builder.readCount;
             this.shelveViewScopeType = builder.shelveViewScopeType;
             this.shelveViewScopeUserGroups = builder.shelveViewScopeUserGroups;
@@ -2070,6 +2551,13 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
         }
 
         /**
+         * @return qualityScoreRadar
+         */
+        public QualityScoreRadar getQualityScoreRadar() {
+            return this.qualityScoreRadar;
+        }
+
+        /**
          * @return readCount
          */
         public Long getReadCount() {
@@ -2188,6 +2676,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
             private java.util.List<String> profilingReportViewScopeUserIds; 
             private Long projectId; 
             private String projectName; 
+            private QualityScoreRadar qualityScoreRadar; 
             private Long readCount; 
             private String shelveViewScopeType; 
             private java.util.List<String> shelveViewScopeUserGroups; 
@@ -2251,6 +2740,7 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
                 this.profilingReportViewScopeUserIds = model.profilingReportViewScopeUserIds;
                 this.projectId = model.projectId;
                 this.projectName = model.projectName;
+                this.qualityScoreRadar = model.qualityScoreRadar;
                 this.readCount = model.readCount;
                 this.shelveViewScopeType = model.shelveViewScopeType;
                 this.shelveViewScopeUserGroups = model.shelveViewScopeUserGroups;
@@ -2644,6 +3134,14 @@ public class GetCatalogAssetDetailsResponseBody extends TeaModel {
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
+                return this;
+            }
+
+            /**
+             * QualityScoreRadar.
+             */
+            public Builder qualityScoreRadar(QualityScoreRadar qualityScoreRadar) {
+                this.qualityScoreRadar = qualityScoreRadar;
                 return this;
             }
 

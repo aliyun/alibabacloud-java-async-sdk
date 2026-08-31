@@ -35,12 +35,17 @@ public class CreateNodeSupplementRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long opTenantId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserId")
+    private String opUserId;
+
     private CreateNodeSupplementRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.createCommand = builder.createCommand;
         this.env = builder.env;
         this.opTenantId = builder.opTenantId;
+        this.opUserId = builder.opUserId;
     }
 
     public static Builder builder() {
@@ -84,11 +89,19 @@ public class CreateNodeSupplementRequest extends Request {
         return this.opTenantId;
     }
 
+    /**
+     * @return opUserId
+     */
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
     public static final class Builder extends Request.Builder<CreateNodeSupplementRequest, Builder> {
         private String regionId; 
         private CreateCommand createCommand; 
         private String env; 
         private Long opTenantId; 
+        private String opUserId; 
 
         private Builder() {
             super();
@@ -100,6 +113,7 @@ public class CreateNodeSupplementRequest extends Request {
             this.createCommand = request.createCommand;
             this.env = request.env;
             this.opTenantId = request.opTenantId;
+            this.opUserId = request.opUserId;
         } 
 
         /**
@@ -139,6 +153,15 @@ public class CreateNodeSupplementRequest extends Request {
         public Builder opTenantId(Long opTenantId) {
             this.putQueryParameter("OpTenantId", opTenantId);
             this.opTenantId = opTenantId;
+            return this;
+        }
+
+        /**
+         * OpUserId.
+         */
+        public Builder opUserId(String opUserId) {
+            this.putQueryParameter("OpUserId", opUserId);
+            this.opUserId = opUserId;
             return this;
         }
 
@@ -667,6 +690,9 @@ public class CreateNodeSupplementRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private Long projectId;
 
+        @com.aliyun.core.annotation.NameInMap("RunImmediately")
+        private Boolean runImmediately;
+
         @com.aliyun.core.annotation.NameInMap("StartBizDate")
         @com.aliyun.core.annotation.Validation(required = true)
         private String startBizDate;
@@ -684,6 +710,7 @@ public class CreateNodeSupplementRequest extends Request {
             this.nodeParamsList = builder.nodeParamsList;
             this.parallelism = builder.parallelism;
             this.projectId = builder.projectId;
+            this.runImmediately = builder.runImmediately;
             this.startBizDate = builder.startBizDate;
         }
 
@@ -780,6 +807,13 @@ public class CreateNodeSupplementRequest extends Request {
         }
 
         /**
+         * @return runImmediately
+         */
+        public Boolean getRunImmediately() {
+            return this.runImmediately;
+        }
+
+        /**
          * @return startBizDate
          */
         public String getStartBizDate() {
@@ -799,6 +833,7 @@ public class CreateNodeSupplementRequest extends Request {
             private java.util.List<NodeParamsList> nodeParamsList; 
             private Integer parallelism; 
             private Long projectId; 
+            private Boolean runImmediately; 
             private String startBizDate; 
 
             private Builder() {
@@ -817,6 +852,7 @@ public class CreateNodeSupplementRequest extends Request {
                 this.nodeParamsList = model.nodeParamsList;
                 this.parallelism = model.parallelism;
                 this.projectId = model.projectId;
+                this.runImmediately = model.runImmediately;
                 this.startBizDate = model.startBizDate;
             } 
 
@@ -919,6 +955,14 @@ public class CreateNodeSupplementRequest extends Request {
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
+                return this;
+            }
+
+            /**
+             * RunImmediately.
+             */
+            public Builder runImmediately(Boolean runImmediately) {
+                this.runImmediately = runImmediately;
                 return this;
             }
 

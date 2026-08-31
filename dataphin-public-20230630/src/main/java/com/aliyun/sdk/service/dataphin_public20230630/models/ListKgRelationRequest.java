@@ -31,6 +31,10 @@ public class ListKgRelationRequest extends Request {
     private Long opTenantId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserId")
+    private String opUserId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RelationType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String relationType;
@@ -45,6 +49,7 @@ public class ListKgRelationRequest extends Request {
         this.regionId = builder.regionId;
         this.listQuery = builder.listQuery;
         this.opTenantId = builder.opTenantId;
+        this.opUserId = builder.opUserId;
         this.relationType = builder.relationType;
         this.workspaceId = builder.workspaceId;
     }
@@ -84,6 +89,13 @@ public class ListKgRelationRequest extends Request {
     }
 
     /**
+     * @return opUserId
+     */
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
+    /**
      * @return relationType
      */
     public String getRelationType() {
@@ -101,6 +113,7 @@ public class ListKgRelationRequest extends Request {
         private String regionId; 
         private ListQuery listQuery; 
         private Long opTenantId; 
+        private String opUserId; 
         private String relationType; 
         private String workspaceId; 
 
@@ -113,6 +126,7 @@ public class ListKgRelationRequest extends Request {
             this.regionId = request.regionId;
             this.listQuery = request.listQuery;
             this.opTenantId = request.opTenantId;
+            this.opUserId = request.opUserId;
             this.relationType = request.relationType;
             this.workspaceId = request.workspaceId;
         } 
@@ -145,6 +159,15 @@ public class ListKgRelationRequest extends Request {
         public Builder opTenantId(Long opTenantId) {
             this.putQueryParameter("OpTenantId", opTenantId);
             this.opTenantId = opTenantId;
+            return this;
+        }
+
+        /**
+         * OpUserId.
+         */
+        public Builder opUserId(String opUserId) {
+            this.putQueryParameter("OpUserId", opUserId);
+            this.opUserId = opUserId;
             return this;
         }
 

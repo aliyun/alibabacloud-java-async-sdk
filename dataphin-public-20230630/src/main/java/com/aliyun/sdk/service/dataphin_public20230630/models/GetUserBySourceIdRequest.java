@@ -27,15 +27,25 @@ public class GetUserBySourceIdRequest extends Request {
     private Long opTenantId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserId")
+    private String opUserId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String sourceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceType")
+    private String sourceType;
 
     private GetUserBySourceIdRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.opTenantId = builder.opTenantId;
+        this.opUserId = builder.opUserId;
         this.sourceId = builder.sourceId;
+        this.sourceType = builder.sourceType;
     }
 
     public static Builder builder() {
@@ -66,16 +76,32 @@ public class GetUserBySourceIdRequest extends Request {
     }
 
     /**
+     * @return opUserId
+     */
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
+    /**
      * @return sourceId
      */
     public String getSourceId() {
         return this.sourceId;
     }
 
+    /**
+     * @return sourceType
+     */
+    public String getSourceType() {
+        return this.sourceType;
+    }
+
     public static final class Builder extends Request.Builder<GetUserBySourceIdRequest, Builder> {
         private String regionId; 
         private Long opTenantId; 
+        private String opUserId; 
         private String sourceId; 
+        private String sourceType; 
 
         private Builder() {
             super();
@@ -85,7 +111,9 @@ public class GetUserBySourceIdRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.opTenantId = request.opTenantId;
+            this.opUserId = request.opUserId;
             this.sourceId = request.sourceId;
+            this.sourceType = request.sourceType;
         } 
 
         /**
@@ -110,6 +138,15 @@ public class GetUserBySourceIdRequest extends Request {
         }
 
         /**
+         * OpUserId.
+         */
+        public Builder opUserId(String opUserId) {
+            this.putQueryParameter("OpUserId", opUserId);
+            this.opUserId = opUserId;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,6 +155,15 @@ public class GetUserBySourceIdRequest extends Request {
         public Builder sourceId(String sourceId) {
             this.putQueryParameter("SourceId", sourceId);
             this.sourceId = sourceId;
+            return this;
+        }
+
+        /**
+         * SourceType.
+         */
+        public Builder sourceType(String sourceType) {
+            this.putQueryParameter("SourceType", sourceType);
+            this.sourceType = sourceType;
             return this;
         }
 

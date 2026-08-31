@@ -164,6 +164,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateBizUnitResponse> createBizUnit(CreateBizUnitRequest request);
 
     /**
+     * @param request the request parameters of CreateComputeCluster  CreateComputeClusterRequest
+     * @return CreateComputeClusterResponse
+     */
+    CompletableFuture<CreateComputeClusterResponse> createComputeCluster(CreateComputeClusterRequest request);
+
+    /**
      * @param request the request parameters of CreateComputeSource  CreateComputeSourceRequest
      * @return CreateComputeSourceResponse
      */
@@ -386,6 +392,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteBizUnitResponse> deleteBizUnit(DeleteBizUnitRequest request);
 
     /**
+     * @param request the request parameters of DeleteComputeCluster  DeleteComputeClusterRequest
+     * @return DeleteComputeClusterResponse
+     */
+    CompletableFuture<DeleteComputeClusterResponse> deleteComputeCluster(DeleteComputeClusterRequest request);
+
+    /**
      * @param request the request parameters of DeleteComputeSource  DeleteComputeSourceRequest
      * @return DeleteComputeSourceResponse
      */
@@ -572,6 +584,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExecKgCypherResponse> execKgCypher(ExecKgCypherRequest request);
 
     /**
+     * @param request the request parameters of ExecKgGremlin  ExecKgGremlinRequest
+     * @return ExecKgGremlinResponse
+     */
+    CompletableFuture<ExecKgGremlinResponse> execKgGremlin(ExecKgGremlinRequest request);
+
+    /**
      * @param request the request parameters of ExecuteAdHocTask  ExecuteAdHocTaskRequest
      * @return ExecuteAdHocTaskResponse
      */
@@ -638,10 +656,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAlertEventResponse> getAlertEvent(GetAlertEventRequest request);
 
     /**
+     * @param request the request parameters of GetAssetAttributes  GetAssetAttributesRequest
+     * @return GetAssetAttributesResponse
+     */
+    CompletableFuture<GetAssetAttributesResponse> getAssetAttributes(GetAssetAttributesRequest request);
+
+    /**
      * @param request the request parameters of GetAssetMappingRelations  GetAssetMappingRelationsRequest
      * @return GetAssetMappingRelationsResponse
      */
     CompletableFuture<GetAssetMappingRelationsResponse> getAssetMappingRelations(GetAssetMappingRelationsRequest request);
+
+    /**
+     * @param request the request parameters of GetAssetTypeAttributeCodes  GetAssetTypeAttributeCodesRequest
+     * @return GetAssetTypeAttributeCodesResponse
+     */
+    CompletableFuture<GetAssetTypeAttributeCodesResponse> getAssetTypeAttributeCodes(GetAssetTypeAttributeCodesRequest request);
 
     /**
      * @param request the request parameters of GetBatchTaskInfo  GetBatchTaskInfoRequest
@@ -722,10 +752,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetClusterQueueInfoByEnvResponse> getClusterQueueInfoByEnv(GetClusterQueueInfoByEnvRequest request);
 
     /**
+     * @param request the request parameters of GetComputeCluster  GetComputeClusterRequest
+     * @return GetComputeClusterResponse
+     */
+    CompletableFuture<GetComputeClusterResponse> getComputeCluster(GetComputeClusterRequest request);
+
+    /**
      * @param request the request parameters of GetComputeSource  GetComputeSourceRequest
      * @return GetComputeSourceResponse
      */
     CompletableFuture<GetComputeSourceResponse> getComputeSource(GetComputeSourceRequest request);
+
+    /**
+     * @param request the request parameters of GetDataAssetsGovernObject  GetDataAssetsGovernObjectRequest
+     * @return GetDataAssetsGovernObjectResponse
+     */
+    CompletableFuture<GetDataAssetsGovernObjectResponse> getDataAssetsGovernObject(GetDataAssetsGovernObjectRequest request);
 
     /**
      * @param request the request parameters of GetDataDomainInfo  GetDataDomainInfoRequest
@@ -860,6 +902,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetInstanceUpDownStreamResponse> getInstanceUpDownStream(GetInstanceUpDownStreamRequest request);
 
     /**
+     * @param request the request parameters of GetKgAuthorizedWorkspaces  GetKgAuthorizedWorkspacesRequest
+     * @return GetKgAuthorizedWorkspacesResponse
+     */
+    CompletableFuture<GetKgAuthorizedWorkspacesResponse> getKgAuthorizedWorkspaces(GetKgAuthorizedWorkspacesRequest request);
+
+    /**
      * @param request the request parameters of GetKgEntity  GetKgEntityRequest
      * @return GetKgEntityResponse
      */
@@ -888,6 +936,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetLatestSubmitDetailResponse
      */
     CompletableFuture<GetLatestSubmitDetailResponse> getLatestSubmitDetail(GetLatestSubmitDetailRequest request);
+
+    /**
+     * @param request the request parameters of GetLlmModelProviderByName  GetLlmModelProviderByNameRequest
+     * @return GetLlmModelProviderByNameResponse
+     */
+    CompletableFuture<GetLlmModelProviderByNameResponse> getLlmModelProviderByName(GetLlmModelProviderByNameRequest request);
+
+    /**
+     * @param request the request parameters of GetLlmModelProviders  GetLlmModelProvidersRequest
+     * @return GetLlmModelProvidersResponse
+     */
+    CompletableFuture<GetLlmModelProvidersResponse> getLlmModelProviders(GetLlmModelProvidersRequest request);
 
     /**
      * @param request the request parameters of GetMyRoles  GetMyRolesRequest
@@ -1008,6 +1068,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetQualityAlertOfAllRuleScopeByWatchIdResponse
      */
     CompletableFuture<GetQualityAlertOfAllRuleScopeByWatchIdResponse> getQualityAlertOfAllRuleScopeByWatchId(GetQualityAlertOfAllRuleScopeByWatchIdRequest request);
+
+    /**
+     * @param request the request parameters of GetQualityArchiveTableProgress  GetQualityArchiveTableProgressRequest
+     * @return GetQualityArchiveTableProgressResponse
+     */
+    CompletableFuture<GetQualityArchiveTableProgressResponse> getQualityArchiveTableProgress(GetQualityArchiveTableProgressRequest request);
 
     /**
      * @param request the request parameters of GetQualityRule  GetQualityRuleRequest
@@ -1226,6 +1292,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetUdfByVersionResponse> getUdfByVersion(GetUdfByVersionRequest request);
 
     /**
+     * @param request the request parameters of GetUserByAccessKey  GetUserByAccessKeyRequest
+     * @return GetUserByAccessKeyResponse
+     */
+    CompletableFuture<GetUserByAccessKeyResponse> getUserByAccessKey(GetUserByAccessKeyRequest request);
+
+    /**
      * @param request the request parameters of GetUserBySourceId  GetUserBySourceIdRequest
      * @return GetUserBySourceIdResponse
      */
@@ -1292,6 +1364,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListApiByAppResponse> listApiByApp(ListApiByAppRequest request);
 
     /**
+     * @param request the request parameters of ListApprovalTasksByUser  ListApprovalTasksByUserRequest
+     * @return ListApprovalTasksByUserResponse
+     */
+    CompletableFuture<ListApprovalTasksByUserResponse> listApprovalTasksByUser(ListApprovalTasksByUserRequest request);
+
+    /**
+     * @param request the request parameters of ListAssetDirectories  ListAssetDirectoriesRequest
+     * @return ListAssetDirectoriesResponse
+     */
+    CompletableFuture<ListAssetDirectoriesResponse> listAssetDirectories(ListAssetDirectoriesRequest request);
+
+    /**
+     * @param request the request parameters of ListAssetTopics  ListAssetTopicsRequest
+     * @return ListAssetTopicsResponse
+     */
+    CompletableFuture<ListAssetTopicsResponse> listAssetTopics(ListAssetTopicsRequest request);
+
+    /**
      * @param request the request parameters of ListAuthorizedDataServiceApiDetails  ListAuthorizedDataServiceApiDetailsRequest
      * @return ListAuthorizedDataServiceApiDetailsResponse
      */
@@ -1320,6 +1410,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCatalogAssetsResponse
      */
     CompletableFuture<ListCatalogAssetsResponse> listCatalogAssets(ListCatalogAssetsRequest request);
+
+    /**
+     * @param request the request parameters of ListComputeClusters  ListComputeClustersRequest
+     * @return ListComputeClustersResponse
+     */
+    CompletableFuture<ListComputeClustersResponse> listComputeClusters(ListComputeClustersRequest request);
 
     /**
      * @param request the request parameters of ListComputeSources  ListComputeSourcesRequest
@@ -1400,6 +1496,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListFilesResponse> listFiles(ListFilesRequest request);
 
     /**
+     * @param request the request parameters of ListGovernObjects  ListGovernObjectsRequest
+     * @return ListGovernObjectsResponse
+     */
+    CompletableFuture<ListGovernObjectsResponse> listGovernObjects(ListGovernObjectsRequest request);
+
+    /**
      * @param request the request parameters of ListInstances  ListInstancesRequest
      * @return ListInstancesResponse
      */
@@ -1458,6 +1560,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListPublishRecordsResponse
      */
     CompletableFuture<ListPublishRecordsResponse> listPublishRecords(ListPublishRecordsRequest request);
+
+    /**
+     * @param request the request parameters of ListQualityArchiveTables  ListQualityArchiveTablesRequest
+     * @return ListQualityArchiveTablesResponse
+     */
+    CompletableFuture<ListQualityArchiveTablesResponse> listQualityArchiveTables(ListQualityArchiveTablesRequest request);
 
     /**
      * @param request the request parameters of ListQualityRuleTasks  ListQualityRuleTasksRequest
@@ -1724,6 +1832,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopAdHocTaskResponse> stopAdHocTask(StopAdHocTaskRequest request);
 
     /**
+     * @param request the request parameters of SubmitAssetsOffShelve  SubmitAssetsOffShelveRequest
+     * @return SubmitAssetsOffShelveResponse
+     */
+    CompletableFuture<SubmitAssetsOffShelveResponse> submitAssetsOffShelve(SubmitAssetsOffShelveRequest request);
+
+    /**
+     * @param request the request parameters of SubmitAssetsOnShelve  SubmitAssetsOnShelveRequest
+     * @return SubmitAssetsOnShelveResponse
+     */
+    CompletableFuture<SubmitAssetsOnShelveResponse> submitAssetsOnShelve(SubmitAssetsOnShelveRequest request);
+
+    /**
      * @param request the request parameters of SubmitBatchTask  SubmitBatchTaskRequest
      * @return SubmitBatchTaskResponse
      */
@@ -1772,6 +1892,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateAdHocFileResponse> updateAdHocFile(UpdateAdHocFileRequest request);
 
     /**
+     * @param request the request parameters of UpdateAssetAttributes  UpdateAssetAttributesRequest
+     * @return UpdateAssetAttributesResponse
+     */
+    CompletableFuture<UpdateAssetAttributesResponse> updateAssetAttributes(UpdateAssetAttributesRequest request);
+
+    /**
      * @param request the request parameters of UpdateBasicProject  UpdateBasicProjectRequest
      * @return UpdateBasicProjectResponse
      */
@@ -1808,10 +1934,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateBizUnitResponse> updateBizUnit(UpdateBizUnitRequest request);
 
     /**
+     * @param request the request parameters of UpdateComputeCluster  UpdateComputeClusterRequest
+     * @return UpdateComputeClusterResponse
+     */
+    CompletableFuture<UpdateComputeClusterResponse> updateComputeCluster(UpdateComputeClusterRequest request);
+
+    /**
      * @param request the request parameters of UpdateComputeSource  UpdateComputeSourceRequest
      * @return UpdateComputeSourceResponse
      */
     CompletableFuture<UpdateComputeSourceResponse> updateComputeSource(UpdateComputeSourceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateDataAssetsGovernObjectStatus  UpdateDataAssetsGovernObjectStatusRequest
+     * @return UpdateDataAssetsGovernObjectStatusResponse
+     */
+    CompletableFuture<UpdateDataAssetsGovernObjectStatusResponse> updateDataAssetsGovernObjectStatus(UpdateDataAssetsGovernObjectStatusRequest request);
 
     /**
      * @param request the request parameters of UpdateDataDomain  UpdateDataDomainRequest
@@ -1884,6 +2022,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateKgRelationResponse
      */
     CompletableFuture<UpdateKgRelationResponse> updateKgRelation(UpdateKgRelationRequest request);
+
+    /**
+     * @param request the request parameters of UpdateNodeOpsOwner  UpdateNodeOpsOwnerRequest
+     * @return UpdateNodeOpsOwnerResponse
+     */
+    CompletableFuture<UpdateNodeOpsOwnerResponse> updateNodeOpsOwner(UpdateNodeOpsOwnerRequest request);
 
     /**
      * @param request the request parameters of UpdatePipeline  UpdatePipelineRequest
@@ -2016,6 +2160,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateUserGroupSwitchResponse
      */
     CompletableFuture<UpdateUserGroupSwitchResponse> updateUserGroupSwitch(UpdateUserGroupSwitchRequest request);
+
+    /**
+     * @param request the request parameters of UploadDataSourceFile  UploadDataSourceFileRequest
+     * @return UploadDataSourceFileResponse
+     */
+    CompletableFuture<UploadDataSourceFileResponse> uploadDataSourceFile(UploadDataSourceFileRequest request);
+
+    /**
+     * @param request the request parameters of UpsertQualityArchiveTable  UpsertQualityArchiveTableRequest
+     * @return UpsertQualityArchiveTableResponse
+     */
+    CompletableFuture<UpsertQualityArchiveTableResponse> upsertQualityArchiveTable(UpsertQualityArchiveTableRequest request);
 
     /**
      * @param request the request parameters of UpsertQualityRule  UpsertQualityRuleRequest

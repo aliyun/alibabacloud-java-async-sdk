@@ -27,6 +27,10 @@ public class UpdateDatasetRequest extends Request {
     private Long opTenantId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserId")
+    private String opUserId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String projectId;
@@ -40,6 +44,7 @@ public class UpdateDatasetRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.opTenantId = builder.opTenantId;
+        this.opUserId = builder.opUserId;
         this.projectId = builder.projectId;
         this.updateCommand = builder.updateCommand;
     }
@@ -72,6 +77,13 @@ public class UpdateDatasetRequest extends Request {
     }
 
     /**
+     * @return opUserId
+     */
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
+    /**
      * @return projectId
      */
     public String getProjectId() {
@@ -88,6 +100,7 @@ public class UpdateDatasetRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateDatasetRequest, Builder> {
         private String regionId; 
         private Long opTenantId; 
+        private String opUserId; 
         private String projectId; 
         private UpdateCommand updateCommand; 
 
@@ -99,6 +112,7 @@ public class UpdateDatasetRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.opTenantId = request.opTenantId;
+            this.opUserId = request.opUserId;
             this.projectId = request.projectId;
             this.updateCommand = request.updateCommand;
         } 
@@ -121,6 +135,15 @@ public class UpdateDatasetRequest extends Request {
         public Builder opTenantId(Long opTenantId) {
             this.putQueryParameter("OpTenantId", opTenantId);
             this.opTenantId = opTenantId;
+            return this;
+        }
+
+        /**
+         * OpUserId.
+         */
+        public Builder opUserId(String opUserId) {
+            this.putQueryParameter("OpUserId", opUserId);
+            this.opUserId = opUserId;
             return this;
         }
 
@@ -153,6 +176,546 @@ public class UpdateDatasetRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateDatasetRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateDatasetRequest</p>
+     */
+    public static class RequestParamList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
+        private String defaultValue;
+
+        @com.aliyun.core.annotation.NameInMap("Descr")
+        private String descr;
+
+        @com.aliyun.core.annotation.NameInMap("IsUrl")
+        private Boolean isUrl;
+
+        @com.aliyun.core.annotation.NameInMap("Must")
+        private Boolean must;
+
+        @com.aliyun.core.annotation.NameInMap("ParamName")
+        private String paramName;
+
+        @com.aliyun.core.annotation.NameInMap("ParamType")
+        private String paramType;
+
+        @com.aliyun.core.annotation.NameInMap("Sample")
+        private String sample;
+
+        private RequestParamList(Builder builder) {
+            this.defaultValue = builder.defaultValue;
+            this.descr = builder.descr;
+            this.isUrl = builder.isUrl;
+            this.must = builder.must;
+            this.paramName = builder.paramName;
+            this.paramType = builder.paramType;
+            this.sample = builder.sample;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RequestParamList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return defaultValue
+         */
+        public String getDefaultValue() {
+            return this.defaultValue;
+        }
+
+        /**
+         * @return descr
+         */
+        public String getDescr() {
+            return this.descr;
+        }
+
+        /**
+         * @return isUrl
+         */
+        public Boolean getIsUrl() {
+            return this.isUrl;
+        }
+
+        /**
+         * @return must
+         */
+        public Boolean getMust() {
+            return this.must;
+        }
+
+        /**
+         * @return paramName
+         */
+        public String getParamName() {
+            return this.paramName;
+        }
+
+        /**
+         * @return paramType
+         */
+        public String getParamType() {
+            return this.paramType;
+        }
+
+        /**
+         * @return sample
+         */
+        public String getSample() {
+            return this.sample;
+        }
+
+        public static final class Builder {
+            private String defaultValue; 
+            private String descr; 
+            private Boolean isUrl; 
+            private Boolean must; 
+            private String paramName; 
+            private String paramType; 
+            private String sample; 
+
+            private Builder() {
+            } 
+
+            private Builder(RequestParamList model) {
+                this.defaultValue = model.defaultValue;
+                this.descr = model.descr;
+                this.isUrl = model.isUrl;
+                this.must = model.must;
+                this.paramName = model.paramName;
+                this.paramType = model.paramType;
+                this.sample = model.sample;
+            } 
+
+            /**
+             * DefaultValue.
+             */
+            public Builder defaultValue(String defaultValue) {
+                this.defaultValue = defaultValue;
+                return this;
+            }
+
+            /**
+             * Descr.
+             */
+            public Builder descr(String descr) {
+                this.descr = descr;
+                return this;
+            }
+
+            /**
+             * IsUrl.
+             */
+            public Builder isUrl(Boolean isUrl) {
+                this.isUrl = isUrl;
+                return this;
+            }
+
+            /**
+             * Must.
+             */
+            public Builder must(Boolean must) {
+                this.must = must;
+                return this;
+            }
+
+            /**
+             * ParamName.
+             */
+            public Builder paramName(String paramName) {
+                this.paramName = paramName;
+                return this;
+            }
+
+            /**
+             * ParamType.
+             */
+            public Builder paramType(String paramType) {
+                this.paramType = paramType;
+                return this;
+            }
+
+            /**
+             * Sample.
+             */
+            public Builder sample(String sample) {
+                this.sample = sample;
+                return this;
+            }
+
+            public RequestParamList build() {
+                return new RequestParamList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateDatasetRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateDatasetRequest</p>
+     */
+    public static class ResponseParamList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Descr")
+        private String descr;
+
+        @com.aliyun.core.annotation.NameInMap("IsUrl")
+        private Boolean isUrl;
+
+        @com.aliyun.core.annotation.NameInMap("ParamName")
+        private String paramName;
+
+        @com.aliyun.core.annotation.NameInMap("ParamType")
+        private String paramType;
+
+        @com.aliyun.core.annotation.NameInMap("Sample")
+        private String sample;
+
+        private ResponseParamList(Builder builder) {
+            this.descr = builder.descr;
+            this.isUrl = builder.isUrl;
+            this.paramName = builder.paramName;
+            this.paramType = builder.paramType;
+            this.sample = builder.sample;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResponseParamList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return descr
+         */
+        public String getDescr() {
+            return this.descr;
+        }
+
+        /**
+         * @return isUrl
+         */
+        public Boolean getIsUrl() {
+            return this.isUrl;
+        }
+
+        /**
+         * @return paramName
+         */
+        public String getParamName() {
+            return this.paramName;
+        }
+
+        /**
+         * @return paramType
+         */
+        public String getParamType() {
+            return this.paramType;
+        }
+
+        /**
+         * @return sample
+         */
+        public String getSample() {
+            return this.sample;
+        }
+
+        public static final class Builder {
+            private String descr; 
+            private Boolean isUrl; 
+            private String paramName; 
+            private String paramType; 
+            private String sample; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResponseParamList model) {
+                this.descr = model.descr;
+                this.isUrl = model.isUrl;
+                this.paramName = model.paramName;
+                this.paramType = model.paramType;
+                this.sample = model.sample;
+            } 
+
+            /**
+             * Descr.
+             */
+            public Builder descr(String descr) {
+                this.descr = descr;
+                return this;
+            }
+
+            /**
+             * IsUrl.
+             */
+            public Builder isUrl(Boolean isUrl) {
+                this.isUrl = isUrl;
+                return this;
+            }
+
+            /**
+             * ParamName.
+             */
+            public Builder paramName(String paramName) {
+                this.paramName = paramName;
+                return this;
+            }
+
+            /**
+             * ParamType.
+             */
+            public Builder paramType(String paramType) {
+                this.paramType = paramType;
+                return this;
+            }
+
+            /**
+             * Sample.
+             */
+            public Builder sample(String sample) {
+                this.sample = sample;
+                return this;
+            }
+
+            public ResponseParamList build() {
+                return new ResponseParamList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateDatasetRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateDatasetRequest</p>
+     */
+    public static class ApiInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ExecTimeout")
+        private Integer execTimeout;
+
+        @com.aliyun.core.annotation.NameInMap("ExecuteMode")
+        private Integer executeMode;
+
+        @com.aliyun.core.annotation.NameInMap("OsApiGroup")
+        private Integer osApiGroup;
+
+        @com.aliyun.core.annotation.NameInMap("OsProject")
+        private Integer osProject;
+
+        @com.aliyun.core.annotation.NameInMap("Protocol")
+        private Integer protocol;
+
+        @com.aliyun.core.annotation.NameInMap("RequestMethod")
+        private Integer requestMethod;
+
+        @com.aliyun.core.annotation.NameInMap("RequestParamList")
+        private java.util.List<RequestParamList> requestParamList;
+
+        @com.aliyun.core.annotation.NameInMap("ResponseParamList")
+        private java.util.List<ResponseParamList> responseParamList;
+
+        @com.aliyun.core.annotation.NameInMap("Timeout")
+        private Integer timeout;
+
+        private ApiInfo(Builder builder) {
+            this.execTimeout = builder.execTimeout;
+            this.executeMode = builder.executeMode;
+            this.osApiGroup = builder.osApiGroup;
+            this.osProject = builder.osProject;
+            this.protocol = builder.protocol;
+            this.requestMethod = builder.requestMethod;
+            this.requestParamList = builder.requestParamList;
+            this.responseParamList = builder.responseParamList;
+            this.timeout = builder.timeout;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ApiInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return execTimeout
+         */
+        public Integer getExecTimeout() {
+            return this.execTimeout;
+        }
+
+        /**
+         * @return executeMode
+         */
+        public Integer getExecuteMode() {
+            return this.executeMode;
+        }
+
+        /**
+         * @return osApiGroup
+         */
+        public Integer getOsApiGroup() {
+            return this.osApiGroup;
+        }
+
+        /**
+         * @return osProject
+         */
+        public Integer getOsProject() {
+            return this.osProject;
+        }
+
+        /**
+         * @return protocol
+         */
+        public Integer getProtocol() {
+            return this.protocol;
+        }
+
+        /**
+         * @return requestMethod
+         */
+        public Integer getRequestMethod() {
+            return this.requestMethod;
+        }
+
+        /**
+         * @return requestParamList
+         */
+        public java.util.List<RequestParamList> getRequestParamList() {
+            return this.requestParamList;
+        }
+
+        /**
+         * @return responseParamList
+         */
+        public java.util.List<ResponseParamList> getResponseParamList() {
+            return this.responseParamList;
+        }
+
+        /**
+         * @return timeout
+         */
+        public Integer getTimeout() {
+            return this.timeout;
+        }
+
+        public static final class Builder {
+            private Integer execTimeout; 
+            private Integer executeMode; 
+            private Integer osApiGroup; 
+            private Integer osProject; 
+            private Integer protocol; 
+            private Integer requestMethod; 
+            private java.util.List<RequestParamList> requestParamList; 
+            private java.util.List<ResponseParamList> responseParamList; 
+            private Integer timeout; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApiInfo model) {
+                this.execTimeout = model.execTimeout;
+                this.executeMode = model.executeMode;
+                this.osApiGroup = model.osApiGroup;
+                this.osProject = model.osProject;
+                this.protocol = model.protocol;
+                this.requestMethod = model.requestMethod;
+                this.requestParamList = model.requestParamList;
+                this.responseParamList = model.responseParamList;
+                this.timeout = model.timeout;
+            } 
+
+            /**
+             * ExecTimeout.
+             */
+            public Builder execTimeout(Integer execTimeout) {
+                this.execTimeout = execTimeout;
+                return this;
+            }
+
+            /**
+             * ExecuteMode.
+             */
+            public Builder executeMode(Integer executeMode) {
+                this.executeMode = executeMode;
+                return this;
+            }
+
+            /**
+             * OsApiGroup.
+             */
+            public Builder osApiGroup(Integer osApiGroup) {
+                this.osApiGroup = osApiGroup;
+                return this;
+            }
+
+            /**
+             * OsProject.
+             */
+            public Builder osProject(Integer osProject) {
+                this.osProject = osProject;
+                return this;
+            }
+
+            /**
+             * Protocol.
+             */
+            public Builder protocol(Integer protocol) {
+                this.protocol = protocol;
+                return this;
+            }
+
+            /**
+             * RequestMethod.
+             */
+            public Builder requestMethod(Integer requestMethod) {
+                this.requestMethod = requestMethod;
+                return this;
+            }
+
+            /**
+             * RequestParamList.
+             */
+            public Builder requestParamList(java.util.List<RequestParamList> requestParamList) {
+                this.requestParamList = requestParamList;
+                return this;
+            }
+
+            /**
+             * ResponseParamList.
+             */
+            public Builder responseParamList(java.util.List<ResponseParamList> responseParamList) {
+                this.responseParamList = responseParamList;
+                return this;
+            }
+
+            /**
+             * Timeout.
+             */
+            public Builder timeout(Integer timeout) {
+                this.timeout = timeout;
+                return this;
+            }
+
+            public ApiInfo build() {
+                return new ApiInfo(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link UpdateDatasetRequest} extends {@link TeaModel}
@@ -1598,6 +2161,9 @@ public class UpdateDatasetRequest extends Request {
      * <p>UpdateDatasetRequest</p>
      */
     public static class UpdateCommand extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ApiInfo")
+        private ApiInfo apiInfo;
+
         @com.aliyun.core.annotation.NameInMap("ContentType")
         private String contentType;
 
@@ -1640,6 +2206,7 @@ public class UpdateDatasetRequest extends Request {
         private VersionConfig versionConfig;
 
         private UpdateCommand(Builder builder) {
+            this.apiInfo = builder.apiInfo;
             this.contentType = builder.contentType;
             this.dataCellId = builder.dataCellId;
             this.description = builder.description;
@@ -1661,6 +2228,13 @@ public class UpdateDatasetRequest extends Request {
 
         public static UpdateCommand create() {
             return builder().build();
+        }
+
+        /**
+         * @return apiInfo
+         */
+        public ApiInfo getApiInfo() {
+            return this.apiInfo;
         }
 
         /**
@@ -1755,6 +2329,7 @@ public class UpdateDatasetRequest extends Request {
         }
 
         public static final class Builder {
+            private ApiInfo apiInfo; 
             private String contentType; 
             private String dataCellId; 
             private String description; 
@@ -1773,6 +2348,7 @@ public class UpdateDatasetRequest extends Request {
             } 
 
             private Builder(UpdateCommand model) {
+                this.apiInfo = model.apiInfo;
                 this.contentType = model.contentType;
                 this.dataCellId = model.dataCellId;
                 this.description = model.description;
@@ -1787,6 +2363,14 @@ public class UpdateDatasetRequest extends Request {
                 this.version = model.version;
                 this.versionConfig = model.versionConfig;
             } 
+
+            /**
+             * ApiInfo.
+             */
+            public Builder apiInfo(ApiInfo apiInfo) {
+                this.apiInfo = apiInfo;
+                return this;
+            }
 
             /**
              * ContentType.

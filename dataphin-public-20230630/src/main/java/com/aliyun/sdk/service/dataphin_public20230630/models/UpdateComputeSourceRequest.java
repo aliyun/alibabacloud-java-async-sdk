@@ -26,6 +26,10 @@ public class UpdateComputeSourceRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long opTenantId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserId")
+    private String opUserId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UpdateCommand")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -35,6 +39,7 @@ public class UpdateComputeSourceRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.opTenantId = builder.opTenantId;
+        this.opUserId = builder.opUserId;
         this.updateCommand = builder.updateCommand;
     }
 
@@ -66,6 +71,13 @@ public class UpdateComputeSourceRequest extends Request {
     }
 
     /**
+     * @return opUserId
+     */
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
+    /**
      * @return updateCommand
      */
     public UpdateCommand getUpdateCommand() {
@@ -75,6 +87,7 @@ public class UpdateComputeSourceRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateComputeSourceRequest, Builder> {
         private String regionId; 
         private Long opTenantId; 
+        private String opUserId; 
         private UpdateCommand updateCommand; 
 
         private Builder() {
@@ -85,6 +98,7 @@ public class UpdateComputeSourceRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.opTenantId = request.opTenantId;
+            this.opUserId = request.opUserId;
             this.updateCommand = request.updateCommand;
         } 
 
@@ -106,6 +120,15 @@ public class UpdateComputeSourceRequest extends Request {
         public Builder opTenantId(Long opTenantId) {
             this.putQueryParameter("OpTenantId", opTenantId);
             this.opTenantId = opTenantId;
+            return this;
+        }
+
+        /**
+         * OpUserId.
+         */
+        public Builder opUserId(String opUserId) {
+            this.putQueryParameter("OpUserId", opUserId);
+            this.opUserId = opUserId;
             return this;
         }
 
@@ -216,9 +239,15 @@ public class UpdateComputeSourceRequest extends Request {
      * <p>UpdateComputeSourceRequest</p>
      */
     public static class UpdateCommand extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
+        private Long clusterId;
+
         @com.aliyun.core.annotation.NameInMap("ConfigList")
         @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List<ConfigList> configList;
+
+        @com.aliyun.core.annotation.NameInMap("CreateType")
+        private String createType;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -236,12 +265,18 @@ public class UpdateComputeSourceRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
+        @com.aliyun.core.annotation.NameInMap("TypeVersion")
+        private String typeVersion;
+
         private UpdateCommand(Builder builder) {
+            this.clusterId = builder.clusterId;
             this.configList = builder.configList;
+            this.createType = builder.createType;
             this.description = builder.description;
             this.id = builder.id;
             this.name = builder.name;
             this.type = builder.type;
+            this.typeVersion = builder.typeVersion;
         }
 
         public static Builder builder() {
@@ -253,10 +288,24 @@ public class UpdateComputeSourceRequest extends Request {
         }
 
         /**
+         * @return clusterId
+         */
+        public Long getClusterId() {
+            return this.clusterId;
+        }
+
+        /**
          * @return configList
          */
         public java.util.List<ConfigList> getConfigList() {
             return this.configList;
+        }
+
+        /**
+         * @return createType
+         */
+        public String getCreateType() {
+            return this.createType;
         }
 
         /**
@@ -287,29 +336,58 @@ public class UpdateComputeSourceRequest extends Request {
             return this.type;
         }
 
+        /**
+         * @return typeVersion
+         */
+        public String getTypeVersion() {
+            return this.typeVersion;
+        }
+
         public static final class Builder {
+            private Long clusterId; 
             private java.util.List<ConfigList> configList; 
+            private String createType; 
             private String description; 
             private Long id; 
             private String name; 
             private String type; 
+            private String typeVersion; 
 
             private Builder() {
             } 
 
             private Builder(UpdateCommand model) {
+                this.clusterId = model.clusterId;
                 this.configList = model.configList;
+                this.createType = model.createType;
                 this.description = model.description;
                 this.id = model.id;
                 this.name = model.name;
                 this.type = model.type;
+                this.typeVersion = model.typeVersion;
             } 
+
+            /**
+             * ClusterId.
+             */
+            public Builder clusterId(Long clusterId) {
+                this.clusterId = clusterId;
+                return this;
+            }
 
             /**
              * <p>This parameter is required.</p>
              */
             public Builder configList(java.util.List<ConfigList> configList) {
                 this.configList = configList;
+                return this;
+            }
+
+            /**
+             * CreateType.
+             */
+            public Builder createType(String createType) {
+                this.createType = createType;
                 return this;
             }
 
@@ -354,6 +432,14 @@ public class UpdateComputeSourceRequest extends Request {
              */
             public Builder type(String type) {
                 this.type = type;
+                return this;
+            }
+
+            /**
+             * TypeVersion.
+             */
+            public Builder typeVersion(String typeVersion) {
+                this.typeVersion = typeVersion;
                 return this;
             }
 

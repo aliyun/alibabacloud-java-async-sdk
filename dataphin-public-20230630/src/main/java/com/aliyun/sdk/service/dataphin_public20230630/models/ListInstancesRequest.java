@@ -34,12 +34,17 @@ public class ListInstancesRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long opTenantId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserId")
+    private String opUserId;
+
     private ListInstancesRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.env = builder.env;
         this.listQuery = builder.listQuery;
         this.opTenantId = builder.opTenantId;
+        this.opUserId = builder.opUserId;
     }
 
     public static Builder builder() {
@@ -83,11 +88,19 @@ public class ListInstancesRequest extends Request {
         return this.opTenantId;
     }
 
+    /**
+     * @return opUserId
+     */
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
     public static final class Builder extends Request.Builder<ListInstancesRequest, Builder> {
         private String regionId; 
         private String env; 
         private ListQuery listQuery; 
         private Long opTenantId; 
+        private String opUserId; 
 
         private Builder() {
             super();
@@ -99,6 +112,7 @@ public class ListInstancesRequest extends Request {
             this.env = request.env;
             this.listQuery = request.listQuery;
             this.opTenantId = request.opTenantId;
+            this.opUserId = request.opUserId;
         } 
 
         /**
@@ -138,6 +152,15 @@ public class ListInstancesRequest extends Request {
         public Builder opTenantId(Long opTenantId) {
             this.putQueryParameter("OpTenantId", opTenantId);
             this.opTenantId = opTenantId;
+            return this;
+        }
+
+        /**
+         * OpUserId.
+         */
+        public Builder opUserId(String opUserId) {
+            this.putQueryParameter("OpUserId", opUserId);
+            this.opUserId = opUserId;
             return this;
         }
 
@@ -216,6 +239,9 @@ public class ListInstancesRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("SubBizTypeList")
         private java.util.List<String> subBizTypeList;
 
+        @com.aliyun.core.annotation.NameInMap("TagList")
+        private java.util.List<String> tagList;
+
         private ListQuery(Builder builder) {
             this.bizType = builder.bizType;
             this.bizUnitId = builder.bizUnitId;
@@ -236,6 +262,7 @@ public class ListInstancesRequest extends Request {
             this.scheduleType = builder.scheduleType;
             this.searchText = builder.searchText;
             this.subBizTypeList = builder.subBizTypeList;
+            this.tagList = builder.tagList;
         }
 
         public static Builder builder() {
@@ -379,6 +406,13 @@ public class ListInstancesRequest extends Request {
             return this.subBizTypeList;
         }
 
+        /**
+         * @return tagList
+         */
+        public java.util.List<String> getTagList() {
+            return this.tagList;
+        }
+
         public static final class Builder {
             private String bizType; 
             private Long bizUnitId; 
@@ -399,6 +433,7 @@ public class ListInstancesRequest extends Request {
             private String scheduleType; 
             private String searchText; 
             private java.util.List<String> subBizTypeList; 
+            private java.util.List<String> tagList; 
 
             private Builder() {
             } 
@@ -423,6 +458,7 @@ public class ListInstancesRequest extends Request {
                 this.scheduleType = model.scheduleType;
                 this.searchText = model.searchText;
                 this.subBizTypeList = model.subBizTypeList;
+                this.tagList = model.tagList;
             } 
 
             /**
@@ -586,6 +622,14 @@ public class ListInstancesRequest extends Request {
              */
             public Builder subBizTypeList(java.util.List<String> subBizTypeList) {
                 this.subBizTypeList = subBizTypeList;
+                return this;
+            }
+
+            /**
+             * TagList.
+             */
+            public Builder tagList(java.util.List<String> tagList) {
+                this.tagList = tagList;
                 return this;
             }
 

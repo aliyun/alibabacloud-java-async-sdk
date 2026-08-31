@@ -26,6 +26,10 @@ public class UpdateBatchTaskRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long opTenantId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserId")
+    private String opUserId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UpdateCommand")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -35,6 +39,7 @@ public class UpdateBatchTaskRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.opTenantId = builder.opTenantId;
+        this.opUserId = builder.opUserId;
         this.updateCommand = builder.updateCommand;
     }
 
@@ -66,6 +71,13 @@ public class UpdateBatchTaskRequest extends Request {
     }
 
     /**
+     * @return opUserId
+     */
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
+    /**
      * @return updateCommand
      */
     public UpdateCommand getUpdateCommand() {
@@ -75,6 +87,7 @@ public class UpdateBatchTaskRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateBatchTaskRequest, Builder> {
         private String regionId; 
         private Long opTenantId; 
+        private String opUserId; 
         private UpdateCommand updateCommand; 
 
         private Builder() {
@@ -85,6 +98,7 @@ public class UpdateBatchTaskRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.opTenantId = request.opTenantId;
+            this.opUserId = request.opUserId;
             this.updateCommand = request.updateCommand;
         } 
 
@@ -106,6 +120,15 @@ public class UpdateBatchTaskRequest extends Request {
         public Builder opTenantId(Long opTenantId) {
             this.putQueryParameter("OpTenantId", opTenantId);
             this.opTenantId = opTenantId;
+            return this;
+        }
+
+        /**
+         * OpUserId.
+         */
+        public Builder opUserId(String opUserId) {
+            this.putQueryParameter("OpUserId", opUserId);
+            this.opUserId = opUserId;
             return this;
         }
 
@@ -760,6 +783,9 @@ public class UpdateBatchTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DataSourceSchema")
         private String dataSourceSchema;
 
+        @com.aliyun.core.annotation.NameInMap("DevelopOwnerIdList")
+        private java.util.List<String> developOwnerIdList;
+
         @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
@@ -813,6 +839,7 @@ public class UpdateBatchTaskRequest extends Request {
             this.dataSourceCatalog = builder.dataSourceCatalog;
             this.dataSourceId = builder.dataSourceId;
             this.dataSourceSchema = builder.dataSourceSchema;
+            this.developOwnerIdList = builder.developOwnerIdList;
             this.engine = builder.engine;
             this.fileId = builder.fileId;
             this.name = builder.name;
@@ -877,6 +904,13 @@ public class UpdateBatchTaskRequest extends Request {
          */
         public String getDataSourceSchema() {
             return this.dataSourceSchema;
+        }
+
+        /**
+         * @return developOwnerIdList
+         */
+        public java.util.List<String> getDevelopOwnerIdList() {
+            return this.developOwnerIdList;
         }
 
         /**
@@ -984,6 +1018,7 @@ public class UpdateBatchTaskRequest extends Request {
             private String dataSourceCatalog; 
             private String dataSourceId; 
             private String dataSourceSchema; 
+            private java.util.List<String> developOwnerIdList; 
             private String engine; 
             private Long fileId; 
             private String name; 
@@ -1009,6 +1044,7 @@ public class UpdateBatchTaskRequest extends Request {
                 this.dataSourceCatalog = model.dataSourceCatalog;
                 this.dataSourceId = model.dataSourceId;
                 this.dataSourceSchema = model.dataSourceSchema;
+                this.developOwnerIdList = model.developOwnerIdList;
                 this.engine = model.engine;
                 this.fileId = model.fileId;
                 this.name = model.name;
@@ -1073,6 +1109,14 @@ public class UpdateBatchTaskRequest extends Request {
              */
             public Builder dataSourceSchema(String dataSourceSchema) {
                 this.dataSourceSchema = dataSourceSchema;
+                return this;
+            }
+
+            /**
+             * DevelopOwnerIdList.
+             */
+            public Builder developOwnerIdList(java.util.List<String> developOwnerIdList) {
+                this.developOwnerIdList = developOwnerIdList;
                 return this;
             }
 

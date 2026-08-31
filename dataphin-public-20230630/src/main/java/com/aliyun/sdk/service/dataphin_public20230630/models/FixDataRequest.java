@@ -35,12 +35,17 @@ public class FixDataRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long opTenantId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserId")
+    private String opUserId;
+
     private FixDataRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.env = builder.env;
         this.fixDataCommand = builder.fixDataCommand;
         this.opTenantId = builder.opTenantId;
+        this.opUserId = builder.opUserId;
     }
 
     public static Builder builder() {
@@ -84,11 +89,19 @@ public class FixDataRequest extends Request {
         return this.opTenantId;
     }
 
+    /**
+     * @return opUserId
+     */
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
     public static final class Builder extends Request.Builder<FixDataRequest, Builder> {
         private String regionId; 
         private String env; 
         private FixDataCommand fixDataCommand; 
         private Long opTenantId; 
+        private String opUserId; 
 
         private Builder() {
             super();
@@ -100,6 +113,7 @@ public class FixDataRequest extends Request {
             this.env = request.env;
             this.fixDataCommand = request.fixDataCommand;
             this.opTenantId = request.opTenantId;
+            this.opUserId = request.opUserId;
         } 
 
         /**
@@ -139,6 +153,15 @@ public class FixDataRequest extends Request {
         public Builder opTenantId(Long opTenantId) {
             this.putQueryParameter("OpTenantId", opTenantId);
             this.opTenantId = opTenantId;
+            return this;
+        }
+
+        /**
+         * OpUserId.
+         */
+        public Builder opUserId(String opUserId) {
+            this.putQueryParameter("OpUserId", opUserId);
+            this.opUserId = opUserId;
             return this;
         }
 

@@ -30,6 +30,10 @@ public class ResumePhysicalNodeRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long opTenantId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserId")
+    private String opUserId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ResumeCommand")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -40,6 +44,7 @@ public class ResumePhysicalNodeRequest extends Request {
         this.regionId = builder.regionId;
         this.env = builder.env;
         this.opTenantId = builder.opTenantId;
+        this.opUserId = builder.opUserId;
         this.resumeCommand = builder.resumeCommand;
     }
 
@@ -78,6 +83,13 @@ public class ResumePhysicalNodeRequest extends Request {
     }
 
     /**
+     * @return opUserId
+     */
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
+    /**
      * @return resumeCommand
      */
     public ResumeCommand getResumeCommand() {
@@ -88,6 +100,7 @@ public class ResumePhysicalNodeRequest extends Request {
         private String regionId; 
         private String env; 
         private Long opTenantId; 
+        private String opUserId; 
         private ResumeCommand resumeCommand; 
 
         private Builder() {
@@ -99,6 +112,7 @@ public class ResumePhysicalNodeRequest extends Request {
             this.regionId = request.regionId;
             this.env = request.env;
             this.opTenantId = request.opTenantId;
+            this.opUserId = request.opUserId;
             this.resumeCommand = request.resumeCommand;
         } 
 
@@ -129,6 +143,15 @@ public class ResumePhysicalNodeRequest extends Request {
         public Builder opTenantId(Long opTenantId) {
             this.putQueryParameter("OpTenantId", opTenantId);
             this.opTenantId = opTenantId;
+            return this;
+        }
+
+        /**
+         * OpUserId.
+         */
+        public Builder opUserId(String opUserId) {
+            this.putQueryParameter("OpUserId", opUserId);
+            this.opUserId = opUserId;
             return this;
         }
 

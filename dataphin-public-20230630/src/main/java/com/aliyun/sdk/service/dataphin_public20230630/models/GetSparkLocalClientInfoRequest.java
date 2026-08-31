@@ -32,6 +32,10 @@ public class GetSparkLocalClientInfoRequest extends Request {
     private Long opTenantId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserId")
+    private String opUserId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String projectId;
@@ -41,6 +45,7 @@ public class GetSparkLocalClientInfoRequest extends Request {
         this.regionId = builder.regionId;
         this.envEnum = builder.envEnum;
         this.opTenantId = builder.opTenantId;
+        this.opUserId = builder.opUserId;
         this.projectId = builder.projectId;
     }
 
@@ -79,6 +84,13 @@ public class GetSparkLocalClientInfoRequest extends Request {
     }
 
     /**
+     * @return opUserId
+     */
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
+    /**
      * @return projectId
      */
     public String getProjectId() {
@@ -89,6 +101,7 @@ public class GetSparkLocalClientInfoRequest extends Request {
         private String regionId; 
         private String envEnum; 
         private Long opTenantId; 
+        private String opUserId; 
         private String projectId; 
 
         private Builder() {
@@ -100,6 +113,7 @@ public class GetSparkLocalClientInfoRequest extends Request {
             this.regionId = request.regionId;
             this.envEnum = request.envEnum;
             this.opTenantId = request.opTenantId;
+            this.opUserId = request.opUserId;
             this.projectId = request.projectId;
         } 
 
@@ -130,6 +144,15 @@ public class GetSparkLocalClientInfoRequest extends Request {
         public Builder opTenantId(Long opTenantId) {
             this.putQueryParameter("OpTenantId", opTenantId);
             this.opTenantId = opTenantId;
+            return this;
+        }
+
+        /**
+         * OpUserId.
+         */
+        public Builder opUserId(String opUserId) {
+            this.putQueryParameter("OpUserId", opUserId);
+            this.opUserId = opUserId;
             return this;
         }
 

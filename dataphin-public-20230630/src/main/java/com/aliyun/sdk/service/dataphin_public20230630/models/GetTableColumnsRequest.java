@@ -32,6 +32,10 @@ public class GetTableColumnsRequest extends Request {
     private Long opTenantId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserId")
+    private String opUserId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TableName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String tableName;
@@ -41,6 +45,7 @@ public class GetTableColumnsRequest extends Request {
         this.regionId = builder.regionId;
         this.catalog = builder.catalog;
         this.opTenantId = builder.opTenantId;
+        this.opUserId = builder.opUserId;
         this.tableName = builder.tableName;
     }
 
@@ -79,6 +84,13 @@ public class GetTableColumnsRequest extends Request {
     }
 
     /**
+     * @return opUserId
+     */
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
+    /**
      * @return tableName
      */
     public String getTableName() {
@@ -89,6 +101,7 @@ public class GetTableColumnsRequest extends Request {
         private String regionId; 
         private String catalog; 
         private Long opTenantId; 
+        private String opUserId; 
         private String tableName; 
 
         private Builder() {
@@ -100,6 +113,7 @@ public class GetTableColumnsRequest extends Request {
             this.regionId = request.regionId;
             this.catalog = request.catalog;
             this.opTenantId = request.opTenantId;
+            this.opUserId = request.opUserId;
             this.tableName = request.tableName;
         } 
 
@@ -133,6 +147,15 @@ public class GetTableColumnsRequest extends Request {
         public Builder opTenantId(Long opTenantId) {
             this.putQueryParameter("OpTenantId", opTenantId);
             this.opTenantId = opTenantId;
+            return this;
+        }
+
+        /**
+         * OpUserId.
+         */
+        public Builder opUserId(String opUserId) {
+            this.putQueryParameter("OpUserId", opUserId);
+            this.opUserId = opUserId;
             return this;
         }
 

@@ -32,6 +32,10 @@ public class UpdateUserGroupSwitchRequest extends Request {
     private Long opTenantId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserId")
+    private String opUserId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserGroupId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String userGroupId;
@@ -41,6 +45,7 @@ public class UpdateUserGroupSwitchRequest extends Request {
         this.regionId = builder.regionId;
         this.active = builder.active;
         this.opTenantId = builder.opTenantId;
+        this.opUserId = builder.opUserId;
         this.userGroupId = builder.userGroupId;
     }
 
@@ -79,6 +84,13 @@ public class UpdateUserGroupSwitchRequest extends Request {
     }
 
     /**
+     * @return opUserId
+     */
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
+    /**
      * @return userGroupId
      */
     public String getUserGroupId() {
@@ -89,6 +101,7 @@ public class UpdateUserGroupSwitchRequest extends Request {
         private String regionId; 
         private Boolean active; 
         private Long opTenantId; 
+        private String opUserId; 
         private String userGroupId; 
 
         private Builder() {
@@ -100,6 +113,7 @@ public class UpdateUserGroupSwitchRequest extends Request {
             this.regionId = request.regionId;
             this.active = request.active;
             this.opTenantId = request.opTenantId;
+            this.opUserId = request.opUserId;
             this.userGroupId = request.userGroupId;
         } 
 
@@ -133,6 +147,15 @@ public class UpdateUserGroupSwitchRequest extends Request {
         public Builder opTenantId(Long opTenantId) {
             this.putQueryParameter("OpTenantId", opTenantId);
             this.opTenantId = opTenantId;
+            return this;
+        }
+
+        /**
+         * OpUserId.
+         */
+        public Builder opUserId(String opUserId) {
+            this.putQueryParameter("OpUserId", opUserId);
+            this.opUserId = opUserId;
             return this;
         }
 

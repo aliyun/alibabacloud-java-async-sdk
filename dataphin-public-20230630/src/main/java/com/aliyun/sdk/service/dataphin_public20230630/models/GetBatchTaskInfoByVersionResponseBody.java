@@ -806,6 +806,12 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataSourceSchema")
         private String dataSourceSchema;
 
+        @com.aliyun.core.annotation.NameInMap("DevelopOwnerIdList")
+        private java.util.List<String> developOwnerIdList;
+
+        @com.aliyun.core.annotation.NameInMap("DevelopOwnerNameList")
+        private java.util.List<String> developOwnerNameList;
+
         @com.aliyun.core.annotation.NameInMap("FileId")
         private Long fileId;
 
@@ -838,6 +844,12 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("OperatorUserId")
         private String operatorUserId;
+
+        @com.aliyun.core.annotation.NameInMap("OpsOwnerIdList")
+        private java.util.List<String> opsOwnerIdList;
+
+        @com.aliyun.core.annotation.NameInMap("OpsOwnerNameList")
+        private java.util.List<String> opsOwnerNameList;
 
         @com.aliyun.core.annotation.NameInMap("OwnerName")
         private String ownerName;
@@ -892,6 +904,8 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             this.dataSourceCatalog = builder.dataSourceCatalog;
             this.dataSourceId = builder.dataSourceId;
             this.dataSourceSchema = builder.dataSourceSchema;
+            this.developOwnerIdList = builder.developOwnerIdList;
+            this.developOwnerNameList = builder.developOwnerNameList;
             this.fileId = builder.fileId;
             this.hasDevNode = builder.hasDevNode;
             this.name = builder.name;
@@ -903,6 +917,8 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             this.nodeOutputNameList = builder.nodeOutputNameList;
             this.nodeStatus = builder.nodeStatus;
             this.operatorUserId = builder.operatorUserId;
+            this.opsOwnerIdList = builder.opsOwnerIdList;
+            this.opsOwnerNameList = builder.opsOwnerNameList;
             this.ownerName = builder.ownerName;
             this.ownerUserId = builder.ownerUserId;
             this.paramList = builder.paramList;
@@ -975,6 +991,20 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
          */
         public String getDataSourceSchema() {
             return this.dataSourceSchema;
+        }
+
+        /**
+         * @return developOwnerIdList
+         */
+        public java.util.List<String> getDevelopOwnerIdList() {
+            return this.developOwnerIdList;
+        }
+
+        /**
+         * @return developOwnerNameList
+         */
+        public java.util.List<String> getDevelopOwnerNameList() {
+            return this.developOwnerNameList;
         }
 
         /**
@@ -1052,6 +1082,20 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
          */
         public String getOperatorUserId() {
             return this.operatorUserId;
+        }
+
+        /**
+         * @return opsOwnerIdList
+         */
+        public java.util.List<String> getOpsOwnerIdList() {
+            return this.opsOwnerIdList;
+        }
+
+        /**
+         * @return opsOwnerNameList
+         */
+        public java.util.List<String> getOpsOwnerNameList() {
+            return this.opsOwnerNameList;
         }
 
         /**
@@ -1167,6 +1211,8 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             private String dataSourceCatalog; 
             private String dataSourceId; 
             private String dataSourceSchema; 
+            private java.util.List<String> developOwnerIdList; 
+            private java.util.List<String> developOwnerNameList; 
             private Long fileId; 
             private Boolean hasDevNode; 
             private String name; 
@@ -1178,6 +1224,8 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             private java.util.List<String> nodeOutputNameList; 
             private Integer nodeStatus; 
             private String operatorUserId; 
+            private java.util.List<String> opsOwnerIdList; 
+            private java.util.List<String> opsOwnerNameList; 
             private String ownerName; 
             private String ownerUserId; 
             private java.util.List<ParamList> paramList; 
@@ -1205,6 +1253,8 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
                 this.dataSourceCatalog = model.dataSourceCatalog;
                 this.dataSourceId = model.dataSourceId;
                 this.dataSourceSchema = model.dataSourceSchema;
+                this.developOwnerIdList = model.developOwnerIdList;
+                this.developOwnerNameList = model.developOwnerNameList;
                 this.fileId = model.fileId;
                 this.hasDevNode = model.hasDevNode;
                 this.name = model.name;
@@ -1216,6 +1266,8 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
                 this.nodeOutputNameList = model.nodeOutputNameList;
                 this.nodeStatus = model.nodeStatus;
                 this.operatorUserId = model.operatorUserId;
+                this.opsOwnerIdList = model.opsOwnerIdList;
+                this.opsOwnerNameList = model.opsOwnerNameList;
                 this.ownerName = model.ownerName;
                 this.ownerUserId = model.ownerUserId;
                 this.paramList = model.paramList;
@@ -1286,6 +1338,22 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
              */
             public Builder dataSourceSchema(String dataSourceSchema) {
                 this.dataSourceSchema = dataSourceSchema;
+                return this;
+            }
+
+            /**
+             * DevelopOwnerIdList.
+             */
+            public Builder developOwnerIdList(java.util.List<String> developOwnerIdList) {
+                this.developOwnerIdList = developOwnerIdList;
+                return this;
+            }
+
+            /**
+             * DevelopOwnerNameList.
+             */
+            public Builder developOwnerNameList(java.util.List<String> developOwnerNameList) {
+                this.developOwnerNameList = developOwnerNameList;
                 return this;
             }
 
@@ -1374,6 +1442,22 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
              */
             public Builder operatorUserId(String operatorUserId) {
                 this.operatorUserId = operatorUserId;
+                return this;
+            }
+
+            /**
+             * OpsOwnerIdList.
+             */
+            public Builder opsOwnerIdList(java.util.List<String> opsOwnerIdList) {
+                this.opsOwnerIdList = opsOwnerIdList;
+                return this;
+            }
+
+            /**
+             * OpsOwnerNameList.
+             */
+            public Builder opsOwnerNameList(java.util.List<String> opsOwnerNameList) {
+                this.opsOwnerNameList = opsOwnerNameList;
                 return this;
             }
 

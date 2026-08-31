@@ -26,6 +26,10 @@ public class RemoveTenantMemberRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long opTenantId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserId")
+    private String opUserId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RemoveCommand")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -35,6 +39,7 @@ public class RemoveTenantMemberRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.opTenantId = builder.opTenantId;
+        this.opUserId = builder.opUserId;
         this.removeCommand = builder.removeCommand;
     }
 
@@ -66,6 +71,13 @@ public class RemoveTenantMemberRequest extends Request {
     }
 
     /**
+     * @return opUserId
+     */
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
+    /**
      * @return removeCommand
      */
     public RemoveCommand getRemoveCommand() {
@@ -75,6 +87,7 @@ public class RemoveTenantMemberRequest extends Request {
     public static final class Builder extends Request.Builder<RemoveTenantMemberRequest, Builder> {
         private String regionId; 
         private Long opTenantId; 
+        private String opUserId; 
         private RemoveCommand removeCommand; 
 
         private Builder() {
@@ -85,6 +98,7 @@ public class RemoveTenantMemberRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.opTenantId = request.opTenantId;
+            this.opUserId = request.opUserId;
             this.removeCommand = request.removeCommand;
         } 
 
@@ -106,6 +120,15 @@ public class RemoveTenantMemberRequest extends Request {
         public Builder opTenantId(Long opTenantId) {
             this.putQueryParameter("OpTenantId", opTenantId);
             this.opTenantId = opTenantId;
+            return this;
+        }
+
+        /**
+         * OpUserId.
+         */
+        public Builder opUserId(String opUserId) {
+            this.putQueryParameter("OpUserId", opUserId);
+            this.opUserId = opUserId;
             return this;
         }
 
@@ -137,8 +160,12 @@ public class RemoveTenantMemberRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String sourceId;
 
+        @com.aliyun.core.annotation.NameInMap("SourceType")
+        private String sourceType;
+
         private RemoveCommand(Builder builder) {
             this.sourceId = builder.sourceId;
+            this.sourceType = builder.sourceType;
         }
 
         public static Builder builder() {
@@ -156,14 +183,23 @@ public class RemoveTenantMemberRequest extends Request {
             return this.sourceId;
         }
 
+        /**
+         * @return sourceType
+         */
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
         public static final class Builder {
             private String sourceId; 
+            private String sourceType; 
 
             private Builder() {
             } 
 
             private Builder(RemoveCommand model) {
                 this.sourceId = model.sourceId;
+                this.sourceType = model.sourceType;
             } 
 
             /**
@@ -174,6 +210,14 @@ public class RemoveTenantMemberRequest extends Request {
              */
             public Builder sourceId(String sourceId) {
                 this.sourceId = sourceId;
+                return this;
+            }
+
+            /**
+             * SourceType.
+             */
+            public Builder sourceType(String sourceType) {
+                this.sourceType = sourceType;
                 return this;
             }
 

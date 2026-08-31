@@ -27,6 +27,10 @@ public class GetQualityWatchByObjectIdRequest extends Request {
     private Long opTenantId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserId")
+    private String opUserId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WatchObjectId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String watchObjectId;
@@ -40,6 +44,7 @@ public class GetQualityWatchByObjectIdRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.opTenantId = builder.opTenantId;
+        this.opUserId = builder.opUserId;
         this.watchObjectId = builder.watchObjectId;
         this.watchType = builder.watchType;
     }
@@ -72,6 +77,13 @@ public class GetQualityWatchByObjectIdRequest extends Request {
     }
 
     /**
+     * @return opUserId
+     */
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
+    /**
      * @return watchObjectId
      */
     public String getWatchObjectId() {
@@ -88,6 +100,7 @@ public class GetQualityWatchByObjectIdRequest extends Request {
     public static final class Builder extends Request.Builder<GetQualityWatchByObjectIdRequest, Builder> {
         private String regionId; 
         private Long opTenantId; 
+        private String opUserId; 
         private String watchObjectId; 
         private String watchType; 
 
@@ -99,6 +112,7 @@ public class GetQualityWatchByObjectIdRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.opTenantId = request.opTenantId;
+            this.opUserId = request.opUserId;
             this.watchObjectId = request.watchObjectId;
             this.watchType = request.watchType;
         } 
@@ -121,6 +135,15 @@ public class GetQualityWatchByObjectIdRequest extends Request {
         public Builder opTenantId(Long opTenantId) {
             this.putQueryParameter("OpTenantId", opTenantId);
             this.opTenantId = opTenantId;
+            return this;
+        }
+
+        /**
+         * OpUserId.
+         */
+        public Builder opUserId(String opUserId) {
+            this.putQueryParameter("OpUserId", opUserId);
+            this.opUserId = opUserId;
             return this;
         }
 

@@ -32,6 +32,10 @@ public class GetClusterQueueInfoByEnvRequest extends Request {
     private Long opTenantId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserId")
+    private String opUserId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long projectId;
@@ -46,6 +50,7 @@ public class GetClusterQueueInfoByEnvRequest extends Request {
         this.regionId = builder.regionId;
         this.env = builder.env;
         this.opTenantId = builder.opTenantId;
+        this.opUserId = builder.opUserId;
         this.projectId = builder.projectId;
         this.streamBatchMode = builder.streamBatchMode;
     }
@@ -85,6 +90,13 @@ public class GetClusterQueueInfoByEnvRequest extends Request {
     }
 
     /**
+     * @return opUserId
+     */
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
+    /**
      * @return projectId
      */
     public Long getProjectId() {
@@ -102,6 +114,7 @@ public class GetClusterQueueInfoByEnvRequest extends Request {
         private String regionId; 
         private String env; 
         private Long opTenantId; 
+        private String opUserId; 
         private Long projectId; 
         private String streamBatchMode; 
 
@@ -114,6 +127,7 @@ public class GetClusterQueueInfoByEnvRequest extends Request {
             this.regionId = request.regionId;
             this.env = request.env;
             this.opTenantId = request.opTenantId;
+            this.opUserId = request.opUserId;
             this.projectId = request.projectId;
             this.streamBatchMode = request.streamBatchMode;
         } 
@@ -148,6 +162,15 @@ public class GetClusterQueueInfoByEnvRequest extends Request {
         public Builder opTenantId(Long opTenantId) {
             this.putQueryParameter("OpTenantId", opTenantId);
             this.opTenantId = opTenantId;
+            return this;
+        }
+
+        /**
+         * OpUserId.
+         */
+        public Builder opUserId(String opUserId) {
+            this.putQueryParameter("OpUserId", opUserId);
+            this.opUserId = opUserId;
             return this;
         }
 

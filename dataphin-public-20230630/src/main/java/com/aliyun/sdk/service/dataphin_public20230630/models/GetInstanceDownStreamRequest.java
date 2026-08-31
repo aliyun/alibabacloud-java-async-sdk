@@ -41,6 +41,10 @@ public class GetInstanceDownStreamRequest extends Request {
     private Long opTenantId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserId")
+    private String opUserId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RunStatus")
     private String runStatus;
 
@@ -51,6 +55,7 @@ public class GetInstanceDownStreamRequest extends Request {
         this.env = builder.env;
         this.instanceGet = builder.instanceGet;
         this.opTenantId = builder.opTenantId;
+        this.opUserId = builder.opUserId;
         this.runStatus = builder.runStatus;
     }
 
@@ -103,6 +108,13 @@ public class GetInstanceDownStreamRequest extends Request {
     }
 
     /**
+     * @return opUserId
+     */
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
+    /**
      * @return runStatus
      */
     public String getRunStatus() {
@@ -115,6 +127,7 @@ public class GetInstanceDownStreamRequest extends Request {
         private String env; 
         private InstanceGet instanceGet; 
         private Long opTenantId; 
+        private String opUserId; 
         private String runStatus; 
 
         private Builder() {
@@ -128,6 +141,7 @@ public class GetInstanceDownStreamRequest extends Request {
             this.env = request.env;
             this.instanceGet = request.instanceGet;
             this.opTenantId = request.opTenantId;
+            this.opUserId = request.opUserId;
             this.runStatus = request.runStatus;
         } 
 
@@ -180,6 +194,15 @@ public class GetInstanceDownStreamRequest extends Request {
         public Builder opTenantId(Long opTenantId) {
             this.putQueryParameter("OpTenantId", opTenantId);
             this.opTenantId = opTenantId;
+            return this;
+        }
+
+        /**
+         * OpUserId.
+         */
+        public Builder opUserId(String opUserId) {
+            this.putQueryParameter("OpUserId", opUserId);
+            this.opUserId = opUserId;
             return this;
         }
 

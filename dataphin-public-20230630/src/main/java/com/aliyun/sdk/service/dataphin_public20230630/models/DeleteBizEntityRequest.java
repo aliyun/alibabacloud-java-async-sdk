@@ -37,6 +37,10 @@ public class DeleteBizEntityRequest extends Request {
     private Long opTenantId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserId")
+    private String opUserId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
     @com.aliyun.core.annotation.Validation(required = true)
     private String type;
@@ -47,6 +51,7 @@ public class DeleteBizEntityRequest extends Request {
         this.bizUnitId = builder.bizUnitId;
         this.id = builder.id;
         this.opTenantId = builder.opTenantId;
+        this.opUserId = builder.opUserId;
         this.type = builder.type;
     }
 
@@ -92,6 +97,13 @@ public class DeleteBizEntityRequest extends Request {
     }
 
     /**
+     * @return opUserId
+     */
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -103,6 +115,7 @@ public class DeleteBizEntityRequest extends Request {
         private Long bizUnitId; 
         private Long id; 
         private Long opTenantId; 
+        private String opUserId; 
         private String type; 
 
         private Builder() {
@@ -115,6 +128,7 @@ public class DeleteBizEntityRequest extends Request {
             this.bizUnitId = request.bizUnitId;
             this.id = request.id;
             this.opTenantId = request.opTenantId;
+            this.opUserId = request.opUserId;
             this.type = request.type;
         } 
 
@@ -160,6 +174,15 @@ public class DeleteBizEntityRequest extends Request {
         public Builder opTenantId(Long opTenantId) {
             this.putQueryParameter("OpTenantId", opTenantId);
             this.opTenantId = opTenantId;
+            return this;
+        }
+
+        /**
+         * OpUserId.
+         */
+        public Builder opUserId(String opUserId) {
+            this.putQueryParameter("OpUserId", opUserId);
+            this.opUserId = opUserId;
             return this;
         }
 

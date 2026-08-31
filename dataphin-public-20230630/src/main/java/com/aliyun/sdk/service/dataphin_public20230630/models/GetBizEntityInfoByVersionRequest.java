@@ -32,6 +32,10 @@ public class GetBizEntityInfoByVersionRequest extends Request {
     private Long opTenantId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserId")
+    private String opUserId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
     @com.aliyun.core.annotation.Validation(required = true)
     private String type;
@@ -46,6 +50,7 @@ public class GetBizEntityInfoByVersionRequest extends Request {
         this.regionId = builder.regionId;
         this.id = builder.id;
         this.opTenantId = builder.opTenantId;
+        this.opUserId = builder.opUserId;
         this.type = builder.type;
         this.versionId = builder.versionId;
     }
@@ -85,6 +90,13 @@ public class GetBizEntityInfoByVersionRequest extends Request {
     }
 
     /**
+     * @return opUserId
+     */
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -102,6 +114,7 @@ public class GetBizEntityInfoByVersionRequest extends Request {
         private String regionId; 
         private Long id; 
         private Long opTenantId; 
+        private String opUserId; 
         private String type; 
         private Long versionId; 
 
@@ -114,6 +127,7 @@ public class GetBizEntityInfoByVersionRequest extends Request {
             this.regionId = request.regionId;
             this.id = request.id;
             this.opTenantId = request.opTenantId;
+            this.opUserId = request.opUserId;
             this.type = request.type;
             this.versionId = request.versionId;
         } 
@@ -148,6 +162,15 @@ public class GetBizEntityInfoByVersionRequest extends Request {
         public Builder opTenantId(Long opTenantId) {
             this.putQueryParameter("OpTenantId", opTenantId);
             this.opTenantId = opTenantId;
+            return this;
+        }
+
+        /**
+         * OpUserId.
+         */
+        public Builder opUserId(String opUserId) {
+            this.putQueryParameter("OpUserId", opUserId);
+            this.opUserId = opUserId;
             return this;
         }
 

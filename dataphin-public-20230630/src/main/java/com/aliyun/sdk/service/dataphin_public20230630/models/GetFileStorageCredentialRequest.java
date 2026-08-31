@@ -27,6 +27,10 @@ public class GetFileStorageCredentialRequest extends Request {
     private Long opTenantId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserId")
+    private String opUserId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     private Long projectId;
 
@@ -42,6 +46,7 @@ public class GetFileStorageCredentialRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.opTenantId = builder.opTenantId;
+        this.opUserId = builder.opUserId;
         this.projectId = builder.projectId;
         this.purpose = builder.purpose;
         this.useVpcEndpoint = builder.useVpcEndpoint;
@@ -75,6 +80,13 @@ public class GetFileStorageCredentialRequest extends Request {
     }
 
     /**
+     * @return opUserId
+     */
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
+    /**
      * @return projectId
      */
     public Long getProjectId() {
@@ -98,6 +110,7 @@ public class GetFileStorageCredentialRequest extends Request {
     public static final class Builder extends Request.Builder<GetFileStorageCredentialRequest, Builder> {
         private String regionId; 
         private Long opTenantId; 
+        private String opUserId; 
         private Long projectId; 
         private String purpose; 
         private Boolean useVpcEndpoint; 
@@ -110,6 +123,7 @@ public class GetFileStorageCredentialRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.opTenantId = request.opTenantId;
+            this.opUserId = request.opUserId;
             this.projectId = request.projectId;
             this.purpose = request.purpose;
             this.useVpcEndpoint = request.useVpcEndpoint;
@@ -133,6 +147,15 @@ public class GetFileStorageCredentialRequest extends Request {
         public Builder opTenantId(Long opTenantId) {
             this.putQueryParameter("OpTenantId", opTenantId);
             this.opTenantId = opTenantId;
+            return this;
+        }
+
+        /**
+         * OpUserId.
+         */
+        public Builder opUserId(String opUserId) {
+            this.putQueryParameter("OpUserId", opUserId);
+            this.opUserId = opUserId;
             return this;
         }
 

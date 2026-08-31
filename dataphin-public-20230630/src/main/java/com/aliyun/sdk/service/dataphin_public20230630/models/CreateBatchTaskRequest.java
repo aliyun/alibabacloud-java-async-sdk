@@ -31,11 +31,16 @@ public class CreateBatchTaskRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long opTenantId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpUserId")
+    private String opUserId;
+
     private CreateBatchTaskRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.createCommand = builder.createCommand;
         this.opTenantId = builder.opTenantId;
+        this.opUserId = builder.opUserId;
     }
 
     public static Builder builder() {
@@ -72,10 +77,18 @@ public class CreateBatchTaskRequest extends Request {
         return this.opTenantId;
     }
 
+    /**
+     * @return opUserId
+     */
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
     public static final class Builder extends Request.Builder<CreateBatchTaskRequest, Builder> {
         private String regionId; 
         private CreateCommand createCommand; 
         private Long opTenantId; 
+        private String opUserId; 
 
         private Builder() {
             super();
@@ -86,6 +99,7 @@ public class CreateBatchTaskRequest extends Request {
             this.regionId = request.regionId;
             this.createCommand = request.createCommand;
             this.opTenantId = request.opTenantId;
+            this.opUserId = request.opUserId;
         } 
 
         /**
@@ -119,6 +133,15 @@ public class CreateBatchTaskRequest extends Request {
             return this;
         }
 
+        /**
+         * OpUserId.
+         */
+        public Builder opUserId(String opUserId) {
+            this.putQueryParameter("OpUserId", opUserId);
+            this.opUserId = opUserId;
+            return this;
+        }
+
         @Override
         public CreateBatchTaskRequest build() {
             return new CreateBatchTaskRequest(this);
@@ -146,6 +169,9 @@ public class CreateBatchTaskRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("DevelopOwnerIdList")
+        private java.util.List<String> developOwnerIdList;
+
         @com.aliyun.core.annotation.NameInMap("Directory")
         @com.aliyun.core.annotation.Validation(required = true)
         private String directory;
@@ -156,6 +182,9 @@ public class CreateBatchTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Name")
         @com.aliyun.core.annotation.Validation(required = true)
         private String name;
+
+        @com.aliyun.core.annotation.NameInMap("OpsOwnerIdList")
+        private java.util.List<String> opsOwnerIdList;
 
         @com.aliyun.core.annotation.NameInMap("ProjectId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -177,9 +206,11 @@ public class CreateBatchTaskRequest extends Request {
             this.dataSourceId = builder.dataSourceId;
             this.dataSourceSchema = builder.dataSourceSchema;
             this.description = builder.description;
+            this.developOwnerIdList = builder.developOwnerIdList;
             this.directory = builder.directory;
             this.engine = builder.engine;
             this.name = builder.name;
+            this.opsOwnerIdList = builder.opsOwnerIdList;
             this.projectId = builder.projectId;
             this.pythonModuleList = builder.pythonModuleList;
             this.scheduleType = builder.scheduleType;
@@ -223,6 +254,13 @@ public class CreateBatchTaskRequest extends Request {
         }
 
         /**
+         * @return developOwnerIdList
+         */
+        public java.util.List<String> getDevelopOwnerIdList() {
+            return this.developOwnerIdList;
+        }
+
+        /**
          * @return directory
          */
         public String getDirectory() {
@@ -241,6 +279,13 @@ public class CreateBatchTaskRequest extends Request {
          */
         public String getName() {
             return this.name;
+        }
+
+        /**
+         * @return opsOwnerIdList
+         */
+        public java.util.List<String> getOpsOwnerIdList() {
+            return this.opsOwnerIdList;
         }
 
         /**
@@ -276,9 +321,11 @@ public class CreateBatchTaskRequest extends Request {
             private String dataSourceId; 
             private String dataSourceSchema; 
             private String description; 
+            private java.util.List<String> developOwnerIdList; 
             private String directory; 
             private String engine; 
             private String name; 
+            private java.util.List<String> opsOwnerIdList; 
             private Long projectId; 
             private java.util.List<String> pythonModuleList; 
             private Integer scheduleType; 
@@ -292,9 +339,11 @@ public class CreateBatchTaskRequest extends Request {
                 this.dataSourceId = model.dataSourceId;
                 this.dataSourceSchema = model.dataSourceSchema;
                 this.description = model.description;
+                this.developOwnerIdList = model.developOwnerIdList;
                 this.directory = model.directory;
                 this.engine = model.engine;
                 this.name = model.name;
+                this.opsOwnerIdList = model.opsOwnerIdList;
                 this.projectId = model.projectId;
                 this.pythonModuleList = model.pythonModuleList;
                 this.scheduleType = model.scheduleType;
@@ -337,6 +386,14 @@ public class CreateBatchTaskRequest extends Request {
             }
 
             /**
+             * DevelopOwnerIdList.
+             */
+            public Builder developOwnerIdList(java.util.List<String> developOwnerIdList) {
+                this.developOwnerIdList = developOwnerIdList;
+                return this;
+            }
+
+            /**
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -363,6 +420,14 @@ public class CreateBatchTaskRequest extends Request {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * OpsOwnerIdList.
+             */
+            public Builder opsOwnerIdList(java.util.List<String> opsOwnerIdList) {
+                this.opsOwnerIdList = opsOwnerIdList;
                 return this;
             }
 
