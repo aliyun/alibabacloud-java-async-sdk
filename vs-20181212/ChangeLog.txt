@@ -1,3 +1,6 @@
+2026-08-31 Version: 3.0.19
+- Generated java-async 2018-12-12 for vs.
+
 2026-07-30 Version: 3.0.18
 - Generated java-async 2018-12-12 for vs.
 

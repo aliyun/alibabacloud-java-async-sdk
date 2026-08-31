@@ -212,11 +212,17 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HiveId")
         private String hiveId;
 
+        @com.aliyun.core.annotation.NameInMap("TaskErrorMessage")
+        private String taskErrorMessage;
+
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         @com.aliyun.core.annotation.NameInMap("TaskState")
         private String taskState;
+
+        @com.aliyun.core.annotation.NameInMap("TaskStateMessage")
+        private String taskStateMessage;
 
         @com.aliyun.core.annotation.NameInMap("UpdatedTime")
         private String updatedTime;
@@ -228,8 +234,10 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
             this.creationTime = builder.creationTime;
             this.endTime = builder.endTime;
             this.hiveId = builder.hiveId;
+            this.taskErrorMessage = builder.taskErrorMessage;
             this.taskId = builder.taskId;
             this.taskState = builder.taskState;
+            this.taskStateMessage = builder.taskStateMessage;
             this.updatedTime = builder.updatedTime;
             this.workflowId = builder.workflowId;
         }
@@ -264,6 +272,13 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return taskErrorMessage
+         */
+        public String getTaskErrorMessage() {
+            return this.taskErrorMessage;
+        }
+
+        /**
          * @return taskId
          */
         public String getTaskId() {
@@ -275,6 +290,13 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
          */
         public String getTaskState() {
             return this.taskState;
+        }
+
+        /**
+         * @return taskStateMessage
+         */
+        public String getTaskStateMessage() {
+            return this.taskStateMessage;
         }
 
         /**
@@ -295,8 +317,10 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
             private String creationTime; 
             private String endTime; 
             private String hiveId; 
+            private String taskErrorMessage; 
             private String taskId; 
             private String taskState; 
+            private String taskStateMessage; 
             private String updatedTime; 
             private String workflowId; 
 
@@ -307,8 +331,10 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
                 this.creationTime = model.creationTime;
                 this.endTime = model.endTime;
                 this.hiveId = model.hiveId;
+                this.taskErrorMessage = model.taskErrorMessage;
                 this.taskId = model.taskId;
                 this.taskState = model.taskState;
+                this.taskStateMessage = model.taskStateMessage;
                 this.updatedTime = model.updatedTime;
                 this.workflowId = model.workflowId;
             } 
@@ -338,6 +364,14 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
             }
 
             /**
+             * TaskErrorMessage.
+             */
+            public Builder taskErrorMessage(String taskErrorMessage) {
+                this.taskErrorMessage = taskErrorMessage;
+                return this;
+            }
+
+            /**
              * TaskId.
              */
             public Builder taskId(String taskId) {
@@ -350,6 +384,14 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
              */
             public Builder taskState(String taskState) {
                 this.taskState = taskState;
+                return this;
+            }
+
+            /**
+             * TaskStateMessage.
+             */
+            public Builder taskStateMessage(String taskStateMessage) {
+                this.taskStateMessage = taskStateMessage;
                 return this;
             }
 
