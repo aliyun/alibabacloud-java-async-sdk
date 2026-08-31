@@ -185,6 +185,9 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileCountOnline")
         private Long fileCountOnline;
 
+        @com.aliyun.core.annotation.NameInMap("Inode")
+        private Long inode;
+
         @com.aliyun.core.annotation.NameInMap("LastAccessTime")
         private String lastAccessTime;
 
@@ -201,6 +204,7 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             this.fileCount = builder.fileCount;
             this.fileCountOffline = builder.fileCountOffline;
             this.fileCountOnline = builder.fileCountOnline;
+            this.inode = builder.inode;
             this.lastAccessTime = builder.lastAccessTime;
             this.updatedAt = builder.updatedAt;
         }
@@ -277,6 +281,13 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
         }
 
         /**
+         * @return inode
+         */
+        public Long getInode() {
+            return this.inode;
+        }
+
+        /**
          * @return lastAccessTime
          */
         public String getLastAccessTime() {
@@ -300,6 +311,7 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             private Long fileCount; 
             private Long fileCountOffline; 
             private Long fileCountOnline; 
+            private Long inode; 
             private String lastAccessTime; 
             private String updatedAt; 
 
@@ -316,6 +328,7 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
                 this.fileCount = model.fileCount;
                 this.fileCountOffline = model.fileCountOffline;
                 this.fileCountOnline = model.fileCountOnline;
+                this.inode = model.inode;
                 this.lastAccessTime = model.lastAccessTime;
                 this.updatedAt = model.updatedAt;
             } 
@@ -393,6 +406,14 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             }
 
             /**
+             * Inode.
+             */
+            public Builder inode(Long inode) {
+                this.inode = inode;
+                return this;
+            }
+
+            /**
              * LastAccessTime.
              */
             public Builder lastAccessTime(String lastAccessTime) {
@@ -440,6 +461,9 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileCountOnline")
         private Long fileCountOnline;
 
+        @com.aliyun.core.annotation.NameInMap("Inode")
+        private Long inode;
+
         @com.aliyun.core.annotation.NameInMap("SubDirectories")
         private java.util.List<SubDirectories> subDirectories;
 
@@ -450,6 +474,7 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             this.fileCount = builder.fileCount;
             this.fileCountOffline = builder.fileCountOffline;
             this.fileCountOnline = builder.fileCountOnline;
+            this.inode = builder.inode;
             this.subDirectories = builder.subDirectories;
         }
 
@@ -504,6 +529,13 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
         }
 
         /**
+         * @return inode
+         */
+        public Long getInode() {
+            return this.inode;
+        }
+
+        /**
          * @return subDirectories
          */
         public java.util.List<SubDirectories> getSubDirectories() {
@@ -517,6 +549,7 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             private Long fileCount; 
             private Long fileCountOffline; 
             private Long fileCountOnline; 
+            private Long inode; 
             private java.util.List<SubDirectories> subDirectories; 
 
             private Builder() {
@@ -529,6 +562,7 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
                 this.fileCount = model.fileCount;
                 this.fileCountOffline = model.fileCountOffline;
                 this.fileCountOnline = model.fileCountOnline;
+                this.inode = model.inode;
                 this.subDirectories = model.subDirectories;
             } 
 
@@ -577,6 +611,14 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
              */
             public Builder fileCountOnline(Long fileCountOnline) {
                 this.fileCountOnline = fileCountOnline;
+                return this;
+            }
+
+            /**
+             * Inode.
+             */
+            public Builder inode(Long inode) {
+                this.inode = inode;
                 return this;
             }
 
