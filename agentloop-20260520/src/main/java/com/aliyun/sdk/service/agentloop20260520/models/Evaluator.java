@@ -38,6 +38,9 @@ public class Evaluator extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
+    @com.aliyun.core.annotation.NameInMap("variableExtractorMapping")
+    private java.util.Map<String, EvaluatorVariableExtractorMappingValue> variableExtractorMapping;
+
     @com.aliyun.core.annotation.NameInMap("variableMapping")
     private java.util.Map<String, String> variableMapping;
 
@@ -49,6 +52,7 @@ public class Evaluator extends TeaModel {
         this.resultName = builder.resultName;
         this.resultType = builder.resultType;
         this.type = builder.type;
+        this.variableExtractorMapping = builder.variableExtractorMapping;
         this.variableMapping = builder.variableMapping;
     }
 
@@ -114,6 +118,13 @@ public class Evaluator extends TeaModel {
     }
 
     /**
+     * @return variableExtractorMapping
+     */
+    public java.util.Map<String, EvaluatorVariableExtractorMappingValue> getVariableExtractorMapping() {
+        return this.variableExtractorMapping;
+    }
+
+    /**
      * @return variableMapping
      */
     public java.util.Map<String, String> getVariableMapping() {
@@ -128,6 +139,7 @@ public class Evaluator extends TeaModel {
         private String resultName; 
         private String resultType; 
         private String type; 
+        private java.util.Map<String, EvaluatorVariableExtractorMappingValue> variableExtractorMapping; 
         private java.util.Map<String, String> variableMapping; 
 
         private Builder() {
@@ -141,6 +153,7 @@ public class Evaluator extends TeaModel {
             this.resultName = model.resultName;
             this.resultType = model.resultType;
             this.type = model.type;
+            this.variableExtractorMapping = model.variableExtractorMapping;
             this.variableMapping = model.variableMapping;
         } 
 
@@ -197,6 +210,14 @@ public class Evaluator extends TeaModel {
          */
         public Builder type(String type) {
             this.type = type;
+            return this;
+        }
+
+        /**
+         * variableExtractorMapping.
+         */
+        public Builder variableExtractorMapping(java.util.Map<String, EvaluatorVariableExtractorMappingValue> variableExtractorMapping) {
+            this.variableExtractorMapping = variableExtractorMapping;
             return this;
         }
 

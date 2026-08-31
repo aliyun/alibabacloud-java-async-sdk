@@ -823,14 +823,14 @@ public class GetPipelineResponseBody extends TeaModel {
      *
      * <p>GetPipelineResponseBody</p>
      */
-    public static class Sink extends TeaModel {
+    public static class DefaultSink extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dataset")
         private Dataset dataset;
 
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        private Sink(Builder builder) {
+        private DefaultSink(Builder builder) {
             this.dataset = builder.dataset;
             this.type = builder.type;
         }
@@ -839,7 +839,7 @@ public class GetPipelineResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Sink create() {
+        public static DefaultSink create() {
             return builder().build();
         }
 
@@ -864,7 +864,7 @@ public class GetPipelineResponseBody extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(Sink model) {
+            private Builder(DefaultSink model) {
                 this.dataset = model.dataset;
                 this.type = model.type;
             } 
@@ -885,8 +885,671 @@ public class GetPipelineResponseBody extends TeaModel {
                 return this;
             }
 
+            public DefaultSink build() {
+                return new DefaultSink(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetPipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPipelineResponseBody</p>
+     */
+    public static class SinkDataset extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("agentSpace")
+        private String agentSpace;
+
+        @com.aliyun.core.annotation.NameInMap("dataset")
+        private String dataset;
+
+        private SinkDataset(Builder builder) {
+            this.agentSpace = builder.agentSpace;
+            this.dataset = builder.dataset;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SinkDataset create() {
+            return builder().build();
+        }
+
+        /**
+         * @return agentSpace
+         */
+        public String getAgentSpace() {
+            return this.agentSpace;
+        }
+
+        /**
+         * @return dataset
+         */
+        public String getDataset() {
+            return this.dataset;
+        }
+
+        public static final class Builder {
+            private String agentSpace; 
+            private String dataset; 
+
+            private Builder() {
+            } 
+
+            private Builder(SinkDataset model) {
+                this.agentSpace = model.agentSpace;
+                this.dataset = model.dataset;
+            } 
+
+            /**
+             * agentSpace.
+             */
+            public Builder agentSpace(String agentSpace) {
+                this.agentSpace = agentSpace;
+                return this;
+            }
+
+            /**
+             * dataset.
+             */
+            public Builder dataset(String dataset) {
+                this.dataset = dataset;
+                return this;
+            }
+
+            public SinkDataset build() {
+                return new SinkDataset(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetPipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPipelineResponseBody</p>
+     */
+    public static class RoutesSink extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("dataset")
+        private SinkDataset dataset;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        private RoutesSink(Builder builder) {
+            this.dataset = builder.dataset;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RoutesSink create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dataset
+         */
+        public SinkDataset getDataset() {
+            return this.dataset;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private SinkDataset dataset; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(RoutesSink model) {
+                this.dataset = model.dataset;
+                this.type = model.type;
+            } 
+
+            /**
+             * dataset.
+             */
+            public Builder dataset(SinkDataset dataset) {
+                this.dataset = dataset;
+                return this;
+            }
+
+            /**
+             * type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public RoutesSink build() {
+                return new RoutesSink(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetPipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPipelineResponseBody</p>
+     */
+    public static class Routes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("expression")
+        private String expression;
+
+        @com.aliyun.core.annotation.NameInMap("id")
+        private String id;
+
+        @com.aliyun.core.annotation.NameInMap("sink")
+        private RoutesSink sink;
+
+        private Routes(Builder builder) {
+            this.expression = builder.expression;
+            this.id = builder.id;
+            this.sink = builder.sink;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Routes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return expression
+         */
+        public String getExpression() {
+            return this.expression;
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return sink
+         */
+        public RoutesSink getSink() {
+            return this.sink;
+        }
+
+        public static final class Builder {
+            private String expression; 
+            private String id; 
+            private RoutesSink sink; 
+
+            private Builder() {
+            } 
+
+            private Builder(Routes model) {
+                this.expression = model.expression;
+                this.id = model.id;
+                this.sink = model.sink;
+            } 
+
+            /**
+             * expression.
+             */
+            public Builder expression(String expression) {
+                this.expression = expression;
+                return this;
+            }
+
+            /**
+             * id.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * sink.
+             */
+            public Builder sink(RoutesSink sink) {
+                this.sink = sink;
+                return this;
+            }
+
+            public Routes build() {
+                return new Routes(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetPipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPipelineResponseBody</p>
+     */
+    public static class Condition extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("defaultSink")
+        private DefaultSink defaultSink;
+
+        @com.aliyun.core.annotation.NameInMap("matchMode")
+        private String matchMode;
+
+        @com.aliyun.core.annotation.NameInMap("routes")
+        private java.util.List<Routes> routes;
+
+        private Condition(Builder builder) {
+            this.defaultSink = builder.defaultSink;
+            this.matchMode = builder.matchMode;
+            this.routes = builder.routes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Condition create() {
+            return builder().build();
+        }
+
+        /**
+         * @return defaultSink
+         */
+        public DefaultSink getDefaultSink() {
+            return this.defaultSink;
+        }
+
+        /**
+         * @return matchMode
+         */
+        public String getMatchMode() {
+            return this.matchMode;
+        }
+
+        /**
+         * @return routes
+         */
+        public java.util.List<Routes> getRoutes() {
+            return this.routes;
+        }
+
+        public static final class Builder {
+            private DefaultSink defaultSink; 
+            private String matchMode; 
+            private java.util.List<Routes> routes; 
+
+            private Builder() {
+            } 
+
+            private Builder(Condition model) {
+                this.defaultSink = model.defaultSink;
+                this.matchMode = model.matchMode;
+                this.routes = model.routes;
+            } 
+
+            /**
+             * defaultSink.
+             */
+            public Builder defaultSink(DefaultSink defaultSink) {
+                this.defaultSink = defaultSink;
+                return this;
+            }
+
+            /**
+             * matchMode.
+             */
+            public Builder matchMode(String matchMode) {
+                this.matchMode = matchMode;
+                return this;
+            }
+
+            /**
+             * routes.
+             */
+            public Builder routes(java.util.List<Routes> routes) {
+                this.routes = routes;
+                return this;
+            }
+
+            public Condition build() {
+                return new Condition(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetPipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPipelineResponseBody</p>
+     */
+    public static class GetPipelineResponseBodySinkDataset extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("agentSpace")
+        private String agentSpace;
+
+        @com.aliyun.core.annotation.NameInMap("dataset")
+        private String dataset;
+
+        private GetPipelineResponseBodySinkDataset(Builder builder) {
+            this.agentSpace = builder.agentSpace;
+            this.dataset = builder.dataset;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GetPipelineResponseBodySinkDataset create() {
+            return builder().build();
+        }
+
+        /**
+         * @return agentSpace
+         */
+        public String getAgentSpace() {
+            return this.agentSpace;
+        }
+
+        /**
+         * @return dataset
+         */
+        public String getDataset() {
+            return this.dataset;
+        }
+
+        public static final class Builder {
+            private String agentSpace; 
+            private String dataset; 
+
+            private Builder() {
+            } 
+
+            private Builder(GetPipelineResponseBodySinkDataset model) {
+                this.agentSpace = model.agentSpace;
+                this.dataset = model.dataset;
+            } 
+
+            /**
+             * agentSpace.
+             */
+            public Builder agentSpace(String agentSpace) {
+                this.agentSpace = agentSpace;
+                return this;
+            }
+
+            /**
+             * dataset.
+             */
+            public Builder dataset(String dataset) {
+                this.dataset = dataset;
+                return this;
+            }
+
+            public GetPipelineResponseBodySinkDataset build() {
+                return new GetPipelineResponseBodySinkDataset(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetPipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPipelineResponseBody</p>
+     */
+    public static class Sink extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("condition")
+        private Condition condition;
+
+        @com.aliyun.core.annotation.NameInMap("dataset")
+        private GetPipelineResponseBodySinkDataset dataset;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        private Sink(Builder builder) {
+            this.condition = builder.condition;
+            this.dataset = builder.dataset;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Sink create() {
+            return builder().build();
+        }
+
+        /**
+         * @return condition
+         */
+        public Condition getCondition() {
+            return this.condition;
+        }
+
+        /**
+         * @return dataset
+         */
+        public GetPipelineResponseBodySinkDataset getDataset() {
+            return this.dataset;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private Condition condition; 
+            private GetPipelineResponseBodySinkDataset dataset; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sink model) {
+                this.condition = model.condition;
+                this.dataset = model.dataset;
+                this.type = model.type;
+            } 
+
+            /**
+             * condition.
+             */
+            public Builder condition(Condition condition) {
+                this.condition = condition;
+                return this;
+            }
+
+            /**
+             * dataset.
+             */
+            public Builder dataset(GetPipelineResponseBodySinkDataset dataset) {
+                this.dataset = dataset;
+                return this;
+            }
+
+            /**
+             * type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
             public Sink build() {
                 return new Sink(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetPipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPipelineResponseBody</p>
+     */
+    public static class SourceDataset extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("dataset")
+        private String dataset;
+
+        @com.aliyun.core.annotation.NameInMap("filter")
+        private String filter;
+
+        private SourceDataset(Builder builder) {
+            this.dataset = builder.dataset;
+            this.filter = builder.filter;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SourceDataset create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dataset
+         */
+        public String getDataset() {
+            return this.dataset;
+        }
+
+        /**
+         * @return filter
+         */
+        public String getFilter() {
+            return this.filter;
+        }
+
+        public static final class Builder {
+            private String dataset; 
+            private String filter; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceDataset model) {
+                this.dataset = model.dataset;
+                this.filter = model.filter;
+            } 
+
+            /**
+             * dataset.
+             */
+            public Builder dataset(String dataset) {
+                this.dataset = dataset;
+                return this;
+            }
+
+            /**
+             * filter.
+             */
+            public Builder filter(String filter) {
+                this.filter = filter;
+                return this;
+            }
+
+            public SourceDataset build() {
+                return new SourceDataset(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetPipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPipelineResponseBody</p>
+     */
+    public static class InputFields extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        private InputFields(Builder builder) {
+            this.name = builder.name;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InputFields create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(InputFields model) {
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public InputFields build() {
+                return new InputFields(this);
             } 
 
         } 
@@ -995,6 +1658,12 @@ public class GetPipelineResponseBody extends TeaModel {
      * <p>GetPipelineResponseBody</p>
      */
     public static class Source extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("dataset")
+        private SourceDataset dataset;
+
+        @com.aliyun.core.annotation.NameInMap("inputFields")
+        private java.util.List<InputFields> inputFields;
+
         @com.aliyun.core.annotation.NameInMap("logstore")
         private Logstore logstore;
 
@@ -1002,6 +1671,8 @@ public class GetPipelineResponseBody extends TeaModel {
         private String type;
 
         private Source(Builder builder) {
+            this.dataset = builder.dataset;
+            this.inputFields = builder.inputFields;
             this.logstore = builder.logstore;
             this.type = builder.type;
         }
@@ -1012,6 +1683,20 @@ public class GetPipelineResponseBody extends TeaModel {
 
         public static Source create() {
             return builder().build();
+        }
+
+        /**
+         * @return dataset
+         */
+        public SourceDataset getDataset() {
+            return this.dataset;
+        }
+
+        /**
+         * @return inputFields
+         */
+        public java.util.List<InputFields> getInputFields() {
+            return this.inputFields;
         }
 
         /**
@@ -1029,6 +1714,8 @@ public class GetPipelineResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private SourceDataset dataset; 
+            private java.util.List<InputFields> inputFields; 
             private Logstore logstore; 
             private String type; 
 
@@ -1036,9 +1723,27 @@ public class GetPipelineResponseBody extends TeaModel {
             } 
 
             private Builder(Source model) {
+                this.dataset = model.dataset;
+                this.inputFields = model.inputFields;
                 this.logstore = model.logstore;
                 this.type = model.type;
             } 
+
+            /**
+             * dataset.
+             */
+            public Builder dataset(SourceDataset dataset) {
+                this.dataset = dataset;
+                return this;
+            }
+
+            /**
+             * inputFields.
+             */
+            public Builder inputFields(java.util.List<InputFields> inputFields) {
+                this.inputFields = inputFields;
+                return this;
+            }
 
             /**
              * logstore.

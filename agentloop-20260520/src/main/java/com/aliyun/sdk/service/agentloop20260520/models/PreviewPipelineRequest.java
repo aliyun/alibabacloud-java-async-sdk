@@ -322,6 +322,156 @@ public class PreviewPipelineRequest extends Request {
      *
      * <p>PreviewPipelineRequest</p>
      */
+    public static class Dataset extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("dataset")
+        private String dataset;
+
+        @com.aliyun.core.annotation.NameInMap("filter")
+        private String filter;
+
+        private Dataset(Builder builder) {
+            this.dataset = builder.dataset;
+            this.filter = builder.filter;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Dataset create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dataset
+         */
+        public String getDataset() {
+            return this.dataset;
+        }
+
+        /**
+         * @return filter
+         */
+        public String getFilter() {
+            return this.filter;
+        }
+
+        public static final class Builder {
+            private String dataset; 
+            private String filter; 
+
+            private Builder() {
+            } 
+
+            private Builder(Dataset model) {
+                this.dataset = model.dataset;
+                this.filter = model.filter;
+            } 
+
+            /**
+             * dataset.
+             */
+            public Builder dataset(String dataset) {
+                this.dataset = dataset;
+                return this;
+            }
+
+            /**
+             * filter.
+             */
+            public Builder filter(String filter) {
+                this.filter = filter;
+                return this;
+            }
+
+            public Dataset build() {
+                return new Dataset(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link PreviewPipelineRequest} extends {@link TeaModel}
+     *
+     * <p>PreviewPipelineRequest</p>
+     */
+    public static class InputFields extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        private InputFields(Builder builder) {
+            this.name = builder.name;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InputFields create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(InputFields model) {
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public InputFields build() {
+                return new InputFields(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link PreviewPipelineRequest} extends {@link TeaModel}
+     *
+     * <p>PreviewPipelineRequest</p>
+     */
     public static class Logstore extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("logstore")
         private String logstore;
@@ -419,6 +569,12 @@ public class PreviewPipelineRequest extends Request {
      * <p>PreviewPipelineRequest</p>
      */
     public static class Source extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("dataset")
+        private Dataset dataset;
+
+        @com.aliyun.core.annotation.NameInMap("inputFields")
+        private java.util.List<InputFields> inputFields;
+
         @com.aliyun.core.annotation.NameInMap("logstore")
         private Logstore logstore;
 
@@ -426,6 +582,8 @@ public class PreviewPipelineRequest extends Request {
         private String type;
 
         private Source(Builder builder) {
+            this.dataset = builder.dataset;
+            this.inputFields = builder.inputFields;
             this.logstore = builder.logstore;
             this.type = builder.type;
         }
@@ -436,6 +594,20 @@ public class PreviewPipelineRequest extends Request {
 
         public static Source create() {
             return builder().build();
+        }
+
+        /**
+         * @return dataset
+         */
+        public Dataset getDataset() {
+            return this.dataset;
+        }
+
+        /**
+         * @return inputFields
+         */
+        public java.util.List<InputFields> getInputFields() {
+            return this.inputFields;
         }
 
         /**
@@ -453,6 +625,8 @@ public class PreviewPipelineRequest extends Request {
         }
 
         public static final class Builder {
+            private Dataset dataset; 
+            private java.util.List<InputFields> inputFields; 
             private Logstore logstore; 
             private String type; 
 
@@ -460,9 +634,27 @@ public class PreviewPipelineRequest extends Request {
             } 
 
             private Builder(Source model) {
+                this.dataset = model.dataset;
+                this.inputFields = model.inputFields;
                 this.logstore = model.logstore;
                 this.type = model.type;
             } 
+
+            /**
+             * dataset.
+             */
+            public Builder dataset(Dataset dataset) {
+                this.dataset = dataset;
+                return this;
+            }
+
+            /**
+             * inputFields.
+             */
+            public Builder inputFields(java.util.List<InputFields> inputFields) {
+                this.inputFields = inputFields;
+                return this;
+            }
 
             /**
              * logstore.
