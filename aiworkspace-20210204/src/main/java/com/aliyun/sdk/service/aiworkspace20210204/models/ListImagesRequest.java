@@ -34,6 +34,10 @@ public class ListImagesRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Options")
+    private String options;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
@@ -67,6 +71,7 @@ public class ListImagesRequest extends Request {
         this.imageUri = builder.imageUri;
         this.labels = builder.labels;
         this.name = builder.name;
+        this.options = builder.options;
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -115,6 +120,13 @@ public class ListImagesRequest extends Request {
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return options
+     */
+    public String getOptions() {
+        return this.options;
     }
 
     /**
@@ -171,6 +183,7 @@ public class ListImagesRequest extends Request {
         private String imageUri; 
         private String labels; 
         private String name; 
+        private String options; 
         private String order; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -189,6 +202,7 @@ public class ListImagesRequest extends Request {
             this.imageUri = request.imageUri;
             this.labels = request.labels;
             this.name = request.name;
+            this.options = request.options;
             this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -264,6 +278,15 @@ public class ListImagesRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * Options.
+         */
+        public Builder options(String options) {
+            this.putQueryParameter("Options", options);
+            this.options = options;
             return this;
         }
 
