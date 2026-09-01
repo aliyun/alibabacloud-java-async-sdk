@@ -17,8 +17,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RefreshOssBucketScanInfoRequest</p>
  */
 public class RefreshOssBucketScanInfoRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
+    private String source;
+
     private RefreshOssBucketScanInfoRequest(Builder builder) {
         super(builder);
+        this.source = builder.source;
     }
 
     public static Builder builder() {
@@ -34,7 +39,15 @@ public class RefreshOssBucketScanInfoRequest extends Request {
         return new Builder(this);
     }
 
+    /**
+     * @return source
+     */
+    public String getSource() {
+        return this.source;
+    }
+
     public static final class Builder extends Request.Builder<RefreshOssBucketScanInfoRequest, Builder> {
+        private String source; 
 
         private Builder() {
             super();
@@ -42,7 +55,17 @@ public class RefreshOssBucketScanInfoRequest extends Request {
 
         private Builder(RefreshOssBucketScanInfoRequest request) {
             super(request);
+            this.source = request.source;
         } 
+
+        /**
+         * Source.
+         */
+        public Builder source(String source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
+            return this;
+        }
 
         @Override
         public RefreshOssBucketScanInfoRequest build() {

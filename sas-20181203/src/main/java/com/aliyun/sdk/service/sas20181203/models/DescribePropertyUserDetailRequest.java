@@ -50,6 +50,10 @@ public class DescribePropertyUserDetailRequest extends Request {
     private String remark;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UseNextToken")
     private Boolean useNextToken;
 
@@ -71,6 +75,7 @@ public class DescribePropertyUserDetailRequest extends Request {
         this.nextToken = builder.nextToken;
         this.pageSize = builder.pageSize;
         this.remark = builder.remark;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.useNextToken = builder.useNextToken;
         this.user = builder.user;
         this.uuid = builder.uuid;
@@ -146,6 +151,13 @@ public class DescribePropertyUserDetailRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return useNextToken
      */
     public Boolean getUseNextToken() {
@@ -175,6 +187,7 @@ public class DescribePropertyUserDetailRequest extends Request {
         private String nextToken; 
         private Integer pageSize; 
         private String remark; 
+        private Long resourceDirectoryAccountId; 
         private Boolean useNextToken; 
         private String user; 
         private String uuid; 
@@ -193,6 +206,7 @@ public class DescribePropertyUserDetailRequest extends Request {
             this.nextToken = request.nextToken;
             this.pageSize = request.pageSize;
             this.remark = request.remark;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.useNextToken = request.useNextToken;
             this.user = request.user;
             this.uuid = request.uuid;
@@ -298,6 +312,15 @@ public class DescribePropertyUserDetailRequest extends Request {
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
             this.remark = remark;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

@@ -18,6 +18,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateSimilarSecurityEventsQueryTaskRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
@@ -36,6 +45,8 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends Request {
 
     private CreateSimilarSecurityEventsQueryTaskRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityEventId = builder.securityEventId;
         this.similarEventScenarioCode = builder.similarEventScenarioCode;
@@ -53,6 +64,20 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     /**
@@ -84,6 +109,8 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateSimilarSecurityEventsQueryTaskRequest, Builder> {
+        private String clientToken; 
+        private Long resourceDirectoryAccountId; 
         private Long resourceOwnerId; 
         private Long securityEventId; 
         private String similarEventScenarioCode; 
@@ -95,11 +122,31 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends Request {
 
         private Builder(CreateSimilarSecurityEventsQueryTaskRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityEventId = request.securityEventId;
             this.similarEventScenarioCode = request.similarEventScenarioCode;
             this.sourceIp = request.sourceIp;
         } 
+
+        /**
+         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
 
         /**
          * ResourceOwnerId.

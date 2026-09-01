@@ -22,12 +22,17 @@ public class DescribeDomainSecureScoreRequest extends Request {
     private String lang;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
     private DescribeDomainSecureScoreRequest(Builder builder) {
         super(builder);
         this.lang = builder.lang;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.sourceIp = builder.sourceIp;
     }
 
@@ -52,6 +57,13 @@ public class DescribeDomainSecureScoreRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return sourceIp
      */
     public String getSourceIp() {
@@ -60,6 +72,7 @@ public class DescribeDomainSecureScoreRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeDomainSecureScoreRequest, Builder> {
         private String lang; 
+        private Long resourceDirectoryAccountId; 
         private String sourceIp; 
 
         private Builder() {
@@ -69,6 +82,7 @@ public class DescribeDomainSecureScoreRequest extends Request {
         private Builder(DescribeDomainSecureScoreRequest request) {
             super(request);
             this.lang = request.lang;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.sourceIp = request.sourceIp;
         } 
 
@@ -85,6 +99,15 @@ public class DescribeDomainSecureScoreRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

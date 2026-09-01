@@ -207,6 +207,9 @@ public class UpdateMultiUserInstancesRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("CspmCapacity")
         private Long cspmCapacity;
 
+        @com.aliyun.core.annotation.NameInMap("CspmInstanceCapacity")
+        private Long cspmInstanceCapacity;
+
         @com.aliyun.core.annotation.NameInMap("HoneypotCapacity")
         private Long honeypotCapacity;
 
@@ -251,6 +254,7 @@ public class UpdateMultiUserInstancesRequest extends Request {
             this.antiRansomwareCapacity = builder.antiRansomwareCapacity;
             this.chargeType = builder.chargeType;
             this.cspmCapacity = builder.cspmCapacity;
+            this.cspmInstanceCapacity = builder.cspmInstanceCapacity;
             this.honeypotCapacity = builder.honeypotCapacity;
             this.imageScanCapacity = builder.imageScanCapacity;
             this.instanceId = builder.instanceId;
@@ -300,6 +304,13 @@ public class UpdateMultiUserInstancesRequest extends Request {
          */
         public Long getCspmCapacity() {
             return this.cspmCapacity;
+        }
+
+        /**
+         * @return cspmInstanceCapacity
+         */
+        public Long getCspmInstanceCapacity() {
+            return this.cspmInstanceCapacity;
         }
 
         /**
@@ -398,6 +409,7 @@ public class UpdateMultiUserInstancesRequest extends Request {
             private Long antiRansomwareCapacity; 
             private String chargeType; 
             private Long cspmCapacity; 
+            private Long cspmInstanceCapacity; 
             private Long honeypotCapacity; 
             private Long imageScanCapacity; 
             private String instanceId; 
@@ -420,6 +432,7 @@ public class UpdateMultiUserInstancesRequest extends Request {
                 this.antiRansomwareCapacity = model.antiRansomwareCapacity;
                 this.chargeType = model.chargeType;
                 this.cspmCapacity = model.cspmCapacity;
+                this.cspmInstanceCapacity = model.cspmInstanceCapacity;
                 this.honeypotCapacity = model.honeypotCapacity;
                 this.imageScanCapacity = model.imageScanCapacity;
                 this.instanceId = model.instanceId;
@@ -480,6 +493,14 @@ public class UpdateMultiUserInstancesRequest extends Request {
              */
             public Builder cspmCapacity(Long cspmCapacity) {
                 this.cspmCapacity = cspmCapacity;
+                return this;
+            }
+
+            /**
+             * CspmInstanceCapacity.
+             */
+            public Builder cspmInstanceCapacity(Long cspmInstanceCapacity) {
+                this.cspmInstanceCapacity = cspmInstanceCapacity;
                 return this;
             }
 

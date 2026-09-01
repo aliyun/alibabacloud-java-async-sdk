@@ -38,6 +38,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AssetLevel")
     private Integer assetLevel;
 
+    @com.aliyun.core.annotation.NameInMap("BuySasEdr")
+    private String buySasEdr;
+
     @com.aliyun.core.annotation.NameInMap("CanTryPostPaidPackage")
     private Integer canTryPostPaidPackage;
 
@@ -52,6 +55,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("HoneypotCapacity")
     private Long honeypotCapacity;
+
+    @com.aliyun.core.annotation.NameInMap("HybridPaidGrayStatus")
+    private String hybridPaidGrayStatus;
 
     @com.aliyun.core.annotation.NameInMap("HybridPaidModuleSwitchMap")
     private Integer hybridPaidModuleSwitchMap;
@@ -140,6 +146,21 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("SasEdrClientAuthCount")
+    private String sasEdrClientAuthCount;
+
+    @com.aliyun.core.annotation.NameInMap("SasEdrPostPaidInstanceId")
+    private String sasEdrPostPaidInstanceId;
+
+    @com.aliyun.core.annotation.NameInMap("SasEdrPrePaidInstanceId")
+    private String sasEdrPrePaidInstanceId;
+
+    @com.aliyun.core.annotation.NameInMap("SasEdrPrePaidInstanceStatus")
+    private String sasEdrPrePaidInstanceStatus;
+
+    @com.aliyun.core.annotation.NameInMap("SasEdrVersion")
+    private String sasEdrVersion;
+
     @com.aliyun.core.annotation.NameInMap("SasLog")
     private Integer sasLog;
 
@@ -157,6 +178,12 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("ThreatAnalysisFlow")
     private Integer threatAnalysisFlow;
+
+    @com.aliyun.core.annotation.NameInMap("TrialModuleList")
+    private java.util.List<TrialModuleList> trialModuleList;
+
+    @com.aliyun.core.annotation.NameInMap("TrialVersion")
+    private Integer trialVersion;
 
     @com.aliyun.core.annotation.NameInMap("UserDefinedAlarms")
     private Integer userDefinedAlarms;
@@ -184,11 +211,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         this.appWhiteList = builder.appWhiteList;
         this.appWhiteListAuthCount = builder.appWhiteListAuthCount;
         this.assetLevel = builder.assetLevel;
+        this.buySasEdr = builder.buySasEdr;
         this.canTryPostPaidPackage = builder.canTryPostPaidPackage;
         this.cspmCapacity = builder.cspmCapacity;
         this.cspmInstanceCapacity = builder.cspmInstanceCapacity;
         this.highestVersion = builder.highestVersion;
         this.honeypotCapacity = builder.honeypotCapacity;
+        this.hybridPaidGrayStatus = builder.hybridPaidGrayStatus;
         this.hybridPaidModuleSwitchMap = builder.hybridPaidModuleSwitchMap;
         this.hybridPaidStatus = builder.hybridPaidStatus;
         this.hybridSwitch = builder.hybridSwitch;
@@ -218,12 +247,19 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         this.raspCapacity = builder.raspCapacity;
         this.releaseTime = builder.releaseTime;
         this.requestId = builder.requestId;
+        this.sasEdrClientAuthCount = builder.sasEdrClientAuthCount;
+        this.sasEdrPostPaidInstanceId = builder.sasEdrPostPaidInstanceId;
+        this.sasEdrPrePaidInstanceId = builder.sasEdrPrePaidInstanceId;
+        this.sasEdrPrePaidInstanceStatus = builder.sasEdrPrePaidInstanceStatus;
+        this.sasEdrVersion = builder.sasEdrVersion;
         this.sasLog = builder.sasLog;
         this.sasScreen = builder.sasScreen;
         this.sdkCapacity = builder.sdkCapacity;
         this.slsCapacity = builder.slsCapacity;
         this.threatAnalysisCapacity = builder.threatAnalysisCapacity;
         this.threatAnalysisFlow = builder.threatAnalysisFlow;
+        this.trialModuleList = builder.trialModuleList;
+        this.trialVersion = builder.trialVersion;
         this.userDefinedAlarms = builder.userDefinedAlarms;
         this.version = builder.version;
         this.vmCores = builder.vmCores;
@@ -294,6 +330,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return buySasEdr
+     */
+    public String getBuySasEdr() {
+        return this.buySasEdr;
+    }
+
+    /**
      * @return canTryPostPaidPackage
      */
     public Integer getCanTryPostPaidPackage() {
@@ -326,6 +369,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
      */
     public Long getHoneypotCapacity() {
         return this.honeypotCapacity;
+    }
+
+    /**
+     * @return hybridPaidGrayStatus
+     */
+    public String getHybridPaidGrayStatus() {
+        return this.hybridPaidGrayStatus;
     }
 
     /**
@@ -532,6 +582,41 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return sasEdrClientAuthCount
+     */
+    public String getSasEdrClientAuthCount() {
+        return this.sasEdrClientAuthCount;
+    }
+
+    /**
+     * @return sasEdrPostPaidInstanceId
+     */
+    public String getSasEdrPostPaidInstanceId() {
+        return this.sasEdrPostPaidInstanceId;
+    }
+
+    /**
+     * @return sasEdrPrePaidInstanceId
+     */
+    public String getSasEdrPrePaidInstanceId() {
+        return this.sasEdrPrePaidInstanceId;
+    }
+
+    /**
+     * @return sasEdrPrePaidInstanceStatus
+     */
+    public String getSasEdrPrePaidInstanceStatus() {
+        return this.sasEdrPrePaidInstanceStatus;
+    }
+
+    /**
+     * @return sasEdrVersion
+     */
+    public String getSasEdrVersion() {
+        return this.sasEdrVersion;
+    }
+
+    /**
      * @return sasLog
      */
     public Integer getSasLog() {
@@ -571,6 +656,20 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
      */
     public Integer getThreatAnalysisFlow() {
         return this.threatAnalysisFlow;
+    }
+
+    /**
+     * @return trialModuleList
+     */
+    public java.util.List<TrialModuleList> getTrialModuleList() {
+        return this.trialModuleList;
+    }
+
+    /**
+     * @return trialVersion
+     */
+    public Integer getTrialVersion() {
+        return this.trialVersion;
     }
 
     /**
@@ -623,11 +722,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         private Integer appWhiteList; 
         private Long appWhiteListAuthCount; 
         private Integer assetLevel; 
+        private String buySasEdr; 
         private Integer canTryPostPaidPackage; 
         private Long cspmCapacity; 
         private Integer cspmInstanceCapacity; 
         private Integer highestVersion; 
         private Long honeypotCapacity; 
+        private String hybridPaidGrayStatus; 
         private Integer hybridPaidModuleSwitchMap; 
         private Integer hybridPaidStatus; 
         private Integer hybridSwitch; 
@@ -657,12 +758,19 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         private Long raspCapacity; 
         private Long releaseTime; 
         private String requestId; 
+        private String sasEdrClientAuthCount; 
+        private String sasEdrPostPaidInstanceId; 
+        private String sasEdrPrePaidInstanceId; 
+        private String sasEdrPrePaidInstanceStatus; 
+        private String sasEdrVersion; 
         private Integer sasLog; 
         private Integer sasScreen; 
         private Long sdkCapacity; 
         private Long slsCapacity; 
         private Long threatAnalysisCapacity; 
         private Integer threatAnalysisFlow; 
+        private java.util.List<TrialModuleList> trialModuleList; 
+        private Integer trialVersion; 
         private Integer userDefinedAlarms; 
         private Integer version; 
         private Integer vmCores; 
@@ -681,11 +789,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
             this.appWhiteList = model.appWhiteList;
             this.appWhiteListAuthCount = model.appWhiteListAuthCount;
             this.assetLevel = model.assetLevel;
+            this.buySasEdr = model.buySasEdr;
             this.canTryPostPaidPackage = model.canTryPostPaidPackage;
             this.cspmCapacity = model.cspmCapacity;
             this.cspmInstanceCapacity = model.cspmInstanceCapacity;
             this.highestVersion = model.highestVersion;
             this.honeypotCapacity = model.honeypotCapacity;
+            this.hybridPaidGrayStatus = model.hybridPaidGrayStatus;
             this.hybridPaidModuleSwitchMap = model.hybridPaidModuleSwitchMap;
             this.hybridPaidStatus = model.hybridPaidStatus;
             this.hybridSwitch = model.hybridSwitch;
@@ -715,12 +825,19 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
             this.raspCapacity = model.raspCapacity;
             this.releaseTime = model.releaseTime;
             this.requestId = model.requestId;
+            this.sasEdrClientAuthCount = model.sasEdrClientAuthCount;
+            this.sasEdrPostPaidInstanceId = model.sasEdrPostPaidInstanceId;
+            this.sasEdrPrePaidInstanceId = model.sasEdrPrePaidInstanceId;
+            this.sasEdrPrePaidInstanceStatus = model.sasEdrPrePaidInstanceStatus;
+            this.sasEdrVersion = model.sasEdrVersion;
             this.sasLog = model.sasLog;
             this.sasScreen = model.sasScreen;
             this.sdkCapacity = model.sdkCapacity;
             this.slsCapacity = model.slsCapacity;
             this.threatAnalysisCapacity = model.threatAnalysisCapacity;
             this.threatAnalysisFlow = model.threatAnalysisFlow;
+            this.trialModuleList = model.trialModuleList;
+            this.trialVersion = model.trialVersion;
             this.userDefinedAlarms = model.userDefinedAlarms;
             this.version = model.version;
             this.vmCores = model.vmCores;
@@ -825,6 +942,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
+         * BuySasEdr.
+         */
+        public Builder buySasEdr(String buySasEdr) {
+            this.buySasEdr = buySasEdr;
+            return this;
+        }
+
+        /**
          * <p>Whether it supports the activation of a post-paid trial package. Values: </p>
          * <ul>
          * <li><strong>0</strong>: Not supported</li>
@@ -888,6 +1013,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
          */
         public Builder honeypotCapacity(Long honeypotCapacity) {
             this.honeypotCapacity = honeypotCapacity;
+            return this;
+        }
+
+        /**
+         * HybridPaidGrayStatus.
+         */
+        public Builder hybridPaidGrayStatus(String hybridPaidGrayStatus) {
+            this.hybridPaidGrayStatus = hybridPaidGrayStatus;
             return this;
         }
 
@@ -1265,6 +1398,46 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
+         * SasEdrClientAuthCount.
+         */
+        public Builder sasEdrClientAuthCount(String sasEdrClientAuthCount) {
+            this.sasEdrClientAuthCount = sasEdrClientAuthCount;
+            return this;
+        }
+
+        /**
+         * SasEdrPostPaidInstanceId.
+         */
+        public Builder sasEdrPostPaidInstanceId(String sasEdrPostPaidInstanceId) {
+            this.sasEdrPostPaidInstanceId = sasEdrPostPaidInstanceId;
+            return this;
+        }
+
+        /**
+         * SasEdrPrePaidInstanceId.
+         */
+        public Builder sasEdrPrePaidInstanceId(String sasEdrPrePaidInstanceId) {
+            this.sasEdrPrePaidInstanceId = sasEdrPrePaidInstanceId;
+            return this;
+        }
+
+        /**
+         * <p>ACTIVE表示生效中，EXPIRED表示已到期，RELEASED表示已释放；无预付费实例时为空</p>
+         */
+        public Builder sasEdrPrePaidInstanceStatus(String sasEdrPrePaidInstanceStatus) {
+            this.sasEdrPrePaidInstanceStatus = sasEdrPrePaidInstanceStatus;
+            return this;
+        }
+
+        /**
+         * SasEdrVersion.
+         */
+        public Builder sasEdrVersion(String sasEdrVersion) {
+            this.sasEdrVersion = sasEdrVersion;
+            return this;
+        }
+
+        /**
          * <p>Whether log analysis has been purchased. Values: </p>
          * <ul>
          * <li><strong>0</strong>: Not purchased </li>
@@ -1335,6 +1508,22 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
          */
         public Builder threatAnalysisFlow(Integer threatAnalysisFlow) {
             this.threatAnalysisFlow = threatAnalysisFlow;
+            return this;
+        }
+
+        /**
+         * <p>当前用户命中的业务试用模块；未命中时返回空数组</p>
+         */
+        public Builder trialModuleList(java.util.List<TrialModuleList> trialModuleList) {
+            this.trialModuleList = trialModuleList;
+            return this;
+        }
+
+        /**
+         * TrialVersion.
+         */
+        public Builder trialVersion(Integer trialVersion) {
+            this.trialVersion = trialVersion;
             return this;
         }
 
@@ -1430,4 +1619,58 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVersionConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVersionConfigResponseBody</p>
+     */
+    public static class TrialModuleList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private TrialModuleList(Builder builder) {
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TrialModuleList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrialModuleList model) {
+                this.name = model.name;
+            } 
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public TrialModuleList build() {
+                return new TrialModuleList(this);
+            } 
+
+        } 
+
+    }
 }

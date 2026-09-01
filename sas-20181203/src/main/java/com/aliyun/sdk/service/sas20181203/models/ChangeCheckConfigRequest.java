@@ -22,6 +22,11 @@ public class ChangeCheckConfigRequest extends Request {
     private java.util.List<AddedCheck> addedCheck;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ConfigRequirementIds")
     private ConfigRequirementIds configRequirementIds;
 
@@ -80,6 +85,7 @@ public class ChangeCheckConfigRequest extends Request {
     private ChangeCheckConfigRequest(Builder builder) {
         super(builder);
         this.addedCheck = builder.addedCheck;
+        this.clientToken = builder.clientToken;
         this.configRequirementIds = builder.configRequirementIds;
         this.configStandardIds = builder.configStandardIds;
         this.configure = builder.configure;
@@ -114,6 +120,13 @@ public class ChangeCheckConfigRequest extends Request {
      */
     public java.util.List<AddedCheck> getAddedCheck() {
         return this.addedCheck;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -216,6 +229,7 @@ public class ChangeCheckConfigRequest extends Request {
 
     public static final class Builder extends Request.Builder<ChangeCheckConfigRequest, Builder> {
         private java.util.List<AddedCheck> addedCheck; 
+        private String clientToken; 
         private ConfigRequirementIds configRequirementIds; 
         private ConfigStandardIds configStandardIds; 
         private String configure; 
@@ -238,6 +252,7 @@ public class ChangeCheckConfigRequest extends Request {
         private Builder(ChangeCheckConfigRequest request) {
             super(request);
             this.addedCheck = request.addedCheck;
+            this.clientToken = request.clientToken;
             this.configRequirementIds = request.configRequirementIds;
             this.configStandardIds = request.configStandardIds;
             this.configure = request.configure;
@@ -263,6 +278,15 @@ public class ChangeCheckConfigRequest extends Request {
         public Builder addedCheck(java.util.List<AddedCheck> addedCheck) {
             this.putQueryParameter("AddedCheck", addedCheck);
             this.addedCheck = addedCheck;
+            return this;
+        }
+
+        /**
+         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 

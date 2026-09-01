@@ -27,6 +27,10 @@ public class OperationSuspEventsRequest extends Request {
     private String operation;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
@@ -47,6 +51,7 @@ public class OperationSuspEventsRequest extends Request {
         super(builder);
         this.from = builder.from;
         this.operation = builder.operation;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.sourceIp = builder.sourceIp;
         this.subOperation = builder.subOperation;
         this.suspiciousEventIds = builder.suspiciousEventIds;
@@ -81,6 +86,13 @@ public class OperationSuspEventsRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return sourceIp
      */
     public String getSourceIp() {
@@ -111,6 +123,7 @@ public class OperationSuspEventsRequest extends Request {
     public static final class Builder extends Request.Builder<OperationSuspEventsRequest, Builder> {
         private String from; 
         private String operation; 
+        private Long resourceDirectoryAccountId; 
         private String sourceIp; 
         private String subOperation; 
         private String suspiciousEventIds; 
@@ -124,6 +137,7 @@ public class OperationSuspEventsRequest extends Request {
             super(request);
             this.from = request.from;
             this.operation = request.operation;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.sourceIp = request.sourceIp;
             this.subOperation = request.subOperation;
             this.suspiciousEventIds = request.suspiciousEventIds;
@@ -160,6 +174,15 @@ public class OperationSuspEventsRequest extends Request {
         public Builder operation(String operation) {
             this.putQueryParameter("Operation", operation);
             this.operation = operation;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

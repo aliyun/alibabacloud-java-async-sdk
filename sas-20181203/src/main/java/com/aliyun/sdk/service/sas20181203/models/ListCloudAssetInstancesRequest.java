@@ -50,6 +50,10 @@ public class ListCloudAssetInstancesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
     private ListCloudAssetInstancesRequest(Builder builder) {
         super(builder);
         this.cloudAssetQueryData = builder.cloudAssetQueryData;
@@ -60,6 +64,7 @@ public class ListCloudAssetInstancesRequest extends Request {
         this.logicalExp = builder.logicalExp;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
     }
 
     public static Builder builder() {
@@ -131,6 +136,13 @@ public class ListCloudAssetInstancesRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
     public static final class Builder extends Request.Builder<ListCloudAssetInstancesRequest, Builder> {
         private java.util.List<CloudAssetQueryData> cloudAssetQueryData; 
         private java.util.List<CloudAssetTypes> cloudAssetTypes; 
@@ -140,6 +152,7 @@ public class ListCloudAssetInstancesRequest extends Request {
         private String logicalExp; 
         private Integer pageSize; 
         private String regionId; 
+        private Long resourceDirectoryAccountId; 
 
         private Builder() {
             super();
@@ -155,6 +168,7 @@ public class ListCloudAssetInstancesRequest extends Request {
             this.logicalExp = request.logicalExp;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
         } 
 
         /**
@@ -260,6 +274,15 @@ public class ListCloudAssetInstancesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

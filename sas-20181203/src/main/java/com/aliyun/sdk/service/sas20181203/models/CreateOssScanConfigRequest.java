@@ -22,8 +22,16 @@ public class CreateOssScanConfigRequest extends Request {
     private Boolean allKeyPrefix;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoAdd")
+    private Integer autoAdd;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BucketNameList")
     private java.util.List<String> bucketNameList;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DecompressMaxFileCount")
@@ -70,13 +78,19 @@ public class CreateOssScanConfigRequest extends Request {
     private java.util.List<Integer> scanDayList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
+    private String source;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private CreateOssScanConfigRequest(Builder builder) {
         super(builder);
         this.allKeyPrefix = builder.allKeyPrefix;
+        this.autoAdd = builder.autoAdd;
         this.bucketNameList = builder.bucketNameList;
+        this.clientToken = builder.clientToken;
         this.decompressMaxFileCount = builder.decompressMaxFileCount;
         this.decompressMaxLayer = builder.decompressMaxLayer;
         this.decryptionList = builder.decryptionList;
@@ -88,6 +102,7 @@ public class CreateOssScanConfigRequest extends Request {
         this.name = builder.name;
         this.realTimeIncr = builder.realTimeIncr;
         this.scanDayList = builder.scanDayList;
+        this.source = builder.source;
         this.startTime = builder.startTime;
     }
 
@@ -112,10 +127,24 @@ public class CreateOssScanConfigRequest extends Request {
     }
 
     /**
+     * @return autoAdd
+     */
+    public Integer getAutoAdd() {
+        return this.autoAdd;
+    }
+
+    /**
      * @return bucketNameList
      */
     public java.util.List<String> getBucketNameList() {
         return this.bucketNameList;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -196,6 +225,13 @@ public class CreateOssScanConfigRequest extends Request {
     }
 
     /**
+     * @return source
+     */
+    public String getSource() {
+        return this.source;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -204,7 +240,9 @@ public class CreateOssScanConfigRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateOssScanConfigRequest, Builder> {
         private Boolean allKeyPrefix; 
+        private Integer autoAdd; 
         private java.util.List<String> bucketNameList; 
+        private String clientToken; 
         private Integer decompressMaxFileCount; 
         private Integer decompressMaxLayer; 
         private java.util.List<String> decryptionList; 
@@ -216,6 +254,7 @@ public class CreateOssScanConfigRequest extends Request {
         private String name; 
         private Boolean realTimeIncr; 
         private java.util.List<Integer> scanDayList; 
+        private String source; 
         private String startTime; 
 
         private Builder() {
@@ -225,7 +264,9 @@ public class CreateOssScanConfigRequest extends Request {
         private Builder(CreateOssScanConfigRequest request) {
             super(request);
             this.allKeyPrefix = request.allKeyPrefix;
+            this.autoAdd = request.autoAdd;
             this.bucketNameList = request.bucketNameList;
+            this.clientToken = request.clientToken;
             this.decompressMaxFileCount = request.decompressMaxFileCount;
             this.decompressMaxLayer = request.decompressMaxLayer;
             this.decryptionList = request.decryptionList;
@@ -237,6 +278,7 @@ public class CreateOssScanConfigRequest extends Request {
             this.name = request.name;
             this.realTimeIncr = request.realTimeIncr;
             this.scanDayList = request.scanDayList;
+            this.source = request.source;
             this.startTime = request.startTime;
         } 
 
@@ -253,11 +295,29 @@ public class CreateOssScanConfigRequest extends Request {
         }
 
         /**
+         * AutoAdd.
+         */
+        public Builder autoAdd(Integer autoAdd) {
+            this.putQueryParameter("AutoAdd", autoAdd);
+            this.autoAdd = autoAdd;
+            return this;
+        }
+
+        /**
          * <p>The names of buckets.</p>
          */
         public Builder bucketNameList(java.util.List<String> bucketNameList) {
             this.putQueryParameter("BucketNameList", bucketNameList);
             this.bucketNameList = bucketNameList;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
@@ -382,6 +442,15 @@ public class CreateOssScanConfigRequest extends Request {
         public Builder scanDayList(java.util.List<Integer> scanDayList) {
             this.putQueryParameter("ScanDayList", scanDayList);
             this.scanDayList = scanDayList;
+            return this;
+        }
+
+        /**
+         * Source.
+         */
+        public Builder source(String source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 

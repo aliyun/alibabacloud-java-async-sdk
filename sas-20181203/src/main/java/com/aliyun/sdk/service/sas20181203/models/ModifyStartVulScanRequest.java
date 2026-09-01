@@ -18,6 +18,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyStartVulScanRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Types")
     private String types;
 
@@ -27,6 +36,8 @@ public class ModifyStartVulScanRequest extends Request {
 
     private ModifyStartVulScanRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.types = builder.types;
         this.uuids = builder.uuids;
     }
@@ -45,6 +56,20 @@ public class ModifyStartVulScanRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return types
      */
     public String getTypes() {
@@ -59,6 +84,8 @@ public class ModifyStartVulScanRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyStartVulScanRequest, Builder> {
+        private String clientToken; 
+        private Long resourceDirectoryAccountId; 
         private String types; 
         private String uuids; 
 
@@ -68,9 +95,29 @@ public class ModifyStartVulScanRequest extends Request {
 
         private Builder(ModifyStartVulScanRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.types = request.types;
             this.uuids = request.uuids;
         } 
+
+        /**
+         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
 
         /**
          * <p>The types of vulnerabilities that can be detected. Valid values:</p>

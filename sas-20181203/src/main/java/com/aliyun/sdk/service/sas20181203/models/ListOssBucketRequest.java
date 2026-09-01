@@ -25,10 +25,15 @@ public class ListOssBucketRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
+    private String source;
+
     private ListOssBucketRequest(Builder builder) {
         super(builder);
         this.bucketName = builder.bucketName;
         this.lang = builder.lang;
+        this.source = builder.source;
     }
 
     public static Builder builder() {
@@ -58,9 +63,17 @@ public class ListOssBucketRequest extends Request {
         return this.lang;
     }
 
+    /**
+     * @return source
+     */
+    public String getSource() {
+        return this.source;
+    }
+
     public static final class Builder extends Request.Builder<ListOssBucketRequest, Builder> {
         private String bucketName; 
         private String lang; 
+        private String source; 
 
         private Builder() {
             super();
@@ -70,6 +83,7 @@ public class ListOssBucketRequest extends Request {
             super(request);
             this.bucketName = request.bucketName;
             this.lang = request.lang;
+            this.source = request.source;
         } 
 
         /**
@@ -97,6 +111,15 @@ public class ListOssBucketRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * Source.
+         */
+        public Builder source(String source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 

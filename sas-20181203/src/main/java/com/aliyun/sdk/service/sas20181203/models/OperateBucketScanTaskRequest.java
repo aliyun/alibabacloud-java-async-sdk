@@ -25,10 +25,15 @@ public class OperateBucketScanTaskRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("OperateCode")
     private Integer operateCode;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
+    private String source;
+
     private OperateBucketScanTaskRequest(Builder builder) {
         super(builder);
         this.bucketName = builder.bucketName;
         this.operateCode = builder.operateCode;
+        this.source = builder.source;
     }
 
     public static Builder builder() {
@@ -58,9 +63,17 @@ public class OperateBucketScanTaskRequest extends Request {
         return this.operateCode;
     }
 
+    /**
+     * @return source
+     */
+    public String getSource() {
+        return this.source;
+    }
+
     public static final class Builder extends Request.Builder<OperateBucketScanTaskRequest, Builder> {
         private String bucketName; 
         private Integer operateCode; 
+        private String source; 
 
         private Builder() {
             super();
@@ -70,6 +83,7 @@ public class OperateBucketScanTaskRequest extends Request {
             super(request);
             this.bucketName = request.bucketName;
             this.operateCode = request.operateCode;
+            this.source = request.source;
         } 
 
         /**
@@ -96,6 +110,15 @@ public class OperateBucketScanTaskRequest extends Request {
         public Builder operateCode(Integer operateCode) {
             this.putQueryParameter("OperateCode", operateCode);
             this.operateCode = operateCode;
+            return this;
+        }
+
+        /**
+         * Source.
+         */
+        public Builder source(String source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 

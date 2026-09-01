@@ -23,12 +23,17 @@ public class GetSuspiciousStatisticsRequest extends Request {
     private String groupIdList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
     private GetSuspiciousStatisticsRequest(Builder builder) {
         super(builder);
         this.groupIdList = builder.groupIdList;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.sourceIp = builder.sourceIp;
     }
 
@@ -53,6 +58,13 @@ public class GetSuspiciousStatisticsRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return sourceIp
      */
     public String getSourceIp() {
@@ -61,6 +73,7 @@ public class GetSuspiciousStatisticsRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetSuspiciousStatisticsRequest, Builder> {
         private String groupIdList; 
+        private Long resourceDirectoryAccountId; 
         private String sourceIp; 
 
         private Builder() {
@@ -70,6 +83,7 @@ public class GetSuspiciousStatisticsRequest extends Request {
         private Builder(GetSuspiciousStatisticsRequest request) {
             super(request);
             this.groupIdList = request.groupIdList;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.sourceIp = request.sourceIp;
         } 
 
@@ -86,6 +100,15 @@ public class GetSuspiciousStatisticsRequest extends Request {
         public Builder groupIdList(String groupIdList) {
             this.putQueryParameter("GroupIdList", groupIdList);
             this.groupIdList = groupIdList;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

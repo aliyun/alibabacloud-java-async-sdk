@@ -26,10 +26,15 @@ public class DescribeReportExportRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
     private DescribeReportExportRequest(Builder builder) {
         super(builder);
         this.exportId = builder.exportId;
         this.lang = builder.lang;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
     }
 
     public static Builder builder() {
@@ -59,9 +64,17 @@ public class DescribeReportExportRequest extends Request {
         return this.lang;
     }
 
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeReportExportRequest, Builder> {
         private Long exportId; 
         private String lang; 
+        private Long resourceDirectoryAccountId; 
 
         private Builder() {
             super();
@@ -71,6 +84,7 @@ public class DescribeReportExportRequest extends Request {
             super(request);
             this.exportId = request.exportId;
             this.lang = request.lang;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
         } 
 
         /**
@@ -102,6 +116,15 @@ public class DescribeReportExportRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

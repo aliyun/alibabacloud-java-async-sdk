@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SubmitCheckRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScanRange")
     private String scanRange;
 
@@ -27,6 +31,7 @@ public class SubmitCheckRequest extends Request {
 
     private SubmitCheckRequest(Builder builder) {
         super(builder);
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.scanRange = builder.scanRange;
         this.taskSource = builder.taskSource;
     }
@@ -45,6 +50,13 @@ public class SubmitCheckRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return scanRange
      */
     public String getScanRange() {
@@ -59,6 +71,7 @@ public class SubmitCheckRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SubmitCheckRequest, Builder> {
+        private Long resourceDirectoryAccountId; 
         private String scanRange; 
         private String taskSource; 
 
@@ -68,9 +81,19 @@ public class SubmitCheckRequest extends Request {
 
         private Builder(SubmitCheckRequest request) {
             super(request);
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.scanRange = request.scanRange;
             this.taskSource = request.taskSource;
         } 
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
 
         /**
          * <p>The check items that are scanned. Valid values:</p>

@@ -119,6 +119,9 @@ public class GetInstanceAuthRangeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CspmCapacity")
         private String cspmCapacity;
 
+        @com.aliyun.core.annotation.NameInMap("CspmInstanceCapacity")
+        private String cspmInstanceCapacity;
+
         @com.aliyun.core.annotation.NameInMap("EnterpriseCount")
         private String enterpriseCount;
 
@@ -154,6 +157,7 @@ public class GetInstanceAuthRangeResponseBody extends TeaModel {
             this.containerCore = builder.containerCore;
             this.containerCount = builder.containerCount;
             this.cspmCapacity = builder.cspmCapacity;
+            this.cspmInstanceCapacity = builder.cspmInstanceCapacity;
             this.enterpriseCount = builder.enterpriseCount;
             this.honeypotCapacity = builder.honeypotCapacity;
             this.imageScanCapacity = builder.imageScanCapacity;
@@ -220,6 +224,13 @@ public class GetInstanceAuthRangeResponseBody extends TeaModel {
          */
         public String getCspmCapacity() {
             return this.cspmCapacity;
+        }
+
+        /**
+         * @return cspmInstanceCapacity
+         */
+        public String getCspmInstanceCapacity() {
+            return this.cspmInstanceCapacity;
         }
 
         /**
@@ -293,6 +304,7 @@ public class GetInstanceAuthRangeResponseBody extends TeaModel {
             private String containerCore; 
             private String containerCount; 
             private String cspmCapacity; 
+            private String cspmInstanceCapacity; 
             private String enterpriseCount; 
             private String honeypotCapacity; 
             private String imageScanCapacity; 
@@ -314,6 +326,7 @@ public class GetInstanceAuthRangeResponseBody extends TeaModel {
                 this.containerCore = model.containerCore;
                 this.containerCount = model.containerCount;
                 this.cspmCapacity = model.cspmCapacity;
+                this.cspmInstanceCapacity = model.cspmInstanceCapacity;
                 this.enterpriseCount = model.enterpriseCount;
                 this.honeypotCapacity = model.honeypotCapacity;
                 this.imageScanCapacity = model.imageScanCapacity;
@@ -427,6 +440,14 @@ public class GetInstanceAuthRangeResponseBody extends TeaModel {
              */
             public Builder cspmCapacity(String cspmCapacity) {
                 this.cspmCapacity = cspmCapacity;
+                return this;
+            }
+
+            /**
+             * CspmInstanceCapacity.
+             */
+            public Builder cspmInstanceCapacity(String cspmInstanceCapacity) {
+                this.cspmInstanceCapacity = cspmInstanceCapacity;
                 return this;
             }
 

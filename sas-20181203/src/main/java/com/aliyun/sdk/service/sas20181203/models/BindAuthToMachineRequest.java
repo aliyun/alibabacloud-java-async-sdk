@@ -34,6 +34,11 @@ public class BindAuthToMachineRequest extends Request {
     private Boolean bindAll;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Criteria")
     private String criteria;
 
@@ -54,6 +59,10 @@ public class BindAuthToMachineRequest extends Request {
     private Long preBindOrderId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
+    private String productCode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
     private Long resourceDirectoryAccountId;
 
@@ -67,11 +76,13 @@ public class BindAuthToMachineRequest extends Request {
         this.autoBind = builder.autoBind;
         this.bind = builder.bind;
         this.bindAll = builder.bindAll;
+        this.clientToken = builder.clientToken;
         this.criteria = builder.criteria;
         this.isPreBind = builder.isPreBind;
         this.logicalExp = builder.logicalExp;
         this.ntmVersion = builder.ntmVersion;
         this.preBindOrderId = builder.preBindOrderId;
+        this.productCode = builder.productCode;
         this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.unBind = builder.unBind;
     }
@@ -118,6 +129,13 @@ public class BindAuthToMachineRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return criteria
      */
     public String getCriteria() {
@@ -153,6 +171,13 @@ public class BindAuthToMachineRequest extends Request {
     }
 
     /**
+     * @return productCode
+     */
+    public String getProductCode() {
+        return this.productCode;
+    }
+
+    /**
      * @return resourceDirectoryAccountId
      */
     public Long getResourceDirectoryAccountId() {
@@ -171,11 +196,13 @@ public class BindAuthToMachineRequest extends Request {
         private Integer autoBind; 
         private java.util.List<String> bind; 
         private Boolean bindAll; 
+        private String clientToken; 
         private String criteria; 
         private Integer isPreBind; 
         private String logicalExp; 
         private String ntmVersion; 
         private Long preBindOrderId; 
+        private String productCode; 
         private Long resourceDirectoryAccountId; 
         private java.util.List<String> unBind; 
 
@@ -189,11 +216,13 @@ public class BindAuthToMachineRequest extends Request {
             this.autoBind = request.autoBind;
             this.bind = request.bind;
             this.bindAll = request.bindAll;
+            this.clientToken = request.clientToken;
             this.criteria = request.criteria;
             this.isPreBind = request.isPreBind;
             this.logicalExp = request.logicalExp;
             this.ntmVersion = request.ntmVersion;
             this.preBindOrderId = request.preBindOrderId;
+            this.productCode = request.productCode;
             this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.unBind = request.unBind;
         } 
@@ -258,6 +287,15 @@ public class BindAuthToMachineRequest extends Request {
         public Builder bindAll(Boolean bindAll) {
             this.putQueryParameter("BindAll", bindAll);
             this.bindAll = bindAll;
+            return this;
+        }
+
+        /**
+         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
@@ -339,6 +377,15 @@ public class BindAuthToMachineRequest extends Request {
         public Builder preBindOrderId(Long preBindOrderId) {
             this.putQueryParameter("PreBindOrderId", preBindOrderId);
             this.preBindOrderId = preBindOrderId;
+            return this;
+        }
+
+        /**
+         * ProductCode.
+         */
+        public Builder productCode(String productCode) {
+            this.putQueryParameter("ProductCode", productCode);
+            this.productCode = productCode;
             return this;
         }
 

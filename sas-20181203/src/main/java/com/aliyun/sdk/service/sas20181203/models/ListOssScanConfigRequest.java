@@ -29,11 +29,16 @@ public class ListOssScanConfigRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
+    private String source;
+
     private ListOssScanConfigRequest(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
         this.name = builder.name;
         this.pageSize = builder.pageSize;
+        this.source = builder.source;
     }
 
     public static Builder builder() {
@@ -70,10 +75,18 @@ public class ListOssScanConfigRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return source
+     */
+    public String getSource() {
+        return this.source;
+    }
+
     public static final class Builder extends Request.Builder<ListOssScanConfigRequest, Builder> {
         private Integer currentPage; 
         private String name; 
         private Integer pageSize; 
+        private String source; 
 
         private Builder() {
             super();
@@ -84,6 +97,7 @@ public class ListOssScanConfigRequest extends Request {
             this.currentPage = request.currentPage;
             this.name = request.name;
             this.pageSize = request.pageSize;
+            this.source = request.source;
         } 
 
         /**
@@ -119,6 +133,15 @@ public class ListOssScanConfigRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * Source.
+         */
+        public Builder source(String source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 

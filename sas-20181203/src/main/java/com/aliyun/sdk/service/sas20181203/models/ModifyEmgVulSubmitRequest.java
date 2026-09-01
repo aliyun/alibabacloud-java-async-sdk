@@ -18,6 +18,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyEmgVulSubmitRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
@@ -37,6 +42,7 @@ public class ModifyEmgVulSubmitRequest extends Request {
 
     private ModifyEmgVulSubmitRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.lang = builder.lang;
         this.name = builder.name;
         this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
@@ -54,6 +60,13 @@ public class ModifyEmgVulSubmitRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -85,6 +98,7 @@ public class ModifyEmgVulSubmitRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyEmgVulSubmitRequest, Builder> {
+        private String clientToken; 
         private String lang; 
         private String name; 
         private Long resourceDirectoryAccountId; 
@@ -96,11 +110,21 @@ public class ModifyEmgVulSubmitRequest extends Request {
 
         private Builder(ModifyEmgVulSubmitRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.lang = request.lang;
             this.name = request.name;
             this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.userAgreement = request.userAgreement;
         } 
+
+        /**
+         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
 
         /**
          * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>

@@ -26,6 +26,11 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
     private Long checkId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private java.util.List<String> instanceIds;
 
@@ -45,6 +50,7 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
         super(builder);
         this.checkGroupId = builder.checkGroupId;
         this.checkId = builder.checkId;
+        this.clientToken = builder.clientToken;
         this.instanceIds = builder.instanceIds;
         this.instanceList = builder.instanceList;
         this.remark = builder.remark;
@@ -79,6 +85,13 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return instanceIds
      */
     public java.util.List<String> getInstanceIds() {
@@ -109,6 +122,7 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
     public static final class Builder extends Request.Builder<AddCheckInstanceResultWhiteListRequest, Builder> {
         private String checkGroupId; 
         private Long checkId; 
+        private String clientToken; 
         private java.util.List<String> instanceIds; 
         private java.util.List<InstanceList> instanceList; 
         private String remark; 
@@ -122,6 +136,7 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
             super(request);
             this.checkGroupId = request.checkGroupId;
             this.checkId = request.checkId;
+            this.clientToken = request.clientToken;
             this.instanceIds = request.instanceIds;
             this.instanceList = request.instanceList;
             this.remark = request.remark;
@@ -152,6 +167,15 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
         public Builder checkId(Long checkId) {
             this.putQueryParameter("CheckId", checkId);
             this.checkId = checkId;
+            return this;
+        }
+
+        /**
+         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 

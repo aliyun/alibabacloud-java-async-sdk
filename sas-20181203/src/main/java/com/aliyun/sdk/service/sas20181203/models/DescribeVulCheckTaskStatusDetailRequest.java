@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeVulCheckTaskStatusDetailRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskIds")
     private java.util.List<String> taskIds;
 
@@ -31,6 +35,7 @@ public class DescribeVulCheckTaskStatusDetailRequest extends Request {
 
     private DescribeVulCheckTaskStatusDetailRequest(Builder builder) {
         super(builder);
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.taskIds = builder.taskIds;
         this.types = builder.types;
         this.uuid = builder.uuid;
@@ -47,6 +52,13 @@ public class DescribeVulCheckTaskStatusDetailRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     /**
@@ -71,6 +83,7 @@ public class DescribeVulCheckTaskStatusDetailRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeVulCheckTaskStatusDetailRequest, Builder> {
+        private Long resourceDirectoryAccountId; 
         private java.util.List<String> taskIds; 
         private java.util.List<String> types; 
         private String uuid; 
@@ -81,10 +94,20 @@ public class DescribeVulCheckTaskStatusDetailRequest extends Request {
 
         private Builder(DescribeVulCheckTaskStatusDetailRequest request) {
             super(request);
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.taskIds = request.taskIds;
             this.types = request.types;
             this.uuid = request.uuid;
         } 
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
 
         /**
          * <p>The task IDs.</p>

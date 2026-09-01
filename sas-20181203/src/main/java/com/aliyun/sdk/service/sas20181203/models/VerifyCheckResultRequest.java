@@ -22,6 +22,10 @@ public class VerifyCheckResultRequest extends Request {
     private java.util.List<Long> checkIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Force")
+    private Boolean force;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private java.util.List<String> instanceIds;
 
@@ -32,6 +36,7 @@ public class VerifyCheckResultRequest extends Request {
     private VerifyCheckResultRequest(Builder builder) {
         super(builder);
         this.checkIds = builder.checkIds;
+        this.force = builder.force;
         this.instanceIds = builder.instanceIds;
         this.taskSource = builder.taskSource;
     }
@@ -57,6 +62,13 @@ public class VerifyCheckResultRequest extends Request {
     }
 
     /**
+     * @return force
+     */
+    public Boolean getForce() {
+        return this.force;
+    }
+
+    /**
      * @return instanceIds
      */
     public java.util.List<String> getInstanceIds() {
@@ -72,6 +84,7 @@ public class VerifyCheckResultRequest extends Request {
 
     public static final class Builder extends Request.Builder<VerifyCheckResultRequest, Builder> {
         private java.util.List<Long> checkIds; 
+        private Boolean force; 
         private java.util.List<String> instanceIds; 
         private String taskSource; 
 
@@ -82,6 +95,7 @@ public class VerifyCheckResultRequest extends Request {
         private Builder(VerifyCheckResultRequest request) {
             super(request);
             this.checkIds = request.checkIds;
+            this.force = request.force;
             this.instanceIds = request.instanceIds;
             this.taskSource = request.taskSource;
         } 
@@ -92,6 +106,15 @@ public class VerifyCheckResultRequest extends Request {
         public Builder checkIds(java.util.List<Long> checkIds) {
             this.putQueryParameter("CheckIds", checkIds);
             this.checkIds = checkIds;
+            return this;
+        }
+
+        /**
+         * Force.
+         */
+        public Builder force(Boolean force) {
+            this.putQueryParameter("Force", force);
+            this.force = force;
             return this;
         }
 

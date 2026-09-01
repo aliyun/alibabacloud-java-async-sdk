@@ -98,6 +98,10 @@ public class DescribeCanFixVulListRequest extends Request {
     private String repoRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScanRange")
     private java.util.List<String> scanRange;
 
@@ -140,6 +144,7 @@ public class DescribeCanFixVulListRequest extends Request {
         this.repoName = builder.repoName;
         this.repoNamespace = builder.repoNamespace;
         this.repoRegionId = builder.repoRegionId;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.scanRange = builder.scanRange;
         this.statusList = builder.statusList;
         this.tag = builder.tag;
@@ -301,6 +306,13 @@ public class DescribeCanFixVulListRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return scanRange
      */
     public java.util.List<String> getScanRange() {
@@ -356,6 +368,7 @@ public class DescribeCanFixVulListRequest extends Request {
         private String repoName; 
         private String repoNamespace; 
         private String repoRegionId; 
+        private Long resourceDirectoryAccountId; 
         private java.util.List<String> scanRange; 
         private String statusList; 
         private String tag; 
@@ -388,6 +401,7 @@ public class DescribeCanFixVulListRequest extends Request {
             this.repoName = request.repoName;
             this.repoNamespace = request.repoNamespace;
             this.repoRegionId = request.repoRegionId;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.scanRange = request.scanRange;
             this.statusList = request.statusList;
             this.tag = request.tag;
@@ -687,6 +701,15 @@ public class DescribeCanFixVulListRequest extends Request {
         public Builder repoRegionId(String repoRegionId) {
             this.putQueryParameter("RepoRegionId", repoRegionId);
             this.repoRegionId = repoRegionId;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

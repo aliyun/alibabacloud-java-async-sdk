@@ -18,6 +18,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyOperateVulRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("From")
     private String from;
 
@@ -36,16 +41,22 @@ public class ModifyOperateVulRequest extends Request {
     private String reason;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
     @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private ModifyOperateVulRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.from = builder.from;
         this.info = builder.info;
         this.operateType = builder.operateType;
         this.reason = builder.reason;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.type = builder.type;
     }
 
@@ -60,6 +71,13 @@ public class ModifyOperateVulRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -91,6 +109,13 @@ public class ModifyOperateVulRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -98,10 +123,12 @@ public class ModifyOperateVulRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyOperateVulRequest, Builder> {
+        private String clientToken; 
         private String from; 
         private String info; 
         private String operateType; 
         private String reason; 
+        private Long resourceDirectoryAccountId; 
         private String type; 
 
         private Builder() {
@@ -110,12 +137,23 @@ public class ModifyOperateVulRequest extends Request {
 
         private Builder(ModifyOperateVulRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.from = request.from;
             this.info = request.info;
             this.operateType = request.operateType;
             this.reason = request.reason;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.type = request.type;
         } 
+
+        /**
+         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
 
         /**
          * <p>The request ID. Set the value to <strong>sas</strong>.</p>
@@ -201,6 +239,15 @@ public class ModifyOperateVulRequest extends Request {
         public Builder reason(String reason) {
             this.putQueryParameter("Reason", reason);
             this.reason = reason;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

@@ -338,9 +338,13 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeductPackageList")
         private java.util.List<DeductPackageList> deductPackageList;
 
+        @com.aliyun.core.annotation.NameInMap("TrialVersion")
+        private Integer trialVersion;
+
         private Data(Builder builder) {
             this.canTry = builder.canTry;
             this.deductPackageList = builder.deductPackageList;
+            this.trialVersion = builder.trialVersion;
         }
 
         public static Builder builder() {
@@ -365,9 +369,17 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
             return this.deductPackageList;
         }
 
+        /**
+         * @return trialVersion
+         */
+        public Integer getTrialVersion() {
+            return this.trialVersion;
+        }
+
         public static final class Builder {
             private Boolean canTry; 
             private java.util.List<DeductPackageList> deductPackageList; 
+            private Integer trialVersion; 
 
             private Builder() {
             } 
@@ -375,6 +387,7 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.canTry = model.canTry;
                 this.deductPackageList = model.deductPackageList;
+                this.trialVersion = model.trialVersion;
             } 
 
             /**
@@ -397,6 +410,14 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
              */
             public Builder deductPackageList(java.util.List<DeductPackageList> deductPackageList) {
                 this.deductPackageList = deductPackageList;
+                return this;
+            }
+
+            /**
+             * TrialVersion.
+             */
+            public Builder trialVersion(Integer trialVersion) {
+                this.trialVersion = trialVersion;
                 return this;
             }
 

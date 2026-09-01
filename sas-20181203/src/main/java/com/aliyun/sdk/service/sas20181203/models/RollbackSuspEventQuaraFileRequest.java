@@ -26,6 +26,10 @@ public class RollbackSuspEventQuaraFileRequest extends Request {
     private Integer quaraFileId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
@@ -33,6 +37,7 @@ public class RollbackSuspEventQuaraFileRequest extends Request {
         super(builder);
         this.from = builder.from;
         this.quaraFileId = builder.quaraFileId;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.sourceIp = builder.sourceIp;
     }
 
@@ -64,6 +69,13 @@ public class RollbackSuspEventQuaraFileRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return sourceIp
      */
     public String getSourceIp() {
@@ -73,6 +85,7 @@ public class RollbackSuspEventQuaraFileRequest extends Request {
     public static final class Builder extends Request.Builder<RollbackSuspEventQuaraFileRequest, Builder> {
         private String from; 
         private Integer quaraFileId; 
+        private Long resourceDirectoryAccountId; 
         private String sourceIp; 
 
         private Builder() {
@@ -83,6 +96,7 @@ public class RollbackSuspEventQuaraFileRequest extends Request {
             super(request);
             this.from = request.from;
             this.quaraFileId = request.quaraFileId;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.sourceIp = request.sourceIp;
         } 
 
@@ -110,6 +124,15 @@ public class RollbackSuspEventQuaraFileRequest extends Request {
         public Builder quaraFileId(Integer quaraFileId) {
             this.putQueryParameter("QuaraFileId", quaraFileId);
             this.quaraFileId = quaraFileId;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

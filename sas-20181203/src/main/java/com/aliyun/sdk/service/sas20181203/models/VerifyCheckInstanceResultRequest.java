@@ -26,6 +26,11 @@ public class VerifyCheckInstanceResultRequest extends Request {
     private java.util.List<Long> checkIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private java.util.List<String> instanceIds;
 
@@ -37,6 +42,7 @@ public class VerifyCheckInstanceResultRequest extends Request {
         super(builder);
         this.checkId = builder.checkId;
         this.checkIds = builder.checkIds;
+        this.clientToken = builder.clientToken;
         this.instanceIds = builder.instanceIds;
         this.taskSource = builder.taskSource;
     }
@@ -69,6 +75,13 @@ public class VerifyCheckInstanceResultRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return instanceIds
      */
     public java.util.List<String> getInstanceIds() {
@@ -85,6 +98,7 @@ public class VerifyCheckInstanceResultRequest extends Request {
     public static final class Builder extends Request.Builder<VerifyCheckInstanceResultRequest, Builder> {
         private Long checkId; 
         private java.util.List<Long> checkIds; 
+        private String clientToken; 
         private java.util.List<String> instanceIds; 
         private String taskSource; 
 
@@ -96,6 +110,7 @@ public class VerifyCheckInstanceResultRequest extends Request {
             super(request);
             this.checkId = request.checkId;
             this.checkIds = request.checkIds;
+            this.clientToken = request.clientToken;
             this.instanceIds = request.instanceIds;
             this.taskSource = request.taskSource;
         } 
@@ -121,6 +136,15 @@ public class VerifyCheckInstanceResultRequest extends Request {
         public Builder checkIds(java.util.List<Long> checkIds) {
             this.putQueryParameter("CheckIds", checkIds);
             this.checkIds = checkIds;
+            return this;
+        }
+
+        /**
+         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 

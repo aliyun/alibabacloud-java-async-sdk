@@ -35,6 +35,10 @@ public class HandleSimilarSecurityEventsRequest extends Request {
     private String remark;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
@@ -53,6 +57,7 @@ public class HandleSimilarSecurityEventsRequest extends Request {
         this.operationCode = builder.operationCode;
         this.operationParams = builder.operationParams;
         this.remark = builder.remark;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.sourceIp = builder.sourceIp;
         this.taskId = builder.taskId;
@@ -100,6 +105,13 @@ public class HandleSimilarSecurityEventsRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return resourceOwnerId
      */
     public Long getResourceOwnerId() {
@@ -125,6 +137,7 @@ public class HandleSimilarSecurityEventsRequest extends Request {
         private String operationCode; 
         private String operationParams; 
         private String remark; 
+        private Long resourceDirectoryAccountId; 
         private Long resourceOwnerId; 
         private String sourceIp; 
         private Long taskId; 
@@ -139,6 +152,7 @@ public class HandleSimilarSecurityEventsRequest extends Request {
             this.operationCode = request.operationCode;
             this.operationParams = request.operationParams;
             this.remark = request.remark;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.resourceOwnerId = request.resourceOwnerId;
             this.sourceIp = request.sourceIp;
             this.taskId = request.taskId;
@@ -226,6 +240,15 @@ public class HandleSimilarSecurityEventsRequest extends Request {
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
             this.remark = remark;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

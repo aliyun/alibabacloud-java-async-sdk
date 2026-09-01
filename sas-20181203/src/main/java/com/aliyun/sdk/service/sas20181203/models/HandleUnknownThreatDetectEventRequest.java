@@ -22,12 +22,18 @@ public class HandleUnknownThreatDetectEventRequest extends Request {
     private java.util.List<String> eventIdList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HandleRemark")
+    @com.aliyun.core.annotation.Validation(maxLength = 100)
+    private String handleRemark;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
     private HandleUnknownThreatDetectEventRequest(Builder builder) {
         super(builder);
         this.eventIdList = builder.eventIdList;
+        this.handleRemark = builder.handleRemark;
         this.status = builder.status;
     }
 
@@ -52,6 +58,13 @@ public class HandleUnknownThreatDetectEventRequest extends Request {
     }
 
     /**
+     * @return handleRemark
+     */
+    public String getHandleRemark() {
+        return this.handleRemark;
+    }
+
+    /**
      * @return status
      */
     public Integer getStatus() {
@@ -60,6 +73,7 @@ public class HandleUnknownThreatDetectEventRequest extends Request {
 
     public static final class Builder extends Request.Builder<HandleUnknownThreatDetectEventRequest, Builder> {
         private java.util.List<String> eventIdList; 
+        private String handleRemark; 
         private Integer status; 
 
         private Builder() {
@@ -69,6 +83,7 @@ public class HandleUnknownThreatDetectEventRequest extends Request {
         private Builder(HandleUnknownThreatDetectEventRequest request) {
             super(request);
             this.eventIdList = request.eventIdList;
+            this.handleRemark = request.handleRemark;
             this.status = request.status;
         } 
 
@@ -78,6 +93,15 @@ public class HandleUnknownThreatDetectEventRequest extends Request {
         public Builder eventIdList(java.util.List<String> eventIdList) {
             this.putQueryParameter("EventIdList", eventIdList);
             this.eventIdList = eventIdList;
+            return this;
+        }
+
+        /**
+         * HandleRemark.
+         */
+        public Builder handleRemark(String handleRemark) {
+            this.putQueryParameter("HandleRemark", handleRemark);
+            this.handleRemark = handleRemark;
             return this;
         }
 

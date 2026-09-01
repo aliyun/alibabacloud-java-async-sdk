@@ -22,12 +22,17 @@ public class DeleteSecurityEventMarkMissListRequest extends Request {
     private java.util.List<Long> ids;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DeleteSecurityEventMarkMissListRequest(Builder builder) {
         super(builder);
         this.ids = builder.ids;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
 
@@ -52,6 +57,13 @@ public class DeleteSecurityEventMarkMissListRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return resourceOwnerId
      */
     public Long getResourceOwnerId() {
@@ -60,6 +72,7 @@ public class DeleteSecurityEventMarkMissListRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteSecurityEventMarkMissListRequest, Builder> {
         private java.util.List<Long> ids; 
+        private Long resourceDirectoryAccountId; 
         private Long resourceOwnerId; 
 
         private Builder() {
@@ -69,6 +82,7 @@ public class DeleteSecurityEventMarkMissListRequest extends Request {
         private Builder(DeleteSecurityEventMarkMissListRequest request) {
             super(request);
             this.ids = request.ids;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
 
@@ -78,6 +92,15 @@ public class DeleteSecurityEventMarkMissListRequest extends Request {
         public Builder ids(java.util.List<Long> ids) {
             this.putQueryParameter("Ids", ids);
             this.ids = ids;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

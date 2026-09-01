@@ -26,6 +26,14 @@ public class CreateAgentlessScanTaskRequest extends Request {
     private Integer autoDeleteDays;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ReleaseAfterScan")
     private Boolean releaseAfterScan;
 
@@ -46,6 +54,8 @@ public class CreateAgentlessScanTaskRequest extends Request {
         super(builder);
         this.assetSelectionType = builder.assetSelectionType;
         this.autoDeleteDays = builder.autoDeleteDays;
+        this.clientToken = builder.clientToken;
+        this.regionId = builder.regionId;
         this.releaseAfterScan = builder.releaseAfterScan;
         this.scanDataDisk = builder.scanDataDisk;
         this.targetType = builder.targetType;
@@ -80,6 +90,20 @@ public class CreateAgentlessScanTaskRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return releaseAfterScan
      */
     public Boolean getReleaseAfterScan() {
@@ -110,6 +134,8 @@ public class CreateAgentlessScanTaskRequest extends Request {
     public static final class Builder extends Request.Builder<CreateAgentlessScanTaskRequest, Builder> {
         private String assetSelectionType; 
         private Integer autoDeleteDays; 
+        private String clientToken; 
+        private String regionId; 
         private Boolean releaseAfterScan; 
         private Boolean scanDataDisk; 
         private Integer targetType; 
@@ -123,6 +149,8 @@ public class CreateAgentlessScanTaskRequest extends Request {
             super(request);
             this.assetSelectionType = request.assetSelectionType;
             this.autoDeleteDays = request.autoDeleteDays;
+            this.clientToken = request.clientToken;
+            this.regionId = request.regionId;
             this.releaseAfterScan = request.releaseAfterScan;
             this.scanDataDisk = request.scanDataDisk;
             this.targetType = request.targetType;
@@ -150,6 +178,24 @@ public class CreateAgentlessScanTaskRequest extends Request {
         public Builder autoDeleteDays(Integer autoDeleteDays) {
             this.putQueryParameter("AutoDeleteDays", autoDeleteDays);
             this.autoDeleteDays = autoDeleteDays;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

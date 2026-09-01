@@ -26,6 +26,10 @@ public class ChangeSecurityScoreRuleRequest extends Request {
     private Boolean resetSecurityScoreRule;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityScoreCategoryList")
     private java.util.List<SecurityScoreCategoryList> securityScoreCategoryList;
 
@@ -37,6 +41,7 @@ public class ChangeSecurityScoreRuleRequest extends Request {
         super(builder);
         this.calType = builder.calType;
         this.resetSecurityScoreRule = builder.resetSecurityScoreRule;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.securityScoreCategoryList = builder.securityScoreCategoryList;
         this.securityScoreRuleList = builder.securityScoreRuleList;
     }
@@ -69,6 +74,13 @@ public class ChangeSecurityScoreRuleRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return securityScoreCategoryList
      */
     public java.util.List<SecurityScoreCategoryList> getSecurityScoreCategoryList() {
@@ -85,6 +97,7 @@ public class ChangeSecurityScoreRuleRequest extends Request {
     public static final class Builder extends Request.Builder<ChangeSecurityScoreRuleRequest, Builder> {
         private String calType; 
         private Boolean resetSecurityScoreRule; 
+        private Long resourceDirectoryAccountId; 
         private java.util.List<SecurityScoreCategoryList> securityScoreCategoryList; 
         private java.util.List<SecurityScoreRuleList> securityScoreRuleList; 
 
@@ -96,6 +109,7 @@ public class ChangeSecurityScoreRuleRequest extends Request {
             super(request);
             this.calType = request.calType;
             this.resetSecurityScoreRule = request.resetSecurityScoreRule;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.securityScoreCategoryList = request.securityScoreCategoryList;
             this.securityScoreRuleList = request.securityScoreRuleList;
         } 
@@ -125,6 +139,15 @@ public class ChangeSecurityScoreRuleRequest extends Request {
         public Builder resetSecurityScoreRule(Boolean resetSecurityScoreRule) {
             this.putQueryParameter("ResetSecurityScoreRule", resetSecurityScoreRule);
             this.resetSecurityScoreRule = resetSecurityScoreRule;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

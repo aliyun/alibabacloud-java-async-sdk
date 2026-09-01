@@ -230,6 +230,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChangeCheckCustomConfigResponse> changeCheckCustomConfig(ChangeCheckCustomConfigRequest request);
 
     /**
+     * @param request the request parameters of ChangeCheckScopeConfigInstance  ChangeCheckScopeConfigInstanceRequest
+     * @return ChangeCheckScopeConfigInstanceResponse
+     */
+    CompletableFuture<ChangeCheckScopeConfigInstanceResponse> changeCheckScopeConfigInstance(ChangeCheckScopeConfigInstanceRequest request);
+
+    /**
      * @param request the request parameters of ChangeSecurityScoreRule  ChangeSecurityScoreRuleRequest
      * @return ChangeSecurityScoreRuleResponse
      */
@@ -3336,6 +3342,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCheckSaleResponse> getCheckSale(GetCheckSaleRequest request);
 
     /**
+     * @param request the request parameters of GetCheckScopeConfig  GetCheckScopeConfigRequest
+     * @return GetCheckScopeConfigResponse
+     */
+    CompletableFuture<GetCheckScopeConfigResponse> getCheckScopeConfig(GetCheckScopeConfigRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You must purchase the configuration assessment feature before you can use the feature.</p>
      * 
@@ -5801,6 +5813,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateCheckPolicyResponse
      */
     CompletableFuture<UpdateCheckPolicyResponse> updateCheckPolicy(UpdateCheckPolicyRequest request);
+
+    /**
+     * @param request the request parameters of UpdateCheckScopeConfig  UpdateCheckScopeConfigRequest
+     * @return UpdateCheckScopeConfigResponse
+     */
+    CompletableFuture<UpdateCheckScopeConfigResponse> updateCheckScopeConfig(UpdateCheckScopeConfigRequest request);
 
     /**
      * @param request the request parameters of UpdateClientAlertMode  UpdateClientAlertModeRequest

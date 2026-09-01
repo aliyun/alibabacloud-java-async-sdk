@@ -18,6 +18,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateCycleTaskRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Enable")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer enable;
@@ -67,6 +72,7 @@ public class CreateCycleTaskRequest extends Request {
 
     private CreateCycleTaskRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.enable = builder.enable;
         this.firstDateStr = builder.firstDateStr;
         this.intervalPeriod = builder.intervalPeriod;
@@ -90,6 +96,13 @@ public class CreateCycleTaskRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -163,6 +176,7 @@ public class CreateCycleTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateCycleTaskRequest, Builder> {
+        private String clientToken; 
         private Integer enable; 
         private Long firstDateStr; 
         private Integer intervalPeriod; 
@@ -180,6 +194,7 @@ public class CreateCycleTaskRequest extends Request {
 
         private Builder(CreateCycleTaskRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.enable = request.enable;
             this.firstDateStr = request.firstDateStr;
             this.intervalPeriod = request.intervalPeriod;
@@ -191,6 +206,15 @@ public class CreateCycleTaskRequest extends Request {
             this.taskName = request.taskName;
             this.taskType = request.taskType;
         } 
+
+        /**
+         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
 
         /**
          * <p>Specifies whether to enable the task. Valid values:</p>

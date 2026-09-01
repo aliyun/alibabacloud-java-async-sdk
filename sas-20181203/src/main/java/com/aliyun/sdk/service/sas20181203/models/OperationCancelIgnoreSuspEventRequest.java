@@ -22,6 +22,10 @@ public class OperationCancelIgnoreSuspEventRequest extends Request {
     private String remark;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityEventIds")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<Long> securityEventIds;
@@ -29,6 +33,7 @@ public class OperationCancelIgnoreSuspEventRequest extends Request {
     private OperationCancelIgnoreSuspEventRequest(Builder builder) {
         super(builder);
         this.remark = builder.remark;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.securityEventIds = builder.securityEventIds;
     }
 
@@ -53,6 +58,13 @@ public class OperationCancelIgnoreSuspEventRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return securityEventIds
      */
     public java.util.List<Long> getSecurityEventIds() {
@@ -61,6 +73,7 @@ public class OperationCancelIgnoreSuspEventRequest extends Request {
 
     public static final class Builder extends Request.Builder<OperationCancelIgnoreSuspEventRequest, Builder> {
         private String remark; 
+        private Long resourceDirectoryAccountId; 
         private java.util.List<Long> securityEventIds; 
 
         private Builder() {
@@ -70,6 +83,7 @@ public class OperationCancelIgnoreSuspEventRequest extends Request {
         private Builder(OperationCancelIgnoreSuspEventRequest request) {
             super(request);
             this.remark = request.remark;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.securityEventIds = request.securityEventIds;
         } 
 
@@ -82,6 +96,15 @@ public class OperationCancelIgnoreSuspEventRequest extends Request {
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
             this.remark = remark;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

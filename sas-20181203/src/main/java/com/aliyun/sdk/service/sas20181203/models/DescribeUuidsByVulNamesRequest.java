@@ -50,6 +50,10 @@ public class DescribeUuidsByVulNamesRequest extends Request {
     private String remark;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SearchTags")
     private String searchTags;
 
@@ -89,6 +93,7 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         this.level = builder.level;
         this.necessity = builder.necessity;
         this.remark = builder.remark;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.searchTags = builder.searchTags;
         this.statusList = builder.statusList;
         this.tag = builder.tag;
@@ -168,6 +173,13 @@ public class DescribeUuidsByVulNamesRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return searchTags
      */
     public String getSearchTags() {
@@ -225,6 +237,7 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         private String level; 
         private String necessity; 
         private String remark; 
+        private Long resourceDirectoryAccountId; 
         private String searchTags; 
         private String statusList; 
         private String tag; 
@@ -247,6 +260,7 @@ public class DescribeUuidsByVulNamesRequest extends Request {
             this.level = request.level;
             this.necessity = request.necessity;
             this.remark = request.remark;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.searchTags = request.searchTags;
             this.statusList = request.statusList;
             this.tag = request.tag;
@@ -367,6 +381,15 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
             this.remark = remark;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

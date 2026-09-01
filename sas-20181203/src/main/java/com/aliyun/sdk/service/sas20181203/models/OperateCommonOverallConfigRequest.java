@@ -18,6 +18,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class OperateCommonOverallConfigRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Config")
     @com.aliyun.core.annotation.Validation(required = true)
     private String config;
@@ -37,6 +42,7 @@ public class OperateCommonOverallConfigRequest extends Request {
 
     private OperateCommonOverallConfigRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.config = builder.config;
         this.noTargetAsOn = builder.noTargetAsOn;
         this.sourceIp = builder.sourceIp;
@@ -54,6 +60,13 @@ public class OperateCommonOverallConfigRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -85,6 +98,7 @@ public class OperateCommonOverallConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<OperateCommonOverallConfigRequest, Builder> {
+        private String clientToken; 
         private String config; 
         private Boolean noTargetAsOn; 
         private String sourceIp; 
@@ -96,11 +110,21 @@ public class OperateCommonOverallConfigRequest extends Request {
 
         private Builder(OperateCommonOverallConfigRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.config = request.config;
             this.noTargetAsOn = request.noTargetAsOn;
             this.sourceIp = request.sourceIp;
             this.type = request.type;
         } 
+
+        /**
+         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
 
         /**
          * <p>Specifies whether to enable or disable the feature. Valid values:</p>

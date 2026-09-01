@@ -29,11 +29,16 @@ public class UpdateAlarmEventRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("OperationCode")
     private String operationCode;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
     private UpdateAlarmEventRequest(Builder builder) {
         super(builder);
         this.alarmEventIdList = builder.alarmEventIdList;
         this.lang = builder.lang;
         this.operationCode = builder.operationCode;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
     }
 
     public static Builder builder() {
@@ -70,10 +75,18 @@ public class UpdateAlarmEventRequest extends Request {
         return this.operationCode;
     }
 
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
     public static final class Builder extends Request.Builder<UpdateAlarmEventRequest, Builder> {
         private java.util.List<Long> alarmEventIdList; 
         private String lang; 
         private String operationCode; 
+        private Long resourceDirectoryAccountId; 
 
         private Builder() {
             super();
@@ -84,6 +97,7 @@ public class UpdateAlarmEventRequest extends Request {
             this.alarmEventIdList = request.alarmEventIdList;
             this.lang = request.lang;
             this.operationCode = request.operationCode;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
         } 
 
         /**
@@ -125,6 +139,15 @@ public class UpdateAlarmEventRequest extends Request {
         public Builder operationCode(String operationCode) {
             this.putBodyParameter("OperationCode", operationCode);
             this.operationCode = operationCode;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

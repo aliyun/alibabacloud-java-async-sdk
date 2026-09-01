@@ -27,10 +27,15 @@ public class CreateSuspEventNoteRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String note;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
     private CreateSuspEventNoteRequest(Builder builder) {
         super(builder);
         this.eventId = builder.eventId;
         this.note = builder.note;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
     }
 
     public static Builder builder() {
@@ -60,9 +65,17 @@ public class CreateSuspEventNoteRequest extends Request {
         return this.note;
     }
 
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
     public static final class Builder extends Request.Builder<CreateSuspEventNoteRequest, Builder> {
         private Long eventId; 
         private String note; 
+        private Long resourceDirectoryAccountId; 
 
         private Builder() {
             super();
@@ -72,6 +85,7 @@ public class CreateSuspEventNoteRequest extends Request {
             super(request);
             this.eventId = request.eventId;
             this.note = request.note;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
         } 
 
         /**
@@ -97,6 +111,15 @@ public class CreateSuspEventNoteRequest extends Request {
         public Builder note(String note) {
             this.putQueryParameter("Note", note);
             this.note = note;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

@@ -22,6 +22,11 @@ public class ModifyNoticeConfigRequest extends Request {
     private String bizType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FocusLevel")
     private String focusLevel;
 
@@ -44,6 +49,7 @@ public class ModifyNoticeConfigRequest extends Request {
     private ModifyNoticeConfigRequest(Builder builder) {
         super(builder);
         this.bizType = builder.bizType;
+        this.clientToken = builder.clientToken;
         this.focusLevel = builder.focusLevel;
         this.project = builder.project;
         this.route = builder.route;
@@ -69,6 +75,13 @@ public class ModifyNoticeConfigRequest extends Request {
      */
     public String getBizType() {
         return this.bizType;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -108,6 +121,7 @@ public class ModifyNoticeConfigRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyNoticeConfigRequest, Builder> {
         private String bizType; 
+        private String clientToken; 
         private String focusLevel; 
         private String project; 
         private Integer route; 
@@ -121,6 +135,7 @@ public class ModifyNoticeConfigRequest extends Request {
         private Builder(ModifyNoticeConfigRequest request) {
             super(request);
             this.bizType = request.bizType;
+            this.clientToken = request.clientToken;
             this.focusLevel = request.focusLevel;
             this.project = request.project;
             this.route = request.route;
@@ -140,6 +155,15 @@ public class ModifyNoticeConfigRequest extends Request {
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
             this.bizType = bizType;
+            return this;
+        }
+
+        /**
+         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 

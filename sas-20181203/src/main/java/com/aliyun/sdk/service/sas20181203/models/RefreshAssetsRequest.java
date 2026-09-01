@@ -30,6 +30,10 @@ public class RefreshAssetsRequest extends Request {
     private Integer cloudAssetType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Vendor")
     private Integer vendor;
 
@@ -38,6 +42,7 @@ public class RefreshAssetsRequest extends Request {
         this.assetType = builder.assetType;
         this.cloudAssetSubType = builder.cloudAssetSubType;
         this.cloudAssetType = builder.cloudAssetType;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.vendor = builder.vendor;
     }
 
@@ -76,6 +81,13 @@ public class RefreshAssetsRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return vendor
      */
     public Integer getVendor() {
@@ -86,6 +98,7 @@ public class RefreshAssetsRequest extends Request {
         private String assetType; 
         private Integer cloudAssetSubType; 
         private Integer cloudAssetType; 
+        private Long resourceDirectoryAccountId; 
         private Integer vendor; 
 
         private Builder() {
@@ -97,6 +110,7 @@ public class RefreshAssetsRequest extends Request {
             this.assetType = request.assetType;
             this.cloudAssetSubType = request.cloudAssetSubType;
             this.cloudAssetType = request.cloudAssetType;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.vendor = request.vendor;
         } 
 
@@ -165,6 +179,15 @@ public class RefreshAssetsRequest extends Request {
         public Builder cloudAssetType(Integer cloudAssetType) {
             this.putQueryParameter("CloudAssetType", cloudAssetType);
             this.cloudAssetType = cloudAssetType;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

@@ -22,6 +22,10 @@ public class UpdateOssScanConfigRequest extends Request {
     private Boolean allKeyPrefix;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoAdd")
+    private Integer autoAdd;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BucketNameList")
     private java.util.List<String> bucketNameList;
 
@@ -74,12 +78,17 @@ public class UpdateOssScanConfigRequest extends Request {
     private java.util.List<Integer> scanDayList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
+    private String source;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private UpdateOssScanConfigRequest(Builder builder) {
         super(builder);
         this.allKeyPrefix = builder.allKeyPrefix;
+        this.autoAdd = builder.autoAdd;
         this.bucketNameList = builder.bucketNameList;
         this.decompressMaxFileCount = builder.decompressMaxFileCount;
         this.decompressMaxLayer = builder.decompressMaxLayer;
@@ -93,6 +102,7 @@ public class UpdateOssScanConfigRequest extends Request {
         this.name = builder.name;
         this.realTimeIncr = builder.realTimeIncr;
         this.scanDayList = builder.scanDayList;
+        this.source = builder.source;
         this.startTime = builder.startTime;
     }
 
@@ -114,6 +124,13 @@ public class UpdateOssScanConfigRequest extends Request {
      */
     public Boolean getAllKeyPrefix() {
         return this.allKeyPrefix;
+    }
+
+    /**
+     * @return autoAdd
+     */
+    public Integer getAutoAdd() {
+        return this.autoAdd;
     }
 
     /**
@@ -208,6 +225,13 @@ public class UpdateOssScanConfigRequest extends Request {
     }
 
     /**
+     * @return source
+     */
+    public String getSource() {
+        return this.source;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -216,6 +240,7 @@ public class UpdateOssScanConfigRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateOssScanConfigRequest, Builder> {
         private Boolean allKeyPrefix; 
+        private Integer autoAdd; 
         private java.util.List<String> bucketNameList; 
         private Integer decompressMaxFileCount; 
         private Integer decompressMaxLayer; 
@@ -229,6 +254,7 @@ public class UpdateOssScanConfigRequest extends Request {
         private String name; 
         private Boolean realTimeIncr; 
         private java.util.List<Integer> scanDayList; 
+        private String source; 
         private String startTime; 
 
         private Builder() {
@@ -238,6 +264,7 @@ public class UpdateOssScanConfigRequest extends Request {
         private Builder(UpdateOssScanConfigRequest request) {
             super(request);
             this.allKeyPrefix = request.allKeyPrefix;
+            this.autoAdd = request.autoAdd;
             this.bucketNameList = request.bucketNameList;
             this.decompressMaxFileCount = request.decompressMaxFileCount;
             this.decompressMaxLayer = request.decompressMaxLayer;
@@ -251,6 +278,7 @@ public class UpdateOssScanConfigRequest extends Request {
             this.name = request.name;
             this.realTimeIncr = request.realTimeIncr;
             this.scanDayList = request.scanDayList;
+            this.source = request.source;
             this.startTime = request.startTime;
         } 
 
@@ -263,6 +291,15 @@ public class UpdateOssScanConfigRequest extends Request {
         public Builder allKeyPrefix(Boolean allKeyPrefix) {
             this.putQueryParameter("AllKeyPrefix", allKeyPrefix);
             this.allKeyPrefix = allKeyPrefix;
+            return this;
+        }
+
+        /**
+         * AutoAdd.
+         */
+        public Builder autoAdd(Integer autoAdd) {
+            this.putQueryParameter("AutoAdd", autoAdd);
+            this.autoAdd = autoAdd;
             return this;
         }
 
@@ -408,6 +445,15 @@ public class UpdateOssScanConfigRequest extends Request {
         public Builder scanDayList(java.util.List<Integer> scanDayList) {
             this.putQueryParameter("ScanDayList", scanDayList);
             this.scanDayList = scanDayList;
+            return this;
+        }
+
+        /**
+         * Source.
+         */
+        public Builder source(String source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 

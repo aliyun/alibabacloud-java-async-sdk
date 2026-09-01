@@ -31,6 +31,10 @@ public class ListOssBucketScanInfoRequest extends Request {
     private String fuzzBucketName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FuzzFileSystemName")
+    private String fuzzFileSystemName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HasRisk")
     private Integer hasRisk;
 
@@ -44,6 +48,10 @@ public class ListOssBucketScanInfoRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
+    private String source;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
@@ -52,9 +60,11 @@ public class ListOssBucketScanInfoRequest extends Request {
         this.bucketName = builder.bucketName;
         this.currentPage = builder.currentPage;
         this.fuzzBucketName = builder.fuzzBucketName;
+        this.fuzzFileSystemName = builder.fuzzFileSystemName;
         this.hasRisk = builder.hasRisk;
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
+        this.source = builder.source;
         this.status = builder.status;
     }
 
@@ -93,6 +103,13 @@ public class ListOssBucketScanInfoRequest extends Request {
     }
 
     /**
+     * @return fuzzFileSystemName
+     */
+    public String getFuzzFileSystemName() {
+        return this.fuzzFileSystemName;
+    }
+
+    /**
      * @return hasRisk
      */
     public Integer getHasRisk() {
@@ -114,6 +131,13 @@ public class ListOssBucketScanInfoRequest extends Request {
     }
 
     /**
+     * @return source
+     */
+    public String getSource() {
+        return this.source;
+    }
+
+    /**
      * @return status
      */
     public Integer getStatus() {
@@ -124,9 +148,11 @@ public class ListOssBucketScanInfoRequest extends Request {
         private String bucketName; 
         private Integer currentPage; 
         private String fuzzBucketName; 
+        private String fuzzFileSystemName; 
         private Integer hasRisk; 
         private String lang; 
         private Integer pageSize; 
+        private String source; 
         private Integer status; 
 
         private Builder() {
@@ -138,9 +164,11 @@ public class ListOssBucketScanInfoRequest extends Request {
             this.bucketName = request.bucketName;
             this.currentPage = request.currentPage;
             this.fuzzBucketName = request.fuzzBucketName;
+            this.fuzzFileSystemName = request.fuzzFileSystemName;
             this.hasRisk = request.hasRisk;
             this.lang = request.lang;
             this.pageSize = request.pageSize;
+            this.source = request.source;
             this.status = request.status;
         } 
 
@@ -178,6 +206,15 @@ public class ListOssBucketScanInfoRequest extends Request {
         public Builder fuzzBucketName(String fuzzBucketName) {
             this.putQueryParameter("FuzzBucketName", fuzzBucketName);
             this.fuzzBucketName = fuzzBucketName;
+            return this;
+        }
+
+        /**
+         * FuzzFileSystemName.
+         */
+        public Builder fuzzFileSystemName(String fuzzFileSystemName) {
+            this.putQueryParameter("FuzzFileSystemName", fuzzFileSystemName);
+            this.fuzzFileSystemName = fuzzFileSystemName;
             return this;
         }
 
@@ -223,6 +260,15 @@ public class ListOssBucketScanInfoRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * Source.
+         */
+        public Builder source(String source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 

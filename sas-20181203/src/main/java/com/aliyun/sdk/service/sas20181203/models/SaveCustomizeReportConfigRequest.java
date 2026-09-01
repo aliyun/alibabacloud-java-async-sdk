@@ -73,6 +73,10 @@ public class SaveCustomizeReportConfigRequest extends Request {
     private String reportVersion;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SendEndTime")
     private String sendEndTime;
 
@@ -116,6 +120,7 @@ public class SaveCustomizeReportConfigRequest extends Request {
         this.reportStatus = builder.reportStatus;
         this.reportType = builder.reportType;
         this.reportVersion = builder.reportVersion;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.sendEndTime = builder.sendEndTime;
         this.sendPeriodDays = builder.sendPeriodDays;
         this.sendPeriodType = builder.sendPeriodType;
@@ -230,6 +235,13 @@ public class SaveCustomizeReportConfigRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return sendEndTime
      */
     public String getSendEndTime() {
@@ -292,6 +304,7 @@ public class SaveCustomizeReportConfigRequest extends Request {
         private Integer reportStatus; 
         private Integer reportType; 
         private String reportVersion; 
+        private Long resourceDirectoryAccountId; 
         private String sendEndTime; 
         private Integer sendPeriodDays; 
         private String sendPeriodType; 
@@ -319,6 +332,7 @@ public class SaveCustomizeReportConfigRequest extends Request {
             this.reportStatus = request.reportStatus;
             this.reportType = request.reportType;
             this.reportVersion = request.reportVersion;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.sendEndTime = request.sendEndTime;
             this.sendPeriodDays = request.sendPeriodDays;
             this.sendPeriodType = request.sendPeriodType;
@@ -538,6 +552,15 @@ public class SaveCustomizeReportConfigRequest extends Request {
         public Builder reportVersion(String reportVersion) {
             this.putQueryParameter("ReportVersion", reportVersion);
             this.reportVersion = reportVersion;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

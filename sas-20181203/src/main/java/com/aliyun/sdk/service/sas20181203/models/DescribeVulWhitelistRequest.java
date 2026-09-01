@@ -29,11 +29,16 @@ public class DescribeVulWhitelistRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
     private DescribeVulWhitelistRequest(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
     }
 
     public static Builder builder() {
@@ -70,10 +75,18 @@ public class DescribeVulWhitelistRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeVulWhitelistRequest, Builder> {
         private Integer currentPage; 
         private String lang; 
         private Integer pageSize; 
+        private Long resourceDirectoryAccountId; 
 
         private Builder() {
             super();
@@ -84,6 +97,7 @@ public class DescribeVulWhitelistRequest extends Request {
             this.currentPage = request.currentPage;
             this.lang = request.lang;
             this.pageSize = request.pageSize;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
         } 
 
         /**
@@ -123,6 +137,15 @@ public class DescribeVulWhitelistRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

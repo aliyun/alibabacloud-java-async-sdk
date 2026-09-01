@@ -30,6 +30,15 @@ public class UpdatePostPaidBindRelRequest extends Request {
     private java.util.List<BindAction> bindAction;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
+    private String productCode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UpdateIfNecessary")
     private Boolean updateIfNecessary;
 
@@ -38,6 +47,8 @@ public class UpdatePostPaidBindRelRequest extends Request {
         this.autoBind = builder.autoBind;
         this.autoBindVersion = builder.autoBindVersion;
         this.bindAction = builder.bindAction;
+        this.clientToken = builder.clientToken;
+        this.productCode = builder.productCode;
         this.updateIfNecessary = builder.updateIfNecessary;
     }
 
@@ -76,6 +87,20 @@ public class UpdatePostPaidBindRelRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * @return productCode
+     */
+    public String getProductCode() {
+        return this.productCode;
+    }
+
+    /**
      * @return updateIfNecessary
      */
     public Boolean getUpdateIfNecessary() {
@@ -86,6 +111,8 @@ public class UpdatePostPaidBindRelRequest extends Request {
         private Integer autoBind; 
         private Integer autoBindVersion; 
         private java.util.List<BindAction> bindAction; 
+        private String clientToken; 
+        private String productCode; 
         private Boolean updateIfNecessary; 
 
         private Builder() {
@@ -97,6 +124,8 @@ public class UpdatePostPaidBindRelRequest extends Request {
             this.autoBind = request.autoBind;
             this.autoBindVersion = request.autoBindVersion;
             this.bindAction = request.bindAction;
+            this.clientToken = request.clientToken;
+            this.productCode = request.productCode;
             this.updateIfNecessary = request.updateIfNecessary;
         } 
 
@@ -145,6 +174,24 @@ public class UpdatePostPaidBindRelRequest extends Request {
         }
 
         /**
+         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * ProductCode.
+         */
+        public Builder productCode(String productCode) {
+            this.putQueryParameter("ProductCode", productCode);
+            this.productCode = productCode;
+            return this;
+        }
+
+        /**
          * <p>Whether to force upgrade the version.</p>
          * 
          * <strong>example:</strong>
@@ -173,6 +220,9 @@ public class UpdatePostPaidBindRelRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("BindAll")
         private Boolean bindAll;
 
+        @com.aliyun.core.annotation.NameInMap("FreeType")
+        private String freeType;
+
         @com.aliyun.core.annotation.NameInMap("UuidList")
         private java.util.List<String> uuidList;
 
@@ -181,6 +231,7 @@ public class UpdatePostPaidBindRelRequest extends Request {
 
         private BindAction(Builder builder) {
             this.bindAll = builder.bindAll;
+            this.freeType = builder.freeType;
             this.uuidList = builder.uuidList;
             this.version = builder.version;
         }
@@ -201,6 +252,13 @@ public class UpdatePostPaidBindRelRequest extends Request {
         }
 
         /**
+         * @return freeType
+         */
+        public String getFreeType() {
+            return this.freeType;
+        }
+
+        /**
          * @return uuidList
          */
         public java.util.List<String> getUuidList() {
@@ -216,6 +274,7 @@ public class UpdatePostPaidBindRelRequest extends Request {
 
         public static final class Builder {
             private Boolean bindAll; 
+            private String freeType; 
             private java.util.List<String> uuidList; 
             private String version; 
 
@@ -224,6 +283,7 @@ public class UpdatePostPaidBindRelRequest extends Request {
 
             private Builder(BindAction model) {
                 this.bindAll = model.bindAll;
+                this.freeType = model.freeType;
                 this.uuidList = model.uuidList;
                 this.version = model.version;
             } 
@@ -240,6 +300,14 @@ public class UpdatePostPaidBindRelRequest extends Request {
              */
             public Builder bindAll(Boolean bindAll) {
                 this.bindAll = bindAll;
+                return this;
+            }
+
+            /**
+             * FreeType.
+             */
+            public Builder freeType(String freeType) {
+                this.freeType = freeType;
                 return this;
             }
 

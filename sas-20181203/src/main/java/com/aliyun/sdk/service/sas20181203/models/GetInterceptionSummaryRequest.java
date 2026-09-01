@@ -21,9 +21,14 @@ public class GetInterceptionSummaryRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExcludeClusterTypes")
+    private java.util.List<String> excludeClusterTypes;
+
     private GetInterceptionSummaryRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.excludeClusterTypes = builder.excludeClusterTypes;
     }
 
     public static Builder builder() {
@@ -46,8 +51,16 @@ public class GetInterceptionSummaryRequest extends Request {
         return this.clusterId;
     }
 
+    /**
+     * @return excludeClusterTypes
+     */
+    public java.util.List<String> getExcludeClusterTypes() {
+        return this.excludeClusterTypes;
+    }
+
     public static final class Builder extends Request.Builder<GetInterceptionSummaryRequest, Builder> {
         private String clusterId; 
+        private java.util.List<String> excludeClusterTypes; 
 
         private Builder() {
             super();
@@ -56,6 +69,7 @@ public class GetInterceptionSummaryRequest extends Request {
         private Builder(GetInterceptionSummaryRequest request) {
             super(request);
             this.clusterId = request.clusterId;
+            this.excludeClusterTypes = request.excludeClusterTypes;
         } 
 
         /**
@@ -70,6 +84,15 @@ public class GetInterceptionSummaryRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * ExcludeClusterTypes.
+         */
+        public Builder excludeClusterTypes(java.util.List<String> excludeClusterTypes) {
+            this.putQueryParameter("ExcludeClusterTypes", excludeClusterTypes);
+            this.excludeClusterTypes = excludeClusterTypes;
             return this;
         }
 

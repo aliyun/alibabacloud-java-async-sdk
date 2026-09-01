@@ -35,6 +35,9 @@ public class GetAuthSummaryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DefaultAuthToAll")
     private Integer defaultAuthToAll;
 
+    @com.aliyun.core.annotation.NameInMap("EdrSummary")
+    private EdrSummary edrSummary;
+
     @com.aliyun.core.annotation.NameInMap("HasPreBindSetting")
     private Boolean hasPreBindSetting;
 
@@ -75,6 +78,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         this.autoBind = builder.autoBind;
         this.clusterNodeCheck = builder.clusterNodeCheck;
         this.defaultAuthToAll = builder.defaultAuthToAll;
+        this.edrSummary = builder.edrSummary;
         this.hasPreBindSetting = builder.hasPreBindSetting;
         this.highestVersion = builder.highestVersion;
         this.invalidBindStatus = builder.invalidBindStatus;
@@ -140,6 +144,13 @@ public class GetAuthSummaryResponseBody extends TeaModel {
      */
     public Integer getDefaultAuthToAll() {
         return this.defaultAuthToAll;
+    }
+
+    /**
+     * @return edrSummary
+     */
+    public EdrSummary getEdrSummary() {
+        return this.edrSummary;
     }
 
     /**
@@ -226,6 +237,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         private Integer autoBind; 
         private Integer clusterNodeCheck; 
         private Integer defaultAuthToAll; 
+        private EdrSummary edrSummary; 
         private Boolean hasPreBindSetting; 
         private Integer highestVersion; 
         private String invalidBindStatus; 
@@ -248,6 +260,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             this.autoBind = model.autoBind;
             this.clusterNodeCheck = model.clusterNodeCheck;
             this.defaultAuthToAll = model.defaultAuthToAll;
+            this.edrSummary = model.edrSummary;
             this.hasPreBindSetting = model.hasPreBindSetting;
             this.highestVersion = model.highestVersion;
             this.invalidBindStatus = model.invalidBindStatus;
@@ -350,6 +363,14 @@ public class GetAuthSummaryResponseBody extends TeaModel {
          */
         public Builder defaultAuthToAll(Integer defaultAuthToAll) {
             this.defaultAuthToAll = defaultAuthToAll;
+            return this;
+        }
+
+        /**
+         * EdrSummary.
+         */
+        public Builder edrSummary(EdrSummary edrSummary) {
+            this.edrSummary = edrSummary;
             return this;
         }
 
@@ -496,6 +517,102 @@ public class GetAuthSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAuthSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAuthSummaryResponseBody</p>
+     */
+    public static class EdrSummary extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BoundCount")
+        private String boundCount;
+
+        @com.aliyun.core.annotation.NameInMap("HybridPaidAutoBind")
+        private String hybridPaidAutoBind;
+
+        @com.aliyun.core.annotation.NameInMap("PostPaidAutoBind")
+        private String postPaidAutoBind;
+
+        private EdrSummary(Builder builder) {
+            this.boundCount = builder.boundCount;
+            this.hybridPaidAutoBind = builder.hybridPaidAutoBind;
+            this.postPaidAutoBind = builder.postPaidAutoBind;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EdrSummary create() {
+            return builder().build();
+        }
+
+        /**
+         * @return boundCount
+         */
+        public String getBoundCount() {
+            return this.boundCount;
+        }
+
+        /**
+         * @return hybridPaidAutoBind
+         */
+        public String getHybridPaidAutoBind() {
+            return this.hybridPaidAutoBind;
+        }
+
+        /**
+         * @return postPaidAutoBind
+         */
+        public String getPostPaidAutoBind() {
+            return this.postPaidAutoBind;
+        }
+
+        public static final class Builder {
+            private String boundCount; 
+            private String hybridPaidAutoBind; 
+            private String postPaidAutoBind; 
+
+            private Builder() {
+            } 
+
+            private Builder(EdrSummary model) {
+                this.boundCount = model.boundCount;
+                this.hybridPaidAutoBind = model.hybridPaidAutoBind;
+                this.postPaidAutoBind = model.postPaidAutoBind;
+            } 
+
+            /**
+             * BoundCount.
+             */
+            public Builder boundCount(String boundCount) {
+                this.boundCount = boundCount;
+                return this;
+            }
+
+            /**
+             * HybridPaidAutoBind.
+             */
+            public Builder hybridPaidAutoBind(String hybridPaidAutoBind) {
+                this.hybridPaidAutoBind = hybridPaidAutoBind;
+                return this;
+            }
+
+            /**
+             * PostPaidAutoBind.
+             */
+            public Builder postPaidAutoBind(String postPaidAutoBind) {
+                this.postPaidAutoBind = postPaidAutoBind;
+                return this;
+            }
+
+            public EdrSummary build() {
+                return new EdrSummary(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link GetAuthSummaryResponseBody} extends {@link TeaModel}
@@ -779,6 +896,15 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthBindType")
         private String authBindType;
 
+        @com.aliyun.core.annotation.NameInMap("FreeCoreCount")
+        private Integer freeCoreCount;
+
+        @com.aliyun.core.annotation.NameInMap("FreeEcsCount")
+        private Integer freeEcsCount;
+
+        @com.aliyun.core.annotation.NameInMap("FreeType")
+        private String freeType;
+
         @com.aliyun.core.annotation.NameInMap("Index")
         private Integer index;
 
@@ -793,6 +919,9 @@ public class GetAuthSummaryResponseBody extends TeaModel {
 
         private PostPaidVersionSummary(Builder builder) {
             this.authBindType = builder.authBindType;
+            this.freeCoreCount = builder.freeCoreCount;
+            this.freeEcsCount = builder.freeEcsCount;
+            this.freeType = builder.freeType;
             this.index = builder.index;
             this.usedCoreCount = builder.usedCoreCount;
             this.usedEcsCount = builder.usedEcsCount;
@@ -812,6 +941,27 @@ public class GetAuthSummaryResponseBody extends TeaModel {
          */
         public String getAuthBindType() {
             return this.authBindType;
+        }
+
+        /**
+         * @return freeCoreCount
+         */
+        public Integer getFreeCoreCount() {
+            return this.freeCoreCount;
+        }
+
+        /**
+         * @return freeEcsCount
+         */
+        public Integer getFreeEcsCount() {
+            return this.freeEcsCount;
+        }
+
+        /**
+         * @return freeType
+         */
+        public String getFreeType() {
+            return this.freeType;
         }
 
         /**
@@ -844,6 +994,9 @@ public class GetAuthSummaryResponseBody extends TeaModel {
 
         public static final class Builder {
             private String authBindType; 
+            private Integer freeCoreCount; 
+            private Integer freeEcsCount; 
+            private String freeType; 
             private Integer index; 
             private Long usedCoreCount; 
             private Long usedEcsCount; 
@@ -854,6 +1007,9 @@ public class GetAuthSummaryResponseBody extends TeaModel {
 
             private Builder(PostPaidVersionSummary model) {
                 this.authBindType = model.authBindType;
+                this.freeCoreCount = model.freeCoreCount;
+                this.freeEcsCount = model.freeEcsCount;
+                this.freeType = model.freeType;
                 this.index = model.index;
                 this.usedCoreCount = model.usedCoreCount;
                 this.usedEcsCount = model.usedEcsCount;
@@ -868,6 +1024,30 @@ public class GetAuthSummaryResponseBody extends TeaModel {
              */
             public Builder authBindType(String authBindType) {
                 this.authBindType = authBindType;
+                return this;
+            }
+
+            /**
+             * FreeCoreCount.
+             */
+            public Builder freeCoreCount(Integer freeCoreCount) {
+                this.freeCoreCount = freeCoreCount;
+                return this;
+            }
+
+            /**
+             * FreeEcsCount.
+             */
+            public Builder freeEcsCount(Integer freeEcsCount) {
+                this.freeEcsCount = freeEcsCount;
+                return this;
+            }
+
+            /**
+             * FreeType.
+             */
+            public Builder freeType(String freeType) {
+                this.freeType = freeType;
                 return this;
             }
 

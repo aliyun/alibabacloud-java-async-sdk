@@ -102,6 +102,10 @@ public class DescribeImageVulListRequest extends Request {
     private String repoRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleTag")
     private String ruleTag;
 
@@ -149,6 +153,7 @@ public class DescribeImageVulListRequest extends Request {
         this.repoName = builder.repoName;
         this.repoNamespace = builder.repoNamespace;
         this.repoRegionId = builder.repoRegionId;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.ruleTag = builder.ruleTag;
         this.scanRange = builder.scanRange;
         this.statusList = builder.statusList;
@@ -318,6 +323,13 @@ public class DescribeImageVulListRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return ruleTag
      */
     public String getRuleTag() {
@@ -381,6 +393,7 @@ public class DescribeImageVulListRequest extends Request {
         private String repoName; 
         private String repoNamespace; 
         private String repoRegionId; 
+        private Long resourceDirectoryAccountId; 
         private String ruleTag; 
         private java.util.List<String> scanRange; 
         private String statusList; 
@@ -415,6 +428,7 @@ public class DescribeImageVulListRequest extends Request {
             this.repoName = request.repoName;
             this.repoNamespace = request.repoNamespace;
             this.repoRegionId = request.repoRegionId;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.ruleTag = request.ruleTag;
             this.scanRange = request.scanRange;
             this.statusList = request.statusList;
@@ -685,6 +699,15 @@ public class DescribeImageVulListRequest extends Request {
         public Builder repoRegionId(String repoRegionId) {
             this.putQueryParameter("RepoRegionId", repoRegionId);
             this.repoRegionId = repoRegionId;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

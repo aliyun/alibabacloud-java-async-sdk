@@ -554,6 +554,9 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataSource")
         private String dataSource;
 
+        @com.aliyun.core.annotation.NameInMap("DeepAnalyzeReportUrl")
+        private String deepAnalyzeReportUrl;
+
         @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
@@ -696,6 +699,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             this.containerImageId = builder.containerImageId;
             this.containerImageName = builder.containerImageName;
             this.dataSource = builder.dataSource;
+            this.deepAnalyzeReportUrl = builder.deepAnalyzeReportUrl;
             this.desc = builder.desc;
             this.details = builder.details;
             this.detectSource = builder.detectSource;
@@ -851,6 +855,13 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
          */
         public String getDataSource() {
             return this.dataSource;
+        }
+
+        /**
+         * @return deepAnalyzeReportUrl
+         */
+        public String getDeepAnalyzeReportUrl() {
+            return this.deepAnalyzeReportUrl;
         }
 
         /**
@@ -1163,6 +1174,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             private String containerImageId; 
             private String containerImageName; 
             private String dataSource; 
+            private String deepAnalyzeReportUrl; 
             private String desc; 
             private java.util.List<Details> details; 
             private String detectSource; 
@@ -1225,6 +1237,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
                 this.containerImageId = model.containerImageId;
                 this.containerImageName = model.containerImageName;
                 this.dataSource = model.dataSource;
+                this.deepAnalyzeReportUrl = model.deepAnalyzeReportUrl;
                 this.desc = model.desc;
                 this.details = model.details;
                 this.detectSource = model.detectSource;
@@ -1443,6 +1456,14 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
              */
             public Builder dataSource(String dataSource) {
                 this.dataSource = dataSource;
+                return this;
+            }
+
+            /**
+             * DeepAnalyzeReportUrl.
+             */
+            public Builder deepAnalyzeReportUrl(String deepAnalyzeReportUrl) {
+                this.deepAnalyzeReportUrl = deepAnalyzeReportUrl;
                 return this;
             }
 

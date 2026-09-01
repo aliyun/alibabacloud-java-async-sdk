@@ -23,6 +23,10 @@ public class DescribeScreenScoreThreadRequest extends Request {
     private Long endTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Source")
     private Integer source;
 
@@ -34,6 +38,7 @@ public class DescribeScreenScoreThreadRequest extends Request {
     private DescribeScreenScoreThreadRequest(Builder builder) {
         super(builder);
         this.endTime = builder.endTime;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.source = builder.source;
         this.startTime = builder.startTime;
     }
@@ -59,6 +64,13 @@ public class DescribeScreenScoreThreadRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return source
      */
     public Integer getSource() {
@@ -74,6 +86,7 @@ public class DescribeScreenScoreThreadRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeScreenScoreThreadRequest, Builder> {
         private Long endTime; 
+        private Long resourceDirectoryAccountId; 
         private Integer source; 
         private Long startTime; 
 
@@ -84,6 +97,7 @@ public class DescribeScreenScoreThreadRequest extends Request {
         private Builder(DescribeScreenScoreThreadRequest request) {
             super(request);
             this.endTime = request.endTime;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.source = request.source;
             this.startTime = request.startTime;
         } 
@@ -98,6 +112,15 @@ public class DescribeScreenScoreThreadRequest extends Request {
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

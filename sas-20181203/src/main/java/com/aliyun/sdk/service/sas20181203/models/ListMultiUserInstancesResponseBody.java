@@ -349,6 +349,111 @@ public class ListMultiUserInstancesResponseBody extends TeaModel {
      *
      * <p>ListMultiUserInstancesResponseBody</p>
      */
+    public static class CspmInstanceCapacity extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Assigned")
+        private Long assigned;
+
+        @com.aliyun.core.annotation.NameInMap("Count")
+        private Long count;
+
+        @com.aliyun.core.annotation.NameInMap("Used")
+        private Long used;
+
+        private CspmInstanceCapacity(Builder builder) {
+            this.assigned = builder.assigned;
+            this.count = builder.count;
+            this.used = builder.used;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CspmInstanceCapacity create() {
+            return builder().build();
+        }
+
+        /**
+         * @return assigned
+         */
+        public Long getAssigned() {
+            return this.assigned;
+        }
+
+        /**
+         * @return count
+         */
+        public Long getCount() {
+            return this.count;
+        }
+
+        /**
+         * @return used
+         */
+        public Long getUsed() {
+            return this.used;
+        }
+
+        public static final class Builder {
+            private Long assigned; 
+            private Long count; 
+            private Long used; 
+
+            private Builder() {
+            } 
+
+            private Builder(CspmInstanceCapacity model) {
+                this.assigned = model.assigned;
+                this.count = model.count;
+                this.used = model.used;
+            } 
+
+            /**
+             * <p>Allocated CSPM scan count. Unit: per month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder assigned(Long assigned) {
+                this.assigned = assigned;
+                return this;
+            }
+
+            /**
+             * <p>Purchased CSPM scan count. Unit: per month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>180000</p>
+             */
+            public Builder count(Long count) {
+                this.count = count;
+                return this;
+            }
+
+            /**
+             * <p>Used CSPM scan count. Unit: per month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>31569</p>
+             */
+            public Builder used(Long used) {
+                this.used = used;
+                return this;
+            }
+
+            public CspmInstanceCapacity build() {
+                return new CspmInstanceCapacity(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListMultiUserInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMultiUserInstancesResponseBody</p>
+     */
     public static class HoneypotCapacity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Assigned")
         private Long assigned;
@@ -1546,6 +1651,9 @@ public class ListMultiUserInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CspmCapacity")
         private CspmCapacity cspmCapacity;
 
+        @com.aliyun.core.annotation.NameInMap("CspmInstanceCapacity")
+        private CspmInstanceCapacity cspmInstanceCapacity;
+
         @com.aliyun.core.annotation.NameInMap("HoneypotCapacity")
         private HoneypotCapacity honeypotCapacity;
 
@@ -1592,6 +1700,7 @@ public class ListMultiUserInstancesResponseBody extends TeaModel {
             this.aliUid = builder.aliUid;
             this.antiRansomwareCapacity = builder.antiRansomwareCapacity;
             this.cspmCapacity = builder.cspmCapacity;
+            this.cspmInstanceCapacity = builder.cspmInstanceCapacity;
             this.honeypotCapacity = builder.honeypotCapacity;
             this.imageScanCapacity = builder.imageScanCapacity;
             this.instanceId = builder.instanceId;
@@ -1635,6 +1744,13 @@ public class ListMultiUserInstancesResponseBody extends TeaModel {
          */
         public CspmCapacity getCspmCapacity() {
             return this.cspmCapacity;
+        }
+
+        /**
+         * @return cspmInstanceCapacity
+         */
+        public CspmInstanceCapacity getCspmInstanceCapacity() {
+            return this.cspmInstanceCapacity;
         }
 
         /**
@@ -1739,6 +1855,7 @@ public class ListMultiUserInstancesResponseBody extends TeaModel {
             private Long aliUid; 
             private AntiRansomwareCapacity antiRansomwareCapacity; 
             private CspmCapacity cspmCapacity; 
+            private CspmInstanceCapacity cspmInstanceCapacity; 
             private HoneypotCapacity honeypotCapacity; 
             private ImageScanCapacity imageScanCapacity; 
             private String instanceId; 
@@ -1761,6 +1878,7 @@ public class ListMultiUserInstancesResponseBody extends TeaModel {
                 this.aliUid = model.aliUid;
                 this.antiRansomwareCapacity = model.antiRansomwareCapacity;
                 this.cspmCapacity = model.cspmCapacity;
+                this.cspmInstanceCapacity = model.cspmInstanceCapacity;
                 this.honeypotCapacity = model.honeypotCapacity;
                 this.imageScanCapacity = model.imageScanCapacity;
                 this.instanceId = model.instanceId;
@@ -1801,6 +1919,14 @@ public class ListMultiUserInstancesResponseBody extends TeaModel {
              */
             public Builder cspmCapacity(CspmCapacity cspmCapacity) {
                 this.cspmCapacity = cspmCapacity;
+                return this;
+            }
+
+            /**
+             * CspmInstanceCapacity.
+             */
+            public Builder cspmInstanceCapacity(CspmInstanceCapacity cspmInstanceCapacity) {
+                this.cspmInstanceCapacity = cspmInstanceCapacity;
                 return this;
             }
 
@@ -2269,6 +2395,87 @@ public class ListMultiUserInstancesResponseBody extends TeaModel {
 
             public SaleInstanceListCspmCapacity build() {
                 return new SaleInstanceListCspmCapacity(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListMultiUserInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMultiUserInstancesResponseBody</p>
+     */
+    public static class SaleInstanceListCspmInstanceCapacity extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Count")
+        private Long count;
+
+        @com.aliyun.core.annotation.NameInMap("Used")
+        private Long used;
+
+        private SaleInstanceListCspmInstanceCapacity(Builder builder) {
+            this.count = builder.count;
+            this.used = builder.used;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SaleInstanceListCspmInstanceCapacity create() {
+            return builder().build();
+        }
+
+        /**
+         * @return count
+         */
+        public Long getCount() {
+            return this.count;
+        }
+
+        /**
+         * @return used
+         */
+        public Long getUsed() {
+            return this.used;
+        }
+
+        public static final class Builder {
+            private Long count; 
+            private Long used; 
+
+            private Builder() {
+            } 
+
+            private Builder(SaleInstanceListCspmInstanceCapacity model) {
+                this.count = model.count;
+                this.used = model.used;
+            } 
+
+            /**
+             * <p>Allocated CSPM scan count. Unit: per month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder count(Long count) {
+                this.count = count;
+                return this;
+            }
+
+            /**
+             * <p>Used CSPM scan count. Unit: per month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder used(Long used) {
+                this.used = used;
+                return this;
+            }
+
+            public SaleInstanceListCspmInstanceCapacity build() {
+                return new SaleInstanceListCspmInstanceCapacity(this);
             } 
 
         } 
@@ -3285,6 +3492,9 @@ public class ListMultiUserInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CspmCapacity")
         private SaleInstanceListCspmCapacity cspmCapacity;
 
+        @com.aliyun.core.annotation.NameInMap("CspmInstanceCapacity")
+        private SaleInstanceListCspmInstanceCapacity cspmInstanceCapacity;
+
         @com.aliyun.core.annotation.NameInMap("HoneypotCapacity")
         private SaleInstanceListHoneypotCapacity honeypotCapacity;
 
@@ -3331,6 +3541,7 @@ public class ListMultiUserInstancesResponseBody extends TeaModel {
             this.aliUid = builder.aliUid;
             this.antiRansomwareCapacity = builder.antiRansomwareCapacity;
             this.cspmCapacity = builder.cspmCapacity;
+            this.cspmInstanceCapacity = builder.cspmInstanceCapacity;
             this.honeypotCapacity = builder.honeypotCapacity;
             this.imageScanCapacity = builder.imageScanCapacity;
             this.instanceId = builder.instanceId;
@@ -3374,6 +3585,13 @@ public class ListMultiUserInstancesResponseBody extends TeaModel {
          */
         public SaleInstanceListCspmCapacity getCspmCapacity() {
             return this.cspmCapacity;
+        }
+
+        /**
+         * @return cspmInstanceCapacity
+         */
+        public SaleInstanceListCspmInstanceCapacity getCspmInstanceCapacity() {
+            return this.cspmInstanceCapacity;
         }
 
         /**
@@ -3478,6 +3696,7 @@ public class ListMultiUserInstancesResponseBody extends TeaModel {
             private Long aliUid; 
             private SaleInstanceListAntiRansomwareCapacity antiRansomwareCapacity; 
             private SaleInstanceListCspmCapacity cspmCapacity; 
+            private SaleInstanceListCspmInstanceCapacity cspmInstanceCapacity; 
             private SaleInstanceListHoneypotCapacity honeypotCapacity; 
             private SaleInstanceListImageScanCapacity imageScanCapacity; 
             private String instanceId; 
@@ -3500,6 +3719,7 @@ public class ListMultiUserInstancesResponseBody extends TeaModel {
                 this.aliUid = model.aliUid;
                 this.antiRansomwareCapacity = model.antiRansomwareCapacity;
                 this.cspmCapacity = model.cspmCapacity;
+                this.cspmInstanceCapacity = model.cspmInstanceCapacity;
                 this.honeypotCapacity = model.honeypotCapacity;
                 this.imageScanCapacity = model.imageScanCapacity;
                 this.instanceId = model.instanceId;
@@ -3540,6 +3760,14 @@ public class ListMultiUserInstancesResponseBody extends TeaModel {
              */
             public Builder cspmCapacity(SaleInstanceListCspmCapacity cspmCapacity) {
                 this.cspmCapacity = cspmCapacity;
+                return this;
+            }
+
+            /**
+             * CspmInstanceCapacity.
+             */
+            public Builder cspmInstanceCapacity(SaleInstanceListCspmInstanceCapacity cspmInstanceCapacity) {
+                this.cspmInstanceCapacity = cspmInstanceCapacity;
                 return this;
             }
 

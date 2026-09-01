@@ -26,6 +26,10 @@ public class AdvanceSecurityEventOperationsRequest extends Request {
     private String eventType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
@@ -37,6 +41,7 @@ public class AdvanceSecurityEventOperationsRequest extends Request {
         super(builder);
         this.eventName = builder.eventName;
         this.eventType = builder.eventType;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.ruleId = builder.ruleId;
     }
@@ -69,6 +74,13 @@ public class AdvanceSecurityEventOperationsRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return resourceOwnerId
      */
     public Long getResourceOwnerId() {
@@ -85,6 +97,7 @@ public class AdvanceSecurityEventOperationsRequest extends Request {
     public static final class Builder extends Request.Builder<AdvanceSecurityEventOperationsRequest, Builder> {
         private String eventName; 
         private String eventType; 
+        private Long resourceDirectoryAccountId; 
         private Long resourceOwnerId; 
         private Integer ruleId; 
 
@@ -96,6 +109,7 @@ public class AdvanceSecurityEventOperationsRequest extends Request {
             super(request);
             this.eventName = request.eventName;
             this.eventType = request.eventType;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.resourceOwnerId = request.resourceOwnerId;
             this.ruleId = request.ruleId;
         } 
@@ -147,6 +161,15 @@ public class AdvanceSecurityEventOperationsRequest extends Request {
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
             this.eventType = eventType;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

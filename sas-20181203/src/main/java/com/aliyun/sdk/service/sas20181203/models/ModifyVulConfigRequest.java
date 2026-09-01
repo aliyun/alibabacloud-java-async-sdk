@@ -18,6 +18,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyVulConfigRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Config")
     private String config;
 
@@ -27,6 +32,7 @@ public class ModifyVulConfigRequest extends Request {
 
     private ModifyVulConfigRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.config = builder.config;
         this.type = builder.type;
     }
@@ -45,6 +51,13 @@ public class ModifyVulConfigRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return config
      */
     public String getConfig() {
@@ -59,6 +72,7 @@ public class ModifyVulConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyVulConfigRequest, Builder> {
+        private String clientToken; 
         private String config; 
         private String type; 
 
@@ -68,9 +82,19 @@ public class ModifyVulConfigRequest extends Request {
 
         private Builder(ModifyVulConfigRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.config = request.config;
             this.type = request.type;
         } 
+
+        /**
+         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
 
         /**
          * <p>Specifies whether to enable the vulnerability scan feature. Valid values:</p>

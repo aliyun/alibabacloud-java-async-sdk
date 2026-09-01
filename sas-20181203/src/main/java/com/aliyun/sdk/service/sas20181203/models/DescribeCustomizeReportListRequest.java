@@ -38,6 +38,10 @@ public class DescribeCustomizeReportListRequest extends Request {
     private String reportVersion;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Title")
     private String title;
 
@@ -48,6 +52,7 @@ public class DescribeCustomizeReportListRequest extends Request {
         this.reportStatus = builder.reportStatus;
         this.reportType = builder.reportType;
         this.reportVersion = builder.reportVersion;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.title = builder.title;
     }
 
@@ -100,6 +105,13 @@ public class DescribeCustomizeReportListRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return title
      */
     public String getTitle() {
@@ -112,6 +124,7 @@ public class DescribeCustomizeReportListRequest extends Request {
         private Integer reportStatus; 
         private Integer reportType; 
         private String reportVersion; 
+        private Long resourceDirectoryAccountId; 
         private String title; 
 
         private Builder() {
@@ -125,6 +138,7 @@ public class DescribeCustomizeReportListRequest extends Request {
             this.reportStatus = request.reportStatus;
             this.reportType = request.reportType;
             this.reportVersion = request.reportVersion;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.title = request.title;
         } 
 
@@ -207,6 +221,15 @@ public class DescribeCustomizeReportListRequest extends Request {
         public Builder reportVersion(String reportVersion) {
             this.putQueryParameter("ReportVersion", reportVersion);
             this.reportVersion = reportVersion;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

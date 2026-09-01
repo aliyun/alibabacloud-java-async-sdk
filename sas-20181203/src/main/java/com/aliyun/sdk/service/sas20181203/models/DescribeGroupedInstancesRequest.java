@@ -47,6 +47,10 @@ public class DescribeGroupedInstancesRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SaleVersionCheckCode")
     private String saleVersionCheckCode;
 
@@ -67,6 +71,7 @@ public class DescribeGroupedInstancesRequest extends Request {
         this.machineTypes = builder.machineTypes;
         this.noPage = builder.noPage;
         this.pageSize = builder.pageSize;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.saleVersionCheckCode = builder.saleVersionCheckCode;
         this.vendor = builder.vendor;
         this.vendors = builder.vendors;
@@ -135,6 +140,13 @@ public class DescribeGroupedInstancesRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return saleVersionCheckCode
      */
     public String getSaleVersionCheckCode() {
@@ -163,6 +175,7 @@ public class DescribeGroupedInstancesRequest extends Request {
         private String machineTypes; 
         private Boolean noPage; 
         private Integer pageSize; 
+        private Long resourceDirectoryAccountId; 
         private String saleVersionCheckCode; 
         private Integer vendor; 
         private String vendors; 
@@ -180,6 +193,7 @@ public class DescribeGroupedInstancesRequest extends Request {
             this.machineTypes = request.machineTypes;
             this.noPage = request.noPage;
             this.pageSize = request.pageSize;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.saleVersionCheckCode = request.saleVersionCheckCode;
             this.vendor = request.vendor;
             this.vendors = request.vendors;
@@ -280,6 +294,15 @@ public class DescribeGroupedInstancesRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

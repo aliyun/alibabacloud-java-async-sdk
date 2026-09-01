@@ -128,6 +128,9 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DecompressStatus")
         private Integer decompressStatus;
 
+        @com.aliyun.core.annotation.NameInMap("FileSystemName")
+        private String fileSystemName;
+
         @com.aliyun.core.annotation.NameInMap("HighRisk")
         private Long highRisk;
 
@@ -171,6 +174,7 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
             this.bucketName = builder.bucketName;
             this.configStatus = builder.configStatus;
             this.decompressStatus = builder.decompressStatus;
+            this.fileSystemName = builder.fileSystemName;
             this.highRisk = builder.highRisk;
             this.lastScanEndTime = builder.lastScanEndTime;
             this.lastScanTime = builder.lastScanTime;
@@ -213,6 +217,13 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
          */
         public Integer getDecompressStatus() {
             return this.decompressStatus;
+        }
+
+        /**
+         * @return fileSystemName
+         */
+        public String getFileSystemName() {
+            return this.fileSystemName;
         }
 
         /**
@@ -310,6 +321,7 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
             private String bucketName; 
             private Integer configStatus; 
             private Integer decompressStatus; 
+            private String fileSystemName; 
             private Long highRisk; 
             private Long lastScanEndTime; 
             private Long lastScanTime; 
@@ -331,6 +343,7 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
                 this.bucketName = model.bucketName;
                 this.configStatus = model.configStatus;
                 this.decompressStatus = model.decompressStatus;
+                this.fileSystemName = model.fileSystemName;
                 this.highRisk = model.highRisk;
                 this.lastScanEndTime = model.lastScanEndTime;
                 this.lastScanTime = model.lastScanTime;
@@ -385,6 +398,14 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
              */
             public Builder decompressStatus(Integer decompressStatus) {
                 this.decompressStatus = decompressStatus;
+                return this;
+            }
+
+            /**
+             * FileSystemName.
+             */
+            public Builder fileSystemName(String fileSystemName) {
+                this.fileSystemName = fileSystemName;
                 return this;
             }
 

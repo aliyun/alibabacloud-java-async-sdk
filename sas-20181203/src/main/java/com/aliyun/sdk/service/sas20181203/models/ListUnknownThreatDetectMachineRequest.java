@@ -22,6 +22,10 @@ public class ListUnknownThreatDetectMachineRequest extends Request {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventStatus")
+    private Integer eventStatus;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
@@ -52,6 +56,7 @@ public class ListUnknownThreatDetectMachineRequest extends Request {
     private ListUnknownThreatDetectMachineRequest(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
+        this.eventStatus = builder.eventStatus;
         this.pageSize = builder.pageSize;
         this.remark = builder.remark;
         this.status = builder.status;
@@ -79,6 +84,13 @@ public class ListUnknownThreatDetectMachineRequest extends Request {
      */
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    /**
+     * @return eventStatus
+     */
+    public Integer getEventStatus() {
+        return this.eventStatus;
     }
 
     /**
@@ -132,6 +144,7 @@ public class ListUnknownThreatDetectMachineRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListUnknownThreatDetectMachineRequest, Builder> {
         private Integer currentPage; 
+        private Integer eventStatus; 
         private Integer pageSize; 
         private String remark; 
         private String status; 
@@ -147,6 +160,7 @@ public class ListUnknownThreatDetectMachineRequest extends Request {
         private Builder(ListUnknownThreatDetectMachineRequest request) {
             super(request);
             this.currentPage = request.currentPage;
+            this.eventStatus = request.eventStatus;
             this.pageSize = request.pageSize;
             this.remark = request.remark;
             this.status = request.status;
@@ -162,6 +176,15 @@ public class ListUnknownThreatDetectMachineRequest extends Request {
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * EventStatus.
+         */
+        public Builder eventStatus(Integer eventStatus) {
+            this.putQueryParameter("EventStatus", eventStatus);
+            this.eventStatus = eventStatus;
             return this;
         }
 

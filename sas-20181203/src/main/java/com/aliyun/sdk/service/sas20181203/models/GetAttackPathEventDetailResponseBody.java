@@ -912,6 +912,12 @@ public class GetAttackPathEventDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PathEventNodeList")
         private java.util.List<PathEventNodeList> pathEventNodeList;
 
+        @com.aliyun.core.annotation.NameInMap("PathInterpretationStatus")
+        private String pathInterpretationStatus;
+
+        @com.aliyun.core.annotation.NameInMap("PathInterpretationUrl")
+        private String pathInterpretationUrl;
+
         @com.aliyun.core.annotation.NameInMap("PathName")
         private String pathName;
 
@@ -937,6 +943,8 @@ public class GetAttackPathEventDetailResponseBody extends TeaModel {
             this.pathDetailDesc = builder.pathDetailDesc;
             this.pathEventEdgeList = builder.pathEventEdgeList;
             this.pathEventNodeList = builder.pathEventNodeList;
+            this.pathInterpretationStatus = builder.pathInterpretationStatus;
+            this.pathInterpretationUrl = builder.pathInterpretationUrl;
             this.pathName = builder.pathName;
             this.pathNameDesc = builder.pathNameDesc;
             this.pathType = builder.pathType;
@@ -996,6 +1004,20 @@ public class GetAttackPathEventDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return pathInterpretationStatus
+         */
+        public String getPathInterpretationStatus() {
+            return this.pathInterpretationStatus;
+        }
+
+        /**
+         * @return pathInterpretationUrl
+         */
+        public String getPathInterpretationUrl() {
+            return this.pathInterpretationUrl;
+        }
+
+        /**
          * @return pathName
          */
         public String getPathName() {
@@ -1044,6 +1066,8 @@ public class GetAttackPathEventDetailResponseBody extends TeaModel {
             private String pathDetailDesc; 
             private java.util.List<PathEventEdgeList> pathEventEdgeList; 
             private java.util.List<PathEventNodeList> pathEventNodeList; 
+            private String pathInterpretationStatus; 
+            private String pathInterpretationUrl; 
             private String pathName; 
             private String pathNameDesc; 
             private String pathType; 
@@ -1061,6 +1085,8 @@ public class GetAttackPathEventDetailResponseBody extends TeaModel {
                 this.pathDetailDesc = model.pathDetailDesc;
                 this.pathEventEdgeList = model.pathEventEdgeList;
                 this.pathEventNodeList = model.pathEventNodeList;
+                this.pathInterpretationStatus = model.pathInterpretationStatus;
+                this.pathInterpretationUrl = model.pathInterpretationUrl;
                 this.pathName = model.pathName;
                 this.pathNameDesc = model.pathNameDesc;
                 this.pathType = model.pathType;
@@ -1123,6 +1149,22 @@ public class GetAttackPathEventDetailResponseBody extends TeaModel {
              */
             public Builder pathEventNodeList(java.util.List<PathEventNodeList> pathEventNodeList) {
                 this.pathEventNodeList = pathEventNodeList;
+                return this;
+            }
+
+            /**
+             * PathInterpretationStatus.
+             */
+            public Builder pathInterpretationStatus(String pathInterpretationStatus) {
+                this.pathInterpretationStatus = pathInterpretationStatus;
+                return this;
+            }
+
+            /**
+             * PathInterpretationUrl.
+             */
+            public Builder pathInterpretationUrl(String pathInterpretationUrl) {
+                this.pathInterpretationUrl = pathInterpretationUrl;
                 return this;
             }
 

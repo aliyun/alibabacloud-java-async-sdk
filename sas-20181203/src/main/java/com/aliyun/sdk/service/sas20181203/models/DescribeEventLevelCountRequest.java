@@ -42,6 +42,10 @@ public class DescribeEventLevelCountRequest extends Request {
     private Integer multiAccountActionType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetType")
     private String targetType;
 
@@ -53,6 +57,7 @@ public class DescribeEventLevelCountRequest extends Request {
         this.containerIds = builder.containerIds;
         this.from = builder.from;
         this.multiAccountActionType = builder.multiAccountActionType;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.targetType = builder.targetType;
     }
 
@@ -112,6 +117,13 @@ public class DescribeEventLevelCountRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return targetType
      */
     public String getTargetType() {
@@ -125,6 +137,7 @@ public class DescribeEventLevelCountRequest extends Request {
         private String containerIds; 
         private String from; 
         private Integer multiAccountActionType; 
+        private Long resourceDirectoryAccountId; 
         private String targetType; 
 
         private Builder() {
@@ -139,6 +152,7 @@ public class DescribeEventLevelCountRequest extends Request {
             this.containerIds = request.containerIds;
             this.from = request.from;
             this.multiAccountActionType = request.multiAccountActionType;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.targetType = request.targetType;
         } 
 
@@ -232,6 +246,15 @@ public class DescribeEventLevelCountRequest extends Request {
         public Builder multiAccountActionType(Integer multiAccountActionType) {
             this.putQueryParameter("MultiAccountActionType", multiAccountActionType);
             this.multiAccountActionType = multiAccountActionType;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

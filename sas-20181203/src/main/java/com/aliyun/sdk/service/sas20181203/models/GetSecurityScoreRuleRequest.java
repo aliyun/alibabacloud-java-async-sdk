@@ -25,10 +25,15 @@ public class GetSecurityScoreRuleRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
     private GetSecurityScoreRuleRequest(Builder builder) {
         super(builder);
         this.calType = builder.calType;
         this.lang = builder.lang;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
     }
 
     public static Builder builder() {
@@ -58,9 +63,17 @@ public class GetSecurityScoreRuleRequest extends Request {
         return this.lang;
     }
 
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
     public static final class Builder extends Request.Builder<GetSecurityScoreRuleRequest, Builder> {
         private String calType; 
         private String lang; 
+        private Long resourceDirectoryAccountId; 
 
         private Builder() {
             super();
@@ -70,6 +83,7 @@ public class GetSecurityScoreRuleRequest extends Request {
             super(request);
             this.calType = request.calType;
             this.lang = request.lang;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
         } 
 
         /**
@@ -97,6 +111,15 @@ public class GetSecurityScoreRuleRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

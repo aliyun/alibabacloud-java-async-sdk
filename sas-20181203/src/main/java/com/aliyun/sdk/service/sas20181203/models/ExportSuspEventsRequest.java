@@ -82,6 +82,10 @@ public class ExportSuspEventsRequest extends Request {
     private String remark;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
@@ -127,6 +131,7 @@ public class ExportSuspEventsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.parentEventTypes = builder.parentEventTypes;
         this.remark = builder.remark;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.sourceIp = builder.sourceIp;
         this.status = builder.status;
         this.targetType = builder.targetType;
@@ -262,6 +267,13 @@ public class ExportSuspEventsRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return sourceIp
      */
     public String getSourceIp() {
@@ -327,6 +339,7 @@ public class ExportSuspEventsRequest extends Request {
         private String pageSize; 
         private String parentEventTypes; 
         private String remark; 
+        private Long resourceDirectoryAccountId; 
         private String sourceIp; 
         private String status; 
         private String targetType; 
@@ -357,6 +370,7 @@ public class ExportSuspEventsRequest extends Request {
             this.pageSize = request.pageSize;
             this.parentEventTypes = request.parentEventTypes;
             this.remark = request.remark;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.sourceIp = request.sourceIp;
             this.status = request.status;
             this.targetType = request.targetType;
@@ -604,6 +618,15 @@ public class ExportSuspEventsRequest extends Request {
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
             this.remark = remark;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

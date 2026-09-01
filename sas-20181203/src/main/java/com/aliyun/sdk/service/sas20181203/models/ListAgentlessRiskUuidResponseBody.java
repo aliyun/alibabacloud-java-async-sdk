@@ -137,6 +137,9 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaliciousCount")
         private Integer maliciousCount;
 
+        @com.aliyun.core.annotation.NameInMap("ReportUrlHtml")
+        private String reportUrlHtml;
+
         @com.aliyun.core.annotation.NameInMap("ScanTime")
         private Long scanTime;
 
@@ -159,6 +162,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             this.internetIp = builder.internetIp;
             this.intranetIp = builder.intranetIp;
             this.maliciousCount = builder.maliciousCount;
+            this.reportUrlHtml = builder.reportUrlHtml;
             this.scanTime = builder.scanTime;
             this.targetId = builder.targetId;
             this.targetName = builder.targetName;
@@ -217,6 +221,13 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
         }
 
         /**
+         * @return reportUrlHtml
+         */
+        public String getReportUrlHtml() {
+            return this.reportUrlHtml;
+        }
+
+        /**
          * @return scanTime
          */
         public Long getScanTime() {
@@ -258,6 +269,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             private String internetIp; 
             private String intranetIp; 
             private Integer maliciousCount; 
+            private String reportUrlHtml; 
             private Long scanTime; 
             private String targetId; 
             private String targetName; 
@@ -274,6 +286,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
                 this.internetIp = model.internetIp;
                 this.intranetIp = model.intranetIp;
                 this.maliciousCount = model.maliciousCount;
+                this.reportUrlHtml = model.reportUrlHtml;
                 this.scanTime = model.scanTime;
                 this.targetId = model.targetId;
                 this.targetName = model.targetName;
@@ -344,6 +357,14 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
              */
             public Builder maliciousCount(Integer maliciousCount) {
                 this.maliciousCount = maliciousCount;
+                return this;
+            }
+
+            /**
+             * ReportUrlHtml.
+             */
+            public Builder reportUrlHtml(String reportUrlHtml) {
+                this.reportUrlHtml = reportUrlHtml;
                 return this;
             }
 

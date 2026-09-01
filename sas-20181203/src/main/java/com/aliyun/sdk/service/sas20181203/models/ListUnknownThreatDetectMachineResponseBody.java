@@ -131,11 +131,21 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
+        @com.aliyun.core.annotation.NameInMap("MaliciousProcessCount")
+        private Long maliciousProcessCount;
+
+        @com.aliyun.core.annotation.NameInMap("NormalEventCount")
+        @Deprecated
+        private Long normalEventCount;
+
         @com.aliyun.core.annotation.NameInMap("PluginStatus")
         private String pluginStatus;
 
         @com.aliyun.core.annotation.NameInMap("ProcessCount")
         private Integer processCount;
+
+        @com.aliyun.core.annotation.NameInMap("RecentDeviationBehaviorCount")
+        private Long recentDeviationBehaviorCount;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -157,8 +167,11 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
             this.instanceName = builder.instanceName;
             this.internetIp = builder.internetIp;
             this.intranetIp = builder.intranetIp;
+            this.maliciousProcessCount = builder.maliciousProcessCount;
+            this.normalEventCount = builder.normalEventCount;
             this.pluginStatus = builder.pluginStatus;
             this.processCount = builder.processCount;
+            this.recentDeviationBehaviorCount = builder.recentDeviationBehaviorCount;
             this.status = builder.status;
             this.studyMode = builder.studyMode;
             this.studyRemainDays = builder.studyRemainDays;
@@ -203,6 +216,20 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
         }
 
         /**
+         * @return maliciousProcessCount
+         */
+        public Long getMaliciousProcessCount() {
+            return this.maliciousProcessCount;
+        }
+
+        /**
+         * @return normalEventCount
+         */
+        public Long getNormalEventCount() {
+            return this.normalEventCount;
+        }
+
+        /**
          * @return pluginStatus
          */
         public String getPluginStatus() {
@@ -214,6 +241,13 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
          */
         public Integer getProcessCount() {
             return this.processCount;
+        }
+
+        /**
+         * @return recentDeviationBehaviorCount
+         */
+        public Long getRecentDeviationBehaviorCount() {
+            return this.recentDeviationBehaviorCount;
         }
 
         /**
@@ -256,8 +290,11 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
             private String instanceName; 
             private String internetIp; 
             private String intranetIp; 
+            private Long maliciousProcessCount; 
+            private Long normalEventCount; 
             private String pluginStatus; 
             private Integer processCount; 
+            private Long recentDeviationBehaviorCount; 
             private String status; 
             private String studyMode; 
             private Long studyRemainDays; 
@@ -272,8 +309,11 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
                 this.instanceName = model.instanceName;
                 this.internetIp = model.internetIp;
                 this.intranetIp = model.intranetIp;
+                this.maliciousProcessCount = model.maliciousProcessCount;
+                this.normalEventCount = model.normalEventCount;
                 this.pluginStatus = model.pluginStatus;
                 this.processCount = model.processCount;
+                this.recentDeviationBehaviorCount = model.recentDeviationBehaviorCount;
                 this.status = model.status;
                 this.studyMode = model.studyMode;
                 this.studyRemainDays = model.studyRemainDays;
@@ -314,6 +354,22 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
             }
 
             /**
+             * MaliciousProcessCount.
+             */
+            public Builder maliciousProcessCount(Long maliciousProcessCount) {
+                this.maliciousProcessCount = maliciousProcessCount;
+                return this;
+            }
+
+            /**
+             * NormalEventCount.
+             */
+            public Builder normalEventCount(Long normalEventCount) {
+                this.normalEventCount = normalEventCount;
+                return this;
+            }
+
+            /**
              * PluginStatus.
              */
             public Builder pluginStatus(String pluginStatus) {
@@ -326,6 +382,14 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
              */
             public Builder processCount(Integer processCount) {
                 this.processCount = processCount;
+                return this;
+            }
+
+            /**
+             * RecentDeviationBehaviorCount.
+             */
+            public Builder recentDeviationBehaviorCount(Long recentDeviationBehaviorCount) {
+                this.recentDeviationBehaviorCount = recentDeviationBehaviorCount;
                 return this;
             }
 

@@ -22,9 +22,14 @@ public class SendCustomizeReportRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long reportId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
     private SendCustomizeReportRequest(Builder builder) {
         super(builder);
         this.reportId = builder.reportId;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
     }
 
     public static Builder builder() {
@@ -47,8 +52,16 @@ public class SendCustomizeReportRequest extends Request {
         return this.reportId;
     }
 
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
     public static final class Builder extends Request.Builder<SendCustomizeReportRequest, Builder> {
         private Long reportId; 
+        private Long resourceDirectoryAccountId; 
 
         private Builder() {
             super();
@@ -57,6 +70,7 @@ public class SendCustomizeReportRequest extends Request {
         private Builder(SendCustomizeReportRequest request) {
             super(request);
             this.reportId = request.reportId;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
         } 
 
         /**
@@ -72,6 +86,15 @@ public class SendCustomizeReportRequest extends Request {
         public Builder reportId(Long reportId) {
             this.putQueryParameter("ReportId", reportId);
             this.reportId = reportId;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

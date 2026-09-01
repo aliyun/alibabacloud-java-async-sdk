@@ -198,6 +198,9 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private Long createdTime;
 
+        @com.aliyun.core.annotation.NameInMap("EdrAuthVersion")
+        private String edrAuthVersion;
+
         @com.aliyun.core.annotation.NameInMap("ExposedStatus")
         private Integer exposedStatus;
 
@@ -206,6 +209,9 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("FlagName")
         private String flagName;
+
+        @com.aliyun.core.annotation.NameInMap("FreeType")
+        private String freeType;
 
         @com.aliyun.core.annotation.NameInMap("GroupId")
         private Long groupId;
@@ -345,9 +351,11 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             this.cores = builder.cores;
             this.cpuInfo = builder.cpuInfo;
             this.createdTime = builder.createdTime;
+            this.edrAuthVersion = builder.edrAuthVersion;
             this.exposedStatus = builder.exposedStatus;
             this.flag = builder.flag;
             this.flagName = builder.flagName;
+            this.freeType = builder.freeType;
             this.groupId = builder.groupId;
             this.groupTrace = builder.groupTrace;
             this.hasContainer = builder.hasContainer;
@@ -518,6 +526,13 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return edrAuthVersion
+         */
+        public String getEdrAuthVersion() {
+            return this.edrAuthVersion;
+        }
+
+        /**
          * @return exposedStatus
          */
         public Integer getExposedStatus() {
@@ -536,6 +551,13 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
          */
         public String getFlagName() {
             return this.flagName;
+        }
+
+        /**
+         * @return freeType
+         */
+        public String getFreeType() {
+            return this.freeType;
         }
 
         /**
@@ -836,9 +858,11 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             private Integer cores; 
             private String cpuInfo; 
             private Long createdTime; 
+            private String edrAuthVersion; 
             private Integer exposedStatus; 
             private Integer flag; 
             private String flagName; 
+            private String freeType; 
             private Long groupId; 
             private String groupTrace; 
             private String hasContainer; 
@@ -901,9 +925,11 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
                 this.cores = model.cores;
                 this.cpuInfo = model.cpuInfo;
                 this.createdTime = model.createdTime;
+                this.edrAuthVersion = model.edrAuthVersion;
                 this.exposedStatus = model.exposedStatus;
                 this.flag = model.flag;
                 this.flagName = model.flagName;
+                this.freeType = model.freeType;
                 this.groupId = model.groupId;
                 this.groupTrace = model.groupTrace;
                 this.hasContainer = model.hasContainer;
@@ -1189,6 +1215,14 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * EdrAuthVersion.
+             */
+            public Builder edrAuthVersion(String edrAuthVersion) {
+                this.edrAuthVersion = edrAuthVersion;
+                return this;
+            }
+
+            /**
              * <p>Indicates whether the asset is exposed. Valid values:</p>
              * <ul>
              * <li><strong>0</strong>: The asset is not exposed.</li>
@@ -1241,6 +1275,14 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
              */
             public Builder flagName(String flagName) {
                 this.flagName = flagName;
+                return this;
+            }
+
+            /**
+             * FreeType.
+             */
+            public Builder freeType(String freeType) {
+                this.freeType = freeType;
                 return this;
             }
 

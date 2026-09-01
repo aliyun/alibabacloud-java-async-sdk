@@ -18,6 +18,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateVirusScanOnceTaskRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Param")
     private String param;
 
@@ -35,6 +40,7 @@ public class CreateVirusScanOnceTaskRequest extends Request {
 
     private CreateVirusScanOnceTaskRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.param = builder.param;
         this.scanPath = builder.scanPath;
         this.scanType = builder.scanType;
@@ -52,6 +58,13 @@ public class CreateVirusScanOnceTaskRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -83,6 +96,7 @@ public class CreateVirusScanOnceTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateVirusScanOnceTaskRequest, Builder> {
+        private String clientToken; 
         private String param; 
         private java.util.List<String> scanPath; 
         private String scanType; 
@@ -94,11 +108,21 @@ public class CreateVirusScanOnceTaskRequest extends Request {
 
         private Builder(CreateVirusScanOnceTaskRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.param = request.param;
             this.scanPath = request.scanPath;
             this.scanType = request.scanType;
             this.selectionKey = request.selectionKey;
         } 
+
+        /**
+         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
 
         /**
          * <p>Additional information fields: </p>

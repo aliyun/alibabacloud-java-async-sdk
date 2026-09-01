@@ -18,6 +18,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AddAssetSelectionCriteriaRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Criteria")
     private String criteria;
 
@@ -36,6 +41,7 @@ public class AddAssetSelectionCriteriaRequest extends Request {
 
     private AddAssetSelectionCriteriaRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.criteria = builder.criteria;
         this.criteriaOperation = builder.criteriaOperation;
         this.selectionKey = builder.selectionKey;
@@ -53,6 +59,13 @@ public class AddAssetSelectionCriteriaRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -84,6 +97,7 @@ public class AddAssetSelectionCriteriaRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddAssetSelectionCriteriaRequest, Builder> {
+        private String clientToken; 
         private String criteria; 
         private String criteriaOperation; 
         private String selectionKey; 
@@ -95,11 +109,21 @@ public class AddAssetSelectionCriteriaRequest extends Request {
 
         private Builder(AddAssetSelectionCriteriaRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.criteria = request.criteria;
             this.criteriaOperation = request.criteriaOperation;
             this.selectionKey = request.selectionKey;
             this.targetOperationList = request.targetOperationList;
         } 
+
+        /**
+         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
 
         /**
          * <p>The search conditions that are used to query assets. The value of this parameter is in the JSON format and is case-sensitive.</p>

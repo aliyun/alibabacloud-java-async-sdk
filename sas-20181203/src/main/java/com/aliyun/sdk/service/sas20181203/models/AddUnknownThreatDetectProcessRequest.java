@@ -22,6 +22,11 @@ public class AddUnknownThreatDetectProcessRequest extends Request {
     private java.util.List<Long> eventIdList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HandleRemark")
+    @com.aliyun.core.annotation.Validation(maxLength = 100)
+    private String handleRemark;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProcessList")
     private java.util.List<ProcessList> processList;
 
@@ -32,6 +37,7 @@ public class AddUnknownThreatDetectProcessRequest extends Request {
     private AddUnknownThreatDetectProcessRequest(Builder builder) {
         super(builder);
         this.eventIdList = builder.eventIdList;
+        this.handleRemark = builder.handleRemark;
         this.processList = builder.processList;
         this.uuidList = builder.uuidList;
     }
@@ -57,6 +63,13 @@ public class AddUnknownThreatDetectProcessRequest extends Request {
     }
 
     /**
+     * @return handleRemark
+     */
+    public String getHandleRemark() {
+        return this.handleRemark;
+    }
+
+    /**
      * @return processList
      */
     public java.util.List<ProcessList> getProcessList() {
@@ -72,6 +85,7 @@ public class AddUnknownThreatDetectProcessRequest extends Request {
 
     public static final class Builder extends Request.Builder<AddUnknownThreatDetectProcessRequest, Builder> {
         private java.util.List<Long> eventIdList; 
+        private String handleRemark; 
         private java.util.List<ProcessList> processList; 
         private java.util.List<String> uuidList; 
 
@@ -82,6 +96,7 @@ public class AddUnknownThreatDetectProcessRequest extends Request {
         private Builder(AddUnknownThreatDetectProcessRequest request) {
             super(request);
             this.eventIdList = request.eventIdList;
+            this.handleRemark = request.handleRemark;
             this.processList = request.processList;
             this.uuidList = request.uuidList;
         } 
@@ -92,6 +107,15 @@ public class AddUnknownThreatDetectProcessRequest extends Request {
         public Builder eventIdList(java.util.List<Long> eventIdList) {
             this.putQueryParameter("EventIdList", eventIdList);
             this.eventIdList = eventIdList;
+            return this;
+        }
+
+        /**
+         * HandleRemark.
+         */
+        public Builder handleRemark(String handleRemark) {
+            this.putQueryParameter("HandleRemark", handleRemark);
+            this.handleRemark = handleRemark;
             return this;
         }
 

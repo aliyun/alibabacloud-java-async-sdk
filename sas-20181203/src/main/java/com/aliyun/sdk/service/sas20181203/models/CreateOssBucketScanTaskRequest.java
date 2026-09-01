@@ -59,6 +59,10 @@ public class CreateOssBucketScanTaskRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer scanMode;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
+    private String source;
+
     private CreateOssBucketScanTaskRequest(Builder builder) {
         super(builder);
         this.allKeyPrefix = builder.allKeyPrefix;
@@ -71,6 +75,7 @@ public class CreateOssBucketScanTaskRequest extends Request {
         this.keySuffixList = builder.keySuffixList;
         this.lastModifiedStartTime = builder.lastModifiedStartTime;
         this.scanMode = builder.scanMode;
+        this.source = builder.source;
     }
 
     public static Builder builder() {
@@ -156,6 +161,13 @@ public class CreateOssBucketScanTaskRequest extends Request {
         return this.scanMode;
     }
 
+    /**
+     * @return source
+     */
+    public String getSource() {
+        return this.source;
+    }
+
     public static final class Builder extends Request.Builder<CreateOssBucketScanTaskRequest, Builder> {
         private Boolean allKeyPrefix; 
         private java.util.List<String> bucketNameList; 
@@ -167,6 +179,7 @@ public class CreateOssBucketScanTaskRequest extends Request {
         private java.util.List<String> keySuffixList; 
         private Long lastModifiedStartTime; 
         private Integer scanMode; 
+        private String source; 
 
         private Builder() {
             super();
@@ -184,6 +197,7 @@ public class CreateOssBucketScanTaskRequest extends Request {
             this.keySuffixList = request.keySuffixList;
             this.lastModifiedStartTime = request.lastModifiedStartTime;
             this.scanMode = request.scanMode;
+            this.source = request.source;
         } 
 
         /**
@@ -294,6 +308,15 @@ public class CreateOssBucketScanTaskRequest extends Request {
         public Builder scanMode(Integer scanMode) {
             this.putQueryParameter("ScanMode", scanMode);
             this.scanMode = scanMode;
+            return this;
+        }
+
+        /**
+         * Source.
+         */
+        public Builder source(String source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 

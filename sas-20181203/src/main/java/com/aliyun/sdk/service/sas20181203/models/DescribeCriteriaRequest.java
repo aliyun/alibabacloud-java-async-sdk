@@ -22,6 +22,10 @@ public class DescribeCriteriaRequest extends Request {
     private String machineTypes;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SupportAutoTag")
     private Boolean supportAutoTag;
 
@@ -32,6 +36,7 @@ public class DescribeCriteriaRequest extends Request {
     private DescribeCriteriaRequest(Builder builder) {
         super(builder);
         this.machineTypes = builder.machineTypes;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.supportAutoTag = builder.supportAutoTag;
         this.value = builder.value;
     }
@@ -57,6 +62,13 @@ public class DescribeCriteriaRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return supportAutoTag
      */
     public Boolean getSupportAutoTag() {
@@ -72,6 +84,7 @@ public class DescribeCriteriaRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeCriteriaRequest, Builder> {
         private String machineTypes; 
+        private Long resourceDirectoryAccountId; 
         private Boolean supportAutoTag; 
         private String value; 
 
@@ -82,6 +95,7 @@ public class DescribeCriteriaRequest extends Request {
         private Builder(DescribeCriteriaRequest request) {
             super(request);
             this.machineTypes = request.machineTypes;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.supportAutoTag = request.supportAutoTag;
             this.value = request.value;
         } 
@@ -98,6 +112,15 @@ public class DescribeCriteriaRequest extends Request {
         public Builder machineTypes(String machineTypes) {
             this.putQueryParameter("MachineTypes", machineTypes);
             this.machineTypes = machineTypes;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

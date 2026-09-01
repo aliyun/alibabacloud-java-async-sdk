@@ -22,12 +22,17 @@ public class DeleteVulWhitelistRequest extends Request {
     private String id;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Whitelist")
     private String whitelist;
 
     private DeleteVulWhitelistRequest(Builder builder) {
         super(builder);
         this.id = builder.id;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.whitelist = builder.whitelist;
     }
 
@@ -52,6 +57,13 @@ public class DeleteVulWhitelistRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return whitelist
      */
     public String getWhitelist() {
@@ -60,6 +72,7 @@ public class DeleteVulWhitelistRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteVulWhitelistRequest, Builder> {
         private String id; 
+        private Long resourceDirectoryAccountId; 
         private String whitelist; 
 
         private Builder() {
@@ -69,6 +82,7 @@ public class DeleteVulWhitelistRequest extends Request {
         private Builder(DeleteVulWhitelistRequest request) {
             super(request);
             this.id = request.id;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.whitelist = request.whitelist;
         } 
 
@@ -84,6 +98,15 @@ public class DeleteVulWhitelistRequest extends Request {
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
             this.id = id;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

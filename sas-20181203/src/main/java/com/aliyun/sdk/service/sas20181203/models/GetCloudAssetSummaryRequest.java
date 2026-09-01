@@ -26,6 +26,10 @@ public class GetCloudAssetSummaryRequest extends Request {
     private Boolean isSaleData;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Vendors")
     private java.util.List<Integer> vendors;
 
@@ -33,6 +37,7 @@ public class GetCloudAssetSummaryRequest extends Request {
         super(builder);
         this.cloudAssetTypes = builder.cloudAssetTypes;
         this.isSaleData = builder.isSaleData;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.vendors = builder.vendors;
     }
 
@@ -64,6 +69,13 @@ public class GetCloudAssetSummaryRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return vendors
      */
     public java.util.List<Integer> getVendors() {
@@ -73,6 +85,7 @@ public class GetCloudAssetSummaryRequest extends Request {
     public static final class Builder extends Request.Builder<GetCloudAssetSummaryRequest, Builder> {
         private java.util.List<CloudAssetTypes> cloudAssetTypes; 
         private Boolean isSaleData; 
+        private Long resourceDirectoryAccountId; 
         private java.util.List<Integer> vendors; 
 
         private Builder() {
@@ -83,6 +96,7 @@ public class GetCloudAssetSummaryRequest extends Request {
             super(request);
             this.cloudAssetTypes = request.cloudAssetTypes;
             this.isSaleData = request.isSaleData;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.vendors = request.vendors;
         } 
 
@@ -101,6 +115,15 @@ public class GetCloudAssetSummaryRequest extends Request {
         public Builder isSaleData(Boolean isSaleData) {
             this.putQueryParameter("IsSaleData", isSaleData);
             this.isSaleData = isSaleData;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

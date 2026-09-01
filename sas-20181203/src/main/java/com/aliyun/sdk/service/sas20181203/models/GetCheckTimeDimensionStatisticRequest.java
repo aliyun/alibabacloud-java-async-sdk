@@ -22,6 +22,10 @@ public class GetCheckTimeDimensionStatisticRequest extends Request {
     private Long endTimeStamp;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTimeStamp")
     private Long startTimeStamp;
 
@@ -36,6 +40,7 @@ public class GetCheckTimeDimensionStatisticRequest extends Request {
     private GetCheckTimeDimensionStatisticRequest(Builder builder) {
         super(builder);
         this.endTimeStamp = builder.endTimeStamp;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.startTimeStamp = builder.startTimeStamp;
         this.statisticType = builder.statisticType;
         this.vendors = builder.vendors;
@@ -62,6 +67,13 @@ public class GetCheckTimeDimensionStatisticRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return startTimeStamp
      */
     public Long getStartTimeStamp() {
@@ -84,6 +96,7 @@ public class GetCheckTimeDimensionStatisticRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetCheckTimeDimensionStatisticRequest, Builder> {
         private Long endTimeStamp; 
+        private Long resourceDirectoryAccountId; 
         private Long startTimeStamp; 
         private String statisticType; 
         private java.util.List<String> vendors; 
@@ -95,6 +108,7 @@ public class GetCheckTimeDimensionStatisticRequest extends Request {
         private Builder(GetCheckTimeDimensionStatisticRequest request) {
             super(request);
             this.endTimeStamp = request.endTimeStamp;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.startTimeStamp = request.startTimeStamp;
             this.statisticType = request.statisticType;
             this.vendors = request.vendors;
@@ -109,6 +123,15 @@ public class GetCheckTimeDimensionStatisticRequest extends Request {
         public Builder endTimeStamp(Long endTimeStamp) {
             this.putQueryParameter("EndTimeStamp", endTimeStamp);
             this.endTimeStamp = endTimeStamp;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

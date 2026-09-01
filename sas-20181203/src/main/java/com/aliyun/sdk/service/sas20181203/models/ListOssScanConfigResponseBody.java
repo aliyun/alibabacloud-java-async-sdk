@@ -122,6 +122,12 @@ public class ListOssScanConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllKeyPrefix")
         private Boolean allKeyPrefix;
 
+        @com.aliyun.core.annotation.NameInMap("AutoAdd")
+        private Integer autoAdd;
+
+        @com.aliyun.core.annotation.NameInMap("AutoAddConfigName")
+        private String autoAddConfigName;
+
         @com.aliyun.core.annotation.NameInMap("BucketCount")
         private Integer bucketCount;
 
@@ -167,11 +173,16 @@ public class ListOssScanConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ScanDayList")
         private java.util.List<Integer> scanDayList;
 
+        @com.aliyun.core.annotation.NameInMap("Source")
+        private String source;
+
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private Data(Builder builder) {
             this.allKeyPrefix = builder.allKeyPrefix;
+            this.autoAdd = builder.autoAdd;
+            this.autoAddConfigName = builder.autoAddConfigName;
             this.bucketCount = builder.bucketCount;
             this.bucketNameList = builder.bucketNameList;
             this.decompressMaxFileCount = builder.decompressMaxFileCount;
@@ -187,6 +198,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             this.name = builder.name;
             this.realTimeIncr = builder.realTimeIncr;
             this.scanDayList = builder.scanDayList;
+            this.source = builder.source;
             this.startTime = builder.startTime;
         }
 
@@ -203,6 +215,20 @@ public class ListOssScanConfigResponseBody extends TeaModel {
          */
         public Boolean getAllKeyPrefix() {
             return this.allKeyPrefix;
+        }
+
+        /**
+         * @return autoAdd
+         */
+        public Integer getAutoAdd() {
+            return this.autoAdd;
+        }
+
+        /**
+         * @return autoAddConfigName
+         */
+        public String getAutoAddConfigName() {
+            return this.autoAddConfigName;
         }
 
         /**
@@ -311,6 +337,13 @@ public class ListOssScanConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return source
+         */
+        public String getSource() {
+            return this.source;
+        }
+
+        /**
          * @return startTime
          */
         public String getStartTime() {
@@ -319,6 +352,8 @@ public class ListOssScanConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean allKeyPrefix; 
+            private Integer autoAdd; 
+            private String autoAddConfigName; 
             private Integer bucketCount; 
             private java.util.List<String> bucketNameList; 
             private Integer decompressMaxFileCount; 
@@ -334,6 +369,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             private String name; 
             private Boolean realTimeIncr; 
             private java.util.List<Integer> scanDayList; 
+            private String source; 
             private String startTime; 
 
             private Builder() {
@@ -341,6 +377,8 @@ public class ListOssScanConfigResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.allKeyPrefix = model.allKeyPrefix;
+                this.autoAdd = model.autoAdd;
+                this.autoAddConfigName = model.autoAddConfigName;
                 this.bucketCount = model.bucketCount;
                 this.bucketNameList = model.bucketNameList;
                 this.decompressMaxFileCount = model.decompressMaxFileCount;
@@ -356,6 +394,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
                 this.name = model.name;
                 this.realTimeIncr = model.realTimeIncr;
                 this.scanDayList = model.scanDayList;
+                this.source = model.source;
                 this.startTime = model.startTime;
             } 
 
@@ -367,6 +406,22 @@ public class ListOssScanConfigResponseBody extends TeaModel {
              */
             public Builder allKeyPrefix(Boolean allKeyPrefix) {
                 this.allKeyPrefix = allKeyPrefix;
+                return this;
+            }
+
+            /**
+             * AutoAdd.
+             */
+            public Builder autoAdd(Integer autoAdd) {
+                this.autoAdd = autoAdd;
+                return this;
+            }
+
+            /**
+             * AutoAddConfigName.
+             */
+            public Builder autoAddConfigName(String autoAddConfigName) {
+                this.autoAddConfigName = autoAddConfigName;
                 return this;
             }
 
@@ -521,6 +576,14 @@ public class ListOssScanConfigResponseBody extends TeaModel {
              */
             public Builder scanDayList(java.util.List<Integer> scanDayList) {
                 this.scanDayList = scanDayList;
+                return this;
+            }
+
+            /**
+             * Source.
+             */
+            public Builder source(String source) {
+                this.source = source;
                 return this;
             }
 

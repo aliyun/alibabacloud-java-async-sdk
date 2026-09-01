@@ -22,12 +22,17 @@ public class GetInstanceAlarmStatisticsRequest extends Request {
     private String from;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
     private GetInstanceAlarmStatisticsRequest(Builder builder) {
         super(builder);
         this.from = builder.from;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.uuid = builder.uuid;
     }
 
@@ -52,6 +57,13 @@ public class GetInstanceAlarmStatisticsRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return uuid
      */
     public String getUuid() {
@@ -60,6 +72,7 @@ public class GetInstanceAlarmStatisticsRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetInstanceAlarmStatisticsRequest, Builder> {
         private String from; 
+        private Long resourceDirectoryAccountId; 
         private String uuid; 
 
         private Builder() {
@@ -69,6 +82,7 @@ public class GetInstanceAlarmStatisticsRequest extends Request {
         private Builder(GetInstanceAlarmStatisticsRequest request) {
             super(request);
             this.from = request.from;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.uuid = request.uuid;
         } 
 
@@ -86,6 +100,15 @@ public class GetInstanceAlarmStatisticsRequest extends Request {
         public Builder from(String from) {
             this.putQueryParameter("From", from);
             this.from = from;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

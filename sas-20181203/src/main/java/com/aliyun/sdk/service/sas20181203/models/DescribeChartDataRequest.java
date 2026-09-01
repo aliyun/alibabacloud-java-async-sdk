@@ -34,6 +34,10 @@ public class DescribeChartDataRequest extends Request {
     private Long reportId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TimeEnd")
     private Long timeEnd;
 
@@ -47,6 +51,7 @@ public class DescribeChartDataRequest extends Request {
         this.chartId = builder.chartId;
         this.lang = builder.lang;
         this.reportId = builder.reportId;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.timeEnd = builder.timeEnd;
         this.timeStart = builder.timeStart;
     }
@@ -93,6 +98,13 @@ public class DescribeChartDataRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return timeEnd
      */
     public Long getTimeEnd() {
@@ -111,6 +123,7 @@ public class DescribeChartDataRequest extends Request {
         private String chartId; 
         private String lang; 
         private Long reportId; 
+        private Long resourceDirectoryAccountId; 
         private Long timeEnd; 
         private Long timeStart; 
 
@@ -124,6 +137,7 @@ public class DescribeChartDataRequest extends Request {
             this.chartId = request.chartId;
             this.lang = request.lang;
             this.reportId = request.reportId;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.timeEnd = request.timeEnd;
             this.timeStart = request.timeStart;
         } 
@@ -186,6 +200,15 @@ public class DescribeChartDataRequest extends Request {
         public Builder reportId(Long reportId) {
             this.putQueryParameter("ReportId", reportId);
             this.reportId = reportId;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

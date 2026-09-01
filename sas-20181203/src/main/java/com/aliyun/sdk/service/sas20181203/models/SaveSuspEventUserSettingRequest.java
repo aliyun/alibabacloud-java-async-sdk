@@ -25,10 +25,15 @@ public class SaveSuspEventUserSettingRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("LevelsOn")
     private String levelsOn;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
     private SaveSuspEventUserSettingRequest(Builder builder) {
         super(builder);
         this.from = builder.from;
         this.levelsOn = builder.levelsOn;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
     }
 
     public static Builder builder() {
@@ -58,9 +63,17 @@ public class SaveSuspEventUserSettingRequest extends Request {
         return this.levelsOn;
     }
 
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
     public static final class Builder extends Request.Builder<SaveSuspEventUserSettingRequest, Builder> {
         private String from; 
         private String levelsOn; 
+        private Long resourceDirectoryAccountId; 
 
         private Builder() {
             super();
@@ -70,6 +83,7 @@ public class SaveSuspEventUserSettingRequest extends Request {
             super(request);
             this.from = request.from;
             this.levelsOn = request.levelsOn;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
         } 
 
         /**
@@ -98,6 +112,15 @@ public class SaveSuspEventUserSettingRequest extends Request {
         public Builder levelsOn(String levelsOn) {
             this.putQueryParameter("LevelsOn", levelsOn);
             this.levelsOn = levelsOn;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

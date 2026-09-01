@@ -18,8 +18,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyCreateVulWhitelistRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Reason")
     private String reason;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetInfo")
@@ -32,7 +41,9 @@ public class ModifyCreateVulWhitelistRequest extends Request {
 
     private ModifyCreateVulWhitelistRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.reason = builder.reason;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.targetInfo = builder.targetInfo;
         this.whitelist = builder.whitelist;
     }
@@ -51,10 +62,24 @@ public class ModifyCreateVulWhitelistRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return reason
      */
     public String getReason() {
         return this.reason;
+    }
+
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     /**
@@ -72,7 +97,9 @@ public class ModifyCreateVulWhitelistRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyCreateVulWhitelistRequest, Builder> {
+        private String clientToken; 
         private String reason; 
+        private Long resourceDirectoryAccountId; 
         private String targetInfo; 
         private String whitelist; 
 
@@ -82,10 +109,21 @@ public class ModifyCreateVulWhitelistRequest extends Request {
 
         private Builder(ModifyCreateVulWhitelistRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.reason = request.reason;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.targetInfo = request.targetInfo;
             this.whitelist = request.whitelist;
         } 
+
+        /**
+         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
 
         /**
          * <p>The reason why you add the vulnerability to the whitelist.</p>
@@ -96,6 +134,15 @@ public class ModifyCreateVulWhitelistRequest extends Request {
         public Builder reason(String reason) {
             this.putQueryParameter("Reason", reason);
             this.reason = reason;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

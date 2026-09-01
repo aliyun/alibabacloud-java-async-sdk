@@ -23,6 +23,10 @@ public class OperateVulsRequest extends Request {
     private String operateType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
     @com.aliyun.core.annotation.Validation(required = true)
     private String type;
@@ -40,6 +44,7 @@ public class OperateVulsRequest extends Request {
     private OperateVulsRequest(Builder builder) {
         super(builder);
         this.operateType = builder.operateType;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.type = builder.type;
         this.uuids = builder.uuids;
         this.vulNames = builder.vulNames;
@@ -66,6 +71,13 @@ public class OperateVulsRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -88,6 +100,7 @@ public class OperateVulsRequest extends Request {
 
     public static final class Builder extends Request.Builder<OperateVulsRequest, Builder> {
         private String operateType; 
+        private Long resourceDirectoryAccountId; 
         private String type; 
         private java.util.List<String> uuids; 
         private java.util.List<String> vulNames; 
@@ -99,6 +112,7 @@ public class OperateVulsRequest extends Request {
         private Builder(OperateVulsRequest request) {
             super(request);
             this.operateType = request.operateType;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.type = request.type;
             this.uuids = request.uuids;
             this.vulNames = request.vulNames;
@@ -114,6 +128,15 @@ public class OperateVulsRequest extends Request {
         public Builder operateType(String operateType) {
             this.putQueryParameter("OperateType", operateType);
             this.operateType = operateType;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

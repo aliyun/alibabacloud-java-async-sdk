@@ -46,6 +46,11 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
     private java.util.List<String> bindUuidList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Criteria")
     private String criteria;
 
@@ -86,6 +91,7 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         this.bindAppList = builder.bindAppList;
         this.bindAssetType = builder.bindAssetType;
         this.bindUuidList = builder.bindUuidList;
+        this.clientToken = builder.clientToken;
         this.criteria = builder.criteria;
         this.logicalExp = builder.logicalExp;
         this.ntmVersion = builder.ntmVersion;
@@ -159,6 +165,13 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return criteria
      */
     public String getCriteria() {
@@ -222,6 +235,7 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         private java.util.List<String> bindAppList; 
         private String bindAssetType; 
         private java.util.List<String> bindUuidList; 
+        private String clientToken; 
         private String criteria; 
         private String logicalExp; 
         private String ntmVersion; 
@@ -244,6 +258,7 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
             this.bindAppList = request.bindAppList;
             this.bindAssetType = request.bindAssetType;
             this.bindUuidList = request.bindUuidList;
+            this.clientToken = request.clientToken;
             this.criteria = request.criteria;
             this.logicalExp = request.logicalExp;
             this.ntmVersion = request.ntmVersion;
@@ -347,6 +362,15 @@ public class ModifyServerlessAuthToMachineRequest extends Request {
         public Builder bindUuidList(java.util.List<String> bindUuidList) {
             this.putQueryParameter("BindUuidList", bindUuidList);
             this.bindUuidList = bindUuidList;
+            return this;
+        }
+
+        /**
+         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 

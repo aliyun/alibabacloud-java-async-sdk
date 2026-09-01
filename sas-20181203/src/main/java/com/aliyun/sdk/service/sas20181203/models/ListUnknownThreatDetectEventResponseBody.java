@@ -137,6 +137,9 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FirstTime")
         private Long firstTime;
 
+        @com.aliyun.core.annotation.NameInMap("HandleRemark")
+        private String handleRemark;
+
         @com.aliyun.core.annotation.NameInMap("HandleType")
         private String handleType;
 
@@ -192,6 +195,7 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             this.cmdline = builder.cmdline;
             this.count = builder.count;
             this.firstTime = builder.firstTime;
+            this.handleRemark = builder.handleRemark;
             this.handleType = builder.handleType;
             this.hashKey = builder.hashKey;
             this.id = builder.id;
@@ -258,6 +262,13 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
          */
         public Long getFirstTime() {
             return this.firstTime;
+        }
+
+        /**
+         * @return handleRemark
+         */
+        public String getHandleRemark() {
+            return this.handleRemark;
         }
 
         /**
@@ -379,6 +390,7 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
             private String cmdline; 
             private Integer count; 
             private Long firstTime; 
+            private String handleRemark; 
             private String handleType; 
             private String hashKey; 
             private String id; 
@@ -406,6 +418,7 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
                 this.cmdline = model.cmdline;
                 this.count = model.count;
                 this.firstTime = model.firstTime;
+                this.handleRemark = model.handleRemark;
                 this.handleType = model.handleType;
                 this.hashKey = model.hashKey;
                 this.id = model.id;
@@ -469,6 +482,14 @@ public class ListUnknownThreatDetectEventResponseBody extends TeaModel {
              */
             public Builder firstTime(Long firstTime) {
                 this.firstTime = firstTime;
+                return this;
+            }
+
+            /**
+             * HandleRemark.
+             */
+            public Builder handleRemark(String handleRemark) {
+                this.handleRemark = handleRemark;
                 return this;
             }
 

@@ -23,6 +23,11 @@ public class CreateAssetSelectionConfigRequest extends Request {
     private String businessType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Platform")
     private String platform;
 
@@ -34,6 +39,7 @@ public class CreateAssetSelectionConfigRequest extends Request {
     private CreateAssetSelectionConfigRequest(Builder builder) {
         super(builder);
         this.businessType = builder.businessType;
+        this.clientToken = builder.clientToken;
         this.platform = builder.platform;
         this.targetType = builder.targetType;
     }
@@ -59,6 +65,13 @@ public class CreateAssetSelectionConfigRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return platform
      */
     public String getPlatform() {
@@ -74,6 +87,7 @@ public class CreateAssetSelectionConfigRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateAssetSelectionConfigRequest, Builder> {
         private String businessType; 
+        private String clientToken; 
         private String platform; 
         private String targetType; 
 
@@ -84,6 +98,7 @@ public class CreateAssetSelectionConfigRequest extends Request {
         private Builder(CreateAssetSelectionConfigRequest request) {
             super(request);
             this.businessType = request.businessType;
+            this.clientToken = request.clientToken;
             this.platform = request.platform;
             this.targetType = request.targetType;
         } 
@@ -105,6 +120,15 @@ public class CreateAssetSelectionConfigRequest extends Request {
         public Builder businessType(String businessType) {
             this.putQueryParameter("BusinessType", businessType);
             this.businessType = businessType;
+            return this;
+        }
+
+        /**
+         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 

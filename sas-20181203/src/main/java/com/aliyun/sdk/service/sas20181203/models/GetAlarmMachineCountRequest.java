@@ -21,9 +21,14 @@ public class GetAlarmMachineCountRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("From")
     private String from;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
     private GetAlarmMachineCountRequest(Builder builder) {
         super(builder);
         this.from = builder.from;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
     }
 
     public static Builder builder() {
@@ -46,8 +51,16 @@ public class GetAlarmMachineCountRequest extends Request {
         return this.from;
     }
 
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
     public static final class Builder extends Request.Builder<GetAlarmMachineCountRequest, Builder> {
         private String from; 
+        private Long resourceDirectoryAccountId; 
 
         private Builder() {
             super();
@@ -56,6 +69,7 @@ public class GetAlarmMachineCountRequest extends Request {
         private Builder(GetAlarmMachineCountRequest request) {
             super(request);
             this.from = request.from;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
         } 
 
         /**
@@ -67,6 +81,15 @@ public class GetAlarmMachineCountRequest extends Request {
         public Builder from(String from) {
             this.putQueryParameter("From", from);
             this.from = from;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

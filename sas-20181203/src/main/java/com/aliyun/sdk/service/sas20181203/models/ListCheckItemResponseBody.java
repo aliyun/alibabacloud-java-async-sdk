@@ -374,6 +374,9 @@ public class ListCheckItemResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EstimatedCount")
         private Integer estimatedCount;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceEstimatedCount")
+        private Integer instanceEstimatedCount;
+
         @com.aliyun.core.annotation.NameInMap("InstanceSubType")
         private String instanceSubType;
 
@@ -396,6 +399,7 @@ public class ListCheckItemResponseBody extends TeaModel {
             this.customConfigs = builder.customConfigs;
             this.description = builder.description;
             this.estimatedCount = builder.estimatedCount;
+            this.instanceEstimatedCount = builder.instanceEstimatedCount;
             this.instanceSubType = builder.instanceSubType;
             this.instanceType = builder.instanceType;
             this.riskLevel = builder.riskLevel;
@@ -454,6 +458,13 @@ public class ListCheckItemResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceEstimatedCount
+         */
+        public Integer getInstanceEstimatedCount() {
+            return this.instanceEstimatedCount;
+        }
+
+        /**
          * @return instanceSubType
          */
         public String getInstanceSubType() {
@@ -495,6 +506,7 @@ public class ListCheckItemResponseBody extends TeaModel {
             private java.util.List<CustomConfigs> customConfigs; 
             private Description description; 
             private Integer estimatedCount; 
+            private Integer instanceEstimatedCount; 
             private String instanceSubType; 
             private String instanceType; 
             private String riskLevel; 
@@ -511,6 +523,7 @@ public class ListCheckItemResponseBody extends TeaModel {
                 this.customConfigs = model.customConfigs;
                 this.description = model.description;
                 this.estimatedCount = model.estimatedCount;
+                this.instanceEstimatedCount = model.instanceEstimatedCount;
                 this.instanceSubType = model.instanceSubType;
                 this.instanceType = model.instanceType;
                 this.riskLevel = model.riskLevel;
@@ -579,6 +592,14 @@ public class ListCheckItemResponseBody extends TeaModel {
              */
             public Builder estimatedCount(Integer estimatedCount) {
                 this.estimatedCount = estimatedCount;
+                return this;
+            }
+
+            /**
+             * InstanceEstimatedCount.
+             */
+            public Builder instanceEstimatedCount(Integer instanceEstimatedCount) {
+                this.instanceEstimatedCount = instanceEstimatedCount;
                 return this;
             }
 

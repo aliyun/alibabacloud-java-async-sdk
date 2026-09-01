@@ -698,6 +698,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ChangeCheckScopeConfigInstance  ChangeCheckScopeConfigInstanceRequest
+     * @return ChangeCheckScopeConfigInstanceResponse
+     */
+    @Override
+    public CompletableFuture<ChangeCheckScopeConfigInstanceResponse> changeCheckScopeConfigInstance(ChangeCheckScopeConfigInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ChangeCheckScopeConfigInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ChangeCheckScopeConfigInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ChangeCheckScopeConfigInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ChangeSecurityScoreRule  ChangeSecurityScoreRuleRequest
      * @return ChangeSecurityScoreRuleResponse
      */
@@ -9660,6 +9678,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetCheckScopeConfig  GetCheckScopeConfigRequest
+     * @return GetCheckScopeConfigResponse
+     */
+    @Override
+    public CompletableFuture<GetCheckScopeConfigResponse> getCheckScopeConfig(GetCheckScopeConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetCheckScopeConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCheckScopeConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetCheckScopeConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>You must purchase the configuration assessment feature before you can use the feature.</p>
      * 
@@ -16837,6 +16873,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateCheckPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateCheckScopeConfig  UpdateCheckScopeConfigRequest
+     * @return UpdateCheckScopeConfigResponse
+     */
+    @Override
+    public CompletableFuture<UpdateCheckScopeConfigResponse> updateCheckScopeConfig(UpdateCheckScopeConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateCheckScopeConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateCheckScopeConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateCheckScopeConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

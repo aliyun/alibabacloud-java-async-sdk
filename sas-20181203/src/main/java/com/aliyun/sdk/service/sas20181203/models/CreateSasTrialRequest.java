@@ -17,6 +17,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSasTrialRequest</p>
  */
 public class CreateSasTrialRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String clientToken;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FromEcs")
     private Boolean fromEcs;
@@ -39,6 +44,7 @@ public class CreateSasTrialRequest extends Request {
 
     private CreateSasTrialRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.fromEcs = builder.fromEcs;
         this.lang = builder.lang;
         this.requestForm = builder.requestForm;
@@ -57,6 +63,13 @@ public class CreateSasTrialRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -95,6 +108,7 @@ public class CreateSasTrialRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateSasTrialRequest, Builder> {
+        private String clientToken; 
         private Boolean fromEcs; 
         private String lang; 
         private RequestForm requestForm; 
@@ -107,12 +121,22 @@ public class CreateSasTrialRequest extends Request {
 
         private Builder(CreateSasTrialRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.fromEcs = request.fromEcs;
             this.lang = request.lang;
             this.requestForm = request.requestForm;
             this.tryType = request.tryType;
             this.tryVersion = request.tryVersion;
         } 
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
 
         /**
          * <p>Specifies whether the request is redirected from the Elastic Compute Service (ECS) console. Valid values:</p>

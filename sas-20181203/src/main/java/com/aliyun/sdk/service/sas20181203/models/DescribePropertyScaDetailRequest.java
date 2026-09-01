@@ -66,6 +66,10 @@ public class DescribePropertyScaDetailRequest extends Request {
     private String remark;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScaName")
     private String scaName;
 
@@ -123,6 +127,7 @@ public class DescribePropertyScaDetailRequest extends Request {
         this.processStartedEnd = builder.processStartedEnd;
         this.processStartedStart = builder.processStartedStart;
         this.remark = builder.remark;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.scaName = builder.scaName;
         this.scaNamePattern = builder.scaNamePattern;
         this.scaVersion = builder.scaVersion;
@@ -234,6 +239,13 @@ public class DescribePropertyScaDetailRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return scaName
      */
     public String getScaName() {
@@ -323,6 +335,7 @@ public class DescribePropertyScaDetailRequest extends Request {
         private Long processStartedEnd; 
         private Long processStartedStart; 
         private String remark; 
+        private Long resourceDirectoryAccountId; 
         private String scaName; 
         private String scaNamePattern; 
         private String scaVersion; 
@@ -353,6 +366,7 @@ public class DescribePropertyScaDetailRequest extends Request {
             this.processStartedEnd = request.processStartedEnd;
             this.processStartedStart = request.processStartedStart;
             this.remark = request.remark;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.scaName = request.scaName;
             this.scaNamePattern = request.scaNamePattern;
             this.scaVersion = request.scaVersion;
@@ -537,6 +551,15 @@ public class DescribePropertyScaDetailRequest extends Request {
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
             this.remark = remark;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

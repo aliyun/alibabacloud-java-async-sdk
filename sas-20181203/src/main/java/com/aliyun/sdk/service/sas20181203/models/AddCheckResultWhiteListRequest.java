@@ -22,6 +22,11 @@ public class AddCheckResultWhiteListRequest extends Request {
     private java.util.List<Long> checkIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private java.util.List<String> instanceIds;
 
@@ -36,6 +41,7 @@ public class AddCheckResultWhiteListRequest extends Request {
     private AddCheckResultWhiteListRequest(Builder builder) {
         super(builder);
         this.checkIds = builder.checkIds;
+        this.clientToken = builder.clientToken;
         this.instanceIds = builder.instanceIds;
         this.remark = builder.remark;
         this.ruleType = builder.ruleType;
@@ -62,6 +68,13 @@ public class AddCheckResultWhiteListRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return instanceIds
      */
     public java.util.List<String> getInstanceIds() {
@@ -84,6 +97,7 @@ public class AddCheckResultWhiteListRequest extends Request {
 
     public static final class Builder extends Request.Builder<AddCheckResultWhiteListRequest, Builder> {
         private java.util.List<Long> checkIds; 
+        private String clientToken; 
         private java.util.List<String> instanceIds; 
         private String remark; 
         private String ruleType; 
@@ -95,6 +109,7 @@ public class AddCheckResultWhiteListRequest extends Request {
         private Builder(AddCheckResultWhiteListRequest request) {
             super(request);
             this.checkIds = request.checkIds;
+            this.clientToken = request.clientToken;
             this.instanceIds = request.instanceIds;
             this.remark = request.remark;
             this.ruleType = request.ruleType;
@@ -109,6 +124,15 @@ public class AddCheckResultWhiteListRequest extends Request {
         public Builder checkIds(java.util.List<Long> checkIds) {
             this.putQueryParameter("CheckIds", checkIds);
             this.checkIds = checkIds;
+            return this;
+        }
+
+        /**
+         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 

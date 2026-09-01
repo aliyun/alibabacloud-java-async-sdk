@@ -22,12 +22,18 @@ public class UpdateSelectionKeyByTypeRequest extends Request {
     private String businessType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SelectionKey")
     private String selectionKey;
 
     private UpdateSelectionKeyByTypeRequest(Builder builder) {
         super(builder);
         this.businessType = builder.businessType;
+        this.clientToken = builder.clientToken;
         this.selectionKey = builder.selectionKey;
     }
 
@@ -52,6 +58,13 @@ public class UpdateSelectionKeyByTypeRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return selectionKey
      */
     public String getSelectionKey() {
@@ -60,6 +73,7 @@ public class UpdateSelectionKeyByTypeRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateSelectionKeyByTypeRequest, Builder> {
         private String businessType; 
+        private String clientToken; 
         private String selectionKey; 
 
         private Builder() {
@@ -69,6 +83,7 @@ public class UpdateSelectionKeyByTypeRequest extends Request {
         private Builder(UpdateSelectionKeyByTypeRequest request) {
             super(request);
             this.businessType = request.businessType;
+            this.clientToken = request.clientToken;
             this.selectionKey = request.selectionKey;
         } 
 
@@ -88,6 +103,15 @@ public class UpdateSelectionKeyByTypeRequest extends Request {
         public Builder businessType(String businessType) {
             this.putQueryParameter("BusinessType", businessType);
             this.businessType = businessType;
+            return this;
+        }
+
+        /**
+         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 

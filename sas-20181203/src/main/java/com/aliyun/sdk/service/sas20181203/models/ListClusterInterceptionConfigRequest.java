@@ -34,6 +34,10 @@ public class ListClusterInterceptionConfigRequest extends Request {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExcludeClusterTypes")
+    private java.util.List<String> excludeClusterTypes;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
@@ -43,6 +47,7 @@ public class ListClusterInterceptionConfigRequest extends Request {
         this.clusterId = builder.clusterId;
         this.clusterName = builder.clusterName;
         this.currentPage = builder.currentPage;
+        this.excludeClusterTypes = builder.excludeClusterTypes;
         this.pageSize = builder.pageSize;
     }
 
@@ -88,6 +93,13 @@ public class ListClusterInterceptionConfigRequest extends Request {
     }
 
     /**
+     * @return excludeClusterTypes
+     */
+    public java.util.List<String> getExcludeClusterTypes() {
+        return this.excludeClusterTypes;
+    }
+
+    /**
      * @return pageSize
      */
     public Integer getPageSize() {
@@ -99,6 +111,7 @@ public class ListClusterInterceptionConfigRequest extends Request {
         private String clusterId; 
         private String clusterName; 
         private Integer currentPage; 
+        private java.util.List<String> excludeClusterTypes; 
         private Integer pageSize; 
 
         private Builder() {
@@ -111,6 +124,7 @@ public class ListClusterInterceptionConfigRequest extends Request {
             this.clusterId = request.clusterId;
             this.clusterName = request.clusterName;
             this.currentPage = request.currentPage;
+            this.excludeClusterTypes = request.excludeClusterTypes;
             this.pageSize = request.pageSize;
         } 
 
@@ -168,6 +182,15 @@ public class ListClusterInterceptionConfigRequest extends Request {
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * ExcludeClusterTypes.
+         */
+        public Builder excludeClusterTypes(java.util.List<String> excludeClusterTypes) {
+            this.putQueryParameter("ExcludeClusterTypes", excludeClusterTypes);
+            this.excludeClusterTypes = excludeClusterTypes;
             return this;
         }
 

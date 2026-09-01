@@ -18,6 +18,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyPostPayModuleSwitchRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EdrModuleSwitch")
+    private EdrModuleSwitch edrModuleSwitch;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PostPaidHostAutoBind")
     private Integer postPaidHostAutoBind;
 
@@ -39,6 +48,8 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
 
     private ModifyPostPayModuleSwitchRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
+        this.edrModuleSwitch = builder.edrModuleSwitch;
         this.postPaidHostAutoBind = builder.postPaidHostAutoBind;
         this.postPaidHostAutoBindVersion = builder.postPaidHostAutoBindVersion;
         this.postPayInstanceId = builder.postPayInstanceId;
@@ -57,6 +68,20 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * @return edrModuleSwitch
+     */
+    public EdrModuleSwitch getEdrModuleSwitch() {
+        return this.edrModuleSwitch;
     }
 
     /**
@@ -95,6 +120,8 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyPostPayModuleSwitchRequest, Builder> {
+        private String clientToken; 
+        private EdrModuleSwitch edrModuleSwitch; 
         private Integer postPaidHostAutoBind; 
         private Integer postPaidHostAutoBindVersion; 
         private String postPayInstanceId; 
@@ -107,12 +134,33 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
 
         private Builder(ModifyPostPayModuleSwitchRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
+            this.edrModuleSwitch = request.edrModuleSwitch;
             this.postPaidHostAutoBind = request.postPaidHostAutoBind;
             this.postPaidHostAutoBindVersion = request.postPaidHostAutoBindVersion;
             this.postPayInstanceId = request.postPayInstanceId;
             this.postPayModuleSwitch = request.postPayModuleSwitch;
             this.postPayModuleSwitchObj = request.postPayModuleSwitchObj;
         } 
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * EdrModuleSwitch.
+         */
+        public Builder edrModuleSwitch(EdrModuleSwitch edrModuleSwitch) {
+            String edrModuleSwitchShrink = shrink(edrModuleSwitch, "EdrModuleSwitch", "json");
+            this.putQueryParameter("EdrModuleSwitch", edrModuleSwitchShrink);
+            this.edrModuleSwitch = edrModuleSwitch;
+            return this;
+        }
 
         /**
          * <p>Automatic binding switch for new assets in host and container protection. Values:</p>
@@ -216,6 +264,81 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyPostPayModuleSwitchRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyPostPayModuleSwitchRequest</p>
+     */
+    public static class EdrModuleSwitch extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AutoBind")
+        private Integer autoBind;
+
+        @com.aliyun.core.annotation.NameInMap("EDR_HOST_USAGE")
+        private Long EDR_HOST_USAGE;
+
+        private EdrModuleSwitch(Builder builder) {
+            this.autoBind = builder.autoBind;
+            this.EDR_HOST_USAGE = builder.EDR_HOST_USAGE;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EdrModuleSwitch create() {
+            return builder().build();
+        }
+
+        /**
+         * @return autoBind
+         */
+        public Integer getAutoBind() {
+            return this.autoBind;
+        }
+
+        /**
+         * @return EDR_HOST_USAGE
+         */
+        public Long getEDR_HOST_USAGE() {
+            return this.EDR_HOST_USAGE;
+        }
+
+        public static final class Builder {
+            private Integer autoBind; 
+            private Long EDR_HOST_USAGE; 
+
+            private Builder() {
+            } 
+
+            private Builder(EdrModuleSwitch model) {
+                this.autoBind = model.autoBind;
+                this.EDR_HOST_USAGE = model.EDR_HOST_USAGE;
+            } 
+
+            /**
+             * AutoBind.
+             */
+            public Builder autoBind(Integer autoBind) {
+                this.autoBind = autoBind;
+                return this;
+            }
+
+            /**
+             * EDR_HOST_USAGE.
+             */
+            public Builder EDR_HOST_USAGE(Long EDR_HOST_USAGE) {
+                this.EDR_HOST_USAGE = EDR_HOST_USAGE;
+                return this;
+            }
+
+            public EdrModuleSwitch build() {
+                return new EdrModuleSwitch(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link ModifyPostPayModuleSwitchRequest} extends {@link TeaModel}

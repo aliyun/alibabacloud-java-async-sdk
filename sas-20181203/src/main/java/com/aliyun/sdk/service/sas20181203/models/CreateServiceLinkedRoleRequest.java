@@ -18,11 +18,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateServiceLinkedRoleRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceLinkedRole")
     private String serviceLinkedRole;
 
     private CreateServiceLinkedRoleRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.serviceLinkedRole = builder.serviceLinkedRole;
     }
 
@@ -40,6 +46,13 @@ public class CreateServiceLinkedRoleRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return serviceLinkedRole
      */
     public String getServiceLinkedRole() {
@@ -47,6 +60,7 @@ public class CreateServiceLinkedRoleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateServiceLinkedRoleRequest, Builder> {
+        private String clientToken; 
         private String serviceLinkedRole; 
 
         private Builder() {
@@ -55,8 +69,18 @@ public class CreateServiceLinkedRoleRequest extends Request {
 
         private Builder(CreateServiceLinkedRoleRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.serviceLinkedRole = request.serviceLinkedRole;
         } 
+
+        /**
+         * <p>客户端 Token，用于保证请求幂等性。不同请求应使用不同的 Token；只支持 ASCII 字符，长度不超过 64 个字符。</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
 
         /**
          * <p>The service-linked role. Default value: <strong>AliyunServiceRoleForSas</strong>. Valid values:</p>

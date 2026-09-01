@@ -18,11 +18,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetCheckProcessRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private GetCheckProcessRequest(Builder builder) {
         super(builder);
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.taskId = builder.taskId;
     }
 
@@ -40,6 +45,13 @@ public class GetCheckProcessRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -47,6 +59,7 @@ public class GetCheckProcessRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetCheckProcessRequest, Builder> {
+        private Long resourceDirectoryAccountId; 
         private String taskId; 
 
         private Builder() {
@@ -55,8 +68,18 @@ public class GetCheckProcessRequest extends Request {
 
         private Builder(GetCheckProcessRequest request) {
             super(request);
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.taskId = request.taskId;
         } 
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
 
         /**
          * <p>The ID of the task.</p>

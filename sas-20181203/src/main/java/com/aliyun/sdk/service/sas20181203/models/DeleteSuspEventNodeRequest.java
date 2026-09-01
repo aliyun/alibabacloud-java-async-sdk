@@ -22,9 +22,14 @@ public class DeleteSuspEventNodeRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long noteId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
     private DeleteSuspEventNodeRequest(Builder builder) {
         super(builder);
         this.noteId = builder.noteId;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
     }
 
     public static Builder builder() {
@@ -47,8 +52,16 @@ public class DeleteSuspEventNodeRequest extends Request {
         return this.noteId;
     }
 
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
     public static final class Builder extends Request.Builder<DeleteSuspEventNodeRequest, Builder> {
         private Long noteId; 
+        private Long resourceDirectoryAccountId; 
 
         private Builder() {
             super();
@@ -57,6 +70,7 @@ public class DeleteSuspEventNodeRequest extends Request {
         private Builder(DeleteSuspEventNodeRequest request) {
             super(request);
             this.noteId = request.noteId;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
         } 
 
         /**
@@ -72,6 +86,15 @@ public class DeleteSuspEventNodeRequest extends Request {
         public Builder noteId(Long noteId) {
             this.putQueryParameter("NoteId", noteId);
             this.noteId = noteId;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

@@ -21,9 +21,14 @@ public class DescribeEventOnStageRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
     private DescribeEventOnStageRequest(Builder builder) {
         super(builder);
         this.lang = builder.lang;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
     }
 
     public static Builder builder() {
@@ -46,8 +51,16 @@ public class DescribeEventOnStageRequest extends Request {
         return this.lang;
     }
 
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeEventOnStageRequest, Builder> {
         private String lang; 
+        private Long resourceDirectoryAccountId; 
 
         private Builder() {
             super();
@@ -56,6 +69,7 @@ public class DescribeEventOnStageRequest extends Request {
         private Builder(DescribeEventOnStageRequest request) {
             super(request);
             this.lang = request.lang;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
         } 
 
         /**
@@ -71,6 +85,15 @@ public class DescribeEventOnStageRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

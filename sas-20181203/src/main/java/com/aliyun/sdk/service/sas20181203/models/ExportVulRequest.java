@@ -22,6 +22,10 @@ public class ExportVulRequest extends Request {
     private String aliasName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssetType")
+    private String assetType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AttachTypes")
     private String attachTypes;
 
@@ -97,6 +101,7 @@ public class ExportVulRequest extends Request {
     private ExportVulRequest(Builder builder) {
         super(builder);
         this.aliasName = builder.aliasName;
+        this.assetType = builder.assetType;
         this.attachTypes = builder.attachTypes;
         this.containerName = builder.containerName;
         this.createTsEnd = builder.createTsEnd;
@@ -135,6 +140,13 @@ public class ExportVulRequest extends Request {
      */
     public String getAliasName() {
         return this.aliasName;
+    }
+
+    /**
+     * @return assetType
+     */
+    public String getAssetType() {
+        return this.assetType;
     }
 
     /**
@@ -265,6 +277,7 @@ public class ExportVulRequest extends Request {
 
     public static final class Builder extends Request.Builder<ExportVulRequest, Builder> {
         private String aliasName; 
+        private String assetType; 
         private String attachTypes; 
         private String containerName; 
         private Long createTsEnd; 
@@ -291,6 +304,7 @@ public class ExportVulRequest extends Request {
         private Builder(ExportVulRequest request) {
             super(request);
             this.aliasName = request.aliasName;
+            this.assetType = request.assetType;
             this.attachTypes = request.attachTypes;
             this.containerName = request.containerName;
             this.createTsEnd = request.createTsEnd;
@@ -320,6 +334,15 @@ public class ExportVulRequest extends Request {
         public Builder aliasName(String aliasName) {
             this.putQueryParameter("AliasName", aliasName);
             this.aliasName = aliasName;
+            return this;
+        }
+
+        /**
+         * AssetType.
+         */
+        public Builder assetType(String assetType) {
+            this.putQueryParameter("AssetType", assetType);
+            this.assetType = assetType;
             return this;
         }
 
