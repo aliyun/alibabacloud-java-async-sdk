@@ -655,6 +655,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListConsumerGroupConsumersResponse> listConsumerGroupConsumers(ListConsumerGroupConsumersRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>查询指定消费者组直接绑定的配额规则，不展开组内消费者个人绑定的规则；无直接绑定关系时返回空列表。</p>
+     * 
+     * @param request the request parameters of ListConsumerGroupQuotaRules  ListConsumerGroupQuotaRulesRequest
+     * @return ListConsumerGroupQuotaRulesResponse
+     */
+    CompletableFuture<ListConsumerGroupQuotaRulesResponse> listConsumerGroupQuotaRules(ListConsumerGroupQuotaRulesRequest request);
+
+    /**
      * @param request the request parameters of ListConsumerGroups  ListConsumerGroupsRequest
      * @return ListConsumerGroupsResponse
      */

@@ -1946,6 +1946,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>查询指定消费者组直接绑定的配额规则，不展开组内消费者个人绑定的规则；无直接绑定关系时返回空列表。</p>
+     * 
+     * @param request the request parameters of ListConsumerGroupQuotaRules  ListConsumerGroupQuotaRulesRequest
+     * @return ListConsumerGroupQuotaRulesResponse
+     */
+    @Override
+    public CompletableFuture<ListConsumerGroupQuotaRulesResponse> listConsumerGroupQuotaRules(ListConsumerGroupQuotaRulesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListConsumerGroupQuotaRules").setMethod(HttpMethod.GET).setPathRegex("/v1/consumer-groups/{consumerGroupId}/quota-rules").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListConsumerGroupQuotaRulesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListConsumerGroupQuotaRulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListConsumerGroups  ListConsumerGroupsRequest
      * @return ListConsumerGroupsResponse
      */
