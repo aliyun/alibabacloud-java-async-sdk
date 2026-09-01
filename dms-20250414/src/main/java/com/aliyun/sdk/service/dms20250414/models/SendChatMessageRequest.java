@@ -414,6 +414,9 @@ public class SendChatMessageRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("AllowedColumns")
         private java.util.List<String> allowedColumns;
 
+        @com.aliyun.core.annotation.NameInMap("DisallowedColumns")
+        private java.util.List<String> disallowedColumns;
+
         @com.aliyun.core.annotation.NameInMap("RequiredRowFilter")
         private String requiredRowFilter;
 
@@ -422,6 +425,7 @@ public class SendChatMessageRequest extends Request {
 
         private Tables(Builder builder) {
             this.allowedColumns = builder.allowedColumns;
+            this.disallowedColumns = builder.disallowedColumns;
             this.requiredRowFilter = builder.requiredRowFilter;
             this.tableName = builder.tableName;
         }
@@ -442,6 +446,13 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
+         * @return disallowedColumns
+         */
+        public java.util.List<String> getDisallowedColumns() {
+            return this.disallowedColumns;
+        }
+
+        /**
          * @return requiredRowFilter
          */
         public String getRequiredRowFilter() {
@@ -457,6 +468,7 @@ public class SendChatMessageRequest extends Request {
 
         public static final class Builder {
             private java.util.List<String> allowedColumns; 
+            private java.util.List<String> disallowedColumns; 
             private String requiredRowFilter; 
             private String tableName; 
 
@@ -465,6 +477,7 @@ public class SendChatMessageRequest extends Request {
 
             private Builder(Tables model) {
                 this.allowedColumns = model.allowedColumns;
+                this.disallowedColumns = model.disallowedColumns;
                 this.requiredRowFilter = model.requiredRowFilter;
                 this.tableName = model.tableName;
             } 
@@ -474,6 +487,14 @@ public class SendChatMessageRequest extends Request {
              */
             public Builder allowedColumns(java.util.List<String> allowedColumns) {
                 this.allowedColumns = allowedColumns;
+                return this;
+            }
+
+            /**
+             * DisallowedColumns.
+             */
+            public Builder disallowedColumns(java.util.List<String> disallowedColumns) {
+                this.disallowedColumns = disallowedColumns;
                 return this;
             }
 
@@ -849,6 +870,9 @@ public class SendChatMessageRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("AllowedColumns")
         private java.util.List<String> allowedColumns;
 
+        @com.aliyun.core.annotation.NameInMap("DisallowedColumns")
+        private java.util.List<String> disallowedColumns;
+
         @com.aliyun.core.annotation.NameInMap("RequiredRowFilter")
         private String requiredRowFilter;
 
@@ -857,6 +881,7 @@ public class SendChatMessageRequest extends Request {
 
         private PermissionTables(Builder builder) {
             this.allowedColumns = builder.allowedColumns;
+            this.disallowedColumns = builder.disallowedColumns;
             this.requiredRowFilter = builder.requiredRowFilter;
             this.tableName = builder.tableName;
         }
@@ -877,6 +902,13 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
+         * @return disallowedColumns
+         */
+        public java.util.List<String> getDisallowedColumns() {
+            return this.disallowedColumns;
+        }
+
+        /**
          * @return requiredRowFilter
          */
         public String getRequiredRowFilter() {
@@ -892,6 +924,7 @@ public class SendChatMessageRequest extends Request {
 
         public static final class Builder {
             private java.util.List<String> allowedColumns; 
+            private java.util.List<String> disallowedColumns; 
             private String requiredRowFilter; 
             private String tableName; 
 
@@ -900,6 +933,7 @@ public class SendChatMessageRequest extends Request {
 
             private Builder(PermissionTables model) {
                 this.allowedColumns = model.allowedColumns;
+                this.disallowedColumns = model.disallowedColumns;
                 this.requiredRowFilter = model.requiredRowFilter;
                 this.tableName = model.tableName;
             } 
@@ -909,6 +943,14 @@ public class SendChatMessageRequest extends Request {
              */
             public Builder allowedColumns(java.util.List<String> allowedColumns) {
                 this.allowedColumns = allowedColumns;
+                return this;
+            }
+
+            /**
+             * DisallowedColumns.
+             */
+            public Builder disallowedColumns(java.util.List<String> disallowedColumns) {
+                this.disallowedColumns = disallowedColumns;
                 return this;
             }
 
@@ -1280,6 +1322,60 @@ public class SendChatMessageRequest extends Request {
      *
      * <p>SendChatMessageRequest</p>
      */
+    public static class PermissionConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DefaultAction")
+        private String defaultAction;
+
+        private PermissionConfig(Builder builder) {
+            this.defaultAction = builder.defaultAction;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PermissionConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return defaultAction
+         */
+        public String getDefaultAction() {
+            return this.defaultAction;
+        }
+
+        public static final class Builder {
+            private String defaultAction; 
+
+            private Builder() {
+            } 
+
+            private Builder(PermissionConfig model) {
+                this.defaultAction = model.defaultAction;
+            } 
+
+            /**
+             * <p>未配置表的默认行为：allow=放行（默认），deny=拒绝</p>
+             */
+            public Builder defaultAction(String defaultAction) {
+                this.defaultAction = defaultAction;
+                return this;
+            }
+
+            public PermissionConfig build() {
+                return new PermissionConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SendChatMessageRequest} extends {@link TeaModel}
+     *
+     * <p>SendChatMessageRequest</p>
+     */
     public static class SessionConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomAgentId")
         private String customAgentId;
@@ -1301,6 +1397,9 @@ public class SendChatMessageRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
+
+        @com.aliyun.core.annotation.NameInMap("PermissionConfig")
+        private PermissionConfig permissionConfig;
 
         @com.aliyun.core.annotation.NameInMap("PlanMode")
         private String planMode;
@@ -1331,6 +1430,7 @@ public class SendChatMessageRequest extends Request {
             this.language = builder.language;
             this.mcpServerIds = builder.mcpServerIds;
             this.mode = builder.mode;
+            this.permissionConfig = builder.permissionConfig;
             this.planMode = builder.planMode;
             this.reportWaterMark = builder.reportWaterMark;
             this.skipAskHuman = builder.skipAskHuman;
@@ -1398,6 +1498,13 @@ public class SendChatMessageRequest extends Request {
         }
 
         /**
+         * @return permissionConfig
+         */
+        public PermissionConfig getPermissionConfig() {
+            return this.permissionConfig;
+        }
+
+        /**
          * @return planMode
          */
         public String getPlanMode() {
@@ -1454,6 +1561,7 @@ public class SendChatMessageRequest extends Request {
             private String language; 
             private String mcpServerIds; 
             private String mode; 
+            private PermissionConfig permissionConfig; 
             private String planMode; 
             private String reportWaterMark; 
             private Boolean skipAskHuman; 
@@ -1473,6 +1581,7 @@ public class SendChatMessageRequest extends Request {
                 this.language = model.language;
                 this.mcpServerIds = model.mcpServerIds;
                 this.mode = model.mode;
+                this.permissionConfig = model.permissionConfig;
                 this.planMode = model.planMode;
                 this.reportWaterMark = model.reportWaterMark;
                 this.skipAskHuman = model.skipAskHuman;
@@ -1535,6 +1644,14 @@ public class SendChatMessageRequest extends Request {
              */
             public Builder mode(String mode) {
                 this.mode = mode;
+                return this;
+            }
+
+            /**
+             * <p>session 级权限生效机制配置，仅含未配置表的默认行为</p>
+             */
+            public Builder permissionConfig(PermissionConfig permissionConfig) {
+                this.permissionConfig = permissionConfig;
                 return this;
             }
 
