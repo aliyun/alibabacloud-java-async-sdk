@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateTeamResponse> createTeam(CreateTeamRequest request);
 
     /**
+     * @param request the request parameters of CreateTemplate  CreateTemplateRequest
+     * @return CreateTemplateResponse
+     */
+    CompletableFuture<CreateTemplateResponse> createTemplate(CreateTemplateRequest request);
+
+    /**
      * @param request the request parameters of CreateVolume  CreateVolumeRequest
      * @return CreateVolumeResponse
      */
@@ -54,6 +60,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteTeamResponse
      */
     CompletableFuture<DeleteTeamResponse> deleteTeam(DeleteTeamRequest request);
+
+    /**
+     * @param request the request parameters of DeleteTemplate  DeleteTemplateRequest
+     * @return DeleteTemplateResponse
+     */
+    CompletableFuture<DeleteTemplateResponse> deleteTemplate(DeleteTemplateRequest request);
 
     /**
      * @param request the request parameters of DeleteVolume  DeleteVolumeRequest
@@ -80,6 +92,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTeamResponse> getTeam(GetTeamRequest request);
 
     /**
+     * @param request the request parameters of GetTemplate  GetTemplateRequest
+     * @return GetTemplateResponse
+     */
+    CompletableFuture<GetTemplateResponse> getTemplate(GetTemplateRequest request);
+
+    /**
      * @param request the request parameters of GetVolume  GetVolumeRequest
      * @return GetVolumeResponse
      */
@@ -102,6 +120,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListTeamsResponse
      */
     CompletableFuture<ListTeamsResponse> listTeams(ListTeamsRequest request);
+
+    /**
+     * @param request the request parameters of ListTemplates  ListTemplatesRequest
+     * @return ListTemplatesResponse
+     */
+    CompletableFuture<ListTemplatesResponse> listTemplates(ListTemplatesRequest request);
 
     /**
      * @param request the request parameters of ListVolumes  ListVolumesRequest
