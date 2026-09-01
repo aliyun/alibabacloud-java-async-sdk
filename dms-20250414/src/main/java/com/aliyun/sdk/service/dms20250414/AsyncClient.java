@@ -92,6 +92,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDataAgentAccuracyTestResponse> createDataAgentAccuracyTest(CreateDataAgentAccuracyTestRequest request);
 
     /**
+     * @param request the request parameters of CreateDataAgentFeedback  CreateDataAgentFeedbackRequest
+     * @return CreateDataAgentFeedbackResponse
+     */
+    CompletableFuture<CreateDataAgentFeedbackResponse> createDataAgentFeedback(CreateDataAgentFeedbackRequest request);
+
+    /**
      * @param request the request parameters of CreateDataAgentKnowledgeBase  CreateDataAgentKnowledgeBaseRequest
      * @return CreateDataAgentKnowledgeBaseResponse
      */
