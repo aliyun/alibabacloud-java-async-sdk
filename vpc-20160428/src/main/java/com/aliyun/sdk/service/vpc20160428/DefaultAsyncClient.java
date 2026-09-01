@@ -7568,6 +7568,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ModifyVpcCidrBlock  ModifyVpcCidrBlockRequest
+     * @return ModifyVpcCidrBlockResponse
+     */
+    @Override
+    public CompletableFuture<ModifyVpcCidrBlockResponse> modifyVpcCidrBlock(ModifyVpcCidrBlockRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyVpcCidrBlock").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyVpcCidrBlockResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyVpcCidrBlockResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>  <strong>ModifyVpcPrefixList</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/311535.html">ListPrefixLists</a> to query the status of the task.
      *     *   If the prefix list is in the <strong>Modifying</strong> state, the configuration of the prefix list is being modified.

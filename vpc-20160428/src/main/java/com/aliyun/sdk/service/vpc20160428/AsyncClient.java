@@ -3443,6 +3443,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyVpcAttributeResponse> modifyVpcAttribute(ModifyVpcAttributeRequest request);
 
     /**
+     * @param request the request parameters of ModifyVpcCidrBlock  ModifyVpcCidrBlockRequest
+     * @return ModifyVpcCidrBlockResponse
+     */
+    CompletableFuture<ModifyVpcCidrBlockResponse> modifyVpcCidrBlock(ModifyVpcCidrBlockRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  <strong>ModifyVpcPrefixList</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/311535.html">ListPrefixLists</a> to query the status of the task.
      *     *   If the prefix list is in the <strong>Modifying</strong> state, the configuration of the prefix list is being modified.
