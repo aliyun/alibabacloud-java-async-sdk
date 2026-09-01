@@ -22,6 +22,14 @@ public class DescribeProcessStatisticsRequest extends Request {
     private String lang;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcessActionEnd")
+    private Long processActionEnd;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcessActionStart")
+    private Long processActionStart;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RoleFor")
     private String roleFor;
 
@@ -32,6 +40,8 @@ public class DescribeProcessStatisticsRequest extends Request {
     private DescribeProcessStatisticsRequest(Builder builder) {
         super(builder);
         this.lang = builder.lang;
+        this.processActionEnd = builder.processActionEnd;
+        this.processActionStart = builder.processActionStart;
         this.roleFor = builder.roleFor;
         this.roleType = builder.roleType;
     }
@@ -57,6 +67,20 @@ public class DescribeProcessStatisticsRequest extends Request {
     }
 
     /**
+     * @return processActionEnd
+     */
+    public Long getProcessActionEnd() {
+        return this.processActionEnd;
+    }
+
+    /**
+     * @return processActionStart
+     */
+    public Long getProcessActionStart() {
+        return this.processActionStart;
+    }
+
+    /**
      * @return roleFor
      */
     public String getRoleFor() {
@@ -72,6 +96,8 @@ public class DescribeProcessStatisticsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeProcessStatisticsRequest, Builder> {
         private String lang; 
+        private Long processActionEnd; 
+        private Long processActionStart; 
         private String roleFor; 
         private String roleType; 
 
@@ -82,6 +108,8 @@ public class DescribeProcessStatisticsRequest extends Request {
         private Builder(DescribeProcessStatisticsRequest request) {
             super(request);
             this.lang = request.lang;
+            this.processActionEnd = request.processActionEnd;
+            this.processActionStart = request.processActionStart;
             this.roleFor = request.roleFor;
             this.roleType = request.roleType;
         } 
@@ -99,6 +127,24 @@ public class DescribeProcessStatisticsRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * ProcessActionEnd.
+         */
+        public Builder processActionEnd(Long processActionEnd) {
+            this.putQueryParameter("ProcessActionEnd", processActionEnd);
+            this.processActionEnd = processActionEnd;
+            return this;
+        }
+
+        /**
+         * ProcessActionStart.
+         */
+        public Builder processActionStart(Long processActionStart) {
+            this.putQueryParameter("ProcessActionStart", processActionStart);
+            this.processActionStart = processActionStart;
             return this;
         }
 

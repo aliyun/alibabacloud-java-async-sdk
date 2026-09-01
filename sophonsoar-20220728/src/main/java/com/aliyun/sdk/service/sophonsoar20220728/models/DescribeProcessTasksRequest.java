@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeProcessTasksRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertId")
+    private String alertId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Direction")
     private String direction;
 
@@ -36,6 +40,10 @@ public class DescribeProcessTasksRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EventUuid")
     private String eventUuid;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecuteUuid")
+    private String executeUuid;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrderField")
@@ -78,6 +86,10 @@ public class DescribeProcessTasksRequest extends Request {
     private String reqUuid;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResponseRuleId")
+    private String responseRuleId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SceneCode")
     private String sceneCode;
 
@@ -107,11 +119,13 @@ public class DescribeProcessTasksRequest extends Request {
 
     private DescribeProcessTasksRequest(Builder builder) {
         super(builder);
+        this.alertId = builder.alertId;
         this.direction = builder.direction;
         this.entityName = builder.entityName;
         this.entityType = builder.entityType;
         this.entityUuid = builder.entityUuid;
         this.eventUuid = builder.eventUuid;
+        this.executeUuid = builder.executeUuid;
         this.orderField = builder.orderField;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -122,6 +136,7 @@ public class DescribeProcessTasksRequest extends Request {
         this.processRemoveStart = builder.processRemoveStart;
         this.processStrategyUuid = builder.processStrategyUuid;
         this.reqUuid = builder.reqUuid;
+        this.responseRuleId = builder.responseRuleId;
         this.sceneCode = builder.sceneCode;
         this.scope = builder.scope;
         this.source = builder.source;
@@ -142,6 +157,13 @@ public class DescribeProcessTasksRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return alertId
+     */
+    public String getAlertId() {
+        return this.alertId;
     }
 
     /**
@@ -177,6 +199,13 @@ public class DescribeProcessTasksRequest extends Request {
      */
     public String getEventUuid() {
         return this.eventUuid;
+    }
+
+    /**
+     * @return executeUuid
+     */
+    public String getExecuteUuid() {
+        return this.executeUuid;
     }
 
     /**
@@ -250,6 +279,13 @@ public class DescribeProcessTasksRequest extends Request {
     }
 
     /**
+     * @return responseRuleId
+     */
+    public String getResponseRuleId() {
+        return this.responseRuleId;
+    }
+
+    /**
      * @return sceneCode
      */
     public String getSceneCode() {
@@ -299,11 +335,13 @@ public class DescribeProcessTasksRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeProcessTasksRequest, Builder> {
+        private String alertId; 
         private String direction; 
         private String entityName; 
         private String entityType; 
         private String entityUuid; 
         private String eventUuid; 
+        private String executeUuid; 
         private String orderField; 
         private Long pageNumber; 
         private Integer pageSize; 
@@ -314,6 +352,7 @@ public class DescribeProcessTasksRequest extends Request {
         private Long processRemoveStart; 
         private String processStrategyUuid; 
         private String reqUuid; 
+        private String responseRuleId; 
         private String sceneCode; 
         private String scope; 
         private String source; 
@@ -328,11 +367,13 @@ public class DescribeProcessTasksRequest extends Request {
 
         private Builder(DescribeProcessTasksRequest request) {
             super(request);
+            this.alertId = request.alertId;
             this.direction = request.direction;
             this.entityName = request.entityName;
             this.entityType = request.entityType;
             this.entityUuid = request.entityUuid;
             this.eventUuid = request.eventUuid;
+            this.executeUuid = request.executeUuid;
             this.orderField = request.orderField;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -343,6 +384,7 @@ public class DescribeProcessTasksRequest extends Request {
             this.processRemoveStart = request.processRemoveStart;
             this.processStrategyUuid = request.processStrategyUuid;
             this.reqUuid = request.reqUuid;
+            this.responseRuleId = request.responseRuleId;
             this.sceneCode = request.sceneCode;
             this.scope = request.scope;
             this.source = request.source;
@@ -351,6 +393,15 @@ public class DescribeProcessTasksRequest extends Request {
             this.triggerSource = request.triggerSource;
             this.yunCode = request.yunCode;
         } 
+
+        /**
+         * AlertId.
+         */
+        public Builder alertId(String alertId) {
+            this.putQueryParameter("AlertId", alertId);
+            this.alertId = alertId;
+            return this;
+        }
 
         /**
          * <p>The sort order. Valid values:</p>
@@ -418,6 +469,15 @@ public class DescribeProcessTasksRequest extends Request {
         public Builder eventUuid(String eventUuid) {
             this.putQueryParameter("EventUuid", eventUuid);
             this.eventUuid = eventUuid;
+            return this;
+        }
+
+        /**
+         * ExecuteUuid.
+         */
+        public Builder executeUuid(String executeUuid) {
+            this.putQueryParameter("ExecuteUuid", executeUuid);
+            this.executeUuid = executeUuid;
             return this;
         }
 
@@ -544,6 +604,15 @@ public class DescribeProcessTasksRequest extends Request {
         public Builder reqUuid(String reqUuid) {
             this.putQueryParameter("ReqUuid", reqUuid);
             this.reqUuid = reqUuid;
+            return this;
+        }
+
+        /**
+         * ResponseRuleId.
+         */
+        public Builder responseRuleId(String responseRuleId) {
+            this.putQueryParameter("ResponseRuleId", responseRuleId);
+            this.responseRuleId = responseRuleId;
             return this;
         }
 

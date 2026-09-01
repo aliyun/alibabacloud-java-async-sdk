@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class TriggerSophonPlaybookRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CommandName")
     private String commandName;
 
@@ -40,6 +44,7 @@ public class TriggerSophonPlaybookRequest extends Request {
 
     private TriggerSophonPlaybookRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.commandName = builder.commandName;
         this.inputParams = builder.inputParams;
         this.sophonTaskId = builder.sophonTaskId;
@@ -58,6 +63,13 @@ public class TriggerSophonPlaybookRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -96,6 +108,7 @@ public class TriggerSophonPlaybookRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<TriggerSophonPlaybookRequest, Builder> {
+        private String clientToken; 
         private String commandName; 
         private String inputParams; 
         private String sophonTaskId; 
@@ -108,12 +121,25 @@ public class TriggerSophonPlaybookRequest extends Request {
 
         private Builder(TriggerSophonPlaybookRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.commandName = request.commandName;
             this.inputParams = request.inputParams;
             this.sophonTaskId = request.sophonTaskId;
             this.triggerType = request.triggerType;
             this.uuid = request.uuid;
         } 
+
+        /**
+         * <p>幂等令牌。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426614174000</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
 
         /**
          * <p>The name of the command that you want to trigger.</p>
