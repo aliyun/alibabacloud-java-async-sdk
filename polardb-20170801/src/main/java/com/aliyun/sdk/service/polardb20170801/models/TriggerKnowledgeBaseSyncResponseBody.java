@@ -54,7 +54,10 @@ public class TriggerKnowledgeBaseSyncResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A7E6A8FD-C50B-46B2-BA85-D8B8D3******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

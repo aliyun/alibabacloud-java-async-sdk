@@ -42,9 +42,19 @@ public class CreateKBSyncLinkRequest extends Request {
     private String linkName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("McpEndpoint")
+    @com.aliyun.core.annotation.Validation(maxLength = 2048)
+    private String mcpEndpoint;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SheetMcpEndpoint")
+    @com.aliyun.core.annotation.Validation(maxLength = 2048)
+    private String sheetMcpEndpoint;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceDir")
@@ -65,6 +75,11 @@ public class CreateKBSyncLinkRequest extends Request {
     @com.aliyun.core.annotation.Validation(maxLength = 255)
     private String tenantId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    @com.aliyun.core.annotation.Validation(maxLength = 255)
+    private String userId;
+
     private CreateKBSyncLinkRequest(Builder builder) {
         super(builder);
         this.clientId = builder.clientId;
@@ -72,11 +87,14 @@ public class CreateKBSyncLinkRequest extends Request {
         this.description = builder.description;
         this.knowledgeBaseId = builder.knowledgeBaseId;
         this.linkName = builder.linkName;
+        this.mcpEndpoint = builder.mcpEndpoint;
         this.regionId = builder.regionId;
+        this.sheetMcpEndpoint = builder.sheetMcpEndpoint;
         this.sourceDir = builder.sourceDir;
         this.sourceType = builder.sourceType;
         this.syncIntervalMinutes = builder.syncIntervalMinutes;
         this.tenantId = builder.tenantId;
+        this.userId = builder.userId;
     }
 
     public static Builder builder() {
@@ -128,10 +146,24 @@ public class CreateKBSyncLinkRequest extends Request {
     }
 
     /**
+     * @return mcpEndpoint
+     */
+    public String getMcpEndpoint() {
+        return this.mcpEndpoint;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return sheetMcpEndpoint
+     */
+    public String getSheetMcpEndpoint() {
+        return this.sheetMcpEndpoint;
     }
 
     /**
@@ -162,17 +194,27 @@ public class CreateKBSyncLinkRequest extends Request {
         return this.tenantId;
     }
 
+    /**
+     * @return userId
+     */
+    public String getUserId() {
+        return this.userId;
+    }
+
     public static final class Builder extends Request.Builder<CreateKBSyncLinkRequest, Builder> {
         private String clientId; 
         private String clientSecret; 
         private String description; 
         private String knowledgeBaseId; 
         private String linkName; 
+        private String mcpEndpoint; 
         private String regionId; 
+        private String sheetMcpEndpoint; 
         private String sourceDir; 
         private String sourceType; 
         private Integer syncIntervalMinutes; 
         private String tenantId; 
+        private String userId; 
 
         private Builder() {
             super();
@@ -185,11 +227,14 @@ public class CreateKBSyncLinkRequest extends Request {
             this.description = request.description;
             this.knowledgeBaseId = request.knowledgeBaseId;
             this.linkName = request.linkName;
+            this.mcpEndpoint = request.mcpEndpoint;
             this.regionId = request.regionId;
+            this.sheetMcpEndpoint = request.sheetMcpEndpoint;
             this.sourceDir = request.sourceDir;
             this.sourceType = request.sourceType;
             this.syncIntervalMinutes = request.syncIntervalMinutes;
             this.tenantId = request.tenantId;
+            this.userId = request.userId;
         } 
 
         /**
@@ -250,6 +295,15 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
+         * McpEndpoint.
+         */
+        public Builder mcpEndpoint(String mcpEndpoint) {
+            this.putQueryParameter("McpEndpoint", mcpEndpoint);
+            this.mcpEndpoint = mcpEndpoint;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -258,6 +312,15 @@ public class CreateKBSyncLinkRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * SheetMcpEndpoint.
+         */
+        public Builder sheetMcpEndpoint(String sheetMcpEndpoint) {
+            this.putQueryParameter("SheetMcpEndpoint", sheetMcpEndpoint);
+            this.sheetMcpEndpoint = sheetMcpEndpoint;
             return this;
         }
 
@@ -300,6 +363,15 @@ public class CreateKBSyncLinkRequest extends Request {
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("TenantId", tenantId);
             this.tenantId = tenantId;
+            return this;
+        }
+
+        /**
+         * UserId.
+         */
+        public Builder userId(String userId) {
+            this.putQueryParameter("UserId", userId);
+            this.userId = userId;
             return this;
         }
 
