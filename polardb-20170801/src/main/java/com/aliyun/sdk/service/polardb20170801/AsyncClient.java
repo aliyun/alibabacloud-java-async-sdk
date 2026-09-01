@@ -68,6 +68,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddSQLRateLimitingRulesResponse> addSQLRateLimitingRules(AddSQLRateLimitingRulesRequest request);
 
     /**
+     * @param request the request parameters of AnswerKnowledgeBase  AnswerKnowledgeBaseRequest
+     * @return AnswerKnowledgeBaseResponse
+     */
+    CompletableFuture<AnswerKnowledgeBaseResponse> answerKnowledgeBase(AnswerKnowledgeBaseRequest request);
+
+    /**
      * @param request the request parameters of ApplyApplicationPrompts  ApplyApplicationPromptsRequest
      * @return ApplyApplicationPromptsResponse
      */
@@ -478,6 +484,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateGwConsumerOrderResponse> createGwConsumerOrder(CreateGwConsumerOrderRequest request);
 
     /**
+     * @param request the request parameters of CreateKBSyncLink  CreateKBSyncLinkRequest
+     * @return CreateKBSyncLinkResponse
+     */
+    CompletableFuture<CreateKBSyncLinkResponse> createKBSyncLink(CreateKBSyncLinkRequest request);
+
+    /**
      * @param request the request parameters of CreateKnowledgeBase  CreateKnowledgeBaseRequest
      * @return CreateKnowledgeBaseResponse
      */
@@ -839,10 +851,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteGlobalSecurityIPGroupResponse> deleteGlobalSecurityIPGroup(DeleteGlobalSecurityIPGroupRequest request);
 
     /**
+     * @param request the request parameters of DeleteKBSyncLink  DeleteKBSyncLinkRequest
+     * @return DeleteKBSyncLinkResponse
+     */
+    CompletableFuture<DeleteKBSyncLinkResponse> deleteKBSyncLink(DeleteKBSyncLinkRequest request);
+
+    /**
      * @param request the request parameters of DeleteKnowledgeBase  DeleteKnowledgeBaseRequest
      * @return DeleteKnowledgeBaseResponse
      */
     CompletableFuture<DeleteKnowledgeBaseResponse> deleteKnowledgeBase(DeleteKnowledgeBaseRequest request);
+
+    /**
+     * @param request the request parameters of DeleteKnowledgeBaseFile  DeleteKnowledgeBaseFileRequest
+     * @return DeleteKnowledgeBaseFileResponse
+     */
+    CompletableFuture<DeleteKnowledgeBaseFileResponse> deleteKnowledgeBaseFile(DeleteKnowledgeBaseFileRequest request);
 
     /**
      * @param request the request parameters of DeleteLakebaseS3Account  DeleteLakebaseS3AccountRequest
@@ -1674,16 +1698,46 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeHistoryTasksStatResponse> describeHistoryTasksStat(DescribeHistoryTasksStatRequest request);
 
     /**
+     * @param request the request parameters of DescribeKBSyncLinks  DescribeKBSyncLinksRequest
+     * @return DescribeKBSyncLinksResponse
+     */
+    CompletableFuture<DescribeKBSyncLinksResponse> describeKBSyncLinks(DescribeKBSyncLinksRequest request);
+
+    /**
+     * @param request the request parameters of DescribeKnowledgeBaseAnswer  DescribeKnowledgeBaseAnswerRequest
+     * @return DescribeKnowledgeBaseAnswerResponse
+     */
+    CompletableFuture<DescribeKnowledgeBaseAnswerResponse> describeKnowledgeBaseAnswer(DescribeKnowledgeBaseAnswerRequest request);
+
+    /**
      * @param request the request parameters of DescribeKnowledgeBaseAttribute  DescribeKnowledgeBaseAttributeRequest
      * @return DescribeKnowledgeBaseAttributeResponse
      */
     CompletableFuture<DescribeKnowledgeBaseAttributeResponse> describeKnowledgeBaseAttribute(DescribeKnowledgeBaseAttributeRequest request);
 
     /**
+     * @param request the request parameters of DescribeKnowledgeBaseFileShards  DescribeKnowledgeBaseFileShardsRequest
+     * @return DescribeKnowledgeBaseFileShardsResponse
+     */
+    CompletableFuture<DescribeKnowledgeBaseFileShardsResponse> describeKnowledgeBaseFileShards(DescribeKnowledgeBaseFileShardsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeKnowledgeBaseFiles  DescribeKnowledgeBaseFilesRequest
+     * @return DescribeKnowledgeBaseFilesResponse
+     */
+    CompletableFuture<DescribeKnowledgeBaseFilesResponse> describeKnowledgeBaseFiles(DescribeKnowledgeBaseFilesRequest request);
+
+    /**
      * @param request the request parameters of DescribeKnowledgeBases  DescribeKnowledgeBasesRequest
      * @return DescribeKnowledgeBasesResponse
      */
     CompletableFuture<DescribeKnowledgeBasesResponse> describeKnowledgeBases(DescribeKnowledgeBasesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeKnowledgeSpaceAttribute  DescribeKnowledgeSpaceAttributeRequest
+     * @return DescribeKnowledgeSpaceAttributeResponse
+     */
+    CompletableFuture<DescribeKnowledgeSpaceAttributeResponse> describeKnowledgeSpaceAttribute(DescribeKnowledgeSpaceAttributeRequest request);
 
     /**
      * @param request the request parameters of DescribeLakebaseS3Account  DescribeLakebaseS3AccountRequest
@@ -2887,6 +2941,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RestoreTableResponse> restoreTable(RestoreTableRequest request);
 
     /**
+     * @param request the request parameters of RetrievalKnowledgeBase  RetrievalKnowledgeBaseRequest
+     * @return RetrievalKnowledgeBaseResponse
+     */
+    CompletableFuture<RetrievalKnowledgeBaseResponse> retrievalKnowledgeBase(RetrievalKnowledgeBaseRequest request);
+
+    /**
+     * @param request the request parameters of RetryKnowledgeBaseFiles  RetryKnowledgeBaseFilesRequest
+     * @return RetryKnowledgeBaseFilesResponse
+     */
+    CompletableFuture<RetryKnowledgeBaseFilesResponse> retryKnowledgeBaseFiles(RetryKnowledgeBaseFilesRequest request);
+
+    /**
      * @param request the request parameters of RevokeAccountPrivilege  RevokeAccountPrivilegeRequest
      * @return RevokeAccountPrivilegeResponse
      */
@@ -2956,6 +3022,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TransformDBClusterPayTypeResponse> transformDBClusterPayType(TransformDBClusterPayTypeRequest request);
 
     /**
+     * @param request the request parameters of TriggerKnowledgeBaseSync  TriggerKnowledgeBaseSyncRequest
+     * @return TriggerKnowledgeBaseSyncResponse
+     */
+    CompletableFuture<TriggerKnowledgeBaseSyncResponse> triggerKnowledgeBaseSync(TriggerKnowledgeBaseSyncRequest request);
+
+    /**
      * @param request the request parameters of UnbindPolarClawAgent  UnbindPolarClawAgentRequest
      * @return UnbindPolarClawAgentResponse
      */
@@ -2990,6 +3062,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateExtensionsResponse
      */
     CompletableFuture<UpdateExtensionsResponse> updateExtensions(UpdateExtensionsRequest request);
+
+    /**
+     * @param request the request parameters of UpdateKBSyncLink  UpdateKBSyncLinkRequest
+     * @return UpdateKBSyncLinkResponse
+     */
+    CompletableFuture<UpdateKBSyncLinkResponse> updateKBSyncLink(UpdateKBSyncLinkRequest request);
+
+    /**
+     * @param request the request parameters of UpdateKnowledgeBase  UpdateKnowledgeBaseRequest
+     * @return UpdateKnowledgeBaseResponse
+     */
+    CompletableFuture<UpdateKnowledgeBaseResponse> updateKnowledgeBase(UpdateKnowledgeBaseRequest request);
+
+    /**
+     * @param request the request parameters of UpdateKnowledgeBaseFileShardingStrategy  UpdateKnowledgeBaseFileShardingStrategyRequest
+     * @return UpdateKnowledgeBaseFileShardingStrategyResponse
+     */
+    CompletableFuture<UpdateKnowledgeBaseFileShardingStrategyResponse> updateKnowledgeBaseFileShardingStrategy(UpdateKnowledgeBaseFileShardingStrategyRequest request);
+
+    /**
+     * @param request the request parameters of UpdateKnowledgeSpace  UpdateKnowledgeSpaceRequest
+     * @return UpdateKnowledgeSpaceResponse
+     */
+    CompletableFuture<UpdateKnowledgeSpaceResponse> updateKnowledgeSpace(UpdateKnowledgeSpaceRequest request);
 
     /**
      * @param request the request parameters of UpdatePolarClawAgent  UpdatePolarClawAgentRequest

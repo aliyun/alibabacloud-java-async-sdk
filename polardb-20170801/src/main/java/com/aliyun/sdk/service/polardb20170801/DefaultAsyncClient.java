@@ -247,6 +247,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AnswerKnowledgeBase  AnswerKnowledgeBaseRequest
+     * @return AnswerKnowledgeBaseResponse
+     */
+    @Override
+    public CompletableFuture<AnswerKnowledgeBaseResponse> answerKnowledgeBase(AnswerKnowledgeBaseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AnswerKnowledgeBase").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AnswerKnowledgeBaseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AnswerKnowledgeBaseResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ApplyApplicationPrompts  ApplyApplicationPromptsRequest
      * @return ApplyApplicationPromptsResponse
      */
@@ -1365,6 +1383,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateKBSyncLink  CreateKBSyncLinkRequest
+     * @return CreateKBSyncLinkResponse
+     */
+    @Override
+    public CompletableFuture<CreateKBSyncLinkResponse> createKBSyncLink(CreateKBSyncLinkRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateKBSyncLink").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateKBSyncLinkResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateKBSyncLinkResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateKnowledgeBase  CreateKnowledgeBaseRequest
      * @return CreateKnowledgeBaseResponse
      */
@@ -2338,6 +2374,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteKBSyncLink  DeleteKBSyncLinkRequest
+     * @return DeleteKBSyncLinkResponse
+     */
+    @Override
+    public CompletableFuture<DeleteKBSyncLinkResponse> deleteKBSyncLink(DeleteKBSyncLinkRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteKBSyncLink").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteKBSyncLinkResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteKBSyncLinkResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteKnowledgeBase  DeleteKnowledgeBaseRequest
      * @return DeleteKnowledgeBaseResponse
      */
@@ -2350,6 +2404,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteKnowledgeBaseResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteKnowledgeBaseFile  DeleteKnowledgeBaseFileRequest
+     * @return DeleteKnowledgeBaseFileResponse
+     */
+    @Override
+    public CompletableFuture<DeleteKnowledgeBaseFileResponse> deleteKnowledgeBaseFile(DeleteKnowledgeBaseFileRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteKnowledgeBaseFile").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteKnowledgeBaseFileResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteKnowledgeBaseFileResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4697,6 +4769,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeKBSyncLinks  DescribeKBSyncLinksRequest
+     * @return DescribeKBSyncLinksResponse
+     */
+    @Override
+    public CompletableFuture<DescribeKBSyncLinksResponse> describeKBSyncLinks(DescribeKBSyncLinksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeKBSyncLinks").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeKBSyncLinksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeKBSyncLinksResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeKnowledgeBaseAnswer  DescribeKnowledgeBaseAnswerRequest
+     * @return DescribeKnowledgeBaseAnswerResponse
+     */
+    @Override
+    public CompletableFuture<DescribeKnowledgeBaseAnswerResponse> describeKnowledgeBaseAnswer(DescribeKnowledgeBaseAnswerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeKnowledgeBaseAnswer").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeKnowledgeBaseAnswerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeKnowledgeBaseAnswerResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeKnowledgeBaseAttribute  DescribeKnowledgeBaseAttributeRequest
      * @return DescribeKnowledgeBaseAttributeResponse
      */
@@ -4715,6 +4823,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeKnowledgeBaseFileShards  DescribeKnowledgeBaseFileShardsRequest
+     * @return DescribeKnowledgeBaseFileShardsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeKnowledgeBaseFileShardsResponse> describeKnowledgeBaseFileShards(DescribeKnowledgeBaseFileShardsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeKnowledgeBaseFileShards").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeKnowledgeBaseFileShardsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeKnowledgeBaseFileShardsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeKnowledgeBaseFiles  DescribeKnowledgeBaseFilesRequest
+     * @return DescribeKnowledgeBaseFilesResponse
+     */
+    @Override
+    public CompletableFuture<DescribeKnowledgeBaseFilesResponse> describeKnowledgeBaseFiles(DescribeKnowledgeBaseFilesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeKnowledgeBaseFiles").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeKnowledgeBaseFilesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeKnowledgeBaseFilesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeKnowledgeBases  DescribeKnowledgeBasesRequest
      * @return DescribeKnowledgeBasesResponse
      */
@@ -4727,6 +4871,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeKnowledgeBasesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeKnowledgeSpaceAttribute  DescribeKnowledgeSpaceAttributeRequest
+     * @return DescribeKnowledgeSpaceAttributeResponse
+     */
+    @Override
+    public CompletableFuture<DescribeKnowledgeSpaceAttributeResponse> describeKnowledgeSpaceAttribute(DescribeKnowledgeSpaceAttributeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeKnowledgeSpaceAttribute").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeKnowledgeSpaceAttributeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeKnowledgeSpaceAttributeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -8114,6 +8276,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of RetrievalKnowledgeBase  RetrievalKnowledgeBaseRequest
+     * @return RetrievalKnowledgeBaseResponse
+     */
+    @Override
+    public CompletableFuture<RetrievalKnowledgeBaseResponse> retrievalKnowledgeBase(RetrievalKnowledgeBaseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RetrievalKnowledgeBase").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RetrievalKnowledgeBaseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RetrievalKnowledgeBaseResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RetryKnowledgeBaseFiles  RetryKnowledgeBaseFilesRequest
+     * @return RetryKnowledgeBaseFilesResponse
+     */
+    @Override
+    public CompletableFuture<RetryKnowledgeBaseFilesResponse> retryKnowledgeBaseFiles(RetryKnowledgeBaseFilesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RetryKnowledgeBaseFiles").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RetryKnowledgeBaseFilesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RetryKnowledgeBaseFilesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of RevokeAccountPrivilege  RevokeAccountPrivilegeRequest
      * @return RevokeAccountPrivilegeResponse
      */
@@ -8303,6 +8501,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of TriggerKnowledgeBaseSync  TriggerKnowledgeBaseSyncRequest
+     * @return TriggerKnowledgeBaseSyncResponse
+     */
+    @Override
+    public CompletableFuture<TriggerKnowledgeBaseSyncResponse> triggerKnowledgeBaseSync(TriggerKnowledgeBaseSyncRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("TriggerKnowledgeBaseSync").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TriggerKnowledgeBaseSyncResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TriggerKnowledgeBaseSyncResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UnbindPolarClawAgent  UnbindPolarClawAgentRequest
      * @return UnbindPolarClawAgentResponse
      */
@@ -8405,6 +8621,78 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateExtensionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateKBSyncLink  UpdateKBSyncLinkRequest
+     * @return UpdateKBSyncLinkResponse
+     */
+    @Override
+    public CompletableFuture<UpdateKBSyncLinkResponse> updateKBSyncLink(UpdateKBSyncLinkRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateKBSyncLink").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateKBSyncLinkResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateKBSyncLinkResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateKnowledgeBase  UpdateKnowledgeBaseRequest
+     * @return UpdateKnowledgeBaseResponse
+     */
+    @Override
+    public CompletableFuture<UpdateKnowledgeBaseResponse> updateKnowledgeBase(UpdateKnowledgeBaseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateKnowledgeBase").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateKnowledgeBaseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateKnowledgeBaseResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateKnowledgeBaseFileShardingStrategy  UpdateKnowledgeBaseFileShardingStrategyRequest
+     * @return UpdateKnowledgeBaseFileShardingStrategyResponse
+     */
+    @Override
+    public CompletableFuture<UpdateKnowledgeBaseFileShardingStrategyResponse> updateKnowledgeBaseFileShardingStrategy(UpdateKnowledgeBaseFileShardingStrategyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateKnowledgeBaseFileShardingStrategy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateKnowledgeBaseFileShardingStrategyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateKnowledgeBaseFileShardingStrategyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateKnowledgeSpace  UpdateKnowledgeSpaceRequest
+     * @return UpdateKnowledgeSpaceResponse
+     */
+    @Override
+    public CompletableFuture<UpdateKnowledgeSpaceResponse> updateKnowledgeSpace(UpdateKnowledgeSpaceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateKnowledgeSpace").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateKnowledgeSpaceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateKnowledgeSpaceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
