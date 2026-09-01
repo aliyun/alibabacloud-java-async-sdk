@@ -125,6 +125,228 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
      *
      * <p>QueryOrganizationWorkspaceListResponseBody</p>
      */
+    public static class WorkspaceExportConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AllowExcelImageFile")
+        private Boolean allowExcelImageFile;
+
+        @com.aliyun.core.annotation.NameInMap("DataExport")
+        private Boolean dataExport;
+
+        @com.aliyun.core.annotation.NameInMap("DefaultExportType")
+        private Boolean defaultExportType;
+
+        @com.aliyun.core.annotation.NameInMap("ExportMainSwitch")
+        private Boolean exportMainSwitch;
+
+        @com.aliyun.core.annotation.NameInMap("ExportToLocal")
+        private Boolean exportToLocal;
+
+        @com.aliyun.core.annotation.NameInMap("ExportToPublicWork")
+        private Boolean exportToPublicWork;
+
+        @com.aliyun.core.annotation.NameInMap("ExportToServer")
+        private Boolean exportToServer;
+
+        @com.aliyun.core.annotation.NameInMap("ImageExport")
+        private Boolean imageExport;
+
+        @com.aliyun.core.annotation.NameInMap("PdfExport")
+        private Boolean pdfExport;
+
+        private WorkspaceExportConfig(Builder builder) {
+            this.allowExcelImageFile = builder.allowExcelImageFile;
+            this.dataExport = builder.dataExport;
+            this.defaultExportType = builder.defaultExportType;
+            this.exportMainSwitch = builder.exportMainSwitch;
+            this.exportToLocal = builder.exportToLocal;
+            this.exportToPublicWork = builder.exportToPublicWork;
+            this.exportToServer = builder.exportToServer;
+            this.imageExport = builder.imageExport;
+            this.pdfExport = builder.pdfExport;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static WorkspaceExportConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return allowExcelImageFile
+         */
+        public Boolean getAllowExcelImageFile() {
+            return this.allowExcelImageFile;
+        }
+
+        /**
+         * @return dataExport
+         */
+        public Boolean getDataExport() {
+            return this.dataExport;
+        }
+
+        /**
+         * @return defaultExportType
+         */
+        public Boolean getDefaultExportType() {
+            return this.defaultExportType;
+        }
+
+        /**
+         * @return exportMainSwitch
+         */
+        public Boolean getExportMainSwitch() {
+            return this.exportMainSwitch;
+        }
+
+        /**
+         * @return exportToLocal
+         */
+        public Boolean getExportToLocal() {
+            return this.exportToLocal;
+        }
+
+        /**
+         * @return exportToPublicWork
+         */
+        public Boolean getExportToPublicWork() {
+            return this.exportToPublicWork;
+        }
+
+        /**
+         * @return exportToServer
+         */
+        public Boolean getExportToServer() {
+            return this.exportToServer;
+        }
+
+        /**
+         * @return imageExport
+         */
+        public Boolean getImageExport() {
+            return this.imageExport;
+        }
+
+        /**
+         * @return pdfExport
+         */
+        public Boolean getPdfExport() {
+            return this.pdfExport;
+        }
+
+        public static final class Builder {
+            private Boolean allowExcelImageFile; 
+            private Boolean dataExport; 
+            private Boolean defaultExportType; 
+            private Boolean exportMainSwitch; 
+            private Boolean exportToLocal; 
+            private Boolean exportToPublicWork; 
+            private Boolean exportToServer; 
+            private Boolean imageExport; 
+            private Boolean pdfExport; 
+
+            private Builder() {
+            } 
+
+            private Builder(WorkspaceExportConfig model) {
+                this.allowExcelImageFile = model.allowExcelImageFile;
+                this.dataExport = model.dataExport;
+                this.defaultExportType = model.defaultExportType;
+                this.exportMainSwitch = model.exportMainSwitch;
+                this.exportToLocal = model.exportToLocal;
+                this.exportToPublicWork = model.exportToPublicWork;
+                this.exportToServer = model.exportToServer;
+                this.imageExport = model.imageExport;
+                this.pdfExport = model.pdfExport;
+            } 
+
+            /**
+             * AllowExcelImageFile.
+             */
+            public Builder allowExcelImageFile(Boolean allowExcelImageFile) {
+                this.allowExcelImageFile = allowExcelImageFile;
+                return this;
+            }
+
+            /**
+             * DataExport.
+             */
+            public Builder dataExport(Boolean dataExport) {
+                this.dataExport = dataExport;
+                return this;
+            }
+
+            /**
+             * DefaultExportType.
+             */
+            public Builder defaultExportType(Boolean defaultExportType) {
+                this.defaultExportType = defaultExportType;
+                return this;
+            }
+
+            /**
+             * ExportMainSwitch.
+             */
+            public Builder exportMainSwitch(Boolean exportMainSwitch) {
+                this.exportMainSwitch = exportMainSwitch;
+                return this;
+            }
+
+            /**
+             * ExportToLocal.
+             */
+            public Builder exportToLocal(Boolean exportToLocal) {
+                this.exportToLocal = exportToLocal;
+                return this;
+            }
+
+            /**
+             * ExportToPublicWork.
+             */
+            public Builder exportToPublicWork(Boolean exportToPublicWork) {
+                this.exportToPublicWork = exportToPublicWork;
+                return this;
+            }
+
+            /**
+             * ExportToServer.
+             */
+            public Builder exportToServer(Boolean exportToServer) {
+                this.exportToServer = exportToServer;
+                return this;
+            }
+
+            /**
+             * ImageExport.
+             */
+            public Builder imageExport(Boolean imageExport) {
+                this.imageExport = imageExport;
+                return this;
+            }
+
+            /**
+             * PdfExport.
+             */
+            public Builder pdfExport(Boolean pdfExport) {
+                this.pdfExport = pdfExport;
+                return this;
+            }
+
+            public WorkspaceExportConfig build() {
+                return new WorkspaceExportConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link QueryOrganizationWorkspaceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrganizationWorkspaceListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowPublishOperation")
         private Boolean allowPublishOperation;
@@ -165,6 +387,9 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WorkspaceDescription")
         private String workspaceDescription;
 
+        @com.aliyun.core.annotation.NameInMap("WorkspaceExportConfig")
+        private WorkspaceExportConfig workspaceExportConfig;
+
         @com.aliyun.core.annotation.NameInMap("WorkspaceId")
         private String workspaceId;
 
@@ -185,6 +410,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             this.ownerAccountName = builder.ownerAccountName;
             this.realOwnerAccountName = builder.realOwnerAccountName;
             this.workspaceDescription = builder.workspaceDescription;
+            this.workspaceExportConfig = builder.workspaceExportConfig;
             this.workspaceId = builder.workspaceId;
             this.workspaceName = builder.workspaceName;
         }
@@ -289,6 +515,13 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         }
 
         /**
+         * @return workspaceExportConfig
+         */
+        public WorkspaceExportConfig getWorkspaceExportConfig() {
+            return this.workspaceExportConfig;
+        }
+
+        /**
          * @return workspaceId
          */
         public String getWorkspaceId() {
@@ -316,6 +549,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
             private String ownerAccountName; 
             private String realOwnerAccountName; 
             private String workspaceDescription; 
+            private WorkspaceExportConfig workspaceExportConfig; 
             private String workspaceId; 
             private String workspaceName; 
 
@@ -336,6 +570,7 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
                 this.ownerAccountName = model.ownerAccountName;
                 this.realOwnerAccountName = model.realOwnerAccountName;
                 this.workspaceDescription = model.workspaceDescription;
+                this.workspaceExportConfig = model.workspaceExportConfig;
                 this.workspaceId = model.workspaceId;
                 this.workspaceName = model.workspaceName;
             } 
@@ -485,6 +720,14 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
              */
             public Builder workspaceDescription(String workspaceDescription) {
                 this.workspaceDescription = workspaceDescription;
+                return this;
+            }
+
+            /**
+             * WorkspaceExportConfig.
+             */
+            public Builder workspaceExportConfig(WorkspaceExportConfig workspaceExportConfig) {
+                this.workspaceExportConfig = workspaceExportConfig;
                 return this;
             }
 

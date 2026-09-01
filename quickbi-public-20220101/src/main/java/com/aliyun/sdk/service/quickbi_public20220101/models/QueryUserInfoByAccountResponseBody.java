@@ -144,6 +144,9 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
+        @com.aliyun.core.annotation.NameInMap("IsDeleted")
+        private Boolean isDeleted;
+
         @com.aliyun.core.annotation.NameInMap("NickName")
         private String nickName;
 
@@ -166,6 +169,7 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
             this.authAdminUser = builder.authAdminUser;
             this.copilotModules = builder.copilotModules;
             this.email = builder.email;
+            this.isDeleted = builder.isDeleted;
             this.nickName = builder.nickName;
             this.phone = builder.phone;
             this.roleIdList = builder.roleIdList;
@@ -224,6 +228,13 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
         }
 
         /**
+         * @return isDeleted
+         */
+        public Boolean getIsDeleted() {
+            return this.isDeleted;
+        }
+
+        /**
          * @return nickName
          */
         public String getNickName() {
@@ -265,6 +276,7 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
             private Boolean authAdminUser; 
             private java.util.List<String> copilotModules; 
             private String email; 
+            private Boolean isDeleted; 
             private String nickName; 
             private String phone; 
             private java.util.List<Long> roleIdList; 
@@ -281,6 +293,7 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
                 this.authAdminUser = model.authAdminUser;
                 this.copilotModules = model.copilotModules;
                 this.email = model.email;
+                this.isDeleted = model.isDeleted;
                 this.nickName = model.nickName;
                 this.phone = model.phone;
                 this.roleIdList = model.roleIdList;
@@ -356,6 +369,14 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
              */
             public Builder email(String email) {
                 this.email = email;
+                return this;
+            }
+
+            /**
+             * IsDeleted.
+             */
+            public Builder isDeleted(Boolean isDeleted) {
+                this.isDeleted = isDeleted;
                 return this;
             }
 

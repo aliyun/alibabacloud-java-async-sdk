@@ -31,16 +31,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.version = "2022-01-01";
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("us-east-1", "quickbi-public.us-east-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "quickbi-public.me-central-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "quickbi-public.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "quickbi-public.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "quickbi-public.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "quickbi-public.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "quickbi-public.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "quickbi-public.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "quickbi-public.ap-northeast-1.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "quickbi-public.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "quickbi-public.ap-northeast-1.aliyuncs.com")
+            new TeaPair("ap-southeast-3", "quickbi-public.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "quickbi-public.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "quickbi-public.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "quickbi-public.cn-hongkong.aliyuncs.com"),
+            new TeaPair("us-east-1", "quickbi-public.us-east-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "quickbi-public.eu-central-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "quickbi-public.me-central-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "quickbi-public.cn-shanghai-finance-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }

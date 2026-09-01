@@ -254,6 +254,123 @@ public class QueryWorksResponseBody extends TeaModel {
      *
      * <p>QueryWorksResponseBody</p>
      */
+    public static class GlobalParamVoList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DataType")
+        private String dataType;
+
+        @com.aliyun.core.annotation.NameInMap("ParamAlias")
+        private String paramAlias;
+
+        @com.aliyun.core.annotation.NameInMap("ParamName")
+        private String paramName;
+
+        @com.aliyun.core.annotation.NameInMap("Required")
+        private Boolean required;
+
+        private GlobalParamVoList(Builder builder) {
+            this.dataType = builder.dataType;
+            this.paramAlias = builder.paramAlias;
+            this.paramName = builder.paramName;
+            this.required = builder.required;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GlobalParamVoList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dataType
+         */
+        public String getDataType() {
+            return this.dataType;
+        }
+
+        /**
+         * @return paramAlias
+         */
+        public String getParamAlias() {
+            return this.paramAlias;
+        }
+
+        /**
+         * @return paramName
+         */
+        public String getParamName() {
+            return this.paramName;
+        }
+
+        /**
+         * @return required
+         */
+        public Boolean getRequired() {
+            return this.required;
+        }
+
+        public static final class Builder {
+            private String dataType; 
+            private String paramAlias; 
+            private String paramName; 
+            private Boolean required; 
+
+            private Builder() {
+            } 
+
+            private Builder(GlobalParamVoList model) {
+                this.dataType = model.dataType;
+                this.paramAlias = model.paramAlias;
+                this.paramName = model.paramName;
+                this.required = model.required;
+            } 
+
+            /**
+             * DataType.
+             */
+            public Builder dataType(String dataType) {
+                this.dataType = dataType;
+                return this;
+            }
+
+            /**
+             * ParamAlias.
+             */
+            public Builder paramAlias(String paramAlias) {
+                this.paramAlias = paramAlias;
+                return this;
+            }
+
+            /**
+             * ParamName.
+             */
+            public Builder paramName(String paramName) {
+                this.paramName = paramName;
+                return this;
+            }
+
+            /**
+             * Required.
+             */
+            public Builder required(Boolean required) {
+                this.required = required;
+                return this;
+            }
+
+            public GlobalParamVoList build() {
+                return new GlobalParamVoList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link QueryWorksResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryWorksResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Auth3rdFlag")
         private Integer auth3rdFlag;
@@ -263,6 +380,9 @@ public class QueryWorksResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Directory")
         private Directory directory;
+
+        @com.aliyun.core.annotation.NameInMap("GlobalParamVoList")
+        private java.util.List<GlobalParamVoList> globalParamVoList;
 
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
@@ -310,6 +430,7 @@ public class QueryWorksResponseBody extends TeaModel {
             this.auth3rdFlag = builder.auth3rdFlag;
             this.description = builder.description;
             this.directory = builder.directory;
+            this.globalParamVoList = builder.globalParamVoList;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModify = builder.gmtModify;
             this.modifyName = builder.modifyName;
@@ -353,6 +474,13 @@ public class QueryWorksResponseBody extends TeaModel {
          */
         public Directory getDirectory() {
             return this.directory;
+        }
+
+        /**
+         * @return globalParamVoList
+         */
+        public java.util.List<GlobalParamVoList> getGlobalParamVoList() {
+            return this.globalParamVoList;
         }
 
         /**
@@ -457,6 +585,7 @@ public class QueryWorksResponseBody extends TeaModel {
             private Integer auth3rdFlag; 
             private String description; 
             private Directory directory; 
+            private java.util.List<GlobalParamVoList> globalParamVoList; 
             private String gmtCreate; 
             private String gmtModify; 
             private String modifyName; 
@@ -479,6 +608,7 @@ public class QueryWorksResponseBody extends TeaModel {
                 this.auth3rdFlag = model.auth3rdFlag;
                 this.description = model.description;
                 this.directory = model.directory;
+                this.globalParamVoList = model.globalParamVoList;
                 this.gmtCreate = model.gmtCreate;
                 this.gmtModify = model.gmtModify;
                 this.modifyName = model.modifyName;
@@ -526,6 +656,14 @@ public class QueryWorksResponseBody extends TeaModel {
              */
             public Builder directory(Directory directory) {
                 this.directory = directory;
+                return this;
+            }
+
+            /**
+             * GlobalParamVoList.
+             */
+            public Builder globalParamVoList(java.util.List<GlobalParamVoList> globalParamVoList) {
+                this.globalParamVoList = globalParamVoList;
                 return this;
             }
 
