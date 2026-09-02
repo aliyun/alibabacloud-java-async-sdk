@@ -220,14 +220,14 @@ public class WafBatchRuleShared extends TeaModel {
      *
      * <p>WafBatchRuleShared</p>
      */
-    public static class Response extends TeaModel {
+    public static class ActionsResponse extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        private Response(Builder builder) {
+        private ActionsResponse(Builder builder) {
             this.code = builder.code;
             this.id = builder.id;
         }
@@ -236,7 +236,7 @@ public class WafBatchRuleShared extends TeaModel {
             return new Builder();
         }
 
-        public static Response create() {
+        public static ActionsResponse create() {
             return builder().build();
         }
 
@@ -261,7 +261,7 @@ public class WafBatchRuleShared extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(Response model) {
+            private Builder(ActionsResponse model) {
                 this.code = model.code;
                 this.id = model.id;
             } 
@@ -282,8 +282,8 @@ public class WafBatchRuleShared extends TeaModel {
                 return this;
             }
 
-            public Response build() {
-                return new Response(this);
+            public ActionsResponse build() {
+                return new ActionsResponse(this);
             } 
 
         } 
@@ -297,7 +297,7 @@ public class WafBatchRuleShared extends TeaModel {
      */
     public static class Actions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Response")
-        private Response response;
+        private ActionsResponse response;
 
         private Actions(Builder builder) {
             this.response = builder.response;
@@ -314,12 +314,12 @@ public class WafBatchRuleShared extends TeaModel {
         /**
          * @return response
          */
-        public Response getResponse() {
+        public ActionsResponse getResponse() {
             return this.response;
         }
 
         public static final class Builder {
-            private Response response; 
+            private ActionsResponse response; 
 
             private Builder() {
             } 
@@ -331,7 +331,7 @@ public class WafBatchRuleShared extends TeaModel {
             /**
              * Response.
              */
-            public Builder response(Response response) {
+            public Builder response(ActionsResponse response) {
                 this.response = response;
                 return this;
             }

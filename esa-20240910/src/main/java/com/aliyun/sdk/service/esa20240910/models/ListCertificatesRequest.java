@@ -35,6 +35,10 @@ public class ListCertificatesRequest extends Request {
     private Long siteId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    private String type;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ValidOnly")
     private Boolean validOnly;
 
@@ -44,6 +48,7 @@ public class ListCertificatesRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.siteId = builder.siteId;
+        this.type = builder.type;
         this.validOnly = builder.validOnly;
     }
 
@@ -89,6 +94,13 @@ public class ListCertificatesRequest extends Request {
     }
 
     /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
+    /**
      * @return validOnly
      */
     public Boolean getValidOnly() {
@@ -100,6 +112,7 @@ public class ListCertificatesRequest extends Request {
         private Long pageNumber; 
         private Long pageSize; 
         private Long siteId; 
+        private String type; 
         private Boolean validOnly; 
 
         private Builder() {
@@ -112,6 +125,7 @@ public class ListCertificatesRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.siteId = request.siteId;
+            this.type = request.type;
             this.validOnly = request.validOnly;
         } 
 
@@ -161,6 +175,15 @@ public class ListCertificatesRequest extends Request {
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
             this.siteId = siteId;
+            return this;
+        }
+
+        /**
+         * Type.
+         */
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
             return this;
         }
 

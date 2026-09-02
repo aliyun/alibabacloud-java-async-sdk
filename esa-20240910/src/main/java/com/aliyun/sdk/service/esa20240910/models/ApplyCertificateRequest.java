@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ApplyCertificateRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlgType")
+    private String algType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Domains")
     @com.aliyun.core.annotation.Validation(required = true)
     private String domains;
@@ -33,6 +37,7 @@ public class ApplyCertificateRequest extends Request {
 
     private ApplyCertificateRequest(Builder builder) {
         super(builder);
+        this.algType = builder.algType;
         this.domains = builder.domains;
         this.siteId = builder.siteId;
         this.type = builder.type;
@@ -49,6 +54,13 @@ public class ApplyCertificateRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return algType
+     */
+    public String getAlgType() {
+        return this.algType;
     }
 
     /**
@@ -73,6 +85,7 @@ public class ApplyCertificateRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ApplyCertificateRequest, Builder> {
+        private String algType; 
         private String domains; 
         private Long siteId; 
         private String type; 
@@ -83,10 +96,20 @@ public class ApplyCertificateRequest extends Request {
 
         private Builder(ApplyCertificateRequest request) {
             super(request);
+            this.algType = request.algType;
             this.domains = request.domains;
             this.siteId = request.siteId;
             this.type = request.type;
         } 
+
+        /**
+         * AlgType.
+         */
+        public Builder algType(String algType) {
+            this.putQueryParameter("AlgType", algType);
+            this.algType = algType;
+            return this;
+        }
 
         /**
          * <p>List of domains, separated by commas.</p>
