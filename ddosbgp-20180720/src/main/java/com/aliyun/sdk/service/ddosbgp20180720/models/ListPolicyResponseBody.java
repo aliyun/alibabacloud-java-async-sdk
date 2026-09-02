@@ -122,6 +122,9 @@ public class ListPolicyResponseBody extends TeaModel {
      * <p>ListPolicyResponseBody</p>
      */
     public static class FingerPrintRuleList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Comment")
+        private String comment;
+
         @com.aliyun.core.annotation.NameInMap("DstPortEnd")
         private Integer dstPortEnd;
 
@@ -140,6 +143,9 @@ public class ListPolicyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MinPktLen")
         private Integer minPktLen;
 
+        @com.aliyun.core.annotation.NameInMap("Mode")
+        private Integer mode;
+
         @com.aliyun.core.annotation.NameInMap("Offset")
         private Integer offset;
 
@@ -152,6 +158,9 @@ public class ListPolicyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RateValue")
         private Integer rateValue;
 
+        @com.aliyun.core.annotation.NameInMap("Rule")
+        private String rule;
+
         @com.aliyun.core.annotation.NameInMap("SeqNo")
         private Integer seqNo;
 
@@ -161,20 +170,27 @@ public class ListPolicyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SrcPortStart")
         private Integer srcPortStart;
 
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private Integer type;
+
         private FingerPrintRuleList(Builder builder) {
+            this.comment = builder.comment;
             this.dstPortEnd = builder.dstPortEnd;
             this.dstPortStart = builder.dstPortStart;
             this.id = builder.id;
             this.matchAction = builder.matchAction;
             this.maxPktLen = builder.maxPktLen;
             this.minPktLen = builder.minPktLen;
+            this.mode = builder.mode;
             this.offset = builder.offset;
             this.payloadBytes = builder.payloadBytes;
             this.protocol = builder.protocol;
             this.rateValue = builder.rateValue;
+            this.rule = builder.rule;
             this.seqNo = builder.seqNo;
             this.srcPortEnd = builder.srcPortEnd;
             this.srcPortStart = builder.srcPortStart;
+            this.type = builder.type;
         }
 
         public static Builder builder() {
@@ -183,6 +199,13 @@ public class ListPolicyResponseBody extends TeaModel {
 
         public static FingerPrintRuleList create() {
             return builder().build();
+        }
+
+        /**
+         * @return comment
+         */
+        public String getComment() {
+            return this.comment;
         }
 
         /**
@@ -228,6 +251,13 @@ public class ListPolicyResponseBody extends TeaModel {
         }
 
         /**
+         * @return mode
+         */
+        public Integer getMode() {
+            return this.mode;
+        }
+
+        /**
          * @return offset
          */
         public Integer getOffset() {
@@ -256,6 +286,13 @@ public class ListPolicyResponseBody extends TeaModel {
         }
 
         /**
+         * @return rule
+         */
+        public String getRule() {
+            return this.rule;
+        }
+
+        /**
          * @return seqNo
          */
         public Integer getSeqNo() {
@@ -276,39 +313,62 @@ public class ListPolicyResponseBody extends TeaModel {
             return this.srcPortStart;
         }
 
+        /**
+         * @return type
+         */
+        public Integer getType() {
+            return this.type;
+        }
+
         public static final class Builder {
+            private String comment; 
             private Integer dstPortEnd; 
             private Integer dstPortStart; 
             private String id; 
             private String matchAction; 
             private Integer maxPktLen; 
             private Integer minPktLen; 
+            private Integer mode; 
             private Integer offset; 
             private String payloadBytes; 
             private String protocol; 
             private Integer rateValue; 
+            private String rule; 
             private Integer seqNo; 
             private Integer srcPortEnd; 
             private Integer srcPortStart; 
+            private Integer type; 
 
             private Builder() {
             } 
 
             private Builder(FingerPrintRuleList model) {
+                this.comment = model.comment;
                 this.dstPortEnd = model.dstPortEnd;
                 this.dstPortStart = model.dstPortStart;
                 this.id = model.id;
                 this.matchAction = model.matchAction;
                 this.maxPktLen = model.maxPktLen;
                 this.minPktLen = model.minPktLen;
+                this.mode = model.mode;
                 this.offset = model.offset;
                 this.payloadBytes = model.payloadBytes;
                 this.protocol = model.protocol;
                 this.rateValue = model.rateValue;
+                this.rule = model.rule;
                 this.seqNo = model.seqNo;
                 this.srcPortEnd = model.srcPortEnd;
                 this.srcPortStart = model.srcPortStart;
+                this.type = model.type;
             } 
+
+            /**
+             * Comment.
+             */
+            public Builder comment(String comment) {
+                this.comment = comment;
+                return this;
+            }
 
             /**
              * <p>The end of the destination port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
@@ -383,6 +443,14 @@ public class ListPolicyResponseBody extends TeaModel {
             }
 
             /**
+             * Mode.
+             */
+            public Builder mode(Integer mode) {
+                this.mode = mode;
+                return this;
+            }
+
+            /**
              * <p>The offset. Valid values: <strong>0</strong> to <strong>1500</strong>.</p>
              * 
              * <strong>example:</strong>
@@ -434,6 +502,14 @@ public class ListPolicyResponseBody extends TeaModel {
             }
 
             /**
+             * Rule.
+             */
+            public Builder rule(String rule) {
+                this.rule = rule;
+                return this;
+            }
+
+            /**
              * <p>The sequence number that indicates the order for the rule to take effect. The value is an integer.</p>
              * 
              * <strong>example:</strong>
@@ -463,6 +539,14 @@ public class ListPolicyResponseBody extends TeaModel {
              */
             public Builder srcPortStart(Integer srcPortStart) {
                 this.srcPortStart = srcPortStart;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(Integer type) {
+                this.type = type;
                 return this;
             }
 

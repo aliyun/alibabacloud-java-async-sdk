@@ -182,12 +182,15 @@ public class ModifyPolicyContentRequest extends Request {
      * <p>ModifyPolicyContentRequest</p>
      */
     public static class FingerPrintRuleList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Comment")
+        private String comment;
+
         @com.aliyun.core.annotation.NameInMap("DstPortEnd")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 65535)
+        @com.aliyun.core.annotation.Validation(maximum = 65535)
         private Integer dstPortEnd;
 
         @com.aliyun.core.annotation.NameInMap("DstPortStart")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 65535)
+        @com.aliyun.core.annotation.Validation(maximum = 65535)
         private Integer dstPortStart;
 
         @com.aliyun.core.annotation.NameInMap("Id")
@@ -198,12 +201,15 @@ public class ModifyPolicyContentRequest extends Request {
         private String matchAction;
 
         @com.aliyun.core.annotation.NameInMap("MaxPktLen")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 1500)
+        @com.aliyun.core.annotation.Validation(maximum = 1500)
         private Integer maxPktLen;
 
         @com.aliyun.core.annotation.NameInMap("MinPktLen")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 1500)
+        @com.aliyun.core.annotation.Validation(maximum = 1500)
         private Integer minPktLen;
+
+        @com.aliyun.core.annotation.NameInMap("Mode")
+        private Integer mode;
 
         @com.aliyun.core.annotation.NameInMap("Offset")
         @com.aliyun.core.annotation.Validation(maximum = 1500)
@@ -214,39 +220,48 @@ public class ModifyPolicyContentRequest extends Request {
         private String payloadBytes;
 
         @com.aliyun.core.annotation.NameInMap("Protocol")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String protocol;
 
         @com.aliyun.core.annotation.NameInMap("RateValue")
         @com.aliyun.core.annotation.Validation(maximum = 100000, minimum = 1)
         private Integer rateValue;
 
+        @com.aliyun.core.annotation.NameInMap("Rule")
+        private String rule;
+
         @com.aliyun.core.annotation.NameInMap("SeqNo")
         @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
         private Integer seqNo;
 
         @com.aliyun.core.annotation.NameInMap("SrcPortEnd")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 65535)
+        @com.aliyun.core.annotation.Validation(maximum = 65535)
         private Integer srcPortEnd;
 
         @com.aliyun.core.annotation.NameInMap("SrcPortStart")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 65535)
+        @com.aliyun.core.annotation.Validation(maximum = 65535)
         private Integer srcPortStart;
 
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private Integer type;
+
         private FingerPrintRuleList(Builder builder) {
+            this.comment = builder.comment;
             this.dstPortEnd = builder.dstPortEnd;
             this.dstPortStart = builder.dstPortStart;
             this.id = builder.id;
             this.matchAction = builder.matchAction;
             this.maxPktLen = builder.maxPktLen;
             this.minPktLen = builder.minPktLen;
+            this.mode = builder.mode;
             this.offset = builder.offset;
             this.payloadBytes = builder.payloadBytes;
             this.protocol = builder.protocol;
             this.rateValue = builder.rateValue;
+            this.rule = builder.rule;
             this.seqNo = builder.seqNo;
             this.srcPortEnd = builder.srcPortEnd;
             this.srcPortStart = builder.srcPortStart;
+            this.type = builder.type;
         }
 
         public static Builder builder() {
@@ -255,6 +270,13 @@ public class ModifyPolicyContentRequest extends Request {
 
         public static FingerPrintRuleList create() {
             return builder().build();
+        }
+
+        /**
+         * @return comment
+         */
+        public String getComment() {
+            return this.comment;
         }
 
         /**
@@ -300,6 +322,13 @@ public class ModifyPolicyContentRequest extends Request {
         }
 
         /**
+         * @return mode
+         */
+        public Integer getMode() {
+            return this.mode;
+        }
+
+        /**
          * @return offset
          */
         public Integer getOffset() {
@@ -328,6 +357,13 @@ public class ModifyPolicyContentRequest extends Request {
         }
 
         /**
+         * @return rule
+         */
+        public String getRule() {
+            return this.rule;
+        }
+
+        /**
          * @return seqNo
          */
         public Integer getSeqNo() {
@@ -348,43 +384,65 @@ public class ModifyPolicyContentRequest extends Request {
             return this.srcPortStart;
         }
 
+        /**
+         * @return type
+         */
+        public Integer getType() {
+            return this.type;
+        }
+
         public static final class Builder {
+            private String comment; 
             private Integer dstPortEnd; 
             private Integer dstPortStart; 
             private String id; 
             private String matchAction; 
             private Integer maxPktLen; 
             private Integer minPktLen; 
+            private Integer mode; 
             private Integer offset; 
             private String payloadBytes; 
             private String protocol; 
             private Integer rateValue; 
+            private String rule; 
             private Integer seqNo; 
             private Integer srcPortEnd; 
             private Integer srcPortStart; 
+            private Integer type; 
 
             private Builder() {
             } 
 
             private Builder(FingerPrintRuleList model) {
+                this.comment = model.comment;
                 this.dstPortEnd = model.dstPortEnd;
                 this.dstPortStart = model.dstPortStart;
                 this.id = model.id;
                 this.matchAction = model.matchAction;
                 this.maxPktLen = model.maxPktLen;
                 this.minPktLen = model.minPktLen;
+                this.mode = model.mode;
                 this.offset = model.offset;
                 this.payloadBytes = model.payloadBytes;
                 this.protocol = model.protocol;
                 this.rateValue = model.rateValue;
+                this.rule = model.rule;
                 this.seqNo = model.seqNo;
                 this.srcPortEnd = model.srcPortEnd;
                 this.srcPortStart = model.srcPortStart;
+                this.type = model.type;
             } 
 
             /**
+             * Comment.
+             */
+            public Builder comment(String comment) {
+                this.comment = comment;
+                return this;
+            }
+
+            /**
              * <p>The end of the destination port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>65535</p>
@@ -396,7 +454,6 @@ public class ModifyPolicyContentRequest extends Request {
 
             /**
              * <p>The start of the destination port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -437,7 +494,6 @@ public class ModifyPolicyContentRequest extends Request {
 
             /**
              * <p>The maximum packet length. Valid values: <strong>1</strong> to <strong>1500</strong>.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>1500</p>
@@ -449,13 +505,20 @@ public class ModifyPolicyContentRequest extends Request {
 
             /**
              * <p>The minimum packet length. Valid values: <strong>1</strong> to <strong>1500</strong>.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
              */
             public Builder minPktLen(Integer minPktLen) {
                 this.minPktLen = minPktLen;
+                return this;
+            }
+
+            /**
+             * Mode.
+             */
+            public Builder mode(Integer mode) {
+                this.mode = mode;
                 return this;
             }
 
@@ -487,7 +550,6 @@ public class ModifyPolicyContentRequest extends Request {
              * <li><strong>tcp</strong></li>
              * <li><strong>udp</strong></li>
              * </ul>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>tcp</p>
@@ -512,6 +574,14 @@ public class ModifyPolicyContentRequest extends Request {
             }
 
             /**
+             * Rule.
+             */
+            public Builder rule(String rule) {
+                this.rule = rule;
+                return this;
+            }
+
+            /**
              * <p>The sequence number that indicates the order for the rule to take effect. The value is an integer.</p>
              * <blockquote>
              * <p> A smaller number indicates a higher priority.</p>
@@ -528,7 +598,6 @@ public class ModifyPolicyContentRequest extends Request {
 
             /**
              * <p>The end of the source port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>65535</p>
@@ -540,13 +609,20 @@ public class ModifyPolicyContentRequest extends Request {
 
             /**
              * <p>The start of the source port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
              */
             public Builder srcPortStart(Integer srcPortStart) {
                 this.srcPortStart = srcPortStart;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(Integer type) {
+                this.type = type;
                 return this;
             }
 
