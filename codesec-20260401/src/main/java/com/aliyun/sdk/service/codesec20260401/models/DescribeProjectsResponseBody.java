@@ -311,6 +311,9 @@ public class DescribeProjectsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("instructionPrompt")
         private String instructionPrompt;
 
+        @com.aliyun.core.annotation.NameInMap("lastScanTime")
+        private String lastScanTime;
+
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
@@ -328,6 +331,7 @@ public class DescribeProjectsResponseBody extends TeaModel {
             this.engines = builder.engines;
             this.id = builder.id;
             this.instructionPrompt = builder.instructionPrompt;
+            this.lastScanTime = builder.lastScanTime;
             this.name = builder.name;
             this.source = builder.source;
             this.updatedAt = builder.updatedAt;
@@ -391,6 +395,13 @@ public class DescribeProjectsResponseBody extends TeaModel {
         }
 
         /**
+         * @return lastScanTime
+         */
+        public String getLastScanTime() {
+            return this.lastScanTime;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -419,6 +430,7 @@ public class DescribeProjectsResponseBody extends TeaModel {
             private Engines engines; 
             private Long id; 
             private String instructionPrompt; 
+            private String lastScanTime; 
             private String name; 
             private Source source; 
             private String updatedAt; 
@@ -434,6 +446,7 @@ public class DescribeProjectsResponseBody extends TeaModel {
                 this.engines = model.engines;
                 this.id = model.id;
                 this.instructionPrompt = model.instructionPrompt;
+                this.lastScanTime = model.lastScanTime;
                 this.name = model.name;
                 this.source = model.source;
                 this.updatedAt = model.updatedAt;
@@ -495,6 +508,14 @@ public class DescribeProjectsResponseBody extends TeaModel {
              */
             public Builder instructionPrompt(String instructionPrompt) {
                 this.instructionPrompt = instructionPrompt;
+                return this;
+            }
+
+            /**
+             * <p>Creation time of the most recent scan under this project, or null if the project has no scans.</p>
+             */
+            public Builder lastScanTime(String lastScanTime) {
+                this.lastScanTime = lastScanTime;
                 return this;
             }
 
