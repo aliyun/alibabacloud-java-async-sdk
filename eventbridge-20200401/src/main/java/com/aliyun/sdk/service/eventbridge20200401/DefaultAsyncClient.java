@@ -31,32 +31,32 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.version = "2020-04-01";
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("us-west-1", "eventbridge-console.us-west-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "eventbridge-console.us-east-1.aliyuncs.com"),
-            new TeaPair("eu-west-1", "eventbridge-console.eu-west-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "eventbridge-console.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "eventbridge-console.cn-zhangjiakou.aliyuncs.com"),
             new TeaPair("cn-wulanchabu", "eventbridge-console.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "eventbridge-console.cn-shenzhen-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "eventbridge-console.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "eventbridge-console.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "eventbridge-console.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-beijing", "eventbridge-console.cn-beijing.aliyuncs.com"),
             new TeaPair("cn-qingdao", "eventbridge-console.cn-qingdao.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "eventbridge-console.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "eventbridge-console.cn-shanghai.aliyuncs.com"),
             new TeaPair("cn-hongkong", "eventbridge-console.cn-hongkong.aliyuncs.com"),
             new TeaPair("cn-heyuan", "eventbridge-console.cn-heyuan.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "eventbridge-console.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "eventbridge-console.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "eventbridge-console.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-1", "eventbridge-console.cn-beijing-finance-1.aliyuncs.com"),
-            new TeaPair("cn-beijing", "eventbridge-console.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "eventbridge-console.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "eventbridge-console.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "eventbridge-console.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "eventbridge-console.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "eventbridge-console.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "eventbridge-console.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "eventbridge-console.cn-shenzhen.aliyuncs.com"),
             new TeaPair("ap-northeast-2", "eventbridge-console.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "eventbridge-console.ap-northeast-1.aliyuncs.com")
+            new TeaPair("ap-northeast-1", "eventbridge-console.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "eventbridge-console.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "eventbridge-console.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "eventbridge-console.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "eventbridge-console.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "eventbridge-console.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "eventbridge-console.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "eventbridge-console.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "eventbridge-console.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "eventbridge-console.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("us-east-1", "eventbridge-console.us-east-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "eventbridge-console.eu-west-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "eventbridge-console.us-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "eventbridge-console.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "eventbridge-console.cn-shenzhen-finance-1.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "eventbridge-console.cn-beijing-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "eventbridge-console.cn-shanghai-finance-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -619,6 +619,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GenerateAgentDataSemantics  GenerateAgentDataSemanticsRequest
+     * @return GenerateAgentDataSemanticsResponse
+     */
+    @Override
+    public CompletableFuture<GenerateAgentDataSemanticsResponse> generateAgentDataSemantics(GenerateAgentDataSemanticsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GenerateAgentDataSemantics").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GenerateAgentDataSemanticsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GenerateAgentDataSemanticsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetAgent  GetAgentRequest
      * @return GetAgentResponse
      */
@@ -631,6 +649,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetAgentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetAgentDataSemantics  GetAgentDataSemanticsRequest
+     * @return GetAgentDataSemanticsResponse
+     */
+    @Override
+    public CompletableFuture<GetAgentDataSemanticsResponse> getAgentDataSemantics(GetAgentDataSemanticsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAgentDataSemantics").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAgentDataSemanticsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAgentDataSemanticsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -751,6 +787,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetEventStreamingResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetGenerateAgentDataSemanticsProgress  GetGenerateAgentDataSemanticsProgressRequest
+     * @return GetGenerateAgentDataSemanticsProgressResponse
+     */
+    @Override
+    public CompletableFuture<GetGenerateAgentDataSemanticsProgressResponse> getGenerateAgentDataSemanticsProgress(GetGenerateAgentDataSemanticsProgressRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetGenerateAgentDataSemanticsProgress").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetGenerateAgentDataSemanticsProgressResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetGenerateAgentDataSemanticsProgressResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1187,6 +1241,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>执行单条只读SQL并返回结构化结果集。BeginTime和EndTime仅约束SQL中引用的内部EventHouse数据，不影响挂载的外部数据源。</p>
+     * 
+     * @param request the request parameters of QueryEventHouseWithTimeRange  QueryEventHouseWithTimeRangeRequest
+     * @return QueryEventHouseWithTimeRangeResponse
+     */
+    @Override
+    public CompletableFuture<QueryEventHouseWithTimeRangeResponse> queryEventHouseWithTimeRange(QueryEventHouseWithTimeRangeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryEventHouseWithTimeRange").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryEventHouseWithTimeRangeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryEventHouseWithTimeRangeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>You can call this API operation to query event traces.</p>
      * 
      * @param request the request parameters of QueryEventTraces  QueryEventTracesRequest
@@ -1243,6 +1318,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<QueryTracedEventsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SaveAgentDataSemantics  SaveAgentDataSemanticsRequest
+     * @return SaveAgentDataSemanticsResponse
+     */
+    @Override
+    public CompletableFuture<SaveAgentDataSemanticsResponse> saveAgentDataSemantics(SaveAgentDataSemanticsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SaveAgentDataSemantics").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SaveAgentDataSemanticsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SaveAgentDataSemanticsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

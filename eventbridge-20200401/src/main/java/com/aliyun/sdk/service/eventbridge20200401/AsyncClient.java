@@ -236,10 +236,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EventCenterQueryEventsResponse> eventCenterQueryEvents(EventCenterQueryEventsRequest request);
 
     /**
+     * @param request the request parameters of GenerateAgentDataSemantics  GenerateAgentDataSemanticsRequest
+     * @return GenerateAgentDataSemanticsResponse
+     */
+    CompletableFuture<GenerateAgentDataSemanticsResponse> generateAgentDataSemantics(GenerateAgentDataSemanticsRequest request);
+
+    /**
      * @param request the request parameters of GetAgent  GetAgentRequest
      * @return GetAgentResponse
      */
     CompletableFuture<GetAgentResponse> getAgent(GetAgentRequest request);
+
+    /**
+     * @param request the request parameters of GetAgentDataSemantics  GetAgentDataSemanticsRequest
+     * @return GetAgentDataSemanticsResponse
+     */
+    CompletableFuture<GetAgentDataSemanticsResponse> getAgentDataSemantics(GetAgentDataSemanticsRequest request);
 
     /**
      * <b>description</b> :
@@ -288,6 +300,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetEventStreamingResponse
      */
     CompletableFuture<GetEventStreamingResponse> getEventStreaming(GetEventStreamingRequest request);
+
+    /**
+     * @param request the request parameters of GetGenerateAgentDataSemanticsProgress  GetGenerateAgentDataSemanticsProgressRequest
+     * @return GetGenerateAgentDataSemanticsProgressResponse
+     */
+    CompletableFuture<GetGenerateAgentDataSemanticsProgressResponse> getGenerateAgentDataSemanticsProgress(GetGenerateAgentDataSemanticsProgressRequest request);
 
     /**
      * @param request the request parameters of GetNamespace  GetNamespaceRequest
@@ -456,6 +474,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>执行单条只读SQL并返回结构化结果集。BeginTime和EndTime仅约束SQL中引用的内部EventHouse数据，不影响挂载的外部数据源。</p>
+     * 
+     * @param request the request parameters of QueryEventHouseWithTimeRange  QueryEventHouseWithTimeRangeRequest
+     * @return QueryEventHouseWithTimeRangeResponse
+     */
+    CompletableFuture<QueryEventHouseWithTimeRangeResponse> queryEventHouseWithTimeRange(QueryEventHouseWithTimeRangeRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>You can call this API operation to query event traces.</p>
      * 
      * @param request the request parameters of QueryEventTraces  QueryEventTracesRequest
@@ -480,6 +507,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryTracedEventsResponse
      */
     CompletableFuture<QueryTracedEventsResponse> queryTracedEvents(QueryTracedEventsRequest request);
+
+    /**
+     * @param request the request parameters of SaveAgentDataSemantics  SaveAgentDataSemanticsRequest
+     * @return SaveAgentDataSemanticsResponse
+     */
+    CompletableFuture<SaveAgentDataSemanticsResponse> saveAgentDataSemantics(SaveAgentDataSemanticsRequest request);
 
     /**
      * <b>description</b> :

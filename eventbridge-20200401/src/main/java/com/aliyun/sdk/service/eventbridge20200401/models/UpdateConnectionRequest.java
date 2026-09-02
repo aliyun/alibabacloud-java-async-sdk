@@ -191,7 +191,7 @@ public class UpdateConnectionRequest extends Request {
         }
 
         /**
-         * <p>连接类型。可选值：MySQL、PostgreSQL、Elasticsearch、Http</p>
+         * <p>连接类型。可选值：MySQL、PostgreSQL、Elasticsearch、OSS_TABLES、SLS、OTS、MaxCompute、MongoDB、Redis、SQLServer、ClickHouse、Oracle、Hive、Iceberg、lakehouse、Http</p>
          * 
          * <strong>example:</strong>
          * <p>Http</p>

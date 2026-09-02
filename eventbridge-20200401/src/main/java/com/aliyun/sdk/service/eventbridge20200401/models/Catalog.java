@@ -130,7 +130,7 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * <p>挂载类型 Catalog 关联的连接名称。仅 Provider 为 MySQL/PostgreSQL/Elasticsearch 时有值</p>
+         * <p>挂载类型 Catalog 关联的连接名称。仅 Provider 为 MySQL/PostgreSQL/Elasticsearch/OSS_TABLES/SLS/OTS/MaxCompute/MongoDB/Redis/SQLServer/ClickHouse/Oracle/Hive/Iceberg 时有值</p>
          * 
          * <strong>example:</strong>
          * <p>my_connection</p>
@@ -163,7 +163,7 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * <p>数据源提供方。EventHouse 为内置存储，MySQL/PostgreSQL/Elasticsearch 为外部挂载</p>
+         * <p>数据源提供方。EventHouse 为内置存储，MySQL/PostgreSQL/Elasticsearch/OSS_TABLES/SLS/OTS/MaxCompute/MongoDB/Redis/SQLServer/ClickHouse/Oracle/Hive/Iceberg 为外部挂载</p>
          * 
          * <strong>example:</strong>
          * <p>EventHouse</p>

@@ -143,7 +143,7 @@ public class ListConnectionsRequest extends Request {
         }
 
         /**
-         * <p>按连接类型过滤查询结果。可选值：Http、MySQL、PostgreSQL、Elasticsearch。不传则返回所有类型</p>
+         * <p>按连接类型过滤查询结果。可选值：Http、MySQL、PostgreSQL、Elasticsearch、OSS_TABLES、SLS、OTS、MaxCompute、MongoDB、Redis、SQLServer、ClickHouse、Oracle、Hive、Iceberg、lakehouse。不传则返回所有类型</p>
          * 
          * <strong>example:</strong>
          * <p>Http</p>

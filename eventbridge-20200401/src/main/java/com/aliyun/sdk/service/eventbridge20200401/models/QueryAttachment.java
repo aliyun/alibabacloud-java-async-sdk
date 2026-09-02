@@ -20,11 +20,15 @@ public class QueryAttachment extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Query")
     private String query;
 
+    @com.aliyun.core.annotation.NameInMap("QueryId")
+    private String queryId;
+
     @com.aliyun.core.annotation.NameInMap("Result")
     private ExecutionResult result;
 
     private QueryAttachment(Builder builder) {
         this.query = builder.query;
+        this.queryId = builder.queryId;
         this.result = builder.result;
     }
 
@@ -48,6 +52,13 @@ public class QueryAttachment extends TeaModel {
     }
 
     /**
+     * @return queryId
+     */
+    public String getQueryId() {
+        return this.queryId;
+    }
+
+    /**
      * @return result
      */
     public ExecutionResult getResult() {
@@ -56,6 +67,7 @@ public class QueryAttachment extends TeaModel {
 
     public static final class Builder {
         private String query; 
+        private String queryId; 
         private ExecutionResult result; 
 
         private Builder() {
@@ -63,6 +75,7 @@ public class QueryAttachment extends TeaModel {
 
         private Builder(QueryAttachment model) {
             this.query = model.query;
+            this.queryId = model.queryId;
             this.result = model.result;
         } 
 
@@ -71,6 +84,17 @@ public class QueryAttachment extends TeaModel {
          */
         public Builder query(String query) {
             this.query = query;
+            return this;
+        }
+
+        /**
+         * <p>对应本次真实 SQL 工具执行的稳定标识，用于结果追踪和解释</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sqlx-0-a1b2c3d4</p>
+         */
+        public Builder queryId(String queryId) {
+            this.queryId = queryId;
             return this;
         }
 

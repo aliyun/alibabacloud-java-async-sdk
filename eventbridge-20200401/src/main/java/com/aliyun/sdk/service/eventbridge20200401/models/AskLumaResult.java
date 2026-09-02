@@ -50,6 +50,9 @@ public class AskLumaResult extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("StorageTruncated")
     private Boolean storageTruncated;
 
+    @com.aliyun.core.annotation.NameInMap("WikiVersion")
+    private String wikiVersion;
+
     private AskLumaResult(Builder builder) {
         this.clarificationNeeded = builder.clarificationNeeded;
         this.clarificationQuestion = builder.clarificationQuestion;
@@ -62,6 +65,7 @@ public class AskLumaResult extends TeaModel {
         this.messageId = builder.messageId;
         this.status = builder.status;
         this.storageTruncated = builder.storageTruncated;
+        this.wikiVersion = builder.wikiVersion;
     }
 
     public static Builder builder() {
@@ -153,6 +157,13 @@ public class AskLumaResult extends TeaModel {
         return this.storageTruncated;
     }
 
+    /**
+     * @return wikiVersion
+     */
+    public String getWikiVersion() {
+        return this.wikiVersion;
+    }
+
     public static final class Builder {
         private Boolean clarificationNeeded; 
         private String clarificationQuestion; 
@@ -165,6 +176,7 @@ public class AskLumaResult extends TeaModel {
         private String messageId; 
         private String status; 
         private Boolean storageTruncated; 
+        private String wikiVersion; 
 
         private Builder() {
         } 
@@ -181,6 +193,7 @@ public class AskLumaResult extends TeaModel {
             this.messageId = model.messageId;
             this.status = model.status;
             this.storageTruncated = model.storageTruncated;
+            this.wikiVersion = model.wikiVersion;
         } 
 
         /**
@@ -268,6 +281,17 @@ public class AskLumaResult extends TeaModel {
          */
         public Builder storageTruncated(Boolean storageTruncated) {
             this.storageTruncated = storageTruncated;
+            return this;
+        }
+
+        /**
+         * <p>本次回答实际使用的业务 Wiki 版本。Agent 未配置 Wiki 时不返回</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eventhouse-multisource-demo-v1</p>
+         */
+        public Builder wikiVersion(String wikiVersion) {
+            this.wikiVersion = wikiVersion;
             return this;
         }
 

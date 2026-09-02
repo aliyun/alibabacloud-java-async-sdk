@@ -191,7 +191,7 @@ public class CreateConnectionRequest extends Request {
         }
 
         /**
-         * <p>连接类型。可选值：MySQL、PostgreSQL、Elasticsearch、Http。数据源类型连接必填，不传默认为 Http。Http 类型用于 API Destination 等 HTTP 协议目标；数据源类型用于集成广场的数据连接</p>
+         * <p>连接类型。可选值：MySQL、PostgreSQL、Elasticsearch、OSS_TABLES、SLS、OTS、MaxCompute、MongoDB、Redis、SQLServer、ClickHouse、Oracle、Hive、Iceberg、lakehouse、Http。数据源类型连接必填，不传默认为 Http。Http 类型用于 API Destination 等 HTTP 协议目标；Hive 和 Iceberg 分别用于对应湖仓数据源，lakehouse 仅用于兼容已有连接；其他数据源类型用于集成广场的数据连接</p>
          * 
          * <strong>example:</strong>
          * <p>Http</p>

@@ -26,10 +26,15 @@ public class DeleteEventStreamingRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 255, minLength = 2)
     private String eventStreamingName;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Force")
+    private Boolean force;
+
     private DeleteEventStreamingRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.eventStreamingName = builder.eventStreamingName;
+        this.force = builder.force;
     }
 
     public static Builder builder() {
@@ -59,9 +64,17 @@ public class DeleteEventStreamingRequest extends Request {
         return this.eventStreamingName;
     }
 
+    /**
+     * @return force
+     */
+    public Boolean getForce() {
+        return this.force;
+    }
+
     public static final class Builder extends Request.Builder<DeleteEventStreamingRequest, Builder> {
         private String regionId; 
         private String eventStreamingName; 
+        private Boolean force; 
 
         private Builder() {
             super();
@@ -71,6 +84,7 @@ public class DeleteEventStreamingRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.eventStreamingName = request.eventStreamingName;
+            this.force = request.force;
         } 
 
         /**
@@ -92,6 +106,15 @@ public class DeleteEventStreamingRequest extends Request {
         public Builder eventStreamingName(String eventStreamingName) {
             this.putBodyParameter("EventStreamingName", eventStreamingName);
             this.eventStreamingName = eventStreamingName;
+            return this;
+        }
+
+        /**
+         * Force.
+         */
+        public Builder force(Boolean force) {
+            this.putBodyParameter("Force", force);
+            this.force = force;
             return this;
         }
 
