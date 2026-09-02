@@ -272,6 +272,9 @@ public class ListObjectScanEventResponseBody extends TeaModel {
      * <p>ListObjectScanEventResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AiDetect")
+        private Boolean aiDetect;
+
         @com.aliyun.core.annotation.NameInMap("BucketName")
         private String bucketName;
 
@@ -333,6 +336,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         private Integer status;
 
         private Data(Builder builder) {
+            this.aiDetect = builder.aiDetect;
             this.bucketName = builder.bucketName;
             this.details = builder.details;
             this.displaySandboxResult = builder.displaySandboxResult;
@@ -361,6 +365,13 @@ public class ListObjectScanEventResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return aiDetect
+         */
+        public Boolean getAiDetect() {
+            return this.aiDetect;
         }
 
         /**
@@ -504,6 +515,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean aiDetect; 
             private String bucketName; 
             private java.util.List<Details> details; 
             private String displaySandboxResult; 
@@ -529,6 +541,7 @@ public class ListObjectScanEventResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.aiDetect = model.aiDetect;
                 this.bucketName = model.bucketName;
                 this.details = model.details;
                 this.displaySandboxResult = model.displaySandboxResult;
@@ -550,6 +563,14 @@ public class ListObjectScanEventResponseBody extends TeaModel {
                 this.source = model.source;
                 this.status = model.status;
             } 
+
+            /**
+             * AiDetect.
+             */
+            public Builder aiDetect(Boolean aiDetect) {
+                this.aiDetect = aiDetect;
+                return this;
+            }
 
             /**
              * <p>The name of the OSS bucket.</p>

@@ -167,6 +167,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SasScreen")
     private Integer sasScreen;
 
+    @com.aliyun.core.annotation.NameInMap("SdkAiPostPaidGray")
+    private Integer sdkAiPostPaidGray;
+
     @com.aliyun.core.annotation.NameInMap("SdkCapacity")
     private Long sdkCapacity;
 
@@ -254,6 +257,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         this.sasEdrVersion = builder.sasEdrVersion;
         this.sasLog = builder.sasLog;
         this.sasScreen = builder.sasScreen;
+        this.sdkAiPostPaidGray = builder.sdkAiPostPaidGray;
         this.sdkCapacity = builder.sdkCapacity;
         this.slsCapacity = builder.slsCapacity;
         this.threatAnalysisCapacity = builder.threatAnalysisCapacity;
@@ -631,6 +635,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return sdkAiPostPaidGray
+     */
+    public Integer getSdkAiPostPaidGray() {
+        return this.sdkAiPostPaidGray;
+    }
+
+    /**
      * @return sdkCapacity
      */
     public Long getSdkCapacity() {
@@ -765,6 +776,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         private String sasEdrVersion; 
         private Integer sasLog; 
         private Integer sasScreen; 
+        private Integer sdkAiPostPaidGray; 
         private Long sdkCapacity; 
         private Long slsCapacity; 
         private Long threatAnalysisCapacity; 
@@ -832,6 +844,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
             this.sasEdrVersion = model.sasEdrVersion;
             this.sasLog = model.sasLog;
             this.sasScreen = model.sasScreen;
+            this.sdkAiPostPaidGray = model.sdkAiPostPaidGray;
             this.sdkCapacity = model.sdkCapacity;
             this.slsCapacity = model.slsCapacity;
             this.threatAnalysisCapacity = model.threatAnalysisCapacity;
@@ -1464,6 +1477,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
          */
         public Builder sasScreen(Integer sasScreen) {
             this.sasScreen = sasScreen;
+            return this;
+        }
+
+        /**
+         * SdkAiPostPaidGray.
+         */
+        public Builder sdkAiPostPaidGray(Integer sdkAiPostPaidGray) {
+            this.sdkAiPostPaidGray = sdkAiPostPaidGray;
             return this;
         }
 

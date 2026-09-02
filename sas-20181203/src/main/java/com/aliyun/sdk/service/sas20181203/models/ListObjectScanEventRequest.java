@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListObjectScanEventRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AiDetect")
+    private Boolean aiDetect;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BatchType")
     private String batchType;
 
@@ -81,6 +85,7 @@ public class ListObjectScanEventRequest extends Request {
 
     private ListObjectScanEventRequest(Builder builder) {
         super(builder);
+        this.aiDetect = builder.aiDetect;
         this.batchType = builder.batchType;
         this.bucketName = builder.bucketName;
         this.currentPage = builder.currentPage;
@@ -109,6 +114,13 @@ public class ListObjectScanEventRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return aiDetect
+     */
+    public Boolean getAiDetect() {
+        return this.aiDetect;
     }
 
     /**
@@ -217,6 +229,7 @@ public class ListObjectScanEventRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListObjectScanEventRequest, Builder> {
+        private Boolean aiDetect; 
         private String batchType; 
         private String bucketName; 
         private Integer currentPage; 
@@ -239,6 +252,7 @@ public class ListObjectScanEventRequest extends Request {
 
         private Builder(ListObjectScanEventRequest request) {
             super(request);
+            this.aiDetect = request.aiDetect;
             this.batchType = request.batchType;
             this.bucketName = request.bucketName;
             this.currentPage = request.currentPage;
@@ -255,6 +269,15 @@ public class ListObjectScanEventRequest extends Request {
             this.timeEnd = request.timeEnd;
             this.timeStart = request.timeStart;
         } 
+
+        /**
+         * AiDetect.
+         */
+        public Builder aiDetect(Boolean aiDetect) {
+            this.putQueryParameter("AiDetect", aiDetect);
+            this.aiDetect = aiDetect;
+            return this;
+        }
 
         /**
          * <p>Batch operation type. Valid values:</p>

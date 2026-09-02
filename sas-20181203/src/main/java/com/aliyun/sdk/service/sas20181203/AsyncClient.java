@@ -2747,6 +2747,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeUserSettingResponse> describeUserSetting(DescribeUserSettingRequest request);
 
     /**
+     * @param request the request parameters of DescribeUuidVulNumClassifyStatistic  DescribeUuidVulNumClassifyStatisticRequest
+     * @return DescribeUuidVulNumClassifyStatisticResponse
+     */
+    CompletableFuture<DescribeUuidVulNumClassifyStatisticResponse> describeUuidVulNumClassifyStatistic(DescribeUuidVulNumClassifyStatisticRequest request);
+
+    /**
      * @param request the request parameters of DescribeUuidsByVulNames  DescribeUuidsByVulNamesRequest
      * @return DescribeUuidsByVulNamesResponse
      */
