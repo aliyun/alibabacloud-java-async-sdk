@@ -17,8 +17,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetGuardLogStatsRequest</p>
  */
 public class GetGuardLogStatsRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommodityCode")
+    private String commodityCode;
+
     private GetGuardLogStatsRequest(Builder builder) {
         super(builder);
+        this.commodityCode = builder.commodityCode;
     }
 
     public static Builder builder() {
@@ -34,7 +39,15 @@ public class GetGuardLogStatsRequest extends Request {
         return new Builder(this);
     }
 
+    /**
+     * @return commodityCode
+     */
+    public String getCommodityCode() {
+        return this.commodityCode;
+    }
+
     public static final class Builder extends Request.Builder<GetGuardLogStatsRequest, Builder> {
+        private String commodityCode; 
 
         private Builder() {
             super();
@@ -42,7 +55,17 @@ public class GetGuardLogStatsRequest extends Request {
 
         private Builder(GetGuardLogStatsRequest request) {
             super(request);
+            this.commodityCode = request.commodityCode;
         } 
+
+        /**
+         * CommodityCode.
+         */
+        public Builder commodityCode(String commodityCode) {
+            this.putQueryParameter("CommodityCode", commodityCode);
+            this.commodityCode = commodityCode;
+            return this;
+        }
 
         @Override
         public GetGuardLogStatsRequest build() {
