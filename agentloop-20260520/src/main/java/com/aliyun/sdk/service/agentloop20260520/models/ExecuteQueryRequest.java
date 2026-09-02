@@ -28,6 +28,10 @@ public class ExecuteQueryRequest extends Request {
     private String datasetName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("annotationFilter")
+    private AnnotationFilter annotationFilter;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("from")
     private Integer from;
 
@@ -65,6 +69,7 @@ public class ExecuteQueryRequest extends Request {
         super(builder);
         this.agentSpace = builder.agentSpace;
         this.datasetName = builder.datasetName;
+        this.annotationFilter = builder.annotationFilter;
         this.from = builder.from;
         this.length = builder.length;
         this.maxOutputLength = builder.maxOutputLength;
@@ -100,6 +105,13 @@ public class ExecuteQueryRequest extends Request {
      */
     public String getDatasetName() {
         return this.datasetName;
+    }
+
+    /**
+     * @return annotationFilter
+     */
+    public AnnotationFilter getAnnotationFilter() {
+        return this.annotationFilter;
     }
 
     /**
@@ -161,6 +173,7 @@ public class ExecuteQueryRequest extends Request {
     public static final class Builder extends Request.Builder<ExecuteQueryRequest, Builder> {
         private String agentSpace; 
         private String datasetName; 
+        private AnnotationFilter annotationFilter; 
         private Integer from; 
         private Integer length; 
         private Integer maxOutputLength; 
@@ -178,6 +191,7 @@ public class ExecuteQueryRequest extends Request {
             super(request);
             this.agentSpace = request.agentSpace;
             this.datasetName = request.datasetName;
+            this.annotationFilter = request.annotationFilter;
             this.from = request.from;
             this.length = request.length;
             this.maxOutputLength = request.maxOutputLength;
@@ -209,6 +223,15 @@ public class ExecuteQueryRequest extends Request {
         public Builder datasetName(String datasetName) {
             this.putPathParameter("datasetName", datasetName);
             this.datasetName = datasetName;
+            return this;
+        }
+
+        /**
+         * annotationFilter.
+         */
+        public Builder annotationFilter(AnnotationFilter annotationFilter) {
+            this.putBodyParameter("annotationFilter", annotationFilter);
+            this.annotationFilter = annotationFilter;
             return this;
         }
 
@@ -297,4 +320,154 @@ public class ExecuteQueryRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ExecuteQueryRequest} extends {@link TeaModel}
+     *
+     * <p>ExecuteQueryRequest</p>
+     */
+    public static class Conditions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("operator")
+        private String operator;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private Object value;
+
+        private Conditions(Builder builder) {
+            this.key = builder.key;
+            this.operator = builder.operator;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Conditions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return operator
+         */
+        public String getOperator() {
+            return this.operator;
+        }
+
+        /**
+         * @return value
+         */
+        public Object getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String operator; 
+            private Object value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Conditions model) {
+                this.key = model.key;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
+
+            /**
+             * key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * operator.
+             */
+            public Builder operator(String operator) {
+                this.operator = operator;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(Object value) {
+                this.value = value;
+                return this;
+            }
+
+            public Conditions build() {
+                return new Conditions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ExecuteQueryRequest} extends {@link TeaModel}
+     *
+     * <p>ExecuteQueryRequest</p>
+     */
+    public static class AnnotationFilter extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("conditions")
+        private java.util.List<Conditions> conditions;
+
+        private AnnotationFilter(Builder builder) {
+            this.conditions = builder.conditions;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AnnotationFilter create() {
+            return builder().build();
+        }
+
+        /**
+         * @return conditions
+         */
+        public java.util.List<Conditions> getConditions() {
+            return this.conditions;
+        }
+
+        public static final class Builder {
+            private java.util.List<Conditions> conditions; 
+
+            private Builder() {
+            } 
+
+            private Builder(AnnotationFilter model) {
+                this.conditions = model.conditions;
+            } 
+
+            /**
+             * conditions.
+             */
+            public Builder conditions(java.util.List<Conditions> conditions) {
+                this.conditions = conditions;
+                return this;
+            }
+
+            public AnnotationFilter build() {
+                return new AnnotationFilter(this);
+            } 
+
+        } 
+
+    }
 }
