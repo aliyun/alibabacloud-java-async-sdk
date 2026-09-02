@@ -188,12 +188,16 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("SubItems")
+        private java.util.List<?> subItems;
+
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Facilities(Builder builder) {
             this.description = builder.description;
             this.name = builder.name;
+            this.subItems = builder.subItems;
             this.type = builder.type;
         }
 
@@ -220,6 +224,13 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return subItems
+         */
+        public java.util.List<?> getSubItems() {
+            return this.subItems;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -229,6 +240,7 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String description; 
             private String name; 
+            private java.util.List<?> subItems; 
             private String type; 
 
             private Builder() {
@@ -237,6 +249,7 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             private Builder(Facilities model) {
                 this.description = model.description;
                 this.name = model.name;
+                this.subItems = model.subItems;
                 this.type = model.type;
             } 
 
@@ -253,6 +266,14 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * SubItems.
+             */
+            public Builder subItems(java.util.List<?> subItems) {
+                this.subItems = subItems;
                 return this;
             }
 
@@ -691,9 +712,15 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
      *
      * <p>GlobalHotelBatchGetHotelDetailResponseBody</p>
      */
-    public static class BedType extends TeaModel {
+    public static class BedInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BedCount")
         private Integer bedCount;
+
+        @com.aliyun.core.annotation.NameInMap("BedNameCn")
+        private String bedNameCn;
+
+        @com.aliyun.core.annotation.NameInMap("BedNameEn")
+        private String bedNameEn;
 
         @com.aliyun.core.annotation.NameInMap("BedSize")
         private String bedSize;
@@ -701,8 +728,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BedType")
         private String bedType;
 
-        private BedType(Builder builder) {
+        private BedInfos(Builder builder) {
             this.bedCount = builder.bedCount;
+            this.bedNameCn = builder.bedNameCn;
+            this.bedNameEn = builder.bedNameEn;
             this.bedSize = builder.bedSize;
             this.bedType = builder.bedType;
         }
@@ -711,7 +740,7 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static BedType create() {
+        public static BedInfos create() {
             return builder().build();
         }
 
@@ -720,6 +749,20 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
          */
         public Integer getBedCount() {
             return this.bedCount;
+        }
+
+        /**
+         * @return bedNameCn
+         */
+        public String getBedNameCn() {
+            return this.bedNameCn;
+        }
+
+        /**
+         * @return bedNameEn
+         */
+        public String getBedNameEn() {
+            return this.bedNameEn;
         }
 
         /**
@@ -738,14 +781,18 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer bedCount; 
+            private String bedNameCn; 
+            private String bedNameEn; 
             private String bedSize; 
             private String bedType; 
 
             private Builder() {
             } 
 
-            private Builder(BedType model) {
+            private Builder(BedInfos model) {
                 this.bedCount = model.bedCount;
+                this.bedNameCn = model.bedNameCn;
+                this.bedNameEn = model.bedNameEn;
                 this.bedSize = model.bedSize;
                 this.bedType = model.bedType;
             } 
@@ -755,6 +802,22 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
              */
             public Builder bedCount(Integer bedCount) {
                 this.bedCount = bedCount;
+                return this;
+            }
+
+            /**
+             * BedNameCn.
+             */
+            public Builder bedNameCn(String bedNameCn) {
+                this.bedNameCn = bedNameCn;
+                return this;
+            }
+
+            /**
+             * BedNameEn.
+             */
+            public Builder bedNameEn(String bedNameEn) {
+                this.bedNameEn = bedNameEn;
                 return this;
             }
 
@@ -774,8 +837,179 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
                 return this;
             }
 
-            public BedType build() {
-                return new BedType(this);
+            public BedInfos build() {
+                return new BedInfos(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GlobalHotelBatchGetHotelDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GlobalHotelBatchGetHotelDetailResponseBody</p>
+     */
+    public static class BedGroups extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BedInfos")
+        private java.util.List<BedInfos> bedInfos;
+
+        private BedGroups(Builder builder) {
+            this.bedInfos = builder.bedInfos;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BedGroups create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bedInfos
+         */
+        public java.util.List<BedInfos> getBedInfos() {
+            return this.bedInfos;
+        }
+
+        public static final class Builder {
+            private java.util.List<BedInfos> bedInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(BedGroups model) {
+                this.bedInfos = model.bedInfos;
+            } 
+
+            /**
+             * BedInfos.
+             */
+            public Builder bedInfos(java.util.List<BedInfos> bedInfos) {
+                this.bedInfos = bedInfos;
+                return this;
+            }
+
+            public BedGroups build() {
+                return new BedGroups(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GlobalHotelBatchGetHotelDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GlobalHotelBatchGetHotelDetailResponseBody</p>
+     */
+    public static class RoomTypesFacilities extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("SubItems")
+        private java.util.List<?> subItems;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private RoomTypesFacilities(Builder builder) {
+            this.description = builder.description;
+            this.name = builder.name;
+            this.subItems = builder.subItems;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RoomTypesFacilities create() {
+            return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return subItems
+         */
+        public java.util.List<?> getSubItems() {
+            return this.subItems;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String description; 
+            private String name; 
+            private java.util.List<?> subItems; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(RoomTypesFacilities model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.subItems = model.subItems;
+                this.type = model.type;
+            } 
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * SubItems.
+             */
+            public Builder subItems(java.util.List<?> subItems) {
+                this.subItems = subItems;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public RoomTypesFacilities build() {
+                return new RoomTypesFacilities(this);
             } 
 
         } 
@@ -989,8 +1223,11 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
      * <p>GlobalHotelBatchGetHotelDetailResponseBody</p>
      */
     public static class RoomTypes extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("BedType")
-        private java.util.List<BedType> bedType;
+        @com.aliyun.core.annotation.NameInMap("BedGroups")
+        private java.util.List<BedGroups> bedGroups;
+
+        @com.aliyun.core.annotation.NameInMap("Facilities")
+        private java.util.List<RoomTypesFacilities> facilities;
 
         @com.aliyun.core.annotation.NameInMap("Pictures")
         private java.util.List<RoomTypesPictures> pictures;
@@ -1017,7 +1254,8 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         private String windowTypeDefect;
 
         private RoomTypes(Builder builder) {
-            this.bedType = builder.bedType;
+            this.bedGroups = builder.bedGroups;
+            this.facilities = builder.facilities;
             this.pictures = builder.pictures;
             this.roomName = builder.roomName;
             this.roomNameCn = builder.roomNameCn;
@@ -1037,10 +1275,17 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         }
 
         /**
-         * @return bedType
+         * @return bedGroups
          */
-        public java.util.List<BedType> getBedType() {
-            return this.bedType;
+        public java.util.List<BedGroups> getBedGroups() {
+            return this.bedGroups;
+        }
+
+        /**
+         * @return facilities
+         */
+        public java.util.List<RoomTypesFacilities> getFacilities() {
+            return this.facilities;
         }
 
         /**
@@ -1100,7 +1345,8 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List<BedType> bedType; 
+            private java.util.List<BedGroups> bedGroups; 
+            private java.util.List<RoomTypesFacilities> facilities; 
             private java.util.List<RoomTypesPictures> pictures; 
             private String roomName; 
             private String roomNameCn; 
@@ -1114,7 +1360,8 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             } 
 
             private Builder(RoomTypes model) {
-                this.bedType = model.bedType;
+                this.bedGroups = model.bedGroups;
+                this.facilities = model.facilities;
                 this.pictures = model.pictures;
                 this.roomName = model.roomName;
                 this.roomNameCn = model.roomNameCn;
@@ -1126,10 +1373,18 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * BedType.
+             * BedGroups.
              */
-            public Builder bedType(java.util.List<BedType> bedType) {
-                this.bedType = bedType;
+            public Builder bedGroups(java.util.List<BedGroups> bedGroups) {
+                this.bedGroups = bedGroups;
+                return this;
+            }
+
+            /**
+             * Facilities.
+             */
+            public Builder facilities(java.util.List<RoomTypesFacilities> facilities) {
+                this.facilities = facilities;
                 return this;
             }
 
