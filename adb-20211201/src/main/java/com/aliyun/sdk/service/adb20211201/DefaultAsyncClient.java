@@ -74,22 +74,7 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-zhengzhou-nebula-1", "adb.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "adb.ap-northeast-1.aliyuncs.com"),
             new TeaPair("me-east-1", "adb.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "adb.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "adb.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "adb.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "adb.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "adb.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "adb.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "adb.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "adb.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "adb.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "adb.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "adb.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "adb.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("eu-west-1", "adb.eu-west-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "adb.eu-central-1.aliyuncs.com"),
-            new TeaPair("na-south-1", "adb.na-south-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "adb.me-central-1.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "adb.ap-northeast-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }

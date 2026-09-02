@@ -36,6 +36,10 @@ public class AddKnowledgeFileRequest extends Request {
     private Boolean isDir;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
+    private String priority;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
     private String tags;
 
@@ -49,6 +53,7 @@ public class AddKnowledgeFileRequest extends Request {
         this.fileLocation = builder.fileLocation;
         this.fileType = builder.fileType;
         this.isDir = builder.isDir;
+        this.priority = builder.priority;
         this.tags = builder.tags;
         this.uploadUser = builder.uploadUser;
     }
@@ -95,6 +100,13 @@ public class AddKnowledgeFileRequest extends Request {
     }
 
     /**
+     * @return priority
+     */
+    public String getPriority() {
+        return this.priority;
+    }
+
+    /**
      * @return tags
      */
     public String getTags() {
@@ -113,6 +125,7 @@ public class AddKnowledgeFileRequest extends Request {
         private String fileLocation; 
         private String fileType; 
         private Boolean isDir; 
+        private String priority; 
         private String tags; 
         private String uploadUser; 
 
@@ -126,6 +139,7 @@ public class AddKnowledgeFileRequest extends Request {
             this.fileLocation = request.fileLocation;
             this.fileType = request.fileType;
             this.isDir = request.isDir;
+            this.priority = request.priority;
             this.tags = request.tags;
             this.uploadUser = request.uploadUser;
         } 
@@ -169,6 +183,15 @@ public class AddKnowledgeFileRequest extends Request {
         public Builder isDir(Boolean isDir) {
             this.putQueryParameter("IsDir", isDir);
             this.isDir = isDir;
+            return this;
+        }
+
+        /**
+         * Priority.
+         */
+        public Builder priority(String priority) {
+            this.putQueryParameter("Priority", priority);
+            this.priority = priority;
             return this;
         }
 
