@@ -2627,6 +2627,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetBatchChangeTableOwnerStatus  GetBatchChangeTableOwnerStatusRequest
+     * @return GetBatchChangeTableOwnerStatusResponse
+     */
+    @Override
+    public CompletableFuture<GetBatchChangeTableOwnerStatusResponse> getBatchChangeTableOwnerStatus(GetBatchChangeTableOwnerStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetBatchChangeTableOwnerStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetBatchChangeTableOwnerStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetBatchChangeTableOwnerStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetBusiness  GetBusinessRequest
      * @return GetBusinessResponse
      */
@@ -6451,6 +6469,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<StopWorkflowInstancesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SubmitBatchChangeTableOwner  SubmitBatchChangeTableOwnerRequest
+     * @return SubmitBatchChangeTableOwnerResponse
+     */
+    @Override
+    public CompletableFuture<SubmitBatchChangeTableOwnerResponse> submitBatchChangeTableOwner(SubmitBatchChangeTableOwnerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SubmitBatchChangeTableOwner").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitBatchChangeTableOwnerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitBatchChangeTableOwnerResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

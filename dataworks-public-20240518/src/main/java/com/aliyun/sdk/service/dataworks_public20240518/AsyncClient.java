@@ -1022,6 +1022,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetApplicationContentsResponse> getApplicationContents(GetApplicationContentsRequest request);
 
     /**
+     * @param request the request parameters of GetBatchChangeTableOwnerStatus  GetBatchChangeTableOwnerStatusRequest
+     * @return GetBatchChangeTableOwnerStatusResponse
+     */
+    CompletableFuture<GetBatchChangeTableOwnerStatusResponse> getBatchChangeTableOwnerStatus(GetBatchChangeTableOwnerStatusRequest request);
+
+    /**
      * @param request the request parameters of GetBusiness  GetBusinessRequest
      * @return GetBusinessResponse
      */
@@ -2470,6 +2476,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StopWorkflowInstancesResponse
      */
     CompletableFuture<StopWorkflowInstancesResponse> stopWorkflowInstances(StopWorkflowInstancesRequest request);
+
+    /**
+     * @param request the request parameters of SubmitBatchChangeTableOwner  SubmitBatchChangeTableOwnerRequest
+     * @return SubmitBatchChangeTableOwnerResponse
+     */
+    CompletableFuture<SubmitBatchChangeTableOwnerResponse> submitBatchChangeTableOwner(SubmitBatchChangeTableOwnerRequest request);
 
     /**
      * @param request the request parameters of SubmitFile  SubmitFileRequest
