@@ -825,6 +825,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListNacUserCertResponse> listNacUserCert(ListNacUserCertRequest request);
 
     /**
+     * @param request the request parameters of ListNetBandwidth  ListNetBandwidthRequest
+     * @return ListNetBandwidthResponse
+     */
+    CompletableFuture<ListNetBandwidthResponse> listNetBandwidth(ListNetBandwidthRequest request);
+
+    /**
      * @param request the request parameters of ListOperationAuditLogs  ListOperationAuditLogsRequest
      * @return ListOperationAuditLogsResponse
      */
