@@ -203,6 +203,9 @@ public class ListIncidentsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertInfos")
         private String alertInfos;
 
+        @com.aliyun.core.annotation.NameInMap("AlertSources")
+        private java.util.List<String> alertSources;
+
         @com.aliyun.core.annotation.NameInMap("AttckTactics")
         private String attckTactics;
 
@@ -239,6 +242,9 @@ public class ListIncidentsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
+        @com.aliyun.core.annotation.NameInMap("OwnerName")
+        private String ownerName;
+
         @com.aliyun.core.annotation.NameInMap("RelateAlertCount")
         private Integer relateAlertCount;
 
@@ -248,6 +254,9 @@ public class ListIncidentsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResponseTime")
         private Long responseTime;
 
+        @com.aliyun.core.annotation.NameInMap("ResponseTypes")
+        private java.util.List<String> responseTypes;
+
         @com.aliyun.core.annotation.NameInMap("ThreatLevel")
         private String threatLevel;
 
@@ -256,6 +265,7 @@ public class ListIncidentsResponseBody extends TeaModel {
 
         private Incidents(Builder builder) {
             this.alertInfos = builder.alertInfos;
+            this.alertSources = builder.alertSources;
             this.attckTactics = builder.attckTactics;
             this.createTime = builder.createTime;
             this.detectionRuleId = builder.detectionRuleId;
@@ -268,9 +278,11 @@ public class ListIncidentsResponseBody extends TeaModel {
             this.incidentTags = builder.incidentTags;
             this.incidentUuid = builder.incidentUuid;
             this.owner = builder.owner;
+            this.ownerName = builder.ownerName;
             this.relateAlertCount = builder.relateAlertCount;
             this.relateAssetCount = builder.relateAssetCount;
             this.responseTime = builder.responseTime;
+            this.responseTypes = builder.responseTypes;
             this.threatLevel = builder.threatLevel;
             this.updateTime = builder.updateTime;
         }
@@ -288,6 +300,13 @@ public class ListIncidentsResponseBody extends TeaModel {
          */
         public String getAlertInfos() {
             return this.alertInfos;
+        }
+
+        /**
+         * @return alertSources
+         */
+        public java.util.List<String> getAlertSources() {
+            return this.alertSources;
         }
 
         /**
@@ -375,6 +394,13 @@ public class ListIncidentsResponseBody extends TeaModel {
         }
 
         /**
+         * @return ownerName
+         */
+        public String getOwnerName() {
+            return this.ownerName;
+        }
+
+        /**
          * @return relateAlertCount
          */
         public Integer getRelateAlertCount() {
@@ -396,6 +422,13 @@ public class ListIncidentsResponseBody extends TeaModel {
         }
 
         /**
+         * @return responseTypes
+         */
+        public java.util.List<String> getResponseTypes() {
+            return this.responseTypes;
+        }
+
+        /**
          * @return threatLevel
          */
         public String getThreatLevel() {
@@ -411,6 +444,7 @@ public class ListIncidentsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String alertInfos; 
+            private java.util.List<String> alertSources; 
             private String attckTactics; 
             private Long createTime; 
             private String detectionRuleId; 
@@ -423,9 +457,11 @@ public class ListIncidentsResponseBody extends TeaModel {
             private String incidentTags; 
             private String incidentUuid; 
             private String owner; 
+            private String ownerName; 
             private Integer relateAlertCount; 
             private Integer relateAssetCount; 
             private Long responseTime; 
+            private java.util.List<String> responseTypes; 
             private String threatLevel; 
             private Long updateTime; 
 
@@ -434,6 +470,7 @@ public class ListIncidentsResponseBody extends TeaModel {
 
             private Builder(Incidents model) {
                 this.alertInfos = model.alertInfos;
+                this.alertSources = model.alertSources;
                 this.attckTactics = model.attckTactics;
                 this.createTime = model.createTime;
                 this.detectionRuleId = model.detectionRuleId;
@@ -446,9 +483,11 @@ public class ListIncidentsResponseBody extends TeaModel {
                 this.incidentTags = model.incidentTags;
                 this.incidentUuid = model.incidentUuid;
                 this.owner = model.owner;
+                this.ownerName = model.ownerName;
                 this.relateAlertCount = model.relateAlertCount;
                 this.relateAssetCount = model.relateAssetCount;
                 this.responseTime = model.responseTime;
+                this.responseTypes = model.responseTypes;
                 this.threatLevel = model.threatLevel;
                 this.updateTime = model.updateTime;
             } 
@@ -458,6 +497,14 @@ public class ListIncidentsResponseBody extends TeaModel {
              */
             public Builder alertInfos(String alertInfos) {
                 this.alertInfos = alertInfos;
+                return this;
+            }
+
+            /**
+             * AlertSources.
+             */
+            public Builder alertSources(java.util.List<String> alertSources) {
+                this.alertSources = alertSources;
                 return this;
             }
 
@@ -558,6 +605,14 @@ public class ListIncidentsResponseBody extends TeaModel {
             }
 
             /**
+             * OwnerName.
+             */
+            public Builder ownerName(String ownerName) {
+                this.ownerName = ownerName;
+                return this;
+            }
+
+            /**
              * RelateAlertCount.
              */
             public Builder relateAlertCount(Integer relateAlertCount) {
@@ -578,6 +633,14 @@ public class ListIncidentsResponseBody extends TeaModel {
              */
             public Builder responseTime(Long responseTime) {
                 this.responseTime = responseTime;
+                return this;
+            }
+
+            /**
+             * ResponseTypes.
+             */
+            public Builder responseTypes(java.util.List<String> responseTypes) {
+                this.responseTypes = responseTypes;
                 return this;
             }
 
