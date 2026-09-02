@@ -152,6 +152,9 @@ public class ListAgentsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("characterAgeStage")
         private String characterAgeStage;
 
+        @com.aliyun.core.annotation.NameInMap("characterGender")
+        private String characterGender;
+
         @com.aliyun.core.annotation.NameInMap("characterName")
         private String characterName;
 
@@ -188,6 +191,7 @@ public class ListAgentsResponseBody extends TeaModel {
             this.agentName = builder.agentName;
             this.agentScene = builder.agentScene;
             this.characterAgeStage = builder.characterAgeStage;
+            this.characterGender = builder.characterGender;
             this.characterName = builder.characterName;
             this.charactersDescription = builder.charactersDescription;
             this.enableInteraction = builder.enableInteraction;
@@ -241,6 +245,13 @@ public class ListAgentsResponseBody extends TeaModel {
          */
         public String getCharacterAgeStage() {
             return this.characterAgeStage;
+        }
+
+        /**
+         * @return characterGender
+         */
+        public String getCharacterGender() {
+            return this.characterGender;
         }
 
         /**
@@ -319,6 +330,7 @@ public class ListAgentsResponseBody extends TeaModel {
             private String agentName; 
             private String agentScene; 
             private String characterAgeStage; 
+            private String characterGender; 
             private String characterName; 
             private String charactersDescription; 
             private Integer enableInteraction; 
@@ -339,6 +351,7 @@ public class ListAgentsResponseBody extends TeaModel {
                 this.agentName = model.agentName;
                 this.agentScene = model.agentScene;
                 this.characterAgeStage = model.characterAgeStage;
+                this.characterGender = model.characterGender;
                 this.characterName = model.characterName;
                 this.charactersDescription = model.charactersDescription;
                 this.enableInteraction = model.enableInteraction;
@@ -388,6 +401,14 @@ public class ListAgentsResponseBody extends TeaModel {
              */
             public Builder characterAgeStage(String characterAgeStage) {
                 this.characterAgeStage = characterAgeStage;
+                return this;
+            }
+
+            /**
+             * characterGender.
+             */
+            public Builder characterGender(String characterGender) {
+                this.characterGender = characterGender;
                 return this;
             }
 
