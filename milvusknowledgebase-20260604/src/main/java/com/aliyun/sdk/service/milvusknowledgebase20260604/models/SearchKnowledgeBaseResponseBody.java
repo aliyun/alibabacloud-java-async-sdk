@@ -499,6 +499,102 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
      *
      * <p>SearchKnowledgeBaseResponseBody</p>
      */
+    public static class MediaTimeline extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("endMs")
+        private Long endMs;
+
+        @com.aliyun.core.annotation.NameInMap("startMs")
+        private Long startMs;
+
+        @com.aliyun.core.annotation.NameInMap("text")
+        private String text;
+
+        private MediaTimeline(Builder builder) {
+            this.endMs = builder.endMs;
+            this.startMs = builder.startMs;
+            this.text = builder.text;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MediaTimeline create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endMs
+         */
+        public Long getEndMs() {
+            return this.endMs;
+        }
+
+        /**
+         * @return startMs
+         */
+        public Long getStartMs() {
+            return this.startMs;
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        public static final class Builder {
+            private Long endMs; 
+            private Long startMs; 
+            private String text; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediaTimeline model) {
+                this.endMs = model.endMs;
+                this.startMs = model.startMs;
+                this.text = model.text;
+            } 
+
+            /**
+             * endMs.
+             */
+            public Builder endMs(Long endMs) {
+                this.endMs = endMs;
+                return this;
+            }
+
+            /**
+             * startMs.
+             */
+            public Builder startMs(Long startMs) {
+                this.startMs = startMs;
+                return this;
+            }
+
+            /**
+             * text.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            public MediaTimeline build() {
+                return new MediaTimeline(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link SearchKnowledgeBaseResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchKnowledgeBaseResponseBody</p>
+     */
     public static class ScoreDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("keywordScore")
         private Float keywordScore;
@@ -599,6 +695,15 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("locations")
         private java.util.List<Locations> locations;
 
+        @com.aliyun.core.annotation.NameInMap("mediaEndMs")
+        private Long mediaEndMs;
+
+        @com.aliyun.core.annotation.NameInMap("mediaStartMs")
+        private Long mediaStartMs;
+
+        @com.aliyun.core.annotation.NameInMap("mediaTimeline")
+        private java.util.List<MediaTimeline> mediaTimeline;
+
         @com.aliyun.core.annotation.NameInMap("parentChunkId")
         private String parentChunkId;
 
@@ -623,6 +728,9 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
             this.images = builder.images;
             this.knowledgeBaseId = builder.knowledgeBaseId;
             this.locations = builder.locations;
+            this.mediaEndMs = builder.mediaEndMs;
+            this.mediaStartMs = builder.mediaStartMs;
+            this.mediaTimeline = builder.mediaTimeline;
             this.parentChunkId = builder.parentChunkId;
             this.scalarFields = builder.scalarFields;
             this.score = builder.score;
@@ -695,6 +803,27 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
+         * @return mediaEndMs
+         */
+        public Long getMediaEndMs() {
+            return this.mediaEndMs;
+        }
+
+        /**
+         * @return mediaStartMs
+         */
+        public Long getMediaStartMs() {
+            return this.mediaStartMs;
+        }
+
+        /**
+         * @return mediaTimeline
+         */
+        public java.util.List<MediaTimeline> getMediaTimeline() {
+            return this.mediaTimeline;
+        }
+
+        /**
          * @return parentChunkId
          */
         public String getParentChunkId() {
@@ -738,6 +867,9 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
             private java.util.List<Images> images; 
             private String knowledgeBaseId; 
             private java.util.List<Locations> locations; 
+            private Long mediaEndMs; 
+            private Long mediaStartMs; 
+            private java.util.List<MediaTimeline> mediaTimeline; 
             private String parentChunkId; 
             private Object scalarFields; 
             private Float score; 
@@ -756,6 +888,9 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
                 this.images = model.images;
                 this.knowledgeBaseId = model.knowledgeBaseId;
                 this.locations = model.locations;
+                this.mediaEndMs = model.mediaEndMs;
+                this.mediaStartMs = model.mediaStartMs;
+                this.mediaTimeline = model.mediaTimeline;
                 this.parentChunkId = model.parentChunkId;
                 this.scalarFields = model.scalarFields;
                 this.score = model.score;
@@ -827,6 +962,36 @@ public class SearchKnowledgeBaseResponseBody extends TeaModel {
              */
             public Builder locations(java.util.List<Locations> locations) {
                 this.locations = locations;
+                return this;
+            }
+
+            /**
+             * <p>音频或视频切片在原始媒体中的结束时间，单位为毫秒；非媒体切片不返回。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8400</p>
+             */
+            public Builder mediaEndMs(Long mediaEndMs) {
+                this.mediaEndMs = mediaEndMs;
+                return this;
+            }
+
+            /**
+             * <p>音频或视频切片在原始媒体中的开始时间，单位为毫秒；非媒体切片不返回。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1250</p>
+             */
+            public Builder mediaStartMs(Long mediaStartMs) {
+                this.mediaStartMs = mediaStartMs;
+                return this;
+            }
+
+            /**
+             * <p>切片内逐句或逐段内容在原始媒体中的时间范围；非音频切片不返回。</p>
+             */
+            public Builder mediaTimeline(java.util.List<MediaTimeline> mediaTimeline) {
+                this.mediaTimeline = mediaTimeline;
                 return this;
             }
 
