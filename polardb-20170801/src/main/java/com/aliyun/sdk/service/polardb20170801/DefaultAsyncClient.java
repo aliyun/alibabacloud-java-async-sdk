@@ -70,29 +70,7 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-zhangjiakou-na62-a01", "polardb.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-nebula-1", "polardb.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "polardb.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "polardb.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "polardb.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "polardb.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "polardb.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "polardb.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "polardb.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "polardb.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "polardb.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "polardb.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "polardb.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "polardb.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "polardb.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "polardb.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "polardb.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("ap-southeast-8", "polardb.ap-southeast-8.aliyuncs.com"),
-            new TeaPair("na-south-1", "polardb.na-south-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "polardb.eu-central-1.aliyuncs.com"),
-            new TeaPair("us-west-1", "polardb.us-west-1.aliyuncs.com"),
-            new TeaPair("eu-west-1", "polardb.eu-west-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "polardb.us-east-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "polardb.me-east-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "polardb.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "polardb.cn-shenzhen-finance-1.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "polardb.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
