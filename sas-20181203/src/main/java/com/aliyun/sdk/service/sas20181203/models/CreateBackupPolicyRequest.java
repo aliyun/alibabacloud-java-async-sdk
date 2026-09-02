@@ -37,8 +37,11 @@ public class CreateBackupPolicyRequest extends Request {
     private String policyVersion;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SelectType")
+    private String selectType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UuidList")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> uuidList;
 
     private CreateBackupPolicyRequest(Builder builder) {
@@ -47,6 +50,7 @@ public class CreateBackupPolicyRequest extends Request {
         this.policy = builder.policy;
         this.policyRegionId = builder.policyRegionId;
         this.policyVersion = builder.policyVersion;
+        this.selectType = builder.selectType;
         this.uuidList = builder.uuidList;
     }
 
@@ -92,6 +96,13 @@ public class CreateBackupPolicyRequest extends Request {
     }
 
     /**
+     * @return selectType
+     */
+    public String getSelectType() {
+        return this.selectType;
+    }
+
+    /**
      * @return uuidList
      */
     public java.util.List<String> getUuidList() {
@@ -103,6 +114,7 @@ public class CreateBackupPolicyRequest extends Request {
         private java.util.Map<String, ?> policy; 
         private String policyRegionId; 
         private String policyVersion; 
+        private String selectType; 
         private java.util.List<String> uuidList; 
 
         private Builder() {
@@ -115,6 +127,7 @@ public class CreateBackupPolicyRequest extends Request {
             this.policy = request.policy;
             this.policyRegionId = request.policyRegionId;
             this.policyVersion = request.policyVersion;
+            this.selectType = request.selectType;
             this.uuidList = request.uuidList;
         } 
 
@@ -208,8 +221,16 @@ public class CreateBackupPolicyRequest extends Request {
         }
 
         /**
+         * SelectType.
+         */
+        public Builder selectType(String selectType) {
+            this.putQueryParameter("SelectType", selectType);
+            this.selectType = selectType;
+            return this;
+        }
+
+        /**
          * <p>The UUIDs of the servers that you want to protect.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;3bb30859-b3b5-4f28-868f-b0892c98****&quot;, &quot;3bb30859-b3b5-4f28-868f-b0892c98****&quot;]</p>

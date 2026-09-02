@@ -287,6 +287,9 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RemarkedUuidList")
         private java.util.List<String> remarkedUuidList;
 
+        @com.aliyun.core.annotation.NameInMap("SelectType")
+        private String selectType;
+
         @com.aliyun.core.annotation.NameInMap("ServerType")
         private String serverType;
 
@@ -319,6 +322,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             this.policyVersion = builder.policyVersion;
             this.preStatus = builder.preStatus;
             this.remarkedUuidList = builder.remarkedUuidList;
+            this.selectType = builder.selectType;
             this.serverType = builder.serverType;
             this.serviceErrorCount = builder.serviceErrorCount;
             this.serviceErrorUuidList = builder.serviceErrorUuidList;
@@ -427,6 +431,13 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         }
 
         /**
+         * @return selectType
+         */
+        public String getSelectType() {
+            return this.selectType;
+        }
+
+        /**
          * @return serverType
          */
         public String getServerType() {
@@ -482,6 +493,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             private String policyVersion; 
             private String preStatus; 
             private java.util.List<String> remarkedUuidList; 
+            private String selectType; 
             private String serverType; 
             private Integer serviceErrorCount; 
             private java.util.List<String> serviceErrorUuidList; 
@@ -506,6 +518,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
                 this.policyVersion = model.policyVersion;
                 this.preStatus = model.preStatus;
                 this.remarkedUuidList = model.remarkedUuidList;
+                this.selectType = model.selectType;
                 this.serverType = model.serverType;
                 this.serviceErrorCount = model.serviceErrorCount;
                 this.serviceErrorUuidList = model.serviceErrorUuidList;
@@ -693,6 +706,14 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
              */
             public Builder remarkedUuidList(java.util.List<String> remarkedUuidList) {
                 this.remarkedUuidList = remarkedUuidList;
+                return this;
+            }
+
+            /**
+             * SelectType.
+             */
+            public Builder selectType(String selectType) {
+                this.selectType = selectType;
                 return this;
             }
 
