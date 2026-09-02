@@ -824,8 +824,12 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
 
+        @com.aliyun.core.annotation.NameInMap("VgpuVersion")
+        private String vgpuVersion;
+
         private HostDetailInfo(Builder builder) {
             this.serialNumber = builder.serialNumber;
+            this.vgpuVersion = builder.vgpuVersion;
         }
 
         public static Builder builder() {
@@ -843,14 +847,23 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.serialNumber;
         }
 
+        /**
+         * @return vgpuVersion
+         */
+        public String getVgpuVersion() {
+            return this.vgpuVersion;
+        }
+
         public static final class Builder {
             private String serialNumber; 
+            private String vgpuVersion; 
 
             private Builder() {
             } 
 
             private Builder(HostDetailInfo model) {
                 this.serialNumber = model.serialNumber;
+                this.vgpuVersion = model.vgpuVersion;
             } 
 
             /**
@@ -861,6 +874,14 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
+                return this;
+            }
+
+            /**
+             * VgpuVersion.
+             */
+            public Builder vgpuVersion(String vgpuVersion) {
+                this.vgpuVersion = vgpuVersion;
                 return this;
             }
 
