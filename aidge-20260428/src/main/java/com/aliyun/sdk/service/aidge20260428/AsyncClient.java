@@ -56,6 +56,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DocumentTranslateResponse> documentTranslate(DocumentTranslateRequest request);
 
     /**
+     * @param request the request parameters of EcomVideoRecreation  EcomVideoRecreationRequest
+     * @return EcomVideoRecreationResponse
+     */
+    CompletableFuture<EcomVideoRecreationResponse> ecomVideoRecreation(EcomVideoRecreationRequest request);
+
+    /**
      * @param request the request parameters of ImageCropping  ImageCroppingRequest
      * @return ImageCroppingResponse
      */

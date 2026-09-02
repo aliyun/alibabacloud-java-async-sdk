@@ -30,9 +30,7 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "Aidge";
         this.version = "2026-04-28";
         this.endpointRule = "regional";
-        this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("cn-beijing", "aidge.cn-beijing.aliyuncs.com")
-        );
+        this.endpointMap = new java.util.HashMap<>();
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -144,6 +142,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DocumentTranslateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EcomVideoRecreation  EcomVideoRecreationRequest
+     * @return EcomVideoRecreationResponse
+     */
+    @Override
+    public CompletableFuture<EcomVideoRecreationResponse> ecomVideoRecreation(EcomVideoRecreationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EcomVideoRecreation").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EcomVideoRecreationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EcomVideoRecreationResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
