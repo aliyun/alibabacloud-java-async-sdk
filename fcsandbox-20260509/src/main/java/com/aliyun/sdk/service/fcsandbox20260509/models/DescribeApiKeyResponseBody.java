@@ -23,6 +23,9 @@ public class DescribeApiKeyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
+    @com.aliyun.core.annotation.NameInMap("effectivePermissions")
+    private EffectivePermissions effectivePermissions;
+
     @com.aliyun.core.annotation.NameInMap("ipBlacklist")
     private java.util.List<IPConfig> ipBlacklist;
 
@@ -32,15 +35,20 @@ public class DescribeApiKeyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
+    @com.aliyun.core.annotation.NameInMap("permissionPolicy")
+    private PermissionPolicy permissionPolicy;
+
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private DescribeApiKeyResponseBody(Builder builder) {
         this.apiKey = builder.apiKey;
         this.code = builder.code;
+        this.effectivePermissions = builder.effectivePermissions;
         this.ipBlacklist = builder.ipBlacklist;
         this.ipWhitelist = builder.ipWhitelist;
         this.message = builder.message;
+        this.permissionPolicy = builder.permissionPolicy;
         this.requestId = builder.requestId;
     }
 
@@ -71,6 +79,13 @@ public class DescribeApiKeyResponseBody extends TeaModel {
     }
 
     /**
+     * @return effectivePermissions
+     */
+    public EffectivePermissions getEffectivePermissions() {
+        return this.effectivePermissions;
+    }
+
+    /**
      * @return ipBlacklist
      */
     public java.util.List<IPConfig> getIpBlacklist() {
@@ -92,6 +107,13 @@ public class DescribeApiKeyResponseBody extends TeaModel {
     }
 
     /**
+     * @return permissionPolicy
+     */
+    public PermissionPolicy getPermissionPolicy() {
+        return this.permissionPolicy;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -101,9 +123,11 @@ public class DescribeApiKeyResponseBody extends TeaModel {
     public static final class Builder {
         private ApiKey apiKey; 
         private String code; 
+        private EffectivePermissions effectivePermissions; 
         private java.util.List<IPConfig> ipBlacklist; 
         private java.util.List<IPConfig> ipWhitelist; 
         private String message; 
+        private PermissionPolicy permissionPolicy; 
         private String requestId; 
 
         private Builder() {
@@ -112,9 +136,11 @@ public class DescribeApiKeyResponseBody extends TeaModel {
         private Builder(DescribeApiKeyResponseBody model) {
             this.apiKey = model.apiKey;
             this.code = model.code;
+            this.effectivePermissions = model.effectivePermissions;
             this.ipBlacklist = model.ipBlacklist;
             this.ipWhitelist = model.ipWhitelist;
             this.message = model.message;
+            this.permissionPolicy = model.permissionPolicy;
             this.requestId = model.requestId;
         } 
 
@@ -131,6 +157,14 @@ public class DescribeApiKeyResponseBody extends TeaModel {
          */
         public Builder code(String code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * effectivePermissions.
+         */
+        public Builder effectivePermissions(EffectivePermissions effectivePermissions) {
+            this.effectivePermissions = effectivePermissions;
             return this;
         }
 
@@ -155,6 +189,14 @@ public class DescribeApiKeyResponseBody extends TeaModel {
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * permissionPolicy.
+         */
+        public Builder permissionPolicy(PermissionPolicy permissionPolicy) {
+            this.permissionPolicy = permissionPolicy;
             return this;
         }
 
