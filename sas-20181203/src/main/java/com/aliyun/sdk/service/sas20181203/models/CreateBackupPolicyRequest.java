@@ -41,6 +41,10 @@ public class CreateBackupPolicyRequest extends Request {
     private String selectType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerType")
+    private String serverType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UuidList")
     private java.util.List<String> uuidList;
 
@@ -51,6 +55,7 @@ public class CreateBackupPolicyRequest extends Request {
         this.policyRegionId = builder.policyRegionId;
         this.policyVersion = builder.policyVersion;
         this.selectType = builder.selectType;
+        this.serverType = builder.serverType;
         this.uuidList = builder.uuidList;
     }
 
@@ -103,6 +108,13 @@ public class CreateBackupPolicyRequest extends Request {
     }
 
     /**
+     * @return serverType
+     */
+    public String getServerType() {
+        return this.serverType;
+    }
+
+    /**
      * @return uuidList
      */
     public java.util.List<String> getUuidList() {
@@ -115,6 +127,7 @@ public class CreateBackupPolicyRequest extends Request {
         private String policyRegionId; 
         private String policyVersion; 
         private String selectType; 
+        private String serverType; 
         private java.util.List<String> uuidList; 
 
         private Builder() {
@@ -128,6 +141,7 @@ public class CreateBackupPolicyRequest extends Request {
             this.policyRegionId = request.policyRegionId;
             this.policyVersion = request.policyVersion;
             this.selectType = request.selectType;
+            this.serverType = request.serverType;
             this.uuidList = request.uuidList;
         } 
 
@@ -226,6 +240,15 @@ public class CreateBackupPolicyRequest extends Request {
         public Builder selectType(String selectType) {
             this.putQueryParameter("SelectType", selectType);
             this.selectType = selectType;
+            return this;
+        }
+
+        /**
+         * ServerType.
+         */
+        public Builder serverType(String serverType) {
+            this.putQueryParameter("ServerType", serverType);
+            this.serverType = serverType;
             return this;
         }
 
