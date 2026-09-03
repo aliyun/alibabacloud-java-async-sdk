@@ -38,6 +38,10 @@ public class ModifyAsrConfigRequest extends Request {
     private String asrOverrides;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AsrOverridesUuid")
+    private String asrOverridesUuid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AsrVocabularyId")
     private String asrVocabularyId;
 
@@ -48,6 +52,10 @@ public class ModifyAsrConfigRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineXunfei")
+    private String engineXunfei;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EntryId")
@@ -64,9 +72,11 @@ public class ModifyAsrConfigRequest extends Request {
         this.asrClassVocabularyId = builder.asrClassVocabularyId;
         this.asrCustomizationId = builder.asrCustomizationId;
         this.asrOverrides = builder.asrOverrides;
+        this.asrOverridesUuid = builder.asrOverridesUuid;
         this.asrVocabularyId = builder.asrVocabularyId;
         this.configLevel = builder.configLevel;
         this.engine = builder.engine;
+        this.engineXunfei = builder.engineXunfei;
         this.entryId = builder.entryId;
         this.nlsServiceType = builder.nlsServiceType;
     }
@@ -120,6 +130,13 @@ public class ModifyAsrConfigRequest extends Request {
     }
 
     /**
+     * @return asrOverridesUuid
+     */
+    public String getAsrOverridesUuid() {
+        return this.asrOverridesUuid;
+    }
+
+    /**
      * @return asrVocabularyId
      */
     public String getAsrVocabularyId() {
@@ -138,6 +155,13 @@ public class ModifyAsrConfigRequest extends Request {
      */
     public String getEngine() {
         return this.engine;
+    }
+
+    /**
+     * @return engineXunfei
+     */
+    public String getEngineXunfei() {
+        return this.engineXunfei;
     }
 
     /**
@@ -160,9 +184,11 @@ public class ModifyAsrConfigRequest extends Request {
         private String asrClassVocabularyId; 
         private String asrCustomizationId; 
         private String asrOverrides; 
+        private String asrOverridesUuid; 
         private String asrVocabularyId; 
         private Integer configLevel; 
         private String engine; 
+        private String engineXunfei; 
         private String entryId; 
         private String nlsServiceType; 
 
@@ -177,9 +203,11 @@ public class ModifyAsrConfigRequest extends Request {
             this.asrClassVocabularyId = request.asrClassVocabularyId;
             this.asrCustomizationId = request.asrCustomizationId;
             this.asrOverrides = request.asrOverrides;
+            this.asrOverridesUuid = request.asrOverridesUuid;
             this.asrVocabularyId = request.asrVocabularyId;
             this.configLevel = request.configLevel;
             this.engine = request.engine;
+            this.engineXunfei = request.engineXunfei;
             this.entryId = request.entryId;
             this.nlsServiceType = request.nlsServiceType;
         } 
@@ -230,6 +258,15 @@ public class ModifyAsrConfigRequest extends Request {
         }
 
         /**
+         * AsrOverridesUuid.
+         */
+        public Builder asrOverridesUuid(String asrOverridesUuid) {
+            this.putQueryParameter("AsrOverridesUuid", asrOverridesUuid);
+            this.asrOverridesUuid = asrOverridesUuid;
+            return this;
+        }
+
+        /**
          * AsrVocabularyId.
          */
         public Builder asrVocabularyId(String asrVocabularyId) {
@@ -253,6 +290,15 @@ public class ModifyAsrConfigRequest extends Request {
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
             this.engine = engine;
+            return this;
+        }
+
+        /**
+         * EngineXunfei.
+         */
+        public Builder engineXunfei(String engineXunfei) {
+            this.putQueryParameter("EngineXunfei", engineXunfei);
+            this.engineXunfei = engineXunfei;
             return this;
         }
 

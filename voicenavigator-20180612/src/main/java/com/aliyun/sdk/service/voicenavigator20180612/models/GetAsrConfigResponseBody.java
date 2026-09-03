@@ -194,6 +194,9 @@ public class GetAsrConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AsrOverrides")
         private String asrOverrides;
 
+        @com.aliyun.core.annotation.NameInMap("AsrOverridesUuid")
+        private String asrOverridesUuid;
+
         @com.aliyun.core.annotation.NameInMap("AsrVocabularyId")
         private String asrVocabularyId;
 
@@ -212,6 +215,7 @@ public class GetAsrConfigResponseBody extends TeaModel {
             this.asrClassVocabularyId = builder.asrClassVocabularyId;
             this.asrCustomizationId = builder.asrCustomizationId;
             this.asrOverrides = builder.asrOverrides;
+            this.asrOverridesUuid = builder.asrOverridesUuid;
             this.asrVocabularyId = builder.asrVocabularyId;
             this.engine = builder.engine;
             this.engineXufei = builder.engineXufei;
@@ -262,6 +266,13 @@ public class GetAsrConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return asrOverridesUuid
+         */
+        public String getAsrOverridesUuid() {
+            return this.asrOverridesUuid;
+        }
+
+        /**
          * @return asrVocabularyId
          */
         public String getAsrVocabularyId() {
@@ -295,6 +306,7 @@ public class GetAsrConfigResponseBody extends TeaModel {
             private String asrClassVocabularyId; 
             private String asrCustomizationId; 
             private String asrOverrides; 
+            private String asrOverridesUuid; 
             private String asrVocabularyId; 
             private String engine; 
             private String engineXufei; 
@@ -309,6 +321,7 @@ public class GetAsrConfigResponseBody extends TeaModel {
                 this.asrClassVocabularyId = model.asrClassVocabularyId;
                 this.asrCustomizationId = model.asrCustomizationId;
                 this.asrOverrides = model.asrOverrides;
+                this.asrOverridesUuid = model.asrOverridesUuid;
                 this.asrVocabularyId = model.asrVocabularyId;
                 this.engine = model.engine;
                 this.engineXufei = model.engineXufei;
@@ -352,6 +365,14 @@ public class GetAsrConfigResponseBody extends TeaModel {
              */
             public Builder asrOverrides(String asrOverrides) {
                 this.asrOverrides = asrOverrides;
+                return this;
+            }
+
+            /**
+             * AsrOverridesUuid.
+             */
+            public Builder asrOverridesUuid(String asrOverridesUuid) {
+                this.asrOverridesUuid = asrOverridesUuid;
                 return this;
             }
 

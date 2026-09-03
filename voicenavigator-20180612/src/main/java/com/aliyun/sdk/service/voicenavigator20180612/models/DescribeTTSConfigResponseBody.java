@@ -50,6 +50,9 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("TtsOverrides")
     private String ttsOverrides;
 
+    @com.aliyun.core.annotation.NameInMap("TtsOverridesUuid")
+    private String ttsOverridesUuid;
+
     @com.aliyun.core.annotation.NameInMap("Voice")
     private String voice;
 
@@ -68,6 +71,7 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.speechRate = builder.speechRate;
         this.ttsOverrides = builder.ttsOverrides;
+        this.ttsOverridesUuid = builder.ttsOverridesUuid;
         this.voice = builder.voice;
         this.volume = builder.volume;
     }
@@ -162,6 +166,13 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return ttsOverridesUuid
+     */
+    public String getTtsOverridesUuid() {
+        return this.ttsOverridesUuid;
+    }
+
+    /**
      * @return voice
      */
     public String getVoice() {
@@ -187,6 +198,7 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         private String requestId; 
         private Integer speechRate; 
         private String ttsOverrides; 
+        private String ttsOverridesUuid; 
         private String voice; 
         private Integer volume; 
 
@@ -205,6 +217,7 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
             this.requestId = model.requestId;
             this.speechRate = model.speechRate;
             this.ttsOverrides = model.ttsOverrides;
+            this.ttsOverridesUuid = model.ttsOverridesUuid;
             this.voice = model.voice;
             this.volume = model.volume;
         } 
@@ -294,6 +307,14 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
          */
         public Builder ttsOverrides(String ttsOverrides) {
             this.ttsOverrides = ttsOverrides;
+            return this;
+        }
+
+        /**
+         * TtsOverridesUuid.
+         */
+        public Builder ttsOverridesUuid(String ttsOverridesUuid) {
+            this.ttsOverridesUuid = ttsOverridesUuid;
             return this;
         }
 

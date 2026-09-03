@@ -63,6 +63,10 @@ public class ModifyTTSConfigRequest extends Request {
     private String ttsOverrides;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TtsOverridesUuid")
+    private String ttsOverridesUuid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Voice")
     private String voice;
 
@@ -83,6 +87,7 @@ public class ModifyTTSConfigRequest extends Request {
         this.pitchRate = builder.pitchRate;
         this.speechRate = builder.speechRate;
         this.ttsOverrides = builder.ttsOverrides;
+        this.ttsOverridesUuid = builder.ttsOverridesUuid;
         this.voice = builder.voice;
         this.volume = builder.volume;
     }
@@ -178,6 +183,13 @@ public class ModifyTTSConfigRequest extends Request {
     }
 
     /**
+     * @return ttsOverridesUuid
+     */
+    public String getTtsOverridesUuid() {
+        return this.ttsOverridesUuid;
+    }
+
+    /**
      * @return voice
      */
     public String getVoice() {
@@ -203,6 +215,7 @@ public class ModifyTTSConfigRequest extends Request {
         private String pitchRate; 
         private String speechRate; 
         private String ttsOverrides; 
+        private String ttsOverridesUuid; 
         private String voice; 
         private String volume; 
 
@@ -223,6 +236,7 @@ public class ModifyTTSConfigRequest extends Request {
             this.pitchRate = request.pitchRate;
             this.speechRate = request.speechRate;
             this.ttsOverrides = request.ttsOverrides;
+            this.ttsOverridesUuid = request.ttsOverridesUuid;
             this.voice = request.voice;
             this.volume = request.volume;
         } 
@@ -326,6 +340,15 @@ public class ModifyTTSConfigRequest extends Request {
         public Builder ttsOverrides(String ttsOverrides) {
             this.putQueryParameter("TtsOverrides", ttsOverrides);
             this.ttsOverrides = ttsOverrides;
+            return this;
+        }
+
+        /**
+         * TtsOverridesUuid.
+         */
+        public Builder ttsOverridesUuid(String ttsOverridesUuid) {
+            this.putQueryParameter("TtsOverridesUuid", ttsOverridesUuid);
+            this.ttsOverridesUuid = ttsOverridesUuid;
             return this;
         }
 
