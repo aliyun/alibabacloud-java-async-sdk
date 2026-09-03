@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteLangfuseInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfirmDeleteAiGateway")
+    private Boolean confirmDeleteAiGateway;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
@@ -29,6 +33,7 @@ public class DeleteLangfuseInstanceRequest extends Request {
 
     private DeleteLangfuseInstanceRequest(Builder builder) {
         super(builder);
+        this.confirmDeleteAiGateway = builder.confirmDeleteAiGateway;
         this.DBInstanceId = builder.DBInstanceId;
         this.regionId = builder.regionId;
     }
@@ -47,6 +52,13 @@ public class DeleteLangfuseInstanceRequest extends Request {
     }
 
     /**
+     * @return confirmDeleteAiGateway
+     */
+    public Boolean getConfirmDeleteAiGateway() {
+        return this.confirmDeleteAiGateway;
+    }
+
+    /**
      * @return DBInstanceId
      */
     public String getDBInstanceId() {
@@ -61,6 +73,7 @@ public class DeleteLangfuseInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteLangfuseInstanceRequest, Builder> {
+        private Boolean confirmDeleteAiGateway; 
         private String DBInstanceId; 
         private String regionId; 
 
@@ -70,9 +83,19 @@ public class DeleteLangfuseInstanceRequest extends Request {
 
         private Builder(DeleteLangfuseInstanceRequest request) {
             super(request);
+            this.confirmDeleteAiGateway = request.confirmDeleteAiGateway;
             this.DBInstanceId = request.DBInstanceId;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * ConfirmDeleteAiGateway.
+         */
+        public Builder confirmDeleteAiGateway(Boolean confirmDeleteAiGateway) {
+            this.putQueryParameter("ConfirmDeleteAiGateway", confirmDeleteAiGateway);
+            this.confirmDeleteAiGateway = confirmDeleteAiGateway;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
