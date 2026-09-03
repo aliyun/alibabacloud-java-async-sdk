@@ -68,6 +68,14 @@ public class CreateApplicationRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DnatEntries")
+    private java.util.List<DnatEntries> dnatEntries;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DnatIpAddress")
+    private String dnatIpAddress;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
@@ -172,6 +180,10 @@ public class CreateApplicationRequest extends Request {
     private String vpcId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcNatGatewayId")
+    private String vpcNatGatewayId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
@@ -189,6 +201,8 @@ public class CreateApplicationRequest extends Request {
         this.components = builder.components;
         this.DBClusterId = builder.DBClusterId;
         this.description = builder.description;
+        this.dnatEntries = builder.dnatEntries;
+        this.dnatIpAddress = builder.dnatIpAddress;
         this.dryRun = builder.dryRun;
         this.endpoints = builder.endpoints;
         this.knowledgeApplicationSpec = builder.knowledgeApplicationSpec;
@@ -215,6 +229,7 @@ public class CreateApplicationRequest extends Request {
         this.usedTime = builder.usedTime;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
+        this.vpcNatGatewayId = builder.vpcNatGatewayId;
         this.zoneId = builder.zoneId;
     }
 
@@ -313,6 +328,20 @@ public class CreateApplicationRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return dnatEntries
+     */
+    public java.util.List<DnatEntries> getDnatEntries() {
+        return this.dnatEntries;
+    }
+
+    /**
+     * @return dnatIpAddress
+     */
+    public String getDnatIpAddress() {
+        return this.dnatIpAddress;
     }
 
     /**
@@ -498,6 +527,13 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return vpcNatGatewayId
+     */
+    public String getVpcNatGatewayId() {
+        return this.vpcNatGatewayId;
+    }
+
+    /**
      * @return zoneId
      */
     public String getZoneId() {
@@ -517,6 +553,8 @@ public class CreateApplicationRequest extends Request {
         private java.util.List<Components> components; 
         private String DBClusterId; 
         private String description; 
+        private java.util.List<DnatEntries> dnatEntries; 
+        private String dnatIpAddress; 
         private Boolean dryRun; 
         private java.util.List<Endpoints> endpoints; 
         private KnowledgeApplicationSpec knowledgeApplicationSpec; 
@@ -543,6 +581,7 @@ public class CreateApplicationRequest extends Request {
         private String usedTime; 
         private String vSwitchId; 
         private String vpcId; 
+        private String vpcNatGatewayId; 
         private String zoneId; 
 
         private Builder() {
@@ -563,6 +602,8 @@ public class CreateApplicationRequest extends Request {
             this.components = request.components;
             this.DBClusterId = request.DBClusterId;
             this.description = request.description;
+            this.dnatEntries = request.dnatEntries;
+            this.dnatIpAddress = request.dnatIpAddress;
             this.dryRun = request.dryRun;
             this.endpoints = request.endpoints;
             this.knowledgeApplicationSpec = request.knowledgeApplicationSpec;
@@ -589,6 +630,7 @@ public class CreateApplicationRequest extends Request {
             this.usedTime = request.usedTime;
             this.vSwitchId = request.vSwitchId;
             this.vpcId = request.vpcId;
+            this.vpcNatGatewayId = request.vpcNatGatewayId;
             this.zoneId = request.zoneId;
         } 
 
@@ -704,6 +746,25 @@ public class CreateApplicationRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * DnatEntries.
+         */
+        public Builder dnatEntries(java.util.List<DnatEntries> dnatEntries) {
+            String dnatEntriesShrink = shrink(dnatEntries, "DnatEntries", "json");
+            this.putQueryParameter("DnatEntries", dnatEntriesShrink);
+            this.dnatEntries = dnatEntries;
+            return this;
+        }
+
+        /**
+         * DnatIpAddress.
+         */
+        public Builder dnatIpAddress(String dnatIpAddress) {
+            this.putQueryParameter("DnatIpAddress", dnatIpAddress);
+            this.dnatIpAddress = dnatIpAddress;
             return this;
         }
 
@@ -942,6 +1003,15 @@ public class CreateApplicationRequest extends Request {
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
             this.vpcId = vpcId;
+            return this;
+        }
+
+        /**
+         * VpcNatGatewayId.
+         */
+        public Builder vpcNatGatewayId(String vpcNatGatewayId) {
+            this.putQueryParameter("VpcNatGatewayId", vpcNatGatewayId);
+            this.vpcNatGatewayId = vpcNatGatewayId;
             return this;
         }
 
@@ -1199,6 +1269,81 @@ public class CreateApplicationRequest extends Request {
 
             public Components build() {
                 return new Components(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateApplicationRequest} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationRequest</p>
+     */
+    public static class DnatEntries extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FrontPort")
+        private Integer frontPort;
+
+        @com.aliyun.core.annotation.NameInMap("PortName")
+        private String portName;
+
+        private DnatEntries(Builder builder) {
+            this.frontPort = builder.frontPort;
+            this.portName = builder.portName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DnatEntries create() {
+            return builder().build();
+        }
+
+        /**
+         * @return frontPort
+         */
+        public Integer getFrontPort() {
+            return this.frontPort;
+        }
+
+        /**
+         * @return portName
+         */
+        public String getPortName() {
+            return this.portName;
+        }
+
+        public static final class Builder {
+            private Integer frontPort; 
+            private String portName; 
+
+            private Builder() {
+            } 
+
+            private Builder(DnatEntries model) {
+                this.frontPort = model.frontPort;
+                this.portName = model.portName;
+            } 
+
+            /**
+             * FrontPort.
+             */
+            public Builder frontPort(Integer frontPort) {
+                this.frontPort = frontPort;
+                return this;
+            }
+
+            /**
+             * PortName.
+             */
+            public Builder portName(String portName) {
+                this.portName = portName;
+                return this;
+            }
+
+            public DnatEntries build() {
+                return new DnatEntries(this);
             } 
 
         } 

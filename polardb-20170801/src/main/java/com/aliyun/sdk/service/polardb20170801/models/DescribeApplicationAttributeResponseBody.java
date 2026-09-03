@@ -41,6 +41,9 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("DnatMappings")
+    private java.util.List<DnatMappings> dnatMappings;
+
     @com.aliyun.core.annotation.NameInMap("Endpoints")
     private java.util.List<Endpoints> endpoints;
 
@@ -73,6 +76,9 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("NatGatewayId")
     private String natGatewayId;
+
+    @com.aliyun.core.annotation.NameInMap("NatMappingSnatIpAddress")
+    private String natMappingSnatIpAddress;
 
     @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
@@ -119,6 +125,9 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Version")
     private String version;
 
+    @com.aliyun.core.annotation.NameInMap("VpcNatGatewayId")
+    private String vpcNatGatewayId;
+
     @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
@@ -131,6 +140,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         this.creationTime = builder.creationTime;
         this.DBClusterId = builder.DBClusterId;
         this.description = builder.description;
+        this.dnatMappings = builder.dnatMappings;
         this.endpoints = builder.endpoints;
         this.expireTime = builder.expireTime;
         this.expired = builder.expired;
@@ -142,6 +152,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         this.memApplicationAttribute = builder.memApplicationAttribute;
         this.minorVersion = builder.minorVersion;
         this.natGatewayId = builder.natGatewayId;
+        this.natMappingSnatIpAddress = builder.natMappingSnatIpAddress;
         this.payType = builder.payType;
         this.polarClawSaaSApplicationAttribute = builder.polarClawSaaSApplicationAttribute;
         this.polarFSInstanceId = builder.polarFSInstanceId;
@@ -157,6 +168,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         this.VPCId = builder.VPCId;
         this.vSwitchId = builder.vSwitchId;
         this.version = builder.version;
+        this.vpcNatGatewayId = builder.vpcNatGatewayId;
         this.zoneId = builder.zoneId;
     }
 
@@ -226,6 +238,13 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return dnatMappings
+     */
+    public java.util.List<DnatMappings> getDnatMappings() {
+        return this.dnatMappings;
     }
 
     /**
@@ -303,6 +322,13 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
      */
     public String getNatGatewayId() {
         return this.natGatewayId;
+    }
+
+    /**
+     * @return natMappingSnatIpAddress
+     */
+    public String getNatMappingSnatIpAddress() {
+        return this.natMappingSnatIpAddress;
     }
 
     /**
@@ -411,6 +437,13 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return vpcNatGatewayId
+     */
+    public String getVpcNatGatewayId() {
+        return this.vpcNatGatewayId;
+    }
+
+    /**
      * @return zoneId
      */
     public String getZoneId() {
@@ -426,6 +459,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         private String creationTime; 
         private String DBClusterId; 
         private String description; 
+        private java.util.List<DnatMappings> dnatMappings; 
         private java.util.List<Endpoints> endpoints; 
         private String expireTime; 
         private Boolean expired; 
@@ -437,6 +471,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         private MemApplicationAttribute memApplicationAttribute; 
         private String minorVersion; 
         private String natGatewayId; 
+        private String natMappingSnatIpAddress; 
         private String payType; 
         private PolarClawSaaSApplicationAttribute polarClawSaaSApplicationAttribute; 
         private String polarFSInstanceId; 
@@ -452,6 +487,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         private String VPCId; 
         private String vSwitchId; 
         private String version; 
+        private String vpcNatGatewayId; 
         private String zoneId; 
 
         private Builder() {
@@ -466,6 +502,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             this.creationTime = model.creationTime;
             this.DBClusterId = model.DBClusterId;
             this.description = model.description;
+            this.dnatMappings = model.dnatMappings;
             this.endpoints = model.endpoints;
             this.expireTime = model.expireTime;
             this.expired = model.expired;
@@ -477,6 +514,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             this.memApplicationAttribute = model.memApplicationAttribute;
             this.minorVersion = model.minorVersion;
             this.natGatewayId = model.natGatewayId;
+            this.natMappingSnatIpAddress = model.natMappingSnatIpAddress;
             this.payType = model.payType;
             this.polarClawSaaSApplicationAttribute = model.polarClawSaaSApplicationAttribute;
             this.polarFSInstanceId = model.polarFSInstanceId;
@@ -492,6 +530,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             this.VPCId = model.VPCId;
             this.vSwitchId = model.vSwitchId;
             this.version = model.version;
+            this.vpcNatGatewayId = model.vpcNatGatewayId;
             this.zoneId = model.zoneId;
         } 
 
@@ -556,6 +595,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * DnatMappings.
+         */
+        public Builder dnatMappings(java.util.List<DnatMappings> dnatMappings) {
+            this.dnatMappings = dnatMappings;
             return this;
         }
 
@@ -644,6 +691,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
          */
         public Builder natGatewayId(String natGatewayId) {
             this.natGatewayId = natGatewayId;
+            return this;
+        }
+
+        /**
+         * NatMappingSnatIpAddress.
+         */
+        public Builder natMappingSnatIpAddress(String natMappingSnatIpAddress) {
+            this.natMappingSnatIpAddress = natMappingSnatIpAddress;
             return this;
         }
 
@@ -770,6 +825,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
          */
         public Builder version(String version) {
             this.version = version;
+            return this;
+        }
+
+        /**
+         * VpcNatGatewayId.
+         */
+        public Builder vpcNatGatewayId(String vpcNatGatewayId) {
+            this.vpcNatGatewayId = vpcNatGatewayId;
             return this;
         }
 
@@ -1397,6 +1460,165 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
 
             public Components build() {
                 return new Components(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeApplicationAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApplicationAttributeResponseBody</p>
+     */
+    public static class DnatMappings extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccessAddress")
+        private String accessAddress;
+
+        @com.aliyun.core.annotation.NameInMap("BackendPort")
+        private Integer backendPort;
+
+        @com.aliyun.core.annotation.NameInMap("EntryId")
+        private String entryId;
+
+        @com.aliyun.core.annotation.NameInMap("FrontPort")
+        private Integer frontPort;
+
+        @com.aliyun.core.annotation.NameInMap("PortName")
+        private String portName;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        private DnatMappings(Builder builder) {
+            this.accessAddress = builder.accessAddress;
+            this.backendPort = builder.backendPort;
+            this.entryId = builder.entryId;
+            this.frontPort = builder.frontPort;
+            this.portName = builder.portName;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DnatMappings create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accessAddress
+         */
+        public String getAccessAddress() {
+            return this.accessAddress;
+        }
+
+        /**
+         * @return backendPort
+         */
+        public Integer getBackendPort() {
+            return this.backendPort;
+        }
+
+        /**
+         * @return entryId
+         */
+        public String getEntryId() {
+            return this.entryId;
+        }
+
+        /**
+         * @return frontPort
+         */
+        public Integer getFrontPort() {
+            return this.frontPort;
+        }
+
+        /**
+         * @return portName
+         */
+        public String getPortName() {
+            return this.portName;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String accessAddress; 
+            private Integer backendPort; 
+            private String entryId; 
+            private Integer frontPort; 
+            private String portName; 
+            private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DnatMappings model) {
+                this.accessAddress = model.accessAddress;
+                this.backendPort = model.backendPort;
+                this.entryId = model.entryId;
+                this.frontPort = model.frontPort;
+                this.portName = model.portName;
+                this.status = model.status;
+            } 
+
+            /**
+             * AccessAddress.
+             */
+            public Builder accessAddress(String accessAddress) {
+                this.accessAddress = accessAddress;
+                return this;
+            }
+
+            /**
+             * BackendPort.
+             */
+            public Builder backendPort(Integer backendPort) {
+                this.backendPort = backendPort;
+                return this;
+            }
+
+            /**
+             * EntryId.
+             */
+            public Builder entryId(String entryId) {
+                this.entryId = entryId;
+                return this;
+            }
+
+            /**
+             * FrontPort.
+             */
+            public Builder frontPort(Integer frontPort) {
+                this.frontPort = frontPort;
+                return this;
+            }
+
+            /**
+             * PortName.
+             */
+            public Builder portName(String portName) {
+                this.portName = portName;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public DnatMappings build() {
+                return new DnatMappings(this);
             } 
 
         } 
