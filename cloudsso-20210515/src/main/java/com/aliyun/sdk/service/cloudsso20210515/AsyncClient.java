@@ -296,6 +296,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAccessConfigurationResponse> getAccessConfiguration(GetAccessConfigurationRequest request);
 
     /**
+     * @param request the request parameters of GetAttributePassingSetting  GetAttributePassingSettingRequest
+     * @return GetAttributePassingSettingResponse
+     */
+    CompletableFuture<GetAttributePassingSettingResponse> getAttributePassingSetting(GetAttributePassingSettingRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This topic provides an example on how to query information about the directory whose ID is <code>d-00fc2p61****</code>.</p>
      * 
@@ -726,6 +732,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateAccessConfigurationResponse
      */
     CompletableFuture<UpdateAccessConfigurationResponse> updateAccessConfiguration(UpdateAccessConfigurationRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAttributePassingSetting  UpdateAttributePassingSettingRequest
+     * @return UpdateAttributePassingSettingResponse
+     */
+    CompletableFuture<UpdateAttributePassingSettingResponse> updateAttributePassingSetting(UpdateAttributePassingSettingRequest request);
 
     /**
      * <b>description</b> :

@@ -30,14 +30,7 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "cloudsso";
         this.version = "2021-05-15";
         this.endpointRule = "regional";
-        this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("cn-shanghai", "cloudsso.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "cloudsso.cn-hongkong.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "cloudsso.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "cloudsso.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("us-west-1", "cloudsso.us-west-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "cloudsso.eu-central-1.aliyuncs.com")
-        );
+        this.endpointMap = new java.util.HashMap<>();
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -629,6 +622,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetAccessConfigurationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetAttributePassingSetting  GetAttributePassingSettingRequest
+     * @return GetAttributePassingSettingResponse
+     */
+    @Override
+    public CompletableFuture<GetAttributePassingSettingResponse> getAttributePassingSetting(GetAttributePassingSettingRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAttributePassingSetting").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAttributePassingSettingResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAttributePassingSettingResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1649,6 +1660,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateAccessConfigurationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateAttributePassingSetting  UpdateAttributePassingSettingRequest
+     * @return UpdateAttributePassingSettingResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAttributePassingSettingResponse> updateAttributePassingSetting(UpdateAttributePassingSettingRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateAttributePassingSetting").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAttributePassingSettingResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAttributePassingSettingResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
