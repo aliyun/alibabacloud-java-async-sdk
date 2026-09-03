@@ -19,8 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteMultiModalKnowledgeBaseRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MmkbName")
+    private String mmkbName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -30,6 +33,7 @@ public class DeleteMultiModalKnowledgeBaseRequest extends Request {
     private DeleteMultiModalKnowledgeBaseRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.mmkbName = builder.mmkbName;
         this.regionId = builder.regionId;
     }
 
@@ -54,6 +58,13 @@ public class DeleteMultiModalKnowledgeBaseRequest extends Request {
     }
 
     /**
+     * @return mmkbName
+     */
+    public String getMmkbName() {
+        return this.mmkbName;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -62,6 +73,7 @@ public class DeleteMultiModalKnowledgeBaseRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteMultiModalKnowledgeBaseRequest, Builder> {
         private String DBClusterId; 
+        private String mmkbName; 
         private String regionId; 
 
         private Builder() {
@@ -71,18 +83,25 @@ public class DeleteMultiModalKnowledgeBaseRequest extends Request {
         private Builder(DeleteMultiModalKnowledgeBaseRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.mmkbName = request.mmkbName;
             this.regionId = request.regionId;
         } 
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>amv-bp11q28kvl688****</p>
+         * DBClusterId.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * MmkbName.
+         */
+        public Builder mmkbName(String mmkbName) {
+            this.putQueryParameter("MmkbName", mmkbName);
+            this.mmkbName = mmkbName;
             return this;
         }
 

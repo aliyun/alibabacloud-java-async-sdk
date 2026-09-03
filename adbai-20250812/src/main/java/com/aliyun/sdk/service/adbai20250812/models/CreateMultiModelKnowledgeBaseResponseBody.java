@@ -17,10 +17,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateMultiModelKnowledgeBaseResponseBody</p>
  */
 public class CreateMultiModelKnowledgeBaseResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("DbClusterId")
+    private String dbClusterId;
+
+    @com.aliyun.core.annotation.NameInMap("MmkbName")
+    private String mmkbName;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateMultiModelKnowledgeBaseResponseBody(Builder builder) {
+        this.dbClusterId = builder.dbClusterId;
+        this.mmkbName = builder.mmkbName;
         this.requestId = builder.requestId;
     }
 
@@ -37,6 +45,20 @@ public class CreateMultiModelKnowledgeBaseResponseBody extends TeaModel {
     }
 
     /**
+     * @return dbClusterId
+     */
+    public String getDbClusterId() {
+        return this.dbClusterId;
+    }
+
+    /**
+     * @return mmkbName
+     */
+    public String getMmkbName() {
+        return this.mmkbName;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -44,14 +66,34 @@ public class CreateMultiModelKnowledgeBaseResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String dbClusterId; 
+        private String mmkbName; 
         private String requestId; 
 
         private Builder() {
         } 
 
         private Builder(CreateMultiModelKnowledgeBaseResponseBody model) {
+            this.dbClusterId = model.dbClusterId;
+            this.mmkbName = model.mmkbName;
             this.requestId = model.requestId;
         } 
+
+        /**
+         * DbClusterId.
+         */
+        public Builder dbClusterId(String dbClusterId) {
+            this.dbClusterId = dbClusterId;
+            return this;
+        }
+
+        /**
+         * MmkbName.
+         */
+        public Builder mmkbName(String mmkbName) {
+            this.mmkbName = mmkbName;
+            return this;
+        }
 
         /**
          * <p>Id of the request</p>
