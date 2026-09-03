@@ -32,8 +32,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.version = "20240611";
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("cn-beijing", "aicontent.cn-beijing.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "aicontent.cn-hangzhou.aliyuncs.com"),
             new TeaPair("cn-shanghai", "aicontent.aliyuncs.com"),
             new TeaPair("public", "aicontent.aliyuncs.com")
         );
@@ -2247,6 +2245,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModelRouterTransferToMemberResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModelRouterUpdateApiKeyStatus  ModelRouterUpdateApiKeyStatusRequest
+     * @return ModelRouterUpdateApiKeyStatusResponse
+     */
+    @Override
+    public CompletableFuture<ModelRouterUpdateApiKeyStatusResponse> modelRouterUpdateApiKeyStatus(ModelRouterUpdateApiKeyStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ModelRouterUpdateApiKeyStatus").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/modelRouter/open/apikeys/{id}/status").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModelRouterUpdateApiKeyStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModelRouterUpdateApiKeyStatusResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

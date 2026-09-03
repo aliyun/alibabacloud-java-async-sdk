@@ -746,6 +746,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModelRouterTransferToMemberResponse> modelRouterTransferToMember(ModelRouterTransferToMemberRequest request);
 
     /**
+     * @param request the request parameters of ModelRouterUpdateApiKeyStatus  ModelRouterUpdateApiKeyStatusRequest
+     * @return ModelRouterUpdateApiKeyStatusResponse
+     */
+    CompletableFuture<ModelRouterUpdateApiKeyStatusResponse> modelRouterUpdateApiKeyStatus(ModelRouterUpdateApiKeyStatusRequest request);
+
+    /**
      * @param request the request parameters of ModelRouterUpdateBillingRule  ModelRouterUpdateBillingRuleRequest
      * @return ModelRouterUpdateBillingRuleResponse
      */
