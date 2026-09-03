@@ -61,40 +61,7 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-zhangjiakou-na62-a01", "hbr.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-nebula-1", "hbr.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "hbr.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "hbr.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "hbr.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-beijing", "hbr.cn-beijing.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "hbr.cn-qingdao.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "hbr.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "hbr.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-heyuan", "hbr.cn-heyuan.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "hbr.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "hbr.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "hbr.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "hbr.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "hbr.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "hbr.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "hbr.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "hbr.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "hbr.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "hbr.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "hbr.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "hbr.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "hbr.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("ap-southeast-8", "hbr.ap-southeast-8.aliyuncs.com"),
-            new TeaPair("cn-zhongwei", "hbr.cn-zhongwei.aliyuncs.com"),
-            new TeaPair("us-southeast-1", "hbr.us-southeast-1.aliyuncs.com"),
-            new TeaPair("na-south-1", "hbr.na-south-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "hbr.eu-central-1.aliyuncs.com"),
-            new TeaPair("us-west-1", "hbr.us-west-1.aliyuncs.com"),
-            new TeaPair("eu-west-1", "hbr.eu-west-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "hbr.us-east-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "hbr.me-central-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "hbr.me-east-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "hbr.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-1", "hbr.cn-beijing-finance-1.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "hbr.cn-shenzhen-finance-1.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "hbr.cn-hangzhou-finance.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "hbr.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -1024,6 +991,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeFeatureTrialInfo  DescribeFeatureTrialInfoRequest
+     * @return DescribeFeatureTrialInfoResponse
+     */
+    @Override
+    public CompletableFuture<DescribeFeatureTrialInfoResponse> describeFeatureTrialInfo(DescribeFeatureTrialInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeFeatureTrialInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeFeatureTrialInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeFeatureTrialInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeHanaBackupPlans  DescribeHanaBackupPlansRequest
      * @return DescribeHanaBackupPlansResponse
      */
@@ -1543,6 +1528,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetTrialInfo  GetTrialInfoRequest
+     * @return GetTrialInfoResponse
+     */
+    @Override
+    public CompletableFuture<GetTrialInfoResponse> getTrialInfo(GetTrialInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetTrialInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetTrialInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetTrialInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>  This operation creates an asynchronous job at the backend and calls Cloud Assistant to install an HBR client on an ECS instance.</p>
      * <ul>
@@ -1580,6 +1583,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListProtectedResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListSnapshots  ListSnapshotsRequest
+     * @return ListSnapshotsResponse
+     */
+    @Override
+    public CompletableFuture<ListSnapshotsResponse> listSnapshots(ListSnapshotsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListSnapshots").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListSnapshotsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListSnapshotsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

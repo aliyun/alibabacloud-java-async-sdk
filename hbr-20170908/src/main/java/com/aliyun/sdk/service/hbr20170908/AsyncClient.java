@@ -399,6 +399,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDataSourcesResponse> describeDataSources(DescribeDataSourcesRequest request);
 
     /**
+     * @param request the request parameters of DescribeFeatureTrialInfo  DescribeFeatureTrialInfoRequest
+     * @return DescribeFeatureTrialInfoResponse
+     */
+    CompletableFuture<DescribeFeatureTrialInfoResponse> describeFeatureTrialInfo(DescribeFeatureTrialInfoRequest request);
+
+    /**
      * @param request the request parameters of DescribeHanaBackupPlans  DescribeHanaBackupPlansRequest
      * @return DescribeHanaBackupPlansResponse
      */
@@ -594,6 +600,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTempFileDownloadLinkResponse> getTempFileDownloadLink(GetTempFileDownloadLinkRequest request);
 
     /**
+     * @param request the request parameters of GetTrialInfo  GetTrialInfoRequest
+     * @return GetTrialInfoResponse
+     */
+    CompletableFuture<GetTrialInfoResponse> getTrialInfo(GetTrialInfoRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  This operation creates an asynchronous job at the backend and calls Cloud Assistant to install an HBR client on an ECS instance.</p>
      * <ul>
@@ -611,6 +623,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListProtectedResourcesResponse
      */
     CompletableFuture<ListProtectedResourcesResponse> listProtectedResources(ListProtectedResourcesRequest request);
+
+    /**
+     * @param request the request parameters of ListSnapshots  ListSnapshotsRequest
+     * @return ListSnapshotsResponse
+     */
+    CompletableFuture<ListSnapshotsResponse> listSnapshots(ListSnapshotsRequest request);
 
     /**
      * @param request the request parameters of OpenHbrService  OpenHbrServiceRequest
