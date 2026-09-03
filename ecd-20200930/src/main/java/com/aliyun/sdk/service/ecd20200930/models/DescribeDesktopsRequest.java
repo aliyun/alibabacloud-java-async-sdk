@@ -103,6 +103,10 @@ public class DescribeDesktopsRequest extends Request {
     private Boolean multiResource;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceIp")
+    private String networkInterfaceIp;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
@@ -137,6 +141,10 @@ public class DescribeDesktopsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProtocolType")
     private String protocolType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PublicIp")
+    private String publicIp;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("QosRuleId")
@@ -194,6 +202,7 @@ public class DescribeDesktopsRequest extends Request {
         this.managementFlag = builder.managementFlag;
         this.maxResults = builder.maxResults;
         this.multiResource = builder.multiResource;
+        this.networkInterfaceIp = builder.networkInterfaceIp;
         this.nextToken = builder.nextToken;
         this.officeSiteId = builder.officeSiteId;
         this.officeSiteName = builder.officeSiteName;
@@ -203,6 +212,7 @@ public class DescribeDesktopsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.policyGroupId = builder.policyGroupId;
         this.protocolType = builder.protocolType;
+        this.publicIp = builder.publicIp;
         this.qosRuleId = builder.qosRuleId;
         this.queryFotaUpdate = builder.queryFotaUpdate;
         this.regionId = builder.regionId;
@@ -374,6 +384,13 @@ public class DescribeDesktopsRequest extends Request {
     }
 
     /**
+     * @return networkInterfaceIp
+     */
+    public String getNetworkInterfaceIp() {
+        return this.networkInterfaceIp;
+    }
+
+    /**
      * @return nextToken
      */
     public String getNextToken() {
@@ -434,6 +451,13 @@ public class DescribeDesktopsRequest extends Request {
      */
     public String getProtocolType() {
         return this.protocolType;
+    }
+
+    /**
+     * @return publicIp
+     */
+    public String getPublicIp() {
+        return this.publicIp;
     }
 
     /**
@@ -514,6 +538,7 @@ public class DescribeDesktopsRequest extends Request {
         private String managementFlag; 
         private Integer maxResults; 
         private Boolean multiResource; 
+        private String networkInterfaceIp; 
         private String nextToken; 
         private String officeSiteId; 
         private String officeSiteName; 
@@ -523,6 +548,7 @@ public class DescribeDesktopsRequest extends Request {
         private Integer pageSize; 
         private String policyGroupId; 
         private String protocolType; 
+        private String publicIp; 
         private String qosRuleId; 
         private Boolean queryFotaUpdate; 
         private String regionId; 
@@ -559,6 +585,7 @@ public class DescribeDesktopsRequest extends Request {
             this.managementFlag = request.managementFlag;
             this.maxResults = request.maxResults;
             this.multiResource = request.multiResource;
+            this.networkInterfaceIp = request.networkInterfaceIp;
             this.nextToken = request.nextToken;
             this.officeSiteId = request.officeSiteId;
             this.officeSiteName = request.officeSiteName;
@@ -568,6 +595,7 @@ public class DescribeDesktopsRequest extends Request {
             this.pageSize = request.pageSize;
             this.policyGroupId = request.policyGroupId;
             this.protocolType = request.protocolType;
+            this.publicIp = request.publicIp;
             this.qosRuleId = request.qosRuleId;
             this.queryFotaUpdate = request.queryFotaUpdate;
             this.regionId = request.regionId;
@@ -852,6 +880,15 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
+         * NetworkInterfaceIp.
+         */
+        public Builder networkInterfaceIp(String networkInterfaceIp) {
+            this.putQueryParameter("NetworkInterfaceIp", networkInterfaceIp);
+            this.networkInterfaceIp = networkInterfaceIp;
+            return this;
+        }
+
+        /**
          * <p>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</p>
          * 
          * <strong>example:</strong>
@@ -958,6 +995,15 @@ public class DescribeDesktopsRequest extends Request {
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
             this.protocolType = protocolType;
+            return this;
+        }
+
+        /**
+         * PublicIp.
+         */
+        public Builder publicIp(String publicIp) {
+            this.putQueryParameter("PublicIp", publicIp);
+            this.publicIp = publicIp;
             return this;
         }
 

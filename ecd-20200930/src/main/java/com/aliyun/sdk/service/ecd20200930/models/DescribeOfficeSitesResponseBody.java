@@ -584,6 +584,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
 
+        @com.aliyun.core.annotation.NameInMap("BasicInternetType")
+        private String basicInternetType;
+
         @com.aliyun.core.annotation.NameInMap("CenAttachStatus")
         private String cenAttachStatus;
 
@@ -768,6 +771,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             this.backupDCHostname = builder.backupDCHostname;
             this.backupDns = builder.backupDns;
             this.bandwidth = builder.bandwidth;
+            this.basicInternetType = builder.basicInternetType;
             this.cenAttachStatus = builder.cenAttachStatus;
             this.cenId = builder.cenId;
             this.cidrBlock = builder.cidrBlock;
@@ -897,6 +901,13 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
          */
         public Integer getBandwidth() {
             return this.bandwidth;
+        }
+
+        /**
+         * @return basicInternetType
+         */
+        public String getBasicInternetType() {
+            return this.basicInternetType;
         }
 
         /**
@@ -1315,6 +1326,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             private String backupDCHostname; 
             private String backupDns; 
             private Integer bandwidth; 
+            private String basicInternetType; 
             private String cenAttachStatus; 
             private String cenId; 
             private String cidrBlock; 
@@ -1387,6 +1399,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
                 this.backupDCHostname = model.backupDCHostname;
                 this.backupDns = model.backupDns;
                 this.bandwidth = model.bandwidth;
+                this.basicInternetType = model.basicInternetType;
                 this.cenAttachStatus = model.cenAttachStatus;
                 this.cenId = model.cenId;
                 this.cidrBlock = model.cidrBlock;
@@ -1531,6 +1544,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
+                return this;
+            }
+
+            /**
+             * BasicInternetType.
+             */
+            public Builder basicInternetType(String basicInternetType) {
+                this.basicInternetType = basicInternetType;
                 return this;
             }
 

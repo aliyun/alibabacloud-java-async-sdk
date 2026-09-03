@@ -1131,6 +1131,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePriceForRenewDesktopOversoldGroupResponse> describePriceForRenewDesktopOversoldGroup(DescribePriceForRenewDesktopOversoldGroupRequest request);
 
     /**
+     * @param request the request parameters of DescribePrinterEvents  DescribePrinterEventsRequest
+     * @return DescribePrinterEventsResponse
+     */
+    CompletableFuture<DescribePrinterEventsResponse> describePrinterEvents(DescribePrinterEventsRequest request);
+
+    /**
      * @param request the request parameters of DescribeQosRules  DescribeQosRulesRequest
      * @return DescribeQosRulesResponse
      */

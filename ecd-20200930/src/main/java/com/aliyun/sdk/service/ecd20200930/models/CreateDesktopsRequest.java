@@ -63,6 +63,10 @@ public class CreateDesktopsRequest extends Request {
     private String desktopName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopNameModel")
+    private DesktopNameModel desktopNameModel;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopNameSuffix")
     private Boolean desktopNameSuffix;
 
@@ -200,6 +204,7 @@ public class CreateDesktopsRequest extends Request {
         this.desktopAttachment = builder.desktopAttachment;
         this.desktopMemberIp = builder.desktopMemberIp;
         this.desktopName = builder.desktopName;
+        this.desktopNameModel = builder.desktopNameModel;
         this.desktopNameSuffix = builder.desktopNameSuffix;
         this.desktopTimers = builder.desktopTimers;
         this.directoryId = builder.directoryId;
@@ -321,6 +326,13 @@ public class CreateDesktopsRequest extends Request {
      */
     public String getDesktopName() {
         return this.desktopName;
+    }
+
+    /**
+     * @return desktopNameModel
+     */
+    public DesktopNameModel getDesktopNameModel() {
+        return this.desktopNameModel;
     }
 
     /**
@@ -552,6 +564,7 @@ public class CreateDesktopsRequest extends Request {
         private DesktopAttachment desktopAttachment; 
         private String desktopMemberIp; 
         private String desktopName; 
+        private DesktopNameModel desktopNameModel; 
         private Boolean desktopNameSuffix; 
         private java.util.List<DesktopTimers> desktopTimers; 
         private String directoryId; 
@@ -601,6 +614,7 @@ public class CreateDesktopsRequest extends Request {
             this.desktopAttachment = request.desktopAttachment;
             this.desktopMemberIp = request.desktopMemberIp;
             this.desktopName = request.desktopName;
+            this.desktopNameModel = request.desktopNameModel;
             this.desktopNameSuffix = request.desktopNameSuffix;
             this.desktopTimers = request.desktopTimers;
             this.directoryId = request.directoryId;
@@ -773,6 +787,16 @@ public class CreateDesktopsRequest extends Request {
         public Builder desktopName(String desktopName) {
             this.putQueryParameter("DesktopName", desktopName);
             this.desktopName = desktopName;
+            return this;
+        }
+
+        /**
+         * DesktopNameModel.
+         */
+        public Builder desktopNameModel(DesktopNameModel desktopNameModel) {
+            String desktopNameModelShrink = shrink(desktopNameModel, "DesktopNameModel", "json");
+            this.putQueryParameter("DesktopNameModel", desktopNameModelShrink);
+            this.desktopNameModel = desktopNameModel;
             return this;
         }
 
@@ -1690,6 +1714,60 @@ public class CreateDesktopsRequest extends Request {
      *
      * <p>CreateDesktopsRequest</p>
      */
+    public static class DesktopNameModel extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DesktopNameIsSuffix")
+        private Boolean desktopNameIsSuffix;
+
+        private DesktopNameModel(Builder builder) {
+            this.desktopNameIsSuffix = builder.desktopNameIsSuffix;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DesktopNameModel create() {
+            return builder().build();
+        }
+
+        /**
+         * @return desktopNameIsSuffix
+         */
+        public Boolean getDesktopNameIsSuffix() {
+            return this.desktopNameIsSuffix;
+        }
+
+        public static final class Builder {
+            private Boolean desktopNameIsSuffix; 
+
+            private Builder() {
+            } 
+
+            private Builder(DesktopNameModel model) {
+                this.desktopNameIsSuffix = model.desktopNameIsSuffix;
+            } 
+
+            /**
+             * DesktopNameIsSuffix.
+             */
+            public Builder desktopNameIsSuffix(Boolean desktopNameIsSuffix) {
+                this.desktopNameIsSuffix = desktopNameIsSuffix;
+                return this;
+            }
+
+            public DesktopNameModel build() {
+                return new DesktopNameModel(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDesktopsRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDesktopsRequest</p>
+     */
     public static class DesktopTimers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowClientSetting")
         private Boolean allowClientSetting;
@@ -2054,10 +2132,22 @@ public class CreateDesktopsRequest extends Request {
      * <p>CreateDesktopsRequest</p>
      */
     public static class PurchaseOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CreditPackageAmountSpec")
+        private Integer creditPackageAmountSpec;
+
+        @com.aliyun.core.annotation.NameInMap("CreditPackagePeriod")
+        private Integer creditPackagePeriod;
+
+        @com.aliyun.core.annotation.NameInMap("CreditPackagePeriodUnit")
+        private String creditPackagePeriodUnit;
+
         @com.aliyun.core.annotation.NameInMap("MonthlyCredits")
         private Integer monthlyCredits;
 
         private PurchaseOptions(Builder builder) {
+            this.creditPackageAmountSpec = builder.creditPackageAmountSpec;
+            this.creditPackagePeriod = builder.creditPackagePeriod;
+            this.creditPackagePeriodUnit = builder.creditPackagePeriodUnit;
             this.monthlyCredits = builder.monthlyCredits;
         }
 
@@ -2070,6 +2160,27 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
+         * @return creditPackageAmountSpec
+         */
+        public Integer getCreditPackageAmountSpec() {
+            return this.creditPackageAmountSpec;
+        }
+
+        /**
+         * @return creditPackagePeriod
+         */
+        public Integer getCreditPackagePeriod() {
+            return this.creditPackagePeriod;
+        }
+
+        /**
+         * @return creditPackagePeriodUnit
+         */
+        public String getCreditPackagePeriodUnit() {
+            return this.creditPackagePeriodUnit;
+        }
+
+        /**
          * @return monthlyCredits
          */
         public Integer getMonthlyCredits() {
@@ -2077,14 +2188,44 @@ public class CreateDesktopsRequest extends Request {
         }
 
         public static final class Builder {
+            private Integer creditPackageAmountSpec; 
+            private Integer creditPackagePeriod; 
+            private String creditPackagePeriodUnit; 
             private Integer monthlyCredits; 
 
             private Builder() {
             } 
 
             private Builder(PurchaseOptions model) {
+                this.creditPackageAmountSpec = model.creditPackageAmountSpec;
+                this.creditPackagePeriod = model.creditPackagePeriod;
+                this.creditPackagePeriodUnit = model.creditPackagePeriodUnit;
                 this.monthlyCredits = model.monthlyCredits;
             } 
+
+            /**
+             * CreditPackageAmountSpec.
+             */
+            public Builder creditPackageAmountSpec(Integer creditPackageAmountSpec) {
+                this.creditPackageAmountSpec = creditPackageAmountSpec;
+                return this;
+            }
+
+            /**
+             * CreditPackagePeriod.
+             */
+            public Builder creditPackagePeriod(Integer creditPackagePeriod) {
+                this.creditPackagePeriod = creditPackagePeriod;
+                return this;
+            }
+
+            /**
+             * CreditPackagePeriodUnit.
+             */
+            public Builder creditPackagePeriodUnit(String creditPackagePeriodUnit) {
+                this.creditPackagePeriodUnit = creditPackagePeriodUnit;
+                return this;
+            }
 
             /**
              * MonthlyCredits.

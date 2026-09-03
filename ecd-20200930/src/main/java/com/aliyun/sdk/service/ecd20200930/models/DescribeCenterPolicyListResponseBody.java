@@ -1391,6 +1391,15 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PortProxy")
         private String portProxy;
 
+        @com.aliyun.core.annotation.NameInMap("PrinterAlert")
+        private String printerAlert;
+
+        @com.aliyun.core.annotation.NameInMap("PrinterAlertContent")
+        private String printerAlertContent;
+
+        @com.aliyun.core.annotation.NameInMap("PrinterAlertTitle")
+        private String printerAlertTitle;
+
         @com.aliyun.core.annotation.NameInMap("PrinterRedirection")
         private String printerRedirection;
 
@@ -1486,6 +1495,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Taskbar")
         private String taskbar;
+
+        @com.aliyun.core.annotation.NameInMap("ThreeScreen")
+        private String threeScreen;
 
         @com.aliyun.core.annotation.NameInMap("UsbRedirect")
         private String usbRedirect;
@@ -1653,6 +1665,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             this.policyGroupType = builder.policyGroupType;
             this.policyStatus = builder.policyStatus;
             this.portProxy = builder.portProxy;
+            this.printerAlert = builder.printerAlert;
+            this.printerAlertContent = builder.printerAlertContent;
+            this.printerAlertTitle = builder.printerAlertTitle;
             this.printerRedirection = builder.printerRedirection;
             this.qualityEnhancement = builder.qualityEnhancement;
             this.recordContent = builder.recordContent;
@@ -1685,6 +1700,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             this.streamingMode = builder.streamingMode;
             this.targetFps = builder.targetFps;
             this.taskbar = builder.taskbar;
+            this.threeScreen = builder.threeScreen;
             this.usbRedirect = builder.usbRedirect;
             this.usbSupplyRedirectRule = builder.usbSupplyRedirectRule;
             this.useTime = builder.useTime;
@@ -2351,6 +2367,27 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         }
 
         /**
+         * @return printerAlert
+         */
+        public String getPrinterAlert() {
+            return this.printerAlert;
+        }
+
+        /**
+         * @return printerAlertContent
+         */
+        public String getPrinterAlertContent() {
+            return this.printerAlertContent;
+        }
+
+        /**
+         * @return printerAlertTitle
+         */
+        public String getPrinterAlertTitle() {
+            return this.printerAlertTitle;
+        }
+
+        /**
          * @return printerRedirection
          */
         public String getPrinterRedirection() {
@@ -2572,6 +2609,13 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
          */
         public String getTaskbar() {
             return this.taskbar;
+        }
+
+        /**
+         * @return threeScreen
+         */
+        public String getThreeScreen() {
+            return this.threeScreen;
         }
 
         /**
@@ -2840,6 +2884,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             private String policyGroupType; 
             private String policyStatus; 
             private String portProxy; 
+            private String printerAlert; 
+            private String printerAlertContent; 
+            private String printerAlertTitle; 
             private String printerRedirection; 
             private String qualityEnhancement; 
             private String recordContent; 
@@ -2872,6 +2919,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             private String streamingMode; 
             private Integer targetFps; 
             private String taskbar; 
+            private String threeScreen; 
             private String usbRedirect; 
             private java.util.List<UsbSupplyRedirectRule> usbSupplyRedirectRule; 
             private String useTime; 
@@ -2992,6 +3040,9 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
                 this.policyGroupType = model.policyGroupType;
                 this.policyStatus = model.policyStatus;
                 this.portProxy = model.portProxy;
+                this.printerAlert = model.printerAlert;
+                this.printerAlertContent = model.printerAlertContent;
+                this.printerAlertTitle = model.printerAlertTitle;
                 this.printerRedirection = model.printerRedirection;
                 this.qualityEnhancement = model.qualityEnhancement;
                 this.recordContent = model.recordContent;
@@ -3024,6 +3075,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
                 this.streamingMode = model.streamingMode;
                 this.targetFps = model.targetFps;
                 this.taskbar = model.taskbar;
+                this.threeScreen = model.threeScreen;
                 this.usbRedirect = model.usbRedirect;
                 this.usbSupplyRedirectRule = model.usbSupplyRedirectRule;
                 this.useTime = model.useTime;
@@ -3916,6 +3968,30 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
             }
 
             /**
+             * PrinterAlert.
+             */
+            public Builder printerAlert(String printerAlert) {
+                this.printerAlert = printerAlert;
+                return this;
+            }
+
+            /**
+             * PrinterAlertContent.
+             */
+            public Builder printerAlertContent(String printerAlertContent) {
+                this.printerAlertContent = printerAlertContent;
+                return this;
+            }
+
+            /**
+             * PrinterAlertTitle.
+             */
+            public Builder printerAlertTitle(String printerAlertTitle) {
+                this.printerAlertTitle = printerAlertTitle;
+                return this;
+            }
+
+            /**
              * <p>The printer redirection policy.</p>
              * 
              * <strong>example:</strong>
@@ -4243,6 +4319,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
              */
             public Builder taskbar(String taskbar) {
                 this.taskbar = taskbar;
+                return this;
+            }
+
+            /**
+             * ThreeScreen.
+             */
+            public Builder threeScreen(String threeScreen) {
+                this.threeScreen = threeScreen;
                 return this;
             }
 

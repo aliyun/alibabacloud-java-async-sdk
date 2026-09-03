@@ -328,6 +328,18 @@ public class CreateCenterPolicyRequest extends Request {
     private String portProxy;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrinterAlert")
+    private String printerAlert;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrinterAlertContent")
+    private String printerAlertContent;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrinterAlertTitle")
+    private String printerAlertTitle;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PrinterRedirect")
     private String printerRedirect;
 
@@ -469,6 +481,10 @@ public class CreateCenterPolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Taskbar")
     private String taskbar;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ThreeScreen")
+    private String threeScreen;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UsbRedirect")
@@ -653,6 +669,9 @@ public class CreateCenterPolicyRequest extends Request {
         this.noOperationDisconnect = builder.noOperationDisconnect;
         this.noOperationDisconnectTime = builder.noOperationDisconnectTime;
         this.portProxy = builder.portProxy;
+        this.printerAlert = builder.printerAlert;
+        this.printerAlertContent = builder.printerAlertContent;
+        this.printerAlertTitle = builder.printerAlertTitle;
         this.printerRedirect = builder.printerRedirect;
         this.qualityEnhancement = builder.qualityEnhancement;
         this.recordEventDuration = builder.recordEventDuration;
@@ -688,6 +707,7 @@ public class CreateCenterPolicyRequest extends Request {
         this.streamingMode = builder.streamingMode;
         this.targetFps = builder.targetFps;
         this.taskbar = builder.taskbar;
+        this.threeScreen = builder.threeScreen;
         this.usbRedirect = builder.usbRedirect;
         this.usbSupplyRedirectRule = builder.usbSupplyRedirectRule;
         this.useTime = builder.useTime;
@@ -1269,6 +1289,27 @@ public class CreateCenterPolicyRequest extends Request {
     }
 
     /**
+     * @return printerAlert
+     */
+    public String getPrinterAlert() {
+        return this.printerAlert;
+    }
+
+    /**
+     * @return printerAlertContent
+     */
+    public String getPrinterAlertContent() {
+        return this.printerAlertContent;
+    }
+
+    /**
+     * @return printerAlertTitle
+     */
+    public String getPrinterAlertTitle() {
+        return this.printerAlertTitle;
+    }
+
+    /**
      * @return printerRedirect
      */
     public String getPrinterRedirect() {
@@ -1511,6 +1552,13 @@ public class CreateCenterPolicyRequest extends Request {
      */
     public String getTaskbar() {
         return this.taskbar;
+    }
+
+    /**
+     * @return threeScreen
+     */
+    public String getThreeScreen() {
+        return this.threeScreen;
     }
 
     /**
@@ -1773,6 +1821,9 @@ public class CreateCenterPolicyRequest extends Request {
         private String noOperationDisconnect; 
         private Integer noOperationDisconnectTime; 
         private String portProxy; 
+        private String printerAlert; 
+        private String printerAlertContent; 
+        private String printerAlertTitle; 
         private String printerRedirect; 
         private String qualityEnhancement; 
         private Integer recordEventDuration; 
@@ -1808,6 +1859,7 @@ public class CreateCenterPolicyRequest extends Request {
         private String streamingMode; 
         private Integer targetFps; 
         private String taskbar; 
+        private String threeScreen; 
         private String usbRedirect; 
         private java.util.List<UsbSupplyRedirectRule> usbSupplyRedirectRule; 
         private String useTime; 
@@ -1918,6 +1970,9 @@ public class CreateCenterPolicyRequest extends Request {
             this.noOperationDisconnect = request.noOperationDisconnect;
             this.noOperationDisconnectTime = request.noOperationDisconnectTime;
             this.portProxy = request.portProxy;
+            this.printerAlert = request.printerAlert;
+            this.printerAlertContent = request.printerAlertContent;
+            this.printerAlertTitle = request.printerAlertTitle;
             this.printerRedirect = request.printerRedirect;
             this.qualityEnhancement = request.qualityEnhancement;
             this.recordEventDuration = request.recordEventDuration;
@@ -1953,6 +2008,7 @@ public class CreateCenterPolicyRequest extends Request {
             this.streamingMode = request.streamingMode;
             this.targetFps = request.targetFps;
             this.taskbar = request.taskbar;
+            this.threeScreen = request.threeScreen;
             this.usbRedirect = request.usbRedirect;
             this.usbSupplyRedirectRule = request.usbSupplyRedirectRule;
             this.useTime = request.useTime;
@@ -2933,6 +2989,33 @@ public class CreateCenterPolicyRequest extends Request {
         }
 
         /**
+         * PrinterAlert.
+         */
+        public Builder printerAlert(String printerAlert) {
+            this.putQueryParameter("PrinterAlert", printerAlert);
+            this.printerAlert = printerAlert;
+            return this;
+        }
+
+        /**
+         * PrinterAlertContent.
+         */
+        public Builder printerAlertContent(String printerAlertContent) {
+            this.putQueryParameter("PrinterAlertContent", printerAlertContent);
+            this.printerAlertContent = printerAlertContent;
+            return this;
+        }
+
+        /**
+         * PrinterAlertTitle.
+         */
+        public Builder printerAlertTitle(String printerAlertTitle) {
+            this.putQueryParameter("PrinterAlertTitle", printerAlertTitle);
+            this.printerAlertTitle = printerAlertTitle;
+            return this;
+        }
+
+        /**
          * <p>The printer redirection policy. This parameter only applies if DeviceRedirects does not include a printer redirection policy.</p>
          * <p>Valid values:</p>
          * <ul>
@@ -3393,6 +3476,15 @@ public class CreateCenterPolicyRequest extends Request {
         public Builder taskbar(String taskbar) {
             this.putQueryParameter("Taskbar", taskbar);
             this.taskbar = taskbar;
+            return this;
+        }
+
+        /**
+         * ThreeScreen.
+         */
+        public Builder threeScreen(String threeScreen) {
+            this.putQueryParameter("ThreeScreen", threeScreen);
+            this.threeScreen = threeScreen;
             return this;
         }
 

@@ -1664,6 +1664,15 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PreemptLoginUsers")
         private java.util.List<String> preemptLoginUsers;
 
+        @com.aliyun.core.annotation.NameInMap("PrinterAlert")
+        private String printerAlert;
+
+        @com.aliyun.core.annotation.NameInMap("PrinterAlertContent")
+        private String printerAlertContent;
+
+        @com.aliyun.core.annotation.NameInMap("PrinterAlertTitle")
+        private String printerAlertTitle;
+
         @com.aliyun.core.annotation.NameInMap("PrinterRedirection")
         private String printerRedirection;
 
@@ -1765,6 +1774,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("TargetFps")
         private Integer targetFps;
+
+        @com.aliyun.core.annotation.NameInMap("ThreeScreen")
+        private String threeScreen;
 
         @com.aliyun.core.annotation.NameInMap("UsbRedirect")
         private String usbRedirect;
@@ -1933,6 +1945,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.portProxy = builder.portProxy;
             this.preemptLogin = builder.preemptLogin;
             this.preemptLoginUsers = builder.preemptLoginUsers;
+            this.printerAlert = builder.printerAlert;
+            this.printerAlertContent = builder.printerAlertContent;
+            this.printerAlertTitle = builder.printerAlertTitle;
             this.printerRedirection = builder.printerRedirection;
             this.qualityEnhancement = builder.qualityEnhancement;
             this.recordContent = builder.recordContent;
@@ -1967,6 +1982,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.statusMonitor = builder.statusMonitor;
             this.streamingMode = builder.streamingMode;
             this.targetFps = builder.targetFps;
+            this.threeScreen = builder.threeScreen;
             this.usbRedirect = builder.usbRedirect;
             this.usbSupplyRedirectRule = builder.usbSupplyRedirectRule;
             this.useTime = builder.useTime;
@@ -2620,6 +2636,27 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return printerAlert
+         */
+        public String getPrinterAlert() {
+            return this.printerAlert;
+        }
+
+        /**
+         * @return printerAlertContent
+         */
+        public String getPrinterAlertContent() {
+            return this.printerAlertContent;
+        }
+
+        /**
+         * @return printerAlertTitle
+         */
+        public String getPrinterAlertTitle() {
+            return this.printerAlertTitle;
+        }
+
+        /**
          * @return printerRedirection
          */
         public String getPrinterRedirection() {
@@ -2855,6 +2892,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         public Integer getTargetFps() {
             return this.targetFps;
+        }
+
+        /**
+         * @return threeScreen
+         */
+        public String getThreeScreen() {
+            return this.threeScreen;
         }
 
         /**
@@ -3128,6 +3172,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String portProxy; 
             private String preemptLogin; 
             private java.util.List<String> preemptLoginUsers; 
+            private String printerAlert; 
+            private String printerAlertContent; 
+            private String printerAlertTitle; 
             private String printerRedirection; 
             private String qualityEnhancement; 
             private String recordContent; 
@@ -3162,6 +3209,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String statusMonitor; 
             private String streamingMode; 
             private Integer targetFps; 
+            private String threeScreen; 
             private String usbRedirect; 
             private java.util.List<UsbSupplyRedirectRule> usbSupplyRedirectRule; 
             private String useTime; 
@@ -3281,6 +3329,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
                 this.portProxy = model.portProxy;
                 this.preemptLogin = model.preemptLogin;
                 this.preemptLoginUsers = model.preemptLoginUsers;
+                this.printerAlert = model.printerAlert;
+                this.printerAlertContent = model.printerAlertContent;
+                this.printerAlertTitle = model.printerAlertTitle;
                 this.printerRedirection = model.printerRedirection;
                 this.qualityEnhancement = model.qualityEnhancement;
                 this.recordContent = model.recordContent;
@@ -3315,6 +3366,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
                 this.statusMonitor = model.statusMonitor;
                 this.streamingMode = model.streamingMode;
                 this.targetFps = model.targetFps;
+                this.threeScreen = model.threeScreen;
                 this.usbRedirect = model.usbRedirect;
                 this.usbSupplyRedirectRule = model.usbSupplyRedirectRule;
                 this.useTime = model.useTime;
@@ -4311,6 +4363,30 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * PrinterAlert.
+             */
+            public Builder printerAlert(String printerAlert) {
+                this.printerAlert = printerAlert;
+                return this;
+            }
+
+            /**
+             * PrinterAlertContent.
+             */
+            public Builder printerAlertContent(String printerAlertContent) {
+                this.printerAlertContent = printerAlertContent;
+                return this;
+            }
+
+            /**
+             * PrinterAlertTitle.
+             */
+            public Builder printerAlertTitle(String printerAlertTitle) {
+                this.printerAlertTitle = printerAlertTitle;
+                return this;
+            }
+
+            /**
              * <p>Indicates whether the printer redirection feature is enabled.</p>
              * <p>Valid values:</p>
              * <ul>
@@ -4724,6 +4800,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder targetFps(Integer targetFps) {
                 this.targetFps = targetFps;
+                return this;
+            }
+
+            /**
+             * ThreeScreen.
+             */
+            public Builder threeScreen(String threeScreen) {
+                this.threeScreen = threeScreen;
                 return this;
             }
 

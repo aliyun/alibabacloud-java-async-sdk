@@ -137,6 +137,9 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MemorySize")
         private String memorySize;
 
+        @com.aliyun.core.annotation.NameInMap("SaleTypes")
+        private java.util.List<String> saleTypes;
+
         @com.aliyun.core.annotation.NameInMap("Scopes")
         private java.util.List<String> scopes;
 
@@ -160,6 +163,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             this.instanceTypeFamily = builder.instanceTypeFamily;
             this.maxSessionCount = builder.maxSessionCount;
             this.memorySize = builder.memorySize;
+            this.saleTypes = builder.saleTypes;
             this.scopes = builder.scopes;
             this.stockState = builder.stockState;
             this.systemDiskSize = builder.systemDiskSize;
@@ -265,6 +269,13 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         }
 
         /**
+         * @return saleTypes
+         */
+        public java.util.List<String> getSaleTypes() {
+            return this.saleTypes;
+        }
+
+        /**
          * @return scopes
          */
         public java.util.List<String> getScopes() {
@@ -299,6 +310,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             private String instanceTypeFamily; 
             private Integer maxSessionCount; 
             private String memorySize; 
+            private java.util.List<String> saleTypes; 
             private java.util.List<String> scopes; 
             private String stockState; 
             private String systemDiskSize; 
@@ -320,6 +332,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
                 this.instanceTypeFamily = model.instanceTypeFamily;
                 this.maxSessionCount = model.maxSessionCount;
                 this.memorySize = model.memorySize;
+                this.saleTypes = model.saleTypes;
                 this.scopes = model.scopes;
                 this.stockState = model.stockState;
                 this.systemDiskSize = model.systemDiskSize;
@@ -456,6 +469,14 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
              */
             public Builder memorySize(String memorySize) {
                 this.memorySize = memorySize;
+                return this;
+            }
+
+            /**
+             * SaleTypes.
+             */
+            public Builder saleTypes(java.util.List<String> saleTypes) {
+                this.saleTypes = saleTypes;
                 return this;
             }
 

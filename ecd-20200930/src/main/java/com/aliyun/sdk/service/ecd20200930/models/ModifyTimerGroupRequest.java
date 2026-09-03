@@ -184,6 +184,9 @@ public class ModifyTimerGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("AppointmentTimer")
         private Long appointmentTimer;
 
+        @com.aliyun.core.annotation.NameInMap("CreateSnapshot")
+        private Boolean createSnapshot;
+
         @com.aliyun.core.annotation.NameInMap("EndCronExpression")
         private String endCronExpression;
 
@@ -234,6 +237,7 @@ public class ModifyTimerGroupRequest extends Request {
 
         private SegmentTimers(Builder builder) {
             this.appointmentTimer = builder.appointmentTimer;
+            this.createSnapshot = builder.createSnapshot;
             this.endCronExpression = builder.endCronExpression;
             this.enforce = builder.enforce;
             this.imageId = builder.imageId;
@@ -265,6 +269,13 @@ public class ModifyTimerGroupRequest extends Request {
          */
         public Long getAppointmentTimer() {
             return this.appointmentTimer;
+        }
+
+        /**
+         * @return createSnapshot
+         */
+        public Boolean getCreateSnapshot() {
+            return this.createSnapshot;
         }
 
         /**
@@ -381,6 +392,7 @@ public class ModifyTimerGroupRequest extends Request {
 
         public static final class Builder {
             private Long appointmentTimer; 
+            private Boolean createSnapshot; 
             private String endCronExpression; 
             private Boolean enforce; 
             private String imageId; 
@@ -403,6 +415,7 @@ public class ModifyTimerGroupRequest extends Request {
 
             private Builder(SegmentTimers model) {
                 this.appointmentTimer = model.appointmentTimer;
+                this.createSnapshot = model.createSnapshot;
                 this.endCronExpression = model.endCronExpression;
                 this.enforce = model.enforce;
                 this.imageId = model.imageId;
@@ -426,6 +439,14 @@ public class ModifyTimerGroupRequest extends Request {
              */
             public Builder appointmentTimer(Long appointmentTimer) {
                 this.appointmentTimer = appointmentTimer;
+                return this;
+            }
+
+            /**
+             * CreateSnapshot.
+             */
+            public Builder createSnapshot(Boolean createSnapshot) {
+                this.createSnapshot = createSnapshot;
                 return this;
             }
 
