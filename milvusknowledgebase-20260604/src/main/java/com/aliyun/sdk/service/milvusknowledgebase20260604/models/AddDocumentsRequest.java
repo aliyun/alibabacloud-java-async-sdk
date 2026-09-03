@@ -358,10 +358,14 @@ public class AddDocumentsRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
+        @com.aliyun.core.annotation.NameInMap("StrategyId")
+        private String strategyId;
+
         private Documents(Builder builder) {
             this.name = builder.name;
             this.path = builder.path;
             this.size = builder.size;
+            this.strategyId = builder.strategyId;
         }
 
         public static Builder builder() {
@@ -393,10 +397,18 @@ public class AddDocumentsRequest extends Request {
             return this.size;
         }
 
+        /**
+         * @return strategyId
+         */
+        public String getStrategyId() {
+            return this.strategyId;
+        }
+
         public static final class Builder {
             private String name; 
             private String path; 
             private Long size; 
+            private String strategyId; 
 
             private Builder() {
             } 
@@ -405,6 +417,7 @@ public class AddDocumentsRequest extends Request {
                 this.name = model.name;
                 this.path = model.path;
                 this.size = model.size;
+                this.strategyId = model.strategyId;
             } 
 
             /**
@@ -431,6 +444,14 @@ public class AddDocumentsRequest extends Request {
              */
             public Builder size(Long size) {
                 this.size = size;
+                return this;
+            }
+
+            /**
+             * StrategyId.
+             */
+            public Builder strategyId(String strategyId) {
+                this.strategyId = strategyId;
                 return this;
             }
 
