@@ -40,6 +40,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     ResponseIterable<String> confirmWithResponseIterable(ConfirmRequest request);
 
     /**
+     * @param request the request parameters of GetSessionContent  GetSessionContentRequest
+     * @return GetSessionContentResponse
+     */
+    CompletableFuture<GetSessionContentResponse> getSessionContent(GetSessionContentRequest request);
+
+    /**
      * @param request the request parameters of Interrupt  InterruptRequest
      * @return InterruptResponse
      */
