@@ -12,16 +12,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ReadNumGroupTotalResponseBody} extends {@link TeaModel}
+ * {@link ReadWebhookContactResponseBody} extends {@link TeaModel}
  *
- * <p>ReadNumGroupTotalResponseBody</p>
+ * <p>ReadWebhookContactResponseBody</p>
  */
-public class ReadNumGroupTotalResponseBody extends TeaModel {
+public class ReadWebhookContactResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List<Data> data;
+    private Data data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -32,7 +32,7 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private ReadNumGroupTotalResponseBody(Builder builder) {
+    private ReadWebhookContactResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -44,7 +44,7 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ReadNumGroupTotalResponseBody create() {
+    public static ReadWebhookContactResponseBody create() {
         return builder().build();
     }
 
@@ -62,7 +62,7 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List<Data> getData() {
+    public Data getData() {
         return this.data;
     }
 
@@ -89,7 +89,7 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List<Data> data; 
+        private Data data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -97,7 +97,7 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(ReadNumGroupTotalResponseBody model) {
+        private Builder(ReadWebhookContactResponseBody model) {
             this.code = model.code;
             this.data = model.data;
             this.message = model.message;
@@ -116,7 +116,7 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List<Data> data) {
+        public Builder data(Data data) {
             this.data = data;
             return this;
         }
@@ -145,40 +145,45 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
             return this;
         }
 
-        public ReadNumGroupTotalResponseBody build() {
-            return new ReadNumGroupTotalResponseBody(this);
+        public ReadWebhookContactResponseBody build() {
+            return new ReadWebhookContactResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link ReadNumGroupTotalResponseBody} extends {@link TeaModel}
+     * {@link ReadWebhookContactResponseBody} extends {@link TeaModel}
      *
-     * <p>ReadNumGroupTotalResponseBody</p>
+     * <p>ReadWebhookContactResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("GroupCode")
-        private String groupCode;
+        @com.aliyun.core.annotation.NameInMap("BotSecurityToken")
+        private String botSecurityToken;
 
-        @com.aliyun.core.annotation.NameInMap("Id")
-        private Long id;
+        @com.aliyun.core.annotation.NameInMap("ContactId")
+        private Long contactId;
 
-        @com.aliyun.core.annotation.NameInMap("ReadCount")
-        private Long readCount;
+        @com.aliyun.core.annotation.NameInMap("ContactName")
+        private String contactName;
 
-        @com.aliyun.core.annotation.NameInMap("TotalCount")
-        private Long totalCount;
+        @com.aliyun.core.annotation.NameInMap("SecurityToken")
+        @Deprecated
+        private String securityToken;
 
-        @com.aliyun.core.annotation.NameInMap("UnReadCount")
-        private Long unReadCount;
+        @com.aliyun.core.annotation.NameInMap("ServerUrl")
+        private String serverUrl;
+
+        @com.aliyun.core.annotation.NameInMap("WebhookType")
+        private String webhookType;
 
         private Data(Builder builder) {
-            this.groupCode = builder.groupCode;
-            this.id = builder.id;
-            this.readCount = builder.readCount;
-            this.totalCount = builder.totalCount;
-            this.unReadCount = builder.unReadCount;
+            this.botSecurityToken = builder.botSecurityToken;
+            this.contactId = builder.contactId;
+            this.contactName = builder.contactName;
+            this.securityToken = builder.securityToken;
+            this.serverUrl = builder.serverUrl;
+            this.webhookType = builder.webhookType;
         }
 
         public static Builder builder() {
@@ -190,95 +195,115 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
         }
 
         /**
-         * @return groupCode
+         * @return botSecurityToken
          */
-        public String getGroupCode() {
-            return this.groupCode;
+        public String getBotSecurityToken() {
+            return this.botSecurityToken;
         }
 
         /**
-         * @return id
+         * @return contactId
          */
-        public Long getId() {
-            return this.id;
+        public Long getContactId() {
+            return this.contactId;
         }
 
         /**
-         * @return readCount
+         * @return contactName
          */
-        public Long getReadCount() {
-            return this.readCount;
+        public String getContactName() {
+            return this.contactName;
         }
 
         /**
-         * @return totalCount
+         * @return securityToken
          */
-        public Long getTotalCount() {
-            return this.totalCount;
+        public String getSecurityToken() {
+            return this.securityToken;
         }
 
         /**
-         * @return unReadCount
+         * @return serverUrl
          */
-        public Long getUnReadCount() {
-            return this.unReadCount;
+        public String getServerUrl() {
+            return this.serverUrl;
+        }
+
+        /**
+         * @return webhookType
+         */
+        public String getWebhookType() {
+            return this.webhookType;
         }
 
         public static final class Builder {
-            private String groupCode; 
-            private Long id; 
-            private Long readCount; 
-            private Long totalCount; 
-            private Long unReadCount; 
+            private String botSecurityToken; 
+            private Long contactId; 
+            private String contactName; 
+            private String securityToken; 
+            private String serverUrl; 
+            private String webhookType; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
-                this.groupCode = model.groupCode;
-                this.id = model.id;
-                this.readCount = model.readCount;
-                this.totalCount = model.totalCount;
-                this.unReadCount = model.unReadCount;
+                this.botSecurityToken = model.botSecurityToken;
+                this.contactId = model.contactId;
+                this.contactName = model.contactName;
+                this.securityToken = model.securityToken;
+                this.serverUrl = model.serverUrl;
+                this.webhookType = model.webhookType;
             } 
 
             /**
-             * GroupCode.
+             * BotSecurityToken.
              */
-            public Builder groupCode(String groupCode) {
-                this.groupCode = groupCode;
+            public Builder botSecurityToken(String botSecurityToken) {
+                this.botSecurityToken = botSecurityToken;
                 return this;
             }
 
             /**
-             * Id.
+             * <p>webhook id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
-            public Builder id(Long id) {
-                this.id = id;
+            public Builder contactId(Long contactId) {
+                this.contactId = contactId;
                 return this;
             }
 
             /**
-             * ReadCount.
+             * ContactName.
              */
-            public Builder readCount(Long readCount) {
-                this.readCount = readCount;
+            public Builder contactName(String contactName) {
+                this.contactName = contactName;
                 return this;
             }
 
             /**
-             * TotalCount.
+             * SecurityToken.
              */
-            public Builder totalCount(Long totalCount) {
-                this.totalCount = totalCount;
+            public Builder securityToken(String securityToken) {
+                this.securityToken = securityToken;
                 return this;
             }
 
             /**
-             * UnReadCount.
+             * ServerUrl.
              */
-            public Builder unReadCount(Long unReadCount) {
-                this.unReadCount = unReadCount;
+            public Builder serverUrl(String serverUrl) {
+                this.serverUrl = serverUrl;
+                return this;
+            }
+
+            /**
+             * WebhookType.
+             */
+            public Builder webhookType(String webhookType) {
+                this.webhookType = webhookType;
                 return this;
             }
 

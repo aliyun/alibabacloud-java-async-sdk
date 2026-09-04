@@ -106,7 +106,10 @@ public class ReadMessageListResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For more information about error codes, see Error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ReadMessageListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ReadMessageListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ReadMessageListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>唯一请求id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A5F62766-1C2F-1F56-A39D-63E3D30F0633</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class ReadMessageListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,6 +174,9 @@ public class ReadMessageListResponseBody extends TeaModel {
      * <p>ReadMessageListResponseBody</p>
      */
     public static class Rows extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CategoryCode")
+        private String categoryCode;
+
         @com.aliyun.core.annotation.NameInMap("CategoryName")
         private String categoryName;
 
@@ -194,7 +213,11 @@ public class ReadMessageListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
+        @com.aliyun.core.annotation.NameInMap("Titleh")
+        private String titleh;
+
         private Rows(Builder builder) {
+            this.categoryCode = builder.categoryCode;
             this.categoryName = builder.categoryName;
             this._class = builder._class;
             this.classId = builder.classId;
@@ -207,6 +230,7 @@ public class ReadMessageListResponseBody extends TeaModel {
             this.msgId = builder.msgId;
             this.status = builder.status;
             this.title = builder.title;
+            this.titleh = builder.titleh;
         }
 
         public static Builder builder() {
@@ -215,6 +239,13 @@ public class ReadMessageListResponseBody extends TeaModel {
 
         public static Rows create() {
             return builder().build();
+        }
+
+        /**
+         * @return categoryCode
+         */
+        public String getCategoryCode() {
+            return this.categoryCode;
         }
 
         /**
@@ -301,7 +332,15 @@ public class ReadMessageListResponseBody extends TeaModel {
             return this.title;
         }
 
+        /**
+         * @return titleh
+         */
+        public String getTitleh() {
+            return this.titleh;
+        }
+
         public static final class Builder {
+            private String categoryCode; 
             private String categoryName; 
             private String _class; 
             private Long classId; 
@@ -314,11 +353,13 @@ public class ReadMessageListResponseBody extends TeaModel {
             private Long msgId; 
             private Long status; 
             private String title; 
+            private String titleh; 
 
             private Builder() {
             } 
 
             private Builder(Rows model) {
+                this.categoryCode = model.categoryCode;
                 this.categoryName = model.categoryName;
                 this._class = model._class;
                 this.classId = model.classId;
@@ -331,10 +372,22 @@ public class ReadMessageListResponseBody extends TeaModel {
                 this.msgId = model.msgId;
                 this.status = model.status;
                 this.title = model.title;
+                this.titleh = model.titleh;
             } 
 
             /**
-             * CategoryName.
+             * CategoryCode.
+             */
+            public Builder categoryCode(String categoryCode) {
+                this.categoryCode = categoryCode;
+                return this;
+            }
+
+            /**
+             * <p>CategoryName</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -342,7 +395,10 @@ public class ReadMessageListResponseBody extends TeaModel {
             }
 
             /**
-             * Class.
+             * <p>Class</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder _class(String _class) {
                 this._class = _class;
@@ -350,7 +406,10 @@ public class ReadMessageListResponseBody extends TeaModel {
             }
 
             /**
-             * ClassId.
+             * <p>ClassId</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder classId(Long classId) {
                 this.classId = classId;
@@ -358,7 +417,10 @@ public class ReadMessageListResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>内容</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -366,7 +428,10 @@ public class ReadMessageListResponseBody extends TeaModel {
             }
 
             /**
-             * Deleted.
+             * <p>删除</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder deleted(Integer deleted) {
                 this.deleted = deleted;
@@ -374,7 +439,10 @@ public class ReadMessageListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>创建时间</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1723772244000</p>
              */
             public Builder gmtCreated(Long gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -390,7 +458,10 @@ public class ReadMessageListResponseBody extends TeaModel {
             }
 
             /**
-             * MassId.
+             * <p>massId</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder massId(Long massId) {
                 this.massId = massId;
@@ -398,7 +469,10 @@ public class ReadMessageListResponseBody extends TeaModel {
             }
 
             /**
-             * Memo.
+             * <p>描述</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder memo(String memo) {
                 this.memo = memo;
@@ -406,7 +480,10 @@ public class ReadMessageListResponseBody extends TeaModel {
             }
 
             /**
-             * MsgId.
+             * <p>消息id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3727683838</p>
              */
             public Builder msgId(Long msgId) {
                 this.msgId = msgId;
@@ -414,7 +491,10 @@ public class ReadMessageListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>状态</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Long status) {
                 this.status = status;
@@ -422,10 +502,21 @@ public class ReadMessageListResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>标题</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder title(String title) {
                 this.title = title;
+                return this;
+            }
+
+            /**
+             * Titleh.
+             */
+            public Builder titleh(String titleh) {
+                this.titleh = titleh;
                 return this;
             }
 
@@ -541,7 +632,10 @@ public class ReadMessageListResponseBody extends TeaModel {
             } 
 
             /**
-             * Count.
+             * <p>The number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -549,7 +643,10 @@ public class ReadMessageListResponseBody extends TeaModel {
             }
 
             /**
-             * MaxResults.
+             * <p>The maximum number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder maxResults(Long maxResults) {
                 this.maxResults = maxResults;
@@ -557,7 +654,10 @@ public class ReadMessageListResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>If excess return values exist, this parameter is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -565,7 +665,10 @@ public class ReadMessageListResponseBody extends TeaModel {
             }
 
             /**
-             * Page.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -573,7 +676,10 @@ public class ReadMessageListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -581,7 +687,7 @@ public class ReadMessageListResponseBody extends TeaModel {
             }
 
             /**
-             * Rows.
+             * <p>The number of rows updated or returned on PolarDB-X 2.0 compute nodes.</p>
              */
             public Builder rows(java.util.List<Rows> rows) {
                 this.rows = rows;

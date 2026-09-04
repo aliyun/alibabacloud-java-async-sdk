@@ -46,6 +46,10 @@ public class ReadAllMessageRequest extends Request {
     private String cookies;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GroupCode")
+    private String groupCode;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SrcUrl")
     private String srcUrl;
 
@@ -66,6 +70,7 @@ public class ReadAllMessageRequest extends Request {
         this.classId = builder.classId;
         this.clientSource = builder.clientSource;
         this.cookies = builder.cookies;
+        this.groupCode = builder.groupCode;
         this.srcUrl = builder.srcUrl;
         this.tenantCode = builder.tenantCode;
         this.uidType = builder.uidType;
@@ -134,6 +139,13 @@ public class ReadAllMessageRequest extends Request {
     }
 
     /**
+     * @return groupCode
+     */
+    public String getGroupCode() {
+        return this.groupCode;
+    }
+
+    /**
      * @return srcUrl
      */
     public String getSrcUrl() {
@@ -162,6 +174,7 @@ public class ReadAllMessageRequest extends Request {
         private Long classId; 
         private String clientSource; 
         private String cookies; 
+        private String groupCode; 
         private String srcUrl; 
         private String tenantCode; 
         private String uidType; 
@@ -179,6 +192,7 @@ public class ReadAllMessageRequest extends Request {
             this.classId = request.classId;
             this.clientSource = request.clientSource;
             this.cookies = request.cookies;
+            this.groupCode = request.groupCode;
             this.srcUrl = request.srcUrl;
             this.tenantCode = request.tenantCode;
             this.uidType = request.uidType;
@@ -244,6 +258,15 @@ public class ReadAllMessageRequest extends Request {
         public Builder cookies(String cookies) {
             this.putBodyParameter("Cookies", cookies);
             this.cookies = cookies;
+            return this;
+        }
+
+        /**
+         * GroupCode.
+         */
+        public Builder groupCode(String groupCode) {
+            this.putBodyParameter("GroupCode", groupCode);
+            this.groupCode = groupCode;
             return this;
         }
 

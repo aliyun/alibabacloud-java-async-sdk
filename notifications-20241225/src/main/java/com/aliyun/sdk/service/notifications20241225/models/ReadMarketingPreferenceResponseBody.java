@@ -12,16 +12,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ReadNumGroupTotalResponseBody} extends {@link TeaModel}
+ * {@link ReadMarketingPreferenceResponseBody} extends {@link TeaModel}
  *
- * <p>ReadNumGroupTotalResponseBody</p>
+ * <p>ReadMarketingPreferenceResponseBody</p>
  */
-public class ReadNumGroupTotalResponseBody extends TeaModel {
+public class ReadMarketingPreferenceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List<Data> data;
+    private Data data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -32,7 +32,7 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private ReadNumGroupTotalResponseBody(Builder builder) {
+    private ReadMarketingPreferenceResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -44,7 +44,7 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ReadNumGroupTotalResponseBody create() {
+    public static ReadMarketingPreferenceResponseBody create() {
         return builder().build();
     }
 
@@ -62,7 +62,7 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List<Data> getData() {
+    public Data getData() {
         return this.data;
     }
 
@@ -89,7 +89,7 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List<Data> data; 
+        private Data data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -97,7 +97,7 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(ReadNumGroupTotalResponseBody model) {
+        private Builder(ReadMarketingPreferenceResponseBody model) {
             this.code = model.code;
             this.data = model.data;
             this.message = model.message;
@@ -116,7 +116,7 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List<Data> data) {
+        public Builder data(Data data) {
             this.data = data;
             return this;
         }
@@ -145,40 +145,44 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
             return this;
         }
 
-        public ReadNumGroupTotalResponseBody build() {
-            return new ReadNumGroupTotalResponseBody(this);
+        public ReadMarketingPreferenceResponseBody build() {
+            return new ReadMarketingPreferenceResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link ReadNumGroupTotalResponseBody} extends {@link TeaModel}
+     * {@link ReadMarketingPreferenceResponseBody} extends {@link TeaModel}
      *
-     * <p>ReadNumGroupTotalResponseBody</p>
+     * <p>ReadMarketingPreferenceResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("GroupCode")
-        private String groupCode;
+        @com.aliyun.core.annotation.NameInMap("AllowMarketing")
+        private Boolean allowMarketing;
 
-        @com.aliyun.core.annotation.NameInMap("Id")
-        private Long id;
+        @com.aliyun.core.annotation.NameInMap("ContactEmail")
+        private String contactEmail;
 
-        @com.aliyun.core.annotation.NameInMap("ReadCount")
-        private Long readCount;
+        @com.aliyun.core.annotation.NameInMap("ContactId")
+        private Long contactId;
 
-        @com.aliyun.core.annotation.NameInMap("TotalCount")
-        private Long totalCount;
+        @com.aliyun.core.annotation.NameInMap("ContactMobile")
+        private String contactMobile;
 
-        @com.aliyun.core.annotation.NameInMap("UnReadCount")
-        private Long unReadCount;
+        @com.aliyun.core.annotation.NameInMap("ContactName")
+        private String contactName;
+
+        @com.aliyun.core.annotation.NameInMap("Position")
+        private String position;
 
         private Data(Builder builder) {
-            this.groupCode = builder.groupCode;
-            this.id = builder.id;
-            this.readCount = builder.readCount;
-            this.totalCount = builder.totalCount;
-            this.unReadCount = builder.unReadCount;
+            this.allowMarketing = builder.allowMarketing;
+            this.contactEmail = builder.contactEmail;
+            this.contactId = builder.contactId;
+            this.contactMobile = builder.contactMobile;
+            this.contactName = builder.contactName;
+            this.position = builder.position;
         }
 
         public static Builder builder() {
@@ -190,95 +194,112 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
         }
 
         /**
-         * @return groupCode
+         * @return allowMarketing
          */
-        public String getGroupCode() {
-            return this.groupCode;
+        public Boolean getAllowMarketing() {
+            return this.allowMarketing;
         }
 
         /**
-         * @return id
+         * @return contactEmail
          */
-        public Long getId() {
-            return this.id;
+        public String getContactEmail() {
+            return this.contactEmail;
         }
 
         /**
-         * @return readCount
+         * @return contactId
          */
-        public Long getReadCount() {
-            return this.readCount;
+        public Long getContactId() {
+            return this.contactId;
         }
 
         /**
-         * @return totalCount
+         * @return contactMobile
          */
-        public Long getTotalCount() {
-            return this.totalCount;
+        public String getContactMobile() {
+            return this.contactMobile;
         }
 
         /**
-         * @return unReadCount
+         * @return contactName
          */
-        public Long getUnReadCount() {
-            return this.unReadCount;
+        public String getContactName() {
+            return this.contactName;
+        }
+
+        /**
+         * @return position
+         */
+        public String getPosition() {
+            return this.position;
         }
 
         public static final class Builder {
-            private String groupCode; 
-            private Long id; 
-            private Long readCount; 
-            private Long totalCount; 
-            private Long unReadCount; 
+            private Boolean allowMarketing; 
+            private String contactEmail; 
+            private Long contactId; 
+            private String contactMobile; 
+            private String contactName; 
+            private String position; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
-                this.groupCode = model.groupCode;
-                this.id = model.id;
-                this.readCount = model.readCount;
-                this.totalCount = model.totalCount;
-                this.unReadCount = model.unReadCount;
+                this.allowMarketing = model.allowMarketing;
+                this.contactEmail = model.contactEmail;
+                this.contactId = model.contactId;
+                this.contactMobile = model.contactMobile;
+                this.contactName = model.contactName;
+                this.position = model.position;
             } 
 
             /**
-             * GroupCode.
+             * AllowMarketing.
              */
-            public Builder groupCode(String groupCode) {
-                this.groupCode = groupCode;
+            public Builder allowMarketing(Boolean allowMarketing) {
+                this.allowMarketing = allowMarketing;
                 return this;
             }
 
             /**
-             * Id.
+             * ContactEmail.
              */
-            public Builder id(Long id) {
-                this.id = id;
+            public Builder contactEmail(String contactEmail) {
+                this.contactEmail = contactEmail;
                 return this;
             }
 
             /**
-             * ReadCount.
+             * ContactId.
              */
-            public Builder readCount(Long readCount) {
-                this.readCount = readCount;
+            public Builder contactId(Long contactId) {
+                this.contactId = contactId;
                 return this;
             }
 
             /**
-             * TotalCount.
+             * ContactMobile.
              */
-            public Builder totalCount(Long totalCount) {
-                this.totalCount = totalCount;
+            public Builder contactMobile(String contactMobile) {
+                this.contactMobile = contactMobile;
                 return this;
             }
 
             /**
-             * UnReadCount.
+             * ContactName.
              */
-            public Builder unReadCount(Long unReadCount) {
-                this.unReadCount = unReadCount;
+            public Builder contactName(String contactName) {
+                this.contactName = contactName;
+                return this;
+            }
+
+            /**
+             * Position.
+             */
+            public Builder position(String position) {
+                this.position = position;
                 return this;
             }
 

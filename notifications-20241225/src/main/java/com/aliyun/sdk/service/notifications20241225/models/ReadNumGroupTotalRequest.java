@@ -50,6 +50,10 @@ public class ReadNumGroupTotalRequest extends Request {
     private String tenantCode;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Title")
+    private String title;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UidType")
     private String uidType;
 
@@ -63,6 +67,7 @@ public class ReadNumGroupTotalRequest extends Request {
         this.cookies = builder.cookies;
         this.srcUrl = builder.srcUrl;
         this.tenantCode = builder.tenantCode;
+        this.title = builder.title;
         this.uidType = builder.uidType;
     }
 
@@ -136,6 +141,13 @@ public class ReadNumGroupTotalRequest extends Request {
     }
 
     /**
+     * @return title
+     */
+    public String getTitle() {
+        return this.title;
+    }
+
+    /**
      * @return uidType
      */
     public String getUidType() {
@@ -151,6 +163,7 @@ public class ReadNumGroupTotalRequest extends Request {
         private String cookies; 
         private String srcUrl; 
         private String tenantCode; 
+        private String title; 
         private String uidType; 
 
         private Builder() {
@@ -167,6 +180,7 @@ public class ReadNumGroupTotalRequest extends Request {
             this.cookies = request.cookies;
             this.srcUrl = request.srcUrl;
             this.tenantCode = request.tenantCode;
+            this.title = request.title;
             this.uidType = request.uidType;
         } 
 
@@ -239,6 +253,15 @@ public class ReadNumGroupTotalRequest extends Request {
         public Builder tenantCode(String tenantCode) {
             this.putBodyParameter("TenantCode", tenantCode);
             this.tenantCode = tenantCode;
+            return this;
+        }
+
+        /**
+         * Title.
+         */
+        public Builder title(String title) {
+            this.putBodyParameter("Title", title);
+            this.title = title;
             return this;
         }
 

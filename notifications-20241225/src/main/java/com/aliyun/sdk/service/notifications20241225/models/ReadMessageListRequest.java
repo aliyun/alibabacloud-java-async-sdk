@@ -50,6 +50,14 @@ public class ReadMessageListRequest extends Request {
     private String cookies;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GroupCode")
+    private String groupCode;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("History")
+    private String history;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Loc")
     private String loc;
 
@@ -99,6 +107,8 @@ public class ReadMessageListRequest extends Request {
         this.clientSource = builder.clientSource;
         this.content = builder.content;
         this.cookies = builder.cookies;
+        this.groupCode = builder.groupCode;
+        this.history = builder.history;
         this.loc = builder.loc;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -181,6 +191,20 @@ public class ReadMessageListRequest extends Request {
     }
 
     /**
+     * @return groupCode
+     */
+    public String getGroupCode() {
+        return this.groupCode;
+    }
+
+    /**
+     * @return history
+     */
+    public String getHistory() {
+        return this.history;
+    }
+
+    /**
      * @return loc
      */
     public String getLoc() {
@@ -259,6 +283,8 @@ public class ReadMessageListRequest extends Request {
         private String clientSource; 
         private String content; 
         private String cookies; 
+        private String groupCode; 
+        private String history; 
         private String loc; 
         private Integer maxResults; 
         private String nextToken; 
@@ -284,6 +310,8 @@ public class ReadMessageListRequest extends Request {
             this.clientSource = request.clientSource;
             this.content = request.content;
             this.cookies = request.cookies;
+            this.groupCode = request.groupCode;
+            this.history = request.history;
             this.loc = request.loc;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -297,7 +325,10 @@ public class ReadMessageListRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>语言，默认为简体中文</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putBodyParameter("AcceptLanguage", acceptLanguage);
@@ -306,7 +337,10 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>系统参数，无需填写</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder appName(String appName) {
             this.putBodyParameter("AppName", appName);
@@ -315,7 +349,10 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * BizName.
+         * <p>系统参数，无需填写</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder bizName(String bizName) {
             this.putBodyParameter("BizName", bizName);
@@ -324,7 +361,10 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * CallerProtocol.
+         * <p>系统参数，无需填写</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder callerProtocol(String callerProtocol) {
             this.putBodyParameter("CallerProtocol", callerProtocol);
@@ -333,7 +373,10 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * ClassId.
+         * <p>消息类目ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder classId(Long classId) {
             this.putBodyParameter("ClassId", classId);
@@ -342,7 +385,10 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * ClientSource.
+         * <p>系统参数，无需填写</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder clientSource(String clientSource) {
             this.putBodyParameter("ClientSource", clientSource);
@@ -351,7 +397,10 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * Content.
+         * <p>消息内容，用于模糊搜索</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;消息内容示例“</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -360,7 +409,10 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * Cookies.
+         * <p>系统参数，无需填写</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder cookies(String cookies) {
             this.putBodyParameter("Cookies", cookies);
@@ -369,7 +421,28 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * Loc.
+         * GroupCode.
+         */
+        public Builder groupCode(String groupCode) {
+            this.putBodyParameter("GroupCode", groupCode);
+            this.groupCode = groupCode;
+            return this;
+        }
+
+        /**
+         * History.
+         */
+        public Builder history(String history) {
+            this.putBodyParameter("History", history);
+            this.history = history;
+            return this;
+        }
+
+        /**
+         * <p>栏位 nav代表控制台topbar</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder loc(String loc) {
             this.putBodyParameter("Loc", loc);
@@ -378,7 +451,10 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>系统参数，无需填写</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -387,7 +463,10 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>系统参数，无需填写</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -396,7 +475,10 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * Page.
+         * <p>分页查询页码</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder page(Integer page) {
             this.putBodyParameter("Page", page);
@@ -405,7 +487,10 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>分页查询大小</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -414,7 +499,10 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * SrcUrl.
+         * <p>系统参数，无需填写</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder srcUrl(String srcUrl) {
             this.putBodyParameter("SrcUrl", srcUrl);
@@ -423,7 +511,10 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>消息状态，已读为1，未读为0</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putBodyParameter("Status", status);
@@ -432,7 +523,10 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * TenantCode.
+         * <p>系统参数，无需填写</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder tenantCode(String tenantCode) {
             this.putBodyParameter("TenantCode", tenantCode);
@@ -441,7 +535,10 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>消息标题，用于模糊搜索</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;标题示例“</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("Title", title);
@@ -450,7 +547,10 @@ public class ReadMessageListRequest extends Request {
         }
 
         /**
-         * UidType.
+         * <p>系统参数，无需填写</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder uidType(String uidType) {
             this.putBodyParameter("UidType", uidType);

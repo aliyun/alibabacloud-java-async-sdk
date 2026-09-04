@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ReadMessageContentRequest} extends {@link RequestModel}
+ * {@link TestWebhookContactRequest} extends {@link RequestModel}
  *
- * <p>ReadMessageContentRequest</p>
+ * <p>TestWebhookContactRequest</p>
  */
-public class ReadMessageContentRequest extends Request {
+public class TestWebhookContactRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
@@ -30,40 +30,40 @@ public class ReadMessageContentRequest extends Request {
     private String bizName;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("CallerProtocol")
-    private String callerProtocol;
+    @com.aliyun.core.annotation.NameInMap("BotSecurityToken")
+    private String botSecurityToken;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("ClassId")
-    private Long classId;
+    @com.aliyun.core.annotation.NameInMap("CallerProtocol")
+    private String callerProtocol;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ClientSource")
     private String clientSource;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ContactId")
+    private Long contactId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ContactName")
+    private String contactName;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Cookies")
     private String cookies;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("GroupCode")
-    private String groupCode;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("History")
-    private Boolean history;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("MsgId")
-    private String msgId;
+    @com.aliyun.core.annotation.NameInMap("ServerUrl")
+    private String serverUrl;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SrcUrl")
     private String srcUrl;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Status")
-    private Integer status;
+    @com.aliyun.core.annotation.NameInMap("TemplateCode")
+    private String templateCode;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TenantCode")
@@ -73,29 +73,34 @@ public class ReadMessageContentRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("UidType")
     private String uidType;
 
-    private ReadMessageContentRequest(Builder builder) {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WebhookType")
+    private String webhookType;
+
+    private TestWebhookContactRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.appName = builder.appName;
         this.bizName = builder.bizName;
+        this.botSecurityToken = builder.botSecurityToken;
         this.callerProtocol = builder.callerProtocol;
-        this.classId = builder.classId;
         this.clientSource = builder.clientSource;
+        this.contactId = builder.contactId;
+        this.contactName = builder.contactName;
         this.cookies = builder.cookies;
-        this.groupCode = builder.groupCode;
-        this.history = builder.history;
-        this.msgId = builder.msgId;
+        this.serverUrl = builder.serverUrl;
         this.srcUrl = builder.srcUrl;
-        this.status = builder.status;
+        this.templateCode = builder.templateCode;
         this.tenantCode = builder.tenantCode;
         this.uidType = builder.uidType;
+        this.webhookType = builder.webhookType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ReadMessageContentRequest create() {
+    public static TestWebhookContactRequest create() {
         return builder().build();
     }
 
@@ -126,17 +131,17 @@ public class ReadMessageContentRequest extends Request {
     }
 
     /**
+     * @return botSecurityToken
+     */
+    public String getBotSecurityToken() {
+        return this.botSecurityToken;
+    }
+
+    /**
      * @return callerProtocol
      */
     public String getCallerProtocol() {
         return this.callerProtocol;
-    }
-
-    /**
-     * @return classId
-     */
-    public Long getClassId() {
-        return this.classId;
     }
 
     /**
@@ -147,6 +152,20 @@ public class ReadMessageContentRequest extends Request {
     }
 
     /**
+     * @return contactId
+     */
+    public Long getContactId() {
+        return this.contactId;
+    }
+
+    /**
+     * @return contactName
+     */
+    public String getContactName() {
+        return this.contactName;
+    }
+
+    /**
      * @return cookies
      */
     public String getCookies() {
@@ -154,24 +173,10 @@ public class ReadMessageContentRequest extends Request {
     }
 
     /**
-     * @return groupCode
+     * @return serverUrl
      */
-    public String getGroupCode() {
-        return this.groupCode;
-    }
-
-    /**
-     * @return history
-     */
-    public Boolean getHistory() {
-        return this.history;
-    }
-
-    /**
-     * @return msgId
-     */
-    public String getMsgId() {
-        return this.msgId;
+    public String getServerUrl() {
+        return this.serverUrl;
     }
 
     /**
@@ -182,10 +187,10 @@ public class ReadMessageContentRequest extends Request {
     }
 
     /**
-     * @return status
+     * @return templateCode
      */
-    public Integer getStatus() {
-        return this.status;
+    public String getTemplateCode() {
+        return this.templateCode;
     }
 
     /**
@@ -202,42 +207,51 @@ public class ReadMessageContentRequest extends Request {
         return this.uidType;
     }
 
-    public static final class Builder extends Request.Builder<ReadMessageContentRequest, Builder> {
+    /**
+     * @return webhookType
+     */
+    public String getWebhookType() {
+        return this.webhookType;
+    }
+
+    public static final class Builder extends Request.Builder<TestWebhookContactRequest, Builder> {
         private String acceptLanguage; 
         private String appName; 
         private String bizName; 
+        private String botSecurityToken; 
         private String callerProtocol; 
-        private Long classId; 
         private String clientSource; 
+        private Long contactId; 
+        private String contactName; 
         private String cookies; 
-        private String groupCode; 
-        private Boolean history; 
-        private String msgId; 
+        private String serverUrl; 
         private String srcUrl; 
-        private Integer status; 
+        private String templateCode; 
         private String tenantCode; 
         private String uidType; 
+        private String webhookType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ReadMessageContentRequest request) {
+        private Builder(TestWebhookContactRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.appName = request.appName;
             this.bizName = request.bizName;
+            this.botSecurityToken = request.botSecurityToken;
             this.callerProtocol = request.callerProtocol;
-            this.classId = request.classId;
             this.clientSource = request.clientSource;
+            this.contactId = request.contactId;
+            this.contactName = request.contactName;
             this.cookies = request.cookies;
-            this.groupCode = request.groupCode;
-            this.history = request.history;
-            this.msgId = request.msgId;
+            this.serverUrl = request.serverUrl;
             this.srcUrl = request.srcUrl;
-            this.status = request.status;
+            this.templateCode = request.templateCode;
             this.tenantCode = request.tenantCode;
             this.uidType = request.uidType;
+            this.webhookType = request.webhookType;
         } 
 
         /**
@@ -268,20 +282,20 @@ public class ReadMessageContentRequest extends Request {
         }
 
         /**
+         * BotSecurityToken.
+         */
+        public Builder botSecurityToken(String botSecurityToken) {
+            this.putBodyParameter("BotSecurityToken", botSecurityToken);
+            this.botSecurityToken = botSecurityToken;
+            return this;
+        }
+
+        /**
          * CallerProtocol.
          */
         public Builder callerProtocol(String callerProtocol) {
             this.putBodyParameter("CallerProtocol", callerProtocol);
             this.callerProtocol = callerProtocol;
-            return this;
-        }
-
-        /**
-         * ClassId.
-         */
-        public Builder classId(Long classId) {
-            this.putBodyParameter("ClassId", classId);
-            this.classId = classId;
             return this;
         }
 
@@ -295,6 +309,27 @@ public class ReadMessageContentRequest extends Request {
         }
 
         /**
+         * <p>webhook id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        public Builder contactId(Long contactId) {
+            this.putBodyParameter("ContactId", contactId);
+            this.contactId = contactId;
+            return this;
+        }
+
+        /**
+         * ContactName.
+         */
+        public Builder contactName(String contactName) {
+            this.putBodyParameter("ContactName", contactName);
+            this.contactName = contactName;
+            return this;
+        }
+
+        /**
          * Cookies.
          */
         public Builder cookies(String cookies) {
@@ -304,29 +339,11 @@ public class ReadMessageContentRequest extends Request {
         }
 
         /**
-         * GroupCode.
+         * ServerUrl.
          */
-        public Builder groupCode(String groupCode) {
-            this.putBodyParameter("GroupCode", groupCode);
-            this.groupCode = groupCode;
-            return this;
-        }
-
-        /**
-         * History.
-         */
-        public Builder history(Boolean history) {
-            this.putBodyParameter("History", history);
-            this.history = history;
-            return this;
-        }
-
-        /**
-         * MsgId.
-         */
-        public Builder msgId(String msgId) {
-            this.putBodyParameter("MsgId", msgId);
-            this.msgId = msgId;
+        public Builder serverUrl(String serverUrl) {
+            this.putBodyParameter("ServerUrl", serverUrl);
+            this.serverUrl = serverUrl;
             return this;
         }
 
@@ -340,11 +357,11 @@ public class ReadMessageContentRequest extends Request {
         }
 
         /**
-         * Status.
+         * TemplateCode.
          */
-        public Builder status(Integer status) {
-            this.putBodyParameter("Status", status);
-            this.status = status;
+        public Builder templateCode(String templateCode) {
+            this.putBodyParameter("TemplateCode", templateCode);
+            this.templateCode = templateCode;
             return this;
         }
 
@@ -366,9 +383,18 @@ public class ReadMessageContentRequest extends Request {
             return this;
         }
 
+        /**
+         * WebhookType.
+         */
+        public Builder webhookType(String webhookType) {
+            this.putBodyParameter("WebhookType", webhookType);
+            this.webhookType = webhookType;
+            return this;
+        }
+
         @Override
-        public ReadMessageContentRequest build() {
-            return new ReadMessageContentRequest(this);
+        public TestWebhookContactRequest build() {
+            return new TestWebhookContactRequest(this);
         } 
 
     } 

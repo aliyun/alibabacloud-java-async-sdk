@@ -12,16 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ReadNumGroupTotalResponseBody} extends {@link TeaModel}
+ * {@link ReadWebhookContactSendTemplateListResponseBody} extends {@link TeaModel}
  *
- * <p>ReadNumGroupTotalResponseBody</p>
+ * <p>ReadWebhookContactSendTemplateListResponseBody</p>
  */
-public class ReadNumGroupTotalResponseBody extends TeaModel {
+public class ReadWebhookContactSendTemplateListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List<Data> data;
+
+    @com.aliyun.core.annotation.NameInMap("HttpCode")
+    private Integer httpCode;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -32,9 +35,10 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private ReadNumGroupTotalResponseBody(Builder builder) {
+    private ReadWebhookContactSendTemplateListResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
+        this.httpCode = builder.httpCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -44,7 +48,7 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ReadNumGroupTotalResponseBody create() {
+    public static ReadWebhookContactSendTemplateListResponseBody create() {
         return builder().build();
     }
 
@@ -64,6 +68,13 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
      */
     public java.util.List<Data> getData() {
         return this.data;
+    }
+
+    /**
+     * @return httpCode
+     */
+    public Integer getHttpCode() {
+        return this.httpCode;
     }
 
     /**
@@ -90,6 +101,7 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private java.util.List<Data> data; 
+        private Integer httpCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -97,9 +109,10 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(ReadNumGroupTotalResponseBody model) {
+        private Builder(ReadWebhookContactSendTemplateListResponseBody model) {
             this.code = model.code;
             this.data = model.data;
+            this.httpCode = model.httpCode;
             this.message = model.message;
             this.requestId = model.requestId;
             this.success = model.success;
@@ -118,6 +131,14 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
+            return this;
+        }
+
+        /**
+         * HttpCode.
+         */
+        public Builder httpCode(Integer httpCode) {
+            this.httpCode = httpCode;
             return this;
         }
 
@@ -145,40 +166,28 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
             return this;
         }
 
-        public ReadNumGroupTotalResponseBody build() {
-            return new ReadNumGroupTotalResponseBody(this);
+        public ReadWebhookContactSendTemplateListResponseBody build() {
+            return new ReadWebhookContactSendTemplateListResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link ReadNumGroupTotalResponseBody} extends {@link TeaModel}
+     * {@link ReadWebhookContactSendTemplateListResponseBody} extends {@link TeaModel}
      *
-     * <p>ReadNumGroupTotalResponseBody</p>
+     * <p>ReadWebhookContactSendTemplateListResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("GroupCode")
-        private String groupCode;
+        @com.aliyun.core.annotation.NameInMap("Code")
+        private String code;
 
-        @com.aliyun.core.annotation.NameInMap("Id")
-        private Long id;
-
-        @com.aliyun.core.annotation.NameInMap("ReadCount")
-        private Long readCount;
-
-        @com.aliyun.core.annotation.NameInMap("TotalCount")
-        private Long totalCount;
-
-        @com.aliyun.core.annotation.NameInMap("UnReadCount")
-        private Long unReadCount;
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private Object template;
 
         private Data(Builder builder) {
-            this.groupCode = builder.groupCode;
-            this.id = builder.id;
-            this.readCount = builder.readCount;
-            this.totalCount = builder.totalCount;
-            this.unReadCount = builder.unReadCount;
+            this.code = builder.code;
+            this.template = builder.template;
         }
 
         public static Builder builder() {
@@ -190,95 +199,44 @@ public class ReadNumGroupTotalResponseBody extends TeaModel {
         }
 
         /**
-         * @return groupCode
+         * @return code
          */
-        public String getGroupCode() {
-            return this.groupCode;
+        public String getCode() {
+            return this.code;
         }
 
         /**
-         * @return id
+         * @return template
          */
-        public Long getId() {
-            return this.id;
-        }
-
-        /**
-         * @return readCount
-         */
-        public Long getReadCount() {
-            return this.readCount;
-        }
-
-        /**
-         * @return totalCount
-         */
-        public Long getTotalCount() {
-            return this.totalCount;
-        }
-
-        /**
-         * @return unReadCount
-         */
-        public Long getUnReadCount() {
-            return this.unReadCount;
+        public Object getTemplate() {
+            return this.template;
         }
 
         public static final class Builder {
-            private String groupCode; 
-            private Long id; 
-            private Long readCount; 
-            private Long totalCount; 
-            private Long unReadCount; 
+            private String code; 
+            private Object template; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
-                this.groupCode = model.groupCode;
-                this.id = model.id;
-                this.readCount = model.readCount;
-                this.totalCount = model.totalCount;
-                this.unReadCount = model.unReadCount;
+                this.code = model.code;
+                this.template = model.template;
             } 
 
             /**
-             * GroupCode.
+             * Code.
              */
-            public Builder groupCode(String groupCode) {
-                this.groupCode = groupCode;
+            public Builder code(String code) {
+                this.code = code;
                 return this;
             }
 
             /**
-             * Id.
+             * Template.
              */
-            public Builder id(Long id) {
-                this.id = id;
-                return this;
-            }
-
-            /**
-             * ReadCount.
-             */
-            public Builder readCount(Long readCount) {
-                this.readCount = readCount;
-                return this;
-            }
-
-            /**
-             * TotalCount.
-             */
-            public Builder totalCount(Long totalCount) {
-                this.totalCount = totalCount;
-                return this;
-            }
-
-            /**
-             * UnReadCount.
-             */
-            public Builder unReadCount(Long unReadCount) {
-                this.unReadCount = unReadCount;
+            public Builder template(Object template) {
+                this.template = template;
                 return this;
             }
 

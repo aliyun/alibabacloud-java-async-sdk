@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ReadMessageContentRequest} extends {@link RequestModel}
+ * {@link ReadRevisionHistoryListRequest} extends {@link RequestModel}
  *
- * <p>ReadMessageContentRequest</p>
+ * <p>ReadRevisionHistoryListRequest</p>
  */
-public class ReadMessageContentRequest extends Request {
+public class ReadRevisionHistoryListRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
@@ -34,8 +34,12 @@ public class ReadMessageContentRequest extends Request {
     private String callerProtocol;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("ClassId")
-    private Long classId;
+    @com.aliyun.core.annotation.NameInMap("CategoryCode")
+    private String categoryCode;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChannelGroupCode")
+    private String channelGroupCode;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ClientSource")
@@ -46,24 +50,12 @@ public class ReadMessageContentRequest extends Request {
     private String cookies;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("GroupCode")
-    private String groupCode;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("History")
-    private Boolean history;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("MsgId")
-    private String msgId;
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
+    private PageInfo pageInfo;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SrcUrl")
     private String srcUrl;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Status")
-    private Integer status;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TenantCode")
@@ -73,20 +65,18 @@ public class ReadMessageContentRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("UidType")
     private String uidType;
 
-    private ReadMessageContentRequest(Builder builder) {
+    private ReadRevisionHistoryListRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.appName = builder.appName;
         this.bizName = builder.bizName;
         this.callerProtocol = builder.callerProtocol;
-        this.classId = builder.classId;
+        this.categoryCode = builder.categoryCode;
+        this.channelGroupCode = builder.channelGroupCode;
         this.clientSource = builder.clientSource;
         this.cookies = builder.cookies;
-        this.groupCode = builder.groupCode;
-        this.history = builder.history;
-        this.msgId = builder.msgId;
+        this.pageInfo = builder.pageInfo;
         this.srcUrl = builder.srcUrl;
-        this.status = builder.status;
         this.tenantCode = builder.tenantCode;
         this.uidType = builder.uidType;
     }
@@ -95,7 +85,7 @@ public class ReadMessageContentRequest extends Request {
         return new Builder();
     }
 
-    public static ReadMessageContentRequest create() {
+    public static ReadRevisionHistoryListRequest create() {
         return builder().build();
     }
 
@@ -133,10 +123,17 @@ public class ReadMessageContentRequest extends Request {
     }
 
     /**
-     * @return classId
+     * @return categoryCode
      */
-    public Long getClassId() {
-        return this.classId;
+    public String getCategoryCode() {
+        return this.categoryCode;
+    }
+
+    /**
+     * @return channelGroupCode
+     */
+    public String getChannelGroupCode() {
+        return this.channelGroupCode;
     }
 
     /**
@@ -154,24 +151,10 @@ public class ReadMessageContentRequest extends Request {
     }
 
     /**
-     * @return groupCode
+     * @return pageInfo
      */
-    public String getGroupCode() {
-        return this.groupCode;
-    }
-
-    /**
-     * @return history
-     */
-    public Boolean getHistory() {
-        return this.history;
-    }
-
-    /**
-     * @return msgId
-     */
-    public String getMsgId() {
-        return this.msgId;
+    public PageInfo getPageInfo() {
+        return this.pageInfo;
     }
 
     /**
@@ -179,13 +162,6 @@ public class ReadMessageContentRequest extends Request {
      */
     public String getSrcUrl() {
         return this.srcUrl;
-    }
-
-    /**
-     * @return status
-     */
-    public Integer getStatus() {
-        return this.status;
     }
 
     /**
@@ -202,19 +178,17 @@ public class ReadMessageContentRequest extends Request {
         return this.uidType;
     }
 
-    public static final class Builder extends Request.Builder<ReadMessageContentRequest, Builder> {
+    public static final class Builder extends Request.Builder<ReadRevisionHistoryListRequest, Builder> {
         private String acceptLanguage; 
         private String appName; 
         private String bizName; 
         private String callerProtocol; 
-        private Long classId; 
+        private String categoryCode; 
+        private String channelGroupCode; 
         private String clientSource; 
         private String cookies; 
-        private String groupCode; 
-        private Boolean history; 
-        private String msgId; 
+        private PageInfo pageInfo; 
         private String srcUrl; 
-        private Integer status; 
         private String tenantCode; 
         private String uidType; 
 
@@ -222,20 +196,18 @@ public class ReadMessageContentRequest extends Request {
             super();
         } 
 
-        private Builder(ReadMessageContentRequest request) {
+        private Builder(ReadRevisionHistoryListRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.appName = request.appName;
             this.bizName = request.bizName;
             this.callerProtocol = request.callerProtocol;
-            this.classId = request.classId;
+            this.categoryCode = request.categoryCode;
+            this.channelGroupCode = request.channelGroupCode;
             this.clientSource = request.clientSource;
             this.cookies = request.cookies;
-            this.groupCode = request.groupCode;
-            this.history = request.history;
-            this.msgId = request.msgId;
+            this.pageInfo = request.pageInfo;
             this.srcUrl = request.srcUrl;
-            this.status = request.status;
             this.tenantCode = request.tenantCode;
             this.uidType = request.uidType;
         } 
@@ -277,11 +249,20 @@ public class ReadMessageContentRequest extends Request {
         }
 
         /**
-         * ClassId.
+         * CategoryCode.
          */
-        public Builder classId(Long classId) {
-            this.putBodyParameter("ClassId", classId);
-            this.classId = classId;
+        public Builder categoryCode(String categoryCode) {
+            this.putBodyParameter("CategoryCode", categoryCode);
+            this.categoryCode = categoryCode;
+            return this;
+        }
+
+        /**
+         * ChannelGroupCode.
+         */
+        public Builder channelGroupCode(String channelGroupCode) {
+            this.putBodyParameter("ChannelGroupCode", channelGroupCode);
+            this.channelGroupCode = channelGroupCode;
             return this;
         }
 
@@ -304,29 +285,12 @@ public class ReadMessageContentRequest extends Request {
         }
 
         /**
-         * GroupCode.
+         * PageInfo.
          */
-        public Builder groupCode(String groupCode) {
-            this.putBodyParameter("GroupCode", groupCode);
-            this.groupCode = groupCode;
-            return this;
-        }
-
-        /**
-         * History.
-         */
-        public Builder history(Boolean history) {
-            this.putBodyParameter("History", history);
-            this.history = history;
-            return this;
-        }
-
-        /**
-         * MsgId.
-         */
-        public Builder msgId(String msgId) {
-            this.putBodyParameter("MsgId", msgId);
-            this.msgId = msgId;
+        public Builder pageInfo(PageInfo pageInfo) {
+            String pageInfoShrink = shrink(pageInfo, "PageInfo", "json");
+            this.putBodyParameter("PageInfo", pageInfoShrink);
+            this.pageInfo = pageInfo;
             return this;
         }
 
@@ -336,15 +300,6 @@ public class ReadMessageContentRequest extends Request {
         public Builder srcUrl(String srcUrl) {
             this.putBodyParameter("SrcUrl", srcUrl);
             this.srcUrl = srcUrl;
-            return this;
-        }
-
-        /**
-         * Status.
-         */
-        public Builder status(Integer status) {
-            this.putBodyParameter("Status", status);
-            this.status = status;
             return this;
         }
 
@@ -367,10 +322,106 @@ public class ReadMessageContentRequest extends Request {
         }
 
         @Override
-        public ReadMessageContentRequest build() {
-            return new ReadMessageContentRequest(this);
+        public ReadRevisionHistoryListRequest build() {
+            return new ReadRevisionHistoryListRequest(this);
         } 
 
     } 
 
+    /**
+     * 
+     * {@link ReadRevisionHistoryListRequest} extends {@link TeaModel}
+     *
+     * <p>ReadRevisionHistoryListRequest</p>
+     */
+    public static class PageInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
+        private Integer maxResults;
+
+        @com.aliyun.core.annotation.NameInMap("NextToken")
+        private String nextToken;
+
+        @com.aliyun.core.annotation.NameInMap("ReturnTotalCount")
+        private Boolean returnTotalCount;
+
+        private PageInfo(Builder builder) {
+            this.maxResults = builder.maxResults;
+            this.nextToken = builder.nextToken;
+            this.returnTotalCount = builder.returnTotalCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PageInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return maxResults
+         */
+        public Integer getMaxResults() {
+            return this.maxResults;
+        }
+
+        /**
+         * @return nextToken
+         */
+        public String getNextToken() {
+            return this.nextToken;
+        }
+
+        /**
+         * @return returnTotalCount
+         */
+        public Boolean getReturnTotalCount() {
+            return this.returnTotalCount;
+        }
+
+        public static final class Builder {
+            private Integer maxResults; 
+            private String nextToken; 
+            private Boolean returnTotalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.maxResults = model.maxResults;
+                this.nextToken = model.nextToken;
+                this.returnTotalCount = model.returnTotalCount;
+            } 
+
+            /**
+             * MaxResults.
+             */
+            public Builder maxResults(Integer maxResults) {
+                this.maxResults = maxResults;
+                return this;
+            }
+
+            /**
+             * NextToken.
+             */
+            public Builder nextToken(String nextToken) {
+                this.nextToken = nextToken;
+                return this;
+            }
+
+            /**
+             * ReturnTotalCount.
+             */
+            public Builder returnTotalCount(Boolean returnTotalCount) {
+                this.returnTotalCount = returnTotalCount;
+                return this;
+            }
+
+            public PageInfo build() {
+                return new PageInfo(this);
+            } 
+
+        } 
+
+    }
 }
