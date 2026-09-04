@@ -434,6 +434,9 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NonNormalServers")
         private java.util.List<NonNormalServers> nonNormalServers;
 
+        @com.aliyun.core.annotation.NameInMap("ServerCount")
+        private Integer serverCount;
+
         @com.aliyun.core.annotation.NameInMap("ServerGroupId")
         private String serverGroupId;
 
@@ -441,6 +444,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             this.actionType = builder.actionType;
             this.healthCheckEnabled = builder.healthCheckEnabled;
             this.nonNormalServers = builder.nonNormalServers;
+            this.serverCount = builder.serverCount;
             this.serverGroupId = builder.serverGroupId;
         }
 
@@ -474,6 +478,13 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         }
 
         /**
+         * @return serverCount
+         */
+        public Integer getServerCount() {
+            return this.serverCount;
+        }
+
+        /**
          * @return serverGroupId
          */
         public String getServerGroupId() {
@@ -484,6 +495,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             private String actionType; 
             private String healthCheckEnabled; 
             private java.util.List<NonNormalServers> nonNormalServers; 
+            private Integer serverCount; 
             private String serverGroupId; 
 
             private Builder() {
@@ -493,6 +505,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
                 this.actionType = model.actionType;
                 this.healthCheckEnabled = model.healthCheckEnabled;
                 this.nonNormalServers = model.nonNormalServers;
+                this.serverCount = model.serverCount;
                 this.serverGroupId = model.serverGroupId;
             } 
 
@@ -527,6 +540,14 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
              */
             public Builder nonNormalServers(java.util.List<NonNormalServers> nonNormalServers) {
                 this.nonNormalServers = nonNormalServers;
+                return this;
+            }
+
+            /**
+             * ServerCount.
+             */
+            public Builder serverCount(Integer serverCount) {
+                this.serverCount = serverCount;
                 return this;
             }
 
@@ -968,6 +989,9 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NonNormalServers")
         private java.util.List<ServerGroupInfosNonNormalServers> nonNormalServers;
 
+        @com.aliyun.core.annotation.NameInMap("ServerCount")
+        private Long serverCount;
+
         @com.aliyun.core.annotation.NameInMap("ServerGroupId")
         private String serverGroupId;
 
@@ -975,6 +999,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             this.actionType = builder.actionType;
             this.healthCheckEnabled = builder.healthCheckEnabled;
             this.nonNormalServers = builder.nonNormalServers;
+            this.serverCount = builder.serverCount;
             this.serverGroupId = builder.serverGroupId;
         }
 
@@ -1008,6 +1033,13 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         }
 
         /**
+         * @return serverCount
+         */
+        public Long getServerCount() {
+            return this.serverCount;
+        }
+
+        /**
          * @return serverGroupId
          */
         public String getServerGroupId() {
@@ -1018,6 +1050,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             private String actionType; 
             private String healthCheckEnabled; 
             private java.util.List<ServerGroupInfosNonNormalServers> nonNormalServers; 
+            private Long serverCount; 
             private String serverGroupId; 
 
             private Builder() {
@@ -1027,6 +1060,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
                 this.actionType = model.actionType;
                 this.healthCheckEnabled = model.healthCheckEnabled;
                 this.nonNormalServers = model.nonNormalServers;
+                this.serverCount = model.serverCount;
                 this.serverGroupId = model.serverGroupId;
             } 
 
@@ -1057,6 +1091,14 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
              */
             public Builder nonNormalServers(java.util.List<ServerGroupInfosNonNormalServers> nonNormalServers) {
                 this.nonNormalServers = nonNormalServers;
+                return this;
+            }
+
+            /**
+             * ServerCount.
+             */
+            public Builder serverCount(Long serverCount) {
+                this.serverCount = serverCount;
                 return this;
             }
 
