@@ -34,12 +34,17 @@ public class DescribeAccountsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
+    private String resourceGroupName;
+
     private DescribeAccountsRequest(Builder builder) {
         super(builder);
         this.accountName = builder.accountName;
         this.DBClusterId = builder.DBClusterId;
         this.engine = builder.engine;
         this.ownerId = builder.ownerId;
+        this.resourceGroupName = builder.resourceGroupName;
     }
 
     public static Builder builder() {
@@ -83,11 +88,19 @@ public class DescribeAccountsRequest extends Request {
         return this.ownerId;
     }
 
+    /**
+     * @return resourceGroupName
+     */
+    public String getResourceGroupName() {
+        return this.resourceGroupName;
+    }
+
     public static final class Builder extends Request.Builder<DescribeAccountsRequest, Builder> {
         private String accountName; 
         private String DBClusterId; 
         private String engine; 
         private String ownerId; 
+        private String resourceGroupName; 
 
         private Builder() {
             super();
@@ -99,6 +112,7 @@ public class DescribeAccountsRequest extends Request {
             this.DBClusterId = request.DBClusterId;
             this.engine = request.engine;
             this.ownerId = request.ownerId;
+            this.resourceGroupName = request.resourceGroupName;
         } 
 
         /**
@@ -151,6 +165,15 @@ public class DescribeAccountsRequest extends Request {
         public Builder ownerId(String ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupName.
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            this.putQueryParameter("ResourceGroupName", resourceGroupName);
+            this.resourceGroupName = resourceGroupName;
             return this;
         }
 

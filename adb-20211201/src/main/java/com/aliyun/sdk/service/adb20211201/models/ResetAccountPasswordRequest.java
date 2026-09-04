@@ -40,6 +40,10 @@ public class ResetAccountPasswordRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
+    private String resourceGroupName;
+
     private ResetAccountPasswordRequest(Builder builder) {
         super(builder);
         this.accountDescription = builder.accountDescription;
@@ -47,6 +51,7 @@ public class ResetAccountPasswordRequest extends Request {
         this.accountPassword = builder.accountPassword;
         this.DBClusterId = builder.DBClusterId;
         this.engine = builder.engine;
+        this.resourceGroupName = builder.resourceGroupName;
     }
 
     public static Builder builder() {
@@ -97,12 +102,20 @@ public class ResetAccountPasswordRequest extends Request {
         return this.engine;
     }
 
+    /**
+     * @return resourceGroupName
+     */
+    public String getResourceGroupName() {
+        return this.resourceGroupName;
+    }
+
     public static final class Builder extends Request.Builder<ResetAccountPasswordRequest, Builder> {
         private String accountDescription; 
         private String accountName; 
         private String accountPassword; 
         private String DBClusterId; 
         private String engine; 
+        private String resourceGroupName; 
 
         private Builder() {
             super();
@@ -115,6 +128,7 @@ public class ResetAccountPasswordRequest extends Request {
             this.accountPassword = request.accountPassword;
             this.DBClusterId = request.DBClusterId;
             this.engine = request.engine;
+            this.resourceGroupName = request.resourceGroupName;
         } 
 
         /**
@@ -193,6 +207,15 @@ public class ResetAccountPasswordRequest extends Request {
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
             this.engine = engine;
+            return this;
+        }
+
+        /**
+         * ResourceGroupName.
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            this.putQueryParameter("ResourceGroupName", resourceGroupName);
+            this.resourceGroupName = resourceGroupName;
             return this;
         }
 

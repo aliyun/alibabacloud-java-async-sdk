@@ -31,11 +31,16 @@ public class DeleteAccountRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
+    private String resourceGroupName;
+
     private DeleteAccountRequest(Builder builder) {
         super(builder);
         this.accountName = builder.accountName;
         this.DBClusterId = builder.DBClusterId;
         this.engine = builder.engine;
+        this.resourceGroupName = builder.resourceGroupName;
     }
 
     public static Builder builder() {
@@ -72,10 +77,18 @@ public class DeleteAccountRequest extends Request {
         return this.engine;
     }
 
+    /**
+     * @return resourceGroupName
+     */
+    public String getResourceGroupName() {
+        return this.resourceGroupName;
+    }
+
     public static final class Builder extends Request.Builder<DeleteAccountRequest, Builder> {
         private String accountName; 
         private String DBClusterId; 
         private String engine; 
+        private String resourceGroupName; 
 
         private Builder() {
             super();
@@ -86,6 +99,7 @@ public class DeleteAccountRequest extends Request {
             this.accountName = request.accountName;
             this.DBClusterId = request.DBClusterId;
             this.engine = request.engine;
+            this.resourceGroupName = request.resourceGroupName;
         } 
 
         /**
@@ -130,6 +144,15 @@ public class DeleteAccountRequest extends Request {
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
             this.engine = engine;
+            return this;
+        }
+
+        /**
+         * ResourceGroupName.
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            this.putQueryParameter("ResourceGroupName", resourceGroupName);
+            this.resourceGroupName = resourceGroupName;
             return this;
         }
 

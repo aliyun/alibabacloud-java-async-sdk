@@ -24,7 +24,6 @@ public class ModifyAccountPrivilegesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AccountPrivileges")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<AccountPrivileges> accountPrivileges;
 
     @com.aliyun.core.annotation.Query
@@ -33,16 +32,36 @@ public class ModifyAccountPrivilegesRequest extends Request {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromqlInsertPrivileges")
+    private java.util.List<String> promqlInsertPrivileges;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromqlSelectNodePercentage")
+    private Double promqlSelectNodePercentage;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromqlSelectPrivileges")
+    private java.util.List<String> promqlSelectPrivileges;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
+    private String resourceGroupName;
 
     private ModifyAccountPrivilegesRequest(Builder builder) {
         super(builder);
         this.accountName = builder.accountName;
         this.accountPrivileges = builder.accountPrivileges;
         this.DBClusterId = builder.DBClusterId;
+        this.promqlInsertPrivileges = builder.promqlInsertPrivileges;
+        this.promqlSelectNodePercentage = builder.promqlSelectNodePercentage;
+        this.promqlSelectPrivileges = builder.promqlSelectPrivileges;
         this.regionId = builder.regionId;
+        this.resourceGroupName = builder.resourceGroupName;
     }
 
     public static Builder builder() {
@@ -80,17 +99,49 @@ public class ModifyAccountPrivilegesRequest extends Request {
     }
 
     /**
+     * @return promqlInsertPrivileges
+     */
+    public java.util.List<String> getPromqlInsertPrivileges() {
+        return this.promqlInsertPrivileges;
+    }
+
+    /**
+     * @return promqlSelectNodePercentage
+     */
+    public Double getPromqlSelectNodePercentage() {
+        return this.promqlSelectNodePercentage;
+    }
+
+    /**
+     * @return promqlSelectPrivileges
+     */
+    public java.util.List<String> getPromqlSelectPrivileges() {
+        return this.promqlSelectPrivileges;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return resourceGroupName
+     */
+    public String getResourceGroupName() {
+        return this.resourceGroupName;
+    }
+
     public static final class Builder extends Request.Builder<ModifyAccountPrivilegesRequest, Builder> {
         private String accountName; 
         private java.util.List<AccountPrivileges> accountPrivileges; 
         private String DBClusterId; 
+        private java.util.List<String> promqlInsertPrivileges; 
+        private Double promqlSelectNodePercentage; 
+        private java.util.List<String> promqlSelectPrivileges; 
         private String regionId; 
+        private String resourceGroupName; 
 
         private Builder() {
             super();
@@ -101,7 +152,11 @@ public class ModifyAccountPrivilegesRequest extends Request {
             this.accountName = request.accountName;
             this.accountPrivileges = request.accountPrivileges;
             this.DBClusterId = request.DBClusterId;
+            this.promqlInsertPrivileges = request.promqlInsertPrivileges;
+            this.promqlSelectNodePercentage = request.promqlSelectNodePercentage;
+            this.promqlSelectPrivileges = request.promqlSelectPrivileges;
             this.regionId = request.regionId;
+            this.resourceGroupName = request.resourceGroupName;
         } 
 
         /**
@@ -119,7 +174,6 @@ public class ModifyAccountPrivilegesRequest extends Request {
 
         /**
          * <p>The permissions that you want to grant to the database account.</p>
-         * <p>This parameter is required.</p>
          */
         public Builder accountPrivileges(java.util.List<AccountPrivileges> accountPrivileges) {
             String accountPrivilegesShrink = shrink(accountPrivileges, "AccountPrivileges", "json");
@@ -142,6 +196,35 @@ public class ModifyAccountPrivilegesRequest extends Request {
         }
 
         /**
+         * PromqlInsertPrivileges.
+         */
+        public Builder promqlInsertPrivileges(java.util.List<String> promqlInsertPrivileges) {
+            String promqlInsertPrivilegesShrink = shrink(promqlInsertPrivileges, "PromqlInsertPrivileges", "json");
+            this.putQueryParameter("PromqlInsertPrivileges", promqlInsertPrivilegesShrink);
+            this.promqlInsertPrivileges = promqlInsertPrivileges;
+            return this;
+        }
+
+        /**
+         * PromqlSelectNodePercentage.
+         */
+        public Builder promqlSelectNodePercentage(Double promqlSelectNodePercentage) {
+            this.putQueryParameter("PromqlSelectNodePercentage", promqlSelectNodePercentage);
+            this.promqlSelectNodePercentage = promqlSelectNodePercentage;
+            return this;
+        }
+
+        /**
+         * PromqlSelectPrivileges.
+         */
+        public Builder promqlSelectPrivileges(java.util.List<String> promqlSelectPrivileges) {
+            String promqlSelectPrivilegesShrink = shrink(promqlSelectPrivileges, "PromqlSelectPrivileges", "json");
+            this.putQueryParameter("PromqlSelectPrivileges", promqlSelectPrivilegesShrink);
+            this.promqlSelectPrivileges = promqlSelectPrivileges;
+            return this;
+        }
+
+        /**
          * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
@@ -151,6 +234,15 @@ public class ModifyAccountPrivilegesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupName.
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            this.putQueryParameter("ResourceGroupName", resourceGroupName);
+            this.resourceGroupName = resourceGroupName;
             return this;
         }
 

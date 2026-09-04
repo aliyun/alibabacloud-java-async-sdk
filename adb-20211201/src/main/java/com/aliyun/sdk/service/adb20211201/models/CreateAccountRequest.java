@@ -46,8 +46,24 @@ public class CreateAccountRequest extends Request {
     private String engine;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromqlInsertPrivileges")
+    private java.util.List<String> promqlInsertPrivileges;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromqlSelectNodePercentage")
+    private Double promqlSelectNodePercentage;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromqlSelectPrivileges")
+    private java.util.List<String> promqlSelectPrivileges;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RamUserList")
     private java.util.List<String> ramUserList;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
+    private String resourceGroupName;
 
     private CreateAccountRequest(Builder builder) {
         super(builder);
@@ -57,7 +73,11 @@ public class CreateAccountRequest extends Request {
         this.accountType = builder.accountType;
         this.DBClusterId = builder.DBClusterId;
         this.engine = builder.engine;
+        this.promqlInsertPrivileges = builder.promqlInsertPrivileges;
+        this.promqlSelectNodePercentage = builder.promqlSelectNodePercentage;
+        this.promqlSelectPrivileges = builder.promqlSelectPrivileges;
         this.ramUserList = builder.ramUserList;
+        this.resourceGroupName = builder.resourceGroupName;
     }
 
     public static Builder builder() {
@@ -116,10 +136,38 @@ public class CreateAccountRequest extends Request {
     }
 
     /**
+     * @return promqlInsertPrivileges
+     */
+    public java.util.List<String> getPromqlInsertPrivileges() {
+        return this.promqlInsertPrivileges;
+    }
+
+    /**
+     * @return promqlSelectNodePercentage
+     */
+    public Double getPromqlSelectNodePercentage() {
+        return this.promqlSelectNodePercentage;
+    }
+
+    /**
+     * @return promqlSelectPrivileges
+     */
+    public java.util.List<String> getPromqlSelectPrivileges() {
+        return this.promqlSelectPrivileges;
+    }
+
+    /**
      * @return ramUserList
      */
     public java.util.List<String> getRamUserList() {
         return this.ramUserList;
+    }
+
+    /**
+     * @return resourceGroupName
+     */
+    public String getResourceGroupName() {
+        return this.resourceGroupName;
     }
 
     public static final class Builder extends Request.Builder<CreateAccountRequest, Builder> {
@@ -129,7 +177,11 @@ public class CreateAccountRequest extends Request {
         private String accountType; 
         private String DBClusterId; 
         private String engine; 
+        private java.util.List<String> promqlInsertPrivileges; 
+        private Double promqlSelectNodePercentage; 
+        private java.util.List<String> promqlSelectPrivileges; 
         private java.util.List<String> ramUserList; 
+        private String resourceGroupName; 
 
         private Builder() {
             super();
@@ -143,7 +195,11 @@ public class CreateAccountRequest extends Request {
             this.accountType = request.accountType;
             this.DBClusterId = request.DBClusterId;
             this.engine = request.engine;
+            this.promqlInsertPrivileges = request.promqlInsertPrivileges;
+            this.promqlSelectNodePercentage = request.promqlSelectNodePercentage;
+            this.promqlSelectPrivileges = request.promqlSelectPrivileges;
             this.ramUserList = request.ramUserList;
+            this.resourceGroupName = request.resourceGroupName;
         } 
 
         /**
@@ -246,12 +302,50 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
+         * PromqlInsertPrivileges.
+         */
+        public Builder promqlInsertPrivileges(java.util.List<String> promqlInsertPrivileges) {
+            String promqlInsertPrivilegesShrink = shrink(promqlInsertPrivileges, "PromqlInsertPrivileges", "json");
+            this.putQueryParameter("PromqlInsertPrivileges", promqlInsertPrivilegesShrink);
+            this.promqlInsertPrivileges = promqlInsertPrivileges;
+            return this;
+        }
+
+        /**
+         * PromqlSelectNodePercentage.
+         */
+        public Builder promqlSelectNodePercentage(Double promqlSelectNodePercentage) {
+            this.putQueryParameter("PromqlSelectNodePercentage", promqlSelectNodePercentage);
+            this.promqlSelectNodePercentage = promqlSelectNodePercentage;
+            return this;
+        }
+
+        /**
+         * PromqlSelectPrivileges.
+         */
+        public Builder promqlSelectPrivileges(java.util.List<String> promqlSelectPrivileges) {
+            String promqlSelectPrivilegesShrink = shrink(promqlSelectPrivileges, "PromqlSelectPrivileges", "json");
+            this.putQueryParameter("PromqlSelectPrivileges", promqlSelectPrivilegesShrink);
+            this.promqlSelectPrivileges = promqlSelectPrivileges;
+            return this;
+        }
+
+        /**
          * RamUserList.
          */
         public Builder ramUserList(java.util.List<String> ramUserList) {
             String ramUserListShrink = shrink(ramUserList, "RamUserList", "json");
             this.putQueryParameter("RamUserList", ramUserListShrink);
             this.ramUserList = ramUserList;
+            return this;
+        }
+
+        /**
+         * ResourceGroupName.
+         */
+        public Builder resourceGroupName(String resourceGroupName) {
+            this.putQueryParameter("ResourceGroupName", resourceGroupName);
+            this.resourceGroupName = resourceGroupName;
             return this;
         }
 
