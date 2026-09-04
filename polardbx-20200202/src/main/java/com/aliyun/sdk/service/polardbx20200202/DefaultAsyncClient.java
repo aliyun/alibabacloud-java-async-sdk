@@ -76,19 +76,7 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("eu-west-1", "polardbx.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "polardbx.aliyuncs.com"),
             new TeaPair("me-east-1", "polardbx.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "polardbx.aliyuncs.com"),
-            new TeaPair("cn-beijing", "polardbx.cn-beijing.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "polardbx.cn-qingdao.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "polardbx.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "polardbx.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "polardbx.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "polardbx.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "polardbx.cn-chengdu.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "polardbx.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "polardbx.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "polardbx.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("us-east-1", "polardbx.us-east-1.aliyuncs.com"),
-            new TeaPair("us-west-1", "polardbx.us-west-1.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "polardbx.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -201,6 +189,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<AllocateMem0PublicConnectionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>开通Agent文件服务公网连接。</p>
+     * 
+     * @param request the request parameters of AllocatePxfsPublicConnection  AllocatePxfsPublicConnectionRequest
+     * @return AllocatePxfsPublicConnectionResponse
+     */
+    @Override
+    public CompletableFuture<AllocatePxfsPublicConnectionResponse> allocatePxfsPublicConnection(AllocatePxfsPublicConnectionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AllocatePxfsPublicConnection").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AllocatePxfsPublicConnectionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AllocatePxfsPublicConnectionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -645,6 +654,90 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>创建Agent文件服务实例。</p>
+     * 
+     * @param request the request parameters of CreatePxfs  CreatePxfsRequest
+     * @return CreatePxfsResponse
+     */
+    @Override
+    public CompletableFuture<CreatePxfsResponse> createPxfs(CreatePxfsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreatePxfs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreatePxfsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreatePxfsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>签发Agent文件服务访问Token。</p>
+     * 
+     * @param request the request parameters of CreatePxfsAccessToken  CreatePxfsAccessTokenRequest
+     * @return CreatePxfsAccessTokenResponse
+     */
+    @Override
+    public CompletableFuture<CreatePxfsAccessTokenResponse> createPxfsAccessToken(CreatePxfsAccessTokenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreatePxfsAccessToken").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreatePxfsAccessTokenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreatePxfsAccessTokenResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>创建Agent文件服务租户。</p>
+     * 
+     * @param request the request parameters of CreatePxfsTenant  CreatePxfsTenantRequest
+     * @return CreatePxfsTenantResponse
+     */
+    @Override
+    public CompletableFuture<CreatePxfsTenantResponse> createPxfsTenant(CreatePxfsTenantRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreatePxfsTenant").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreatePxfsTenantResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreatePxfsTenantResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>创建Agent文件服务租户身份。</p>
+     * 
+     * @param request the request parameters of CreatePxfsUser  CreatePxfsUserRequest
+     * @return CreatePxfsUserResponse
+     */
+    @Override
+    public CompletableFuture<CreatePxfsUserResponse> createPxfsUser(CreatePxfsUserRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreatePxfsUser").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreatePxfsUserResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreatePxfsUserResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreatePxfuse  CreatePxfuseRequest
      * @return CreatePxfuseResponse
      */
@@ -1062,6 +1155,48 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeletePolardbxSupabaseInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>删除Agent文件服务实例。</p>
+     * 
+     * @param request the request parameters of DeletePxfs  DeletePxfsRequest
+     * @return DeletePxfsResponse
+     */
+    @Override
+    public CompletableFuture<DeletePxfsResponse> deletePxfs(DeletePxfsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeletePxfs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeletePxfsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeletePxfsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>删除Agent文件服务租户身份。</p>
+     * 
+     * @param request the request parameters of DeletePxfsUser  DeletePxfsUserRequest
+     * @return DeletePxfsUserResponse
+     */
+    @Override
+    public CompletableFuture<DeletePxfsUserResponse> deletePxfsUser(DeletePxfsUserRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeletePxfsUser").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeletePxfsUserResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeletePxfsUserResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2208,6 +2343,111 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>查询Agent文件服务访问Token。</p>
+     * 
+     * @param request the request parameters of DescribePxfsAccessTokens  DescribePxfsAccessTokensRequest
+     * @return DescribePxfsAccessTokensResponse
+     */
+    @Override
+    public CompletableFuture<DescribePxfsAccessTokensResponse> describePxfsAccessTokens(DescribePxfsAccessTokensRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePxfsAccessTokens").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePxfsAccessTokensResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribePxfsAccessTokensResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>查询Agent文件服务实例信息。</p>
+     * 
+     * @param request the request parameters of DescribePxfsInfo  DescribePxfsInfoRequest
+     * @return DescribePxfsInfoResponse
+     */
+    @Override
+    public CompletableFuture<DescribePxfsInfoResponse> describePxfsInfo(DescribePxfsInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePxfsInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePxfsInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribePxfsInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>查询Agent文件服务白名单。</p>
+     * 
+     * @param request the request parameters of DescribePxfsSecurityIps  DescribePxfsSecurityIpsRequest
+     * @return DescribePxfsSecurityIpsResponse
+     */
+    @Override
+    public CompletableFuture<DescribePxfsSecurityIpsResponse> describePxfsSecurityIps(DescribePxfsSecurityIpsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePxfsSecurityIps").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePxfsSecurityIpsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribePxfsSecurityIpsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>查询Agent文件服务租户。</p>
+     * 
+     * @param request the request parameters of DescribePxfsTenant  DescribePxfsTenantRequest
+     * @return DescribePxfsTenantResponse
+     */
+    @Override
+    public CompletableFuture<DescribePxfsTenantResponse> describePxfsTenant(DescribePxfsTenantRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePxfsTenant").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePxfsTenantResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribePxfsTenantResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>查询Agent文件服务租户身份。</p>
+     * 
+     * @param request the request parameters of DescribePxfsUsers  DescribePxfsUsersRequest
+     * @return DescribePxfsUsersResponse
+     */
+    @Override
+    public CompletableFuture<DescribePxfsUsersResponse> describePxfsUsers(DescribePxfsUsersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePxfsUsers").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePxfsUsersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribePxfsUsersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribePxfuseInfo  DescribePxfuseInfoRequest
      * @return DescribePxfuseInfoResponse
      */
@@ -3232,6 +3472,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>修改Agent文件服务白名单。</p>
+     * 
+     * @param request the request parameters of ModifyPxfsSecurityIps  ModifyPxfsSecurityIpsRequest
+     * @return ModifyPxfsSecurityIpsResponse
+     */
+    @Override
+    public CompletableFuture<ModifyPxfsSecurityIpsResponse> modifyPxfsSecurityIps(ModifyPxfsSecurityIpsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyPxfsSecurityIps").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyPxfsSecurityIpsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyPxfsSecurityIpsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <hr>
      * 
      * @param request the request parameters of ModifyPxfuseSecurityIps  ModifyPxfuseSecurityIpsRequest
@@ -3490,6 +3751,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>关闭Agent文件服务公网连接。</p>
+     * 
+     * @param request the request parameters of ReleasePxfsPublicConnection  ReleasePxfsPublicConnectionRequest
+     * @return ReleasePxfsPublicConnectionResponse
+     */
+    @Override
+    public CompletableFuture<ReleasePxfsPublicConnectionResponse> releasePxfsPublicConnection(ReleasePxfsPublicConnectionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ReleasePxfsPublicConnection").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ReleasePxfsPublicConnectionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ReleasePxfsPublicConnectionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ResetAccountPassword  ResetAccountPasswordRequest
      * @return ResetAccountPasswordResponse
      */
@@ -3629,6 +3911,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>重启Agent文件服务实例。</p>
+     * 
+     * @param request the request parameters of RestartPxfs  RestartPxfsRequest
+     * @return RestartPxfsResponse
+     */
+    @Override
+    public CompletableFuture<RestartPxfsResponse> restartPxfs(RestartPxfsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RestartPxfs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RestartPxfsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RestartPxfsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <hr>
      * 
      * @param request the request parameters of RestartSupabaseInstance  RestartSupabaseInstanceRequest
@@ -3664,6 +3967,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RestoreDBInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>吊销Agent文件服务访问Token。</p>
+     * 
+     * @param request the request parameters of RevokePxfsAccessToken  RevokePxfsAccessTokenRequest
+     * @return RevokePxfsAccessTokenResponse
+     */
+    @Override
+    public CompletableFuture<RevokePxfsAccessTokenResponse> revokePxfsAccessToken(RevokePxfsAccessTokenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RevokePxfsAccessToken").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RevokePxfsAccessTokenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RevokePxfsAccessTokenResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3991,6 +4315,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpgradeDBInstanceKernelVersionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>升级Agent文件服务小版本。</p>
+     * 
+     * @param request the request parameters of UpgradePxfsVersion  UpgradePxfsVersionRequest
+     * @return UpgradePxfsVersionResponse
+     */
+    @Override
+    public CompletableFuture<UpgradePxfsVersionResponse> upgradePxfsVersion(UpgradePxfsVersionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpgradePxfsVersion").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpgradePxfsVersionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpgradePxfsVersionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

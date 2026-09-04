@@ -56,6 +56,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AllocateMem0PublicConnectionResponse> allocateMem0PublicConnection(AllocateMem0PublicConnectionRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>开通Agent文件服务公网连接。</p>
+     * 
+     * @param request the request parameters of AllocatePxfsPublicConnection  AllocatePxfsPublicConnectionRequest
+     * @return AllocatePxfsPublicConnectionResponse
+     */
+    CompletableFuture<AllocatePxfsPublicConnectionResponse> allocatePxfsPublicConnection(AllocatePxfsPublicConnectionRequest request);
+
+    /**
      * @param request the request parameters of AttachColumnarInstance  AttachColumnarInstanceRequest
      * @return AttachColumnarInstanceResponse
      */
@@ -206,6 +215,42 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePolardbxSupabaseInstanceResponse> createPolardbxSupabaseInstance(CreatePolardbxSupabaseInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>创建Agent文件服务实例。</p>
+     * 
+     * @param request the request parameters of CreatePxfs  CreatePxfsRequest
+     * @return CreatePxfsResponse
+     */
+    CompletableFuture<CreatePxfsResponse> createPxfs(CreatePxfsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>签发Agent文件服务访问Token。</p>
+     * 
+     * @param request the request parameters of CreatePxfsAccessToken  CreatePxfsAccessTokenRequest
+     * @return CreatePxfsAccessTokenResponse
+     */
+    CompletableFuture<CreatePxfsAccessTokenResponse> createPxfsAccessToken(CreatePxfsAccessTokenRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>创建Agent文件服务租户。</p>
+     * 
+     * @param request the request parameters of CreatePxfsTenant  CreatePxfsTenantRequest
+     * @return CreatePxfsTenantResponse
+     */
+    CompletableFuture<CreatePxfsTenantResponse> createPxfsTenant(CreatePxfsTenantRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>创建Agent文件服务租户身份。</p>
+     * 
+     * @param request the request parameters of CreatePxfsUser  CreatePxfsUserRequest
+     * @return CreatePxfsUserResponse
+     */
+    CompletableFuture<CreatePxfsUserResponse> createPxfsUser(CreatePxfsUserRequest request);
+
+    /**
      * @param request the request parameters of CreatePxfuse  CreatePxfuseRequest
      * @return CreatePxfuseResponse
      */
@@ -351,6 +396,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeletePolardbxSupabaseInstanceResponse
      */
     CompletableFuture<DeletePolardbxSupabaseInstanceResponse> deletePolardbxSupabaseInstance(DeletePolardbxSupabaseInstanceRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>删除Agent文件服务实例。</p>
+     * 
+     * @param request the request parameters of DeletePxfs  DeletePxfsRequest
+     * @return DeletePxfsResponse
+     */
+    CompletableFuture<DeletePxfsResponse> deletePxfs(DeletePxfsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>删除Agent文件服务租户身份。</p>
+     * 
+     * @param request the request parameters of DeletePxfsUser  DeletePxfsUserRequest
+     * @return DeletePxfsUserResponse
+     */
+    CompletableFuture<DeletePxfsUserResponse> deletePxfsUser(DeletePxfsUserRequest request);
 
     /**
      * @param request the request parameters of DeletePxfuse  DeletePxfuseRequest
@@ -737,6 +800,51 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePolarxDataNodesResponse> describePolarxDataNodes(DescribePolarxDataNodesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>查询Agent文件服务访问Token。</p>
+     * 
+     * @param request the request parameters of DescribePxfsAccessTokens  DescribePxfsAccessTokensRequest
+     * @return DescribePxfsAccessTokensResponse
+     */
+    CompletableFuture<DescribePxfsAccessTokensResponse> describePxfsAccessTokens(DescribePxfsAccessTokensRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>查询Agent文件服务实例信息。</p>
+     * 
+     * @param request the request parameters of DescribePxfsInfo  DescribePxfsInfoRequest
+     * @return DescribePxfsInfoResponse
+     */
+    CompletableFuture<DescribePxfsInfoResponse> describePxfsInfo(DescribePxfsInfoRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>查询Agent文件服务白名单。</p>
+     * 
+     * @param request the request parameters of DescribePxfsSecurityIps  DescribePxfsSecurityIpsRequest
+     * @return DescribePxfsSecurityIpsResponse
+     */
+    CompletableFuture<DescribePxfsSecurityIpsResponse> describePxfsSecurityIps(DescribePxfsSecurityIpsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>查询Agent文件服务租户。</p>
+     * 
+     * @param request the request parameters of DescribePxfsTenant  DescribePxfsTenantRequest
+     * @return DescribePxfsTenantResponse
+     */
+    CompletableFuture<DescribePxfsTenantResponse> describePxfsTenant(DescribePxfsTenantRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>查询Agent文件服务租户身份。</p>
+     * 
+     * @param request the request parameters of DescribePxfsUsers  DescribePxfsUsersRequest
+     * @return DescribePxfsUsersResponse
+     */
+    CompletableFuture<DescribePxfsUsersResponse> describePxfsUsers(DescribePxfsUsersRequest request);
+
+    /**
      * @param request the request parameters of DescribePxfuseInfo  DescribePxfuseInfoRequest
      * @return DescribePxfuseInfoResponse
      */
@@ -1101,6 +1209,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>修改Agent文件服务白名单。</p>
+     * 
+     * @param request the request parameters of ModifyPxfsSecurityIps  ModifyPxfsSecurityIpsRequest
+     * @return ModifyPxfsSecurityIpsResponse
+     */
+    CompletableFuture<ModifyPxfsSecurityIpsResponse> modifyPxfsSecurityIps(ModifyPxfsSecurityIpsRequest request);
+
+    /**
+     * <b>description</b> :
      * <hr>
      * 
      * @param request the request parameters of ModifyPxfuseSecurityIps  ModifyPxfuseSecurityIpsRequest
@@ -1195,6 +1312,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ReleaseMem0PublicConnectionResponse> releaseMem0PublicConnection(ReleaseMem0PublicConnectionRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>关闭Agent文件服务公网连接。</p>
+     * 
+     * @param request the request parameters of ReleasePxfsPublicConnection  ReleasePxfsPublicConnectionRequest
+     * @return ReleasePxfsPublicConnectionResponse
+     */
+    CompletableFuture<ReleasePxfsPublicConnectionResponse> releasePxfsPublicConnection(ReleasePxfsPublicConnectionRequest request);
+
+    /**
      * @param request the request parameters of ResetAccountPassword  ResetAccountPasswordRequest
      * @return ResetAccountPasswordResponse
      */
@@ -1250,6 +1376,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>重启Agent文件服务实例。</p>
+     * 
+     * @param request the request parameters of RestartPxfs  RestartPxfsRequest
+     * @return RestartPxfsResponse
+     */
+    CompletableFuture<RestartPxfsResponse> restartPxfs(RestartPxfsRequest request);
+
+    /**
+     * <b>description</b> :
      * <hr>
      * 
      * @param request the request parameters of RestartSupabaseInstance  RestartSupabaseInstanceRequest
@@ -1265,6 +1400,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RestoreDBInstanceResponse
      */
     CompletableFuture<RestoreDBInstanceResponse> restoreDBInstance(RestoreDBInstanceRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>吊销Agent文件服务访问Token。</p>
+     * 
+     * @param request the request parameters of RevokePxfsAccessToken  RevokePxfsAccessTokenRequest
+     * @return RevokePxfsAccessTokenResponse
+     */
+    CompletableFuture<RevokePxfsAccessTokenResponse> revokePxfsAccessToken(RevokePxfsAccessTokenRequest request);
 
     /**
      * <b>description</b> :
@@ -1376,5 +1520,14 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpgradeDBInstanceKernelVersionResponse
      */
     CompletableFuture<UpgradeDBInstanceKernelVersionResponse> upgradeDBInstanceKernelVersion(UpgradeDBInstanceKernelVersionRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>升级Agent文件服务小版本。</p>
+     * 
+     * @param request the request parameters of UpgradePxfsVersion  UpgradePxfsVersionRequest
+     * @return UpgradePxfsVersionResponse
+     */
+    CompletableFuture<UpgradePxfsVersionResponse> upgradePxfsVersion(UpgradePxfsVersionRequest request);
 
 }
