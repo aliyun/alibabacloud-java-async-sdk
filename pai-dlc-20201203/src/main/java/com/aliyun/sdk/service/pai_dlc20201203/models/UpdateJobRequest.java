@@ -37,6 +37,10 @@ public class UpdateJobRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Priority")
     private Integer priority;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserCommand")
+    private String userCommand;
+
     private UpdateJobRequest(Builder builder) {
         super(builder);
         this.jobId = builder.jobId;
@@ -44,6 +48,7 @@ public class UpdateJobRequest extends Request {
         this.description = builder.description;
         this.jobSpecs = builder.jobSpecs;
         this.priority = builder.priority;
+        this.userCommand = builder.userCommand;
     }
 
     public static Builder builder() {
@@ -94,12 +99,20 @@ public class UpdateJobRequest extends Request {
         return this.priority;
     }
 
+    /**
+     * @return userCommand
+     */
+    public String getUserCommand() {
+        return this.userCommand;
+    }
+
     public static final class Builder extends Request.Builder<UpdateJobRequest, Builder> {
         private String jobId; 
         private String accessibility; 
         private String description; 
         private java.util.List<JobSpec> jobSpecs; 
         private Integer priority; 
+        private String userCommand; 
 
         private Builder() {
             super();
@@ -112,6 +125,7 @@ public class UpdateJobRequest extends Request {
             this.description = request.description;
             this.jobSpecs = request.jobSpecs;
             this.priority = request.priority;
+            this.userCommand = request.userCommand;
         } 
 
         /**
@@ -173,6 +187,15 @@ public class UpdateJobRequest extends Request {
         public Builder priority(Integer priority) {
             this.putBodyParameter("Priority", priority);
             this.priority = priority;
+            return this;
+        }
+
+        /**
+         * UserCommand.
+         */
+        public Builder userCommand(String userCommand) {
+            this.putBodyParameter("UserCommand", userCommand);
+            this.userCommand = userCommand;
             return this;
         }
 

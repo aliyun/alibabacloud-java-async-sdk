@@ -91,6 +91,9 @@ public class JobSpec extends TeaModel {
     @Deprecated
     private Boolean useSpotInstance;
 
+    @com.aliyun.core.annotation.NameInMap("UserCommand")
+    private String userCommand;
+
     private JobSpec(Builder builder) {
         this.assignNodeSpec = builder.assignNodeSpec;
         this.autoScalingSpec = builder.autoScalingSpec;
@@ -116,6 +119,7 @@ public class JobSpec extends TeaModel {
         this.systemDisk = builder.systemDisk;
         this.type = builder.type;
         this.useSpotInstance = builder.useSpotInstance;
+        this.userCommand = builder.userCommand;
     }
 
     public static Builder builder() {
@@ -298,6 +302,13 @@ public class JobSpec extends TeaModel {
         return this.useSpotInstance;
     }
 
+    /**
+     * @return userCommand
+     */
+    public String getUserCommand() {
+        return this.userCommand;
+    }
+
     public static final class Builder {
         private AssignNodeSpec assignNodeSpec; 
         private AutoScalingSpec autoScalingSpec; 
@@ -323,6 +334,7 @@ public class JobSpec extends TeaModel {
         private SystemDisk systemDisk; 
         private String type; 
         private Boolean useSpotInstance; 
+        private String userCommand; 
 
         private Builder() {
         } 
@@ -352,6 +364,7 @@ public class JobSpec extends TeaModel {
             this.systemDisk = model.systemDisk;
             this.type = model.type;
             this.useSpotInstance = model.useSpotInstance;
+            this.userCommand = model.userCommand;
         } 
 
         /**
@@ -543,6 +556,14 @@ public class JobSpec extends TeaModel {
          */
         public Builder useSpotInstance(Boolean useSpotInstance) {
             this.useSpotInstance = useSpotInstance;
+            return this;
+        }
+
+        /**
+         * UserCommand.
+         */
+        public Builder userCommand(String userCommand) {
+            this.userCommand = userCommand;
             return this;
         }
 
