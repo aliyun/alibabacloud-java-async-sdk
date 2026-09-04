@@ -30,23 +30,7 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "EhpcInstant";
         this.version = "2023-07-01";
         this.endpointRule = "regional";
-        this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("cn-shenzhen", "ehpcinstant.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "ehpcinstant.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-beijing", "ehpcinstant.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "ehpcinstant.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "ehpcinstant.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "ehpcinstant.cn-chengdu.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "ehpcinstant.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "ehpcinstant.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "ehpcinstant.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-heyuan", "ehpcinstant.cn-heyuan.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "ehpcinstant.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "ehpcinstant.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "ehpcinstant.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "ehpcinstant.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("eu-central-1", "ehpcinstant.eu-central-1.aliyuncs.com")
-        );
+        this.endpointMap = new java.util.HashMap<>();
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -113,6 +97,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateJobTemplate  CreateJobTemplateRequest
+     * @return CreateJobTemplateResponse
+     */
+    @Override
+    public CompletableFuture<CreateJobTemplateResponse> createJobTemplate(CreateJobTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateJobTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateJobTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateJobTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreatePool  CreatePoolRequest
      * @return CreatePoolResponse
      */
@@ -165,6 +167,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteJobRecordsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteJobTemplate  DeleteJobTemplateRequest
+     * @return DeleteJobTemplateResponse
+     */
+    @Override
+    public CompletableFuture<DeleteJobTemplateResponse> deleteJobTemplate(DeleteJobTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteJobTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteJobTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteJobTemplateResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -351,6 +371,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetJobTemplate  GetJobTemplateRequest
+     * @return GetJobTemplateResponse
+     */
+    @Override
+    public CompletableFuture<GetJobTemplateResponse> getJobTemplate(GetJobTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetJobTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetJobTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetJobTemplateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetPool  GetPoolRequest
      * @return GetPoolResponse
      */
@@ -477,6 +515,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListJobExecutorsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListJobTemplates  ListJobTemplatesRequest
+     * @return ListJobTemplatesResponse
+     */
+    @Override
+    public CompletableFuture<ListJobTemplatesResponse> listJobTemplates(ListJobTemplatesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListJobTemplates").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListJobTemplatesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListJobTemplatesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -639,6 +695,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateJobRecordDurationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateJobTemplate  UpdateJobTemplateRequest
+     * @return UpdateJobTemplateResponse
+     */
+    @Override
+    public CompletableFuture<UpdateJobTemplateResponse> updateJobTemplate(UpdateJobTemplateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateJobTemplate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateJobTemplateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateJobTemplateResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

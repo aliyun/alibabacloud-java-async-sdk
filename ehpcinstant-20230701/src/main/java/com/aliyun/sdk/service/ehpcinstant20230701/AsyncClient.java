@@ -41,6 +41,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateJobResponse> createJob(CreateJobRequest request);
 
     /**
+     * @param request the request parameters of CreateJobTemplate  CreateJobTemplateRequest
+     * @return CreateJobTemplateResponse
+     */
+    CompletableFuture<CreateJobTemplateResponse> createJobTemplate(CreateJobTemplateRequest request);
+
+    /**
      * @param request the request parameters of CreatePool  CreatePoolRequest
      * @return CreatePoolResponse
      */
@@ -61,6 +67,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteJobRecordsResponse
      */
     CompletableFuture<DeleteJobRecordsResponse> deleteJobRecords(DeleteJobRecordsRequest request);
+
+    /**
+     * @param request the request parameters of DeleteJobTemplate  DeleteJobTemplateRequest
+     * @return DeleteJobTemplateResponse
+     */
+    CompletableFuture<DeleteJobTemplateResponse> deleteJobTemplate(DeleteJobTemplateRequest request);
 
     /**
      * @param request the request parameters of DeleteJobs  DeleteJobsRequest
@@ -123,6 +135,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetJobRecordDurationResponse> getJobRecordDuration(GetJobRecordDurationRequest request);
 
     /**
+     * @param request the request parameters of GetJobTemplate  GetJobTemplateRequest
+     * @return GetJobTemplateResponse
+     */
+    CompletableFuture<GetJobTemplateResponse> getJobTemplate(GetJobTemplateRequest request);
+
+    /**
      * @param request the request parameters of GetPool  GetPoolRequest
      * @return GetPoolResponse
      */
@@ -169,6 +187,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListJobExecutorsResponse
      */
     CompletableFuture<ListJobExecutorsResponse> listJobExecutors(ListJobExecutorsRequest request);
+
+    /**
+     * @param request the request parameters of ListJobTemplates  ListJobTemplatesRequest
+     * @return ListJobTemplatesResponse
+     */
+    CompletableFuture<ListJobTemplatesResponse> listJobTemplates(ListJobTemplatesRequest request);
 
     /**
      * @param request the request parameters of ListJobs  ListJobsRequest
@@ -223,6 +247,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateJobRecordDurationResponse
      */
     CompletableFuture<UpdateJobRecordDurationResponse> updateJobRecordDuration(UpdateJobRecordDurationRequest request);
+
+    /**
+     * @param request the request parameters of UpdateJobTemplate  UpdateJobTemplateRequest
+     * @return UpdateJobTemplateResponse
+     */
+    CompletableFuture<UpdateJobTemplateResponse> updateJobTemplate(UpdateJobTemplateRequest request);
 
     /**
      * @param request the request parameters of UpdatePool  UpdatePoolRequest
