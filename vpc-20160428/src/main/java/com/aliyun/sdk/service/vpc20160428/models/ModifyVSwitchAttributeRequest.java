@@ -30,6 +30,10 @@ public class ModifyVSwitchAttributeRequest extends Request {
     private Integer ipv6CidrBlock;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6CidrMask")
+    private Integer ipv6CidrMask;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -67,6 +71,7 @@ public class ModifyVSwitchAttributeRequest extends Request {
         this.description = builder.description;
         this.enableIPv6 = builder.enableIPv6;
         this.ipv6CidrBlock = builder.ipv6CidrBlock;
+        this.ipv6CidrMask = builder.ipv6CidrMask;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -109,6 +114,13 @@ public class ModifyVSwitchAttributeRequest extends Request {
      */
     public Integer getIpv6CidrBlock() {
         return this.ipv6CidrBlock;
+    }
+
+    /**
+     * @return ipv6CidrMask
+     */
+    public Integer getIpv6CidrMask() {
+        return this.ipv6CidrMask;
     }
 
     /**
@@ -171,6 +183,7 @@ public class ModifyVSwitchAttributeRequest extends Request {
         private String description; 
         private Boolean enableIPv6; 
         private Integer ipv6CidrBlock; 
+        private Integer ipv6CidrMask; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -189,6 +202,7 @@ public class ModifyVSwitchAttributeRequest extends Request {
             this.description = request.description;
             this.enableIPv6 = request.enableIPv6;
             this.ipv6CidrBlock = request.ipv6CidrBlock;
+            this.ipv6CidrMask = request.ipv6CidrMask;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -238,6 +252,15 @@ public class ModifyVSwitchAttributeRequest extends Request {
         public Builder ipv6CidrBlock(Integer ipv6CidrBlock) {
             this.putQueryParameter("Ipv6CidrBlock", ipv6CidrBlock);
             this.ipv6CidrBlock = ipv6CidrBlock;
+            return this;
+        }
+
+        /**
+         * Ipv6CidrMask.
+         */
+        public Builder ipv6CidrMask(Integer ipv6CidrMask) {
+            this.putQueryParameter("Ipv6CidrMask", ipv6CidrMask);
+            this.ipv6CidrMask = ipv6CidrMask;
             return this;
         }
 

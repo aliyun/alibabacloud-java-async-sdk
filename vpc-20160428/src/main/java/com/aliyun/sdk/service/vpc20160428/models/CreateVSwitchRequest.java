@@ -19,8 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateVSwitchRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CidrBlock")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String cidrBlock;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CidrMask")
+    private Integer cidrMask;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -33,6 +36,10 @@ public class CreateVSwitchRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ipv6CidrBlock")
     private Integer ipv6CidrBlock;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6CidrMask")
+    private Integer ipv6CidrMask;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -79,9 +86,11 @@ public class CreateVSwitchRequest extends Request {
     private CreateVSwitchRequest(Builder builder) {
         super(builder);
         this.cidrBlock = builder.cidrBlock;
+        this.cidrMask = builder.cidrMask;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.ipv6CidrBlock = builder.ipv6CidrBlock;
+        this.ipv6CidrMask = builder.ipv6CidrMask;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -115,6 +124,13 @@ public class CreateVSwitchRequest extends Request {
     }
 
     /**
+     * @return cidrMask
+     */
+    public Integer getCidrMask() {
+        return this.cidrMask;
+    }
+
+    /**
      * @return clientToken
      */
     public String getClientToken() {
@@ -133,6 +149,13 @@ public class CreateVSwitchRequest extends Request {
      */
     public Integer getIpv6CidrBlock() {
         return this.ipv6CidrBlock;
+    }
+
+    /**
+     * @return ipv6CidrMask
+     */
+    public Integer getIpv6CidrMask() {
+        return this.ipv6CidrMask;
     }
 
     /**
@@ -207,9 +230,11 @@ public class CreateVSwitchRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateVSwitchRequest, Builder> {
         private String cidrBlock; 
+        private Integer cidrMask; 
         private String clientToken; 
         private String description; 
         private Integer ipv6CidrBlock; 
+        private Integer ipv6CidrMask; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -228,9 +253,11 @@ public class CreateVSwitchRequest extends Request {
         private Builder(CreateVSwitchRequest request) {
             super(request);
             this.cidrBlock = request.cidrBlock;
+            this.cidrMask = request.cidrMask;
             this.clientToken = request.clientToken;
             this.description = request.description;
             this.ipv6CidrBlock = request.ipv6CidrBlock;
+            this.ipv6CidrMask = request.ipv6CidrMask;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -250,7 +277,6 @@ public class CreateVSwitchRequest extends Request {
          * <li>The CIDR block of the vSwitch must fall within the CIDR block of the VPC to which the vSwitch belongs.</li>
          * <li>The CIDR block of a vSwitch cannot be the same as the destination CIDR block in a route entry of the VPC. However, it can be a subset of the destination CIDR block.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>172.16.0.0/24</p>
@@ -258,6 +284,15 @@ public class CreateVSwitchRequest extends Request {
         public Builder cidrBlock(String cidrBlock) {
             this.putQueryParameter("CidrBlock", cidrBlock);
             this.cidrBlock = cidrBlock;
+            return this;
+        }
+
+        /**
+         * CidrMask.
+         */
+        public Builder cidrMask(Integer cidrMask) {
+            this.putQueryParameter("CidrMask", cidrMask);
+            this.cidrMask = cidrMask;
             return this;
         }
 
@@ -299,6 +334,15 @@ public class CreateVSwitchRequest extends Request {
         public Builder ipv6CidrBlock(Integer ipv6CidrBlock) {
             this.putQueryParameter("Ipv6CidrBlock", ipv6CidrBlock);
             this.ipv6CidrBlock = ipv6CidrBlock;
+            return this;
+        }
+
+        /**
+         * Ipv6CidrMask.
+         */
+        public Builder ipv6CidrMask(Integer ipv6CidrMask) {
+            this.putQueryParameter("Ipv6CidrMask", ipv6CidrMask);
+            this.ipv6CidrMask = ipv6CidrMask;
             return this;
         }
 
