@@ -66,6 +66,10 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
     private Integer status;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SyncAlertStatus")
+    private Boolean syncAlertStatus;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ThreatLevel")
     private String threatLevel;
 
@@ -83,6 +87,7 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         this.roleFor = builder.roleFor;
         this.roleType = builder.roleType;
         this.status = builder.status;
+        this.syncAlertStatus = builder.syncAlertStatus;
         this.threatLevel = builder.threatLevel;
     }
 
@@ -184,6 +189,13 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
     }
 
     /**
+     * @return syncAlertStatus
+     */
+    public Boolean getSyncAlertStatus() {
+        return this.syncAlertStatus;
+    }
+
+    /**
      * @return threatLevel
      */
     public String getThreatLevel() {
@@ -203,6 +215,7 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         private Long roleFor; 
         private Integer roleType; 
         private Integer status; 
+        private Boolean syncAlertStatus; 
         private String threatLevel; 
 
         private Builder() {
@@ -223,6 +236,7 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
             this.roleFor = request.roleFor;
             this.roleType = request.roleType;
             this.status = request.status;
+            this.syncAlertStatus = request.syncAlertStatus;
             this.threatLevel = request.threatLevel;
         } 
 
@@ -400,6 +414,15 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         public Builder status(Integer status) {
             this.putBodyParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * SyncAlertStatus.
+         */
+        public Builder syncAlertStatus(Boolean syncAlertStatus) {
+            this.putBodyParameter("SyncAlertStatus", syncAlertStatus);
+            this.syncAlertStatus = syncAlertStatus;
             return this;
         }
 
