@@ -128,6 +128,9 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CaCertType")
         private String caCertType;
 
+        @com.aliyun.core.annotation.NameInMap("CertChainExpirationTime")
+        private Long certChainExpirationTime;
+
         @com.aliyun.core.annotation.NameInMap("ExpirationTime")
         private Long expirationTime;
 
@@ -148,6 +151,7 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
             this.aliasName = builder.aliasName;
             this.caCertId = builder.caCertId;
             this.caCertType = builder.caCertType;
+            this.certChainExpirationTime = builder.certChainExpirationTime;
             this.expirationTime = builder.expirationTime;
             this.keySize = builder.keySize;
             this.parentCaCertId = builder.parentCaCertId;
@@ -192,6 +196,13 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
         }
 
         /**
+         * @return certChainExpirationTime
+         */
+        public Long getCertChainExpirationTime() {
+            return this.certChainExpirationTime;
+        }
+
+        /**
          * @return expirationTime
          */
         public Long getExpirationTime() {
@@ -231,6 +242,7 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
             private String aliasName; 
             private String caCertId; 
             private String caCertType; 
+            private Long certChainExpirationTime; 
             private Long expirationTime; 
             private Integer keySize; 
             private String parentCaCertId; 
@@ -245,6 +257,7 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
                 this.aliasName = model.aliasName;
                 this.caCertId = model.caCertId;
                 this.caCertType = model.caCertType;
+                this.certChainExpirationTime = model.certChainExpirationTime;
                 this.expirationTime = model.expirationTime;
                 this.keySize = model.keySize;
                 this.parentCaCertId = model.parentCaCertId;
@@ -281,6 +294,14 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
              */
             public Builder caCertType(String caCertType) {
                 this.caCertType = caCertType;
+                return this;
+            }
+
+            /**
+             * CertChainExpirationTime.
+             */
+            public Builder certChainExpirationTime(Long certChainExpirationTime) {
+                this.certChainExpirationTime = certChainExpirationTime;
                 return this;
             }
 
