@@ -342,6 +342,15 @@ public class ListIndicesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OverlapSize")
         private Integer overlapSize;
 
+        @com.aliyun.core.annotation.NameInMap("PipelineCommercialCu")
+        private Integer pipelineCommercialCu;
+
+        @com.aliyun.core.annotation.NameInMap("PipelineCommercialType")
+        private String pipelineCommercialType;
+
+        @com.aliyun.core.annotation.NameInMap("PipelineStorageUsage")
+        private Double pipelineStorageUsage;
+
         @com.aliyun.core.annotation.NameInMap("RerankMinScore")
         private String rerankMinScore;
 
@@ -379,6 +388,9 @@ public class ListIndicesResponseBody extends TeaModel {
             this.id = builder.id;
             this.name = builder.name;
             this.overlapSize = builder.overlapSize;
+            this.pipelineCommercialCu = builder.pipelineCommercialCu;
+            this.pipelineCommercialType = builder.pipelineCommercialType;
+            this.pipelineStorageUsage = builder.pipelineStorageUsage;
             this.rerankMinScore = builder.rerankMinScore;
             this.rerankModelName = builder.rerankModelName;
             this.separator = builder.separator;
@@ -462,6 +474,27 @@ public class ListIndicesResponseBody extends TeaModel {
         }
 
         /**
+         * @return pipelineCommercialCu
+         */
+        public Integer getPipelineCommercialCu() {
+            return this.pipelineCommercialCu;
+        }
+
+        /**
+         * @return pipelineCommercialType
+         */
+        public String getPipelineCommercialType() {
+            return this.pipelineCommercialType;
+        }
+
+        /**
+         * @return pipelineStorageUsage
+         */
+        public Double getPipelineStorageUsage() {
+            return this.pipelineStorageUsage;
+        }
+
+        /**
          * @return rerankMinScore
          */
         public String getRerankMinScore() {
@@ -534,6 +567,9 @@ public class ListIndicesResponseBody extends TeaModel {
             private String id; 
             private String name; 
             private Integer overlapSize; 
+            private Integer pipelineCommercialCu; 
+            private String pipelineCommercialType; 
+            private Double pipelineStorageUsage; 
             private String rerankMinScore; 
             private String rerankModelName; 
             private String separator; 
@@ -557,6 +593,9 @@ public class ListIndicesResponseBody extends TeaModel {
                 this.id = model.id;
                 this.name = model.name;
                 this.overlapSize = model.overlapSize;
+                this.pipelineCommercialCu = model.pipelineCommercialCu;
+                this.pipelineCommercialType = model.pipelineCommercialType;
+                this.pipelineStorageUsage = model.pipelineStorageUsage;
                 this.rerankMinScore = model.rerankMinScore;
                 this.rerankModelName = model.rerankModelName;
                 this.separator = model.separator;
@@ -658,6 +697,30 @@ public class ListIndicesResponseBody extends TeaModel {
              */
             public Builder overlapSize(Integer overlapSize) {
                 this.overlapSize = overlapSize;
+                return this;
+            }
+
+            /**
+             * PipelineCommercialCu.
+             */
+            public Builder pipelineCommercialCu(Integer pipelineCommercialCu) {
+                this.pipelineCommercialCu = pipelineCommercialCu;
+                return this;
+            }
+
+            /**
+             * PipelineCommercialType.
+             */
+            public Builder pipelineCommercialType(String pipelineCommercialType) {
+                this.pipelineCommercialType = pipelineCommercialType;
+                return this;
+            }
+
+            /**
+             * PipelineStorageUsage.
+             */
+            public Builder pipelineStorageUsage(Double pipelineStorageUsage) {
+                this.pipelineStorageUsage = pipelineStorageUsage;
                 return this;
             }
 
