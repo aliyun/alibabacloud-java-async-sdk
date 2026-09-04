@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of CancelCopilotTurn  CancelCopilotTurnRequest
+     * @return CancelCopilotTurnResponse
+     */
+    CompletableFuture<CancelCopilotTurnResponse> cancelCopilotTurn(CancelCopilotTurnRequest request);
+
+    /**
      * @param request the request parameters of CheckUpgradeItem  CheckUpgradeItemRequest
      * @return CheckUpgradeItemResponse
      */
@@ -30,6 +36,20 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateAutoDisposeConfigResponse
      */
     CompletableFuture<CreateAutoDisposeConfigResponse> createAutoDisposeConfig(CreateAutoDisposeConfigRequest request);
+
+    /**
+     * @param request the request parameters of CreateCopilotChat  CreateCopilotChatRequest
+     * @return CreateCopilotChatResponse
+     */
+    CompletableFuture<CreateCopilotChatResponse> createCopilotChat(CreateCopilotChatRequest request);
+
+    ResponseIterable<String> createCopilotChatWithResponseIterable(CreateCopilotChatRequest request);
+
+    /**
+     * @param request the request parameters of CreateCopilotConversation  CreateCopilotConversationRequest
+     * @return CreateCopilotConversationResponse
+     */
+    CompletableFuture<CreateCopilotConversationResponse> createCopilotConversation(CreateCopilotConversationRequest request);
 
     /**
      * @param request the request parameters of CreateDataIngestion  CreateDataIngestionRequest
@@ -212,6 +232,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAutoDisposeConfigResponse> getAutoDisposeConfig(GetAutoDisposeConfigRequest request);
 
     /**
+     * @param request the request parameters of GetCopilotConversation  GetCopilotConversationRequest
+     * @return GetCopilotConversationResponse
+     */
+    CompletableFuture<GetCopilotConversationResponse> getCopilotConversation(GetCopilotConversationRequest request);
+
+    /**
+     * @param request the request parameters of GetCopilotTurn  GetCopilotTurnRequest
+     * @return GetCopilotTurnResponse
+     */
+    CompletableFuture<GetCopilotTurnResponse> getCopilotTurn(GetCopilotTurnRequest request);
+
+    /**
+     * @param request the request parameters of GetCopilotTurnByClientMessageId  GetCopilotTurnByClientMessageIdRequest
+     * @return GetCopilotTurnByClientMessageIdResponse
+     */
+    CompletableFuture<GetCopilotTurnByClientMessageIdResponse> getCopilotTurnByClientMessageId(GetCopilotTurnByClientMessageIdRequest request);
+
+    /**
      * @param request the request parameters of GetDataBatchIngestion  GetDataBatchIngestionRequest
      * @return GetDataBatchIngestionResponse
      */
@@ -294,6 +332,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAutoDisposeEntitiesResponse
      */
     CompletableFuture<ListAutoDisposeEntitiesResponse> listAutoDisposeEntities(ListAutoDisposeEntitiesRequest request);
+
+    /**
+     * @param request the request parameters of ListCopilotMessages  ListCopilotMessagesRequest
+     * @return ListCopilotMessagesResponse
+     */
+    CompletableFuture<ListCopilotMessagesResponse> listCopilotMessages(ListCopilotMessagesRequest request);
 
     /**
      * @param request the request parameters of ListDataConnectors  ListDataConnectorsRequest
@@ -468,6 +512,14 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ResetDataStorageResponse
      */
     CompletableFuture<ResetDataStorageResponse> resetDataStorage(ResetDataStorageRequest request);
+
+    /**
+     * @param request the request parameters of ResumeCopilotTurnStream  ResumeCopilotTurnStreamRequest
+     * @return ResumeCopilotTurnStreamResponse
+     */
+    CompletableFuture<ResumeCopilotTurnStreamResponse> resumeCopilotTurnStream(ResumeCopilotTurnStreamRequest request);
+
+    ResponseIterable<String> resumeCopilotTurnStreamWithResponseIterable(ResumeCopilotTurnStreamRequest request);
 
     /**
      * @param request the request parameters of SetDefaultNormalizationRuleVersion  SetDefaultNormalizationRuleVersionRequest

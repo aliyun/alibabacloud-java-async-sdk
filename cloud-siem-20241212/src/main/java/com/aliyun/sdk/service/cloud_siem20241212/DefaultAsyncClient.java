@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.cloud_siem20241212;
 
 import com.aliyun.core.http.*;
 import com.aliyun.sdk.service.cloud_siem20241212.models.*;
+import darabonba.core.sse.SSEHttpResponseHandler;
 import darabonba.core.utils.*;
 import com.aliyun.sdk.gateway.pop.*;
 import darabonba.core.*;
@@ -40,6 +41,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CancelCopilotTurn  CancelCopilotTurnRequest
+     * @return CancelCopilotTurnResponse
+     */
+    @Override
+    public CompletableFuture<CancelCopilotTurnResponse> cancelCopilotTurn(CancelCopilotTurnRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CancelCopilotTurn").setMethod(HttpMethod.POST).setPathRegex("/api/v1/copilot/turn/cancel").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CancelCopilotTurnResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CancelCopilotTurnResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CheckUpgradeItem  CheckUpgradeItemRequest
      * @return CheckUpgradeItemResponse
      */
@@ -70,6 +89,52 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateAutoDisposeConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateCopilotChat  CreateCopilotChatRequest
+     * @return CreateCopilotChatResponse
+     */
+    @Override
+    public CompletableFuture<CreateCopilotChatResponse> createCopilotChat(CreateCopilotChatRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateCopilotChat").setMethod(HttpMethod.POST).setPathRegex("/api/v1/copilot/chat/completions/create").setBodyType(BodyType.STRING).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateCopilotChatResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateCopilotChatResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<String> createCopilotChatWithResponseIterable(CreateCopilotChatRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("CreateCopilotChat").setMethod(HttpMethod.POST).setPathRegex("/api/v1/copilot/chat/completions/create").setBodyType(BodyType.STRING).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+        CreateCopilotChatResponseBodyIterator iterator = CreateCopilotChatResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
+     * @param request the request parameters of CreateCopilotConversation  CreateCopilotConversationRequest
+     * @return CreateCopilotConversationResponse
+     */
+    @Override
+    public CompletableFuture<CreateCopilotConversationResponse> createCopilotConversation(CreateCopilotConversationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateCopilotConversation").setMethod(HttpMethod.POST).setPathRegex("/api/v1/copilot/conversation/create").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateCopilotConversationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateCopilotConversationResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -616,6 +681,60 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetCopilotConversation  GetCopilotConversationRequest
+     * @return GetCopilotConversationResponse
+     */
+    @Override
+    public CompletableFuture<GetCopilotConversationResponse> getCopilotConversation(GetCopilotConversationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetCopilotConversation").setMethod(HttpMethod.POST).setPathRegex("/api/v1/copilot/conversation/get").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCopilotConversationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetCopilotConversationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetCopilotTurn  GetCopilotTurnRequest
+     * @return GetCopilotTurnResponse
+     */
+    @Override
+    public CompletableFuture<GetCopilotTurnResponse> getCopilotTurn(GetCopilotTurnRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetCopilotTurn").setMethod(HttpMethod.POST).setPathRegex("/api/v1/copilot/turn/get").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCopilotTurnResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetCopilotTurnResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetCopilotTurnByClientMessageId  GetCopilotTurnByClientMessageIdRequest
+     * @return GetCopilotTurnByClientMessageIdResponse
+     */
+    @Override
+    public CompletableFuture<GetCopilotTurnByClientMessageIdResponse> getCopilotTurnByClientMessageId(GetCopilotTurnByClientMessageIdRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetCopilotTurnByClientMessageId").setMethod(HttpMethod.POST).setPathRegex("/api/v1/copilot/turn/get-by-client-message-id").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCopilotTurnByClientMessageIdResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetCopilotTurnByClientMessageIdResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetDataBatchIngestion  GetDataBatchIngestionRequest
      * @return GetDataBatchIngestionResponse
      */
@@ -862,6 +981,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListAutoDisposeEntitiesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListCopilotMessages  ListCopilotMessagesRequest
+     * @return ListCopilotMessagesResponse
+     */
+    @Override
+    public CompletableFuture<ListCopilotMessagesResponse> listCopilotMessages(ListCopilotMessagesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListCopilotMessages").setMethod(HttpMethod.POST).setPathRegex("/api/v1/copilot/message/list").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListCopilotMessagesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListCopilotMessagesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1387,6 +1524,34 @@ public final class DefaultAsyncClient implements AsyncClient {
             future.completeExceptionally(e);
             return future;
         }
+    }
+
+    /**
+     * @param request the request parameters of ResumeCopilotTurnStream  ResumeCopilotTurnStreamRequest
+     * @return ResumeCopilotTurnStreamResponse
+     */
+    @Override
+    public CompletableFuture<ResumeCopilotTurnStreamResponse> resumeCopilotTurnStream(ResumeCopilotTurnStreamRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ResumeCopilotTurnStream").setMethod(HttpMethod.POST).setPathRegex("/api/v1/copilot/turn/resume-stream").setBodyType(BodyType.STRING).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ResumeCopilotTurnStreamResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ResumeCopilotTurnStreamResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<String> resumeCopilotTurnStreamWithResponseIterable(ResumeCopilotTurnStreamRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("ResumeCopilotTurnStream").setMethod(HttpMethod.POST).setPathRegex("/api/v1/copilot/turn/resume-stream").setBodyType(BodyType.STRING).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+        ResumeCopilotTurnStreamResponseBodyIterator iterator = ResumeCopilotTurnStreamResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
     }
 
     /**
