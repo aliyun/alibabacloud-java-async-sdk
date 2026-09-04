@@ -22,6 +22,10 @@ public class CreateApplicationRequest extends Request {
     private String AIDBClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgenticDBBranchSpec")
+    private AgenticDBBranchSpec agenticDBBranchSpec;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApplicationType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String applicationType;
@@ -160,6 +164,10 @@ public class CreateApplicationRequest extends Request {
     private String skillTemplateId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Storages")
+    private java.util.List<Storages> storages;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Tag> tag;
 
@@ -190,6 +198,7 @@ public class CreateApplicationRequest extends Request {
     private CreateApplicationRequest(Builder builder) {
         super(builder);
         this.AIDBClusterId = builder.AIDBClusterId;
+        this.agenticDBBranchSpec = builder.agenticDBBranchSpec;
         this.applicationType = builder.applicationType;
         this.architecture = builder.architecture;
         this.authProvider = builder.authProvider;
@@ -224,6 +233,7 @@ public class CreateApplicationRequest extends Request {
         this.securityIPList = builder.securityIPList;
         this.securityIPType = builder.securityIPType;
         this.skillTemplateId = builder.skillTemplateId;
+        this.storages = builder.storages;
         this.tag = builder.tag;
         this.targetVersion = builder.targetVersion;
         this.usedTime = builder.usedTime;
@@ -251,6 +261,13 @@ public class CreateApplicationRequest extends Request {
      */
     public String getAIDBClusterId() {
         return this.AIDBClusterId;
+    }
+
+    /**
+     * @return agenticDBBranchSpec
+     */
+    public AgenticDBBranchSpec getAgenticDBBranchSpec() {
+        return this.agenticDBBranchSpec;
     }
 
     /**
@@ -492,6 +509,13 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return storages
+     */
+    public java.util.List<Storages> getStorages() {
+        return this.storages;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List<Tag> getTag() {
@@ -542,6 +566,7 @@ public class CreateApplicationRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateApplicationRequest, Builder> {
         private String AIDBClusterId; 
+        private AgenticDBBranchSpec agenticDBBranchSpec; 
         private String applicationType; 
         private String architecture; 
         private String authProvider; 
@@ -576,6 +601,7 @@ public class CreateApplicationRequest extends Request {
         private String securityIPList; 
         private String securityIPType; 
         private String skillTemplateId; 
+        private java.util.List<Storages> storages; 
         private java.util.List<Tag> tag; 
         private String targetVersion; 
         private String usedTime; 
@@ -591,6 +617,7 @@ public class CreateApplicationRequest extends Request {
         private Builder(CreateApplicationRequest request) {
             super(request);
             this.AIDBClusterId = request.AIDBClusterId;
+            this.agenticDBBranchSpec = request.agenticDBBranchSpec;
             this.applicationType = request.applicationType;
             this.architecture = request.architecture;
             this.authProvider = request.authProvider;
@@ -625,6 +652,7 @@ public class CreateApplicationRequest extends Request {
             this.securityIPList = request.securityIPList;
             this.securityIPType = request.securityIPType;
             this.skillTemplateId = request.skillTemplateId;
+            this.storages = request.storages;
             this.tag = request.tag;
             this.targetVersion = request.targetVersion;
             this.usedTime = request.usedTime;
@@ -640,6 +668,16 @@ public class CreateApplicationRequest extends Request {
         public Builder AIDBClusterId(String AIDBClusterId) {
             this.putQueryParameter("AIDBClusterId", AIDBClusterId);
             this.AIDBClusterId = AIDBClusterId;
+            return this;
+        }
+
+        /**
+         * AgenticDBBranchSpec.
+         */
+        public Builder agenticDBBranchSpec(AgenticDBBranchSpec agenticDBBranchSpec) {
+            String agenticDBBranchSpecShrink = shrink(agenticDBBranchSpec, "AgenticDBBranchSpec", "json");
+            this.putQueryParameter("AgenticDBBranchSpec", agenticDBBranchSpecShrink);
+            this.agenticDBBranchSpec = agenticDBBranchSpec;
             return this;
         }
 
@@ -962,6 +1000,16 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
+         * Storages.
+         */
+        public Builder storages(java.util.List<Storages> storages) {
+            String storagesShrink = shrink(storages, "Storages", "json");
+            this.putQueryParameter("Storages", storagesShrink);
+            this.storages = storages;
+            return this;
+        }
+
+        /**
          * Tag.
          */
         public Builder tag(java.util.List<Tag> tag) {
@@ -1031,6 +1079,165 @@ public class CreateApplicationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateApplicationRequest} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationRequest</p>
+     */
+    public static class AgenticDBBranchSpec extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BranchId")
+        private String branchId;
+
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
+        private String DBClusterId;
+
+        @com.aliyun.core.annotation.NameInMap("ForkFromApplicationId")
+        private String forkFromApplicationId;
+
+        @com.aliyun.core.annotation.NameInMap("ForkFromBranch")
+        private Boolean forkFromBranch;
+
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
+        private String projectId;
+
+        @com.aliyun.core.annotation.NameInMap("TenantId")
+        private String tenantId;
+
+        private AgenticDBBranchSpec(Builder builder) {
+            this.branchId = builder.branchId;
+            this.DBClusterId = builder.DBClusterId;
+            this.forkFromApplicationId = builder.forkFromApplicationId;
+            this.forkFromBranch = builder.forkFromBranch;
+            this.projectId = builder.projectId;
+            this.tenantId = builder.tenantId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AgenticDBBranchSpec create() {
+            return builder().build();
+        }
+
+        /**
+         * @return branchId
+         */
+        public String getBranchId() {
+            return this.branchId;
+        }
+
+        /**
+         * @return DBClusterId
+         */
+        public String getDBClusterId() {
+            return this.DBClusterId;
+        }
+
+        /**
+         * @return forkFromApplicationId
+         */
+        public String getForkFromApplicationId() {
+            return this.forkFromApplicationId;
+        }
+
+        /**
+         * @return forkFromBranch
+         */
+        public Boolean getForkFromBranch() {
+            return this.forkFromBranch;
+        }
+
+        /**
+         * @return projectId
+         */
+        public String getProjectId() {
+            return this.projectId;
+        }
+
+        /**
+         * @return tenantId
+         */
+        public String getTenantId() {
+            return this.tenantId;
+        }
+
+        public static final class Builder {
+            private String branchId; 
+            private String DBClusterId; 
+            private String forkFromApplicationId; 
+            private Boolean forkFromBranch; 
+            private String projectId; 
+            private String tenantId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AgenticDBBranchSpec model) {
+                this.branchId = model.branchId;
+                this.DBClusterId = model.DBClusterId;
+                this.forkFromApplicationId = model.forkFromApplicationId;
+                this.forkFromBranch = model.forkFromBranch;
+                this.projectId = model.projectId;
+                this.tenantId = model.tenantId;
+            } 
+
+            /**
+             * BranchId.
+             */
+            public Builder branchId(String branchId) {
+                this.branchId = branchId;
+                return this;
+            }
+
+            /**
+             * DBClusterId.
+             */
+            public Builder DBClusterId(String DBClusterId) {
+                this.DBClusterId = DBClusterId;
+                return this;
+            }
+
+            /**
+             * ForkFromApplicationId.
+             */
+            public Builder forkFromApplicationId(String forkFromApplicationId) {
+                this.forkFromApplicationId = forkFromApplicationId;
+                return this;
+            }
+
+            /**
+             * ForkFromBranch.
+             */
+            public Builder forkFromBranch(Boolean forkFromBranch) {
+                this.forkFromBranch = forkFromBranch;
+                return this;
+            }
+
+            /**
+             * ProjectId.
+             */
+            public Builder projectId(String projectId) {
+                this.projectId = projectId;
+                return this;
+            }
+
+            /**
+             * TenantId.
+             */
+            public Builder tenantId(String tenantId) {
+                this.tenantId = tenantId;
+                return this;
+            }
+
+            public AgenticDBBranchSpec build() {
+                return new AgenticDBBranchSpec(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link CreateApplicationRequest} extends {@link TeaModel}
@@ -1833,6 +2040,207 @@ public class CreateApplicationRequest extends Request {
 
             public Parameters build() {
                 return new Parameters(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateApplicationRequest} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationRequest</p>
+     */
+    public static class Storages extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ContainerMountPath")
+        private String containerMountPath;
+
+        @com.aliyun.core.annotation.NameInMap("EndpointId")
+        private String endpointId;
+
+        @com.aliyun.core.annotation.NameInMap("MountPath")
+        private String mountPath;
+
+        @com.aliyun.core.annotation.NameInMap("StorageCapacity")
+        private String storageCapacity;
+
+        @com.aliyun.core.annotation.NameInMap("StorageEndpoint")
+        private String storageEndpoint;
+
+        @com.aliyun.core.annotation.NameInMap("StorageInstanceId")
+        private String storageInstanceId;
+
+        @com.aliyun.core.annotation.NameInMap("StoragePerformanceLevel")
+        private String storagePerformanceLevel;
+
+        @com.aliyun.core.annotation.NameInMap("StorageType")
+        private String storageType;
+
+        private Storages(Builder builder) {
+            this.containerMountPath = builder.containerMountPath;
+            this.endpointId = builder.endpointId;
+            this.mountPath = builder.mountPath;
+            this.storageCapacity = builder.storageCapacity;
+            this.storageEndpoint = builder.storageEndpoint;
+            this.storageInstanceId = builder.storageInstanceId;
+            this.storagePerformanceLevel = builder.storagePerformanceLevel;
+            this.storageType = builder.storageType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Storages create() {
+            return builder().build();
+        }
+
+        /**
+         * @return containerMountPath
+         */
+        public String getContainerMountPath() {
+            return this.containerMountPath;
+        }
+
+        /**
+         * @return endpointId
+         */
+        public String getEndpointId() {
+            return this.endpointId;
+        }
+
+        /**
+         * @return mountPath
+         */
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        /**
+         * @return storageCapacity
+         */
+        public String getStorageCapacity() {
+            return this.storageCapacity;
+        }
+
+        /**
+         * @return storageEndpoint
+         */
+        public String getStorageEndpoint() {
+            return this.storageEndpoint;
+        }
+
+        /**
+         * @return storageInstanceId
+         */
+        public String getStorageInstanceId() {
+            return this.storageInstanceId;
+        }
+
+        /**
+         * @return storagePerformanceLevel
+         */
+        public String getStoragePerformanceLevel() {
+            return this.storagePerformanceLevel;
+        }
+
+        /**
+         * @return storageType
+         */
+        public String getStorageType() {
+            return this.storageType;
+        }
+
+        public static final class Builder {
+            private String containerMountPath; 
+            private String endpointId; 
+            private String mountPath; 
+            private String storageCapacity; 
+            private String storageEndpoint; 
+            private String storageInstanceId; 
+            private String storagePerformanceLevel; 
+            private String storageType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Storages model) {
+                this.containerMountPath = model.containerMountPath;
+                this.endpointId = model.endpointId;
+                this.mountPath = model.mountPath;
+                this.storageCapacity = model.storageCapacity;
+                this.storageEndpoint = model.storageEndpoint;
+                this.storageInstanceId = model.storageInstanceId;
+                this.storagePerformanceLevel = model.storagePerformanceLevel;
+                this.storageType = model.storageType;
+            } 
+
+            /**
+             * ContainerMountPath.
+             */
+            public Builder containerMountPath(String containerMountPath) {
+                this.containerMountPath = containerMountPath;
+                return this;
+            }
+
+            /**
+             * EndpointId.
+             */
+            public Builder endpointId(String endpointId) {
+                this.endpointId = endpointId;
+                return this;
+            }
+
+            /**
+             * MountPath.
+             */
+            public Builder mountPath(String mountPath) {
+                this.mountPath = mountPath;
+                return this;
+            }
+
+            /**
+             * StorageCapacity.
+             */
+            public Builder storageCapacity(String storageCapacity) {
+                this.storageCapacity = storageCapacity;
+                return this;
+            }
+
+            /**
+             * StorageEndpoint.
+             */
+            public Builder storageEndpoint(String storageEndpoint) {
+                this.storageEndpoint = storageEndpoint;
+                return this;
+            }
+
+            /**
+             * StorageInstanceId.
+             */
+            public Builder storageInstanceId(String storageInstanceId) {
+                this.storageInstanceId = storageInstanceId;
+                return this;
+            }
+
+            /**
+             * StoragePerformanceLevel.
+             */
+            public Builder storagePerformanceLevel(String storagePerformanceLevel) {
+                this.storagePerformanceLevel = storagePerformanceLevel;
+                return this;
+            }
+
+            /**
+             * StorageType.
+             */
+            public Builder storageType(String storageType) {
+                this.storageType = storageType;
+                return this;
+            }
+
+            public Storages build() {
+                return new Storages(this);
             } 
 
         } 
