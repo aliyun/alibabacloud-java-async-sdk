@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCreditDetailRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentTypes")
+    private java.util.List<String> agentTypes;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
@@ -51,6 +55,7 @@ public class DescribeCreditDetailRequest extends Request {
 
     private DescribeCreditDetailRequest(Builder builder) {
         super(builder);
+        this.agentTypes = builder.agentTypes;
         this.endTime = builder.endTime;
         this.instanceIds = builder.instanceIds;
         this.maxResults = builder.maxResults;
@@ -72,6 +77,13 @@ public class DescribeCreditDetailRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentTypes
+     */
+    public java.util.List<String> getAgentTypes() {
+        return this.agentTypes;
     }
 
     /**
@@ -131,6 +143,7 @@ public class DescribeCreditDetailRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeCreditDetailRequest, Builder> {
+        private java.util.List<String> agentTypes; 
         private Long endTime; 
         private java.util.List<String> instanceIds; 
         private Integer maxResults; 
@@ -146,6 +159,7 @@ public class DescribeCreditDetailRequest extends Request {
 
         private Builder(DescribeCreditDetailRequest request) {
             super(request);
+            this.agentTypes = request.agentTypes;
             this.endTime = request.endTime;
             this.instanceIds = request.instanceIds;
             this.maxResults = request.maxResults;
@@ -155,6 +169,15 @@ public class DescribeCreditDetailRequest extends Request {
             this.pageSize = request.pageSize;
             this.startTime = request.startTime;
         } 
+
+        /**
+         * AgentTypes.
+         */
+        public Builder agentTypes(java.util.List<String> agentTypes) {
+            this.putQueryParameter("AgentTypes", agentTypes);
+            this.agentTypes = agentTypes;
+            return this;
+        }
 
         /**
          * EndTime.

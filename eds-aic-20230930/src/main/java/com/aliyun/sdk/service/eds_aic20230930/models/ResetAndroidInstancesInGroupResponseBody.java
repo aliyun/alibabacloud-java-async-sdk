@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ResetAndroidInstancesInGroupResponseBody</p>
  */
 public class ResetAndroidInstancesInGroupResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("OrderId")
+    private String orderId;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -24,6 +27,7 @@ public class ResetAndroidInstancesInGroupResponseBody extends TeaModel {
     private Tasks tasks;
 
     private ResetAndroidInstancesInGroupResponseBody(Builder builder) {
+        this.orderId = builder.orderId;
         this.requestId = builder.requestId;
         this.tasks = builder.tasks;
     }
@@ -41,6 +45,13 @@ public class ResetAndroidInstancesInGroupResponseBody extends TeaModel {
     }
 
     /**
+     * @return orderId
+     */
+    public String getOrderId() {
+        return this.orderId;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -55,6 +66,7 @@ public class ResetAndroidInstancesInGroupResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String orderId; 
         private String requestId; 
         private Tasks tasks; 
 
@@ -62,9 +74,18 @@ public class ResetAndroidInstancesInGroupResponseBody extends TeaModel {
         } 
 
         private Builder(ResetAndroidInstancesInGroupResponseBody model) {
+            this.orderId = model.orderId;
             this.requestId = model.requestId;
             this.tasks = model.tasks;
         } 
+
+        /**
+         * OrderId.
+         */
+        public Builder orderId(String orderId) {
+            this.orderId = orderId;
+            return this;
+        }
 
         /**
          * <p>The ID of the request.</p>

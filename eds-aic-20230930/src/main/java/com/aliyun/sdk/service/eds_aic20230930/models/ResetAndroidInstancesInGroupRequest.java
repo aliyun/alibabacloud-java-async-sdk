@@ -22,8 +22,16 @@ public class ResetAndroidInstancesInGroupRequest extends Request {
     private java.util.List<String> androidInstanceIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
+    private Boolean autoPay;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IgnoreParamValidation")
     private Boolean ignoreParamValidation;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionId")
+    private String promotionId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SaleMode")
@@ -33,12 +41,19 @@ public class ResetAndroidInstancesInGroupRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SettingResetType")
     private Integer settingResetType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetDataDiskSize")
+    private Integer targetDataDiskSize;
+
     private ResetAndroidInstancesInGroupRequest(Builder builder) {
         super(builder);
         this.androidInstanceIds = builder.androidInstanceIds;
+        this.autoPay = builder.autoPay;
         this.ignoreParamValidation = builder.ignoreParamValidation;
+        this.promotionId = builder.promotionId;
         this.saleMode = builder.saleMode;
         this.settingResetType = builder.settingResetType;
+        this.targetDataDiskSize = builder.targetDataDiskSize;
     }
 
     public static Builder builder() {
@@ -62,10 +77,24 @@ public class ResetAndroidInstancesInGroupRequest extends Request {
     }
 
     /**
+     * @return autoPay
+     */
+    public Boolean getAutoPay() {
+        return this.autoPay;
+    }
+
+    /**
      * @return ignoreParamValidation
      */
     public Boolean getIgnoreParamValidation() {
         return this.ignoreParamValidation;
+    }
+
+    /**
+     * @return promotionId
+     */
+    public String getPromotionId() {
+        return this.promotionId;
     }
 
     /**
@@ -82,11 +111,21 @@ public class ResetAndroidInstancesInGroupRequest extends Request {
         return this.settingResetType;
     }
 
+    /**
+     * @return targetDataDiskSize
+     */
+    public Integer getTargetDataDiskSize() {
+        return this.targetDataDiskSize;
+    }
+
     public static final class Builder extends Request.Builder<ResetAndroidInstancesInGroupRequest, Builder> {
         private java.util.List<String> androidInstanceIds; 
+        private Boolean autoPay; 
         private Boolean ignoreParamValidation; 
+        private String promotionId; 
         private String saleMode; 
         private Integer settingResetType; 
+        private Integer targetDataDiskSize; 
 
         private Builder() {
             super();
@@ -95,9 +134,12 @@ public class ResetAndroidInstancesInGroupRequest extends Request {
         private Builder(ResetAndroidInstancesInGroupRequest request) {
             super(request);
             this.androidInstanceIds = request.androidInstanceIds;
+            this.autoPay = request.autoPay;
             this.ignoreParamValidation = request.ignoreParamValidation;
+            this.promotionId = request.promotionId;
             this.saleMode = request.saleMode;
             this.settingResetType = request.settingResetType;
+            this.targetDataDiskSize = request.targetDataDiskSize;
         } 
 
         /**
@@ -110,11 +152,29 @@ public class ResetAndroidInstancesInGroupRequest extends Request {
         }
 
         /**
+         * AutoPay.
+         */
+        public Builder autoPay(Boolean autoPay) {
+            this.putQueryParameter("AutoPay", autoPay);
+            this.autoPay = autoPay;
+            return this;
+        }
+
+        /**
          * IgnoreParamValidation.
          */
         public Builder ignoreParamValidation(Boolean ignoreParamValidation) {
             this.putQueryParameter("IgnoreParamValidation", ignoreParamValidation);
             this.ignoreParamValidation = ignoreParamValidation;
+            return this;
+        }
+
+        /**
+         * PromotionId.
+         */
+        public Builder promotionId(String promotionId) {
+            this.putQueryParameter("PromotionId", promotionId);
+            this.promotionId = promotionId;
             return this;
         }
 
@@ -133,6 +193,15 @@ public class ResetAndroidInstancesInGroupRequest extends Request {
         public Builder settingResetType(Integer settingResetType) {
             this.putQueryParameter("SettingResetType", settingResetType);
             this.settingResetType = settingResetType;
+            return this;
+        }
+
+        /**
+         * TargetDataDiskSize.
+         */
+        public Builder targetDataDiskSize(Integer targetDataDiskSize) {
+            this.putQueryParameter("TargetDataDiskSize", targetDataDiskSize);
+            this.targetDataDiskSize = targetDataDiskSize;
             return this;
         }
 

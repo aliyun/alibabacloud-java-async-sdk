@@ -99,6 +99,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAICloudPhoneResponse> createAICloudPhone(CreateAICloudPhoneRequest request);
 
     /**
+     * @param request the request parameters of CreateAgentSkill  CreateAgentSkillRequest
+     * @return CreateAgentSkillResponse
+     */
+    CompletableFuture<CreateAgentSkillResponse> createAgentSkill(CreateAgentSkillRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before creating an instance group, ensure you understand the <a href="https://help.aliyun.com/document_detail/2807121.html">billing methods</a> supported by Cloud Phone.</p>
      * <ul>
@@ -206,6 +212,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateSystemPropertyTemplateResponse
      */
     CompletableFuture<CreateSystemPropertyTemplateResponse> createSystemPropertyTemplate(CreateSystemPropertyTemplateRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAgentSkill  DeleteAgentSkillRequest
+     * @return DeleteAgentSkillResponse
+     */
+    CompletableFuture<DeleteAgentSkillResponse> deleteAgentSkill(DeleteAgentSkillRequest request);
 
     /**
      * <b>description</b> :
@@ -419,6 +431,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeScheduledTasksResponse> describeScheduledTasks(DescribeScheduledTasksRequest request);
 
     /**
+     * @param request the request parameters of DescribeSkills  DescribeSkillsRequest
+     * @return DescribeSkillsResponse
+     */
+    CompletableFuture<DescribeSkillsResponse> describeSkills(DescribeSkillsRequest request);
+
+    /**
      * @param request the request parameters of DescribeSpec  DescribeSpecRequest
      * @return DescribeSpecResponse
      */
@@ -555,6 +573,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return InstallMonitorAgentResponse
      */
     CompletableFuture<InstallMonitorAgentResponse> installMonitorAgent(InstallMonitorAgentRequest request);
+
+    /**
+     * @param request the request parameters of InstallSkills  InstallSkillsRequest
+     * @return InstallSkillsResponse
+     */
+    CompletableFuture<InstallSkillsResponse> installSkills(InstallSkillsRequest request);
 
     /**
      * @param request the request parameters of InstanceHealer  InstanceHealerRequest
@@ -834,6 +858,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UninstallMonitorAgentResponse
      */
     CompletableFuture<UninstallMonitorAgentResponse> uninstallMonitorAgent(UninstallMonitorAgentRequest request);
+
+    /**
+     * @param request the request parameters of UninstallSkills  UninstallSkillsRequest
+     * @return UninstallSkillsResponse
+     */
+    CompletableFuture<UninstallSkillsResponse> uninstallSkills(UninstallSkillsRequest request);
 
     /**
      * @param request the request parameters of UntagResources  UntagResourcesRequest

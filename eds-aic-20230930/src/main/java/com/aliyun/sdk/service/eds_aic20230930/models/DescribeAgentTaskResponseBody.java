@@ -157,7 +157,151 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
      *
      * <p>DescribeAgentTaskResponseBody</p>
      */
+    public static class Artifacts extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ContentType")
+        private String contentType;
+
+        @com.aliyun.core.annotation.NameInMap("DownloadUrl")
+        private String downloadUrl;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Size")
+        private Long size;
+
+        @com.aliyun.core.annotation.NameInMap("UpdatedTime")
+        private String updatedTime;
+
+        private Artifacts(Builder builder) {
+            this.contentType = builder.contentType;
+            this.downloadUrl = builder.downloadUrl;
+            this.name = builder.name;
+            this.size = builder.size;
+            this.updatedTime = builder.updatedTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Artifacts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return contentType
+         */
+        public String getContentType() {
+            return this.contentType;
+        }
+
+        /**
+         * @return downloadUrl
+         */
+        public String getDownloadUrl() {
+            return this.downloadUrl;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return size
+         */
+        public Long getSize() {
+            return this.size;
+        }
+
+        /**
+         * @return updatedTime
+         */
+        public String getUpdatedTime() {
+            return this.updatedTime;
+        }
+
+        public static final class Builder {
+            private String contentType; 
+            private String downloadUrl; 
+            private String name; 
+            private Long size; 
+            private String updatedTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Artifacts model) {
+                this.contentType = model.contentType;
+                this.downloadUrl = model.downloadUrl;
+                this.name = model.name;
+                this.size = model.size;
+                this.updatedTime = model.updatedTime;
+            } 
+
+            /**
+             * ContentType.
+             */
+            public Builder contentType(String contentType) {
+                this.contentType = contentType;
+                return this;
+            }
+
+            /**
+             * DownloadUrl.
+             */
+            public Builder downloadUrl(String downloadUrl) {
+                this.downloadUrl = downloadUrl;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Size.
+             */
+            public Builder size(Long size) {
+                this.size = size;
+                return this;
+            }
+
+            /**
+             * UpdatedTime.
+             */
+            public Builder updatedTime(String updatedTime) {
+                this.updatedTime = updatedTime;
+                return this;
+            }
+
+            public Artifacts build() {
+                return new Artifacts(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAgentTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAgentTaskResponseBody</p>
+     */
     public static class Tasks extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ArtifactCount")
+        private Integer artifactCount;
+
+        @com.aliyun.core.annotation.NameInMap("Artifacts")
+        private java.util.List<Artifacts> artifacts;
+
         @com.aliyun.core.annotation.NameInMap("CurrentStatus")
         private String currentStatus;
 
@@ -192,6 +336,8 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
         private String userPrompt;
 
         private Tasks(Builder builder) {
+            this.artifactCount = builder.artifactCount;
+            this.artifacts = builder.artifacts;
             this.currentStatus = builder.currentStatus;
             this.digestSource = builder.digestSource;
             this.instanceId = builder.instanceId;
@@ -211,6 +357,20 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
 
         public static Tasks create() {
             return builder().build();
+        }
+
+        /**
+         * @return artifactCount
+         */
+        public Integer getArtifactCount() {
+            return this.artifactCount;
+        }
+
+        /**
+         * @return artifacts
+         */
+        public java.util.List<Artifacts> getArtifacts() {
+            return this.artifacts;
         }
 
         /**
@@ -291,6 +451,8 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer artifactCount; 
+            private java.util.List<Artifacts> artifacts; 
             private String currentStatus; 
             private String digestSource; 
             private String instanceId; 
@@ -307,6 +469,8 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
             } 
 
             private Builder(Tasks model) {
+                this.artifactCount = model.artifactCount;
+                this.artifacts = model.artifacts;
                 this.currentStatus = model.currentStatus;
                 this.digestSource = model.digestSource;
                 this.instanceId = model.instanceId;
@@ -319,6 +483,22 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
                 this.taskResult = model.taskResult;
                 this.userPrompt = model.userPrompt;
             } 
+
+            /**
+             * ArtifactCount.
+             */
+            public Builder artifactCount(Integer artifactCount) {
+                this.artifactCount = artifactCount;
+                return this;
+            }
+
+            /**
+             * Artifacts.
+             */
+            public Builder artifacts(java.util.List<Artifacts> artifacts) {
+                this.artifacts = artifacts;
+                return this;
+            }
 
             /**
              * CurrentStatus.

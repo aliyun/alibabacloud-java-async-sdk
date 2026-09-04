@@ -95,6 +95,9 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
      * <p>DescribeCreditDetailResponseBody</p>
      */
     public static class Details extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AgentType")
+        private String agentType;
+
         @com.aliyun.core.annotation.NameInMap("ApiKeyName")
         private String apiKeyName;
 
@@ -144,6 +147,7 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
         private Long ttftMs;
 
         private Details(Builder builder) {
+            this.agentType = builder.agentType;
             this.apiKeyName = builder.apiKeyName;
             this.cachedTokens = builder.cachedTokens;
             this.changeTime = builder.changeTime;
@@ -168,6 +172,13 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
 
         public static Details create() {
             return builder().build();
+        }
+
+        /**
+         * @return agentType
+         */
+        public String getAgentType() {
+            return this.agentType;
         }
 
         /**
@@ -283,6 +294,7 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String agentType; 
             private String apiKeyName; 
             private Long cachedTokens; 
             private String changeTime; 
@@ -304,6 +316,7 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             } 
 
             private Builder(Details model) {
+                this.agentType = model.agentType;
                 this.apiKeyName = model.apiKeyName;
                 this.cachedTokens = model.cachedTokens;
                 this.changeTime = model.changeTime;
@@ -321,6 +334,14 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
                 this.totalTokens = model.totalTokens;
                 this.ttftMs = model.ttftMs;
             } 
+
+            /**
+             * AgentType.
+             */
+            public Builder agentType(String agentType) {
+                this.agentType = agentType;
+                return this;
+            }
 
             /**
              * ApiKeyName.

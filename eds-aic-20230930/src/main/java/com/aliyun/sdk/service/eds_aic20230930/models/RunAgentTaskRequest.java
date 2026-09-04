@@ -34,6 +34,10 @@ public class RunAgentTaskRequest extends Request {
     private RunConfig runConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SaveArtifacts")
+    private Boolean saveArtifacts;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScheduleId")
     private String scheduleId;
 
@@ -59,6 +63,7 @@ public class RunAgentTaskRequest extends Request {
         this.instanceIds = builder.instanceIds;
         this.maxSteps = builder.maxSteps;
         this.runConfig = builder.runConfig;
+        this.saveArtifacts = builder.saveArtifacts;
         this.scheduleId = builder.scheduleId;
         this.targets = builder.targets;
         this.taskConfigId = builder.taskConfigId;
@@ -108,6 +113,13 @@ public class RunAgentTaskRequest extends Request {
     }
 
     /**
+     * @return saveArtifacts
+     */
+    public Boolean getSaveArtifacts() {
+        return this.saveArtifacts;
+    }
+
+    /**
      * @return scheduleId
      */
     public String getScheduleId() {
@@ -147,6 +159,7 @@ public class RunAgentTaskRequest extends Request {
         private java.util.List<String> instanceIds; 
         private Integer maxSteps; 
         private RunConfig runConfig; 
+        private Boolean saveArtifacts; 
         private String scheduleId; 
         private java.util.List<Targets> targets; 
         private String taskConfigId; 
@@ -163,6 +176,7 @@ public class RunAgentTaskRequest extends Request {
             this.instanceIds = request.instanceIds;
             this.maxSteps = request.maxSteps;
             this.runConfig = request.runConfig;
+            this.saveArtifacts = request.saveArtifacts;
             this.scheduleId = request.scheduleId;
             this.targets = request.targets;
             this.taskConfigId = request.taskConfigId;
@@ -204,6 +218,15 @@ public class RunAgentTaskRequest extends Request {
             String runConfigShrink = shrink(runConfig, "RunConfig", "json");
             this.putQueryParameter("RunConfig", runConfigShrink);
             this.runConfig = runConfig;
+            return this;
+        }
+
+        /**
+         * SaveArtifacts.
+         */
+        public Builder saveArtifacts(Boolean saveArtifacts) {
+            this.putQueryParameter("SaveArtifacts", saveArtifacts);
+            this.saveArtifacts = saveArtifacts;
             return this;
         }
 
