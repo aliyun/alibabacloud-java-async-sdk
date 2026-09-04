@@ -44,6 +44,9 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceClass")
     private String instanceClass;
 
+    @com.aliyun.core.annotation.NameInMap("InstanceLatestVersion")
+    private String instanceLatestVersion;
+
     @com.aliyun.core.annotation.NameInMap("InstanceMinorVersion")
     private String instanceMinorVersion;
 
@@ -52,6 +55,9 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("LoginToken")
     private String loginToken;
+
+    @com.aliyun.core.annotation.NameInMap("MinorVersionDetail")
+    private String minorVersionDetail;
 
     @com.aliyun.core.annotation.NameInMap("NatCreatedBy")
     private String natCreatedBy;
@@ -105,9 +111,11 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         this.eipId = builder.eipId;
         this.eipStatus = builder.eipStatus;
         this.instanceClass = builder.instanceClass;
+        this.instanceLatestVersion = builder.instanceLatestVersion;
         this.instanceMinorVersion = builder.instanceMinorVersion;
         this.instanceName = builder.instanceName;
         this.loginToken = builder.loginToken;
+        this.minorVersionDetail = builder.minorVersionDetail;
         this.natCreatedBy = builder.natCreatedBy;
         this.natGatewayId = builder.natGatewayId;
         this.natStatus = builder.natStatus;
@@ -200,6 +208,13 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return instanceLatestVersion
+     */
+    public String getInstanceLatestVersion() {
+        return this.instanceLatestVersion;
+    }
+
+    /**
      * @return instanceMinorVersion
      */
     public String getInstanceMinorVersion() {
@@ -218,6 +233,13 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
      */
     public String getLoginToken() {
         return this.loginToken;
+    }
+
+    /**
+     * @return minorVersionDetail
+     */
+    public String getMinorVersionDetail() {
+        return this.minorVersionDetail;
     }
 
     /**
@@ -328,9 +350,11 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         private String eipId; 
         private String eipStatus; 
         private String instanceClass; 
+        private String instanceLatestVersion; 
         private String instanceMinorVersion; 
         private String instanceName; 
         private String loginToken; 
+        private String minorVersionDetail; 
         private String natCreatedBy; 
         private String natGatewayId; 
         private String natStatus; 
@@ -359,9 +383,11 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
             this.eipId = model.eipId;
             this.eipStatus = model.eipStatus;
             this.instanceClass = model.instanceClass;
+            this.instanceLatestVersion = model.instanceLatestVersion;
             this.instanceMinorVersion = model.instanceMinorVersion;
             this.instanceName = model.instanceName;
             this.loginToken = model.loginToken;
+            this.minorVersionDetail = model.minorVersionDetail;
             this.natCreatedBy = model.natCreatedBy;
             this.natGatewayId = model.natGatewayId;
             this.natStatus = model.natStatus;
@@ -463,6 +489,14 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * InstanceLatestVersion.
+         */
+        public Builder instanceLatestVersion(String instanceLatestVersion) {
+            this.instanceLatestVersion = instanceLatestVersion;
+            return this;
+        }
+
+        /**
          * <p>The minor version number of RDS Supabase instance.</p>
          * 
          * <strong>example:</strong>
@@ -489,6 +523,14 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
          */
         public Builder loginToken(String loginToken) {
             this.loginToken = loginToken;
+            return this;
+        }
+
+        /**
+         * MinorVersionDetail.
+         */
+        public Builder minorVersionDetail(String minorVersionDetail) {
+            this.minorVersionDetail = minorVersionDetail;
             return this;
         }
 
