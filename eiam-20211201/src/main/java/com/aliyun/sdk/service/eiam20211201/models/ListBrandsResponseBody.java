@@ -200,15 +200,23 @@ public class ListBrandsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
+        @com.aliyun.core.annotation.NameInMap("SmsGatewayId")
+        private String smsGatewayId;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
+
+        @com.aliyun.core.annotation.NameInMap("SystemNotificationStatus")
+        private String systemNotificationStatus;
 
         private Brands(Builder builder) {
             this.brandId = builder.brandId;
             this.brandName = builder.brandName;
             this.brandType = builder.brandType;
             this.instanceId = builder.instanceId;
+            this.smsGatewayId = builder.smsGatewayId;
             this.status = builder.status;
+            this.systemNotificationStatus = builder.systemNotificationStatus;
         }
 
         public static Builder builder() {
@@ -248,10 +256,24 @@ public class ListBrandsResponseBody extends TeaModel {
         }
 
         /**
+         * @return smsGatewayId
+         */
+        public String getSmsGatewayId() {
+            return this.smsGatewayId;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return systemNotificationStatus
+         */
+        public String getSystemNotificationStatus() {
+            return this.systemNotificationStatus;
         }
 
         public static final class Builder {
@@ -259,7 +281,9 @@ public class ListBrandsResponseBody extends TeaModel {
             private String brandName; 
             private String brandType; 
             private String instanceId; 
+            private String smsGatewayId; 
             private String status; 
+            private String systemNotificationStatus; 
 
             private Builder() {
             } 
@@ -269,7 +293,9 @@ public class ListBrandsResponseBody extends TeaModel {
                 this.brandName = model.brandName;
                 this.brandType = model.brandType;
                 this.instanceId = model.instanceId;
+                this.smsGatewayId = model.smsGatewayId;
                 this.status = model.status;
+                this.systemNotificationStatus = model.systemNotificationStatus;
             } 
 
             /**
@@ -317,6 +343,14 @@ public class ListBrandsResponseBody extends TeaModel {
             }
 
             /**
+             * SmsGatewayId.
+             */
+            public Builder smsGatewayId(String smsGatewayId) {
+                this.smsGatewayId = smsGatewayId;
+                return this;
+            }
+
+            /**
              * <p>品牌状态</p>
              * 
              * <strong>example:</strong>
@@ -324,6 +358,14 @@ public class ListBrandsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * SystemNotificationStatus.
+             */
+            public Builder systemNotificationStatus(String systemNotificationStatus) {
+                this.systemNotificationStatus = systemNotificationStatus;
                 return this;
             }
 
