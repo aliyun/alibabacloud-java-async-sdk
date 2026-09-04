@@ -31,6 +31,10 @@ public class CreateUserRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("roleCodes")
     private java.util.List<String> roleCodes;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ssoProvider")
+    private String ssoProvider;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("tenantId")
     private String tenantId;
@@ -45,6 +49,7 @@ public class CreateUserRequest extends Request {
         this.displayName = builder.displayName;
         this.passwordEncrypted = builder.passwordEncrypted;
         this.roleCodes = builder.roleCodes;
+        this.ssoProvider = builder.ssoProvider;
         this.tenantId = builder.tenantId;
         this.wnAccountId = builder.wnAccountId;
     }
@@ -84,6 +89,13 @@ public class CreateUserRequest extends Request {
     }
 
     /**
+     * @return ssoProvider
+     */
+    public String getSsoProvider() {
+        return this.ssoProvider;
+    }
+
+    /**
      * @return tenantId
      */
     public String getTenantId() {
@@ -101,6 +113,7 @@ public class CreateUserRequest extends Request {
         private String displayName; 
         private String passwordEncrypted; 
         private java.util.List<String> roleCodes; 
+        private String ssoProvider; 
         private String tenantId; 
         private String wnAccountId; 
 
@@ -113,6 +126,7 @@ public class CreateUserRequest extends Request {
             this.displayName = request.displayName;
             this.passwordEncrypted = request.passwordEncrypted;
             this.roleCodes = request.roleCodes;
+            this.ssoProvider = request.ssoProvider;
             this.tenantId = request.tenantId;
             this.wnAccountId = request.wnAccountId;
         } 
@@ -157,6 +171,18 @@ public class CreateUserRequest extends Request {
         }
 
         /**
+         * <p>SSO provider 类型。租户仅有一个外部登录方式时可不传；多外部登录方式时必填。当前 createUser 支持 BUILD_IN 与 AGENT_ONE</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AGENT_ONE</p>
+         */
+        public Builder ssoProvider(String ssoProvider) {
+            this.putBodyParameter("ssoProvider", ssoProvider);
+            this.ssoProvider = ssoProvider;
+            return this;
+        }
+
+        /**
          * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
          * 
          * <strong>example:</strong>
@@ -169,7 +195,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * <p>WINNEXO 登录账号（唯一标识，不可为空）</p>
+         * <p>登录账号唯一标识；阿里云场景为 RAM 子账号 ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -31,11 +31,7 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "WinNexo";
         this.version = "2026-05-12";
         this.endpointRule = "regional";
-        this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("cn-shanghai", "winnexo.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "winnexo.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "winnexo.cn-hangzhou.aliyuncs.com")
-        );
+        this.endpointMap = new java.util.HashMap<>();
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -66,6 +62,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>按 graphName、operatingObjectName、objectType 三个独立维度幂等取消关注。原始数组单次 1 至 200 项，每项为最长 128 字符的非空字符串；服务端校验后保持顺序去重，非字符串、超长值或数组超限均被拒绝。删除、逐项状态和剩余有效数量在同一事务内完成。要安全取消全部关注，还必须调用 ClearOperatingObjectFavorites 清理列表不可见的历史、MISSING 或权限隐藏记录，并最终读回确认 total 为 0。</p>
+     * 
+     * @param request the request parameters of BatchRemoveOperatingObjectFavorites  BatchRemoveOperatingObjectFavoritesRequest
+     * @return BatchRemoveOperatingObjectFavoritesResponse
+     */
+    @Override
+    public CompletableFuture<BatchRemoveOperatingObjectFavoritesResponse> batchRemoveOperatingObjectFavorites(BatchRemoveOperatingObjectFavoritesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("BatchRemoveOperatingObjectFavorites").setMethod(HttpMethod.POST).setPathRegex("/openapi/batchRemoveOperatingObjectFavorites").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchRemoveOperatingObjectFavoritesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchRemoveOperatingObjectFavoritesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CheckHealth  CheckHealthRequest
      * @return CheckHealthResponse
      */
@@ -78,6 +95,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CheckHealthResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>按 graphName、operatingObjectName、objectType 三个独立维度清空当前调用用户的全部持久化关注，包括列表不可见的历史、MISSING 和权限隐藏记录。接口不返回不可见对象 ID，并在同一事务内复核剩余物理记录为零。</p>
+     * 
+     * @param request the request parameters of ClearOperatingObjectFavorites  ClearOperatingObjectFavoritesRequest
+     * @return ClearOperatingObjectFavoritesResponse
+     */
+    @Override
+    public CompletableFuture<ClearOperatingObjectFavoritesResponse> clearOperatingObjectFavorites(ClearOperatingObjectFavoritesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ClearOperatingObjectFavorites").setMethod(HttpMethod.POST).setPathRegex("/openapi/clearOperatingObjectFavorites").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ClearOperatingObjectFavoritesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ClearOperatingObjectFavoritesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -817,14 +855,18 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <p>OpenAPI 创建用户。
      *     业务编排：
-     *     1. 解析 roleCodes → role_ids（系统角色枚举校验）
-     *     2. 判断用户是否已存在（用于返回 isNewUser 标记）
-     *     3. 调用 UserManagementService.add_tenant_member 完成创建/加入（密码由调用方强制传入 RSA 密文）
-     *     4. 返回创建结果（含 isNewUser 标记）
+     *     1. 按有效配置与可选 ssoProvider 解析唯一登录方式；仅当主账号 ACTIVE 订阅授权目标租户时，公共云网关链路兼容无租户 SSO 绑定的唯一 AGENT_ONE
+     *     2. 解析 roleCodes → role_ids（系统角色枚举校验）
+     *     3. 判断用户是否已存在（用于返回 isNewUser 标记）
+     *     4. 调用 UserManagementService.add_tenant_member 完成创建/加入
+     *     5. 返回创建结果（含 isNewUser 标记）
      *     错误码：
      *     - ERR.User.DeactivatedInTenant: 用户在租户中已停用，请使用 updateUser 恢复
      *     - ERR.User.AlreadyInTenant: 用户已是租户活跃成员
-     *     - ERR.User.DisplayNameDuplicateInTenant: 租户内显示名重复</p>
+     *     - ERR.User.DisplayNameDuplicateInTenant: 租户内显示名重复
+     *     - ERR.User.CreateUserSsoProviderRequired: 多个外部 provider，无法唯一选择
+     *     - ERR.User.CreateUserSsoProviderUnavailable: provider 未绑定、未启用或暂不支持
+     *     - ERR.User.CreateUserRamAccountRequired: 公共云 RAM 登录方式传入了阿里云主账号</p>
      * 
      * @param request the request parameters of CreateUser  CreateUserRequest
      * @return CreateUserResponse
@@ -1766,6 +1808,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>按 graphName、operatingObjectName、objectType 三个独立维度查询关注。支持主对象与显式一级关联对象，使用不透明游标分页，不受关注面板 1000 条展示窗口限制。</p>
+     * 
+     * @param request the request parameters of ListOperatingObjectFavorites  ListOperatingObjectFavoritesRequest
+     * @return ListOperatingObjectFavoritesResponse
+     */
+    @Override
+    public CompletableFuture<ListOperatingObjectFavoritesResponse> listOperatingObjectFavorites(ListOperatingObjectFavoritesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListOperatingObjectFavorites").setMethod(HttpMethod.POST).setPathRegex("/openapi/listOperatingObjectFavorites").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListOperatingObjectFavoritesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListOperatingObjectFavoritesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>请求说明</h2>
      * <ul>
      * <li>该API用于查询当前登录用户的产出列表。</li>
@@ -2236,10 +2299,11 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>请求说明</h2>
      * <ul>
-     * <li>该API用于根据给定的运营对象名称（如 <code>customer_1</code>）分页查询相关的主对象数据。</li>
+     * <li>该API用于根据给定的数字员工技术名（如 <code>customer_1</code>）分页查询其主对象数据；不支持关系对象。</li>
      * <li>支持通过关键字进行搜索，并且可以设置是否仅返回被标记为关注的对象。</li>
      * <li>可以使用复杂的过滤条件来进一步筛选结果，包括但不限于等于、不等于、大于、小于等逻辑操作符。</li>
-     * <li>如果没有配置主对象类型，则会返回一个空的结果集。</li>
+     * <li>数字员工不存在、无 USE 权限或没有配置主对象类型时返回明确错误，不会静默返回空结果。</li>
+     * <li><code>operatingObjectName</code> 与对象类型是不同维度，禁止将 <code>objectType</code> 值替换到该字段。</li>
      * <li>请求中包含的数据将经过鉴权与过滤处理，确保安全性和准确性。</li>
      * </ul>
      * 

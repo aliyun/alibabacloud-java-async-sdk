@@ -132,7 +132,7 @@ public class CreateUserResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>WINNEXO 登录账号</p>
+         * <p>登录账号唯一标识</p>
          * 
          * <strong>example:</strong>
          * <p>exampleAccountId</p>

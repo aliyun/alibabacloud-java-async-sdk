@@ -154,7 +154,7 @@ public class QueryPrimaryObjectDataRequest extends Request {
         }
 
         /**
-         * <p>运营对象名称（如 customer_1）</p>
+         * <p>数字员工技术名（如 customer_1），不是对象类型</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

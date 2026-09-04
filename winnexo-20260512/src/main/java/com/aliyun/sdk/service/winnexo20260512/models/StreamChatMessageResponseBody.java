@@ -20,6 +20,9 @@ public class StreamChatMessageResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
+    @com.aliyun.core.annotation.NameInMap("content")
+    private String content;
+
     @com.aliyun.core.annotation.NameInMap("data")
     private Object data;
 
@@ -29,11 +32,16 @@ public class StreamChatMessageResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("type")
+    private String type;
+
     private StreamChatMessageResponseBody(Builder builder) {
         this.code = builder.code;
+        this.content = builder.content;
         this.data = builder.data;
         this.message = builder.message;
         this.requestId = builder.requestId;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -53,6 +61,13 @@ public class StreamChatMessageResponseBody extends TeaModel {
      */
     public String getCode() {
         return this.code;
+    }
+
+    /**
+     * @return content
+     */
+    public String getContent() {
+        return this.content;
     }
 
     /**
@@ -76,20 +91,31 @@ public class StreamChatMessageResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder {
         private String code; 
+        private String content; 
         private Object data; 
         private String message; 
         private String requestId; 
+        private String type; 
 
         private Builder() {
         } 
 
         private Builder(StreamChatMessageResponseBody model) {
             this.code = model.code;
+            this.content = model.content;
             this.data = model.data;
             this.message = model.message;
             this.requestId = model.requestId;
+            this.type = model.type;
         } 
 
         /**
@@ -100,6 +126,17 @@ public class StreamChatMessageResponseBody extends TeaModel {
          */
         public Builder code(String code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * <p>当前 SSE 帧的增量内容</p>
+         * 
+         * <strong>example:</strong>
+         * <p>你好</p>
+         */
+        public Builder content(String content) {
+            this.content = content;
             return this;
         }
 
@@ -133,6 +170,17 @@ public class StreamChatMessageResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * <p>SSE 事件类型，如 text、think、heartbeat、done 或 error</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
+         */
+        public Builder type(String type) {
+            this.type = type;
             return this;
         }
 
