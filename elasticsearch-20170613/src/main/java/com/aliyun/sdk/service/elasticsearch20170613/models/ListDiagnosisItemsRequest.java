@@ -25,10 +25,15 @@ public class ListDiagnosisItemsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("lang")
     private String lang;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("level")
+    private String level;
+
     private ListDiagnosisItemsRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.lang = builder.lang;
+        this.level = builder.level;
     }
 
     public static Builder builder() {
@@ -58,9 +63,17 @@ public class ListDiagnosisItemsRequest extends Request {
         return this.lang;
     }
 
+    /**
+     * @return level
+     */
+    public String getLevel() {
+        return this.level;
+    }
+
     public static final class Builder extends Request.Builder<ListDiagnosisItemsRequest, Builder> {
         private String instanceId; 
         private String lang; 
+        private String level; 
 
         private Builder() {
             super();
@@ -70,6 +83,7 @@ public class ListDiagnosisItemsRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.lang = request.lang;
+            this.level = request.level;
         } 
 
         /**
@@ -87,6 +101,15 @@ public class ListDiagnosisItemsRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * level.
+         */
+        public Builder level(String level) {
+            this.putQueryParameter("level", level);
+            this.level = level;
             return this;
         }
 

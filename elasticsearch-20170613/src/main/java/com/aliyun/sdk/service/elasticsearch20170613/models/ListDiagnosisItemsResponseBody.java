@@ -95,6 +95,12 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
      * <p>ListDiagnosisItemsResponseBody</p>
      */
     public static class Result extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("billable")
+        private Boolean billable;
+
+        @com.aliyun.core.annotation.NameInMap("category")
+        private String category;
+
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
@@ -104,14 +110,28 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
+        @com.aliyun.core.annotation.NameInMap("level")
+        private String level;
+
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("sortOrder")
+        private Integer sortOrder;
+
+        @com.aliyun.core.annotation.NameInMap("supportedModes")
+        private java.util.List<String> supportedModes;
+
         private Result(Builder builder) {
+            this.billable = builder.billable;
+            this.category = builder.category;
             this.description = builder.description;
             this.esApiRequired = builder.esApiRequired;
             this.key = builder.key;
+            this.level = builder.level;
             this.name = builder.name;
+            this.sortOrder = builder.sortOrder;
+            this.supportedModes = builder.supportedModes;
         }
 
         public static Builder builder() {
@@ -120,6 +140,20 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
 
         public static Result create() {
             return builder().build();
+        }
+
+        /**
+         * @return billable
+         */
+        public Boolean getBillable() {
+            return this.billable;
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
         }
 
         /**
@@ -144,27 +178,74 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
         }
 
         /**
+         * @return level
+         */
+        public String getLevel() {
+            return this.level;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
             return this.name;
         }
 
+        /**
+         * @return sortOrder
+         */
+        public Integer getSortOrder() {
+            return this.sortOrder;
+        }
+
+        /**
+         * @return supportedModes
+         */
+        public java.util.List<String> getSupportedModes() {
+            return this.supportedModes;
+        }
+
         public static final class Builder {
+            private Boolean billable; 
+            private String category; 
             private String description; 
             private Boolean esApiRequired; 
             private String key; 
+            private String level; 
             private String name; 
+            private Integer sortOrder; 
+            private java.util.List<String> supportedModes; 
 
             private Builder() {
             } 
 
             private Builder(Result model) {
+                this.billable = model.billable;
+                this.category = model.category;
                 this.description = model.description;
                 this.esApiRequired = model.esApiRequired;
                 this.key = model.key;
+                this.level = model.level;
                 this.name = model.name;
+                this.sortOrder = model.sortOrder;
+                this.supportedModes = model.supportedModes;
             } 
+
+            /**
+             * billable.
+             */
+            public Builder billable(Boolean billable) {
+                this.billable = billable;
+                return this;
+            }
+
+            /**
+             * category.
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
 
             /**
              * description.
@@ -191,10 +272,34 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
             }
 
             /**
+             * level.
+             */
+            public Builder level(String level) {
+                this.level = level;
+                return this;
+            }
+
+            /**
              * name.
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * sortOrder.
+             */
+            public Builder sortOrder(Integer sortOrder) {
+                this.sortOrder = sortOrder;
+                return this;
+            }
+
+            /**
+             * supportedModes.
+             */
+            public Builder supportedModes(java.util.List<String> supportedModes) {
+                this.supportedModes = supportedModes;
                 return this;
             }
 
