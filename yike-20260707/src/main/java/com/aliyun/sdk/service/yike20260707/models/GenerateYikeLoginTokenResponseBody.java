@@ -93,7 +93,10 @@ public class GenerateYikeLoginTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * ExpiresAt.
+         * <p>The session expiration time (millisecond timestamp).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1782008128000</p>
          */
         public Builder expiresAt(String expiresAt) {
             this.expiresAt = expiresAt;
@@ -112,7 +115,10 @@ public class GenerateYikeLoginTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Token.
+         * <p>The login token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>*<em><strong><strong>d6931ff7e89b5eb19484</strong></strong></em></p>
          */
         public Builder token(String token) {
             this.token = token;
@@ -120,7 +126,10 @@ public class GenerateYikeLoginTokenResponseBody extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The generated user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23253**</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;

@@ -80,7 +80,7 @@ public class ListAssetCategoriesResponseBody extends TeaModel {
         } 
 
         /**
-         * Categories.
+         * <p>The list of categories on the current page.</p>
          */
         public Builder categories(java.util.List<Categories> categories) {
             this.categories = categories;
@@ -88,7 +88,10 @@ public class ListAssetCategoriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListAssetCategoriesResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of categories.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -188,7 +194,10 @@ public class ListAssetCategoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * CategoryId.
+             * <p>The category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45</p>
              */
             public Builder categoryId(Long categoryId) {
                 this.categoryId = categoryId;
@@ -196,7 +205,10 @@ public class ListAssetCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryName.
+             * <p>The category name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>scenery</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -204,7 +216,10 @@ public class ListAssetCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The category level. A level-1 category has a value of 0, a level-2 category has a value of 1, and a level-3 category has a value of 2.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -212,7 +227,10 @@ public class ListAssetCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * ParentId.
+             * <p>The parent category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;

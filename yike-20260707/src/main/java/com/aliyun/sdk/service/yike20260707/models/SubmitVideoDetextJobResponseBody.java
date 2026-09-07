@@ -12,19 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ImportMediaResponseBody} extends {@link TeaModel}
+ * {@link SubmitVideoDetextJobResponseBody} extends {@link TeaModel}
  *
- * <p>ImportMediaResponseBody</p>
+ * <p>SubmitVideoDetextJobResponseBody</p>
  */
-public class ImportMediaResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("MediaId")
-    private String mediaId;
+public class SubmitVideoDetextJobResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    private String jobId;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private ImportMediaResponseBody(Builder builder) {
-        this.mediaId = builder.mediaId;
+    private SubmitVideoDetextJobResponseBody(Builder builder) {
+        this.jobId = builder.jobId;
         this.requestId = builder.requestId;
     }
 
@@ -32,7 +32,7 @@ public class ImportMediaResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ImportMediaResponseBody create() {
+    public static SubmitVideoDetextJobResponseBody create() {
         return builder().build();
     }
 
@@ -41,10 +41,10 @@ public class ImportMediaResponseBody extends TeaModel {
     }
 
     /**
-     * @return mediaId
+     * @return jobId
      */
-    public String getMediaId() {
-        return this.mediaId;
+    public String getJobId() {
+        return this.jobId;
     }
 
     /**
@@ -55,41 +55,41 @@ public class ImportMediaResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String mediaId; 
+        private String jobId; 
         private String requestId; 
 
         private Builder() {
         } 
 
-        private Builder(ImportMediaResponseBody model) {
-            this.mediaId = model.mediaId;
+        private Builder(SubmitVideoDetextJobResponseBody model) {
+            this.jobId = model.jobId;
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>The ICE media asset ID.</p>
+         * <p>The video text erasure job ID. You can use this ID to call GetVideoDetextJob to query the job status.</p>
          * 
          * <strong>example:</strong>
-         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
+         * <p>vdt_0123456789abcdef0123456789abcdef</p>
          */
-        public Builder mediaId(String mediaId) {
-            this.mediaId = mediaId;
+        public Builder jobId(String jobId) {
+            this.jobId = jobId;
             return this;
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID, which is used for Tracing Analysis and troubleshooting.</p>
          * 
          * <strong>example:</strong>
-         * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
+         * <p>req-detext-20260820-001</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public ImportMediaResponseBody build() {
-            return new ImportMediaResponseBody(this);
+        public SubmitVideoDetextJobResponseBody build() {
+            return new SubmitVideoDetextJobResponseBody(this);
         } 
 
     } 

@@ -98,6 +98,11 @@ public class UpdateAssetCategoryRequest extends Request {
         }
 
         /**
+         * <p>The category ID. You can obtain the ID by using one of the following methods:</p>
+         * <ul>
+         * <li>When you create a category by calling the CreateAssetCategory operation, the category ID is the value of CategoryId in the response.</li>
+         * <li>When you query categories by calling the ListAssetCategories operation, the category ID is the value of CategoryId in the corresponding entry in the response.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +115,7 @@ public class UpdateAssetCategoryRequest extends Request {
         }
 
         /**
+         * <p>The updated category name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

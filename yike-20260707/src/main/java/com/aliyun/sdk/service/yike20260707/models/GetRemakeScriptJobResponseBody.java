@@ -67,7 +67,7 @@ public class GetRemakeScriptJobResponseBody extends TeaModel {
         } 
 
         /**
-         * Job.
+         * <p>The generated creative script object.</p>
          */
         public Builder job(Job job) {
             this.job = job;
@@ -75,7 +75,10 @@ public class GetRemakeScriptJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +196,10 @@ public class GetRemakeScriptJobResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorCode.
+             * <p>The error code. Returned when the status is Failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -201,7 +207,10 @@ public class GetRemakeScriptJobResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message. Returned when the status is Failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The specified product does not exist.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -209,7 +218,10 @@ public class GetRemakeScriptJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>68ca759e798b40b4903b255*******</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -217,7 +229,10 @@ public class GetRemakeScriptJobResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The file URL of the script imitation result. The file content is in JSON format of the creative script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxx.json">http://xxxx.json</a></p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -225,7 +240,17 @@ public class GetRemakeScriptJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The file status. Valid values:</p>
+             * <ul>
+             * <li>Created: Created.</li>
+             * <li>Executing: Executing.</li>
+             * <li>Finished: Finished.</li>
+             * <li>Failed: Failed.</li>
+             * <li>Deleted: Deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Executing</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -233,7 +258,10 @@ public class GetRemakeScriptJobResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The user-defined parameter, in JSON format string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;NotifyAddress&quot;: &quot;<a href="http://xxx.callback.url%22%7D">http://xxx.callback.url&quot;}</a></p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;

@@ -80,7 +80,7 @@ public class GetYikeAccountCreditResponseBody extends TeaModel {
         } 
 
         /**
-         * CreditInfo.
+         * <p>The credit information.</p>
          */
         public Builder creditInfo(CreditInfo creditInfo) {
             this.creditInfo = creditInfo;
@@ -88,7 +88,7 @@ public class GetYikeAccountCreditResponseBody extends TeaModel {
         }
 
         /**
-         * MembershipInfo.
+         * <p>The membership information.</p>
          */
         public Builder membershipInfo(MembershipInfo membershipInfo) {
             this.membershipInfo = membershipInfo;
@@ -217,7 +217,10 @@ public class GetYikeAccountCreditResponseBody extends TeaModel {
             } 
 
             /**
-             * GrantedCreditQuota.
+             * <p>The total granted credits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder grantedCreditQuota(Double grantedCreditQuota) {
                 this.grantedCreditQuota = grantedCreditQuota;
@@ -225,7 +228,10 @@ public class GetYikeAccountCreditResponseBody extends TeaModel {
             }
 
             /**
-             * GrantedCreditQuotaUsage.
+             * <p>The remaining granted credits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder grantedCreditQuotaUsage(Double grantedCreditQuotaUsage) {
                 this.grantedCreditQuotaUsage = grantedCreditQuotaUsage;
@@ -233,7 +239,10 @@ public class GetYikeAccountCreditResponseBody extends TeaModel {
             }
 
             /**
-             * PackCreditQuota.
+             * <p>The total credits of the booster pack.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20000</p>
              */
             public Builder packCreditQuota(Double packCreditQuota) {
                 this.packCreditQuota = packCreditQuota;
@@ -241,7 +250,10 @@ public class GetYikeAccountCreditResponseBody extends TeaModel {
             }
 
             /**
-             * PackCreditQuotaUsage.
+             * <p>The remaining credits of the booster pack.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder packCreditQuotaUsage(Double packCreditQuotaUsage) {
                 this.packCreditQuotaUsage = packCreditQuotaUsage;
@@ -249,7 +261,10 @@ public class GetYikeAccountCreditResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceCreditQuota.
+             * <p>The total credits of the membership plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder resourceCreditQuota(Double resourceCreditQuota) {
                 this.resourceCreditQuota = resourceCreditQuota;
@@ -257,7 +272,10 @@ public class GetYikeAccountCreditResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceCreditQuotaUsage.
+             * <p>The remaining credits of the membership plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder resourceCreditQuotaUsage(Double resourceCreditQuotaUsage) {
                 this.resourceCreditQuotaUsage = resourceCreditQuotaUsage;
@@ -337,7 +355,10 @@ public class GetYikeAccountCreditResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>The end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1784179281</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -345,7 +366,16 @@ public class GetYikeAccountCreditResponseBody extends TeaModel {
             }
 
             /**
-             * Membership.
+             * <p>The membership level. Valid values:</p>
+             * <ul>
+             * <li>basic: Basic Edition.</li>
+             * <li>standard: Standard Edition.</li>
+             * <li>professional: Ultimate Edition.</li>
+             * <li>ultra: Ultra Edition.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>basic</p>
              */
             public Builder membership(String membership) {
                 this.membership = membership;
@@ -353,7 +383,10 @@ public class GetYikeAccountCreditResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1784784081</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

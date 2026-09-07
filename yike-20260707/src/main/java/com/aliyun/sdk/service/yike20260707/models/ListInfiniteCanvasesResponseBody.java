@@ -106,7 +106,7 @@ public class ListInfiniteCanvasesResponseBody extends TeaModel {
         } 
 
         /**
-         * CanvasList.
+         * <p>The list of infinite canvases.</p>
          */
         public Builder canvasList(java.util.List<CanvasList> canvasList) {
             this.canvasList = canvasList;
@@ -114,7 +114,10 @@ public class ListInfiniteCanvasesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The current page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -122,7 +125,10 @@ public class ListInfiniteCanvasesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListInfiniteCanvasesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListInfiniteCanvasesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of infinite canvases.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -256,7 +268,10 @@ public class ListInfiniteCanvasesResponseBody extends TeaModel {
             } 
 
             /**
-             * CanvasId.
+             * <p>The ID of the infinite canvas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>canvas_xxx</p>
              */
             public Builder canvasId(String canvasId) {
                 this.canvasId = canvasId;
@@ -264,7 +279,10 @@ public class ListInfiniteCanvasesResponseBody extends TeaModel {
             }
 
             /**
-             * CoverUrl.
+             * <p>The cover URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example.com/cover.png">http://example.com/cover.png</a></p>
              */
             public Builder coverUrl(String coverUrl) {
                 this.coverUrl = coverUrl;
@@ -272,7 +290,10 @@ public class ListInfiniteCanvasesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-26T10:21:17Z</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -280,7 +301,10 @@ public class ListInfiniteCanvasesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The last modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-18T10:03:56Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -288,7 +312,10 @@ public class ListInfiniteCanvasesResponseBody extends TeaModel {
             }
 
             /**
-             * Thumbnail.
+             * <p>The thumbnail height, in px.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example.com/thumbnail2.png">http://example.com/thumbnail2.png</a></p>
              */
             public Builder thumbnail(String thumbnail) {
                 this.thumbnail = thumbnail;
@@ -296,7 +323,10 @@ public class ListInfiniteCanvasesResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The title of the infinite canvas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder title(String title) {
                 this.title = title;

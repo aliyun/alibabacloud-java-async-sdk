@@ -82,7 +82,10 @@ public class GetImageGenerationJobRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ag_68ca759b4903b255*******</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

@@ -83,6 +83,7 @@ public class GetInfiniteCanvasRequest extends Request {
         }
 
         /**
+         * <p>The ID of the infinite canvas.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

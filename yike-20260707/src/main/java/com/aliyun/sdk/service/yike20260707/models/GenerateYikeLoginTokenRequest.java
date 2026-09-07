@@ -180,7 +180,10 @@ public class GenerateYikeLoginTokenRequest extends Request {
         }
 
         /**
-         * AutoCreateProduction.
+         * <p>Specifies whether automatic creation of a project is enabled. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoCreateProduction(String autoCreateProduction) {
             this.putQueryParameter("AutoCreateProduction", autoCreateProduction);
@@ -189,7 +192,10 @@ public class GenerateYikeLoginTokenRequest extends Request {
         }
 
         /**
-         * Expires.
+         * <p>The token expiration time, in seconds. Default value: 30 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder expires(String expires) {
             this.putQueryParameter("Expires", expires);
@@ -198,7 +204,14 @@ public class GenerateYikeLoginTokenRequest extends Request {
         }
 
         /**
-         * NickName.
+         * <p>The nickname.</p>
+         * <ul>
+         * <li>Format check: The maximum length is 50 characters.</li>
+         * <li>Special format validation: Chinese characters, English characters, digits, _ \ / () ] [</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>冯凯</p>
          */
         public Builder nickName(String nickName) {
             this.putQueryParameter("NickName", nickName);
@@ -207,7 +220,10 @@ public class GenerateYikeLoginTokenRequest extends Request {
         }
 
         /**
-         * ProductionAuth.
+         * <p>The role of the user in the project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>common</p>
          */
         public Builder productionAuth(String productionAuth) {
             this.putQueryParameter("ProductionAuth", productionAuth);
@@ -216,7 +232,10 @@ public class GenerateYikeLoginTokenRequest extends Request {
         }
 
         /**
-         * SubUserCredit.
+         * <p>The default credits granted to the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder subUserCredit(String subUserCredit) {
             this.putQueryParameter("SubUserCredit", subUserCredit);
@@ -225,7 +244,10 @@ public class GenerateYikeLoginTokenRequest extends Request {
         }
 
         /**
-         * Tenant.
+         * <p>The tenant identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wanyou</p>
          */
         public Builder tenant(String tenant) {
             this.putQueryParameter("Tenant", tenant);
@@ -234,7 +256,10 @@ public class GenerateYikeLoginTokenRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>userxxx</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);
@@ -243,7 +268,10 @@ public class GenerateYikeLoginTokenRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>581236</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

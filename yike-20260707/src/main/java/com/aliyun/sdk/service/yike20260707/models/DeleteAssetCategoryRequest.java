@@ -83,6 +83,11 @@ public class DeleteAssetCategoryRequest extends Request {
         }
 
         /**
+         * <p>The category ID. You can obtain the value by using one of the following methods:</p>
+         * <ul>
+         * <li>When you create a category by calling the CreateAssetCategory operation, the category ID is the value of CategoryId in the response.</li>
+         * <li>When you query categories by calling the ListAssetCategories operation, the category ID is the value of CategoryId in the corresponding entry in the response.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

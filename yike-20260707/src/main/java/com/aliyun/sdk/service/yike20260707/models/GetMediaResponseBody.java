@@ -67,7 +67,7 @@ public class GetMediaResponseBody extends TeaModel {
         } 
 
         /**
-         * MediaInfo.
+         * <p>The media asset information.</p>
          */
         public Builder mediaInfo(MediaInfo mediaInfo) {
             this.mediaInfo = mediaInfo;
@@ -75,7 +75,10 @@ public class GetMediaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -349,7 +352,10 @@ public class GetMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * Bitrate.
+             * <p>The bitrate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -357,7 +363,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelLayout.
+             * <p>The channel layout.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stereo</p>
              */
             public Builder channelLayout(String channelLayout) {
                 this.channelLayout = channelLayout;
@@ -365,7 +374,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Channels.
+             * <p>The number of channels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder channels(String channels) {
                 this.channels = channels;
@@ -373,7 +385,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * CodecLongName.
+             * <p>The long name of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAC (Advanced Audio Coding)</p>
              */
             public Builder codecLongName(String codecLongName) {
                 this.codecLongName = codecLongName;
@@ -381,7 +396,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * CodecName.
+             * <p>The short name of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aac</p>
              */
             public Builder codecName(String codecName) {
                 this.codecName = codecName;
@@ -389,7 +407,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTag.
+             * <p>The codec tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0x6134706d</p>
              */
             public Builder codecTag(String codecTag) {
                 this.codecTag = codecTag;
@@ -397,7 +418,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTagString.
+             * <p>The codec tag string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mp4a</p>
              */
             public Builder codecTagString(String codecTagString) {
                 this.codecTagString = codecTagString;
@@ -405,7 +429,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTimeBase.
+             * <p>The codec time base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1/44100</p>
              */
             public Builder codecTimeBase(String codecTimeBase) {
                 this.codecTimeBase = codecTimeBase;
@@ -413,7 +440,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16.2</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -421,7 +451,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Fps.
+             * <p>The audio frame rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -429,7 +462,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>The index of the audio stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(String index) {
                 this.index = index;
@@ -437,7 +473,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Lang.
+             * <p>The language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh</p>
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -445,7 +484,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * NumFrames.
+             * <p>The total number of frames.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder numFrames(String numFrames) {
                 this.numFrames = numFrames;
@@ -453,7 +495,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * <p>The codec profile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>High</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -461,7 +506,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * SampleFmt.
+             * <p>The sample format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fltp</p>
              */
             public Builder sampleFmt(String sampleFmt) {
                 this.sampleFmt = sampleFmt;
@@ -469,7 +517,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * SampleRate.
+             * <p>The sample rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44100</p>
              */
             public Builder sampleRate(String sampleRate) {
                 this.sampleRate = sampleRate;
@@ -477,7 +528,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-02-04T02:13:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -485,7 +539,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Timebase.
+             * <p>The time base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1/44100</p>
              */
             public Builder timebase(String timebase) {
                 this.timebase = timebase;
@@ -695,7 +752,10 @@ public class GetMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * Bitrate.
+             * <p>The bitrate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -703,7 +763,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the file was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-26T04:11:08Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -711,7 +774,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -719,7 +785,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.mp4</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -727,7 +796,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * FileSize.
+             * <p>The file size, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27007</p>
              */
             public Builder fileSize(String fileSize) {
                 this.fileSize = fileSize;
@@ -735,7 +807,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * FileStatus.
+             * <p>The file status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder fileStatus(String fileStatus) {
                 this.fileStatus = fileStatus;
@@ -743,7 +818,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * FileType.
+             * <p>The file type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>source_file</p>
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -751,7 +829,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * FileUrl.
+             * <p>The OSS URL of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></p>
              */
             public Builder fileUrl(String fileUrl) {
                 this.fileUrl = fileUrl;
@@ -759,7 +840,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * FormatName.
+             * <p>The container format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mp4</p>
              */
             public Builder formatName(String formatName) {
                 this.formatName = formatName;
@@ -767,7 +851,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The height.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>540</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -775,7 +862,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the file was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-26T04:11:10Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -783,7 +873,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region where the file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -791,7 +884,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The width.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>960</p>
              */
             public Builder width(String width) {
                 this.width = width;
@@ -962,7 +1058,10 @@ public class GetMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * CodecLongName.
+             * <p>The long name of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SubRip Text</p>
              */
             public Builder codecLongName(String codecLongName) {
                 this.codecLongName = codecLongName;
@@ -970,7 +1069,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * CodecName.
+             * <p>The short name of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>srt</p>
              */
             public Builder codecName(String codecName) {
                 this.codecName = codecName;
@@ -978,7 +1080,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTag.
+             * <p>The codec tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>unicode</p>
              */
             public Builder codecTag(String codecTag) {
                 this.codecTag = codecTag;
@@ -986,7 +1091,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTagString.
+             * <p>The codec tag string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>unicode</p>
              */
             public Builder codecTagString(String codecTagString) {
                 this.codecTagString = codecTagString;
@@ -994,7 +1102,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTimeBase.
+             * <p>The codec time base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29.97</p>
              */
             public Builder codecTimeBase(String codecTimeBase) {
                 this.codecTimeBase = codecTimeBase;
@@ -1002,7 +1113,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -1010,7 +1124,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>The index of the audio stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(String index) {
                 this.index = index;
@@ -1018,7 +1135,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Lang.
+             * <p>The language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh</p>
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -1026,7 +1146,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-07T01:30Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1034,7 +1157,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Timebase.
+             * <p>The time base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder timebase(String timebase) {
                 this.timebase = timebase;
@@ -1387,7 +1513,10 @@ public class GetMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * AvgFPS.
+             * <p>The average frame rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24.0</p>
              */
             public Builder avgFPS(String avgFPS) {
                 this.avgFPS = avgFPS;
@@ -1395,7 +1524,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Bitrate.
+             * <p>The bitrate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -1403,7 +1535,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * CodecLongName.
+             * <p>The long name of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</p>
              */
             public Builder codecLongName(String codecLongName) {
                 this.codecLongName = codecLongName;
@@ -1411,7 +1546,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * CodecName.
+             * <p>The short name of the codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>h264</p>
              */
             public Builder codecName(String codecName) {
                 this.codecName = codecName;
@@ -1419,7 +1557,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTag.
+             * <p>The codec tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0x0000</p>
              */
             public Builder codecTag(String codecTag) {
                 this.codecTag = codecTag;
@@ -1427,7 +1568,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTagString.
+             * <p>The codec tag string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[0][0][0][0]</p>
              */
             public Builder codecTagString(String codecTagString) {
                 this.codecTagString = codecTagString;
@@ -1435,7 +1579,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTimeBase.
+             * <p>The codec time base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1/48</p>
              */
             public Builder codecTimeBase(String codecTimeBase) {
                 this.codecTimeBase = codecTimeBase;
@@ -1443,7 +1590,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Dar.
+             * <p>The display aspect ratio (DAR).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0:1</p>
              */
             public Builder dar(String dar) {
                 this.dar = dar;
@@ -1451,7 +1601,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>216.206706</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -1459,7 +1612,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Fps.
+             * <p>The video frame rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24.0</p>
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -1467,7 +1623,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * HasBFrames.
+             * <p>Indicates whether B-frames exist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder hasBFrames(String hasBFrames) {
                 this.hasBFrames = hasBFrames;
@@ -1475,7 +1634,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The height.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>540</p>
              */
             public Builder height(String height) {
                 this.height = height;
@@ -1483,7 +1645,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>The video stream index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder index(String index) {
                 this.index = index;
@@ -1491,7 +1656,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Lang.
+             * <p>The language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh</p>
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -1499,7 +1667,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The encoding level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -1507,7 +1678,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Nb_frames.
+             * <p>The total number of frames.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder nbFrames(String nbFrames) {
                 this.nbFrames = nbFrames;
@@ -1515,7 +1689,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * NumFrames.
+             * <p>The total number of frames.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5184</p>
              */
             public Builder numFrames(String numFrames) {
                 this.numFrames = numFrames;
@@ -1523,7 +1700,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * PixFmt.
+             * <p>The pixel format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yuv420p</p>
              */
             public Builder pixFmt(String pixFmt) {
                 this.pixFmt = pixFmt;
@@ -1531,7 +1711,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * <p>The codec profile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>High</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -1539,7 +1722,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Rotate.
+             * <p>The rotation angle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rotate(String rotate) {
                 this.rotate = rotate;
@@ -1547,7 +1733,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Sar.
+             * <p>The sample aspect ratio (SAR).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0:1</p>
              */
             public Builder sar(String sar) {
                 this.sar = sar;
@@ -1555,7 +1744,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-08-04T12:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1563,7 +1755,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Timebase.
+             * <p>The time base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1/12288</p>
              */
             public Builder timebase(String timebase) {
                 this.timebase = timebase;
@@ -1571,7 +1766,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The width.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>960</p>
              */
             public Builder width(String width) {
                 this.width = width;
@@ -1664,7 +1862,7 @@ public class GetMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * AudioStreamInfoList.
+             * <p>The audio stream information. A media asset may have multiple audio streams.</p>
              */
             public Builder audioStreamInfoList(java.util.List<AudioStreamInfoList> audioStreamInfoList) {
                 this.audioStreamInfoList = audioStreamInfoList;
@@ -1672,7 +1870,7 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * FileBasicInfo.
+             * <p>The basic file information, including duration and size.</p>
              */
             public Builder fileBasicInfo(FileBasicInfo fileBasicInfo) {
                 this.fileBasicInfo = fileBasicInfo;
@@ -1680,7 +1878,7 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * SubtitleStreamInfoList.
+             * <p>The subtitle stream information. A media asset may have multiple subtitle streams.</p>
              */
             public Builder subtitleStreamInfoList(java.util.List<SubtitleStreamInfoList> subtitleStreamInfoList) {
                 this.subtitleStreamInfoList = subtitleStreamInfoList;
@@ -1688,7 +1886,7 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * VideoStreamInfoList.
+             * <p>The video stream information. A media asset may have multiple video streams.</p>
              */
             public Builder videoStreamInfoList(java.util.List<VideoStreamInfoList> videoStreamInfoList) {
                 this.videoStreamInfoList = videoStreamInfoList;
@@ -1976,7 +2174,10 @@ public class GetMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * BusinessType.
+             * <p>The business type of the media asset. This parameter is currently unavailable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>general</p>
              */
             public Builder businessType(String businessType) {
                 this.businessType = businessType;
@@ -2000,7 +2201,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * CoverURL.
+             * <p>The cover URL, which is an authenticated access URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://dtlive-vip.oss-cn-shanghai.aliyuncs.com/cover/4e88a055-75fc-4ff5-8b8a-f32224917514_open_live_cover.jpg">https://dtlive-vip.oss-cn-shanghai.aliyuncs.com/cover/4e88a055-75fc-4ff5-8b8a-f32224917514_open_live_cover.jpg</a></p>
              */
             public Builder coverURL(String coverURL) {
                 this.coverURL = coverURL;
@@ -2008,7 +2212,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-26T04:11:08Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -2016,7 +2223,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The content description. This is the request parameter value of the RegisterMediaInfo API operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2024,7 +2234,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * EntityId.
+             * <p>The entity ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1586676</p>
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -2032,7 +2245,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * InputURL.
+             * <p>The publicly accessible HTTP URL. This is the request parameter value of the RegisterMediaInfo API operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></p>
              */
             public Builder inputURL(String inputURL) {
                 this.inputURL = inputURL;
@@ -2040,7 +2256,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId.
+             * <p>The media asset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -2048,7 +2267,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * MediaTags.
+             * <p>The tags, separated by commas. This is the request parameter value of the RegisterMediaInfo API operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pitaya,prd-wuxi,248</p>
              */
             public Builder mediaTags(String mediaTags) {
                 this.mediaTags = mediaTags;
@@ -2056,7 +2278,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * MediaType.
+             * <p>The media type of the media asset. Valid values: image, audio, and video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>image</p>
              */
             public Builder mediaType(String mediaType) {
                 this.mediaType = mediaType;
@@ -2064,7 +2289,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the media asset was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-26T04:11:08Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -2072,7 +2300,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Snapshots.
+             * <p>The snapshots.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder snapshots(String snapshots) {
                 this.snapshots = snapshots;
@@ -2080,7 +2311,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The source (currently unavailable).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -2088,7 +2322,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * SpriteImages.
+             * <p>The sprite images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder spriteImages(String spriteImages) {
                 this.spriteImages = spriteImages;
@@ -2096,7 +2333,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The resource status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2104,7 +2344,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The title (the request parameter value of the register media asset API).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T32</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -2112,7 +2355,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * UploadSource.
+             * <p>The upload source of the media asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>general</p>
              */
             public Builder uploadSource(String uploadSource) {
                 this.uploadSource = uploadSource;
@@ -2120,7 +2366,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The custom user data (the request parameter value of the register media asset API).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -2200,7 +2449,10 @@ public class GetMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>The content of the dynamic metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder data(String data) {
                 this.data = data;
@@ -2208,7 +2460,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * EntityId.
+             * <p>The entity ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4614131</p>
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -2216,7 +2471,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Currently not in use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -2270,7 +2528,7 @@ public class GetMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * DynamicMetaData.
+             * <p>The dynamic metadata.</p>
              */
             public Builder dynamicMetaData(DynamicMetaData dynamicMetaData) {
                 this.dynamicMetaData = dynamicMetaData;
@@ -2363,7 +2621,7 @@ public class GetMediaResponseBody extends TeaModel {
             } 
 
             /**
-             * FileInfoList.
+             * <p>The list of file information.</p>
              */
             public Builder fileInfoList(java.util.List<FileInfoList> fileInfoList) {
                 this.fileInfoList = fileInfoList;
@@ -2371,7 +2629,7 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * MediaBasicInfo.
+             * <p>The basic information of the media asset.</p>
              */
             public Builder mediaBasicInfo(MediaBasicInfo mediaBasicInfo) {
                 this.mediaBasicInfo = mediaBasicInfo;
@@ -2379,7 +2637,7 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * MediaDynamicInfo.
+             * <p>The dynamic data of the entity.</p>
              */
             public Builder mediaDynamicInfo(MediaDynamicInfo mediaDynamicInfo) {
                 this.mediaDynamicInfo = mediaDynamicInfo;
@@ -2387,7 +2645,10 @@ public class GetMediaResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId.
+             * <p>The media asset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;

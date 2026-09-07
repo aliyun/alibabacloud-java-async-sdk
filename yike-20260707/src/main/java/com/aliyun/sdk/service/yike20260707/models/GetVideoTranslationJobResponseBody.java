@@ -67,7 +67,7 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
         } 
 
         /**
-         * Job.
+         * <p>The video translation job.</p>
          */
         public Builder job(Job job) {
             this.job = job;
@@ -75,7 +75,10 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, used for Tracing Analysis and troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>req-vt-get-20260820-001</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -245,7 +248,10 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
             } 
 
             /**
-             * Duration.
+             * <p>The input video duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60.5</p>
              */
             public Builder duration(Double duration) {
                 this.duration = duration;
@@ -253,7 +259,10 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
             }
 
             /**
-             * EditingProjectId.
+             * <p>The editing project ID for a single-target-language job. For multi-target-language results, retrieve the ID from Output.AiResult.ResultMap.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>editing-project-001</p>
              */
             public Builder editingProjectId(String editingProjectId) {
                 this.editingProjectId = editingProjectId;
@@ -261,7 +270,10 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>The business error code returned when the job fails. This field is typically not returned for non-failed states.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidInput</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -269,7 +281,10 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The business error message returned when the job fails. This field is typically not returned for non-failed states.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Input video is invalid.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -277,7 +292,10 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
             }
 
             /**
-             * Input.
+             * <p>The normalized input configuration JSON string saved at submission time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;VideoMediaId&quot;:&quot;media-video-001&quot;}</p>
              */
             public Builder input(String input) {
                 this.input = input;
@@ -285,7 +303,10 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The video translation job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vtj_0123456789abcdef0123456789abcdef</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -293,7 +314,10 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobParameters.
+             * <p>The normalized job parameters JSON string, including default values supplemented by the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;SourceLanguage&quot;:&quot;zh&quot;,&quot;TargetLanguage&quot;:&quot;en&quot;,&quot;SubtitleFrom&quot;:&quot;default&quot;,&quot;NeedDetext&quot;:false,&quot;NeedVisualTranslate&quot;:false}</p>
              */
             public Builder jobParameters(String jobParameters) {
                 this.jobParameters = jobParameters;
@@ -301,7 +325,10 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobType.
+             * <p>The normalized job type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VoiceTranslate</p>
              */
             public Builder jobType(String jobType) {
                 this.jobType = jobType;
@@ -309,7 +336,10 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
             }
 
             /**
-             * Output.
+             * <p>The job output JSON string. When the job succeeds, AiResult.ResultMap organizes the final video, subtitle, and audio outputs by target language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;AiResult&quot;:{&quot;ResultMap&quot;:{&quot;en&quot;:{&quot;EditingProjectId&quot;:&quot;editing-project-001&quot;,&quot;MediaURL&quot;:&quot;<a href="https://example.com/video-translation/en/result.mp4%22,%22MediaId%22:%22media-output-001%22%7D%7D%7D%7D">https://example.com/video-translation/en/result.mp4&quot;,&quot;MediaId&quot;:&quot;media-output-001&quot;}}}}</a></p>
              */
             public Builder output(String output) {
                 this.output = output;
@@ -317,7 +347,10 @@ public class GetVideoTranslationJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The job status. Valid values: Created, Queuing, Executing, Finished, or Failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;

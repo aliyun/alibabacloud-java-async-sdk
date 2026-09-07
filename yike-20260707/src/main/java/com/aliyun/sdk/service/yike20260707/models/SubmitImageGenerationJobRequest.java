@@ -208,7 +208,10 @@ public class SubmitImageGenerationJobRequest extends Request {
         }
 
         /**
-         * AspectRatio.
+         * <p>The aspect ratio. Valid values: 16:9 (default), 9:16, 4:3, 3:4, 1:1, and 21:9.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4:3</p>
          */
         public Builder aspectRatio(String aspectRatio) {
             this.putQueryParameter("AspectRatio", aspectRatio);
@@ -217,7 +220,10 @@ public class SubmitImageGenerationJobRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The idempotency token. A unique, case-sensitive string of up to 32 characters. This token ensures that the request is completed no more than once, preventing duplicate operations caused by multiple retries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>3e761e9d11edba640c42a1b7</strong></strong></p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -226,7 +232,17 @@ public class SubmitImageGenerationJobRequest extends Request {
         }
 
         /**
-         * Input.
+         * <p>The task input. This parameter is required. The value is a JSON string that contains the following fields:</p>
+         * <ul>
+         * <li>Prompt: String. Required. The prompt for image generation.</li>
+         * <li>Medias: A list of media items. Required when the task type is <code>image_to_image</code>. A maximum of 9 items are supported.<blockquote>
+         * <p>The Media struct contains the following fields: Type, the media type, String, valid value: image. URL, the download URL of the media, String. MediaId, the media asset ID, String.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Prompt&quot;:&quot;xxx&quot;,&quot;Medias&quot;:[{&quot;Type&quot;:&quot;image&quot;,&quot;URL&quot;:&quot;xxx&quot;}]}</p>
          */
         public Builder input(String input) {
             this.putQueryParameter("Input", input);
@@ -235,7 +251,10 @@ public class SubmitImageGenerationJobRequest extends Request {
         }
 
         /**
-         * JobParameters.
+         * <p>The task feature parameters. The value is a JSON string. You do not need to set this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder jobParameters(String jobParameters) {
             this.putQueryParameter("JobParameters", jobParameters);
@@ -244,7 +263,14 @@ public class SubmitImageGenerationJobRequest extends Request {
         }
 
         /**
-         * JobType.
+         * <p>The type of the generation task. This parameter is required. Valid values:</p>
+         * <ul>
+         * <li>text_to_image: text-to-image generation.</li>
+         * <li>image_to_image: image-to-image generation.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>text_to_image</p>
          */
         public Builder jobType(String jobType) {
             this.putQueryParameter("JobType", jobType);
@@ -253,7 +279,16 @@ public class SubmitImageGenerationJobRequest extends Request {
         }
 
         /**
-         * Model.
+         * <p>The model name. This parameter is required. Valid values:</p>
+         * <ul>
+         * <li>qwen-image-3.0</li>
+         * <li>qwen-image-2.0-pro</li>
+         * <li>qwen-image-2.0</li>
+         * <li>wan2.7-image</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>wan2.7-image</p>
          */
         public Builder model(String model) {
             this.putQueryParameter("Model", model);
@@ -262,7 +297,10 @@ public class SubmitImageGenerationJobRequest extends Request {
         }
 
         /**
-         * N.
+         * <p>The number of images. Valid values: 1 to 4. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder n(String n) {
             this.putQueryParameter("N", n);
@@ -271,7 +309,10 @@ public class SubmitImageGenerationJobRequest extends Request {
         }
 
         /**
-         * Resolution.
+         * <p>The resolution. Valid values: 1K (default), 2K, and 4K.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>720P</p>
          */
         public Builder resolution(String resolution) {
             this.putQueryParameter("Resolution", resolution);
@@ -280,7 +321,10 @@ public class SubmitImageGenerationJobRequest extends Request {
         }
 
         /**
-         * Scene.
+         * <p>The scenario. This is an enumeration type. Currently, only <code>general</code> is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>general</p>
          */
         public Builder scene(String scene) {
             this.putQueryParameter("Scene", scene);
@@ -289,7 +333,10 @@ public class SubmitImageGenerationJobRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The user business data in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;env&quot;:&quot;prd&quot;}</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

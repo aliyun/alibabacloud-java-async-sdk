@@ -93,7 +93,7 @@ public class GetAssetCategoryResponseBody extends TeaModel {
         } 
 
         /**
-         * Category.
+         * <p>The category details.</p>
          */
         public Builder category(Category category) {
             this.category = category;
@@ -101,7 +101,10 @@ public class GetAssetCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +112,7 @@ public class GetAssetCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * SubCategories.
+         * <p>The list of subcategories.</p>
          */
         public Builder subCategories(java.util.List<SubCategories> subCategories) {
             this.subCategories = subCategories;
@@ -117,7 +120,10 @@ public class GetAssetCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * SubTotal.
+         * <p>The number of subcategories.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder subTotal(Long subTotal) {
             this.subTotal = subTotal;
@@ -209,7 +215,10 @@ public class GetAssetCategoryResponseBody extends TeaModel {
             } 
 
             /**
-             * CategoryId.
+             * <p>The category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder categoryId(Long categoryId) {
                 this.categoryId = categoryId;
@@ -217,7 +226,10 @@ public class GetAssetCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryName.
+             * <p>The category name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>scenery</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -225,7 +237,15 @@ public class GetAssetCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The category level. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: level-1 category.</li>
+             * <li><strong>1</strong>: level-2 category.</li>
+             * <li><strong>2</strong>: level-3 category.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder level(Long level) {
                 this.level = level;
@@ -233,7 +253,10 @@ public class GetAssetCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * ParentId.
+             * <p>The parent category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;
@@ -339,7 +362,10 @@ public class GetAssetCategoryResponseBody extends TeaModel {
             } 
 
             /**
-             * CategoryId.
+             * <p>The category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>55</p>
              */
             public Builder categoryId(Long categoryId) {
                 this.categoryId = categoryId;
@@ -347,7 +373,10 @@ public class GetAssetCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryName.
+             * <p>The category name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sea</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -355,7 +384,10 @@ public class GetAssetCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The category level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder level(Long level) {
                 this.level = level;
@@ -363,7 +395,10 @@ public class GetAssetCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * ParentId.
+             * <p>The parent category ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;
@@ -371,7 +406,10 @@ public class GetAssetCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * SubTotal.
+             * <p>The total number of subcategories.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder subTotal(Long subTotal) {
                 this.subTotal = subTotal;

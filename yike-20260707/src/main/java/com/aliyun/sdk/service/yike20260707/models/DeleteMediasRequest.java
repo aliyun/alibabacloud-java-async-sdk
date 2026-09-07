@@ -133,7 +133,10 @@ public class DeleteMediasRequest extends Request {
         }
 
         /**
-         * DeletePhysicalFiles.
+         * <p>Specifies whether to delete the physical files at the same time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deletePhysicalFiles(Boolean deletePhysicalFiles) {
             this.putQueryParameter("DeletePhysicalFiles", deletePhysicalFiles);
@@ -142,7 +145,7 @@ public class DeleteMediasRequest extends Request {
         }
 
         /**
-         * InputURLs.
+         * <p>Not supported.</p>
          */
         public Builder inputURLs(String inputURLs) {
             this.putQueryParameter("InputURLs", inputURLs);
@@ -151,7 +154,10 @@ public class DeleteMediasRequest extends Request {
         }
 
         /**
-         * MediaIds.
+         * <p>The media asset IDs, separated by commas. Invalid IDs are added to IgnoredList.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>b48fb04483915d4f2cd8</strong></strong></strong>,<strong><strong><strong>c48fb37407365d4f2cd8</strong></strong></strong></p>
          */
         public Builder mediaIds(String mediaIds) {
             this.putQueryParameter("MediaIds", mediaIds);

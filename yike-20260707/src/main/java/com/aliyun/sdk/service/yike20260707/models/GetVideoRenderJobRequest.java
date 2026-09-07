@@ -82,7 +82,10 @@ public class GetVideoRenderJobRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68ca759e798b40b4903b255*******</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

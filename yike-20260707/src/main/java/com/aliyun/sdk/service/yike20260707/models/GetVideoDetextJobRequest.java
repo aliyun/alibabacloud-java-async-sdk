@@ -12,23 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetYikeJobCreditRequest} extends {@link RequestModel}
+ * {@link GetVideoDetextJobRequest} extends {@link RequestModel}
  *
- * <p>GetYikeJobCreditRequest</p>
+ * <p>GetVideoDetextJobRequest</p>
  */
-public class GetYikeJobCreditRequest extends Request {
-    @com.aliyun.core.annotation.Host
-    @com.aliyun.core.annotation.NameInMap("RegionId")
-    private String regionId;
-
+public class GetVideoDetextJobRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("JobId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
-    private GetYikeJobCreditRequest(Builder builder) {
+    private GetVideoDetextJobRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.jobId = builder.jobId;
     }
 
@@ -36,7 +31,7 @@ public class GetYikeJobCreditRequest extends Request {
         return new Builder();
     }
 
-    public static GetYikeJobCreditRequest create() {
+    public static GetVideoDetextJobRequest create() {
         return builder().build();
     }
 
@@ -46,48 +41,30 @@ public class GetYikeJobCreditRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return jobId
      */
     public String getJobId() {
         return this.jobId;
     }
 
-    public static final class Builder extends Request.Builder<GetYikeJobCreditRequest, Builder> {
-        private String regionId; 
+    public static final class Builder extends Request.Builder<GetVideoDetextJobRequest, Builder> {
         private String jobId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetYikeJobCreditRequest request) {
+        private Builder(GetVideoDetextJobRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.jobId = request.jobId;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * <p>The task ID.</p>
+         * <p>The video text erasure task ID returned by SubmitVideoDetextJob.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ag_12412424****</p>
+         * <p>vdt_0123456789abcdef0123456789abcdef</p>
          */
         public Builder jobId(String jobId) {
             this.putBodyParameter("JobId", jobId);
@@ -96,8 +73,8 @@ public class GetYikeJobCreditRequest extends Request {
         }
 
         @Override
-        public GetYikeJobCreditRequest build() {
-            return new GetYikeJobCreditRequest(this);
+        public GetVideoDetextJobRequest build() {
+            return new GetVideoDetextJobRequest(this);
         } 
 
     } 

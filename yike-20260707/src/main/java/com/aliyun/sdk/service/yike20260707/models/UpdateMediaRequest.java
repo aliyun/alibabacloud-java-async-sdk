@@ -222,7 +222,7 @@ public class UpdateMediaRequest extends Request {
         }
 
         /**
-         * AppendTags.
+         * <p>Specifies whether to update the Tags field in append mode.</p>
          */
         public Builder appendTags(Boolean appendTags) {
             this.putQueryParameter("AppendTags", appendTags);
@@ -249,7 +249,10 @@ public class UpdateMediaRequest extends Request {
         }
 
         /**
-         * CoverURL.
+         * <p>The cover image URL. This parameter is valid only for video media assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://bullet-time-20240910.oss-cn-shanghai.aliyuncs.com/ice-generated/a97255309a7c71f093d3e7f6d75a6302/snapshots/normal/2a4030b1950443048f3e3f81489d57eb-00001.jpg">https://bullet-time-20240910.oss-cn-shanghai.aliyuncs.com/ice-generated/a97255309a7c71f093d3e7f6d75a6302/snapshots/normal/2a4030b1950443048f3e3f81489d57eb-00001.jpg</a></p>
          */
         public Builder coverURL(String coverURL) {
             this.putQueryParameter("CoverURL", coverURL);
@@ -258,7 +261,10 @@ public class UpdateMediaRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -267,7 +273,10 @@ public class UpdateMediaRequest extends Request {
         }
 
         /**
-         * DynamicMetaData.
+         * <p>The dynamic metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder dynamicMetaData(String dynamicMetaData) {
             this.putQueryParameter("DynamicMetaData", dynamicMetaData);
@@ -276,7 +285,10 @@ public class UpdateMediaRequest extends Request {
         }
 
         /**
-         * InputURL.
+         * <p>The media type of the media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></p>
          */
         public Builder inputURL(String inputURL) {
             this.putQueryParameter("InputURL", inputURL);
@@ -285,7 +297,10 @@ public class UpdateMediaRequest extends Request {
         }
 
         /**
-         * MediaId.
+         * <p>The media asset ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);
@@ -294,7 +309,10 @@ public class UpdateMediaRequest extends Request {
         }
 
         /**
-         * MediaTags.
+         * <p>The tags. Separate multiple tags with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>剪映动画</p>
          */
         public Builder mediaTags(String mediaTags) {
             this.putQueryParameter("MediaTags", mediaTags);
@@ -303,7 +321,10 @@ public class UpdateMediaRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>The title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>title</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -312,7 +333,10 @@ public class UpdateMediaRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The user data. Maximum length: 1024 bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

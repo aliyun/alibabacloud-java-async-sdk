@@ -67,7 +67,7 @@ public class GetInfiniteCanvasResponseBody extends TeaModel {
         } 
 
         /**
-         * InfiniteCanvas.
+         * <p>The infinite canvas details.</p>
          */
         public Builder infiniteCanvas(InfiniteCanvas infiniteCanvas) {
             this.infiniteCanvas = infiniteCanvas;
@@ -75,7 +75,10 @@ public class GetInfiniteCanvasResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +196,10 @@ public class GetInfiniteCanvasResponseBody extends TeaModel {
             } 
 
             /**
-             * CanvasId.
+             * <p>The ID of the infinite canvas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>canvas_gesad*</p>
              */
             public Builder canvasId(String canvasId) {
                 this.canvasId = canvasId;
@@ -201,7 +207,10 @@ public class GetInfiniteCanvasResponseBody extends TeaModel {
             }
 
             /**
-             * CoverUrl.
+             * <p>The cover URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https://*uncs.com/cover.png</p>
              */
             public Builder coverUrl(String coverUrl) {
                 this.coverUrl = coverUrl;
@@ -209,7 +218,10 @@ public class GetInfiniteCanvasResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-07-01T08:42:16Z</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -217,7 +229,10 @@ public class GetInfiniteCanvasResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-07-01T08:42:16Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -225,7 +240,10 @@ public class GetInfiniteCanvasResponseBody extends TeaModel {
             }
 
             /**
-             * Thumbnail.
+             * <p>The thumbnail URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https://*uncs.com/cover.png</p>
              */
             public Builder thumbnail(String thumbnail) {
                 this.thumbnail = thumbnail;
@@ -233,7 +251,10 @@ public class GetInfiniteCanvasResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The title of the infinite canvas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test infinite canvas</p>
              */
             public Builder title(String title) {
                 this.title = title;

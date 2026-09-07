@@ -80,7 +80,10 @@ public class SubmitRemakeScriptJobResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The business error code. An empty string is returned when the submission is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -88,7 +91,10 @@ public class SubmitRemakeScriptJobResponseBody extends TeaModel {
         }
 
         /**
-         * JobId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68ca759e798b40b4903b255********</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;

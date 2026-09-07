@@ -166,7 +166,10 @@ public class ListInfiniteCanvasesRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The keyword for querying site monitoring tasks. Supports fuzzy match based on task name or task address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2_</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -175,7 +178,10 @@ public class ListInfiniteCanvasesRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The current page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -184,7 +190,10 @@ public class ListInfiniteCanvasesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -202,7 +211,10 @@ public class ListInfiniteCanvasesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sort field and sort order. Separate multiple values with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>utcCreate:Desc</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -211,7 +223,16 @@ public class ListInfiniteCanvasesRequest extends Request {
         }
 
         /**
-         * SortOrder.
+         * <p>The sort direction.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Asc: Ascending order.</li>
+         * <li>Desc: Descending order.</li>
+         * </ul>
+         * <p>Default value: Desc.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ascending</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putQueryParameter("SortOrder", sortOrder);

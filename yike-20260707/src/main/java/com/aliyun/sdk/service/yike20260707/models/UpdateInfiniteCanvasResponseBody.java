@@ -67,7 +67,10 @@ public class UpdateInfiniteCanvasResponseBody extends TeaModel {
         } 
 
         /**
-         * CanvasId.
+         * <p>The ID of the infinite canvas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>canvas_gesad*</p>
          */
         public Builder canvasId(String canvasId) {
             this.canvasId = canvasId;
@@ -75,7 +78,10 @@ public class UpdateInfiniteCanvasResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

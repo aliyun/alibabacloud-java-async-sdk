@@ -80,7 +80,7 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
         } 
 
         /**
-         * Job.
+         * <p>The media asset content understanding result object.</p>
          */
         public Builder job(Job job) {
             this.job = job;
@@ -88,7 +88,7 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
         }
 
         /**
-         * MediaComprehensionJob.
+         * <p>The media asset content understanding object. This parameter is deprecated.</p>
          */
         public Builder mediaComprehensionJob(MediaComprehensionJob mediaComprehensionJob) {
             this.mediaComprehensionJob = mediaComprehensionJob;
@@ -96,7 +96,10 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +217,10 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorCode.
+             * <p>The error code. This parameter is returned when the job is in the Failed state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -222,7 +228,10 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message. This parameter is returned when the job is in the Failed state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The specified product does not exist.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -230,7 +239,7 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
             }
 
             /**
-             * MediaIds.
+             * <p>The list of media asset IDs. If the input is a URL, the media asset ID registered after input is returned.</p>
              */
             public Builder mediaIds(java.util.List<String> mediaIds) {
                 this.mediaIds = mediaIds;
@@ -238,7 +247,10 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The URL of the analysis result file. The file content is in JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxx.json">http://xxxx.json</a></p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -246,7 +258,17 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The file status. Valid values:</p>
+             * <ul>
+             * <li><strong>Created</strong>: Created.</li>
+             * <li><strong>Executing</strong>: Executing.</li>
+             * <li><strong>Finished</strong>: Finished.</li>
+             * <li><strong>Failed</strong>: Failed.</li>
+             * <li><strong>Deleted</strong>: Deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Executing</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -254,7 +276,10 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The user-defined parameter, which is a JSON-formatted string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;NotifyAddress&quot;: &quot;<a href="http://xxx.callback.url%22%7D">http://xxx.callback.url&quot;}</a></p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -386,7 +411,10 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorCode.
+             * <p>The error code. This parameter is returned when the job is in the <code>Failed</code> state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -394,7 +422,10 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message. This parameter is returned when the job is in the Failed state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The specified product does not exist.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -402,7 +433,10 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong><strong>afaa6f37457</strong></strong></strong></p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -410,7 +444,10 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId.
+             * <p>The media asset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong><strong>307e9971f1</strong></strong></strong></p>
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -418,7 +455,10 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The analysis result, which is a JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;{\&quot;source_video_url\&quot;:\&quot;<a href="http://xxx.mp4%5C%5C%22,%5C%5C%22narrative_overview%5C%5C%22:%7B******%7D%7D">http://xxx.mp4\\&quot;,\\&quot;narrative_overview\\&quot;:{******}}</a>&quot;</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -426,7 +466,17 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The file status. Valid values:</p>
+             * <ul>
+             * <li><strong>Created</strong>: Created.</li>
+             * <li><strong>Executing</strong>: Executing.</li>
+             * <li><strong>Finished</strong>: Finished.</li>
+             * <li><strong>Failed</strong>: Failed.</li>
+             * <li><strong>Deleted</strong>: Deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Executing</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -434,7 +484,10 @@ public class GetMediaComprehensionJobResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The user-defined parameter, which is a JSON-formatted string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;NotifyAddress&quot;: &quot;<a href="http://xxx.callback.url%22%7D">http://xxx.callback.url&quot;}</a></p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;

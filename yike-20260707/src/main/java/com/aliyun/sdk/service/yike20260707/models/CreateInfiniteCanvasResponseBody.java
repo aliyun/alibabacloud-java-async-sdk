@@ -67,7 +67,10 @@ public class CreateInfiniteCanvasResponseBody extends TeaModel {
         } 
 
         /**
-         * CanvasId.
+         * <p>The canvas ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>canvas_***</p>
          */
         public Builder canvasId(String canvasId) {
             this.canvasId = canvasId;

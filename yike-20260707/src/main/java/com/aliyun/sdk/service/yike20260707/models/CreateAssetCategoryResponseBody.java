@@ -67,7 +67,7 @@ public class CreateAssetCategoryResponseBody extends TeaModel {
         } 
 
         /**
-         * Category.
+         * <p>The media asset category information.</p>
          */
         public Builder category(Category category) {
             this.category = category;
@@ -75,7 +75,10 @@ public class CreateAssetCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +170,10 @@ public class CreateAssetCategoryResponseBody extends TeaModel {
             } 
 
             /**
-             * CategoryId.
+             * <p>The ID of the created category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45</p>
              */
             public Builder categoryId(Long categoryId) {
                 this.categoryId = categoryId;
@@ -175,7 +181,10 @@ public class CreateAssetCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryName.
+             * <p>The media asset category information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>see below</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -183,7 +192,10 @@ public class CreateAssetCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The category level. The first-level category has a level of 0, the second-level category has a level of 1, and the third-level category has a level of 2.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder level(Long level) {
                 this.level = level;
@@ -191,7 +203,10 @@ public class CreateAssetCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * ParentId.
+             * <p>The parent category ID. If the ParentId parameter is set to empty or a value less than 1, the default return value is -1, which indicates that the created category is a root directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;

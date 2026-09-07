@@ -125,7 +125,10 @@ public class CreateInfiniteCanvasRequest extends Request {
         }
 
         /**
-         * CoverUrl.
+         * <p>The cover URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://tagvvcloud-material-center-prod.oss-cn-hangzhou.aliyuncs.com/sumvideo/utils_image/sumvideo-video-cover.png">https://tagvvcloud-material-center-prod.oss-cn-hangzhou.aliyuncs.com/sumvideo/utils_image/sumvideo-video-cover.png</a></p>
          */
         public Builder coverUrl(String coverUrl) {
             this.putQueryParameter("CoverUrl", coverUrl);
@@ -134,7 +137,10 @@ public class CreateInfiniteCanvasRequest extends Request {
         }
 
         /**
-         * ProductionId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pd_061716****</p>
          */
         public Builder productionId(String productionId) {
             this.putQueryParameter("ProductionId", productionId);
@@ -143,6 +149,7 @@ public class CreateInfiniteCanvasRequest extends Request {
         }
 
         /**
+         * <p>The project title.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +162,10 @@ public class CreateInfiniteCanvasRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ws_zna577pdximv***</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

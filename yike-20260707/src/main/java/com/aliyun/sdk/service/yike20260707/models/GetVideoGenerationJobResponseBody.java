@@ -78,7 +78,7 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         }
 
         /**
-         * VideoGenerationJob.
+         * <p>The video generation task.</p>
          */
         public Builder videoGenerationJob(VideoGenerationJob videoGenerationJob) {
             this.videoGenerationJob = videoGenerationJob;
@@ -300,7 +300,10 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
             } 
 
             /**
-             * AspectRatio.
+             * <p>The aspect ratio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16:9</p>
              */
             public Builder aspectRatio(String aspectRatio) {
                 this.aspectRatio = aspectRatio;
@@ -308,7 +311,10 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The video duration. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -316,7 +322,10 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message. This parameter is returned only when the task is in the Failed state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Input file not found.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -324,7 +333,10 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * Input.
+             * <p>The task input.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Prompt&quot;:&quot;Person in image 1 is on a basketball court, dunking with image 2&quot;,&quot;Medias&quot;:[{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;<a href="https://xxx/xxx.jpg%22%7D,%7B%22Type%22:%22image%22,%22Url%22:%22https://xxx/xxx.jpg%22%7D%5D%7D">https://xxx/xxx.jpg&quot;},{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;https://xxx/xxx.jpg&quot;}]}</a></p>
              */
             public Builder input(String input) {
                 this.input = input;
@@ -332,7 +344,10 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fdc7f121056249c2b64e04bba27bcc8c</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -340,7 +355,10 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobParameters.
+             * <p>The task feature configuration. No configuration is required at this time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder jobParameters(String jobParameters) {
                 this.jobParameters = jobParameters;
@@ -348,7 +366,10 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobType.
+             * <p>The task type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>first_last_frame</p>
              */
             public Builder jobType(String jobType) {
                 this.jobType = jobType;
@@ -356,7 +377,10 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p>The model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>happyhorse-1.1</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -364,7 +388,10 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * N.
+             * <p>The number of generated videos.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder n(Integer n) {
                 this.n = n;
@@ -372,7 +399,13 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * Output.
+             * <p>The generation result in JsonString format, which contains:</p>
+             * <p>Medias: a list of media information (Media objects). Fields of a Media object:
+             * MediaId: String. The media asset ID.
+             * OutputUrl: String. The media URL (with authentication string).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;Medias\&quot;:[{\&quot;MediaId\&quot;:\&quot;<em><strong><strong>470732171f1bfcaf7f6d44</strong></strong></em>\&quot;,\&quot;OutputUrl\&quot;:\&quot;<a href="https://xxxxxxx/.../xxxxx.mp4?Expires=xxxx&OSSAccessKeyId=xxx&Signature=xxxx%5C%5C%22%7D%5D%7D">https://xxxxxxx/.../xxxxx.mp4?Expires=xxxx&amp;OSSAccessKeyId=xxx&amp;Signature=xxxx\\&quot;}]}</a></p>
              */
             public Builder output(String output) {
                 this.output = output;
@@ -380,7 +413,10 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * Resolution.
+             * <p>The resolution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>720P</p>
              */
             public Builder resolution(String resolution) {
                 this.resolution = resolution;
@@ -388,7 +424,10 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * Scene.
+             * <p>The scene type. Currently only general is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>general</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -396,7 +435,17 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li>Created: The task is created.</li>
+             * <li>Queuing: The task is queuing.</li>
+             * <li>Executing: The task is being executed.</li>
+             * <li>Finished: The task is completed.</li>
+             * <li>Failed: The task failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Executing</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -404,7 +453,10 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The user business information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;

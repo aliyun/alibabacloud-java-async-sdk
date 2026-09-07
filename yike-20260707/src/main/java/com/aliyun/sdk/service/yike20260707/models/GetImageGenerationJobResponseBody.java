@@ -67,7 +67,7 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
         } 
 
         /**
-         * ImageGenerationJob.
+         * <p>The image generation task.</p>
          */
         public Builder imageGenerationJob(ImageGenerationJob imageGenerationJob) {
             this.imageGenerationJob = imageGenerationJob;
@@ -287,7 +287,10 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
             } 
 
             /**
-             * AspectRatio.
+             * <p>The video aspect ratio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16:9</p>
              */
             public Builder aspectRatio(String aspectRatio) {
                 this.aspectRatio = aspectRatio;
@@ -295,7 +298,10 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message. This parameter is returned only when the task is in the Failed state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Input file not found.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -303,7 +309,10 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * Input.
+             * <p>The task input.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Prompt&quot;:&quot;Image 1 is on a basketball court, using Image 2 to perform a slam dunk&quot;}</p>
              */
             public Builder input(String input) {
                 this.input = input;
@@ -311,7 +320,10 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ag_68ca759b4903b255*******</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -319,7 +331,10 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobParameters.
+             * <p>The task feature configuration. No configuration is required at this time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder jobParameters(String jobParameters) {
                 this.jobParameters = jobParameters;
@@ -327,7 +342,10 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobType.
+             * <p>The task type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text_to_image</p>
              */
             public Builder jobType(String jobType) {
                 this.jobType = jobType;
@@ -335,7 +353,10 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p>The model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wan2.7-image</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -343,7 +364,10 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * N.
+             * <p>The number of generated images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder n(String n) {
                 this.n = n;
@@ -351,7 +375,17 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * Output.
+             * <p>The generation result in JSON string format. Fields:</p>
+             * <ul>
+             * <li>Medias: a list of media information (Media objects). Fields of a Media object:<ul>
+             * <li>MediaId: String. The media asset ID.</li>
+             * <li>OutputUrl: String. The media URL (with authentication string).</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Medias&quot;:[{&quot;MediaId&quot;:&quot;<em><strong>e3700761971f19c32e7e7d5496</strong></em>&quot;,&quot;OutputUrl&quot;:&quot;https://<strong>bucket</strong>.oss-ap-southeast-1.aliyuncs.com/xxx.prd&quot;}]}</p>
              */
             public Builder output(String output) {
                 this.output = output;
@@ -359,7 +393,10 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * Resolution.
+             * <p>The resolution of the generated video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1K</p>
              */
             public Builder resolution(String resolution) {
                 this.resolution = resolution;
@@ -367,7 +404,10 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * Scene.
+             * <p>The scene type. Currently only <code>general</code> is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>general</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -375,7 +415,17 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li>Created: The task is created.</li>
+             * <li>Queuing: The task is queuing.</li>
+             * <li>Executing: The task is being executed.</li>
+             * <li>Finished: The task is completed.</li>
+             * <li>Failed: The task failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Executing</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -383,7 +433,10 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * <p>The user business information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;

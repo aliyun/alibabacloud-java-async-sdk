@@ -124,7 +124,10 @@ public class GetMediaRequest extends Request {
         }
 
         /**
-         * AuthTimeout.
+         * <p>The validity period of the signed file URL. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder authTimeout(Long authTimeout) {
             this.putQueryParameter("AuthTimeout", authTimeout);
@@ -142,7 +145,10 @@ public class GetMediaRequest extends Request {
         }
 
         /**
-         * InputURL.
+         * <p>Currently unavailable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></p>
          */
         public Builder inputURL(String inputURL) {
             this.putQueryParameter("InputURL", inputURL);
@@ -151,7 +157,10 @@ public class GetMediaRequest extends Request {
         }
 
         /**
-         * MediaId.
+         * <p>The media asset ID. If this parameter is not empty, the query is performed based on this parameter, and the system verifies whether the value is a valid MediaId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);

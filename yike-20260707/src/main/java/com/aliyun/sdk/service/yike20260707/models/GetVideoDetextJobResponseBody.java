@@ -12,18 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetVideoRenderJobResponseBody} extends {@link TeaModel}
+ * {@link GetVideoDetextJobResponseBody} extends {@link TeaModel}
  *
- * <p>GetVideoRenderJobResponseBody</p>
+ * <p>GetVideoDetextJobResponseBody</p>
  */
-public class GetVideoRenderJobResponseBody extends TeaModel {
+public class GetVideoDetextJobResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Job")
     private Job job;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private GetVideoRenderJobResponseBody(Builder builder) {
+    private GetVideoDetextJobResponseBody(Builder builder) {
         this.job = builder.job;
         this.requestId = builder.requestId;
     }
@@ -32,7 +32,7 @@ public class GetVideoRenderJobResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetVideoRenderJobResponseBody create() {
+    public static GetVideoDetextJobResponseBody create() {
         return builder().build();
     }
 
@@ -61,13 +61,13 @@ public class GetVideoRenderJobResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(GetVideoRenderJobResponseBody model) {
+        private Builder(GetVideoDetextJobResponseBody model) {
             this.job = model.job;
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>The video rendering and composition task object.</p>
+         * <p>The video text erasure task.</p>
          */
         public Builder job(Job job) {
             this.job = job;
@@ -75,62 +75,62 @@ public class GetVideoRenderJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID, which is used for Tracing Analysis and troubleshooting.</p>
          * 
          * <strong>example:</strong>
-         * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
+         * <p>req-detext-get-20260820-001</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public GetVideoRenderJobResponseBody build() {
-            return new GetVideoRenderJobResponseBody(this);
+        public GetVideoDetextJobResponseBody build() {
+            return new GetVideoDetextJobResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link GetVideoRenderJobResponseBody} extends {@link TeaModel}
+     * {@link GetVideoDetextJobResponseBody} extends {@link TeaModel}
      *
-     * <p>GetVideoRenderJobResponseBody</p>
+     * <p>GetVideoDetextJobResponseBody</p>
      */
     public static class Job extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("EditingProjectId")
-        private String editingProjectId;
-
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
+        @com.aliyun.core.annotation.NameInMap("Input")
+        private String input;
+
         @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @com.aliyun.core.annotation.NameInMap("Language")
-        private String language;
+        @com.aliyun.core.annotation.NameInMap("JobParameters")
+        private String jobParameters;
 
-        @com.aliyun.core.annotation.NameInMap("Result")
-        private String result;
+        @com.aliyun.core.annotation.NameInMap("JobType")
+        private String jobType;
+
+        @com.aliyun.core.annotation.NameInMap("Output")
+        private String output;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @com.aliyun.core.annotation.NameInMap("UserData")
-        private String userData;
-
         private Job(Builder builder) {
-            this.editingProjectId = builder.editingProjectId;
             this.errorCode = builder.errorCode;
             this.errorMessage = builder.errorMessage;
+            this.input = builder.input;
             this.jobId = builder.jobId;
-            this.language = builder.language;
-            this.result = builder.result;
+            this.jobParameters = builder.jobParameters;
+            this.jobType = builder.jobType;
+            this.output = builder.output;
             this.status = builder.status;
-            this.userData = builder.userData;
         }
 
         public static Builder builder() {
@@ -139,13 +139,6 @@ public class GetVideoRenderJobResponseBody extends TeaModel {
 
         public static Job create() {
             return builder().build();
-        }
-
-        /**
-         * @return editingProjectId
-         */
-        public String getEditingProjectId() {
-            return this.editingProjectId;
         }
 
         /**
@@ -163,6 +156,13 @@ public class GetVideoRenderJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return input
+         */
+        public String getInput() {
+            return this.input;
+        }
+
+        /**
          * @return jobId
          */
         public String getJobId() {
@@ -170,17 +170,24 @@ public class GetVideoRenderJobResponseBody extends TeaModel {
         }
 
         /**
-         * @return language
+         * @return jobParameters
          */
-        public String getLanguage() {
-            return this.language;
+        public String getJobParameters() {
+            return this.jobParameters;
         }
 
         /**
-         * @return result
+         * @return jobType
          */
-        public String getResult() {
-            return this.result;
+        public String getJobType() {
+            return this.jobType;
+        }
+
+        /**
+         * @return output
+         */
+        public String getOutput() {
+            return this.output;
         }
 
         /**
@@ -190,53 +197,35 @@ public class GetVideoRenderJobResponseBody extends TeaModel {
             return this.status;
         }
 
-        /**
-         * @return userData
-         */
-        public String getUserData() {
-            return this.userData;
-        }
-
         public static final class Builder {
-            private String editingProjectId; 
             private String errorCode; 
             private String errorMessage; 
+            private String input; 
             private String jobId; 
-            private String language; 
-            private String result; 
+            private String jobParameters; 
+            private String jobType; 
+            private String output; 
             private String status; 
-            private String userData; 
 
             private Builder() {
             } 
 
             private Builder(Job model) {
-                this.editingProjectId = model.editingProjectId;
                 this.errorCode = model.errorCode;
                 this.errorMessage = model.errorMessage;
+                this.input = model.input;
                 this.jobId = model.jobId;
-                this.language = model.language;
-                this.result = model.result;
+                this.jobParameters = model.jobParameters;
+                this.jobType = model.jobType;
+                this.output = model.output;
                 this.status = model.status;
-                this.userData = model.userData;
             } 
 
             /**
-             * <p>The online editing project ID, which can be used for secondary editing of the output video.</p>
+             * <p>The business error code returned when the task fails. This field is typically not returned for non-failure states.</p>
              * 
              * <strong>example:</strong>
-             * <p>8239345231244512***</p>
-             */
-            public Builder editingProjectId(String editingProjectId) {
-                this.editingProjectId = editingProjectId;
-                return this;
-            }
-
-            /**
-             * <p>The error code. This parameter is returned when the task is in the Failed state.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>200</p>
+             * <p>InvalidInput</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -244,10 +233,10 @@ public class GetVideoRenderJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message. This parameter is returned when the task is in the Failed state.</p>
+             * <p>The business error message returned when the task fails. This field is typically not returned for non-failure states.</p>
              * 
              * <strong>example:</strong>
-             * <p>The specified product does not exist.</p>
+             * <p>Input video is invalid.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -255,10 +244,21 @@ public class GetVideoRenderJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task ID.</p>
+             * <p>The normalized input configuration JSON string saved at submission time.</p>
              * 
              * <strong>example:</strong>
-             * <p>68ca759e798b40b4903b255*******</p>
+             * <p>{&quot;VideoMediaId&quot;:&quot;media-video-001&quot;}</p>
+             */
+            public Builder input(String input) {
+                this.input = input;
+                return this;
+            }
+
+            /**
+             * <p>The video text erasure task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vdt_0123456789abcdef0123456789abcdef</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -266,53 +266,46 @@ public class GetVideoRenderJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The narration language of the output video.</p>
+             * <p>The normalized text erasure parameter JSON string.</p>
              * 
              * <strong>example:</strong>
-             * <p>zh</p>
+             * <p>{&quot;EraseAllText&quot;:false,&quot;TextTargets&quot;:[{&quot;Box&quot;:[0.1,0.8,0.8,0.15],&quot;TimeRanges&quot;:[[0,30]]}]}</p>
              */
-            public Builder language(String language) {
-                this.language = language;
+            public Builder jobParameters(String jobParameters) {
+                this.jobParameters = jobParameters;
                 return this;
             }
 
             /**
-             * <p>The download URL of the rendered and composed video.</p>
+             * <p>The task type. The value is fixed to VIDEO_DETEXT.</p>
              * 
              * <strong>example:</strong>
-             * <p><a href="https://xxxx.mp4">https://xxxx.mp4</a></p>
+             * <p>VIDEO_DETEXT</p>
              */
-            public Builder result(String result) {
-                this.result = result;
+            public Builder jobType(String jobType) {
+                this.jobType = jobType;
                 return this;
             }
 
             /**
-             * <p>The task status. Valid values:</p>
-             * <ul>
-             * <li>Created: The task is created.</li>
-             * <li>Executing: The task is being executed.</li>
-             * <li>Finished: The task is completed.</li>
-             * <li>Failed: The task has failed.</li>
-             * <li>Deleted: The task is deleted.</li>
-             * </ul>
+             * <p>The task output JSON string. When the task succeeds, AiResult.DetextVideoURL contains the URL of the video with text erased.</p>
              * 
              * <strong>example:</strong>
-             * <p>Executing</p>
+             * <p>{&quot;AiResult&quot;:{&quot;DetextVideoURL&quot;:&quot;<a href="https://example.com/detext/detext.mp4%22%7D%7D">https://example.com/detext/detext.mp4&quot;}}</a></p>
+             */
+            public Builder output(String output) {
+                this.output = output;
+                return this;
+            }
+
+            /**
+             * <p>The task status. Valid values: Created, Queuing, Executing, Finished, and Failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
-                return this;
-            }
-
-            /**
-             * <p>The custom user data in JSON format.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{&quot;NotifyAddress&quot;: &quot;<a href="http://xxx.callback.url%22%7D">http://xxx.callback.url&quot;}</a></p>
-             */
-            public Builder userData(String userData) {
-                this.userData = userData;
                 return this;
             }
 

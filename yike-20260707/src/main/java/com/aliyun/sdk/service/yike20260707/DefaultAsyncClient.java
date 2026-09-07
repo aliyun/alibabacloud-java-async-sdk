@@ -40,6 +40,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description.</h2>
+     * 
      * @param request the request parameters of BatchGetMedias  BatchGetMediasRequest
      * @return BatchGetMediasResponse
      */
@@ -58,6 +61,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Categories support up to three levels, and each level supports up to 100 subcategories.</p>
+     * 
      * @param request the request parameters of CreateAssetCategory  CreateAssetCategoryRequest
      * @return CreateAssetCategoryResponse
      */
@@ -76,6 +82,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This API operation is used to query media asset content understanding jobs.</p>
+     * 
      * @param request the request parameters of CreateInfiniteCanvas  CreateInfiniteCanvasRequest
      * @return CreateInfiniteCanvasResponse
      */
@@ -94,6 +104,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation also deletes all subcategories (including second-level and third-level categories). Proceed with caution.</p>
+     * 
      * @param request the request parameters of DeleteAssetCategory  DeleteAssetCategoryRequest
      * @return DeleteAssetCategoryResponse
      */
@@ -112,6 +125,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This API operation is used to query media asset content understanding jobs.</p>
+     * 
      * @param request the request parameters of DeleteInfiniteCanvas  DeleteInfiniteCanvasRequest
      * @return DeleteInfiniteCanvasResponse
      */
@@ -148,6 +165,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice:  The AI generation-related API operations in the 2026-03-19 API version will be deprecated soon. Upgrade to the 2026-07-07 API version.</notice></p>
+     * </blockquote>
+     * 
      * @param request the request parameters of GenerateYikeLoginToken  GenerateYikeLoginTokenRequest
      * @return GenerateYikeLoginTokenResponse
      */
@@ -202,6 +224,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>This API is used to query a media asset content understanding job.</p>
+     * 
      * @param request the request parameters of GetInfiniteCanvas  GetInfiniteCanvasRequest
      * @return GetInfiniteCanvasResponse
      */
@@ -220,6 +246,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This API operation is used to query a media content analysis job.</p>
+     * 
      * @param request the request parameters of GetMedia  GetMediaRequest
      * @return GetMediaResponse
      */
@@ -238,6 +268,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>This API is used to query a media asset content understanding job.</p>
+     * 
      * @param request the request parameters of GetMediaComprehensionJob  GetMediaComprehensionJobRequest
      * @return GetMediaComprehensionJobResponse
      */
@@ -268,6 +302,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetRemakeScriptJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the status, input, parameters, and desired state result of a video text erasure task based on <code>JobId</code>.</p>
+     * 
+     * @param request the request parameters of GetVideoDetextJob  GetVideoDetextJobRequest
+     * @return GetVideoDetextJobResponse
+     */
+    @Override
+    public CompletableFuture<GetVideoDetextJobResponse> getVideoDetextJob(GetVideoDetextJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetVideoDetextJob").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetVideoDetextJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetVideoDetextJobResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -310,6 +365,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the status, input, parameters, and desired state results of a video translation job based on the <code>JobId</code>.</p>
+     * 
      * @param request the request parameters of GetVideoTranslationJob  GetVideoTranslationJobRequest
      * @return GetVideoTranslationJobResponse
      */
@@ -364,6 +422,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>This API is used to query media content analysis jobs.</p>
+     * 
      * @param request the request parameters of ImportMedia  ImportMediaRequest
      * @return ImportMediaResponse
      */
@@ -400,6 +462,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This API is used to query media asset content understanding jobs.</p>
+     * 
      * @param request the request parameters of ListInfiniteCanvases  ListInfiniteCanvasesRequest
      * @return ListInfiniteCanvasesResponse
      */
@@ -454,6 +520,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This API operation performs content understanding based on the provided media asset files (such as video URLs). You can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
+     * 
      * @param request the request parameters of SubmitMediaComprehensionJob  SubmitMediaComprehensionJobRequest
      * @return SubmitMediaComprehensionJobResponse
      */
@@ -472,6 +542,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API generates a new voiceover script based on content comprehension results and new product/model information by imitating the style of the original script. You can pass custom parameters through the UserData field, which are returned as-is in the callback.</p>
+     * 
      * @param request the request parameters of SubmitRemakeScriptJob  SubmitRemakeScriptJobRequest
      * @return SubmitRemakeScriptJobResponse
      */
@@ -484,6 +557,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SubmitRemakeScriptJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Submits an asynchronous video text erasure task. The input can be an accessible video URL or a media asset ID. You can configure the erasure time range and text regions.</p>
+     * 
+     * @param request the request parameters of SubmitVideoDetextJob  SubmitVideoDetextJobRequest
+     * @return SubmitVideoDetextJobResponse
+     */
+    @Override
+    public CompletableFuture<SubmitVideoDetextJobResponse> submitVideoDetextJob(SubmitVideoDetextJobRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SubmitVideoDetextJob").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitVideoDetextJobResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitVideoDetextJobResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -526,6 +620,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Submits an asynchronous video translation task. The input supports a media URL or an Intelligent Media Management (IMM) media asset ID. Task parameters specify the source language, target language, and translation capabilities to enable.</p>
+     * 
      * @param request the request parameters of SubmitVideoTranslationJob  SubmitVideoTranslationJobRequest
      * @return SubmitVideoTranslationJobResponse
      */
@@ -544,6 +641,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After creating a media asset category, you can call this operation to locate and update the name of the category by category ID.</p>
+     * 
      * @param request the request parameters of UpdateAssetCategory  UpdateAssetCategoryRequest
      * @return UpdateAssetCategoryResponse
      */
@@ -562,6 +662,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This API operation is used to query media asset content understanding jobs.</p>
+     * 
      * @param request the request parameters of UpdateInfiniteCanvas  UpdateInfiniteCanvasRequest
      * @return UpdateInfiniteCanvasResponse
      */
@@ -580,6 +684,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This API operation is used to query media content understanding jobs.</p>
+     * 
      * @param request the request parameters of UpdateMedia  UpdateMediaRequest
      * @return UpdateMediaResponse
      */

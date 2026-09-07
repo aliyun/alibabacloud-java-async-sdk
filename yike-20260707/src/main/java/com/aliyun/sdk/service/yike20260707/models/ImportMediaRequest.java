@@ -296,7 +296,10 @@ public class ImportMediaRequest extends Request {
         }
 
         /**
-         * CoverURL.
+         * <p>The cover image URL. This parameter is valid only for video media assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://outin-55c9ab3fb1b911ee817b00163e32b0a3.oss-cn-shanghai.aliyuncs.com/60425a2758a971f181385017f0e90102/covers/ice-generated/d4aee2d6c6f84769ac89f18c667699c6-cover.png">https://outin-55c9ab3fb1b911ee817b00163e32b0a3.oss-cn-shanghai.aliyuncs.com/60425a2758a971f181385017f0e90102/covers/ice-generated/d4aee2d6c6f84769ac89f18c667699c6-cover.png</a></p>
          */
         public Builder coverURL(String coverURL) {
             this.putQueryParameter("CoverURL", coverURL);
@@ -305,7 +308,10 @@ public class ImportMediaRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -314,7 +320,10 @@ public class ImportMediaRequest extends Request {
         }
 
         /**
-         * DynamicMetaData.
+         * <p>The dynamic metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder dynamicMetaData(String dynamicMetaData) {
             this.putQueryParameter("DynamicMetaData", dynamicMetaData);
@@ -323,7 +332,10 @@ public class ImportMediaRequest extends Request {
         }
 
         /**
-         * EntityId.
+         * <p>The entity ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>urn:cruise:mock-saml-idp</p>
          */
         public Builder entityId(String entityId) {
             this.putQueryParameter("EntityId", entityId);
@@ -332,7 +344,10 @@ public class ImportMediaRequest extends Request {
         }
 
         /**
-         * ImportSource.
+         * <p>The media asset source. Set this parameter to url.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>url</p>
          */
         public Builder importSource(String importSource) {
             this.putQueryParameter("ImportSource", importSource);
@@ -341,7 +356,10 @@ public class ImportMediaRequest extends Request {
         }
 
         /**
-         * InputURL.
+         * <p>The URL of the media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></p>
          */
         public Builder inputURL(String inputURL) {
             this.putQueryParameter("InputURL", inputURL);
@@ -350,7 +368,10 @@ public class ImportMediaRequest extends Request {
         }
 
         /**
-         * MediaTags.
+         * <p>The tags of the media asset. Separate multiple tags with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AdvancedImageToVideo,AIGenerated</p>
          */
         public Builder mediaTags(String mediaTags) {
             this.putQueryParameter("MediaTags", mediaTags);
@@ -359,7 +380,10 @@ public class ImportMediaRequest extends Request {
         }
 
         /**
-         * MediaType.
+         * <p>The type of the media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>video</p>
          */
         public Builder mediaType(String mediaType) {
             this.putQueryParameter("MediaType", mediaType);
@@ -368,7 +392,10 @@ public class ImportMediaRequest extends Request {
         }
 
         /**
-         * Overwrite.
+         * <p>Specifies whether to overwrite existing media assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder overwrite(Boolean overwrite) {
             this.putQueryParameter("Overwrite", overwrite);
@@ -377,7 +404,10 @@ public class ImportMediaRequest extends Request {
         }
 
         /**
-         * RegisterConfig.
+         * <p>The configuration for registering the media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;SearchLibName\&quot;:\&quot;AiSaasLib_34140718_MA\&quot;}</p>
          */
         public Builder registerConfig(String registerConfig) {
             this.putQueryParameter("RegisterConfig", registerConfig);
@@ -386,7 +416,10 @@ public class ImportMediaRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>The title of the media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>title</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -395,7 +428,10 @@ public class ImportMediaRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The user data. Maximum length: 1024 bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

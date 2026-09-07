@@ -96,7 +96,10 @@ public class ListAssetCategoriesRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The current page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -105,7 +108,10 @@ public class ListAssetCategoriesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

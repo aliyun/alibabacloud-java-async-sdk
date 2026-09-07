@@ -80,7 +80,7 @@ public class DeleteMediasResponseBody extends TeaModel {
         } 
 
         /**
-         * ForbiddenList.
+         * <p>The IDs or input URLs that are forbidden from being deleted.</p>
          */
         public Builder forbiddenList(java.util.List<String> forbiddenList) {
             this.forbiddenList = forbiddenList;
@@ -88,7 +88,7 @@ public class DeleteMediasResponseBody extends TeaModel {
         }
 
         /**
-         * IgnoredList.
+         * <p>The ignored IDs or input URLs, which are invalid or have retrieval errors.</p>
          */
         public Builder ignoredList(java.util.List<String> ignoredList) {
             this.ignoredList = ignoredList;
@@ -96,7 +96,10 @@ public class DeleteMediasResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

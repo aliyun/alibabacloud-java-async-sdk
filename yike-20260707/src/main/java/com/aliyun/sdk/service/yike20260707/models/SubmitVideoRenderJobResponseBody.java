@@ -80,7 +80,10 @@ public class SubmitVideoRenderJobResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrorCode.
+         * <p>The error code. This parameter is returned when the task is in the Failed state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -88,7 +91,10 @@ public class SubmitVideoRenderJobResponseBody extends TeaModel {
         }
 
         /**
-         * JobId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68ca759e798b40b4903b255*******</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -96,7 +102,10 @@ public class SubmitVideoRenderJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -67,7 +67,10 @@ public class DeleteInfiniteCanvasResponseBody extends TeaModel {
         } 
 
         /**
-         * CanvasId.
+         * <p>The ID of the infinite canvas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>canvas_adaasd*</p>
          */
         public Builder canvasId(String canvasId) {
             this.canvasId = canvasId;
@@ -75,7 +78,10 @@ public class DeleteInfiniteCanvasResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><em><strong>F88A3-AC51-5588-859A-03144F082</strong></em></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

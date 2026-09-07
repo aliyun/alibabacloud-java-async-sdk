@@ -112,6 +112,7 @@ public class UpdateInfiniteCanvasRequest extends Request {
         }
 
         /**
+         * <p>The ID of the infinite canvas.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +125,10 @@ public class UpdateInfiniteCanvasRequest extends Request {
         }
 
         /**
-         * CoverUrl.
+         * <p>The cover URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>84ec412603784c04a00c737c71d86dfd</p>
          */
         public Builder coverUrl(String coverUrl) {
             this.putQueryParameter("CoverUrl", coverUrl);
@@ -133,7 +137,10 @@ public class UpdateInfiniteCanvasRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>The project title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>title</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

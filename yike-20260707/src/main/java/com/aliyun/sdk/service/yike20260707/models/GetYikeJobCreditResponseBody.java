@@ -93,7 +93,10 @@ public class GetYikeJobCreditResponseBody extends TeaModel {
         } 
 
         /**
-         * CreditStatus.
+         * <p>The credit deduction status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder creditStatus(String creditStatus) {
             this.creditStatus = creditStatus;
@@ -101,7 +104,10 @@ public class GetYikeJobCreditResponseBody extends TeaModel {
         }
 
         /**
-         * JobCreditCost.
+         * <p>The actual credits consumed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder jobCreditCost(Double jobCreditCost) {
             this.jobCreditCost = jobCreditCost;
@@ -109,7 +115,10 @@ public class GetYikeJobCreditResponseBody extends TeaModel {
         }
 
         /**
-         * JobId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ag_12412424****</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -117,7 +126,10 @@ public class GetYikeJobCreditResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

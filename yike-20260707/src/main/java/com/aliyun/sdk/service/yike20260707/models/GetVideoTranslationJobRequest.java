@@ -60,10 +60,11 @@ public class GetVideoTranslationJobRequest extends Request {
         } 
 
         /**
+         * <p>The video translation job ID returned by SubmitVideoTranslationJob.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>vtj_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+         * <p>vtj_0123456789abcdef0123456789abcdef</p>
          */
         public Builder jobId(String jobId) {
             this.putBodyParameter("JobId", jobId);
