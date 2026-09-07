@@ -67,7 +67,7 @@ public class ListClientUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>User information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListClientUsersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FEF1144C-95D1-5F7C-81EF-9DB70EA49FCE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class ListClientUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>Department ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>105</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -149,7 +155,10 @@ public class ListClientUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Department name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例部门</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -320,7 +329,7 @@ public class ListClientUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * Department.
+             * <p>Department to which the user belongs.</p>
              */
             public Builder department(Department department) {
                 this.department = department;
@@ -328,7 +337,10 @@ public class ListClientUsersResponseBody extends TeaModel {
             }
 
             /**
-             * DepartmentId.
+             * <p>Department ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10800</p>
              */
             public Builder departmentId(String departmentId) {
                 this.departmentId = departmentId;
@@ -336,7 +348,10 @@ public class ListClientUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>User description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例用户</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -344,7 +359,10 @@ public class ListClientUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * <p>Email address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:johndoe@example.com">johndoe@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -352,7 +370,10 @@ public class ListClientUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>User ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1970</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -360,7 +381,10 @@ public class ListClientUsersResponseBody extends TeaModel {
             }
 
             /**
-             * IdpConfigId.
+             * <p>Custom identity source configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1026</p>
              */
             public Builder idpConfigId(String idpConfigId) {
                 this.idpConfigId = idpConfigId;
@@ -368,7 +392,10 @@ public class ListClientUsersResponseBody extends TeaModel {
             }
 
             /**
-             * MobileNumber.
+             * <p>Mobile phone number without country code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15800820468</p>
              */
             public Builder mobileNumber(String mobileNumber) {
                 this.mobileNumber = mobileNumber;
@@ -376,7 +403,16 @@ public class ListClientUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>User enable status. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Enabled</strong>: enabled.</p>
+             * </li>
+             * <li><p><strong>Disabled</strong>: disabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Disabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -384,7 +420,10 @@ public class ListClientUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>Unique user identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>su_dead7216****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -392,7 +431,10 @@ public class ListClientUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * <p>Username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder username(String username) {
                 this.username = username;
@@ -459,7 +501,7 @@ public class ListClientUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * DataList.
+             * <p>List of user information.</p>
              */
             public Builder dataList(java.util.List<DataList> dataList) {
                 this.dataList = dataList;
@@ -467,7 +509,10 @@ public class ListClientUsersResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNum.
+             * <p>Total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalNum(Long totalNum) {
                 this.totalNum = totalNum;

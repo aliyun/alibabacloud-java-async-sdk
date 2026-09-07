@@ -173,7 +173,18 @@ public class ListRegistrationPoliciesRequest extends Request {
         } 
 
         /**
-         * CompanyLimitType.
+         * <p>The type of company device registration limit. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Unlimited</strong>: No limit.</p>
+         * </li>
+         * <li><p><strong>LimitAll</strong>: Limit by total number.</p>
+         * </li>
+         * <li><p><strong>LimitDiff</strong>: Limit by device categorization.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LimitAll</p>
          */
         public Builder companyLimitType(String companyLimitType) {
             this.putQueryParameter("CompanyLimitType", companyLimitType);
@@ -182,6 +193,7 @@ public class ListRegistrationPoliciesRequest extends Request {
         }
 
         /**
+         * <p>The current page number for paged queries. Values range from 1 to 10000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +206,16 @@ public class ListRegistrationPoliciesRequest extends Request {
         }
 
         /**
-         * MatchMode.
+         * <p>The policy matching target type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>UserGroupAll</strong>: Associate all users.</p>
+         * </li>
+         * <li><p><strong>UserGroupNormal</strong>: Associate some user groups.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UserGroupAll</p>
          */
         public Builder matchMode(String matchMode) {
             this.putQueryParameter("MatchMode", matchMode);
@@ -203,7 +224,10 @@ public class ListRegistrationPoliciesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the device registration policy. It can be 1 to 128 characters long. It supports Chinese characters, uppercase and lowercase English letters, numbers, periods (.), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registration_policy_name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -212,6 +236,7 @@ public class ListRegistrationPoliciesRequest extends Request {
         }
 
         /**
+         * <p>The number of items per page for paged queries. Values range from 1 to 500.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -224,7 +249,18 @@ public class ListRegistrationPoliciesRequest extends Request {
         }
 
         /**
-         * PersonalLimitType.
+         * <p>The type of personal device registration limit. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Unlimited</strong>: No limit.</p>
+         * </li>
+         * <li><p><strong>LimitAll</strong>: Limit by total number.</p>
+         * </li>
+         * <li><p><strong>LimitDiff</strong>: Limit by device categorization.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LimitDiff</p>
          */
         public Builder personalLimitType(String personalLimitType) {
             this.putQueryParameter("PersonalLimitType", personalLimitType);
@@ -233,7 +269,7 @@ public class ListRegistrationPoliciesRequest extends Request {
         }
 
         /**
-         * PolicyIds.
+         * <p>A collection of device registration policy IDs. You can enter up to 100 device registration policy IDs.</p>
          */
         public Builder policyIds(java.util.List<String> policyIds) {
             this.putQueryParameter("PolicyIds", policyIds);
@@ -242,7 +278,16 @@ public class ListRegistrationPoliciesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the device registration policy. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Enabled</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>Disabled</strong>: Disabled.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -251,7 +296,16 @@ public class ListRegistrationPoliciesRequest extends Request {
         }
 
         /**
-         * UserGroupId.
+         * <p>The user group ID. Get this value from:</p>
+         * <ul>
+         * <li><p><a href="~~ListUserGroups~~">ListUserGroups</a>: Batch query user groups.</p>
+         * </li>
+         * <li><p><a href="~~CreateUserGroup~~">CreateUserGroup</a>: Create user groups.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>usergroup-6f1ef2fc56b6****</p>
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);

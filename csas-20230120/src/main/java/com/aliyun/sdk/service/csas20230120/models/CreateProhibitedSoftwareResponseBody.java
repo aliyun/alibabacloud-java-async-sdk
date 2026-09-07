@@ -78,7 +78,7 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
         }
 
         /**
-         * Software.
+         * <p>The details of the disabled software.</p>
          */
         public Builder software(Software software) {
             this.software = software;
@@ -170,7 +170,10 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
             } 
 
             /**
-             * BundleId.
+             * <p>The bundle ID of the application. This parameter is required only for macOS processes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.aliyun.security.sase</p>
              */
             public Builder bundleId(String bundleId) {
                 this.bundleId = bundleId;
@@ -178,7 +181,10 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * Cmdline.
+             * <p>The command line parameters for starting the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>--start-minimized</p>
              */
             public Builder cmdline(String cmdline) {
                 this.cmdline = cmdline;
@@ -186,7 +192,10 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * Directory.
+             * <p>The directory where the process is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>C:\Program Files\Thunder Network\Thunder</p>
              */
             public Builder directory(String directory) {
                 this.directory = directory;
@@ -194,7 +203,10 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * Process.
+             * <p>The process name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>terraform</p>
              */
             public Builder process(String process) {
                 this.process = process;
@@ -287,7 +299,10 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
             } 
 
             /**
-             * BundleId.
+             * <p>The bundle ID of the application. This parameter is required only for macOS processes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.aliyun.security.sase</p>
              */
             public Builder bundleId(String bundleId) {
                 this.bundleId = bundleId;
@@ -295,7 +310,10 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * Cmdline.
+             * <p>The command line parameters for starting the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>--start-minimized</p>
              */
             public Builder cmdline(String cmdline) {
                 this.cmdline = cmdline;
@@ -303,7 +321,10 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * Directory.
+             * <p>The directory where the process is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>C:\Program Files\Thunder Network\Thunder</p>
              */
             public Builder directory(String directory) {
                 this.directory = directory;
@@ -311,7 +332,10 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * Process.
+             * <p>The process name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>autotest_update.exe</p>
              */
             public Builder process(String process) {
                 this.process = process;
@@ -404,7 +428,10 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
             } 
 
             /**
-             * BundleId.
+             * <p>The bundle ID of the application. This parameter is required only for macOS processes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.aliyun.security.sase</p>
              */
             public Builder bundleId(String bundleId) {
                 this.bundleId = bundleId;
@@ -412,7 +439,10 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * Cmdline.
+             * <p>The command line parameters for starting the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>--start-minimized</p>
              */
             public Builder cmdline(String cmdline) {
                 this.cmdline = cmdline;
@@ -420,7 +450,10 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * Directory.
+             * <p>The directory where the process is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>C:\Program Files\Thunder Network\Thunder</p>
              */
             public Builder directory(String directory) {
                 this.directory = directory;
@@ -428,7 +461,10 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * Process.
+             * <p>The process name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>anaconda3.exe</p>
              */
             public Builder process(String process) {
                 this.process = process;
@@ -573,7 +609,10 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time of the disabled software, in the yyyy-MM-dd HH:mm:ss format. The time is in the UTC+8 time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-09-05 10:20:46</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -581,7 +620,10 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the disabled software.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Endpoint group targeting github</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -589,7 +631,7 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * LinuxProcesses.
+             * <p>The list of process configurations for the Linux operating system.</p>
              */
             public Builder linuxProcesses(java.util.List<LinuxProcesses> linuxProcesses) {
                 this.linuxProcesses = linuxProcesses;
@@ -597,7 +639,7 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * MacOSProcesses.
+             * <p>The list of process configurations for the macOS operating system.</p>
              */
             public Builder macOSProcesses(java.util.List<MacOSProcesses> macOSProcesses) {
                 this.macOSProcesses = macOSProcesses;
@@ -605,7 +647,10 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The software name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>shell</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -613,7 +658,10 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * SoftwareId.
+             * <p>The ID of the disabled software.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>swb-83995ff2ae38****</p>
              */
             public Builder softwareId(String softwareId) {
                 this.softwareId = softwareId;
@@ -621,7 +669,7 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * TagIds.
+             * <p>The IDs of disabled software tags associated with this disabled software.</p>
              */
             public Builder tagIds(java.util.List<String> tagIds) {
                 this.tagIds = tagIds;
@@ -629,7 +677,7 @@ public class CreateProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * WindowsProcesses.
+             * <p>The list of process configurations for the Windows operating system.</p>
              */
             public Builder windowsProcesses(java.util.List<WindowsProcesses> windowsProcesses) {
                 this.windowsProcesses = windowsProcesses;

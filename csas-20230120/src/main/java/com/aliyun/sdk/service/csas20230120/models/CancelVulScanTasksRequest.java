@@ -60,6 +60,7 @@ public class CancelVulScanTasksRequest extends Request {
         } 
 
         /**
+         * <p>The IDs of the vulnerability scanning tasks to cancel. The collection must contain at least 1 and at most 100 IDs. Duplicate IDs are not allowed.</p>
          * <p>This parameter is required.</p>
          */
         public Builder taskIds(java.util.List<String> taskIds) {

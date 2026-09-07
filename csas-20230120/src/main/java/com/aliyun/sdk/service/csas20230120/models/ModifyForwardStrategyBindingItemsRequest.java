@@ -102,6 +102,7 @@ public class ModifyForwardStrategyBindingItemsRequest extends Request {
         } 
 
         /**
+         * <p>The forwarding rule ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,7 @@ public class ModifyForwardStrategyBindingItemsRequest extends Request {
         }
 
         /**
-         * ItemIds.
+         * <p>The list of binding item IDs. Must be empty when MatchMode is <strong>UserGroupAll</strong> or <strong>ApplicationAll</strong>. Required for other values. Duplicates are not allowed in the list, and the specified objects must already exist.</p>
          */
         public Builder itemIds(java.util.List<String> itemIds) {
             this.putQueryParameter("ItemIds", itemIds);
@@ -123,7 +124,19 @@ public class ModifyForwardStrategyBindingItemsRequest extends Request {
         }
 
         /**
-         * MatchMode.
+         * <p>The policy matching target type. Required. Valid values:</p>
+         * <ul>
+         * <li><strong>UserGroupAll</strong>: associates with all users.</li>
+         * <li><strong>UserGroupNormal</strong>: associates with specific user groups.</li>
+         * <li><strong>ApplicationAll</strong>: all private network applications.</li>
+         * <li><strong>Application</strong>: specific private network applications.</li>
+         * <li><strong>Tag</strong>: private network application tags.</li>
+         * </ul>
+         * <p>When the value is <strong>UserGroupAll</strong> or <strong>ApplicationAll</strong>, ItemIds must be empty. When the value is <strong>UserGroupNormal</strong>, <strong>Application</strong>, or <strong>Tag</strong>, ItemIds is required.</p>
+         * <p>When ModifyType is not <strong>Cover</strong>, switching the matching target type is not allowed: <strong>Application</strong>, <strong>Tag</strong>, and <strong>ApplicationAll</strong> are mutually exclusive, and <strong>UserGroupNormal</strong> and <strong>UserGroupAll</strong> are mutually exclusive. If a binding item of a mutually exclusive type already exists on the same forwarding rule, the request is rejected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Application</p>
          */
         public Builder matchMode(String matchMode) {
             this.putQueryParameter("MatchMode", matchMode);
@@ -132,7 +145,16 @@ public class ModifyForwardStrategyBindingItemsRequest extends Request {
         }
 
         /**
-         * ModifyType.
+         * <p>The modification method. Required. Valid values:</p>
+         * <ul>
+         * <li><strong>Append</strong>: appends to existing binding items. ItemIds cannot contain objects that are already bound.</li>
+         * <li><strong>Delete</strong>: deletes specified binding items. All objects in ItemIds must be already bound.</li>
+         * <li><strong>Cover</strong>: overwrites binding items of the same category by clearing all existing binding items of the same category on the forwarding rule and then writing ItemIds. The same category refers to <strong>ApplicationAll</strong>, <strong>Application</strong>, and <strong>Tag</strong>, or <strong>UserGroupAll</strong> and <strong>UserGroupNormal</strong>.</li>
+         * </ul>
+         * <p>When the value is <strong>Append</strong> or <strong>Delete</strong>, MatchMode cannot be <strong>UserGroupAll</strong> or <strong>ApplicationAll</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cover</p>
          */
         public Builder modifyType(String modifyType) {
             this.putQueryParameter("ModifyType", modifyType);

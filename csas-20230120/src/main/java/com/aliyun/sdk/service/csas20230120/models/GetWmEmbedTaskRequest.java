@@ -60,6 +60,10 @@ public class GetWmEmbedTaskRequest extends Request {
         } 
 
         /**
+         * <p>The job ID obtained when creating the embedding job. Source of the value:  </p>
+         * <ul>
+         * <li><a href="~~CreateWmEmbedTask~~">CreateWmEmbedTask</a>: Create a watermark embedding job.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

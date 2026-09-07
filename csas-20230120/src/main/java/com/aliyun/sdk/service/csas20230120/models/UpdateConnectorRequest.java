@@ -116,7 +116,14 @@ public class UpdateConnectorRequest extends Request {
         } 
 
         /**
-         * AccelerateStatus.
+         * <p>Specifies whether to enable Global Accelerator. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder accelerateStatus(String accelerateStatus) {
             this.putBodyParameter("AccelerateStatus", accelerateStatus);
@@ -125,6 +132,7 @@ public class UpdateConnectorRequest extends Request {
         }
 
         /**
+         * <p>The Connector ID. You can obtain the value by calling <a href="~~ListConnectors~~">ListConnectors</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,7 +145,10 @@ public class UpdateConnectorRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The Connector name. The name must be 1 to 128 characters in length and can contain Chinese characters, letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>connector_name</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -146,7 +157,14 @@ public class UpdateConnectorRequest extends Request {
         }
 
         /**
-         * SwitchStatus.
+         * <p>The instance status of the Connector. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Shutdown.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder switchStatus(String switchStatus) {
             this.putBodyParameter("SwitchStatus", switchStatus);
@@ -155,7 +173,10 @@ public class UpdateConnectorRequest extends Request {
         }
 
         /**
-         * VipCidr.
+         * <p>The CIDR block of the virtual IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.0/24</p>
          */
         public Builder vipCidr(String vipCidr) {
             this.putBodyParameter("VipCidr", vipCidr);

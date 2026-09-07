@@ -60,6 +60,7 @@ public class ListApprovalSchemasForApprovalProcessesRequest extends Request {
         } 
 
         /**
+         * <p>A collection of approval process IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder processIds(java.util.List<String> processIds) {

@@ -74,7 +74,10 @@ public class CreatePrivateAccessTagRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the internal-facing access tag. The description must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. Chinese characters are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is an internal-facing access tag</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -83,6 +86,7 @@ public class CreatePrivateAccessTagRequest extends Request {
         }
 
         /**
+         * <p>The name of the internal-facing access tag. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). Chinese characters are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

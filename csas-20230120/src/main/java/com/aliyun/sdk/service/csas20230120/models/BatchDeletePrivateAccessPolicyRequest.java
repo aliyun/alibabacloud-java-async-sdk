@@ -59,7 +59,7 @@ public class BatchDeletePrivateAccessPolicyRequest extends Request {
         } 
 
         /**
-         * PolicyIds.
+         * <p>The IDs of internal network access policies. You can specify up to 100 internal network access policy IDs.</p>
          */
         public Builder policyIds(java.util.List<String> policyIds) {
             this.putBodyParameter("PolicyIds", policyIds);

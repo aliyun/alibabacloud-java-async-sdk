@@ -229,6 +229,7 @@ public class ListProhibitedPoliciesRequest extends Request {
         } 
 
         /**
+         * <p>The page number of the current page in a paged query. Valid values: 1 to 10000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,7 +242,14 @@ public class ListProhibitedPoliciesRequest extends Request {
         }
 
         /**
-         * Enabled.
+         * <p>Specifies whether the policy is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Enabled. The policy is delivered to endpoints and takes effect.</li>
+         * <li><strong>false</strong>: Disabled. The policy configuration is retained but not delivered to endpoints.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.putQueryParameter("Enabled", enabled);
@@ -250,7 +258,14 @@ public class ListProhibitedPoliciesRequest extends Request {
         }
 
         /**
-         * MatchMode.
+         * <p>The effective scope. Valid values:</p>
+         * <ul>
+         * <li><strong>UserGroupAll</strong>: Applies to all users under the current Alibaba Cloud account. No user group needs to be specified.</li>
+         * <li><strong>UserGroupNormal</strong>: Applies only to users in the user groups specified by UserGroupIds.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UserGroupAll</p>
          */
         public Builder matchMode(String matchMode) {
             this.putQueryParameter("MatchMode", matchMode);
@@ -259,7 +274,10 @@ public class ListProhibitedPoliciesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>Policy Name of the software prohibition policy. Fuzzy match is supported. Policy Name can be up to 128 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-). Spaces are not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -268,7 +286,14 @@ public class ListProhibitedPoliciesRequest extends Request {
         }
 
         /**
-         * ObjectType.
+         * <p>The object type of the controlled target. Valid values:</p>
+         * <ul>
+         * <li><strong>App</strong>: Controls by prohibited software. The controlled objects are specified by SoftwareIds.</li>
+         * <li><strong>Tag</strong>: Controls by prohibited software tag. The controlled objects are specified by TagIds. All prohibited software under the tag is controlled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>App</p>
          */
         public Builder objectType(String objectType) {
             this.putQueryParameter("ObjectType", objectType);
@@ -277,6 +302,7 @@ public class ListProhibitedPoliciesRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page in a paged query. Valid values: 1 to 500.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -289,7 +315,7 @@ public class ListProhibitedPoliciesRequest extends Request {
         }
 
         /**
-         * PolicyIds.
+         * <p>The collection of software prohibition policy IDs. Duplicate values are not allowed.</p>
          */
         public Builder policyIds(java.util.List<String> policyIds) {
             this.putQueryParameter("PolicyIds", policyIds);
@@ -298,7 +324,15 @@ public class ListProhibitedPoliciesRequest extends Request {
         }
 
         /**
-         * PolicyType.
+         * <p>The action to take. Valid values:</p>
+         * <ul>
+         * <li><strong>Ban</strong>: Blocks the software from running and displays a pop-up notification on the endpoint to alert the user.</li>
+         * <li><strong>BanSilent</strong>: Blocks the software from running without notifying the user. The blocking is silent.</li>
+         * <li><strong>Warn</strong>: Only displays a pop-up notification on the endpoint to alert the user without blocking the software from running.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Ban</p>
          */
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);
@@ -307,7 +341,7 @@ public class ListProhibitedPoliciesRequest extends Request {
         }
 
         /**
-         * SoftwareId.
+         * <p>The unique identifier of the prohibited software.</p>
          */
         public Builder softwareId(SoftwareId softwareId) {
             String softwareIdShrink = shrink(softwareId, "SoftwareId", "json");
@@ -317,7 +351,10 @@ public class ListProhibitedPoliciesRequest extends Request {
         }
 
         /**
-         * SoftwareName.
+         * <p>The name of the prohibited software. Fuzzy match is supported. The name can be up to 128 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-). Spaces are not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Thunder</p>
          */
         public Builder softwareName(String softwareName) {
             this.putQueryParameter("SoftwareName", softwareName);
@@ -326,7 +363,14 @@ public class ListProhibitedPoliciesRequest extends Request {
         }
 
         /**
-         * TagId.
+         * <p>The prohibited software tag ID, used to filter policies that reference this tag. You can obtain the value from the following operations:</p>
+         * <ul>
+         * <li><a href="~~ListProhibitedTags~~">ListProhibitedTags</a>: Lists prohibited software tags.</li>
+         * <li><a href="~~CreateProhibitedTag~~">CreateProhibitedTag</a>: Creates a custom prohibited software tag.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-d3f64e8bdd4a****</p>
          */
         public Builder tagId(String tagId) {
             this.putQueryParameter("TagId", tagId);
@@ -335,7 +379,10 @@ public class ListProhibitedPoliciesRequest extends Request {
         }
 
         /**
-         * TagName.
+         * <p>The name of the prohibited software tag. Fuzzy match is supported. The name can be up to 128 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-). Spaces are not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudProduct</p>
          */
         public Builder tagName(String tagName) {
             this.putQueryParameter("TagName", tagName);
@@ -344,7 +391,14 @@ public class ListProhibitedPoliciesRequest extends Request {
         }
 
         /**
-         * UserGroupId.
+         * <p>The user group ID, used to filter policies whose effective scope includes this user group. You can obtain the value from the following operations:</p>
+         * <ul>
+         * <li><a href="~~ListUserGroups~~">ListUserGroups</a>: Lists user groups.</li>
+         * <li><a href="~~CreateUserGroup~~">CreateUserGroup</a>: Creates a user group.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>usergroup-9d4f2a7b3c1e****</p>
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);
@@ -412,7 +466,14 @@ public class ListProhibitedPoliciesRequest extends Request {
             } 
 
             /**
-             * IsDefault.
+             * <p>Specifies whether the prohibited software is a system built-in entry. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: A system built-in prohibited software entry shared by all Alibaba Cloud accounts. Modification and deletion are not supported.</li>
+             * <li><strong>false</strong>: Custom prohibited software under the current Alibaba Cloud account.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -420,7 +481,14 @@ public class ListProhibitedPoliciesRequest extends Request {
             }
 
             /**
-             * SoftwareId.
+             * <p>The prohibited software ID. You can obtain the value from the following operations:</p>
+             * <ul>
+             * <li><a href="~~ListProhibitedSoftware~~">ListProhibitedSoftware</a>: Lists prohibited software.</li>
+             * <li><a href="~~CreateProhibitedSoftware~~">CreateProhibitedSoftware</a>: Creates custom prohibited software.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>swb-83995ff2ae38****</p>
              */
             public Builder softwareId(String softwareId) {
                 this.softwareId = softwareId;

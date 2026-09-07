@@ -80,7 +80,10 @@ public class ListVirusScanTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3D7EC0AF-DB2A-5D9C-90EC-F090A6BAAEA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class ListVirusScanTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * <p>The list of virus scan tasks.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
@@ -96,7 +99,10 @@ public class ListVirusScanTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of virus scan tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalNum(Integer totalNum) {
             this.totalNum = totalNum;
@@ -162,7 +168,7 @@ public class ListVirusScanTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * Group.
+             * <p>The collection of organizational structure nodes.</p>
              */
             public Builder group(java.util.List<String> group) {
                 this.group = group;
@@ -170,7 +176,10 @@ public class ListVirusScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * IdpId.
+             * <p>The ID of the identity provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idp-7c3f9a2e5b18****</p>
              */
             public Builder idpId(String idpId) {
                 this.idpId = idpId;
@@ -237,7 +246,10 @@ public class ListVirusScanTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * TargetId.
+             * <p>The ID of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>usergroup-9d4f2a7b3c1e****</p>
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -245,7 +257,10 @@ public class ListVirusScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TargetName.
+             * <p>The name of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>R&amp;D Department</p>
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -507,7 +522,10 @@ public class ListVirusScanTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the task was created, in the yyyy-MM-dd HH:mm:ss format. The time is in the UTC+8 time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-21 10:24:31</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -515,7 +533,7 @@ public class ListVirusScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * CustomMatchGroup.
+             * <p>The effective scope specified by organizational structure.</p>
              */
             public Builder customMatchGroup(java.util.List<CustomMatchGroup> customMatchGroup) {
                 this.customMatchGroup = customMatchGroup;
@@ -523,7 +541,10 @@ public class ListVirusScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The time when the task expires, in seconds-level UNIX timestamp format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1786377600</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -531,7 +552,14 @@ public class ListVirusScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * HighRiskOperation.
+             * <p>The action to take on high-risk virus files. Valid values:</p>
+             * <ul>
+             * <li><strong>Quarantine</strong>: Quarantine quarantined file.</li>
+             * <li><strong>Notify</strong>: Report an alert only without taking action on quarantined file.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Quarantine</p>
              */
             public Builder highRiskOperation(String highRiskOperation) {
                 this.highRiskOperation = highRiskOperation;
@@ -539,7 +567,15 @@ public class ListVirusScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * LowRiskOperation.
+             * <p>The action to take on low-risk virus files. Valid values:</p>
+             * <ul>
+             * <li><strong>Quarantine</strong>: Quarantine quarantined file.</li>
+             * <li><strong>Notify</strong>: Report an alert only without taking action on quarantined file.</li>
+             * <li><strong>None</strong>: Take no action.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder lowRiskOperation(String lowRiskOperation) {
                 this.lowRiskOperation = lowRiskOperation;
@@ -547,7 +583,14 @@ public class ListVirusScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * MatchMode.
+             * <p>The matching mode for the effective scope. Valid values:</p>
+             * <ul>
+             * <li><strong>UserGroupAll</strong>: Applies to all users under the current Alibaba Cloud account.</li>
+             * <li><strong>UserGroupNormal</strong>: Applies only to users in specified user groups.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>UserGroupNormal</p>
              */
             public Builder matchMode(String matchMode) {
                 this.matchMode = matchMode;
@@ -555,7 +598,7 @@ public class ListVirusScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * MatchTargetInfos.
+             * <p>The collection of user groups to which the task applies.</p>
              */
             public Builder matchTargetInfos(java.util.List<MatchTargetInfos> matchTargetInfos) {
                 this.matchTargetInfos = matchTargetInfos;
@@ -563,7 +606,10 @@ public class ListVirusScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * MaxCpuUsage.
+             * <p>The maximum percentage of endpoint CPU usage allowed during scanning.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder maxCpuUsage(Long maxCpuUsage) {
                 this.maxCpuUsage = maxCpuUsage;
@@ -571,7 +617,14 @@ public class ListVirusScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * MidRiskOperation.
+             * <p>The action to take on medium-risk virus files. Valid values:</p>
+             * <ul>
+             * <li><strong>Quarantine</strong>: Quarantine quarantined file.</li>
+             * <li><strong>Notify</strong>: Report an alert only without taking action on quarantined file.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Notify</p>
              */
             public Builder midRiskOperation(String midRiskOperation) {
                 this.midRiskOperation = midRiskOperation;
@@ -579,7 +632,15 @@ public class ListVirusScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * PerformanceMode.
+             * <p>The scan performance schema pattern. Valid values:</p>
+             * <ul>
+             * <li><strong>SecurityFirst</strong>: Security first. The default CPU usage upper limit is 50%.</li>
+             * <li><strong>Balance</strong>: Balanced. The default CPU usage upper limit is 30%.</li>
+             * <li><strong>ExperienceFirst</strong>: Experience first. The default CPU usage upper limit is 15%.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Balance</p>
              */
             public Builder performanceMode(String performanceMode) {
                 this.performanceMode = performanceMode;
@@ -587,7 +648,15 @@ public class ListVirusScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ScanMode.
+             * <p>The scan path scope. Valid values:</p>
+             * <ul>
+             * <li><strong>Quick</strong>: Quick scan. Only scans critical system directories and common risk locations.</li>
+             * <li><strong>Full</strong>: Full scan.</li>
+             * <li><strong>Custom</strong>: Custom path scan.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Quick</p>
              */
             public Builder scanMode(String scanMode) {
                 this.scanMode = scanMode;
@@ -595,7 +664,7 @@ public class ListVirusScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ScanPath.
+             * <p>The collection of custom scan paths.</p>
              */
             public Builder scanPath(java.util.List<String> scanPath) {
                 this.scanPath = scanPath;
@@ -603,7 +672,7 @@ public class ListVirusScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ScanTargets.
+             * <p>The collection of virus types to be handled in this scan.</p>
              */
             public Builder scanTargets(java.util.List<String> scanTargets) {
                 this.scanTargets = scanTargets;
@@ -611,7 +680,14 @@ public class ListVirusScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Not canceled.</li>
+             * <li><strong>1</strong>: Canceled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -619,7 +695,10 @@ public class ListVirusScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskDescription.
+             * <p>The description of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Full scan for R&amp;D department</p>
              */
             public Builder taskDescription(String taskDescription) {
                 this.taskDescription = taskDescription;
@@ -627,7 +706,10 @@ public class ListVirusScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the virus scan task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1:1024772</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -635,7 +717,7 @@ public class ListVirusScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Whitelist.
+             * <p>The list of exempted users.</p>
              */
             public Builder whitelist(java.util.List<String> whitelist) {
                 this.whitelist = whitelist;

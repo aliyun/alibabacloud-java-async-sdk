@@ -103,6 +103,7 @@ public class ListNetBandwidthRequest extends Request {
         } 
 
         /**
+         * <p>The current page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,7 @@ public class ListNetBandwidthRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>The list of instance IDs.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -124,7 +125,10 @@ public class ListNetBandwidthRequest extends Request {
         }
 
         /**
-         * NetType.
+         * <p>The network type. If this parameter is left empty, both VPC and Connector instances are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder netType(String netType) {
             this.putQueryParameter("NetType", netType);
@@ -133,6 +137,7 @@ public class ListNetBandwidthRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

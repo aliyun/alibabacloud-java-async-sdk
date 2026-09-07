@@ -80,7 +80,7 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The private access policies.</p>
+         * <p>The list of private access policies.</p>
          */
         public Builder polices(java.util.List<Polices> polices) {
             this.polices = polices;
@@ -194,7 +194,7 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the identity provider (IdP) for the user group. If the value of UserGroupType is <strong>department</strong>, this parameter is returned.</p>
+             * <p>The identity provider ID of the user group. This value exists when the custom user group type is <strong>department</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -205,10 +205,10 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The logical operator for the user group. Valid values:</p>
+             * <p>The relation of the user group. Valid values:</p>
              * <ul>
-             * <li><strong>Equal</strong></li>
-             * <li><strong>Unequal</strong></li>
+             * <li><strong>Equal</strong>: Equal.</li>
+             * <li><strong>Unequal</strong>: Not equal.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -220,12 +220,12 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the user group, which is the key of the attribute. Valid values:</p>
+             * <p>The type of the user group. Valid values:</p>
              * <ul>
-             * <li><strong>username</strong></li>
-             * <li><strong>department</strong></li>
-             * <li><strong>email</strong></li>
-             * <li><strong>telephone</strong></li>
+             * <li><strong>username</strong>: Username.</li>
+             * <li><strong>department</strong>: Department.</li>
+             * <li><strong>email</strong>: Email.</li>
+             * <li><strong>telephone</strong>: Mobile phone.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -237,16 +237,16 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the attribute.</p>
+             * <p>The value of the user group attribute.</p>
              * <ul>
-             * <li>If the value of UserGroupType is <strong>username</strong>, the value of this parameter is a username. The value must be 1 to 128 characters in length and can contain letters, digits, hyphens (-), underscores (_), and periods (.).</li>
-             * <li>If the value of UserGroupType is <strong>department</strong>, the value of this parameter is a department. Examples: OU=Department 1, OU=SASE DingTalk.</li>
-             * <li>If the value of UserGroupType is <strong>email</strong>, the value of this parameter is an email address. Example: <a href="mailto:username@example.com">username@example.com</a>.</li>
-             * <li>If the value of UserGroupType is <strong>telephone</strong>, the value of this parameter is a mobile phone number. Example: 13900001234.</li>
+             * <li>When the user group type is <strong>username</strong>, this indicates the value of the username. The value must be 1 to 128 characters in length and supports Chinese characters and uppercase and lowercase English letters. It can contain digits, periods (.), underscores (_), and hyphens (-).</li>
+             * <li>When the user group type is <strong>department</strong>, this indicates the value of the department. For example: OU=Department1,OU=SASE DingTalk.</li>
+             * <li>When the user group type is <strong>email</strong>, this indicates the value of the email. For example: <a href="mailto:username@example.com">username@example.com</a>.</li>
+             * <li>When the user group type is <strong>telephone</strong>, this indicates the value of the mobile phone. For example: 13900001234.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>OU=Department 1, OU=SASE DingTalk</p>
+             * <p>OU=部门1,OU=SASE钉钉</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -573,7 +573,7 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IDs of the applications that are specified in the private access policy. If the value of ApplicationType is <strong>Application</strong>, this parameter is returned.</p>
+             * <p>The collection of application IDs of the private access policy. This field has a value when the application type is <strong>Application</strong>.</p>
              */
             public Builder applicationIds(java.util.List<String> applicationIds) {
                 this.applicationIds = applicationIds;
@@ -583,8 +583,8 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             /**
              * <p>The application type of the private access policy. Valid values:</p>
              * <ul>
-             * <li><strong>Application</strong></li>
-             * <li><strong>Tag</strong></li>
+             * <li><strong>Application</strong>: Application.</li>
+             * <li><strong>Tag</strong>: Tag.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -607,7 +607,7 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The attributes of the custom user group. The attributes of the custom user group are evaluated by using a logical OR. If an attribute is matched, the policy takes effect.</p>
+             * <p>The collection of custom user group attributes. Multiple custom user group attributes have an OR relationship and take effect by union.</p>
              */
             public Builder customUserAttributes(java.util.List<CustomUserAttributes> customUserAttributes) {
                 this.customUserAttributes = customUserAttributes;
@@ -618,7 +618,7 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
              * <p>The description of the private access policy.</p>
              * 
              * <strong>example:</strong>
-             * <p>a private access policy</p>
+             * <p>这是一条内网访问策略</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -626,10 +626,10 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The action that is performed when the security baseline is not met. Valid values:</p>
+             * <p>The action to take when the security baseline is not met. Valid values:</p>
              * <ul>
-             * <li><strong>Block</strong></li>
-             * <li><strong>Observe</strong></li>
+             * <li><strong>Block</strong>: Block.</li>
+             * <li><strong>Observe</strong>: Observe.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -641,7 +641,7 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the security baseline.</p>
+             * <p>The ID of the security baseline policy.</p>
              * 
              * <strong>example:</strong>
              * <p>dag-d3f64e8bdd4a****</p>
@@ -663,10 +663,10 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The action in the private access policy. Valid values:</p>
+             * <p>The action of the private access policy. Valid values:</p>
              * <ul>
-             * <li><strong>Block</strong></li>
-             * <li><strong>Allow</strong></li>
+             * <li><strong>Block</strong>: Block.</li>
+             * <li><strong>Allow</strong>: Allow.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -689,7 +689,7 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The priority of the private access policy. The value 1 indicates the highest priority.</p>
+             * <p>The priority of the private access policy. A value of 1 indicates the highest priority.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -702,8 +702,8 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             /**
              * <p>The status of the private access policy. Valid values:</p>
              * <ul>
-             * <li><strong>Enabled</strong></li>
-             * <li><strong>Disabled</strong></li>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -715,7 +715,7 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the tags that are specified in the private access policy. If the value of ApplicationType is <strong>Tag</strong>, this parameter is returned.</p>
+             * <p>The collection of tag IDs of the private access policy. This field has a value when the application type is <strong>Tag</strong>.</p>
              */
             public Builder tagIds(java.util.List<String> tagIds) {
                 this.tagIds = tagIds;
@@ -734,7 +734,7 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of trusted process group IDs.</p>
+             * <p>The list of trusted process group IDs.</p>
              */
             public Builder trustedProcessGroupIds(java.util.List<String> trustedProcessGroupIds) {
                 this.trustedProcessGroupIds = trustedProcessGroupIds;
@@ -742,10 +742,10 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Trusted process switch status. Values: </p>
+             * <p>The status of the trusted process switch. Valid values:</p>
              * <ul>
-             * <li><strong>Enabled</strong>: On.</li>
-             * <li><strong>Disabled</strong>: Off.</li>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -757,7 +757,7 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of trusted software IDs.</p>
+             * <p>The list of trusted software IDs.</p>
              */
             public Builder trustedSoftwareIds(java.util.List<String> trustedSoftwareIds) {
                 this.trustedSoftwareIds = trustedSoftwareIds;
@@ -765,7 +765,7 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of user groups in the private access policy. If the value of UserGroupMode is <strong>Normal</strong>, this parameter is returned.</p>
+             * <p>The collection of user group IDs for the private access policy. This field has a value when the user group type is <strong>Normal</strong>.</p>
              */
             public Builder userGroupIds(java.util.List<String> userGroupIds) {
                 this.userGroupIds = userGroupIds;
@@ -773,10 +773,10 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the user group in the private access policy. Valid values:</p>
+             * <p>The user group type of the private access policy. Valid values:</p>
              * <ul>
-             * <li><strong>Normal</strong>: regular user group.</li>
-             * <li><strong>Custom</strong>: custom user group.</li>
+             * <li><strong>Normal</strong>: Normal user group.</li>
+             * <li><strong>Custom</strong>: Custom user group.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -788,7 +788,7 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time when the zero trust policy takes effect, represented as a timestamp in seconds.</p>
+             * <p>The effective start time of the zero trust policy, in second-level Unix timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -799,7 +799,11 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Switch status for effective time. Values: - <strong>Enabled</strong>: On. - <strong>Disabled</strong>: Off.</p>
+             * <p>The status of the effective time switch. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Enabled</p>
@@ -810,7 +814,7 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the zero trust policy, in seconds timestamp.</p>
+             * <p>The effective end time of the zero trust policy, in second-level Unix timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1764727544</p>

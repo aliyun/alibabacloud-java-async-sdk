@@ -67,7 +67,7 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
         } 
 
         /**
-         * L7Switches.
+         * <p>The Layer 7 application configurations.</p>
          */
         public Builder l7Switches(java.util.List<L7Switches> l7Switches) {
             this.l7Switches = l7Switches;
@@ -144,7 +144,10 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
             } 
 
             /**
-             * Begin.
+             * <p>The start port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2379</p>
              */
             public Builder begin(Integer begin) {
                 this.begin = begin;
@@ -152,7 +155,10 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
             }
 
             /**
-             * End.
+             * <p>The end port. The value must be greater than or equal to the start port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24</p>
              */
             public Builder end(Integer end) {
                 this.end = end;
@@ -310,7 +316,10 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
             } 
 
             /**
-             * ApplicationId.
+             * <p>The ID of the internal-facing application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pa-application-bbbc550d7c6e4db6</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -318,7 +327,14 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
             }
 
             /**
-             * DevTagMarkStatus.
+             * <p>The device tag mark switch. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Disabled</p>
              */
             public Builder devTagMarkStatus(String devTagMarkStatus) {
                 this.devTagMarkStatus = devTagMarkStatus;
@@ -326,7 +342,14 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
             }
 
             /**
-             * DownloadAuditStatus.
+             * <p>The download audit switch for sensitive applications. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Disabled</p>
              */
             public Builder downloadAuditStatus(String downloadAuditStatus) {
                 this.downloadAuditStatus = downloadAuditStatus;
@@ -334,7 +357,7 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
             }
 
             /**
-             * PortRanges.
+             * <p>The port ranges.</p>
              */
             public Builder portRanges(java.util.List<PortRanges> portRanges) {
                 this.portRanges = portRanges;
@@ -342,7 +365,14 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
             }
 
             /**
-             * SrcIpMarkStatus.
+             * <p>The source IP mark switch. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Disabled</p>
              */
             public Builder srcIpMarkStatus(String srcIpMarkStatus) {
                 this.srcIpMarkStatus = srcIpMarkStatus;
@@ -350,7 +380,14 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
             }
 
             /**
-             * Status.
+             * <p>The status of the internal-facing access policy. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Disabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -358,7 +395,10 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
             }
 
             /**
-             * TimeoutSec.
+             * <p>The request timeout period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder timeoutSec(Integer timeoutSec) {
                 this.timeoutSec = timeoutSec;
@@ -366,7 +406,14 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
             }
 
             /**
-             * UserMarkStatus.
+             * <p>The user mark switch. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Disabled</p>
              */
             public Builder userMarkStatus(String userMarkStatus) {
                 this.userMarkStatus = userMarkStatus;
@@ -374,7 +421,14 @@ public class ListPrivateAccessApplicationL7SwitchesResponseBody extends TeaModel
             }
 
             /**
-             * ZeroTrustStatus.
+             * <p>The host bypass prevention switch. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Disabled</p>
              */
             public Builder zeroTrustStatus(String zeroTrustStatus) {
                 this.zeroTrustStatus = zeroTrustStatus;

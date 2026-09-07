@@ -67,7 +67,7 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
         } 
 
         /**
-         * Applications.
+         * <p>The list of private access applications.</p>
          */
         public Builder applications(java.util.List<Applications> applications) {
             this.applications = applications;
@@ -75,7 +75,10 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4AB972E2-D702-5464-B132-B1911498B8BF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +170,10 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
             } 
 
             /**
-             * IdpId.
+             * <p>The ID of the identity provider (IdP) for the user group. This parameter is returned when the custom user group type is <strong>department</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder idpId(Integer idpId) {
                 this.idpId = idpId;
@@ -175,7 +181,16 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
             }
 
             /**
-             * Relation.
+             * <p>The relationship of the user group. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Equal</strong>: Equal to.</p>
+             * </li>
+             * <li><p><strong>Unequal</strong>: Not equal to.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Equal</p>
              */
             public Builder relation(String relation) {
                 this.relation = relation;
@@ -183,7 +198,20 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
             }
 
             /**
-             * UserGroupType.
+             * <p>The type of the user group. Valid values:</p>
+             * <ul>
+             * <li><p><strong>username</strong>: Username.</p>
+             * </li>
+             * <li><p><strong>department</strong>: Department.</p>
+             * </li>
+             * <li><p><strong>email</strong>: Email.</p>
+             * </li>
+             * <li><p><strong>telephone</strong>: Mobile number.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>department</p>
              */
             public Builder userGroupType(String userGroupType) {
                 this.userGroupType = userGroupType;
@@ -191,7 +219,20 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
             }
 
             /**
-             * Value.
+             * <p>The value of the user group attribute.</p>
+             * <ul>
+             * <li><p>If the user group type is <strong>username</strong>, this parameter specifies the value of the username. The value can be 1 to 128 characters in length and can contain Chinese characters, letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+             * </li>
+             * <li><p>If the user group type is <strong>department</strong>, this parameter specifies the value of the department. Example: OU=Department 1,OU=SASE DingTalk.</p>
+             * </li>
+             * <li><p>If the user group type is <strong>email</strong>, this parameter specifies the value of the email address. Example: username\@example.com.</p>
+             * </li>
+             * <li><p>If the user group type is <strong>telephone</strong>, this parameter specifies the value of the mobile number. Example: 13900001234.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OU=部门1,OU=SASE钉钉</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -362,7 +403,16 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
             } 
 
             /**
-             * ApplicationType.
+             * <p>The application type of the private access policy. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Application</strong>: Application.</p>
+             * </li>
+             * <li><p><strong>Tag</strong>: Tag.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Application</p>
              */
             public Builder applicationType(String applicationType) {
                 this.applicationType = applicationType;
@@ -370,7 +420,10 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the private access policy was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-27 18:10:25</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -378,7 +431,7 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
             }
 
             /**
-             * CustomUserAttributes.
+             * <p>The collection of custom user group attributes. If you specify multiple attributes, the relationship between them is OR.</p>
              */
             public Builder customUserAttributes(java.util.List<CustomUserAttributes> customUserAttributes) {
                 this.customUserAttributes = customUserAttributes;
@@ -386,7 +439,10 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
             }
 
             /**
-             * Description.
+             * <p>The description of the private access policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是一条内网访问策略</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -394,7 +450,10 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
             }
 
             /**
-             * Name.
+             * <p>The name of the private access policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>private_access_policy_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -402,7 +461,16 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
             }
 
             /**
-             * PolicyAction.
+             * <p>The action of the private access policy. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Block</strong>: Blocks access.</p>
+             * </li>
+             * <li><p><strong>Allow</strong>: Allows access.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Allow</p>
              */
             public Builder policyAction(String policyAction) {
                 this.policyAction = policyAction;
@@ -410,7 +478,10 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
             }
 
             /**
-             * PolicyId.
+             * <p>The ID of the private access policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pa-policy-867ef4007c8a****</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -418,7 +489,10 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
             }
 
             /**
-             * Priority.
+             * <p>The priority of the private access policy. The value 1 indicates the highest priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -426,7 +500,16 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
             }
 
             /**
-             * Status.
+             * <p>The status of the private access policy. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Enabled</strong>: The policy is enabled.</p>
+             * </li>
+             * <li><p><strong>Disabled</strong>: The policy is disabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -434,7 +517,16 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
             }
 
             /**
-             * UserGroupType.
+             * <p>The user group type of the private access policy. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Normal</strong>: Regular user group.</p>
+             * </li>
+             * <li><p><strong>Custom</strong>: Custom user group.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder userGroupType(String userGroupType) {
                 this.userGroupType = userGroupType;
@@ -501,7 +593,10 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
             } 
 
             /**
-             * ApplicationId.
+             * <p>The ID of the private access application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pa-application-b927baf3e592****</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -509,7 +604,7 @@ public class ListPolicesForPrivateAccessApplicationResponseBody extends TeaModel
             }
 
             /**
-             * Policies.
+             * <p>The collection of private access policies.</p>
              */
             public Builder policies(java.util.List<Policies> policies) {
                 this.policies = policies;

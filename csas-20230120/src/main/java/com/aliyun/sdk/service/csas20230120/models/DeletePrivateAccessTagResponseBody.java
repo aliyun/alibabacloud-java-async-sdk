@@ -54,7 +54,10 @@ public class DeletePrivateAccessTagResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FD724DBC-CD76-5235-BF76-59C51B73296D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -101,7 +101,10 @@ public class UpdateVirusScanGlobalConfigRequest extends Request {
         } 
 
         /**
-         * UploadFileMaxSize.
+         * <p>The maximum size of a single virus file that can be uploaded. Unit: KB. Valid values: 0 to 204800. A value of 0 indicates no size limit. Values from 1 to 204800 specify the actual size limit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         public Builder uploadFileMaxSize(Long uploadFileMaxSize) {
             this.putBodyParameter("UploadFileMaxSize", uploadFileMaxSize);
@@ -110,7 +113,10 @@ public class UpdateVirusScanGlobalConfigRequest extends Request {
         }
 
         /**
-         * UploadFileMaxSpeed.
+         * <p>The maximum upload rate for virus files. Unit: KB/s. Valid values: 0 to 102400. A value of 0 indicates no rate limit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder uploadFileMaxSpeed(Long uploadFileMaxSpeed) {
             this.putBodyParameter("UploadFileMaxSpeed", uploadFileMaxSpeed);
@@ -119,7 +125,7 @@ public class UpdateVirusScanGlobalConfigRequest extends Request {
         }
 
         /**
-         * UploadFileSuffixBlacklist.
+         * <p>The collection of file types that are prohibited from being uploaded. Duplicate values are not allowed. Files that match the specified types are not uploaded even if upload is enabled.</p>
          */
         public Builder uploadFileSuffixBlacklist(java.util.List<String> uploadFileSuffixBlacklist) {
             this.putBodyParameter("UploadFileSuffixBlacklist", uploadFileSuffixBlacklist);
@@ -128,7 +134,14 @@ public class UpdateVirusScanGlobalConfigRequest extends Request {
         }
 
         /**
-         * VirusFileUpload.
+         * <p>Specifies whether user terminal devices are allowed to upload detected virus files to the cloud for further analysis. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Allowed.</li>
+         * <li><strong>false</strong>: Not allowed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder virusFileUpload(Boolean virusFileUpload) {
             this.putBodyParameter("VirusFileUpload", virusFileUpload);

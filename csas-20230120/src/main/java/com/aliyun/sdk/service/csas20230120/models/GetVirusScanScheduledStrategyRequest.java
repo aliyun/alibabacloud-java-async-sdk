@@ -59,7 +59,14 @@ public class GetVirusScanScheduledStrategyRequest extends Request {
         } 
 
         /**
-         * StrategyId.
+         * <p>The ID of the scheduled virus scan policy. You can obtain the value from the following operations:</p>
+         * <ul>
+         * <li><a href="~~ListVirusScanScheduledStrategies~~">ListVirusScanScheduledStrategies</a>: Lists scheduled virus scan policies.</li>
+         * <li><a href="~~CreateVirusScanScheduledStrategy~~">CreateVirusScanScheduledStrategy</a>: Creates a scheduled virus scan policy.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vc-strategy-8a3f6c2e91b7****</p>
          */
         public Builder strategyId(String strategyId) {
             this.putQueryParameter("StrategyId", strategyId);

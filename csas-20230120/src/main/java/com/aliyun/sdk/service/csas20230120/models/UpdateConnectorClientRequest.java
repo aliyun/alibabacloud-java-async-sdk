@@ -89,6 +89,7 @@ public class UpdateConnectorClientRequest extends Request {
         } 
 
         /**
+         * <p>The connector ID. You can call <a href="~~ListConnectors~~">ListConnectors</a> to query connector IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class UpdateConnectorClientRequest extends Request {
         }
 
         /**
+         * <p>The unique identifier of the ConnectorClient device. You can call <a href="~~ListConnectors~~">ListConnectors</a> to query connector information.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,14 @@ public class UpdateConnectorClientRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The connection status of the ConnectorClient. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: connected.</li>
+         * <li><strong>Disabled</strong>: disconnected.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);

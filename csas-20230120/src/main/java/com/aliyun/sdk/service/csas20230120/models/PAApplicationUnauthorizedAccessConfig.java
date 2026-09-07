@@ -93,7 +93,10 @@ public class PAApplicationUnauthorizedAccessConfig extends TeaModel {
         } 
 
         /**
-         * AllowReport.
+         * <p>Specifies whether end users are allowed to submit approval requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder allowReport(Boolean allowReport) {
             this.allowReport = allowReport;
@@ -101,7 +104,7 @@ public class PAApplicationUnauthorizedAccessConfig extends TeaModel {
         }
 
         /**
-         * BlockContent.
+         * <p>The content displayed in the client interception pop-up window.</p>
          */
         public Builder blockContent(BlockContent blockContent) {
             this.blockContent = blockContent;
@@ -109,7 +112,14 @@ public class PAApplicationUnauthorizedAccessConfig extends TeaModel {
         }
 
         /**
-         * Enabled.
+         * <p>Specifies whether the feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Enabled. Users are redirected to an interception page when they access an unauthorized application.</li>
+         * <li><strong>false</strong>: Disabled. An error message is returned by default when users access an unauthorized application.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -117,7 +127,10 @@ public class PAApplicationUnauthorizedAccessConfig extends TeaModel {
         }
 
         /**
-         * ReportProcessId.
+         * <p>The ID of the approval flow associated with the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>approval-process-0ee84ac4f9c31bc5</p>
          */
         public Builder reportProcessId(String reportProcessId) {
             this.reportProcessId = reportProcessId;
@@ -209,7 +222,10 @@ public class PAApplicationUnauthorizedAccessConfig extends TeaModel {
             } 
 
             /**
-             * BrowserAlertContent.
+             * <p>The prompt content of the English block page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>You do not have permission to access this system. If you need to do so, please submit a permission request.</p>
              */
             public Builder browserAlertContent(String browserAlertContent) {
                 this.browserAlertContent = browserAlertContent;
@@ -217,7 +233,10 @@ public class PAApplicationUnauthorizedAccessConfig extends TeaModel {
             }
 
             /**
-             * BrowserAlertStyle.
+             * <p>The background pattern of the English block page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://img.alicdn.com/xxx.png">https://img.alicdn.com/xxx.png</a></p>
              */
             public Builder browserAlertStyle(String browserAlertStyle) {
                 this.browserAlertStyle = browserAlertStyle;
@@ -225,7 +244,10 @@ public class PAApplicationUnauthorizedAccessConfig extends TeaModel {
             }
 
             /**
-             * BrowserAlertTitle.
+             * <p>The title of the English block page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>No Permission Access</p>
              */
             public Builder browserAlertTitle(String browserAlertTitle) {
                 this.browserAlertTitle = browserAlertTitle;
@@ -233,7 +255,10 @@ public class PAApplicationUnauthorizedAccessConfig extends TeaModel {
             }
 
             /**
-             * ReportButtonText.
+             * <p>The text of the English report approval button.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Report</p>
              */
             public Builder reportButtonText(String reportButtonText) {
                 this.reportButtonText = reportButtonText;
@@ -326,7 +351,10 @@ public class PAApplicationUnauthorizedAccessConfig extends TeaModel {
             } 
 
             /**
-             * BrowserAlertContent.
+             * <p>The prompt content of the block page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>您暂无权限访问该系统。如有工作需要，请提交权限申请。</p>
              */
             public Builder browserAlertContent(String browserAlertContent) {
                 this.browserAlertContent = browserAlertContent;
@@ -334,7 +362,10 @@ public class PAApplicationUnauthorizedAccessConfig extends TeaModel {
             }
 
             /**
-             * BrowserAlertStyle.
+             * <p>The background pattern of the block page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://img.alicdn.com/xxx.png">https://img.alicdn.com/xxx.png</a></p>
              */
             public Builder browserAlertStyle(String browserAlertStyle) {
                 this.browserAlertStyle = browserAlertStyle;
@@ -342,7 +373,10 @@ public class PAApplicationUnauthorizedAccessConfig extends TeaModel {
             }
 
             /**
-             * BrowserAlertTitle.
+             * <p>The title of the block page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无权限访问</p>
              */
             public Builder browserAlertTitle(String browserAlertTitle) {
                 this.browserAlertTitle = browserAlertTitle;
@@ -350,7 +384,10 @@ public class PAApplicationUnauthorizedAccessConfig extends TeaModel {
             }
 
             /**
-             * ReportButtonText.
+             * <p>The text of the report approval button.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>前往报备</p>
              */
             public Builder reportButtonText(String reportButtonText) {
                 this.reportButtonText = reportButtonText;
@@ -417,7 +454,7 @@ public class PAApplicationUnauthorizedAccessConfig extends TeaModel {
             } 
 
             /**
-             * BlockTextEn.
+             * <p>The English content.</p>
              */
             public Builder blockTextEn(BlockTextEn blockTextEn) {
                 this.blockTextEn = blockTextEn;
@@ -425,7 +462,7 @@ public class PAApplicationUnauthorizedAccessConfig extends TeaModel {
             }
 
             /**
-             * BlockTextZh.
+             * <p>The Chinese content.</p>
              */
             public Builder blockTextZh(BlockTextZh blockTextZh) {
                 this.blockTextZh = blockTextZh;

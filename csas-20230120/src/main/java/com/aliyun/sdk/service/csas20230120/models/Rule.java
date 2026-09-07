@@ -145,7 +145,14 @@ public class Rule extends TeaModel {
         } 
 
         /**
-         * Combinator.
+         * <p>The logical relationship between rules at the same level. Valid values:</p>
+         * <ul>
+         * <li><strong>AND</strong>: All rules at the same level must be hit.</li>
+         * <li><strong>OR</strong>: Any one rule at the same level can be hit.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AND</p>
          */
         public Builder combinator(String combinator) {
             this.combinator = combinator;
@@ -153,7 +160,10 @@ public class Rule extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1361</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -161,7 +171,10 @@ public class Rule extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The endpoint device attribute field to match. Required for leaf rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mac</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -169,7 +182,10 @@ public class Rule extends TeaModel {
         }
 
         /**
-         * Operator.
+         * <p>The matching operator. Required for leaf rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>equal</p>
          */
         public Builder operator(String operator) {
             this.operator = operator;
@@ -177,7 +193,10 @@ public class Rule extends TeaModel {
         }
 
         /**
-         * RuleSubType.
+         * <p>The rule subtype.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>windows</p>
          */
         public Builder ruleSubType(String ruleSubType) {
             this.ruleSubType = ruleSubType;
@@ -185,7 +204,10 @@ public class Rule extends TeaModel {
         }
 
         /**
-         * RuleType.
+         * <p>The rule type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>device_info</p>
          */
         public Builder ruleType(String ruleType) {
             this.ruleType = ruleType;
@@ -193,7 +215,7 @@ public class Rule extends TeaModel {
         }
 
         /**
-         * Rules.
+         * <p>The list of matching rules. At least one rule must be included.</p>
          */
         public Builder rules(java.util.List<Rule> rules) {
             this.rules = rules;
@@ -201,7 +223,7 @@ public class Rule extends TeaModel {
         }
 
         /**
-         * Values.
+         * <p>The set of values to match. Required for leaf rules and cannot be empty.</p>
          */
         public Builder values(java.util.List<String> values) {
             this.values = values;

@@ -87,7 +87,10 @@ public class ListPopTrafficStatisticsRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end time for the data. This is a UNIX timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1681293719</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -96,7 +99,10 @@ public class ListPopTrafficStatisticsRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -105,7 +111,10 @@ public class ListPopTrafficStatisticsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time for the data. This is a UNIX timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1681035708</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -75,6 +75,7 @@ public class RevokeUserSessionRequest extends Request {
         } 
 
         /**
+         * <p>The unique ID of the user in the external identity source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class RevokeUserSessionRequest extends Request {
         }
 
         /**
+         * <p>The ID of the identity source configuration to which the user belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

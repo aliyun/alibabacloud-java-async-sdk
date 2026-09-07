@@ -172,7 +172,10 @@ public class CreateSoftwarelibVersionRequest extends Request {
         } 
 
         /**
-         * Md5.
+         * <p>The MD5 value of the software package. The value can be up to 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0b5824cdd509d3ed560e2d20d29a1bcb</p>
          */
         public Builder md5(String md5) {
             this.putBodyParameter("Md5", md5);
@@ -181,7 +184,15 @@ public class CreateSoftwarelibVersionRequest extends Request {
         }
 
         /**
-         * Os.
+         * <p>The operating system to which the software package applies. Valid values:</p>
+         * <ul>
+         * <li><strong>Windows</strong>: Windows.</li>
+         * <li><strong>Mac(Apple)</strong>: macOS with Apple silicon.</li>
+         * <li><strong>Mac(Intel)</strong>: macOS with Intel processors.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Windows</p>
          */
         public Builder os(String os) {
             this.putBodyParameter("Os", os);
@@ -190,7 +201,14 @@ public class CreateSoftwarelibVersionRequest extends Request {
         }
 
         /**
-         * PublisherType.
+         * <p>The software publisher type. Valid values:</p>
+         * <ul>
+         * <li><strong>local</strong>: local upload.</li>
+         * <li><strong>thirdparty</strong>: third-party link.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>local</p>
          */
         public Builder publisherType(String publisherType) {
             this.putBodyParameter("PublisherType", publisherType);
@@ -199,6 +217,7 @@ public class CreateSoftwarelibVersionRequest extends Request {
         }
 
         /**
+         * <p>The software ID in the software library. The value can be up to 64 characters in length. You can call <a href="~~ListSoftwarelibSoftware~~">ListSoftwarelibSoftware</a> to obtain the value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +230,10 @@ public class CreateSoftwarelibVersionRequest extends Request {
         }
 
         /**
-         * SoftwareName.
+         * <p>The software name. The value can be up to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Thunder</p>
          */
         public Builder softwareName(String softwareName) {
             this.putBodyParameter("SoftwareName", softwareName);
@@ -220,7 +242,10 @@ public class CreateSoftwarelibVersionRequest extends Request {
         }
 
         /**
-         * SoftwarePkgName.
+         * <p>The file name of the software package. The value can be up to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestSoftware.exe</p>
          */
         public Builder softwarePkgName(String softwarePkgName) {
             this.putBodyParameter("SoftwarePkgName", softwarePkgName);
@@ -229,7 +254,10 @@ public class CreateSoftwarelibVersionRequest extends Request {
         }
 
         /**
-         * SoftwarePkgSize.
+         * <p>The size of the software package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder softwarePkgSize(Long softwarePkgSize) {
             this.putBodyParameter("SoftwarePkgSize", softwarePkgSize);
@@ -238,7 +266,7 @@ public class CreateSoftwarelibVersionRequest extends Request {
         }
 
         /**
-         * SoftwareUrl.
+         * <p>The download URL of the software package. If the publisher type is local, the value is the relative path of the software package in the OSS bucket. If the publisher type is thirdparty, the value is a third-party download URL.</p>
          */
         public Builder softwareUrl(String softwareUrl) {
             this.putBodyParameter("SoftwareUrl", softwareUrl);
@@ -247,7 +275,10 @@ public class CreateSoftwarelibVersionRequest extends Request {
         }
 
         /**
-         * SoftwareVersion.
+         * <p>The software version number. The value can be up to 64 characters in length. The combination of operating system and version number must be unique within the same software. If a duplicate exists, a ResourceDuplicated error is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder softwareVersion(String softwareVersion) {
             this.putBodyParameter("SoftwareVersion", softwareVersion);

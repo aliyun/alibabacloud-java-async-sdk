@@ -90,6 +90,7 @@ public class ListSoftwareForUserDeviceRequest extends Request {
         } 
 
         /**
+         * <p>The page number of the current page in a paged query. Valid values: 1 to 10000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,11 @@ public class ListSoftwareForUserDeviceRequest extends Request {
         }
 
         /**
+         * <p>The endpoint device ID. You can obtain this value from the following operations:</p>
+         * <ul>
+         * <li><a href="~~GetUserDevice~~">GetUserDevice</a>: Queries the details of a user endpoint device.</li>
+         * <li><a href="~~ListUserDevices~~">ListUserDevices</a>: Queries user endpoint devices in batches.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +120,7 @@ public class ListSoftwareForUserDeviceRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page in a paged query. Valid values: 1 to 500.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

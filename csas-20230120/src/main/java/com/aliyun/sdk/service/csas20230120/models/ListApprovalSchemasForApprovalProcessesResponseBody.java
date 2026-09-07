@@ -67,7 +67,7 @@ public class ListApprovalSchemasForApprovalProcessesResponseBody extends TeaMode
         } 
 
         /**
-         * Processes.
+         * <p>A list of approval processes.</p>
          */
         public Builder processes(java.util.List<Processes> processes) {
             this.processes = processes;
@@ -75,7 +75,10 @@ public class ListApprovalSchemasForApprovalProcessesResponseBody extends TeaMode
         }
 
         /**
-         * RequestId.
+         * <p>The ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -219,7 +222,10 @@ public class ListApprovalSchemasForApprovalProcessesResponseBody extends TeaMode
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the approval template was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-15 14:44:07</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -227,7 +233,10 @@ public class ListApprovalSchemasForApprovalProcessesResponseBody extends TeaMode
             }
 
             /**
-             * Description.
+             * <p>The description of the approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是一个模板</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -235,7 +244,10 @@ public class ListApprovalSchemasForApprovalProcessesResponseBody extends TeaMode
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether the template is maintained by Alibaba Cloud.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -243,7 +255,24 @@ public class ListApprovalSchemasForApprovalProcessesResponseBody extends TeaMode
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type that the template applies to. Valid values:</p>
+             * <ul>
+             * <li><p><strong>DomainBlacklist</strong>: Domain blacklist.</p>
+             * </li>
+             * <li><p><strong>DomainWhitelist</strong>: Domain whitelist.</p>
+             * </li>
+             * <li><p><strong>SoftwareBlock</strong>: Software disable.</p>
+             * </li>
+             * <li><p><strong>AppUninstall</strong>: Application uninstall.</p>
+             * </li>
+             * <li><p><strong>DlpSend</strong>: File transfer.</p>
+             * </li>
+             * <li><p><strong>PeripheralBlock</strong>: Peripheral control.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DlpSend</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -251,7 +280,10 @@ public class ListApprovalSchemasForApprovalProcessesResponseBody extends TeaMode
             }
 
             /**
-             * SchemaContent.
+             * <p>The content of the approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;form&quot;: {&quot;labelCol&quot;: 6,&quot;wrapperCol&quot;: 12}}</p>
              */
             public Builder schemaContent(String schemaContent) {
                 this.schemaContent = schemaContent;
@@ -259,7 +291,10 @@ public class ListApprovalSchemasForApprovalProcessesResponseBody extends TeaMode
             }
 
             /**
-             * SchemaId.
+             * <p>The ID of the approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -267,7 +302,10 @@ public class ListApprovalSchemasForApprovalProcessesResponseBody extends TeaMode
             }
 
             /**
-             * SchemaName.
+             * <p>The name of the approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -275,7 +313,10 @@ public class ListApprovalSchemasForApprovalProcessesResponseBody extends TeaMode
             }
 
             /**
-             * SchemaVersion.
+             * <p>The version of the approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1715680940</p>
              */
             public Builder schemaVersion(Long schemaVersion) {
                 this.schemaVersion = schemaVersion;
@@ -342,7 +383,10 @@ public class ListApprovalSchemasForApprovalProcessesResponseBody extends TeaMode
             } 
 
             /**
-             * ProcessId.
+             * <p>The ID of the approval process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-process-35ee09077ee9****</p>
              */
             public Builder processId(String processId) {
                 this.processId = processId;
@@ -350,7 +394,7 @@ public class ListApprovalSchemasForApprovalProcessesResponseBody extends TeaMode
             }
 
             /**
-             * Schemas.
+             * <p>A list of approval templates.</p>
              */
             public Builder schemas(java.util.List<Schemas> schemas) {
                 this.schemas = schemas;

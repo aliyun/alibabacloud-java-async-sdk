@@ -158,7 +158,7 @@ public class IdpIdaas2SubConfig extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The unique identifier of the application within the IDaaS instance.</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -166,7 +166,7 @@ public class IdpIdaas2SubConfig extends TeaModel {
         }
 
         /**
-         * ClientId.
+         * <p>The client ID of the application registered with the identity provider.</p>
          */
         public Builder clientId(String clientId) {
             this.clientId = clientId;
@@ -174,7 +174,7 @@ public class IdpIdaas2SubConfig extends TeaModel {
         }
 
         /**
-         * ClientSecret.
+         * <p>The client secret used to authenticate the application with the identity provider.</p>
          */
         public Builder clientSecret(String clientSecret) {
             this.clientSecret = clientSecret;
@@ -182,7 +182,7 @@ public class IdpIdaas2SubConfig extends TeaModel {
         }
 
         /**
-         * EventAesKey.
+         * <p>The AES encryption key for securing event data.</p>
          */
         public Builder eventAesKey(String eventAesKey) {
             this.eventAesKey = eventAesKey;
@@ -190,7 +190,7 @@ public class IdpIdaas2SubConfig extends TeaModel {
         }
 
         /**
-         * EventLabel.
+         * <p>A label that identifies the event subscription.</p>
          */
         public Builder eventLabel(String eventLabel) {
             this.eventLabel = eventLabel;
@@ -198,7 +198,7 @@ public class IdpIdaas2SubConfig extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The unique identifier of the IDaaS instance.</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -206,7 +206,7 @@ public class IdpIdaas2SubConfig extends TeaModel {
         }
 
         /**
-         * PublicKeyEndpoint.
+         * <p>The URL of the endpoint providing the public key for token signature verification.</p>
          */
         public Builder publicKeyEndpoint(String publicKeyEndpoint) {
             this.publicKeyEndpoint = publicKeyEndpoint;
@@ -214,7 +214,7 @@ public class IdpIdaas2SubConfig extends TeaModel {
         }
 
         /**
-         * Region.
+         * <p>The deployment region of the IDaaS instance.</p>
          */
         public Builder region(String region) {
             this.region = region;
@@ -222,7 +222,7 @@ public class IdpIdaas2SubConfig extends TeaModel {
         }
 
         /**
-         * SamlMetadata.
+         * <p>The SAML metadata in XML format. It specifies the identity provider\&quot;s configuration, including endpoints and certificates.</p>
          */
         public Builder samlMetadata(String samlMetadata) {
             this.samlMetadata = samlMetadata;

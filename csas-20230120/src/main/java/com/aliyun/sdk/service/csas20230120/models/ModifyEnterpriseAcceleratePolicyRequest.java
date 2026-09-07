@@ -204,7 +204,15 @@ public class ModifyEnterpriseAcceleratePolicyRequest extends Request {
         } 
 
         /**
-         * AccelerationType.
+         * <p>The acceleration mode:</p>
+         * <ul>
+         * <li><strong>whiltelist</strong>: whitelist acceleration</li>
+         * <li><strong>global</strong>: global acceleration</li>
+         * <li><strong>build-in-list</strong>: built-in system application acceleration</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>whitelist</p>
          */
         public Builder accelerationType(String accelerationType) {
             this.putBodyParameter("AccelerationType", accelerationType);
@@ -213,7 +221,10 @@ public class ModifyEnterpriseAcceleratePolicyRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the enterprise acceleration policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一条内网访问策略</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -222,7 +233,10 @@ public class ModifyEnterpriseAcceleratePolicyRequest extends Request {
         }
 
         /**
-         * EapId.
+         * <p>The ID of the enterprise acceleration policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eap-ce153a7165c8feea</p>
          */
         public Builder eapId(String eapId) {
             this.putBodyParameter("EapId", eapId);
@@ -231,7 +245,10 @@ public class ModifyEnterpriseAcceleratePolicyRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the enterprise acceleration policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>白名单策略001</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -240,7 +257,14 @@ public class ModifyEnterpriseAcceleratePolicyRequest extends Request {
         }
 
         /**
-         * OnTls.
+         * <p>Specifies whether to enable TLS mode:</p>
+         * <ul>
+         * <li><strong>0</strong>: disable</li>
+         * <li><strong>1</strong>: enable</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder onTls(Integer onTls) {
             this.putBodyParameter("OnTls", onTls);
@@ -249,7 +273,10 @@ public class ModifyEnterpriseAcceleratePolicyRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49</p>
          */
         public Builder priority(Integer priority) {
             this.putBodyParameter("Priority", priority);
@@ -258,7 +285,14 @@ public class ModifyEnterpriseAcceleratePolicyRequest extends Request {
         }
 
         /**
-         * ShowInClient.
+         * <p>Specifies whether to display on the client:</p>
+         * <ul>
+         * <li><strong>0</strong>: do not display</li>
+         * <li><strong>1</strong>: display</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder showInClient(Integer showInClient) {
             this.putBodyParameter("ShowInClient", showInClient);
@@ -267,6 +301,7 @@ public class ModifyEnterpriseAcceleratePolicyRequest extends Request {
         }
 
         /**
+         * <p>The address (IP or domain name) of the acceleration instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -279,6 +314,7 @@ public class ModifyEnterpriseAcceleratePolicyRequest extends Request {
         }
 
         /**
+         * <p>The port of the acceleration instance (between 1000 and 60000).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -291,6 +327,7 @@ public class ModifyEnterpriseAcceleratePolicyRequest extends Request {
         }
 
         /**
+         * <p>The acceleration instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -303,7 +340,11 @@ public class ModifyEnterpriseAcceleratePolicyRequest extends Request {
         }
 
         /**
+         * <p>The acceleration user group.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试用户组</p>
          */
         public Builder userAttributeGroup(String userAttributeGroup) {
             this.putBodyParameter("UserAttributeGroup", userAttributeGroup);

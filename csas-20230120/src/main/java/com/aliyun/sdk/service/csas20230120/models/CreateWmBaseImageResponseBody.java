@@ -67,7 +67,7 @@ public class CreateWmBaseImageResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The transparent image information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class CreateWmBaseImageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class CreateWmBaseImageResponseBody extends TeaModel {
             } 
 
             /**
-             * ImageId.
+             * <p>The transparent image ID. The same ID indicates that the image content is identical.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fafb432cdede9b20640e12105845386e-496883833-8242409229217337*****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -162,7 +168,10 @@ public class CreateWmBaseImageResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUrl.
+             * <p>The temporary URL for downloading the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/test-*****.png">https://example.com/test-*****.png</a></p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -170,7 +179,10 @@ public class CreateWmBaseImageResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUrlExp.
+             * <p>The expiration time of the temporary image URL, in UNIX timestamp format. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17185*****</p>
              */
             public Builder imageUrlExp(Long imageUrlExp) {
                 this.imageUrlExp = imageUrlExp;

@@ -59,7 +59,7 @@ public class DeleteProhibitedPoliciesRequest extends Request {
         } 
 
         /**
-         * PolicyIds.
+         * <p>The IDs of the software prohibition policies to delete. Duplicate IDs are not allowed. You can specify up to 100 IDs.</p>
          */
         public Builder policyIds(java.util.List<String> policyIds) {
             this.putBodyParameter("PolicyIds", policyIds);

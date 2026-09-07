@@ -54,7 +54,10 @@ public class DeleteEnterpriseAccelerateTargetResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>655CE28F-2C0C-5801-A31E-C16BF54BD225</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

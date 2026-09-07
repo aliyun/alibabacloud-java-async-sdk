@@ -67,7 +67,7 @@ public class ModifyForwardStrategyBindingItemsResponseBody extends TeaModel {
         } 
 
         /**
-         * ForwardStrategyBindingItems.
+         * <p>The binding items of the forwarding rule after this modification.</p>
          */
         public Builder forwardStrategyBindingItems(ForwardStrategyBindingItems forwardStrategyBindingItems) {
             this.forwardStrategyBindingItems = forwardStrategyBindingItems;
@@ -75,7 +75,10 @@ public class ModifyForwardStrategyBindingItemsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5F79AE39-6622-5292-87EF-DE45631DE4D7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +196,10 @@ public class ModifyForwardStrategyBindingItemsResponseBody extends TeaModel {
             } 
 
             /**
-             * ApplicationId.
+             * <p>The private network access application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pa-application-104b6b97b7f0c5d9</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -201,7 +207,10 @@ public class ModifyForwardStrategyBindingItemsResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationName.
+             * <p>The private network access application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OA System</p>
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -209,7 +218,10 @@ public class ModifyForwardStrategyBindingItemsResponseBody extends TeaModel {
             }
 
             /**
-             * TagId.
+             * <p>The private network access tag ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-4c8b988bb0ffdfb3</p>
              */
             public Builder tagId(String tagId) {
                 this.tagId = tagId;
@@ -217,7 +229,10 @@ public class ModifyForwardStrategyBindingItemsResponseBody extends TeaModel {
             }
 
             /**
-             * TagName.
+             * <p>The tag name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Finance System</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;
@@ -225,7 +240,10 @@ public class ModifyForwardStrategyBindingItemsResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupId.
+             * <p>The user group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>usergroup-3f9a2c7e10b4d856</p>
              */
             public Builder userGroupId(String userGroupId) {
                 this.userGroupId = userGroupId;
@@ -233,7 +251,10 @@ public class ModifyForwardStrategyBindingItemsResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupName.
+             * <p>The user group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>R&amp;D Department</p>
              */
             public Builder userGroupName(String userGroupName) {
                 this.userGroupName = userGroupName;
@@ -313,7 +334,10 @@ public class ModifyForwardStrategyBindingItemsResponseBody extends TeaModel {
             } 
 
             /**
-             * ForwardId.
+             * <p>The forwarding rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fs-849ac29396d9ea98</p>
              */
             public Builder forwardId(String forwardId) {
                 this.forwardId = forwardId;
@@ -321,7 +345,7 @@ public class ModifyForwardStrategyBindingItemsResponseBody extends TeaModel {
             }
 
             /**
-             * Items.
+             * <p>The binding content. This parameter is not returned when MatchMode is <strong>UserGroupAll</strong> or <strong>ApplicationAll</strong>.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -329,7 +353,17 @@ public class ModifyForwardStrategyBindingItemsResponseBody extends TeaModel {
             }
 
             /**
-             * MatchMode.
+             * <p>The policy matching target type. Valid values:</p>
+             * <ul>
+             * <li><strong>UserGroupAll</strong>: associates with all users.</li>
+             * <li><strong>UserGroupNormal</strong>: associates with specific user groups.</li>
+             * <li><strong>ApplicationAll</strong>: all private network applications.</li>
+             * <li><strong>Application</strong>: specific private network applications.</li>
+             * <li><strong>Tag</strong>: private network application tags.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Application</p>
              */
             public Builder matchMode(String matchMode) {
                 this.matchMode = matchMode;

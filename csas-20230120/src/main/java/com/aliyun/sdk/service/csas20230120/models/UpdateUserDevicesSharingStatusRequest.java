@@ -75,6 +75,7 @@ public class UpdateUserDevicesSharingStatusRequest extends Request {
         } 
 
         /**
+         * <p>Collection of device IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder deviceTags(java.util.List<String> deviceTags) {
@@ -84,6 +85,13 @@ public class UpdateUserDevicesSharingStatusRequest extends Request {
         }
 
         /**
+         * <p>Indicates whether device sharing is enabled. Values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Enable sharing.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Disable sharing.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

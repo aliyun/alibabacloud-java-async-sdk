@@ -60,6 +60,7 @@ public class ListPolicesForPrivateAccessApplicationRequest extends Request {
         } 
 
         /**
+         * <p>The IDs of the private access applications. You can specify up to 100 IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder applicationIds(java.util.List<String> applicationIds) {

@@ -67,7 +67,10 @@ public class CreatePrivateAccessTagResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102350E7-1A20-58F5-9D63-ABEA820AE6E1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class CreatePrivateAccessTagResponseBody extends TeaModel {
         }
 
         /**
-         * TagId.
+         * <p>The ID of the internal-facing access tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-d3f64e8bdd4a****</p>
          */
         public Builder tagId(String tagId) {
             this.tagId = tagId;

@@ -159,6 +159,7 @@ public class ListApprovalProcessesRequest extends Request {
         } 
 
         /**
+         * <p>The page number of the current page when paging is used. Valid values: 1 to 10000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,6 +172,7 @@ public class ListApprovalProcessesRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page when paging is used. Valid values: 1 to 500.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +185,10 @@ public class ListApprovalProcessesRequest extends Request {
         }
 
         /**
-         * PolicyId.
+         * <p>The ID of the associated business policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pid-6d6ad77d5b52****</p>
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -192,7 +197,18 @@ public class ListApprovalProcessesRequest extends Request {
         }
 
         /**
-         * PolicyType.
+         * <p>The type of the associated policy. Valid values:</p>
+         * <ul>
+         * <li><strong>DomainBlacklist</strong>: domain name blacklist.</li>
+         * <li><strong>DomainWhitelist</strong>: domain name whitelist.</li>
+         * <li><strong>SoftwareBlock</strong>: software blocking.</li>
+         * <li><strong>AppUninstall</strong>: agent uninstallation.</li>
+         * <li><strong>DlpSend</strong>: file outgoing.</li>
+         * <li><strong>PeripheralBlock</strong>: peripheral control.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DlpSend</p>
          */
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);
@@ -201,7 +217,7 @@ public class ListApprovalProcessesRequest extends Request {
         }
 
         /**
-         * ProcessIds.
+         * <p>The collection of approval process IDs.</p>
          */
         public Builder processIds(java.util.List<String> processIds) {
             this.putQueryParameter("ProcessIds", processIds);
@@ -210,7 +226,10 @@ public class ListApprovalProcessesRequest extends Request {
         }
 
         /**
-         * ProcessName.
+         * <p>The template name. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). Chinese characters are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder processName(String processName) {
             this.putQueryParameter("ProcessName", processName);
@@ -219,7 +238,13 @@ public class ListApprovalProcessesRequest extends Request {
         }
 
         /**
-         * SaseUserId.
+         * <p>The ID of the associated approver. You can call the following operation to obtain the ID:</p>
+         * <ul>
+         * <li><a href="~~ListUsers~~">ListUsers</a>: lists users.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
          */
         public Builder saseUserId(String saseUserId) {
             this.putQueryParameter("SaseUserId", saseUserId);
@@ -228,7 +253,10 @@ public class ListApprovalProcessesRequest extends Request {
         }
 
         /**
-         * Username.
+         * <p>The username of the associated approver.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>王先生</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

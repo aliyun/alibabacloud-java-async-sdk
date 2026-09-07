@@ -214,7 +214,7 @@ public class UpdateDynamicRouteRequest extends Request {
         } 
 
         /**
-         * ApplicationIds.
+         * <p>A collection of private network access application IDs for the dynamic route. You can specify up to 200 IDs. This parameter is required when <strong>ApplicationType</strong> is set to <strong>Application</strong>. Specify either this parameter or <strong>TagIds</strong>, but not both. Do not specify this parameter when <strong>ApplicationType</strong> is set to <strong>All</strong>.</p>
          */
         public Builder applicationIds(java.util.List<String> applicationIds) {
             this.putBodyParameter("ApplicationIds", applicationIds);
@@ -223,7 +223,18 @@ public class UpdateDynamicRouteRequest extends Request {
         }
 
         /**
-         * ApplicationType.
+         * <p>The application type of the dynamic route. Valid values:</p>
+         * <ul>
+         * <li><p><strong>All</strong>: All applications.</p>
+         * </li>
+         * <li><p><strong>Application</strong>: Application.</p>
+         * </li>
+         * <li><p><strong>Tag</strong>: Tag.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Application</p>
          */
         public Builder applicationType(String applicationType) {
             this.putBodyParameter("ApplicationType", applicationType);
@@ -232,7 +243,10 @@ public class UpdateDynamicRouteRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the dynamic route. The description must be 1 to 128 characters long and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一条动态路由</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -241,6 +255,7 @@ public class UpdateDynamicRouteRequest extends Request {
         }
 
         /**
+         * <p>The ID of the dynamic route.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -253,7 +268,10 @@ public class UpdateDynamicRouteRequest extends Request {
         }
 
         /**
-         * DynamicRouteType.
+         * <p>The type of the dynamic route. Valid value: <strong>connector</strong>: leased line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>connector</p>
          */
         public Builder dynamicRouteType(String dynamicRouteType) {
             this.putBodyParameter("DynamicRouteType", dynamicRouteType);
@@ -262,7 +280,16 @@ public class UpdateDynamicRouteRequest extends Request {
         }
 
         /**
-         * ModifyType.
+         * <p>The modification type of the dynamic route. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Cover</strong> (default): Use the values of <strong>RegionIds</strong>, <strong>ApplicationIds</strong>, and <strong>TagIds</strong> to overwrite the existing regions, private network access application IDs, and private network access tag IDs supported by the SASE POP cluster access points.</p>
+         * </li>
+         * <li><p><strong>Append</strong>: Add the values specified in <strong>RegionIds</strong>, <strong>ApplicationIds</strong>, and <strong>TagIds</strong> to the existing regions, private network access application IDs, and private network access tag IDs supported by the SASE POP cluster access points.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Cover</p>
          */
         public Builder modifyType(String modifyType) {
             this.putBodyParameter("ModifyType", modifyType);
@@ -271,7 +298,10 @@ public class UpdateDynamicRouteRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the dynamic route. The name must be 1 to 128 characters long and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dynamic_route_name</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -280,7 +310,13 @@ public class UpdateDynamicRouteRequest extends Request {
         }
 
         /**
-         * NextHop.
+         * <p>The next hop instance ID of the dynamic route. To get valid values, see:</p>
+         * <ul>
+         * <li><a href="~~ListConnectors~~">ListConnectors</a>: Query connectors in bulk.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>connector-8ccb13b6f52c****</p>
          */
         public Builder nextHop(String nextHop) {
             this.putBodyParameter("NextHop", nextHop);
@@ -289,7 +325,10 @@ public class UpdateDynamicRouteRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The route priority. A value of 1 indicates the highest priority. Valid values: 1 to 99.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99</p>
          */
         public Builder priority(Integer priority) {
             this.putBodyParameter("Priority", priority);
@@ -298,7 +337,7 @@ public class UpdateDynamicRouteRequest extends Request {
         }
 
         /**
-         * RegionIds.
+         * <p>A list of regions supported by the SASE POP cluster access points.</p>
          */
         public Builder regionIds(java.util.List<String> regionIds) {
             this.putBodyParameter("RegionIds", regionIds);
@@ -307,7 +346,16 @@ public class UpdateDynamicRouteRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the dynamic route. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Enabled</strong>: Enable the route.</p>
+         * </li>
+         * <li><p><strong>Disabled</strong>: Disable the route.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Disabled</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);
@@ -316,7 +364,7 @@ public class UpdateDynamicRouteRequest extends Request {
         }
 
         /**
-         * TagIds.
+         * <p>A collection of private network access tag IDs for the dynamic route. You can specify up to 40 IDs. This parameter is required when <strong>ApplicationType</strong> is set to <strong>Tag</strong>. Specify either this parameter or <strong>ApplicationIds</strong>, but not both. Do not specify this parameter when <strong>ApplicationType</strong> is set to <strong>All</strong>.</p>
          */
         public Builder tagIds(java.util.List<String> tagIds) {
             this.putBodyParameter("TagIds", tagIds);

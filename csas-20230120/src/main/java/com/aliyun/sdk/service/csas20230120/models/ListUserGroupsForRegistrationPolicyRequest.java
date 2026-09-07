@@ -60,6 +60,7 @@ public class ListUserGroupsForRegistrationPolicyRequest extends Request {
         } 
 
         /**
+         * <p>A collection of device registration policy IDs. You can specify up to 100 IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder policyIds(java.util.List<String> policyIds) {

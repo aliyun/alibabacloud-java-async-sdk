@@ -67,7 +67,7 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * Devices.
+         * <p>A list of endpoint devices.</p>
          */
         public Builder devices(java.util.List<Devices> devices) {
             this.devices = devices;
@@ -75,7 +75,10 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FEF5CFA-14CC-5DE5-BD1F-AFFE0996E71D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * Mac.
+             * <p>The MAC address of the NIC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:16:XX:XX:7c:46</p>
              */
             public Builder mac(String mac) {
                 this.mac = mac;
@@ -149,7 +155,10 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The NIC name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eth0</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -528,7 +537,16 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * AppStatus.
+             * <p>The client status. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Online</strong>: Online.</p>
+             * </li>
+             * <li><p><strong>Offline</strong>: Offline.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Online</p>
              */
             public Builder appStatus(String appStatus) {
                 this.appStatus = appStatus;
@@ -536,7 +554,10 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * AppVersion.
+             * <p>The client version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.2.0</p>
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -544,7 +565,10 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * CPU.
+             * <p>The CPU model of the endpoint device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Apple M1</p>
              */
             public Builder CPU(String CPU) {
                 this.CPU = CPU;
@@ -552,7 +576,10 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the endpoint device was registered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-07-17 18:46:55</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -560,7 +587,10 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Department.
+             * <p>The department to which the user belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试部</p>
              */
             public Builder department(String department) {
                 this.department = department;
@@ -568,7 +598,16 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceBelong.
+             * <p>The ownership of the endpoint device. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Personal</strong>: Personal device.</p>
+             * </li>
+             * <li><p><strong>Company</strong>: Company device.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Company</p>
              */
             public Builder deviceBelong(String deviceBelong) {
                 this.deviceBelong = deviceBelong;
@@ -576,7 +615,10 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceModel.
+             * <p>The model of the endpoint device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MacBookPro17,1</p>
              */
             public Builder deviceModel(String deviceModel) {
                 this.deviceModel = deviceModel;
@@ -584,7 +626,24 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceStatus.
+             * <p>The status of the endpoint device. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Online</strong>: Online.</p>
+             * </li>
+             * <li><p><strong>Offline</strong>: Offline.</p>
+             * </li>
+             * <li><p><strong>LongTermOffline</strong>: Long-term offline.</p>
+             * </li>
+             * <li><p><strong>Locked</strong>: Locked.</p>
+             * </li>
+             * <li><p><strong>Lost</strong>: Reported as lost.</p>
+             * </li>
+             * <li><p><strong>Unbound</strong>: Detached.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Online</p>
              */
             public Builder deviceStatus(String deviceStatus) {
                 this.deviceStatus = deviceStatus;
@@ -592,7 +651,10 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceTag.
+             * <p>The endpoint device ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
              */
             public Builder deviceTag(String deviceTag) {
                 this.deviceTag = deviceTag;
@@ -600,7 +662,24 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceType.
+             * <p>The operating system type of the endpoint device. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Windows</strong>: Windows.</p>
+             * </li>
+             * <li><p><strong>macOS</strong>: macOS.</p>
+             * </li>
+             * <li><p><strong>Linux</strong>: Linux.</p>
+             * </li>
+             * <li><p><strong>Android</strong>: Android.</p>
+             * </li>
+             * <li><p><strong>iOS</strong>: iOS.</p>
+             * </li>
+             * <li><p><strong>Windows_Wuying</strong>: Alibaba Cloud Cloud Desktop.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Windows</p>
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -608,7 +687,10 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceVersion.
+             * <p>The operating system version of the endpoint device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.5.1</p>
              */
             public Builder deviceVersion(String deviceVersion) {
                 this.deviceVersion = deviceVersion;
@@ -616,7 +698,10 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Disk.
+             * <p>The disk model of the endpoint device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>APPLE SSD AP0512Q Media</p>
              */
             public Builder disk(String disk) {
                 this.disk = disk;
@@ -624,7 +709,20 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DlpStatus.
+             * <p>The data protection status. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Enabled</strong>: Enabled.</p>
+             * </li>
+             * <li><p><strong>Disabled</strong>: Disabled.</p>
+             * </li>
+             * <li><p><strong>Unprovisioned</strong>: Not configured.</p>
+             * </li>
+             * <li><p><strong>Unauthorized</strong>: Unauthorized.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder dlpStatus(String dlpStatus) {
                 this.dlpStatus = dlpStatus;
@@ -632,7 +730,10 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Hostname.
+             * <p>The device name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>win10-64bit</p>
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -640,7 +741,18 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * IaStatus.
+             * <p>Internet access status. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Enabled</strong>: Internet access is enabled.</p>
+             * </li>
+             * <li><p><strong>Disabled</strong>: Internet access is disabled.</p>
+             * </li>
+             * <li><p><strong>Unprovisioned</strong>: The device is unconfigured.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder iaStatus(String iaStatus) {
                 this.iaStatus = iaStatus;
@@ -648,7 +760,10 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InnerIP.
+             * <p>The private network IP address of the endpoint device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder innerIP(String innerIP) {
                 this.innerIP = innerIP;
@@ -656,7 +771,10 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Mac.
+             * <p>The MAC address of the endpoint device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:16:XX:XX:7c:46</p>
              */
             public Builder mac(String mac) {
                 this.mac = mac;
@@ -664,7 +782,10 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The memory capacity of the endpoint device, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -672,7 +793,18 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * NacStatus.
+             * <p>The network admission control status. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Enabled</strong>: Enabled.</p>
+             * </li>
+             * <li><p><strong>Disabled</strong>: Disabled.</p>
+             * </li>
+             * <li><p><strong>Unprovisioned</strong>: Not configured.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder nacStatus(String nacStatus) {
                 this.nacStatus = nacStatus;
@@ -680,7 +812,7 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * NetInterfaceInfo.
+             * <p>A list of network interface controllers (NICs) on the endpoint device.</p>
              */
             public Builder netInterfaceInfo(java.util.List<NetInterfaceInfo> netInterfaceInfo) {
                 this.netInterfaceInfo = netInterfaceInfo;
@@ -688,7 +820,18 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * PaStatus.
+             * <p>The private network access status. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Enabled</strong>: Enabled.</p>
+             * </li>
+             * <li><p><strong>Disabled</strong>: Disabled.</p>
+             * </li>
+             * <li><p><strong>Unprovisioned</strong>: Not configured.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder paStatus(String paStatus) {
                 this.paStatus = paStatus;
@@ -696,7 +839,10 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SaseUserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
              */
             public Builder saseUserId(String saseUserId) {
                 this.saseUserId = saseUserId;
@@ -704,7 +850,16 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SharingStatus.
+             * <p>Whether sharing is enabled for the device. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: Sharing is enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: Sharing is disabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sharingStatus(Boolean sharingStatus) {
                 this.sharingStatus = sharingStatus;
@@ -712,7 +867,10 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SrcIP.
+             * <p>The IP address used to log on to the endpoint device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11.49.XX.XX</p>
              */
             public Builder srcIP(String srcIP) {
                 this.srcIP = srcIP;
@@ -720,7 +878,10 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The last time the endpoint device was online.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-08-24 19:04:42</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -728,7 +889,10 @@ public class UpdateUserDevicesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>王先生</p>
              */
             public Builder username(String username) {
                 this.username = username;

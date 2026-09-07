@@ -73,7 +73,7 @@ public class UnbindSaseUserTagRequest extends Request {
         } 
 
         /**
-         * SaseUserIds.
+         * <p>The collection of user IDs.</p>
          */
         public Builder saseUserIds(java.util.List<String> saseUserIds) {
             this.putBodyParameter("SaseUserIds", saseUserIds);
@@ -82,7 +82,7 @@ public class UnbindSaseUserTagRequest extends Request {
         }
 
         /**
-         * TagIds.
+         * <p>The collection of user label IDs.</p>
          */
         public Builder tagIds(java.util.List<String> tagIds) {
             this.putBodyParameter("TagIds", tagIds);

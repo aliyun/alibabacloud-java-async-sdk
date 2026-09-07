@@ -159,7 +159,10 @@ public class ListEnterpriseAccelerateLogsRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The current page number displayed during paged queries. Value range: 1 to 10000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -168,7 +171,10 @@ public class ListEnterpriseAccelerateLogsRequest extends Request {
         }
 
         /**
-         * Department.
+         * <p>Department.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试部</p>
          */
         public Builder department(String department) {
             this.putQueryParameter("Department", department);
@@ -177,7 +183,10 @@ public class ListEnterpriseAccelerateLogsRequest extends Request {
         }
 
         /**
-         * DstAddr.
+         * <p>Endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jfrog.cea.vwah.vwgroup.com</p>
          */
         public Builder dstAddr(String dstAddr) {
             this.putQueryParameter("DstAddr", dstAddr);
@@ -186,6 +195,7 @@ public class ListEnterpriseAccelerateLogsRequest extends Request {
         }
 
         /**
+         * <p>End time, UNIX timestamp, in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +208,10 @@ public class ListEnterpriseAccelerateLogsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of items per page for paged queries. Value range: 1 to 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -207,7 +220,16 @@ public class ListEnterpriseAccelerateLogsRequest extends Request {
         }
 
         /**
-         * SearchMode.
+         * <p>Query mode. Only the DstAddr field supports the following modes:</p>
+         * <ul>
+         * <li><p><strong>Exact</strong>: Term query</p>
+         * </li>
+         * <li><p><strong>Fuzzy</strong>: Fuzzy query</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Exact</p>
          */
         public Builder searchMode(String searchMode) {
             this.putQueryParameter("SearchMode", searchMode);
@@ -216,6 +238,7 @@ public class ListEnterpriseAccelerateLogsRequest extends Request {
         }
 
         /**
+         * <p>Start time, UNIX timestamp, in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,7 +251,10 @@ public class ListEnterpriseAccelerateLogsRequest extends Request {
         }
 
         /**
-         * Username.
+         * <p>Username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

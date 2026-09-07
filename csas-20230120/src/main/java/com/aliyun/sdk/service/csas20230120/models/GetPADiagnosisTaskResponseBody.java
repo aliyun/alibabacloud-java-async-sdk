@@ -67,7 +67,7 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * DiagnosisTask.
+         * <p>The diagnostic task.</p>
          */
         public Builder diagnosisTask(DiagnosisTask diagnosisTask) {
             this.diagnosisTask = diagnosisTask;
@@ -75,7 +75,7 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>2CABFEBB-0CE7-575E-833A-266F75D46713</p>
@@ -170,7 +170,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * Country.
+             * <p>The country.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder country(String country) {
                 this.country = country;
@@ -178,7 +181,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Prov.
+             * <p>The province.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhejiang</p>
              */
             public Builder prov(String prov) {
                 this.prov = prov;
@@ -186,7 +192,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * City.
+             * <p>The city.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hangzhou</p>
              */
             public Builder city(String city) {
                 this.city = city;
@@ -194,7 +203,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Isp.
+             * <p>The ISP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>telecom</p>
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -287,7 +299,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * Address.
+             * <p>The private access application address. The address can be 1 to 128 characters long and can be an IPv4 address, a CIDR block, a domain name, or a wildcard domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -295,7 +310,7 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>TTL。</p>
+             * <p>The TTL.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -306,7 +321,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Latency.
+             * <p>The latency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder latency(String latency) {
                 this.latency = latency;
@@ -314,7 +332,7 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * GeoData.
+             * <p>The geographic location.</p>
              */
             public Builder geoData(GeoData geoData) {
                 this.geoData = geoData;
@@ -472,7 +490,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * DnsServer.
+             * <p>The DNS server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.100.2.136,100.100.2.138</p>
              */
             public Builder dnsServer(String dnsServer) {
                 this.dnsServer = dnsServer;
@@ -480,7 +501,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * DnsType.
+             * <p>The DNS type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>private-zone</p>
              */
             public Builder dnsType(String dnsType) {
                 this.dnsType = dnsType;
@@ -488,7 +512,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Error.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder error(String error) {
                 this.error = error;
@@ -496,7 +523,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * FromNode.
+             * <p>The source node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder fromNode(Long fromNode) {
                 this.fromNode = fromNode;
@@ -504,7 +534,7 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Hops.
+             * <p>The intermediate hops.</p>
              */
             public Builder hops(java.util.List<java.util.List<Hops>> hops) {
                 this.hops = hops;
@@ -512,7 +542,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Latency.
+             * <p>The latency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder latency(String latency) {
                 this.latency = latency;
@@ -520,7 +553,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The DNS result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.1</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -528,7 +564,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the operation was successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -536,7 +575,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ToNode.
+             * <p>The destination node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder toNode(Long toNode) {
                 this.toNode = toNode;
@@ -629,7 +671,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * City.
+             * <p>The city.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Haikou City</p>
              */
             public Builder city(String city) {
                 this.city = city;
@@ -637,7 +682,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Country.
+             * <p>The country.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder country(String country) {
                 this.country = country;
@@ -645,7 +693,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Isp.
+             * <p>The ISP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ChinaMobile_L2</p>
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -653,7 +704,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Prov.
+             * <p>The province.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZHejiang</p>
              */
             public Builder prov(String prov) {
                 this.prov = prov;
@@ -746,7 +800,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * Address.
+             * <p>The address.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -754,7 +811,7 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * GeoData.
+             * <p>The geographic location.</p>
              */
             public Builder geoData(HopsGeoData geoData) {
                 this.geoData = geoData;
@@ -762,7 +819,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Latency.
+             * <p>The latency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder latency(String latency) {
                 this.latency = latency;
@@ -770,7 +830,7 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>TTL。</p>
+             * <p>The Time to Live (TTL).</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -892,7 +952,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * Error.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder error(String error) {
                 this.error = error;
@@ -900,7 +963,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * FromNode.
+             * <p>The source node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder fromNode(Long fromNode) {
                 this.fromNode = fromNode;
@@ -908,7 +974,7 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Hops.
+             * <p>The intermediate hops.</p>
              */
             public Builder hops(java.util.List<LinksHops> hops) {
                 this.hops = hops;
@@ -916,7 +982,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Latency.
+             * <p>The latency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder latency(String latency) {
                 this.latency = latency;
@@ -924,7 +993,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the operation was successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -932,7 +1004,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ToNode.
+             * <p>The destination node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder toNode(Long toNode) {
                 this.toNode = toNode;
@@ -1025,7 +1100,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * City.
+             * <p>The city.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hangzhou</p>
              */
             public Builder city(String city) {
                 this.city = city;
@@ -1033,7 +1111,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Country.
+             * <p>The country.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder country(String country) {
                 this.country = country;
@@ -1041,7 +1122,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Isp.
+             * <p>The Internet Service Provider (ISP).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ChinaTelecom_L2</p>
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -1049,7 +1133,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Prov.
+             * <p>The province.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhejiang</p>
              */
             public Builder prov(String prov) {
                 this.prov = prov;
@@ -1220,7 +1307,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * Address.
+             * <p>The private access application address. The address can be 1 to 128 characters long and can be an IPv4 address, a CIDR block, a domain name, or a wildcard domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.27.228.132</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -1228,7 +1318,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * CloudNetId.
+             * <p>The ID of the cloud network instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-xxxxxx</p>
              */
             public Builder cloudNetId(String cloudNetId) {
                 this.cloudNetId = cloudNetId;
@@ -1236,7 +1329,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Error.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder error(String error) {
                 this.error = error;
@@ -1244,7 +1340,7 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * GeoData.
+             * <p>The geographic location information.</p>
              */
             public Builder geoData(NodesGeoData geoData) {
                 this.geoData = geoData;
@@ -1252,7 +1348,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1237</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1260,7 +1359,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The node name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>全局加速</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1268,7 +1370,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * NameEn.
+             * <p>The English name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Japan Private POP</p>
              */
             public Builder nameEn(String nameEn) {
                 this.nameEn = nameEn;
@@ -1276,7 +1381,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * <p>The node type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stunnel</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -1284,7 +1392,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pop-xxxxxx</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -1292,7 +1403,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the operation was successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -1385,7 +1499,7 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * Dns.
+             * <p>The Domain Name System (DNS) information.</p>
              */
             public Builder dns(Dns dns) {
                 this.dns = dns;
@@ -1393,7 +1507,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * FBT.
+             * <p>The time to first byte.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder FBT(String FBT) {
                 this.FBT = FBT;
@@ -1401,7 +1518,7 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Links.
+             * <p>The connections between nodes.</p>
              */
             public Builder links(java.util.List<Links> links) {
                 this.links = links;
@@ -1409,7 +1526,7 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Nodes.
+             * <p>The forwarding nodes.</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
@@ -1593,7 +1710,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * DevTag.
+             * <p>The ID of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>E9EE1CE7-4AA0-521D-B8E1-E13E47F05E94</p>
              */
             public Builder devTag(String devTag) {
                 this.devTag = devTag;
@@ -1601,7 +1721,24 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceType.
+             * <p>The operating system of the device. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Windows</strong>: Windows</p>
+             * </li>
+             * <li><p><strong>macOS</strong>: macOS</p>
+             * </li>
+             * <li><p><strong>Linux</strong>: Linux</p>
+             * </li>
+             * <li><p><strong>Android</strong>: Android</p>
+             * </li>
+             * <li><p><strong>iOS</strong>: iOS</p>
+             * </li>
+             * <li><p><strong>Windows_Wuying</strong>: Cloud Desktop</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>macos</p>
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -1609,7 +1746,7 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * File.
+             * <p>The name of the file.</p>
              */
             public Builder file(java.util.List<String> file) {
                 this.file = file;
@@ -1617,7 +1754,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Firewall.
+             * <p>The firewall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{\&quot;Platform\&quot;:\&quot;windows\&quot;,\&quot;Status\&quot;:\&quot;disabled\&quot;},{\&quot;Platform\&quot;:\&quot;macos\&quot;,\&quot;Status\&quot;:\&quot;disabled\&quot;},{\&quot;Platform\&quot;:\&quot;linux\&quot;,\&quot;Status\&quot;:\&quot;disabled\&quot;}]</p>
              */
             public Builder firewall(String firewall) {
                 this.firewall = firewall;
@@ -1625,7 +1765,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Hostname.
+             * <p>The name of the device. The name can be 1 to 128 characters long and can include letters, numbers, and the following special characters: . , ; - _ / @ and spaces. To query for all devices with names containing 4-byte UTF-8 characters, enter only an underscore (_).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DESKTOP-CVTB5KT.CXISHD01.CATHAY_INS.CHN</p>
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -1633,7 +1776,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * InnerIp.
+             * <p>The private IP address of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.5.208.122</p>
              */
             public Builder innerIp(String innerIp) {
                 this.innerIp = innerIp;
@@ -1641,7 +1787,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.98.146.136</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -1649,7 +1798,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Mac.
+             * <p>The MAC address of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>curl Rj0F9uvI.popscan.xaliyun.com</code></p>
              */
             public Builder mac(String mac) {
                 this.mac = mac;
@@ -1657,7 +1809,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * MatchedSecurityBaseline.
+             * <p>The matched security baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder matchedSecurityBaseline(String matchedSecurityBaseline) {
                 this.matchedSecurityBaseline = matchedSecurityBaseline;
@@ -1665,7 +1820,7 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Process.
+             * <p>The list of security baseline processes.</p>
              */
             public Builder process(java.util.List<String> process) {
                 this.process = process;
@@ -1673,7 +1828,7 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>SSID。</p>
+             * <p>The SSID.</p>
              * 
              * <strong>example:</strong>
              * <p>abcd</p>
@@ -1756,7 +1911,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * RouteType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>connector</p>
              */
             public Builder routeType(String routeType) {
                 this.routeType = routeType;
@@ -1764,7 +1922,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyId.
+             * <p>The policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>av-rtd-091c2d6e3f24aae4</p>
              */
             public Builder strategyId(String strategyId) {
                 this.strategyId = strategyId;
@@ -1772,7 +1933,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * StrategyName.
+             * <p>The policy name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder strategyName(String strategyName) {
                 this.strategyName = strategyName;
@@ -1878,7 +2042,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * Email.
+             * <p>The email address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:1234@xxxx.com">1234@xxxx.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -1886,7 +2053,7 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Group.
+             * <p>The list of department names.</p>
              */
             public Builder group(java.util.List<String> group) {
                 this.group = group;
@@ -1894,7 +2061,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * MatchedUserGroups.
+             * <p>The matched user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IT</p>
              */
             public Builder matchedUserGroups(String matchedUserGroups) {
                 this.matchedUserGroups = matchedUserGroups;
@@ -1902,7 +2072,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Telephone.
+             * <p>The mobile phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789</p>
              */
             public Builder telephone(String telephone) {
                 this.telephone = telephone;
@@ -1910,7 +2083,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangsan</p>
              */
             public Builder username(String username) {
                 this.username = username;
@@ -2003,7 +2179,18 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * Action.
+             * <p>The policy action:</p>
+             * <ul>
+             * <li><p><strong>Allow</strong>: allow</p>
+             * </li>
+             * <li><p><strong>Block</strong>: block</p>
+             * </li>
+             * <li><p><strong>Observe</strong>: monitor mode</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>block</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -2011,7 +2198,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyApp2</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -2019,7 +2209,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * BlockInfo.
+             * <p>The block information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>access denied</p>
              */
             public Builder blockInfo(String blockInfo) {
                 this.blockInfo = blockInfo;
@@ -2027,7 +2220,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyName.
+             * <p>The name of the zero-trust policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>保密测试</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -2133,7 +2329,7 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * DeviceAttributeInfo.
+             * <p>The device information.</p>
              */
             public Builder deviceAttributeInfo(DeviceAttributeInfo deviceAttributeInfo) {
                 this.deviceAttributeInfo = deviceAttributeInfo;
@@ -2141,7 +2337,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessTime.
+             * <p>The processing duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder processTime(Long processTime) {
                 this.processTime = processTime;
@@ -2149,7 +2348,7 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RouteStrategyInfo.
+             * <p>The name of the routing policy.</p>
              */
             public Builder routeStrategyInfo(RouteStrategyInfo routeStrategyInfo) {
                 this.routeStrategyInfo = routeStrategyInfo;
@@ -2157,7 +2356,7 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupInfo.
+             * <p>The user group information.</p>
              */
             public Builder userGroupInfo(UserGroupInfo userGroupInfo) {
                 this.userGroupInfo = userGroupInfo;
@@ -2165,7 +2364,7 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ZeroTrustPolicyInfo.
+             * <p>The zero-trust policy information.</p>
              */
             public Builder zeroTrustPolicyInfo(ZeroTrustPolicyInfo zeroTrustPolicyInfo) {
                 this.zeroTrustPolicyInfo = zeroTrustPolicyInfo;
@@ -2271,7 +2470,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorMessage.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>device offline</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -2279,7 +2481,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * FlowId.
+             * <p>The ID of the request stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>flow-d918b12f9b974f6489fc</p>
              */
             public Builder flowId(String flowId) {
                 this.flowId = flowId;
@@ -2287,7 +2492,7 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkLinkInfo.
+             * <p>The network connectivity information.</p>
              */
             public Builder networkLinkInfo(NetworkLinkInfo networkLinkInfo) {
                 this.networkLinkInfo = networkLinkInfo;
@@ -2295,7 +2500,7 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyInfo.
+             * <p>The policy information.</p>
              */
             public Builder policyInfo(PolicyInfo policyInfo) {
                 this.policyInfo = policyInfo;
@@ -2303,7 +2508,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the operation was successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -2370,7 +2578,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * ExpectedResponse.
+             * <p>The expected response from the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello</p>
              */
             public Builder expectedResponse(String expectedResponse) {
                 this.expectedResponse = expectedResponse;
@@ -2378,7 +2589,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RequestContent.
+             * <p>The content of the UDP request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello</p>
              */
             public Builder requestContent(String requestContent) {
                 this.requestContent = requestContent;
@@ -2445,7 +2659,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * UserGroupId.
+             * <p>The ID of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ug-xxxxx</p>
              */
             public Builder userGroupId(String userGroupId) {
                 this.userGroupId = userGroupId;
@@ -2453,7 +2670,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupName.
+             * <p>The name of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IT</p>
              */
             public Builder userGroupName(String userGroupName) {
                 this.userGroupName = userGroupName;
@@ -2676,7 +2896,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-08-17 09:49:03</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -2684,7 +2907,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * DevTag.
+             * <p>The ID of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>76C08B0F-CEFD-8F01-C1D3-0D5B493B5EAF</p>
              */
             public Builder devTag(String devTag) {
                 this.devTag = devTag;
@@ -2692,7 +2918,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * DiagnoseId.
+             * <p>The ID of the diagnostic task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>diag-3e0d36d6c15a0502</p>
              */
             public Builder diagnoseId(String diagnoseId) {
                 this.diagnoseId = diagnoseId;
@@ -2700,7 +2929,16 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * DiagnoseType.
+             * <p>The diagnostic type. Valid values:</p>
+             * <ul>
+             * <li><p><strong>FullLink</strong>: full-link diagnostics</p>
+             * </li>
+             * <li><p><strong>Application</strong>: application diagnostics</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FullLink</p>
              */
             public Builder diagnoseType(String diagnoseType) {
                 this.diagnoseType = diagnoseType;
@@ -2708,7 +2946,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * <p>The domain name to be diagnosed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mtools-admin.redotpay.com</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -2716,7 +2957,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * PopId.
+             * <p>The ID of the POP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pop-2504cd067e094750</p>
              */
             public Builder popId(String popId) {
                 this.popId = popId;
@@ -2724,7 +2968,16 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * PopMode.
+             * <p>The point of presence (POP) selection mode:</p>
+             * <ul>
+             * <li><p><strong>AutoSelect</strong>: automatic selection</p>
+             * </li>
+             * <li><p><strong>ManualSelect</strong>: manual selection</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AutoSelect</p>
              */
             public Builder popMode(String popMode) {
                 this.popMode = popMode;
@@ -2732,7 +2985,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -2740,7 +2996,16 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>The private access application protocol. Valid values:</p>
+             * <ul>
+             * <li><p><strong>TCP</strong></p>
+             * </li>
+             * <li><p><strong>UDP</strong></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>All</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -2748,7 +3013,7 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The diagnostic result.</p>
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -2756,7 +3021,18 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the task. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Running</strong>: The task is running.</p>
+             * </li>
+             * <li><p><strong>Finished</strong>: The task is complete.</p>
+             * </li>
+             * <li><p><strong>Failed</strong>: The task failed.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2764,7 +3040,7 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * UdpExtraConfigs.
+             * <p>Additional UDP configurations.</p>
              */
             public Builder udpExtraConfigs(UdpExtraConfigs udpExtraConfigs) {
                 this.udpExtraConfigs = udpExtraConfigs;
@@ -2772,7 +3048,7 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroup.
+             * <p>The user group.</p>
              */
             public Builder userGroup(UserGroup userGroup) {
                 this.userGroup = userGroup;
@@ -2780,7 +3056,10 @@ public class GetPADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangsan</p>
              */
             public Builder username(String username) {
                 this.username = username;

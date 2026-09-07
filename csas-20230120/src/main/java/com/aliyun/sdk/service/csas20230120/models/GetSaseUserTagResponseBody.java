@@ -67,7 +67,10 @@ public class GetSaseUserTagResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2CABFEBB-0CE7-575E-833A-266F75D46713</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class GetSaseUserTagResponseBody extends TeaModel {
         }
 
         /**
-         * SaseUserTag.
+         * <p>The user tag response body.</p>
          */
         public Builder saseUserTag(SaseUserTag saseUserTag) {
             this.saseUserTag = saseUserTag;
@@ -167,7 +170,10 @@ public class GetSaseUserTagResponseBody extends TeaModel {
             } 
 
             /**
-             * Aliuid.
+             * <p>The Alibaba Cloud account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>141681795035****</p>
              */
             public Builder aliuid(String aliuid) {
                 this.aliuid = aliuid;
@@ -175,7 +181,10 @@ public class GetSaseUserTagResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The user tag description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>These are the company\&quot;s employees</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -183,7 +192,10 @@ public class GetSaseUserTagResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The user tag name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>boss</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -191,7 +203,10 @@ public class GetSaseUserTagResponseBody extends TeaModel {
             }
 
             /**
-             * TagId.
+             * <p>The user tag ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>su-tag-1ae52f66039fa0d4****</p>
              */
             public Builder tagId(String tagId) {
                 this.tagId = tagId;

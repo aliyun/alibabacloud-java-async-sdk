@@ -87,7 +87,10 @@ public class UpdateClientUserPasswordRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1128</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -96,7 +99,10 @@ public class UpdateClientUserPasswordRequest extends Request {
         }
 
         /**
-         * Password.
+         * <p>The password. If this parameter is left empty, a random password is automatically generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kehudiyidj</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -105,7 +111,10 @@ public class UpdateClientUserPasswordRequest extends Request {
         }
 
         /**
-         * Username.
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

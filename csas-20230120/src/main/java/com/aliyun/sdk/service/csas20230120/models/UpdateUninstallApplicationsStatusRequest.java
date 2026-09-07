@@ -73,7 +73,7 @@ public class UpdateUninstallApplicationsStatusRequest extends Request {
         } 
 
         /**
-         * ApplicationIds.
+         * <p>The list of uninstall application IDs.</p>
          */
         public Builder applicationIds(java.util.List<String> applicationIds) {
             this.putBodyParameter("ApplicationIds", applicationIds);
@@ -82,7 +82,14 @@ public class UpdateUninstallApplicationsStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the uninstall application. Valid values:</p>
+         * <ul>
+         * <li><strong>Approved</strong>: Approved.</li>
+         * <li><strong>Rejected</strong>: Rejected.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Approved</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);

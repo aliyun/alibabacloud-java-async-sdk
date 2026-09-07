@@ -80,7 +80,7 @@ public class ListOperationAuditLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * Logs.
+         * <p>The list of administrator operation audit logs, sorted by operation time in descending order.</p>
          */
         public Builder logs(java.util.List<Logs> logs) {
             this.logs = logs;
@@ -99,7 +99,10 @@ public class ListOperationAuditLogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of logs that match the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder totalNum(Long totalNum) {
             this.totalNum = totalNum;
@@ -282,7 +285,10 @@ public class ListOperationAuditLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * AfterAction.
+             * <p>The post-operation snapshot. This value is recorded as-is by the audit framework without localization. This field is empty for historical logs that are not integrated with the audit framework.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;RequestId&quot;:&quot;01A03244-5BAD-5FAA-93D6-E4F4A1A2****&quot;}</p>
              */
             public Builder afterAction(String afterAction) {
                 this.afterAction = afterAction;
@@ -290,7 +296,10 @@ public class ListOperationAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * BeforeAction.
+             * <p>The pre-operation snapshot. This value is recorded as-is by the audit framework without localization. This field is empty for historical logs that are not integrated with the audit framework.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;pa-application-ea73352b4b75****&quot;</p>
              */
             public Builder beforeAction(String beforeAction) {
                 this.beforeAction = beforeAction;
@@ -298,7 +307,10 @@ public class ListOperationAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>The error code when the operation failed. This field is empty when the operation succeeded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ResourceNotFound</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -306,7 +318,10 @@ public class ListOperationAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message when the operation failed. This field is empty when the operation succeeded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>the specified resource is not found</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -314,7 +329,14 @@ public class ListOperationAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * EventType.
+             * <p>The event source type. Valid values:</p>
+             * <ul>
+             * <li><strong>console</strong>: console call.</li>
+             * <li><strong>sdk</strong>: SDK call.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>console</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -322,7 +344,10 @@ public class ListOperationAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * OperationFunc.
+             * <p>The operation function module. The return value is localized based on the request language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Office Data Protection</p>
              */
             public Builder operationFunc(String operationFunc) {
                 this.operationFunc = operationFunc;
@@ -330,7 +355,10 @@ public class ListOperationAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * OperationPage.
+             * <p>The operation page. The return value is localized based on the request language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Peripheral Management</p>
              */
             public Builder operationPage(String operationPage) {
                 this.operationPage = operationPage;
@@ -338,7 +366,10 @@ public class ListOperationAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * OperationTime.
+             * <p>The operation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-24 13:38:06</p>
              */
             public Builder operationTime(String operationTime) {
                 this.operationTime = operationTime;
@@ -346,7 +377,10 @@ public class ListOperationAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * OperationType.
+             * <p>The operation type. The return value is localized based on the request language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Modify peripheral control policy</p>
              */
             public Builder operationType(String operationType) {
                 this.operationType = operationType;
@@ -354,7 +388,10 @@ public class ListOperationAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorId.
+             * <p>The Alibaba Cloud account ID (AliUid) of the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234****</p>
              */
             public Builder operatorId(String operatorId) {
                 this.operatorId = operatorId;
@@ -362,7 +399,10 @@ public class ListOperationAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the operation succeeded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

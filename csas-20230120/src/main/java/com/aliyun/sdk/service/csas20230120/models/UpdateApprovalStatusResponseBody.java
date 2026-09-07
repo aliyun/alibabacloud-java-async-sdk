@@ -67,7 +67,7 @@ public class UpdateApprovalStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * Approval.
+         * <p>The approval instance.</p>
          */
         public Builder approval(java.util.List<Approval> approval) {
             this.approval = approval;
@@ -75,7 +75,10 @@ public class UpdateApprovalStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class UpdateApprovalStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * SaseUserId.
+             * <p>The ID of the operator for the approval progress node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
              */
             public Builder saseUserId(String saseUserId) {
                 this.saseUserId = saseUserId;
@@ -149,7 +155,10 @@ public class UpdateApprovalStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * <p>The username of the operator for the approval progress node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>John</p>
              */
             public Builder username(String username) {
                 this.username = username;
@@ -268,7 +277,16 @@ public class UpdateApprovalStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * Action.
+             * <p>The action performed on the approval progress node. Valid values:</p>
+             * <ul>
+             * <li><strong>Approve</strong>: Approve.</li>
+             * <li><strong>Reject</strong>: Reject.</li>
+             * <li><strong>Revoke</strong>: Revoke.</li>
+             * <li><strong>Comment</strong>: Comment.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Approve</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -276,7 +294,10 @@ public class UpdateApprovalStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * <p>The comment on the approval progress node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Approved</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -284,7 +305,10 @@ public class UpdateApprovalStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Executor.
+             * <p>The ID of the executor for the approval progress node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
              */
             public Builder executor(String executor) {
                 this.executor = executor;
@@ -292,7 +316,7 @@ public class UpdateApprovalStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Operators.
+             * <p>The list of operators for the approval progress node.</p>
              */
             public Builder operators(java.util.List<Operators> operators) {
                 this.operators = operators;
@@ -300,7 +324,16 @@ public class UpdateApprovalStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the approval progress node. Valid values:</p>
+             * <ul>
+             * <li><strong>Pending</strong>: Pending approval.</li>
+             * <li><strong>Approved</strong>: Approved.</li>
+             * <li><strong>Rejected</strong>: Rejected.</li>
+             * <li><strong>Revoked</strong>: Revoked.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Approved</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -308,7 +341,10 @@ public class UpdateApprovalStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>The time when the action was performed on the approval progress node. The value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1736752000</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -544,7 +580,10 @@ public class UpdateApprovalStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * ApprovalDetail.
+             * <p>The details of the approval instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;initiatorName&quot;:&quot;John&quot;,&quot;initiatorDept&quot;:&quot;QA Department&quot;,&quot;devType&quot;:&quot;windows&quot;,&quot;deviceType&quot;:&quot;usbStorage&quot;,&quot;deviceId&quot;:&quot;FC216E9E3****&quot;,&quot;approvalEndTimestamp&quot;:1736524799,&quot;approvalReason&quot;:&quot;This is a test&quot;}</p>
              */
             public Builder approvalDetail(String approvalDetail) {
                 this.approvalDetail = approvalDetail;
@@ -552,7 +591,10 @@ public class UpdateApprovalStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ApprovalId.
+             * <p>The approval instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-165e6738ad9d****</p>
              */
             public Builder approvalId(String approvalId) {
                 this.approvalId = approvalId;
@@ -560,7 +602,7 @@ public class UpdateApprovalStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ApprovalProgresses.
+             * <p>The list of approval progress nodes.</p>
              */
             public Builder approvalProgresses(java.util.List<ApprovalProgresses> approvalProgresses) {
                 this.approvalProgresses = approvalProgresses;
@@ -568,7 +610,10 @@ public class UpdateApprovalStatusResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the approval instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-15 22:11:55</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -576,7 +621,10 @@ public class UpdateApprovalStatusResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorDevTag.
+             * <p>The ID of the terminal device from which the approval instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
              */
             public Builder creatorDevTag(String creatorDevTag) {
                 this.creatorDevTag = creatorDevTag;
@@ -584,7 +632,10 @@ public class UpdateApprovalStatusResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorUserId.
+             * <p>The ID of the user who created the approval instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
              */
             public Builder creatorUserId(String creatorUserId) {
                 this.creatorUserId = creatorUserId;
@@ -592,7 +643,10 @@ public class UpdateApprovalStatusResponseBody extends TeaModel {
             }
 
             /**
-             * EndTimestamp.
+             * <p>The expiration time of the approval instance. The value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1757952000</p>
              */
             public Builder endTimestamp(Long endTimestamp) {
                 this.endTimestamp = endTimestamp;
@@ -600,7 +654,18 @@ public class UpdateApprovalStatusResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type associated with the approval instance. Valid values:</p>
+             * <ul>
+             * <li><strong>DomainBlacklist</strong>: Domain name blacklist.</li>
+             * <li><strong>DomainWhitelist</strong>: Domain name whitelist.</li>
+             * <li><strong>SoftwareBlock</strong>: Software blocking.</li>
+             * <li><strong>AppUninstall</strong>: Terminal uninstallation.</li>
+             * <li><strong>DlpSend</strong>: File outbound transfer.</li>
+             * <li><strong>PeripheralBlock</strong>: Peripheral control.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DlpSend</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -608,7 +673,10 @@ public class UpdateApprovalStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessId.
+             * <p>The ID of the process associated with the approval instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-process-fcc351b8a95b****</p>
              */
             public Builder processId(String processId) {
                 this.processId = processId;
@@ -616,7 +684,10 @@ public class UpdateApprovalStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessName.
+             * <p>The name of the process associated with the approval instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder processName(String processName) {
                 this.processName = processName;
@@ -624,7 +695,10 @@ public class UpdateApprovalStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The reason for creating the approval instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a test</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -632,7 +706,10 @@ public class UpdateApprovalStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaContent.
+             * <p>The content of the template associated with the approval instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;form&quot;: {&quot;labelCol&quot;: 6,&quot;wrapperCol&quot;: 12}}</p>
              */
             public Builder schemaContent(String schemaContent) {
                 this.schemaContent = schemaContent;
@@ -640,7 +717,10 @@ public class UpdateApprovalStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaId.
+             * <p>The ID of the template associated with the approval instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -648,7 +728,10 @@ public class UpdateApprovalStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * <p>The name of the template associated with the approval instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -656,7 +739,17 @@ public class UpdateApprovalStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The instance status of the approval. Valid values:</p>
+             * <ul>
+             * <li><strong>Pending</strong>: Pending approval.</li>
+             * <li><strong>Approved</strong>: Approved.</li>
+             * <li><strong>Rejected</strong>: Deny.</li>
+             * <li><strong>Revoked</strong>: Revoked.</li>
+             * <li><strong>Expired</strong>: Expired.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Pending</p>
              */
             public Builder status(String status) {
                 this.status = status;

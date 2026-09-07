@@ -175,6 +175,7 @@ public class ListOperationAuditLogsRequest extends Request {
         } 
 
         /**
+         * <p>The page number of the current page in paging. The value starts from 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,6 +188,7 @@ public class ListOperationAuditLogsRequest extends Request {
         }
 
         /**
+         * <p>The end time of the query. This value is a UNIX timestamp in seconds. The value must be later than StartTime.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,7 +201,14 @@ public class ListOperationAuditLogsRequest extends Request {
         }
 
         /**
-         * EventType.
+         * <p>The event source type. Valid values:</p>
+         * <ul>
+         * <li><strong>console</strong>: console call.</li>
+         * <li><strong>sdk</strong>: SDK call.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>console</p>
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -208,7 +217,33 @@ public class ListOperationAuditLogsRequest extends Request {
         }
 
         /**
-         * OperationFunc.
+         * <p>The operation function module. The value is the English code of the function module. If other values are specified, no records are returned. Valid values:</p>
+         * <ul>
+         * <li><strong>PrivateAccess</strong>: private access.</li>
+         * <li><strong>OfficeNetworkAccess</strong>: office network access.</li>
+         * <li><strong>AppAcceleration</strong>: application acceleration.</li>
+         * <li><strong>InternetAccess</strong>: Internet access.</li>
+         * <li><strong>OfficeDataProtection</strong>: office data protection.</li>
+         * <li><strong>IdentityAccessManagement</strong>: identity and access management.</li>
+         * <li><strong>DeviceManagement</strong>: device management.</li>
+         * <li><strong>ApprovalCenter</strong>: approval center.</li>
+         * <li><strong>SoftwareManagement</strong>: software management.</li>
+         * <li><strong>LogAnalysis</strong>: log analysis.</li>
+         * <li><strong>Setting</strong>: settings.</li>
+         * <li><strong>DigitalWatermark</strong>: digital watermarking.</li>
+         * <li><strong>DynamicDecision</strong>: dynamic decision.</li>
+         * <li><strong>InternetBehaviorManagement</strong>: Internet behavior management.</li>
+         * <li><strong>AgentOfficeSecurity</strong>: Agent office security.</li>
+         * <li><strong>NetworkAccess</strong>: network access.</li>
+         * <li><strong>RiskManagement</strong>: risk management.</li>
+         * <li><strong>EndpointProtection</strong>: endpoint protection.</li>
+         * <li><strong>Overview</strong>: overview page.</li>
+         * <li><strong>ITManagement</strong>: IT management.</li>
+         * <li><strong>InstanceManagement</strong>: instance management.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OfficeDataProtection</p>
          */
         public Builder operationFunc(String operationFunc) {
             this.putQueryParameter("OperationFunc", operationFunc);
@@ -217,7 +252,15 @@ public class ListOperationAuditLogsRequest extends Request {
         }
 
         /**
-         * OperationStatus.
+         * <p>The operation status. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong>: The operation succeeded. Equivalent values: true, 成功.</li>
+         * <li><strong>failure</strong>: The operation failed. Equivalent values: fail, failed, false, 失败.</li>
+         * </ul>
+         * <p>If this parameter is not specified, only successful operation records are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder operationStatus(String operationStatus) {
             this.putQueryParameter("OperationStatus", operationStatus);
@@ -226,7 +269,10 @@ public class ListOperationAuditLogsRequest extends Request {
         }
 
         /**
-         * OperationType.
+         * <p>The operation type. The value must exactly match the original operation type recorded in the log. The OperationType value in the response is localized based on the request language and may differ from this filter value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sync classification rules</p>
          */
         public Builder operationType(String operationType) {
             this.putQueryParameter("OperationType", operationType);
@@ -235,7 +281,10 @@ public class ListOperationAuditLogsRequest extends Request {
         }
 
         /**
-         * OperatorId.
+         * <p>The Alibaba Cloud account ID (AliUid) of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234****</p>
          */
         public Builder operatorId(String operatorId) {
             this.putQueryParameter("OperatorId", operatorId);
@@ -244,6 +293,7 @@ public class ListOperationAuditLogsRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page. Settings: 1 to 100. Used in paging.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -256,6 +306,7 @@ public class ListOperationAuditLogsRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. This value is a UNIX timestamp in seconds. The value must be earlier than EndTime. The interval between StartTime and EndTime cannot exceed 30 days, and StartTime cannot be more than 31 days before the current time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

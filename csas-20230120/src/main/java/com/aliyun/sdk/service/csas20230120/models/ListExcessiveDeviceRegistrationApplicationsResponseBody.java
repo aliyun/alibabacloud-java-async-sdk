@@ -80,7 +80,7 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
         } 
 
         /**
-         * Applications.
+         * <p>A list of excessive device registration applications.</p>
          */
         public Builder applications(java.util.List<Applications> applications) {
             this.applications = applications;
@@ -88,7 +88,10 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of excessive device registration applications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalNum(Long totalNum) {
             this.totalNum = totalNum;
@@ -305,7 +311,10 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
             } 
 
             /**
-             * ApplicationId.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>reg-application-0f4a127b7e78****</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -313,7 +322,10 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time of the excessive device registration application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-07-17 18:46:55</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -321,7 +333,10 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
             }
 
             /**
-             * Department.
+             * <p>The user\&quot;s department.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试部</p>
              */
             public Builder department(String department) {
                 this.department = department;
@@ -329,7 +344,10 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
             }
 
             /**
-             * Description.
+             * <p>The reason for the excessive device registration application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是一条超额注册申请</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -337,7 +355,10 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
             }
 
             /**
-             * DeviceTag.
+             * <p>The device ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
              */
             public Builder deviceTag(String deviceTag) {
                 this.deviceTag = deviceTag;
@@ -345,7 +366,24 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
             }
 
             /**
-             * DeviceType.
+             * <p>The operating system of the device. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Windows</strong>: The Windows operating system.</p>
+             * </li>
+             * <li><p><strong>macOS</strong>: The macOS operating system.</p>
+             * </li>
+             * <li><p><strong>Linux</strong>: The Linux operating system.</p>
+             * </li>
+             * <li><p><strong>Android</strong>: The Android operating system.</p>
+             * </li>
+             * <li><p><strong>iOS</strong>: The iOS operating system.</p>
+             * </li>
+             * <li><p><strong>Windows_Wuying</strong>: Wuying Workspace.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Windows</p>
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -353,7 +391,7 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
             }
 
             /**
-             * FullDepartment.
+             * <p>A list of full department paths.</p>
              */
             public Builder fullDepartment(java.util.List<String> fullDepartment) {
                 this.fullDepartment = fullDepartment;
@@ -361,7 +399,10 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
             }
 
             /**
-             * Hostname.
+             * <p>The hostname of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>win10-64bit</p>
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -369,7 +410,16 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
             }
 
             /**
-             * IsUsed.
+             * <p>Specifies whether the excessive device registration application has been used. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: The application has been used.</p>
+             * </li>
+             * <li><p><strong>false</strong>: The application has not been used.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isUsed(Boolean isUsed) {
                 this.isUsed = isUsed;
@@ -377,7 +427,10 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
             }
 
             /**
-             * Mac.
+             * <p>The MAC address of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:16:XX:XX:7c:46</p>
              */
             public Builder mac(String mac) {
                 this.mac = mac;
@@ -385,7 +438,10 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
             }
 
             /**
-             * SaseUserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
              */
             public Builder saseUserId(String saseUserId) {
                 this.saseUserId = saseUserId;
@@ -393,7 +449,18 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
             }
 
             /**
-             * Status.
+             * <p>The status of the excessive device registration application. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Pending</strong></p>
+             * </li>
+             * <li><p><strong>Approved</strong></p>
+             * </li>
+             * <li><p><strong>Rejected</strong></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Approved</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -401,7 +468,10 @@ public class ListExcessiveDeviceRegistrationApplicationsResponseBody extends Tea
             }
 
             /**
-             * Username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>王先生</p>
              */
             public Builder username(String username) {
                 this.username = username;

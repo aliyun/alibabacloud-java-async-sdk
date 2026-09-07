@@ -129,7 +129,10 @@ public class UpdateBootAndAntiUninstallPolicyRequest extends Request {
         } 
 
         /**
-         * AllowReport.
+         * <p>Let end users submit approval requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder allowReport(Boolean allowReport) {
             this.putBodyParameter("AllowReport", allowReport);
@@ -138,7 +141,7 @@ public class UpdateBootAndAntiUninstallPolicyRequest extends Request {
         }
 
         /**
-         * BlockContent.
+         * <p>Content shown in the client-side block dialog.</p>
          */
         public Builder blockContent(BlockContent blockContent) {
             String blockContentShrink = shrink(blockContent, "BlockContent", "json");
@@ -148,7 +151,10 @@ public class UpdateBootAndAntiUninstallPolicyRequest extends Request {
         }
 
         /**
-         * IsAntiUninstall.
+         * <p>Enable anti-uninstall.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isAntiUninstall(Boolean isAntiUninstall) {
             this.putBodyParameter("IsAntiUninstall", isAntiUninstall);
@@ -157,7 +163,10 @@ public class UpdateBootAndAntiUninstallPolicyRequest extends Request {
         }
 
         /**
-         * IsBoot.
+         * <p>Enable auto-start.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isBoot(Boolean isBoot) {
             this.putBodyParameter("IsBoot", isBoot);
@@ -166,7 +175,7 @@ public class UpdateBootAndAntiUninstallPolicyRequest extends Request {
         }
 
         /**
-         * UserGroupIds.
+         * <p>List of user group IDs to which this policy applies.</p>
          */
         public Builder userGroupIds(java.util.List<String> userGroupIds) {
             this.putBodyParameter("UserGroupIds", userGroupIds);
@@ -175,7 +184,7 @@ public class UpdateBootAndAntiUninstallPolicyRequest extends Request {
         }
 
         /**
-         * WhitelistUsers.
+         * <p>List of whitelisted users.</p>
          */
         public Builder whitelistUsers(java.util.List<String> whitelistUsers) {
             this.putBodyParameter("WhitelistUsers", whitelistUsers);
@@ -269,7 +278,10 @@ public class UpdateBootAndAntiUninstallPolicyRequest extends Request {
             } 
 
             /**
-             * Content.
+             * <p>Dialog content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>After uninstalling, the device can no longer be used for company work, and it will lose access to the company\&quot;s intranet!</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -277,7 +289,10 @@ public class UpdateBootAndAntiUninstallPolicyRequest extends Request {
             }
 
             /**
-             * MainButtonText.
+             * <p>Main button text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Report</p>
              */
             public Builder mainButtonText(String mainButtonText) {
                 this.mainButtonText = mainButtonText;
@@ -285,7 +300,10 @@ public class UpdateBootAndAntiUninstallPolicyRequest extends Request {
             }
 
             /**
-             * MinorButtonText.
+             * <p>Secondary button text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ignore</p>
              */
             public Builder minorButtonText(String minorButtonText) {
                 this.minorButtonText = minorButtonText;
@@ -293,7 +311,10 @@ public class UpdateBootAndAntiUninstallPolicyRequest extends Request {
             }
 
             /**
-             * Title.
+             * <p>Dialog title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Anti-Uninstall Warning</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -386,7 +407,10 @@ public class UpdateBootAndAntiUninstallPolicyRequest extends Request {
             } 
 
             /**
-             * Content.
+             * <p>Dialog content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>卸载后该设备无法再用于公司办公，同时该设备将失去进入公司内网权限！</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -394,7 +418,10 @@ public class UpdateBootAndAntiUninstallPolicyRequest extends Request {
             }
 
             /**
-             * MainButtonText.
+             * <p>Main button text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>去报备</p>
              */
             public Builder mainButtonText(String mainButtonText) {
                 this.mainButtonText = mainButtonText;
@@ -402,7 +429,10 @@ public class UpdateBootAndAntiUninstallPolicyRequest extends Request {
             }
 
             /**
-             * MinorButtonText.
+             * <p>Secondary button text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>我知道了</p>
              */
             public Builder minorButtonText(String minorButtonText) {
                 this.minorButtonText = minorButtonText;
@@ -410,7 +440,10 @@ public class UpdateBootAndAntiUninstallPolicyRequest extends Request {
             }
 
             /**
-             * Title.
+             * <p>Dialog title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>防卸载警告</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -477,7 +510,7 @@ public class UpdateBootAndAntiUninstallPolicyRequest extends Request {
             } 
 
             /**
-             * BlockTextEn.
+             * <p>English text.</p>
              */
             public Builder blockTextEn(BlockTextEn blockTextEn) {
                 this.blockTextEn = blockTextEn;
@@ -485,7 +518,7 @@ public class UpdateBootAndAntiUninstallPolicyRequest extends Request {
             }
 
             /**
-             * BlockTextZh.
+             * <p>Chinese text.</p>
              */
             public Builder blockTextZh(BlockTextZh blockTextZh) {
                 this.blockTextZh = blockTextZh;

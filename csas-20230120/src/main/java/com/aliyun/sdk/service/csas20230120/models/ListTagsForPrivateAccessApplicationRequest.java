@@ -60,6 +60,7 @@ public class ListTagsForPrivateAccessApplicationRequest extends Request {
         } 
 
         /**
+         * <p>Collection of private network access application IDs. Enter a maximum of 100 private network access application IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder applicationIds(java.util.List<String> applicationIds) {

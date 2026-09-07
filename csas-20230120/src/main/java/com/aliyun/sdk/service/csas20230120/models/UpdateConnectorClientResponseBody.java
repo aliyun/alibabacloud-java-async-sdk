@@ -75,7 +75,10 @@ public class UpdateConnectorClientResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -336,7 +339,10 @@ public class UpdateConnectorClientResponseBody extends TeaModel {
             } 
 
             /**
-             * CPUSize.
+             * <p>The number of CPUs of the ConnectorClient.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder CPUSize(String CPUSize) {
                 this.CPUSize = CPUSize;
@@ -344,7 +350,14 @@ public class UpdateConnectorClientResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionStatus.
+             * <p>The connection status of the ConnectorClient. Valid values:</p>
+             * <ul>
+             * <li><strong>Connected</strong>: connected.</li>
+             * <li><strong>Disconnected</strong>: disconnected.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Connected</p>
              */
             public Builder connectionStatus(String connectionStatus) {
                 this.connectionStatus = connectionStatus;
@@ -363,7 +376,10 @@ public class UpdateConnectorClientResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the connector was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-16 17:18:46</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -371,7 +387,10 @@ public class UpdateConnectorClientResponseBody extends TeaModel {
             }
 
             /**
-             * DevTag.
+             * <p>The unique identifier of the ConnectorClient device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>E86266A0-2859-58EF-8F5B-EDE226FF6EB2</p>
              */
             public Builder devTag(String devTag) {
                 this.devTag = devTag;
@@ -379,7 +398,10 @@ public class UpdateConnectorClientResponseBody extends TeaModel {
             }
 
             /**
-             * Hosname.
+             * <p>The hostname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>connector_client_hostname</p>
              */
             public Builder hosname(String hosname) {
                 this.hosname = hosname;
@@ -387,7 +409,10 @@ public class UpdateConnectorClientResponseBody extends TeaModel {
             }
 
             /**
-             * KernelVersion.
+             * <p>The kernel version of the ConnectorClient.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22.3.0</p>
              */
             public Builder kernelVersion(String kernelVersion) {
                 this.kernelVersion = kernelVersion;
@@ -395,7 +420,10 @@ public class UpdateConnectorClientResponseBody extends TeaModel {
             }
 
             /**
-             * MemorySize.
+             * <p>The memory size of the ConnectorClient. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32768</p>
              */
             public Builder memorySize(String memorySize) {
                 this.memorySize = memorySize;
@@ -403,7 +431,15 @@ public class UpdateConnectorClientResponseBody extends TeaModel {
             }
 
             /**
-             * OperationStatus.
+             * <p>The O&amp;M status. Valid values:</p>
+             * <ul>
+             * <li><strong>Running</strong>: O&amp;M in progress.</li>
+             * <li><strong>Failed</strong>: O&amp;M failed.</li>
+             * <li>(empty string): not in O&amp;M status.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder operationStatus(String operationStatus) {
                 this.operationStatus = operationStatus;
@@ -411,7 +447,10 @@ public class UpdateConnectorClientResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIp.
+             * <p>The private IP address of the ConnectorClient.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.1</p>
              */
             public Builder privateIp(String privateIp) {
                 this.privateIp = privateIp;
@@ -419,7 +458,10 @@ public class UpdateConnectorClientResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessRunTime.
+             * <p>The program runtime. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder processRunTime(Integer processRunTime) {
                 this.processRunTime = processRunTime;
@@ -427,7 +469,10 @@ public class UpdateConnectorClientResponseBody extends TeaModel {
             }
 
             /**
-             * PublicIp.
+             * <p>The public IP address of the ConnectorClient.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>203.0.113.1</p>
              */
             public Builder publicIp(String publicIp) {
                 this.publicIp = publicIp;
@@ -435,7 +480,7 @@ public class UpdateConnectorClientResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseNotes.
+             * <p>The version number.</p>
              */
             public Builder releaseNotes(java.util.List<String> releaseNotes) {
                 this.releaseNotes = releaseNotes;
@@ -443,7 +488,14 @@ public class UpdateConnectorClientResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The enabled status of the ConnectorClient, which can be used to force the client offline. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: enabled.</li>
+             * <li><strong>Disabled</strong>: disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -451,7 +503,14 @@ public class UpdateConnectorClientResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradeStatus.
+             * <p>The version status of the connector. Valid values:</p>
+             * <ul>
+             * <li><strong>Latest</strong>: the current version is the latest version.</li>
+             * <li><strong>NewVersionAvailable</strong>: a newer version is available for upgrade.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Latest</p>
              */
             public Builder upgradeStatus(String upgradeStatus) {
                 this.upgradeStatus = upgradeStatus;
@@ -459,7 +518,10 @@ public class UpdateConnectorClientResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The blockchain version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-04-02</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -467,7 +529,10 @@ public class UpdateConnectorClientResponseBody extends TeaModel {
             }
 
             /**
-             * VersionToRollback.
+             * <p>The version to roll back to.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder versionToRollback(String versionToRollback) {
                 this.versionToRollback = versionToRollback;

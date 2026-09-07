@@ -60,6 +60,7 @@ public class ListVirusScanTaskSummaryRequest extends Request {
         } 
 
         /**
+         * <p>The collection of virus scan task IDs. The collection must contain at least one ID. Duplicate IDs are not allowed.</p>
          * <p>This parameter is required.</p>
          */
         public Builder taskIds(java.util.List<String> taskIds) {

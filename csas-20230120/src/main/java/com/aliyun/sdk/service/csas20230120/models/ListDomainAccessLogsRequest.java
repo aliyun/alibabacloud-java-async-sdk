@@ -171,7 +171,17 @@ public class ListDomainAccessLogsRequest extends Request {
         } 
 
         /**
-         * BlockAction.
+         * <p>The action taken upon a rule hit. Exact match is used. Valid values:</p>
+         * <ul>
+         * <li>Audit: Audit.</li>
+         * <li>Observe: Observe only.</li>
+         * <li>WhiteList: Allowed by whitelist.</li>
+         * <li>Block: Blocked.</li>
+         * <li>Redirect: Redirected to a prompt page.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Block</p>
          */
         public Builder blockAction(String blockAction) {
             this.putQueryParameter("BlockAction", blockAction);
@@ -180,7 +190,10 @@ public class ListDomainAccessLogsRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -189,7 +202,10 @@ public class ListDomainAccessLogsRequest extends Request {
         }
 
         /**
-         * Department.
+         * <p>The department. Exact match is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IT department</p>
          */
         public Builder department(String department) {
             this.putQueryParameter("Department", department);
@@ -198,7 +214,10 @@ public class ListDomainAccessLogsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the query. This value is a UNIX timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1754956800</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -207,7 +226,10 @@ public class ListDomainAccessLogsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page in paging. Valid values: 1 to 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -216,7 +238,10 @@ public class ListDomainAccessLogsRequest extends Request {
         }
 
         /**
-         * PolicyType.
+         * <p>The policy type used to filter results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>la_domain_white</p>
          */
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);
@@ -225,7 +250,10 @@ public class ListDomainAccessLogsRequest extends Request {
         }
 
         /**
-         * RemoteHost.
+         * <p>The destination domain name accessed. Exact match is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder remoteHost(String remoteHost) {
             this.putQueryParameter("RemoteHost", remoteHost);
@@ -234,7 +262,10 @@ public class ListDomainAccessLogsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the query. This value is a UNIX timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1754870400</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -243,7 +274,10 @@ public class ListDomainAccessLogsRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>The username. Exact match is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangsan</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

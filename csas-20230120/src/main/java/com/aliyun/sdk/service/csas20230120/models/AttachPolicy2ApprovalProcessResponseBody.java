@@ -54,7 +54,10 @@ public class AttachPolicy2ApprovalProcessResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C51D9340-4604-5331-AE62-407F3B408F86</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

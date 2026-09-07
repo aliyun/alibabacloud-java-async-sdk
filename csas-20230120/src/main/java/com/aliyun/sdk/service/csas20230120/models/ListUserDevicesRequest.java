@@ -397,7 +397,7 @@ public class ListUserDevicesRequest extends Request {
         } 
 
         /**
-         * AppStatuses.
+         * <p>The collection of client statuses.</p>
          */
         public Builder appStatuses(java.util.List<String> appStatuses) {
             this.putQueryParameter("AppStatuses", appStatuses);
@@ -406,7 +406,7 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * AppVersions.
+         * <p>The collection of client versions.</p>
          */
         public Builder appVersions(java.util.List<String> appVersions) {
             this.putQueryParameter("AppVersions", appVersions);
@@ -424,6 +424,7 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
+         * <p>The page number of the current page in a paging query. Valid values: 1 to 10000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -436,7 +437,10 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * Department.
+         * <p>The department to which the user belongs. The value is 1 to 128 characters in length and supports Chinese characters and uppercase and lowercase letters. It can contain digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (_), forward slashes (/), at signs (@), and spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试部</p>
          */
         public Builder department(String department) {
             this.putQueryParameter("Department", department);
@@ -445,7 +449,14 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * DeviceBelong.
+         * <p>The ownership of the endpoint device. Valid values:</p>
+         * <ul>
+         * <li><strong>Personal</strong>: personal device.</li>
+         * <li><strong>Company</strong>: company device.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Company</p>
          */
         public Builder deviceBelong(String deviceBelong) {
             this.putQueryParameter("DeviceBelong", deviceBelong);
@@ -454,7 +465,10 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * DeviceGroupId.
+         * <p>The device group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>device-group-5191cf830a5e****</p>
          */
         public Builder deviceGroupId(String deviceGroupId) {
             this.putQueryParameter("DeviceGroupId", deviceGroupId);
@@ -463,7 +477,7 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * DeviceStatuses.
+         * <p>The collection of endpoint device statuses.</p>
          */
         public Builder deviceStatuses(java.util.List<String> deviceStatuses) {
             this.putQueryParameter("DeviceStatuses", deviceStatuses);
@@ -472,7 +486,7 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * DeviceTags.
+         * <p>The collection of endpoint device IDs.</p>
          */
         public Builder deviceTags(java.util.List<String> deviceTags) {
             this.putQueryParameter("DeviceTags", deviceTags);
@@ -481,7 +495,7 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * DeviceTypes.
+         * <p>The collection of endpoint device operating system types.</p>
          */
         public Builder deviceTypes(java.util.List<String> deviceTypes) {
             this.putQueryParameter("DeviceTypes", deviceTypes);
@@ -490,7 +504,7 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * DlpStatuses.
+         * <p>The collection of office data protection statuses.</p>
          */
         public Builder dlpStatuses(java.util.List<String> dlpStatuses) {
             this.putQueryParameter("DlpStatuses", dlpStatuses);
@@ -499,7 +513,10 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * Hostname.
+         * <p>The name of the endpoint device. The value is 1 to 128 characters in length and supports Chinese characters and uppercase and lowercase letters. It can contain digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (<em>), forward slashes (/), at signs (@), and spaces. If you enter only an underscore (</em>), endpoint devices whose names contain 4-byte UTF-8 characters are also queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>win10-64bit</p>
          */
         public Builder hostname(String hostname) {
             this.putQueryParameter("Hostname", hostname);
@@ -508,7 +525,7 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * IaStatuses.
+         * <p>The collection of Internet access statuses.</p>
          */
         public Builder iaStatuses(java.util.List<String> iaStatuses) {
             this.putQueryParameter("IaStatuses", iaStatuses);
@@ -517,7 +534,10 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * InnerIp.
+         * <p>The internal IP address of the endpoint device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder innerIp(String innerIp) {
             this.putQueryParameter("InnerIp", innerIp);
@@ -526,7 +546,10 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * Mac.
+         * <p>The MAC address of the endpoint device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:16:XX:XX:7c:46</p>
          */
         public Builder mac(String mac) {
             this.putQueryParameter("Mac", mac);
@@ -535,7 +558,7 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * NacStatuses.
+         * <p>The collection of network access control statuses.</p>
          */
         public Builder nacStatuses(java.util.List<String> nacStatuses) {
             this.putQueryParameter("NacStatuses", nacStatuses);
@@ -544,7 +567,7 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * PaStatuses.
+         * <p>The collection of private access statuses.</p>
          */
         public Builder paStatuses(java.util.List<String> paStatuses) {
             this.putQueryParameter("PaStatuses", paStatuses);
@@ -553,6 +576,7 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page in a paging query. Settings: 1 to 500.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -565,7 +589,14 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * SaseUserId.
+         * <p>The user ID. You can obtain this value from the following operations:</p>
+         * <ul>
+         * <li><a href="~~GetUserDevice~~">GetUserDevice</a>: Queries the details of a user endpoint device.</li>
+         * <li><a href="~~ListUserDevices~~">ListUserDevices</a>: Lists user endpoint devices.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
          */
         public Builder saseUserId(String saseUserId) {
             this.putQueryParameter("SaseUserId", saseUserId);
@@ -574,7 +605,14 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * SharingStatus.
+         * <p>Specifies whether sharing is enabled for the device. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Sharing is enabled.</li>
+         * <li><strong>false</strong>: Sharing is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder sharingStatus(Boolean sharingStatus) {
             this.putQueryParameter("SharingStatus", sharingStatus);
@@ -583,7 +621,10 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * SnBios.
+         * <p>The BIOS system serial number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5CG003****</p>
          */
         public Builder snBios(String snBios) {
             this.putQueryParameter("SnBios", snBios);
@@ -592,7 +633,10 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * SnSystem.
+         * <p>The system serial number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KVN9C9****</p>
          */
         public Builder snSystem(String snSystem) {
             this.putQueryParameter("SnSystem", snSystem);
@@ -601,7 +645,16 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sort parameter. Valid values:</p>
+         * <ul>
+         * <li><strong>Username</strong>: sorted by Username in ascending order.</li>
+         * <li><strong>AppVersion</strong>: sorted by AppVersion in descending order.</li>
+         * <li><strong>UpdateTime</strong>: sorted by UpdateTime in descending order.</li>
+         * <li><strong>CreateTime</strong>: sorted by CreateTime in descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UpdateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -610,7 +663,10 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * Username.
+         * <p>The username. The value is 1 to 128 characters in length and supports Chinese characters and uppercase and lowercase letters. It can contain digits, periods (.), underscores (_), hyphens (-), asterisks (*), at signs (@), and spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>王先生</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);
@@ -619,7 +675,10 @@ public class ListUserDevicesRequest extends Request {
         }
 
         /**
-         * Workshop.
+         * <p>The name of the office area.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试办公区</p>
          */
         public Builder workshop(String workshop) {
             this.putQueryParameter("Workshop", workshop);

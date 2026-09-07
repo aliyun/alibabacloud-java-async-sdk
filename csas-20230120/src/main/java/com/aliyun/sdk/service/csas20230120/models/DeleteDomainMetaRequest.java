@@ -75,6 +75,7 @@ public class DeleteDomainMetaRequest extends Request {
         } 
 
         /**
+         * <p>The list ID, which is a unique business identifier used for policy references and create, update, and delete operations.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,11 @@ public class DeleteDomainMetaRequest extends Request {
         }
 
         /**
+         * <p>The list type. Valid values:</p>
+         * <ul>
+         * <li>la_domain_white_list: domain name whitelist.</li>
+         * <li>la_domain_black_list: domain name blacklist.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

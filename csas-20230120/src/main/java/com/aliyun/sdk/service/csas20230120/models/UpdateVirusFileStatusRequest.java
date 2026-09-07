@@ -119,6 +119,10 @@ public class UpdateVirusFileStatusRequest extends Request {
         } 
 
         /**
+         * <p>The unique identifier of the user terminal device where the virus file is located. The value can be up to 64 characters in length. You can obtain the value from the following operation:</p>
+         * <ul>
+         * <li><a href="~~ListVirusFileStatuses~~">ListVirusFileStatuses</a>: lists virus file statuses.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,6 +135,10 @@ public class UpdateVirusFileStatusRequest extends Request {
         }
 
         /**
+         * <p>The MD5 value of the virus file. The value must be a 32-character hexadecimal string. You can obtain the value from the following operation:</p>
+         * <ul>
+         * <li><a href="~~ListVirusFileStatuses~~">ListVirusFileStatuses</a>: lists virus file statuses.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,6 +151,10 @@ public class UpdateVirusFileStatusRequest extends Request {
         }
 
         /**
+         * <p>The absolute path of the virus file on the user terminal device. You can obtain the value from the following operation:</p>
+         * <ul>
+         * <li><a href="~~ListVirusFileStatuses~~">ListVirusFileStatuses</a>: lists virus file statuses.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,6 +167,11 @@ public class UpdateVirusFileStatusRequest extends Request {
         }
 
         /**
+         * <p>The disposal action. Valid values:</p>
+         * <ul>
+         * <li><strong>AdminQuarantine</strong>: quarantines the virus file. The server creates a disposal task and returns a TaskId. The user terminal device pulls and executes the quarantine.</li>
+         * <li><strong>AdminTrust</strong>: trusts the virus file. Only the disposal status is updated. No disposal task is created, and TaskId returns an empty string.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +184,38 @@ public class UpdateVirusFileStatusRequest extends Request {
         }
 
         /**
-         * VirusType.
+         * <p>The virus type. This parameter is used for synchronization to update the virus type of the file. Valid values:</p>
+         * <ul>
+         * <li><strong>Backdoor</strong>: backdoor program.</li>
+         * <li><strong>DDoS</strong>: DDoS Trojan.</li>
+         * <li><strong>Downloader</strong>: downloader Trojan.</li>
+         * <li><strong>Engtest</strong>: DPI engine test program.</li>
+         * <li><strong>Hacktool</strong>: hacker tool.</li>
+         * <li><strong>Trojan</strong>: self-mutating Trojan.</li>
+         * <li><strong>Malbaseware</strong>: contaminated base software.</li>
+         * <li><strong>MalScript</strong>: malicious script.</li>
+         * <li><strong>Malware</strong>: malicious program.</li>
+         * <li><strong>Miner</strong>: mining programs.</li>
+         * <li><strong>Proxytool</strong>: proxy tool.</li>
+         * <li><strong>RansomWare</strong>: ransomware.</li>
+         * <li><strong>RiskWare</strong>: riskware.</li>
+         * <li><strong>Rootkit</strong>: kernel-hidden program.</li>
+         * <li><strong>Stealer</strong>: credential stealer.</li>
+         * <li><strong>Scanner</strong>: scanner.</li>
+         * <li><strong>Suspicious</strong>: suspicious program.</li>
+         * <li><strong>Virus</strong>: file-infecting virus.</li>
+         * <li><strong>WebShell</strong>: webshell.</li>
+         * <li><strong>Worm</strong>: worms.</li>
+         * <li><strong>BlackList</strong>: file that hit a blacklist entry.</li>
+         * <li><strong>Exp</strong>: vulnerability exploits program.</li>
+         * <li><strong>Patcher</strong>: cracking program.</li>
+         * <li><strong>Gametool</strong>: private server tool.</li>
+         * <li><strong>AdWare</strong>: adware.</li>
+         * <li><strong>Maldoc</strong>: malicious document.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Virus</p>
          */
         public Builder virusType(String virusType) {
             this.putBodyParameter("VirusType", virusType);

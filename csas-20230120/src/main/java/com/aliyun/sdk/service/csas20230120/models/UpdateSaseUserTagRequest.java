@@ -87,7 +87,10 @@ public class UpdateSaseUserTagRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the user tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>These are the company\&quot;s employees</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -96,7 +99,10 @@ public class UpdateSaseUserTagRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the user tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>boss</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -105,7 +111,14 @@ public class UpdateSaseUserTagRequest extends Request {
         }
 
         /**
-         * TagId.
+         * <p>The ID of the user tag. You can obtain the tag ID from the following operations:</p>
+         * <ul>
+         * <li><a href="~~ListSaseUserTags~~">ListSaseUserTags</a>: Lists user tags.</li>
+         * <li><a href="~~CreateSaseUserTag~~">CreateSaseUserTag</a>: Creates a user tag.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-d3f64e8bdd4a****</p>
          */
         public Builder tagId(String tagId) {
             this.putBodyParameter("TagId", tagId);

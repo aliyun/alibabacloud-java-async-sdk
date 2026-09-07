@@ -67,7 +67,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         } 
 
         /**
-         * Device.
+         * <p>The terminal device.</p>
          */
         public Builder device(Device device) {
             this.device = device;
@@ -75,7 +75,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EFE7EBB2-449D-5BBB-B381-CA7839BC1649</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             } 
 
             /**
-             * SaseUserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
              */
             public Builder saseUserId(String saseUserId) {
                 this.saseUserId = saseUserId;
@@ -149,7 +155,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ms. Zhang</p>
              */
             public Builder username(String username) {
                 this.username = username;
@@ -216,7 +225,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             } 
 
             /**
-             * Mac.
+             * <p>The MAC address of the NIC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:16:XX:XX:7c:46</p>
              */
             public Builder mac(String mac) {
                 this.mac = mac;
@@ -224,7 +236,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the NIC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eth0</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -317,7 +332,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             } 
 
             /**
-             * Cpu.
+             * <p>The CPU usage percentage of the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.05</p>
              */
             public Builder cpu(Double cpu) {
                 this.cpu = cpu;
@@ -325,7 +343,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The process running description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>C:\Program Files\Google\Chrome\Application\chrome.exe</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -333,7 +354,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The memory usage of the process, in MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>233</p>
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -341,7 +365,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The process name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chrome.exe</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1097,7 +1124,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             } 
 
             /**
-             * AppStatus.
+             * <p>The client status. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Online</p>
              */
             public Builder appStatus(String appStatus) {
                 this.appStatus = appStatus;
@@ -1105,7 +1135,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * AppVersion.
+             * <p>The client version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.2.0</p>
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -1113,7 +1146,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * AutoLoginStatus.
+             * <p>The auto-logon status of the device. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder autoLoginStatus(String autoLoginStatus) {
                 this.autoLoginStatus = autoLoginStatus;
@@ -1121,7 +1157,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * BatteryHealthPercentage.
+             * <p>The battery health percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder batteryHealthPercentage(Integer batteryHealthPercentage) {
                 this.batteryHealthPercentage = batteryHealthPercentage;
@@ -1129,7 +1168,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * BatteryRemainingPercentage.
+             * <p>The battery remaining charge percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder batteryRemainingPercentage(Integer batteryRemainingPercentage) {
                 this.batteryRemainingPercentage = batteryRemainingPercentage;
@@ -1137,7 +1179,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * CPU.
+             * <p>The CPU model of the terminal device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Apple M1</p>
              */
             public Builder CPU(String CPU) {
                 this.CPU = CPU;
@@ -1145,7 +1190,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * City.
+             * <p>The city to which the public IP address belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hangzhou City</p>
              */
             public Builder city(String city) {
                 this.city = city;
@@ -1153,7 +1201,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * CityEn.
+             * <p>The city name in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beijing City</p>
              */
             public Builder cityEn(String cityEn) {
                 this.cityEn = cityEn;
@@ -1161,7 +1212,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * CityZh.
+             * <p>The city name in Chinese.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>北京市</p>
              */
             public Builder cityZh(String cityZh) {
                 this.cityZh = cityZh;
@@ -1169,7 +1223,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * Continent.
+             * <p>The continent to which the public IP address belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia</p>
              */
             public Builder continent(String continent) {
                 this.continent = continent;
@@ -1177,7 +1234,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * ContinentEn.
+             * <p>The continent name in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia</p>
              */
             public Builder continentEn(String continentEn) {
                 this.continentEn = continentEn;
@@ -1185,7 +1245,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * ContinentZh.
+             * <p>The continent name in Chinese.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>亚洲</p>
              */
             public Builder continentZh(String continentZh) {
                 this.continentZh = continentZh;
@@ -1193,7 +1256,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * Country.
+             * <p>The country to which the public IP address belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China</p>
              */
             public Builder country(String country) {
                 this.country = country;
@@ -1201,7 +1267,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * CountryEn.
+             * <p>The country name in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China</p>
              */
             public Builder countryEn(String countryEn) {
                 this.countryEn = countryEn;
@@ -1209,7 +1278,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * CountryZh.
+             * <p>The country name in Chinese.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>中国</p>
              */
             public Builder countryZh(String countryZh) {
                 this.countryZh = countryZh;
@@ -1217,7 +1289,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The registration time of the terminal device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-16 17:18:46</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1225,7 +1300,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * Department.
+             * <p>The department to which the user belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>QA Department</p>
              */
             public Builder department(String department) {
                 this.department = department;
@@ -1233,7 +1311,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceBelong.
+             * <p>The ownership of the terminal device. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Company</p>
              */
             public Builder deviceBelong(String deviceBelong) {
                 this.deviceBelong = deviceBelong;
@@ -1241,7 +1322,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceModel.
+             * <p>The model of the terminal device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MacBookPro17,1</p>
              */
             public Builder deviceModel(String deviceModel) {
                 this.deviceModel = deviceModel;
@@ -1249,7 +1333,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceStatus.
+             * <p>The status of the terminal device. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Online</p>
              */
             public Builder deviceStatus(String deviceStatus) {
                 this.deviceStatus = deviceStatus;
@@ -1257,7 +1344,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceTag.
+             * <p>The ID of the terminal device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
              */
             public Builder deviceTag(String deviceTag) {
                 this.deviceTag = deviceTag;
@@ -1265,7 +1355,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceType.
+             * <p>The operating system type of the terminal device. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Windows</p>
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -1273,7 +1366,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceVersion.
+             * <p>The operating system version of the terminal device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.5.1</p>
              */
             public Builder deviceVersion(String deviceVersion) {
                 this.deviceVersion = deviceVersion;
@@ -1281,7 +1377,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * Disk.
+             * <p>The disk model of the terminal device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>APPLE SSD AP0512Q Media</p>
              */
             public Builder disk(String disk) {
                 this.disk = disk;
@@ -1289,7 +1388,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * DiskAvailable.
+             * <p>The available disk space, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder diskAvailable(Integer diskAvailable) {
                 this.diskAvailable = diskAvailable;
@@ -1297,7 +1399,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * DiskUsed.
+             * <p>The used disk space, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>103</p>
              */
             public Builder diskUsed(Integer diskUsed) {
                 this.diskUsed = diskUsed;
@@ -1305,7 +1410,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * DlpStatus.
+             * <p>The office data protection status. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unauthorized</p>
              */
             public Builder dlpStatus(String dlpStatus) {
                 this.dlpStatus = dlpStatus;
@@ -1313,7 +1421,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * EdrStatus.
+             * <p>The anti-intrusion status. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Disabled</p>
              */
             public Builder edrStatus(String edrStatus) {
                 this.edrStatus = edrStatus;
@@ -1321,7 +1432,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * HistoryUsers.
+             * <p>The historical users of the terminal device.</p>
              */
             public Builder historyUsers(java.util.List<HistoryUsers> historyUsers) {
                 this.historyUsers = historyUsers;
@@ -1329,7 +1440,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * Hostname.
+             * <p>The name of the terminal device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>win10-64bit</p>
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -1337,7 +1451,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * IaStatus.
+             * <p>The Internet access status. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Disabled</p>
              */
             public Builder iaStatus(String iaStatus) {
                 this.iaStatus = iaStatus;
@@ -1345,7 +1462,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * InnerIP.
+             * <p>The internal IP address of the terminal device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.XX.XX</p>
              */
             public Builder innerIP(String innerIP) {
                 this.innerIP = innerIP;
@@ -1353,7 +1473,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * JoinAdDomain.
+             * <p>Indicates whether the terminal has joined an AD domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder joinAdDomain(Boolean joinAdDomain) {
                 this.joinAdDomain = joinAdDomain;
@@ -1361,7 +1484,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * Mac.
+             * <p>The MAC address of the terminal device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>48:9e:XX:XX:02:80</p>
              */
             public Builder mac(String mac) {
                 this.mac = mac;
@@ -1369,7 +1495,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * MatchDeviceGroupIds.
+             * <p>The IDs of matched device groups.</p>
              */
             public Builder matchDeviceGroupIds(java.util.List<String> matchDeviceGroupIds) {
                 this.matchDeviceGroupIds = matchDeviceGroupIds;
@@ -1377,7 +1503,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The memory capacity of the terminal device. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -1385,7 +1514,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * NacStatus.
+             * <p>The network access control status. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unprovisioned</p>
              */
             public Builder nacStatus(String nacStatus) {
                 this.nacStatus = nacStatus;
@@ -1393,7 +1525,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * NetInterfaceInfo.
+             * <p>The list of network interface controllers (NICs) of the terminal device.</p>
              */
             public Builder netInterfaceInfo(java.util.List<NetInterfaceInfo> netInterfaceInfo) {
                 this.netInterfaceInfo = netInterfaceInfo;
@@ -1401,7 +1533,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * PaStatus.
+             * <p>The private access status. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder paStatus(String paStatus) {
                 this.paStatus = paStatus;
@@ -1409,7 +1544,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * Processes.
+             * <p>The list of processes running on the terminal.</p>
              */
             public Builder processes(java.util.List<Processes> processes) {
                 this.processes = processes;
@@ -1417,7 +1552,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * Province.
+             * <p>The province to which the public IP address belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhejiang</p>
              */
             public Builder province(String province) {
                 this.province = province;
@@ -1425,7 +1563,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * ProvinceEn.
+             * <p>The province name in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beijing</p>
              */
             public Builder provinceEn(String provinceEn) {
                 this.provinceEn = provinceEn;
@@ -1433,7 +1574,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * ProvinceZh.
+             * <p>The province name in Chinese.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>北京市</p>
              */
             public Builder provinceZh(String provinceZh) {
                 this.provinceZh = provinceZh;
@@ -1441,7 +1585,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * SaseUserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
              */
             public Builder saseUserId(String saseUserId) {
                 this.saseUserId = saseUserId;
@@ -1449,7 +1596,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * SharingStatus.
+             * <p>Indicates whether sharing is enabled for the device. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sharingStatus(Boolean sharingStatus) {
                 this.sharingStatus = sharingStatus;
@@ -1457,7 +1607,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * SnBaseBoard.
+             * <p>The motherboard serial number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PJGGU00WBD****</p>
              */
             public Builder snBaseBoard(String snBaseBoard) {
                 this.snBaseBoard = snBaseBoard;
@@ -1465,7 +1618,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * SnBios.
+             * <p>The serial number (SN) of the BIOS system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5CG003****</p>
              */
             public Builder snBios(String snBios) {
                 this.snBios = snBios;
@@ -1473,7 +1629,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * SnDiskDrive.
+             * <p>The hard disk serial number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WD-WXR1A99A****</p>
              */
             public Builder snDiskDrive(String snDiskDrive) {
                 this.snDiskDrive = snDiskDrive;
@@ -1481,7 +1640,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * SnProcessor.
+             * <p>The serial number (SN) of the processor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BFEBFBFF0008****</p>
              */
             public Builder snProcessor(String snProcessor) {
                 this.snProcessor = snProcessor;
@@ -1489,7 +1651,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * SnSystem.
+             * <p>The system serial number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KVN9C9****</p>
              */
             public Builder snSystem(String snSystem) {
                 this.snSystem = snSystem;
@@ -1497,7 +1662,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * SrcIP.
+             * <p>The logon IP address of the terminal device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>106.14.XX.XX</p>
              */
             public Builder srcIP(String srcIP) {
                 this.srcIP = srcIP;
@@ -1505,7 +1673,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * TerminalInfoCollectTime.
+             * <p>The timestamp when the terminal process information was collected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1775096714</p>
              */
             public Builder terminalInfoCollectTime(Long terminalInfoCollectTime) {
                 this.terminalInfoCollectTime = terminalInfoCollectTime;
@@ -1513,7 +1684,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The last online time of the terminal device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-08-24 19:04:42</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -1521,7 +1695,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mr. Wang</p>
              */
             public Builder username(String username) {
                 this.username = username;
@@ -1529,7 +1706,10 @@ public class GetUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * Workshop.
+             * <p>The name of the office area.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test Office Area</p>
              */
             public Builder workshop(String workshop) {
                 this.workshop = workshop;

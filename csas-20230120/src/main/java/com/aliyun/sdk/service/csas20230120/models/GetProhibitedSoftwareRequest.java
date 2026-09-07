@@ -59,7 +59,7 @@ public class GetProhibitedSoftwareRequest extends Request {
         } 
 
         /**
-         * SoftwareId.
+         * <p>The prohibited software ID.</p>
          */
         public Builder softwareId(SoftwareId softwareId) {
             String softwareIdShrink = shrink(softwareId, "SoftwareId", "json");
@@ -128,7 +128,14 @@ public class GetProhibitedSoftwareRequest extends Request {
             } 
 
             /**
-             * IsDefault.
+             * <p>Indicates whether the prohibited software is a system built-in prohibited software. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: A system built-in prohibited software that is shared across all Alibaba Cloud accounts and cannot be modified or deleted.</li>
+             * <li><strong>false</strong>: A custom prohibited software under the current Alibaba Cloud account.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -136,7 +143,14 @@ public class GetProhibitedSoftwareRequest extends Request {
             }
 
             /**
-             * SoftwareId.
+             * <p>The prohibited software ID. You can obtain the value from the following operations:</p>
+             * <ul>
+             * <li><a href="~~ListProhibitedSoftware~~">ListProhibitedSoftware</a>: Lists prohibited software.</li>
+             * <li><a href="~~CreateProhibitedSoftware~~">CreateProhibitedSoftware</a>: Creates custom prohibited software.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>swb-3e6a1f9c4b28****</p>
              */
             public Builder softwareId(String softwareId) {
                 this.softwareId = softwareId;

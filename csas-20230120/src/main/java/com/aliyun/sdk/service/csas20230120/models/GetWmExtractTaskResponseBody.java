@@ -67,7 +67,7 @@ public class GetWmExtractTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The task result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetWmExtractTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102350E7-1A20-58F5-9D63-ABEA820AE6E1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -219,7 +222,10 @@ public class GetWmExtractTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01 11:22:33</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -227,7 +233,10 @@ public class GetWmExtractTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Filename.
+             * <p>The name of the file that was provided when the extraction task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-****.pdf</p>
              */
             public Builder filename(String filename) {
                 this.filename = filename;
@@ -235,7 +244,18 @@ public class GetWmExtractTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the task. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Running</strong>: The task is running.</p>
+             * </li>
+             * <li><p><strong>Success</strong>: The task is successful.</p>
+             * </li>
+             * <li><p><strong>Failed</strong>: The task failed.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -243,7 +263,10 @@ public class GetWmExtractTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wmt-9648c22d2eb2cb57bb855dcae7898464********</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -251,7 +274,10 @@ public class GetWmExtractTaskResponseBody extends TeaModel {
             }
 
             /**
-             * WmInfoBytesB64.
+             * <p>The extracted watermark information as a Base64-encoded string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aGVsbG8gc2Fz****</p>
              */
             public Builder wmInfoBytesB64(String wmInfoBytesB64) {
                 this.wmInfoBytesB64 = wmInfoBytesB64;
@@ -259,7 +285,10 @@ public class GetWmExtractTaskResponseBody extends TeaModel {
             }
 
             /**
-             * WmInfoSize.
+             * <p>The size of the watermark information, which was provided when the extraction task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder wmInfoSize(Long wmInfoSize) {
                 this.wmInfoSize = wmInfoSize;
@@ -267,7 +296,10 @@ public class GetWmExtractTaskResponseBody extends TeaModel {
             }
 
             /**
-             * WmInfoUint.
+             * <p>The extracted watermark information in decimal format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123**</p>
              */
             public Builder wmInfoUint(Long wmInfoUint) {
                 this.wmInfoUint = wmInfoUint;
@@ -275,7 +307,10 @@ public class GetWmExtractTaskResponseBody extends TeaModel {
             }
 
             /**
-             * WmType.
+             * <p>The watermark type that was provided when the extraction task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PureDocument</p>
              */
             public Builder wmType(String wmType) {
                 this.wmType = wmType;

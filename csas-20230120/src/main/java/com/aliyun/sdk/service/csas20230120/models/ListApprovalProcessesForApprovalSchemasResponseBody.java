@@ -67,7 +67,10 @@ public class ListApprovalProcessesForApprovalSchemasResponseBody extends TeaMode
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BE4FB974-11BC-5453-9BE1-1606A73EACA6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class ListApprovalProcessesForApprovalSchemasResponseBody extends TeaMode
         }
 
         /**
-         * Schemas.
+         * <p>A list of approval templates.</p>
          */
         public Builder schemas(java.util.List<Schemas> schemas) {
             this.schemas = schemas;
@@ -167,7 +170,10 @@ public class ListApprovalProcessesForApprovalSchemasResponseBody extends TeaMode
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the approval flow was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-25 10:44:09</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -175,7 +181,10 @@ public class ListApprovalProcessesForApprovalSchemasResponseBody extends TeaMode
             }
 
             /**
-             * Description.
+             * <p>The description of the approval flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是一个审批流程</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -183,7 +192,10 @@ public class ListApprovalProcessesForApprovalSchemasResponseBody extends TeaMode
             }
 
             /**
-             * ProcessId.
+             * <p>The ID of the approval flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-process-dc61e92ba5c5****</p>
              */
             public Builder processId(String processId) {
                 this.processId = processId;
@@ -191,7 +203,10 @@ public class ListApprovalProcessesForApprovalSchemasResponseBody extends TeaMode
             }
 
             /**
-             * ProcessName.
+             * <p>The name of the approval flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试</p>
              */
             public Builder processName(String processName) {
                 this.processName = processName;
@@ -258,7 +273,7 @@ public class ListApprovalProcessesForApprovalSchemasResponseBody extends TeaMode
             } 
 
             /**
-             * Processes.
+             * <p>A collection of approval flows.</p>
              */
             public Builder processes(java.util.List<Processes> processes) {
                 this.processes = processes;
@@ -266,7 +281,10 @@ public class ListApprovalProcessesForApprovalSchemasResponseBody extends TeaMode
             }
 
             /**
-             * SchemaId.
+             * <p>The ID of the approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;

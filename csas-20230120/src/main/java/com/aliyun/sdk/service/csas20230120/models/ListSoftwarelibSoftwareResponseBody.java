@@ -106,7 +106,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
         } 
 
         /**
-         * DataList.
+         * <p>The software list.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -114,7 +114,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page. This parameter is not returned by this operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. This parameter is not returned by this operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FFM+3L1WZbKngBeLWcDmQrzLuGDDwAw7JA5q2AjvTSJm9WyhQ0MwJoOWpky9ZhgcWfIgtGpZ+4NQX97+EIwsqUNQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -141,7 +147,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of software entries that match the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -350,7 +359,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the software version was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-05 18:03:58</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -358,7 +370,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadTimes.
+             * <p>The number of times the software has been downloaded from the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder downloadTimes(Long downloadTimes) {
                 this.downloadTimes = downloadTimes;
@@ -366,7 +381,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * Md5.
+             * <p>The MD5 value of the software package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0b5824cdd509d3ed560e2d20d29a1bcb</p>
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -374,7 +392,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The time when the software version was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-05 18:03:58</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -382,7 +403,15 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * Os.
+             * <p>The operating system to which the software package applies. Valid values:</p>
+             * <ul>
+             * <li><strong>Windows</strong>: Windows.</li>
+             * <li><strong>Mac(Apple)</strong>: macOS with Apple silicon.</li>
+             * <li><strong>Mac(Intel)</strong>: macOS with Intel processors.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Windows</p>
              */
             public Builder os(String os) {
                 this.os = os;
@@ -390,7 +419,14 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * PublisherType.
+             * <p>The software publisher type. Valid values:</p>
+             * <ul>
+             * <li><strong>local</strong>: locally uploaded.</li>
+             * <li><strong>thirdparty</strong>: third-party link.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>local</p>
              */
             public Builder publisherType(String publisherType) {
                 this.publisherType = publisherType;
@@ -398,7 +434,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * SoftwareId.
+             * <p>The ID of the software to which this version belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>softwarelib-software-1da844a39729****</p>
              */
             public Builder softwareId(String softwareId) {
                 this.softwareId = softwareId;
@@ -406,7 +445,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * SoftwarePkgName.
+             * <p>The name of the software package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test softwarename</p>
              */
             public Builder softwarePkgName(String softwarePkgName) {
                 this.softwarePkgName = softwarePkgName;
@@ -414,7 +456,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * SoftwarePkgSize.
+             * <p>The size of the software package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder softwarePkgSize(Long softwarePkgSize) {
                 this.softwarePkgSize = softwarePkgSize;
@@ -422,7 +467,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * SoftwareUrl.
+             * <p>The download URL of the software package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https://<strong><strong>.com/</strong></strong></p>
              */
             public Builder softwareUrl(String softwareUrl) {
                 this.softwareUrl = softwareUrl;
@@ -430,7 +478,14 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The version publish status. Valid values:</p>
+             * <ul>
+             * <li><strong>published</strong>: published.</li>
+             * <li><strong>unpublished</strong>: not published.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>published</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -438,7 +493,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The software version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -446,7 +504,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * VersionId.
+             * <p>The software version ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>softwarelib-version-21ae186e2ac9****</p>
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;
@@ -786,7 +847,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             } 
 
             /**
-             * BuiltinSoftwareId.
+             * <p>The associated built-in software ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>softwarelib-software-1da844a39729****</p>
              */
             public Builder builtinSoftwareId(String builtinSoftwareId) {
                 this.builtinSoftwareId = builtinSoftwareId;
@@ -794,7 +858,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * CheckBundleId.
+             * <p>The software BundleId used for verification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test software</p>
              */
             public Builder checkBundleId(String checkBundleId) {
                 this.checkBundleId = checkBundleId;
@@ -802,7 +869,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * CheckSoftwareName.
+             * <p>The software name used for verification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test software</p>
              */
             public Builder checkSoftwareName(String checkSoftwareName) {
                 this.checkSoftwareName = checkSoftwareName;
@@ -810,7 +880,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * ClassifyId.
+             * <p>The software classification ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>softwarelib-classify-61b7ccc63cae****</p>
              */
             public Builder classifyId(String classifyId) {
                 this.classifyId = classifyId;
@@ -818,7 +891,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the software was created, in seconds-level UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1781748302</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -826,7 +902,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The software description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a demo software.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -834,7 +913,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * DevTags.
+             * <p>The list of associated terminal device IDs.</p>
              */
             public Builder devTags(java.util.List<String> devTags) {
                 this.devTags = devTags;
@@ -842,7 +921,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceGroupIds.
+             * <p>The list of associated device group IDs.</p>
              */
             public Builder deviceGroupIds(java.util.List<String> deviceGroupIds) {
                 this.deviceGroupIds = deviceGroupIds;
@@ -850,7 +929,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadTimes.
+             * <p>The number of times the software has been manually downloaded from the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder downloadTimes(Long downloadTimes) {
                 this.downloadTimes = downloadTimes;
@@ -858,7 +940,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * HasNewVersion.
+             * <p>Indicates whether a new version is available for the software.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasNewVersion(Boolean hasNewVersion) {
                 this.hasNewVersion = hasNewVersion;
@@ -866,7 +951,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * LogoUrl.
+             * <p>The URL of the software logo.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://img.alicdn.com/imgextra/i4/O1CN01mXKAQX1P3a5fbS0Dp_!!6000000001785-2-tps-40-40.png">https://img.alicdn.com/imgextra/i4/O1CN01mXKAQX1P3a5fbS0Dp_!!6000000001785-2-tps-40-40.png</a></p>
              */
             public Builder logoUrl(String logoUrl) {
                 this.logoUrl = logoUrl;
@@ -874,7 +962,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * MacAppleVersion.
+             * <p>The latest software version number for Mac (Apple).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder macAppleVersion(String macAppleVersion) {
                 this.macAppleVersion = macAppleVersion;
@@ -882,7 +973,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * MacIntelVersion.
+             * <p>The latest software version number for Mac (Intel).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder macIntelVersion(String macIntelVersion) {
                 this.macIntelVersion = macIntelVersion;
@@ -890,7 +984,18 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * MatchMode.
+             * <p>The policy matching target type. Valid values:</p>
+             * <ul>
+             * <li><strong>UserGroupAll</strong>: all users.</li>
+             * <li><strong>UserGroupNormal</strong>: specified user groups.</li>
+             * <li><strong>DevTagNormal</strong>: specified devices.</li>
+             * <li><strong>DeviceGroupNormal</strong>: specified device groups.</li>
+             * <li><strong>DevTagAll</strong>: all devices.</li>
+             * <li><strong>None</strong>: not configured.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>UserGroupAll</p>
              */
             public Builder matchMode(String matchMode) {
                 this.matchMode = matchMode;
@@ -898,7 +1003,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * OfficialDownloadUrl.
+             * <p>The official download URL of the software.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxx.com/">http://xxx.com/</a>****</p>
              */
             public Builder officialDownloadUrl(String officialDownloadUrl) {
                 this.officialDownloadUrl = officialDownloadUrl;
@@ -906,7 +1014,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * RunAsAccount.
+             * <p>The execution account (only supported on Windows).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admin</p>
              */
             public Builder runAsAccount(String runAsAccount) {
                 this.runAsAccount = runAsAccount;
@@ -914,7 +1025,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * SoftwareId.
+             * <p>The software ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>softwarelib-software-1da844a39729****</p>
              */
             public Builder softwareId(String softwareId) {
                 this.softwareId = softwareId;
@@ -922,7 +1036,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * SoftwareName.
+             * <p>The software name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Thunder</p>
              */
             public Builder softwareName(String softwareName) {
                 this.softwareName = softwareName;
@@ -930,7 +1047,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * SourceRemoved.
+             * <p>Indicates whether the built-in library source has been deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder sourceRemoved(Boolean sourceRemoved) {
                 this.sourceRemoved = sourceRemoved;
@@ -938,7 +1058,14 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * <p>The software source. Valid values:</p>
+             * <ul>
+             * <li><strong>custom</strong>: custom software.</li>
+             * <li><strong>builtin</strong>: built-in software library.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -946,7 +1073,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupIds.
+             * <p>The list of associated user group IDs.</p>
              */
             public Builder userGroupIds(java.util.List<String> userGroupIds) {
                 this.userGroupIds = userGroupIds;
@@ -954,7 +1081,7 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * Versions.
+             * <p>The software version list. This field is not returned by this operation. Call <a href="~~ListSoftwarelibVersion~~">ListSoftwarelibVersion</a> to query software versions.</p>
              */
             public Builder versions(java.util.List<Versions> versions) {
                 this.versions = versions;
@@ -962,7 +1089,10 @@ public class ListSoftwarelibSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * WindowsVersion.
+             * <p>The latest software version number for Windows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder windowsVersion(String windowsVersion) {
                 this.windowsVersion = windowsVersion;

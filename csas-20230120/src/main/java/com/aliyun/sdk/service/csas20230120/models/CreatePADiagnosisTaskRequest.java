@@ -190,7 +190,10 @@ public class CreatePADiagnosisTaskRequest extends Request {
         } 
 
         /**
-         * DevTag.
+         * <p>The ID of the terminal device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2987b3e0-8108-2f99-4d18-3b4f1c1c36d7</p>
          */
         public Builder devTag(String devTag) {
             this.putBodyParameter("DevTag", devTag);
@@ -199,6 +202,11 @@ public class CreatePADiagnosisTaskRequest extends Request {
         }
 
         /**
+         * <p>The diagnosis type. Valid values:</p>
+         * <ul>
+         * <li><strong>FullLink</strong>: full-link diagnosis.</li>
+         * <li><strong>Application</strong>: application diagnosis.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,6 +219,7 @@ public class CreatePADiagnosisTaskRequest extends Request {
         }
 
         /**
+         * <p>The address to diagnose.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -223,7 +232,10 @@ public class CreatePADiagnosisTaskRequest extends Request {
         }
 
         /**
-         * PopId.
+         * <p>The POP point ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pop-3e244b62357dcafc</p>
          */
         public Builder popId(String popId) {
             this.putBodyParameter("PopId", popId);
@@ -232,6 +244,11 @@ public class CreatePADiagnosisTaskRequest extends Request {
         }
 
         /**
+         * <p>The POP point selection mode. Valid values:</p>
+         * <ul>
+         * <li><strong>AutoSelect</strong>: automatic selection.</li>
+         * <li><strong>ManualSelect</strong>: manual selection.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -244,6 +261,7 @@ public class CreatePADiagnosisTaskRequest extends Request {
         }
 
         /**
+         * <p>The port.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -256,6 +274,11 @@ public class CreatePADiagnosisTaskRequest extends Request {
         }
 
         /**
+         * <p>The protocol used by the internal network access application. Valid values:</p>
+         * <ul>
+         * <li><strong>TCP</strong></li>
+         * <li><strong>UDP</strong>.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -268,7 +291,7 @@ public class CreatePADiagnosisTaskRequest extends Request {
         }
 
         /**
-         * UdpExtraConfigs.
+         * <p>The extra configurations for UDP diagnosis. If this parameter is not specified, any response received is considered a success.</p>
          */
         public Builder udpExtraConfigs(UdpExtraConfigs udpExtraConfigs) {
             String udpExtraConfigsShrink = shrink(udpExtraConfigs, "UdpExtraConfigs", "json");
@@ -278,7 +301,10 @@ public class CreatePADiagnosisTaskRequest extends Request {
         }
 
         /**
-         * UserGroupId.
+         * <p>The user group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>用户组ID。</p>
          */
         public Builder userGroupId(String userGroupId) {
             this.putBodyParameter("UserGroupId", userGroupId);
@@ -287,7 +313,10 @@ public class CreatePADiagnosisTaskRequest extends Request {
         }
 
         /**
-         * Username.
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zhaosi</p>
          */
         public Builder username(String username) {
             this.putBodyParameter("Username", username);
@@ -355,7 +384,10 @@ public class CreatePADiagnosisTaskRequest extends Request {
             } 
 
             /**
-             * ExpectedResponse.
+             * <p>The expected response from the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello</p>
              */
             public Builder expectedResponse(String expectedResponse) {
                 this.expectedResponse = expectedResponse;
@@ -363,7 +395,10 @@ public class CreatePADiagnosisTaskRequest extends Request {
             }
 
             /**
-             * RequestContent.
+             * <p>The UDP request content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello</p>
              */
             public Builder requestContent(String requestContent) {
                 this.requestContent = requestContent;

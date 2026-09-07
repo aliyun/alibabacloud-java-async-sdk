@@ -78,7 +78,10 @@ public class CreateSoftwarelibVersionResponseBody extends TeaModel {
         }
 
         /**
-         * VersionId.
+         * <p>The ID of the software version that was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>softwarelib-version-21ae186e2ac9****</p>
          */
         public Builder versionId(String versionId) {
             this.versionId = versionId;

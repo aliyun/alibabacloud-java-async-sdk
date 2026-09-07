@@ -80,7 +80,10 @@ public class ListSoftwareForUserDeviceResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102350E7-1A20-58F5-9D63-ABEA820AE6E1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class ListSoftwareForUserDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * Software.
+         * <p>The list of software installed on the endpoint device.</p>
          */
         public Builder software(java.util.List<Software> software) {
             this.software = software;
@@ -96,7 +99,10 @@ public class ListSoftwareForUserDeviceResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of software installed on the endpoint device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalNum(Long totalNum) {
             this.totalNum = totalNum;
@@ -188,7 +194,10 @@ public class ListSoftwareForUserDeviceResponseBody extends TeaModel {
             } 
 
             /**
-             * Inc.
+             * <p>The software publisher.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba (China) Network Technology Co.,Ltd.</p>
              */
             public Builder inc(String inc) {
                 this.inc = inc;
@@ -196,7 +205,10 @@ public class ListSoftwareForUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * InstallTime.
+             * <p>The software installation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-08-18 02:43:02</p>
              */
             public Builder installTime(String installTime) {
                 this.installTime = installTime;
@@ -204,7 +216,10 @@ public class ListSoftwareForUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The software name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DingTalk</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -212,7 +227,7 @@ public class ListSoftwareForUserDeviceResponseBody extends TeaModel {
             }
 
             /**
-             * Versions.
+             * <p>The collection of software versions.</p>
              */
             public Builder versions(java.util.List<String> versions) {
                 this.versions = versions;

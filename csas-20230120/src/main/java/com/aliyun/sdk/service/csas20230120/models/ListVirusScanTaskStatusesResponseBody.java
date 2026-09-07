@@ -67,7 +67,10 @@ public class ListVirusScanTaskStatusesResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3D7EC0AF-DB2A-5D9C-90EC-F090A6BAAEA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class ListVirusScanTaskStatusesResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * <p>The list of execution progress for virus scan tasks.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
@@ -167,7 +170,10 @@ public class ListVirusScanTaskStatusesResponseBody extends TeaModel {
             } 
 
             /**
-             * DeviceAckCount.
+             * <p>The number of user terminal devices that have received the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder deviceAckCount(Integer deviceAckCount) {
                 this.deviceAckCount = deviceAckCount;
@@ -175,7 +181,10 @@ public class ListVirusScanTaskStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceResultFailCount.
+             * <p>The number of user terminal devices on which the scan execution failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder deviceResultFailCount(Integer deviceResultFailCount) {
                 this.deviceResultFailCount = deviceResultFailCount;
@@ -183,7 +192,10 @@ public class ListVirusScanTaskStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceResultSuccessCount.
+             * <p>The number of user terminal devices on which the scan was executed successfully.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder deviceResultSuccessCount(Integer deviceResultSuccessCount) {
                 this.deviceResultSuccessCount = deviceResultSuccessCount;
@@ -191,7 +203,10 @@ public class ListVirusScanTaskStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceStartCount.
+             * <p>The number of user terminal devices that are currently executing the scan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder deviceStartCount(Integer deviceStartCount) {
                 this.deviceStartCount = deviceStartCount;
@@ -258,7 +273,10 @@ public class ListVirusScanTaskStatusesResponseBody extends TeaModel {
             } 
 
             /**
-             * TaskId.
+             * <p>The virus scan task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1:1024772</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -266,7 +284,7 @@ public class ListVirusScanTaskStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * <p>The execution progress measured by device count.</p>
              */
             public Builder taskStatus(TaskStatus taskStatus) {
                 this.taskStatus = taskStatus;

@@ -67,7 +67,10 @@ public class UpdateVirusFileStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3D7EC0AF-DB2A-5D9C-90EC-F090A6BAAEA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class UpdateVirusFileStatusResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The disposal task ID. This parameter is returned when Operation is set to AdminQuarantine. An empty string is returned when Operation is set to AdminTrust. You can check the execution result on the user terminal device by using the TaskExecutionInfo field of ListVirusFileStatuses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1:1024773</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

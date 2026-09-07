@@ -326,7 +326,14 @@ public class UpdateVirusScanScheduledStrategyRequest extends Request {
         } 
 
         /**
-         * HighRiskOperation.
+         * <p>The action to take on high-risk virus files. Valid values:</p>
+         * <ul>
+         * <li><strong>Quarantine</strong>: Quarantine quarantined file.</li>
+         * <li><strong>Notify</strong>: Report an alert only without taking action on quarantined file.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Quarantine</p>
          */
         public Builder highRiskOperation(String highRiskOperation) {
             this.putBodyParameter("HighRiskOperation", highRiskOperation);
@@ -335,7 +342,15 @@ public class UpdateVirusScanScheduledStrategyRequest extends Request {
         }
 
         /**
-         * LowRiskOperation.
+         * <p>The action to take on low-risk virus files. Valid values:</p>
+         * <ul>
+         * <li><strong>Quarantine</strong>: Quarantine quarantined file.</li>
+         * <li><strong>Notify</strong>: Report an alert only without taking action on quarantined file.</li>
+         * <li><strong>None</strong>: Take no action.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder lowRiskOperation(String lowRiskOperation) {
             this.putBodyParameter("LowRiskOperation", lowRiskOperation);
@@ -344,7 +359,14 @@ public class UpdateVirusScanScheduledStrategyRequest extends Request {
         }
 
         /**
-         * MatchMode.
+         * <p>The matching mode for the effective scope. Valid values:</p>
+         * <ul>
+         * <li><strong>UserGroupAll</strong>: The policy takes effect for all users under the current Alibaba Cloud account.</li>
+         * <li><strong>UserGroupNormal</strong>: The policy takes effect only for users in specified user groups. UserGroupIds is required when this value is specified.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UserGroupNormal</p>
          */
         public Builder matchMode(String matchMode) {
             this.putBodyParameter("MatchMode", matchMode);
@@ -353,7 +375,10 @@ public class UpdateVirusScanScheduledStrategyRequest extends Request {
         }
 
         /**
-         * MaxCpuUsage.
+         * <p>The maximum percentage of terminal CPU usage allowed during scanning. Valid values: 0 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxCpuUsage(Long maxCpuUsage) {
             this.putBodyParameter("MaxCpuUsage", maxCpuUsage);
@@ -362,7 +387,14 @@ public class UpdateVirusScanScheduledStrategyRequest extends Request {
         }
 
         /**
-         * MidRiskOperation.
+         * <p>The action to take on medium-risk virus files. Valid values:</p>
+         * <ul>
+         * <li><strong>Quarantine</strong>: Quarantine quarantined file.</li>
+         * <li><strong>Notify</strong>: Report an alert only without taking action on quarantined file.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Notify</p>
          */
         public Builder midRiskOperation(String midRiskOperation) {
             this.putBodyParameter("MidRiskOperation", midRiskOperation);
@@ -371,7 +403,15 @@ public class UpdateVirusScanScheduledStrategyRequest extends Request {
         }
 
         /**
-         * PerformanceMode.
+         * <p>The scan performance pattern. Valid values:</p>
+         * <ul>
+         * <li><strong>SecurityFirst</strong>: Security first. The default CPU usage limit is 50%.</li>
+         * <li><strong>Balance</strong>: Balanced. The default CPU usage limit is 30%.</li>
+         * <li><strong>ExperienceFirst</strong>: Experience first. The default CPU usage limit is 15%.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Balance</p>
          */
         public Builder performanceMode(String performanceMode) {
             this.putBodyParameter("PerformanceMode", performanceMode);
@@ -380,7 +420,10 @@ public class UpdateVirusScanScheduledStrategyRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The policy priority. A smaller value indicates a higher priority. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder priority(Integer priority) {
             this.putBodyParameter("Priority", priority);
@@ -389,7 +432,10 @@ public class UpdateVirusScanScheduledStrategyRequest extends Request {
         }
 
         /**
-         * ScanBeginTime.
+         * <p>The start hour during which scans can be triggered. The value is a whole hour number. Valid values: 0 to 23, inclusive. This field is not a timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scanBeginTime(Long scanBeginTime) {
             this.putBodyParameter("ScanBeginTime", scanBeginTime);
@@ -398,7 +444,10 @@ public class UpdateVirusScanScheduledStrategyRequest extends Request {
         }
 
         /**
-         * ScanEndTime.
+         * <p>The end hour during which scans can be triggered. The value is a whole hour number. Valid values: 1 to 24, exclusive of the specified hour, and must be greater than ScanBeginTime. Scan tasks generated by each trigger expire at this hour on the same day. This field is not a timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder scanEndTime(Long scanEndTime) {
             this.putBodyParameter("ScanEndTime", scanEndTime);
@@ -407,7 +456,14 @@ public class UpdateVirusScanScheduledStrategyRequest extends Request {
         }
 
         /**
-         * ScanFrequency.
+         * <p>The unit of the trigger cycle. Valid values:</p>
+         * <ul>
+         * <li><strong>day</strong>: by day.</li>
+         * <li><strong>week</strong>: by week.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>week</p>
          */
         public Builder scanFrequency(String scanFrequency) {
             this.putBodyParameter("ScanFrequency", scanFrequency);
@@ -416,7 +472,10 @@ public class UpdateVirusScanScheduledStrategyRequest extends Request {
         }
 
         /**
-         * ScanInterval.
+         * <p>The interval number of the trigger cycle, which together with ScanFrequency determines the trigger cycle. Valid values: 1 to 30. For example, if ScanFrequency is set to week and ScanInterval is set to 1, the scan is triggered once a week.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scanInterval(Long scanInterval) {
             this.putBodyParameter("ScanInterval", scanInterval);
@@ -425,7 +484,15 @@ public class UpdateVirusScanScheduledStrategyRequest extends Request {
         }
 
         /**
-         * ScanMode.
+         * <p>The path scope for scanning. Valid values:</p>
+         * <ul>
+         * <li><strong>Quick</strong>: Quick scan. Only system-critical directories and common risk locations are scanned.</li>
+         * <li><strong>Full</strong>: Full disk scan.</li>
+         * <li><strong>Custom</strong>: Custom path scan. ScanPath is required when this value is specified.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Quick</p>
          */
         public Builder scanMode(String scanMode) {
             this.putBodyParameter("ScanMode", scanMode);
@@ -434,7 +501,7 @@ public class UpdateVirusScanScheduledStrategyRequest extends Request {
         }
 
         /**
-         * ScanPath.
+         * <p>The collection of custom scan paths. A maximum of 100 paths can be specified, and duplicates are not allowed. This parameter takes effect only when ScanMode is set to Custom.</p>
          */
         public Builder scanPath(java.util.List<String> scanPath) {
             this.putBodyParameter("ScanPath", scanPath);
@@ -443,7 +510,7 @@ public class UpdateVirusScanScheduledStrategyRequest extends Request {
         }
 
         /**
-         * ScanTargets.
+         * <p>The collection of virus types to be handled in this scan. At least one type must be specified, and duplicates are not allowed.</p>
          */
         public Builder scanTargets(java.util.List<String> scanTargets) {
             this.putBodyParameter("ScanTargets", scanTargets);
@@ -452,7 +519,15 @@ public class UpdateVirusScanScheduledStrategyRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The enabled status. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
+         * </ul>
+         * <p>When enabled, the policy immediately participates in periodic scheduling. When disabled, the policy is saved but does not trigger scans.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);
@@ -461,7 +536,10 @@ public class UpdateVirusScanScheduledStrategyRequest extends Request {
         }
 
         /**
-         * StrategyDescription.
+         * <p>The policy description. The description can contain Chinese characters, uppercase and lowercase letters, digits, spaces, periods (.), commas (,), semicolons (;), forward slashes (/), at signs (@), hyphens (-), and underscores (_).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Full disk scan for R&amp;D department terminals every Sunday at midnight</p>
          */
         public Builder strategyDescription(String strategyDescription) {
             this.putBodyParameter("StrategyDescription", strategyDescription);
@@ -470,6 +548,11 @@ public class UpdateVirusScanScheduledStrategyRequest extends Request {
         }
 
         /**
+         * <p>The ID of the scheduled virus scan policy to modify. You can obtain the value from:</p>
+         * <ul>
+         * <li><a href="~~ListVirusScanScheduledStrategies~~">ListVirusScanScheduledStrategies</a>: Lists scheduled virus scan policies.</li>
+         * <li><a href="~~CreateVirusScanScheduledStrategy~~">CreateVirusScanScheduledStrategy</a>: Creates a scheduled virus scan policy.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -482,7 +565,10 @@ public class UpdateVirusScanScheduledStrategyRequest extends Request {
         }
 
         /**
-         * StrategyName.
+         * <p>The policy name. The name can be up to 128 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-). Spaces are not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Weekly scan for R&amp;D department</p>
          */
         public Builder strategyName(String strategyName) {
             this.putBodyParameter("StrategyName", strategyName);
@@ -491,7 +577,7 @@ public class UpdateVirusScanScheduledStrategyRequest extends Request {
         }
 
         /**
-         * UserGroupIds.
+         * <p>The collection of user group IDs for the effective scope. At least 1 and at most 100 IDs can be specified, and duplicates are not allowed. When the effective scope is UserGroupNormal, the provided collection fully replaces the existing user groups of the policy. When the effective scope is UserGroupAll and the effective scope is not being modified, this parameter must not be specified.</p>
          */
         public Builder userGroupIds(java.util.List<String> userGroupIds) {
             this.putBodyParameter("UserGroupIds", userGroupIds);
@@ -500,7 +586,7 @@ public class UpdateVirusScanScheduledStrategyRequest extends Request {
         }
 
         /**
-         * Whitelist.
+         * <p>The exception user list. Users in this list are excluded from the scan performed by this policy. A maximum of 1000 entries can be specified, and duplicates are not allowed. This parameter performs a full overwrite, meaning the provided list replaces the existing list of the policy.</p>
          */
         public Builder whitelist(java.util.List<String> whitelist) {
             this.putBodyParameter("Whitelist", whitelist);

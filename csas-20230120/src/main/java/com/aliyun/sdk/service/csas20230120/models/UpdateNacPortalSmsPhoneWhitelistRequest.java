@@ -59,7 +59,7 @@ public class UpdateNacPortalSmsPhoneWhitelistRequest extends Request {
         } 
 
         /**
-         * Phones.
+         * <p>The list of phone numbers.</p>
          */
         public Builder phones(java.util.List<String> phones) {
             this.putQueryParameter("Phones", phones);

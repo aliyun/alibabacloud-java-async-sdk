@@ -173,6 +173,7 @@ public class ListVirusScanTasksRequest extends Request {
         } 
 
         /**
+         * <p>The page number of the current page in paging. Valid values: 1 to 10000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,7 +186,10 @@ public class ListVirusScanTasksRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end point for filtering by task expiration time. The value is a UNIX timestamp in seconds. The value must be greater than StartTime.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1762135466</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -194,6 +198,7 @@ public class ListVirusScanTasksRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page in paging. Valid values: 1 to 1000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,7 +211,7 @@ public class ListVirusScanTasksRequest extends Request {
         }
 
         /**
-         * PerformanceModes.
+         * <p>The collection of scan performance modes. Duplicate values are not allowed.</p>
          */
         public Builder performanceModes(java.util.List<String> performanceModes) {
             this.putQueryParameter("PerformanceModes", performanceModes);
@@ -215,7 +220,7 @@ public class ListVirusScanTasksRequest extends Request {
         }
 
         /**
-         * ScanModes.
+         * <p>The collection of scan path scopes. Duplicate values are not allowed.</p>
          */
         public Builder scanModes(java.util.List<String> scanModes) {
             this.putQueryParameter("ScanModes", scanModes);
@@ -224,7 +229,10 @@ public class ListVirusScanTasksRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start point for filtering by task expiration time. The value is a UNIX timestamp in seconds. This parameter must be specified together with EndTime. Specifying this parameter alone does not take effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1754150421</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -233,7 +241,15 @@ public class ListVirusScanTasksRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Not canceled. This is the default value.</li>
+         * <li><strong>1</strong>: Canceled.</li>
+         * <li><strong>-1</strong>: No status filter. All tasks are returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -242,7 +258,7 @@ public class ListVirusScanTasksRequest extends Request {
         }
 
         /**
-         * TaskIds.
+         * <p>The collection of virus scan task IDs. Duplicate values are not allowed.</p>
          */
         public Builder taskIds(java.util.List<String> taskIds) {
             this.putQueryParameter("TaskIds", taskIds);
@@ -251,7 +267,13 @@ public class ListVirusScanTasksRequest extends Request {
         }
 
         /**
-         * UserGroupId.
+         * <p>The user group ID, used to filter tasks whose effective scope includes the specified user group. You can obtain the value from:</p>
+         * <ul>
+         * <li><a href="~~ListUserGroups~~">ListUserGroups</a>: Lists user groups.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>usergroup-9d4f2a7b3c1e****</p>
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);

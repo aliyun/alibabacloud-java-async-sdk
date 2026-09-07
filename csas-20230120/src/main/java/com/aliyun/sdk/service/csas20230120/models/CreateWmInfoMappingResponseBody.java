@@ -67,7 +67,7 @@ public class CreateWmInfoMappingResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The mapping result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class CreateWmInfoMappingResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7E9D7ACD-53D5-56EF-A913-79D148D06299</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +131,10 @@ public class CreateWmInfoMappingResponseBody extends TeaModel {
             } 
 
             /**
-             * WmInfoUint.
+             * <p>The mapped digital-format watermark information. This value can be used to look up the corresponding string-format watermark information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123***</p>
              */
             public Builder wmInfoUint(Long wmInfoUint) {
                 this.wmInfoUint = wmInfoUint;

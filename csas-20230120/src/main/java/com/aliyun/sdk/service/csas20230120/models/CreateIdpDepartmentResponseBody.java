@@ -67,7 +67,10 @@ public class CreateIdpDepartmentResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The ID of the created department.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>726</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -75,7 +78,10 @@ public class CreateIdpDepartmentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D6707286-A50E-57B1-B2CF-EFAC59E850D8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

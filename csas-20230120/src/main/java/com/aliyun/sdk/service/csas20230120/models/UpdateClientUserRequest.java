@@ -116,7 +116,10 @@ public class UpdateClientUserRequest extends Request {
         } 
 
         /**
-         * DepartmentId.
+         * <p>Department ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10701</p>
          */
         public Builder departmentId(String departmentId) {
             this.putQueryParameter("DepartmentId", departmentId);
@@ -125,7 +128,10 @@ public class UpdateClientUserRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>User description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例用户</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -134,7 +140,10 @@ public class UpdateClientUserRequest extends Request {
         }
 
         /**
-         * Email.
+         * <p>Email address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:johndoe@example.com">johndoe@example.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -143,6 +152,7 @@ public class UpdateClientUserRequest extends Request {
         }
 
         /**
+         * <p>User ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +165,10 @@ public class UpdateClientUserRequest extends Request {
         }
 
         /**
-         * MobileNumber.
+         * <p>Mobile phone number without country code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13641966835</p>
          */
         public Builder mobileNumber(String mobileNumber) {
             this.putQueryParameter("MobileNumber", mobileNumber);

@@ -87,7 +87,7 @@ public class BatchCreateDomainItemsRequest extends Request {
         } 
 
         /**
-         * DomainItems.
+         * <p>The domain name list.</p>
          */
         public Builder domainItems(java.util.List<String> domainItems) {
             this.putBodyParameter("DomainItems", domainItems);
@@ -96,7 +96,10 @@ public class BatchCreateDomainItemsRequest extends Request {
         }
 
         /**
-         * ListId.
+         * <p>The list ID. This is a unique business identifier used for policy references and add, delete, and modify operations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ladl-61aae0c0ba715e3b</p>
          */
         public Builder listId(String listId) {
             this.putBodyParameter("ListId", listId);
@@ -105,7 +108,10 @@ public class BatchCreateDomainItemsRequest extends Request {
         }
 
         /**
-         * ListType.
+         * <p>The list type (Blacklist/Whitelist).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>la_domain_white_list</p>
          */
         public Builder listType(String listType) {
             this.putBodyParameter("ListType", listType);

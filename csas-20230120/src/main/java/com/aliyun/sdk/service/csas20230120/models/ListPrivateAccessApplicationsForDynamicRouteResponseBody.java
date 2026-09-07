@@ -67,7 +67,7 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
         } 
 
         /**
-         * DynamicRoutes.
+         * <p>List of dynamic routes.</p>
          */
         public Builder dynamicRoutes(java.util.List<DynamicRoutes> dynamicRoutes) {
             this.dynamicRoutes = dynamicRoutes;
@@ -75,7 +75,10 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
         }
 
         /**
-         * RequestId.
+         * <p>ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BE4FB974-11BC-5453-9BE1-1606A73EACA6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
             } 
 
             /**
-             * Begin.
+             * <p>Start port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder begin(Integer begin) {
                 this.begin = begin;
@@ -149,7 +155,10 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
             }
 
             /**
-             * End.
+             * <p>End port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>81</p>
              */
             public Builder end(Integer end) {
                 this.end = end;
@@ -294,7 +303,7 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
             } 
 
             /**
-             * Addresses.
+             * <p>Collection of private access application addresses.</p>
              */
             public Builder addresses(java.util.List<String> addresses) {
                 this.addresses = addresses;
@@ -302,7 +311,10 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
             }
 
             /**
-             * ApplicationId.
+             * <p>Private access application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pa-application-7a9243dd02f4****</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -310,7 +322,10 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
             }
 
             /**
-             * CreateTime.
+             * <p>Time when the private access application was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-13 13:33:24</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -318,7 +333,10 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
             }
 
             /**
-             * Description.
+             * <p>Private access application description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是一条被动态路由引用的内网访问应用</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -326,7 +344,10 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
             }
 
             /**
-             * Name.
+             * <p>Private access application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>application_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -334,7 +355,7 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
             }
 
             /**
-             * PortRanges.
+             * <p>Collection of private access application port ranges.</p>
              */
             public Builder portRanges(java.util.List<PortRanges> portRanges) {
                 this.portRanges = portRanges;
@@ -342,7 +363,18 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
             }
 
             /**
-             * Protocol.
+             * <p>Protocol used by the private access application. Valid values:</p>
+             * <ul>
+             * <li><p><strong>All</strong>: All protocols.</p>
+             * </li>
+             * <li><p><strong>TCP</strong></p>
+             * </li>
+             * <li><p><strong>UDP</strong></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>All</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -350,7 +382,16 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
             }
 
             /**
-             * Status.
+             * <p>Status of the private access application. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Enabled</strong>: Enabled.</p>
+             * </li>
+             * <li><p><strong>Disabled</strong>: Disabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -417,7 +458,7 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
             } 
 
             /**
-             * Applications.
+             * <p>Collection of private access applications.</p>
              */
             public Builder applications(java.util.List<Applications> applications) {
                 this.applications = applications;
@@ -425,7 +466,10 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
             }
 
             /**
-             * DynamicRouteId.
+             * <p>Dynamic route ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dr-ca9fddfac7c6****</p>
              */
             public Builder dynamicRouteId(String dynamicRouteId) {
                 this.dynamicRouteId = dynamicRouteId;

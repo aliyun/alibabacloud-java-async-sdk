@@ -75,6 +75,7 @@ public class ImportEnterpriseAccelerateTargetsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the enterprise acceleration policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class ImportEnterpriseAccelerateTargetsRequest extends Request {
         }
 
         /**
+         * <p>The URL of the import file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

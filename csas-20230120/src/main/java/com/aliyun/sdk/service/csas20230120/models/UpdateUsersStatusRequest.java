@@ -75,6 +75,7 @@ public class UpdateUsersStatusRequest extends Request {
         } 
 
         /**
+         * <p>Collection of user IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder saseUserIds(java.util.List<String> saseUserIds) {
@@ -84,6 +85,13 @@ public class UpdateUsersStatusRequest extends Request {
         }
 
         /**
+         * <p>User status. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Enabled</strong>: Enable the user.</p>
+         * </li>
+         * <li><p><strong>Disabled</strong>: Disable the user.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

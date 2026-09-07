@@ -171,7 +171,10 @@ public class UpdatePrivateAccessApplicationL7SwitchRequest extends Request {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The ID of the internal-facing application. Required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-application-e12860ef6c48****</p>
          */
         public Builder applicationId(String applicationId) {
             this.putBodyParameter("ApplicationId", applicationId);
@@ -180,7 +183,14 @@ public class UpdatePrivateAccessApplicationL7SwitchRequest extends Request {
         }
 
         /**
-         * DevTagMarkStatus.
+         * <p>The device tag mark switch. Required. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Disabled</p>
          */
         public Builder devTagMarkStatus(String devTagMarkStatus) {
             this.putBodyParameter("DevTagMarkStatus", devTagMarkStatus);
@@ -189,7 +199,14 @@ public class UpdatePrivateAccessApplicationL7SwitchRequest extends Request {
         }
 
         /**
-         * DownloadAuditStatus.
+         * <p>The sensitive application download audit switch. Optional. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Disabled</p>
          */
         public Builder downloadAuditStatus(String downloadAuditStatus) {
             this.putBodyParameter("DownloadAuditStatus", downloadAuditStatus);
@@ -198,7 +215,7 @@ public class UpdatePrivateAccessApplicationL7SwitchRequest extends Request {
         }
 
         /**
-         * PortRanges.
+         * <p>The collection of port ranges for the internal-facing application. Multiple port ranges cannot be duplicated or overlap. You can specify up to 50 port ranges. This parameter takes effect and is validated only when Status is set to <strong>Enabled</strong>. If this parameter is not specified or an empty collection is passed in, the default ports 80, 443, 8080, and 465 are used. The effective ports are the intersection of the ports specified in this request and the port ranges already configured for the internal-facing application.</p>
          */
         public Builder portRanges(java.util.List<PortRanges> portRanges) {
             this.putBodyParameter("PortRanges", portRanges);
@@ -207,7 +224,14 @@ public class UpdatePrivateAccessApplicationL7SwitchRequest extends Request {
         }
 
         /**
-         * SrcIpMarkStatus.
+         * <p>The source IP mark switch. Required. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Disabled</p>
          */
         public Builder srcIpMarkStatus(String srcIpMarkStatus) {
             this.putBodyParameter("SrcIpMarkStatus", srcIpMarkStatus);
@@ -216,7 +240,15 @@ public class UpdatePrivateAccessApplicationL7SwitchRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The master switch for Layer 7 access of the internal-facing application. Required. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
+         * </ul>
+         * <p>When the value is <strong>Disabled</strong>, PortRanges is neither validated nor saved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);
@@ -225,7 +257,10 @@ public class UpdatePrivateAccessApplicationL7SwitchRequest extends Request {
         }
 
         /**
-         * TimeoutSec.
+         * <p>The request timeout period, in seconds. Valid values: 1 to 3600. Default value: 60. If this parameter is not specified or an invalid value is specified, the value 60 is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder timeoutSec(Integer timeoutSec) {
             this.putBodyParameter("TimeoutSec", timeoutSec);
@@ -234,7 +269,14 @@ public class UpdatePrivateAccessApplicationL7SwitchRequest extends Request {
         }
 
         /**
-         * UserMarkStatus.
+         * <p>The user mark switch. Required. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder userMarkStatus(String userMarkStatus) {
             this.putBodyParameter("UserMarkStatus", userMarkStatus);
@@ -243,7 +285,14 @@ public class UpdatePrivateAccessApplicationL7SwitchRequest extends Request {
         }
 
         /**
-         * ZeroTrustStatus.
+         * <p>The host bypass prevention switch. Required. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder zeroTrustStatus(String zeroTrustStatus) {
             this.putBodyParameter("ZeroTrustStatus", zeroTrustStatus);
@@ -311,7 +360,10 @@ public class UpdatePrivateAccessApplicationL7SwitchRequest extends Request {
             } 
 
             /**
-             * Begin.
+             * <p>The start port. The value must be less than or equal to the end port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder begin(Integer begin) {
                 this.begin = begin;
@@ -319,7 +371,10 @@ public class UpdatePrivateAccessApplicationL7SwitchRequest extends Request {
             }
 
             /**
-             * End.
+             * <p>The end port. The value must be greater than or equal to the start port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>81</p>
              */
             public Builder end(Integer end) {
                 this.end = end;

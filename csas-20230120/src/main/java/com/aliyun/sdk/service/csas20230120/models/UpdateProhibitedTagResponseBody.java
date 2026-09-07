@@ -78,7 +78,7 @@ public class UpdateProhibitedTagResponseBody extends TeaModel {
         }
 
         /**
-         * Tag.
+         * <p>The prohibited software tag.</p>
          */
         public Builder tag(Tag tag) {
             this.tag = tag;
@@ -170,7 +170,10 @@ public class UpdateProhibitedTagResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time of the prohibited software tag, in the yyyy-MM-dd HH:mm:ss format. The time is displayed in UTC+8.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-09-05 10:20:46</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -178,7 +181,10 @@ public class UpdateProhibitedTagResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the prohibited software tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test constraints</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -186,7 +192,10 @@ public class UpdateProhibitedTagResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the prohibited software tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PolicyC</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -194,7 +203,10 @@ public class UpdateProhibitedTagResponseBody extends TeaModel {
             }
 
             /**
-             * TagId.
+             * <p>The ID of the prohibited software tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-d730092d87ec****</p>
              */
             public Builder tagId(String tagId) {
                 this.tagId = tagId;

@@ -67,7 +67,7 @@ public class LookupWmInfoMappingResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Query result of the mapping.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class LookupWmInfoMappingResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7E9D7ACD-53D5-56EF-A913-79D148D06299</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +131,13 @@ public class LookupWmInfoMappingResponseBody extends TeaModel {
             } 
 
             /**
-             * WmInfoBytesB64.
+             * <p>String-formatted watermark information obtained from the mapping lookup. Value source:</p>
+             * <ul>
+             * <li><a href="~~CreateWmInfoMapping~~">CreateWmInfoMapping</a>: The <strong>WmInfoBytesB64</strong> parameter from the CreateWmInfoMapping API.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>aGVsbG8gc2F*****</p>
              */
             public Builder wmInfoBytesB64(String wmInfoBytesB64) {
                 this.wmInfoBytesB64 = wmInfoBytesB64;

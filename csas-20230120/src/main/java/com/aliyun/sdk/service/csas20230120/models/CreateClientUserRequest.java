@@ -146,7 +146,10 @@ public class CreateClientUserRequest extends Request {
         } 
 
         /**
-         * DepartmentId.
+         * <p>Department ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10797</p>
          */
         public Builder departmentId(String departmentId) {
             this.putQueryParameter("DepartmentId", departmentId);
@@ -155,7 +158,10 @@ public class CreateClientUserRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>User description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例用户</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -164,6 +170,7 @@ public class CreateClientUserRequest extends Request {
         }
 
         /**
+         * <p>Email address.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,6 +183,7 @@ public class CreateClientUserRequest extends Request {
         }
 
         /**
+         * <p>ID of the custom identity source configuration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,7 +196,10 @@ public class CreateClientUserRequest extends Request {
         }
 
         /**
-         * MobileNumber.
+         * <p>Mobile phone number without country code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13641966835</p>
          */
         public Builder mobileNumber(String mobileNumber) {
             this.putQueryParameter("MobileNumber", mobileNumber);
@@ -197,7 +208,10 @@ public class CreateClientUserRequest extends Request {
         }
 
         /**
-         * Password.
+         * <p>Password. If empty, a random password is generated automatically.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kehudiyi</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -206,7 +220,11 @@ public class CreateClientUserRequest extends Request {
         }
 
         /**
+         * <p>Username.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

@@ -119,6 +119,7 @@ public class ListDomainItemsRequest extends Request {
         } 
 
         /**
+         * <p>The current page number in paging.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +132,10 @@ public class ListDomainItemsRequest extends Request {
         }
 
         /**
-         * ItemValue.
+         * <p>The domain name value filter. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder itemValue(String itemValue) {
             this.putQueryParameter("ItemValue", itemValue);
@@ -140,6 +144,7 @@ public class ListDomainItemsRequest extends Request {
         }
 
         /**
+         * <p>The list ID. This is a unique business identifier used for policy references and CRUD operations.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +157,7 @@ public class ListDomainItemsRequest extends Request {
         }
 
         /**
+         * <p>The list type (Blacklist/Whitelist).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,6 +170,7 @@ public class ListDomainItemsRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page in paging. Valid values: 1 to 1000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

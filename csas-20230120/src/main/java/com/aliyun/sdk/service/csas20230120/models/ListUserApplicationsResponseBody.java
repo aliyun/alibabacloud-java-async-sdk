@@ -80,7 +80,7 @@ public class ListUserApplicationsResponseBody extends TeaModel {
         } 
 
         /**
-         * Applications.
+         * <p>The list of applications that the user is authorized to access.</p>
          */
         public Builder applications(java.util.List<Applications> applications) {
             this.applications = applications;
@@ -88,7 +88,7 @@ public class ListUserApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
@@ -99,7 +99,10 @@ public class ListUserApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of applications that the user is authorized to access.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalNum(Integer totalNum) {
             this.totalNum = totalNum;
@@ -165,7 +168,10 @@ public class ListUserApplicationsResponseBody extends TeaModel {
             } 
 
             /**
-             * Begin.
+             * <p>The start port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder begin(String begin) {
                 this.begin = begin;
@@ -173,7 +179,10 @@ public class ListUserApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * End.
+             * <p>The end port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>81</p>
              */
             public Builder end(String end) {
                 this.end = end;
@@ -318,7 +327,16 @@ public class ListUserApplicationsResponseBody extends TeaModel {
             } 
 
             /**
-             * Action.
+             * <p>The action for private application access:</p>
+             * <ul>
+             * <li><p><strong>Block</strong>: blocks access.</p>
+             * </li>
+             * <li><p><strong>Allow</strong>: allows access.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Block</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -326,7 +344,7 @@ public class ListUserApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * AddressGroups.
+             * <p>The application address group. This parameter is returned when ConfigMode is set to Precise. This parameter is empty when ConfigMode is an empty string.</p>
              */
             public Builder addressGroups(java.util.List<AddressGroup> addressGroups) {
                 this.addressGroups = addressGroups;
@@ -334,7 +352,7 @@ public class ListUserApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Addresses.
+             * <p>The list of private access application addresses.</p>
              */
             public Builder addresses(java.util.List<String> addresses) {
                 this.addresses = addresses;
@@ -342,7 +360,10 @@ public class ListUserApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationId.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pa-application-b927baf3e592****</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -350,7 +371,16 @@ public class ListUserApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigMode.
+             * <p>The configuration mode. Valid values:</p>
+             * <ul>
+             * <li><p>Empty string: default mode.</p>
+             * </li>
+             * <li><p>Precise: precise mode.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Precise</p>
              */
             public Builder configMode(String configMode) {
                 this.configMode = configMode;
@@ -358,7 +388,10 @@ public class ListUserApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>private_access_application_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -366,7 +399,7 @@ public class ListUserApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * PortRanges.
+             * <p>The port ranges of the private access application. Multiple port ranges cannot be repeated or overlap.</p>
              */
             public Builder portRanges(java.util.List<PortRanges> portRanges) {
                 this.portRanges = portRanges;
@@ -374,7 +407,22 @@ public class ListUserApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>The protocol of the private access application. Valid values:</p>
+             * <ul>
+             * <li><p><strong>All</strong>: all protocols.</p>
+             * </li>
+             * <li><p><strong>TCP</strong>: TCP.</p>
+             * </li>
+             * <li><p><strong>UDP</strong>: UDP.</p>
+             * </li>
+             * <li><p><strong>HTTP</strong>: HTTP.</p>
+             * </li>
+             * <li><p><strong>HTTPS</strong>: HTTPS.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;

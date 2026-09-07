@@ -80,7 +80,10 @@ public class ListVulnerabilitiesResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3D7EC0AF-DB2A-5D9C-90EC-F090A6BAAEA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,10 @@ public class ListVulnerabilitiesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of vulnerabilities that match the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>37</p>
          */
         public Builder totalNum(Long totalNum) {
             this.totalNum = totalNum;
@@ -96,7 +102,7 @@ public class ListVulnerabilitiesResponseBody extends TeaModel {
         }
 
         /**
-         * Vulnerabilities.
+         * <p>The list of vulnerabilities.</p>
          */
         public Builder vulnerabilities(java.util.List<Vulnerabilities> vulnerabilities) {
             this.vulnerabilities = vulnerabilities;
@@ -292,7 +298,7 @@ public class ListVulnerabilitiesResponseBody extends TeaModel {
             } 
 
             /**
-             * CveList.
+             * <p>The list of CVE IDs corresponding to the vulnerability. An empty list is returned if no CVE is associated.</p>
              */
             public Builder cveList(java.util.List<String> cveList) {
                 this.cveList = cveList;
@@ -300,7 +306,10 @@ public class ListVulnerabilitiesResponseBody extends TeaModel {
             }
 
             /**
-             * DescriptionEn.
+             * <p>The English description of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This update fixes several remote code execution and privilege escalation vulnerabilities.</p>
              */
             public Builder descriptionEn(String descriptionEn) {
                 this.descriptionEn = descriptionEn;
@@ -308,7 +317,10 @@ public class ListVulnerabilitiesResponseBody extends TeaModel {
             }
 
             /**
-             * DescriptionZh.
+             * <p>The Chinese description of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>该更新修复了若干远程代码执行与权限提升漏洞</p>
              */
             public Builder descriptionZh(String descriptionZh) {
                 this.descriptionZh = descriptionZh;
@@ -316,7 +328,7 @@ public class ListVulnerabilitiesResponseBody extends TeaModel {
             }
 
             /**
-             * Kbs.
+             * <p>The list of Knowledge Base (KB) numbers corresponding to the vulnerability.</p>
              */
             public Builder kbs(java.util.List<String> kbs) {
                 this.kbs = kbs;
@@ -324,7 +336,10 @@ public class ListVulnerabilitiesResponseBody extends TeaModel {
             }
 
             /**
-             * Product.
+             * <p>The name of the product affected by the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Windows 11 Home</p>
              */
             public Builder product(String product) {
                 this.product = product;
@@ -332,7 +347,10 @@ public class ListVulnerabilitiesResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseTime.
+             * <p>The release time of the vulnerability, in seconds as a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1786291200</p>
              */
             public Builder releaseTime(Long releaseTime) {
                 this.releaseTime = releaseTime;
@@ -340,7 +358,10 @@ public class ListVulnerabilitiesResponseBody extends TeaModel {
             }
 
             /**
-             * TitleEn.
+             * <p>The English title of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08 Cumulative Update for Windows 11</p>
              */
             public Builder titleEn(String titleEn) {
                 this.titleEn = titleEn;
@@ -348,7 +369,10 @@ public class ListVulnerabilitiesResponseBody extends TeaModel {
             }
 
             /**
-             * TitleZh.
+             * <p>The Chinese title of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08 适用于 Windows 11 的累积更新</p>
              */
             public Builder titleZh(String titleZh) {
                 this.titleZh = titleZh;
@@ -356,7 +380,10 @@ public class ListVulnerabilitiesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateId.
+             * <p>The patch ID corresponding to the vulnerability. For Windows vulnerabilities, this is the Microsoft patch Update ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9f8c1d2e-4b7a-4c31-9e05-6d2f8a71****</p>
              */
             public Builder updateId(String updateId) {
                 this.updateId = updateId;
@@ -364,7 +391,10 @@ public class ListVulnerabilitiesResponseBody extends TeaModel {
             }
 
             /**
-             * VulDeviceCount.
+             * <p>The number of user endpoint devices affected by the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder vulDeviceCount(Long vulDeviceCount) {
                 this.vulDeviceCount = vulDeviceCount;
@@ -372,7 +402,15 @@ public class ListVulnerabilitiesResponseBody extends TeaModel {
             }
 
             /**
-             * VulLevel.
+             * <p>The vulnerability risk level, mapped from the vendor risk level: Critical is mapped to High, Important is mapped to Mid, and others are mapped to Low. Valid values:</p>
+             * <ul>
+             * <li><strong>High</strong>: high risk.</li>
+             * <li><strong>Mid</strong>: medium risk.</li>
+             * <li><strong>Low</strong>: low risk.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>High</p>
              */
             public Builder vulLevel(String vulLevel) {
                 this.vulLevel = vulLevel;
@@ -380,7 +418,14 @@ public class ListVulnerabilitiesResponseBody extends TeaModel {
             }
 
             /**
-             * VulType.
+             * <p>The vulnerability type. Valid values:</p>
+             * <ul>
+             * <li><strong>windows</strong>: Windows system vulnerability.</li>
+             * <li><strong>ai_agent</strong>: AI Agent vulnerability.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>windows</p>
              */
             public Builder vulType(String vulType) {
                 this.vulType = vulType;

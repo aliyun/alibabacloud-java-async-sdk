@@ -187,7 +187,7 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends Request 
         } 
 
         /**
-         * ApplicationIds.
+         * <p>The IDs of the excessive device registration applications.</p>
          */
         public Builder applicationIds(java.util.List<String> applicationIds) {
             this.putQueryParameter("ApplicationIds", applicationIds);
@@ -196,6 +196,7 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends Request 
         }
 
         /**
+         * <p>The page number. Valid values: 1 to 10,000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,7 +209,10 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends Request 
         }
 
         /**
-         * Department.
+         * <p>The user\&quot;s department. The value must be 1 to 128 characters long and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (_), forward slashes (/), at signs (@), and spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试部</p>
          */
         public Builder department(String department) {
             this.putQueryParameter("Department", department);
@@ -217,7 +221,16 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends Request 
         }
 
         /**
-         * DeviceTag.
+         * <p>The device ID. You can get the device ID from the <code>DeviceTag</code> parameter returned by the following operations:</p>
+         * <ul>
+         * <li><p><a href="~~GetUserDevice~~">GetUserDevice</a>: Queries the details of a user\&quot;s device.</p>
+         * </li>
+         * <li><p><a href="~~ListUserDevices~~">ListUserDevices</a>: Queries a list of devices for a user.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
          */
         public Builder deviceTag(String deviceTag) {
             this.putQueryParameter("DeviceTag", deviceTag);
@@ -226,7 +239,10 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends Request 
         }
 
         /**
-         * Hostname.
+         * <p>The hostname of the device. The value must be 1 to 128 characters long and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (<em>), forward slashes (/), at signs (@), and spaces. If you specify only an underscore (</em>), the query is extended to include devices whose hostnames contain 4-byte UTF-8 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>win10-64bit</p>
          */
         public Builder hostname(String hostname) {
             this.putQueryParameter("Hostname", hostname);
@@ -235,7 +251,10 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends Request 
         }
 
         /**
-         * Mac.
+         * <p>The MAC address of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:16:XX:XX:7c:46</p>
          */
         public Builder mac(String mac) {
             this.putQueryParameter("Mac", mac);
@@ -244,6 +263,7 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends Request 
         }
 
         /**
+         * <p>The number of entries on each page. Valid values: 1 to 500.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -256,7 +276,16 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends Request 
         }
 
         /**
-         * SaseUserId.
+         * <p>The user ID. You can get the user ID from the <code>SaseUserId</code> parameter returned by the following operations:</p>
+         * <ul>
+         * <li><p><a href="~~GetUserDevice~~">GetUserDevice</a>: Queries the details of a user\&quot;s device.</p>
+         * </li>
+         * <li><p><a href="~~ListUserDevices~~">ListUserDevices</a>: Queries a list of devices for a user.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
          */
         public Builder saseUserId(String saseUserId) {
             this.putQueryParameter("SaseUserId", saseUserId);
@@ -265,7 +294,7 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends Request 
         }
 
         /**
-         * Statuses.
+         * <p>The statuses of excessive device registration applications.</p>
          */
         public Builder statuses(java.util.List<String> statuses) {
             this.putQueryParameter("Statuses", statuses);
@@ -274,7 +303,10 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends Request 
         }
 
         /**
-         * Username.
+         * <p>The username. The value must be 1 to 128 characters long and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), asterisks (\*), at signs (@), and spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>王先生</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

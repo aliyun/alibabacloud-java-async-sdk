@@ -67,7 +67,7 @@ public class CreateWmExtractTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the watermark extraction task.</p>
+         * <p>The watermark extraction task information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -131,7 +131,7 @@ public class CreateWmExtractTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The task ID. You can use task IDs to query task results.</p>
+             * <p>The task ID, which is used to query the task result.</p>
              * 
              * <strong>example:</strong>
              * <p>wmt-9648c22d2eb2cb57bb855dcae7898464********</p>

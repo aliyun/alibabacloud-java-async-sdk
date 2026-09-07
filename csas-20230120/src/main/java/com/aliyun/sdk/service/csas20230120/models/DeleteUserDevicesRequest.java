@@ -59,7 +59,7 @@ public class DeleteUserDevicesRequest extends Request {
         } 
 
         /**
-         * DeviceTags.
+         * <p>The collection of endpoint device IDs. A maximum of 100 entries are supported.</p>
          */
         public Builder deviceTags(java.util.List<String> deviceTags) {
             this.putBodyParameter("DeviceTags", deviceTags);

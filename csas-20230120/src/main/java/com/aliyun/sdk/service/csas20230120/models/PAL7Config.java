@@ -158,7 +158,7 @@ public class PAL7Config extends TeaModel {
         } 
 
         /**
-         * BypassConfig.
+         * <p>The configuration for anonymous access.</p>
          */
         public Builder bypassConfig(BypassConfig bypassConfig) {
             this.bypassConfig = bypassConfig;
@@ -166,7 +166,10 @@ public class PAL7Config extends TeaModel {
         }
 
         /**
-         * CertId.
+         * <p>The certificate ID. This parameter is required when you use a custom proxy domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cert-xxxx</p>
          */
         public Builder certId(String certId) {
             this.certId = certId;
@@ -174,7 +177,7 @@ public class PAL7Config extends TeaModel {
         }
 
         /**
-         * DnsConfig.
+         * <p>The DNS configuration.</p>
          */
         public Builder dnsConfig(DnsConfig dnsConfig) {
             this.dnsConfig = dnsConfig;
@@ -182,7 +185,7 @@ public class PAL7Config extends TeaModel {
         }
 
         /**
-         * JsHookConfig.
+         * <p>The configuration for rewriting internal network requests in JavaScript.</p>
          */
         public Builder jsHookConfig(JsHookConfig jsHookConfig) {
             this.jsHookConfig = jsHookConfig;
@@ -190,7 +193,16 @@ public class PAL7Config extends TeaModel {
         }
 
         /**
-         * ProxyDomainTypes.
+         * <p>The type of the proxy domain name. Valid values:</p>
+         * <ul>
+         * <li><p><strong>automatic</strong>: Uses a mapped proxy domain name.</p>
+         * </li>
+         * <li><p><strong>custom</strong>: Uses a custom proxy domain name.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>automatic</p>
          */
         public Builder proxyDomainTypes(byte[] proxyDomainTypes) {
             this.proxyDomainTypes = proxyDomainTypes;
@@ -198,7 +210,7 @@ public class PAL7Config extends TeaModel {
         }
 
         /**
-         * RequestHeaderRewriteConfig.
+         * <p>The rules for rewriting HTTP request headers.</p>
          */
         public Builder requestHeaderRewriteConfig(RequestHeaderRewriteConfig requestHeaderRewriteConfig) {
             this.requestHeaderRewriteConfig = requestHeaderRewriteConfig;
@@ -206,7 +218,7 @@ public class PAL7Config extends TeaModel {
         }
 
         /**
-         * RequestQueryRewriteConfig.
+         * <p>The configuration for rewriting HTTP request query parameters.</p>
          */
         public Builder requestQueryRewriteConfig(RequestQueryRewriteConfig requestQueryRewriteConfig) {
             this.requestQueryRewriteConfig = requestQueryRewriteConfig;
@@ -214,7 +226,7 @@ public class PAL7Config extends TeaModel {
         }
 
         /**
-         * ResponseHeaderRewriteConfig.
+         * <p>The configuration for rewriting HTTP response headers.</p>
          */
         public Builder responseHeaderRewriteConfig(ResponseHeaderRewriteConfig responseHeaderRewriteConfig) {
             this.responseHeaderRewriteConfig = responseHeaderRewriteConfig;
@@ -222,7 +234,7 @@ public class PAL7Config extends TeaModel {
         }
 
         /**
-         * ResponseRewriteConfig.
+         * <p>The configuration for rewriting internal domain names in HTML.</p>
          */
         public Builder responseRewriteConfig(ResponseRewriteConfig responseRewriteConfig) {
             this.responseRewriteConfig = responseRewriteConfig;
@@ -288,7 +300,7 @@ public class PAL7Config extends TeaModel {
             } 
 
             /**
-             * Froms.
+             * <p>An array of source IP address ranges that are allowed to anonymously access the application paths.</p>
              */
             public Builder froms(java.util.List<String> froms) {
                 this.froms = froms;
@@ -296,7 +308,7 @@ public class PAL7Config extends TeaModel {
             }
 
             /**
-             * Paths.
+             * <p>The URL paths that allow anonymous access.</p>
              */
             public Builder paths(java.util.List<String> paths) {
                 this.paths = paths;
@@ -376,7 +388,7 @@ public class PAL7Config extends TeaModel {
             } 
 
             /**
-             * AppBypassFroms.
+             * <p>An array of source IP address ranges that are allowed to anonymously access the application.</p>
              */
             public Builder appBypassFroms(java.util.List<String> appBypassFroms) {
                 this.appBypassFroms = appBypassFroms;
@@ -384,7 +396,18 @@ public class PAL7Config extends TeaModel {
             }
 
             /**
-             * Mode.
+             * <p>The anonymous access mode. The default value is <strong>disabled</strong>. Valid values:</p>
+             * <ul>
+             * <li><p><strong>disabled</strong>: Disables anonymous access.</p>
+             * </li>
+             * <li><p><strong>url</strong>: Sets anonymous access at the URL level.</p>
+             * </li>
+             * <li><p><strong>app</strong>: Sets anonymous access at the application level.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>disabled</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -392,7 +415,7 @@ public class PAL7Config extends TeaModel {
             }
 
             /**
-             * UrlBypassRules.
+             * <p>An array of rules for anonymous access to URLs.</p>
              */
             public Builder urlBypassRules(java.util.List<UrlBypassRules> urlBypassRules) {
                 this.urlBypassRules = urlBypassRules;
@@ -446,7 +469,7 @@ public class PAL7Config extends TeaModel {
             } 
 
             /**
-             * DnsServers.
+             * <p>An array of DNS server addresses. The gateway preferentially uses the DNS servers configured here to resolve internal domain names.</p>
              */
             public Builder dnsServers(java.util.List<String> dnsServers) {
                 this.dnsServers = dnsServers;
@@ -513,7 +536,16 @@ public class PAL7Config extends TeaModel {
             } 
 
             /**
-             * Mode.
+             * <p>The mode for rewriting internal network requests in JavaScript. The default value is <strong>disabled</strong>. Valid values:</p>
+             * <ul>
+             * <li><p><strong>disabled</strong>: Disables traffic redirection for JavaScript.</p>
+             * </li>
+             * <li><p><strong>whitelist</strong>: Enables the whitelist mode to redirect traffic as needed.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>disabled</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -521,7 +553,7 @@ public class PAL7Config extends TeaModel {
             }
 
             /**
-             * ReplaceRules.
+             * <p>An array of rules for rewriting internal network requests in JavaScript.</p>
              */
             public Builder replaceRules(java.util.List<PAL7ConfigReplaceRule> replaceRules) {
                 this.replaceRules = replaceRules;
@@ -575,7 +607,7 @@ public class PAL7Config extends TeaModel {
             } 
 
             /**
-             * Ops.
+             * <p>An array of rewrite operations.</p>
              */
             public Builder ops(java.util.List<PAL7ConfigRewriteOp> ops) {
                 this.ops = ops;
@@ -629,7 +661,7 @@ public class PAL7Config extends TeaModel {
             } 
 
             /**
-             * Ops.
+             * <p>An array of rewrite operations.</p>
              */
             public Builder ops(java.util.List<PAL7ConfigRewriteOp> ops) {
                 this.ops = ops;
@@ -683,7 +715,7 @@ public class PAL7Config extends TeaModel {
             } 
 
             /**
-             * Ops.
+             * <p>An array of rewrite operations.</p>
              */
             public Builder ops(java.util.List<PAL7ConfigRewriteOp> ops) {
                 this.ops = ops;
@@ -750,7 +782,16 @@ public class PAL7Config extends TeaModel {
             } 
 
             /**
-             * Mode.
+             * <p>The rewrite mode. The default value is <strong>auto</strong>. Valid values:</p>
+             * <ul>
+             * <li><p><strong>disabled</strong>: Disables rewriting of internal domain names in HTML.</p>
+             * </li>
+             * <li><p><strong>auto</strong>: Enables the automatic mode. The system automatically detects and rewrites internal domain names in HTML.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>auto</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -758,7 +799,7 @@ public class PAL7Config extends TeaModel {
             }
 
             /**
-             * ReplaceRules.
+             * <p>An array of rewrite rules.</p>
              */
             public Builder replaceRules(java.util.List<PAL7ConfigReplaceRule> replaceRules) {
                 this.replaceRules = replaceRules;

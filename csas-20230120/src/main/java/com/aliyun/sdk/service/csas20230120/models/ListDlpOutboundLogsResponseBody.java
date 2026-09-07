@@ -80,7 +80,7 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * Logs.
+         * <p>The log objects.</p>
          */
         public Builder logs(java.util.List<Logs> logs) {
             this.logs = logs;
@@ -88,7 +88,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9350F06D-80FB-5B8B-983A-0E25CBD08479</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNumber.
+         * <p>The total number of records that match the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         public Builder totalNumber(Integer totalNumber) {
             this.totalNumber = totalNumber;
@@ -162,7 +168,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * Count.
+             * <p>The number of matches.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -170,7 +179,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The dictionary name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Identify Number</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -237,7 +249,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * Count.
+             * <p>The number of matches.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -245,7 +260,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The keyword name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Report</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -312,7 +330,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * Count.
+             * <p>The number of matches.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -320,7 +341,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The dictionary name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Work Number</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -400,7 +424,7 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * InnerDicts.
+             * <p>The matched built-in dictionaries.</p>
              */
             public Builder innerDicts(java.util.List<InnerDicts> innerDicts) {
                 this.innerDicts = innerDicts;
@@ -408,7 +432,7 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Keywords.
+             * <p>The matched keywords.</p>
              */
             public Builder keywords(java.util.List<Keywords> keywords) {
                 this.keywords = keywords;
@@ -416,7 +440,7 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * UserDicts.
+             * <p>The matched built-in dictionaries.</p>
              */
             public Builder userDicts(java.util.List<UserDicts> userDicts) {
                 this.userDicts = userDicts;
@@ -522,7 +546,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * EngineDataLevel.
+             * <p>The corresponding data level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>L3</p>
              */
             public Builder engineDataLevel(String engineDataLevel) {
                 this.engineDataLevel = engineDataLevel;
@@ -530,7 +557,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * EngineDataType.
+             * <p>The corresponding data type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Company Data</p>
              */
             public Builder engineDataType(String engineDataType) {
                 this.engineDataType = engineDataType;
@@ -538,7 +568,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * EngineName.
+             * <p>The matched detection rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ID No</p>
              */
             public Builder engineName(String engineName) {
                 this.engineName = engineName;
@@ -546,7 +579,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyDesc.
+             * <p>The policy description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gitlab-tag-policy</p>
              */
             public Builder policyDesc(String policyDesc) {
                 this.policyDesc = policyDesc;
@@ -554,7 +590,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyName.
+             * <p>The matched policy name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -1037,7 +1076,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * Category.
+             * <p>The file category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Document</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -1045,7 +1087,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelId.
+             * <p>The primary channel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder channelId(String channelId) {
                 this.channelId = channelId;
@@ -1053,7 +1098,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelType.
+             * <p>The primary channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Web Upload</p>
              */
             public Builder channelType(String channelType) {
                 this.channelType = channelType;
@@ -1061,7 +1109,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Department.
+             * <p>The department.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>R&amp;D Department</p>
              */
             public Builder department(String department) {
                 this.department = department;
@@ -1069,7 +1120,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * DevFilePath.
+             * <p>The local path of the file on the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>C:\Users\a\Desktop\x.xlsx</p>
              */
             public Builder devFilePath(String devFilePath) {
                 this.devFilePath = devFilePath;
@@ -1077,7 +1131,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceTag.
+             * <p>The unique identifier of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69FFB8EB-3E5E-5F11-A9D3-59ED8CBB345D</p>
              */
             public Builder deviceTag(String deviceTag) {
                 this.deviceTag = deviceTag;
@@ -1085,7 +1142,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceType.
+             * <p>The device type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Windows</p>
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -1093,7 +1153,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * DlpStorageConfigId.
+             * <p>The storage policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder dlpStorageConfigId(String dlpStorageConfigId) {
                 this.dlpStorageConfigId = dlpStorageConfigId;
@@ -1101,7 +1164,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * DlpStorageType.
+             * <p>The storage type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder dlpStorageType(String dlpStorageType) {
                 this.dlpStorageType = dlpStorageType;
@@ -1109,7 +1175,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * DstAddr.
+             * <p>The outbound destination address or URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://mail.example.com">https://mail.example.com</a></p>
              */
             public Builder dstAddr(String dstAddr) {
                 this.dstAddr = dstAddr;
@@ -1117,7 +1186,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * FileOrigin.
+             * <p>The file source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>download</p>
              */
             public Builder fileOrigin(String fileOrigin) {
                 this.fileOrigin = fileOrigin;
@@ -1125,7 +1197,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * FileOriginHost.
+             * <p>The host of the file source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>drive.example.com</p>
              */
             public Builder fileOriginHost(String fileOriginHost) {
                 this.fileOriginHost = fileOriginHost;
@@ -1133,7 +1208,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * FileOriginReferrer.
+             * <p>The referrer of the file source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://drive.example.com/">https://drive.example.com/</a></p>
              */
             public Builder fileOriginReferrer(String fileOriginReferrer) {
                 this.fileOriginReferrer = fileOriginReferrer;
@@ -1141,7 +1219,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * FilePreview.
+             * <p>The file content preview snippet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>preview</p>
              */
             public Builder filePreview(String filePreview) {
                 this.filePreview = filePreview;
@@ -1149,7 +1230,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Format.
+             * <p>The file type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xlsx</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -1157,7 +1241,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupInfo.
+             * <p>The organizational structure path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>R&amp;D Center-Data Platform Team</p>
              */
             public Builder groupInfo(String groupInfo) {
                 this.groupInfo = groupInfo;
@@ -1165,7 +1252,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * HostName.
+             * <p>The hostname of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MacBook-Pro</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -1184,7 +1274,7 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * MatchedDicts.
+             * <p>The matched dictionary statistics.</p>
              */
             public Builder matchedDicts(MatchedDicts matchedDicts) {
                 this.matchedDicts = matchedDicts;
@@ -1192,7 +1282,7 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * MatchedPolicies.
+             * <p>The list of matched policy details.</p>
              */
             public Builder matchedPolicies(java.util.List<MatchedPolicies> matchedPolicies) {
                 this.matchedPolicies = matchedPolicies;
@@ -1200,7 +1290,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * OssFileName.
+             * <p>The object path of the sensitive file in the storage bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dlp/2026/08/10/xxx.xlsx</p>
              */
             public Builder ossFileName(String ossFileName) {
                 this.ossFileName = ossFileName;
@@ -1208,7 +1301,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyAction.
+             * <p>The policy action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>block_and_hint</p>
              */
             public Builder policyAction(String policyAction) {
                 this.policyAction = policyAction;
@@ -1216,7 +1312,7 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyName.
+             * <p>The list of matched policy names.</p>
              */
             public Builder policyName(java.util.List<String> policyName) {
                 this.policyName = policyName;
@@ -1224,7 +1320,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessName.
+             * <p>The outbound process name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chrome.exe</p>
              */
             public Builder processName(String processName) {
                 this.processName = processName;
@@ -1232,7 +1331,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessNameDesc.
+             * <p>The secondary channel description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WeCom-FileSend</p>
              */
             public Builder processNameDesc(String processNameDesc) {
                 this.processNameDesc = processNameDesc;
@@ -1240,7 +1342,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>The risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>low</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -1248,7 +1353,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Scene.
+             * <p>The matched risk scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>file</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -1256,7 +1364,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ScreenFilePath.
+             * <p>The storage path of the screenshot file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dlp/screen/xxx.png</p>
              */
             public Builder screenFilePath(String screenFilePath) {
                 this.screenFilePath = screenFilePath;
@@ -1264,7 +1375,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The file size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1048576</p>
              */
             public Builder size(String size) {
                 this.size = size;
@@ -1272,7 +1386,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SrcFileName.
+             * <p>The original file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026Q2FinancialReport.xlsx</p>
              */
             public Builder srcFileName(String srcFileName) {
                 this.srcFileName = srcFileName;
@@ -1280,7 +1397,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SrcIp.
+             * <p>The source IP address of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.5</p>
              */
             public Builder srcIp(String srcIp) {
                 this.srcIp = srcIp;
@@ -1288,7 +1408,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The time when the event occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-10 14:03:22</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1296,7 +1419,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * UploadTime.
+             * <p>The time when the log was reported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-10 14:03:25</p>
              */
             public Builder uploadTime(String uploadTime) {
                 this.uploadTime = uploadTime;
@@ -1304,7 +1430,10 @@ public class ListDlpOutboundLogsResponseBody extends TeaModel {
             }
 
             /**
-             * User.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangsan</p>
              */
             public Builder user(String user) {
                 this.user = user;

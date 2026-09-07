@@ -184,7 +184,14 @@ public class GetAntiVirusRealTimeDefenceStrategyResponseBody extends TeaModel {
         } 
 
         /**
-         * HighRiskOperation.
+         * <p>The action taken on high-risk virus files. Valid values:</p>
+         * <ul>
+         * <li><strong>Quarantine</strong>: Quarantines quarantined file.</li>
+         * <li><strong>Notify</strong>: Reports an alert only without taking action on quarantined file. Quarantine is returned if no real-time defense policy has been configured.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Quarantine</p>
          */
         public Builder highRiskOperation(String highRiskOperation) {
             this.highRiskOperation = highRiskOperation;
@@ -192,7 +199,15 @@ public class GetAntiVirusRealTimeDefenceStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * LowRiskOperation.
+         * <p>The action taken on low-risk virus files. Valid values:</p>
+         * <ul>
+         * <li><strong>Quarantine</strong>: Quarantines quarantined file.</li>
+         * <li><strong>Notify</strong>: Reports an alert only without taking action on quarantined file.</li>
+         * <li><strong>None</strong>: Takes no action. None is returned if no real-time defense policy has been configured.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder lowRiskOperation(String lowRiskOperation) {
             this.lowRiskOperation = lowRiskOperation;
@@ -200,7 +215,14 @@ public class GetAntiVirusRealTimeDefenceStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * MatchMode.
+         * <p>The matching mode of the effective scope. Valid values:</p>
+         * <ul>
+         * <li><strong>UserGroupAll</strong>: Applies to all users under the current Alibaba Cloud account.</li>
+         * <li><strong>UserGroupNormal</strong>: Applies only to users in specified user groups. An empty string is returned if no real-time defense policy has been configured.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UserGroupNormal</p>
          */
         public Builder matchMode(String matchMode) {
             this.matchMode = matchMode;
@@ -208,7 +230,7 @@ public class GetAntiVirusRealTimeDefenceStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * MatchTargetIds.
+         * <p>The collection of user group IDs to which the policy applies. An empty list is returned when MatchMode is set to UserGroupAll.</p>
          */
         public Builder matchTargetIds(java.util.List<String> matchTargetIds) {
             this.matchTargetIds = matchTargetIds;
@@ -216,7 +238,10 @@ public class GetAntiVirusRealTimeDefenceStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * MaxCpuUsage.
+         * <p>The maximum percentage of endpoint CPU that real-time defense can use. The default value 30 is returned if a policy has been configured but this parameter is not separately set. 0 is returned if no real-time defense policy has been configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxCpuUsage(Long maxCpuUsage) {
             this.maxCpuUsage = maxCpuUsage;
@@ -224,7 +249,14 @@ public class GetAntiVirusRealTimeDefenceStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * MidRiskOperation.
+         * <p>The action taken on medium-risk virus files. Valid values:</p>
+         * <ul>
+         * <li><strong>Quarantine</strong>: Quarantines quarantined file.</li>
+         * <li><strong>Notify</strong>: Reports an alert only without taking action on quarantined file. Notify is returned if no real-time defense policy has been configured.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Notify</p>
          */
         public Builder midRiskOperation(String midRiskOperation) {
             this.midRiskOperation = midRiskOperation;
@@ -232,7 +264,10 @@ public class GetAntiVirusRealTimeDefenceStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3D7EC0AF-DB2A-5D9C-90EC-F090A6BAAEA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -240,7 +275,7 @@ public class GetAntiVirusRealTimeDefenceStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * ScanTargets.
+         * <p>The collection of virus types that the real-time defense handles. An empty list is returned if no real-time defense policy has been configured.</p>
          */
         public Builder scanTargets(java.util.List<String> scanTargets) {
             this.scanTargets = scanTargets;
@@ -248,7 +283,14 @@ public class GetAntiVirusRealTimeDefenceStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The enabling status. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled. Disabled is returned if no real-time defense policy has been configured.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -256,7 +298,10 @@ public class GetAntiVirusRealTimeDefenceStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * StrategyId.
+         * <p>The ID of the real-time defense policy. An empty string is returned if no real-time defense policy has been configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>av-rtd-2f5c8e1a7b94****</p>
          */
         public Builder strategyId(String strategyId) {
             this.strategyId = strategyId;
@@ -264,7 +309,7 @@ public class GetAntiVirusRealTimeDefenceStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * Whitelist.
+         * <p>The list of exempted usernames. Users in this list are not subject to real-time defense. An empty list is returned if no exemption is configured.</p>
          */
         public Builder whitelist(java.util.List<String> whitelist) {
             this.whitelist = whitelist;

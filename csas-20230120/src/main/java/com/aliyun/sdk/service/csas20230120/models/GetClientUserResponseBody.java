@@ -67,7 +67,7 @@ public class GetClientUserResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>User details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetClientUserResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class GetClientUserResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>Department ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>107</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -149,7 +155,10 @@ public class GetClientUserResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Department name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例部门</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -320,7 +329,7 @@ public class GetClientUserResponseBody extends TeaModel {
             } 
 
             /**
-             * Department.
+             * <p>Department to which the user belongs.</p>
              */
             public Builder department(Department department) {
                 this.department = department;
@@ -328,7 +337,10 @@ public class GetClientUserResponseBody extends TeaModel {
             }
 
             /**
-             * DepartmentId.
+             * <p>Department ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10713</p>
              */
             public Builder departmentId(String departmentId) {
                 this.departmentId = departmentId;
@@ -336,7 +348,10 @@ public class GetClientUserResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>User description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例用户</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -344,7 +359,10 @@ public class GetClientUserResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * <p>Email address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:johndoe@example.com">johndoe@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -352,7 +370,10 @@ public class GetClientUserResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>User ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>83</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -360,7 +381,10 @@ public class GetClientUserResponseBody extends TeaModel {
             }
 
             /**
-             * IdpConfigId.
+             * <p>ID of the custom identity source configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idp-cfg68956d86e********</p>
              */
             public Builder idpConfigId(String idpConfigId) {
                 this.idpConfigId = idpConfigId;
@@ -368,7 +392,10 @@ public class GetClientUserResponseBody extends TeaModel {
             }
 
             /**
-             * MobileNumber.
+             * <p>Mobile phone number without country code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1364196****</p>
              */
             public Builder mobileNumber(String mobileNumber) {
                 this.mobileNumber = mobileNumber;
@@ -376,7 +403,16 @@ public class GetClientUserResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>User status. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Enabled</strong>: Enabled.</p>
+             * </li>
+             * <li><p><strong>Disabled</strong>: Disabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Disabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -384,7 +420,10 @@ public class GetClientUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>Unique identifier of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>su_abcd7215****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -392,7 +431,10 @@ public class GetClientUserResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * <p>Username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder username(String username) {
                 this.username = username;

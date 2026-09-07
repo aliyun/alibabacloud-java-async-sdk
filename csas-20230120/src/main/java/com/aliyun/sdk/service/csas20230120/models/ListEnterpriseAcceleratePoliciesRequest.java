@@ -89,6 +89,7 @@ public class ListEnterpriseAcceleratePoliciesRequest extends Request {
         } 
 
         /**
+         * <p>The number of the page to return for a paged query. Valid values: 1 to 10000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,10 @@ public class ListEnterpriseAcceleratePoliciesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the enterprise acceleration policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试策略</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -110,6 +114,7 @@ public class ListEnterpriseAcceleratePoliciesRequest extends Request {
         }
 
         /**
+         * <p>The number of entries to return on each page for a paged query. Valid values: 1 to 1000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

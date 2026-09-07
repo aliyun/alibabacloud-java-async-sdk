@@ -75,6 +75,7 @@ public class AttachApplication2ConnectorRequest extends Request {
         } 
 
         /**
+         * <p>The set of private access application IDs. The number of private access applications that can be attached to a single Connector cannot exceed the total number of private access applications.</p>
          * <p>This parameter is required.</p>
          */
         public Builder applicationIds(java.util.List<String> applicationIds) {
@@ -85,7 +86,7 @@ public class AttachApplication2ConnectorRequest extends Request {
         }
 
         /**
-         * <p>ConnectorID。</p>
+         * <p>The Connector ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

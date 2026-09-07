@@ -67,7 +67,10 @@ public class CreateDeviceGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * DeviceGroupId.
+         * <p>The device label ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>device-group-5191cf830a5e****</p>
          */
         public Builder deviceGroupId(String deviceGroupId) {
             this.deviceGroupId = deviceGroupId;

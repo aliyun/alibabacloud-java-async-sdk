@@ -60,6 +60,7 @@ public class CancelVirusScanTasksRequest extends Request {
         } 
 
         /**
+         * <p>The collection of virus scan task IDs to cancel. The collection must contain at least one ID, and duplicate IDs are not allowed.</p>
          * <p>This parameter is required.</p>
          */
         public Builder taskIds(java.util.List<String> taskIds) {

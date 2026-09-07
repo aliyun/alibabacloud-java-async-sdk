@@ -60,6 +60,7 @@ public class ListApprovalProcessesForApprovalSchemasRequest extends Request {
         } 
 
         /**
+         * <p>A collection of approval template IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder schemaIds(java.util.List<String> schemaIds) {

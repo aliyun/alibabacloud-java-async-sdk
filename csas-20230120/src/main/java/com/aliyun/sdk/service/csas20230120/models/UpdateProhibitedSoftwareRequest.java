@@ -144,7 +144,10 @@ public class UpdateProhibitedSoftwareRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the prohibited software.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -153,7 +156,7 @@ public class UpdateProhibitedSoftwareRequest extends Request {
         }
 
         /**
-         * LinuxProcesses.
+         * <p>The list of process configurations for the Linux operating system.</p>
          */
         public Builder linuxProcesses(java.util.List<LinuxProcesses> linuxProcesses) {
             this.putBodyParameter("LinuxProcesses", linuxProcesses);
@@ -162,7 +165,7 @@ public class UpdateProhibitedSoftwareRequest extends Request {
         }
 
         /**
-         * MacOSProcesses.
+         * <p>The list of process configurations for the macOS operating system.</p>
          */
         public Builder macOSProcesses(java.util.List<MacOSProcesses> macOSProcesses) {
             this.putBodyParameter("MacOSProcesses", macOSProcesses);
@@ -171,7 +174,10 @@ public class UpdateProhibitedSoftwareRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the prohibited software.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Edge</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -180,6 +186,11 @@ public class UpdateProhibitedSoftwareRequest extends Request {
         }
 
         /**
+         * <p>The ID of the custom prohibited software to update. Only custom prohibited software under the current Alibaba Cloud account can be updated. Built-in prohibited software cannot be updated. You can obtain the value from the following operations:</p>
+         * <ul>
+         * <li><a href="~~ListProhibitedSoftware~~">ListProhibitedSoftware</a>: queries prohibited software entries in batches.</li>
+         * <li><a href="~~CreateProhibitedSoftware~~">CreateProhibitedSoftware</a>: creates a custom prohibited software entry.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,7 +203,7 @@ public class UpdateProhibitedSoftwareRequest extends Request {
         }
 
         /**
-         * TagIds.
+         * <p>The IDs of the custom prohibited software tags to associate. Duplicate values are not allowed.</p>
          */
         public Builder tagIds(java.util.List<String> tagIds) {
             this.putBodyParameter("TagIds", tagIds);
@@ -201,7 +212,7 @@ public class UpdateProhibitedSoftwareRequest extends Request {
         }
 
         /**
-         * WindowsProcesses.
+         * <p>The list of process configurations for the Windows operating system.</p>
          */
         public Builder windowsProcesses(java.util.List<WindowsProcesses> windowsProcesses) {
             this.putBodyParameter("WindowsProcesses", windowsProcesses);
@@ -295,7 +306,10 @@ public class UpdateProhibitedSoftwareRequest extends Request {
             } 
 
             /**
-             * BundleId.
+             * <p>The bundle ID of the application. This parameter is required only for macOS processes. You must specify at least one of this parameter and Process. The value can be up to 1024 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.aliyun.security.sase</p>
              */
             public Builder bundleId(String bundleId) {
                 this.bundleId = bundleId;
@@ -303,7 +317,10 @@ public class UpdateProhibitedSoftwareRequest extends Request {
             }
 
             /**
-             * Cmdline.
+             * <p>The command line parameters for starting the process. If specified, only processes whose command line contains this content are matched. If left empty, the command line is not checked. The value can be up to 1024 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>--start-minimized</p>
              */
             public Builder cmdline(String cmdline) {
                 this.cmdline = cmdline;
@@ -311,7 +328,10 @@ public class UpdateProhibitedSoftwareRequest extends Request {
             }
 
             /**
-             * Directory.
+             * <p>The directory where the process is located. If specified, only processes with the same name in this directory are matched. If left empty, processes in any directory are matched. The value can be up to 1024 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>C:\\autotest</p>
              */
             public Builder directory(String directory) {
                 this.directory = directory;
@@ -319,7 +339,10 @@ public class UpdateProhibitedSoftwareRequest extends Request {
             }
 
             /**
-             * Process.
+             * <p>The process name. The value can be up to 1024 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Everything.exe</p>
              */
             public Builder process(String process) {
                 this.process = process;
@@ -412,7 +435,10 @@ public class UpdateProhibitedSoftwareRequest extends Request {
             } 
 
             /**
-             * BundleId.
+             * <p>The bundle ID of the application. This parameter is required only for macOS processes. You must specify at least one of this parameter and Process. The value can be up to 1024 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.autotest.update</p>
              */
             public Builder bundleId(String bundleId) {
                 this.bundleId = bundleId;
@@ -420,7 +446,10 @@ public class UpdateProhibitedSoftwareRequest extends Request {
             }
 
             /**
-             * Cmdline.
+             * <p>The command line parameters for starting the process. If specified, only processes whose command line contains this content are matched. If left empty, the command line is not checked. The value can be up to 1024 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>--start-minimized</p>
              */
             public Builder cmdline(String cmdline) {
                 this.cmdline = cmdline;
@@ -428,7 +457,10 @@ public class UpdateProhibitedSoftwareRequest extends Request {
             }
 
             /**
-             * Directory.
+             * <p>The directory where the process is located. If specified, only processes with the same name in this directory are matched. If left empty, processes in any directory are matched. The value can be up to 1024 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>C:\\autotest</p>
              */
             public Builder directory(String directory) {
                 this.directory = directory;
@@ -436,7 +468,10 @@ public class UpdateProhibitedSoftwareRequest extends Request {
             }
 
             /**
-             * Process.
+             * <p>The process name. The value can be up to 1024 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Everything.exe</p>
              */
             public Builder process(String process) {
                 this.process = process;
@@ -529,7 +564,10 @@ public class UpdateProhibitedSoftwareRequest extends Request {
             } 
 
             /**
-             * BundleId.
+             * <p>The bundle ID of the application. This parameter is required only for macOS processes. You must specify at least one of this parameter and Process. The value can be up to 1024 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn.apifox.app</p>
              */
             public Builder bundleId(String bundleId) {
                 this.bundleId = bundleId;
@@ -537,7 +575,10 @@ public class UpdateProhibitedSoftwareRequest extends Request {
             }
 
             /**
-             * Cmdline.
+             * <p>The command line parameters for starting the process. If specified, only processes whose command line contains this content are matched. If left empty, the command line is not checked. The value can be up to 1024 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>--start-minimized</p>
              */
             public Builder cmdline(String cmdline) {
                 this.cmdline = cmdline;
@@ -545,7 +586,10 @@ public class UpdateProhibitedSoftwareRequest extends Request {
             }
 
             /**
-             * Directory.
+             * <p>The directory where the process is located. If specified, only processes with the same name in this directory are matched. If left empty, processes in any directory are matched. The value can be up to 1024 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>C:\\autotest</p>
              */
             public Builder directory(String directory) {
                 this.directory = directory;
@@ -553,7 +597,10 @@ public class UpdateProhibitedSoftwareRequest extends Request {
             }
 
             /**
-             * Process.
+             * <p>The process name. The value can be up to 1024 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Everything.exe</p>
              */
             public Builder process(String process) {
                 this.process = process;

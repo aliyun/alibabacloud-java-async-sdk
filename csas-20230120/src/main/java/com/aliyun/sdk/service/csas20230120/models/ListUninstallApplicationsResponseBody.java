@@ -80,7 +80,7 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
         } 
 
         /**
-         * Applications.
+         * <p>The list of uninstall applications.</p>
          */
         public Builder applications(java.util.List<Applications> applications) {
             this.applications = applications;
@@ -88,7 +88,10 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of uninstall applications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalNum(Long totalNum) {
             this.totalNum = totalNum;
@@ -318,7 +324,10 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
             } 
 
             /**
-             * ApplicationId.
+             * <p>The uninstall application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>uninstall-app-6646831ac314****</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -326,7 +335,10 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the uninstall application was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-07-17 18:46:55</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -334,7 +346,10 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Department.
+             * <p>The department to which the user belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Testing Department</p>
              */
             public Builder department(String department) {
                 this.department = department;
@@ -342,7 +357,10 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * DevTag.
+             * <p>The ID of the terminal device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
              */
             public Builder devTag(String devTag) {
                 this.devTag = devTag;
@@ -350,7 +368,18 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * DevType.
+             * <p>The operating system type of the terminal device. Valid values:</p>
+             * <ul>
+             * <li><strong>Windows</strong>: Windows.</li>
+             * <li><strong>macOS</strong>: macOS.</li>
+             * <li><strong>Linux</strong>: Linux.</li>
+             * <li><strong>Android</strong>: Android.</li>
+             * <li><strong>iOS</strong>: iOS.</li>
+             * <li><strong>Windows_Wuying</strong>: WUYING Workspace.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Windows</p>
              */
             public Builder devType(String devType) {
                 this.devType = devType;
@@ -358,7 +387,7 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * FullDepartment.
+             * <p>The list of full department paths.</p>
              */
             public Builder fullDepartment(java.util.List<String> fullDepartment) {
                 this.fullDepartment = fullDepartment;
@@ -366,7 +395,10 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Hostname.
+             * <p>The name of the terminal device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>win10-64bit</p>
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -374,7 +406,10 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * IdpName.
+             * <p>The name of the user identity source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test identity source</p>
              */
             public Builder idpName(String idpName) {
                 this.idpName = idpName;
@@ -382,7 +417,10 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * IsUninstall.
+             * <p>Indicates whether the uninstallation has been performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isUninstall(Boolean isUninstall) {
                 this.isUninstall = isUninstall;
@@ -390,7 +428,10 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Mac.
+             * <p>The MAC address of the terminal device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:16:XX:XX:7c:46</p>
              */
             public Builder mac(String mac) {
                 this.mac = mac;
@@ -398,7 +439,10 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The reason for the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a test</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -406,7 +450,10 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * SaseUserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
              */
             public Builder saseUserId(String saseUserId) {
                 this.saseUserId = saseUserId;
@@ -414,7 +461,15 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The uninstall application status. Valid values:</p>
+             * <ul>
+             * <li><strong>Pending</strong>: Pending processing.</li>
+             * <li><strong>Approved</strong>: Approved.</li>
+             * <li><strong>Rejected</strong>: Rejected.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Approved</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -422,7 +477,10 @@ public class ListUninstallApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mr. Wang</p>
              */
             public Builder username(String username) {
                 this.username = username;

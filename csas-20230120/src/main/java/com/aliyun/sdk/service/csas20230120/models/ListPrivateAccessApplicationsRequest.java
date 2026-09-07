@@ -187,7 +187,14 @@ public class ListPrivateAccessApplicationsRequest extends Request {
         } 
 
         /**
-         * AccessModes.
+         * <p>The access mode. Valid values:</p>
+         * <ul>
+         * <li><strong>app</strong>: application access. Filters applications that support application access.</li>
+         * <li><strong>browser</strong>: browser access. Filters applications that support browser access.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>app</p>
          */
         public Builder accessModes(String accessModes) {
             this.putQueryParameter("AccessModes", accessModes);
@@ -196,7 +203,10 @@ public class ListPrivateAccessApplicationsRequest extends Request {
         }
 
         /**
-         * Address.
+         * <p>The address of the internal-facing access application. The address is 1 to 128 characters in length and supports IPv4 addresses, CIDR blocks, domain names, and wildcard domain names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0/16</p>
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -205,7 +215,7 @@ public class ListPrivateAccessApplicationsRequest extends Request {
         }
 
         /**
-         * ApplicationIds.
+         * <p>The IDs of internal-facing access applications. You can specify up to 100 application IDs.</p>
          */
         public Builder applicationIds(java.util.List<String> applicationIds) {
             this.putQueryParameter("ApplicationIds", applicationIds);
@@ -214,7 +224,10 @@ public class ListPrivateAccessApplicationsRequest extends Request {
         }
 
         /**
-         * ConnectorId.
+         * <p>The connector ID. You can obtain the ID from the <a href="~~ListConnectors~~">ListConnectors</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>connector-94db94e06b98****</p>
          */
         public Builder connectorId(String connectorId) {
             this.putQueryParameter("ConnectorId", connectorId);
@@ -223,6 +236,7 @@ public class ListPrivateAccessApplicationsRequest extends Request {
         }
 
         /**
+         * <p>The page number of the current page displayed in a paged query. Valid values: 1 to 10000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -235,7 +249,10 @@ public class ListPrivateAccessApplicationsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the internal-facing access application. The name is 1 to 128 characters in length, supports Chinese and uppercase and lowercase letters, and can contain digits, periods (.), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>private_access_application_name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -244,6 +261,7 @@ public class ListPrivateAccessApplicationsRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page in a paged query. Valid values: 1 to 1000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -256,7 +274,14 @@ public class ListPrivateAccessApplicationsRequest extends Request {
         }
 
         /**
-         * PolicyId.
+         * <p>The ID of the internal-facing access policy. You can obtain the ID from the following operations:</p>
+         * <ul>
+         * <li><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: queries internal-facing access policies in batches.</li>
+         * <li><a href="~~CreatePrivateAccessPolicy~~">CreatePrivateAccessPolicy</a>: creates an internal-facing access policy.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-policy-54a7838a48bf****</p>
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -265,7 +290,14 @@ public class ListPrivateAccessApplicationsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the internal-facing access application. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: enabled.</li>
+         * <li><strong>Disabled</strong>: disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -274,7 +306,14 @@ public class ListPrivateAccessApplicationsRequest extends Request {
         }
 
         /**
-         * TagId.
+         * <p>The ID of the internal-facing access tag. You can obtain the ID from the following operations:</p>
+         * <ul>
+         * <li><a href="~~ListPrivateAccessTags~~">ListPrivateAccessTags</a>: queries internal-facing access tags in batches.</li>
+         * <li><a href="~~CreatePrivateAccessTag~~">CreatePrivateAccessTag</a>: creates an internal-facing access tag.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>tag-d3f64e8bdd4a****</p>
          */
         public Builder tagId(String tagId) {
             this.putQueryParameter("TagId", tagId);

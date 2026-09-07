@@ -80,7 +80,7 @@ public class ListDomainItemsResponseBody extends TeaModel {
         } 
 
         /**
-         * DomainItems.
+         * <p>The list of domain name entries.</p>
          */
         public Builder domainItems(java.util.List<DomainItems> domainItems) {
             this.domainItems = domainItems;
@@ -99,7 +99,10 @@ public class ListDomainItemsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of records that match the specified conditions. This is an optional parameter and may not be returned by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13</p>
          */
         public Builder totalNum(Integer totalNum) {
             this.totalNum = totalNum;
@@ -191,7 +194,10 @@ public class ListDomainItemsResponseBody extends TeaModel {
             } 
 
             /**
-             * GmtCreate.
+             * <p>The time when the entry was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-01 10:20:30</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -199,7 +205,10 @@ public class ListDomainItemsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the entry was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-01 10:20:30</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -215,7 +224,10 @@ public class ListDomainItemsResponseBody extends TeaModel {
             }
 
             /**
-             * ItemValue.
+             * <p>The domain name. Wildcard domain names are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder itemValue(String itemValue) {
                 this.itemValue = itemValue;

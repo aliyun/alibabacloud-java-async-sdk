@@ -80,7 +80,7 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
         } 
 
         /**
-         * Applications.
+         * <p>The list of internal-facing access applications.</p>
          */
         public Builder applications(java.util.List<Applications> applications) {
             this.applications = applications;
@@ -88,7 +88,10 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>748CFDC7-1EB6-5B8B-9405-DA76ED5BB60D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of internal-facing access applications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalNum(Integer totalNum) {
             this.totalNum = totalNum;
@@ -162,7 +168,10 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
             } 
 
             /**
-             * Begin.
+             * <p>The start port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder begin(Integer begin) {
                 this.begin = begin;
@@ -170,7 +179,10 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * End.
+             * <p>The end port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>81</p>
              */
             public Builder end(Integer end) {
                 this.end = end;
@@ -440,7 +452,7 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Addresses.
+             * <p>The addresses of the internal-facing access application.</p>
              */
             public Builder addresses(java.util.List<String> addresses) {
                 this.addresses = addresses;
@@ -448,7 +460,10 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationId.
+             * <p>The ID of the internal-facing access application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pa-application-e12860ef6c48****</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -464,7 +479,14 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * BrowserAccessStatus.
+             * <p>The browser access mode. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: enabled.</li>
+             * <li><strong>Disabled</strong>: disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder browserAccessStatus(String browserAccessStatus) {
                 this.browserAccessStatus = browserAccessStatus;
@@ -480,7 +502,7 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectorIds.
+             * <p>The connector IDs.</p>
              */
             public Builder connectorIds(java.util.List<String> connectorIds) {
                 this.connectorIds = connectorIds;
@@ -488,7 +510,10 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the internal-facing access application was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-16 15:03:42</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -496,7 +521,10 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the internal-facing access application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是一条内网访问应用</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -504,7 +532,10 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * L7ProxyDomainAutomatic.
+             * <p>The browser access mode parameter: mapped proxy domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app1-xxx.at.cloudssecsase.com</p>
              */
             public Builder l7ProxyDomainAutomatic(String l7ProxyDomainAutomatic) {
                 this.l7ProxyDomainAutomatic = l7ProxyDomainAutomatic;
@@ -512,7 +543,10 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * L7ProxyDomainCustom.
+             * <p>The browser access mode parameter: custom proxy domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app1.example.com</p>
              */
             public Builder l7ProxyDomainCustom(String l7ProxyDomainCustom) {
                 this.l7ProxyDomainCustom = l7ProxyDomainCustom;
@@ -520,7 +554,10 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the internal-facing access application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>private_access_application_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -528,7 +565,7 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyIds.
+             * <p>The IDs of internal-facing access policies.</p>
              */
             public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
@@ -536,7 +573,7 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * PortRanges.
+             * <p>The port ranges of the internal-facing access application. Multiple port ranges cannot be duplicate or overlapping.</p>
              */
             public Builder portRanges(java.util.List<PortRanges> portRanges) {
                 this.portRanges = portRanges;
@@ -544,7 +581,15 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>The protocol of the internal-facing access application. Valid values:</p>
+             * <ul>
+             * <li><strong>All</strong>: all protocols.</li>
+             * <li><strong>TCP</strong></li>
+             * <li><strong>UDP</strong>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>All</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -552,7 +597,14 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the internal-facing access application. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: enabled.</li>
+             * <li><strong>Disabled</strong>: disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -560,7 +612,7 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * TagIds.
+             * <p>The IDs of internal-facing access tags.</p>
              */
             public Builder tagIds(java.util.List<String> tagIds) {
                 this.tagIds = tagIds;

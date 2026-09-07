@@ -214,7 +214,7 @@ public class UpdateRegistrationPolicyRequest extends Request {
         } 
 
         /**
-         * CompanyLimitCount.
+         * <p>The registration limit for corporate devices.</p>
          */
         public Builder companyLimitCount(CompanyLimitCount companyLimitCount) {
             String companyLimitCountShrink = shrink(companyLimitCount, "CompanyLimitCount", "json");
@@ -224,7 +224,18 @@ public class UpdateRegistrationPolicyRequest extends Request {
         }
 
         /**
-         * CompanyLimitType.
+         * <p>The registration limit type for corporate devices. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Unlimited</strong>: No limit.</p>
+         * </li>
+         * <li><p><strong>LimitAll</strong>: Limits the total number of devices.</p>
+         * </li>
+         * <li><p><strong>LimitDiff</strong>: Limits devices by terminal type.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LimitAll</p>
          */
         public Builder companyLimitType(String companyLimitType) {
             this.putBodyParameter("CompanyLimitType", companyLimitType);
@@ -233,7 +244,10 @@ public class UpdateRegistrationPolicyRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the device registration policy. The description can be 1 to 128 characters long and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一条设备注册策略</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -242,7 +256,16 @@ public class UpdateRegistrationPolicyRequest extends Request {
         }
 
         /**
-         * MatchMode.
+         * <p>The matching target type of the policy. Valid values:</p>
+         * <ul>
+         * <li><p><strong>UserGroupAll</strong>: Associates with all users.</p>
+         * </li>
+         * <li><p><strong>UserGroupNormal</strong>: Associates with specific user groups.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UserGroupNormal</p>
          */
         public Builder matchMode(String matchMode) {
             this.putBodyParameter("MatchMode", matchMode);
@@ -251,7 +274,10 @@ public class UpdateRegistrationPolicyRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the device registration policy. The name must be 1 to 128 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registration_policy_name</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -260,7 +286,7 @@ public class UpdateRegistrationPolicyRequest extends Request {
         }
 
         /**
-         * PersonalLimitCount.
+         * <p>The registration limit for personal devices.</p>
          */
         public Builder personalLimitCount(PersonalLimitCount personalLimitCount) {
             String personalLimitCountShrink = shrink(personalLimitCount, "PersonalLimitCount", "json");
@@ -270,7 +296,18 @@ public class UpdateRegistrationPolicyRequest extends Request {
         }
 
         /**
-         * PersonalLimitType.
+         * <p>The registration limit type for personal devices. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Unlimited</strong>: No limit.</p>
+         * </li>
+         * <li><p><strong>LimitAll</strong>: Limits the total number of devices.</p>
+         * </li>
+         * <li><p><strong>LimitDiff</strong>: Limits devices by terminal type.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LimitDiff</p>
          */
         public Builder personalLimitType(String personalLimitType) {
             this.putBodyParameter("PersonalLimitType", personalLimitType);
@@ -279,6 +316,17 @@ public class UpdateRegistrationPolicyRequest extends Request {
         }
 
         /**
+         * <p>The ID of the device registration policy. You can obtain the ID by calling one of the following operations:</p>
+         * <ul>
+         * <li><p><a href="~~ListRegistrationPolicies~~">ListRegistrationPolicies</a></p>
+         * </li>
+         * <li><p><a href="~~GetRegistrationPolicy~~">GetRegistrationPolicy</a></p>
+         * </li>
+         * <li><p><a href="~~CreateRegistrationPolicy~~">CreateRegistrationPolicy</a></p>
+         * </li>
+         * <li><p><a href="~~UpdateRegistrationPolicy~~">UpdateRegistrationPolicy</a></p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -291,7 +339,10 @@ public class UpdateRegistrationPolicyRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The priority of the device registration policy. A smaller value indicates a higher priority. The value 0 indicates the highest priority, and 99 indicates the lowest priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder priority(Long priority) {
             this.putBodyParameter("Priority", priority);
@@ -300,7 +351,16 @@ public class UpdateRegistrationPolicyRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the device registration policy. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Enabled</strong></p>
+         * </li>
+         * <li><p><strong>Disabled</strong></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);
@@ -309,7 +369,7 @@ public class UpdateRegistrationPolicyRequest extends Request {
         }
 
         /**
-         * UserGroupIds.
+         * <p>The IDs of user groups. This parameter is required when MatchMode is set to <strong>UserGroupNormal</strong>. A policy can be associated with up to 100 user groups.</p>
          */
         public Builder userGroupIds(java.util.List<String> userGroupIds) {
             this.putBodyParameter("UserGroupIds", userGroupIds);
@@ -318,7 +378,7 @@ public class UpdateRegistrationPolicyRequest extends Request {
         }
 
         /**
-         * Whitelist.
+         * <p>The list of whitelisted users for the device registration policy. You can add up to 1,000 usernames.</p>
          */
         public Builder whitelist(java.util.List<String> whitelist) {
             this.putBodyParameter("Whitelist", whitelist);
@@ -399,7 +459,10 @@ public class UpdateRegistrationPolicyRequest extends Request {
             } 
 
             /**
-             * All.
+             * <p>The total number of corporate devices that can be registered. The value can be from 0 to 100. The default value is 0. This parameter is valid only when CompanyLimitType is set to <strong>LimitAll</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder all(Integer all) {
                 this.all = all;
@@ -407,7 +470,10 @@ public class UpdateRegistrationPolicyRequest extends Request {
             }
 
             /**
-             * Mobile.
+             * <p>The number of corporate mobile devices that can be registered. The value can be from 0 to 100. The default value is 0. This parameter is valid only when CompanyLimitType is set to <strong>LimitDiff</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder mobile(Integer mobile) {
                 this.mobile = mobile;
@@ -415,7 +481,10 @@ public class UpdateRegistrationPolicyRequest extends Request {
             }
 
             /**
-             * PC.
+             * <p>The number of corporate PCs that can be registered. The value can be from 0 to 100. The default value is 0. This parameter is valid only when CompanyLimitType is set to <strong>LimitDiff</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pc(Integer pc) {
                 this.pc = pc;
@@ -495,7 +564,10 @@ public class UpdateRegistrationPolicyRequest extends Request {
             } 
 
             /**
-             * All.
+             * <p>The total number of personal devices that can be registered. The value can be from 0 to 100. The default value is 0. This parameter is valid only when PersonalLimitType is set to <strong>LimitAll</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder all(Integer all) {
                 this.all = all;
@@ -503,7 +575,10 @@ public class UpdateRegistrationPolicyRequest extends Request {
             }
 
             /**
-             * Mobile.
+             * <p>The number of personal mobile devices that can be registered. The value can be from 0 to 100. The default value is 0. This parameter is valid only when PersonalLimitType is set to <strong>LimitDiff</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder mobile(Integer mobile) {
                 this.mobile = mobile;
@@ -511,7 +586,10 @@ public class UpdateRegistrationPolicyRequest extends Request {
             }
 
             /**
-             * PC.
+             * <p>The number of personal PCs that can be registered. The value can be from 0 to 100. The default value is 0. This parameter is valid only when PersonalLimitType is set to <strong>LimitDiff</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder pc(Integer pc) {
                 this.pc = pc;

@@ -67,7 +67,10 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B608C6AE-623D-55C4-9454-601B88AE937E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * <p>The list of private network access tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
@@ -141,7 +144,10 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
             } 
 
             /**
-             * Begin.
+             * <p>The start port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder begin(Integer begin) {
                 this.begin = begin;
@@ -149,7 +155,10 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
             }
 
             /**
-             * End.
+             * <p>The end port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>81</p>
              */
             public Builder end(Integer end) {
                 this.end = end;
@@ -294,7 +303,7 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
             } 
 
             /**
-             * Addresses.
+             * <p>The collection of addresses for the private network access application.</p>
              */
             public Builder addresses(java.util.List<String> addresses) {
                 this.addresses = addresses;
@@ -302,7 +311,10 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationId.
+             * <p>The ID of the private network access application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pa-application-7a9243dd02f4****</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -310,7 +322,7 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
             }
 
             /**
-             * <p>内网访问应用创建时间。</p>
+             * <p>The time when the private network access application was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-09-27 18:10:25</p>
@@ -321,7 +333,10 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the private network access application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是一条内网访问应用</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -329,7 +344,10 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the private network access application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>private_access_application_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -337,7 +355,7 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
             }
 
             /**
-             * PortRanges.
+             * <p>The collection of port ranges for the private network access application. Port ranges must not overlap or duplicate each other.</p>
              */
             public Builder portRanges(java.util.List<PortRanges> portRanges) {
                 this.portRanges = portRanges;
@@ -345,7 +363,18 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>The protocol used by the private network access application. Valid values:</p>
+             * <ul>
+             * <li><p><strong>All</strong>: All protocols.</p>
+             * </li>
+             * <li><p><strong>TCP</strong></p>
+             * </li>
+             * <li><p><strong>UDP</strong></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>All</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -353,7 +382,16 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the private network access application. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Enabled</strong>: Enabled.</p>
+             * </li>
+             * <li><p><strong>Disabled</strong>: Disabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -420,7 +458,7 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
             } 
 
             /**
-             * Applications.
+             * <p>The collection of private network access applications.</p>
              */
             public Builder applications(java.util.List<Applications> applications) {
                 this.applications = applications;
@@ -428,7 +466,10 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
             }
 
             /**
-             * TagId.
+             * <p>The ID of the private network access tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-7ffc82853476****</p>
              */
             public Builder tagId(String tagId) {
                 this.tagId = tagId;

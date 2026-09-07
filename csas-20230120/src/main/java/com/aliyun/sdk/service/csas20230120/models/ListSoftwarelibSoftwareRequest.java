@@ -159,7 +159,10 @@ public class ListSoftwarelibSoftwareRequest extends Request {
         } 
 
         /**
-         * ClassifyId.
+         * <p>The software classification ID. You can call <a href="~~ListSoftwarelibClassify~~">ListSoftwarelibClassify</a> to obtain the value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>softwarelib-classify-61b7ccc63cae****</p>
          */
         public Builder classifyId(String classifyId) {
             this.putQueryParameter("ClassifyId", classifyId);
@@ -168,6 +171,7 @@ public class ListSoftwarelibSoftwareRequest extends Request {
         }
 
         /**
+         * <p>The page number of the current page in a paging query. Valid values: 1 to 10000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +184,10 @@ public class ListSoftwarelibSoftwareRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page. This parameter is not supported by this operation. Use CurrentPage and PageSize for pagination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -189,7 +196,10 @@ public class ListSoftwarelibSoftwareRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. This parameter is not supported by this operation. Use CurrentPage and PageSize for pagination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh27/Jy4SXvlU9WgqeV7az+t</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -198,7 +208,15 @@ public class ListSoftwarelibSoftwareRequest extends Request {
         }
 
         /**
-         * Os.
+         * <p>The operating system to which the software package applies. Valid values:</p>
+         * <ul>
+         * <li><strong>Windows</strong>: Windows.</li>
+         * <li><strong>Mac(Apple)</strong>: macOS with Apple silicon.</li>
+         * <li><strong>Mac(Intel)</strong>: macOS with Intel processors.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Windows</p>
          */
         public Builder os(String os) {
             this.putQueryParameter("Os", os);
@@ -207,6 +225,7 @@ public class ListSoftwarelibSoftwareRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page in a paging query. Valid values: 1 to 500.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -219,7 +238,10 @@ public class ListSoftwarelibSoftwareRequest extends Request {
         }
 
         /**
-         * SoftwareName.
+         * <p>The software name. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Thunder</p>
          */
         public Builder softwareName(String softwareName) {
             this.putQueryParameter("SoftwareName", softwareName);
@@ -228,7 +250,14 @@ public class ListSoftwarelibSoftwareRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>The software source. Valid values:</p>
+         * <ul>
+         * <li><strong>custom</strong>: custom software.</li>
+         * <li><strong>builtin</strong>: built-in software library.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>builtin</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);

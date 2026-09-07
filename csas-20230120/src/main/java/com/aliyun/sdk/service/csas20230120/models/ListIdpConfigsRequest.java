@@ -88,7 +88,10 @@ public class ListIdpConfigsRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -97,7 +100,10 @@ public class ListIdpConfigsRequest extends Request {
         }
 
         /**
-         * Include.
+         * <p>Specified IdP configuration types. Separate multiple types with a comma (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CSAS,DingTalk,LDAP</p>
          */
         public Builder include(String include) {
             this.putQueryParameter("Include", include);
@@ -106,7 +112,10 @@ public class ListIdpConfigsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

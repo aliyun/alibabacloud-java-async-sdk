@@ -67,7 +67,10 @@ public class PAL7ConfigReplaceRule extends TeaModel {
         } 
 
         /**
-         * From.
+         * <p>The original content to be replaced.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>before</p>
          */
         public Builder from(String from) {
             this.from = from;
@@ -75,7 +78,10 @@ public class PAL7ConfigReplaceRule extends TeaModel {
         }
 
         /**
-         * To.
+         * <p>The target content for replacement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>after</p>
          */
         public Builder to(String to) {
             this.to = to;

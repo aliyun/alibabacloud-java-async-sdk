@@ -104,7 +104,10 @@ public class CreateConnectorRequest extends Request {
         } 
 
         /**
-         * Bandwidth.
+         * <p>The bandwidth value (Mbit/s).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putBodyParameter("Bandwidth", bandwidth);
@@ -113,6 +116,7 @@ public class CreateConnectorRequest extends Request {
         }
 
         /**
+         * <p>The connector name. The name must be 1 to 128 characters in length and can contain letters, digits, Chinese characters, periods (.), underscores (_), and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +129,7 @@ public class CreateConnectorRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +142,11 @@ public class CreateConnectorRequest extends Request {
         }
 
         /**
+         * <p>The connector instance status. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Shutdown.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

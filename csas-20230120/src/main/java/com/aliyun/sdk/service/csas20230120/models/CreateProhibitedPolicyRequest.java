@@ -347,7 +347,14 @@ public class CreateProhibitedPolicyRequest extends Request {
         } 
 
         /**
-         * AllowReport.
+         * <p>Specifies whether end users are allowed to submit a report request for this policy. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Reporting is allowed. The pop-up window on the endpoint provides a reporting entry.</li>
+         * <li><strong>false</strong>: Reporting is not allowed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder allowReport(String allowReport) {
             this.putBodyParameter("AllowReport", allowReport);
@@ -356,7 +363,10 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the software ban policy. The description can be up to 128 characters in length and can be left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project name pass the check</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -365,6 +375,11 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether the policy is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Enabled. The policy is delivered to the endpoint and takes effect.</li>
+         * <li><strong>false</strong>: Disabled. The policy configuration is retained but not delivered to the endpoint.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -377,7 +392,10 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
-         * ForceKill.
+         * <p>Specifies whether to forcefully terminate running software processes. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceKill(Boolean forceKill) {
             this.putBodyParameter("ForceKill", forceKill);
@@ -386,7 +404,10 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
-         * MainButtonTextCh.
+         * <p>The Chinese text of the primary button in the pop-up window on the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Submit Filing</p>
          */
         public Builder mainButtonTextCh(String mainButtonTextCh) {
             this.putBodyParameter("MainButtonTextCh", mainButtonTextCh);
@@ -395,7 +416,10 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
-         * MainButtonTextEn.
+         * <p>The English text of the primary button in the pop-up window on the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Report</p>
          */
         public Builder mainButtonTextEn(String mainButtonTextEn) {
             this.putBodyParameter("MainButtonTextEn", mainButtonTextEn);
@@ -404,6 +428,7 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
+         * <p>The scope in which the policy takes effect. Valid values:</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -416,7 +441,10 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
-         * MinorButtonTextCh.
+         * <p>The Chinese text of the secondary button in the pop-up window on the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Got It</p>
          */
         public Builder minorButtonTextCh(String minorButtonTextCh) {
             this.putBodyParameter("MinorButtonTextCh", minorButtonTextCh);
@@ -425,7 +453,10 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
-         * MinorButtonTextEn.
+         * <p>The English text of the secondary button in the pop-up window on the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>I know</p>
          */
         public Builder minorButtonTextEn(String minorButtonTextEn) {
             this.putBodyParameter("MinorButtonTextEn", minorButtonTextEn);
@@ -434,6 +465,7 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
+         * <p>Policy Name of the software ban policy. Policy Name must be 1 to 128 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-). Spaces are not supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -446,6 +478,7 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
+         * <p>The object type. Valid values:</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -458,6 +491,12 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
+         * <p>The action to take. Valid values:</p>
+         * <ul>
+         * <li><strong>Ban</strong>: Blocks the software from running and displays a pop-up notification to the end user.</li>
+         * <li><strong>BanSilent</strong>: Blocks the software from running without notifying the end user (silent blocking).</li>
+         * <li><strong>Warn</strong>: Displays a pop-up notification to the end user without blocking the software from running.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -470,6 +509,7 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
+         * <p>The policy priority. Valid values: 0 to 99. A smaller value indicates a higher priority.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -482,6 +522,7 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
+         * <p>The Chinese prompt content displayed in the pop-up window on the endpoint.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -494,6 +535,7 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
+         * <p>The English prompt content displayed in the pop-up window on the endpoint.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -506,7 +548,7 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
-         * SoftwareIds.
+         * <p>The collection of banned software directly controlled by this policy.</p>
          */
         public Builder softwareIds(java.util.List<SoftwareIds> softwareIds) {
             this.putBodyParameter("SoftwareIds", softwareIds);
@@ -515,7 +557,7 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
-         * TagIds.
+         * <p>The collection of banned software tag IDs controlled by this policy.</p>
          */
         public Builder tagIds(java.util.List<String> tagIds) {
             this.putBodyParameter("TagIds", tagIds);
@@ -524,7 +566,10 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
-         * TitleCh.
+         * <p>The Chinese title of the pop-up window on the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Software Ban Reminder</p>
          */
         public Builder titleCh(String titleCh) {
             this.putBodyParameter("TitleCh", titleCh);
@@ -533,7 +578,10 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
-         * TitleEn.
+         * <p>The English title of the pop-up window on the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Software Blocked</p>
          */
         public Builder titleEn(String titleEn) {
             this.putBodyParameter("TitleEn", titleEn);
@@ -542,7 +590,7 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
-         * UserGroupIds.
+         * <p>The collection of user group IDs for which the policy takes effect.</p>
          */
         public Builder userGroupIds(java.util.List<String> userGroupIds) {
             this.putBodyParameter("UserGroupIds", userGroupIds);
@@ -551,7 +599,7 @@ public class CreateProhibitedPolicyRequest extends Request {
         }
 
         /**
-         * Whitelist.
+         * <p>The list of exempted usernames.</p>
          */
         public Builder whitelist(java.util.List<String> whitelist) {
             this.putBodyParameter("Whitelist", whitelist);
@@ -619,7 +667,14 @@ public class CreateProhibitedPolicyRequest extends Request {
             } 
 
             /**
-             * IsDefault.
+             * <p>Specifies whether the blocked software is a built-in blocked software entry. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: A built-in blocked software entry that is shared across all Alibaba Cloud accounts. Built-in entries cannot be modified or deleted.</li>
+             * <li><strong>false</strong>: A custom blocked software entry under the current Alibaba Cloud account.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -627,7 +682,14 @@ public class CreateProhibitedPolicyRequest extends Request {
             }
 
             /**
-             * SoftwareId.
+             * <p>The ID of the prohibited software. You can obtain the value from the following operations:</p>
+             * <ul>
+             * <li><a href="~~ListProhibitedSoftware~~">ListProhibitedSoftware</a>: Lists prohibited software.</li>
+             * <li><a href="~~CreateProhibitedSoftware~~">CreateProhibitedSoftware</a>: Creates custom prohibited software.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>swb-df1fa76d889b****</p>
              */
             public Builder softwareId(String softwareId) {
                 this.softwareId = softwareId;

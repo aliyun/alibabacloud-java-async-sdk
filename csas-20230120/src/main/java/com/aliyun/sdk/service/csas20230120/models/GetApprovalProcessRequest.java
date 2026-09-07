@@ -60,6 +60,10 @@ public class GetApprovalProcessRequest extends Request {
         } 
 
         /**
+         * <p>The approval flow ID. Valid values:</p>
+         * <ul>
+         * <li><a href="~~ListApprovalProcesses~~">ListApprovalProcesses</a>: Lists approval flows.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

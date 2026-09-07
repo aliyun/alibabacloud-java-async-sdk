@@ -67,7 +67,7 @@ public class GetWmEmbedTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The result of the watermark embedding job.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetWmEmbedTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D6707286-A50E-57B1-B2CF-EFAC59E850D8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +209,10 @@ public class GetWmEmbedTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * FileUrl.
+             * <p>The temporary URL of the file embedded with watermark information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/embed-****.pdf">https://example.com/embed-****.pdf</a></p>
              */
             public Builder fileUrl(String fileUrl) {
                 this.fileUrl = fileUrl;
@@ -214,7 +220,10 @@ public class GetWmEmbedTaskResponseBody extends TeaModel {
             }
 
             /**
-             * FileUrlExp.
+             * <p>Expiration time of FileUrl, formatted as a Unix timestamp with second-level precision.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>171859****</p>
              */
             public Builder fileUrlExp(String fileUrlExp) {
                 this.fileUrlExp = fileUrlExp;
@@ -222,7 +231,10 @@ public class GetWmEmbedTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Filename.
+             * <p>The filename of the file embedded with watermark information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>embed-****.pdf</p>
              */
             public Builder filename(String filename) {
                 this.filename = filename;
@@ -230,7 +242,10 @@ public class GetWmEmbedTaskResponseBody extends TeaModel {
             }
 
             /**
-             * OutFileHashMd5.
+             * <p>The MD5 hash of the file with embedded watermark information, used for troubleshooting.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d41d8cd98f00b204e9800998ecf8****</p>
              */
             public Builder outFileHashMd5(String outFileHashMd5) {
                 this.outFileHashMd5 = outFileHashMd5;
@@ -238,7 +253,10 @@ public class GetWmEmbedTaskResponseBody extends TeaModel {
             }
 
             /**
-             * OutFileSize.
+             * <p>The size in bytes of the file embedded with watermark information. This is used for troubleshooting.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123**</p>
              */
             public Builder outFileSize(Long outFileSize) {
                 this.outFileSize = outFileSize;
@@ -246,7 +264,10 @@ public class GetWmEmbedTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job:5GfrJYsoaffmCE7Z5bZtjUxxxxxxxxxx</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -254,7 +275,15 @@ public class GetWmEmbedTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * <p>Task Status. Valid values:  </p>
+             * <ul>
+             * <li><strong>Running</strong>: The job is running.  </li>
+             * <li><strong>Success</strong>: The job succeeded.  </li>
+             * <li><strong>Failed</strong>: The job failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;

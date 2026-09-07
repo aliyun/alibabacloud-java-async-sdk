@@ -60,6 +60,11 @@ public class GetDeviceGroupRequest extends Request {
         } 
 
         /**
+         * <p>The device label ID. You can obtain this value from:</p>
+         * <ul>
+         * <li><a href="~~ListDeviceGroups~~">ListDeviceGroups</a>: Lists device labels.</li>
+         * <li><a href="~~CreateDeviceGroup~~">CreateDeviceGroup</a>: Creates a device label.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

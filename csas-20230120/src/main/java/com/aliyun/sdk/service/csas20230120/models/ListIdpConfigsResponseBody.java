@@ -67,7 +67,7 @@ public class ListIdpConfigsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>IdP configurations.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListIdpConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FD724DBC-CD76-5235-BF76-59C51B73296D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -258,7 +261,10 @@ public class ListIdpConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>IdP configuration description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例描述</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -266,7 +272,10 @@ public class ListIdpConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>IdP configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>277</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -274,7 +283,10 @@ public class ListIdpConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Mfa.
+             * <p>Multi-factor authentication (MFA) type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>totp</p>
              */
             public Builder mfa(String mfa) {
                 this.mfa = mfa;
@@ -282,7 +294,10 @@ public class ListIdpConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * MobileLoginType.
+             * <p>Mobile login type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>password</p>
              */
             public Builder mobileLoginType(String mobileLoginType) {
                 this.mobileLoginType = mobileLoginType;
@@ -290,7 +305,10 @@ public class ListIdpConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * MobileMfaConfigType.
+             * <p>Mobile MFA configuration type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>password</p>
              */
             public Builder mobileMfaConfigType(String mobileMfaConfigType) {
                 this.mobileMfaConfigType = mobileMfaConfigType;
@@ -298,7 +316,10 @@ public class ListIdpConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * MultiIdpInfo.
+             * <p>List of multiple IdP configuration IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1482,1355</p>
              */
             public Builder multiIdpInfo(String multiIdpInfo) {
                 this.multiIdpInfo = multiIdpInfo;
@@ -306,7 +327,10 @@ public class ListIdpConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>IdP configuration name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例身份源</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -314,7 +338,10 @@ public class ListIdpConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * PcLoginType.
+             * <p>PC login type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>password</p>
              */
             public Builder pcLoginType(String pcLoginType) {
                 this.pcLoginType = pcLoginType;
@@ -322,7 +349,16 @@ public class ListIdpConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>IdP configuration enable status. Values:</p>
+             * <ul>
+             * <li><p><strong>Enabled</strong>: Enabled.</p>
+             * </li>
+             * <li><p><strong>Disabled</strong>: Disabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Disabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -330,7 +366,10 @@ public class ListIdpConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>IdP configuration type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DingTalk</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -338,7 +377,10 @@ public class ListIdpConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>Update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-09T02:22:41.430Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -405,7 +447,7 @@ public class ListIdpConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * DataList.
+             * <p>List of IdP configurations.</p>
              */
             public Builder dataList(java.util.List<DataList> dataList) {
                 this.dataList = dataList;
@@ -413,7 +455,10 @@ public class ListIdpConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNum.
+             * <p>Total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalNum(Long totalNum) {
                 this.totalNum = totalNum;

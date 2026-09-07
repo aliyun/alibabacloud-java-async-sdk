@@ -67,7 +67,7 @@ public class ListTagsForPrivateAccessPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * Polices.
+         * <p>List of internal network access policies.</p>
          */
         public Builder polices(java.util.List<Polices> polices) {
             this.polices = polices;
@@ -75,7 +75,10 @@ public class ListTagsForPrivateAccessPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9EE61139-A6A8-5E13-80AF-83435C21B26B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +183,7 @@ public class ListTagsForPrivateAccessPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>内网访问标签创建时间。</p>
+             * <p>Time when the tag was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-02-21 14:10:16</p>
@@ -191,7 +194,10 @@ public class ListTagsForPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Description of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是一条被内网访问策略引用的标签</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -199,7 +205,10 @@ public class ListTagsForPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Name of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -207,7 +216,10 @@ public class ListTagsForPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * TagId.
+             * <p>ID of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-d3f64e8bdd4a****</p>
              */
             public Builder tagId(String tagId) {
                 this.tagId = tagId;
@@ -215,7 +227,16 @@ public class ListTagsForPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * TagType.
+             * <p>Type of the tag. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Default</strong>: Default tag.</p>
+             * </li>
+             * <li><p><strong>Custom</strong>: Custom tag.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Default</p>
              */
             public Builder tagType(String tagType) {
                 this.tagType = tagType;
@@ -282,7 +303,10 @@ public class ListTagsForPrivateAccessPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * PolicyId.
+             * <p>ID of the internal network access policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pa-policy-1b0d0e8b4bcf****</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -290,7 +314,7 @@ public class ListTagsForPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>Tags for the internal network access policy.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

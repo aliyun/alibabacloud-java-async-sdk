@@ -80,7 +80,7 @@ public class ListDynamicRouteRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * Regions.
+         * <p>The list of regions for POP cluster access points authorized for the SASE Global Office service.</p>
          */
         public Builder regions(java.util.List<String> regions) {
             this.regions = regions;
@@ -88,7 +88,10 @@ public class ListDynamicRouteRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListDynamicRouteRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of regions for POP cluster access points authorized for the SASE Global Office service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalNum(Integer totalNum) {
             this.totalNum = totalNum;

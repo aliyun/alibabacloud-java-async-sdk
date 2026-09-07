@@ -173,6 +173,7 @@ public class ListVulScanTasksRequest extends Request {
         } 
 
         /**
+         * <p>The page number of the current page in a paged query. Valid values: 1 to 10000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,7 +186,14 @@ public class ListVulScanTasksRequest extends Request {
         }
 
         /**
-         * MatchMode.
+         * <p>Filters by the matching mode of the effective scope. Valid values:</p>
+         * <ul>
+         * <li><strong>UserGroupAll</strong>: applies to all users under the current Alibaba Cloud account.</li>
+         * <li><strong>UserGroupNormal</strong>: applies only to users within specified user groups.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UserGroupNormal</p>
          */
         public Builder matchMode(String matchMode) {
             this.putQueryParameter("MatchMode", matchMode);
@@ -194,6 +202,7 @@ public class ListVulScanTasksRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page in a paged query. Valid values: 1 to 1000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,7 +215,14 @@ public class ListVulScanTasksRequest extends Request {
         }
 
         /**
-         * ScheduledStrategyId.
+         * <p>The ID of the vulnerability scheduled scan policy. This parameter is used to filter tasks triggered by the specified policy. Valid values are obtained from:</p>
+         * <ul>
+         * <li><a href="~~ListVulScanScheduledStrategies~~">ListVulScanScheduledStrategies</a>: lists vulnerability scheduled scan policies.</li>
+         * <li><a href="~~CreateVulScanScheduledStrategy~~">CreateVulScanScheduledStrategy</a>: creates a vulnerability scheduled scan policy.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vul-scan-scheduled-strategy-8a3f6c2e91b7****</p>
          */
         public Builder scheduledStrategyId(String scheduledStrategyId) {
             this.putQueryParameter("ScheduledStrategyId", scheduledStrategyId);
@@ -215,7 +231,15 @@ public class ListVulScanTasksRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Filters by task status. Valid values:</p>
+         * <ul>
+         * <li><strong>Running</strong>: the task is in progress and still within the validity period.</li>
+         * <li><strong>Expired</strong>: the task has expired and exceeded the validity period.</li>
+         * <li><strong>Canceled</strong>: the task has been canceled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -224,7 +248,7 @@ public class ListVulScanTasksRequest extends Request {
         }
 
         /**
-         * TaskIds.
+         * <p>The vulnerability scanning task IDs used for filtering. A maximum of 100 IDs can be specified. Duplicate IDs are not allowed.</p>
          */
         public Builder taskIds(java.util.List<String> taskIds) {
             this.putQueryParameter("TaskIds", taskIds);
@@ -233,7 +257,10 @@ public class ListVulScanTasksRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * <p>The task name. Fuzzy match is supported. The name can be up to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>R&amp;D department vulnerability scanning</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -242,7 +269,14 @@ public class ListVulScanTasksRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * <p>Filters by task type. Valid values:</p>
+         * <ul>
+         * <li><strong>Instant</strong>: an instant task created by CreateVulScanTask.</li>
+         * <li><strong>Scheduled</strong>: a scheduled task automatically created by a vulnerability scheduled scan policy on a periodic basis.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Instant</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);
@@ -251,7 +285,13 @@ public class ListVulScanTasksRequest extends Request {
         }
 
         /**
-         * UserGroupId.
+         * <p>The user group ID. This parameter is used to filter records whose effective scope includes the specified user group. Valid values are obtained from:</p>
+         * <ul>
+         * <li><a href="~~ListUserGroups~~">ListUserGroups</a>: lists user groups.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>usergroup-9d4f2a7b3c1e****</p>
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);

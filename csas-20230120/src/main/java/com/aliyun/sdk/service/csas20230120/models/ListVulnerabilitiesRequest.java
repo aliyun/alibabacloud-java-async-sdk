@@ -229,6 +229,7 @@ public class ListVulnerabilitiesRequest extends Request {
         } 
 
         /**
+         * <p>The page number of the current page in a paged query with paging. Valid values: 1 to 10000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,7 +242,10 @@ public class ListVulnerabilitiesRequest extends Request {
         }
 
         /**
-         * Department.
+         * <p>The department name. Matches any level of department in the organizational structure to which the user belongs. Specify the department name itself without the full path of the organizational structure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>R&amp;D Department</p>
          */
         public Builder department(String department) {
             this.putQueryParameter("Department", department);
@@ -250,7 +254,13 @@ public class ListVulnerabilitiesRequest extends Request {
         }
 
         /**
-         * DevTag.
+         * <p>The unique identifier of the user endpoint device. Exact match. The value can be up to 64 characters in length. Valid values are obtained from:</p>
+         * <ul>
+         * <li><a href="~~ListUserDevices~~">ListUserDevices</a>: lists user endpoint devices.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
          */
         public Builder devTag(String devTag) {
             this.putQueryParameter("DevTag", devTag);
@@ -259,7 +269,13 @@ public class ListVulnerabilitiesRequest extends Request {
         }
 
         /**
-         * DevType.
+         * <p>The operating system type of the user endpoint device. Valid values:</p>
+         * <ul>
+         * <li><strong>windows</strong>: Windows. Currently, vulnerability scanning supports only Windows.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>windows</p>
          */
         public Builder devType(String devType) {
             this.putQueryParameter("DevType", devType);
@@ -268,7 +284,10 @@ public class ListVulnerabilitiesRequest extends Request {
         }
 
         /**
-         * Hostname.
+         * <p>The hostname of the user endpoint device. Fuzzy match is supported. The value can be up to 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DESKTOP-8A3F</p>
          */
         public Builder hostname(String hostname) {
             this.putQueryParameter("Hostname", hostname);
@@ -277,6 +296,7 @@ public class ListVulnerabilitiesRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page. Settings for paged query with paging. Valid values: 1 to 1000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -289,7 +309,14 @@ public class ListVulnerabilitiesRequest extends Request {
         }
 
         /**
-         * SaseUserId.
+         * <p>The user ID. Exact match. Valid values are obtained from:</p>
+         * <ul>
+         * <li><a href="~~ListUserDevices~~">ListUserDevices</a>: lists user endpoint devices.</li>
+         * <li><a href="~~GetUserDevice~~">GetUserDevice</a>: queries the details of a user endpoint device.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
          */
         public Builder saseUserId(String saseUserId) {
             this.putQueryParameter("SaseUserId", saseUserId);
@@ -298,7 +325,14 @@ public class ListVulnerabilitiesRequest extends Request {
         }
 
         /**
-         * ScanTaskId.
+         * <p>The ID of the vulnerability scanning node that detected the vulnerability. Used to filter detection results of a specified node. Valid values are obtained from:</p>
+         * <ul>
+         * <li><a href="~~ListVulScanTasks~~">ListVulScanTasks</a>: lists vulnerability scanning nodes.</li>
+         * <li><a href="~~CreateVulScanTask~~">CreateVulScanTask</a>: creates a vulnerability scanning node.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vul-scan-task-4d7b1e9a6c38****</p>
          */
         public Builder scanTaskId(String scanTaskId) {
             this.putQueryParameter("ScanTaskId", scanTaskId);
@@ -307,7 +341,10 @@ public class ListVulnerabilitiesRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>The vulnerability title. Fuzzy match is supported. Matches both Chinese and English titles.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cumulative Update</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -316,7 +353,7 @@ public class ListVulnerabilitiesRequest extends Request {
         }
 
         /**
-         * UpdateIds.
+         * <p>The patch IDs used for filtering. A maximum of 100 IDs can be specified. Duplicate values are not allowed.</p>
          */
         public Builder updateIds(java.util.List<String> updateIds) {
             this.putQueryParameter("UpdateIds", updateIds);
@@ -325,7 +362,10 @@ public class ListVulnerabilitiesRequest extends Request {
         }
 
         /**
-         * Username.
+         * <p>The username. Fuzzy match is supported. The value can be up to 128 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), asterisks (*), hyphens (-), at signs (@), spaces, middle dots (·), and parentheses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>John Smith</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);
@@ -334,7 +374,15 @@ public class ListVulnerabilitiesRequest extends Request {
         }
 
         /**
-         * VulLevel.
+         * <p>The vulnerability risk level used for filtering. Valid values:</p>
+         * <ul>
+         * <li><strong>High</strong>: high risk.</li>
+         * <li><strong>Mid</strong>: medium risk.</li>
+         * <li><strong>Low</strong>: low risk.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>High</p>
          */
         public Builder vulLevel(String vulLevel) {
             this.putQueryParameter("VulLevel", vulLevel);
@@ -343,7 +391,14 @@ public class ListVulnerabilitiesRequest extends Request {
         }
 
         /**
-         * VulType.
+         * <p>The vulnerability type used for filtering. Valid values:</p>
+         * <ul>
+         * <li><strong>windows</strong>: Windows system vulnerability.</li>
+         * <li><strong>ai_agent</strong>: AI Agent vulnerability.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>windows</p>
          */
         public Builder vulType(String vulType) {
             this.putQueryParameter("VulType", vulType);

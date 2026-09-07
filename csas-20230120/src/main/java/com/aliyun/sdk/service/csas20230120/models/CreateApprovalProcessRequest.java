@@ -103,7 +103,10 @@ public class CreateApprovalProcessRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the approval flow. The description must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. Chinese characters are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is an approval flow</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -112,7 +115,7 @@ public class CreateApprovalProcessRequest extends Request {
         }
 
         /**
-         * MatchSchemas.
+         * <p>The matched approval templates.</p>
          */
         public Builder matchSchemas(MatchSchemas matchSchemas) {
             String matchSchemasShrink = shrink(matchSchemas, "MatchSchemas", "json");
@@ -122,6 +125,7 @@ public class CreateApprovalProcessRequest extends Request {
         }
 
         /**
+         * <p>The flow name. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). Chinese characters are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,6 +138,7 @@ public class CreateApprovalProcessRequest extends Request {
         }
 
         /**
+         * <p>The list of approval nodes. You can define up to 5 approval nodes.</p>
          * <p>This parameter is required.</p>
          */
         public Builder processNodes(java.util.List<java.util.List<String>> processNodes) {
@@ -306,7 +311,10 @@ public class CreateApprovalProcessRequest extends Request {
             } 
 
             /**
-             * AppUninstallSchemaId.
+             * <p>The ID of the device uninstall approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder appUninstallSchemaId(String appUninstallSchemaId) {
                 this.appUninstallSchemaId = appUninstallSchemaId;
@@ -314,7 +322,10 @@ public class CreateApprovalProcessRequest extends Request {
             }
 
             /**
-             * DeviceRegistrationSchemaId.
+             * <p>The ID of the device registration approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder deviceRegistrationSchemaId(String deviceRegistrationSchemaId) {
                 this.deviceRegistrationSchemaId = deviceRegistrationSchemaId;
@@ -322,7 +333,10 @@ public class CreateApprovalProcessRequest extends Request {
             }
 
             /**
-             * DlpSendSchemaId.
+             * <p>The ID of the file outbound approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder dlpSendSchemaId(String dlpSendSchemaId) {
                 this.dlpSendSchemaId = dlpSendSchemaId;
@@ -330,7 +344,10 @@ public class CreateApprovalProcessRequest extends Request {
             }
 
             /**
-             * DomainBlacklistSchemaId.
+             * <p>The ID of the domain name blacklist approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder domainBlacklistSchemaId(String domainBlacklistSchemaId) {
                 this.domainBlacklistSchemaId = domainBlacklistSchemaId;
@@ -338,7 +355,10 @@ public class CreateApprovalProcessRequest extends Request {
             }
 
             /**
-             * DomainWhitelistSchemaId.
+             * <p>The ID of the domain name whitelist approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder domainWhitelistSchemaId(String domainWhitelistSchemaId) {
                 this.domainWhitelistSchemaId = domainWhitelistSchemaId;
@@ -354,7 +374,10 @@ public class CreateApprovalProcessRequest extends Request {
             }
 
             /**
-             * PeripheralBlockSchemaId.
+             * <p>The ID of the peripheral control approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder peripheralBlockSchemaId(String peripheralBlockSchemaId) {
                 this.peripheralBlockSchemaId = peripheralBlockSchemaId;
@@ -370,7 +393,10 @@ public class CreateApprovalProcessRequest extends Request {
             }
 
             /**
-             * SoftwareBlockSchemaId.
+             * <p>The ID of the software blocking approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder softwareBlockSchemaId(String softwareBlockSchemaId) {
                 this.softwareBlockSchemaId = softwareBlockSchemaId;

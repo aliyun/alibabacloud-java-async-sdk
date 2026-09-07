@@ -80,7 +80,10 @@ public class ListUserGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4AB972E2-D702-5464-B132-B1911498B8BF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,10 @@ public class ListUserGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of user groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalNum(Integer totalNum) {
             this.totalNum = totalNum;
@@ -96,7 +102,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * UserGroups.
+         * <p>A list of user groups.</p>
          */
         public Builder userGroups(java.util.List<UserGroups> userGroups) {
             this.userGroups = userGroups;
@@ -188,7 +194,10 @@ public class ListUserGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * IdpId.
+             * <p>The identity provider ID for the user group. This parameter appears only when the user group type is <strong>department</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder idpId(Integer idpId) {
                 this.idpId = idpId;
@@ -196,7 +205,16 @@ public class ListUserGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Relation.
+             * <p>The relation for the user group. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Equal</strong>: Equal to.</p>
+             * </li>
+             * <li><p><strong>Unequal</strong>: Not equal to.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Equal</p>
              */
             public Builder relation(String relation) {
                 this.relation = relation;
@@ -204,7 +222,20 @@ public class ListUserGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupType.
+             * <p>The type of the user group. Valid values:</p>
+             * <ul>
+             * <li><p><strong>username</strong>: Username.</p>
+             * </li>
+             * <li><p><strong>department</strong>: Department.</p>
+             * </li>
+             * <li><p><strong>email</strong>: Email address.</p>
+             * </li>
+             * <li><p><strong>telephone</strong>: Phone number.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>department</p>
              */
             public Builder userGroupType(String userGroupType) {
                 this.userGroupType = userGroupType;
@@ -212,7 +243,20 @@ public class ListUserGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the user group property.</p>
+             * <ul>
+             * <li><p>If the user group type is <strong>username</strong>, this is the username. The value must be 1 to 128 characters in length. It can contain letters, digits, periods (.), underscores (_), and hyphens (-). It supports both uppercase and lowercase letters and Chinese characters.</p>
+             * </li>
+             * <li><p>If the user group type is <strong>department</strong>, this is the department name. Example: OU=Department 1,OU=SASE DingTalk.</p>
+             * </li>
+             * <li><p>If the user group type is <strong>email</strong>, this is the email address. Example: username\@example.com.</p>
+             * </li>
+             * <li><p>If the user group type is <strong>telephone</strong>, this is the phone number. Example: 13900001234.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OU=部门1,OU=SASE钉钉</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -318,7 +362,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * Attributes.
+             * <p>A collection of user group properties. Multiple properties are combined with OR logic.</p>
              */
             public Builder attributes(java.util.List<Attributes> attributes) {
                 this.attributes = attributes;
@@ -326,7 +370,10 @@ public class ListUserGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the user group was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-10 11:39:22</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -334,7 +381,10 @@ public class ListUserGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>A description of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是一条用户组</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -342,7 +392,10 @@ public class ListUserGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_group_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -350,7 +403,10 @@ public class ListUserGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupId.
+             * <p>The ID of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>usergroup-6f1ef2fc56b6****</p>
              */
             public Builder userGroupId(String userGroupId) {
                 this.userGroupId = userGroupId;

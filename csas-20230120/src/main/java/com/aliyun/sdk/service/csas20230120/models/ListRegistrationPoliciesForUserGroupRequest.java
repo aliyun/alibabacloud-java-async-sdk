@@ -60,6 +60,7 @@ public class ListRegistrationPoliciesForUserGroupRequest extends Request {
         } 
 
         /**
+         * <p>A collection of user group IDs. You can specify up to 100 user group IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder userGroupIds(java.util.List<String> userGroupIds) {

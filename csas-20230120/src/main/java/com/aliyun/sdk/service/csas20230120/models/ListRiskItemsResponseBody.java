@@ -80,7 +80,10 @@ public class ListRiskItemsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D6707286-A50E-57B1-B2CF-EFAC59E850D8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class ListRiskItemsResponseBody extends TeaModel {
         }
 
         /**
-         * RiskItems.
+         * <p>The list of risk events.</p>
          */
         public Builder riskItems(java.util.List<RiskItems> riskItems) {
             this.riskItems = riskItems;
@@ -96,7 +99,10 @@ public class ListRiskItemsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of risk events that meet the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalNum(Integer totalNum) {
             this.totalNum = totalNum;
@@ -487,7 +493,10 @@ public class ListRiskItemsResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentName.
+             * <p>The name of the Agent that generated the risk event. An empty string is returned for non-Agent risk scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qoder****</p>
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -495,7 +504,10 @@ public class ListRiskItemsResponseBody extends TeaModel {
             }
 
             /**
-             * AiConclusion.
+             * <p>The AI risk analysis conclusion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The account logged on from an unusual device, and the behavior is inconsistent with the historical baseline</p>
              */
             public Builder aiConclusion(String aiConclusion) {
                 this.aiConclusion = aiConclusion;
@@ -503,7 +515,14 @@ public class ListRiskItemsResponseBody extends TeaModel {
             }
 
             /**
-             * AiRiskConfirm.
+             * <p>The risk judgment provided by AI. An empty string is returned if no AI analysis results exist. Valid values:</p>
+             * <ul>
+             * <li><code>Risk</code>: determined as risky.</li>
+             * <li><code>Ignore</code>: determined as not risky.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Risk</p>
              */
             public Builder aiRiskConfirm(String aiRiskConfirm) {
                 this.aiRiskConfirm = aiRiskConfirm;
@@ -511,7 +530,10 @@ public class ListRiskItemsResponseBody extends TeaModel {
             }
 
             /**
-             * CheckName.
+             * <p>The name of the risk detection item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unusual device logon check</p>
              */
             public Builder checkName(String checkName) {
                 this.checkName = checkName;
@@ -519,7 +541,10 @@ public class ListRiskItemsResponseBody extends TeaModel {
             }
 
             /**
-             * Department.
+             * <p>The department to which the user associated with the risk event belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Department****</p>
              */
             public Builder department(String department) {
                 this.department = department;
@@ -527,7 +552,10 @@ public class ListRiskItemsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupInfo.
+             * <p>The original organizational structure information of the user associated with the risk event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN=zhang***,OU=Department****</p>
              */
             public Builder groupInfo(String groupInfo) {
                 this.groupInfo = groupInfo;
@@ -535,7 +563,10 @@ public class ListRiskItemsResponseBody extends TeaModel {
             }
 
             /**
-             * Hostname.
+             * <p>The name of the endpoint device associated with the risk event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>U-2GW2L4M7-****</p>
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -543,7 +574,10 @@ public class ListRiskItemsResponseBody extends TeaModel {
             }
 
             /**
-             * InnerIp.
+             * <p>The internal IP address of the endpoint associated with the risk event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder innerIp(String innerIp) {
                 this.innerIp = innerIp;
@@ -551,7 +585,10 @@ public class ListRiskItemsResponseBody extends TeaModel {
             }
 
             /**
-             * Report.
+             * <p>The risk detection report or risk evidence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The account logged on from a new device, and the logon location is inconsistent with the usual location</p>
              */
             public Builder report(String report) {
                 this.report = report;
@@ -559,7 +596,7 @@ public class ListRiskItemsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskAnalysisPolicyNames.
+             * <p>The list of risk analysis policy names that were hit.</p>
              */
             public Builder riskAnalysisPolicyNames(java.util.List<String> riskAnalysisPolicyNames) {
                 this.riskAnalysisPolicyNames = riskAnalysisPolicyNames;
@@ -567,7 +604,17 @@ public class ListRiskItemsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskCategory.
+             * <p>The risk category. Valid values:</p>
+             * <ul>
+             * <li><code>data_safe</code>: data security.</li>
+             * <li><code>identify_safe</code>: identity security.</li>
+             * <li><code>device_safe</code>: device security.</li>
+             * <li><code>access_safe</code>: access security.</li>
+             * <li><code>ai_agent_safe</code>: Agent security.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>identify_safe</p>
              */
             public Builder riskCategory(String riskCategory) {
                 this.riskCategory = riskCategory;
@@ -575,7 +622,15 @@ public class ListRiskItemsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskConfirm.
+             * <p>The manually confirmed risk conclusion. An empty string is returned if not confirmed. Valid values:</p>
+             * <ul>
+             * <li><code>Risk</code>: confirmed as risky.</li>
+             * <li><code>Ignore</code>: confirmed as not risky.</li>
+             * <li><code>Invalid</code>: confirmed as a false positive.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Risk</p>
              */
             public Builder riskConfirm(String riskConfirm) {
                 this.riskConfirm = riskConfirm;
@@ -583,7 +638,10 @@ public class ListRiskItemsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskConfirmDesc.
+             * <p>The description of the risk event disposition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>After verification, the logon was not authorized by the user</p>
              */
             public Builder riskConfirmDesc(String riskConfirmDesc) {
                 this.riskConfirmDesc = riskConfirmDesc;
@@ -591,7 +649,10 @@ public class ListRiskItemsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskDesc.
+             * <p>The risk description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The account logged on from an unusual device</p>
              */
             public Builder riskDesc(String riskDesc) {
                 this.riskDesc = riskDesc;
@@ -599,7 +660,10 @@ public class ListRiskItemsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskEndTime.
+             * <p>The end time of the risky behavior, in the format of <code>yyyy-MM-dd HH:mm:ss</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-21 05:21:00</p>
              */
             public Builder riskEndTime(String riskEndTime) {
                 this.riskEndTime = riskEndTime;
@@ -607,7 +671,7 @@ public class ListRiskItemsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskFeatureIds.
+             * <p>The list of detection feature or detection item identifiers that triggered the risk event. A risk event may hit multiple identifiers. The specific values vary based on the risk scenario and detection rules.</p>
              */
             public Builder riskFeatureIds(java.util.List<String> riskFeatureIds) {
                 this.riskFeatureIds = riskFeatureIds;
@@ -615,7 +679,10 @@ public class ListRiskItemsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskFoundTime.
+             * <p>The time when the risk was detected, in the format of <code>yyyy-MM-dd HH:mm:ss</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-20 10:30:00</p>
              */
             public Builder riskFoundTime(String riskFoundTime) {
                 this.riskFoundTime = riskFoundTime;
@@ -623,7 +690,10 @@ public class ListRiskItemsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskId.
+             * <p>The risk event ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69ef648034cf53d7bac7a9c9c912****</p>
              */
             public Builder riskId(String riskId) {
                 this.riskId = riskId;
@@ -631,7 +701,15 @@ public class ListRiskItemsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>The risk level. Valid values:</p>
+             * <ul>
+             * <li><code>High</code>: high risk.</li>
+             * <li><code>Medium</code>: medium risk.</li>
+             * <li><code>Low</code>: low risk.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>High</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -639,7 +717,21 @@ public class ListRiskItemsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskScene.
+             * <p>The risk scenario. Valid values:</p>
+             * <ul>
+             * <li><code>account_share</code>: account sharing.</li>
+             * <li><code>account_stolen</code>: account theft.</li>
+             * <li><code>device_share</code>: device sharing.</li>
+             * <li><code>remote_logon</code>: remote logon from an unusual location.</li>
+             * <li><code>sensitive_data_leakage</code>: sensitive data exfiltration.</li>
+             * <li><code>lateral_scanning</code>: lateral scanning.</li>
+             * <li><code>ai_skill_malware</code>: malicious Skill.</li>
+             * <li><code>ai_config_check</code>: AI configuration check.</li>
+             * <li><code>openclaw_vulnerability</code>: OpenClaw vulnerability.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>account_stolen</p>
              */
             public Builder riskScene(String riskScene) {
                 this.riskScene = riskScene;
@@ -647,7 +739,10 @@ public class ListRiskItemsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskStartTime.
+             * <p>The start time of the risky behavior, in the format of <code>yyyy-MM-dd HH:mm:ss</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-20 05:20:00</p>
              */
             public Builder riskStartTime(String riskStartTime) {
                 this.riskStartTime = riskStartTime;
@@ -655,7 +750,10 @@ public class ListRiskItemsResponseBody extends TeaModel {
             }
 
             /**
-             * SaseUserId.
+             * <p>The SASE user ID associated with the risk event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
              */
             public Builder saseUserId(String saseUserId) {
                 this.saseUserId = saseUserId;
@@ -663,7 +761,10 @@ public class ListRiskItemsResponseBody extends TeaModel {
             }
 
             /**
-             * SkillName.
+             * <p>The name of the Agent Skill that generated the risk event. An empty string is returned for non-Agent risk scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>frontend-design</p>
              */
             public Builder skillName(String skillName) {
                 this.skillName = skillName;
@@ -671,7 +772,10 @@ public class ListRiskItemsResponseBody extends TeaModel {
             }
 
             /**
-             * Solution.
+             * <p>The recommended remediation action for the risk event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Verify the account user and freeze the account or reset credentials based on the verification result</p>
              */
             public Builder solution(String solution) {
                 this.solution = solution;
@@ -679,7 +783,15 @@ public class ListRiskItemsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The disposition status of the risk event. Valid values:</p>
+             * <ul>
+             * <li><code>Unprocess</code>: unprocessed.</li>
+             * <li><code>Processing</code>: being processed.</li>
+             * <li><code>Processed</code>: processed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Unprocess</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -687,7 +799,14 @@ public class ListRiskItemsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportAnalysis.
+             * <p>Indicates whether AI risk analysis results exist. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: AI risk analysis results exist.</li>
+             * <li><code>false</code>: AI risk analysis results do not exist.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportAnalysis(Boolean supportAnalysis) {
                 this.supportAnalysis = supportAnalysis;
@@ -695,7 +814,10 @@ public class ListRiskItemsResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * <p>The username associated with the risk event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhang***</p>
              */
             public Builder username(String username) {
                 this.username = username;

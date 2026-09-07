@@ -353,7 +353,10 @@ public class GetVirusScanScheduledStrategyResponseBody extends TeaModel {
         } 
 
         /**
-         * CreateTime.
+         * <p>The time when the policy was created, in the format of yyyy-MM-dd HH:mm:ss in the UTC+8 time zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-21 10:24:31</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -361,7 +364,7 @@ public class GetVirusScanScheduledStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * CustomMatchGroup.
+         * <p>The effective scope specified by organizational structure.</p>
          */
         public Builder customMatchGroup(java.util.List<CustomMatchGroup> customMatchGroup) {
             this.customMatchGroup = customMatchGroup;
@@ -369,7 +372,14 @@ public class GetVirusScanScheduledStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * HighRiskOperation.
+         * <p>The action to take on high-risk virus files. Valid values:</p>
+         * <ul>
+         * <li><strong>Quarantine</strong>: Quarantine quarantined file.</li>
+         * <li><strong>Notify</strong>: Only report an alert without taking action on quarantined file.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Quarantine</p>
          */
         public Builder highRiskOperation(String highRiskOperation) {
             this.highRiskOperation = highRiskOperation;
@@ -377,7 +387,10 @@ public class GetVirusScanScheduledStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * LastTriggerTime.
+         * <p>The time when the policy last triggered a scan, in the format of yyyy-MM-dd HH:mm:ss in the UTC+8 time zone. An empty string is returned if the policy has never been triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-21 01:00:03</p>
          */
         public Builder lastTriggerTime(String lastTriggerTime) {
             this.lastTriggerTime = lastTriggerTime;
@@ -385,7 +398,15 @@ public class GetVirusScanScheduledStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * LowRiskOperation.
+         * <p>The action to take on low-risk virus files. Valid values:</p>
+         * <ul>
+         * <li><strong>Quarantine</strong>: Quarantine quarantined file.</li>
+         * <li><strong>Notify</strong>: Only report an alert without taking action on quarantined file.</li>
+         * <li><strong>None</strong>: No action.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder lowRiskOperation(String lowRiskOperation) {
             this.lowRiskOperation = lowRiskOperation;
@@ -393,7 +414,14 @@ public class GetVirusScanScheduledStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * MatchMode.
+         * <p>The matching method for the effective scope. Valid values:</p>
+         * <ul>
+         * <li><strong>UserGroupAll</strong>: Applies to all users under the current Alibaba Cloud account.</li>
+         * <li><strong>UserGroupNormal</strong>: Applies only to users in specified user groups.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UserGroupNormal</p>
          */
         public Builder matchMode(String matchMode) {
             this.matchMode = matchMode;
@@ -401,7 +429,7 @@ public class GetVirusScanScheduledStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * MatchTargetIds.
+         * <p>The collection of user group IDs within the effective scope. An empty list is returned when MatchMode is set to UserGroupAll.</p>
          */
         public Builder matchTargetIds(java.util.List<String> matchTargetIds) {
             this.matchTargetIds = matchTargetIds;
@@ -409,7 +437,10 @@ public class GetVirusScanScheduledStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * MaxCpuUsage.
+         * <p>The maximum percentage of endpoint CPU usage allowed during the scan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxCpuUsage(Long maxCpuUsage) {
             this.maxCpuUsage = maxCpuUsage;
@@ -417,7 +448,14 @@ public class GetVirusScanScheduledStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * MidRiskOperation.
+         * <p>The action to take on medium-risk virus files. Valid values:</p>
+         * <ul>
+         * <li><strong>Quarantine</strong>: Quarantine quarantined file.</li>
+         * <li><strong>Notify</strong>: Only report an alert without taking action on quarantined file.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Notify</p>
          */
         public Builder midRiskOperation(String midRiskOperation) {
             this.midRiskOperation = midRiskOperation;
@@ -425,7 +463,15 @@ public class GetVirusScanScheduledStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * PerformanceMode.
+         * <p>The scan performance schema pattern. Valid values:</p>
+         * <ul>
+         * <li><strong>SecurityFirst</strong>: Security first. The default CPU usage upper limit is 50%.</li>
+         * <li><strong>Balance</strong>: Balanced. The default CPU usage upper limit is 30%.</li>
+         * <li><strong>ExperienceFirst</strong>: Experience first. The default CPU usage upper limit is 15%.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Balance</p>
          */
         public Builder performanceMode(String performanceMode) {
             this.performanceMode = performanceMode;
@@ -433,7 +479,10 @@ public class GetVirusScanScheduledStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * Priority.
+         * <p>The policy priority. A smaller value indicates a higher priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder priority(Integer priority) {
             this.priority = priority;
@@ -441,7 +490,10 @@ public class GetVirusScanScheduledStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3D7EC0AF-DB2A-5D9C-90EC-F090A6BAAEA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -449,7 +501,10 @@ public class GetVirusScanScheduledStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * ScanBeginTime.
+         * <p>The start hour during which the scan can be triggered. The value is a whole hour number ranging from 0 to 23, inclusive. This field is not a timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scanBeginTime(Integer scanBeginTime) {
             this.scanBeginTime = scanBeginTime;
@@ -457,7 +512,10 @@ public class GetVirusScanScheduledStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * ScanEndTime.
+         * <p>The end hour during which the scan can be triggered. The value is a whole hour number ranging from 1 to 24, exclusive of the specified hour, and must be greater than ScanBeginTime. The scan task generated by each trigger expires at this hour on the same day. This field is not a timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder scanEndTime(Integer scanEndTime) {
             this.scanEndTime = scanEndTime;
@@ -465,7 +523,14 @@ public class GetVirusScanScheduledStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * ScanFrequency.
+         * <p>The unit of the trigger cycle. Valid values:</p>
+         * <ul>
+         * <li><strong>day</strong>: By day.</li>
+         * <li><strong>week</strong>: By week.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>week</p>
          */
         public Builder scanFrequency(String scanFrequency) {
             this.scanFrequency = scanFrequency;
@@ -473,7 +538,10 @@ public class GetVirusScanScheduledStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * ScanInterval.
+         * <p>The interval number of the trigger cycle, which determines the trigger cycle together with ScanFrequency. For example, if ScanFrequency is set to week and ScanInterval is set to 1, the scan is triggered once a week.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scanInterval(Integer scanInterval) {
             this.scanInterval = scanInterval;
@@ -481,7 +549,15 @@ public class GetVirusScanScheduledStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * ScanMode.
+         * <p>The scan path scope. Valid values:</p>
+         * <ul>
+         * <li><strong>Quick</strong>: Quick scan. Only scans critical system directories and common risk locations.</li>
+         * <li><strong>Full</strong>: Full disk scan.</li>
+         * <li><strong>Custom</strong>: Custom path scan.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Quick</p>
          */
         public Builder scanMode(String scanMode) {
             this.scanMode = scanMode;
@@ -489,7 +565,7 @@ public class GetVirusScanScheduledStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * ScanPath.
+         * <p>The collection of custom scan paths.</p>
          */
         public Builder scanPath(java.util.List<String> scanPath) {
             this.scanPath = scanPath;
@@ -497,7 +573,7 @@ public class GetVirusScanScheduledStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * ScanTargets.
+         * <p>The collection of virus types to be handled in this scan.</p>
          */
         public Builder scanTargets(java.util.List<String> scanTargets) {
             this.scanTargets = scanTargets;
@@ -505,7 +581,14 @@ public class GetVirusScanScheduledStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The enabled status. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -513,7 +596,10 @@ public class GetVirusScanScheduledStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * StrategyDescription.
+         * <p>The policy description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Full disk scan for R&amp;D department endpoints every Sunday at midnight</p>
          */
         public Builder strategyDescription(String strategyDescription) {
             this.strategyDescription = strategyDescription;
@@ -521,7 +607,10 @@ public class GetVirusScanScheduledStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * StrategyId.
+         * <p>The ID of the scheduled virus scan policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vc-strategy-8a3f6c2e91b7****</p>
          */
         public Builder strategyId(String strategyId) {
             this.strategyId = strategyId;
@@ -529,7 +618,10 @@ public class GetVirusScanScheduledStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * StrategyName.
+         * <p>The policy name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Weekly scan for R&amp;D department</p>
          */
         public Builder strategyName(String strategyName) {
             this.strategyName = strategyName;
@@ -537,7 +629,7 @@ public class GetVirusScanScheduledStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * Whitelist.
+         * <p>The list of exempted users. Users in this list are excluded from the scan policy. An empty list is returned if no exemptions are configured.</p>
          */
         public Builder whitelist(java.util.List<String> whitelist) {
             this.whitelist = whitelist;
@@ -603,7 +695,7 @@ public class GetVirusScanScheduledStrategyResponseBody extends TeaModel {
             } 
 
             /**
-             * Group.
+             * <p>The collection of organizational structure nodes.</p>
              */
             public Builder group(java.util.List<String> group) {
                 this.group = group;
@@ -611,7 +703,10 @@ public class GetVirusScanScheduledStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * IdpId.
+             * <p>The identity provider ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idp-7c3f9a2e5b18****</p>
              */
             public Builder idpId(String idpId) {
                 this.idpId = idpId;

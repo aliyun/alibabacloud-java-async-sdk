@@ -187,6 +187,7 @@ public class ListRiskItemsRequest extends Request {
         } 
 
         /**
+         * <p>The page number of the current page in a paging query. Valid values: 1 to 10000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,6 +200,7 @@ public class ListRiskItemsRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page in a paging query. Valid values: 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +213,10 @@ public class ListRiskItemsRequest extends Request {
         }
 
         /**
-         * PolicyName.
+         * <p>The name of the risk analysis policy. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Remote logon risk analysis policy</p>
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -220,7 +225,17 @@ public class ListRiskItemsRequest extends Request {
         }
 
         /**
-         * RiskCategory.
+         * <p>The risk category. Valid values:</p>
+         * <ul>
+         * <li><code>data_safe</code>: data security.</li>
+         * <li><code>identify_safe</code>: identity security.</li>
+         * <li><code>device_safe</code>: device security.</li>
+         * <li><code>access_safe</code>: access security.</li>
+         * <li><code>ai_agent_safe</code>: Agent security.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>identify_safe</p>
          */
         public Builder riskCategory(String riskCategory) {
             this.putQueryParameter("RiskCategory", riskCategory);
@@ -229,7 +244,10 @@ public class ListRiskItemsRequest extends Request {
         }
 
         /**
-         * RiskId.
+         * <p>The risk event ID. If specified, the exact risk event is queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69ef648034cf53d7bac7a9c9c912****</p>
          */
         public Builder riskId(String riskId) {
             this.putQueryParameter("RiskId", riskId);
@@ -238,7 +256,15 @@ public class ListRiskItemsRequest extends Request {
         }
 
         /**
-         * RiskLevel.
+         * <p>The risk level. Valid values:</p>
+         * <ul>
+         * <li><code>High</code>: high risk.</li>
+         * <li><code>Medium</code>: medium risk.</li>
+         * <li><code>Low</code>: low risk.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>High</p>
          */
         public Builder riskLevel(String riskLevel) {
             this.putQueryParameter("RiskLevel", riskLevel);
@@ -247,7 +273,22 @@ public class ListRiskItemsRequest extends Request {
         }
 
         /**
-         * RiskScene.
+         * <p>The risk scenario. Valid values:</p>
+         * <ul>
+         * <li><code>account_share</code>: account sharing.</li>
+         * <li><code>account_stolen</code>: account theft.</li>
+         * <li><code>device_share</code>: device sharing.</li>
+         * <li><code>remote_logon</code>: remote logon from an unusual location.</li>
+         * <li><code>sensitive_data_leakage</code>: sensitive data exfiltration.</li>
+         * <li><code>compressed_archive_exfil</code>: compressed data exfiltration from the internal network.</li>
+         * <li><code>lateral_scanning</code>: lateral scanning.</li>
+         * <li><code>ai_skill_malware</code>: malicious Skill.</li>
+         * <li><code>ai_config_check</code>: AI configuration check.</li>
+         * <li><code>openclaw_vulnerability</code>: OpenClaw vulnerability.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>account_stolen</p>
          */
         public Builder riskScene(String riskScene) {
             this.putQueryParameter("RiskScene", riskScene);
@@ -256,7 +297,10 @@ public class ListRiskItemsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The disposition status of the risk event. This parameter cannot be set together with <code>StatusList</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unprocess</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -265,7 +309,7 @@ public class ListRiskItemsRequest extends Request {
         }
 
         /**
-         * StatusList.
+         * <p>The list of disposition statuses of risk events, in Flat serialization format. This parameter cannot be set together with Status.</p>
          */
         public Builder statusList(java.util.List<String> statusList) {
             this.putQueryParameter("StatusList", statusList);
@@ -274,7 +318,10 @@ public class ListRiskItemsRequest extends Request {
         }
 
         /**
-         * Username.
+         * <p>The username associated with the risk event. Fuzzy match is supported. Maximum length: 128 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhang***</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

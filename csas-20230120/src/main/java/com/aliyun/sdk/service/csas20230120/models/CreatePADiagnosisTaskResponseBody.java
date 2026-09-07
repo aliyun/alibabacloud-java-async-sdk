@@ -67,7 +67,7 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * DiagnosisTask.
+         * <p>The diagnostic task.</p>
          */
         public Builder diagnosisTask(DiagnosisTask diagnosisTask) {
             this.diagnosisTask = diagnosisTask;
@@ -144,7 +144,10 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * ExpectedResponse.
+             * <p>The expected response from the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello</p>
              */
             public Builder expectedResponse(String expectedResponse) {
                 this.expectedResponse = expectedResponse;
@@ -152,7 +155,10 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RequestContent.
+             * <p>The UDP request content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello</p>
              */
             public Builder requestContent(String requestContent) {
                 this.requestContent = requestContent;
@@ -219,7 +225,10 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * UserGroupId.
+             * <p>The user group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ug-xxxxxxxx</p>
              */
             public Builder userGroupId(String userGroupId) {
                 this.userGroupId = userGroupId;
@@ -227,7 +236,10 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupName.
+             * <p>The user group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IT</p>
              */
             public Builder userGroupName(String userGroupName) {
                 this.userGroupName = userGroupName;
@@ -424,7 +436,10 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * DevTag.
+             * <p>The ID of the terminal device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>E9EE1CE7-4AA0-521D-B8E1-E13E47F05E94</p>
              */
             public Builder devTag(String devTag) {
                 this.devTag = devTag;
@@ -432,7 +447,10 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * DiagnoseId.
+             * <p>The diagnostic task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>diag-3e0d36d6c15a0502</p>
              */
             public Builder diagnoseId(String diagnoseId) {
                 this.diagnoseId = diagnoseId;
@@ -440,7 +458,14 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * DiagnoseType.
+             * <p>The diagnosis type. Valid values:</p>
+             * <ul>
+             * <li>FullLink: full-link diagnosis.</li>
+             * <li>Application: application diagnosis.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FullLink</p>
              */
             public Builder diagnoseType(String diagnoseType) {
                 this.diagnoseType = diagnoseType;
@@ -448,7 +473,10 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * <p>The address to diagnose.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.6.1</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -456,7 +484,10 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * PopId.
+             * <p>The POP point ID. This parameter is required when manual selection is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pop-8ded63ce9d3d317e</p>
              */
             public Builder popId(String popId) {
                 this.popId = popId;
@@ -464,7 +495,14 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * PopMode.
+             * <p>The POP point selection mode. Valid values:</p>
+             * <ul>
+             * <li><strong>AutoSelect</strong>: automatic selection.</li>
+             * <li><strong>ManualSelect</strong>: manual selection.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AutoSelect</p>
              */
             public Builder popMode(String popMode) {
                 this.popMode = popMode;
@@ -472,7 +510,10 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -480,7 +521,14 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>The protocol used by the internal network access application. Valid values:</p>
+             * <ul>
+             * <li><strong>TCP</strong></li>
+             * <li><strong>UDP</strong>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -488,7 +536,15 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task running status. Valid values:</p>
+             * <ul>
+             * <li><strong>Running</strong>: The task is running.</li>
+             * <li><strong>Finished</strong>: The task is complete.</li>
+             * <li><strong>Failed</strong>: The task failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Disabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -496,7 +552,7 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * UdpExtraConfigs.
+             * <p>The extra information for UDP diagnosis.</p>
              */
             public Builder udpExtraConfigs(UdpExtraConfigs udpExtraConfigs) {
                 this.udpExtraConfigs = udpExtraConfigs;
@@ -504,7 +560,7 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroup.
+             * <p>The user group.</p>
              */
             public Builder userGroup(UserGroup userGroup) {
                 this.userGroup = userGroup;
@@ -512,7 +568,10 @@ public class CreatePADiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangsan</p>
              */
             public Builder username(String username) {
                 this.username = username;

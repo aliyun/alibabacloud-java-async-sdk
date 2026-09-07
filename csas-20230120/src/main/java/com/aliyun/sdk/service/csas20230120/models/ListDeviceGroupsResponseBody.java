@@ -80,7 +80,7 @@ public class ListDeviceGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * DeviceGroups.
+         * <p>The list of device labels.</p>
          */
         public Builder deviceGroups(java.util.List<DeviceGroups> deviceGroups) {
             this.deviceGroups = deviceGroups;
@@ -99,7 +99,10 @@ public class ListDeviceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of device labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalNum(Long totalNum) {
             this.totalNum = totalNum;
@@ -244,7 +247,10 @@ public class ListDeviceGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The device label description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -252,7 +258,10 @@ public class ListDeviceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceGroupId.
+             * <p>The device label ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>device-group-5191cf830a5e****</p>
              */
             public Builder deviceGroupId(String deviceGroupId) {
                 this.deviceGroupId = deviceGroupId;
@@ -260,7 +269,10 @@ public class ListDeviceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DynamicOperator.
+             * <p>The rule operator of the dynamic device group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AND</p>
              */
             public Builder dynamicOperator(String dynamicOperator) {
                 this.dynamicOperator = dynamicOperator;
@@ -268,7 +280,7 @@ public class ListDeviceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DynamicRule.
+             * <p>The matching rule of the dynamic device label.</p>
              */
             public Builder dynamicRule(Rule dynamicRule) {
                 this.dynamicRule = dynamicRule;
@@ -276,7 +288,14 @@ public class ListDeviceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupType.
+             * <p>The device label type. Valid values:</p>
+             * <ul>
+             * <li><strong>static</strong>: A static device label. Members consist of manually added terminal devices.</li>
+             * <li><strong>dynamic</strong>: A dynamic device label. Members are automatically calculated by matching rules when terminal devices report heartbeats.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>static</p>
              */
             public Builder groupType(String groupType) {
                 this.groupType = groupType;
@@ -284,7 +303,14 @@ public class ListDeviceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether the device label is a system built-in device label. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: A system built-in device label.</li>
+             * <li><strong>false</strong>: A user-defined device label.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDefault(String isDefault) {
                 this.isDefault = isDefault;
@@ -292,7 +318,7 @@ public class ListDeviceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * MatchDevTags.
+             * <p>The collection of terminal device IDs associated with the device label.</p>
              */
             public Builder matchDevTags(java.util.List<String> matchDevTags) {
                 this.matchDevTags = matchDevTags;
@@ -300,7 +326,10 @@ public class ListDeviceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The device label name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder name(String name) {
                 this.name = name;

@@ -67,7 +67,7 @@ public class AddressGroup extends TeaModel {
         } 
 
         /**
-         * Addresses.
+         * <p>Address list.</p>
          */
         public Builder addresses(java.util.List<String> addresses) {
             this.addresses = addresses;
@@ -75,7 +75,7 @@ public class AddressGroup extends TeaModel {
         }
 
         /**
-         * Ports.
+         * <p>Port list.</p>
          */
         public Builder ports(java.util.List<Ports> ports) {
             this.ports = ports;
@@ -141,7 +141,10 @@ public class AddressGroup extends TeaModel {
             } 
 
             /**
-             * Begin.
+             * <p>Start port. Must be less than or equal to the end port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder begin(Integer begin) {
                 this.begin = begin;
@@ -149,7 +152,10 @@ public class AddressGroup extends TeaModel {
             }
 
             /**
-             * End.
+             * <p>End port. Must be greater than or equal to the start port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder end(Integer end) {
                 this.end = end;

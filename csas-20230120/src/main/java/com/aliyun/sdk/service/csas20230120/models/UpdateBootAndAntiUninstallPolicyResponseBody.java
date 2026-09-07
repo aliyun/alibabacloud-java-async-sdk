@@ -67,7 +67,10 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB67D866-1E54-5106-89DF-6D70C73E5989</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Strategy.
+         * <p>Auto-start and anti-uninstall policy.</p>
          */
         public Builder strategy(Strategy strategy) {
             this.strategy = strategy;
@@ -167,7 +170,10 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>Dialog content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>After uninstalling, the device can no longer be used for company work, and it will lose access to the company\&quot;s intranet!</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -175,7 +181,10 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * MainButtonText.
+             * <p>Main button text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Report</p>
              */
             public Builder mainButtonText(String mainButtonText) {
                 this.mainButtonText = mainButtonText;
@@ -183,7 +192,10 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * MinorButtonText.
+             * <p>Secondary button text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ignore</p>
              */
             public Builder minorButtonText(String minorButtonText) {
                 this.minorButtonText = minorButtonText;
@@ -191,7 +203,10 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>Dialog title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Anti-Uninstall Warning</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -284,7 +299,10 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>Dialog content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>卸载后该设备无法再用于公司办公，同时该设备将失去进入公司内网权限！</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -292,7 +310,10 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * MainButtonText.
+             * <p>Main button text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>去报备</p>
              */
             public Builder mainButtonText(String mainButtonText) {
                 this.mainButtonText = mainButtonText;
@@ -300,7 +321,10 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * MinorButtonText.
+             * <p>Secondary button text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>我知道了</p>
              */
             public Builder minorButtonText(String minorButtonText) {
                 this.minorButtonText = minorButtonText;
@@ -308,7 +332,10 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>Dialog title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>防卸载警告</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -375,7 +402,7 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * BlockTextEn.
+             * <p>English text.</p>
              */
             public Builder blockTextEn(BlockTextEn blockTextEn) {
                 this.blockTextEn = blockTextEn;
@@ -383,7 +410,7 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * BlockTextZh.
+             * <p>Chinese text.</p>
              */
             public Builder blockTextZh(BlockTextZh blockTextZh) {
                 this.blockTextZh = blockTextZh;
@@ -554,7 +581,10 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * AllowReport.
+             * <p>End users can submit approval requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder allowReport(Boolean allowReport) {
                 this.allowReport = allowReport;
@@ -562,7 +592,7 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * BlockContent.
+             * <p>Content shown in the client-side block dialog.</p>
              */
             public Builder blockContent(BlockContent blockContent) {
                 this.blockContent = blockContent;
@@ -570,7 +600,10 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>Time when the policy was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-16 10:50:05</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -578,7 +611,10 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * IsAntiUninstall.
+             * <p>Indicates whether the anti-uninstall feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isAntiUninstall(Boolean isAntiUninstall) {
                 this.isAntiUninstall = isAntiUninstall;
@@ -586,7 +622,10 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * IsBoot.
+             * <p>Indicates whether the auto-start feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isBoot(Boolean isBoot) {
                 this.isBoot = isBoot;
@@ -594,7 +633,10 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyId.
+             * <p>Policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>auto-boot-anti-uninstall-6f6cbf5f6605****</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -602,7 +644,10 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * ReportProcessId.
+             * <p>ID of the approval process associated with this policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-process-65c255598826****</p>
              */
             public Builder reportProcessId(String reportProcessId) {
                 this.reportProcessId = reportProcessId;
@@ -610,7 +655,10 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>Time when the policy was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-06-14 10:17:14</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -618,7 +666,7 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupIds.
+             * <p>List of user group IDs to which this policy applies.</p>
              */
             public Builder userGroupIds(java.util.List<String> userGroupIds) {
                 this.userGroupIds = userGroupIds;
@@ -626,7 +674,7 @@ public class UpdateBootAndAntiUninstallPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * WhitelistUsers.
+             * <p>List of whitelisted users.</p>
              */
             public Builder whitelistUsers(java.util.List<String> whitelistUsers) {
                 this.whitelistUsers = whitelistUsers;

@@ -75,10 +75,11 @@ public class GetClientUserRequest extends Request {
         } 
 
         /**
+         * <p>ID of the custom identity source configuration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>598</p>
+         * <p>idp-cfg68956d86e********</p>
          */
         public Builder idpConfigId(String idpConfigId) {
             this.putQueryParameter("IdpConfigId", idpConfigId);
@@ -87,7 +88,11 @@ public class GetClientUserRequest extends Request {
         }
 
         /**
+         * <p>Username.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

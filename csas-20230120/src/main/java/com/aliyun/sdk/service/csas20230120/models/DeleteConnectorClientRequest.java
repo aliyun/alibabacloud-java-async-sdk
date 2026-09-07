@@ -75,6 +75,7 @@ public class DeleteConnectorClientRequest extends Request {
         } 
 
         /**
+         * <p>The connector ID. You can call <a href="~~ListConnectors~~">ListConnectors</a> to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteConnectorClientRequest extends Request {
         }
 
         /**
+         * <p>The unique identifier of the ConnectorClient device. You can call <a href="~~ListConnectors~~">ListConnectors</a> to obtain the identifier.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

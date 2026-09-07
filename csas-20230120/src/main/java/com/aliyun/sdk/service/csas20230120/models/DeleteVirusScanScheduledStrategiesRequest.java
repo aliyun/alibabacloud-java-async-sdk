@@ -60,6 +60,7 @@ public class DeleteVirusScanScheduledStrategiesRequest extends Request {
         } 
 
         /**
+         * <p>The IDs of the virus scheduled scan policies to delete. The collection must contain at least 1 and at most 100 IDs. Duplicate IDs are not allowed.</p>
          * <p>This parameter is required.</p>
          */
         public Builder strategyIds(java.util.List<String> strategyIds) {

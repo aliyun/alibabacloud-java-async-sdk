@@ -204,7 +204,7 @@ public class CreateRegistrationPolicyRequest extends Request {
         } 
 
         /**
-         * CompanyLimitCount.
+         * <p>The restriction count for company devices.</p>
          */
         public Builder companyLimitCount(CompanyLimitCount companyLimitCount) {
             String companyLimitCountShrink = shrink(companyLimitCount, "CompanyLimitCount", "json");
@@ -214,6 +214,15 @@ public class CreateRegistrationPolicyRequest extends Request {
         }
 
         /**
+         * <p>The restriction type for company devices. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Unlimited</strong>: No restrictions.</p>
+         * </li>
+         * <li><p><strong>LimitAll</strong>: Limit by total count.</p>
+         * </li>
+         * <li><p><strong>LimitDiff</strong>: Limit by device category.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,7 +235,10 @@ public class CreateRegistrationPolicyRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>A description of the device registration policy. The description must be 1 to 128 characters in length. It can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一条设备注册策略</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -235,6 +247,13 @@ public class CreateRegistrationPolicyRequest extends Request {
         }
 
         /**
+         * <p>The target type for policy matching. Valid values:</p>
+         * <ul>
+         * <li><p><strong>UserGroupAll</strong>: Apply to all users.</p>
+         * </li>
+         * <li><p><strong>UserGroupNormal</strong>: Apply to selected user groups.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -247,6 +266,7 @@ public class CreateRegistrationPolicyRequest extends Request {
         }
 
         /**
+         * <p>The name of the device registration policy. The name must be 1 to 128 characters in length. It can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -259,7 +279,7 @@ public class CreateRegistrationPolicyRequest extends Request {
         }
 
         /**
-         * PersonalLimitCount.
+         * <p>The restriction count for personal devices.</p>
          */
         public Builder personalLimitCount(PersonalLimitCount personalLimitCount) {
             String personalLimitCountShrink = shrink(personalLimitCount, "PersonalLimitCount", "json");
@@ -269,6 +289,15 @@ public class CreateRegistrationPolicyRequest extends Request {
         }
 
         /**
+         * <p>The restriction type for personal devices. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Unlimited</strong>: No restrictions.</p>
+         * </li>
+         * <li><p><strong>LimitAll</strong>: Limit by total count.</p>
+         * </li>
+         * <li><p><strong>LimitDiff</strong>: Limit by device category.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -281,7 +310,10 @@ public class CreateRegistrationPolicyRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The priority of the device registration policy. A value of 0 indicates the highest priority. A value of 99 indicates the lowest priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99</p>
          */
         public Builder priority(Long priority) {
             this.putBodyParameter("Priority", priority);
@@ -290,6 +322,13 @@ public class CreateRegistrationPolicyRequest extends Request {
         }
 
         /**
+         * <p>The status of the device registration policy. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Enabled</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>Disabled</strong>: Disabled.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -302,7 +341,7 @@ public class CreateRegistrationPolicyRequest extends Request {
         }
 
         /**
-         * UserGroupIds.
+         * <p>The IDs of user groups to which the device registration policy applies. Required if MatchMode is set to <strong>UserGroupNormal</strong>. A maximum of 100 user groups can be specified per policy.</p>
          */
         public Builder userGroupIds(java.util.List<String> userGroupIds) {
             this.putBodyParameter("UserGroupIds", userGroupIds);
@@ -311,7 +350,7 @@ public class CreateRegistrationPolicyRequest extends Request {
         }
 
         /**
-         * Whitelist.
+         * <p>The list of usernames in the whitelist for the device registration policy. You can specify up to 1,000 usernames.</p>
          */
         public Builder whitelist(java.util.List<String> whitelist) {
             this.putBodyParameter("Whitelist", whitelist);
@@ -392,7 +431,10 @@ public class CreateRegistrationPolicyRequest extends Request {
             } 
 
             /**
-             * All.
+             * <p>The total restriction count for company devices. Valid values: 0 to 100. Default value: 0. This parameter takes effect only when CompanyLimitType is set to <strong>LimitAll</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder all(Integer all) {
                 this.all = all;
@@ -400,7 +442,10 @@ public class CreateRegistrationPolicyRequest extends Request {
             }
 
             /**
-             * Mobile.
+             * <p>The restriction count for mobile logins by company devices. Valid values: 0 to 100. Default value: 0. This parameter takes effect only when CompanyLimitType is set to <strong>LimitDiff</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder mobile(Integer mobile) {
                 this.mobile = mobile;
@@ -408,7 +453,10 @@ public class CreateRegistrationPolicyRequest extends Request {
             }
 
             /**
-             * PC.
+             * <p>The restriction count for PC logins by company devices. Valid values: 0 to 100. Default value: 0. This parameter takes effect only when CompanyLimitType is set to <strong>LimitDiff</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pc(Integer pc) {
                 this.pc = pc;
@@ -488,7 +536,10 @@ public class CreateRegistrationPolicyRequest extends Request {
             } 
 
             /**
-             * All.
+             * <p>The total restriction count for personal devices. Valid values: 0 to 100. Default value: 0. This parameter takes effect only when PersonalLimitType is set to <strong>LimitAll</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder all(Integer all) {
                 this.all = all;
@@ -496,7 +547,10 @@ public class CreateRegistrationPolicyRequest extends Request {
             }
 
             /**
-             * Mobile.
+             * <p>The restriction count for mobile logins by personal devices. Valid values: 0 to 100. Default value: 0. This parameter takes effect only when PersonalLimitType is set to <strong>LimitDiff</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder mobile(Integer mobile) {
                 this.mobile = mobile;
@@ -504,7 +558,10 @@ public class CreateRegistrationPolicyRequest extends Request {
             }
 
             /**
-             * PC.
+             * <p>The restriction count for PC logins by personal devices. Valid values: 0 to 100. Default value: 0. This parameter takes effect only when PersonalLimitType is set to <strong>LimitDiff</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder pc(Integer pc) {
                 this.pc = pc;

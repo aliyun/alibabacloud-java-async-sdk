@@ -60,6 +60,7 @@ public class DeleteForwardStrategyRequest extends Request {
         } 
 
         /**
+         * <p>The forwarding rule ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -80,7 +80,7 @@ public class ListDomainMetasResponseBody extends TeaModel {
         } 
 
         /**
-         * DomainMetas.
+         * <p>The list of domain name lists.</p>
          */
         public Builder domainMetas(java.util.List<DomainMetas> domainMetas) {
             this.domainMetas = domainMetas;
@@ -88,7 +88,10 @@ public class ListDomainMetasResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D2788E14-8C9F-5FE8-B72F-5ABD033AA27E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListDomainMetasResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of lists that match the specified conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34</p>
          */
         public Builder totalNum(Integer totalNum) {
             this.totalNum = totalNum;
@@ -227,7 +233,10 @@ public class ListDomainMetasResponseBody extends TeaModel {
             } 
 
             /**
-             * GmtCreate.
+             * <p>The time when the list was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-01 10:20:30</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -235,7 +244,10 @@ public class ListDomainMetasResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the list was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-02 15:00:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -243,7 +255,10 @@ public class ListDomainMetasResponseBody extends TeaModel {
             }
 
             /**
-             * ItemCount.
+             * <p>The number of domain name entries in the list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128</p>
              */
             public Builder itemCount(Long itemCount) {
                 this.itemCount = itemCount;
@@ -251,7 +266,10 @@ public class ListDomainMetasResponseBody extends TeaModel {
             }
 
             /**
-             * ListId.
+             * <p>The list ID, which is a unique business identifier used for policy references and CRUD operations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ladl-8acxxxa0f2a7daf9</p>
              */
             public Builder listId(String listId) {
                 this.listId = listId;
@@ -259,7 +277,10 @@ public class ListDomainMetasResponseBody extends TeaModel {
             }
 
             /**
-             * ListType.
+             * <p>The list type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>la_domain_white_list</p>
              */
             public Builder listType(String listType) {
                 this.listType = listType;
@@ -267,7 +288,10 @@ public class ListDomainMetasResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The list name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OfficeDomainWhitelist</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -275,7 +299,10 @@ public class ListDomainMetasResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RS_ladl-xxxxxxxxx</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;

@@ -103,6 +103,7 @@ public class ListDeviceGroupsRequest extends Request {
         } 
 
         /**
+         * <p>The number of the page to return in a paged query. Valid values: 1 to 10000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,7 @@ public class ListDeviceGroupsRequest extends Request {
         }
 
         /**
-         * DeviceGroupIds.
+         * <p>The collection of device group IDs. Duplicate values are not allowed.</p>
          */
         public Builder deviceGroupIds(java.util.List<String> deviceGroupIds) {
             this.putQueryParameter("DeviceGroupIds", deviceGroupIds);
@@ -124,7 +125,10 @@ public class ListDeviceGroupsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The device label name. The name can be up to 128 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PublicServiceSystemUserGroup</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -133,6 +137,7 @@ public class ListDeviceGroupsRequest extends Request {
         }
 
         /**
+         * <p>The number of entries to return on each page in a paged query. Valid values: 1 to 500.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

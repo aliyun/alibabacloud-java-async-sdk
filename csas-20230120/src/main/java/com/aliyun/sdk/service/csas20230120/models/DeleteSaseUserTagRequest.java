@@ -59,7 +59,7 @@ public class DeleteSaseUserTagRequest extends Request {
         } 
 
         /**
-         * TagIds.
+         * <p>The collection of user tag IDs.</p>
          */
         public Builder tagIds(java.util.List<String> tagIds) {
             this.putBodyParameter("TagIds", tagIds);

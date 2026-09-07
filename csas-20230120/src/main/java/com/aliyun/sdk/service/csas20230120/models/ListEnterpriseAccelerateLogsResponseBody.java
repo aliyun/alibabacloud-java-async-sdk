@@ -80,7 +80,7 @@ public class ListEnterpriseAccelerateLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * Logs.
+         * <p>List of logs.</p>
          */
         public Builder logs(java.util.List<Logs> logs) {
             this.logs = logs;
@@ -88,7 +88,10 @@ public class ListEnterpriseAccelerateLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43F07A6A-294D-56FB-85EB-6AD00C5B60FF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListEnterpriseAccelerateLogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNumber.
+         * <p>Total number of logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         public Builder totalNumber(Integer totalNumber) {
             this.totalNumber = totalNumber;
@@ -253,7 +259,10 @@ public class ListEnterpriseAccelerateLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * Department.
+             * <p>Department.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试部</p>
              */
             public Builder department(String department) {
                 this.department = department;
@@ -261,7 +270,10 @@ public class ListEnterpriseAccelerateLogsResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceType.
+             * <p>Device type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>windows</p>
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -269,7 +281,10 @@ public class ListEnterpriseAccelerateLogsResponseBody extends TeaModel {
             }
 
             /**
-             * DstAddr.
+             * <p>Destination endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.bing.com:443">www.bing.com:443</a></p>
              */
             public Builder dstAddr(String dstAddr) {
                 this.dstAddr = dstAddr;
@@ -277,7 +292,10 @@ public class ListEnterpriseAccelerateLogsResponseBody extends TeaModel {
             }
 
             /**
-             * InBytes.
+             * <p>Inbound traffic, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12299</p>
              */
             public Builder inBytes(String inBytes) {
                 this.inBytes = inBytes;
@@ -285,7 +303,10 @@ public class ListEnterpriseAccelerateLogsResponseBody extends TeaModel {
             }
 
             /**
-             * OutBytes.
+             * <p>Outbound traffic, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2603</p>
              */
             public Builder outBytes(String outBytes) {
                 this.outBytes = outBytes;
@@ -293,7 +314,10 @@ public class ListEnterpriseAccelerateLogsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyName.
+             * <p>Enterprise acceleration policy name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>白名单加速</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -301,7 +325,10 @@ public class ListEnterpriseAccelerateLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyAddr.
+             * <p>Enterprise acceleration instance address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.222.179.xxx:10015</p>
              */
             public Builder proxyAddr(String proxyAddr) {
                 this.proxyAddr = proxyAddr;
@@ -309,7 +336,10 @@ public class ListEnterpriseAccelerateLogsResponseBody extends TeaModel {
             }
 
             /**
-             * UnixTime.
+             * <p>Time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1748422797</p>
              */
             public Builder unixTime(String unixTime) {
                 this.unixTime = unixTime;
@@ -317,7 +347,10 @@ public class ListEnterpriseAccelerateLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * <p>Username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder username(String username) {
                 this.username = username;

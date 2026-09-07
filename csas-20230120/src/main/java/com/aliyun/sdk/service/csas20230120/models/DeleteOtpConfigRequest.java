@@ -59,7 +59,10 @@ public class DeleteOtpConfigRequest extends Request {
         } 
 
         /**
-         * Username.
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
          */
         public Builder username(String username) {
             this.putBodyParameter("Username", username);

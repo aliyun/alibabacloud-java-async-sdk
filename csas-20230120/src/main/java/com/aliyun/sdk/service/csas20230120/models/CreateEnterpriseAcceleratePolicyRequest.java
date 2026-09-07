@@ -176,7 +176,15 @@ public class CreateEnterpriseAcceleratePolicyRequest extends Request {
         } 
 
         /**
-         * AccelerationType.
+         * <p>The acceleration mode. Valid values:</p>
+         * <ul>
+         * <li><strong>whiltelist</strong>: whitelist-based acceleration.</li>
+         * <li><strong>global</strong>: global acceleration.</li>
+         * <li><strong>build-in-list</strong>: built-in application acceleration.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>whitelist</p>
          */
         public Builder accelerationType(String accelerationType) {
             this.putBodyParameter("AccelerationType", accelerationType);
@@ -185,7 +193,10 @@ public class CreateEnterpriseAcceleratePolicyRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the enterprise management policy. The description must be 1 to 512 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Acceleration policy for global network access</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -194,7 +205,10 @@ public class CreateEnterpriseAcceleratePolicyRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The policy name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GlobalAccelerationPolicy</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -203,7 +217,10 @@ public class CreateEnterpriseAcceleratePolicyRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99</p>
          */
         public Builder priority(String priority) {
             this.putBodyParameter("Priority", priority);
@@ -212,7 +229,14 @@ public class CreateEnterpriseAcceleratePolicyRequest extends Request {
         }
 
         /**
-         * ShowInClient.
+         * <p>Specifies whether to display the policy in the client. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: not displayed.</li>
+         * <li><strong>1</strong>: displayed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder showInClient(Integer showInClient) {
             this.putBodyParameter("ShowInClient", showInClient);
@@ -221,6 +245,7 @@ public class CreateEnterpriseAcceleratePolicyRequest extends Request {
         }
 
         /**
+         * <p>The address (IP address or domain name) of the acceleration instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -233,6 +258,7 @@ public class CreateEnterpriseAcceleratePolicyRequest extends Request {
         }
 
         /**
+         * <p>The port of the acceleration instance. Valid values: 1000 to 60000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -245,6 +271,7 @@ public class CreateEnterpriseAcceleratePolicyRequest extends Request {
         }
 
         /**
+         * <p>The acceleration instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -257,7 +284,11 @@ public class CreateEnterpriseAcceleratePolicyRequest extends Request {
         }
 
         /**
+         * <p>The acceleration user group.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestUserGroup</p>
          */
         public Builder userAttributeGroup(String userAttributeGroup) {
             this.putBodyParameter("UserAttributeGroup", userAttributeGroup);

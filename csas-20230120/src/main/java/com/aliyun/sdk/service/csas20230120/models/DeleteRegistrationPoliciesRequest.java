@@ -60,6 +60,7 @@ public class DeleteRegistrationPoliciesRequest extends Request {
         } 
 
         /**
+         * <p>A collection of device registration policy IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder policyIds(java.util.List<String> policyIds) {

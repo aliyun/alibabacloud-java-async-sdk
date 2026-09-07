@@ -75,6 +75,7 @@ public class DeleteIdpDepartmentRequest extends Request {
         } 
 
         /**
+         * <p>ID of the department.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,10 +88,11 @@ public class DeleteIdpDepartmentRequest extends Request {
         }
 
         /**
+         * <p>ID of the custom identity provider configuration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>507</p>
+         * <p>idp-cfg68956d86e********</p>
          */
         public Builder idpConfigId(String idpConfigId) {
             this.putQueryParameter("IdpConfigId", idpConfigId);

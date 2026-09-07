@@ -44,18 +44,31 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AttachPolicy2ApprovalProcessResponse> attachPolicy2ApprovalProcess(AttachPolicy2ApprovalProcessRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Appends domain name entries in batches to a specified domain name list (<code>ListId</code>). Domain names must be second-level or higher domain names. Wildcard domain names (<code>*.example.com</code>) are supported, but overly broad patterns such as <code>*.com</code> or <code>*.com.cn</code> are prohibited.</p>
+     * 
      * @param request the request parameters of BatchCreateDomainItems  BatchCreateDomainItemsRequest
      * @return BatchCreateDomainItemsResponse
      */
     CompletableFuture<BatchCreateDomainItemsResponse> batchCreateDomainItems(BatchCreateDomainItemsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Batch deletes domain name entries from a specified domain name list by entry IDs (<code>ItemIds</code>, obtained from the <code>ItemId</code> field returned by ListDomainItems).</p>
+     * 
      * @param request the request parameters of BatchDeleteDomainItems  BatchDeleteDomainItemsRequest
      * @return BatchDeleteDomainItemsResponse
      */
     CompletableFuture<BatchDeleteDomainItemsResponse> batchDeleteDomainItems(BatchDeleteDomainItemsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Applications that are referenced by office network recognition or policies cannot be deleted. References:</p>
+     * <ul>
+     * <li><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Lists internal-facing access applications in batches.</li>
+     * <li><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: Lists internal-facing access policies in batches.</li>
+     * </ul>
+     * 
      * @param request the request parameters of BatchDeletePrivateAccessApplication  BatchDeletePrivateAccessApplicationRequest
      * @return BatchDeletePrivateAccessApplicationResponse
      */
@@ -92,6 +105,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateApprovalProcessResponse> createApprovalProcess(CreateApprovalProcessRequest request);
 
     /**
+     * @param request the request parameters of CreateBackendReport  CreateBackendReportRequest
+     * @return CreateBackendReportResponse
+     */
+    CompletableFuture<CreateBackendReportResponse> createBackendReport(CreateBackendReportRequest request);
+
+    /**
      * @param request the request parameters of CreateClientUser  CreateClientUserRequest
      * @return CreateClientUserResponse
      */
@@ -110,12 +129,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDeviceGroupResponse> createDeviceGroup(CreateDeviceGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Creates a domain name list of a specified type (blacklist or whitelist) under the current tenant and returns the ListId of the new list. A maximum of 100 lists can be created for each list type per tenant.</p>
+     * 
      * @param request the request parameters of CreateDomainMeta  CreateDomainMetaRequest
      * @return CreateDomainMetaResponse
      */
     CompletableFuture<CreateDomainMetaResponse> createDomainMeta(CreateDomainMetaRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>By default, you can create a maximum of 100 dynamic routes.</p>
+     * 
      * @param request the request parameters of CreateDynamicRoute  CreateDynamicRouteRequest
      * @return CreateDynamicRouteResponse
      */
@@ -153,7 +178,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>By default, you can create a maximum of 500 office applications.</p>
+     * <p>You can create up to 500 internal-facing access applications by default.</p>
      * 
      * @param request the request parameters of CreatePrivateAccessApplication  CreatePrivateAccessApplicationRequest
      * @return CreatePrivateAccessApplicationResponse
@@ -170,6 +195,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePrivateAccessPolicyResponse> createPrivateAccessPolicy(CreatePrivateAccessPolicyRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can create up to 500 internal-facing access tags by default.</p>
+     * 
      * @param request the request parameters of CreatePrivateAccessTag  CreatePrivateAccessTagRequest
      * @return CreatePrivateAccessTagResponse
      */
@@ -206,18 +234,35 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSaseUserTagResponse> createSaseUserTag(CreateSaseUserTagRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>After a task is created, its initial status is disabled.</li>
+     * <li>MatchMode determines how to specify the matching target parameters: when set to UserGroupNormal, you must pass only UserGroupIds. When set to DeviceGroupNormal, you must pass only DeviceGroupIds. When set to DevTagNormal, you must pass only DevTags. Requests that contain parameters not matching the MatchMode value are rejected.</li>
+     * <li>SupportOs supports only a single operating system value.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateSoftwarelibDistributeTask  CreateSoftwarelibDistributeTaskRequest
      * @return CreateSoftwarelibDistributeTaskResponse
      */
     CompletableFuture<CreateSoftwarelibDistributeTaskResponse> createSoftwarelibDistributeTask(CreateSoftwarelibDistributeTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Within the same software, the combination of operating system and version number must be unique. If a duplicate is created, a ResourceDuplicated error is returned.</li>
+     * <li>A newly created version has an initial publish status of unpublished.</li>
+     * <li>A newly created version has the highest priority. The priorities of other versions under the same software are shifted down accordingly.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateSoftwarelibVersion  CreateSoftwarelibVersionRequest
      * @return CreateSoftwarelibVersionResponse
      */
     CompletableFuture<CreateSoftwarelibVersionResponse> createSoftwarelibVersion(CreateSoftwarelibVersionRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can create up to 500 user groups.</p>
+     * 
      * @param request the request parameters of CreateUserGroup  CreateUserGroupRequest
      * @return CreateUserGroupResponse
      */
@@ -260,6 +305,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateWmBaseImageResponse> createWmBaseImage(CreateWmBaseImageRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can create a maximum of 500 user groups by default.</p>
+     * 
      * @param request the request parameters of CreateWmEmbedTask  CreateWmEmbedTaskRequest
      * @return CreateWmEmbedTaskResponse
      */
@@ -314,6 +362,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDevicesVulnerabilityResponse> deleteDevicesVulnerability(DeleteDevicesVulnerabilityRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a specified domain name list under the current tenant. Before deletion, the system checks whether any domain name policy references the list. If a reference exists, the deletion is rejected.</p>
+     * 
      * @param request the request parameters of DeleteDomainMeta  DeleteDomainMetaRequest
      * @return DeleteDomainMetaResponse
      */
@@ -356,6 +407,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteOtpConfigResponse> deleteOtpConfig(DeleteOtpConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You cannot delete an application if it is referenced by an office zone or a policy. For more information, see:</p>
+     * <ul>
+     * <li><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Lists internal network access applications.</li>
+     * <li><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolicies</a>: Lists internal network access policies.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeletePrivateAccessApplication  DeletePrivateAccessApplicationRequest
      * @return DeletePrivateAccessApplicationResponse
      */
@@ -368,6 +426,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeletePrivateAccessPolicyResponse> deletePrivateAccessPolicy(DeletePrivateAccessPolicyRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Deletion is not allowed when the tag is referenced by applications, office networks, or policies. References:</p>
+     * <ul>
+     * <li><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Lists internal access applications.</li>
+     * <li><a href="~~ListPrivateAccessTags~~">ListPrivateAccessTags</a>: Lists internal access tags.</li>
+     * <li><a href="~~ListPrivateAccessPolices~~">ListPrivateAccessPolices</a>: Lists internal access policies.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeletePrivateAccessTag  DeletePrivateAccessTagRequest
      * @return DeletePrivateAccessTagResponse
      */
@@ -404,12 +470,21 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteSaseUserTagResponse> deleteSaseUserTag(DeleteSaseUserTagRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can delete up to 100 devices at a time. Each device must be in a non-online status. If some device IDs in the specified collection do not meet the status requirement, only the devices that meet the requirement are deleted, and the operation still returns a success response.</p>
+     * 
      * @param request the request parameters of DeleteUserDevices  DeleteUserDevicesRequest
      * @return DeleteUserDevicesResponse
      */
     CompletableFuture<DeleteUserDevicesResponse> deleteUserDevices(DeleteUserDevicesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>For more information, see:</p>
+     * <ul>
+     * <li><a href="~~ListPolicesForUserGroup~~">ListPolicesForUserGroup</a>: Query policies attached to a user group.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteUserGroup  DeleteUserGroupRequest
      * @return DeleteUserGroupResponse
      */
@@ -537,6 +612,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDynamicRouteResponse> getDynamicRoute(GetDynamicRouteRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Creates a domain name list of a specified type (blacklist/whitelist) under the current tenant and returns the ListId of the new list. You can create up to 100 lists of each type per tenant.</p>
+     * 
      * @param request the request parameters of GetForwardStrategy  GetForwardStrategyRequest
      * @return GetForwardStrategyResponse
      */
@@ -549,6 +627,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetIdpConfigResponse> getIdpConfig(GetIdpConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves all phone numbers in the whitelist.</p>
+     * 
      * @param request the request parameters of GetNacPortalSmsPhoneWhitelist  GetNacPortalSmsPhoneWhitelistRequest
      * @return GetNacPortalSmsPhoneWhitelistResponse
      */
@@ -663,6 +744,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ImportEnterpriseAccelerateTargetsResponse> importEnterpriseAccelerateTargets(ImportEnterpriseAccelerateTargetsRequest request);
 
     /**
+     * @param request the request parameters of InvalidateApproval  InvalidateApprovalRequest
+     * @return InvalidateApprovalResponse
+     */
+    CompletableFuture<InvalidateApprovalResponse> invalidateApproval(InvalidateApprovalRequest request);
+
+    /**
      * @param request the request parameters of ListApplicationsForPrivateAccessPolicy  ListApplicationsForPrivateAccessPolicyRequest
      * @return ListApplicationsForPrivateAccessPolicyResponse
      */
@@ -735,18 +822,27 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDlpOutboundLogsResponse> listDlpOutboundLogs(ListDlpOutboundLogsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries the Internet access logs of endpoints under the current tenant by using paging. The logs contain full records of Internet access behavior.</p>
+     * 
      * @param request the request parameters of ListDomainAccessLogs  ListDomainAccessLogsRequest
      * @return ListDomainAccessLogsResponse
      */
     CompletableFuture<ListDomainAccessLogsResponse> listDomainAccessLogs(ListDomainAccessLogsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of domain name entries in a specified domain name list by paging. Use this operation together with ListDomainMetas: first obtain the <code>ListId</code>, and then use this operation to perform paging through the domain names in the list.</p>
+     * 
      * @param request the request parameters of ListDomainItems  ListDomainItemsRequest
      * @return ListDomainItemsResponse
      */
     CompletableFuture<ListDomainItemsResponse> listDomainItems(ListDomainItemsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Performs a paged query on the metadata of domain name lists (the header information of domain name blacklists/whitelists, excluding the specific domain name entries within the lists) for the current tenant with paging. You can filter by list type (blacklist/whitelist), perform fuzzy search by name, and specify whether to include system built-in default template lists in the results. Each record includes the number of domain name entries in the list.</p>
+     * 
      * @param request the request parameters of ListDomainMetas  ListDomainMetasRequest
      * @return ListDomainMetasResponse
      */
@@ -825,12 +921,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListNacUserCertResponse> listNacUserCert(ListNacUserCertRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries the bandwidth configuration list of available network instances under the current account. You can filter results by network type (<code>NetType</code>) and instance ID list (<code>InstanceIds</code>), and use <code>CurrentPage</code> and <code>PageSize</code> for pagination.</p>
+     * 
      * @param request the request parameters of ListNetBandwidth  ListNetBandwidthRequest
      * @return ListNetBandwidthResponse
      */
     CompletableFuture<ListNetBandwidthResponse> listNetBandwidth(ListNetBandwidthRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>StartTime and EndTime are UNIX timestamps in seconds. StartTime must be earlier than EndTime. The interval between them cannot exceed 30 days, and StartTime cannot be more than 31 days before the current time.</li>
+     * <li>If OperationStatus is not specified, only successful operation records are returned.</li>
+     * <li>Results are sorted by operation time in descending order.</li>
+     * <li>The return values of OperationFunc, OperationPage, and OperationType are localized based on the request language.</li>
+     * <li>The values of filter parameters cannot contain single quotation marks (\&quot;), double quotation marks (&quot;), or backslashes (\\). Otherwise, an InvalidParameter error is returned.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListOperationAuditLogs  ListOperationAuditLogsRequest
      * @return ListOperationAuditLogsResponse
      */
@@ -927,6 +1035,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRegistrationPoliciesForUserGroupResponse> listRegistrationPoliciesForUserGroup(ListRegistrationPoliciesForUserGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation is used for paging query of risk events that meet specified conditional criteria.</li>
+     * <li><code>CurrentPage</code> and <code>PageSize</code> are required parameters that specify the current page number and the number of entries per page.</li>
+     * <li>You can set parameters such as <code>RiskId</code>, <code>RiskScene</code>, and <code>RiskCategory</code> to perform exact or fuzzy queries for specific risk events.</li>
+     * <li>The <code>Status</code> and <code>StatusList</code> parameters cannot be used at the same time. They are used to filter risk events by disposition status.</li>
+     * <li>Fuzzy match queries are supported by settings <code>PolicyName</code> and <code>Username</code>.</li>
+     * <li>The response includes the total number of risk events that meet the query conditions and their details.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListRiskItems  ListRiskItemsRequest
      * @return ListRiskItemsResponse
      */
@@ -945,6 +1064,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListSoftwareForUserDeviceResponse> listSoftwareForUserDevice(ListSoftwareForUserDeviceRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Use CurrentPage and PageSize for pagination. NextToken and MaxResults do not take effect.</li>
+     * <li>SoftwareName supports fuzzy match.</li>
+     * <li>The Versions field (software version list) is not returned in the response. To query software versions, call <a href="~~ListSoftwarelibVersion~~">ListSoftwarelibVersion</a>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListSoftwarelibSoftware  ListSoftwarelibSoftwareRequest
      * @return ListSoftwarelibSoftwareResponse
      */
@@ -1204,6 +1330,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateIdpDepartmentResponse> updateIdpDepartment(UpdateIdpDepartmentRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>A maximum of 1024 phone numbers are supported.</li>
+     * <li>Duplicate phone numbers are not allowed. Phone numbers in invalid formats are rejected. Only Chinese mainland phone numbers are supported.</li>
+     * <li>You must update all phone numbers at once. Incremental updates are not supported.</li>
+     * </ul>
+     * 
      * @param request the request parameters of UpdateNacPortalSmsPhoneWhitelist  UpdateNacPortalSmsPhoneWhitelistRequest
      * @return UpdateNacPortalSmsPhoneWhitelistResponse
      */
@@ -1258,6 +1391,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateRegistrationPolicyResponse> updateRegistrationPolicy(UpdateRegistrationPolicyRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This operation allows you to update the processing status of a specific risk event under your Alibaba Cloud account.</li>
+     * <li>When <code>Status</code> is set to <code>Processed</code>, you must provide the <code>RiskConfirm</code> parameter to specify the manually confirmed risk conclusion.</li>
+     * <li>If <code>Status</code> is <code>Unprocess</code> or <code>Processing</code>, do not include the <code>RiskConfirm</code> parameter.</li>
+     * <li>The <code>RiskScene</code> parameter is optional. If not provided, the system automatically populates it based on <code>RiskId</code>.</li>
+     * <li>The <code>RiskConfirmDesc</code> field provides additional explanation or remarks for the processing decision. The length must be 1 to 128 characters.</li>
+     * </ul>
+     * 
      * @param request the request parameters of UpdateRiskStatus  UpdateRiskStatusRequest
      * @return UpdateRiskStatusResponse
      */

@@ -106,7 +106,10 @@ public class GetVirusScanGlobalConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3D7EC0AF-DB2A-5D9C-90EC-F090A6BAAEA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -114,7 +117,10 @@ public class GetVirusScanGlobalConfigResponseBody extends TeaModel {
         }
 
         /**
-         * UploadFileMaxSize.
+         * <p>The maximum size of a single virus file that can be uploaded, in KB. A value of 0 indicates no size limit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         public Builder uploadFileMaxSize(Long uploadFileMaxSize) {
             this.uploadFileMaxSize = uploadFileMaxSize;
@@ -122,7 +128,10 @@ public class GetVirusScanGlobalConfigResponseBody extends TeaModel {
         }
 
         /**
-         * UploadFileMaxSpeed.
+         * <p>The maximum upload rate for virus files, in KB/s. A value of 0 indicates no rate limit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder uploadFileMaxSpeed(Long uploadFileMaxSpeed) {
             this.uploadFileMaxSpeed = uploadFileMaxSpeed;
@@ -130,7 +139,7 @@ public class GetVirusScanGlobalConfigResponseBody extends TeaModel {
         }
 
         /**
-         * UploadFileSuffixBlacklist.
+         * <p>The collection of file types that are prohibited from being uploaded. Files that match these types are not uploaded even if the upload feature is enabled. An empty list is returned if no file types are configured.</p>
          */
         public Builder uploadFileSuffixBlacklist(java.util.List<String> uploadFileSuffixBlacklist) {
             this.uploadFileSuffixBlacklist = uploadFileSuffixBlacklist;
@@ -138,7 +147,14 @@ public class GetVirusScanGlobalConfigResponseBody extends TeaModel {
         }
 
         /**
-         * VirusFileUpload.
+         * <p>Indicates whether user terminal devices are allowed to upload detected virus files to the cloud for further analysis. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Upload is allowed.</li>
+         * <li><strong>false</strong>: Upload is not allowed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder virusFileUpload(Boolean virusFileUpload) {
             this.virusFileUpload = virusFileUpload;

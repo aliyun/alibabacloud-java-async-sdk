@@ -80,7 +80,10 @@ public class ListVulScanTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3D7EC0AF-DB2A-5D9C-90EC-F090A6BAAEA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class ListVulScanTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * <p>The list of vulnerability scanning tasks.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
@@ -96,7 +99,10 @@ public class ListVulScanTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of vulnerability scanning tasks that match the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>37</p>
          */
         public Builder totalNum(Long totalNum) {
             this.totalNum = totalNum;
@@ -162,7 +168,7 @@ public class ListVulScanTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * Group.
+             * <p>The collection of organizational structure nodes.</p>
              */
             public Builder group(java.util.List<String> group) {
                 this.group = group;
@@ -170,7 +176,10 @@ public class ListVulScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * IdpId.
+             * <p>The identity provider ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idp-7c3f9a2e5b18****</p>
              */
             public Builder idpId(String idpId) {
                 this.idpId = idpId;
@@ -263,7 +272,10 @@ public class ListVulScanTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * AckCount.
+             * <p>The number of user endpoint devices that have acknowledged receipt of this task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder ackCount(Long ackCount) {
                 this.ackCount = ackCount;
@@ -271,7 +283,10 @@ public class ListVulScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * FailCount.
+             * <p>The number of user endpoint devices on which the scan failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder failCount(Long failCount) {
                 this.failCount = failCount;
@@ -279,7 +294,10 @@ public class ListVulScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StartCount.
+             * <p>The number of user endpoint devices currently executing the scan. This value is calculated by subtracting SuccessCount and FailCount from AckCount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder startCount(Long startCount) {
                 this.startCount = startCount;
@@ -287,7 +305,10 @@ public class ListVulScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessCount.
+             * <p>The number of user endpoint devices on which the scan succeeded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder successCount(Long successCount) {
                 this.successCount = successCount;
@@ -510,7 +531,10 @@ public class ListVulScanTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The task creation time, in seconds-level UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1786291200</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -518,7 +542,7 @@ public class ListVulScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * CustomMatchGroup.
+             * <p>The effective scope specified by organizational structure. An empty list is returned if no organizational structure is configured.</p>
              */
             public Builder customMatchGroup(java.util.List<CustomMatchGroup> customMatchGroup) {
                 this.customMatchGroup = customMatchGroup;
@@ -526,7 +550,10 @@ public class ListVulScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * EndTimestamp.
+             * <p>The task expiration time, in seconds-level UNIX timestamp. After this time, endpoints no longer pull and execute this task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1786291200</p>
              */
             public Builder endTimestamp(Long endTimestamp) {
                 this.endTimestamp = endTimestamp;
@@ -534,7 +561,14 @@ public class ListVulScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * MatchMode.
+             * <p>The matching mode of the effective scope. Valid values:</p>
+             * <ul>
+             * <li><strong>UserGroupAll</strong>: applies to all users under the current Alibaba Cloud account.</li>
+             * <li><strong>UserGroupNormal</strong>: applies only to users within specified user groups.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>UserGroupNormal</p>
              */
             public Builder matchMode(String matchMode) {
                 this.matchMode = matchMode;
@@ -542,7 +576,7 @@ public class ListVulScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * MatchTargetIds.
+             * <p>The collection of effective user group IDs. An empty list is returned when MatchMode is UserGroupAll.</p>
              */
             public Builder matchTargetIds(java.util.List<String> matchTargetIds) {
                 this.matchTargetIds = matchTargetIds;
@@ -550,7 +584,10 @@ public class ListVulScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduledStrategyId.
+             * <p>The ID of the vulnerability scheduled scan policy that triggered this task. An empty string is returned when TaskType is Instant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vul-scan-scheduled-strategy-8a3f6c2e91b7****</p>
              */
             public Builder scheduledStrategyId(String scheduledStrategyId) {
                 this.scheduledStrategyId = scheduledStrategyId;
@@ -558,7 +595,15 @@ public class ListVulScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li><strong>Running</strong>: the task is in progress and still within the validity period.</li>
+             * <li><strong>Expired</strong>: the task has expired and exceeded the validity period.</li>
+             * <li><strong>Canceled</strong>: the task has been canceled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -566,7 +611,7 @@ public class ListVulScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TargetDeviceCount.
+             * <p>The execution statistics of this task on user endpoint devices within the effective scope.</p>
              */
             public Builder targetDeviceCount(TargetDeviceCount targetDeviceCount) {
                 this.targetDeviceCount = targetDeviceCount;
@@ -574,7 +619,10 @@ public class ListVulScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskDescription.
+             * <p>The task description. An empty string is returned if no description is specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Execute a vulnerability scanning on R&amp;D department endpoints</p>
              */
             public Builder taskDescription(String taskDescription) {
                 this.taskDescription = taskDescription;
@@ -582,7 +630,10 @@ public class ListVulScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The vulnerability scanning task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vul-scan-task-4d7b1e9a6c38****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -590,7 +641,10 @@ public class ListVulScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * <p>The task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>R&amp;D department vulnerability scanning</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -598,7 +652,14 @@ public class ListVulScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * <p>The task type. Valid values:</p>
+             * <ul>
+             * <li><strong>Instant</strong>: an instant task created by CreateVulScanTask.</li>
+             * <li><strong>Scheduled</strong>: a scheduled task automatically created by a vulnerability scheduled scan policy on a periodic basis.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Instant</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -606,7 +667,10 @@ public class ListVulScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * VulCount.
+             * <p>The total number of vulnerabilities detected by this task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27</p>
              */
             public Builder vulCount(Long vulCount) {
                 this.vulCount = vulCount;
@@ -614,7 +678,7 @@ public class ListVulScanTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Whitelist.
+             * <p>The list of exempted users. Users in this list are excluded from the scan. An empty list is returned if no exemption is configured.</p>
              */
             public Builder whitelist(java.util.List<String> whitelist) {
                 this.whitelist = whitelist;

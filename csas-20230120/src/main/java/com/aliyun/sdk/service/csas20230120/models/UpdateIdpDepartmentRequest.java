@@ -90,6 +90,7 @@ public class UpdateIdpDepartmentRequest extends Request {
         } 
 
         /**
+         * <p>The department ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +103,11 @@ public class UpdateIdpDepartmentRequest extends Request {
         }
 
         /**
+         * <p>The department name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例部门</p>
          */
         public Builder departmentName(String departmentName) {
             this.putQueryParameter("DepartmentName", departmentName);
@@ -111,6 +116,7 @@ public class UpdateIdpDepartmentRequest extends Request {
         }
 
         /**
+         * <p>The ID of the custom identity source configuration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

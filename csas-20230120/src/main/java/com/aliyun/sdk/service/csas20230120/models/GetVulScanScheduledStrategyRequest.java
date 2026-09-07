@@ -60,6 +60,11 @@ public class GetVulScanScheduledStrategyRequest extends Request {
         } 
 
         /**
+         * <p>The vulnerability scheduled scan policy ID. You can obtain the value from the following operations:</p>
+         * <ul>
+         * <li><a href="~~ListVulScanScheduledStrategies~~">ListVulScanScheduledStrategies</a>: Lists vulnerability scheduled scan policies.</li>
+         * <li><a href="~~CreateVulScanScheduledStrategy~~">CreateVulScanScheduledStrategy</a>: Creates a vulnerability scheduled scan policy.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

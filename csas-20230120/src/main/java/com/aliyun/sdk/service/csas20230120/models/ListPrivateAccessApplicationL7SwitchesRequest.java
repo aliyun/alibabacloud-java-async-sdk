@@ -59,7 +59,7 @@ public class ListPrivateAccessApplicationL7SwitchesRequest extends Request {
         } 
 
         /**
-         * ApplicationIds.
+         * <p>The IDs of internal-facing applications. You can specify up to 100 internal-facing application IDs.</p>
          */
         public Builder applicationIds(java.util.List<String> applicationIds) {
             this.putQueryParameter("ApplicationIds", applicationIds);

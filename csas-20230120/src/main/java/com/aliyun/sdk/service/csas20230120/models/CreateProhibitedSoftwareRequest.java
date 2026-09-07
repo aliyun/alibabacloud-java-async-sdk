@@ -130,7 +130,10 @@ public class CreateProhibitedSoftwareRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the disabled software.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -139,7 +142,7 @@ public class CreateProhibitedSoftwareRequest extends Request {
         }
 
         /**
-         * LinuxProcesses.
+         * <p>The list of process configurations for the Linux operating system.</p>
          */
         public Builder linuxProcesses(java.util.List<LinuxProcesses> linuxProcesses) {
             this.putBodyParameter("LinuxProcesses", linuxProcesses);
@@ -148,7 +151,7 @@ public class CreateProhibitedSoftwareRequest extends Request {
         }
 
         /**
-         * MacOSProcesses.
+         * <p>The list of process configurations for the macOS operating system.</p>
          */
         public Builder macOSProcesses(java.util.List<MacOSProcesses> macOSProcesses) {
             this.putBodyParameter("MacOSProcesses", macOSProcesses);
@@ -157,6 +160,7 @@ public class CreateProhibitedSoftwareRequest extends Request {
         }
 
         /**
+         * <p>The name of the disabled software.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,7 +173,7 @@ public class CreateProhibitedSoftwareRequest extends Request {
         }
 
         /**
-         * TagIds.
+         * <p>The IDs of custom disabled software tags to associate. Duplicate values are not allowed.</p>
          */
         public Builder tagIds(java.util.List<String> tagIds) {
             this.putBodyParameter("TagIds", tagIds);
@@ -178,7 +182,7 @@ public class CreateProhibitedSoftwareRequest extends Request {
         }
 
         /**
-         * WindowsProcesses.
+         * <p>The list of process configurations for the Windows operating system.</p>
          */
         public Builder windowsProcesses(java.util.List<WindowsProcesses> windowsProcesses) {
             this.putBodyParameter("WindowsProcesses", windowsProcesses);
@@ -272,7 +276,10 @@ public class CreateProhibitedSoftwareRequest extends Request {
             } 
 
             /**
-             * BundleId.
+             * <p>The bundle ID of the application. This parameter is required only for macOS processes. You must specify at least one of BundleId and Process. Maximum length: 1024 characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.autotest.app</p>
              */
             public Builder bundleId(String bundleId) {
                 this.bundleId = bundleId;
@@ -280,7 +287,10 @@ public class CreateProhibitedSoftwareRequest extends Request {
             }
 
             /**
-             * Cmdline.
+             * <p>The command line parameters for starting the process. If specified, only processes whose command line contains this content are matched. If left empty, the command line is not checked. Maximum length: 1024 characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>--start-minimized</p>
              */
             public Builder cmdline(String cmdline) {
                 this.cmdline = cmdline;
@@ -288,7 +298,10 @@ public class CreateProhibitedSoftwareRequest extends Request {
             }
 
             /**
-             * Directory.
+             * <p>The directory where the process is located. If specified, only processes with the same name in this directory are matched. If left empty, processes in any directory are matched. Maximum length: 1024 characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>C:\\autotest</p>
              */
             public Builder directory(String directory) {
                 this.directory = directory;
@@ -296,7 +309,10 @@ public class CreateProhibitedSoftwareRequest extends Request {
             }
 
             /**
-             * Process.
+             * <p>The process name. Maximum length: 1024 characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>autotest.exe</p>
              */
             public Builder process(String process) {
                 this.process = process;
@@ -389,7 +405,10 @@ public class CreateProhibitedSoftwareRequest extends Request {
             } 
 
             /**
-             * BundleId.
+             * <p>The bundle ID of the application. This parameter is required only for macOS processes. You must specify at least one of BundleId and Process. Maximum length: 1024 characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.autotest.app</p>
              */
             public Builder bundleId(String bundleId) {
                 this.bundleId = bundleId;
@@ -397,7 +416,10 @@ public class CreateProhibitedSoftwareRequest extends Request {
             }
 
             /**
-             * Cmdline.
+             * <p>The command line parameters for starting the process. If specified, only processes whose command line contains this content are matched. If left empty, the command line is not checked. Maximum length: 1024 characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>--start-minimized</p>
              */
             public Builder cmdline(String cmdline) {
                 this.cmdline = cmdline;
@@ -405,7 +427,10 @@ public class CreateProhibitedSoftwareRequest extends Request {
             }
 
             /**
-             * Directory.
+             * <p>The directory where the process is located. If specified, only processes with the same name in this directory are matched. If left empty, processes in any directory are matched. Maximum length: 1024 characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>C:\\autotest</p>
              */
             public Builder directory(String directory) {
                 this.directory = directory;
@@ -413,7 +438,10 @@ public class CreateProhibitedSoftwareRequest extends Request {
             }
 
             /**
-             * Process.
+             * <p>The process name. Maximum length: 1024 characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WeChat</p>
              */
             public Builder process(String process) {
                 this.process = process;
@@ -506,7 +534,10 @@ public class CreateProhibitedSoftwareRequest extends Request {
             } 
 
             /**
-             * BundleId.
+             * <p>The bundle ID of the application. This parameter is required only for macOS processes. You must specify at least one of BundleId and Process. Maximum length: 1024 characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.autotest.update</p>
              */
             public Builder bundleId(String bundleId) {
                 this.bundleId = bundleId;
@@ -514,7 +545,10 @@ public class CreateProhibitedSoftwareRequest extends Request {
             }
 
             /**
-             * Cmdline.
+             * <p>The command line parameters for starting the process. If specified, only processes whose command line contains this content are matched. If left empty, the command line is not checked. Maximum length: 1024 characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>--start-minimized</p>
              */
             public Builder cmdline(String cmdline) {
                 this.cmdline = cmdline;
@@ -522,7 +556,10 @@ public class CreateProhibitedSoftwareRequest extends Request {
             }
 
             /**
-             * Directory.
+             * <p>The directory where the process is located. If specified, only processes with the same name in this directory are matched. If left empty, processes in any directory are matched. Maximum length: 1024 characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>C:\\autotest</p>
              */
             public Builder directory(String directory) {
                 this.directory = directory;
@@ -530,7 +567,10 @@ public class CreateProhibitedSoftwareRequest extends Request {
             }
 
             /**
-             * Process.
+             * <p>The process name. Maximum length: 1024 characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>autotest.exe</p>
              */
             public Builder process(String process) {
                 this.process = process;

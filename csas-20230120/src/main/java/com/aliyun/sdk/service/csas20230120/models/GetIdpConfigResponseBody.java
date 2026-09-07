@@ -67,7 +67,7 @@ public class GetIdpConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Identity provider configuration.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetIdpConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58D6B23E-E5DA-5418-8F61-******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -349,10 +352,10 @@ public class GetIdpConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>AccessKey ID</p>
+             * <p>AccessKey ID for the IDaaS identity provider.</p>
              * 
              * <strong>example:</strong>
-             * <p>LTAI5tJVztnh6Nn***</p>
+             * <hr>
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -360,10 +363,10 @@ public class GetIdpConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>AccessKey Secret</p>
+             * <p>AccessKey for the IDaaS identity provider.</p>
              * 
              * <strong>example:</strong>
-             * <p>E75ktr5jENiR3ssjC***</p>
+             * <hr>
              */
             public Builder accessKeySecret(String accessKeySecret) {
                 this.accessKeySecret = accessKeySecret;
@@ -371,7 +374,10 @@ public class GetIdpConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Description of the identity provider configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例身份源</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -379,7 +385,10 @@ public class GetIdpConfigResponseBody extends TeaModel {
             }
 
             /**
-             * GetGroupUrl.
+             * <p>URL to query the organizational structure from a custom identity provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://172.10.XX.XX:4321/getGroup?name=%s&pass=%s">https://172.10.XX.XX:4321/getGroup?name=%s&amp;pass=%s</a></p>
              */
             public Builder getGroupUrl(String getGroupUrl) {
                 this.getGroupUrl = getGroupUrl;
@@ -387,7 +396,10 @@ public class GetIdpConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>ID of the identity provider configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idp-cfg68956d86e********</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -395,7 +407,10 @@ public class GetIdpConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IdpMetadata.
+             * <p>Metadata of the identity provider (IdP).</p>
+             * 
+             * <strong>example:</strong>
+             * <?xml version="1.0" encoding="utf-8"?><hr>
              */
             public Builder idpMetadata(String idpMetadata) {
                 this.idpMetadata = idpMetadata;
@@ -403,7 +418,10 @@ public class GetIdpConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MfaConfigType.
+             * <p>Type of multi-factor authentication (MFA) configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>totp</p>
              */
             public Builder mfaConfigType(String mfaConfigType) {
                 this.mfaConfigType = mfaConfigType;
@@ -411,7 +429,10 @@ public class GetIdpConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MobileLoginType.
+             * <p>Login type for mobile clients.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>password</p>
              */
             public Builder mobileLoginType(String mobileLoginType) {
                 this.mobileLoginType = mobileLoginType;
@@ -419,7 +440,10 @@ public class GetIdpConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MobileMfaConfigType.
+             * <p>Type of MFA configuration for mobile clients.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>totp</p>
              */
             public Builder mobileMfaConfigType(String mobileMfaConfigType) {
                 this.mobileMfaConfigType = mobileMfaConfigType;
@@ -427,7 +451,10 @@ public class GetIdpConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MultiIdpInfo.
+             * <p>List of IDs for multiple identity providers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1482,1355</p>
              */
             public Builder multiIdpInfo(String multiIdpInfo) {
                 this.multiIdpInfo = multiIdpInfo;
@@ -435,7 +462,10 @@ public class GetIdpConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Name of the identity provider configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例身份源</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -443,7 +473,10 @@ public class GetIdpConfigResponseBody extends TeaModel {
             }
 
             /**
-             * PcLoginType.
+             * <p>Login type for PC clients.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>password</p>
              */
             public Builder pcLoginType(String pcLoginType) {
                 this.pcLoginType = pcLoginType;
@@ -451,7 +484,16 @@ public class GetIdpConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Status of the identity provider configuration. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Enabled</strong>: Enabled.</p>
+             * </li>
+             * <li><p><strong>Disabled</strong>: Disabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -459,7 +501,10 @@ public class GetIdpConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Type of the identity provider configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CSAS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -467,7 +512,10 @@ public class GetIdpConfigResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>Time when the configuration was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-02-26T02:02:42Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -475,7 +523,10 @@ public class GetIdpConfigResponseBody extends TeaModel {
             }
 
             /**
-             * VerifyAesKey.
+             * <p>AES key used to encrypt requests to a custom MFA service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>QVhaU0RDR0JIWV****</p>
              */
             public Builder verifyAesKey(String verifyAesKey) {
                 this.verifyAesKey = verifyAesKey;
@@ -483,7 +534,10 @@ public class GetIdpConfigResponseBody extends TeaModel {
             }
 
             /**
-             * VerifyToken.
+             * <p>Token used to verify signatures in requests to a custom MFA service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7JAr3fYtn****</p>
              */
             public Builder verifyToken(String verifyToken) {
                 this.verifyToken = verifyToken;
@@ -491,7 +545,10 @@ public class GetIdpConfigResponseBody extends TeaModel {
             }
 
             /**
-             * VerifyUrl.
+             * <p>URL used to verify one-time passwords with a custom MFA service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://172.10.XX.XX:1234/otp_verify">http://172.10.XX.XX:1234/otp_verify</a></p>
              */
             public Builder verifyUrl(String verifyUrl) {
                 this.verifyUrl = verifyUrl;

@@ -67,7 +67,10 @@ public class CreateVirusScanTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3D7EC0AF-DB2A-5D9C-90EC-F090A6BAAEA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class CreateVirusScanTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the created virus scan task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1:1024772</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

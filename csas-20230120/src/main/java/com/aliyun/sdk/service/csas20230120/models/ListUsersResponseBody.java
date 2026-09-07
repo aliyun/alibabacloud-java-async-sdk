@@ -80,7 +80,10 @@ public class ListUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FEF5CFA-14CC-5DE5-BD1F-AFFE0996E71D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,10 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalNum(String totalNum) {
             this.totalNum = totalNum;
@@ -96,7 +102,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Users.
+         * <p>An array of user objects.</p>
          */
         public Builder users(java.util.List<Users> users) {
             this.users = users;
@@ -240,7 +246,10 @@ public class ListUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * Department.
+             * <p>The user\&quot;s department.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试部</p>
              */
             public Builder department(String department) {
                 this.department = department;
@@ -248,7 +257,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * <p>The user\&quot;s email address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a***@example.net</p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -256,7 +268,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * FullDepartment.
+             * <p>A list of full department paths.</p>
              */
             public Builder fullDepartment(java.util.List<String> fullDepartment) {
                 this.fullDepartment = fullDepartment;
@@ -264,7 +276,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * IdpName.
+             * <p>The name of the Identity Provider (IdP).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>飞书</p>
              */
             public Builder idpName(String idpName) {
                 this.idpName = idpName;
@@ -272,7 +287,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Phone.
+             * <p>The user\&quot;s phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1381111****</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -280,7 +298,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * SaseUserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
              */
             public Builder saseUserId(String saseUserId) {
                 this.saseUserId = saseUserId;
@@ -288,7 +309,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The user status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -296,7 +320,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>王先生</p>
              */
             public Builder username(String username) {
                 this.username = username;

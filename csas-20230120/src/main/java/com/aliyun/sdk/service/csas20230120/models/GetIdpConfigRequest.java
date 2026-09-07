@@ -60,10 +60,11 @@ public class GetIdpConfigRequest extends Request {
         } 
 
         /**
+         * <p>ID of the identity provider configuration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1465</p>
+         * <p>idp-cfg68956d86e********</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

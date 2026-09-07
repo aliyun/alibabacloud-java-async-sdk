@@ -93,7 +93,10 @@ public class ListEnterpriseAccelerateTargetsResponseBody extends TeaModel {
         } 
 
         /**
-         * EapId.
+         * <p>Enterprise Acceleration Policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eap-7fed37a757a0de24</p>
          */
         public Builder eapId(String eapId) {
             this.eapId = eapId;
@@ -101,7 +104,10 @@ public class ListEnterpriseAccelerateTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID of the current request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>529F755E-2E75-52EC-9C2E-6293FB8BF986</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +115,7 @@ public class ListEnterpriseAccelerateTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * Targets.
+         * <p>List of enterprise acceleration targets.</p>
          */
         public Builder targets(java.util.List<String> targets) {
             this.targets = targets;
@@ -117,7 +123,10 @@ public class ListEnterpriseAccelerateTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>103</p>
          */
         public Builder total(Integer total) {
             this.total = total;

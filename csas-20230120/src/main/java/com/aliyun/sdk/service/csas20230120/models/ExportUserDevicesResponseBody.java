@@ -67,7 +67,10 @@ public class ExportUserDevicesResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>748CFDC7-1EB6-5B8B-9405-DA76ED5BB60D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class ExportUserDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * SignedUrl.
+         * <p>URL to download the file. The URL expires in one minute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://sase-export.oss-cn-hangzhou.aliyuncs.com/export%2Fapp-device%2F20240607154831.xlsx?Expires=1717746571&OSSAccessKeyId=">https://sase-export.oss-cn-hangzhou.aliyuncs.com/export%2Fapp-device%2F20240607154831.xlsx?Expires=1717746571&amp;OSSAccessKeyId=</a>********************</p>
          */
         public Builder signedUrl(String signedUrl) {
             this.signedUrl = signedUrl;

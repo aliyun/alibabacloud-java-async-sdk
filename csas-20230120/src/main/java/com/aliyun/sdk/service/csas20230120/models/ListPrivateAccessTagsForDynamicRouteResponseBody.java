@@ -67,7 +67,7 @@ public class ListPrivateAccessTagsForDynamicRouteResponseBody extends TeaModel {
         } 
 
         /**
-         * DynamicRoutes.
+         * <p>The dynamic route list.</p>
          */
         public Builder dynamicRoutes(java.util.List<DynamicRoutes> dynamicRoutes) {
             this.dynamicRoutes = dynamicRoutes;
@@ -75,7 +75,10 @@ public class ListPrivateAccessTagsForDynamicRouteResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B608C6AE-623D-55C4-9454-601B88AE937E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +183,10 @@ public class ListPrivateAccessTagsForDynamicRouteResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The private network access tag creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-23 14:02:56</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -188,7 +194,10 @@ public class ListPrivateAccessTagsForDynamicRouteResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The private network access tag description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是一条被动态路由引用的内网访问标签</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -196,7 +205,10 @@ public class ListPrivateAccessTagsForDynamicRouteResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The private network access tag name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -204,7 +216,10 @@ public class ListPrivateAccessTagsForDynamicRouteResponseBody extends TeaModel {
             }
 
             /**
-             * TagId.
+             * <p>The private network access tag ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-d3f64e8bdd4a****</p>
              */
             public Builder tagId(String tagId) {
                 this.tagId = tagId;
@@ -212,7 +227,16 @@ public class ListPrivateAccessTagsForDynamicRouteResponseBody extends TeaModel {
             }
 
             /**
-             * TagType.
+             * <p>The private network access tag type. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Default</strong>: Default.</p>
+             * </li>
+             * <li><p><strong>Custom</strong>: Custom.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder tagType(String tagType) {
                 this.tagType = tagType;
@@ -279,7 +303,10 @@ public class ListPrivateAccessTagsForDynamicRouteResponseBody extends TeaModel {
             } 
 
             /**
-             * DynamicRouteId.
+             * <p>The dynamic route ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dr-ca9fddfac7c6****</p>
              */
             public Builder dynamicRouteId(String dynamicRouteId) {
                 this.dynamicRouteId = dynamicRouteId;
@@ -287,7 +314,7 @@ public class ListPrivateAccessTagsForDynamicRouteResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>A collection of private network access tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

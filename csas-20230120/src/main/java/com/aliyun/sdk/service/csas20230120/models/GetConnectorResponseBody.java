@@ -144,7 +144,10 @@ public class GetConnectorResponseBody extends TeaModel {
             } 
 
             /**
-             * End.
+             * <p>The end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23:00</p>
              */
             public Builder end(String end) {
                 this.end = end;
@@ -152,7 +155,10 @@ public class GetConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * Start.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20:00</p>
              */
             public Builder start(String start) {
                 this.start = start;
@@ -308,7 +314,10 @@ public class GetConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The connector creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-16 17:18:46</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -316,7 +325,10 @@ public class GetConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The connector name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>connector_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -324,7 +336,10 @@ public class GetConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -332,7 +347,14 @@ public class GetConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The connector connection status. Valid values:</p>
+             * <ul>
+             * <li><strong>Online</strong>: Online.</li>
+             * <li><strong>Offline</strong>: Offline.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Online</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -340,7 +362,14 @@ public class GetConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchStatus.
+             * <p>The connector instance status. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder switchStatus(String switchStatus) {
                 this.switchStatus = switchStatus;
@@ -348,7 +377,7 @@ public class GetConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradeTime.
+             * <p>The connector upgrade time.</p>
              */
             public Builder upgradeTime(UpgradeTime upgradeTime) {
                 this.upgradeTime = upgradeTime;
@@ -356,7 +385,10 @@ public class GetConnectorResponseBody extends TeaModel {
             }
 
             /**
-             * VipCidr.
+             * <p>The virtual IP address range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.0/24</p>
              */
             public Builder vipCidr(String vipCidr) {
                 this.vipCidr = vipCidr;

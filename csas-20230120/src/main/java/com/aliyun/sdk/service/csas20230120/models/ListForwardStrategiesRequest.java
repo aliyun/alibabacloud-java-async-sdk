@@ -129,7 +129,10 @@ public class ListForwardStrategiesRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number of the current page in paging query. Valid values: 1 to 10000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -138,7 +141,7 @@ public class ListForwardStrategiesRequest extends Request {
         }
 
         /**
-         * DestinationIds.
+         * <p>The list of access destination instance IDs.</p>
          */
         public Builder destinationIds(java.util.List<String> destinationIds) {
             this.putQueryParameter("DestinationIds", destinationIds);
@@ -147,7 +150,13 @@ public class ListForwardStrategiesRequest extends Request {
         }
 
         /**
-         * DestinationType.
+         * <p>The type of the access destination. Valid values:</p>
+         * <ul>
+         * <li><strong>Connector</strong>: connector.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Connector</p>
          */
         public Builder destinationType(String destinationType) {
             this.putQueryParameter("DestinationType", destinationType);
@@ -156,7 +165,7 @@ public class ListForwardStrategiesRequest extends Request {
         }
 
         /**
-         * ForwardIds.
+         * <p>The list of forwarding rule IDs.</p>
          */
         public Builder forwardIds(java.util.List<String> forwardIds) {
             this.putQueryParameter("ForwardIds", forwardIds);
@@ -165,7 +174,10 @@ public class ListForwardStrategiesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the forwarding rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs_rand_str_acs</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -174,7 +186,10 @@ public class ListForwardStrategiesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page in paging query. Valid values: 1 to 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

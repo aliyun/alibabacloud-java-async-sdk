@@ -75,7 +75,11 @@ public class CreateIdpDepartmentRequest extends Request {
         } 
 
         /**
+         * <p>The department name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例部门</p>
          */
         public Builder departmentName(String departmentName) {
             this.putQueryParameter("DepartmentName", departmentName);
@@ -84,10 +88,11 @@ public class CreateIdpDepartmentRequest extends Request {
         }
 
         /**
+         * <p>The ID of the custom identity source configuration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1222</p>
+         * <p>idp-cfg68956d86e********</p>
          */
         public Builder idpConfigId(String idpConfigId) {
             this.putQueryParameter("IdpConfigId", idpConfigId);

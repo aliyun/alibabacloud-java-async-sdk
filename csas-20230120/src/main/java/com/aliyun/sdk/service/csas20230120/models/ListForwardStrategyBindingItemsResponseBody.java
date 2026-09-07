@@ -80,7 +80,7 @@ public class ListForwardStrategyBindingItemsResponseBody extends TeaModel {
         } 
 
         /**
-         * ForwardStrategyBindingItemsList.
+         * <p>The list of forwarding rule bindings.</p>
          */
         public Builder forwardStrategyBindingItemsList(java.util.List<ForwardStrategyBindingItemsList> forwardStrategyBindingItemsList) {
             this.forwardStrategyBindingItemsList = forwardStrategyBindingItemsList;
@@ -88,7 +88,14 @@ public class ListForwardStrategyBindingItemsResponseBody extends TeaModel {
         }
 
         /**
-         * ItemType.
+         * <p>The binding item type. Valid values:</p>
+         * <ul>
+         * <li><strong>Application</strong>: internal-facing application</li>
+         * <li><strong>UserGroup</strong>: user group.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Application</p>
          */
         public Builder itemType(String itemType) {
             this.itemType = itemType;
@@ -217,7 +224,10 @@ public class ListForwardStrategyBindingItemsResponseBody extends TeaModel {
             } 
 
             /**
-             * ApplicationId.
+             * <p>The ID of the internal-facing application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pa-application-104b6b97b7f0c5d9</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -225,7 +235,10 @@ public class ListForwardStrategyBindingItemsResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationName.
+             * <p>The name of the internal-facing application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>437008</p>
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -233,7 +246,10 @@ public class ListForwardStrategyBindingItemsResponseBody extends TeaModel {
             }
 
             /**
-             * TagId.
+             * <p>The internal-facing tag ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-4c8b988bb0ffdfb3</p>
              */
             public Builder tagId(String tagId) {
                 this.tagId = tagId;
@@ -241,7 +257,10 @@ public class ListForwardStrategyBindingItemsResponseBody extends TeaModel {
             }
 
             /**
-             * TagName.
+             * <p>The tag name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nieshirui.nsr</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;
@@ -249,7 +268,10 @@ public class ListForwardStrategyBindingItemsResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupId.
+             * <p>The user group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ug-xxxxxx</p>
              */
             public Builder userGroupId(String userGroupId) {
                 this.userGroupId = userGroupId;
@@ -257,7 +279,10 @@ public class ListForwardStrategyBindingItemsResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupName.
+             * <p>The user group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aaaaa</p>
              */
             public Builder userGroupName(String userGroupName) {
                 this.userGroupName = userGroupName;
@@ -337,7 +362,10 @@ public class ListForwardStrategyBindingItemsResponseBody extends TeaModel {
             } 
 
             /**
-             * ForwardId.
+             * <p>The forwarding rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fs-41a7891ff6568421</p>
              */
             public Builder forwardId(String forwardId) {
                 this.forwardId = forwardId;
@@ -345,7 +373,7 @@ public class ListForwardStrategyBindingItemsResponseBody extends TeaModel {
             }
 
             /**
-             * Items.
+             * <p>The binding items.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -353,7 +381,17 @@ public class ListForwardStrategyBindingItemsResponseBody extends TeaModel {
             }
 
             /**
-             * MatchMode.
+             * <p>The policy matching target type. Valid values:</p>
+             * <ul>
+             * <li><strong>UserGroupAll</strong>: all users.</li>
+             * <li><strong>UserGroupNormal</strong>: specific user groups.</li>
+             * <li><strong>ApplicationAll</strong>: all internal-facing applications.</li>
+             * <li><strong>Application</strong>: specific internal-facing applications.</li>
+             * <li><strong>Tag</strong>: internal-facing application tags.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>UserGroupAll</p>
              */
             public Builder matchMode(String matchMode) {
                 this.matchMode = matchMode;

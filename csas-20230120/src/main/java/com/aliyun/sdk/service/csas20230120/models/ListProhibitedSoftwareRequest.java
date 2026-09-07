@@ -159,6 +159,7 @@ public class ListProhibitedSoftwareRequest extends Request {
         } 
 
         /**
+         * <p>The page number of the current page in a paged query. Valid values: 1 to 10000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +172,10 @@ public class ListProhibitedSoftwareRequest extends Request {
         }
 
         /**
-         * DeviceType.
+         * <p>The operating system type for which the prohibited software has configured processes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Windows</p>
          */
         public Builder deviceType(String deviceType) {
             this.putQueryParameter("DeviceType", deviceType);
@@ -180,7 +184,10 @@ public class ListProhibitedSoftwareRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the prohibited software.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Thunder</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -189,6 +196,7 @@ public class ListProhibitedSoftwareRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page in a paged query. Valid values: 1 to 500.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +209,14 @@ public class ListProhibitedSoftwareRequest extends Request {
         }
 
         /**
-         * PolicyId.
+         * <p>The ID of the software prohibition policy. You can obtain the value from the following operations:</p>
+         * <ul>
+         * <li><a href="~~ListProhibitedPolicies~~">ListProhibitedPolicies</a>: Lists software prohibition policies.</li>
+         * <li><a href="~~CreateProhibitedPolicy~~">CreateProhibitedPolicy</a>: Creates a software prohibition policy.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>pid-5a1e8c3f7b09****</p>
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -210,7 +225,10 @@ public class ListProhibitedSoftwareRequest extends Request {
         }
 
         /**
-         * ProcessName.
+         * <p>The process name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Thunder.exe</p>
          */
         public Builder processName(String processName) {
             this.putQueryParameter("ProcessName", processName);
@@ -219,7 +237,7 @@ public class ListProhibitedSoftwareRequest extends Request {
         }
 
         /**
-         * SoftwareIds.
+         * <p>The collection of prohibited software IDs. Duplicate values are not allowed.</p>
          */
         public Builder softwareIds(java.util.List<SoftwareIds> softwareIds) {
             this.putQueryParameter("SoftwareIds", softwareIds);
@@ -228,7 +246,7 @@ public class ListProhibitedSoftwareRequest extends Request {
         }
 
         /**
-         * TagId.
+         * <p>The unique identifier of the prohibited software tag.</p>
          */
         public Builder tagId(TagId tagId) {
             String tagIdShrink = shrink(tagId, "TagId", "json");
@@ -297,7 +315,14 @@ public class ListProhibitedSoftwareRequest extends Request {
             } 
 
             /**
-             * IsDefault.
+             * <p>Indicates whether the prohibited software is a system built-in prohibited software. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: A system built-in prohibited software that is shared across all Alibaba Cloud accounts and cannot be modified or deleted.</li>
+             * <li><strong>false</strong>: Custom prohibited software under the current Alibaba Cloud account.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -305,7 +330,14 @@ public class ListProhibitedSoftwareRequest extends Request {
             }
 
             /**
-             * SoftwareId.
+             * <p>The ID of the prohibited software. You can obtain the value from the following operations:</p>
+             * <ul>
+             * <li><a href="~~ListProhibitedSoftware~~">ListProhibitedSoftware</a>: Lists prohibited software.</li>
+             * <li><a href="~~CreateProhibitedSoftware~~">CreateProhibitedSoftware</a>: Creates custom prohibited software.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>swb-d9f669a09746****</p>
              */
             public Builder softwareId(String softwareId) {
                 this.softwareId = softwareId;
@@ -372,7 +404,14 @@ public class ListProhibitedSoftwareRequest extends Request {
             } 
 
             /**
-             * IsDefault.
+             * <p>Indicates whether the prohibited software tag is a system built-in tag. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: A system built-in tag that is shared across all Alibaba Cloud accounts and cannot be modified or deleted.</li>
+             * <li><strong>false</strong>: A custom tag under the current Alibaba Cloud account.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -380,7 +419,14 @@ public class ListProhibitedSoftwareRequest extends Request {
             }
 
             /**
-             * TagId.
+             * <p>The ID of the prohibited software tag. You can obtain the value from the following operations:</p>
+             * <ul>
+             * <li><a href="~~ListProhibitedTags~~">ListProhibitedTags</a>: Lists prohibited software tags.</li>
+             * <li><a href="~~CreateProhibitedTag~~">CreateProhibitedTag</a>: Creates a custom prohibited software tag.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-7b2c9e4a1d8f****</p>
              */
             public Builder tagId(String tagId) {
                 this.tagId = tagId;

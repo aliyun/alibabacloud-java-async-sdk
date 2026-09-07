@@ -78,7 +78,7 @@ public class CreateSoftwarelibDistributeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Task.
+         * <p>The information about the created task.</p>
          */
         public Builder task(Task task) {
             this.task = task;
@@ -196,7 +196,10 @@ public class CreateSoftwarelibDistributeTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The task creation time as a second-level UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1782268092</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -204,7 +207,10 @@ public class CreateSoftwarelibDistributeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_task</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -212,7 +218,10 @@ public class CreateSoftwarelibDistributeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * SoftwareName.
+             * <p>The software name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test software</p>
              */
             public Builder softwareName(String softwareName) {
                 this.softwareName = softwareName;
@@ -220,7 +229,15 @@ public class CreateSoftwarelibDistributeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li><strong>enabled</strong>: enabled.</li>
+             * <li><strong>disabled</strong>: disabled.</li>
+             * </ul>
+             * <p>The initial status of a task after creation is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>disabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -228,7 +245,15 @@ public class CreateSoftwarelibDistributeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * SupportOs.
+             * <p>The operating system to which the task applies. Valid values:</p>
+             * <ul>
+             * <li><strong>Windows</strong>: Windows.</li>
+             * <li><strong>Mac(Apple)</strong>: macOS with Apple silicon.</li>
+             * <li><strong>Mac(Intel)</strong>: macOS with Intel processors.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Windows</p>
              */
             public Builder supportOs(String supportOs) {
                 this.supportOs = supportOs;
@@ -236,7 +261,10 @@ public class CreateSoftwarelibDistributeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID, which is used to query the task execution result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>softwarelib-distribute-task-911dd7898bc2****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

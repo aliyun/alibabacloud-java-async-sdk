@@ -54,7 +54,10 @@ public class DeleteDynamicRouteResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>748CFDC7-1EB6-5B8B-9405-DA76ED5BB60D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -159,6 +159,7 @@ public class ListVirusScanScheduledStrategiesRequest extends Request {
         } 
 
         /**
+         * <p>The page number of the current page in paging. Valid values: 1 to 10000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,6 +172,7 @@ public class ListVirusScanScheduledStrategiesRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page in paging. Valid values: 1 to 1000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +185,7 @@ public class ListVirusScanScheduledStrategiesRequest extends Request {
         }
 
         /**
-         * PerformanceModes.
+         * <p>The collection of scan performance modes. Duplicate values are not allowed.</p>
          */
         public Builder performanceModes(java.util.List<String> performanceModes) {
             this.putQueryParameter("PerformanceModes", performanceModes);
@@ -192,7 +194,7 @@ public class ListVirusScanScheduledStrategiesRequest extends Request {
         }
 
         /**
-         * ScanModes.
+         * <p>The collection of scan path scopes. Duplicate values are not allowed.</p>
          */
         public Builder scanModes(java.util.List<String> scanModes) {
             this.putQueryParameter("ScanModes", scanModes);
@@ -201,7 +203,14 @@ public class ListVirusScanScheduledStrategiesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Filters policies by enabled status. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: enabled.</li>
+         * <li><strong>Disabled</strong>: disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -210,7 +219,7 @@ public class ListVirusScanScheduledStrategiesRequest extends Request {
         }
 
         /**
-         * StrategyIds.
+         * <p>The collection of virus scheduled scan policy IDs. Duplicate values are not allowed.</p>
          */
         public Builder strategyIds(java.util.List<String> strategyIds) {
             this.putQueryParameter("StrategyIds", strategyIds);
@@ -219,7 +228,10 @@ public class ListVirusScanScheduledStrategiesRequest extends Request {
         }
 
         /**
-         * StrategyName.
+         * <p>The policy name. Fuzzy match is supported. The name can be up to 128 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Weekly_Scan_DevTeam</p>
          */
         public Builder strategyName(String strategyName) {
             this.putQueryParameter("StrategyName", strategyName);
@@ -228,7 +240,13 @@ public class ListVirusScanScheduledStrategiesRequest extends Request {
         }
 
         /**
-         * UserGroupId.
+         * <p>The user group ID. This parameter is used to filter policies whose effective scope includes the specified user group. You can obtain the value from:</p>
+         * <ul>
+         * <li><a href="~~ListUserGroups~~">ListUserGroups</a>: lists user groups.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>usergroup-9d4f2a7b3c1e****</p>
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);

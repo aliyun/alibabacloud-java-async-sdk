@@ -75,6 +75,7 @@ public class UpdateClientUserStatusRequest extends Request {
         } 
 
         /**
+         * <p>The user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,13 @@ public class UpdateClientUserStatusRequest extends Request {
         }
 
         /**
+         * <p>The status of the user. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Enabled</strong>: The user is enabled.</p>
+         * </li>
+         * <li><p><strong>Disabled</strong>: The user is disabled.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

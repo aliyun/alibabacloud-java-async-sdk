@@ -60,6 +60,7 @@ public class DeleteProhibitedSoftwareRequest extends Request {
         } 
 
         /**
+         * <p>The IDs of the prohibited software to delete. Duplicate IDs are not allowed. You can specify up to 100 IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder softwareIds(java.util.List<String> softwareIds) {

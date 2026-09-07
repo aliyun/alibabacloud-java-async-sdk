@@ -73,7 +73,10 @@ public class CreateSaseUserTagRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the employee tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>These are the company\&quot;s employees</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -82,7 +85,10 @@ public class CreateSaseUserTagRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the user tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>boss</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

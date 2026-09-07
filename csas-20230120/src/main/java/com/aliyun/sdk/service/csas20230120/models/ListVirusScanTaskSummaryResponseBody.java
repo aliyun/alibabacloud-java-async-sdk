@@ -67,7 +67,10 @@ public class ListVirusScanTaskSummaryResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3D7EC0AF-DB2A-5D9C-90EC-F090A6BAAEA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class ListVirusScanTaskSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * <p>The list of detection statistics for virus scan tasks.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
@@ -141,7 +144,10 @@ public class ListVirusScanTaskSummaryResponseBody extends TeaModel {
             } 
 
             /**
-             * TaskId.
+             * <p>The virus scan task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1:1024772</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -149,7 +155,10 @@ public class ListVirusScanTaskSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * VirusFileCount.
+             * <p>The number of virus files detected by the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder virusFileCount(Long virusFileCount) {
                 this.virusFileCount = virusFileCount;

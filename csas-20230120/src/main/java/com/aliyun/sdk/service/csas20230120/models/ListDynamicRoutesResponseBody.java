@@ -80,7 +80,7 @@ public class ListDynamicRoutesResponseBody extends TeaModel {
         } 
 
         /**
-         * DynamicRoutes.
+         * <p>The list of dynamic routes.</p>
          */
         public Builder dynamicRoutes(java.util.List<DynamicRoutes> dynamicRoutes) {
             this.dynamicRoutes = dynamicRoutes;
@@ -88,7 +88,10 @@ public class ListDynamicRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListDynamicRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of dynamic routes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalNum(Integer totalNum) {
             this.totalNum = totalNum;
@@ -292,7 +298,7 @@ public class ListDynamicRoutesResponseBody extends TeaModel {
             } 
 
             /**
-             * ApplicationIds.
+             * <p>The IDs of the private access applications for the dynamic route. This field has a value when the application type is <strong>Application</strong>.</p>
              */
             public Builder applicationIds(java.util.List<String> applicationIds) {
                 this.applicationIds = applicationIds;
@@ -300,7 +306,18 @@ public class ListDynamicRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationType.
+             * <p>The application type of the dynamic route. Valid values:</p>
+             * <ul>
+             * <li><p><strong>All</strong>: All applications.</p>
+             * </li>
+             * <li><p><strong>Application</strong>: A specific application.</p>
+             * </li>
+             * <li><p><strong>Tag</strong>: A specific tag.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Application</p>
              */
             public Builder applicationType(String applicationType) {
                 this.applicationType = applicationType;
@@ -308,7 +325,10 @@ public class ListDynamicRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the dynamic route was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-21 11:50:03</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -316,7 +336,10 @@ public class ListDynamicRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the dynamic route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是一条动态路由</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -324,7 +347,10 @@ public class ListDynamicRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * DynamicRouteId.
+             * <p>The ID of the dynamic route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dr-a0ca843f53cf****</p>
              */
             public Builder dynamicRouteId(String dynamicRouteId) {
                 this.dynamicRouteId = dynamicRouteId;
@@ -332,7 +358,10 @@ public class ListDynamicRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * DynamicRouteType.
+             * <p>The type of the dynamic route. Valid value: <strong>connector</strong>, which indicates a private leased line.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>connector</p>
              */
             public Builder dynamicRouteType(String dynamicRouteType) {
                 this.dynamicRouteType = dynamicRouteType;
@@ -340,7 +369,10 @@ public class ListDynamicRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the dynamic route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dynamic_route_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -348,7 +380,10 @@ public class ListDynamicRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * NextHop.
+             * <p>The ID of the next hop instance for the dynamic route.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>connector-8ccb13b6f52c****</p>
              */
             public Builder nextHop(String nextHop) {
                 this.nextHop = nextHop;
@@ -356,7 +391,10 @@ public class ListDynamicRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the dynamic route. A value of 1 indicates the highest priority. The priority is consistent with the order in the list query results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -364,7 +402,7 @@ public class ListDynamicRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionIds.
+             * <p>The list of regions where the SASE POP cluster endpoint is supported.</p>
              */
             public Builder regionIds(java.util.List<String> regionIds) {
                 this.regionIds = regionIds;
@@ -372,7 +410,16 @@ public class ListDynamicRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the dynamic route. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Enabled</strong>: The dynamic route is enabled.</p>
+             * </li>
+             * <li><p><strong>Disabled</strong>: The dynamic route is disabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -380,7 +427,7 @@ public class ListDynamicRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * TagIds.
+             * <p>The IDs of the private access tags for the dynamic route. This field has a value when the application type is <strong>Tag</strong>.</p>
              */
             public Builder tagIds(java.util.List<String> tagIds) {
                 this.tagIds = tagIds;

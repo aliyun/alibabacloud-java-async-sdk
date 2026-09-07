@@ -59,7 +59,7 @@ public class DeleteDeviceGroupsRequest extends Request {
         } 
 
         /**
-         * DeviceGroupIds.
+         * <p>The collection of instance tag IDs to delete. Duplicate values are not allowed.</p>
          */
         public Builder deviceGroupIds(java.util.List<String> deviceGroupIds) {
             this.putBodyParameter("DeviceGroupIds", deviceGroupIds);

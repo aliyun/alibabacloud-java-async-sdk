@@ -91,7 +91,7 @@ public class ListProhibitedSoftwareResponseBody extends TeaModel {
         }
 
         /**
-         * Software.
+         * <p>The list of prohibited software.</p>
          */
         public Builder software(java.util.List<Software> software) {
             this.software = software;
@@ -99,7 +99,10 @@ public class ListProhibitedSoftwareResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of prohibited software entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28</p>
          */
         public Builder totalNum(Long totalNum) {
             this.totalNum = totalNum;
@@ -191,7 +194,10 @@ public class ListProhibitedSoftwareResponseBody extends TeaModel {
             } 
 
             /**
-             * BundleId.
+             * <p>The application bundle identifier (Bundle ID). This parameter is required only for macOS processes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.autotest.app</p>
              */
             public Builder bundleId(String bundleId) {
                 this.bundleId = bundleId;
@@ -199,7 +205,10 @@ public class ListProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * Cmdline.
+             * <p>The command-line parameters for starting the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>--start-minimized</p>
              */
             public Builder cmdline(String cmdline) {
                 this.cmdline = cmdline;
@@ -207,7 +216,10 @@ public class ListProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * Directory.
+             * <p>The directory where the process is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/User/sase/Applications</p>
              */
             public Builder directory(String directory) {
                 this.directory = directory;
@@ -215,7 +227,10 @@ public class ListProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * Process.
+             * <p>The process name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>thunder</p>
              */
             public Builder process(String process) {
                 this.process = process;
@@ -308,7 +323,10 @@ public class ListProhibitedSoftwareResponseBody extends TeaModel {
             } 
 
             /**
-             * BundleId.
+             * <p>The application bundle identifier (Bundle ID). This parameter is required only for macOS processes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.xunlei.Thunder</p>
              */
             public Builder bundleId(String bundleId) {
                 this.bundleId = bundleId;
@@ -316,7 +334,10 @@ public class ListProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * Cmdline.
+             * <p>The command-line parameters for starting the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>--start-minimized</p>
              */
             public Builder cmdline(String cmdline) {
                 this.cmdline = cmdline;
@@ -324,7 +345,10 @@ public class ListProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * Directory.
+             * <p>The directory where the process is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>~/Applications</p>
              */
             public Builder directory(String directory) {
                 this.directory = directory;
@@ -332,7 +356,10 @@ public class ListProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * Process.
+             * <p>The process name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>autotest.exe</p>
              */
             public Builder process(String process) {
                 this.process = process;
@@ -425,7 +452,10 @@ public class ListProhibitedSoftwareResponseBody extends TeaModel {
             } 
 
             /**
-             * BundleId.
+             * <p>The application bundle identifier (Bundle ID). This parameter is required only for macOS processes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.xunlei.Thunder</p>
              */
             public Builder bundleId(String bundleId) {
                 this.bundleId = bundleId;
@@ -433,7 +463,10 @@ public class ListProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * Cmdline.
+             * <p>The command-line parameters for starting the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>--start-minimized</p>
              */
             public Builder cmdline(String cmdline) {
                 this.cmdline = cmdline;
@@ -441,7 +474,10 @@ public class ListProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * Directory.
+             * <p>The directory where the process is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>C:\Program Files\Thunder Network</p>
              */
             public Builder directory(String directory) {
                 this.directory = directory;
@@ -449,7 +485,10 @@ public class ListProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * Process.
+             * <p>The process name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SASE.exe</p>
              */
             public Builder process(String process) {
                 this.process = process;
@@ -633,7 +672,10 @@ public class ListProhibitedSoftwareResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the prohibited software was created, in the yyyy-MM-dd HH:mm:ss format. The time is in the UTC+8 time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-19 10:24:31</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -641,7 +683,10 @@ public class ListProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the prohibited software.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>P2P download software</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -649,7 +694,7 @@ public class ListProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * DynamicPolicyIds.
+             * <p>The collection of dynamic policy IDs that reference the prohibited software as a disposal action.</p>
              */
             public Builder dynamicPolicyIds(java.util.List<String> dynamicPolicyIds) {
                 this.dynamicPolicyIds = dynamicPolicyIds;
@@ -657,7 +702,14 @@ public class ListProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether the software is a system built-in prohibited software. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: A system built-in prohibited software that is shared across all Alibaba Cloud accounts and cannot be modified or deleted.</li>
+             * <li><strong>false</strong>: Custom prohibited software under the current Alibaba Cloud account.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -665,7 +717,7 @@ public class ListProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * LinuxProcesses.
+             * <p>The list of process configurations for the Linux operating system.</p>
              */
             public Builder linuxProcesses(java.util.List<LinuxProcesses> linuxProcesses) {
                 this.linuxProcesses = linuxProcesses;
@@ -673,7 +725,7 @@ public class ListProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * MacOSProcesses.
+             * <p>The list of process configurations for the macOS operating system.</p>
              */
             public Builder macOSProcesses(java.util.List<MacOSProcesses> macOSProcesses) {
                 this.macOSProcesses = macOSProcesses;
@@ -681,7 +733,10 @@ public class ListProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the prohibited software.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Thunder</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -689,7 +744,7 @@ public class ListProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyIds.
+             * <p>The collection of software prohibition policy IDs that directly reference the prohibited software.</p>
              */
             public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
@@ -697,7 +752,10 @@ public class ListProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * SoftwareId.
+             * <p>The ID of the prohibited software.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>swb-238eee6903e8****</p>
              */
             public Builder softwareId(String softwareId) {
                 this.softwareId = softwareId;
@@ -705,7 +763,7 @@ public class ListProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * TagIds.
+             * <p>The collection of prohibited software tag IDs associated with the prohibited software.</p>
              */
             public Builder tagIds(java.util.List<String> tagIds) {
                 this.tagIds = tagIds;
@@ -713,7 +771,7 @@ public class ListProhibitedSoftwareResponseBody extends TeaModel {
             }
 
             /**
-             * WindowsProcesses.
+             * <p>The list of process configurations for the Windows operating system.</p>
              */
             public Builder windowsProcesses(java.util.List<WindowsProcesses> windowsProcesses) {
                 this.windowsProcesses = windowsProcesses;

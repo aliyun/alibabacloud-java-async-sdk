@@ -144,7 +144,10 @@ public class ModifyForwardStrategyRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The policy description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is an internal access policy</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -153,7 +156,10 @@ public class ModifyForwardStrategyRequest extends Request {
         }
 
         /**
-         * DestinationId.
+         * <p>The target instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>connector-e3152978fb32443b</p>
          */
         public Builder destinationId(String destinationId) {
             this.putBodyParameter("DestinationId", destinationId);
@@ -162,7 +168,13 @@ public class ModifyForwardStrategyRequest extends Request {
         }
 
         /**
-         * DestinationType.
+         * <p>The destination type. Valid values:</p>
+         * <ul>
+         * <li><strong>Connector</strong>: connector.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Connector</p>
          */
         public Builder destinationType(String destinationType) {
             this.putBodyParameter("DestinationType", destinationType);
@@ -171,6 +183,7 @@ public class ModifyForwardStrategyRequest extends Request {
         }
 
         /**
+         * <p>The forwarding rule ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +196,10 @@ public class ModifyForwardStrategyRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The policy name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CollegeStudentsOnline</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -192,7 +208,10 @@ public class ModifyForwardStrategyRequest extends Request {
         }
 
         /**
-         * Priority.
+         * <p>The policy priority. A value of 1 indicates the highest priority, and a value of 100 indicates the lowest priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder priority(Integer priority) {
             this.putBodyParameter("Priority", priority);
@@ -201,7 +220,14 @@ public class ModifyForwardStrategyRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The policy status. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);

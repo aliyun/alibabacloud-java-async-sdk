@@ -67,7 +67,7 @@ public class CreateForwardStrategyResponseBody extends TeaModel {
         } 
 
         /**
-         * ForwardStrategy.
+         * <p>The traffic forwarding rule.</p>
          */
         public Builder forwardStrategy(ForwardStrategy forwardStrategy) {
             this.forwardStrategy = forwardStrategy;
@@ -209,7 +209,10 @@ public class CreateForwardStrategyResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the traffic forwarding rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -217,7 +220,10 @@ public class CreateForwardStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationId.
+             * <p>The target instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>connector-af9b4ee6fd15d82d</p>
              */
             public Builder destinationId(String destinationId) {
                 this.destinationId = destinationId;
@@ -225,7 +231,13 @@ public class CreateForwardStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationType.
+             * <p>The destination type. Valid values:</p>
+             * <ul>
+             * <li><strong>Connector</strong>: connector.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Connector</p>
              */
             public Builder destinationType(String destinationType) {
                 this.destinationType = destinationType;
@@ -233,7 +245,10 @@ public class CreateForwardStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * ForwardId.
+             * <p>The ID of the traffic forwarding rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fs-345d6ab82b5a43a3</p>
              */
             public Builder forwardId(String forwardId) {
                 this.forwardId = forwardId;
@@ -241,7 +256,10 @@ public class CreateForwardStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The policy name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xftp</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -249,7 +267,10 @@ public class CreateForwardStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The policy priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Long priority) {
                 this.priority = priority;
@@ -257,7 +278,14 @@ public class CreateForwardStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the internal-facing access application. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: enabled.</li>
+             * <li><strong>Disabled</strong>: disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;

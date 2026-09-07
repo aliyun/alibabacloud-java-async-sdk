@@ -67,7 +67,7 @@ public class GetNacPortalSmsPhoneWhitelistResponseBody extends TeaModel {
         } 
 
         /**
-         * Phones.
+         * <p>The list of phone numbers.</p>
          */
         public Builder phones(java.util.List<String> phones) {
             this.phones = phones;
@@ -75,7 +75,10 @@ public class GetNacPortalSmsPhoneWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B608C6AE-623D-55C4-9454-601B88AE937E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

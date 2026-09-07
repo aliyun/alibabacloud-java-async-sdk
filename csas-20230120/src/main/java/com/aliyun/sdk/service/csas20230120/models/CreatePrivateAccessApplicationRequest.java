@@ -244,7 +244,7 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         } 
 
         /**
-         * AddressGroups.
+         * <p>The application address groups. Required when ConfigMode is set to Precise. Not allowed when ConfigMode is an empty string.</p>
          */
         public Builder addressGroups(java.util.List<AddressGroup> addressGroups) {
             this.putBodyParameter("AddressGroups", addressGroups);
@@ -253,7 +253,7 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The addresses of the office applications. You can enter up to 1,000 addresses of office applications.</p>
+         * <p>The collection of internal-facing access application addresses. You can specify up to 1000 addresses.</p>
          */
         public Builder addresses(java.util.List<String> addresses) {
             this.putBodyParameter("Addresses", addresses);
@@ -262,10 +262,10 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to allow access from a browser. Default value: <strong>Disabled</strong>. Valid values:</p>
+         * <p>The browser access status of the internal-facing access application. After this feature is enabled, you can access internal applications in a clientless manner. Default value: <strong>Disabled</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>Enabled</strong></li>
-         * <li><strong>Disabled</strong></li>
+         * <li><strong>Enabled</strong>: enabled.</li>
+         * <li><strong>Disabled</strong>: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -278,7 +278,11 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * ConfigMode.
+         * <p>The configuration mode. Valid values:</p>
+         * <ul>
+         * <li>Empty string: default mode.</li>
+         * <li>Precise: precise mode.</li>
+         * </ul>
          */
         public Builder configMode(String configMode) {
             this.putBodyParameter("ConfigMode", configMode);
@@ -287,7 +291,10 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The description of the office application. The value must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</p>
+         * <p>The description of the internal-facing access application. The description must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. Chinese characters are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is an internal-facing access application</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -296,7 +303,7 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The browser access mode parameter. The parameter specifies the configurations of Layer 7 applications.</p>
+         * <p>The browser access mode parameter: the application configuration.</p>
          */
         public Builder l7Config(PAL7Config l7Config) {
             String l7ConfigShrink = shrink(l7Config, "L7Config", "json");
@@ -306,7 +313,7 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The browser access mode parameter. The parameter specifies the prefix of the domain name that the proxy gateway uses. The prefix must be 3 to 20 characters in length, and can contain lowercase letters, digits, and hyphens (-).</p>
+         * <p>The browser access mode parameter: the prefix of the mapped proxy domain name. The prefix must be 3 to 20 characters in length and can contain lowercase letters, digits, and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>app-sample</p>
@@ -318,7 +325,7 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The browser access mode parameter. The parameter specifies the custom domain name of the proxy gateway. Enter a valid domain name.</p>
+         * <p>The browser access mode parameter: the custom proxy domain name. The value must be a valid domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>app1.example.com</p>
@@ -330,7 +337,7 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The name of the office application. The value must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+         * <p>The name of the internal-facing access application. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). Chinese characters are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -343,7 +350,7 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The port ranges of the office applications. You can enter up to 65,535 port ranges. Multiple port ranges cannot be duplicated or overlapped.</p>
+         * <p>The collection of port ranges for the internal-facing access application. You can specify up to 65535 port ranges. Port ranges cannot overlap or be duplicated.</p>
          */
         public Builder portRanges(java.util.List<PortRanges> portRanges) {
             this.putBodyParameter("PortRanges", portRanges);
@@ -352,9 +359,9 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The protocol that is used by the office application. Valid values:</p>
+         * <p>The protocol of the internal-facing access application. Valid values:</p>
          * <ul>
-         * <li><strong>All</strong></li>
+         * <li><strong>All</strong>: all protocols.</li>
          * <li><strong>TCP</strong></li>
          * <li><strong>UDP</strong></li>
          * </ul>
@@ -370,10 +377,10 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The status of the office application. Valid values:</p>
+         * <p>The status of the internal-facing access application. Valid values:</p>
          * <ul>
-         * <li><strong>Enabled</strong></li>
-         * <li><strong>Disabled</strong></li>
+         * <li><strong>Enabled</strong>: enabled.</li>
+         * <li><strong>Disabled</strong>: disabled.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -387,7 +394,7 @@ public class CreatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the tags for the office applications. You can add up to six custom tags to an office application.</p>
+         * <p>The collection of internal-facing access tag IDs. You can associate up to 6 custom-type internal-facing access tags with each application.</p>
          */
         public Builder tagIds(java.util.List<String> tagIds) {
             this.putBodyParameter("TagIds", tagIds);
@@ -467,7 +474,7 @@ public class CreatePrivateAccessApplicationRequest extends Request {
             } 
 
             /**
-             * <p>The start port. The start port must be less than or equal to the end port.</p>
+             * <p>The start port. The value must be less than or equal to the end port.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -479,7 +486,7 @@ public class CreatePrivateAccessApplicationRequest extends Request {
             }
 
             /**
-             * <p>The end port. The end port must be greater than or equal to the start port.</p>
+             * <p>The end port. The value must be greater than or equal to the start port.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

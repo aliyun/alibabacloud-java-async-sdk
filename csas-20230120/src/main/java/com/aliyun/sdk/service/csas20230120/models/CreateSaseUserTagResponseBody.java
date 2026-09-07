@@ -67,7 +67,10 @@ public class CreateSaseUserTagResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FEF1144C-95D1-5F7C-81EF-9DB70EA49FCE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class CreateSaseUserTagResponseBody extends TeaModel {
         }
 
         /**
-         * TagId.
+         * <p>The user tag ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>su-tag-1ae52f66039fa0d4****</p>
          */
         public Builder tagId(String tagId) {
             this.tagId = tagId;

@@ -59,7 +59,14 @@ public class GetSaseUserTagRequest extends Request {
         } 
 
         /**
-         * TagId.
+         * <p>The user tag ID. You can obtain this value from the following operations:</p>
+         * <ul>
+         * <li><a href="~~ListSaseUserTags~~">ListSaseUserTags</a>: Lists user tags.</li>
+         * <li><a href="~~CreateSaseUserTag~~">CreateSaseUserTag</a>: Creates a user tag.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>su-tag-1ae52f66039fa0d4****</p>
          */
         public Builder tagId(String tagId) {
             this.putBodyParameter("TagId", tagId);

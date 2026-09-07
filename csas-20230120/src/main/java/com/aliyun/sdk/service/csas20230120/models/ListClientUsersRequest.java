@@ -159,7 +159,10 @@ public class ListClientUsersRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -168,7 +171,10 @@ public class ListClientUsersRequest extends Request {
         }
 
         /**
-         * DepartmentId.
+         * <p>Department ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10785</p>
          */
         public Builder departmentId(String departmentId) {
             this.putQueryParameter("DepartmentId", departmentId);
@@ -177,7 +183,10 @@ public class ListClientUsersRequest extends Request {
         }
 
         /**
-         * Email.
+         * <p>Email address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:johndoe@example.com">johndoe@example.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -186,6 +195,7 @@ public class ListClientUsersRequest extends Request {
         }
 
         /**
+         * <p>Custom identity source configuration ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +208,10 @@ public class ListClientUsersRequest extends Request {
         }
 
         /**
-         * MobileNumber.
+         * <p>Mobile phone number without country code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18980976559</p>
          */
         public Builder mobileNumber(String mobileNumber) {
             this.putQueryParameter("MobileNumber", mobileNumber);
@@ -207,7 +220,10 @@ public class ListClientUsersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -216,7 +232,16 @@ public class ListClientUsersRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>User enable status. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Enabled</strong>: enabled.</p>
+         * </li>
+         * <li><p><strong>Disabled</strong>: disabled.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -225,7 +250,10 @@ public class ListClientUsersRequest extends Request {
         }
 
         /**
-         * Username.
+         * <p>Username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

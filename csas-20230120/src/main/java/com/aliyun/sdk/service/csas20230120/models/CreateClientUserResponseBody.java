@@ -67,7 +67,10 @@ public class CreateClientUserResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>ID of the created user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>726</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -75,7 +78,10 @@ public class CreateClientUserResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

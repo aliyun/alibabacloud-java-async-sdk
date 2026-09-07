@@ -60,6 +60,7 @@ public class GetPADiagnosisTaskRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the diagnostic task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

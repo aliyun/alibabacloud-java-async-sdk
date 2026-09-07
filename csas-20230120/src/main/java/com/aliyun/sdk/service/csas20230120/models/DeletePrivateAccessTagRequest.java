@@ -60,6 +60,11 @@ public class DeletePrivateAccessTagRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the internal access tag. You can obtain the value from the following operations:</p>
+         * <ul>
+         * <li><a href="~~ListPrivateAccessTags~~">ListPrivateAccessTags</a>: Lists internal access tags.</li>
+         * <li><a href="~~CreatePrivateAccessTag~~">CreatePrivateAccessTag</a>: Creates an internal access tag.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

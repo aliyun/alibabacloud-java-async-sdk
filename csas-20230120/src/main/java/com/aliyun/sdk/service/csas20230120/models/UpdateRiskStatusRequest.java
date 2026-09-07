@@ -115,7 +115,15 @@ public class UpdateRiskStatusRequest extends Request {
         } 
 
         /**
-         * RiskConfirm.
+         * <p>The manually confirmed risk conclusion. This parameter is required when <code>Status</code> is set to <code>Processed</code>. Do not specify this parameter when <code>Status</code> is set to <code>Unprocess</code> or <code>Processing</code>. Valid values:</p>
+         * <ul>
+         * <li><code>Risk</code>: Confirmed as risky.</li>
+         * <li><code>Ignore</code>: Confirmed as not risky.</li>
+         * <li><code>Invalid</code>: Confirmed as a false positive.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Risk</p>
          */
         public Builder riskConfirm(String riskConfirm) {
             this.putBodyParameter("RiskConfirm", riskConfirm);
@@ -124,7 +132,10 @@ public class UpdateRiskStatusRequest extends Request {
         }
 
         /**
-         * RiskConfirmDesc.
+         * <p>The description of the risk event processing decision. The value must be 1 to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>After verification, this risk event is a real risk</p>
          */
         public Builder riskConfirmDesc(String riskConfirmDesc) {
             this.putBodyParameter("RiskConfirmDesc", riskConfirmDesc);
@@ -133,7 +144,13 @@ public class UpdateRiskStatusRequest extends Request {
         }
 
         /**
-         * RiskId.
+         * <p>The risk event ID. You can obtain the value from the following operation:</p>
+         * <ul>
+         * <li><code>ListRiskItems</code>: Queries the list of risk events.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>69ef648034cf53d7bac7a9c9c912****</p>
          */
         public Builder riskId(String riskId) {
             this.putBodyParameter("RiskId", riskId);
@@ -142,7 +159,22 @@ public class UpdateRiskStatusRequest extends Request {
         }
 
         /**
-         * RiskScene.
+         * <p>The risk scenario. This parameter is optional. If not specified, the system automatically populates it based on RiskId. Valid values:</p>
+         * <ul>
+         * <li>account_share: Account sharing.</li>
+         * <li>account_stolen: Account stolen.</li>
+         * <li>device_share: Device sharing.</li>
+         * <li>remote_logon: Remote logon.</li>
+         * <li>sensitive_data_leakage: Sensitive data leakage.</li>
+         * <li><code>compressed_archive_exfil</code>: Internal network data compression and exfiltration.</li>
+         * <li>lateral_scanning: Lateral scanning.</li>
+         * <li>ai_skill_malware: Malicious skill.</li>
+         * <li>ai_config_check: AI configuration check.</li>
+         * <li>openclaw_vulnerability: OpenClaw vulnerability.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>account_stolen</p>
          */
         public Builder riskScene(String riskScene) {
             this.putBodyParameter("RiskScene", riskScene);
@@ -151,7 +183,15 @@ public class UpdateRiskStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The processing status of the risk event. Valid values:</p>
+         * <ul>
+         * <li><code>Unprocess</code>: Unprocessed.</li>
+         * <li><code>Processing</code>: Being processed.</li>
+         * <li><code>Processed</code>: Processed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Processed</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);

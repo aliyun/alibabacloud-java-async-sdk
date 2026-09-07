@@ -78,7 +78,7 @@ public class CreateProhibitedTagResponseBody extends TeaModel {
         }
 
         /**
-         * Tag.
+         * <p>The disabled software tag.</p>
          */
         public Builder tag(Tag tag) {
             this.tag = tag;
@@ -170,7 +170,10 @@ public class CreateProhibitedTagResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the disabled software tag was created, in the yyyy-MM-dd HH:mm:ss format. The time is displayed in UTC+8.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-19 10:24:31</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -178,7 +181,10 @@ public class CreateProhibitedTagResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the disabled software tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test template create get delete</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -186,7 +192,10 @@ public class CreateProhibitedTagResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the disabled software tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>autotest_37bf6a18</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -194,7 +203,10 @@ public class CreateProhibitedTagResponseBody extends TeaModel {
             }
 
             /**
-             * TagId.
+             * <p>The ID of the disabled software tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-4a4046838f77****</p>
              */
             public Builder tagId(String tagId) {
                 this.tagId = tagId;

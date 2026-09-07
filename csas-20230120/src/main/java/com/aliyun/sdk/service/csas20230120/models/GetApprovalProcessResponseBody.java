@@ -67,7 +67,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         } 
 
         /**
-         * Process.
+         * <p>The approval process.</p>
          */
         public Builder process(Process process) {
             this.process = process;
@@ -75,7 +75,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C81E0B4B-AAEB-5FDD-B27E-3F5AF7EBD7EF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayField.
+             * <p>The display field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Name</p>
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
@@ -170,7 +176,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * SystemField.
+             * <p>The system field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Name</p>
              */
             public Builder systemField(String systemField) {
                 this.systemField = systemField;
@@ -263,7 +272,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * ExternalProcessId.
+             * <p>The external process ID.</p>
              */
             public Builder externalProcessId(String externalProcessId) {
                 this.externalProcessId = externalProcessId;
@@ -271,7 +280,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * FieldMap.
+             * <p>The field mapping table.</p>
              */
             public Builder fieldMap(java.util.List<FieldMap> fieldMap) {
                 this.fieldMap = fieldMap;
@@ -279,7 +288,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyIds.
+             * <p>The list of endpoint uninstall policy IDs.</p>
              */
             public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
@@ -287,7 +296,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaId.
+             * <p>The ID of the approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -367,7 +379,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayField.
+             * <p>The display field.</p>
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
@@ -383,7 +395,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * SystemField.
+             * <p>The system field.</p>
              */
             public Builder systemField(String systemField) {
                 this.systemField = systemField;
@@ -476,7 +488,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * ExternalProcessId.
+             * <p>The external process ID.</p>
              */
             public Builder externalProcessId(String externalProcessId) {
                 this.externalProcessId = externalProcessId;
@@ -484,7 +496,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * FieldMap.
+             * <p>The field mapping table.</p>
              */
             public Builder fieldMap(java.util.List<DeviceRegistrationPoliciesFieldMap> fieldMap) {
                 this.fieldMap = fieldMap;
@@ -492,7 +504,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyIds.
+             * <p>The list of device registration policy IDs.</p>
              */
             public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
@@ -500,7 +512,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaId.
+             * <p>The ID of the approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -580,7 +595,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayField.
+             * <p>The display field.</p>
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
@@ -596,7 +611,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * SystemField.
+             * <p>The system field.</p>
              */
             public Builder systemField(String systemField) {
                 this.systemField = systemField;
@@ -689,7 +704,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * ExternalProcessId.
+             * <p>The external process ID.</p>
              */
             public Builder externalProcessId(String externalProcessId) {
                 this.externalProcessId = externalProcessId;
@@ -697,7 +712,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * FieldMap.
+             * <p>The field mapping table.</p>
              */
             public Builder fieldMap(java.util.List<DlpSendPoliciesFieldMap> fieldMap) {
                 this.fieldMap = fieldMap;
@@ -705,7 +720,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyIds.
+             * <p>The list of file outgoing policy IDs.</p>
              */
             public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
@@ -713,7 +728,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaId.
+             * <p>The ID of the approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -793,7 +811,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayField.
+             * <p>The display field.</p>
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
@@ -809,7 +827,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * SystemField.
+             * <p>The system field.</p>
              */
             public Builder systemField(String systemField) {
                 this.systemField = systemField;
@@ -902,7 +920,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * ExternalProcessId.
+             * <p>The external process ID.</p>
              */
             public Builder externalProcessId(String externalProcessId) {
                 this.externalProcessId = externalProcessId;
@@ -910,7 +928,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * FieldMap.
+             * <p>The field mapping table.</p>
              */
             public Builder fieldMap(java.util.List<DomainBlacklistPoliciesFieldMap> fieldMap) {
                 this.fieldMap = fieldMap;
@@ -918,7 +936,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyIds.
+             * <p>The list of domain blacklist policy IDs.</p>
              */
             public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
@@ -926,7 +944,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaId.
+             * <p>The ID of the approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -1006,7 +1027,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayField.
+             * <p>The display field.</p>
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
@@ -1022,7 +1043,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * SystemField.
+             * <p>The system field.</p>
              */
             public Builder systemField(String systemField) {
                 this.systemField = systemField;
@@ -1115,7 +1136,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * ExternalProcessId.
+             * <p>The external process ID.</p>
              */
             public Builder externalProcessId(String externalProcessId) {
                 this.externalProcessId = externalProcessId;
@@ -1123,7 +1144,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * FieldMap.
+             * <p>The field mapping table.</p>
              */
             public Builder fieldMap(java.util.List<DomainWhitelistPoliciesFieldMap> fieldMap) {
                 this.fieldMap = fieldMap;
@@ -1131,7 +1152,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyIds.
+             * <p>The list of domain whitelist policy IDs.</p>
              */
             public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
@@ -1139,7 +1160,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaId.
+             * <p>The ID of the approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -1219,7 +1243,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayField.
+             * <p>The display field.</p>
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
@@ -1235,7 +1259,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * SystemField.
+             * <p>The system field.</p>
              */
             public Builder systemField(String systemField) {
                 this.systemField = systemField;
@@ -1328,7 +1352,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * ExternalProcessId.
+             * <p>The external process ID.</p>
              */
             public Builder externalProcessId(String externalProcessId) {
                 this.externalProcessId = externalProcessId;
@@ -1336,7 +1360,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * FieldMap.
+             * <p>The field mapping table.</p>
              */
             public Builder fieldMap(java.util.List<EndpointHardeningPoliciesFieldMap> fieldMap) {
                 this.fieldMap = fieldMap;
@@ -1344,7 +1368,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyIds.
+             * <p>The policy ID.</p>
              */
             public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
@@ -1352,7 +1376,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaId.
+             * <p>The template ID.</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -1432,7 +1456,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayField.
+             * <p>The display field.</p>
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
@@ -1448,7 +1472,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * SystemField.
+             * <p>The system field.</p>
              */
             public Builder systemField(String systemField) {
                 this.systemField = systemField;
@@ -1541,7 +1565,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * ExternalProcessId.
+             * <p>The external process ID.</p>
              */
             public Builder externalProcessId(String externalProcessId) {
                 this.externalProcessId = externalProcessId;
@@ -1549,7 +1573,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * FieldMap.
+             * <p>The field mapping table.</p>
              */
             public Builder fieldMap(java.util.List<PeripheralBlockPoliciesFieldMap> fieldMap) {
                 this.fieldMap = fieldMap;
@@ -1557,7 +1581,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyIds.
+             * <p>The list of peripheral control policy IDs.</p>
              */
             public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
@@ -1565,7 +1589,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaId.
+             * <p>The ID of the approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -1645,7 +1672,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayField.
+             * <p>The display field.</p>
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
@@ -1661,7 +1688,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * SystemField.
+             * <p>The system field.</p>
              */
             public Builder systemField(String systemField) {
                 this.systemField = systemField;
@@ -1754,7 +1781,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * ExternalProcessId.
+             * <p>The external process ID.</p>
              */
             public Builder externalProcessId(String externalProcessId) {
                 this.externalProcessId = externalProcessId;
@@ -1762,7 +1789,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * FieldMap.
+             * <p>The field mapping table.</p>
              */
             public Builder fieldMap(java.util.List<PrivateAccessBlockPoliciesFieldMap> fieldMap) {
                 this.fieldMap = fieldMap;
@@ -1770,7 +1797,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyIds.
+             * <p>The policy ID.</p>
              */
             public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
@@ -1778,7 +1805,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaId.
+             * <p>The template ID.</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -1845,7 +1872,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * SaseUserId.
+             * <p>The approver ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
              */
             public Builder saseUserId(String saseUserId) {
                 this.saseUserId = saseUserId;
@@ -1853,7 +1883,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * <p>The username of the approver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>John</p>
              */
             public Builder username(String username) {
                 this.username = username;
@@ -1933,7 +1966,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayField.
+             * <p>The display field.</p>
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
@@ -1949,7 +1982,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * SystemField.
+             * <p>The system field.</p>
              */
             public Builder systemField(String systemField) {
                 this.systemField = systemField;
@@ -2042,7 +2075,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * ExternalProcessId.
+             * <p>The external process ID.</p>
              */
             public Builder externalProcessId(String externalProcessId) {
                 this.externalProcessId = externalProcessId;
@@ -2050,7 +2083,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * FieldMap.
+             * <p>The field mapping table.</p>
              */
             public Builder fieldMap(java.util.List<SoftwareBlockPoliciesFieldMap> fieldMap) {
                 this.fieldMap = fieldMap;
@@ -2058,7 +2091,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyIds.
+             * <p>The list of software blocking policy IDs.</p>
              */
             public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
@@ -2066,7 +2099,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaId.
+             * <p>The ID of the approval template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -2146,7 +2182,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayField.
+             * <p>The display field.</p>
              */
             public Builder displayField(String displayField) {
                 this.displayField = displayField;
@@ -2162,7 +2198,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * SystemField.
+             * <p>The system field.</p>
              */
             public Builder systemField(String systemField) {
                 this.systemField = systemField;
@@ -2255,7 +2291,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * ExternalProcessId.
+             * <p>The external process ID.</p>
              */
             public Builder externalProcessId(String externalProcessId) {
                 this.externalProcessId = externalProcessId;
@@ -2263,7 +2299,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * FieldMap.
+             * <p>The field mapping table.</p>
              */
             public Builder fieldMap(java.util.List<SoftwareHardeningPoliciesFieldMap> fieldMap) {
                 this.fieldMap = fieldMap;
@@ -2271,7 +2307,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyIds.
+             * <p>The policy ID.</p>
              */
             public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
@@ -2279,7 +2315,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaId.
+             * <p>The template ID.</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -2554,7 +2590,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             } 
 
             /**
-             * AppUninstallPolicies.
+             * <p>The list of policies associated with endpoint uninstallation.</p>
              */
             public Builder appUninstallPolicies(AppUninstallPolicies appUninstallPolicies) {
                 this.appUninstallPolicies = appUninstallPolicies;
@@ -2562,7 +2598,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * ApprovalType.
+             * <p>The approval type.</p>
              */
             public Builder approvalType(Integer approvalType) {
                 this.approvalType = approvalType;
@@ -2570,7 +2606,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time of the approval process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-25 10:44:09</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -2578,7 +2617,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the approval process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is an approval process</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2586,7 +2628,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceRegistrationPolicies.
+             * <p>The list of policies associated with device registration.</p>
              */
             public Builder deviceRegistrationPolicies(DeviceRegistrationPolicies deviceRegistrationPolicies) {
                 this.deviceRegistrationPolicies = deviceRegistrationPolicies;
@@ -2594,7 +2636,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * DlpSendPolicies.
+             * <p>The list of associated policies for file outgoing.</p>
              */
             public Builder dlpSendPolicies(DlpSendPolicies dlpSendPolicies) {
                 this.dlpSendPolicies = dlpSendPolicies;
@@ -2602,7 +2644,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * DomainBlacklistPolicies.
+             * <p>The list of policies associated with the domain blacklist.</p>
              */
             public Builder domainBlacklistPolicies(DomainBlacklistPolicies domainBlacklistPolicies) {
                 this.domainBlacklistPolicies = domainBlacklistPolicies;
@@ -2610,7 +2652,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * DomainWhitelistPolicies.
+             * <p>The list of policies associated with the domain whitelist.</p>
              */
             public Builder domainWhitelistPolicies(DomainWhitelistPolicies domainWhitelistPolicies) {
                 this.domainWhitelistPolicies = domainWhitelistPolicies;
@@ -2618,7 +2660,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointHardeningPolicies.
+             * <p>The endpoint protection policy.</p>
              */
             public Builder endpointHardeningPolicies(EndpointHardeningPolicies endpointHardeningPolicies) {
                 this.endpointHardeningPolicies = endpointHardeningPolicies;
@@ -2626,7 +2668,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * EventLabel.
+             * <p>The label.</p>
              */
             public Builder eventLabel(String eventLabel) {
                 this.eventLabel = eventLabel;
@@ -2634,7 +2676,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * ExternalConfig.
+             * <p>The external configuration.</p>
              */
             public Builder externalConfig(String externalConfig) {
                 this.externalConfig = externalConfig;
@@ -2642,7 +2684,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * PeripheralBlockPolicies.
+             * <p>The list of associated policies for peripheral control.</p>
              */
             public Builder peripheralBlockPolicies(PeripheralBlockPolicies peripheralBlockPolicies) {
                 this.peripheralBlockPolicies = peripheralBlockPolicies;
@@ -2650,7 +2692,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateAccessBlockPolicies.
+             * <p>The software hardening policy.</p>
              */
             public Builder privateAccessBlockPolicies(PrivateAccessBlockPolicies privateAccessBlockPolicies) {
                 this.privateAccessBlockPolicies = privateAccessBlockPolicies;
@@ -2658,7 +2700,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessId.
+             * <p>The ID of the approval process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-process-35ee09077ee9****</p>
              */
             public Builder processId(String processId) {
                 this.processId = processId;
@@ -2666,7 +2711,10 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessName.
+             * <p>The name of the approval process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder processName(String processName) {
                 this.processName = processName;
@@ -2674,7 +2722,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessNodes.
+             * <p>The list of approval nodes.</p>
              */
             public Builder processNodes(java.util.List<java.util.List<ProcessNodes>> processNodes) {
                 this.processNodes = processNodes;
@@ -2682,7 +2730,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * SoftwareBlockPolicies.
+             * <p>The list of policies associated with software blocking.</p>
              */
             public Builder softwareBlockPolicies(SoftwareBlockPolicies softwareBlockPolicies) {
                 this.softwareBlockPolicies = softwareBlockPolicies;
@@ -2690,7 +2738,7 @@ public class GetApprovalProcessResponseBody extends TeaModel {
             }
 
             /**
-             * SoftwareHardeningPolicies.
+             * <p>The software hardening policy.</p>
              */
             public Builder softwareHardeningPolicies(SoftwareHardeningPolicies softwareHardeningPolicies) {
                 this.softwareHardeningPolicies = softwareHardeningPolicies;

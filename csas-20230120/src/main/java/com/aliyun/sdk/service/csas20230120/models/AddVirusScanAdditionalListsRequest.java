@@ -74,7 +74,7 @@ public class AddVirusScanAdditionalListsRequest extends Request {
         } 
 
         /**
-         * AdditionalLists.
+         * <p>The list of entries to append. At least one entry is required.</p>
          */
         public Builder additionalLists(java.util.List<AdditionalLists> additionalLists) {
             this.putBodyParameter("AdditionalLists", additionalLists);
@@ -83,6 +83,11 @@ public class AddVirusScanAdditionalListsRequest extends Request {
         }
 
         /**
+         * <p>The operating system type for which the list takes effect. Valid values:</p>
+         * <ul>
+         * <li><strong>windows</strong>: Windows.</li>
+         * <li><strong>macOS</strong>: macOS.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +172,17 @@ public class AddVirusScanAdditionalListsRequest extends Request {
             } 
 
             /**
-             * AdditionalType.
+             * <p>The matching dimension of the list entry. Valid values:</p>
+             * <ul>
+             * <li><strong>FileSuffix</strong>: matches by file name extension.</li>
+             * <li><strong>FileName</strong>: matches by file name.</li>
+             * <li><strong>FolderName</strong>: matches by folder name.</li>
+             * <li><strong>FilePath</strong>: matches by file path.</li>
+             * <li><strong>FileMd5</strong>: matches by file MD5 value.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FileSuffix</p>
              */
             public Builder additionalType(String additionalType) {
                 this.additionalType = additionalType;
@@ -175,7 +190,10 @@ public class AddVirusScanAdditionalListsRequest extends Request {
             }
 
             /**
-             * Detail.
+             * <p>The content of the list entry. The value cannot exceed 255 characters. The meaning is determined by AdditionalType: when AdditionalType is set to FileSuffix, specify a file name extension. When set to FileName, specify a file name. When set to FolderName, specify a folder name. When set to FilePath, specify a file path. When set to FileMd5, specify the MD5 value of a file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>.tmp</p>
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -183,7 +201,14 @@ public class AddVirusScanAdditionalListsRequest extends Request {
             }
 
             /**
-             * ListType.
+             * <p>The list type. Valid values:</p>
+             * <ul>
+             * <li><strong>Blacklist</strong>: blacklist. Files that match are directly identified as virus files.</li>
+             * <li><strong>Whitelist</strong>: whitelist. Files that match are excluded from virus detection.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Whitelist</p>
              */
             public Builder listType(String listType) {
                 this.listType = listType;

@@ -201,10 +201,10 @@ public class ListPrivateAccessPolicesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the office application. Either the ID or tag of the office application is used for queries. You can obtain the value by calling the following operations:</p>
+         * <p>The ID of the private access application. The application ID cannot be used together with the private access tag ID for filtering. Sources of the value:</p>
          * <ul>
-         * <li><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: queries office applications.</li>
-         * <li><a href="~~CreatePrivateAccessApplication~~">CreatePrivateAccessApplication</a>: creates an office application.</li>
+         * <li><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Queries private access applications by batch.</li>
+         * <li><a href="~~CreatePrivateAccessApplication~~">CreatePrivateAccessApplication</a>: Creates a private access application.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -217,10 +217,10 @@ public class ListPrivateAccessPolicesRequest extends Request {
         }
 
         /**
-         * <p>The name of the office application.</p>
+         * <p>The name of the private access application.</p>
          * 
          * <strong>example:</strong>
-         * <p>Office</p>
+         * <p>办公</p>
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -229,7 +229,7 @@ public class ListPrivateAccessPolicesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Valid values: 1 to 10000.</p>
+         * <p>The page number of the current page that is returned during paginated queries. Valid values: 1 to 10000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,7 +242,7 @@ public class ListPrivateAccessPolicesRequest extends Request {
         }
 
         /**
-         * <p>The name of the private access policy. The value must be 1 to 128 characters in length and can contain letters, digits, hyphens (-), underscores (_), and periods (.).</p>
+         * <p>The name of the private access policy. The name must be 1 to 128 characters in length and supports Chinese characters and uppercase and lowercase English letters. It can contain digits, periods (.), underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>private_access_policy_name</p>
@@ -254,7 +254,7 @@ public class ListPrivateAccessPolicesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 1000.</p>
+         * <p>The number of entries per page that is set during paginated queries. Valid values: 1 to 1000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -267,10 +267,10 @@ public class ListPrivateAccessPolicesRequest extends Request {
         }
 
         /**
-         * <p>The action in the private access policy. Valid values:</p>
+         * <p>The action of the private access policy. Valid values:</p>
          * <ul>
-         * <li><strong>Block</strong></li>
-         * <li><strong>Allow</strong></li>
+         * <li><strong>Block</strong>: Block.</li>
+         * <li><strong>Allow</strong>: Allow.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -283,7 +283,7 @@ public class ListPrivateAccessPolicesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the private access policies. You can enter up to 100 IDs.</p>
+         * <p>The collection of private access policy IDs. You can specify up to 100 private access policy IDs.</p>
          */
         public Builder policyIds(java.util.List<String> policyIds) {
             this.putQueryParameter("PolicyIds", policyIds);
@@ -294,8 +294,8 @@ public class ListPrivateAccessPolicesRequest extends Request {
         /**
          * <p>The status of the private access policy. Valid values:</p>
          * <ul>
-         * <li><strong>Enabled</strong></li>
-         * <li><strong>Disabled</strong></li>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -308,10 +308,10 @@ public class ListPrivateAccessPolicesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the tag for the office application. Either the ID or tag of the office application is used for queries. You can obtain the value by calling the following operations:</p>
+         * <p>The ID of the private access tag. The tag ID cannot be used together with the application ID for filtering. Sources of the value:</p>
          * <ul>
-         * <li><a href="~~ListPrivateAccessTags~~">ListPrivateAccessTags</a>: queries tags for office applications.</li>
-         * <li><a href="~~CreatePrivateAccessTag~~">CreatePrivateAccessTag</a>: creates a tag for office applications.</li>
+         * <li><a href="~~ListPrivateAccessTags~~">ListPrivateAccessTags</a>: Queries private access tags by batch.</li>
+         * <li><a href="~~CreatePrivateAccessTag~~">CreatePrivateAccessTag</a>: Creates a private access tag.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -327,7 +327,7 @@ public class ListPrivateAccessPolicesRequest extends Request {
          * <p>The name of the tag.</p>
          * 
          * <strong>example:</strong>
-         * <p>Cloud service</p>
+         * <p>云产品</p>
          */
         public Builder tagName(String tagName) {
             this.putQueryParameter("TagName", tagName);
@@ -336,10 +336,10 @@ public class ListPrivateAccessPolicesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the user group. You can obtain the value by calling the following operations:</p>
+         * <p>The ID of the user group. Sources of the value:</p>
          * <ul>
-         * <li><a href="~~ListUserGroups~~">ListUserGroups</a>: queries user groups.</li>
-         * <li><a href="~~CreateUserGroup~~">CreateUserGroup</a>: creates a user group.</li>
+         * <li><a href="~~ListUserGroups~~">ListUserGroups</a>: Queries user groups by batch.</li>
+         * <li><a href="~~CreateUserGroup~~">CreateUserGroup</a>: Creates a user group.</li>
          * </ul>
          * 
          * <strong>example:</strong>

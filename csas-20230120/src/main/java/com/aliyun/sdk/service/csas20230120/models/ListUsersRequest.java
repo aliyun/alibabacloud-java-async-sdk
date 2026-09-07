@@ -145,6 +145,7 @@ public class ListUsersRequest extends Request {
         } 
 
         /**
+         * <p>The page number. Valid values: 1 to 10,000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +158,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * Department.
+         * <p>The user\&quot;s department. The value must be 1 to 128 characters long and can contain Chinese characters, letters, digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (_), slashes (/), at signs (@), and spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试部</p>
          */
         public Builder department(String department) {
             this.putQueryParameter("Department", department);
@@ -166,7 +170,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * FuzzyUsername.
+         * <p>The username for a fuzzy match. The value must be 1 to 128 characters long and can contain Chinese characters, letters, digits, periods (.), underscores (_), hyphens (-), asterisks (\*), at signs (@), and spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>王先生</p>
          */
         public Builder fuzzyUsername(String fuzzyUsername) {
             this.putQueryParameter("FuzzyUsername", fuzzyUsername);
@@ -175,6 +182,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page. Valid values: 1 to 500.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,7 +195,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * PreciseUsername.
+         * <p>The username for an exact match. The value must be 1 to 128 characters long and can contain Chinese characters, letters, digits, periods (.), underscores (_), hyphens (-), asterisks (\*), at signs (@), and spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>王先生@alibaba.com</p>
          */
         public Builder preciseUsername(String preciseUsername) {
             this.putQueryParameter("PreciseUsername", preciseUsername);
@@ -196,7 +207,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * SaseUserIds.
+         * <p>An array of user IDs.</p>
          */
         public Builder saseUserIds(java.util.List<String> saseUserIds) {
             this.putQueryParameter("SaseUserIds", saseUserIds);
@@ -205,7 +216,16 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the user. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Enabled</strong>: The user is enabled.</p>
+         * </li>
+         * <li><p><strong>Disabled</strong>: The user is disabled.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

@@ -60,6 +60,7 @@ public class RemoveVirusScanAdditionalListsRequest extends Request {
         } 
 
         /**
+         * <p>The collection of entry IDs to remove. At least one entry ID must be specified.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listIds(java.util.List<String> listIds) {

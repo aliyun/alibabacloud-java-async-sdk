@@ -67,7 +67,7 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * Policy.
+         * <p>The details of the software prohibition policy.</p>
          */
         public Builder policy(Policy policy) {
             this.policy = policy;
@@ -144,7 +144,14 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * IsDefault.
+             * <p>Indicates whether the prohibited software is a system built-in entry. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: A system built-in prohibited software entry shared by all Alibaba Cloud accounts. Modification and deletion are not supported.</li>
+             * <li><strong>false</strong>: A custom prohibited software entry under the current Alibaba Cloud account.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -152,7 +159,10 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * SoftwareId.
+             * <p>The prohibited software ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>swb-050216aafaae****</p>
              */
             public Builder softwareId(String softwareId) {
                 this.softwareId = softwareId;
@@ -505,7 +515,14 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * AllowReport.
+             * <p>Indicates whether end users are allowed to submit a filing request for this policy. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Filing is allowed. The terminal pop-up window provides a filing entry.</li>
+             * <li><strong>false</strong>: Filing is not allowed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder allowReport(Boolean allowReport) {
                 this.allowReport = allowReport;
@@ -513,7 +530,10 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time of the software prohibition policy, in the yyyy-MM-dd HH:mm:ss format using the UTC+8 time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-07-29 11:26:02</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -521,7 +541,10 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the software prohibition policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>completed</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -529,7 +552,14 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>Indicates whether the policy is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Enabled. The policy is delivered to terminals and takes effect.</li>
+             * <li><strong>false</strong>: Disabled. The policy configuration is retained but not delivered to terminals.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -537,7 +567,14 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * ForceKill.
+             * <p>Indicates whether to forcibly terminate running software processes. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The terminal immediately terminates the running processes of the software when the policy is triggered.</li>
+             * <li><strong>false</strong>: Running processes are not terminated. Only subsequent launches are blocked.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder forceKill(Boolean forceKill) {
                 this.forceKill = forceKill;
@@ -545,7 +582,10 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * MainButtonTextCh.
+             * <p>The Chinese text of the primary button in the terminal pop-up window.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>前往报备</p>
              */
             public Builder mainButtonTextCh(String mainButtonTextCh) {
                 this.mainButtonTextCh = mainButtonTextCh;
@@ -553,7 +593,10 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * MainButtonTextEn.
+             * <p>The English text of the primary button in the terminal pop-up window.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Report</p>
              */
             public Builder mainButtonTextEn(String mainButtonTextEn) {
                 this.mainButtonTextEn = mainButtonTextEn;
@@ -561,7 +604,14 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * MatchMode.
+             * <p>The policy matching target type. Valid values:</p>
+             * <ul>
+             * <li><strong>UserGroupAll</strong>: Associates with all users.</li>
+             * <li><strong>UserGroupNormal</strong>: Associates with specific user groups.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>UserGroupNormal</p>
              */
             public Builder matchMode(String matchMode) {
                 this.matchMode = matchMode;
@@ -569,7 +619,10 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * MinorButtonTextCh.
+             * <p>The Chinese text of the secondary button in the terminal pop-up window.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>我知道了</p>
              */
             public Builder minorButtonTextCh(String minorButtonTextCh) {
                 this.minorButtonTextCh = minorButtonTextCh;
@@ -577,7 +630,10 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * MinorButtonTextEn.
+             * <p>The English text of the secondary button in the terminal pop-up window.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>I know</p>
              */
             public Builder minorButtonTextEn(String minorButtonTextEn) {
                 this.minorButtonTextEn = minorButtonTextEn;
@@ -585,7 +641,10 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the software prohibition policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PolicyC</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -593,7 +652,14 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectType.
+             * <p>The object type of the controlled target. Valid values:</p>
+             * <ul>
+             * <li><strong>App</strong>: Controls by prohibited software. The controlled objects are specified by SoftwareIds.</li>
+             * <li><strong>Tag</strong>: Controls by prohibited software labels. The controlled objects are specified by TagIds. All prohibited software under the labels is controlled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>App</p>
              */
             public Builder objectType(String objectType) {
                 this.objectType = objectType;
@@ -601,7 +667,10 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyId.
+             * <p>The software prohibition policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pid-36ee4a5869f3****</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -609,7 +678,15 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The action type. Valid values:</p>
+             * <ul>
+             * <li><strong>Ban</strong>: Blocks the software from running and displays a pop-up notification to the end user.</li>
+             * <li><strong>BanSilent</strong>: Blocks the software from running without notifying the end user (silent blocking).</li>
+             * <li><strong>Warn</strong>: Displays a pop-up notification to the end user without blocking the software from running.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Ban</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -617,7 +694,10 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The policy priority. Valid values: 0 to 99. A smaller value indicates a higher priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -625,7 +705,10 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PromptCh.
+             * <p>The Chinese prompt content displayed in the terminal pop-up window.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This software has been blocked by the enterprise security policy. To use it, submit an approval request</p>
              */
             public Builder promptCh(String promptCh) {
                 this.promptCh = promptCh;
@@ -633,7 +716,10 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PromptEn.
+             * <p>The English prompt content displayed in the terminal pop-up window.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This software is blocked by your enterprise security policy.</p>
              */
             public Builder promptEn(String promptEn) {
                 this.promptEn = promptEn;
@@ -641,7 +727,13 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * ReportProcessId.
+             * <p>The approval process ID bound to this policy. An empty string is returned if no approval process is bound. In this case, filing requests submitted by end users are approved by the IT administrator as a fallback. Approval processes are bound by using <a href="~~AttachPolicy2ApprovalProcess~~">AttachPolicy2ApprovalProcess</a> and unbound by using <a href="~~DetachPolicy2ApprovalProcess~~">DetachPolicy2ApprovalProcess</a>. You can obtain this value from the following operation:</p>
+             * <ul>
+             * <li><a href="~~ListApprovalProcesses~~">ListApprovalProcesses</a>: Lists approval processes.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-process-6c2f8a1b7d3e****</p>
              */
             public Builder reportProcessId(String reportProcessId) {
                 this.reportProcessId = reportProcessId;
@@ -649,7 +741,7 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * SoftwareIds.
+             * <p>The collection of prohibited software directly controlled by this policy.</p>
              */
             public Builder softwareIds(java.util.List<SoftwareIds> softwareIds) {
                 this.softwareIds = softwareIds;
@@ -657,7 +749,7 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * TagIds.
+             * <p>The collection of prohibited software label IDs controlled by this policy.</p>
              */
             public Builder tagIds(java.util.List<String> tagIds) {
                 this.tagIds = tagIds;
@@ -665,7 +757,10 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * TitleCh.
+             * <p>The Chinese title of the terminal pop-up window.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>软件禁用提醒</p>
              */
             public Builder titleCh(String titleCh) {
                 this.titleCh = titleCh;
@@ -673,7 +768,10 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * TitleEn.
+             * <p>The English title of the terminal pop-up window.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Software Blocked</p>
              */
             public Builder titleEn(String titleEn) {
                 this.titleEn = titleEn;
@@ -681,7 +779,7 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupIds.
+             * <p>The collection of user group IDs to which this policy applies.</p>
              */
             public Builder userGroupIds(java.util.List<String> userGroupIds) {
                 this.userGroupIds = userGroupIds;
@@ -689,7 +787,7 @@ public class GetProhibitedPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Whitelist.
+             * <p>The list of exempted usernames.</p>
              */
             public Builder whitelist(java.util.List<String> whitelist) {
                 this.whitelist = whitelist;

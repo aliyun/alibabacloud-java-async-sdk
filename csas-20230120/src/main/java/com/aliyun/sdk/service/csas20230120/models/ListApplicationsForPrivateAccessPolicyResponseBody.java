@@ -67,7 +67,7 @@ public class ListApplicationsForPrivateAccessPolicyResponseBody extends TeaModel
         } 
 
         /**
-         * Polices.
+         * <p>A list of private access policies.</p>
          */
         public Builder polices(java.util.List<Polices> polices) {
             this.polices = polices;
@@ -75,7 +75,10 @@ public class ListApplicationsForPrivateAccessPolicyResponseBody extends TeaModel
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4D169859-A4F2-5EC8-853B-8447787C0D8A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class ListApplicationsForPrivateAccessPolicyResponseBody extends TeaModel
             } 
 
             /**
-             * Begin.
+             * <p>The start port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder begin(Integer begin) {
                 this.begin = begin;
@@ -149,7 +155,10 @@ public class ListApplicationsForPrivateAccessPolicyResponseBody extends TeaModel
             }
 
             /**
-             * End.
+             * <p>The end port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>81</p>
              */
             public Builder end(Integer end) {
                 this.end = end;
@@ -294,7 +303,7 @@ public class ListApplicationsForPrivateAccessPolicyResponseBody extends TeaModel
             } 
 
             /**
-             * Addresses.
+             * <p>A collection of private access application addresses.</p>
              */
             public Builder addresses(java.util.List<String> addresses) {
                 this.addresses = addresses;
@@ -302,7 +311,10 @@ public class ListApplicationsForPrivateAccessPolicyResponseBody extends TeaModel
             }
 
             /**
-             * ApplicationId.
+             * <p>The ID of the private access application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pa-application-7a9243dd02f4****</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -310,7 +322,10 @@ public class ListApplicationsForPrivateAccessPolicyResponseBody extends TeaModel
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the private access application was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-27 18:10:25</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -318,7 +333,10 @@ public class ListApplicationsForPrivateAccessPolicyResponseBody extends TeaModel
             }
 
             /**
-             * Description.
+             * <p>The description of the private access application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是一条被内网访问策略引用的内网访问应用</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -326,7 +344,10 @@ public class ListApplicationsForPrivateAccessPolicyResponseBody extends TeaModel
             }
 
             /**
-             * Name.
+             * <p>The name of the private access application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>application_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -334,7 +355,7 @@ public class ListApplicationsForPrivateAccessPolicyResponseBody extends TeaModel
             }
 
             /**
-             * PortRanges.
+             * <p>A collection of port ranges for the private access application.</p>
              */
             public Builder portRanges(java.util.List<PortRanges> portRanges) {
                 this.portRanges = portRanges;
@@ -342,7 +363,18 @@ public class ListApplicationsForPrivateAccessPolicyResponseBody extends TeaModel
             }
 
             /**
-             * Protocol.
+             * <p>The protocol of the private access application. Valid values:</p>
+             * <ul>
+             * <li><p><strong>All</strong>: All protocols.</p>
+             * </li>
+             * <li><p><strong>TCP</strong></p>
+             * </li>
+             * <li><p><strong>UDP</strong></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -350,7 +382,16 @@ public class ListApplicationsForPrivateAccessPolicyResponseBody extends TeaModel
             }
 
             /**
-             * Status.
+             * <p>The status of the private access application. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Enabled</strong>: The application is enabled.</p>
+             * </li>
+             * <li><p><strong>Disabled</strong>: The application is disabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -417,7 +458,7 @@ public class ListApplicationsForPrivateAccessPolicyResponseBody extends TeaModel
             } 
 
             /**
-             * Applications.
+             * <p>A collection of private access applications.</p>
              */
             public Builder applications(java.util.List<Applications> applications) {
                 this.applications = applications;
@@ -425,7 +466,10 @@ public class ListApplicationsForPrivateAccessPolicyResponseBody extends TeaModel
             }
 
             /**
-             * PolicyId.
+             * <p>The policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pa-policy-1b0d0e8b4bcf****</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;

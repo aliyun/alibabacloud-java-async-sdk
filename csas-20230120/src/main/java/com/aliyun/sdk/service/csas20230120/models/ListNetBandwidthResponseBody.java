@@ -106,7 +106,10 @@ public class ListNetBandwidthResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -114,7 +117,7 @@ public class ListNetBandwidthResponseBody extends TeaModel {
         }
 
         /**
-         * NetBandwidthList.
+         * <p>The list of bandwidth configurations.</p>
          */
         public Builder netBandwidthList(java.util.List<NetBandwidthList> netBandwidthList) {
             this.netBandwidthList = netBandwidthList;
@@ -122,7 +125,10 @@ public class ListNetBandwidthResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -141,7 +147,10 @@ public class ListNetBandwidthResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalNum(Integer totalNum) {
             this.totalNum = totalNum;
@@ -272,7 +281,10 @@ public class ListNetBandwidthResponseBody extends TeaModel {
             } 
 
             /**
-             * Bandwidth.
+             * <p>The bandwidth value, in Mbps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -280,7 +292,10 @@ public class ListNetBandwidthResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-01 10:20:30</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -288,7 +303,10 @@ public class ListNetBandwidthResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the instance was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-02 15:00:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -296,7 +314,10 @@ public class ListNetBandwidthResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1234567890</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -304,7 +325,10 @@ public class ListNetBandwidthResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>production-vpc</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -312,7 +336,10 @@ public class ListNetBandwidthResponseBody extends TeaModel {
             }
 
             /**
-             * NetType.
+             * <p>The network type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -320,7 +347,10 @@ public class ListNetBandwidthResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;

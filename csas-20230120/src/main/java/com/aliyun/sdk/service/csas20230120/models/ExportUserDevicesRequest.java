@@ -255,7 +255,7 @@ public class ExportUserDevicesRequest extends Request {
         } 
 
         /**
-         * AppStatuses.
+         * <p>Collection of client statuses.</p>
          */
         public Builder appStatuses(java.util.List<String> appStatuses) {
             this.putBodyParameter("AppStatuses", appStatuses);
@@ -264,7 +264,10 @@ public class ExportUserDevicesRequest extends Request {
         }
 
         /**
-         * Department.
+         * <p>Department name. Must be 1 to 128 characters long. Supports Chinese, uppercase and lowercase letters, digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (_), forward slashes (/), at signs (@), and spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试部</p>
          */
         public Builder department(String department) {
             this.putBodyParameter("Department", department);
@@ -273,7 +276,16 @@ public class ExportUserDevicesRequest extends Request {
         }
 
         /**
-         * DeviceBelong.
+         * <p>Terminal device ownership. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Personal</strong>: Personal device.</p>
+         * </li>
+         * <li><p><strong>Company</strong>: Company device.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Company</p>
          */
         public Builder deviceBelong(String deviceBelong) {
             this.putBodyParameter("DeviceBelong", deviceBelong);
@@ -282,7 +294,7 @@ public class ExportUserDevicesRequest extends Request {
         }
 
         /**
-         * DeviceStatuses.
+         * <p>Collection of terminal device statuses.</p>
          */
         public Builder deviceStatuses(java.util.List<String> deviceStatuses) {
             this.putBodyParameter("DeviceStatuses", deviceStatuses);
@@ -291,7 +303,7 @@ public class ExportUserDevicesRequest extends Request {
         }
 
         /**
-         * DeviceTags.
+         * <p>Collection of terminal device IDs.</p>
          */
         public Builder deviceTags(java.util.List<String> deviceTags) {
             this.putBodyParameter("DeviceTags", deviceTags);
@@ -300,7 +312,7 @@ public class ExportUserDevicesRequest extends Request {
         }
 
         /**
-         * DeviceTypes.
+         * <p>Collection of terminal device operating system types.</p>
          */
         public Builder deviceTypes(java.util.List<String> deviceTypes) {
             this.putBodyParameter("DeviceTypes", deviceTypes);
@@ -309,7 +321,7 @@ public class ExportUserDevicesRequest extends Request {
         }
 
         /**
-         * DlpStatuses.
+         * <p>Collection of office data protection statuses.</p>
          */
         public Builder dlpStatuses(java.util.List<String> dlpStatuses) {
             this.putBodyParameter("DlpStatuses", dlpStatuses);
@@ -318,7 +330,10 @@ public class ExportUserDevicesRequest extends Request {
         }
 
         /**
-         * Hostname.
+         * <p>Terminal device name. Must be 1 to 128 characters long. Supports Chinese, uppercase and lowercase letters, digits, periods (.), commas (,), semicolons (;), hyphens (-), underscores (<em>), forward slashes (/), at signs (@), and spaces. If you enter only an underscore (</em>), the system returns all terminal devices whose names contain four-byte UTF-8 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>win10-64bit</p>
          */
         public Builder hostname(String hostname) {
             this.putBodyParameter("Hostname", hostname);
@@ -327,7 +342,7 @@ public class ExportUserDevicesRequest extends Request {
         }
 
         /**
-         * IaStatuses.
+         * <p>Collection of Internet access statuses.</p>
          */
         public Builder iaStatuses(java.util.List<String> iaStatuses) {
             this.putBodyParameter("IaStatuses", iaStatuses);
@@ -336,7 +351,10 @@ public class ExportUserDevicesRequest extends Request {
         }
 
         /**
-         * Mac.
+         * <p>MAC address of the terminal device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:16:7c:46:<strong>:</strong></p>
          */
         public Builder mac(String mac) {
             this.putBodyParameter("Mac", mac);
@@ -345,7 +363,7 @@ public class ExportUserDevicesRequest extends Request {
         }
 
         /**
-         * NacStatuses.
+         * <p>Collection of network admission statuses.</p>
          */
         public Builder nacStatuses(java.util.List<String> nacStatuses) {
             this.putBodyParameter("NacStatuses", nacStatuses);
@@ -354,7 +372,7 @@ public class ExportUserDevicesRequest extends Request {
         }
 
         /**
-         * PaStatuses.
+         * <p>Collection of private network access statuses.</p>
          */
         public Builder paStatuses(java.util.List<String> paStatuses) {
             this.putBodyParameter("PaStatuses", paStatuses);
@@ -363,7 +381,10 @@ public class ExportUserDevicesRequest extends Request {
         }
 
         /**
-         * SaseUserId.
+         * <p>User ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
          */
         public Builder saseUserId(String saseUserId) {
             this.putBodyParameter("SaseUserId", saseUserId);
@@ -372,7 +393,16 @@ public class ExportUserDevicesRequest extends Request {
         }
 
         /**
-         * SharingStatus.
+         * <p>Whether device sharing is enabled. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Sharing is enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Sharing is disabled.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder sharingStatus(Boolean sharingStatus) {
             this.putBodyParameter("SharingStatus", sharingStatus);
@@ -381,7 +411,10 @@ public class ExportUserDevicesRequest extends Request {
         }
 
         /**
-         * Username.
+         * <p>Username. Must be 1 to 128 characters long. Supports Chinese, uppercase and lowercase letters, digits, periods (.), underscores (_), hyphens (-), asterisks (\*), at signs (@), and spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>王先生</p>
          */
         public Builder username(String username) {
             this.putBodyParameter("Username", username);

@@ -271,6 +271,7 @@ public class ListVirusFileStatusesRequest extends Request {
         } 
 
         /**
+         * <p>The page number of the current page in paging. Valid values: 1 to 10000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -283,7 +284,10 @@ public class ListVirusFileStatusesRequest extends Request {
         }
 
         /**
-         * Department.
+         * <p>The department name. Matches any level of the organizational structure to which the user belongs. Specify the department name itself without the full path of the organizational structure. The value can contain Chinese characters, uppercase and lowercase letters, digits, spaces, periods (.), commas (,), forward slashes (/), at signs (@), hyphens (-), and underscores (_).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>R&amp;D Department</p>
          */
         public Builder department(String department) {
             this.putQueryParameter("Department", department);
@@ -292,7 +296,13 @@ public class ListVirusFileStatusesRequest extends Request {
         }
 
         /**
-         * DevTag.
+         * <p>The unique identifier of the user terminal device. Exact match. The value can be up to 64 characters in length. You can obtain the value from the following operation:</p>
+         * <ul>
+         * <li><a href="~~ListUserDevices~~">ListUserDevices</a>: Lists user terminal devices.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
          */
         public Builder devTag(String devTag) {
             this.putQueryParameter("DevTag", devTag);
@@ -301,7 +311,14 @@ public class ListVirusFileStatusesRequest extends Request {
         }
 
         /**
-         * DevType.
+         * <p>The operating system type of the user terminal device. Valid values:</p>
+         * <ul>
+         * <li><strong>windows</strong>: Windows.</li>
+         * <li><strong>macOS</strong>: macOS.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>windows</p>
          */
         public Builder devType(String devType) {
             this.putQueryParameter("DevType", devType);
@@ -310,7 +327,10 @@ public class ListVirusFileStatusesRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time for filtering by virus file discovery time. The value is a UNIX timestamp in seconds. This parameter must be specified together with StartTime and must be later than StartTime.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1786377600</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -319,7 +339,10 @@ public class ListVirusFileStatusesRequest extends Request {
         }
 
         /**
-         * FileMd5.
+         * <p>The MD5 value of the virus file. Fuzzy match is supported. The value can be up to 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d41d8cd98f00b204e9800998ecf8427e</p>
          */
         public Builder fileMd5(String fileMd5) {
             this.putQueryParameter("FileMd5", fileMd5);
@@ -328,7 +351,14 @@ public class ListVirusFileStatusesRequest extends Request {
         }
 
         /**
-         * FileProcessStatus.
+         * <p>Filters by disposition status. If this parameter is not specified, no filtering by disposition status is applied. Valid values:</p>
+         * <ul>
+         * <li><strong>Pending</strong>: Pending disposition.</li>
+         * <li><strong>Processed</strong>: Disposed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Pending</p>
          */
         public Builder fileProcessStatus(String fileProcessStatus) {
             this.putQueryParameter("FileProcessStatus", fileProcessStatus);
@@ -337,7 +367,10 @@ public class ListVirusFileStatusesRequest extends Request {
         }
 
         /**
-         * Hostname.
+         * <p>The hostname of the user terminal device. Fuzzy match is supported. The value can be up to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DESKTOP-8A3F</p>
          */
         public Builder hostname(String hostname) {
             this.putQueryParameter("Hostname", hostname);
@@ -346,7 +379,7 @@ public class ListVirusFileStatusesRequest extends Request {
         }
 
         /**
-         * Operations.
+         * <p>Filters by disposition action. Duplicate values are not allowed. If this parameter is not specified, no filtering by disposition action is applied.</p>
          */
         public Builder operations(java.util.List<String> operations) {
             this.putQueryParameter("Operations", operations);
@@ -355,6 +388,7 @@ public class ListVirusFileStatusesRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page in paging. Valid values: 1 to 1000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -367,7 +401,7 @@ public class ListVirusFileStatusesRequest extends Request {
         }
 
         /**
-         * RiskLevels.
+         * <p>Filters by risk level. Duplicate values are not allowed. If this parameter is not specified, no filtering by risk level is applied.</p>
          */
         public Builder riskLevels(java.util.List<String> riskLevels) {
             this.putQueryParameter("RiskLevels", riskLevels);
@@ -376,7 +410,14 @@ public class ListVirusFileStatusesRequest extends Request {
         }
 
         /**
-         * SaseUserId.
+         * <p>The user ID. Exact match. The value can be up to 128 characters in length. You can obtain the value from the following operations:</p>
+         * <ul>
+         * <li><a href="~~ListUserDevices~~">ListUserDevices</a>: Lists user terminal devices.</li>
+         * <li><a href="~~GetUserDevice~~">GetUserDevice</a>: Queries user terminal device details.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
          */
         public Builder saseUserId(String saseUserId) {
             this.putQueryParameter("SaseUserId", saseUserId);
@@ -385,7 +426,14 @@ public class ListVirusFileStatusesRequest extends Request {
         }
 
         /**
-         * ScanTaskId.
+         * <p>The ID of the virus scan task that detected the virus file. This parameter is used to filter detection results of a specified task. You can obtain the value from the following operations:</p>
+         * <ul>
+         * <li><a href="~~ListVirusScanTasks~~">ListVirusScanTasks</a>: Lists virus scan tasks.</li>
+         * <li><a href="~~CreateVirusScanTask~~">CreateVirusScanTask</a>: Creates a virus scan task.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>v1:1024772</p>
          */
         public Builder scanTaskId(String scanTaskId) {
             this.putQueryParameter("ScanTaskId", scanTaskId);
@@ -394,7 +442,10 @@ public class ListVirusFileStatusesRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time for filtering by virus file discovery time. The value is a UNIX timestamp in seconds. This parameter must be specified together with EndTime and must be earlier than EndTime.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1786291200</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -403,7 +454,10 @@ public class ListVirusFileStatusesRequest extends Request {
         }
 
         /**
-         * Username.
+         * <p>The username. Fuzzy match is supported. The value can be up to 128 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), asterisks (*), hyphens (-), at signs (@), spaces, middle dots (·), and parentheses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>John Smith</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);
@@ -412,7 +466,7 @@ public class ListVirusFileStatusesRequest extends Request {
         }
 
         /**
-         * VirusTypes.
+         * <p>Filters by virus type. Duplicate values are not allowed. If this parameter is not specified, no filtering by virus type is applied.</p>
          */
         public Builder virusTypes(java.util.List<String> virusTypes) {
             this.putQueryParameter("VirusTypes", virusTypes);

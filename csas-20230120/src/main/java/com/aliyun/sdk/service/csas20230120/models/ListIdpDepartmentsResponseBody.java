@@ -67,7 +67,7 @@ public class ListIdpDepartmentsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The department information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListIdpDepartmentsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102350E7-1A20-58F5-9D63-ABEA820AE6E1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class ListIdpDepartmentsResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The department ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30520</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -162,7 +168,10 @@ public class ListIdpDepartmentsResponseBody extends TeaModel {
             }
 
             /**
-             * IdpConfigId.
+             * <p>The ID of the custom IdP configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1440</p>
              */
             public Builder idpConfigId(String idpConfigId) {
                 this.idpConfigId = idpConfigId;
@@ -170,7 +179,10 @@ public class ListIdpDepartmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The department name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例部门</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -237,7 +249,7 @@ public class ListIdpDepartmentsResponseBody extends TeaModel {
             } 
 
             /**
-             * DataList.
+             * <p>A list of department information.</p>
              */
             public Builder dataList(java.util.List<DataList> dataList) {
                 this.dataList = dataList;
@@ -245,7 +257,10 @@ public class ListIdpDepartmentsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNum.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalNum(Long totalNum) {
                 this.totalNum = totalNum;

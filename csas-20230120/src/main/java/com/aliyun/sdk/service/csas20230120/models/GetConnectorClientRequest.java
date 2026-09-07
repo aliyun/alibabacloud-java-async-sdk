@@ -75,6 +75,7 @@ public class GetConnectorClientRequest extends Request {
         } 
 
         /**
+         * <p>The connector ID. You can call <a href="~~ListConnectors~~">ListConnectors</a> to query connectors.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class GetConnectorClientRequest extends Request {
         }
 
         /**
+         * <p>The unique device identifier of the ConnectorClient. You can call <a href="~~ListConnectors~~">ListConnectors</a> to query connectors.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

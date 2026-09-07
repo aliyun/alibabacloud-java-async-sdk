@@ -75,6 +75,7 @@ public class DeleteEnterpriseAccelerateTargetRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the enterprise acceleration policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteEnterpriseAccelerateTargetRequest extends Request {
         }
 
         /**
+         * <p>The list of enterprise acceleration addresses.</p>
          * <p>This parameter is required.</p>
          */
         public Builder target(java.util.List<String> target) {

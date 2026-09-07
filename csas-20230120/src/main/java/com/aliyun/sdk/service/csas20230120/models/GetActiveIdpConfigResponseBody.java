@@ -67,7 +67,7 @@ public class GetActiveIdpConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The identity provider configuration.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetActiveIdpConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4D169859-A4F2-5EC8-853B-8447787C0D8A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +170,10 @@ public class GetActiveIdpConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>A description of the identity provider configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>示例身份源</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -175,7 +181,10 @@ public class GetActiveIdpConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the identity provider configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idp-cfg001</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -183,7 +192,10 @@ public class GetActiveIdpConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the identity provider configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试身份源</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -191,7 +203,10 @@ public class GetActiveIdpConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the identity provider configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DingTalk</p>
              */
             public Builder type(String type) {
                 this.type = type;

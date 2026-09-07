@@ -67,7 +67,10 @@ public class CreateVirusScanScheduledStrategyResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3D7EC0AF-DB2A-5D9C-90EC-F090A6BAAEA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class CreateVirusScanScheduledStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * StrategyId.
+         * <p>The ID of the created scheduled virus scan policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vc-strategy-8a3f6c2e91b7****</p>
          */
         public Builder strategyId(String strategyId) {
             this.strategyId = strategyId;

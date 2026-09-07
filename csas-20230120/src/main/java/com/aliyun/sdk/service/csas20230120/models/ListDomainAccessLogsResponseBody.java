@@ -80,7 +80,7 @@ public class ListDomainAccessLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessLogs.
+         * <p>The list of access log records.</p>
          */
         public Builder accessLogs(java.util.List<AccessLogs> accessLogs) {
             this.accessLogs = accessLogs;
@@ -99,7 +99,10 @@ public class ListDomainAccessLogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of records that match the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>122</p>
          */
         public Builder totalNum(Integer totalNum) {
             this.totalNum = totalNum;
@@ -282,7 +285,10 @@ public class ListDomainAccessLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * BlockAction.
+             * <p>The action taken upon a rule hit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WhiteList</p>
              */
             public Builder blockAction(String blockAction) {
                 this.blockAction = blockAction;
@@ -290,7 +296,10 @@ public class ListDomainAccessLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Department.
+             * <p>The department.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IT department</p>
              */
             public Builder department(String department) {
                 this.department = department;
@@ -298,7 +307,10 @@ public class ListDomainAccessLogsResponseBody extends TeaModel {
             }
 
             /**
-             * DestAddress.
+             * <p>The destination URL accessed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.example.com/a">https://www.example.com/a</a></p>
              */
             public Builder destAddress(String destAddress) {
                 this.destAddress = destAddress;
@@ -306,7 +318,10 @@ public class ListDomainAccessLogsResponseBody extends TeaModel {
             }
 
             /**
-             * EventTime.
+             * <p>The event time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-10 14:03:22</p>
              */
             public Builder eventTime(String eventTime) {
                 this.eventTime = eventTime;
@@ -314,7 +329,10 @@ public class ListDomainAccessLogsResponseBody extends TeaModel {
             }
 
             /**
-             * L4ProtocolType.
+             * <p>The Layer 4 protocol type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder l4ProtocolType(String l4ProtocolType) {
                 this.l4ProtocolType = l4ProtocolType;
@@ -322,7 +340,10 @@ public class ListDomainAccessLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessName.
+             * <p>The name of the client process that initiated the access.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chrome.exe</p>
              */
             public Builder processName(String processName) {
                 this.processName = processName;
@@ -330,7 +351,10 @@ public class ListDomainAccessLogsResponseBody extends TeaModel {
             }
 
             /**
-             * RemoteAddress.
+             * <p>The destination IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2.3.4</p>
              */
             public Builder remoteAddress(String remoteAddress) {
                 this.remoteAddress = remoteAddress;
@@ -338,7 +362,10 @@ public class ListDomainAccessLogsResponseBody extends TeaModel {
             }
 
             /**
-             * RemoteHost.
+             * <p>The destination domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder remoteHost(String remoteHost) {
                 this.remoteHost = remoteHost;
@@ -346,7 +373,10 @@ public class ListDomainAccessLogsResponseBody extends TeaModel {
             }
 
             /**
-             * RemotePort.
+             * <p>The destination port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder remotePort(String remotePort) {
                 this.remotePort = remotePort;
@@ -354,7 +384,10 @@ public class ListDomainAccessLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SrcAddress.
+             * <p>The source address of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.5</p>
              */
             public Builder srcAddress(String srcAddress) {
                 this.srcAddress = srcAddress;
@@ -362,7 +395,10 @@ public class ListDomainAccessLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangsan</p>
              */
             public Builder username(String username) {
                 this.username = username;

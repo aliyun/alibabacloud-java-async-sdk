@@ -131,7 +131,10 @@ public class CreateVulScanTaskRequest extends Request {
         } 
 
         /**
-         * EndTimestamp.
+         * <p>The task expiration time, in seconds-level UNIX timestamp. After this time is reached, endpoints no longer pull and execute this task, and incomplete scans are not continued.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1786291200</p>
          */
         public Builder endTimestamp(Long endTimestamp) {
             this.putBodyParameter("EndTimestamp", endTimestamp);
@@ -140,6 +143,11 @@ public class CreateVulScanTaskRequest extends Request {
         }
 
         /**
+         * <p>The matching mode for the effective scope. Valid values:</p>
+         * <ul>
+         * <li><strong>UserGroupAll</strong>: Takes effect for all users under the current Alibaba Cloud account.</li>
+         * <li><strong>UserGroupNormal</strong>: Takes effect only for users in specified user groups. In this case, UserGroupIds is required.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +160,10 @@ public class CreateVulScanTaskRequest extends Request {
         }
 
         /**
-         * TaskDescription.
+         * <p>The task description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Execute a vulnerability scanning on R&amp;D department endpoints</p>
          */
         public Builder taskDescription(String taskDescription) {
             this.putBodyParameter("TaskDescription", taskDescription);
@@ -161,7 +172,11 @@ public class CreateVulScanTaskRequest extends Request {
         }
 
         /**
+         * <p>The task name. The name can be up to 128 characters in length and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-). Spaces are not supported.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>R&amp;D Department Vulnerability Scanning</p>
          */
         public Builder taskName(String taskName) {
             this.putBodyParameter("TaskName", taskName);
@@ -170,7 +185,7 @@ public class CreateVulScanTaskRequest extends Request {
         }
 
         /**
-         * UserGroupIds.
+         * <p>The collection of user group IDs for which the task takes effect. This parameter is required when MatchMode is set to UserGroupNormal and cannot be specified when MatchMode is set to UserGroupAll. The collection must contain at least 1 and at most 100 entries. Duplicate values are not allowed.</p>
          */
         public Builder userGroupIds(java.util.List<String> userGroupIds) {
             this.putBodyParameter("UserGroupIds", userGroupIds);
@@ -179,7 +194,7 @@ public class CreateVulScanTaskRequest extends Request {
         }
 
         /**
-         * Whitelist.
+         * <p>The list of exempt usernames. Users in this list are excluded from this scan. The list can contain up to 1000 entries. Duplicate values are not allowed.</p>
          */
         public Builder whitelist(java.util.List<String> whitelist) {
             this.putBodyParameter("Whitelist", whitelist);

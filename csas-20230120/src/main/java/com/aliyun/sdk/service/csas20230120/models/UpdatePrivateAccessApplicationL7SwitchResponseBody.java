@@ -67,7 +67,7 @@ public class UpdatePrivateAccessApplicationL7SwitchResponseBody extends TeaModel
         } 
 
         /**
-         * L7Switch.
+         * <p>The Layer 7 access switch configuration of the internal-facing application after this update.</p>
          */
         public Builder l7Switch(L7Switch l7Switch) {
             this.l7Switch = l7Switch;
@@ -75,7 +75,10 @@ public class UpdatePrivateAccessApplicationL7SwitchResponseBody extends TeaModel
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BE4FB974-11BC-5453-9BE1-1606A73EACA6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class UpdatePrivateAccessApplicationL7SwitchResponseBody extends TeaModel
             } 
 
             /**
-             * Begin.
+             * <p>The start port. The value must be less than or equal to the end port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder begin(Integer begin) {
                 this.begin = begin;
@@ -149,7 +155,10 @@ public class UpdatePrivateAccessApplicationL7SwitchResponseBody extends TeaModel
             }
 
             /**
-             * End.
+             * <p>The end port. The value must be greater than or equal to the start port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>81</p>
              */
             public Builder end(Integer end) {
                 this.end = end;
@@ -307,7 +316,10 @@ public class UpdatePrivateAccessApplicationL7SwitchResponseBody extends TeaModel
             } 
 
             /**
-             * ApplicationId.
+             * <p>The ID of the internal-facing application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pa-application-e12860ef6c48****</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -315,7 +327,14 @@ public class UpdatePrivateAccessApplicationL7SwitchResponseBody extends TeaModel
             }
 
             /**
-             * DevTagMarkStatus.
+             * <p>The device tag mark switch. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Disabled</p>
              */
             public Builder devTagMarkStatus(String devTagMarkStatus) {
                 this.devTagMarkStatus = devTagMarkStatus;
@@ -323,7 +342,14 @@ public class UpdatePrivateAccessApplicationL7SwitchResponseBody extends TeaModel
             }
 
             /**
-             * DownloadAuditStatus.
+             * <p>The sensitive application download audit switch. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Disabled</p>
              */
             public Builder downloadAuditStatus(String downloadAuditStatus) {
                 this.downloadAuditStatus = downloadAuditStatus;
@@ -331,7 +357,7 @@ public class UpdatePrivateAccessApplicationL7SwitchResponseBody extends TeaModel
             }
 
             /**
-             * PortRanges.
+             * <p>The collection of port ranges that are effective for Layer 7 access. This is the intersection of the ports specified in this request and the port ranges already configured for the internal-facing application. An empty collection is returned when Status is set to <strong>Disabled</strong>.</p>
              */
             public Builder portRanges(java.util.List<PortRanges> portRanges) {
                 this.portRanges = portRanges;
@@ -339,7 +365,14 @@ public class UpdatePrivateAccessApplicationL7SwitchResponseBody extends TeaModel
             }
 
             /**
-             * SrcIpMarkStatus.
+             * <p>The source IP mark switch. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Disabled</p>
              */
             public Builder srcIpMarkStatus(String srcIpMarkStatus) {
                 this.srcIpMarkStatus = srcIpMarkStatus;
@@ -347,7 +380,14 @@ public class UpdatePrivateAccessApplicationL7SwitchResponseBody extends TeaModel
             }
 
             /**
-             * Status.
+             * <p>The master switch for Layer 7 access of the internal-facing application. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -355,7 +395,10 @@ public class UpdatePrivateAccessApplicationL7SwitchResponseBody extends TeaModel
             }
 
             /**
-             * TimeoutSec.
+             * <p>The request timeout period, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder timeoutSec(Integer timeoutSec) {
                 this.timeoutSec = timeoutSec;
@@ -363,7 +406,14 @@ public class UpdatePrivateAccessApplicationL7SwitchResponseBody extends TeaModel
             }
 
             /**
-             * UserMarkStatus.
+             * <p>The user mark switch. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder userMarkStatus(String userMarkStatus) {
                 this.userMarkStatus = userMarkStatus;
@@ -371,7 +421,14 @@ public class UpdatePrivateAccessApplicationL7SwitchResponseBody extends TeaModel
             }
 
             /**
-             * ZeroTrustStatus.
+             * <p>The host bypass prevention switch. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder zeroTrustStatus(String zeroTrustStatus) {
                 this.zeroTrustStatus = zeroTrustStatus;

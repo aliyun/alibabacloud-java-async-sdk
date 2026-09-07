@@ -60,6 +60,11 @@ public class GetProhibitedPolicyRequest extends Request {
         } 
 
         /**
+         * <p>The software prohibition policy ID. You can obtain this value from the following operations:</p>
+         * <ul>
+         * <li><a href="~~ListProhibitedPolicies~~">ListProhibitedPolicies</a>: Lists software prohibition policies.</li>
+         * <li><a href="~~CreateProhibitedPolicy~~">CreateProhibitedPolicy</a>: Creates a software prohibition policy.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

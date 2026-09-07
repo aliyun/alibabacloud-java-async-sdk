@@ -60,6 +60,7 @@ public class DeleteDynamicRouteRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the dynamic route.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

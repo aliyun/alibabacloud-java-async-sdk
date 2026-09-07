@@ -87,7 +87,10 @@ public class UpdateDomainMetaRequest extends Request {
         } 
 
         /**
-         * ListId.
+         * <p>The list ID. This is a unique business identifier used for policy references and add, delete, or modify operations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ladl-6f1exxxxx6ab59</p>
          */
         public Builder listId(String listId) {
             this.putBodyParameter("ListId", listId);
@@ -96,7 +99,10 @@ public class UpdateDomainMetaRequest extends Request {
         }
 
         /**
-         * ListType.
+         * <p>The list type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>la_domain_white_list</p>
          */
         public Builder listType(String listType) {
             this.putBodyParameter("ListType", listType);
@@ -105,7 +111,10 @@ public class UpdateDomainMetaRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The list name. Maximum length: 32 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>new_office_domain</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

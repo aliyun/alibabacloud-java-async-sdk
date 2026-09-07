@@ -118,6 +118,7 @@ public class ListDomainMetasRequest extends Request {
         } 
 
         /**
+         * <p>The current page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +131,10 @@ public class ListDomainMetasRequest extends Request {
         }
 
         /**
-         * DefaultTemplate.
+         * <p>Specifies whether to include system default template lists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder defaultTemplate(Boolean defaultTemplate) {
             this.putQueryParameter("DefaultTemplate", defaultTemplate);
@@ -139,6 +143,7 @@ public class ListDomainMetasRequest extends Request {
         }
 
         /**
+         * <p>The list type (blacklist/whitelist).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +156,10 @@ public class ListDomainMetasRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The list name. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OfficeDomains</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -160,6 +168,7 @@ public class ListDomainMetasRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page in a paged query. Settings: 1 to 1000. Paging is used to return results.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

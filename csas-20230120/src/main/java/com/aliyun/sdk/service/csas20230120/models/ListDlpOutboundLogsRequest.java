@@ -175,6 +175,7 @@ public class ListDlpOutboundLogsRequest extends Request {
         } 
 
         /**
+         * <p>The current page number, starting from 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,6 +188,7 @@ public class ListDlpOutboundLogsRequest extends Request {
         }
 
         /**
+         * <p>The end time of the query. UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,7 +201,10 @@ public class ListDlpOutboundLogsRequest extends Request {
         }
 
         /**
-         * LogId.
+         * <p>The log ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>da817m4mfrcs6xxxx3hg</p>
          */
         public Builder logId(String logId) {
             this.putBodyParameter("LogId", logId);
@@ -208,6 +213,7 @@ public class ListDlpOutboundLogsRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page. Maximum value: 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,7 +226,10 @@ public class ListDlpOutboundLogsRequest extends Request {
         }
 
         /**
-         * PolicyAction.
+         * <p>The policy action. Single-value exact match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>block_and_hint</p>
          */
         public Builder policyAction(String policyAction) {
             this.putBodyParameter("PolicyAction", policyAction);
@@ -229,7 +238,10 @@ public class ListDlpOutboundLogsRequest extends Request {
         }
 
         /**
-         * SrcFileName.
+         * <p>The original file name. Fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestFile</p>
          */
         public Builder srcFileName(String srcFileName) {
             this.putBodyParameter("SrcFileName", srcFileName);
@@ -238,6 +250,7 @@ public class ListDlpOutboundLogsRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. UNIX timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -250,7 +263,10 @@ public class ListDlpOutboundLogsRequest extends Request {
         }
 
         /**
-         * SubChannelType.
+         * <p>The secondary channel ID in the format of <code>PrimaryChannelID.SubChannelID</code>. Separate multiple values with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.1,3.2</p>
          */
         public Builder subChannelType(String subChannelType) {
             this.putBodyParameter("SubChannelType", subChannelType);
@@ -259,7 +275,10 @@ public class ListDlpOutboundLogsRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>The username. Exact match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangsan</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);

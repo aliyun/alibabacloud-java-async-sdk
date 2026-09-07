@@ -67,7 +67,7 @@ public class CreateRegistrationPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * Policy.
+         * <p>The device registration policy.</p>
          */
         public Builder policy(Policy policy) {
             this.policy = policy;
@@ -75,7 +75,10 @@ public class CreateRegistrationPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FEF1144C-95D1-5F7C-81EF-9DB70EA49FCE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class CreateRegistrationPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * All.
+             * <p>The total restriction count for device registration. This parameter takes effect only when LimitType is set to <strong>LimitAll</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder all(Integer all) {
                 this.all = all;
@@ -162,7 +168,10 @@ public class CreateRegistrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Mobile.
+             * <p>The restriction count for mobile logins. This parameter takes effect only when LimitType is set to <strong>LimitDiff</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder mobile(Integer mobile) {
                 this.mobile = mobile;
@@ -170,7 +179,10 @@ public class CreateRegistrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PC.
+             * <p>The restriction count for PC logins. This parameter takes effect only when LimitType is set to <strong>LimitDiff</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder pc(Integer pc) {
                 this.pc = pc;
@@ -250,7 +262,16 @@ public class CreateRegistrationPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * DeviceBelong.
+             * <p>The ownership of the device. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Company</strong>: Company device.</p>
+             * </li>
+             * <li><p><strong>Personal</strong>: Personal device.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Company</p>
              */
             public Builder deviceBelong(String deviceBelong) {
                 this.deviceBelong = deviceBelong;
@@ -258,7 +279,7 @@ public class CreateRegistrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * LimitCount.
+             * <p>The restriction count for device registration.</p>
              */
             public Builder limitCount(LimitCount limitCount) {
                 this.limitCount = limitCount;
@@ -266,7 +287,18 @@ public class CreateRegistrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * LimitType.
+             * <p>The restriction type for device registration. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Unlimited</strong>: No restrictions.</p>
+             * </li>
+             * <li><p><strong>LimitAll</strong>: Limit by total count.</p>
+             * </li>
+             * <li><p><strong>LimitDiff</strong>: Limit by device category.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>LimitDiff</p>
              */
             public Builder limitType(String limitType) {
                 this.limitType = limitType;
@@ -437,7 +469,10 @@ public class CreateRegistrationPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the device registration policy was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-16 17:18:46</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -445,7 +480,10 @@ public class CreateRegistrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>A description of the device registration policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是一条设备注册策略</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -453,7 +491,7 @@ public class CreateRegistrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * LimitDetail.
+             * <p>The list of device registration limits.</p>
              */
             public Builder limitDetail(java.util.List<LimitDetail> limitDetail) {
                 this.limitDetail = limitDetail;
@@ -461,7 +499,16 @@ public class CreateRegistrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * MatchMode.
+             * <p>The target type for policy matching. Valid values:</p>
+             * <ul>
+             * <li><p><strong>UserGroupAll</strong>: Apply to all users.</p>
+             * </li>
+             * <li><p><strong>UserGroupNormal</strong>: Apply to selected user groups.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>UserGroupNormal</p>
              */
             public Builder matchMode(String matchMode) {
                 this.matchMode = matchMode;
@@ -469,7 +516,10 @@ public class CreateRegistrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the device registration policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registration_policy_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -477,7 +527,10 @@ public class CreateRegistrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyId.
+             * <p>The ID of the device registration policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>reg-policy-dcbfd33cb004****</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -485,7 +538,10 @@ public class CreateRegistrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the device registration policy. A value of 0 indicates the highest priority. A value of 99 indicates the lowest priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -493,7 +549,16 @@ public class CreateRegistrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the device registration policy. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Enabled</strong>: Enabled.</p>
+             * </li>
+             * <li><p><strong>Disabled</strong>: Disabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -501,7 +566,7 @@ public class CreateRegistrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupIds.
+             * <p>The IDs of user groups to which the device registration policy applies. This field has a value only when MatchMode is set to <strong>UserGroupNormal</strong>.</p>
              */
             public Builder userGroupIds(java.util.List<String> userGroupIds) {
                 this.userGroupIds = userGroupIds;
@@ -509,7 +574,7 @@ public class CreateRegistrationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Whitelist.
+             * <p>The list of usernames in the whitelist for the device registration policy.</p>
              */
             public Builder whitelist(java.util.List<String> whitelist) {
                 this.whitelist = whitelist;

@@ -81,7 +81,10 @@ public class UpdateVulScanGlobalConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxDownloadSpeed.
+         * <p>The maximum download rate for vulnerability patches on a single user terminal device. Unit: Byte/s. A value of 0 indicates no speed limit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1048576</p>
          */
         public Builder maxDownloadSpeed(Integer maxDownloadSpeed) {
             this.maxDownloadSpeed = maxDownloadSpeed;
@@ -89,7 +92,10 @@ public class UpdateVulScanGlobalConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3D7EC0AF-DB2A-5D9C-90EC-F090A6BAAEA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +103,7 @@ public class UpdateVulScanGlobalConfigResponseBody extends TeaModel {
         }
 
         /**
-         * WuyingVulFixConfig.
+         * <p>The vulnerability fix configuration for WUYING Workspace. This configuration applies only to user terminal devices of the Cloud Desktop type.</p>
          */
         public Builder wuyingVulFixConfig(WuyingVulFixConfig wuyingVulFixConfig) {
             this.wuyingVulFixConfig = wuyingVulFixConfig;
@@ -165,7 +171,14 @@ public class UpdateVulScanGlobalConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * AntiShutdownSwitch.
+             * <p>Specifies whether to prohibit shutdown during the fix process to prevent system exceptions caused by shutting down during patch installation. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Prohibit shutdown.</li>
+             * <li><strong>false</strong>: Do not prohibit shutdown.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder antiShutdownSwitch(Boolean antiShutdownSwitch) {
                 this.antiShutdownSwitch = antiShutdownSwitch;
@@ -173,7 +186,14 @@ public class UpdateVulScanGlobalConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotSwitch.
+             * <p>Specifies whether to create a snapshot for the cloud desktop before the fix for rollback in case of fix failure. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Create a snapshot.</li>
+             * <li><strong>false</strong>: Do not create a snapshot.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder snapshotSwitch(Boolean snapshotSwitch) {
                 this.snapshotSwitch = snapshotSwitch;

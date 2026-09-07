@@ -131,7 +131,7 @@ public class ListConnectorsRequest extends Request {
         } 
 
         /**
-         * <p>Collection of ConnectorIDs. Up to 100 ConnectorIDs can be entered.</p>
+         * <p>An array of up to 100 ConnectorIDs.</p>
          */
         public Builder connectorIds(java.util.List<String> connectorIds) {
             this.putQueryParameter("ConnectorIds", connectorIds);
@@ -140,7 +140,7 @@ public class ListConnectorsRequest extends Request {
         }
 
         /**
-         * <p>The page number of the current page in a paginated query. Value: 1~10000.</p>
+         * <p>The number of the page to return. Valid values: 1 to 10,000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +153,7 @@ public class ListConnectorsRequest extends Request {
         }
 
         /**
-         * <p>Connector name. Length: 1~128 characters, supporting Chinese and uppercase/lowercase English letters, and can include numbers, periods (.), underscores (_), and hyphens (-).</p>
+         * <p>The name of the connector. The name must be 1 to 128 characters long and can contain letters, Chinese characters, digits, periods (.), underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>connector_name</p>
@@ -165,7 +165,7 @@ public class ListConnectorsRequest extends Request {
         }
 
         /**
-         * <p>The number of items per page in a paginated query. Value: 1~1000.</p>
+         * <p>The number of entries per page. Valid values: 1 to 1,000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,10 +178,12 @@ public class ListConnectorsRequest extends Request {
         }
 
         /**
-         * <p>Connector connection status. Values:</p>
+         * <p>The connection status of the connector. Valid values:</p>
          * <ul>
-         * <li><strong>Online</strong>: Online.</li>
-         * <li><strong>Offline</strong>: Offline.</li>
+         * <li><p><strong>Online</strong></p>
+         * </li>
+         * <li><p><strong>Offline</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -194,10 +196,12 @@ public class ListConnectorsRequest extends Request {
         }
 
         /**
-         * <p>Connector instance status. Values:</p>
+         * <p>The state of the connector instance. Valid values:</p>
          * <ul>
-         * <li><strong>Enabled</strong>: Enabled.</li>
-         * <li><strong>Disabled</strong>: Disabled.</li>
+         * <li><p><strong>Enabled</strong></p>
+         * </li>
+         * <li><p><strong>Disabled</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

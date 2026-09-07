@@ -67,7 +67,10 @@ public class CreateDomainMetaResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The ID of the newly created list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ladl-6f1exxxxx6ab59</p>
          */
         public Builder data(String data) {
             this.data = data;

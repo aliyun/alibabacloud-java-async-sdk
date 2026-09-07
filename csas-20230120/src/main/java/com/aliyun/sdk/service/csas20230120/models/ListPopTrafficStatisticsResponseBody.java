@@ -78,7 +78,7 @@ public class ListPopTrafficStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * TrafficData.
+         * <p>A list of bandwidth data for the POPs.</p>
          */
         public Builder trafficData(java.util.List<TrafficData> trafficData) {
             this.trafficData = trafficData;
@@ -144,7 +144,10 @@ public class ListPopTrafficStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * Average.
+             * <p>The average bandwidth value per minute. The unit is Byte/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15325</p>
              */
             public Builder average(Double average) {
                 this.average = average;
@@ -152,7 +155,10 @@ public class ListPopTrafficStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * DateTime.
+             * <p>The time that corresponds to the data point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-12-06 15:29:00</p>
              */
             public Builder dateTime(String dateTime) {
                 this.dateTime = dateTime;
@@ -219,7 +225,7 @@ public class ListPopTrafficStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * Datapoints.
+             * <p>A list of bandwidth data points for the POPs.</p>
              */
             public Builder datapoints(java.util.List<Datapoints> datapoints) {
                 this.datapoints = datapoints;
@@ -227,7 +233,10 @@ public class ListPopTrafficStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * MetricName.
+             * <p>The name of the metric. Metrics are categorized as inbound or outbound.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InternetTx</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;

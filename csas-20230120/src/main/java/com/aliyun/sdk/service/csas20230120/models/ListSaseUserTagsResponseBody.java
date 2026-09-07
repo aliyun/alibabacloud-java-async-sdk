@@ -80,7 +80,7 @@ public class ListSaseUserTagsResponseBody extends TeaModel {
         } 
 
         /**
-         * DataList.
+         * <p>The list of user labels returned.</p>
          */
         public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
@@ -88,7 +88,10 @@ public class ListSaseUserTagsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7E9D7ACD-53D5-56EF-A913-79D148D06299</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListSaseUserTagsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of user labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalNum(Integer totalNum) {
             this.totalNum = totalNum;
@@ -201,7 +207,10 @@ public class ListSaseUserTagsResponseBody extends TeaModel {
             } 
 
             /**
-             * Aliuid.
+             * <p>The Alibaba Cloud account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>141681795035****</p>
              */
             public Builder aliuid(String aliuid) {
                 this.aliuid = aliuid;
@@ -209,7 +218,10 @@ public class ListSaseUserTagsResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * <p>The number of users associated with the user label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -217,7 +229,10 @@ public class ListSaseUserTagsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the user label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>These are the company\&quot;s employees</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -225,7 +240,10 @@ public class ListSaseUserTagsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the user label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>boss</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -233,7 +251,10 @@ public class ListSaseUserTagsResponseBody extends TeaModel {
             }
 
             /**
-             * TagId.
+             * <p>The user label ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>su-tag-1ae52f66039fa0d4****</p>
              */
             public Builder tagId(String tagId) {
                 this.tagId = tagId;

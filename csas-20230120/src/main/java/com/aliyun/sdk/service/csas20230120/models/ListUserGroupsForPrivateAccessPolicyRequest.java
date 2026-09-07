@@ -60,6 +60,7 @@ public class ListUserGroupsForPrivateAccessPolicyRequest extends Request {
         } 
 
         /**
+         * <p>A collection of private network access policy IDs. Enter a maximum of 100 private network access policy IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder policyIds(java.util.List<String> policyIds) {

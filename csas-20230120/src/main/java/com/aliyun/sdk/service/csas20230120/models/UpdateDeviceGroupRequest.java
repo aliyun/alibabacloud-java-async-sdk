@@ -102,7 +102,10 @@ public class UpdateDeviceGroupRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the device label. If you pass in an empty string, the description is cleared. The description can contain letters, digits, spaces, periods (.), underscores (_), and hyphens (-). Chinese characters are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test device group description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -111,7 +114,10 @@ public class UpdateDeviceGroupRequest extends Request {
         }
 
         /**
-         * DeviceGroupId.
+         * <p>The ID of the device label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>device-group-5191cf830a5e****</p>
          */
         public Builder deviceGroupId(String deviceGroupId) {
             this.putBodyParameter("DeviceGroupId", deviceGroupId);
@@ -120,7 +126,10 @@ public class UpdateDeviceGroupRequest extends Request {
         }
 
         /**
-         * DynamicOperator.
+         * <p>The rule operator of the dynamic device group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AND</p>
          */
         public Builder dynamicOperator(String dynamicOperator) {
             this.putBodyParameter("DynamicOperator", dynamicOperator);
@@ -129,7 +138,10 @@ public class UpdateDeviceGroupRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the device label. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). Chinese characters are supported. Spaces are not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

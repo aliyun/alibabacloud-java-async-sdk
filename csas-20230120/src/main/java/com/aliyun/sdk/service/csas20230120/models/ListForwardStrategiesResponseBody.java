@@ -80,7 +80,7 @@ public class ListForwardStrategiesResponseBody extends TeaModel {
         } 
 
         /**
-         * ForwardStrategies.
+         * <p>The list of forwarding rules.</p>
          */
         public Builder forwardStrategies(java.util.List<ForwardStrategies> forwardStrategies) {
             this.forwardStrategies = forwardStrategies;
@@ -99,7 +99,10 @@ public class ListForwardStrategiesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of policies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalNum(Long totalNum) {
             this.totalNum = totalNum;
@@ -230,7 +233,10 @@ public class ListForwardStrategiesResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the forwarding rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asdasdasd</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -238,7 +244,10 @@ public class ListForwardStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationId.
+             * <p>The ID of the destination instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>connector-4178bc59bec56df1</p>
              */
             public Builder destinationId(String destinationId) {
                 this.destinationId = destinationId;
@@ -246,7 +255,13 @@ public class ListForwardStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationType.
+             * <p>The type of the access destination. Valid values:</p>
+             * <ul>
+             * <li><strong>Connector</strong>: connector.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Connector</p>
              */
             public Builder destinationType(String destinationType) {
                 this.destinationType = destinationType;
@@ -254,7 +269,10 @@ public class ListForwardStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * ForwardId.
+             * <p>The ID of the forwarding rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fs-8b299ac5a93a0a3a</p>
              */
             public Builder forwardId(String forwardId) {
                 this.forwardId = forwardId;
@@ -262,7 +280,10 @@ public class ListForwardStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the forwarding rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>白名单加速</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -270,7 +291,10 @@ public class ListForwardStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The policy priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -278,7 +302,14 @@ public class ListForwardStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the policy. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;

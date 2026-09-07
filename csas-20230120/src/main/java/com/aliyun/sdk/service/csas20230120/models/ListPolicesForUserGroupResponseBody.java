@@ -67,7 +67,10 @@ public class ListPolicesForUserGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5F04DFBD-3F48-5F70-AE72-474026670128</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class ListPolicesForUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * UserGroups.
+         * <p>The list of user groups.</p>
          */
         public Builder userGroups(java.util.List<UserGroups> userGroups) {
             this.userGroups = userGroups;
@@ -154,7 +157,10 @@ public class ListPolicesForUserGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The name of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>private_access_policy_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -162,7 +168,10 @@ public class ListPolicesForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyId.
+             * <p>The ID of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pa-policy-ce2bf7236fab****</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -170,7 +179,22 @@ public class ListPolicesForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type. Valid values:</p>
+             * <ul>
+             * <li><p><strong>PrivateAccess</strong>: private network access.</p>
+             * </li>
+             * <li><p><strong>URLFilter</strong>: URL filtering.</p>
+             * </li>
+             * <li><p><strong>AppAccessControl</strong>: application control.</p>
+             * </li>
+             * <li><p><strong>DLP</strong>: Data Leakage Prevention.</p>
+             * </li>
+             * <li><p><strong>NAC</strong>: Network Access Control.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PrivateAccess</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -237,7 +261,7 @@ public class ListPolicesForUserGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * Polices.
+             * <p>The policies.</p>
              */
             public Builder polices(java.util.List<Polices> polices) {
                 this.polices = polices;
@@ -245,7 +269,10 @@ public class ListPolicesForUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupId.
+             * <p>The ID of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>usergroup-6f1ef2fc56b6****</p>
              */
             public Builder userGroupId(String userGroupId) {
                 this.userGroupId = userGroupId;

@@ -271,7 +271,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         } 
 
         /**
-         * AddressGroups.
+         * <p>The application address groups. This parameter can be specified when ConfigMode is set to Precise. This parameter cannot be specified when ConfigMode is an empty string.</p>
          */
         public Builder addressGroups(java.util.List<AddressGroup> addressGroups) {
             this.putBodyParameter("AddressGroups", addressGroups);
@@ -280,7 +280,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The addresses of the office applications. You can enter up to 1,000 addresses of office applications.</p>
+         * <p>The addresses of the private access application. You can specify up to 1000 addresses.</p>
          */
         public Builder addresses(java.util.List<String> addresses) {
             this.putBodyParameter("Addresses", addresses);
@@ -289,10 +289,10 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the office application. You can obtain the value by calling the following operations:</p>
+         * <p>The ID of the private access application. You can obtain the value from:</p>
          * <ul>
-         * <li><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: queries office applications.</li>
-         * <li><a href="~~CreatePrivateAccessApplication~~">CreatePrivateAccessApplication</a>: creates an office application.</li>
+         * <li><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: Lists private access applications.</li>
+         * <li><a href="~~CreatePrivateAccessApplication~~">CreatePrivateAccessApplication</a>: Creates a private access application.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -306,7 +306,11 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * ConfigMode.
+         * <p>The configuration mode. Valid values:</p>
+         * <ul>
+         * <li>Empty string: default mode.</li>
+         * <li>Precise: precise mode.</li>
+         * </ul>
          */
         public Builder configMode(String configMode) {
             this.putBodyParameter("ConfigMode", configMode);
@@ -315,7 +319,10 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The description of the office application. The value must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</p>
+         * <p>The description of the private access application. The description must be 1 to 128 characters in length and can contain Chinese characters, letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a private access application</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -324,7 +331,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The browser access mode parameter. The parameter specifies the configurations of Layer 7 applications.</p>
+         * <p>The browser access mode parameter: the Layer 7 application configuration.</p>
          */
         public Builder l7Config(PAL7Config l7Config) {
             String l7ConfigShrink = shrink(l7Config, "L7Config", "json");
@@ -334,7 +341,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The browser access mode parameter. The parameter specifies the prefix of the domain name that the proxy gateway uses. The prefix must be 3 to 20 characters in length, and can contain lowercase letters, digits, and hyphens (-).</p>
+         * <p>The browser access mode parameter: the prefix of the mapped proxy domain name. The prefix must be 3 to 20 characters in length and can contain lowercase letters, digits, and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>app1-xxx</p>
@@ -346,7 +353,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The browser access mode parameter. The parameter specifies the custom domain name of the proxy gateway.</p>
+         * <p>The browser access mode parameter: the custom proxy domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>app1.example.com</p>
@@ -358,7 +365,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>浏览器访问模式参数：私有代理域名。</p>
+         * <p>The browser access mode parameter: the private proxy domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>app1.example.com</p>
@@ -370,10 +377,10 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The modification type of the office application. Valid values:</p>
+         * <p>The modification type of the private access application. Valid values:</p>
          * <ul>
-         * <li><strong>Cover</strong>: uses the values of the <strong>Addresses</strong>, <strong>PortRanges</strong>, and <strong>TagIds</strong> parameters to overwrite the original addresses, port ranges, and tag IDs. This is the default value.</li>
-         * <li><strong>Append</strong>: adds the values of the <strong>Addresses</strong>, <strong>PortRanges</strong>, and <strong>TagIds</strong> parameters respectively to the original addresses, port ranges, and tag IDs.</li>
+         * <li><strong>Cover</strong> (default): overwrites the original addresses, port ranges, and tag IDs with the values of the <strong>Addresses</strong>, <strong>PortRanges</strong>, and <strong>TagIds</strong> parameters.</li>
+         * <li><strong>Append</strong>: appends the values of the <strong>Addresses</strong>, <strong>PortRanges</strong>, and <strong>TagIds</strong> parameters to the original addresses, port ranges, and tag IDs.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -386,7 +393,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The application name.</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -395,7 +402,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The port ranges of the office applications. You can enter up to 65,535 port ranges. Multiple port ranges cannot be duplicated or overlapped.</p>
+         * <p>The port ranges of the private access application. You can specify up to 65535 port ranges. Multiple port ranges cannot overlap.</p>
          */
         public Builder portRanges(java.util.List<PortRanges> portRanges) {
             this.putBodyParameter("PortRanges", portRanges);
@@ -404,9 +411,9 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The protocol that is used by the office application. Valid values:</p>
+         * <p>The protocol of the private access application. Valid values:</p>
          * <ul>
-         * <li><strong>All</strong></li>
+         * <li><strong>All</strong>: all protocols.</li>
          * <li><strong>TCP</strong></li>
          * <li><strong>UDP</strong></li>
          * </ul>
@@ -421,10 +428,10 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The status of the office application. Valid values:</p>
+         * <p>The status of the private access application. Valid values:</p>
          * <ul>
-         * <li><strong>Enabled</strong></li>
-         * <li><strong>Disabled</strong></li>
+         * <li><strong>Enabled</strong>: enabled.</li>
+         * <li><strong>Disabled</strong>: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -437,7 +444,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the tags for the office applications. You can add up to six custom tags to an office application.</p>
+         * <p>The IDs of private access tags. A private access application can be associated with up to 6 custom private access tags.</p>
          */
         public Builder tagIds(java.util.List<String> tagIds) {
             this.putBodyParameter("TagIds", tagIds);
@@ -446,7 +453,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         }
 
         /**
-         * UnauthorizedAccessConfig.
+         * <p>The configuration for unauthorized application access requests.</p>
          */
         public Builder unauthorizedAccessConfig(PAApplicationUnauthorizedAccessConfig unauthorizedAccessConfig) {
             String unauthorizedAccessConfigShrink = shrink(unauthorizedAccessConfig, "UnauthorizedAccessConfig", "json");
@@ -517,7 +524,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
             } 
 
             /**
-             * <p>The start port. The start port must be less than or equal to the end port.</p>
+             * <p>The start port. The value must be less than or equal to the end port.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -528,7 +535,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
             }
 
             /**
-             * <p>The end port. The end port must be greater than or equal to the start port.</p>
+             * <p>The end port. The value must be greater than or equal to the start port.</p>
              * 
              * <strong>example:</strong>
              * <p>81</p>

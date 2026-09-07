@@ -67,7 +67,7 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * Polices.
+         * <p>List of private network access policies.</p>
          */
         public Builder polices(java.util.List<Polices> polices) {
             this.polices = polices;
@@ -75,7 +75,10 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58D6B23E-E5DA-5418-8F61-51A3B5A30049</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +170,10 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * IdpId.
+             * <p>The identity source ID of the user group. This value exists if the custom user group type is <strong>department</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder idpId(Integer idpId) {
                 this.idpId = idpId;
@@ -175,7 +181,16 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Relation.
+             * <p>The relationship of the user group. Values:</p>
+             * <ul>
+             * <li><p><strong>Equal</strong>: Equal.</p>
+             * </li>
+             * <li><p><strong>Unequal</strong>: Unequal.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Equal</p>
              */
             public Builder relation(String relation) {
                 this.relation = relation;
@@ -183,7 +198,20 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupType.
+             * <p>The type of the user group. Values:</p>
+             * <ul>
+             * <li><p><strong>username</strong>: username.</p>
+             * </li>
+             * <li><p><strong>department</strong>: department.</p>
+             * </li>
+             * <li><p><strong>email</strong>: mailbox.</p>
+             * </li>
+             * <li><p><strong>telephone</strong>: telephone.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>department</p>
              */
             public Builder userGroupType(String userGroupType) {
                 this.userGroupType = userGroupType;
@@ -191,7 +219,20 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Value of the user group property.</p>
+             * <ul>
+             * <li><p>If the user group type is <strong>username</strong>, this indicates the username\&quot;s value. The length is 1 to 128 characters. It supports Chinese characters and uppercase and lowercase English letters. It can contain numbers, periods (.), underscores (_), and hyphens (-).</p>
+             * </li>
+             * <li><p>If the user group type is <strong>department</strong>, this indicates the department\&quot;s value, such as OU=Department 1,OU=SASE DingTalk.</p>
+             * </li>
+             * <li><p>If the user group type is <strong>email</strong>, this indicates the mailbox\&quot;s value, such as username\@example.com.</p>
+             * </li>
+             * <li><p>If the user group type is <strong>telephone</strong>, this indicates the telephone\&quot;s value, such as 13900001234.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OU=部门1,OU=SASE钉钉</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -297,7 +338,7 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * Attributes.
+             * <p>Collection of user group properties.</p>
              */
             public Builder attributes(java.util.List<Attributes> attributes) {
                 this.attributes = attributes;
@@ -305,7 +346,7 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>用户组创建时间。</p>
+             * <p>User group creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-09-27 18:10:25</p>
@@ -316,7 +357,10 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>User group description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是一条被内网访问策略引用的用户组</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -324,7 +368,10 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>User group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_group_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -332,7 +379,10 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupId.
+             * <p>User group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>usergroup-6f1ef2fc56b6****</p>
              */
             public Builder userGroupId(String userGroupId) {
                 this.userGroupId = userGroupId;
@@ -399,7 +449,10 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * PolicyId.
+             * <p>Private network access policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pa-policy-1b0d0e8b4bcf****</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -407,7 +460,7 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroups.
+             * <p>Collection of user groups for the private network access policy.</p>
              */
             public Builder userGroups(java.util.List<UserGroups> userGroups) {
                 this.userGroups = userGroups;

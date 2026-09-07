@@ -54,7 +54,10 @@ public class DeleteOtpConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54A4055A-343D-583E-9EAC-D12231148A68</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

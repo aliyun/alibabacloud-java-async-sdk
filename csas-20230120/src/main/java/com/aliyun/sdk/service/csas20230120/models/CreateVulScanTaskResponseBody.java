@@ -67,7 +67,10 @@ public class CreateVulScanTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3D7EC0AF-DB2A-5D9C-90EC-F090A6BAAEA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class CreateVulScanTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the created vulnerability scanning task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vul-scan-task-4d7b1e9a6c38****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

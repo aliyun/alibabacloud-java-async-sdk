@@ -60,6 +60,10 @@ public class GetApprovalSchemaRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the approval template. Call <a href="~~ListApprovalSchemas~~">ListApprovalSchemas</a> to list approval templates.</p>
+         * <ul>
+         * <li><a href="~~ListApprovalSchemas~~">ListApprovalSchemas</a>: List approval templates in batches.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

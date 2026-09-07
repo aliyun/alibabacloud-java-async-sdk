@@ -73,7 +73,10 @@ public class CreateDomainMetaRequest extends Request {
         } 
 
         /**
-         * ListType.
+         * <p>The list type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>la_domain_black_list</p>
          */
         public Builder listType(String listType) {
             this.putBodyParameter("ListType", listType);
@@ -82,7 +85,10 @@ public class CreateDomainMetaRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The list name. Maximum length: 32 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>office_domain</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

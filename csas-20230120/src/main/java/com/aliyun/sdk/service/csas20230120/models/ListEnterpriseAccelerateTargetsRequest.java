@@ -104,6 +104,7 @@ public class ListEnterpriseAccelerateTargetsRequest extends Request {
         } 
 
         /**
+         * <p>Page number to display in a paged query. Valid values: 1 to 10000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class ListEnterpriseAccelerateTargetsRequest extends Request {
         }
 
         /**
+         * <p>Enterprise Acceleration Policy ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +130,7 @@ public class ListEnterpriseAccelerateTargetsRequest extends Request {
         }
 
         /**
+         * <p>Number of entries per page in a paged query. Valid values: 1 to 1000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +143,10 @@ public class ListEnterpriseAccelerateTargetsRequest extends Request {
         }
 
         /**
-         * Target.
+         * <p>Enterprise acceleration target. Supports fuzzy query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>googleapis.com</p>
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);

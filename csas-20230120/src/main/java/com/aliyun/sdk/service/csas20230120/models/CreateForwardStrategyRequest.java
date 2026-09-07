@@ -134,7 +134,10 @@ public class CreateForwardStrategyRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description. The description must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces. The description can also contain Chinese characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is an internal access policy</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -143,6 +146,7 @@ public class CreateForwardStrategyRequest extends Request {
         }
 
         /**
+         * <p>The target instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,6 +159,10 @@ public class CreateForwardStrategyRequest extends Request {
         }
 
         /**
+         * <p>The destination type. Valid values:</p>
+         * <ul>
+         * <li><strong>Connector</strong>: connector.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,6 +175,7 @@ public class CreateForwardStrategyRequest extends Request {
         }
 
         /**
+         * <p>The name. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name can also contain Chinese characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,6 +188,7 @@ public class CreateForwardStrategyRequest extends Request {
         }
 
         /**
+         * <p>The policy priority. A value of 1 indicates the highest priority. Valid values: 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,6 +201,11 @@ public class CreateForwardStrategyRequest extends Request {
         }
 
         /**
+         * <p>The policy status. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: enabled.</li>
+         * <li><strong>Disabled</strong>: disabled.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

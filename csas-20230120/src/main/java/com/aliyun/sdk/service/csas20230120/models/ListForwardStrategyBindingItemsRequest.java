@@ -74,6 +74,7 @@ public class ListForwardStrategyBindingItemsRequest extends Request {
         } 
 
         /**
+         * <p>The forwarding rule ID.</p>
          * <p>This parameter is required.</p>
          */
         public Builder forwardIds(java.util.List<String> forwardIds) {
@@ -83,7 +84,14 @@ public class ListForwardStrategyBindingItemsRequest extends Request {
         }
 
         /**
-         * ItemType.
+         * <p>The binding item type. Valid values:</p>
+         * <ul>
+         * <li><strong>Application</strong>: internal-facing application</li>
+         * <li><strong>UserGroup</strong>: user group.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Application</p>
          */
         public Builder itemType(String itemType) {
             this.putQueryParameter("ItemType", itemType);

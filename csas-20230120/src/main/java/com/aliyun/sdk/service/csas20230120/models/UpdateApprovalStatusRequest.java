@@ -75,6 +75,11 @@ public class UpdateApprovalStatusRequest extends Request {
         } 
 
         /**
+         * <p>The approval instance ID. You can obtain this value from the following operations:</p>
+         * <ul>
+         * <li><a href="~~ListApprovals~~">ListApprovals</a>: Lists approval instances.</li>
+         * <li><a href="~~GetApproval~~">GetApproval</a>: Queries the details of an approval instance.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +92,11 @@ public class UpdateApprovalStatusRequest extends Request {
         }
 
         /**
+         * <p>The approval instance status. Valid values:</p>
+         * <ul>
+         * <li><strong>Approved</strong>: Approved.</li>
+         * <li><strong>Rejected</strong>: Rejected.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -145,6 +145,7 @@ public class ListVulScanScheduledStrategiesRequest extends Request {
         } 
 
         /**
+         * <p>The page number of the current page in a paging query. Valid values: 1 to 10000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +158,14 @@ public class ListVulScanScheduledStrategiesRequest extends Request {
         }
 
         /**
-         * MatchMode.
+         * <p>Filters by the matching mode of the effective scope. Valid values:</p>
+         * <ul>
+         * <li><strong>UserGroupAll</strong>: Takes effect for all users under the current Alibaba Cloud account.</li>
+         * <li><strong>UserGroupNormal</strong>: Takes effect only for users in specified user groups.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UserGroupNormal</p>
          */
         public Builder matchMode(String matchMode) {
             this.putQueryParameter("MatchMode", matchMode);
@@ -166,6 +174,7 @@ public class ListVulScanScheduledStrategiesRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page in a paging query. Valid values: 1 to 1000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +187,14 @@ public class ListVulScanScheduledStrategiesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Filters by enabled status. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -187,7 +203,7 @@ public class ListVulScanScheduledStrategiesRequest extends Request {
         }
 
         /**
-         * StrategyIds.
+         * <p>The IDs of scheduled vulnerability scan policies used for filtering. A maximum of 100 IDs can be specified. Duplicate IDs are not allowed.</p>
          */
         public Builder strategyIds(java.util.List<String> strategyIds) {
             this.putQueryParameter("StrategyIds", strategyIds);
@@ -196,7 +212,10 @@ public class ListVulScanScheduledStrategiesRequest extends Request {
         }
 
         /**
-         * StrategyName.
+         * <p>The policy name. Fuzzy match is supported. The name can be up to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Weekly vulnerability scanning for R&amp;D department</p>
          */
         public Builder strategyName(String strategyName) {
             this.putQueryParameter("StrategyName", strategyName);
@@ -205,7 +224,13 @@ public class ListVulScanScheduledStrategiesRequest extends Request {
         }
 
         /**
-         * UserGroupId.
+         * <p>The user group ID. Used to filter records whose effective scope includes the specified user group. You can obtain the value from the following operation:</p>
+         * <ul>
+         * <li><a href="~~ListUserGroups~~">ListUserGroups</a>: lists user groups.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>usergroup-9d4f2a7b3c1e****</p>
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);

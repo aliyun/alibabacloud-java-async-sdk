@@ -91,7 +91,7 @@ public class ListProhibitedTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * <p>The list of prohibited software tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
@@ -99,7 +99,10 @@ public class ListProhibitedTagsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of prohibited software tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalNum(Long totalNum) {
             this.totalNum = totalNum;
@@ -230,7 +233,10 @@ public class ListProhibitedTagsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the prohibited software tag was created, in the yyyy-MM-dd HH:mm:ss format. The time is in the UTC+8 time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-10 11:39:34</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -238,7 +244,10 @@ public class ListProhibitedTagsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the prohibited software tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>created</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -246,7 +255,14 @@ public class ListProhibitedTagsResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether the tag is a system built-in device tag. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: A system built-in device tag.</li>
+             * <li><strong>false</strong>: A user-defined device tag.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -254,7 +270,10 @@ public class ListProhibitedTagsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the prohibited software tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -262,7 +281,7 @@ public class ListProhibitedTagsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyIds.
+             * <p>The collection of software prohibition policy IDs that reference the tag.</p>
              */
             public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
@@ -270,7 +289,7 @@ public class ListProhibitedTagsResponseBody extends TeaModel {
             }
 
             /**
-             * SoftwareIds.
+             * <p>The collection of prohibited software IDs included in the tag.</p>
              */
             public Builder softwareIds(java.util.List<String> softwareIds) {
                 this.softwareIds = softwareIds;
@@ -278,7 +297,10 @@ public class ListProhibitedTagsResponseBody extends TeaModel {
             }
 
             /**
-             * TagId.
+             * <p>The ID of the prohibited software tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag-7b2c9e4a1d8f****</p>
              */
             public Builder tagId(String tagId) {
                 this.tagId = tagId;

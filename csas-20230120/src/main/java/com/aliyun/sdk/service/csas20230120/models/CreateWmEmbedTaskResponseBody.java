@@ -67,7 +67,7 @@ public class CreateWmEmbedTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The task information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class CreateWmEmbedTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BE4FB974-11BC-5453-9BE1-1606A73EACA6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +131,10 @@ public class CreateWmEmbedTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * TaskId.
+             * <p>The task ID, which is used to query the task execution result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job:5GfrJYsoaffmCE7Z5bZtjUefzxfd****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

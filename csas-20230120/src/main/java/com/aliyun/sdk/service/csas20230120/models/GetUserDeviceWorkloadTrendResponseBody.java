@@ -104,7 +104,14 @@ public class GetUserDeviceWorkloadTrendResponseBody extends TeaModel {
         }
 
         /**
-         * TitleEn.
+         * <p>The English name of the workload type. Valid values:</p>
+         * <ul>
+         * <li><strong>CPU Usage</strong>: returned when WorkloadType is set to cpu.</li>
+         * <li><strong>Memory Usage</strong>: returned when WorkloadType is set to mem.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CPU Usage</p>
          */
         public Builder titleEn(String titleEn) {
             this.titleEn = titleEn;
@@ -112,7 +119,14 @@ public class GetUserDeviceWorkloadTrendResponseBody extends TeaModel {
         }
 
         /**
-         * TitleZh.
+         * <p>The Chinese name of the workload type. Valid values:</p>
+         * <ul>
+         * <li><strong>CPU使用率</strong>: returned when WorkloadType is set to cpu.</li>
+         * <li><strong>内存使用率</strong>: returned when WorkloadType is set to mem.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CPU 使用率</p>
          */
         public Builder titleZh(String titleZh) {
             this.titleZh = titleZh;
@@ -120,7 +134,7 @@ public class GetUserDeviceWorkloadTrendResponseBody extends TeaModel {
         }
 
         /**
-         * WorkloadList.
+         * <p>The list of workload trend data points, sorted by time in ascending order.</p>
          */
         public Builder workloadList(java.util.List<WorkloadList> workloadList) {
             this.workloadList = workloadList;
@@ -186,7 +200,10 @@ public class GetUserDeviceWorkloadTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * Timestamp.
+             * <p>The collection time of the data point. This value is a UNIX timestamp in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1755360600</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -194,7 +211,10 @@ public class GetUserDeviceWorkloadTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Workload.
+             * <p>The workload usage percentage. Valid values: 0 to 100, with two decimal places.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>35.27</p>
              */
             public Builder workload(Double workload) {
                 this.workload = workload;

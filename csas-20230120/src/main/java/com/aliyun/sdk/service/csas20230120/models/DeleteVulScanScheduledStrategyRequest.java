@@ -60,6 +60,11 @@ public class DeleteVulScanScheduledStrategyRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the scheduled vulnerability scanning policy to delete. You can obtain the value from the following operations:</p>
+         * <ul>
+         * <li><a href="~~ListVulScanScheduledStrategies~~">ListVulScanScheduledStrategies</a>: Lists scheduled vulnerability scanning policies.</li>
+         * <li><a href="~~CreateVulScanScheduledStrategy~~">CreateVulScanScheduledStrategy</a>: Creates a scheduled vulnerability scanning policy.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

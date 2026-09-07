@@ -80,7 +80,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
         } 
 
         /**
-         * Processes.
+         * <p>The list of approval processes.</p>
          */
         public Builder processes(java.util.List<Processes> processes) {
             this.processes = processes;
@@ -88,7 +88,10 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7E39C33B-F565-55C6-ACC2-953FCE7DA7D6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of approval processes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalNum(String totalNum) {
             this.totalNum = totalNum;
@@ -162,7 +168,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             } 
 
             /**
-             * PolicyIds.
+             * <p>The list of agent uninstallation policy IDs.</p>
              */
             public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
@@ -170,7 +176,10 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaId.
+             * <p>The approval template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -237,7 +246,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             } 
 
             /**
-             * PolicyIds.
+             * <p>The list of device registration policy IDs.</p>
              */
             public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
@@ -245,7 +254,10 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaId.
+             * <p>The approval template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -312,7 +324,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             } 
 
             /**
-             * PolicyIds.
+             * <p>The list of file outgoing policy IDs.</p>
              */
             public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
@@ -320,7 +332,10 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaId.
+             * <p>The approval template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -387,7 +402,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             } 
 
             /**
-             * PolicyIds.
+             * <p>The list of domain name blacklist policy IDs.</p>
              */
             public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
@@ -395,7 +410,10 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaId.
+             * <p>The approval template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -462,7 +480,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             } 
 
             /**
-             * PolicyIds.
+             * <p>The list of domain name whitelist policy IDs.</p>
              */
             public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
@@ -470,7 +488,10 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaId.
+             * <p>The approval template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -537,7 +558,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             } 
 
             /**
-             * PolicyIds.
+             * <p>The list of domain name whitelist policy IDs.</p>
              */
             public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
@@ -545,7 +566,10 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaId.
+             * <p>The approval template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -612,7 +636,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             } 
 
             /**
-             * PolicyIds.
+             * <p>The list of peripheral control policy IDs.</p>
              */
             public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
@@ -620,7 +644,10 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaId.
+             * <p>The approval template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -687,7 +714,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             } 
 
             /**
-             * PolicyIds.
+             * <p>The list of peripheral control policy IDs.</p>
              */
             public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
@@ -695,7 +722,10 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaId.
+             * <p>The approval template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -762,7 +792,10 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             } 
 
             /**
-             * SaseUserId.
+             * <p>审批人ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
              */
             public Builder saseUserId(String saseUserId) {
                 this.saseUserId = saseUserId;
@@ -770,7 +803,10 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * <p>审批人用户名。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>王先生</p>
              */
             public Builder username(String username) {
                 this.username = username;
@@ -837,7 +873,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             } 
 
             /**
-             * PolicyIds.
+             * <p>The list of software blocking policy IDs.</p>
              */
             public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
@@ -845,7 +881,10 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaId.
+             * <p>The approval template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -912,7 +951,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             } 
 
             /**
-             * PolicyIds.
+             * <p>The list of software blocking policy IDs.</p>
              */
             public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
@@ -920,7 +959,10 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaId.
+             * <p>The approval template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-schema-090134f1ebff****</p>
              */
             public Builder schemaId(String schemaId) {
                 this.schemaId = schemaId;
@@ -1169,7 +1211,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             } 
 
             /**
-             * AppUninstallPolicies.
+             * <p>The list of policies associated with agent uninstallation.</p>
              */
             public Builder appUninstallPolicies(AppUninstallPolicies appUninstallPolicies) {
                 this.appUninstallPolicies = appUninstallPolicies;
@@ -1185,7 +1227,10 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the approval process was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-02-27 14:04:27</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1193,7 +1238,10 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the approval process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是一个审批流程</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1201,7 +1249,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceRegistrationPolicies.
+             * <p>The list of policies associated with device registration.</p>
              */
             public Builder deviceRegistrationPolicies(DeviceRegistrationPolicies deviceRegistrationPolicies) {
                 this.deviceRegistrationPolicies = deviceRegistrationPolicies;
@@ -1209,7 +1257,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * DlpSendPolicies.
+             * <p>The list of policies associated with file outgoing.</p>
              */
             public Builder dlpSendPolicies(DlpSendPolicies dlpSendPolicies) {
                 this.dlpSendPolicies = dlpSendPolicies;
@@ -1217,7 +1265,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * DomainBlacklistPolicies.
+             * <p>The list of policies associated with the domain name blacklist.</p>
              */
             public Builder domainBlacklistPolicies(DomainBlacklistPolicies domainBlacklistPolicies) {
                 this.domainBlacklistPolicies = domainBlacklistPolicies;
@@ -1225,7 +1273,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * DomainWhitelistPolicies.
+             * <p>The list of policies associated with the domain name whitelist.</p>
              */
             public Builder domainWhitelistPolicies(DomainWhitelistPolicies domainWhitelistPolicies) {
                 this.domainWhitelistPolicies = domainWhitelistPolicies;
@@ -1241,7 +1289,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * PeripheralBlockPolicies.
+             * <p>The list of policies associated with peripheral control.</p>
              */
             public Builder peripheralBlockPolicies(PeripheralBlockPolicies peripheralBlockPolicies) {
                 this.peripheralBlockPolicies = peripheralBlockPolicies;
@@ -1257,7 +1305,10 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessId.
+             * <p>The approval process ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>approval-process-35ee09077ee9****</p>
              */
             public Builder processId(String processId) {
                 this.processId = processId;
@@ -1265,7 +1316,10 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessName.
+             * <p>The name of the approval process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试</p>
              */
             public Builder processName(String processName) {
                 this.processName = processName;
@@ -1273,7 +1327,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessNodes.
+             * <p>The list of approval nodes.</p>
              */
             public Builder processNodes(java.util.List<java.util.List<ProcessNodes>> processNodes) {
                 this.processNodes = processNodes;
@@ -1281,7 +1335,7 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * SoftwareBlockPolicies.
+             * <p>The list of policies associated with software blocking.</p>
              */
             public Builder softwareBlockPolicies(SoftwareBlockPolicies softwareBlockPolicies) {
                 this.softwareBlockPolicies = softwareBlockPolicies;

@@ -67,7 +67,7 @@ public class AddVirusScanAdditionalListsResponseBody extends TeaModel {
         } 
 
         /**
-         * ListIds.
+         * <p>The list of IDs for the newly added entries. The order is consistent with AdditionalLists in the request.</p>
          */
         public Builder listIds(java.util.List<String> listIds) {
             this.listIds = listIds;
@@ -75,7 +75,10 @@ public class AddVirusScanAdditionalListsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3D7EC0AF-DB2A-5D9C-90EC-F090A6BAAEA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

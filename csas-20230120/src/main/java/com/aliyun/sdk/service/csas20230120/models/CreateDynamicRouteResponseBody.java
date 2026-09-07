@@ -67,7 +67,10 @@ public class CreateDynamicRouteResponseBody extends TeaModel {
         } 
 
         /**
-         * DynamicRouteId.
+         * <p>The dynamic route ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dr-ca9fddfac7c6****</p>
          */
         public Builder dynamicRouteId(String dynamicRouteId) {
             this.dynamicRouteId = dynamicRouteId;
@@ -75,7 +78,10 @@ public class CreateDynamicRouteResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102350E7-1A20-58F5-9D63-ABEA820AE6E1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

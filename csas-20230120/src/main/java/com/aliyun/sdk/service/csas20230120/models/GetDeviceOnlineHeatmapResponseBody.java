@@ -67,7 +67,7 @@ public class GetDeviceOnlineHeatmapResponseBody extends TeaModel {
         } 
 
         /**
-         * DeviceOnlineHeatmap.
+         * <p>The online time distribution.</p>
          */
         public Builder deviceOnlineHeatmap(java.util.List<java.util.List<Long>> deviceOnlineHeatmap) {
             this.deviceOnlineHeatmap = deviceOnlineHeatmap;

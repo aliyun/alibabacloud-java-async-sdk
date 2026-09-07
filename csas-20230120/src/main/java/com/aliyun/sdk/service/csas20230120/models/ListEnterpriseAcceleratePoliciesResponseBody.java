@@ -80,7 +80,7 @@ public class ListEnterpriseAcceleratePoliciesResponseBody extends TeaModel {
         } 
 
         /**
-         * Policies.
+         * <p>The list of policies.</p>
          */
         public Builder policies(java.util.List<Policies> policies) {
             this.policies = policies;
@@ -88,7 +88,10 @@ public class ListEnterpriseAcceleratePoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DB0471D0-C05C-556D-9F40-0325D890036F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListEnterpriseAcceleratePoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of policies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -292,7 +298,18 @@ public class ListEnterpriseAcceleratePoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * AccelerationType.
+             * <p>The acceleration pattern.</p>
+             * <ul>
+             * <li><p><strong>whitelist</strong>: accelerates access to applications in the whitelist.</p>
+             * </li>
+             * <li><p><strong>global</strong>: accelerates access to all applications.</p>
+             * </li>
+             * <li><p><strong>build-in-list:</strong> accelerates access to built-in applications.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>whitelist</p>
              */
             public Builder accelerationType(String accelerationType) {
                 this.accelerationType = accelerationType;
@@ -300,7 +317,10 @@ public class ListEnterpriseAcceleratePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是一条测试策略。</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -308,7 +328,10 @@ public class ListEnterpriseAcceleratePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * EapId.
+             * <p>The policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eap-eec34d4b12fcca61</p>
              */
             public Builder eapId(String eapId) {
                 this.eapId = eapId;
@@ -316,7 +339,16 @@ public class ListEnterpriseAcceleratePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>Indicates whether the policy is enabled.</p>
+             * <ul>
+             * <li><p><strong>1</strong>: enabled</p>
+             * </li>
+             * <li><p><strong>0</strong>: disabled</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder enabled(Integer enabled) {
                 this.enabled = enabled;
@@ -324,7 +356,10 @@ public class ListEnterpriseAcceleratePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The policy name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -332,7 +367,16 @@ public class ListEnterpriseAcceleratePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * OnTls.
+             * <p>Indicates whether to enable Transport Layer Security (TLS).</p>
+             * <ul>
+             * <li><p><strong>0</strong>: disable</p>
+             * </li>
+             * <li><p><strong>1</strong>: enable</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder onTls(Integer onTls) {
                 this.onTls = onTls;
@@ -340,7 +384,10 @@ public class ListEnterpriseAcceleratePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The policy priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -348,7 +395,16 @@ public class ListEnterpriseAcceleratePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * ShowInClient.
+             * <p>Indicates whether the policy is visible on the client.</p>
+             * <ul>
+             * <li><p><strong>0</strong>: not visible</p>
+             * </li>
+             * <li><p><strong>1</strong>: visible</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder showInClient(Integer showInClient) {
                 this.showInClient = showInClient;
@@ -356,7 +412,10 @@ public class ListEnterpriseAcceleratePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * UpstreamHost.
+             * <p>The address of the acceleration instance. The address can be an IP address or a domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12.34.56.XX</p>
              */
             public Builder upstreamHost(String upstreamHost) {
                 this.upstreamHost = upstreamHost;
@@ -364,7 +423,10 @@ public class ListEnterpriseAcceleratePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * UpstreamPort.
+             * <p>The port of the acceleration instance. The port must be between 1000 and 60000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder upstreamPort(Integer upstreamPort) {
                 this.upstreamPort = upstreamPort;
@@ -372,7 +434,10 @@ public class ListEnterpriseAcceleratePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * UpstreamType.
+             * <p>The acceleration instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>connector</p>
              */
             public Builder upstreamType(String upstreamType) {
                 this.upstreamType = upstreamType;
@@ -380,7 +445,10 @@ public class ListEnterpriseAcceleratePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * UserAttributeGroup.
+             * <p>The user group for acceleration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试用户组</p>
              */
             public Builder userAttributeGroup(String userAttributeGroup) {
                 this.userAttributeGroup = userAttributeGroup;

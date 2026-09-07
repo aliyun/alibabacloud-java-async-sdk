@@ -93,7 +93,7 @@ public class IdpSyncConfig extends TeaModel {
         } 
 
         /**
-         * AutoSyncEnabled.
+         * <p>Specifies whether automatic synchronization is enabled.</p>
          */
         public Builder autoSyncEnabled(Boolean autoSyncEnabled) {
             this.autoSyncEnabled = autoSyncEnabled;
@@ -101,7 +101,7 @@ public class IdpSyncConfig extends TeaModel {
         }
 
         /**
-         * IdpDepartmentInfos.
+         * <p>The names of the departments selected for synchronization. The names have a one-to-one relationship with IdpDepartmentIds.</p>
          */
         public Builder idpDepartmentInfos(java.util.List<IdpDepartmentInfos> idpDepartmentInfos) {
             this.idpDepartmentInfos = idpDepartmentInfos;
@@ -109,7 +109,7 @@ public class IdpSyncConfig extends TeaModel {
         }
 
         /**
-         * ScheduleSyncIntervalSecond.
+         * <p>The scheduled synchronization interval, in seconds.</p>
          */
         public Builder scheduleSyncIntervalSecond(Long scheduleSyncIntervalSecond) {
             this.scheduleSyncIntervalSecond = scheduleSyncIntervalSecond;

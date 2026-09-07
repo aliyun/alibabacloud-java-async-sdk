@@ -101,7 +101,10 @@ public class ListSaseUserTagsRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>The page number of the current page in a paging query. Valid values: 1 to 10000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
@@ -110,7 +113,10 @@ public class ListSaseUserTagsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the user label. The name must be 1 to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>boss</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -119,7 +125,10 @@ public class ListSaseUserTagsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Settings: 1 to 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -128,7 +137,7 @@ public class ListSaseUserTagsRequest extends Request {
         }
 
         /**
-         * TagIds.
+         * <p>The collection of user label IDs.</p>
          */
         public Builder tagIds(java.util.List<String> tagIds) {
             String tagIdsShrink = shrink(tagIds, "TagIds", "json");

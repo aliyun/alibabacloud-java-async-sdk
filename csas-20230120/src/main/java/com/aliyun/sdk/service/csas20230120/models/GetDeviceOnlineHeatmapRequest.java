@@ -90,6 +90,7 @@ public class GetDeviceOnlineHeatmapRequest extends Request {
         } 
 
         /**
+         * <p>The date to query, in the format yyyyMMdd with a fixed length of 8 characters. Online data is retained for only 8 days. Dates beyond the retention period return an empty list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class GetDeviceOnlineHeatmapRequest extends Request {
         }
 
         /**
+         * <p>The terminal device ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,11 @@ public class GetDeviceOnlineHeatmapRequest extends Request {
         }
 
         /**
+         * <p>The user ID. You can obtain this value from the following operations:</p>
+         * <ul>
+         * <li><a href="~~ListUserDevices~~">ListUserDevices</a>: Lists user terminal devices.</li>
+         * <li><a href="~~GetUserDevice~~">GetUserDevice</a>: Queries the details of a user terminal device.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

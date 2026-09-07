@@ -158,7 +158,7 @@ public class IdpDingtalkSubConfig extends TeaModel {
         } 
 
         /**
-         * AppKey.
+         * <p>Your application\&quot;s unique identifier. You can get this identifier from the DingTalk Open Platform.</p>
          */
         public Builder appKey(String appKey) {
             this.appKey = appKey;
@@ -166,7 +166,7 @@ public class IdpDingtalkSubConfig extends TeaModel {
         }
 
         /**
-         * AppSecret.
+         * <p>Your application\&quot;s secret key. You can get this key from the DingTalk Open Platform.</p>
          */
         public Builder appSecret(String appSecret) {
             this.appSecret = appSecret;
@@ -174,7 +174,7 @@ public class IdpDingtalkSubConfig extends TeaModel {
         }
 
         /**
-         * CorpId.
+         * <p>Your enterprise\&quot;s unique ID in DingTalk.</p>
          */
         public Builder corpId(String corpId) {
             this.corpId = corpId;
@@ -182,7 +182,7 @@ public class IdpDingtalkSubConfig extends TeaModel {
         }
 
         /**
-         * EventAesKey.
+         * <p>The AES key used to decrypt the content of event callbacks. This ensures the confidentiality of the event data.</p>
          */
         public Builder eventAesKey(String eventAesKey) {
             this.eventAesKey = eventAesKey;
@@ -190,7 +190,7 @@ public class IdpDingtalkSubConfig extends TeaModel {
         }
 
         /**
-         * EventLabel.
+         * <p>A custom label for event subscriptions. This field is reserved for future use.</p>
          */
         public Builder eventLabel(String eventLabel) {
             this.eventLabel = eventLabel;
@@ -198,7 +198,7 @@ public class IdpDingtalkSubConfig extends TeaModel {
         }
 
         /**
-         * EventVerifyToken.
+         * <p>The token used to verify the authenticity of event callback requests from DingTalk.</p>
          */
         public Builder eventVerifyToken(String eventVerifyToken) {
             this.eventVerifyToken = eventVerifyToken;
@@ -206,7 +206,7 @@ public class IdpDingtalkSubConfig extends TeaModel {
         }
 
         /**
-         * Exclusive.
+         * <p>Specifies whether this identity provider is the exclusive login method. If set to <code>true</code>, other login methods are disabled.</p>
          */
         public Builder exclusive(Boolean exclusive) {
             this.exclusive = exclusive;
@@ -214,7 +214,7 @@ public class IdpDingtalkSubConfig extends TeaModel {
         }
 
         /**
-         * Oauth.
+         * <p>Specifies whether to enable the OAuth authentication flow.</p>
          */
         public Builder oauth(Boolean oauth) {
             this.oauth = oauth;
@@ -222,7 +222,7 @@ public class IdpDingtalkSubConfig extends TeaModel {
         }
 
         /**
-         * RedirectUri.
+         * <p>The URL where the user is redirected after successful authorization. You must register this URL on the DingTalk Open Platform.</p>
          */
         public Builder redirectUri(String redirectUri) {
             this.redirectUri = redirectUri;

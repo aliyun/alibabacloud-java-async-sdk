@@ -313,7 +313,7 @@ public class ListApprovalsRequest extends Request {
         } 
 
         /**
-         * ApprovalIds.
+         * <p>The collection of approval instance IDs.</p>
          */
         public Builder approvalIds(java.util.List<String> approvalIds) {
             this.putQueryParameter("ApprovalIds", approvalIds);
@@ -322,7 +322,10 @@ public class ListApprovalsRequest extends Request {
         }
 
         /**
-         * CreateEndTime.
+         * <p>The end time for querying approval instance creation, in seconds-level timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1736750500</p>
          */
         public Builder createEndTime(Long createEndTime) {
             this.putQueryParameter("CreateEndTime", createEndTime);
@@ -331,7 +334,10 @@ public class ListApprovalsRequest extends Request {
         }
 
         /**
-         * CreateStartTime.
+         * <p>The start time for querying approval instance creation, in seconds-level timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1730000000</p>
          */
         public Builder createStartTime(Long createStartTime) {
             this.putQueryParameter("CreateStartTime", createStartTime);
@@ -340,7 +346,10 @@ public class ListApprovalsRequest extends Request {
         }
 
         /**
-         * CreatorDepartment.
+         * <p>The department of the approval instance creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>QA Department</p>
          */
         public Builder creatorDepartment(String creatorDepartment) {
             this.putQueryParameter("CreatorDepartment", creatorDepartment);
@@ -349,7 +358,10 @@ public class ListApprovalsRequest extends Request {
         }
 
         /**
-         * CreatorDevTag.
+         * <p>The terminal device ID of the approval instance creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36efa42d-2c32-c4dc-e3fc-8541e33a****</p>
          */
         public Builder creatorDevTag(String creatorDevTag) {
             this.putQueryParameter("CreatorDevTag", creatorDevTag);
@@ -358,7 +370,10 @@ public class ListApprovalsRequest extends Request {
         }
 
         /**
-         * CreatorUserId.
+         * <p>The ID of the approval instance creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
          */
         public Builder creatorUserId(String creatorUserId) {
             this.putQueryParameter("CreatorUserId", creatorUserId);
@@ -367,7 +382,10 @@ public class ListApprovalsRequest extends Request {
         }
 
         /**
-         * CreatorUsername.
+         * <p>The username of the approval instance creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Mr. Wang</p>
          */
         public Builder creatorUsername(String creatorUsername) {
             this.putQueryParameter("CreatorUsername", creatorUsername);
@@ -376,6 +394,7 @@ public class ListApprovalsRequest extends Request {
         }
 
         /**
+         * <p>The page number of the current page in a paging query. Valid values: 1 to 10000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -388,7 +407,11 @@ public class ListApprovalsRequest extends Request {
         }
 
         /**
-         * EffectStatuses.
+         * <p>The list of report effective statuses, serialized in Flat format. Duplicate values are not allowed. Only records with an approval status of Approved are matched. Valid values:</p>
+         * <ul>
+         * <li>Enabled: effective.</li>
+         * <li>Expired: expired or invalidated.</li>
+         * </ul>
          */
         public Builder effectStatuses(java.util.List<String> effectStatuses) {
             this.putQueryParameter("EffectStatuses", effectStatuses);
@@ -397,7 +420,10 @@ public class ListApprovalsRequest extends Request {
         }
 
         /**
-         * OperatorUserId.
+         * <p>The ID of the approval instance operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>su_e8f218fb171edd167c2ad917d21f53148bdefc510ca1f3c3cc0249d3643d****</p>
          */
         public Builder operatorUserId(String operatorUserId) {
             this.putQueryParameter("OperatorUserId", operatorUserId);
@@ -406,7 +432,10 @@ public class ListApprovalsRequest extends Request {
         }
 
         /**
-         * OperatorUsername.
+         * <p>The username of the approval instance operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ms. Li</p>
          */
         public Builder operatorUsername(String operatorUsername) {
             this.putQueryParameter("OperatorUsername", operatorUsername);
@@ -415,6 +444,7 @@ public class ListApprovalsRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page in a paging query. Valid values: 1 to 500.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -427,7 +457,18 @@ public class ListApprovalsRequest extends Request {
         }
 
         /**
-         * PolicyType.
+         * <p>The adaptation policy type. Valid values:</p>
+         * <ul>
+         * <li><strong>DomainBlacklist</strong>: Domain name blacklist.</li>
+         * <li><strong>DomainWhitelist</strong>: Domain name whitelist.</li>
+         * <li><strong>SoftwareBlock</strong>: Software blocking.</li>
+         * <li><strong>AppUninstall</strong>: Agent uninstallation.</li>
+         * <li><strong>DlpSend</strong>: File outbound transfer.</li>
+         * <li><strong>PeripheralBlock</strong>: Peripheral control.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DlpSend</p>
          */
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);
@@ -436,7 +477,10 @@ public class ListApprovalsRequest extends Request {
         }
 
         /**
-         * ProcessId.
+         * <p>The associated approval process ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>approval-process-fcc351b8a95b****</p>
          */
         public Builder processId(String processId) {
             this.putQueryParameter("ProcessId", processId);
@@ -445,7 +489,10 @@ public class ListApprovalsRequest extends Request {
         }
 
         /**
-         * ProcessName.
+         * <p>The associated approval process name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         public Builder processName(String processName) {
             this.putQueryParameter("ProcessName", processName);
@@ -454,7 +501,12 @@ public class ListApprovalsRequest extends Request {
         }
 
         /**
-         * ReportTypes.
+         * <p>The list of report types, serialized in Flat format. Duplicate values are not allowed. Valid values:</p>
+         * <ul>
+         * <li>ApprovalReport: approval report.</li>
+         * <li>BackendReport: backend report.
+         * If not specified, only ApprovalReport is queried by default.</li>
+         * </ul>
          */
         public Builder reportTypes(java.util.List<String> reportTypes) {
             this.putQueryParameter("ReportTypes", reportTypes);
@@ -463,7 +515,10 @@ public class ListApprovalsRequest extends Request {
         }
 
         /**
-         * SchemaId.
+         * <p>The associated approval template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>approval-schema-090134f1ebff****</p>
          */
         public Builder schemaId(String schemaId) {
             this.putQueryParameter("SchemaId", schemaId);
@@ -472,7 +527,10 @@ public class ListApprovalsRequest extends Request {
         }
 
         /**
-         * SchemaName.
+         * <p>The associated approval template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("SchemaName", schemaName);
@@ -481,7 +539,7 @@ public class ListApprovalsRequest extends Request {
         }
 
         /**
-         * Statuses.
+         * <p>The collection of approval instance statuses.</p>
          */
         public Builder statuses(java.util.List<String> statuses) {
             this.putQueryParameter("Statuses", statuses);

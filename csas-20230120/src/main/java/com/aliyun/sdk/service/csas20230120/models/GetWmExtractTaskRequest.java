@@ -60,6 +60,10 @@ public class GetWmExtractTaskRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the extraction task. You can obtain the task ID by calling the <a href="~~CreateWmExtractTask~~">CreateWmExtractTask</a> operation.</p>
+         * <ul>
+         * <li><a href="~~CreateWmExtractTask~~">CreateWmExtractTask</a>: Create a watermark extraction task.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
